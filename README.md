@@ -18,3 +18,5 @@ Execute o notebook `Processamento.ipynb`. Nessa fase, você aplicará as métric
 ### Etapa 4: Resultados Finais e Avaliação
 Execute o notebook `Etapa_4.ipynb`. Nesta última etapa, você visualizará os resultados finais das análises. A etapa foca na interpretação dos resultados das métricas calculadas, fornecendo insights detalhados sobre o desempenho das questões de teste.
 
+Para mais informações sobre a **Etapa 4**, visite o repositório relacionado: [codebench-analytics](https://github.com/Jacksonfern/codebench-analytics).
+
