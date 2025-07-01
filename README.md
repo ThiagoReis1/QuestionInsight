@@ -20,3 +20,11 @@ Execute o notebook `Etapa_4.ipynb`. Nesta última etapa, você visualizará os r
 
 Para mais informações sobre a **Etapa 4**, visite o repositório relacionado: [codebench-analytics](https://github.com/Jacksonfern/codebench-analytics).
 
+### Etapa 5: Identificação e Análise de Misconceptions
+
+Execute os notebooks `1_Misconceptions_Parser.ipynb` e `2_analise_graficos.ipynb`. Esta etapa tem como foco a identificação de **misconceptions** (conceitos incorretos) presentes nas respostas dos estudantes, por meio da análise sintática e semântica de códigos-fonte.
+
+A ferramenta realiza parsing dos códigos utilizando técnicas de visita à árvore sintática (via `VisitorMC3.py`), detectando padrões recorrentes de erro. Após isso, são gerados gráficos e métricas que ajudam a visualizar e interpretar esses equívocos, permitindo a construção de estratégias pedagógicas mais eficazes.
+
+Para mais informações sobre a **Etapa 5**, visite o repositório relacionado: [Misconceptions_Parser](https://github.com/Airtonn/Misconceptions_Parser).
+
