@@ -1,5 +1,5 @@
 # Makefile para automação de ambiente Python
-# Focado em setup e instruções para o usuário
+# Focado em setup e instruções para o usuário (v2)
 
 # --- Configuração ---
 VENV_DIR := .venv
@@ -40,8 +40,11 @@ install: setup
 	@echo ""
 	@echo "O ambiente virtual '$(VENV_DIR)' foi criado e configurado."
 	@echo ""
-	@echo "👉 Para ATIVAR o ambiente, execute no seu terminal:"
+	@echo "👉 Para ATIVAR o ambiente, execute um dos seguintes comandos:"
 	@echo "   source $(VENV_DIR)/bin/activate"
+	@echo ""
+	@echo "   ou a forma mais curta:"
+	@echo "   . $(VENV_DIR)/bin/activate"
 	@echo ""
 	@echo "👉 Para DESATIVAR o ambiente quando terminar, digite:"
 	@echo "   deactivate"
