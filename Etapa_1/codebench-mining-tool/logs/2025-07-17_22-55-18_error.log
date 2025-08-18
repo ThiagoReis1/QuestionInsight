@@ -1,0 +1,432 @@
+2025-07-17 22:58:56,589 cblogger [ERROR]: 		Error while extracting code complexity metrics: '(' was never closed (<unknown>, line 3)
+Traceback (most recent call last):
+  File "/root/trabalho_super/QuestionInsight/Etapa_1/codebench-mining-tool/util.py", line 551, in extract_complexity_metrics
+    v = ComplexityVisitor.from_code(code)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/trabalho_super/venv_jupyter/lib/python3.12/site-packages/radon/visitors.py", line 133, in from_code
+    return cls.from_ast(code2ast(code), **kwargs)
+                        ^^^^^^^^^^^^^^
+  File "/root/trabalho_super/venv_jupyter/lib/python3.12/site-packages/radon/visitors.py", line 48, in code2ast
+    return ast.parse(source)
+           ^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/ast.py", line 52, in parse
+    return compile(source, filename, mode, flags,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<unknown>", line 3
+    print(int(var * 10)
+         ^
+SyntaxError: '(' was never closed
+2025-07-17 22:58:56,724 cblogger [ERROR]: 		Error while extracting code size based metrics: SyntaxError at line: 3
+Traceback (most recent call last):
+  File "/root/trabalho_super/venv_jupyter/lib/python3.12/site-packages/radon/raw.py", line 210, in analyze
+    tokens, parsed_lines = _get_all_tokens(line, lines)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/trabalho_super/venv_jupyter/lib/python3.12/site-packages/radon/raw.py", line 117, in _get_all_tokens
+    next_line = next(lines)
+                ^^^^^^^^^^^
+StopIteration
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/trabalho_super/QuestionInsight/Etapa_1/codebench-mining-tool/util.py", line 560, in extract_size_metrics
+    a = analyze(code)
+        ^^^^^^^^^^^^^
+  File "/root/trabalho_super/venv_jupyter/lib/python3.12/site-packages/radon/raw.py", line 212, in analyze
+    raise SyntaxError('SyntaxError at line: {0}'.format(lineno))
+SyntaxError: SyntaxError at line: 3
+2025-07-17 22:58:57,334 cblogger [ERROR]: 		Error while extracting halsted code metrics: '(' was never closed (<unknown>, line 3)
+Traceback (most recent call last):
+  File "/root/trabalho_super/QuestionInsight/Etapa_1/codebench-mining-tool/util.py", line 569, in extract_halstead_metrics
+    h = h_visit(code)
+        ^^^^^^^^^^^^^
+  File "/root/trabalho_super/venv_jupyter/lib/python3.12/site-packages/radon/metrics.py", line 29, in h_visit
+    return h_visit_ast(ast.parse(code))
+                       ^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/ast.py", line 52, in parse
+    return compile(source, filename, mode, flags,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<unknown>", line 3
+    print(int(var * 10)
+         ^
+SyntaxError: '(' was never closed
+2025-07-17 22:58:58,819 cblogger [ERROR]: 		Error while extracting code complexity metrics: unindent does not match any outer indentation level (<unknown>, line 5)
+Traceback (most recent call last):
+  File "/root/trabalho_super/QuestionInsight/Etapa_1/codebench-mining-tool/util.py", line 551, in extract_complexity_metrics
+    v = ComplexityVisitor.from_code(code)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/trabalho_super/venv_jupyter/lib/python3.12/site-packages/radon/visitors.py", line 133, in from_code
+    return cls.from_ast(code2ast(code), **kwargs)
+                        ^^^^^^^^^^^^^^
+  File "/root/trabalho_super/venv_jupyter/lib/python3.12/site-packages/radon/visitors.py", line 48, in code2ast
+    return ast.parse(source)
+           ^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/ast.py", line 52, in parse
+    return compile(source, filename, mode, flags,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<unknown>", line 5
+    Custo = 6.00
+                ^
+IndentationError: unindent does not match any outer indentation level
+2025-07-17 22:58:58,823 cblogger [ERROR]: 		Error while extracting code size based metrics: SyntaxError at line: 17
+Traceback (most recent call last):
+  File "/root/trabalho_super/venv_jupyter/lib/python3.12/site-packages/radon/raw.py", line 210, in analyze
+    tokens, parsed_lines = _get_all_tokens(line, lines)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/trabalho_super/venv_jupyter/lib/python3.12/site-packages/radon/raw.py", line 117, in _get_all_tokens
+    next_line = next(lines)
+                ^^^^^^^^^^^
+StopIteration
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/trabalho_super/QuestionInsight/Etapa_1/codebench-mining-tool/util.py", line 560, in extract_size_metrics
+    a = analyze(code)
+        ^^^^^^^^^^^^^
+  File "/root/trabalho_super/venv_jupyter/lib/python3.12/site-packages/radon/raw.py", line 212, in analyze
+    raise SyntaxError('SyntaxError at line: {0}'.format(lineno))
+SyntaxError: SyntaxError at line: 17
+2025-07-17 22:58:58,825 cblogger [ERROR]: 		Error while extracting halsted code metrics: unindent does not match any outer indentation level (<unknown>, line 5)
+Traceback (most recent call last):
+  File "/root/trabalho_super/QuestionInsight/Etapa_1/codebench-mining-tool/util.py", line 569, in extract_halstead_metrics
+    h = h_visit(code)
+        ^^^^^^^^^^^^^
+  File "/root/trabalho_super/venv_jupyter/lib/python3.12/site-packages/radon/metrics.py", line 29, in h_visit
+    return h_visit_ast(ast.parse(code))
+                       ^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/ast.py", line 52, in parse
+    return compile(source, filename, mode, flags,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<unknown>", line 5
+    Custo = 6.00
+                ^
+IndentationError: unindent does not match any outer indentation level
+2025-07-17 22:58:58,956 cblogger [ERROR]: 		Error while extracting code complexity metrics: invalid syntax. Maybe you meant '==' or ':=' instead of '='? (<unknown>, line 6)
+Traceback (most recent call last):
+  File "/root/trabalho_super/QuestionInsight/Etapa_1/codebench-mining-tool/util.py", line 551, in extract_complexity_metrics
+    v = ComplexityVisitor.from_code(code)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/trabalho_super/venv_jupyter/lib/python3.12/site-packages/radon/visitors.py", line 133, in from_code
+    return cls.from_ast(code2ast(code), **kwargs)
+                        ^^^^^^^^^^^^^^
+  File "/root/trabalho_super/venv_jupyter/lib/python3.12/site-packages/radon/visitors.py", line 48, in code2ast
+    return ast.parse(source)
+           ^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/ast.py", line 52, in parse
+    return compile(source, filename, mode, flags,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<unknown>", line 6
+    if bolsal = "B"
+       ^^^^^^^^^^^^
+SyntaxError: invalid syntax. Maybe you meant '==' or ':=' instead of '='?
+2025-07-17 22:58:58,956 cblogger [ERROR]: 		Error while extracting halsted code metrics: invalid syntax. Maybe you meant '==' or ':=' instead of '='? (<unknown>, line 6)
+Traceback (most recent call last):
+  File "/root/trabalho_super/QuestionInsight/Etapa_1/codebench-mining-tool/util.py", line 569, in extract_halstead_metrics
+    h = h_visit(code)
+        ^^^^^^^^^^^^^
+  File "/root/trabalho_super/venv_jupyter/lib/python3.12/site-packages/radon/metrics.py", line 29, in h_visit
+    return h_visit_ast(ast.parse(code))
+                       ^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/ast.py", line 52, in parse
+    return compile(source, filename, mode, flags,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<unknown>", line 6
+    if bolsal = "B"
+       ^^^^^^^^^^^^
+SyntaxError: invalid syntax. Maybe you meant '==' or ':=' instead of '='?
+2025-07-17 22:58:58,995 cblogger [ERROR]: 		Error while extracting code complexity metrics: invalid syntax (<unknown>, line 6)
+Traceback (most recent call last):
+  File "/root/trabalho_super/QuestionInsight/Etapa_1/codebench-mining-tool/util.py", line 551, in extract_complexity_metrics
+    v = ComplexityVisitor.from_code(code)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/trabalho_super/venv_jupyter/lib/python3.12/site-packages/radon/visitors.py", line 133, in from_code
+    return cls.from_ast(code2ast(code), **kwargs)
+                        ^^^^^^^^^^^^^^
+  File "/root/trabalho_super/venv_jupyter/lib/python3.12/site-packages/radon/visitors.py", line 48, in code2ast
+    return ast.parse(source)
+           ^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/ast.py", line 52, in parse
+    return compile(source, filename, mode, flags,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<unknown>", line 6
+    while 
+          ^
+SyntaxError: invalid syntax
+2025-07-17 22:58:58,997 cblogger [ERROR]: 		Error while extracting halsted code metrics: invalid syntax (<unknown>, line 6)
+Traceback (most recent call last):
+  File "/root/trabalho_super/QuestionInsight/Etapa_1/codebench-mining-tool/util.py", line 569, in extract_halstead_metrics
+    h = h_visit(code)
+        ^^^^^^^^^^^^^
+  File "/root/trabalho_super/venv_jupyter/lib/python3.12/site-packages/radon/metrics.py", line 29, in h_visit
+    return h_visit_ast(ast.parse(code))
+                       ^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/ast.py", line 52, in parse
+    return compile(source, filename, mode, flags,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<unknown>", line 6
+    while 
+          ^
+SyntaxError: invalid syntax
+2025-07-17 22:58:59,023 cblogger [ERROR]: 		Error while extracting code complexity metrics: inconsistent use of tabs and spaces in indentation (<unknown>, line 10)
+Traceback (most recent call last):
+  File "/root/trabalho_super/QuestionInsight/Etapa_1/codebench-mining-tool/util.py", line 551, in extract_complexity_metrics
+    v = ComplexityVisitor.from_code(code)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/trabalho_super/venv_jupyter/lib/python3.12/site-packages/radon/visitors.py", line 133, in from_code
+    return cls.from_ast(code2ast(code), **kwargs)
+                        ^^^^^^^^^^^^^^
+  File "/root/trabalho_super/venv_jupyter/lib/python3.12/site-packages/radon/visitors.py", line 48, in code2ast
+    return ast.parse(source)
+           ^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/ast.py", line 52, in parse
+    return compile(source, filename, mode, flags,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<unknown>", line 10
+    aumento = salario + salario * 8/100
+TabError: inconsistent use of tabs and spaces in indentation
+2025-07-17 22:58:59,023 cblogger [ERROR]: 		Error while extracting halsted code metrics: inconsistent use of tabs and spaces in indentation (<unknown>, line 10)
+Traceback (most recent call last):
+  File "/root/trabalho_super/QuestionInsight/Etapa_1/codebench-mining-tool/util.py", line 569, in extract_halstead_metrics
+    h = h_visit(code)
+        ^^^^^^^^^^^^^
+  File "/root/trabalho_super/venv_jupyter/lib/python3.12/site-packages/radon/metrics.py", line 29, in h_visit
+    return h_visit_ast(ast.parse(code))
+                       ^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/ast.py", line 52, in parse
+    return compile(source, filename, mode, flags,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<unknown>", line 10
+    aumento = salario + salario * 8/100
+TabError: inconsistent use of tabs and spaces in indentation
+2025-07-17 22:58:59,025 cblogger [ERROR]: 		Error while extracting code complexity metrics: cannot assign to expression here. Maybe you meant '==' instead of '='? (<unknown>, line 13)
+Traceback (most recent call last):
+  File "/root/trabalho_super/QuestionInsight/Etapa_1/codebench-mining-tool/util.py", line 551, in extract_complexity_metrics
+    v = ComplexityVisitor.from_code(code)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/trabalho_super/venv_jupyter/lib/python3.12/site-packages/radon/visitors.py", line 133, in from_code
+    return cls.from_ast(code2ast(code), **kwargs)
+                        ^^^^^^^^^^^^^^
+  File "/root/trabalho_super/venv_jupyter/lib/python3.12/site-packages/radon/visitors.py", line 48, in code2ast
+    return ast.parse(source)
+           ^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/ast.py", line 52, in parse
+    return compile(source, filename, mode, flags,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<unknown>", line 13
+    a * x + b * y = c
+    ^^^^^^^^^^^^^
+SyntaxError: cannot assign to expression here. Maybe you meant '==' instead of '='?
+2025-07-17 22:58:59,026 cblogger [ERROR]: 		Error while extracting halsted code metrics: cannot assign to expression here. Maybe you meant '==' instead of '='? (<unknown>, line 13)
+Traceback (most recent call last):
+  File "/root/trabalho_super/QuestionInsight/Etapa_1/codebench-mining-tool/util.py", line 569, in extract_halstead_metrics
+    h = h_visit(code)
+        ^^^^^^^^^^^^^
+  File "/root/trabalho_super/venv_jupyter/lib/python3.12/site-packages/radon/metrics.py", line 29, in h_visit
+    return h_visit_ast(ast.parse(code))
+                       ^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/ast.py", line 52, in parse
+    return compile(source, filename, mode, flags,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<unknown>", line 13
+    a * x + b * y = c
+    ^^^^^^^^^^^^^
+SyntaxError: cannot assign to expression here. Maybe you meant '==' instead of '='?
+2025-07-17 22:58:59,038 cblogger [ERROR]: 		Error while extracting code complexity metrics: inconsistent use of tabs and spaces in indentation (<unknown>, line 14)
+Traceback (most recent call last):
+  File "/root/trabalho_super/QuestionInsight/Etapa_1/codebench-mining-tool/util.py", line 551, in extract_complexity_metrics
+    v = ComplexityVisitor.from_code(code)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/trabalho_super/venv_jupyter/lib/python3.12/site-packages/radon/visitors.py", line 133, in from_code
+    return cls.from_ast(code2ast(code), **kwargs)
+                        ^^^^^^^^^^^^^^
+  File "/root/trabalho_super/venv_jupyter/lib/python3.12/site-packages/radon/visitors.py", line 48, in code2ast
+    return ast.parse(source)
+           ^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/ast.py", line 52, in parse
+    return compile(source, filename, mode, flags,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<unknown>", line 14
+    		print("pertence")
+    ^
+TabError: inconsistent use of tabs and spaces in indentation
+2025-07-17 22:58:59,038 cblogger [ERROR]: 		Error while extracting halsted code metrics: inconsistent use of tabs and spaces in indentation (<unknown>, line 14)
+Traceback (most recent call last):
+  File "/root/trabalho_super/QuestionInsight/Etapa_1/codebench-mining-tool/util.py", line 569, in extract_halstead_metrics
+    h = h_visit(code)
+        ^^^^^^^^^^^^^
+  File "/root/trabalho_super/venv_jupyter/lib/python3.12/site-packages/radon/metrics.py", line 29, in h_visit
+    return h_visit_ast(ast.parse(code))
+                       ^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/ast.py", line 52, in parse
+    return compile(source, filename, mode, flags,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<unknown>", line 14
+    		print("pertence")
+    ^
+TabError: inconsistent use of tabs and spaces in indentation
+2025-07-17 22:58:59,049 cblogger [ERROR]: 		Error while extracting code complexity metrics: unexpected indent (<unknown>, line 12)
+Traceback (most recent call last):
+  File "/root/trabalho_super/QuestionInsight/Etapa_1/codebench-mining-tool/util.py", line 551, in extract_complexity_metrics
+    v = ComplexityVisitor.from_code(code)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/trabalho_super/venv_jupyter/lib/python3.12/site-packages/radon/visitors.py", line 133, in from_code
+    return cls.from_ast(code2ast(code), **kwargs)
+                        ^^^^^^^^^^^^^^
+  File "/root/trabalho_super/venv_jupyter/lib/python3.12/site-packages/radon/visitors.py", line 48, in code2ast
+    return ast.parse(source)
+           ^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/ast.py", line 52, in parse
+    return compile(source, filename, mode, flags,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<unknown>", line 12
+    	print(round(quanttot2,2))
+    ^
+IndentationError: unexpected indent
+2025-07-17 22:58:59,049 cblogger [ERROR]: 		Error while extracting halsted code metrics: unexpected indent (<unknown>, line 12)
+Traceback (most recent call last):
+  File "/root/trabalho_super/QuestionInsight/Etapa_1/codebench-mining-tool/util.py", line 569, in extract_halstead_metrics
+    h = h_visit(code)
+        ^^^^^^^^^^^^^
+  File "/root/trabalho_super/venv_jupyter/lib/python3.12/site-packages/radon/metrics.py", line 29, in h_visit
+    return h_visit_ast(ast.parse(code))
+                       ^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/ast.py", line 52, in parse
+    return compile(source, filename, mode, flags,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<unknown>", line 12
+    	print(round(quanttot2,2))
+    ^
+IndentationError: unexpected indent
+2025-07-17 22:58:59,055 cblogger [ERROR]: 		Error while extracting code complexity metrics: invalid syntax. Perhaps you forgot a comma? (<unknown>, line 6)
+Traceback (most recent call last):
+  File "/root/trabalho_super/QuestionInsight/Etapa_1/codebench-mining-tool/util.py", line 551, in extract_complexity_metrics
+    v = ComplexityVisitor.from_code(code)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/trabalho_super/venv_jupyter/lib/python3.12/site-packages/radon/visitors.py", line 133, in from_code
+    return cls.from_ast(code2ast(code), **kwargs)
+                        ^^^^^^^^^^^^^^
+  File "/root/trabalho_super/venv_jupyter/lib/python3.12/site-packages/radon/visitors.py", line 48, in code2ast
+    return ast.parse(source)
+           ^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/ast.py", line 52, in parse
+    return compile(source, filename, mode, flags,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<unknown>", line 6
+    a = sqrt(ladob**2 + ladoc**2-2*ladob*ladoc*(radians)cos(alfa))
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+SyntaxError: invalid syntax. Perhaps you forgot a comma?
+2025-07-17 22:58:59,056 cblogger [ERROR]: 		Error while extracting halsted code metrics: invalid syntax. Perhaps you forgot a comma? (<unknown>, line 6)
+Traceback (most recent call last):
+  File "/root/trabalho_super/QuestionInsight/Etapa_1/codebench-mining-tool/util.py", line 569, in extract_halstead_metrics
+    h = h_visit(code)
+        ^^^^^^^^^^^^^
+  File "/root/trabalho_super/venv_jupyter/lib/python3.12/site-packages/radon/metrics.py", line 29, in h_visit
+    return h_visit_ast(ast.parse(code))
+                       ^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/ast.py", line 52, in parse
+    return compile(source, filename, mode, flags,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<unknown>", line 6
+    a = sqrt(ladob**2 + ladoc**2-2*ladob*ladoc*(radians)cos(alfa))
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+SyntaxError: invalid syntax. Perhaps you forgot a comma?
+2025-07-17 22:58:59,116 cblogger [ERROR]: 		Error while extracting code complexity metrics: invalid syntax (<unknown>, line 4)
+Traceback (most recent call last):
+  File "/root/trabalho_super/QuestionInsight/Etapa_1/codebench-mining-tool/util.py", line 551, in extract_complexity_metrics
+    v = ComplexityVisitor.from_code(code)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/trabalho_super/venv_jupyter/lib/python3.12/site-packages/radon/visitors.py", line 133, in from_code
+    return cls.from_ast(code2ast(code), **kwargs)
+                        ^^^^^^^^^^^^^^
+  File "/root/trabalho_super/venv_jupyter/lib/python3.12/site-packages/radon/visitors.py", line 48, in code2ast
+    return ast.parse(source)
+           ^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/ast.py", line 52, in parse
+    return compile(source, filename, mode, flags,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<unknown>", line 4
+    tp = 
+         ^
+SyntaxError: invalid syntax
+2025-07-17 22:58:59,119 cblogger [ERROR]: 		Error while extracting halsted code metrics: invalid syntax (<unknown>, line 4)
+Traceback (most recent call last):
+  File "/root/trabalho_super/QuestionInsight/Etapa_1/codebench-mining-tool/util.py", line 569, in extract_halstead_metrics
+    h = h_visit(code)
+        ^^^^^^^^^^^^^
+  File "/root/trabalho_super/venv_jupyter/lib/python3.12/site-packages/radon/metrics.py", line 29, in h_visit
+    return h_visit_ast(ast.parse(code))
+                       ^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/ast.py", line 52, in parse
+    return compile(source, filename, mode, flags,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<unknown>", line 4
+    tp = 
+         ^
+SyntaxError: invalid syntax
+2025-07-17 22:59:01,412 cblogger [ERROR]: 		Error while extracting code complexity metrics: expected ':' (<unknown>, line 9)
+Traceback (most recent call last):
+  File "/root/trabalho_super/QuestionInsight/Etapa_1/codebench-mining-tool/util.py", line 551, in extract_complexity_metrics
+    v = ComplexityVisitor.from_code(code)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/trabalho_super/venv_jupyter/lib/python3.12/site-packages/radon/visitors.py", line 133, in from_code
+    return cls.from_ast(code2ast(code), **kwargs)
+                        ^^^^^^^^^^^^^^
+  File "/root/trabalho_super/venv_jupyter/lib/python3.12/site-packages/radon/visitors.py", line 48, in code2ast
+    return ast.parse(source)
+           ^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/ast.py", line 52, in parse
+    return compile(source, filename, mode, flags,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<unknown>", line 9
+    for i in range(size(golpro)) and range(size(golcontra))
+                                                           ^
+SyntaxError: expected ':'
+2025-07-17 22:59:01,413 cblogger [ERROR]: 		Error while extracting halsted code metrics: expected ':' (<unknown>, line 9)
+Traceback (most recent call last):
+  File "/root/trabalho_super/QuestionInsight/Etapa_1/codebench-mining-tool/util.py", line 569, in extract_halstead_metrics
+    h = h_visit(code)
+        ^^^^^^^^^^^^^
+  File "/root/trabalho_super/venv_jupyter/lib/python3.12/site-packages/radon/metrics.py", line 29, in h_visit
+    return h_visit_ast(ast.parse(code))
+                       ^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/ast.py", line 52, in parse
+    return compile(source, filename, mode, flags,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<unknown>", line 9
+    for i in range(size(golpro)) and range(size(golcontra))
+                                                           ^
+SyntaxError: expected ':'
+2025-07-17 22:59:01,479 cblogger [ERROR]: 		Error while extracting code complexity metrics: invalid syntax (<unknown>, line 12)
+Traceback (most recent call last):
+  File "/root/trabalho_super/QuestionInsight/Etapa_1/codebench-mining-tool/util.py", line 551, in extract_complexity_metrics
+    v = ComplexityVisitor.from_code(code)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/trabalho_super/venv_jupyter/lib/python3.12/site-packages/radon/visitors.py", line 133, in from_code
+    return cls.from_ast(code2ast(code), **kwargs)
+                        ^^^^^^^^^^^^^^
+  File "/root/trabalho_super/venv_jupyter/lib/python3.12/site-packages/radon/visitors.py", line 48, in code2ast
+    return ast.parse(source)
+           ^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/ast.py", line 52, in parse
+    return compile(source, filename, mode, flags,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<unknown>", line 12
+    	+=1
+    	^^
+SyntaxError: invalid syntax
+2025-07-17 22:59:01,482 cblogger [ERROR]: 		Error while extracting halsted code metrics: invalid syntax (<unknown>, line 12)
+Traceback (most recent call last):
+  File "/root/trabalho_super/QuestionInsight/Etapa_1/codebench-mining-tool/util.py", line 569, in extract_halstead_metrics
+    h = h_visit(code)
+        ^^^^^^^^^^^^^
+  File "/root/trabalho_super/venv_jupyter/lib/python3.12/site-packages/radon/metrics.py", line 29, in h_visit
+    return h_visit_ast(ast.parse(code))
+                       ^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/ast.py", line 52, in parse
+    return compile(source, filename, mode, flags,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<unknown>", line 12
+    	+=1
+    	^^
+SyntaxError: invalid syntax
