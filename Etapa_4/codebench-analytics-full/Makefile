@@ -1,7 +1,7 @@
 # Makefile que verifica e instala o Poetry se necessário.
 
 PROJECT_PATH=codebench_analytics/
-PYTHON_EXEC := $(shell which python)
+PYTHON_EXEC := $(shell which python3)
 
 # Opções para as ferramentas de linting e formatação
 BLACK_OPTIONS := --check
