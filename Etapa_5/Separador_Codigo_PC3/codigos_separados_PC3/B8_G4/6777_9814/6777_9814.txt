@@ -1,0 +1,82 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 6777_9814.py
+Questão  : 6777
+Aluno    : 9814
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | ano = int(input('Determine o ano de nascimento: '))
+     2 | p = input('Escolha entre B e I: ').upper()
+     3 | 
+     4 | idade = 2023 - ano
+     5 | tb = idade - 18
+     6 | ti = idade - 17
+     7 | 
+     8 | if p != "B" and p != "I":
+     9 | 	print("invalido")
+    10 | elif p == 'B':
+    11 | 	if idade >= 18:
+    12 | 		print('sim')
+    13 | 		print(tb)
+    14 | 	else:
+    15 | 		print('nao')
+    16 | 		print(-1 * tb)
+    17 | elif p == 'I':
+    18 | 	if idade >= 17:
+    19 | 		print('sim')
+    20 | 		print(ti)
+    21 | 	else:
+    22 | 		print('nao')
+    23 | 		print(-1 * ti)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 10: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 10) / elif ... sem else
+      Contexto:
+               9 | 	print("invalido")
+        >>>   10 | elif p == 'B':
+              11 | 	if idade >= 18:
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 4
+
+  [1] Linha 1: Variável 'ano' com nome muito curto (≤4 chars)
+      Trecho  : ano = ...
+      Contexto:
+        >>>    1 | ano = int(input('Determine o ano de nascimento: '))
+               2 | p = input('Escolha entre B e I: ').upper()
+
+  [2] Linha 2: Variável 'p' com nome muito curto (≤4 chars)
+      Trecho  : p = ...
+      Contexto:
+               1 | ano = int(input('Determine o ano de nascimento: '))
+        >>>    2 | p = input('Escolha entre B e I: ').upper()
+               3 | 
+
+  [3] Linha 5: Variável 'tb' com nome muito curto (≤4 chars)
+      Trecho  : tb = ...
+      Contexto:
+               4 | idade = 2023 - ano
+        >>>    5 | tb = idade - 18
+               6 | ti = idade - 17
+
+  [4] Linha 6: Variável 'ti' com nome muito curto (≤4 chars)
+      Trecho  : ti = ...
+      Contexto:
+               5 | tb = idade - 18
+        >>>    6 | ti = idade - 17
+               7 | 
+
+======================================================================

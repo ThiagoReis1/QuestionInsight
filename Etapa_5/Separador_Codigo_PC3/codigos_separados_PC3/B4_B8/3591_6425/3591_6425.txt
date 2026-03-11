@@ -1,0 +1,122 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 3591_6425.py
+Questão  : 3591
+Aluno    : 6425
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B4, B8
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import *
+     2 | face=array(eval(input("entre com os pontos: ")))
+     3 | i=0
+     4 | pontos=0
+     5 | while (i<size(face)):
+     6 | 	if (face[i]==1):
+     7 | 		pontos+=10
+     8 | 	elif (face[i]==2):
+     9 | 		pontos+=5
+    10 | 	elif (face[i]==3):
+    11 | 		pontos+=10
+    12 | 	elif (face[i]==4):
+    13 | 		pontos+=5
+    14 | 	elif (face[i]==5):
+    15 | 		pontos+=10
+    16 | 	elif (face[i]==6):
+    17 | 		pontos+=5
+    18 | 	i+=1
+    19 | print(sum(pontos))
+    20 | 		
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B4 — Comandos repetidos dentro de blocos if-elif-else
+  Ocorrências: 10
+
+  [1] Linha 10: Bloco idêntico ao da linha 6
+      Trecho  : pontos += 10
+      Contexto:
+               9 | 		pontos+=5
+        >>>   10 | 	elif (face[i]==3):
+              11 | 		pontos+=10
+
+  [2] Linha 12: Bloco idêntico ao da linha 8
+      Trecho  : pontos += 5
+      Contexto:
+              11 | 		pontos+=10
+        >>>   12 | 	elif (face[i]==4):
+              13 | 		pontos+=5
+
+  [3] Linha 14: Bloco idêntico ao da linha 6
+      Trecho  : pontos += 10
+      Contexto:
+              13 | 		pontos+=5
+        >>>   14 | 	elif (face[i]==5):
+              15 | 		pontos+=10
+
+  [4] Linha 16: Bloco idêntico ao da linha 8
+      Trecho  : pontos += 5
+      Contexto:
+              15 | 		pontos+=10
+        >>>   16 | 	elif (face[i]==6):
+              17 | 		pontos+=5
+
+  [5] Linha 12: Bloco idêntico ao da linha 8
+      Trecho  : pontos += 5
+      Contexto:
+              11 | 		pontos+=10
+        >>>   12 | 	elif (face[i]==4):
+              13 | 		pontos+=5
+
+  [6] Linha 14: Bloco idêntico ao da linha 10
+      Trecho  : pontos += 10
+      Contexto:
+              13 | 		pontos+=5
+        >>>   14 | 	elif (face[i]==5):
+              15 | 		pontos+=10
+
+  [7] Linha 16: Bloco idêntico ao da linha 8
+      Trecho  : pontos += 5
+      Contexto:
+              15 | 		pontos+=10
+        >>>   16 | 	elif (face[i]==6):
+              17 | 		pontos+=5
+
+  [8] Linha 14: Bloco idêntico ao da linha 10
+      Trecho  : pontos += 10
+      Contexto:
+              13 | 		pontos+=5
+        >>>   14 | 	elif (face[i]==5):
+              15 | 		pontos+=10
+
+  [9] Linha 16: Bloco idêntico ao da linha 12
+      Trecho  : pontos += 5
+      Contexto:
+              15 | 		pontos+=10
+        >>>   16 | 	elif (face[i]==6):
+              17 | 		pontos+=5
+
+  [10] Linha 16: Bloco idêntico ao da linha 12
+      Trecho  : pontos += 5
+      Contexto:
+              15 | 		pontos+=10
+        >>>   16 | 	elif (face[i]==6):
+              17 | 		pontos+=5
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 14: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 14) / elif ... sem else
+      Contexto:
+              13 | 		pontos+=5
+        >>>   14 | 	elif (face[i]==5):
+              15 | 		pontos+=10
+
+======================================================================

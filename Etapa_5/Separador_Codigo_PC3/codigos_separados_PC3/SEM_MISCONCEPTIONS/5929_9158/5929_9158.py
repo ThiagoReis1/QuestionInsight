@@ -1,0 +1,5 @@
+volume = float(input("volume do consumo no mes: "))
+valor1 = float(volume * 0.37)
+valor2 = float(valor1 + 15.0)
+valortotal = float(valor2 + valor2 * (35/100))
+print(round(valortotal, 2))

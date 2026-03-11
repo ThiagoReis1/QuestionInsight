@@ -1,0 +1,94 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1258_1660.py
+Questão  : 1258
+Aluno    : 1660
+Total MCs: 2
+
+⚠️  Misconceptions detectados: A3, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import *
+     2 | from math import *
+     3 | p = float(input("Qual o valor? "))
+     4 | vet = array(eval(input("Insira o vetor: ")))
+     5 | vet1 = array(eval(input("Insira o outro vetor: ")))
+     6 | t = p / (p + 1)
+     7 | 
+     8 | vint = 0
+     9 | vint1 = 0
+    10 | for i in range (0, size(vet)):
+    11 | 	vint = (abs(vet[i]+vet1[i]) ** t) + vint
+    12 | norv = vint ** (1/t)
+    13 | print(round(norv, 3))
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 1
+
+  [1] Linha 9: Variável 'vint1' declarada mas nunca utilizada
+      Trecho  : vint1 = ...
+      Contexto:
+               8 | vint = 0
+        >>>    9 | vint1 = 0
+              10 | for i in range (0, size(vet)):
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 7
+
+  [1] Linha 3: Variável 'p' com nome muito curto (≤4 chars)
+      Trecho  : p = ...
+      Contexto:
+               2 | from math import *
+        >>>    3 | p = float(input("Qual o valor? "))
+               4 | vet = array(eval(input("Insira o vetor: ")))
+
+  [2] Linha 4: Variável 'vet' com nome muito curto (≤4 chars)
+      Trecho  : vet = ...
+      Contexto:
+               3 | p = float(input("Qual o valor? "))
+        >>>    4 | vet = array(eval(input("Insira o vetor: ")))
+               5 | vet1 = array(eval(input("Insira o outro vetor: ")))
+
+  [3] Linha 5: Variável 'vet1' com nome muito curto (≤4 chars)
+      Trecho  : vet1 = ...
+      Contexto:
+               4 | vet = array(eval(input("Insira o vetor: ")))
+        >>>    5 | vet1 = array(eval(input("Insira o outro vetor: ")))
+               6 | t = p / (p + 1)
+
+  [4] Linha 6: Variável 't' com nome muito curto (≤4 chars)
+      Trecho  : t = ...
+      Contexto:
+               5 | vet1 = array(eval(input("Insira o outro vetor: ")))
+        >>>    6 | t = p / (p + 1)
+               7 | 
+
+  [5] Linha 8: Variável 'vint' com nome muito curto (≤4 chars)
+      Trecho  : vint = ...
+      Contexto:
+               7 | 
+        >>>    8 | vint = 0
+               9 | vint1 = 0
+
+  [6] Linha 12: Variável 'norv' com nome muito curto (≤4 chars)
+      Trecho  : norv = ...
+      Contexto:
+              11 | 	vint = (abs(vet[i]+vet1[i]) ** t) + vint
+        >>>   12 | norv = vint ** (1/t)
+              13 | print(round(norv, 3))
+
+  [7] Linha 11: Variável 'vint' com nome muito curto (≤4 chars)
+      Trecho  : vint = ...
+      Contexto:
+              10 | for i in range (0, size(vet)):
+        >>>   11 | 	vint = (abs(vet[i]+vet1[i]) ** t) + vint
+              12 | norv = vint ** (1/t)
+
+======================================================================

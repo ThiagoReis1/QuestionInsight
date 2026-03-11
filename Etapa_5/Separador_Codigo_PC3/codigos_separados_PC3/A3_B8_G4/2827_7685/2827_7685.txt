@@ -1,0 +1,82 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 2827_7685.py
+Questão  : 2827
+Aluno    : 7685
+Total MCs: 3
+
+⚠️  Misconceptions detectados: A3, B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import *
+     2 | n=array(eval(input("")))
+     3 | i=0
+     4 | soma=0
+     5 | 
+     6 | while(size(n)>i):
+     7 | 	if(n[i]>=4 and n[i]<=5):
+     8 | 		n[i]=4
+     9 | 	elif(n[i]>=9 and n[i]<=10):
+    10 | 		n[i]=10
+    11 | 	i=i+1
+    12 | print(n)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 1
+
+  [1] Linha 4: Variável 'soma' declarada mas nunca utilizada
+      Trecho  : soma = ...
+      Contexto:
+               3 | i=0
+        >>>    4 | soma=0
+               5 | 
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 7: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 7) / elif ... sem else
+      Contexto:
+               6 | while(size(n)>i):
+        >>>    7 | 	if(n[i]>=4 and n[i]<=5):
+               8 | 		n[i]=4
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 4
+
+  [1] Linha 2: Variável 'n' com nome muito curto (≤4 chars)
+      Trecho  : n = ...
+      Contexto:
+               1 | from numpy import *
+        >>>    2 | n=array(eval(input("")))
+               3 | i=0
+
+  [2] Linha 3: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+               2 | n=array(eval(input("")))
+        >>>    3 | i=0
+               4 | soma=0
+
+  [3] Linha 4: Variável 'soma' com nome muito curto (≤4 chars)
+      Trecho  : soma = ...
+      Contexto:
+               3 | i=0
+        >>>    4 | soma=0
+               5 | 
+
+  [4] Linha 11: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+              10 | 		n[i]=10
+        >>>   11 | 	i=i+1
+              12 | print(n)
+
+======================================================================

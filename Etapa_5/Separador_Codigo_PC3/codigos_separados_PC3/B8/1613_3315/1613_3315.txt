@@ -1,0 +1,53 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1613_3315.py
+Questão  : 1613
+Aluno    : 3315
+Total MCs: 1
+
+⚠️  Misconceptions detectados: B8
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | 
+     3 | vetor_ex = array(eval(input()))
+     4 | vetor_tempo = array(eval(input()))
+     5 | 
+     6 | i = 0
+     7 | total = 0
+     8 | 
+     9 | while(i<size(vetor_ex)):
+    10 | 	if(vetor_ex[i]=="ALONGAMENTO"):
+    11 | 		total = total + vetor_tempo[i]*3.0
+    12 | 	elif(vetor_ex[i]=="CORRIDA"):
+    13 | 		total = total + vetor_tempo[i]*10.3
+    14 | 	elif(vetor_ex[i]=="DANCA"):
+    15 | 		total = total + vetor_tempo[i]*6.7
+    16 | 	elif(vetor_ex[i]=="ESCALADA"):
+    17 | 		total = total + vetor_tempo[i]*9.7
+    18 | 	elif(vetor_ex[i]=="HIDROGINASTICA"):
+    19 | 		total = total + vetor_tempo[i]*5.0
+    20 | 		
+    21 | 	i = i+1
+    22 | 
+    23 | print(round(total,2))
+    24 |  		
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 16: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 16) / elif ... sem else
+      Contexto:
+              15 | 		total = total + vetor_tempo[i]*6.7
+        >>>   16 | 	elif(vetor_ex[i]=="ESCALADA"):
+              17 | 		total = total + vetor_tempo[i]*9.7
+
+======================================================================

@@ -1,0 +1,49 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 6938_9681.py
+Questão  : 6938
+Aluno    : 9681
+Total MCs: 1
+
+⚠️  Misconceptions detectados: B8
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | valor = float(input("Qual o valor total da compra: "))
+     2 | opcao = str(input("Qual a opcao de compra, [D] no dinheiro, [p] no pix e [C] no cartao: ")).upper()
+     3 | if opcao == "C":
+     4 | 	vezes = int(input("Quantas vezes deseja pagar, 1 ou 2? "))
+     5 | 	if vezes == 1:
+     6 | 		total = valor
+     7 | 		print(round(total,2))
+     8 | 	elif vezes == 2:
+     9 | 		total = valor * 0.06 + valor
+    10 | 		print(round(total,2))
+    11 | elif opcao == "P" or opcao == "D" :
+    12 | 	total = valor - valor * 0.11
+    13 | 	print(round(total,2))
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 2
+
+  [1] Linha 3: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 3) / elif ... sem else
+      Contexto:
+               2 | opcao = str(input("Qual a opcao de compra, [D] no dinheiro, [p] no pix e [C] no cartao: ")).upper()
+        >>>    3 | if opcao == "C":
+               4 | 	vezes = int(input("Quantas vezes deseja pagar, 1 ou 2? "))
+
+  [2] Linha 5: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 5) / elif ... sem else
+      Contexto:
+               4 | 	vezes = int(input("Quantas vezes deseja pagar, 1 ou 2? "))
+        >>>    5 | 	if vezes == 1:
+               6 | 		total = valor
+
+======================================================================

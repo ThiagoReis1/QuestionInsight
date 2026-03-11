@@ -1,0 +1,63 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 6377_9669.py
+Questão  : 6377
+Aluno    : 9669
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | gols = input("Entre com os caracteres referente ao jogador que marcou: ").upper().split(",")
+     3 | 
+     4 | cont = zeros(4,dtype=int)
+     5 | 
+     6 | for i in range(size(gols)):
+     7 | 	if gols[i] == "A":
+     8 | 		cont[0] = cont[0] + 1
+     9 | 	elif gols[i] == "B":
+    10 | 		cont[1] = cont[1] + 1
+    11 | 	elif gols[i] == "C":
+    12 | 		cont[2] = cont[2] + 1
+    13 | 	elif gols[i] == "D":
+    14 | 		cont[3] = cont[3] + 1
+    15 | 		
+    16 | print(cont)
+    17 | 
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 11: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 11) / elif ... sem else
+      Contexto:
+              10 | 		cont[1] = cont[1] + 1
+        >>>   11 | 	elif gols[i] == "C":
+              12 | 		cont[2] = cont[2] + 1
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 2
+
+  [1] Linha 2: Variável 'gols' com nome muito curto (≤4 chars)
+      Trecho  : gols = ...
+      Contexto:
+               1 | from numpy import*
+        >>>    2 | gols = input("Entre com os caracteres referente ao jogador que marcou: ").upper().split(",")
+               3 | 
+
+  [2] Linha 4: Variável 'cont' com nome muito curto (≤4 chars)
+      Trecho  : cont = ...
+      Contexto:
+               3 | 
+        >>>    4 | cont = zeros(4,dtype=int)
+               5 | 
+
+======================================================================

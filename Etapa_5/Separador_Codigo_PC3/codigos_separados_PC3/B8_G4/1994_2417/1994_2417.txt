@@ -1,0 +1,53 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1994_2417.py
+Questão  : 1994
+Aluno    : 2417
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | nome = input("")
+     2 | O = 15.9994
+     3 | C = 12.011
+     4 | N = 14.00674
+     5 | H = 1.0079
+     6 | if (nome.lower != "histidina") and (nome.lower() != "leucina") and (nome.lower() != "lisina"):
+     7 | 	print("Entrada:", nome.lower())
+     8 | 	print("Dado Invalido")		
+     9 | else:
+    10 | 	if nome.lower() == "histidina" :
+    11 | 		peso_mol = C * 6 + H * 10 + N * 3 + O * 2
+    12 | 		print(round(peso_mol, 2))
+    13 | 	elif nome.lower() == "leucina" :
+    14 | 		peso_mol = C * 6 + H * 13 + N + O * 2
+    15 | 		print(round(peso_mol, 2))
+    16 | 	elif nome.lower() == "lisina" :
+    17 | 		peso_mol = C * 6 + H * 15 + N * 2 + O * 2
+    18 | 		print(round(peso_mol, 2))
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 13: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 13) / elif ... sem else
+      Contexto:
+              12 | 		print(round(peso_mol, 2))
+        >>>   13 | 	elif nome.lower() == "leucina" :
+              14 | 		peso_mol = C * 6 + H * 13 + N + O * 2
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 1
+
+  [1] Linha 0: G4 detectado pelo VisitorMC3 (localização exata não mapeada)
+      Trecho  : —
+
+======================================================================

@@ -1,0 +1,89 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1658_6367.py
+Questão  : 1658
+Aluno    : 6367
+Total MCs: 3
+
+⚠️  Misconceptions detectados: A3, B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | 
+     2 | from numpy import*
+     3 | m=['CHN','JPN','KOR','MGL','THA']
+     4 | c=zeros(len(m),dtype=int)
+     5 | a=(input().split(','))
+     6 | s=0
+     7 | for i in range(0,len(a)):
+     8 | 	if a[i]=='CHN':
+     9 | 		c[0]=c[0]+1
+    10 | 	elif a[i]=='JPN':
+    11 | 		c[1]=c[1]+1
+    12 | 	elif a[i]=='KOR':
+    13 | 		c[2]=c[2]+1
+    14 | 	elif a[i]=='MGL':
+    15 | 		c[3]=c[3]+1
+    16 | 	elif a[i]=='THA':
+    17 | 		c[4]=c[4]+1
+    18 | print(max(c))
+    19 | print(c)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 1
+
+  [1] Linha 6: Variável 's' declarada mas nunca utilizada
+      Trecho  : s = ...
+      Contexto:
+               5 | a=(input().split(','))
+        >>>    6 | s=0
+               7 | for i in range(0,len(a)):
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 14: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 14) / elif ... sem else
+      Contexto:
+              13 | 		c[2]=c[2]+1
+        >>>   14 | 	elif a[i]=='MGL':
+              15 | 		c[3]=c[3]+1
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 4
+
+  [1] Linha 3: Variável 'm' com nome muito curto (≤4 chars)
+      Trecho  : m = ...
+      Contexto:
+               2 | from numpy import*
+        >>>    3 | m=['CHN','JPN','KOR','MGL','THA']
+               4 | c=zeros(len(m),dtype=int)
+
+  [2] Linha 4: Variável 'c' com nome muito curto (≤4 chars)
+      Trecho  : c = ...
+      Contexto:
+               3 | m=['CHN','JPN','KOR','MGL','THA']
+        >>>    4 | c=zeros(len(m),dtype=int)
+               5 | a=(input().split(','))
+
+  [3] Linha 5: Variável 'a' com nome muito curto (≤4 chars)
+      Trecho  : a = ...
+      Contexto:
+               4 | c=zeros(len(m),dtype=int)
+        >>>    5 | a=(input().split(','))
+               6 | s=0
+
+  [4] Linha 6: Variável 's' com nome muito curto (≤4 chars)
+      Trecho  : s = ...
+      Contexto:
+               5 | a=(input().split(','))
+        >>>    6 | s=0
+               7 | for i in range(0,len(a)):
+
+======================================================================

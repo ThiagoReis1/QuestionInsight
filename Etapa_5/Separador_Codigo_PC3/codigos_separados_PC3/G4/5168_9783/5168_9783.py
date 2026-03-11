@@ -1,0 +1,5 @@
+p = float(input(": "))
+q = float(input(": "))
+rato = p - (q * 7)
+epa = round(rato,4)
+print(epa)

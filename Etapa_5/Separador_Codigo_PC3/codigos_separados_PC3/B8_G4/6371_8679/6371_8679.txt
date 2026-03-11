@@ -1,0 +1,57 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 6371_8679.py
+Questão  : 6371
+Aluno    : 8679
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import *
+     2 | 
+     3 | v = array(eval(input()))
+     4 | v0 = zeros(size(v), dtype=int)
+     5 | 
+     6 | for i in range(size(v)):
+     7 | 	if v[i] != 0:
+     8 | 		v0[i] = (v[i] - 1) ** 2
+     9 | 	elif v[i] == 0:
+    10 | 		v0[i] = 9 ** 2
+    11 | print(v0)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 7: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 7) / elif ... sem else
+      Contexto:
+               6 | for i in range(size(v)):
+        >>>    7 | 	if v[i] != 0:
+               8 | 		v0[i] = (v[i] - 1) ** 2
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 2
+
+  [1] Linha 3: Variável 'v' com nome muito curto (≤4 chars)
+      Trecho  : v = ...
+      Contexto:
+               2 | 
+        >>>    3 | v = array(eval(input()))
+               4 | v0 = zeros(size(v), dtype=int)
+
+  [2] Linha 4: Variável 'v0' com nome muito curto (≤4 chars)
+      Trecho  : v0 = ...
+      Contexto:
+               3 | v = array(eval(input()))
+        >>>    4 | v0 = zeros(size(v), dtype=int)
+               5 | 
+
+======================================================================

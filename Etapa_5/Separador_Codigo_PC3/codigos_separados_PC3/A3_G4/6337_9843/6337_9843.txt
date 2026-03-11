@@ -1,0 +1,69 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 6337_9843.py
+Questão  : 6337
+Aluno    : 9843
+Total MCs: 2
+
+⚠️  Misconceptions detectados: A3, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | 
+     3 | vet = array(eval(input("Digite o vetor: ")))
+     4 | num = int(input("Digite um numero inteiro: "))
+     5 | 
+     6 | 
+     7 | aux = 0
+     8 | for i in range(size(vet)):
+     9 | 	if vet[i] == num:
+    10 | 		print(i)
+    11 | 
+    12 | total = 0
+    13 | for i in range(size(vet)):
+    14 | 	if vet[i] < num:
+    15 | 		total += 1
+    16 | print(total)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 1
+
+  [1] Linha 7: Variável 'aux' declarada mas nunca utilizada
+      Trecho  : aux = ...
+      Contexto:
+               6 | 
+        >>>    7 | aux = 0
+               8 | for i in range(size(vet)):
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 3
+
+  [1] Linha 3: Variável 'vet' com nome muito curto (≤4 chars)
+      Trecho  : vet = ...
+      Contexto:
+               2 | 
+        >>>    3 | vet = array(eval(input("Digite o vetor: ")))
+               4 | num = int(input("Digite um numero inteiro: "))
+
+  [2] Linha 4: Variável 'num' com nome muito curto (≤4 chars)
+      Trecho  : num = ...
+      Contexto:
+               3 | vet = array(eval(input("Digite o vetor: ")))
+        >>>    4 | num = int(input("Digite um numero inteiro: "))
+               5 | 
+
+  [3] Linha 7: Variável 'aux' com nome muito curto (≤4 chars)
+      Trecho  : aux = ...
+      Contexto:
+               6 | 
+        >>>    7 | aux = 0
+               8 | for i in range(size(vet)):
+
+======================================================================

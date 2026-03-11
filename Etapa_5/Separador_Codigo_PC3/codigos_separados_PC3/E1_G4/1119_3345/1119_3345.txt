@@ -1,0 +1,132 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1119_3345.py
+Questão  : 1119
+Aluno    : 3345
+Total MCs: 2
+
+⚠️  Misconceptions detectados: E1, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | x = str(input("Casa: "))
+     2 | X = x.lower()
+     3 | if (X == "baratheon") or (X == "targaryen") or (X == "tyrell") or (X == "stark") or (X == "lannister") or (X == "greyjoy") or (X == "tully") or (X == "arryn") or (X == "martell"):
+     4 | 	if (X == "baratheon"):
+     5 | 		m = "Nossa e a furia"
+     6 | 	elif (X == "targaryen"):
+     7 | 		m = "Fogo e sangue"
+     8 | 	elif (X == "tyrell"):
+     9 | 		m = "Crescendo fortes"
+    10 | 	elif (X == "stark"):
+    11 | 		m = "O inverno esta chegando"
+    12 | 	elif (X == "lannister"):
+    13 | 		m = "Oucam-me rugir"
+    14 | 	elif (X == "greyjoy"):
+    15 | 		m = "Nos nao semeamos"
+    16 | 	elif (X == "tully"):
+    17 | 		m = "Familia, dever, honra"
+    18 | 	elif (X == "arryn"):
+    19 | 		m = "Tao alto como a honra"
+    20 | 	else:
+    21 | 		m = "Insubmissos, nao curvados, nao quebrados"
+    22 | 	print(m)
+    23 | else:
+    24 | 	print("Entrada ", x, " invalida")
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ E1 — Verificação desnecessária de todas as combinações possíveis
+  Ocorrências: 1
+
+  [1] Linha 3: 9 condições em um único if — verificação excessiva
+      Trecho  : X == 'baratheon' or X == 'targaryen' or X == 'tyrell' or (X == 'stark') or (X == 'lannister') or (X == 'greyjoy') or (X == 'tully') or (X == 'arryn') or (X == 'martell')
+      Contexto:
+               2 | X = x.lower()
+        >>>    3 | if (X == "baratheon") or (X == "targaryen") or (X == "tyrell") or (X == "stark") or (X == "lannister") or (X == "greyjoy") or (X == "tully") or (X == "arryn") or (X == "martell"):
+               4 | 	if (X == "baratheon"):
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 11
+
+  [1] Linha 1: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+        >>>    1 | x = str(input("Casa: "))
+               2 | X = x.lower()
+
+  [2] Linha 2: Variável 'X' com nome muito curto (≤4 chars)
+      Trecho  : X = ...
+      Contexto:
+               1 | x = str(input("Casa: "))
+        >>>    2 | X = x.lower()
+               3 | if (X == "baratheon") or (X == "targaryen") or (X == "tyrell") or (X == "stark") or (X == "lannister") or (X == "greyjoy") or (X == "tully") or (X == "arryn") or (X == "martell"):
+
+  [3] Linha 5: Variável 'm' com nome muito curto (≤4 chars)
+      Trecho  : m = ...
+      Contexto:
+               4 | 	if (X == "baratheon"):
+        >>>    5 | 		m = "Nossa e a furia"
+               6 | 	elif (X == "targaryen"):
+
+  [4] Linha 7: Variável 'm' com nome muito curto (≤4 chars)
+      Trecho  : m = ...
+      Contexto:
+               6 | 	elif (X == "targaryen"):
+        >>>    7 | 		m = "Fogo e sangue"
+               8 | 	elif (X == "tyrell"):
+
+  [5] Linha 9: Variável 'm' com nome muito curto (≤4 chars)
+      Trecho  : m = ...
+      Contexto:
+               8 | 	elif (X == "tyrell"):
+        >>>    9 | 		m = "Crescendo fortes"
+              10 | 	elif (X == "stark"):
+
+  [6] Linha 11: Variável 'm' com nome muito curto (≤4 chars)
+      Trecho  : m = ...
+      Contexto:
+              10 | 	elif (X == "stark"):
+        >>>   11 | 		m = "O inverno esta chegando"
+              12 | 	elif (X == "lannister"):
+
+  [7] Linha 13: Variável 'm' com nome muito curto (≤4 chars)
+      Trecho  : m = ...
+      Contexto:
+              12 | 	elif (X == "lannister"):
+        >>>   13 | 		m = "Oucam-me rugir"
+              14 | 	elif (X == "greyjoy"):
+
+  [8] Linha 15: Variável 'm' com nome muito curto (≤4 chars)
+      Trecho  : m = ...
+      Contexto:
+              14 | 	elif (X == "greyjoy"):
+        >>>   15 | 		m = "Nos nao semeamos"
+              16 | 	elif (X == "tully"):
+
+  [9] Linha 17: Variável 'm' com nome muito curto (≤4 chars)
+      Trecho  : m = ...
+      Contexto:
+              16 | 	elif (X == "tully"):
+        >>>   17 | 		m = "Familia, dever, honra"
+              18 | 	elif (X == "arryn"):
+
+  [10] Linha 19: Variável 'm' com nome muito curto (≤4 chars)
+      Trecho  : m = ...
+      Contexto:
+              18 | 	elif (X == "arryn"):
+        >>>   19 | 		m = "Tao alto como a honra"
+              20 | 	else:
+
+  [11] Linha 21: Variável 'm' com nome muito curto (≤4 chars)
+      Trecho  : m = ...
+      Contexto:
+              20 | 	else:
+        >>>   21 | 		m = "Insubmissos, nao curvados, nao quebrados"
+              22 | 	print(m)
+
+======================================================================

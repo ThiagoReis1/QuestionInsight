@@ -1,0 +1,72 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 5246_7106.py
+Questão  : 5246
+Aluno    : 7106
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | ida = int(input("idade:  "))
+     2 | pes = float(input("Peso:  "))
+     3 | 
+     4 | print("Entradas:", ida, "anos e", round(pes,1), "kg")
+     5 | 
+     6 | if (ida >=0 and ida<=130) and (pes >=0.0 and pes <=550.0):
+     7 | 	if ida <=20 and pes<=60:
+     8 | 		print("Grupo de risco: 9")
+     9 | 	elif ida <=20 and (pes>60 and pes<=90):
+    10 | 		print("Grupo de risco: 8")
+    11 | 	elif ida <=20 and pes>90:
+    12 | 		print("Grupo de risco: 7")
+    13 | 	elif (ida >20 and ida<=50) and pes <=60:
+    14 | 		print("Grupo de risco: 6")
+    15 | 	elif (ida>20 and ida<=50) and (pes>60 and pes<=90):
+    16 | 		print("Grupo de risco: 5")
+    17 | 	elif (ida>20 and ida<=50) and pes>90:
+    18 | 		print("Grupo de risco: 4")
+    19 | 	elif ida>50 and pes <=60:
+    20 | 		print("Grupo de risco: 3")
+    21 | 	elif ida>50 and (pes>60 and pes<=90):
+    22 | 		print("Grupo de risco: 2")
+    23 | 	elif ida>50 and pes>90:
+    24 | 		print("Grupo de risco: 1")
+    25 | else:
+    26 | 	print("Dados invalidos")
+    27 | 		
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 21: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 21) / elif ... sem else
+      Contexto:
+              20 | 		print("Grupo de risco: 3")
+        >>>   21 | 	elif ida>50 and (pes>60 and pes<=90):
+              22 | 		print("Grupo de risco: 2")
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 2
+
+  [1] Linha 1: Variável 'ida' com nome muito curto (≤4 chars)
+      Trecho  : ida = ...
+      Contexto:
+        >>>    1 | ida = int(input("idade:  "))
+               2 | pes = float(input("Peso:  "))
+
+  [2] Linha 2: Variável 'pes' com nome muito curto (≤4 chars)
+      Trecho  : pes = ...
+      Contexto:
+               1 | ida = int(input("idade:  "))
+        >>>    2 | pes = float(input("Peso:  "))
+               3 | 
+
+======================================================================

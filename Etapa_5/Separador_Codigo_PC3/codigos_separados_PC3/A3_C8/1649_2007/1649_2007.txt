@@ -1,0 +1,88 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1649_2007.py
+Questão  : 1649
+Aluno    : 2007
+Total MCs: 2
+
+⚠️  Misconceptions detectados: A3, C8
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import *
+     2 | cor = array(eval(input("cor dos olhos: ")))
+     3 | i = o
+     4 | contP = o
+     5 | contC = o
+     6 | contM = o
+     7 | contV = o
+     8 | contA = o
+     9 | for i in range: 
+    10 | 	i = i + 1
+    11 | 	if cor == P:
+    12 | 		contP = cont + 1
+    13 | 	if cor == C:
+    14 | 		contC = cont + 1
+    15 | 	if cor == M:
+    16 | 		contM = cont + 1
+    17 | 	if cor == V:
+    18 | 		contV = cont + 1
+    19 | 	if cor == A: 
+    20 | 		contA = cont + 1
+    21 | print(i)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 5
+
+  [1] Linha 4: Variável 'contP' declarada mas nunca utilizada
+      Trecho  : contP = ...
+      Contexto:
+               3 | i = o
+        >>>    4 | contP = o
+               5 | contC = o
+
+  [2] Linha 5: Variável 'contC' declarada mas nunca utilizada
+      Trecho  : contC = ...
+      Contexto:
+               4 | contP = o
+        >>>    5 | contC = o
+               6 | contM = o
+
+  [3] Linha 6: Variável 'contM' declarada mas nunca utilizada
+      Trecho  : contM = ...
+      Contexto:
+               5 | contC = o
+        >>>    6 | contM = o
+               7 | contV = o
+
+  [4] Linha 7: Variável 'contV' declarada mas nunca utilizada
+      Trecho  : contV = ...
+      Contexto:
+               6 | contM = o
+        >>>    7 | contV = o
+               8 | contA = o
+
+  [5] Linha 8: Variável 'contA' declarada mas nunca utilizada
+      Trecho  : contA = ...
+      Contexto:
+               7 | contV = o
+        >>>    8 | contA = o
+               9 | for i in range: 
+
+▶ C8 — Loop for com sua variável de iteração sobrescrita
+  Ocorrências: 1
+
+  [1] Linha 10: Variável de iteração 'i' sobrescrita no loop
+      Trecho  : i = i + 1
+      Contexto:
+               9 | for i in range: 
+        >>>   10 | 	i = i + 1
+              11 | 	if cor == P:
+
+======================================================================

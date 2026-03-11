@@ -1,0 +1,63 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 5931_8229.py
+Questão  : 5931
+Aluno    : 8229
+Total MCs: 2
+
+⚠️  Misconceptions detectados: A4, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | min = float(input("45"))
+     2 | m = 45
+     3 | m = m + (min*0.97)
+     4 | fin = m + (m*0.42)
+     5 | print(round(fin, 2))
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A4 — Redefinição de built-in
+  Ocorrências: 1
+
+  [1] Linha 1: Built-in 'min' redefinido como variável
+      Trecho  : min = float(input('45'))
+      Contexto:
+        >>>    1 | min = float(input("45"))
+               2 | m = 45
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 4
+
+  [1] Linha 1: Variável 'min' com nome muito curto (≤4 chars)
+      Trecho  : min = ...
+      Contexto:
+        >>>    1 | min = float(input("45"))
+               2 | m = 45
+
+  [2] Linha 2: Variável 'm' com nome muito curto (≤4 chars)
+      Trecho  : m = ...
+      Contexto:
+               1 | min = float(input("45"))
+        >>>    2 | m = 45
+               3 | m = m + (min*0.97)
+
+  [3] Linha 3: Variável 'm' com nome muito curto (≤4 chars)
+      Trecho  : m = ...
+      Contexto:
+               2 | m = 45
+        >>>    3 | m = m + (min*0.97)
+               4 | fin = m + (m*0.42)
+
+  [4] Linha 4: Variável 'fin' com nome muito curto (≤4 chars)
+      Trecho  : fin = ...
+      Contexto:
+               3 | m = m + (min*0.97)
+        >>>    4 | fin = m + (m*0.42)
+               5 | print(round(fin, 2))
+
+======================================================================

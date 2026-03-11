@@ -1,0 +1,68 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 2826_5013.py
+Questão  : 2826
+Aluno    : 5013
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | n = array(eval(input("Digite o vetor: "))) #vetor de notas
+     3 | 
+     4 | 
+     5 | i = 0
+     6 | while(i < size(n)):
+     7 | 	if(n[i] > 8):
+     8 | 		n[i] = 10
+     9 | 	elif(n[i] < 2):
+    10 | 		n[i] = 0
+    11 | 	elif(n[i] < 8 and n[i] > 2):
+    12 | 		n[i] = n[i]
+    13 | 	i = i + 1
+    14 | 	
+    15 | print(n)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 9: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 9) / elif ... sem else
+      Contexto:
+               8 | 		n[i] = 10
+        >>>    9 | 	elif(n[i] < 2):
+              10 | 		n[i] = 0
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 3
+
+  [1] Linha 2: Variável 'n' com nome muito curto (≤4 chars)
+      Trecho  : n = ...
+      Contexto:
+               1 | from numpy import*
+        >>>    2 | n = array(eval(input("Digite o vetor: "))) #vetor de notas
+               3 | 
+
+  [2] Linha 5: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+               4 | 
+        >>>    5 | i = 0
+               6 | while(i < size(n)):
+
+  [3] Linha 13: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+              12 | 		n[i] = n[i]
+        >>>   13 | 	i = i + 1
+              14 | 	
+
+======================================================================

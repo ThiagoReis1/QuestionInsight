@@ -1,0 +1,6 @@
+mg = int(input("massa do peixe grande:"))
+vg = int(input("velocidade do peixe grande:"))
+mp = int(input("massa do peixe pequeno:"))
+vp = int(input("velocidade do peixe pequeno:"))
+vf = ((mg * vg) - (mp * vp))/(mg + mp)
+print(vf)

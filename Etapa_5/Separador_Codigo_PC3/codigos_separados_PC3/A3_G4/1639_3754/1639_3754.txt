@@ -1,0 +1,81 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1639_3754.py
+Questão  : 1639
+Aluno    : 3754
+Total MCs: 2
+
+⚠️  Misconceptions detectados: A3, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | 
+     3 | par = array(eval(input("Digite: ")))
+     4 | 
+     5 | r = zeros(3, dtype=int)
+     6 | cont =0 
+     7 | for x in par:
+     8 | 	npar = 0
+     9 | 	
+    10 | 	if(npar % 2 == 0):
+    11 | 		npar += 1
+    12 | 	cont += 1	
+    13 | print(npar)	
+    14 | 	
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 2
+
+  [1] Linha 5: Variável 'r' declarada mas nunca utilizada
+      Trecho  : r = ...
+      Contexto:
+               4 | 
+        >>>    5 | r = zeros(3, dtype=int)
+               6 | cont =0 
+
+  [2] Linha 6: Variável 'cont' declarada mas nunca utilizada
+      Trecho  : cont = ...
+      Contexto:
+               5 | r = zeros(3, dtype=int)
+        >>>    6 | cont =0 
+               7 | for x in par:
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 4
+
+  [1] Linha 3: Variável 'par' com nome muito curto (≤4 chars)
+      Trecho  : par = ...
+      Contexto:
+               2 | 
+        >>>    3 | par = array(eval(input("Digite: ")))
+               4 | 
+
+  [2] Linha 5: Variável 'r' com nome muito curto (≤4 chars)
+      Trecho  : r = ...
+      Contexto:
+               4 | 
+        >>>    5 | r = zeros(3, dtype=int)
+               6 | cont =0 
+
+  [3] Linha 6: Variável 'cont' com nome muito curto (≤4 chars)
+      Trecho  : cont = ...
+      Contexto:
+               5 | r = zeros(3, dtype=int)
+        >>>    6 | cont =0 
+               7 | for x in par:
+
+  [4] Linha 8: Variável 'npar' com nome muito curto (≤4 chars)
+      Trecho  : npar = ...
+      Contexto:
+               7 | for x in par:
+        >>>    8 | 	npar = 0
+               9 | 	
+
+======================================================================

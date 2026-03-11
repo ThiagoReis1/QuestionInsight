@@ -1,0 +1,49 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1619_2824.py
+Questão  : 1619
+Aluno    : 2824
+Total MCs: 1
+
+⚠️  Misconceptions detectados: A3
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | tempo = array(eval(input("")))
+     3 | modo = array(eval(input("")))
+     4 | n = 0
+     5 | preco1 = 0
+     6 | preco3 = 0
+     7 | valor = size(tempo)
+     8 | while(n < valor):
+     9 | 	if(modo[n]== "QUENTE"):
+    10 | 		preco = 90*0.005*(tempo[n])
+    11 | 		preco1= preco + preco1
+    12 | 	elif(modo[n]== "MORNO"):
+    13 | 		preco2 = 45 * 0.005*(tempo[n])
+    14 | 		preco3 = preco2 + preco3
+    15 | 	else:
+    16 | 		preco4 = 0
+    17 | 	n = n + 1 
+    18 | total = round(preco1 + preco2, 2)
+    19 | print(total)
+    20 | 	
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 1
+
+  [1] Linha 16: Variável 'preco4' declarada mas nunca utilizada
+      Trecho  : preco4 = ...
+      Contexto:
+              15 | 	else:
+        >>>   16 | 		preco4 = 0
+              17 | 	n = n + 1 
+
+======================================================================

@@ -1,0 +1,60 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 6246_9837.py
+Questão  : 6246
+Aluno    : 9837
+Total MCs: 3
+
+⚠️  Misconceptions detectados: A3, B4, B8
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import *
+     2 | total= 0
+     3 | time = input("digite uma letra:").upper()
+     4 | contagem = zeros(5, dtype=int)
+     5 | if time == "X":
+     6 | 	total+=1
+     7 | 	print(total)
+     8 | elif time =="A":
+     9 | 	total+=1
+    10 | 	print(total)
+    11 | 	
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 1
+
+  [1] Linha 4: Variável 'contagem' declarada mas nunca utilizada
+      Trecho  : contagem = ...
+      Contexto:
+               3 | time = input("digite uma letra:").upper()
+        >>>    4 | contagem = zeros(5, dtype=int)
+               5 | if time == "X":
+
+▶ B4 — Comandos repetidos dentro de blocos if-elif-else
+  Ocorrências: 1
+
+  [1] Linha 8: Bloco idêntico ao da linha 5
+      Trecho  : total += 1
+      Contexto:
+               7 | 	print(total)
+        >>>    8 | elif time =="A":
+               9 | 	total+=1
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 5: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 5) / elif ... sem else
+      Contexto:
+               4 | contagem = zeros(5, dtype=int)
+        >>>    5 | if time == "X":
+               6 | 	total+=1
+
+======================================================================

@@ -1,0 +1,63 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1251_1557.py
+Questão  : 1251
+Aluno    : 1557
+Total MCs: 1
+
+⚠️  Misconceptions detectados: G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | v = array(eval(input("Informe o vetor v: ")))
+     3 | x = zeros(2, dtype = int)
+     4 | c = 0.7 * min(v) + 0.3 * max(v)
+     5 | d = 0.4 * min(v) + 0.6 * max(v)
+     6 | for i in range(0, size(v)):
+     7 | 	if(v[i] >= c and v[i] < d):
+     8 | 		x[0] = x[0] + 1
+     9 | 	if(v[i] >= d and v[i] < max(v)):
+    10 | 		x[1] = x[1] + 1
+    11 | print(x)
+    12 | 
+    13 | 			 
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 4
+
+  [1] Linha 2: Variável 'v' com nome muito curto (≤4 chars)
+      Trecho  : v = ...
+      Contexto:
+               1 | from numpy import*
+        >>>    2 | v = array(eval(input("Informe o vetor v: ")))
+               3 | x = zeros(2, dtype = int)
+
+  [2] Linha 3: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+               2 | v = array(eval(input("Informe o vetor v: ")))
+        >>>    3 | x = zeros(2, dtype = int)
+               4 | c = 0.7 * min(v) + 0.3 * max(v)
+
+  [3] Linha 4: Variável 'c' com nome muito curto (≤4 chars)
+      Trecho  : c = ...
+      Contexto:
+               3 | x = zeros(2, dtype = int)
+        >>>    4 | c = 0.7 * min(v) + 0.3 * max(v)
+               5 | d = 0.4 * min(v) + 0.6 * max(v)
+
+  [4] Linha 5: Variável 'd' com nome muito curto (≤4 chars)
+      Trecho  : d = ...
+      Contexto:
+               4 | c = 0.7 * min(v) + 0.3 * max(v)
+        >>>    5 | d = 0.4 * min(v) + 0.6 * max(v)
+               6 | for i in range(0, size(v)):
+
+======================================================================

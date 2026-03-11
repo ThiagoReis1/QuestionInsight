@@ -1,0 +1,117 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 5245_5604.py
+Questão  : 5245
+Aluno    : 5604
+Total MCs: 3
+
+⚠️  Misconceptions detectados: B8, B9, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | x= float(input("salario atual: "))
+     2 | 
+     3 | if(x>=0):
+     4 | 	if(x<=800.00):
+     5 | 		y= x + (x*50/100)
+     6 | 		print("Entrada: R$",round(x,2))
+     7 | 		print("Novo salario: R$", round(y,2))
+     8 | 	elif(x>800.00 and x<=1000.00):
+     9 | 		y= x + (x*40/100)
+    10 | 		print("Entrada: R$", round(x,2))
+    11 | 		print("Novo salario: R$", round(y,2))
+    12 | 	elif(x>1000.00 and x<=1200.00):
+    13 | 		y= x + (x* 30/100)
+    14 | 		print("Entrada: R$", round(x,2))
+    15 | 		print("Novo salario: R$", round(y,2))
+    16 | 	elif(x>1200.00 and x<=1400.00):
+    17 | 		y= x + (x*20/100)
+    18 | 		print("Entrada: R$", round(x,2))
+    19 | 		print("Novo salario: R$", round(y,2))
+    20 | 	elif(x>1400.00 and x<=1600.00):
+    21 | 		y= x + (x*10/100)
+    22 | 		print("Entrada: R$", round(x,2))
+    23 | 		print("Novo salario: R$", round(y,2))
+    24 | 	elif(x>1600.00):
+    25 | 		y= x + (x*5/100)
+    26 | 		print("Entrada: R$", round(x,2))
+    27 | 		print("Novo salario: R$", round(y,2))
+    28 | 
+    29 | else:
+    30 | 	print("Entrada: R$", round(x,2))
+    31 | 	print("Dado invalido")
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 20: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 20) / elif ... sem else
+      Contexto:
+              19 | 		print("Novo salario: R$", round(y,2))
+        >>>   20 | 	elif(x>1400.00 and x<=1600.00):
+              21 | 		y= x + (x*10/100)
+
+▶ B9 — elif/else retestando condições já verificadas
+  Ocorrências: 1
+
+  [1] Linha 0: B9 detectado pelo VisitorMC3 (localização exata não mapeada)
+      Trecho  : —
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 7
+
+  [1] Linha 1: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+        >>>    1 | x= float(input("salario atual: "))
+               2 | 
+
+  [2] Linha 5: Variável 'y' com nome muito curto (≤4 chars)
+      Trecho  : y = ...
+      Contexto:
+               4 | 	if(x<=800.00):
+        >>>    5 | 		y= x + (x*50/100)
+               6 | 		print("Entrada: R$",round(x,2))
+
+  [3] Linha 9: Variável 'y' com nome muito curto (≤4 chars)
+      Trecho  : y = ...
+      Contexto:
+               8 | 	elif(x>800.00 and x<=1000.00):
+        >>>    9 | 		y= x + (x*40/100)
+              10 | 		print("Entrada: R$", round(x,2))
+
+  [4] Linha 13: Variável 'y' com nome muito curto (≤4 chars)
+      Trecho  : y = ...
+      Contexto:
+              12 | 	elif(x>1000.00 and x<=1200.00):
+        >>>   13 | 		y= x + (x* 30/100)
+              14 | 		print("Entrada: R$", round(x,2))
+
+  [5] Linha 17: Variável 'y' com nome muito curto (≤4 chars)
+      Trecho  : y = ...
+      Contexto:
+              16 | 	elif(x>1200.00 and x<=1400.00):
+        >>>   17 | 		y= x + (x*20/100)
+              18 | 		print("Entrada: R$", round(x,2))
+
+  [6] Linha 21: Variável 'y' com nome muito curto (≤4 chars)
+      Trecho  : y = ...
+      Contexto:
+              20 | 	elif(x>1400.00 and x<=1600.00):
+        >>>   21 | 		y= x + (x*10/100)
+              22 | 		print("Entrada: R$", round(x,2))
+
+  [7] Linha 25: Variável 'y' com nome muito curto (≤4 chars)
+      Trecho  : y = ...
+      Contexto:
+              24 | 	elif(x>1600.00):
+        >>>   25 | 		y= x + (x*5/100)
+              26 | 		print("Entrada: R$", round(x,2))
+
+======================================================================

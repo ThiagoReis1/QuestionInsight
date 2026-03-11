@@ -1,0 +1,158 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1613_2478.py
+Questão  : 1613
+Aluno    : 2478
+Total MCs: 3
+
+⚠️  Misconceptions detectados: A3, B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import *
+     2 | v1 = array(eval(input("Informe a atividade: ")))
+     3 | v2 = array(eval(input("Informe o tempo da atividade: ")))
+     4 | i = 0
+     5 | a = 0
+     6 | c = 0
+     7 | d = 0
+     8 | h = 0
+     9 | e = 0
+    10 | while(size(v1) > i):
+    11 | 	if(v1[i] == "ALONGAMENTO"):
+    12 | 		a = 3.0*v2[i]
+    13 | 	elif(v1[i] == "CORRIDA"):
+    14 | 		c = 10.3*v2[i]
+    15 | 	elif(v1[i] == "DANCA"):
+    16 | 		d = 6.7*v2[i]
+    17 | 	elif(v1[i] == "ESCALADA"):
+    18 | 		e = 9.7*v2[i]
+    19 | 	elif(v1[i] == "HIDROGINASTICA"):	
+    20 | 		h = 5.0*v2[i]
+    21 | 	i = i + 1	
+    22 | print(round(a+c+d+e+h, 2))		
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 1
+
+  [1] Linha 0: A3 detectado pelo VisitorMC3 (localização exata não mapeada)
+      Trecho  : —
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 17: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 17) / elif ... sem else
+      Contexto:
+              16 | 		d = 6.7*v2[i]
+        >>>   17 | 	elif(v1[i] == "ESCALADA"):
+              18 | 		e = 9.7*v2[i]
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 14
+
+  [1] Linha 2: Variável 'v1' com nome muito curto (≤4 chars)
+      Trecho  : v1 = ...
+      Contexto:
+               1 | from numpy import *
+        >>>    2 | v1 = array(eval(input("Informe a atividade: ")))
+               3 | v2 = array(eval(input("Informe o tempo da atividade: ")))
+
+  [2] Linha 3: Variável 'v2' com nome muito curto (≤4 chars)
+      Trecho  : v2 = ...
+      Contexto:
+               2 | v1 = array(eval(input("Informe a atividade: ")))
+        >>>    3 | v2 = array(eval(input("Informe o tempo da atividade: ")))
+               4 | i = 0
+
+  [3] Linha 4: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+               3 | v2 = array(eval(input("Informe o tempo da atividade: ")))
+        >>>    4 | i = 0
+               5 | a = 0
+
+  [4] Linha 5: Variável 'a' com nome muito curto (≤4 chars)
+      Trecho  : a = ...
+      Contexto:
+               4 | i = 0
+        >>>    5 | a = 0
+               6 | c = 0
+
+  [5] Linha 6: Variável 'c' com nome muito curto (≤4 chars)
+      Trecho  : c = ...
+      Contexto:
+               5 | a = 0
+        >>>    6 | c = 0
+               7 | d = 0
+
+  [6] Linha 7: Variável 'd' com nome muito curto (≤4 chars)
+      Trecho  : d = ...
+      Contexto:
+               6 | c = 0
+        >>>    7 | d = 0
+               8 | h = 0
+
+  [7] Linha 8: Variável 'h' com nome muito curto (≤4 chars)
+      Trecho  : h = ...
+      Contexto:
+               7 | d = 0
+        >>>    8 | h = 0
+               9 | e = 0
+
+  [8] Linha 9: Variável 'e' com nome muito curto (≤4 chars)
+      Trecho  : e = ...
+      Contexto:
+               8 | h = 0
+        >>>    9 | e = 0
+              10 | while(size(v1) > i):
+
+  [9] Linha 21: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+              20 | 		h = 5.0*v2[i]
+        >>>   21 | 	i = i + 1	
+              22 | print(round(a+c+d+e+h, 2))		
+
+  [10] Linha 12: Variável 'a' com nome muito curto (≤4 chars)
+      Trecho  : a = ...
+      Contexto:
+              11 | 	if(v1[i] == "ALONGAMENTO"):
+        >>>   12 | 		a = 3.0*v2[i]
+              13 | 	elif(v1[i] == "CORRIDA"):
+
+  [11] Linha 14: Variável 'c' com nome muito curto (≤4 chars)
+      Trecho  : c = ...
+      Contexto:
+              13 | 	elif(v1[i] == "CORRIDA"):
+        >>>   14 | 		c = 10.3*v2[i]
+              15 | 	elif(v1[i] == "DANCA"):
+
+  [12] Linha 16: Variável 'd' com nome muito curto (≤4 chars)
+      Trecho  : d = ...
+      Contexto:
+              15 | 	elif(v1[i] == "DANCA"):
+        >>>   16 | 		d = 6.7*v2[i]
+              17 | 	elif(v1[i] == "ESCALADA"):
+
+  [13] Linha 18: Variável 'e' com nome muito curto (≤4 chars)
+      Trecho  : e = ...
+      Contexto:
+              17 | 	elif(v1[i] == "ESCALADA"):
+        >>>   18 | 		e = 9.7*v2[i]
+              19 | 	elif(v1[i] == "HIDROGINASTICA"):	
+
+  [14] Linha 20: Variável 'h' com nome muito curto (≤4 chars)
+      Trecho  : h = ...
+      Contexto:
+              19 | 	elif(v1[i] == "HIDROGINASTICA"):	
+        >>>   20 | 		h = 5.0*v2[i]
+              21 | 	i = i + 1	
+
+======================================================================

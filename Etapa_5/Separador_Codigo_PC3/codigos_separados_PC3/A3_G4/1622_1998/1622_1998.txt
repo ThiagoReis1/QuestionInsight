@@ -1,0 +1,67 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1622_1998.py
+Questão  : 1622
+Aluno    : 1998
+Total MCs: 2
+
+⚠️  Misconceptions detectados: A3, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import *
+     2 | v1 = array (eval(input("vetor:")))# Qtd pessoas que entraram
+     3 | v2= array (eval(input("vetor1")))# Qtd pessoas que saíram
+     4 | for i in range (size(v1)) :
+     5 | 	x = abs(v2[i] - v1[i])
+     6 | 	z = v2[i+y] + x 
+     7 | print (x)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 1
+
+  [1] Linha 6: Variável 'z' declarada mas nunca utilizada
+      Trecho  : z = ...
+      Contexto:
+               5 | 	x = abs(v2[i] - v1[i])
+        >>>    6 | 	z = v2[i+y] + x 
+               7 | print (x)
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 4
+
+  [1] Linha 2: Variável 'v1' com nome muito curto (≤4 chars)
+      Trecho  : v1 = ...
+      Contexto:
+               1 | from numpy import *
+        >>>    2 | v1 = array (eval(input("vetor:")))# Qtd pessoas que entraram
+               3 | v2= array (eval(input("vetor1")))# Qtd pessoas que saíram
+
+  [2] Linha 3: Variável 'v2' com nome muito curto (≤4 chars)
+      Trecho  : v2 = ...
+      Contexto:
+               2 | v1 = array (eval(input("vetor:")))# Qtd pessoas que entraram
+        >>>    3 | v2= array (eval(input("vetor1")))# Qtd pessoas que saíram
+               4 | for i in range (size(v1)) :
+
+  [3] Linha 5: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+               4 | for i in range (size(v1)) :
+        >>>    5 | 	x = abs(v2[i] - v1[i])
+               6 | 	z = v2[i+y] + x 
+
+  [4] Linha 6: Variável 'z' com nome muito curto (≤4 chars)
+      Trecho  : z = ...
+      Contexto:
+               5 | 	x = abs(v2[i] - v1[i])
+        >>>    6 | 	z = v2[i+y] + x 
+               7 | print (x)
+
+======================================================================

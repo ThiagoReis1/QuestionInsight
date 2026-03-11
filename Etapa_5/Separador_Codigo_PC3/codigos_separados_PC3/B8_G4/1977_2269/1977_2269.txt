@@ -1,0 +1,58 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1977_2269.py
+Questão  : 1977
+Aluno    : 2269
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | a = input("genero: ").upper()
+     2 | b = input("subgenero: ").upper()
+     3 | if(a == "INVESTIGATIVA" or a == "DRAMATICA") and (b == "SUSPENSE" or b == "DRAMA" or b == "COM FICCAO" or b == "AVENTURA"):
+     4 | 	if(a == "INVESTIGATIVA" and b == "SUSPENSE"):
+     5 | 		print("DEXTER")
+     6 | 	elif(a == "INVESTIGATIVA" and b == "DRAMA"):
+     7 | 		print("NARCOS")
+     8 | 	elif(a == "DRAMATICA" and b == "COM FICCAO"):
+     9 | 		print("LOST")
+    10 | 	elif(a == "DRAMATICA" and b == "AVENTURA"):
+    11 | 		print("SHERLOCK")
+    12 | else:
+    13 | 	print("SERIE NAO IDENTIFICADA")
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 8: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 8) / elif ... sem else
+      Contexto:
+               7 | 		print("NARCOS")
+        >>>    8 | 	elif(a == "DRAMATICA" and b == "COM FICCAO"):
+               9 | 		print("LOST")
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 2
+
+  [1] Linha 1: Variável 'a' com nome muito curto (≤4 chars)
+      Trecho  : a = ...
+      Contexto:
+        >>>    1 | a = input("genero: ").upper()
+               2 | b = input("subgenero: ").upper()
+
+  [2] Linha 2: Variável 'b' com nome muito curto (≤4 chars)
+      Trecho  : b = ...
+      Contexto:
+               1 | a = input("genero: ").upper()
+        >>>    2 | b = input("subgenero: ").upper()
+               3 | if(a == "INVESTIGATIVA" or a == "DRAMATICA") and (b == "SUSPENSE" or b == "DRAMA" or b == "COM FICCAO" or b == "AVENTURA"):
+
+======================================================================

@@ -1,0 +1,122 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1616_2190.py
+Questão  : 1616
+Aluno    : 2190
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | m = array(eval(input().upper()))
+     3 | n = array(eval(input()))
+     4 | 
+     5 | j = 0
+     6 | dm = 0
+     7 | while (j < size(n)):
+     8 | 	if (m[j] == "GELO"):
+     9 | 		dm = dm + n[j]*2
+    10 | 	elif (m[j] == "FOGO"):
+    11 | 		dm = dm + n[j]*3
+    12 | 	elif (m[j] == "CHOQUE"):
+    13 | 		dm = dm + n[j]*4
+    14 | 	elif (m[j] == "CONJURACAO"):
+    15 | 		dm = dm + n[j]*8
+    16 | 	elif (m[j] == "ILUSAO"):
+    17 | 		dm = dm + n[j]*10
+    18 | 	j = j + 1
+    19 | 
+    20 | print(int(dm))
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 14: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 14) / elif ... sem else
+      Contexto:
+              13 | 		dm = dm + n[j]*4
+        >>>   14 | 	elif (m[j] == "CONJURACAO"):
+              15 | 		dm = dm + n[j]*8
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 10
+
+  [1] Linha 2: Variável 'm' com nome muito curto (≤4 chars)
+      Trecho  : m = ...
+      Contexto:
+               1 | from numpy import*
+        >>>    2 | m = array(eval(input().upper()))
+               3 | n = array(eval(input()))
+
+  [2] Linha 3: Variável 'n' com nome muito curto (≤4 chars)
+      Trecho  : n = ...
+      Contexto:
+               2 | m = array(eval(input().upper()))
+        >>>    3 | n = array(eval(input()))
+               4 | 
+
+  [3] Linha 5: Variável 'j' com nome muito curto (≤4 chars)
+      Trecho  : j = ...
+      Contexto:
+               4 | 
+        >>>    5 | j = 0
+               6 | dm = 0
+
+  [4] Linha 6: Variável 'dm' com nome muito curto (≤4 chars)
+      Trecho  : dm = ...
+      Contexto:
+               5 | j = 0
+        >>>    6 | dm = 0
+               7 | while (j < size(n)):
+
+  [5] Linha 18: Variável 'j' com nome muito curto (≤4 chars)
+      Trecho  : j = ...
+      Contexto:
+              17 | 		dm = dm + n[j]*10
+        >>>   18 | 	j = j + 1
+              19 | 
+
+  [6] Linha 9: Variável 'dm' com nome muito curto (≤4 chars)
+      Trecho  : dm = ...
+      Contexto:
+               8 | 	if (m[j] == "GELO"):
+        >>>    9 | 		dm = dm + n[j]*2
+              10 | 	elif (m[j] == "FOGO"):
+
+  [7] Linha 11: Variável 'dm' com nome muito curto (≤4 chars)
+      Trecho  : dm = ...
+      Contexto:
+              10 | 	elif (m[j] == "FOGO"):
+        >>>   11 | 		dm = dm + n[j]*3
+              12 | 	elif (m[j] == "CHOQUE"):
+
+  [8] Linha 13: Variável 'dm' com nome muito curto (≤4 chars)
+      Trecho  : dm = ...
+      Contexto:
+              12 | 	elif (m[j] == "CHOQUE"):
+        >>>   13 | 		dm = dm + n[j]*4
+              14 | 	elif (m[j] == "CONJURACAO"):
+
+  [9] Linha 15: Variável 'dm' com nome muito curto (≤4 chars)
+      Trecho  : dm = ...
+      Contexto:
+              14 | 	elif (m[j] == "CONJURACAO"):
+        >>>   15 | 		dm = dm + n[j]*8
+              16 | 	elif (m[j] == "ILUSAO"):
+
+  [10] Linha 17: Variável 'dm' com nome muito curto (≤4 chars)
+      Trecho  : dm = ...
+      Contexto:
+              16 | 	elif (m[j] == "ILUSAO"):
+        >>>   17 | 		dm = dm + n[j]*10
+              18 | 	j = j + 1
+
+======================================================================

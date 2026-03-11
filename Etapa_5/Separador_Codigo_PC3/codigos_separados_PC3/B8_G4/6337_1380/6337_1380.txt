@@ -1,0 +1,69 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 6337_1380.py
+Questão  : 6337
+Aluno    : 1380
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import *
+     2 | 
+     3 | vet = array(eval(input("Informe o vetor: ")))
+     4 | n = int(input("Informe o valor de n: "))
+     5 | saida_pos = ""
+     6 | cont = 0
+     7 | 
+     8 | for i in range(size(vet)):
+     9 | 	
+    10 | 	if (vet[i] == n):
+    11 | 		saida_pos += "\n" + str(i)
+    12 | 	elif (vet[i] < n):
+    13 | 		cont += 1
+    14 | 		
+    15 | print(saida_pos)
+    16 | print(cont)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 10: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 10) / elif ... sem else
+      Contexto:
+               9 | 	
+        >>>   10 | 	if (vet[i] == n):
+              11 | 		saida_pos += "\n" + str(i)
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 3
+
+  [1] Linha 3: Variável 'vet' com nome muito curto (≤4 chars)
+      Trecho  : vet = ...
+      Contexto:
+               2 | 
+        >>>    3 | vet = array(eval(input("Informe o vetor: ")))
+               4 | n = int(input("Informe o valor de n: "))
+
+  [2] Linha 4: Variável 'n' com nome muito curto (≤4 chars)
+      Trecho  : n = ...
+      Contexto:
+               3 | vet = array(eval(input("Informe o vetor: ")))
+        >>>    4 | n = int(input("Informe o valor de n: "))
+               5 | saida_pos = ""
+
+  [3] Linha 6: Variável 'cont' com nome muito curto (≤4 chars)
+      Trecho  : cont = ...
+      Contexto:
+               5 | saida_pos = ""
+        >>>    6 | cont = 0
+               7 | 
+
+======================================================================

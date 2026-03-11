@@ -1,0 +1,78 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1109_3344.py
+Questão  : 1109
+Aluno    : 3344
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | a = int(input("Digite: "))
+     2 | b = float(input("DIgite: "))
+     3 | 
+     4 | if(0<=a and a<=130 and 0<=b and b<=550):
+     5 | 	if(a>=12 and b>=60):
+     6 | 		print("Entradas: ",a,"anos e",b,"kg")
+     7 | 		print("Dosagem: 1000 mg")
+     8 | 	elif(a>=12 and b<60):
+     9 | 		print("Entradas: ",a,"anos e",b,"kg")
+    10 | 		print("Dosagem: 875 mg")
+    11 | 	else:
+    12 | 		if(a<12 and b<=5):
+    13 | 			print("Entradas: ",a,"anos e",b,"kg")
+    14 | 			print("Dosagem: 75 mg")
+    15 | 		elif(a<12 and b>5 and b<=9):
+    16 | 			print("Entradas: ",a,"anos e",b,"kg")
+    17 | 			print("Dosagem: 125 mg")
+    18 | 		elif(a<12 and b>9 and b<=16):
+    19 | 			print("Entradas: ",a,"anos e",b,"kg")
+    20 | 			print("Dosagem: 250 mg")
+    21 | 		elif(a<12 and b>16 and b<=24):
+    22 | 			print("Entradas: ",a,"anos e",b,"kg")
+    23 | 			print("Dosagem: 375 mg")
+    24 | 		elif(a<12 and b>24 and b<=30):
+    25 | 			print("Entradas: ",a,"anos e",b,"kg")
+    26 | 			print("Dosagem: 500 mg")
+    27 | 		elif(a<12 and b>30):
+    28 | 			print("Entradas: ",a,"anos e",b,"kg")
+    29 | 			print("Dosagem: 750 mg")
+    30 | 		
+    31 | else:
+    32 | 	print("Entradas: ",a,"anos e",b,"kg")
+    33 | 	print("Dados invalidos")
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 24: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 24) / elif ... sem else
+      Contexto:
+              23 | 			print("Dosagem: 375 mg")
+        >>>   24 | 		elif(a<12 and b>24 and b<=30):
+              25 | 			print("Entradas: ",a,"anos e",b,"kg")
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 2
+
+  [1] Linha 1: Variável 'a' com nome muito curto (≤4 chars)
+      Trecho  : a = ...
+      Contexto:
+        >>>    1 | a = int(input("Digite: "))
+               2 | b = float(input("DIgite: "))
+
+  [2] Linha 2: Variável 'b' com nome muito curto (≤4 chars)
+      Trecho  : b = ...
+      Contexto:
+               1 | a = int(input("Digite: "))
+        >>>    2 | b = float(input("DIgite: "))
+               3 | 
+
+======================================================================

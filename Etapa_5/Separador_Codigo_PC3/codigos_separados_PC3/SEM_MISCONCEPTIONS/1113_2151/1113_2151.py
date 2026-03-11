@@ -1,0 +1,15 @@
+i = print(input())
+p = print(input())
+
+grupo 1 = print( i > 50 , p > 90 )
+grupo 2 = print( i > 50 , p > 60 or = 90 )
+grupo 3 = print( i > 50 , p < or = 60 )
+grupo 4 = print( i > 20 or = 50 , p > 90 )
+grupo 5 = print( i > 20 or = 50 , p > 60 or = 90 )
+grupo 6 = print( i > 20 or = 50 , p <= 60 )
+grupo 7 = print( i <= 20 , p > 90 )
+grupo 8 = print( i <= 20 , p > 60 or = 90 )
+grupo 9 = print( i <= 20 , p <= 60 )
+
+entradas = print(i and p)
+grupo de risco = print ()

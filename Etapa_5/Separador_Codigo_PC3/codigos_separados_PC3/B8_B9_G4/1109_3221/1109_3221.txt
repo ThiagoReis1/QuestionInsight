@@ -1,0 +1,82 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1109_3221.py
+Questão  : 1109
+Aluno    : 3221
+Total MCs: 3
+
+⚠️  Misconceptions detectados: B8, B9, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | i = int(input())
+     2 | p = float(input())
+     3 | 
+     4 | print("Entradas:",i,"anos e",p,"kg")
+     5 | if (i >= 0) and (i <= 130) and (p >= 0) and (p <= 550):
+     6 | 	if (i>=12) and (p>=60):
+     7 | 		print("Dosagem: 1000 mg")
+     8 | 	elif(i >= 12) and (p < 60):
+     9 | 		print("Dosagem: 875 mg")
+    10 | 	elif(i < 12):
+    11 | 		if (p<=5):
+    12 | 			print("Dosagem: 75 mg")
+    13 | 		elif(p>5 and p<=9):
+    14 | 			print("Dosagem: 125 mg")
+    15 | 		elif(p>9 and p<=16):
+    16 | 			print("Dosagem: 250 mg")
+    17 | 		elif(p>16 and p<=24):
+    18 | 			print("Dosagem: 375 mg")
+    19 | 		elif(p>24 and p<=30):
+    20 | 			print("Dosagem: 500 mg")
+    21 | 		elif(p>30):
+    22 | 			print("Dosagem: 750 mg")
+    23 | else:
+    24 | 	print("Dados invalidos")
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 2
+
+  [1] Linha 8: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 8) / elif ... sem else
+      Contexto:
+               7 | 		print("Dosagem: 1000 mg")
+        >>>    8 | 	elif(i >= 12) and (p < 60):
+               9 | 		print("Dosagem: 875 mg")
+
+  [2] Linha 19: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 19) / elif ... sem else
+      Contexto:
+              18 | 			print("Dosagem: 375 mg")
+        >>>   19 | 		elif(p>24 and p<=30):
+              20 | 			print("Dosagem: 500 mg")
+
+▶ B9 — elif/else retestando condições já verificadas
+  Ocorrências: 1
+
+  [1] Linha 0: B9 detectado pelo VisitorMC3 (localização exata não mapeada)
+      Trecho  : —
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 2
+
+  [1] Linha 1: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+        >>>    1 | i = int(input())
+               2 | p = float(input())
+
+  [2] Linha 2: Variável 'p' com nome muito curto (≤4 chars)
+      Trecho  : p = ...
+      Contexto:
+               1 | i = int(input())
+        >>>    2 | p = float(input())
+               3 | 
+
+======================================================================

@@ -1,0 +1,167 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1615_3345.py
+Questão  : 1615
+Aluno    : 3345
+Total MCs: 1
+
+⚠️  Misconceptions detectados: G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import *
+     2 | v1 = array(eval(input("Primeiro jogador: ")))
+     3 | v2 = array(eval(input("Segundo jogador: ")))
+     4 | i = 0
+     5 | q1 = 0
+     6 | q2 = 0
+     7 | while (i < size(v1)):
+     8 | 	if (v1[i] == 1):
+     9 | 		q1 = q1 + 40
+    10 | 	elif (v1[i] == 2):
+    11 | 		q1 = q1 + 20
+    12 | 	elif (v1[i] == 3):
+    13 | 		q1 = q1 + 10
+    14 | 	else:
+    15 | 		q1 = q1 + 0
+    16 | 	i = i + 1
+    17 | i = 0
+    18 | while (i < size(v1)):
+    19 | 	if (v2[i] == 1):
+    20 | 		q2 = q2 + 40
+    21 | 	elif (v2[i] == 2):
+    22 | 		q2 = q2 + 20
+    23 | 	elif (v2[i] == 3):
+    24 | 		q2 = q2 + 10
+    25 | 	else:
+    26 | 		q2 = q2 + 0
+    27 | 	i = i + 1
+    28 | if (q1 > q2):
+    29 | 	print("JOGADOR UM")
+    30 | elif (q2 > q1):
+    31 | 	print("JOGADOR DOIS")
+    32 | else:
+    33 | 	print("EMPATE")
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 16
+
+  [1] Linha 2: Variável 'v1' com nome muito curto (≤4 chars)
+      Trecho  : v1 = ...
+      Contexto:
+               1 | from numpy import *
+        >>>    2 | v1 = array(eval(input("Primeiro jogador: ")))
+               3 | v2 = array(eval(input("Segundo jogador: ")))
+
+  [2] Linha 3: Variável 'v2' com nome muito curto (≤4 chars)
+      Trecho  : v2 = ...
+      Contexto:
+               2 | v1 = array(eval(input("Primeiro jogador: ")))
+        >>>    3 | v2 = array(eval(input("Segundo jogador: ")))
+               4 | i = 0
+
+  [3] Linha 4: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+               3 | v2 = array(eval(input("Segundo jogador: ")))
+        >>>    4 | i = 0
+               5 | q1 = 0
+
+  [4] Linha 5: Variável 'q1' com nome muito curto (≤4 chars)
+      Trecho  : q1 = ...
+      Contexto:
+               4 | i = 0
+        >>>    5 | q1 = 0
+               6 | q2 = 0
+
+  [5] Linha 6: Variável 'q2' com nome muito curto (≤4 chars)
+      Trecho  : q2 = ...
+      Contexto:
+               5 | q1 = 0
+        >>>    6 | q2 = 0
+               7 | while (i < size(v1)):
+
+  [6] Linha 17: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+              16 | 	i = i + 1
+        >>>   17 | i = 0
+              18 | while (i < size(v1)):
+
+  [7] Linha 16: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+              15 | 		q1 = q1 + 0
+        >>>   16 | 	i = i + 1
+              17 | i = 0
+
+  [8] Linha 27: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+              26 | 		q2 = q2 + 0
+        >>>   27 | 	i = i + 1
+              28 | if (q1 > q2):
+
+  [9] Linha 9: Variável 'q1' com nome muito curto (≤4 chars)
+      Trecho  : q1 = ...
+      Contexto:
+               8 | 	if (v1[i] == 1):
+        >>>    9 | 		q1 = q1 + 40
+              10 | 	elif (v1[i] == 2):
+
+  [10] Linha 20: Variável 'q2' com nome muito curto (≤4 chars)
+      Trecho  : q2 = ...
+      Contexto:
+              19 | 	if (v2[i] == 1):
+        >>>   20 | 		q2 = q2 + 40
+              21 | 	elif (v2[i] == 2):
+
+  [11] Linha 11: Variável 'q1' com nome muito curto (≤4 chars)
+      Trecho  : q1 = ...
+      Contexto:
+              10 | 	elif (v1[i] == 2):
+        >>>   11 | 		q1 = q1 + 20
+              12 | 	elif (v1[i] == 3):
+
+  [12] Linha 22: Variável 'q2' com nome muito curto (≤4 chars)
+      Trecho  : q2 = ...
+      Contexto:
+              21 | 	elif (v2[i] == 2):
+        >>>   22 | 		q2 = q2 + 20
+              23 | 	elif (v2[i] == 3):
+
+  [13] Linha 13: Variável 'q1' com nome muito curto (≤4 chars)
+      Trecho  : q1 = ...
+      Contexto:
+              12 | 	elif (v1[i] == 3):
+        >>>   13 | 		q1 = q1 + 10
+              14 | 	else:
+
+  [14] Linha 15: Variável 'q1' com nome muito curto (≤4 chars)
+      Trecho  : q1 = ...
+      Contexto:
+              14 | 	else:
+        >>>   15 | 		q1 = q1 + 0
+              16 | 	i = i + 1
+
+  [15] Linha 24: Variável 'q2' com nome muito curto (≤4 chars)
+      Trecho  : q2 = ...
+      Contexto:
+              23 | 	elif (v2[i] == 3):
+        >>>   24 | 		q2 = q2 + 10
+              25 | 	else:
+
+  [16] Linha 26: Variável 'q2' com nome muito curto (≤4 chars)
+      Trecho  : q2 = ...
+      Contexto:
+              25 | 	else:
+        >>>   26 | 		q2 = q2 + 0
+              27 | 	i = i + 1
+
+======================================================================

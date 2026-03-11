@@ -1,0 +1,100 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1225_7097.py
+Questão  : 1225
+Aluno    : 7097
+Total MCs: 2
+
+⚠️  Misconceptions detectados: A3, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | v=array(eval(input("")))
+     3 | m=0
+     4 | p=0
+     5 | p1=0
+     6 | d=0
+     7 | m=sum(v)/size(v)
+     8 | for i in range(size(v)):
+     9 | 	p=p+((v[i]-m)**2)
+    10 | 	
+    11 | d=(p/(size(v)-1))**0.5
+    12 | print (round(d,3))	
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 1
+
+  [1] Linha 5: Variável 'p1' declarada mas nunca utilizada
+      Trecho  : p1 = ...
+      Contexto:
+               4 | p=0
+        >>>    5 | p1=0
+               6 | d=0
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 8
+
+  [1] Linha 2: Variável 'v' com nome muito curto (≤4 chars)
+      Trecho  : v = ...
+      Contexto:
+               1 | from numpy import*
+        >>>    2 | v=array(eval(input("")))
+               3 | m=0
+
+  [2] Linha 3: Variável 'm' com nome muito curto (≤4 chars)
+      Trecho  : m = ...
+      Contexto:
+               2 | v=array(eval(input("")))
+        >>>    3 | m=0
+               4 | p=0
+
+  [3] Linha 4: Variável 'p' com nome muito curto (≤4 chars)
+      Trecho  : p = ...
+      Contexto:
+               3 | m=0
+        >>>    4 | p=0
+               5 | p1=0
+
+  [4] Linha 5: Variável 'p1' com nome muito curto (≤4 chars)
+      Trecho  : p1 = ...
+      Contexto:
+               4 | p=0
+        >>>    5 | p1=0
+               6 | d=0
+
+  [5] Linha 6: Variável 'd' com nome muito curto (≤4 chars)
+      Trecho  : d = ...
+      Contexto:
+               5 | p1=0
+        >>>    6 | d=0
+               7 | m=sum(v)/size(v)
+
+  [6] Linha 7: Variável 'm' com nome muito curto (≤4 chars)
+      Trecho  : m = ...
+      Contexto:
+               6 | d=0
+        >>>    7 | m=sum(v)/size(v)
+               8 | for i in range(size(v)):
+
+  [7] Linha 11: Variável 'd' com nome muito curto (≤4 chars)
+      Trecho  : d = ...
+      Contexto:
+              10 | 	
+        >>>   11 | d=(p/(size(v)-1))**0.5
+              12 | print (round(d,3))	
+
+  [8] Linha 9: Variável 'p' com nome muito curto (≤4 chars)
+      Trecho  : p = ...
+      Contexto:
+               8 | for i in range(size(v)):
+        >>>    9 | 	p=p+((v[i]-m)**2)
+              10 | 	
+
+======================================================================

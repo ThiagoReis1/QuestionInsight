@@ -1,0 +1,70 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1642_4109.py
+Questão  : 1642
+Aluno    : 4109
+Total MCs: 1
+
+⚠️  Misconceptions detectados: G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import *
+     2 | from numpy.linalg import *
+     3 | t = array(eval(input("Qnt de turmas divisiveis: ")))
+     4 | 
+     5 | x = 0
+     6 | 
+     7 | for e in t:
+     8 | 	if e%5 == 0:
+     9 | 		x += 1
+    10 | 	
+    11 | y = zeros(x,dtype = int)
+    12 | x = 0
+    13 | 
+    14 | for i in range(len(t)):
+    15 | 	if t[i]%5 == 0:
+    16 | 		y[x] = i
+    17 | 		x +=1
+    18 | 		
+    19 | print(x)
+    20 | print(y)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 4
+
+  [1] Linha 3: Variável 't' com nome muito curto (≤4 chars)
+      Trecho  : t = ...
+      Contexto:
+               2 | from numpy.linalg import *
+        >>>    3 | t = array(eval(input("Qnt de turmas divisiveis: ")))
+               4 | 
+
+  [2] Linha 5: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+               4 | 
+        >>>    5 | x = 0
+               6 | 
+
+  [3] Linha 11: Variável 'y' com nome muito curto (≤4 chars)
+      Trecho  : y = ...
+      Contexto:
+              10 | 	
+        >>>   11 | y = zeros(x,dtype = int)
+              12 | x = 0
+
+  [4] Linha 12: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+              11 | y = zeros(x,dtype = int)
+        >>>   12 | x = 0
+              13 | 
+
+======================================================================

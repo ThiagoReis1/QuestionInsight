@@ -1,0 +1,10 @@
+N=int(input("numero inteiro: "))
+
+if (N >= 1) and (N % 3 == 0) and (N % 5 == 0):
+	print("TicTac")
+elif (N >= 1) and (N % 3 == 0):
+	print("Tic")
+elif (N >= 1) and (N % 5 == 0):
+	print("Tac")
+else:
+	print(N)

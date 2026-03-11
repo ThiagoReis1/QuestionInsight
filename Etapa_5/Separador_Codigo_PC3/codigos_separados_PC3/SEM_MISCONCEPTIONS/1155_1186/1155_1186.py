@@ -1,0 +1,6 @@
+virus = str(input("numero de copias do virus: "))
+leucocitos = str(input("numero de leucocitos: "))
+taxa1 = str(input("multiplicacao diaria do virus: "))
+taxa2 = str(input("multiplicacao diaria dos leucocitos: "))
+while (virus + leucocitos)
+	if(virus > leucocitos and taxa1 < taxa 2)

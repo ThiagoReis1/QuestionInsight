@@ -1,0 +1,145 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1263_1443.py
+Questão  : 1263
+Aluno    : 1443
+Total MCs: 2
+
+⚠️  Misconceptions detectados: A3, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import *
+     2 | 
+     3 | p = float(input("Digite o valor de p: "))
+     4 | x = array(eval(input("Digite o vetor x: ")))
+     5 | y = array(eval(input("Digite o vetor y: ")))
+     6 | z = array(zeros(size(x)))
+     7 | t = p / (p + 1)
+     8 | i = 0
+     9 | while(i < size(x)):
+    10 | 	if(size(x) == size(y)):
+    11 | 		z[i] = abs(2 * x[i] + 3 * y[i])
+    12 | 		i = i + 1
+    13 | 	else:
+    14 | 		mens = "Erro"
+    15 | j = 0
+    16 | cont = 0
+    17 | while(j < size(z)):	
+    18 | 	cont = (cont + (abs(z[i]) ** t)) ** (1 / t)
+    19 | 	j = j + 1
+    20 | 	i = i + 1
+    21 | 	
+    22 | print(round(cont, 7))	
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 1
+
+  [1] Linha 14: Variável 'mens' declarada mas nunca utilizada
+      Trecho  : mens = ...
+      Contexto:
+              13 | 	else:
+        >>>   14 | 		mens = "Erro"
+              15 | j = 0
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 13
+
+  [1] Linha 3: Variável 'p' com nome muito curto (≤4 chars)
+      Trecho  : p = ...
+      Contexto:
+               2 | 
+        >>>    3 | p = float(input("Digite o valor de p: "))
+               4 | x = array(eval(input("Digite o vetor x: ")))
+
+  [2] Linha 4: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+               3 | p = float(input("Digite o valor de p: "))
+        >>>    4 | x = array(eval(input("Digite o vetor x: ")))
+               5 | y = array(eval(input("Digite o vetor y: ")))
+
+  [3] Linha 5: Variável 'y' com nome muito curto (≤4 chars)
+      Trecho  : y = ...
+      Contexto:
+               4 | x = array(eval(input("Digite o vetor x: ")))
+        >>>    5 | y = array(eval(input("Digite o vetor y: ")))
+               6 | z = array(zeros(size(x)))
+
+  [4] Linha 6: Variável 'z' com nome muito curto (≤4 chars)
+      Trecho  : z = ...
+      Contexto:
+               5 | y = array(eval(input("Digite o vetor y: ")))
+        >>>    6 | z = array(zeros(size(x)))
+               7 | t = p / (p + 1)
+
+  [5] Linha 7: Variável 't' com nome muito curto (≤4 chars)
+      Trecho  : t = ...
+      Contexto:
+               6 | z = array(zeros(size(x)))
+        >>>    7 | t = p / (p + 1)
+               8 | i = 0
+
+  [6] Linha 8: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+               7 | t = p / (p + 1)
+        >>>    8 | i = 0
+               9 | while(i < size(x)):
+
+  [7] Linha 15: Variável 'j' com nome muito curto (≤4 chars)
+      Trecho  : j = ...
+      Contexto:
+              14 | 		mens = "Erro"
+        >>>   15 | j = 0
+              16 | cont = 0
+
+  [8] Linha 16: Variável 'cont' com nome muito curto (≤4 chars)
+      Trecho  : cont = ...
+      Contexto:
+              15 | j = 0
+        >>>   16 | cont = 0
+              17 | while(j < size(z)):	
+
+  [9] Linha 18: Variável 'cont' com nome muito curto (≤4 chars)
+      Trecho  : cont = ...
+      Contexto:
+              17 | while(j < size(z)):	
+        >>>   18 | 	cont = (cont + (abs(z[i]) ** t)) ** (1 / t)
+              19 | 	j = j + 1
+
+  [10] Linha 19: Variável 'j' com nome muito curto (≤4 chars)
+      Trecho  : j = ...
+      Contexto:
+              18 | 	cont = (cont + (abs(z[i]) ** t)) ** (1 / t)
+        >>>   19 | 	j = j + 1
+              20 | 	i = i + 1
+
+  [11] Linha 20: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+              19 | 	j = j + 1
+        >>>   20 | 	i = i + 1
+              21 | 	
+
+  [12] Linha 12: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+              11 | 		z[i] = abs(2 * x[i] + 3 * y[i])
+        >>>   12 | 		i = i + 1
+              13 | 	else:
+
+  [13] Linha 14: Variável 'mens' com nome muito curto (≤4 chars)
+      Trecho  : mens = ...
+      Contexto:
+              13 | 	else:
+        >>>   14 | 		mens = "Erro"
+              15 | j = 0
+
+======================================================================

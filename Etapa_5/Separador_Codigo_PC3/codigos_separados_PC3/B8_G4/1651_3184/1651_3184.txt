@@ -1,0 +1,166 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1651_3184.py
+Questão  : 1651
+Aluno    : 3184
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | 
+     3 | cont = zeros(6,dtype=int)
+     4 | 
+     5 | cdp = input().upper().split(',')
+     6 | 
+     7 | mc = 0
+     8 | c = 0
+     9 | cm = 0
+    10 | em = 0
+    11 | e = 0
+    12 | me = 0
+    13 | 
+    14 | for i in range(size(cdp)):
+    15 | 	if(cdp[i]=="MC"):
+    16 | 		mc = mc + 1
+    17 | 	elif(cdp[i]=="C"):
+    18 | 		c = c + 1
+    19 | 	elif(cdp[i]=="CM"):
+    20 | 		cm = cm + 1
+    21 | 	elif(cdp[i]=="EM"):
+    22 | 		em = em + 1
+    23 | 	elif(cdp[i]=="E"):
+    24 | 		e = e + 1
+    25 | 	elif(cdp[i]=="ME"):
+    26 | 		me = me + 1
+    27 | 		
+    28 | cont[0] = mc
+    29 | cont[1] = c
+    30 | cont[2] = cm
+    31 | cont[3] = em
+    32 | cont[4] = e
+    33 | cont[5] = me
+    34 | 
+    35 | print(max(cont))
+    36 | print(cont)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 23: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 23) / elif ... sem else
+      Contexto:
+              22 | 		em = em + 1
+        >>>   23 | 	elif(cdp[i]=="E"):
+              24 | 		e = e + 1
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 14
+
+  [1] Linha 3: Variável 'cont' com nome muito curto (≤4 chars)
+      Trecho  : cont = ...
+      Contexto:
+               2 | 
+        >>>    3 | cont = zeros(6,dtype=int)
+               4 | 
+
+  [2] Linha 5: Variável 'cdp' com nome muito curto (≤4 chars)
+      Trecho  : cdp = ...
+      Contexto:
+               4 | 
+        >>>    5 | cdp = input().upper().split(',')
+               6 | 
+
+  [3] Linha 7: Variável 'mc' com nome muito curto (≤4 chars)
+      Trecho  : mc = ...
+      Contexto:
+               6 | 
+        >>>    7 | mc = 0
+               8 | c = 0
+
+  [4] Linha 8: Variável 'c' com nome muito curto (≤4 chars)
+      Trecho  : c = ...
+      Contexto:
+               7 | mc = 0
+        >>>    8 | c = 0
+               9 | cm = 0
+
+  [5] Linha 9: Variável 'cm' com nome muito curto (≤4 chars)
+      Trecho  : cm = ...
+      Contexto:
+               8 | c = 0
+        >>>    9 | cm = 0
+              10 | em = 0
+
+  [6] Linha 10: Variável 'em' com nome muito curto (≤4 chars)
+      Trecho  : em = ...
+      Contexto:
+               9 | cm = 0
+        >>>   10 | em = 0
+              11 | e = 0
+
+  [7] Linha 11: Variável 'e' com nome muito curto (≤4 chars)
+      Trecho  : e = ...
+      Contexto:
+              10 | em = 0
+        >>>   11 | e = 0
+              12 | me = 0
+
+  [8] Linha 12: Variável 'me' com nome muito curto (≤4 chars)
+      Trecho  : me = ...
+      Contexto:
+              11 | e = 0
+        >>>   12 | me = 0
+              13 | 
+
+  [9] Linha 16: Variável 'mc' com nome muito curto (≤4 chars)
+      Trecho  : mc = ...
+      Contexto:
+              15 | 	if(cdp[i]=="MC"):
+        >>>   16 | 		mc = mc + 1
+              17 | 	elif(cdp[i]=="C"):
+
+  [10] Linha 18: Variável 'c' com nome muito curto (≤4 chars)
+      Trecho  : c = ...
+      Contexto:
+              17 | 	elif(cdp[i]=="C"):
+        >>>   18 | 		c = c + 1
+              19 | 	elif(cdp[i]=="CM"):
+
+  [11] Linha 20: Variável 'cm' com nome muito curto (≤4 chars)
+      Trecho  : cm = ...
+      Contexto:
+              19 | 	elif(cdp[i]=="CM"):
+        >>>   20 | 		cm = cm + 1
+              21 | 	elif(cdp[i]=="EM"):
+
+  [12] Linha 22: Variável 'em' com nome muito curto (≤4 chars)
+      Trecho  : em = ...
+      Contexto:
+              21 | 	elif(cdp[i]=="EM"):
+        >>>   22 | 		em = em + 1
+              23 | 	elif(cdp[i]=="E"):
+
+  [13] Linha 24: Variável 'e' com nome muito curto (≤4 chars)
+      Trecho  : e = ...
+      Contexto:
+              23 | 	elif(cdp[i]=="E"):
+        >>>   24 | 		e = e + 1
+              25 | 	elif(cdp[i]=="ME"):
+
+  [14] Linha 26: Variável 'me' com nome muito curto (≤4 chars)
+      Trecho  : me = ...
+      Contexto:
+              25 | 	elif(cdp[i]=="ME"):
+        >>>   26 | 		me = me + 1
+              27 | 		
+
+======================================================================

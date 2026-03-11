@@ -1,0 +1,109 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1606_2853.py
+Questão  : 1606
+Aluno    : 2853
+Total MCs: 2
+
+⚠️  Misconceptions detectados: A3, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import *
+     2 | 
+     3 | andares = array(eval(input("Insira vetor de paradas: ")))   #andares que o elevador parou
+     4 | 
+     5 | i = 0
+     6 | soma = 0
+     7 | prox = 0
+     8 | ant = 0
+     9 | 
+    10 | while(i < size(andares)):
+    11 | 	prox = andares[i]
+    12 | 	if(andares[i] >= 1 and andares[i] <= 20):
+    13 | 		soma = soma + (andares[i] - 1)
+    14 | 		ant = andares[i]
+    15 | 	if(prox < ant):
+    16 | 		soma = soma + (ant - prox)
+    17 | 	i = i + 1
+    18 | print(soma)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 1
+
+  [1] Linha 0: A3 detectado pelo VisitorMC3 (localização exata não mapeada)
+      Trecho  : —
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 9
+
+  [1] Linha 5: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+               4 | 
+        >>>    5 | i = 0
+               6 | soma = 0
+
+  [2] Linha 6: Variável 'soma' com nome muito curto (≤4 chars)
+      Trecho  : soma = ...
+      Contexto:
+               5 | i = 0
+        >>>    6 | soma = 0
+               7 | prox = 0
+
+  [3] Linha 7: Variável 'prox' com nome muito curto (≤4 chars)
+      Trecho  : prox = ...
+      Contexto:
+               6 | soma = 0
+        >>>    7 | prox = 0
+               8 | ant = 0
+
+  [4] Linha 8: Variável 'ant' com nome muito curto (≤4 chars)
+      Trecho  : ant = ...
+      Contexto:
+               7 | prox = 0
+        >>>    8 | ant = 0
+               9 | 
+
+  [5] Linha 11: Variável 'prox' com nome muito curto (≤4 chars)
+      Trecho  : prox = ...
+      Contexto:
+              10 | while(i < size(andares)):
+        >>>   11 | 	prox = andares[i]
+              12 | 	if(andares[i] >= 1 and andares[i] <= 20):
+
+  [6] Linha 17: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+              16 | 		soma = soma + (ant - prox)
+        >>>   17 | 	i = i + 1
+              18 | print(soma)
+
+  [7] Linha 13: Variável 'soma' com nome muito curto (≤4 chars)
+      Trecho  : soma = ...
+      Contexto:
+              12 | 	if(andares[i] >= 1 and andares[i] <= 20):
+        >>>   13 | 		soma = soma + (andares[i] - 1)
+              14 | 		ant = andares[i]
+
+  [8] Linha 14: Variável 'ant' com nome muito curto (≤4 chars)
+      Trecho  : ant = ...
+      Contexto:
+              13 | 		soma = soma + (andares[i] - 1)
+        >>>   14 | 		ant = andares[i]
+              15 | 	if(prox < ant):
+
+  [9] Linha 16: Variável 'soma' com nome muito curto (≤4 chars)
+      Trecho  : soma = ...
+      Contexto:
+              15 | 	if(prox < ant):
+        >>>   16 | 		soma = soma + (ant - prox)
+              17 | 	i = i + 1
+
+======================================================================

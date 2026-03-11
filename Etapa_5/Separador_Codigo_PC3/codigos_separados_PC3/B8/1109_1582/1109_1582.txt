@@ -1,0 +1,62 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1109_1582.py
+Questão  : 1109
+Aluno    : 1582
+Total MCs: 1
+
+⚠️  Misconceptions detectados: B8
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | idade = int(input("digite a idade do paciente"))
+     2 | peso = float(input("digite o peso do paciente em Kg"))
+     3 | round(peso, 2)
+     4 | print("Entradas:", idade, "anos", "e", peso, "kg")
+     5 | 
+     6 | if (idade > 0) and (idade <= 130) and (peso >= 0) and (peso <= 550):
+     7 | 	if (peso >= 60) and (idade > 12):
+     8 | 		dosagem = 1000
+     9 | 		print("Dosagem:", dosagem, "mg")
+    10 | 	elif (peso < 60) and (idade > 12):
+    11 | 		dosagem = 875
+    12 | 		print("Dosagem:", dosagem, "mg")
+    13 | 	elif (peso <= 5) and (idade < 12):
+    14 | 		dosagem = 75
+    15 | 		print("Dosagem:", dosagem, "mg")
+    16 | 	elif (peso > 5) and (peso <= 9) and (idade < 12):
+    17 | 		dosagem = 125
+    18 | 		print("Dosagem:", dosagem, "mg")
+    19 | 	elif (peso > 9) and (peso <= 16) and (idade < 12):
+    20 | 		dosagem = 250
+    21 | 		print("Dosagem", dosagem, "mg")
+    22 | 	elif (peso > 16) and (peso <= 24) and (idade < 12):
+    23 | 		dosagem = 375
+    24 | 		print("Dosagem:", dosagem, "mg")
+    25 | 	elif (peso > 24) and (peso <= 30) and (idade < 12):
+    26 | 		dosagem = 500
+    27 | 		print("Dosagem:", dosagem, "mg")
+    28 | 	elif (peso > 30) and (idade < 12):
+    29 | 		dosagem = 750
+    30 | 		print("Dosagem:", dosagem, "mg")
+    31 | else:
+    32 | 	print("Dados invalidos")
+    33 | 		
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 25: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 25) / elif ... sem else
+      Contexto:
+              24 | 		print("Dosagem:", dosagem, "mg")
+        >>>   25 | 	elif (peso > 24) and (peso <= 30) and (idade < 12):
+              26 | 		dosagem = 500
+
+======================================================================

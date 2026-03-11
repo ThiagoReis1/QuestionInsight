@@ -1,0 +1,60 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 6376_9233.py
+Questão  : 6376
+Aluno    : 9233
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | part = input("digite a partida: ").upper()
+     3 | cont = zeros(4, dtype=int)
+     4 | 
+     5 | for i in range(len(part)):
+     6 | 	if(part[i] == "A"):
+     7 | 		cont[0] += 1
+     8 | 	elif(part[i] == "B"):
+     9 | 		cont[1] += 1
+    10 | 	elif(part[i] == "C"):
+    11 | 		cont[2] += 1
+    12 | 	elif(part[i] == "D"):
+    13 | 		cont[3] += 1
+    14 | print(cont)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 10: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 10) / elif ... sem else
+      Contexto:
+               9 | 		cont[1] += 1
+        >>>   10 | 	elif(part[i] == "C"):
+              11 | 		cont[2] += 1
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 2
+
+  [1] Linha 2: Variável 'part' com nome muito curto (≤4 chars)
+      Trecho  : part = ...
+      Contexto:
+               1 | from numpy import*
+        >>>    2 | part = input("digite a partida: ").upper()
+               3 | cont = zeros(4, dtype=int)
+
+  [2] Linha 3: Variável 'cont' com nome muito curto (≤4 chars)
+      Trecho  : cont = ...
+      Contexto:
+               2 | part = input("digite a partida: ").upper()
+        >>>    3 | cont = zeros(4, dtype=int)
+               4 | 
+
+======================================================================

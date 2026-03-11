@@ -1,0 +1,53 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1260_1463.py
+Questão  : 1260
+Aluno    : 1463
+Total MCs: 1
+
+⚠️  Misconceptions detectados: A3
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import *
+     2 | 
+     3 | p = float(input())
+     4 | x = array(eval(input()))
+     5 | y = array(eval(input()))
+     6 | 
+     7 | t = p/(p+1)
+     8 | norma1 = 0
+     9 | norma2 = 0
+    10 | 
+    11 | for i in range(0,size(x)):
+    12 | 	x[i] = x[i] - y[i]
+    13 | 	
+    14 | for i in range(0,size(x)):
+    15 | 	norma1 = norma1 + abs(x[i])**t 
+    16 | 	#norma2 = norma2 + abs(y[i])**t
+    17 | 
+    18 | norma1 = pow(norma1,1/t)
+    19 | #norma2 = pow(norma2,1/t)
+    20 | #print ("t:",t)
+    21 | #print("norma1:",norma1)
+    22 | #print("norma2:",norma2)
+    23 | #print ("soma:", norma1 + norma2)
+    24 | print (round(norma1,4))
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 1
+
+  [1] Linha 9: Variável 'norma2' declarada mas nunca utilizada
+      Trecho  : norma2 = ...
+      Contexto:
+               8 | norma1 = 0
+        >>>    9 | norma2 = 0
+              10 | 
+
+======================================================================

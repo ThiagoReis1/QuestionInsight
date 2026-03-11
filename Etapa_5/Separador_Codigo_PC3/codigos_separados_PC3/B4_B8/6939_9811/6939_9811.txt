@@ -1,0 +1,63 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 6939_9811.py
+Questão  : 6939
+Aluno    : 9811
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B4, B8
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | valorcompra = float(input("valor total da compra:"))
+     2 | forma = input("D, P ou C").upper()
+     3 | 
+     4 | if forma == "D":
+     5 | 	total = valorcompra - (valorcompra * 0.19)
+     6 | 	print(round(total, 2))
+     7 | elif forma == "P":
+     8 | 	total = valorcompra - (valorcompra * 0.19)
+     9 | 	print(round(total, 2))
+    10 | elif forma == "C":
+    11 | 	parcelas = int(input("numero de parcelas:"))
+    12 | 	if parcelas == 1:
+    13 | 		total = valorcompra
+    14 | 		print(round(total, 2))
+    15 | 	elif parcelas == 2:
+    16 | 		total = valorcompra + (valorcompra * 0.09)
+    17 | 		print(round(total, 2))
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B4 — Comandos repetidos dentro de blocos if-elif-else
+  Ocorrências: 1
+
+  [1] Linha 7: Bloco idêntico ao da linha 4
+      Trecho  : total = valorcompra - valorcompra * 0.19
+      Contexto:
+               6 | 	print(round(total, 2))
+        >>>    7 | elif forma == "P":
+               8 | 	total = valorcompra - (valorcompra * 0.19)
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 2
+
+  [1] Linha 7: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 7) / elif ... sem else
+      Contexto:
+               6 | 	print(round(total, 2))
+        >>>    7 | elif forma == "P":
+               8 | 	total = valorcompra - (valorcompra * 0.19)
+
+  [2] Linha 12: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 12) / elif ... sem else
+      Contexto:
+              11 | 	parcelas = int(input("numero de parcelas:"))
+        >>>   12 | 	if parcelas == 1:
+              13 | 		total = valorcompra
+
+======================================================================

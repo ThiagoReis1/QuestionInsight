@@ -1,0 +1,73 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1641_1947.py
+Questão  : 1641
+Aluno    : 1947
+Total MCs: 1
+
+⚠️  Misconceptions detectados: G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | vetor = array(eval(input("Coloque o numeo de alunos da turma")))
+     3 | soma = 0
+     4 | 
+     5 | for i in range(size(vetor)):
+     6 | 	if vetor[i] % 3 == 0:
+     7 | 		soma = soma + 1
+     8 | m = zeros(soma, dtype = int)
+     9 | h = 0
+    10 | 
+    11 | for j in range(size(vetor)):
+    12 | 	if vetor[j] % 3 == 0:
+    13 | 		m[h] = j
+    14 | 		h = h + 1
+    15 | print(soma)
+    16 | print(m)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 5
+
+  [1] Linha 3: Variável 'soma' com nome muito curto (≤4 chars)
+      Trecho  : soma = ...
+      Contexto:
+               2 | vetor = array(eval(input("Coloque o numeo de alunos da turma")))
+        >>>    3 | soma = 0
+               4 | 
+
+  [2] Linha 8: Variável 'm' com nome muito curto (≤4 chars)
+      Trecho  : m = ...
+      Contexto:
+               7 | 		soma = soma + 1
+        >>>    8 | m = zeros(soma, dtype = int)
+               9 | h = 0
+
+  [3] Linha 9: Variável 'h' com nome muito curto (≤4 chars)
+      Trecho  : h = ...
+      Contexto:
+               8 | m = zeros(soma, dtype = int)
+        >>>    9 | h = 0
+              10 | 
+
+  [4] Linha 7: Variável 'soma' com nome muito curto (≤4 chars)
+      Trecho  : soma = ...
+      Contexto:
+               6 | 	if vetor[i] % 3 == 0:
+        >>>    7 | 		soma = soma + 1
+               8 | m = zeros(soma, dtype = int)
+
+  [5] Linha 14: Variável 'h' com nome muito curto (≤4 chars)
+      Trecho  : h = ...
+      Contexto:
+              13 | 		m[h] = j
+        >>>   14 | 		h = h + 1
+              15 | print(soma)
+
+======================================================================

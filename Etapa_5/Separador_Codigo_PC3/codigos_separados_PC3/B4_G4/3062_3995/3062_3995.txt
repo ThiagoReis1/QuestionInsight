@@ -1,0 +1,168 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 3062_3995.py
+Questão  : 3062
+Aluno    : 3995
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B4, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | PO=int(input("pecas:"))
+     2 | na=input("ESPADA/MACHADO/MARRETA").upper()
+     3 | d=int(input("valor do dado:"))
+     4 | if(d>=1 and d<=10):
+     5 | 	if(na=="ESPADA" or na=="MACHADO" or na=="MARRETA"):
+     6 | 		if(PO>=100):
+     7 | 			if(na=="ESPADA"):
+     8 | 				dano=d*10
+     9 | 				print(dano)
+    10 | 			elif(na=="MACHADO"):
+    11 | 				dano=d+3
+    12 | 				print(dano)
+    13 | 			else:
+    14 | 				dano=d+5
+    15 | 		elif(PO>=30 and PO<=99):
+    16 | 			if(na=="MACHADO"):
+    17 | 				dano=d+3
+    18 | 				print(dano)
+    19 | 			elif(na=="MARRETA"):
+    20 | 				dano=d+5
+    21 | 				print(dano)
+    22 | 			else:
+    23 | 				print("PO insuficiente")
+    24 | 		elif(PO>=30 and PO<=49):
+    25 | 			if(na=="MACHADO"):
+    26 | 				dano=d+3
+    27 | 				print(dano)
+    28 | 			else:
+    29 | 				print("PO insuficiente")
+    30 | 		elif(PO==30):
+    31 | 			if(na=="MACHADO"):
+    32 | 				dano=d+3
+    33 | 				print(dano)
+    34 | 			else:
+    35 | 				print("PO insuficiente")
+    36 | 		else:
+    37 | 			print("PO insuficiente")
+    38 | 	else:
+    39 | 		print("Entrada invalida")
+    40 | else:
+    41 | 	print("Entrada invalida")
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B4 — Comandos repetidos dentro de blocos if-elif-else
+  Ocorrências: 3
+
+  [1] Linha 30: Bloco idêntico ao da linha 24
+      Trecho  : if na == 'MACHADO':
+    dano = d + 3
+    print(dano)
+else:
+    print('PO insuficiente')
+      Contexto:
+              29 | 				print("PO insuficiente")
+        >>>   30 | 		elif(PO==30):
+              31 | 			if(na=="MACHADO"):
+
+  [2] Linha 30: Bloco idêntico ao da linha 24
+      Trecho  : if na == 'MACHADO':
+    dano = d + 3
+    print(dano)
+else:
+    print('PO insuficiente')
+      Contexto:
+              29 | 				print("PO insuficiente")
+        >>>   30 | 		elif(PO==30):
+              31 | 			if(na=="MACHADO"):
+
+  [3] Linha 30: Bloco idêntico ao da linha 24
+      Trecho  : if na == 'MACHADO':
+    dano = d + 3
+    print(dano)
+else:
+    print('PO insuficiente')
+      Contexto:
+              29 | 				print("PO insuficiente")
+        >>>   30 | 		elif(PO==30):
+              31 | 			if(na=="MACHADO"):
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 10
+
+  [1] Linha 1: Variável 'PO' com nome muito curto (≤4 chars)
+      Trecho  : PO = ...
+      Contexto:
+        >>>    1 | PO=int(input("pecas:"))
+               2 | na=input("ESPADA/MACHADO/MARRETA").upper()
+
+  [2] Linha 2: Variável 'na' com nome muito curto (≤4 chars)
+      Trecho  : na = ...
+      Contexto:
+               1 | PO=int(input("pecas:"))
+        >>>    2 | na=input("ESPADA/MACHADO/MARRETA").upper()
+               3 | d=int(input("valor do dado:"))
+
+  [3] Linha 3: Variável 'd' com nome muito curto (≤4 chars)
+      Trecho  : d = ...
+      Contexto:
+               2 | na=input("ESPADA/MACHADO/MARRETA").upper()
+        >>>    3 | d=int(input("valor do dado:"))
+               4 | if(d>=1 and d<=10):
+
+  [4] Linha 8: Variável 'dano' com nome muito curto (≤4 chars)
+      Trecho  : dano = ...
+      Contexto:
+               7 | 			if(na=="ESPADA"):
+        >>>    8 | 				dano=d*10
+               9 | 				print(dano)
+
+  [5] Linha 11: Variável 'dano' com nome muito curto (≤4 chars)
+      Trecho  : dano = ...
+      Contexto:
+              10 | 			elif(na=="MACHADO"):
+        >>>   11 | 				dano=d+3
+              12 | 				print(dano)
+
+  [6] Linha 14: Variável 'dano' com nome muito curto (≤4 chars)
+      Trecho  : dano = ...
+      Contexto:
+              13 | 			else:
+        >>>   14 | 				dano=d+5
+              15 | 		elif(PO>=30 and PO<=99):
+
+  [7] Linha 17: Variável 'dano' com nome muito curto (≤4 chars)
+      Trecho  : dano = ...
+      Contexto:
+              16 | 			if(na=="MACHADO"):
+        >>>   17 | 				dano=d+3
+              18 | 				print(dano)
+
+  [8] Linha 20: Variável 'dano' com nome muito curto (≤4 chars)
+      Trecho  : dano = ...
+      Contexto:
+              19 | 			elif(na=="MARRETA"):
+        >>>   20 | 				dano=d+5
+              21 | 				print(dano)
+
+  [9] Linha 26: Variável 'dano' com nome muito curto (≤4 chars)
+      Trecho  : dano = ...
+      Contexto:
+              25 | 			if(na=="MACHADO"):
+        >>>   26 | 				dano=d+3
+              27 | 				print(dano)
+
+  [10] Linha 32: Variável 'dano' com nome muito curto (≤4 chars)
+      Trecho  : dano = ...
+      Contexto:
+              31 | 			if(na=="MACHADO"):
+        >>>   32 | 				dano=d+3
+              33 | 				print(dano)
+
+======================================================================

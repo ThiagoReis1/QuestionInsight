@@ -1,0 +1,168 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1616_2212.py
+Questão  : 1616
+Aluno    : 2212
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import *
+     2 | #formula do dano total:dm = s[i]*n[1]
+     3 | #gelo=2
+     4 | #fogo=3
+     5 | #choque=4
+     6 | #conjuração=8
+     7 | #ilusão=10
+     8 | s = array(eval(input("Magia: ")))
+     9 | n = array(eval(input("Mago: ")))
+    10 | 
+    11 | 
+    12 | i=0
+    13 | dm=0
+    14 | g=2 #gelo
+    15 | f=3 #fogo
+    16 | ch=4 #choque
+    17 | c=8 #conjuração
+    18 | l=10 #ilusão
+    19 | while(i<size(s)):
+    20 | 	if(s[i]=="GELO"):
+    21 | 		dm = dm + (g*n[i])
+    22 | 	elif(s[i]=="FOGO"):
+    23 | 		dm = dm + (f*n[i])
+    24 | 	elif(s[i]=="CHOQUE"):
+    25 | 		dm = dm + (ch*n[i])
+    26 | 	elif(s[i]=="CONJURACAO"):
+    27 | 		dm = dm + (c*n[i])
+    28 | 	elif(s[i]=="ILUSAO"):
+    29 | 		dm = dm + (l*n[i])
+    30 | 	i=i+1
+    31 | print(dm)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 26: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 26) / elif ... sem else
+      Contexto:
+              25 | 		dm = dm + (ch*n[i])
+        >>>   26 | 	elif(s[i]=="CONJURACAO"):
+              27 | 		dm = dm + (c*n[i])
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 15
+
+  [1] Linha 8: Variável 's' com nome muito curto (≤4 chars)
+      Trecho  : s = ...
+      Contexto:
+               7 | #ilusão=10
+        >>>    8 | s = array(eval(input("Magia: ")))
+               9 | n = array(eval(input("Mago: ")))
+
+  [2] Linha 9: Variável 'n' com nome muito curto (≤4 chars)
+      Trecho  : n = ...
+      Contexto:
+               8 | s = array(eval(input("Magia: ")))
+        >>>    9 | n = array(eval(input("Mago: ")))
+              10 | 
+
+  [3] Linha 12: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+              11 | 
+        >>>   12 | i=0
+              13 | dm=0
+
+  [4] Linha 13: Variável 'dm' com nome muito curto (≤4 chars)
+      Trecho  : dm = ...
+      Contexto:
+              12 | i=0
+        >>>   13 | dm=0
+              14 | g=2 #gelo
+
+  [5] Linha 14: Variável 'g' com nome muito curto (≤4 chars)
+      Trecho  : g = ...
+      Contexto:
+              13 | dm=0
+        >>>   14 | g=2 #gelo
+              15 | f=3 #fogo
+
+  [6] Linha 15: Variável 'f' com nome muito curto (≤4 chars)
+      Trecho  : f = ...
+      Contexto:
+              14 | g=2 #gelo
+        >>>   15 | f=3 #fogo
+              16 | ch=4 #choque
+
+  [7] Linha 16: Variável 'ch' com nome muito curto (≤4 chars)
+      Trecho  : ch = ...
+      Contexto:
+              15 | f=3 #fogo
+        >>>   16 | ch=4 #choque
+              17 | c=8 #conjuração
+
+  [8] Linha 17: Variável 'c' com nome muito curto (≤4 chars)
+      Trecho  : c = ...
+      Contexto:
+              16 | ch=4 #choque
+        >>>   17 | c=8 #conjuração
+              18 | l=10 #ilusão
+
+  [9] Linha 18: Variável 'l' com nome muito curto (≤4 chars)
+      Trecho  : l = ...
+      Contexto:
+              17 | c=8 #conjuração
+        >>>   18 | l=10 #ilusão
+              19 | while(i<size(s)):
+
+  [10] Linha 30: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+              29 | 		dm = dm + (l*n[i])
+        >>>   30 | 	i=i+1
+              31 | print(dm)
+
+  [11] Linha 21: Variável 'dm' com nome muito curto (≤4 chars)
+      Trecho  : dm = ...
+      Contexto:
+              20 | 	if(s[i]=="GELO"):
+        >>>   21 | 		dm = dm + (g*n[i])
+              22 | 	elif(s[i]=="FOGO"):
+
+  [12] Linha 23: Variável 'dm' com nome muito curto (≤4 chars)
+      Trecho  : dm = ...
+      Contexto:
+              22 | 	elif(s[i]=="FOGO"):
+        >>>   23 | 		dm = dm + (f*n[i])
+              24 | 	elif(s[i]=="CHOQUE"):
+
+  [13] Linha 25: Variável 'dm' com nome muito curto (≤4 chars)
+      Trecho  : dm = ...
+      Contexto:
+              24 | 	elif(s[i]=="CHOQUE"):
+        >>>   25 | 		dm = dm + (ch*n[i])
+              26 | 	elif(s[i]=="CONJURACAO"):
+
+  [14] Linha 27: Variável 'dm' com nome muito curto (≤4 chars)
+      Trecho  : dm = ...
+      Contexto:
+              26 | 	elif(s[i]=="CONJURACAO"):
+        >>>   27 | 		dm = dm + (c*n[i])
+              28 | 	elif(s[i]=="ILUSAO"):
+
+  [15] Linha 29: Variável 'dm' com nome muito curto (≤4 chars)
+      Trecho  : dm = ...
+      Contexto:
+              28 | 	elif(s[i]=="ILUSAO"):
+        >>>   29 | 		dm = dm + (l*n[i])
+              30 | 	i=i+1
+
+======================================================================

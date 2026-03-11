@@ -1,0 +1,13 @@
+n=int(input(""))
+a=1
+b=1
+c=-1
+cont=0
+sg=0
+while(n>cont):
+	sg=sg+((c*(a**2))/b+7)
+	cont=cont+1
+	a=a+1
+	b=b+2
+	c=c*(-1)
+	print(round(sg,7))

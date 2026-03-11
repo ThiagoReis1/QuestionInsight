@@ -1,0 +1,153 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1621_2881.py
+Questão  : 1621
+Aluno    : 2881
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import * 
+     2 | np = array(eval(input("Digite nomes dos produtos: ")))
+     3 | qt = array(eval(input("Digite as quantidades dos produtos: ")))
+     4 | c = 0
+     5 | a = 0
+     6 | fe = 0
+     7 | b = 0
+     8 | m = 0
+     9 | f = 0
+    10 | while (c < size(np)):
+    11 | 	if np[c] == "ARROZ":
+    12 | 		a=a+qt[c]*1.25
+    13 | 	elif np[c] == "FEIJAO":
+    14 | 		fe=fe+qt[c]*2.60 
+    15 | 	elif np [c] == "BIS":
+    16 | 		b=b+qt[c]*1.80
+    17 | 	elif np [c]== "MIOJO":
+    18 | 		m=m+qt[c]*0.85
+    19 | 	elif np [c]== "FANTA":
+    20 | 		f=f+qt[c]*3.20
+    21 | 	c+=1
+    22 | soma = a+fe+b+m+f
+    23 | print(round(soma, 2))
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 17: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 17) / elif ... sem else
+      Contexto:
+              16 | 		b=b+qt[c]*1.80
+        >>>   17 | 	elif np [c]== "MIOJO":
+              18 | 		m=m+qt[c]*0.85
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 14
+
+  [1] Linha 2: Variável 'np' com nome muito curto (≤4 chars)
+      Trecho  : np = ...
+      Contexto:
+               1 | from numpy import * 
+        >>>    2 | np = array(eval(input("Digite nomes dos produtos: ")))
+               3 | qt = array(eval(input("Digite as quantidades dos produtos: ")))
+
+  [2] Linha 3: Variável 'qt' com nome muito curto (≤4 chars)
+      Trecho  : qt = ...
+      Contexto:
+               2 | np = array(eval(input("Digite nomes dos produtos: ")))
+        >>>    3 | qt = array(eval(input("Digite as quantidades dos produtos: ")))
+               4 | c = 0
+
+  [3] Linha 4: Variável 'c' com nome muito curto (≤4 chars)
+      Trecho  : c = ...
+      Contexto:
+               3 | qt = array(eval(input("Digite as quantidades dos produtos: ")))
+        >>>    4 | c = 0
+               5 | a = 0
+
+  [4] Linha 5: Variável 'a' com nome muito curto (≤4 chars)
+      Trecho  : a = ...
+      Contexto:
+               4 | c = 0
+        >>>    5 | a = 0
+               6 | fe = 0
+
+  [5] Linha 6: Variável 'fe' com nome muito curto (≤4 chars)
+      Trecho  : fe = ...
+      Contexto:
+               5 | a = 0
+        >>>    6 | fe = 0
+               7 | b = 0
+
+  [6] Linha 7: Variável 'b' com nome muito curto (≤4 chars)
+      Trecho  : b = ...
+      Contexto:
+               6 | fe = 0
+        >>>    7 | b = 0
+               8 | m = 0
+
+  [7] Linha 8: Variável 'm' com nome muito curto (≤4 chars)
+      Trecho  : m = ...
+      Contexto:
+               7 | b = 0
+        >>>    8 | m = 0
+               9 | f = 0
+
+  [8] Linha 9: Variável 'f' com nome muito curto (≤4 chars)
+      Trecho  : f = ...
+      Contexto:
+               8 | m = 0
+        >>>    9 | f = 0
+              10 | while (c < size(np)):
+
+  [9] Linha 22: Variável 'soma' com nome muito curto (≤4 chars)
+      Trecho  : soma = ...
+      Contexto:
+              21 | 	c+=1
+        >>>   22 | soma = a+fe+b+m+f
+              23 | print(round(soma, 2))
+
+  [10] Linha 12: Variável 'a' com nome muito curto (≤4 chars)
+      Trecho  : a = ...
+      Contexto:
+              11 | 	if np[c] == "ARROZ":
+        >>>   12 | 		a=a+qt[c]*1.25
+              13 | 	elif np[c] == "FEIJAO":
+
+  [11] Linha 14: Variável 'fe' com nome muito curto (≤4 chars)
+      Trecho  : fe = ...
+      Contexto:
+              13 | 	elif np[c] == "FEIJAO":
+        >>>   14 | 		fe=fe+qt[c]*2.60 
+              15 | 	elif np [c] == "BIS":
+
+  [12] Linha 16: Variável 'b' com nome muito curto (≤4 chars)
+      Trecho  : b = ...
+      Contexto:
+              15 | 	elif np [c] == "BIS":
+        >>>   16 | 		b=b+qt[c]*1.80
+              17 | 	elif np [c]== "MIOJO":
+
+  [13] Linha 18: Variável 'm' com nome muito curto (≤4 chars)
+      Trecho  : m = ...
+      Contexto:
+              17 | 	elif np [c]== "MIOJO":
+        >>>   18 | 		m=m+qt[c]*0.85
+              19 | 	elif np [c]== "FANTA":
+
+  [14] Linha 20: Variável 'f' com nome muito curto (≤4 chars)
+      Trecho  : f = ...
+      Contexto:
+              19 | 	elif np [c]== "FANTA":
+        >>>   20 | 		f=f+qt[c]*3.20
+              21 | 	c+=1
+
+======================================================================

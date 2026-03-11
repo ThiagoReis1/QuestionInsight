@@ -1,0 +1,5 @@
+P1= float(input("preco na abertura da bolsa"))
+P2= float(input("preco no fechamento da bolsa"))
+p = (P2 - P1)
+P = ((p*100)/P1)
+print(round(P , 2))

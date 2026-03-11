@@ -1,0 +1,195 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 3591_7565.py
+Questão  : 3591
+Aluno    : 7565
+Total MCs: 3
+
+⚠️  Misconceptions detectados: B4, B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | v=array(eval(input("vetor: ")))
+     3 | cont=0
+     4 | i=0
+     5 | while(i<size(v)):
+     6 | 	if(v[i]==1):
+     7 | 		cont=cont+10
+     8 | 	elif(v[i]==2):
+     9 | 		cont=cont+5
+    10 | 	elif(v[i]==3):
+    11 | 		cont=cont+10
+    12 | 	elif(v[i]==4):
+    13 | 		cont=cont+5
+    14 | 	elif(v[i]==5):
+    15 | 		cont=cont+10
+    16 | 	elif(v[i]==6):
+    17 | 		cont=cont+5
+    18 | 	i=i+1
+    19 | 	
+    20 | print(cont)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B4 — Comandos repetidos dentro de blocos if-elif-else
+  Ocorrências: 10
+
+  [1] Linha 10: Bloco idêntico ao da linha 6
+      Trecho  : cont = cont + 10
+      Contexto:
+               9 | 		cont=cont+5
+        >>>   10 | 	elif(v[i]==3):
+              11 | 		cont=cont+10
+
+  [2] Linha 12: Bloco idêntico ao da linha 8
+      Trecho  : cont = cont + 5
+      Contexto:
+              11 | 		cont=cont+10
+        >>>   12 | 	elif(v[i]==4):
+              13 | 		cont=cont+5
+
+  [3] Linha 14: Bloco idêntico ao da linha 6
+      Trecho  : cont = cont + 10
+      Contexto:
+              13 | 		cont=cont+5
+        >>>   14 | 	elif(v[i]==5):
+              15 | 		cont=cont+10
+
+  [4] Linha 16: Bloco idêntico ao da linha 8
+      Trecho  : cont = cont + 5
+      Contexto:
+              15 | 		cont=cont+10
+        >>>   16 | 	elif(v[i]==6):
+              17 | 		cont=cont+5
+
+  [5] Linha 12: Bloco idêntico ao da linha 8
+      Trecho  : cont = cont + 5
+      Contexto:
+              11 | 		cont=cont+10
+        >>>   12 | 	elif(v[i]==4):
+              13 | 		cont=cont+5
+
+  [6] Linha 14: Bloco idêntico ao da linha 10
+      Trecho  : cont = cont + 10
+      Contexto:
+              13 | 		cont=cont+5
+        >>>   14 | 	elif(v[i]==5):
+              15 | 		cont=cont+10
+
+  [7] Linha 16: Bloco idêntico ao da linha 8
+      Trecho  : cont = cont + 5
+      Contexto:
+              15 | 		cont=cont+10
+        >>>   16 | 	elif(v[i]==6):
+              17 | 		cont=cont+5
+
+  [8] Linha 14: Bloco idêntico ao da linha 10
+      Trecho  : cont = cont + 10
+      Contexto:
+              13 | 		cont=cont+5
+        >>>   14 | 	elif(v[i]==5):
+              15 | 		cont=cont+10
+
+  [9] Linha 16: Bloco idêntico ao da linha 12
+      Trecho  : cont = cont + 5
+      Contexto:
+              15 | 		cont=cont+10
+        >>>   16 | 	elif(v[i]==6):
+              17 | 		cont=cont+5
+
+  [10] Linha 16: Bloco idêntico ao da linha 12
+      Trecho  : cont = cont + 5
+      Contexto:
+              15 | 		cont=cont+10
+        >>>   16 | 	elif(v[i]==6):
+              17 | 		cont=cont+5
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 14: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 14) / elif ... sem else
+      Contexto:
+              13 | 		cont=cont+5
+        >>>   14 | 	elif(v[i]==5):
+              15 | 		cont=cont+10
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 10
+
+  [1] Linha 2: Variável 'v' com nome muito curto (≤4 chars)
+      Trecho  : v = ...
+      Contexto:
+               1 | from numpy import*
+        >>>    2 | v=array(eval(input("vetor: ")))
+               3 | cont=0
+
+  [2] Linha 3: Variável 'cont' com nome muito curto (≤4 chars)
+      Trecho  : cont = ...
+      Contexto:
+               2 | v=array(eval(input("vetor: ")))
+        >>>    3 | cont=0
+               4 | i=0
+
+  [3] Linha 4: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+               3 | cont=0
+        >>>    4 | i=0
+               5 | while(i<size(v)):
+
+  [4] Linha 18: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+              17 | 		cont=cont+5
+        >>>   18 | 	i=i+1
+              19 | 	
+
+  [5] Linha 7: Variável 'cont' com nome muito curto (≤4 chars)
+      Trecho  : cont = ...
+      Contexto:
+               6 | 	if(v[i]==1):
+        >>>    7 | 		cont=cont+10
+               8 | 	elif(v[i]==2):
+
+  [6] Linha 9: Variável 'cont' com nome muito curto (≤4 chars)
+      Trecho  : cont = ...
+      Contexto:
+               8 | 	elif(v[i]==2):
+        >>>    9 | 		cont=cont+5
+              10 | 	elif(v[i]==3):
+
+  [7] Linha 11: Variável 'cont' com nome muito curto (≤4 chars)
+      Trecho  : cont = ...
+      Contexto:
+              10 | 	elif(v[i]==3):
+        >>>   11 | 		cont=cont+10
+              12 | 	elif(v[i]==4):
+
+  [8] Linha 13: Variável 'cont' com nome muito curto (≤4 chars)
+      Trecho  : cont = ...
+      Contexto:
+              12 | 	elif(v[i]==4):
+        >>>   13 | 		cont=cont+5
+              14 | 	elif(v[i]==5):
+
+  [9] Linha 15: Variável 'cont' com nome muito curto (≤4 chars)
+      Trecho  : cont = ...
+      Contexto:
+              14 | 	elif(v[i]==5):
+        >>>   15 | 		cont=cont+10
+              16 | 	elif(v[i]==6):
+
+  [10] Linha 17: Variável 'cont' com nome muito curto (≤4 chars)
+      Trecho  : cont = ...
+      Contexto:
+              16 | 	elif(v[i]==6):
+        >>>   17 | 		cont=cont+5
+              18 | 	i=i+1
+
+======================================================================

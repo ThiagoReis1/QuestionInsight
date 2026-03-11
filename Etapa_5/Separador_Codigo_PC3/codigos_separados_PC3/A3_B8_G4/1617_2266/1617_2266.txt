@@ -1,0 +1,151 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1617_2266.py
+Questão  : 1617
+Aluno    : 2266
+Total MCs: 3
+
+⚠️  Misconceptions detectados: A3, B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | v = array(eval(input()))
+     3 | n = array(eval(input()))
+     4 | dano = 0
+     5 | t = 0
+     6 | av = zeros(size(n),dtype=int)
+     7 | while t < size(n):
+     8 | 	if v[t] == "CENOURA":
+     9 | 		av[t] = 2
+    10 | 	elif v[t] == "FERRO":
+    11 | 		av[t] = 4
+    12 | 	elif v[t] == "DWARVEN": 
+    13 | 		av[t] = 8
+    14 | 	elif v[t] == "ELVEN":
+    15 | 		av[t] = 11
+    16 | 	elif v[t] == "DAEDRIC": 
+    17 | 		av[t] = 14
+    18 | 	t = t + 1
+    19 | y = 0
+    20 | P = ["DAEDRIC","FERRO","CENOURA","FERRO"]
+    21 | g = [2,1,5,8]
+    22 | while y < size(n):
+    23 | 	dano = dano + av[y]*n[y]
+    24 | 	y = y + 1
+    25 | print(dano)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 2
+
+  [1] Linha 20: Variável 'P' declarada mas nunca utilizada
+      Trecho  : P = ...
+      Contexto:
+              19 | y = 0
+        >>>   20 | P = ["DAEDRIC","FERRO","CENOURA","FERRO"]
+              21 | g = [2,1,5,8]
+
+  [2] Linha 21: Variável 'g' declarada mas nunca utilizada
+      Trecho  : g = ...
+      Contexto:
+              20 | P = ["DAEDRIC","FERRO","CENOURA","FERRO"]
+        >>>   21 | g = [2,1,5,8]
+              22 | while y < size(n):
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 14: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 14) / elif ... sem else
+      Contexto:
+              13 | 		av[t] = 8
+        >>>   14 | 	elif v[t] == "ELVEN":
+              15 | 		av[t] = 11
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 11
+
+  [1] Linha 2: Variável 'v' com nome muito curto (≤4 chars)
+      Trecho  : v = ...
+      Contexto:
+               1 | from numpy import*
+        >>>    2 | v = array(eval(input()))
+               3 | n = array(eval(input()))
+
+  [2] Linha 3: Variável 'n' com nome muito curto (≤4 chars)
+      Trecho  : n = ...
+      Contexto:
+               2 | v = array(eval(input()))
+        >>>    3 | n = array(eval(input()))
+               4 | dano = 0
+
+  [3] Linha 4: Variável 'dano' com nome muito curto (≤4 chars)
+      Trecho  : dano = ...
+      Contexto:
+               3 | n = array(eval(input()))
+        >>>    4 | dano = 0
+               5 | t = 0
+
+  [4] Linha 5: Variável 't' com nome muito curto (≤4 chars)
+      Trecho  : t = ...
+      Contexto:
+               4 | dano = 0
+        >>>    5 | t = 0
+               6 | av = zeros(size(n),dtype=int)
+
+  [5] Linha 6: Variável 'av' com nome muito curto (≤4 chars)
+      Trecho  : av = ...
+      Contexto:
+               5 | t = 0
+        >>>    6 | av = zeros(size(n),dtype=int)
+               7 | while t < size(n):
+
+  [6] Linha 19: Variável 'y' com nome muito curto (≤4 chars)
+      Trecho  : y = ...
+      Contexto:
+              18 | 	t = t + 1
+        >>>   19 | y = 0
+              20 | P = ["DAEDRIC","FERRO","CENOURA","FERRO"]
+
+  [7] Linha 20: Variável 'P' com nome muito curto (≤4 chars)
+      Trecho  : P = ...
+      Contexto:
+              19 | y = 0
+        >>>   20 | P = ["DAEDRIC","FERRO","CENOURA","FERRO"]
+              21 | g = [2,1,5,8]
+
+  [8] Linha 21: Variável 'g' com nome muito curto (≤4 chars)
+      Trecho  : g = ...
+      Contexto:
+              20 | P = ["DAEDRIC","FERRO","CENOURA","FERRO"]
+        >>>   21 | g = [2,1,5,8]
+              22 | while y < size(n):
+
+  [9] Linha 18: Variável 't' com nome muito curto (≤4 chars)
+      Trecho  : t = ...
+      Contexto:
+              17 | 		av[t] = 14
+        >>>   18 | 	t = t + 1
+              19 | y = 0
+
+  [10] Linha 23: Variável 'dano' com nome muito curto (≤4 chars)
+      Trecho  : dano = ...
+      Contexto:
+              22 | while y < size(n):
+        >>>   23 | 	dano = dano + av[y]*n[y]
+              24 | 	y = y + 1
+
+  [11] Linha 24: Variável 'y' com nome muito curto (≤4 chars)
+      Trecho  : y = ...
+      Contexto:
+              23 | 	dano = dano + av[y]*n[y]
+        >>>   24 | 	y = y + 1
+              25 | print(dano)
+
+======================================================================

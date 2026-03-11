@@ -1,0 +1,75 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1405_2384.py
+Questão  : 1405
+Aluno    : 2384
+Total MCs: 2
+
+⚠️  Misconceptions detectados: A3, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | # Leitura de variáveis
+     2 | nome = input("Insira o nome do ataque realizado pela Banshee: ")
+     3 | D1 = int(input("Insira o valor sorteado do dado 1: "))
+     4 | D2 = int(input("Insira o valor sorteado do dado 2: "))
+     5 | 
+     6 | if(nome == "grito"):
+     7 | 	dano = 6 + (D1 + D2)
+     8 | if(nome == "toque"):
+     9 | 	dano = (D1 + D2) ** 2
+    10 | 	
+    11 | print(dano)
+    12 | 
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 1
+
+  [1] Linha 0: A3 detectado pelo VisitorMC3 (localização exata não mapeada)
+      Trecho  : —
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 5
+
+  [1] Linha 2: Variável 'nome' com nome muito curto (≤4 chars)
+      Trecho  : nome = ...
+      Contexto:
+               1 | # Leitura de variáveis
+        >>>    2 | nome = input("Insira o nome do ataque realizado pela Banshee: ")
+               3 | D1 = int(input("Insira o valor sorteado do dado 1: "))
+
+  [2] Linha 3: Variável 'D1' com nome muito curto (≤4 chars)
+      Trecho  : D1 = ...
+      Contexto:
+               2 | nome = input("Insira o nome do ataque realizado pela Banshee: ")
+        >>>    3 | D1 = int(input("Insira o valor sorteado do dado 1: "))
+               4 | D2 = int(input("Insira o valor sorteado do dado 2: "))
+
+  [3] Linha 4: Variável 'D2' com nome muito curto (≤4 chars)
+      Trecho  : D2 = ...
+      Contexto:
+               3 | D1 = int(input("Insira o valor sorteado do dado 1: "))
+        >>>    4 | D2 = int(input("Insira o valor sorteado do dado 2: "))
+               5 | 
+
+  [4] Linha 7: Variável 'dano' com nome muito curto (≤4 chars)
+      Trecho  : dano = ...
+      Contexto:
+               6 | if(nome == "grito"):
+        >>>    7 | 	dano = 6 + (D1 + D2)
+               8 | if(nome == "toque"):
+
+  [5] Linha 9: Variável 'dano' com nome muito curto (≤4 chars)
+      Trecho  : dano = ...
+      Contexto:
+               8 | if(nome == "toque"):
+        >>>    9 | 	dano = (D1 + D2) ** 2
+              10 | 	
+
+======================================================================

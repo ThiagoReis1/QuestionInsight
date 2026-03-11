@@ -1,0 +1,15 @@
+a=float(input("preco:"))
+b=input("codigo:")
+c=a*(40/100)
+if(b==1):
+	x=(a-(a*c)+a*(10/100)/100)
+	print(round(x,2))
+elif(b==2):
+	x=(a-(a*40/100))+a*(8/100)
+	print(round(x,2))
+elif(b==3):
+	x=(a-(a*40/100))+a*0
+	print(round(x,2))
+else:
+	x=(a-(a*40/100))+a*(2/100)
+	print(round(x,2))

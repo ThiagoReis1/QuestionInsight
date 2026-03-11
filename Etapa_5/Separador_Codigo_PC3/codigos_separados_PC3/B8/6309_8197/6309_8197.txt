@@ -1,0 +1,50 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 6309_8197.py
+Questão  : 6309
+Aluno    : 8197
+Total MCs: 1
+
+⚠️  Misconceptions detectados: B8
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import *
+     2 | 
+     3 | produtos = input("Digite o produto desejado: ").upper()
+     4 | i = 0
+     5 | total = 0
+     6 | quantidade_h = 0
+     7 | quantidade_c = 0
+     8 | quantidade_l = 0
+     9 | 
+    10 | while (i < len(produtos)):
+    11 | 	if (produtos[i] == "H"):
+    12 | 		quantidade_h = quantidade_h + 1
+    13 | 		total = total + 5.40
+    14 | 	elif (produtos[i] == "C"):
+    15 | 		quantidade_c = quantidade_c + 1
+    16 | 		total = total + 8.95
+    17 | 	elif (produtos[i] == "L"):
+    18 | 		quantidade_l = quantidade_l + 1
+    19 | 		total = total + 4.50
+    20 | 	i = i + 1
+    21 | print(round(total, 2), quantidade_h, quantidade_c, quantidade_l)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 14: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 14) / elif ... sem else
+      Contexto:
+              13 | 		total = total + 5.40
+        >>>   14 | 	elif (produtos[i] == "C"):
+              15 | 		quantidade_c = quantidade_c + 1
+
+======================================================================

@@ -1,0 +1,70 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 6381_4282.py
+Questão  : 6381
+Aluno    : 4282
+Total MCs: 3
+
+⚠️  Misconceptions detectados: A4, B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import *
+     2 | str = input().upper().split(',')
+     3 | 
+     4 | vet = zeros(4, dtype=int)
+     5 | for char in str:
+     6 | 	if (char == 'C'):
+     7 | 		vet[0] += 1
+     8 | 	elif (char == 'O'):
+     9 | 		vet[1] += 1
+    10 | 	elif (char == 'P'):
+    11 | 		vet[2] += 1
+    12 | 	elif (char == 'E'):
+    13 | 		vet[3] += 1
+    14 | print(vet)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A4 — Redefinição de built-in
+  Ocorrências: 1
+
+  [1] Linha 2: Built-in 'str' redefinido como variável
+      Trecho  : str = input().upper().split(',')
+      Contexto:
+               1 | from numpy import *
+        >>>    2 | str = input().upper().split(',')
+               3 | 
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 10: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 10) / elif ... sem else
+      Contexto:
+               9 | 		vet[1] += 1
+        >>>   10 | 	elif (char == 'P'):
+              11 | 		vet[2] += 1
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 2
+
+  [1] Linha 2: Variável 'str' com nome muito curto (≤4 chars)
+      Trecho  : str = ...
+      Contexto:
+               1 | from numpy import *
+        >>>    2 | str = input().upper().split(',')
+               3 | 
+
+  [2] Linha 4: Variável 'vet' com nome muito curto (≤4 chars)
+      Trecho  : vet = ...
+      Contexto:
+               3 | 
+        >>>    4 | vet = zeros(4, dtype=int)
+               5 | for char in str:
+
+======================================================================

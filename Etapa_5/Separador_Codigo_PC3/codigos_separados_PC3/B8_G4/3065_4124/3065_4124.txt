@@ -1,0 +1,89 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 3065_4124.py
+Questão  : 3065
+Aluno    : 4124
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | tipo = input("Tipo de ataque: ").upper()
+     2 | n = int(input("Valor do dado: "))
+     3 | trn = int(input("Numero de turnos: "))
+     4 | 
+     5 | if((tipo == "CAUDA" or tipo == "CUSPE" or tipo == "PATADA") and (n >= 1 and n <= 4)):
+     6 | 	if(tipo == "CAUDA"):
+     7 | 		pv = n * trn
+     8 | 		print(pv)
+     9 | 	elif(tipo == "CUSPE"):
+    10 | 		pv = 2 * n * trn
+    11 | 		print(pv)
+    12 | 	elif(tipo == "PATADA"):
+    13 | 		pv = ((2 * n) - 5) * trn
+    14 | 		print(pv)
+    15 | else:
+    16 | 	print("Entrada invalida")
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 9: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 9) / elif ... sem else
+      Contexto:
+               8 | 		print(pv)
+        >>>    9 | 	elif(tipo == "CUSPE"):
+              10 | 		pv = 2 * n * trn
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 6
+
+  [1] Linha 1: Variável 'tipo' com nome muito curto (≤4 chars)
+      Trecho  : tipo = ...
+      Contexto:
+        >>>    1 | tipo = input("Tipo de ataque: ").upper()
+               2 | n = int(input("Valor do dado: "))
+
+  [2] Linha 2: Variável 'n' com nome muito curto (≤4 chars)
+      Trecho  : n = ...
+      Contexto:
+               1 | tipo = input("Tipo de ataque: ").upper()
+        >>>    2 | n = int(input("Valor do dado: "))
+               3 | trn = int(input("Numero de turnos: "))
+
+  [3] Linha 3: Variável 'trn' com nome muito curto (≤4 chars)
+      Trecho  : trn = ...
+      Contexto:
+               2 | n = int(input("Valor do dado: "))
+        >>>    3 | trn = int(input("Numero de turnos: "))
+               4 | 
+
+  [4] Linha 7: Variável 'pv' com nome muito curto (≤4 chars)
+      Trecho  : pv = ...
+      Contexto:
+               6 | 	if(tipo == "CAUDA"):
+        >>>    7 | 		pv = n * trn
+               8 | 		print(pv)
+
+  [5] Linha 10: Variável 'pv' com nome muito curto (≤4 chars)
+      Trecho  : pv = ...
+      Contexto:
+               9 | 	elif(tipo == "CUSPE"):
+        >>>   10 | 		pv = 2 * n * trn
+              11 | 		print(pv)
+
+  [6] Linha 13: Variável 'pv' com nome muito curto (≤4 chars)
+      Trecho  : pv = ...
+      Contexto:
+              12 | 	elif(tipo == "PATADA"):
+        >>>   13 | 		pv = ((2 * n) - 5) * trn
+              14 | 		print(pv)
+
+======================================================================

@@ -1,0 +1,12 @@
+x=float(input("jogo1:"))
+round(x, 2)
+y=float(input("jogo2:"))
+round(y, 2)
+d=float(y*25/100)
+totaljogo2=float(y-d)
+round(totaljogo2, 2)
+valortotal=float(x+totaljogo2)
+round(valortotal, 2)
+
+print(round(totaljogo2, 2))
+print(round(valortotal, 2))

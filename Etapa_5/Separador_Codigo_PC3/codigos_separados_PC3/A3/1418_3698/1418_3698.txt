@@ -1,0 +1,62 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1418_3698.py
+Questão  : 1418
+Aluno    : 3698
+Total MCs: 1
+
+⚠️  Misconceptions detectados: A3
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | mais_votado = int(input('Votos do mais votado: '))
+     2 | segundo_lugar = int(input('Votos do segundo lugar: '))
+     3 | menos_votado = int(input('Votos do menos votado: '))
+     4 | brancos = int(input('Votos em branco'))
+     5 | nulos = int(input('Votos nulos: '))
+     6 | 
+     7 | if (mais_votado < 200000/2):
+     8 | 	mensagem = "sim"
+     9 | else:
+    10 | 	mensagem = "nao"
+    11 | 	
+    12 | print(mensagem.upper())
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 4
+
+  [1] Linha 2: Variável 'segundo_lugar' declarada mas nunca utilizada
+      Trecho  : segundo_lugar = ...
+      Contexto:
+               1 | mais_votado = int(input('Votos do mais votado: '))
+        >>>    2 | segundo_lugar = int(input('Votos do segundo lugar: '))
+               3 | menos_votado = int(input('Votos do menos votado: '))
+
+  [2] Linha 3: Variável 'menos_votado' declarada mas nunca utilizada
+      Trecho  : menos_votado = ...
+      Contexto:
+               2 | segundo_lugar = int(input('Votos do segundo lugar: '))
+        >>>    3 | menos_votado = int(input('Votos do menos votado: '))
+               4 | brancos = int(input('Votos em branco'))
+
+  [3] Linha 4: Variável 'brancos' declarada mas nunca utilizada
+      Trecho  : brancos = ...
+      Contexto:
+               3 | menos_votado = int(input('Votos do menos votado: '))
+        >>>    4 | brancos = int(input('Votos em branco'))
+               5 | nulos = int(input('Votos nulos: '))
+
+  [4] Linha 5: Variável 'nulos' declarada mas nunca utilizada
+      Trecho  : nulos = ...
+      Contexto:
+               4 | brancos = int(input('Votos em branco'))
+        >>>    5 | nulos = int(input('Votos nulos: '))
+               6 | 
+
+======================================================================

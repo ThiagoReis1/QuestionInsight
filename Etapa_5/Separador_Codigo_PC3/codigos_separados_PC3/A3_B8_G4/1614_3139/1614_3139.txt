@@ -1,0 +1,109 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1614_3139.py
+Questão  : 1614
+Aluno    : 3139
+Total MCs: 3
+
+⚠️  Misconceptions detectados: A3, B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import* 
+     2 | 
+     3 | a = array(input("alimentos: ").upper())
+     4 | k = array(eval(input("quantidade de gramas: ")))
+     5 | 
+     6 | 
+     7 | 
+     8 | if (a == "BANANA"):
+     9 | 	x = k * 0.97
+    10 | elif (a == "BIFE"):
+    11 | 	x = k * 2.95
+    12 | elif (a == "FEIJOADA"):
+    13 | 	x = k * 1.27
+    14 | elif(a == "OMELETE"):
+    15 | 	x = k * 1.04
+    16 | elif(a == "TOMATE"):
+    17 | 	x = k * 0.2
+    18 | print(round(k, 2))
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 1
+
+  [1] Linha 9: Variável 'x' declarada mas nunca utilizada
+      Trecho  : x = ...
+      Contexto:
+               8 | if (a == "BANANA"):
+        >>>    9 | 	x = k * 0.97
+              10 | elif (a == "BIFE"):
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 14: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 14) / elif ... sem else
+      Contexto:
+              13 | 	x = k * 1.27
+        >>>   14 | elif(a == "OMELETE"):
+              15 | 	x = k * 1.04
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 7
+
+  [1] Linha 3: Variável 'a' com nome muito curto (≤4 chars)
+      Trecho  : a = ...
+      Contexto:
+               2 | 
+        >>>    3 | a = array(input("alimentos: ").upper())
+               4 | k = array(eval(input("quantidade de gramas: ")))
+
+  [2] Linha 4: Variável 'k' com nome muito curto (≤4 chars)
+      Trecho  : k = ...
+      Contexto:
+               3 | a = array(input("alimentos: ").upper())
+        >>>    4 | k = array(eval(input("quantidade de gramas: ")))
+               5 | 
+
+  [3] Linha 9: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+               8 | if (a == "BANANA"):
+        >>>    9 | 	x = k * 0.97
+              10 | elif (a == "BIFE"):
+
+  [4] Linha 11: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+              10 | elif (a == "BIFE"):
+        >>>   11 | 	x = k * 2.95
+              12 | elif (a == "FEIJOADA"):
+
+  [5] Linha 13: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+              12 | elif (a == "FEIJOADA"):
+        >>>   13 | 	x = k * 1.27
+              14 | elif(a == "OMELETE"):
+
+  [6] Linha 15: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+              14 | elif(a == "OMELETE"):
+        >>>   15 | 	x = k * 1.04
+              16 | elif(a == "TOMATE"):
+
+  [7] Linha 17: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+              16 | elif(a == "TOMATE"):
+        >>>   17 | 	x = k * 0.2
+              18 | print(round(k, 2))
+
+======================================================================

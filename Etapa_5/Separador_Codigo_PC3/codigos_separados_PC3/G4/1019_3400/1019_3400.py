@@ -1,0 +1,5 @@
+a= float(input("largura em metros: "))
+b= float(input("comprimento em metros: "))
+c= float(input("area do retangulo: "))
+y= c *(a*b)
+print(round(y, 2))

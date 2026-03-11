@@ -1,0 +1,117 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1989_2212.py
+Questão  : 1989
+Aluno    : 2212
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | #Asparagina = C4+H8+N2+O3
+     2 | #Glutamina = C5+H8+N1+O4
+     3 | #Triptofano = C11+H11+N2+O2
+     4 | f = input("Nome do aminoácido: ")
+     5 | x=(f).upper()
+     6 | o = 15.999
+     7 | c = 12.011
+     8 | n = 14.00674
+     9 | h = 1.00794
+    10 | if(x=="ASPARAGINA")or (x=="GLUTAMINA") or (x=="TRIPTOFANO"):
+    11 | 	if(x=="ASPARAGINA"):
+    12 | 		z=((c*4)+(h*8)+(n*2)+(o*3))
+    13 | 		print(round(z,2))
+    14 | 	elif(x=="GLUTAMINA"):
+    15 | 		z=((c*5)+(h*8)+(n*1)+(o*4))
+    16 | 		print(round(z,2))
+    17 | 	elif(x=="TRIPTOFANO"):
+    18 | 		z=((c*11)+(h*11)+(n*2)+(o*2))
+    19 | 		print(round(z,2))
+    20 | else:
+    21 | 	print("Entrada:",f)
+    22 | 	print("Dado Invalido")
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 14: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 14) / elif ... sem else
+      Contexto:
+              13 | 		print(round(z,2))
+        >>>   14 | 	elif(x=="GLUTAMINA"):
+              15 | 		z=((c*5)+(h*8)+(n*1)+(o*4))
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 9
+
+  [1] Linha 4: Variável 'f' com nome muito curto (≤4 chars)
+      Trecho  : f = ...
+      Contexto:
+               3 | #Triptofano = C11+H11+N2+O2
+        >>>    4 | f = input("Nome do aminoácido: ")
+               5 | x=(f).upper()
+
+  [2] Linha 5: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+               4 | f = input("Nome do aminoácido: ")
+        >>>    5 | x=(f).upper()
+               6 | o = 15.999
+
+  [3] Linha 6: Variável 'o' com nome muito curto (≤4 chars)
+      Trecho  : o = ...
+      Contexto:
+               5 | x=(f).upper()
+        >>>    6 | o = 15.999
+               7 | c = 12.011
+
+  [4] Linha 7: Variável 'c' com nome muito curto (≤4 chars)
+      Trecho  : c = ...
+      Contexto:
+               6 | o = 15.999
+        >>>    7 | c = 12.011
+               8 | n = 14.00674
+
+  [5] Linha 8: Variável 'n' com nome muito curto (≤4 chars)
+      Trecho  : n = ...
+      Contexto:
+               7 | c = 12.011
+        >>>    8 | n = 14.00674
+               9 | h = 1.00794
+
+  [6] Linha 9: Variável 'h' com nome muito curto (≤4 chars)
+      Trecho  : h = ...
+      Contexto:
+               8 | n = 14.00674
+        >>>    9 | h = 1.00794
+              10 | if(x=="ASPARAGINA")or (x=="GLUTAMINA") or (x=="TRIPTOFANO"):
+
+  [7] Linha 12: Variável 'z' com nome muito curto (≤4 chars)
+      Trecho  : z = ...
+      Contexto:
+              11 | 	if(x=="ASPARAGINA"):
+        >>>   12 | 		z=((c*4)+(h*8)+(n*2)+(o*3))
+              13 | 		print(round(z,2))
+
+  [8] Linha 15: Variável 'z' com nome muito curto (≤4 chars)
+      Trecho  : z = ...
+      Contexto:
+              14 | 	elif(x=="GLUTAMINA"):
+        >>>   15 | 		z=((c*5)+(h*8)+(n*1)+(o*4))
+              16 | 		print(round(z,2))
+
+  [9] Linha 18: Variável 'z' com nome muito curto (≤4 chars)
+      Trecho  : z = ...
+      Contexto:
+              17 | 	elif(x=="TRIPTOFANO"):
+        >>>   18 | 		z=((c*11)+(h*11)+(n*2)+(o*2))
+              19 | 		print(round(z,2))
+
+======================================================================

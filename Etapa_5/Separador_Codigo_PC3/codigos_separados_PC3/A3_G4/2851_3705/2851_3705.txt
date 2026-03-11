@@ -1,0 +1,79 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 2851_3705.py
+Questão  : 2851
+Aluno    : 3705
+Total MCs: 2
+
+⚠️  Misconceptions detectados: A3, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | vet=array(eval(input()))
+     3 | soma=0
+     4 | i=0
+     5 | 
+     6 | while(i<size(vet)):
+     7 | 	for x in vet:
+     8 | 		if(vet[i]==99):
+     9 | 			vet[i]=0
+    10 | 		i=i+1
+    11 | 	i=i+1
+    12 | print(sum(vet)*2)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 1
+
+  [1] Linha 3: Variável 'soma' declarada mas nunca utilizada
+      Trecho  : soma = ...
+      Contexto:
+               2 | vet=array(eval(input()))
+        >>>    3 | soma=0
+               4 | i=0
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 5
+
+  [1] Linha 2: Variável 'vet' com nome muito curto (≤4 chars)
+      Trecho  : vet = ...
+      Contexto:
+               1 | from numpy import*
+        >>>    2 | vet=array(eval(input()))
+               3 | soma=0
+
+  [2] Linha 3: Variável 'soma' com nome muito curto (≤4 chars)
+      Trecho  : soma = ...
+      Contexto:
+               2 | vet=array(eval(input()))
+        >>>    3 | soma=0
+               4 | i=0
+
+  [3] Linha 4: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+               3 | soma=0
+        >>>    4 | i=0
+               5 | 
+
+  [4] Linha 11: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+              10 | 		i=i+1
+        >>>   11 | 	i=i+1
+              12 | print(sum(vet)*2)
+
+  [5] Linha 10: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+               9 | 			vet[i]=0
+        >>>   10 | 		i=i+1
+              11 | 	i=i+1
+
+======================================================================

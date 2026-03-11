@@ -1,0 +1,62 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1115_3351.py
+Questão  : 1115
+Aluno    : 3351
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | #Entradinhas
+     2 | s = float(input("Insira seu salario atual: "))
+     3 | cod = int(input("Insira o codigo correspondente ao seu cargo: "))
+     4 | print("Entradas: R$", s , "e codigo", cod)
+     5 | #Condições
+     6 | if((s>0) and (101 <= cod <= 104)):
+     7 | 	if(cod == 101):
+     8 | 		print("Novo salario: R$",round(s + s*0.0080,2))
+     9 | 	elif(cod == 102):
+    10 | 		print("Novo salario: R$",round(s + s*0.0065,2))
+    11 | 	elif(cod == 103):
+    12 | 		print("Novo salario: R$",round(s + s*0.0060,2))
+    13 | 	elif(cod == 104):
+    14 | 		print("Novo salario: R$",round(s + s*0.0055,2))
+    15 | else:
+    16 | 	print("Dados invalidos")
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 11: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 11) / elif ... sem else
+      Contexto:
+              10 | 		print("Novo salario: R$",round(s + s*0.0065,2))
+        >>>   11 | 	elif(cod == 103):
+              12 | 		print("Novo salario: R$",round(s + s*0.0060,2))
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 2
+
+  [1] Linha 2: Variável 's' com nome muito curto (≤4 chars)
+      Trecho  : s = ...
+      Contexto:
+               1 | #Entradinhas
+        >>>    2 | s = float(input("Insira seu salario atual: "))
+               3 | cod = int(input("Insira o codigo correspondente ao seu cargo: "))
+
+  [2] Linha 3: Variável 'cod' com nome muito curto (≤4 chars)
+      Trecho  : cod = ...
+      Contexto:
+               2 | s = float(input("Insira seu salario atual: "))
+        >>>    3 | cod = int(input("Insira o codigo correspondente ao seu cargo: "))
+               4 | print("Entradas: R$", s , "e codigo", cod)
+
+======================================================================

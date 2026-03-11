@@ -1,0 +1,3 @@
+renda = float(input)
+
+

@@ -1,0 +1,72 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1598_3485.py
+Questão  : 1598
+Aluno    : 3485
+Total MCs: 2
+
+⚠️  Misconceptions detectados: A2, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | 
+     3 | vet = array(eval(input("Digite o valor da compra: ")))
+     4 | 
+     5 | for x in vet:
+     6 | 	if(x > 80.0):
+     7 | 		x = x - 5
+     8 | 	else:
+     9 | 		x = x
+    10 | 		
+    11 | 	s = sum(vet)
+    12 | print(round(s, 2))
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A2 — Variável atribuída a si mesma
+  Ocorrências: 1
+
+  [1] Linha 9: 'x' atribuído a si mesmo
+      Trecho  : x = x
+      Contexto:
+               8 | 	else:
+        >>>    9 | 		x = x
+              10 | 		
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 4
+
+  [1] Linha 3: Variável 'vet' com nome muito curto (≤4 chars)
+      Trecho  : vet = ...
+      Contexto:
+               2 | 
+        >>>    3 | vet = array(eval(input("Digite o valor da compra: ")))
+               4 | 
+
+  [2] Linha 11: Variável 's' com nome muito curto (≤4 chars)
+      Trecho  : s = ...
+      Contexto:
+              10 | 		
+        >>>   11 | 	s = sum(vet)
+              12 | print(round(s, 2))
+
+  [3] Linha 7: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+               6 | 	if(x > 80.0):
+        >>>    7 | 		x = x - 5
+               8 | 	else:
+
+  [4] Linha 9: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+               8 | 	else:
+        >>>    9 | 		x = x
+              10 | 		
+
+======================================================================

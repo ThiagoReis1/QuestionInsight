@@ -1,0 +1,76 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1621_4228.py
+Questão  : 1621
+Aluno    : 4228
+Total MCs: 2
+
+⚠️  Misconceptions detectados: A3, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | 
+     3 | v = array(input("Nome do Produto: ").upper())
+     4 | v = array(["ARROZ","FEIJAO","BIS","MIOJO","FANTA"])
+     5 | q = array(eval(input("Quantidade: ")))
+     6 | i = 0 
+     7 | v[0] = 1.25
+     8 | v[1] = 2.60
+     9 | v[2] = 1.80
+    10 | v[3] = 0.85
+    11 | v[4] = 3.20
+    12 | 
+    13 | if (q[0] == v[0]):
+    14 | 	total = q * v
+    15 | 
+    16 | print(round(total, 2))
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 1
+
+  [1] Linha 6: Variável 'i' declarada mas nunca utilizada
+      Trecho  : i = ...
+      Contexto:
+               5 | q = array(eval(input("Quantidade: ")))
+        >>>    6 | i = 0 
+               7 | v[0] = 1.25
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 4
+
+  [1] Linha 3: Variável 'v' com nome muito curto (≤4 chars)
+      Trecho  : v = ...
+      Contexto:
+               2 | 
+        >>>    3 | v = array(input("Nome do Produto: ").upper())
+               4 | v = array(["ARROZ","FEIJAO","BIS","MIOJO","FANTA"])
+
+  [2] Linha 4: Variável 'v' com nome muito curto (≤4 chars)
+      Trecho  : v = ...
+      Contexto:
+               3 | v = array(input("Nome do Produto: ").upper())
+        >>>    4 | v = array(["ARROZ","FEIJAO","BIS","MIOJO","FANTA"])
+               5 | q = array(eval(input("Quantidade: ")))
+
+  [3] Linha 5: Variável 'q' com nome muito curto (≤4 chars)
+      Trecho  : q = ...
+      Contexto:
+               4 | v = array(["ARROZ","FEIJAO","BIS","MIOJO","FANTA"])
+        >>>    5 | q = array(eval(input("Quantidade: ")))
+               6 | i = 0 
+
+  [4] Linha 6: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+               5 | q = array(eval(input("Quantidade: ")))
+        >>>    6 | i = 0 
+               7 | v[0] = 1.25
+
+======================================================================

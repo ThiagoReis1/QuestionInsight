@@ -1,0 +1,121 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1616_2225.py
+Questão  : 1616
+Aluno    : 2225
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | 
+     3 | v=array(eval(input("tipo: ").upper()))
+     4 | d=array(eval(input("numero: ")))
+     5 | i=0
+     6 | da=0
+     7 | while(i<size(v)):
+     8 | 	if(v[i]=="GELO"):
+     9 | 		da=da+2*d[i]
+    10 | 	elif(v[i]=="FOGO"):
+    11 | 		da=da+3*d[i]
+    12 | 	elif(v[i]=="CHOQUE"):
+    13 | 		da=da+4*d[i]
+    14 | 	elif(v[i]=="CONJURACAO"):
+    15 | 		da=da+8*d[i]
+    16 | 	elif(v[i]=="ILUSAO"):
+    17 | 		da=da+10*d[i]
+    18 | 	i=i+1
+    19 | print(da)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 14: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 14) / elif ... sem else
+      Contexto:
+              13 | 		da=da+4*d[i]
+        >>>   14 | 	elif(v[i]=="CONJURACAO"):
+              15 | 		da=da+8*d[i]
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 10
+
+  [1] Linha 3: Variável 'v' com nome muito curto (≤4 chars)
+      Trecho  : v = ...
+      Contexto:
+               2 | 
+        >>>    3 | v=array(eval(input("tipo: ").upper()))
+               4 | d=array(eval(input("numero: ")))
+
+  [2] Linha 4: Variável 'd' com nome muito curto (≤4 chars)
+      Trecho  : d = ...
+      Contexto:
+               3 | v=array(eval(input("tipo: ").upper()))
+        >>>    4 | d=array(eval(input("numero: ")))
+               5 | i=0
+
+  [3] Linha 5: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+               4 | d=array(eval(input("numero: ")))
+        >>>    5 | i=0
+               6 | da=0
+
+  [4] Linha 6: Variável 'da' com nome muito curto (≤4 chars)
+      Trecho  : da = ...
+      Contexto:
+               5 | i=0
+        >>>    6 | da=0
+               7 | while(i<size(v)):
+
+  [5] Linha 18: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+              17 | 		da=da+10*d[i]
+        >>>   18 | 	i=i+1
+              19 | print(da)
+
+  [6] Linha 9: Variável 'da' com nome muito curto (≤4 chars)
+      Trecho  : da = ...
+      Contexto:
+               8 | 	if(v[i]=="GELO"):
+        >>>    9 | 		da=da+2*d[i]
+              10 | 	elif(v[i]=="FOGO"):
+
+  [7] Linha 11: Variável 'da' com nome muito curto (≤4 chars)
+      Trecho  : da = ...
+      Contexto:
+              10 | 	elif(v[i]=="FOGO"):
+        >>>   11 | 		da=da+3*d[i]
+              12 | 	elif(v[i]=="CHOQUE"):
+
+  [8] Linha 13: Variável 'da' com nome muito curto (≤4 chars)
+      Trecho  : da = ...
+      Contexto:
+              12 | 	elif(v[i]=="CHOQUE"):
+        >>>   13 | 		da=da+4*d[i]
+              14 | 	elif(v[i]=="CONJURACAO"):
+
+  [9] Linha 15: Variável 'da' com nome muito curto (≤4 chars)
+      Trecho  : da = ...
+      Contexto:
+              14 | 	elif(v[i]=="CONJURACAO"):
+        >>>   15 | 		da=da+8*d[i]
+              16 | 	elif(v[i]=="ILUSAO"):
+
+  [10] Linha 17: Variável 'da' com nome muito curto (≤4 chars)
+      Trecho  : da = ...
+      Contexto:
+              16 | 	elif(v[i]=="ILUSAO"):
+        >>>   17 | 		da=da+10*d[i]
+              18 | 	i=i+1
+
+======================================================================

@@ -1,0 +1,16 @@
+from numpy import*
+
+vetor=eval(input(""))
+A=min(vetor)
+B=max(vetor)
+C=0.75 * A +0.25 * B
+D=0.25 * A +0.75 * B
+
+v=zeros(2, dtype=int)
+
+for i in vetor:
+   if(i>=C and i<D):
+      v[0]+=1
+   elif(i>=D and i<B):
+      v[1]+=1
+print(v)

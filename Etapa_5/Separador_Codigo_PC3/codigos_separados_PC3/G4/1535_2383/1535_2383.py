@@ -1,0 +1,12 @@
+s=0
+x=float(input())
+k=int(input())
+i=1
+j=1
+p=0
+while(i<=k):
+	s=s+((-1)**p)*((x)**j)/j
+	i=i+1
+	j=j+2
+	p=p+1
+print(round(s,6))

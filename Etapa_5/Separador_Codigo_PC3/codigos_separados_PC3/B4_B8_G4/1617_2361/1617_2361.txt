@@ -1,0 +1,119 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1617_2361.py
+Questão  : 1617
+Aluno    : 2361
+Total MCs: 3
+
+⚠️  Misconceptions detectados: B4, B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import *
+     2 | TE = array(eval(input("Tipo da Espada: ")))
+     3 | TC = array(eval(input("Nível do Combate: ")))
+     4 | i = 0
+     5 | while (i < size(TE)):
+     6 | 	if (TE[i] == "CENOURA"):
+     7 | 		 TE[i] = 2
+     8 | 	elif (TE[i] == "FERRO"):
+     9 | 		 TE[i] = 4
+    10 | 	elif (TE[i] == "DWARVEN"):
+    11 | 		 TE[i] = 8
+    12 | 	elif (TE[i] == "ELVEN"):
+    13 | 		 TE[i] = 11
+    14 | 	elif (TE[i] == "DAEDRIC"):
+    15 | 		 TE[i] = 4
+    16 | 	i = i + 1
+    17 | j = 0
+    18 | while (j < size(TE)):
+    19 | 	TE = (TE[j]*TC[j])
+    20 | 	j = j + 1
+    21 | print (sun(TE))
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B4 — Comandos repetidos dentro de blocos if-elif-else
+  Ocorrências: 2
+
+  [1] Linha 14: Bloco idêntico ao da linha 8
+      Trecho  : TE[i] = 4
+      Contexto:
+              13 | 		 TE[i] = 11
+        >>>   14 | 	elif (TE[i] == "DAEDRIC"):
+              15 | 		 TE[i] = 4
+
+  [2] Linha 14: Bloco idêntico ao da linha 8
+      Trecho  : TE[i] = 4
+      Contexto:
+              13 | 		 TE[i] = 11
+        >>>   14 | 	elif (TE[i] == "DAEDRIC"):
+              15 | 		 TE[i] = 4
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 12: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 12) / elif ... sem else
+      Contexto:
+              11 | 		 TE[i] = 8
+        >>>   12 | 	elif (TE[i] == "ELVEN"):
+              13 | 		 TE[i] = 11
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 7
+
+  [1] Linha 2: Variável 'TE' com nome muito curto (≤4 chars)
+      Trecho  : TE = ...
+      Contexto:
+               1 | from numpy import *
+        >>>    2 | TE = array(eval(input("Tipo da Espada: ")))
+               3 | TC = array(eval(input("Nível do Combate: ")))
+
+  [2] Linha 3: Variável 'TC' com nome muito curto (≤4 chars)
+      Trecho  : TC = ...
+      Contexto:
+               2 | TE = array(eval(input("Tipo da Espada: ")))
+        >>>    3 | TC = array(eval(input("Nível do Combate: ")))
+               4 | i = 0
+
+  [3] Linha 4: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+               3 | TC = array(eval(input("Nível do Combate: ")))
+        >>>    4 | i = 0
+               5 | while (i < size(TE)):
+
+  [4] Linha 17: Variável 'j' com nome muito curto (≤4 chars)
+      Trecho  : j = ...
+      Contexto:
+              16 | 	i = i + 1
+        >>>   17 | j = 0
+              18 | while (j < size(TE)):
+
+  [5] Linha 16: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+              15 | 		 TE[i] = 4
+        >>>   16 | 	i = i + 1
+              17 | j = 0
+
+  [6] Linha 19: Variável 'TE' com nome muito curto (≤4 chars)
+      Trecho  : TE = ...
+      Contexto:
+              18 | while (j < size(TE)):
+        >>>   19 | 	TE = (TE[j]*TC[j])
+              20 | 	j = j + 1
+
+  [7] Linha 20: Variável 'j' com nome muito curto (≤4 chars)
+      Trecho  : j = ...
+      Contexto:
+              19 | 	TE = (TE[j]*TC[j])
+        >>>   20 | 	j = j + 1
+              21 | print (sun(TE))
+
+======================================================================

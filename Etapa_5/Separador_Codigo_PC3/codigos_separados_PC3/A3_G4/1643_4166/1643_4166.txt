@@ -1,0 +1,79 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1643_4166.py
+Questão  : 1643
+Aluno    : 4166
+Total MCs: 2
+
+⚠️  Misconceptions detectados: A3, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | notas=array(eval(input("Vetor de notas:")))
+     3 | n=size(notas)
+     4 | soma=0
+     5 | v=zeros(n, dtype=int)
+     6 | 
+     7 | for i in range(n):
+     8 | 	if(notas[i]>=5):
+     9 | 		v[i]=notas[i]
+    10 | 		print()
+    11 | 		x=size(notas)
+    12 | print(v)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 2
+
+  [1] Linha 4: Variável 'soma' declarada mas nunca utilizada
+      Trecho  : soma = ...
+      Contexto:
+               3 | n=size(notas)
+        >>>    4 | soma=0
+               5 | v=zeros(n, dtype=int)
+
+  [2] Linha 11: Variável 'x' declarada mas nunca utilizada
+      Trecho  : x = ...
+      Contexto:
+              10 | 		print()
+        >>>   11 | 		x=size(notas)
+              12 | print(v)
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 4
+
+  [1] Linha 3: Variável 'n' com nome muito curto (≤4 chars)
+      Trecho  : n = ...
+      Contexto:
+               2 | notas=array(eval(input("Vetor de notas:")))
+        >>>    3 | n=size(notas)
+               4 | soma=0
+
+  [2] Linha 4: Variável 'soma' com nome muito curto (≤4 chars)
+      Trecho  : soma = ...
+      Contexto:
+               3 | n=size(notas)
+        >>>    4 | soma=0
+               5 | v=zeros(n, dtype=int)
+
+  [3] Linha 5: Variável 'v' com nome muito curto (≤4 chars)
+      Trecho  : v = ...
+      Contexto:
+               4 | soma=0
+        >>>    5 | v=zeros(n, dtype=int)
+               6 | 
+
+  [4] Linha 11: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+              10 | 		print()
+        >>>   11 | 		x=size(notas)
+              12 | print(v)
+
+======================================================================

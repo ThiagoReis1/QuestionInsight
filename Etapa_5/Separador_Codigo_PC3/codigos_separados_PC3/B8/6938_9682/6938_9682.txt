@@ -1,0 +1,49 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 6938_9682.py
+Questão  : 6938
+Aluno    : 9682
+Total MCs: 1
+
+⚠️  Misconceptions detectados: B8
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | compra = float(input("Digite o valor da compra: "))
+     2 | codigo = str(input("Digite o codigo [D], [P] ou [C]: ")).upper()
+     3 | if codigo == "D" or codigo == "P":
+     4 | 	total = compra - compra*(11/100)
+     5 | 	print(round(total, 2))
+     6 | elif codigo == "C":
+     7 | 	cartao = int(input())
+     8 | 	if cartao == 1:
+     9 | 		total = compra
+    10 | 		print(round(total, 2))
+    11 | 	elif cartao == 2:
+    12 | 		total = compra + compra*(6/100)
+    13 | 		print(round(total, 2))
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 2
+
+  [1] Linha 3: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 3) / elif ... sem else
+      Contexto:
+               2 | codigo = str(input("Digite o codigo [D], [P] ou [C]: ")).upper()
+        >>>    3 | if codigo == "D" or codigo == "P":
+               4 | 	total = compra - compra*(11/100)
+
+  [2] Linha 8: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 8) / elif ... sem else
+      Contexto:
+               7 | 	cartao = int(input())
+        >>>    8 | 	if cartao == 1:
+               9 | 		total = compra
+
+======================================================================

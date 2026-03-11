@@ -1,0 +1,14 @@
+qo=int(input(""))
+qi=int(input(""))
+qr=int(input(""))
+g=5
+i=0
+soma=0
+rei=qi
+while(i<=qo):
+	soma=soma+(qo*qi)
+	soma=soma+(qo*qr)
+	g=g+1
+	rei=qi+1
+	i=i+1
+print(soma)	

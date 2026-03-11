@@ -1,0 +1,86 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 6833_9832.py
+Questão  : 6833
+Aluno    : 9832
+Total MCs: 2
+
+⚠️  Misconceptions detectados: A3, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | c = input("Digite a secao dos produtos comprados: ").upper()
+     2 | 
+     3 | i = 0
+     4 | t = 0
+     5 | tf = True
+     6 | 
+     7 | while ( i < len(c) ) :
+     8 | 	if (not c[i] in "MPR") :
+     9 | 		tf = False
+    10 | 		break
+    11 | 	elif (c[i] == "M") :
+    12 | 		t += 7.25
+    13 | 	elif(c[i] == "P") :
+    14 | 		t += 4.75
+    15 | 	else :
+    16 | 		t += 3.5
+    17 | 	
+    18 | 	i += 1
+    19 | 	
+    20 | if (tf == True) :
+    21 | 	print(round(t,2))
+    22 | 	
+    23 | else :
+    24 | 	print("Bobo")
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 1
+
+  [1] Linha 0: A3 detectado pelo VisitorMC3 (localização exata não mapeada)
+      Trecho  : —
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 5
+
+  [1] Linha 1: Variável 'c' com nome muito curto (≤4 chars)
+      Trecho  : c = ...
+      Contexto:
+        >>>    1 | c = input("Digite a secao dos produtos comprados: ").upper()
+               2 | 
+
+  [2] Linha 3: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+               2 | 
+        >>>    3 | i = 0
+               4 | t = 0
+
+  [3] Linha 4: Variável 't' com nome muito curto (≤4 chars)
+      Trecho  : t = ...
+      Contexto:
+               3 | i = 0
+        >>>    4 | t = 0
+               5 | tf = True
+
+  [4] Linha 5: Variável 'tf' com nome muito curto (≤4 chars)
+      Trecho  : tf = ...
+      Contexto:
+               4 | t = 0
+        >>>    5 | tf = True
+               6 | 
+
+  [5] Linha 9: Variável 'tf' com nome muito curto (≤4 chars)
+      Trecho  : tf = ...
+      Contexto:
+               8 | 	if (not c[i] in "MPR") :
+        >>>    9 | 		tf = False
+              10 | 		break
+
+======================================================================

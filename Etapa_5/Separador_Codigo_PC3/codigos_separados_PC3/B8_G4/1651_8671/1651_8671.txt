@@ -1,0 +1,70 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1651_8671.py
+Questão  : 1651
+Aluno    : 8671
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import *
+     2 | 
+     3 | tp = input("Digite o tom de pele: ").upper().split(',')
+     4 | 
+     5 | v = zeros(6,dtype=int)
+     6 | 
+     7 | for i in tp:
+     8 | 	if i == "MC":
+     9 | 		v[0] += 1
+    10 | 	elif i == "C":
+    11 | 		v[1] += 1
+    12 | 	elif i == "CM":
+    13 | 		v[2] += 1
+    14 | 	elif i == "EM":
+    15 | 		v[3] += 1
+    16 | 	elif i == "E":
+    17 | 		v[4] += 1
+    18 | 	elif i == "ME":
+    19 | 		v[5] += 1
+    20 | 
+    21 | print(max(v))
+    22 | print(v)
+    23 | 		
+    24 | 	
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 16: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 16) / elif ... sem else
+      Contexto:
+              15 | 		v[3] += 1
+        >>>   16 | 	elif i == "E":
+              17 | 		v[4] += 1
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 2
+
+  [1] Linha 3: Variável 'tp' com nome muito curto (≤4 chars)
+      Trecho  : tp = ...
+      Contexto:
+               2 | 
+        >>>    3 | tp = input("Digite o tom de pele: ").upper().split(',')
+               4 | 
+
+  [2] Linha 5: Variável 'v' com nome muito curto (≤4 chars)
+      Trecho  : v = ...
+      Contexto:
+               4 | 
+        >>>    5 | v = zeros(6,dtype=int)
+               6 | 
+
+======================================================================

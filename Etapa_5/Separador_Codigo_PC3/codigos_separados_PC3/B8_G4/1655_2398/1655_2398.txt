@@ -1,0 +1,78 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1655_2398.py
+Questão  : 1655
+Aluno    : 2398
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | n = input()
+     3 | s = n.split(',')
+     4 | z = zeros(5, int)
+     5 | for i in range(size(s)):
+     6 | 	if(s[i]=="AC"):
+     7 | 		z[0] = z[0]+1
+     8 | 	elif(s[i]=="AM"):
+     9 | 		z[1] = z[1]+1
+    10 | 	elif(s[i]=="PA"):
+    11 | 		z[2] = z[2]+1
+    12 | 	elif(s[i]=="RO"):
+    13 | 		z[3] = z[3]+1
+    14 | 	elif(s[i]=="RR"):
+    15 | 		z[4] = z[4]+1
+    16 | m = max(z)
+    17 | print(m)
+    18 | print(z)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 12: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 12) / elif ... sem else
+      Contexto:
+              11 | 		z[2] = z[2]+1
+        >>>   12 | 	elif(s[i]=="RO"):
+              13 | 		z[3] = z[3]+1
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 4
+
+  [1] Linha 2: Variável 'n' com nome muito curto (≤4 chars)
+      Trecho  : n = ...
+      Contexto:
+               1 | from numpy import*
+        >>>    2 | n = input()
+               3 | s = n.split(',')
+
+  [2] Linha 3: Variável 's' com nome muito curto (≤4 chars)
+      Trecho  : s = ...
+      Contexto:
+               2 | n = input()
+        >>>    3 | s = n.split(',')
+               4 | z = zeros(5, int)
+
+  [3] Linha 4: Variável 'z' com nome muito curto (≤4 chars)
+      Trecho  : z = ...
+      Contexto:
+               3 | s = n.split(',')
+        >>>    4 | z = zeros(5, int)
+               5 | for i in range(size(s)):
+
+  [4] Linha 16: Variável 'm' com nome muito curto (≤4 chars)
+      Trecho  : m = ...
+      Contexto:
+              15 | 		z[4] = z[4]+1
+        >>>   16 | m = max(z)
+              17 | print(m)
+
+======================================================================

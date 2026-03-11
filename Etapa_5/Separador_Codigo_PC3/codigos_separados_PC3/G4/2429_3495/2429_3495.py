@@ -1,0 +1,7 @@
+op = float(6.90)
+g1 = float(2.50)
+b = float(3)
+x=int(input())
+y=int(input())
+soma=float(op+(x*g1)+(y*b))
+print(soma)

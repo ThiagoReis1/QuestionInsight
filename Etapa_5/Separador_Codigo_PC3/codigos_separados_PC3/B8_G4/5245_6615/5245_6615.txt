@@ -1,0 +1,62 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 5245_6615.py
+Questão  : 5245
+Aluno    : 6615
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | X = float(input("digite o salario atual de um funcionario: "))
+     2 | print(("Entrada: R$"), X)
+     3 | if(X<0):
+     4 | 	print("Dado invalido")
+     5 | else:
+     6 | 	if(0<=X and X<=800.0):
+     7 | 		print("Novo salario: R$", round((X*0.5 + X),2))
+     8 | 	if(800.0<X and X<=1000.0):
+     9 | 		print("Novo salario: R$", round((X*0.4+X),2))
+    10 | 	elif(1000.0<X and X<=1200.0):
+    11 | 		print("Novo salario: R$", round((X*0.3+X),2))
+    12 | 	elif(1200.0<X and X<=1400.0):
+    13 | 		print("Novo salario:R$",round((X*0.2+X),2))
+    14 | 	elif(1400.0<X and X<=1600.0):
+    15 | 		print("Novo salario: R$", round((X*0.1+X),2))
+    16 | 	elif(1600.0<X):
+    17 | 		print("Novo salario: R$", round((X*0.05+X),2))
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 2
+
+  [1] Linha 3: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 3) / elif ... sem else
+      Contexto:
+               2 | print(("Entrada: R$"), X)
+        >>>    3 | if(X<0):
+               4 | 	print("Dado invalido")
+
+  [2] Linha 14: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 14) / elif ... sem else
+      Contexto:
+              13 | 		print("Novo salario:R$",round((X*0.2+X),2))
+        >>>   14 | 	elif(1400.0<X and X<=1600.0):
+              15 | 		print("Novo salario: R$", round((X*0.1+X),2))
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 1
+
+  [1] Linha 1: Variável 'X' com nome muito curto (≤4 chars)
+      Trecho  : X = ...
+      Contexto:
+        >>>    1 | X = float(input("digite o salario atual de um funcionario: "))
+               2 | print(("Entrada: R$"), X)
+
+======================================================================

@@ -1,0 +1,58 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 6931_9787.py
+Questão  : 6931
+Aluno    : 9787
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B4, B8
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | vl = float(input("Valor da compra: "))
+     2 | codigo = input("(D)Dinheiro:(P)Pix:(C)Credito: ")
+     3 | total = vl
+     4 | 
+     5 | if codigo == "D":
+     6 | 	desconto = total - total * .18
+     7 | elif codigo == "P":
+     8 | 	desconto = total - total * .18
+     9 | elif codigo == "C":
+    10 | 	vezes = int(input("1 ou 2: "))
+    11 | 	if vezes == 1:
+    12 | 		desconto = vl
+    13 | 	else:
+    14 | 		desconto = total + total * .07
+    15 | print(round(desconto, 2))
+    16 | 	
+    17 | 	
+    18 | 	
+    19 |   
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B4 — Comandos repetidos dentro de blocos if-elif-else
+  Ocorrências: 1
+
+  [1] Linha 7: Bloco idêntico ao da linha 5
+      Trecho  : desconto = total - total * 0.18
+      Contexto:
+               6 | 	desconto = total - total * .18
+        >>>    7 | elif codigo == "P":
+               8 | 	desconto = total - total * .18
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 7: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 7) / elif ... sem else
+      Contexto:
+               6 | 	desconto = total - total * .18
+        >>>    7 | elif codigo == "P":
+               8 | 	desconto = total - total * .18
+
+======================================================================

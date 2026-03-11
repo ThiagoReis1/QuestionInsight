@@ -1,0 +1,67 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 3041_4040.py
+Questão  : 3041
+Aluno    : 4040
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | # Insertables
+     2 | 
+     3 | x = float(input("X coordinate: "))
+     4 | f1 = -(1/(x + 2))
+     5 | f2 = (1/(x - 2))
+     6 | 
+     7 | # Processing
+     8 | 
+     9 | if( (x >= -1000) and (x < -2) ):
+    10 | 	print(round(f1,4))
+    11 | elif( (x > 2) and (x <= 1000) ):
+    12 | 	print(round(f2,4))
+    13 | elif( (x < -1000) or ( (x > -2) and (x < 2) ) or (x > 1000) ):
+    14 | 	print("entrada invalida")
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 11: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 11) / elif ... sem else
+      Contexto:
+              10 | 	print(round(f1,4))
+        >>>   11 | elif( (x > 2) and (x <= 1000) ):
+              12 | 	print(round(f2,4))
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 3
+
+  [1] Linha 3: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+               2 | 
+        >>>    3 | x = float(input("X coordinate: "))
+               4 | f1 = -(1/(x + 2))
+
+  [2] Linha 4: Variável 'f1' com nome muito curto (≤4 chars)
+      Trecho  : f1 = ...
+      Contexto:
+               3 | x = float(input("X coordinate: "))
+        >>>    4 | f1 = -(1/(x + 2))
+               5 | f2 = (1/(x - 2))
+
+  [3] Linha 5: Variável 'f2' com nome muito curto (≤4 chars)
+      Trecho  : f2 = ...
+      Contexto:
+               4 | f1 = -(1/(x + 2))
+        >>>    5 | f2 = (1/(x - 2))
+               6 | 
+
+======================================================================

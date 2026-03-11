@@ -1,0 +1,5 @@
+A=float(input("digite valor: "))
+B=float(input(digite ))
+gfalmer= 2**(1+(p/100))
+gsoul=p*(pi)
+print(gsoul)

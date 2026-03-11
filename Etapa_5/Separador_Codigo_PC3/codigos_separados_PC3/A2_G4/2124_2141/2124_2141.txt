@@ -1,0 +1,94 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 2124_2141.py
+Questão  : 2124
+Aluno    : 2141
+Total MCs: 2
+
+⚠️  Misconceptions detectados: A2, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import *
+     2 | 
+     3 | nota=array(eval(input()))
+     4 | 
+     5 | i=0
+     6 | acm=0
+     7 | while(i<size(nota)):
+     8 | 	if nota[i]==max(nota):
+     9 | 		acm=acm
+    10 | 	else:
+    11 | 		acm=acm+nota[i]
+    12 | 
+    13 | 	i=i+1
+    14 | media=acm/3.0
+    15 | if (media>=5.0):
+    16 | 	print(round(media,2))
+    17 | 	print("APROVOU")
+    18 | else:
+    19 | 	print(round(media,2))
+    20 | 	print("REPROVOU")
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A2 — Variável atribuída a si mesma
+  Ocorrências: 1
+
+  [1] Linha 9: 'acm' atribuído a si mesmo
+      Trecho  : acm = acm
+      Contexto:
+               8 | 	if nota[i]==max(nota):
+        >>>    9 | 		acm=acm
+              10 | 	else:
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 6
+
+  [1] Linha 3: Variável 'nota' com nome muito curto (≤4 chars)
+      Trecho  : nota = ...
+      Contexto:
+               2 | 
+        >>>    3 | nota=array(eval(input()))
+               4 | 
+
+  [2] Linha 5: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+               4 | 
+        >>>    5 | i=0
+               6 | acm=0
+
+  [3] Linha 6: Variável 'acm' com nome muito curto (≤4 chars)
+      Trecho  : acm = ...
+      Contexto:
+               5 | i=0
+        >>>    6 | acm=0
+               7 | while(i<size(nota)):
+
+  [4] Linha 13: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+              12 | 
+        >>>   13 | 	i=i+1
+              14 | media=acm/3.0
+
+  [5] Linha 9: Variável 'acm' com nome muito curto (≤4 chars)
+      Trecho  : acm = ...
+      Contexto:
+               8 | 	if nota[i]==max(nota):
+        >>>    9 | 		acm=acm
+              10 | 	else:
+
+  [6] Linha 11: Variável 'acm' com nome muito curto (≤4 chars)
+      Trecho  : acm = ...
+      Contexto:
+              10 | 	else:
+        >>>   11 | 		acm=acm+nota[i]
+              12 | 
+
+======================================================================

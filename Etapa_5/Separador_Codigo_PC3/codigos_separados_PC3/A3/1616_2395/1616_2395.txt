@@ -1,0 +1,71 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1616_2395.py
+Questão  : 1616
+Aluno    : 2395
+Total MCs: 1
+
+⚠️  Misconceptions detectados: A3
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | m = array(eval(input()))
+     3 | n = array(eval(input()))
+     4 | GELO = 2
+     5 | FOGO = 3
+     6 | CHOQUE = 4
+     7 | CONJURACAO = 8
+     8 | ILUSAO = 10
+     9 | dm = zeros(size(m), dtype=int)
+    10 | i = 0
+    11 | while(i<size(m)):
+    12 | 	dm[i] = dm + m[i]*n[i]
+    13 | 	i = i + 1
+    14 | print(dm)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 5
+
+  [1] Linha 4: Variável 'GELO' declarada mas nunca utilizada
+      Trecho  : GELO = ...
+      Contexto:
+               3 | n = array(eval(input()))
+        >>>    4 | GELO = 2
+               5 | FOGO = 3
+
+  [2] Linha 5: Variável 'FOGO' declarada mas nunca utilizada
+      Trecho  : FOGO = ...
+      Contexto:
+               4 | GELO = 2
+        >>>    5 | FOGO = 3
+               6 | CHOQUE = 4
+
+  [3] Linha 6: Variável 'CHOQUE' declarada mas nunca utilizada
+      Trecho  : CHOQUE = ...
+      Contexto:
+               5 | FOGO = 3
+        >>>    6 | CHOQUE = 4
+               7 | CONJURACAO = 8
+
+  [4] Linha 7: Variável 'CONJURACAO' declarada mas nunca utilizada
+      Trecho  : CONJURACAO = ...
+      Contexto:
+               6 | CHOQUE = 4
+        >>>    7 | CONJURACAO = 8
+               8 | ILUSAO = 10
+
+  [5] Linha 8: Variável 'ILUSAO' declarada mas nunca utilizada
+      Trecho  : ILUSAO = ...
+      Contexto:
+               7 | CONJURACAO = 8
+        >>>    8 | ILUSAO = 10
+               9 | dm = zeros(size(m), dtype=int)
+
+======================================================================

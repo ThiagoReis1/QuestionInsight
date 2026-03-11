@@ -1,0 +1,77 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1620_2167.py
+Questão  : 1620
+Aluno    : 2167
+Total MCs: 1
+
+⚠️  Misconceptions detectados: A3
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import *
+     2 | tempo = array(eval(input("Digite o tempo de banho: ")))
+     3 | percentual = array(eval(input("Digite o percentual: ")))
+     4 | Semana1 = tempo[0]
+     5 | Semana2 = tempo[1]
+     6 | Semana3 = tempo[2]
+     7 | Semana4 = tempo[3]
+     8 | SemanaA = percentual[0]
+     9 | SemanaB = percentual[1]
+    10 | SemanaC = percentual[2]
+    11 | SemanaD = percentual[3]
+    12 | total = (5 * Semana1 + 2.5 * SemanaA) + 12
+    13 | print(total)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 6
+
+  [1] Linha 5: Variável 'Semana2' declarada mas nunca utilizada
+      Trecho  : Semana2 = ...
+      Contexto:
+               4 | Semana1 = tempo[0]
+        >>>    5 | Semana2 = tempo[1]
+               6 | Semana3 = tempo[2]
+
+  [2] Linha 6: Variável 'Semana3' declarada mas nunca utilizada
+      Trecho  : Semana3 = ...
+      Contexto:
+               5 | Semana2 = tempo[1]
+        >>>    6 | Semana3 = tempo[2]
+               7 | Semana4 = tempo[3]
+
+  [3] Linha 7: Variável 'Semana4' declarada mas nunca utilizada
+      Trecho  : Semana4 = ...
+      Contexto:
+               6 | Semana3 = tempo[2]
+        >>>    7 | Semana4 = tempo[3]
+               8 | SemanaA = percentual[0]
+
+  [4] Linha 9: Variável 'SemanaB' declarada mas nunca utilizada
+      Trecho  : SemanaB = ...
+      Contexto:
+               8 | SemanaA = percentual[0]
+        >>>    9 | SemanaB = percentual[1]
+              10 | SemanaC = percentual[2]
+
+  [5] Linha 10: Variável 'SemanaC' declarada mas nunca utilizada
+      Trecho  : SemanaC = ...
+      Contexto:
+               9 | SemanaB = percentual[1]
+        >>>   10 | SemanaC = percentual[2]
+              11 | SemanaD = percentual[3]
+
+  [6] Linha 11: Variável 'SemanaD' declarada mas nunca utilizada
+      Trecho  : SemanaD = ...
+      Contexto:
+              10 | SemanaC = percentual[2]
+        >>>   11 | SemanaD = percentual[3]
+              12 | total = (5 * Semana1 + 2.5 * SemanaA) + 12
+
+======================================================================

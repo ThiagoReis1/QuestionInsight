@@ -1,0 +1,90 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1657_2238.py
+Questão  : 1657
+Aluno    : 2238
+Total MCs: 3
+
+⚠️  Misconceptions detectados: A3, B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | a = input("países:").split(',')
+     3 | p = array(["AZ","CA","FL","PA","WI"])
+     4 | b = array([0,0,0,0,0])
+     5 | 
+     6 | c = 0
+     7 | for i in (a):
+     8 | 	if(i==p[0]):
+     9 | 		b[0] += 1
+    10 | 	elif(i==p[1]):
+    11 | 		b[1] += 1
+    12 | 	elif(i==p[2]):
+    13 | 		b[2] += 1
+    14 | 	elif(i==p[3]):
+    15 | 		b[3] += 1
+    16 | 	elif(i==p[4]):
+    17 | 		b[4] += 1
+    18 | print(max(b))
+    19 | print(b)
+    20 | 		
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 1
+
+  [1] Linha 6: Variável 'c' declarada mas nunca utilizada
+      Trecho  : c = ...
+      Contexto:
+               5 | 
+        >>>    6 | c = 0
+               7 | for i in (a):
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 14: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 14) / elif ... sem else
+      Contexto:
+              13 | 		b[2] += 1
+        >>>   14 | 	elif(i==p[3]):
+              15 | 		b[3] += 1
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 4
+
+  [1] Linha 2: Variável 'a' com nome muito curto (≤4 chars)
+      Trecho  : a = ...
+      Contexto:
+               1 | from numpy import*
+        >>>    2 | a = input("países:").split(',')
+               3 | p = array(["AZ","CA","FL","PA","WI"])
+
+  [2] Linha 3: Variável 'p' com nome muito curto (≤4 chars)
+      Trecho  : p = ...
+      Contexto:
+               2 | a = input("países:").split(',')
+        >>>    3 | p = array(["AZ","CA","FL","PA","WI"])
+               4 | b = array([0,0,0,0,0])
+
+  [3] Linha 4: Variável 'b' com nome muito curto (≤4 chars)
+      Trecho  : b = ...
+      Contexto:
+               3 | p = array(["AZ","CA","FL","PA","WI"])
+        >>>    4 | b = array([0,0,0,0,0])
+               5 | 
+
+  [4] Linha 6: Variável 'c' com nome muito curto (≤4 chars)
+      Trecho  : c = ...
+      Contexto:
+               5 | 
+        >>>    6 | c = 0
+               7 | for i in (a):
+
+======================================================================

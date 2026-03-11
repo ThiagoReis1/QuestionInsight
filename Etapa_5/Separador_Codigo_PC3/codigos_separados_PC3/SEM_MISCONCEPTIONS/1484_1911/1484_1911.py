@@ -1,0 +1,1 @@
+from = ("qual a quantidade de equipamentos")

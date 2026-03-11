@@ -1,0 +1,244 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 5251_3169.py
+Questão  : 5251
+Aluno    : 3169
+Total MCs: 1
+
+⚠️  Misconceptions detectados: G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | x = input()
+     2 | i = int(input())
+     3 | cd = x.upper()
+     4 | p = 30/100
+     5 | 
+     6 | if(i>=0 and i<=150 and (cd=='PORTOVELHO' or cd=='SANTAREM' or cd=='BELEM' or cd=='TEFE' or cd=='TABATINGA')):
+     7 | 	if(i<=2):
+     8 | 		if(cd=='PORTOVELHO'):
+     9 | 			print("Entradas: PortoVelho",",",i)
+    10 | 			print("Passagem: R$ 0.0")
+    11 | 		elif(cd=='SANTAREM'):
+    12 | 			print("Entradas: Santarem",",",i)
+    13 | 			print("Passagem: R$ 0.0")
+    14 | 		elif(cd=='BELEM'):
+    15 | 			print("Entradas: Belem",",",i)
+    16 | 			print("Passagem: R$ 0.0")
+    17 | 		elif(cd=='TEFE'):
+    18 | 			print("Entradas: Tefe",",",i)
+    19 | 			print("Passagem: R$ 0.0")
+    20 | 		else:
+    21 | 			print("Entradas: Tabatinga",",",i)
+    22 | 			print("Passagem: R$ 0.0")
+    23 | 	elif(i>=3 and i<=12):
+    24 | 		if(cd=='PORTOVELHO'):
+    25 | 			a = round((500/2), 2)
+    26 | 			print("Entradas: PortoVelho",",",i)
+    27 | 			print("Passagem: R$",a)
+    28 | 		elif(cd=='SANTAREM'):
+    29 | 			a = round((370/2), 2)
+    30 | 			print("Entradas: Santarem",",",i)
+    31 | 			print("Passagem: R$",a)
+    32 | 		elif(cd=='BELEM'):
+    33 | 			a = round((600/2), 2)
+    34 | 			print("Entradas: Belem",",",i)
+    35 | 			print("Passagem: R$",a)
+    36 | 		elif(cd=='TEFE'):
+    37 | 			a = round((360/2), 2)
+    38 | 			print("Entradas: Tefe",",",i)
+    39 | 			print("Passagem: R$",a)
+    40 | 		else:
+    41 | 			a = round((550/2), 2)
+    42 | 			print("Entradas: Tabatinga",",",i)
+    43 | 			print("Passagem: R$",a)
+    44 | 	elif(i>12 and i<65):
+    45 | 		if(cd=='PORTOVELHO'):
+    46 | 			a = round(500, 2)
+    47 | 			print("Entradas: PortoVelho",",",i)
+    48 | 			print("Passagem: R$",a)
+    49 | 		elif(cd=='SANTAREM'):
+    50 | 			a = round(370, 2)
+    51 | 			print("Entradas: Santarem",",",i)
+    52 | 			print("Passagem: R$",a)
+    53 | 		elif(cd=='BELEM'):
+    54 | 			a = round(600, 2)
+    55 | 			print("Entradas: Belem",",",i)
+    56 | 			print("Passagem: R$",a)
+    57 | 		elif(cd=='TEFE'):
+    58 | 			a = round(360, 2)
+    59 | 			print("Entradas: Tefe",",",i)
+    60 | 			print("Passagem: R$",a)
+    61 | 		else:
+    62 | 			a = round(550, 2)
+    63 | 			print("Entradas: Tabatinga",",",i)
+    64 | 			print("Passagem: R$",a)
+    65 | 	else:
+    66 | 		if(cd=='PORTOVELHO'):
+    67 | 			a = round((500-(p*500)), 2)
+    68 | 			print("Entradas: PortoVelho",",",i)
+    69 | 			print("Passagem: R$",a)
+    70 | 		elif(cd=="SANTAREM"):
+    71 | 			a = round((370-(p*370)), 2)
+    72 | 			print("Entradas: Santarem",",",i)
+    73 | 			print("Passagem: R$",a)
+    74 | 		elif(cd=='BELEM'):
+    75 | 			a = round((600-(p*600)), 2)
+    76 | 			print("Entradas: Belem",",",i)
+    77 | 			print("Passagem: R$",a)
+    78 | 		elif(cd=='TEFE'):
+    79 | 			a = round((360-(p*360)), 2)
+    80 | 			print("Entradas: Tefe",",",i)
+    81 | 			print("Passagem:",a)
+    82 | 		else:
+    83 | 			a = round((550-(p*550)), 2)
+    84 | 			print("Entradas: Tabatinga",",",i)
+    85 | 			print("Passagem:",a)
+    86 | else:
+    87 | 	print("Entradas:",x,",",i)
+    88 | 	print("entradas invalidas")
+    89 | 
+    90 | #queria saber onde e o erro.
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 19
+
+  [1] Linha 1: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+        >>>    1 | x = input()
+               2 | i = int(input())
+
+  [2] Linha 2: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+               1 | x = input()
+        >>>    2 | i = int(input())
+               3 | cd = x.upper()
+
+  [3] Linha 3: Variável 'cd' com nome muito curto (≤4 chars)
+      Trecho  : cd = ...
+      Contexto:
+               2 | i = int(input())
+        >>>    3 | cd = x.upper()
+               4 | p = 30/100
+
+  [4] Linha 4: Variável 'p' com nome muito curto (≤4 chars)
+      Trecho  : p = ...
+      Contexto:
+               3 | cd = x.upper()
+        >>>    4 | p = 30/100
+               5 | 
+
+  [5] Linha 25: Variável 'a' com nome muito curto (≤4 chars)
+      Trecho  : a = ...
+      Contexto:
+              24 | 		if(cd=='PORTOVELHO'):
+        >>>   25 | 			a = round((500/2), 2)
+              26 | 			print("Entradas: PortoVelho",",",i)
+
+  [6] Linha 29: Variável 'a' com nome muito curto (≤4 chars)
+      Trecho  : a = ...
+      Contexto:
+              28 | 		elif(cd=='SANTAREM'):
+        >>>   29 | 			a = round((370/2), 2)
+              30 | 			print("Entradas: Santarem",",",i)
+
+  [7] Linha 46: Variável 'a' com nome muito curto (≤4 chars)
+      Trecho  : a = ...
+      Contexto:
+              45 | 		if(cd=='PORTOVELHO'):
+        >>>   46 | 			a = round(500, 2)
+              47 | 			print("Entradas: PortoVelho",",",i)
+
+  [8] Linha 67: Variável 'a' com nome muito curto (≤4 chars)
+      Trecho  : a = ...
+      Contexto:
+              66 | 		if(cd=='PORTOVELHO'):
+        >>>   67 | 			a = round((500-(p*500)), 2)
+              68 | 			print("Entradas: PortoVelho",",",i)
+
+  [9] Linha 33: Variável 'a' com nome muito curto (≤4 chars)
+      Trecho  : a = ...
+      Contexto:
+              32 | 		elif(cd=='BELEM'):
+        >>>   33 | 			a = round((600/2), 2)
+              34 | 			print("Entradas: Belem",",",i)
+
+  [10] Linha 50: Variável 'a' com nome muito curto (≤4 chars)
+      Trecho  : a = ...
+      Contexto:
+              49 | 		elif(cd=='SANTAREM'):
+        >>>   50 | 			a = round(370, 2)
+              51 | 			print("Entradas: Santarem",",",i)
+
+  [11] Linha 71: Variável 'a' com nome muito curto (≤4 chars)
+      Trecho  : a = ...
+      Contexto:
+              70 | 		elif(cd=="SANTAREM"):
+        >>>   71 | 			a = round((370-(p*370)), 2)
+              72 | 			print("Entradas: Santarem",",",i)
+
+  [12] Linha 37: Variável 'a' com nome muito curto (≤4 chars)
+      Trecho  : a = ...
+      Contexto:
+              36 | 		elif(cd=='TEFE'):
+        >>>   37 | 			a = round((360/2), 2)
+              38 | 			print("Entradas: Tefe",",",i)
+
+  [13] Linha 41: Variável 'a' com nome muito curto (≤4 chars)
+      Trecho  : a = ...
+      Contexto:
+              40 | 		else:
+        >>>   41 | 			a = round((550/2), 2)
+              42 | 			print("Entradas: Tabatinga",",",i)
+
+  [14] Linha 54: Variável 'a' com nome muito curto (≤4 chars)
+      Trecho  : a = ...
+      Contexto:
+              53 | 		elif(cd=='BELEM'):
+        >>>   54 | 			a = round(600, 2)
+              55 | 			print("Entradas: Belem",",",i)
+
+  [15] Linha 75: Variável 'a' com nome muito curto (≤4 chars)
+      Trecho  : a = ...
+      Contexto:
+              74 | 		elif(cd=='BELEM'):
+        >>>   75 | 			a = round((600-(p*600)), 2)
+              76 | 			print("Entradas: Belem",",",i)
+
+  [16] Linha 58: Variável 'a' com nome muito curto (≤4 chars)
+      Trecho  : a = ...
+      Contexto:
+              57 | 		elif(cd=='TEFE'):
+        >>>   58 | 			a = round(360, 2)
+              59 | 			print("Entradas: Tefe",",",i)
+
+  [17] Linha 62: Variável 'a' com nome muito curto (≤4 chars)
+      Trecho  : a = ...
+      Contexto:
+              61 | 		else:
+        >>>   62 | 			a = round(550, 2)
+              63 | 			print("Entradas: Tabatinga",",",i)
+
+  [18] Linha 79: Variável 'a' com nome muito curto (≤4 chars)
+      Trecho  : a = ...
+      Contexto:
+              78 | 		elif(cd=='TEFE'):
+        >>>   79 | 			a = round((360-(p*360)), 2)
+              80 | 			print("Entradas: Tefe",",",i)
+
+  [19] Linha 83: Variável 'a' com nome muito curto (≤4 chars)
+      Trecho  : a = ...
+      Contexto:
+              82 | 		else:
+        >>>   83 | 			a = round((550-(p*550)), 2)
+              84 | 			print("Entradas: Tabatinga",",",i)
+
+======================================================================

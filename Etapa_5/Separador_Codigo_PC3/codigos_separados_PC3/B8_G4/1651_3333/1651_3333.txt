@@ -1,0 +1,64 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1651_3333.py
+Questão  : 1651
+Aluno    : 3333
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import *
+     2 | e=input("Digite a entrada:").split(',')
+     3 | vt=zeros(6,dtype=int)
+     4 | for j in range(size(e)):
+     5 | 	if (e[j] == "MC"):
+     6 | 		vt[0]=vt[0]+1
+     7 | 	elif (e[j] == "C"):
+     8 | 		vt[1]=vt[1]+1
+     9 | 	elif (e[j] == "CM"):
+    10 | 		vt[2]=vt[2]+1
+    11 | 	elif (e[j] == "EM"):
+    12 | 		vt[3]=vt[3]+1
+    13 | 	elif (e[j] == "E"):
+    14 | 		vt[4]=vt[4]+1
+    15 | 	elif (e[j] == "ME"):
+    16 | 		vt[5]=vt[5]+1
+    17 | print(max(vt))
+    18 | print(vt)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 13: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 13) / elif ... sem else
+      Contexto:
+              12 | 		vt[3]=vt[3]+1
+        >>>   13 | 	elif (e[j] == "E"):
+              14 | 		vt[4]=vt[4]+1
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 2
+
+  [1] Linha 2: Variável 'e' com nome muito curto (≤4 chars)
+      Trecho  : e = ...
+      Contexto:
+               1 | from numpy import *
+        >>>    2 | e=input("Digite a entrada:").split(',')
+               3 | vt=zeros(6,dtype=int)
+
+  [2] Linha 3: Variável 'vt' com nome muito curto (≤4 chars)
+      Trecho  : vt = ...
+      Contexto:
+               2 | e=input("Digite a entrada:").split(',')
+        >>>    3 | vt=zeros(6,dtype=int)
+               4 | for j in range(size(e)):
+
+======================================================================

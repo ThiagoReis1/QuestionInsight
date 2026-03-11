@@ -1,0 +1,58 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 6833_9676.py
+Questão  : 6833
+Aluno    : 9676
+Total MCs: 2
+
+⚠️  Misconceptions detectados: A3, B8
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import *
+     2 | produto = input("digite a sequencia")
+     3 | total=0
+     4 | i=0
+     5 | m=0
+     6 | p=0
+     7 | r=0
+     8 | # enquanto o indicie for menor que o tamanho 
+     9 | while i < len(produto):
+    10 | 	if produto[i].upper() == "M":
+    11 | 		m += 7.25
+    12 | 		i+=1
+    13 | 	elif produto[i].upper() == "P":
+    14 | 		p+= 4.75
+    15 | 		i+=1
+    16 | 		
+    17 | 	elif produto[i].upper() == "R":
+    18 | 		r+= 3.50
+    19 | 		i+=1
+    20 | 
+    21 | total = m + p + r
+    22 | 
+    23 | print(round(total,2))
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 1
+
+  [1] Linha 0: A3 detectado pelo VisitorMC3 (localização exata não mapeada)
+      Trecho  : —
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 13: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 13) / elif ... sem else
+      Contexto:
+              12 | 		i+=1
+        >>>   13 | 	elif produto[i].upper() == "P":
+              14 | 		p+= 4.75
+
+======================================================================

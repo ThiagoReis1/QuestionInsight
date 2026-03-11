@@ -1,0 +1,54 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1641_8414.py
+Questão  : 1641
+Aluno    : 8414
+Total MCs: 2
+
+⚠️  Misconceptions detectados: A3, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | 
+     3 | vet = array(eval(input()), dtype=int)
+     4 | cont = zeros(size(vet), dtype=int)
+     5 | 
+     6 | for  i in range(size(vet)): 
+     7 | 	if vet[i] % 3 == 0:
+     8 | 		cont += 1
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 1
+
+  [1] Linha 4: Variável 'cont' declarada mas nunca utilizada
+      Trecho  : cont = ...
+      Contexto:
+               3 | vet = array(eval(input()), dtype=int)
+        >>>    4 | cont = zeros(size(vet), dtype=int)
+               5 | 
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 2
+
+  [1] Linha 3: Variável 'vet' com nome muito curto (≤4 chars)
+      Trecho  : vet = ...
+      Contexto:
+               2 | 
+        >>>    3 | vet = array(eval(input()), dtype=int)
+               4 | cont = zeros(size(vet), dtype=int)
+
+  [2] Linha 4: Variável 'cont' com nome muito curto (≤4 chars)
+      Trecho  : cont = ...
+      Contexto:
+               3 | vet = array(eval(input()), dtype=int)
+        >>>    4 | cont = zeros(size(vet), dtype=int)
+               5 | 
+
+======================================================================

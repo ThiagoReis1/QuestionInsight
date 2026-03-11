@@ -1,0 +1,7 @@
+x = float(input("valor do número: "))
+y = float(input("valor: "))
+z = float(input("valor: "))
+w = float(input("valor: "))
+x1 = (y**3 + z**3 + w**3 == x)
+if(x1 == x)
+	print("X per")

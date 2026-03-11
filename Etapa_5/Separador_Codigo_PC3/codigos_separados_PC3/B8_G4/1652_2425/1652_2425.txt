@@ -1,0 +1,73 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1652_2425.py
+Questão  : 1652
+Aluno    : 2425
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import *
+     2 | s = input("s:")
+     3 | vet = s.split(',')
+     4 | 
+     5 | vc = zeros(5, dtype=int)
+     6 | 
+     7 | for i in range(0,size(vet)):
+     8 | 	if(vet[i]=='B'):
+     9 | 		vc[0]=vc[0]+1
+    10 | 	elif(vet[i]=='PA'):
+    11 | 		vc[1]=vc[1]+1
+    12 | 	elif(vet[i]=='PR'):
+    13 | 		vc[2]=vc[2]+1
+    14 | 	elif(vet[i]=='A'):
+    15 | 		vc[3]=vc[3]+1
+    16 | 	elif(vet[i]=='I'):
+    17 | 		vc[4]=vc[4]+1
+    18 | print(max(vc))
+    19 | print(vc)
+    20 | 
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 14: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 14) / elif ... sem else
+      Contexto:
+              13 | 		vc[2]=vc[2]+1
+        >>>   14 | 	elif(vet[i]=='A'):
+              15 | 		vc[3]=vc[3]+1
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 3
+
+  [1] Linha 2: Variável 's' com nome muito curto (≤4 chars)
+      Trecho  : s = ...
+      Contexto:
+               1 | from numpy import *
+        >>>    2 | s = input("s:")
+               3 | vet = s.split(',')
+
+  [2] Linha 3: Variável 'vet' com nome muito curto (≤4 chars)
+      Trecho  : vet = ...
+      Contexto:
+               2 | s = input("s:")
+        >>>    3 | vet = s.split(',')
+               4 | 
+
+  [3] Linha 5: Variável 'vc' com nome muito curto (≤4 chars)
+      Trecho  : vc = ...
+      Contexto:
+               4 | 
+        >>>    5 | vc = zeros(5, dtype=int)
+               6 | 
+
+======================================================================

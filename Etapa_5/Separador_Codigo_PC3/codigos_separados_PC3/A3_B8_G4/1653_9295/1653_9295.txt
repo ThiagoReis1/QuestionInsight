@@ -1,0 +1,147 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1653_9295.py
+Questão  : 1653
+Aluno    : 9295
+Total MCs: 3
+
+⚠️  Misconceptions detectados: A3, B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | v = input("").upper()
+     3 | v = v.split(',')
+     4 | i = 0
+     5 | a = 0
+     6 | b = 0
+     7 | cl = 0
+     8 | co = 0
+     9 | uy = 0
+    10 | 
+    11 | while i <= size(v):
+    12 | 	if v[i] == "BR":
+    13 | 		b += 1
+    14 | 	elif v[i] == "AR":
+    15 | 		a += 1
+    16 | 	elif v[i] == "CL":
+    17 | 		cl += 1
+    18 | 	elif v[i] == "CO":
+    19 | 		co += 1
+    20 | 	elif v[i] == "UY":
+    21 | 		uy += 1
+    22 | 
+    23 | z = array(eval(vet[ar,br,cl,co,uy]))
+    24 | y = max(z)
+    25 | print(y)
+    26 | print(z)
+    27 | 
+    28 | 
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 2
+
+  [1] Linha 5: Variável 'a' declarada mas nunca utilizada
+      Trecho  : a = ...
+      Contexto:
+               4 | i = 0
+        >>>    5 | a = 0
+               6 | b = 0
+
+  [2] Linha 6: Variável 'b' declarada mas nunca utilizada
+      Trecho  : b = ...
+      Contexto:
+               5 | a = 0
+        >>>    6 | b = 0
+               7 | cl = 0
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 18: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 18) / elif ... sem else
+      Contexto:
+              17 | 		cl += 1
+        >>>   18 | 	elif v[i] == "CO":
+              19 | 		co += 1
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 10
+
+  [1] Linha 2: Variável 'v' com nome muito curto (≤4 chars)
+      Trecho  : v = ...
+      Contexto:
+               1 | from numpy import*
+        >>>    2 | v = input("").upper()
+               3 | v = v.split(',')
+
+  [2] Linha 3: Variável 'v' com nome muito curto (≤4 chars)
+      Trecho  : v = ...
+      Contexto:
+               2 | v = input("").upper()
+        >>>    3 | v = v.split(',')
+               4 | i = 0
+
+  [3] Linha 4: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+               3 | v = v.split(',')
+        >>>    4 | i = 0
+               5 | a = 0
+
+  [4] Linha 5: Variável 'a' com nome muito curto (≤4 chars)
+      Trecho  : a = ...
+      Contexto:
+               4 | i = 0
+        >>>    5 | a = 0
+               6 | b = 0
+
+  [5] Linha 6: Variável 'b' com nome muito curto (≤4 chars)
+      Trecho  : b = ...
+      Contexto:
+               5 | a = 0
+        >>>    6 | b = 0
+               7 | cl = 0
+
+  [6] Linha 7: Variável 'cl' com nome muito curto (≤4 chars)
+      Trecho  : cl = ...
+      Contexto:
+               6 | b = 0
+        >>>    7 | cl = 0
+               8 | co = 0
+
+  [7] Linha 8: Variável 'co' com nome muito curto (≤4 chars)
+      Trecho  : co = ...
+      Contexto:
+               7 | cl = 0
+        >>>    8 | co = 0
+               9 | uy = 0
+
+  [8] Linha 9: Variável 'uy' com nome muito curto (≤4 chars)
+      Trecho  : uy = ...
+      Contexto:
+               8 | co = 0
+        >>>    9 | uy = 0
+              10 | 
+
+  [9] Linha 23: Variável 'z' com nome muito curto (≤4 chars)
+      Trecho  : z = ...
+      Contexto:
+              22 | 
+        >>>   23 | z = array(eval(vet[ar,br,cl,co,uy]))
+              24 | y = max(z)
+
+  [10] Linha 24: Variável 'y' com nome muito curto (≤4 chars)
+      Trecho  : y = ...
+      Contexto:
+              23 | z = array(eval(vet[ar,br,cl,co,uy]))
+        >>>   24 | y = max(z)
+              25 | print(y)
+
+======================================================================

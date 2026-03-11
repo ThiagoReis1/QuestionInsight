@@ -1,0 +1,107 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1117_3224.py
+Questão  : 1117
+Aluno    : 3224
+Total MCs: 3
+
+⚠️  Misconceptions detectados: B11, B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | p = float(input())
+     2 | d = int(input())
+     3 | m = input()                                        
+     4 | 
+     5 | if(d != 1,2,3,4,5,6,7):
+     6 | 	print("Entradas:", p, ",", d, ",", m)
+     7 | 	print("Dados invalidos")
+     8 | 	
+     9 | if(m != "S" and m != "N"):
+    10 | 	print("Entradas:", p, ",", d, ",", m)
+    11 | 	print("Dados invalidos")
+    12 | 	
+    13 | else:
+    14 | 	if(d == 2 or d == 3 or d==5):
+    15 | 		c = p - (p*0.25)
+    16 | 		if(m == "S"):
+    17 | 			c = c + 20
+    18 | 		print("Entradas:", p, ",", d, ",", m)
+    19 | 		print("Valor a pagar: R$", round(c, 2))
+    20 | 	else:
+    21 | 		if(m == "S"):
+    22 | 			c = p + 20
+    23 | 		print("Entradas:", p, ",", d, ",", m)
+    24 | 		print("Valor a pagar: R$", round(c, 2))
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B11 — Ifs distintos com blocos idênticos
+  Ocorrências: 1
+
+  [1] Linha 9: Bloco idêntico ao if da linha 5
+      Trecho  : print('Entradas:', p, ',', d, ',', m)
+      Contexto:
+               8 | 	
+        >>>    9 | if(m != "S" and m != "N"):
+              10 | 	print("Entradas:", p, ",", d, ",", m)
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 14: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 14) / elif ... sem else
+      Contexto:
+              13 | else:
+        >>>   14 | 	if(d == 2 or d == 3 or d==5):
+              15 | 		c = p - (p*0.25)
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 6
+
+  [1] Linha 1: Variável 'p' com nome muito curto (≤4 chars)
+      Trecho  : p = ...
+      Contexto:
+        >>>    1 | p = float(input())
+               2 | d = int(input())
+
+  [2] Linha 2: Variável 'd' com nome muito curto (≤4 chars)
+      Trecho  : d = ...
+      Contexto:
+               1 | p = float(input())
+        >>>    2 | d = int(input())
+               3 | m = input()                                        
+
+  [3] Linha 3: Variável 'm' com nome muito curto (≤4 chars)
+      Trecho  : m = ...
+      Contexto:
+               2 | d = int(input())
+        >>>    3 | m = input()                                        
+               4 | 
+
+  [4] Linha 15: Variável 'c' com nome muito curto (≤4 chars)
+      Trecho  : c = ...
+      Contexto:
+              14 | 	if(d == 2 or d == 3 or d==5):
+        >>>   15 | 		c = p - (p*0.25)
+              16 | 		if(m == "S"):
+
+  [5] Linha 17: Variável 'c' com nome muito curto (≤4 chars)
+      Trecho  : c = ...
+      Contexto:
+              16 | 		if(m == "S"):
+        >>>   17 | 			c = c + 20
+              18 | 		print("Entradas:", p, ",", d, ",", m)
+
+  [6] Linha 22: Variável 'c' com nome muito curto (≤4 chars)
+      Trecho  : c = ...
+      Contexto:
+              21 | 		if(m == "S"):
+        >>>   22 | 			c = p + 20
+              23 | 		print("Entradas:", p, ",", d, ",", m)
+
+======================================================================

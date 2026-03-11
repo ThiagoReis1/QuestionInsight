@@ -1,0 +1,173 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 5251_7181.py
+Questão  : 5251
+Aluno    : 7181
+Total MCs: 5
+
+⚠️  Misconceptions detectados: A2, A3, B8, B9, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | x=input("cidade de destino:  ")
+     2 | y=int(input("idade do passageiro:  "))
+     3 | 
+     4 | 
+     5 | if(x.upper()=="PORTO VELHO"):
+     6 | 	z=500.0
+     7 | elif(x.upper()=="SANTAREM"):
+     8 | 	z=370.0
+     9 | elif(x.upper()=="BELEM"):
+    10 | 	z=600.0
+    11 | elif(x.upper()=="TEFE"):
+    12 | 	z=360.0
+    13 | elif(x.upper()=="TABATINGA"):
+    14 | 	z=550.0
+    15 | 
+    16 | if(y>0 and y<=150 and (x.upper()=="PORTO VELHO" or x.upper()=="SANTAREM" or x.upper()=="BELEM" or x.upper()=="TEFE" or x.upper()=="TABATINGA")):
+    17 | 		
+    18 | 	if(y<=2 and y>=0):
+    19 | 		z=0
+    20 | 		print("Entradas: ", x, ",", y)
+    21 | 		print("Passagem: R$", round(z, 2))
+    22 | 	elif(y>=3 and y<=12):
+    23 | 		z=z-(z*0.5)
+    24 | 		print("Entradas: ", x, ",", y)
+    25 | 		print("Passagem: R$", round(z, 2))
+    26 | 	elif(y>=65):
+    27 | 		z=z-(z*0.3)
+    28 | 		print("Entradas: ", x, ",", y)
+    29 | 		print("Passagem: R$", round(z, 2))
+    30 | 	elif(y>12 and y<65):
+    31 | 		z=z
+    32 | 		print("Entradas: ", x, ",", y)
+    33 | 		print("Passagem: R$", round(z, 2))
+    34 | else:
+    35 | 	print("Entradas: ", x, ",", y)
+    36 | 	print("entradas invalidas")
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A2 — Variável atribuída a si mesma
+  Ocorrências: 1
+
+  [1] Linha 31: 'z' atribuído a si mesmo
+      Trecho  : z = z
+      Contexto:
+              30 | 	elif(y>12 and y<65):
+        >>>   31 | 		z=z
+              32 | 		print("Entradas: ", x, ",", y)
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 1
+
+  [1] Linha 0: A3 detectado pelo VisitorMC3 (localização exata não mapeada)
+      Trecho  : —
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 2
+
+  [1] Linha 11: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 11) / elif ... sem else
+      Contexto:
+              10 | 	z=600.0
+        >>>   11 | elif(x.upper()=="TEFE"):
+              12 | 	z=360.0
+
+  [2] Linha 26: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 26) / elif ... sem else
+      Contexto:
+              25 | 		print("Passagem: R$", round(z, 2))
+        >>>   26 | 	elif(y>=65):
+              27 | 		z=z-(z*0.3)
+
+▶ B9 — elif/else retestando condições já verificadas
+  Ocorrências: 1
+
+  [1] Linha 0: B9 detectado pelo VisitorMC3 (localização exata não mapeada)
+      Trecho  : —
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 11
+
+  [1] Linha 1: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+        >>>    1 | x=input("cidade de destino:  ")
+               2 | y=int(input("idade do passageiro:  "))
+
+  [2] Linha 2: Variável 'y' com nome muito curto (≤4 chars)
+      Trecho  : y = ...
+      Contexto:
+               1 | x=input("cidade de destino:  ")
+        >>>    2 | y=int(input("idade do passageiro:  "))
+               3 | 
+
+  [3] Linha 6: Variável 'z' com nome muito curto (≤4 chars)
+      Trecho  : z = ...
+      Contexto:
+               5 | if(x.upper()=="PORTO VELHO"):
+        >>>    6 | 	z=500.0
+               7 | elif(x.upper()=="SANTAREM"):
+
+  [4] Linha 8: Variável 'z' com nome muito curto (≤4 chars)
+      Trecho  : z = ...
+      Contexto:
+               7 | elif(x.upper()=="SANTAREM"):
+        >>>    8 | 	z=370.0
+               9 | elif(x.upper()=="BELEM"):
+
+  [5] Linha 19: Variável 'z' com nome muito curto (≤4 chars)
+      Trecho  : z = ...
+      Contexto:
+              18 | 	if(y<=2 and y>=0):
+        >>>   19 | 		z=0
+              20 | 		print("Entradas: ", x, ",", y)
+
+  [6] Linha 10: Variável 'z' com nome muito curto (≤4 chars)
+      Trecho  : z = ...
+      Contexto:
+               9 | elif(x.upper()=="BELEM"):
+        >>>   10 | 	z=600.0
+              11 | elif(x.upper()=="TEFE"):
+
+  [7] Linha 23: Variável 'z' com nome muito curto (≤4 chars)
+      Trecho  : z = ...
+      Contexto:
+              22 | 	elif(y>=3 and y<=12):
+        >>>   23 | 		z=z-(z*0.5)
+              24 | 		print("Entradas: ", x, ",", y)
+
+  [8] Linha 12: Variável 'z' com nome muito curto (≤4 chars)
+      Trecho  : z = ...
+      Contexto:
+              11 | elif(x.upper()=="TEFE"):
+        >>>   12 | 	z=360.0
+              13 | elif(x.upper()=="TABATINGA"):
+
+  [9] Linha 27: Variável 'z' com nome muito curto (≤4 chars)
+      Trecho  : z = ...
+      Contexto:
+              26 | 	elif(y>=65):
+        >>>   27 | 		z=z-(z*0.3)
+              28 | 		print("Entradas: ", x, ",", y)
+
+  [10] Linha 14: Variável 'z' com nome muito curto (≤4 chars)
+      Trecho  : z = ...
+      Contexto:
+              13 | elif(x.upper()=="TABATINGA"):
+        >>>   14 | 	z=550.0
+              15 | 
+
+  [11] Linha 31: Variável 'z' com nome muito curto (≤4 chars)
+      Trecho  : z = ...
+      Contexto:
+              30 | 	elif(y>12 and y<65):
+        >>>   31 | 		z=z
+              32 | 		print("Entradas: ", x, ",", y)
+
+======================================================================

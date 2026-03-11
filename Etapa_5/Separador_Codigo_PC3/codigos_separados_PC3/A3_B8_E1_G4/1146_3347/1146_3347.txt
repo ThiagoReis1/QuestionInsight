@@ -1,0 +1,155 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1146_3347.py
+Questão  : 1146
+Aluno    : 3347
+Total MCs: 4
+
+⚠️  Misconceptions detectados: A3, B8, E1, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | nome = input("nome personagem GOT: ")
+     2 | a = "Joffrey"
+     3 | a = "Joffrey"
+     4 | b = "Robert"
+     5 | c = "Sandor"
+     6 | d = "Theon"
+     7 | e = "Cersei"
+     8 | f = "Jaime"
+     9 | g = "Tyrin"
+    10 | h = "Jorah"
+    11 | i = "Jon"
+    12 | if (nome != a) and ( nome != b) and (nome != c) and (nome != d) and (nome != e) and (nome != f) and (nome!= g) and ( nome != h) and (nome != i):
+    13 | 	print("Entrada", nome, "invalida")
+    14 | elif(nome == a):
+    15 | 	print("Jack Gleeson")
+    16 | elif(nome == b):
+    17 | 	print("Mark Addy")
+    18 | elif(nome == c):
+    19 | 	print("Rory McCann")
+    20 | elif(nome == d):
+    21 | 	print("Alfie Allen")
+    22 | elif(nome == e):
+    23 | 	print("Lena Headey")
+    24 | elif(nome == f):
+    25 | 	print("Nikolaj Coster-Waldau")
+    26 | elif(nome == g):
+    27 | 	print("Peter Dinklage")
+    28 | elif(nome == h):
+    29 | 	print("Iain Glen")
+    30 | elif(nome == i):
+    31 | 	print("Kit Harington")
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 1
+
+  [1] Linha 0: A3 detectado pelo VisitorMC3 (localização exata não mapeada)
+      Trecho  : —
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 28: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 28) / elif ... sem else
+      Contexto:
+              27 | 	print("Peter Dinklage")
+        >>>   28 | elif(nome == h):
+              29 | 	print("Iain Glen")
+
+▶ E1 — Verificação desnecessária de todas as combinações possíveis
+  Ocorrências: 1
+
+  [1] Linha 12: 9 condições em um único if — verificação excessiva
+      Trecho  : nome != a and nome != b and (nome != c) and (nome != d) and (nome != e) and (nome != f) and (nome != g) and (nome != h) and (nome != i)
+      Contexto:
+              11 | i = "Jon"
+        >>>   12 | if (nome != a) and ( nome != b) and (nome != c) and (nome != d) and (nome != e) and (nome != f) and (nome!= g) and ( nome != h) and (nome != i):
+              13 | 	print("Entrada", nome, "invalida")
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 11
+
+  [1] Linha 1: Variável 'nome' com nome muito curto (≤4 chars)
+      Trecho  : nome = ...
+      Contexto:
+        >>>    1 | nome = input("nome personagem GOT: ")
+               2 | a = "Joffrey"
+
+  [2] Linha 2: Variável 'a' com nome muito curto (≤4 chars)
+      Trecho  : a = ...
+      Contexto:
+               1 | nome = input("nome personagem GOT: ")
+        >>>    2 | a = "Joffrey"
+               3 | a = "Joffrey"
+
+  [3] Linha 3: Variável 'a' com nome muito curto (≤4 chars)
+      Trecho  : a = ...
+      Contexto:
+               2 | a = "Joffrey"
+        >>>    3 | a = "Joffrey"
+               4 | b = "Robert"
+
+  [4] Linha 4: Variável 'b' com nome muito curto (≤4 chars)
+      Trecho  : b = ...
+      Contexto:
+               3 | a = "Joffrey"
+        >>>    4 | b = "Robert"
+               5 | c = "Sandor"
+
+  [5] Linha 5: Variável 'c' com nome muito curto (≤4 chars)
+      Trecho  : c = ...
+      Contexto:
+               4 | b = "Robert"
+        >>>    5 | c = "Sandor"
+               6 | d = "Theon"
+
+  [6] Linha 6: Variável 'd' com nome muito curto (≤4 chars)
+      Trecho  : d = ...
+      Contexto:
+               5 | c = "Sandor"
+        >>>    6 | d = "Theon"
+               7 | e = "Cersei"
+
+  [7] Linha 7: Variável 'e' com nome muito curto (≤4 chars)
+      Trecho  : e = ...
+      Contexto:
+               6 | d = "Theon"
+        >>>    7 | e = "Cersei"
+               8 | f = "Jaime"
+
+  [8] Linha 8: Variável 'f' com nome muito curto (≤4 chars)
+      Trecho  : f = ...
+      Contexto:
+               7 | e = "Cersei"
+        >>>    8 | f = "Jaime"
+               9 | g = "Tyrin"
+
+  [9] Linha 9: Variável 'g' com nome muito curto (≤4 chars)
+      Trecho  : g = ...
+      Contexto:
+               8 | f = "Jaime"
+        >>>    9 | g = "Tyrin"
+              10 | h = "Jorah"
+
+  [10] Linha 10: Variável 'h' com nome muito curto (≤4 chars)
+      Trecho  : h = ...
+      Contexto:
+               9 | g = "Tyrin"
+        >>>   10 | h = "Jorah"
+              11 | i = "Jon"
+
+  [11] Linha 11: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+              10 | h = "Jorah"
+        >>>   11 | i = "Jon"
+              12 | if (nome != a) and ( nome != b) and (nome != c) and (nome != d) and (nome != e) and (nome != f) and (nome!= g) and ( nome != h) and (nome != i):
+
+======================================================================

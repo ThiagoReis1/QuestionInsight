@@ -1,0 +1,108 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 5251_7098.py
+Questão  : 5251
+Aluno    : 7098
+Total MCs: 3
+
+⚠️  Misconceptions detectados: B8, E1, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | cidade = input("cidade: ")
+     2 | idade = int(input("idade: "))
+     3 | 
+     4 | print("Entradas:",cidade, ",",idade)
+     5 | 
+     6 | vpv = 500.00
+     7 | vs = 370.00
+     8 | vb = 600.00
+     9 | vt = 360.00
+    10 | vta = 550.00
+    11 | d1 = 30/100 * 500
+    12 | d2 = 30/100 * 370
+    13 | d3 = 30/100 * 600
+    14 | d4 = 30/100 * 360
+    15 | d5 = 30/100 * 550
+    16 | 
+    17 | if idade <= 2 and idade >= 0 and cidade == "Porto Velho" and cidade == "Santarem" and cidade == "Belem" and cidade == "Tefe" and cidade == "Tabatinga":
+    18 | 	print("Passagem:", "R$", "0" )
+    19 | elif idade >= 3 and idade <= 12 and cidade == "Porto Velho":
+    20 | 	valor = vpv / 2
+    21 | 	print("Passagem:", "R$", valor)
+    22 | elif idade >= 3 and idade <= 12 and cidade == "Santarem":
+    23 | 	valor = vs / 2
+    24 | 	print("Passagem:", "R$", valor)
+    25 | elif idade >= 3 and idade <= 12 and cidade == "Belem":
+    26 | 	valor = vb / 2
+    27 | 	print("Passagem:", "R$", valor)
+    28 | elif idade >= 3 and idade <= 12 and cidade == "Tefe":
+    29 | 	valor = vt / 2
+    30 | 	print("Passagem:", "R$", valor)
+    31 | elif idade >= 3 and idade <= 12 and cidade == "Tabatinga":
+    32 | 	valor = vta / 2
+    33 | 	print("Passagem:", "R$", valor)
+    34 | elif idade > 12 and idade < 65 and cidade == "Porto Velho":
+    35 | 	print("Passagem:", "R$", vpv)
+    36 | elif idade > 12 and idade < 65 and cidade == "Santarem":
+    37 | 	print("Passagem:", "R$", vs)
+    38 | elif idade > 12 and idade < 65 and cidade == "Belem":
+    39 | 	print("Passagem:", "R$", vb)
+    40 | elif idade > 12 and idade < 65 and cidade == "Tefe":
+    41 | 	print("Passagem:", "R$", vt)
+    42 | elif idade > 12 and idade < 65 and cidade == "Tabatinga":
+    43 | 	print("Passagem:", "R$", vta)
+    44 | elif idade >= 65 and idade < 150 and cidade == "Porto Velho":
+    45 | 	valor = vpv - d1
+    46 | 	print("Passagem:", "R$", valor)
+    47 | elif idade >= 65 and idade < 150 and cidade == "Santarem":
+    48 | 	valor = vs - d2
+    49 | 	print("Passagem:", "R$", valor)
+    50 | elif idade >= 65 and idade < 150 and cidade == "Belem":
+    51 | 	valor = vb - d3
+    52 | 	print("Passagem:", "R$", valor)
+    53 | elif idade >= 65 and idade < 150 and cidade == "Tefe":
+    54 | 	valor = vt - d4
+    55 | 	print("Passagem:", "R$", valor)
+    56 | elif idade >= 65 and idade < 150 and cidade == "Tabatinga":
+    57 | 	valor = vta - d5
+    58 | 	print("Passagem:", "R$", valor)
+    59 | elif idade > 150 or idade < 0 or (cidade != "Porto Velho" and cidade != "Santarem" and cidade != "Belem" and cidade != "Tefe" and cidade != "Tabatinga"):
+    60 | 	print("entradas invalidas")
+    61 | 
+    62 | 
+    63 | 	
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 56: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 56) / elif ... sem else
+      Contexto:
+              55 | 	print("Passagem:", "R$", valor)
+        >>>   56 | elif idade >= 65 and idade < 150 and cidade == "Tabatinga":
+              57 | 	valor = vta - d5
+
+▶ E1 — Verificação desnecessária de todas as combinações possíveis
+  Ocorrências: 1
+
+  [1] Linha 17: 7 condições em um único if — verificação excessiva
+      Trecho  : idade <= 2 and idade >= 0 and (cidade == 'Porto Velho') and (cidade == 'Santarem') and (cidade == 'Belem') and (cidade == 'Tefe') and (cidade == 'Tabatinga')
+      Contexto:
+              16 | 
+        >>>   17 | if idade <= 2 and idade >= 0 and cidade == "Porto Velho" and cidade == "Santarem" and cidade == "Belem" and cidade == "Tefe" and cidade == "Tabatinga":
+              18 | 	print("Passagem:", "R$", "0" )
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 1
+
+  [1] Linha 0: G4 detectado pelo VisitorMC3 (localização exata não mapeada)
+      Trecho  : —
+
+======================================================================

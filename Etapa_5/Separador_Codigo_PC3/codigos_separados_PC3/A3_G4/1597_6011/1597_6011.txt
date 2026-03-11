@@ -1,0 +1,65 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1597_6011.py
+Questão  : 1597
+Aluno    : 6011
+Total MCs: 2
+
+⚠️  Misconceptions detectados: A3, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | 
+     3 | vet = array(eval(input("")))
+     4 | 
+     5 | cont = 0 
+     6 | desc = 5.00
+     7 | 
+     8 | for i in range(size(vet)):
+     9 | 	if(vet[i]>80.0):
+    10 | 		vet[i] = vet[i] - desc
+    11 | 		total = sum(vet)
+    12 | print(total)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 1
+
+  [1] Linha 5: Variável 'cont' declarada mas nunca utilizada
+      Trecho  : cont = ...
+      Contexto:
+               4 | 
+        >>>    5 | cont = 0 
+               6 | desc = 5.00
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 3
+
+  [1] Linha 3: Variável 'vet' com nome muito curto (≤4 chars)
+      Trecho  : vet = ...
+      Contexto:
+               2 | 
+        >>>    3 | vet = array(eval(input("")))
+               4 | 
+
+  [2] Linha 5: Variável 'cont' com nome muito curto (≤4 chars)
+      Trecho  : cont = ...
+      Contexto:
+               4 | 
+        >>>    5 | cont = 0 
+               6 | desc = 5.00
+
+  [3] Linha 6: Variável 'desc' com nome muito curto (≤4 chars)
+      Trecho  : desc = ...
+      Contexto:
+               5 | cont = 0 
+        >>>    6 | desc = 5.00
+               7 | 
+
+======================================================================

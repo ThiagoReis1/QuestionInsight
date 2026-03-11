@@ -1,0 +1,66 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1111_3320.py
+Questão  : 1111
+Aluno    : 3320
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | he=float(input("numero de horas extras: "))
+     2 | hnt=float(input("numero de horas nao trabalhadas: "))
+     3 | if((he<0)or(hnt<0)):
+     4 | 	print("Entradas:",he,"horas extras e",hnt,"horas de falta")
+     5 | 	print("Dados invalidos")
+     6 | else:
+     7 | 	if round((he-2/3*hnt), 2)>2400:
+     8 | 		print("Entradas:",he,"horas extras e",hnt,"horas de falta")
+     9 | 		print("Gratificacao: R$",500.0)
+    10 | 	elif round((he-2/3*hnt),2)>1800 and round((he-2/3*hnt),2)<=2400:
+    11 | 		print("Entradas:",he,"horas extras e",hnt,"horas de falta")
+    12 | 		print("Gratificacao: R$",400.0)
+    13 | 	elif round((he-2/3*hnt),2)>1200 and round((he-2/3*hnt),2)<=1800:
+    14 | 		print("Entradas:",he,"horas extras e",hnt,"horas de falta")
+    15 | 		print("Gratificacao: R$",300.0)
+    16 | 	elif round((he-2/3*hnt),2)>600 and round((he-2/3*hnt),2)<=1200:
+    17 | 		print("Entradas:",he,"horas extras e",hnt,"horas de falta")
+    18 | 		print("Gratificacao: R$",200.0)
+    19 | 	elif round((he-2/3*hnt),2)<=600:
+    20 | 		print("Entradas:",he,"horas extras e",hnt,"horas de falta")
+    21 | 		print("Gratificacao: R$",100.0)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 16: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 16) / elif ... sem else
+      Contexto:
+              15 | 		print("Gratificacao: R$",300.0)
+        >>>   16 | 	elif round((he-2/3*hnt),2)>600 and round((he-2/3*hnt),2)<=1200:
+              17 | 		print("Entradas:",he,"horas extras e",hnt,"horas de falta")
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 2
+
+  [1] Linha 1: Variável 'he' com nome muito curto (≤4 chars)
+      Trecho  : he = ...
+      Contexto:
+        >>>    1 | he=float(input("numero de horas extras: "))
+               2 | hnt=float(input("numero de horas nao trabalhadas: "))
+
+  [2] Linha 2: Variável 'hnt' com nome muito curto (≤4 chars)
+      Trecho  : hnt = ...
+      Contexto:
+               1 | he=float(input("numero de horas extras: "))
+        >>>    2 | hnt=float(input("numero de horas nao trabalhadas: "))
+               3 | if((he<0)or(hnt<0)):
+
+======================================================================

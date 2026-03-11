@@ -1,0 +1,71 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 3590_9170.py
+Questão  : 3590
+Aluno    : 9170
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B4, B8
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | 
+     3 | fc=array(eval(input("Face do Dado: ")))
+     4 | i=0
+     5 | total=0
+     6 | while i<size(fc):
+     7 | 	if fc[i]==1:
+     8 | 		total+=10
+     9 | 	elif fc[i]==2:
+    10 | 		total+=5
+    11 | 	elif fc[i]==4:
+    12 | 		total+=5
+    13 | 	elif fc[i]==5:
+    14 | 		total+=20
+    15 | 	elif fc[i]==6:
+    16 | 		total+=10
+    17 | 	i+=1
+    18 | print(total)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B4 — Comandos repetidos dentro de blocos if-elif-else
+  Ocorrências: 3
+
+  [1] Linha 11: Bloco idêntico ao da linha 9
+      Trecho  : total += 5
+      Contexto:
+              10 | 		total+=5
+        >>>   11 | 	elif fc[i]==4:
+              12 | 		total+=5
+
+  [2] Linha 15: Bloco idêntico ao da linha 7
+      Trecho  : total += 10
+      Contexto:
+              14 | 		total+=20
+        >>>   15 | 	elif fc[i]==6:
+              16 | 		total+=10
+
+  [3] Linha 11: Bloco idêntico ao da linha 9
+      Trecho  : total += 5
+      Contexto:
+              10 | 		total+=5
+        >>>   11 | 	elif fc[i]==4:
+              12 | 		total+=5
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 13: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 13) / elif ... sem else
+      Contexto:
+              12 | 		total+=5
+        >>>   13 | 	elif fc[i]==5:
+              14 | 		total+=20
+
+======================================================================

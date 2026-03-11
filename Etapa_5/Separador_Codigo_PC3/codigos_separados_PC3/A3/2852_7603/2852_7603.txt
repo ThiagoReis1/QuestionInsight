@@ -1,0 +1,43 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 2852_7603.py
+Questão  : 2852
+Aluno    : 7603
+Total MCs: 1
+
+⚠️  Misconceptions detectados: A3
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import *
+     2 | 
+     3 | num = array(eval(input(" ")))
+     4 | 
+     5 | soma = 0 #variavel acumuladora
+     6 | total = sum(num)
+     7 | for i in range(size(num)):
+     8 | 	if num[i] != "88":
+     9 | 		soma = sum(num)
+    10 | 	else:
+    11 | 		soma = (sum(num[i])/2) + sum(num[i,-1]) - 88
+    12 | 
+    13 | print(soma)
+    14 | 
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 1
+
+  [1] Linha 6: Variável 'total' declarada mas nunca utilizada
+      Trecho  : total = ...
+      Contexto:
+               5 | soma = 0 #variavel acumuladora
+        >>>    6 | total = sum(num)
+               7 | for i in range(size(num)):
+
+======================================================================

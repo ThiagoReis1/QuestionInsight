@@ -1,0 +1,194 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 3591_9272.py
+Questão  : 3591
+Aluno    : 9272
+Total MCs: 3
+
+⚠️  Misconceptions detectados: B4, B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | a = array(eval(input("numeros gerados pelo dado: ")))
+     3 | i = 0
+     4 | ac = 0
+     5 | while i < size(a):
+     6 | 	if  a[i] == 1:
+     7 | 		ac = ac + 10
+     8 | 	elif a[i] == 2:
+     9 | 		ac = ac + 5
+    10 | 	elif a[i] == 3:
+    11 | 		ac = ac + 10
+    12 | 	elif a[i] == 4:
+    13 | 		ac = ac + 5
+    14 | 	elif a[i] == 5:
+    15 | 		ac = ac + 10
+    16 | 	elif a[i] == 6:
+    17 | 		ac = ac + 5
+    18 | 	i = i + 1
+    19 | print(ac)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B4 — Comandos repetidos dentro de blocos if-elif-else
+  Ocorrências: 10
+
+  [1] Linha 10: Bloco idêntico ao da linha 6
+      Trecho  : ac = ac + 10
+      Contexto:
+               9 | 		ac = ac + 5
+        >>>   10 | 	elif a[i] == 3:
+              11 | 		ac = ac + 10
+
+  [2] Linha 12: Bloco idêntico ao da linha 8
+      Trecho  : ac = ac + 5
+      Contexto:
+              11 | 		ac = ac + 10
+        >>>   12 | 	elif a[i] == 4:
+              13 | 		ac = ac + 5
+
+  [3] Linha 14: Bloco idêntico ao da linha 6
+      Trecho  : ac = ac + 10
+      Contexto:
+              13 | 		ac = ac + 5
+        >>>   14 | 	elif a[i] == 5:
+              15 | 		ac = ac + 10
+
+  [4] Linha 16: Bloco idêntico ao da linha 8
+      Trecho  : ac = ac + 5
+      Contexto:
+              15 | 		ac = ac + 10
+        >>>   16 | 	elif a[i] == 6:
+              17 | 		ac = ac + 5
+
+  [5] Linha 12: Bloco idêntico ao da linha 8
+      Trecho  : ac = ac + 5
+      Contexto:
+              11 | 		ac = ac + 10
+        >>>   12 | 	elif a[i] == 4:
+              13 | 		ac = ac + 5
+
+  [6] Linha 14: Bloco idêntico ao da linha 10
+      Trecho  : ac = ac + 10
+      Contexto:
+              13 | 		ac = ac + 5
+        >>>   14 | 	elif a[i] == 5:
+              15 | 		ac = ac + 10
+
+  [7] Linha 16: Bloco idêntico ao da linha 8
+      Trecho  : ac = ac + 5
+      Contexto:
+              15 | 		ac = ac + 10
+        >>>   16 | 	elif a[i] == 6:
+              17 | 		ac = ac + 5
+
+  [8] Linha 14: Bloco idêntico ao da linha 10
+      Trecho  : ac = ac + 10
+      Contexto:
+              13 | 		ac = ac + 5
+        >>>   14 | 	elif a[i] == 5:
+              15 | 		ac = ac + 10
+
+  [9] Linha 16: Bloco idêntico ao da linha 12
+      Trecho  : ac = ac + 5
+      Contexto:
+              15 | 		ac = ac + 10
+        >>>   16 | 	elif a[i] == 6:
+              17 | 		ac = ac + 5
+
+  [10] Linha 16: Bloco idêntico ao da linha 12
+      Trecho  : ac = ac + 5
+      Contexto:
+              15 | 		ac = ac + 10
+        >>>   16 | 	elif a[i] == 6:
+              17 | 		ac = ac + 5
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 14: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 14) / elif ... sem else
+      Contexto:
+              13 | 		ac = ac + 5
+        >>>   14 | 	elif a[i] == 5:
+              15 | 		ac = ac + 10
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 10
+
+  [1] Linha 2: Variável 'a' com nome muito curto (≤4 chars)
+      Trecho  : a = ...
+      Contexto:
+               1 | from numpy import*
+        >>>    2 | a = array(eval(input("numeros gerados pelo dado: ")))
+               3 | i = 0
+
+  [2] Linha 3: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+               2 | a = array(eval(input("numeros gerados pelo dado: ")))
+        >>>    3 | i = 0
+               4 | ac = 0
+
+  [3] Linha 4: Variável 'ac' com nome muito curto (≤4 chars)
+      Trecho  : ac = ...
+      Contexto:
+               3 | i = 0
+        >>>    4 | ac = 0
+               5 | while i < size(a):
+
+  [4] Linha 18: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+              17 | 		ac = ac + 5
+        >>>   18 | 	i = i + 1
+              19 | print(ac)
+
+  [5] Linha 7: Variável 'ac' com nome muito curto (≤4 chars)
+      Trecho  : ac = ...
+      Contexto:
+               6 | 	if  a[i] == 1:
+        >>>    7 | 		ac = ac + 10
+               8 | 	elif a[i] == 2:
+
+  [6] Linha 9: Variável 'ac' com nome muito curto (≤4 chars)
+      Trecho  : ac = ...
+      Contexto:
+               8 | 	elif a[i] == 2:
+        >>>    9 | 		ac = ac + 5
+              10 | 	elif a[i] == 3:
+
+  [7] Linha 11: Variável 'ac' com nome muito curto (≤4 chars)
+      Trecho  : ac = ...
+      Contexto:
+              10 | 	elif a[i] == 3:
+        >>>   11 | 		ac = ac + 10
+              12 | 	elif a[i] == 4:
+
+  [8] Linha 13: Variável 'ac' com nome muito curto (≤4 chars)
+      Trecho  : ac = ...
+      Contexto:
+              12 | 	elif a[i] == 4:
+        >>>   13 | 		ac = ac + 5
+              14 | 	elif a[i] == 5:
+
+  [9] Linha 15: Variável 'ac' com nome muito curto (≤4 chars)
+      Trecho  : ac = ...
+      Contexto:
+              14 | 	elif a[i] == 5:
+        >>>   15 | 		ac = ac + 10
+              16 | 	elif a[i] == 6:
+
+  [10] Linha 17: Variável 'ac' com nome muito curto (≤4 chars)
+      Trecho  : ac = ...
+      Contexto:
+              16 | 	elif a[i] == 6:
+        >>>   17 | 		ac = ac + 5
+              18 | 	i = i + 1
+
+======================================================================

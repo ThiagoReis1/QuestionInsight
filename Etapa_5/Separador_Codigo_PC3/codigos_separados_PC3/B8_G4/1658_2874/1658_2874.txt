@@ -1,0 +1,99 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1658_2874.py
+Questão  : 1658
+Aluno    : 2874
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import *
+     2 | paises = input("Digite: ").split(',')
+     3 | nCHN = 0
+     4 | nJPN = 0
+     5 | nKOR = 0
+     6 | nMGL = 0
+     7 | nTHA = 0
+     8 | 
+     9 | for i in paises:
+    10 | 	if(i == "CHN"):
+    11 | 		nCHN +=1
+    12 | 	elif(i == "JPN"):
+    13 | 		nJPN +=1
+    14 | 	elif(i == "KOR"):
+    15 | 		nKOR +=1
+    16 | 	elif(i == "MGL"):
+    17 | 		nMGL +=1
+    18 | 	elif(i == "THA"):
+    19 | 		nTHA +=1
+    20 | 
+    21 | vet = array([nCHN,nJPN, nKOR, nMGL, nTHA ])
+    22 | 
+    23 | print(max(vet))
+    24 | print(vet)		
+    25 | 	
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 16: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 16) / elif ... sem else
+      Contexto:
+              15 | 		nKOR +=1
+        >>>   16 | 	elif(i == "MGL"):
+              17 | 		nMGL +=1
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 6
+
+  [1] Linha 3: Variável 'nCHN' com nome muito curto (≤4 chars)
+      Trecho  : nCHN = ...
+      Contexto:
+               2 | paises = input("Digite: ").split(',')
+        >>>    3 | nCHN = 0
+               4 | nJPN = 0
+
+  [2] Linha 4: Variável 'nJPN' com nome muito curto (≤4 chars)
+      Trecho  : nJPN = ...
+      Contexto:
+               3 | nCHN = 0
+        >>>    4 | nJPN = 0
+               5 | nKOR = 0
+
+  [3] Linha 5: Variável 'nKOR' com nome muito curto (≤4 chars)
+      Trecho  : nKOR = ...
+      Contexto:
+               4 | nJPN = 0
+        >>>    5 | nKOR = 0
+               6 | nMGL = 0
+
+  [4] Linha 6: Variável 'nMGL' com nome muito curto (≤4 chars)
+      Trecho  : nMGL = ...
+      Contexto:
+               5 | nKOR = 0
+        >>>    6 | nMGL = 0
+               7 | nTHA = 0
+
+  [5] Linha 7: Variável 'nTHA' com nome muito curto (≤4 chars)
+      Trecho  : nTHA = ...
+      Contexto:
+               6 | nMGL = 0
+        >>>    7 | nTHA = 0
+               8 | 
+
+  [6] Linha 21: Variável 'vet' com nome muito curto (≤4 chars)
+      Trecho  : vet = ...
+      Contexto:
+              20 | 
+        >>>   21 | vet = array([nCHN,nJPN, nKOR, nMGL, nTHA ])
+              22 | 
+
+======================================================================

@@ -1,0 +1,69 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 3184_4027.py
+Questão  : 3184
+Aluno    : 4027
+Total MCs: 2
+
+⚠️  Misconceptions detectados: A3, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import *
+     2 | ent = array(eval(input("Letras em ordem descrescente: ")))
+     3 | n = size(ent)
+     4 | j = n - 1
+     5 | for i in range(n//2):
+     6 | 	c = ent[n - 1 - i]
+     7 | 	ent[n - 1 - i] = ent[i]
+     8 | 	ent[i] = c
+     9 | print(ent)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 1
+
+  [1] Linha 4: Variável 'j' declarada mas nunca utilizada
+      Trecho  : j = ...
+      Contexto:
+               3 | n = size(ent)
+        >>>    4 | j = n - 1
+               5 | for i in range(n//2):
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 4
+
+  [1] Linha 2: Variável 'ent' com nome muito curto (≤4 chars)
+      Trecho  : ent = ...
+      Contexto:
+               1 | from numpy import *
+        >>>    2 | ent = array(eval(input("Letras em ordem descrescente: ")))
+               3 | n = size(ent)
+
+  [2] Linha 3: Variável 'n' com nome muito curto (≤4 chars)
+      Trecho  : n = ...
+      Contexto:
+               2 | ent = array(eval(input("Letras em ordem descrescente: ")))
+        >>>    3 | n = size(ent)
+               4 | j = n - 1
+
+  [3] Linha 4: Variável 'j' com nome muito curto (≤4 chars)
+      Trecho  : j = ...
+      Contexto:
+               3 | n = size(ent)
+        >>>    4 | j = n - 1
+               5 | for i in range(n//2):
+
+  [4] Linha 6: Variável 'c' com nome muito curto (≤4 chars)
+      Trecho  : c = ...
+      Contexto:
+               5 | for i in range(n//2):
+        >>>    6 | 	c = ent[n - 1 - i]
+               7 | 	ent[n - 1 - i] = ent[i]
+
+======================================================================

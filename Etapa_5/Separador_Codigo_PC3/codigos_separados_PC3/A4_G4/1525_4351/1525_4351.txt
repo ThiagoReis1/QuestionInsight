@@ -1,0 +1,88 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1525_4351.py
+Questão  : 1525
+Aluno    : 4351
+Total MCs: 2
+
+⚠️  Misconceptions detectados: A4, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | vi=int(input("volume inicial: "))
+     2 | vb=int(input("volume de agua que e bombeado para dentro da masmorra por minuto: "))
+     3 | vr=int(input("volume de aguya que a elfa retira da masmorra por minuto: "))
+     4 | min=0
+     5 | while vi>1000:
+     6 | 	vi= (vi+vb)-vr
+     7 | 	min= min+1
+     8 | print(min)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A4 — Redefinição de built-in
+  Ocorrências: 2
+
+  [1] Linha 4: Built-in 'min' redefinido como variável
+      Trecho  : min = 0
+      Contexto:
+               3 | vr=int(input("volume de aguya que a elfa retira da masmorra por minuto: "))
+        >>>    4 | min=0
+               5 | while vi>1000:
+
+  [2] Linha 7: Built-in 'min' redefinido como variável
+      Trecho  : min = min + 1
+      Contexto:
+               6 | 	vi= (vi+vb)-vr
+        >>>    7 | 	min= min+1
+               8 | print(min)
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 6
+
+  [1] Linha 1: Variável 'vi' com nome muito curto (≤4 chars)
+      Trecho  : vi = ...
+      Contexto:
+        >>>    1 | vi=int(input("volume inicial: "))
+               2 | vb=int(input("volume de agua que e bombeado para dentro da masmorra por minuto: "))
+
+  [2] Linha 2: Variável 'vb' com nome muito curto (≤4 chars)
+      Trecho  : vb = ...
+      Contexto:
+               1 | vi=int(input("volume inicial: "))
+        >>>    2 | vb=int(input("volume de agua que e bombeado para dentro da masmorra por minuto: "))
+               3 | vr=int(input("volume de aguya que a elfa retira da masmorra por minuto: "))
+
+  [3] Linha 3: Variável 'vr' com nome muito curto (≤4 chars)
+      Trecho  : vr = ...
+      Contexto:
+               2 | vb=int(input("volume de agua que e bombeado para dentro da masmorra por minuto: "))
+        >>>    3 | vr=int(input("volume de aguya que a elfa retira da masmorra por minuto: "))
+               4 | min=0
+
+  [4] Linha 4: Variável 'min' com nome muito curto (≤4 chars)
+      Trecho  : min = ...
+      Contexto:
+               3 | vr=int(input("volume de aguya que a elfa retira da masmorra por minuto: "))
+        >>>    4 | min=0
+               5 | while vi>1000:
+
+  [5] Linha 6: Variável 'vi' com nome muito curto (≤4 chars)
+      Trecho  : vi = ...
+      Contexto:
+               5 | while vi>1000:
+        >>>    6 | 	vi= (vi+vb)-vr
+               7 | 	min= min+1
+
+  [6] Linha 7: Variável 'min' com nome muito curto (≤4 chars)
+      Trecho  : min = ...
+      Contexto:
+               6 | 	vi= (vi+vb)-vr
+        >>>    7 | 	min= min+1
+               8 | print(min)
+
+======================================================================

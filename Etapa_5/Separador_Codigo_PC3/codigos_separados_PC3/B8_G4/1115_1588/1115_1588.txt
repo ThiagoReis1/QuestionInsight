@@ -1,0 +1,93 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1115_1588.py
+Questão  : 1115
+Aluno    : 1588
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | s = float(input("Digite o salario atual: "))
+     2 | c = int(input("Digite o codigo: "))
+     3 | 
+     4 | print("Entradas: R$", s, "e codigo", c)
+     5 | 
+     6 | if(s >=0):
+     7 | 	if(c == 101):
+     8 | 		n = s+s * 0.8/100 
+     9 | 		print("Novo salario: R$",n)	
+    10 | 	elif(c == 102):
+    11 | 		n = s+s * 0.65/100 
+    12 | 		print("Novo salario: R$",n)
+    13 | 	elif(c == 103):
+    14 | 		n = s+s * 0.60/100 
+    15 | 		print("Novo salario: R$", n)	
+    16 | 	elif(c == 104):
+    17 | 		n = s+s * 0.55/100 
+    18 | 		print("Novo salario: R$",n)
+    19 | else:
+    20 | 	print("Dados invalidos")
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 13: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 13) / elif ... sem else
+      Contexto:
+              12 | 		print("Novo salario: R$",n)
+        >>>   13 | 	elif(c == 103):
+              14 | 		n = s+s * 0.60/100 
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 6
+
+  [1] Linha 1: Variável 's' com nome muito curto (≤4 chars)
+      Trecho  : s = ...
+      Contexto:
+        >>>    1 | s = float(input("Digite o salario atual: "))
+               2 | c = int(input("Digite o codigo: "))
+
+  [2] Linha 2: Variável 'c' com nome muito curto (≤4 chars)
+      Trecho  : c = ...
+      Contexto:
+               1 | s = float(input("Digite o salario atual: "))
+        >>>    2 | c = int(input("Digite o codigo: "))
+               3 | 
+
+  [3] Linha 8: Variável 'n' com nome muito curto (≤4 chars)
+      Trecho  : n = ...
+      Contexto:
+               7 | 	if(c == 101):
+        >>>    8 | 		n = s+s * 0.8/100 
+               9 | 		print("Novo salario: R$",n)	
+
+  [4] Linha 11: Variável 'n' com nome muito curto (≤4 chars)
+      Trecho  : n = ...
+      Contexto:
+              10 | 	elif(c == 102):
+        >>>   11 | 		n = s+s * 0.65/100 
+              12 | 		print("Novo salario: R$",n)
+
+  [5] Linha 14: Variável 'n' com nome muito curto (≤4 chars)
+      Trecho  : n = ...
+      Contexto:
+              13 | 	elif(c == 103):
+        >>>   14 | 		n = s+s * 0.60/100 
+              15 | 		print("Novo salario: R$", n)	
+
+  [6] Linha 17: Variável 'n' com nome muito curto (≤4 chars)
+      Trecho  : n = ...
+      Contexto:
+              16 | 	elif(c == 104):
+        >>>   17 | 		n = s+s * 0.55/100 
+              18 | 		print("Novo salario: R$",n)
+
+======================================================================

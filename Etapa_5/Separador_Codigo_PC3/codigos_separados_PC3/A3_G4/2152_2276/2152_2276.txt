@@ -1,0 +1,147 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 2152_2276.py
+Questão  : 2152
+Aluno    : 2276
+Total MCs: 2
+
+⚠️  Misconceptions detectados: A3, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import *
+     2 | m = array(eval(input()))
+     3 | p = 0
+     4 | i = 0
+     5 | g1 = zeros(p, dtype= int)
+     6 | g2 = zeros(i, dtype= int)
+     7 | for k in m:
+     8 | 	if k%2 == 0:
+     9 | 		p = p + 1	
+    10 | 	else: 
+    11 | 		i = i + 1
+    12 | g2 = zeros(i, dtype= int)
+    13 | x = 0
+    14 | y = 0
+    15 | while x < size(m):
+    16 | 	if m[x]%2 != 0:
+    17 | 		g2[y] = m[x] 
+    18 | 		y = y + 1
+    19 | 		x = x + 1
+    20 | 	else:
+    21 | 		x = x + 1
+    22 | 		
+    23 | print(g2)
+    24 | 		
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 1
+
+  [1] Linha 5: Variável 'g1' declarada mas nunca utilizada
+      Trecho  : g1 = ...
+      Contexto:
+               4 | i = 0
+        >>>    5 | g1 = zeros(p, dtype= int)
+               6 | g2 = zeros(i, dtype= int)
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 13
+
+  [1] Linha 2: Variável 'm' com nome muito curto (≤4 chars)
+      Trecho  : m = ...
+      Contexto:
+               1 | from numpy import *
+        >>>    2 | m = array(eval(input()))
+               3 | p = 0
+
+  [2] Linha 3: Variável 'p' com nome muito curto (≤4 chars)
+      Trecho  : p = ...
+      Contexto:
+               2 | m = array(eval(input()))
+        >>>    3 | p = 0
+               4 | i = 0
+
+  [3] Linha 4: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+               3 | p = 0
+        >>>    4 | i = 0
+               5 | g1 = zeros(p, dtype= int)
+
+  [4] Linha 5: Variável 'g1' com nome muito curto (≤4 chars)
+      Trecho  : g1 = ...
+      Contexto:
+               4 | i = 0
+        >>>    5 | g1 = zeros(p, dtype= int)
+               6 | g2 = zeros(i, dtype= int)
+
+  [5] Linha 6: Variável 'g2' com nome muito curto (≤4 chars)
+      Trecho  : g2 = ...
+      Contexto:
+               5 | g1 = zeros(p, dtype= int)
+        >>>    6 | g2 = zeros(i, dtype= int)
+               7 | for k in m:
+
+  [6] Linha 12: Variável 'g2' com nome muito curto (≤4 chars)
+      Trecho  : g2 = ...
+      Contexto:
+              11 | 		i = i + 1
+        >>>   12 | g2 = zeros(i, dtype= int)
+              13 | x = 0
+
+  [7] Linha 13: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+              12 | g2 = zeros(i, dtype= int)
+        >>>   13 | x = 0
+              14 | y = 0
+
+  [8] Linha 14: Variável 'y' com nome muito curto (≤4 chars)
+      Trecho  : y = ...
+      Contexto:
+              13 | x = 0
+        >>>   14 | y = 0
+              15 | while x < size(m):
+
+  [9] Linha 9: Variável 'p' com nome muito curto (≤4 chars)
+      Trecho  : p = ...
+      Contexto:
+               8 | 	if k%2 == 0:
+        >>>    9 | 		p = p + 1	
+              10 | 	else: 
+
+  [10] Linha 11: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+              10 | 	else: 
+        >>>   11 | 		i = i + 1
+              12 | g2 = zeros(i, dtype= int)
+
+  [11] Linha 18: Variável 'y' com nome muito curto (≤4 chars)
+      Trecho  : y = ...
+      Contexto:
+              17 | 		g2[y] = m[x] 
+        >>>   18 | 		y = y + 1
+              19 | 		x = x + 1
+
+  [12] Linha 19: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+              18 | 		y = y + 1
+        >>>   19 | 		x = x + 1
+              20 | 	else:
+
+  [13] Linha 21: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+              20 | 	else:
+        >>>   21 | 		x = x + 1
+              22 | 		
+
+======================================================================

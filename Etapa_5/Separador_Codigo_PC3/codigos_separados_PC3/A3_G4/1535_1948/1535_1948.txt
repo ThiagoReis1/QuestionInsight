@@ -1,0 +1,104 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1535_1948.py
+Questão  : 1535
+Aluno    : 1948
+Total MCs: 2
+
+⚠️  Misconceptions detectados: A3, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | #--------------------------------------------------
+     2 | #Universidade Federal do Amazonas
+     3 | #Larisse Gabriele Ramos de Abreu
+     4 | #Data: 21/12/2016
+     5 | #
+     6 | #Objetivo: Serie de Maclaurin do Arco Tangente
+     7 | #---------------------------------------------------
+     8 | from math import*
+     9 | 
+    10 | x = eval(input("Um numero real x: "))
+    11 | n = eval(input("A quantidade de termos da serie: "))
+    12 | 
+    13 | k =  1
+    14 | valor = 1
+    15 | qo = x
+    16 | 
+    17 | while(k < n ):
+    18 | 	x = x - (((qo)**((2 * k) + 1 ))/((2 * k) + 1))
+    19 | 	qo = - qo
+    20 | 	k = k + 1 
+    21 | print(round(x, 6))
+    22 | 	
+    23 | 
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 1
+
+  [1] Linha 14: Variável 'valor' declarada mas nunca utilizada
+      Trecho  : valor = ...
+      Contexto:
+              13 | k =  1
+        >>>   14 | valor = 1
+              15 | qo = x
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 7
+
+  [1] Linha 10: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+               9 | 
+        >>>   10 | x = eval(input("Um numero real x: "))
+              11 | n = eval(input("A quantidade de termos da serie: "))
+
+  [2] Linha 11: Variável 'n' com nome muito curto (≤4 chars)
+      Trecho  : n = ...
+      Contexto:
+              10 | x = eval(input("Um numero real x: "))
+        >>>   11 | n = eval(input("A quantidade de termos da serie: "))
+              12 | 
+
+  [3] Linha 13: Variável 'k' com nome muito curto (≤4 chars)
+      Trecho  : k = ...
+      Contexto:
+              12 | 
+        >>>   13 | k =  1
+              14 | valor = 1
+
+  [4] Linha 15: Variável 'qo' com nome muito curto (≤4 chars)
+      Trecho  : qo = ...
+      Contexto:
+              14 | valor = 1
+        >>>   15 | qo = x
+              16 | 
+
+  [5] Linha 18: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+              17 | while(k < n ):
+        >>>   18 | 	x = x - (((qo)**((2 * k) + 1 ))/((2 * k) + 1))
+              19 | 	qo = - qo
+
+  [6] Linha 19: Variável 'qo' com nome muito curto (≤4 chars)
+      Trecho  : qo = ...
+      Contexto:
+              18 | 	x = x - (((qo)**((2 * k) + 1 ))/((2 * k) + 1))
+        >>>   19 | 	qo = - qo
+              20 | 	k = k + 1 
+
+  [7] Linha 20: Variável 'k' com nome muito curto (≤4 chars)
+      Trecho  : k = ...
+      Contexto:
+              19 | 	qo = - qo
+        >>>   20 | 	k = k + 1 
+              21 | print(round(x, 6))
+
+======================================================================

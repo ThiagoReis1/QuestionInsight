@@ -1,0 +1,56 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1030_4750.py
+Questão  : 1030
+Aluno    : 4750
+Total MCs: 2
+
+⚠️  Misconceptions detectados: A4, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | min = float(input("quantidade min: "))
+     2 | p = 0.97*min + 45
+     3 | timp = 0.42 * p
+     4 | total = p + timp
+     5 | print(round(total,2))
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A4 — Redefinição de built-in
+  Ocorrências: 1
+
+  [1] Linha 1: Built-in 'min' redefinido como variável
+      Trecho  : min = float(input('quantidade min: '))
+      Contexto:
+        >>>    1 | min = float(input("quantidade min: "))
+               2 | p = 0.97*min + 45
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 3
+
+  [1] Linha 1: Variável 'min' com nome muito curto (≤4 chars)
+      Trecho  : min = ...
+      Contexto:
+        >>>    1 | min = float(input("quantidade min: "))
+               2 | p = 0.97*min + 45
+
+  [2] Linha 2: Variável 'p' com nome muito curto (≤4 chars)
+      Trecho  : p = ...
+      Contexto:
+               1 | min = float(input("quantidade min: "))
+        >>>    2 | p = 0.97*min + 45
+               3 | timp = 0.42 * p
+
+  [3] Linha 3: Variável 'timp' com nome muito curto (≤4 chars)
+      Trecho  : timp = ...
+      Contexto:
+               2 | p = 0.97*min + 45
+        >>>    3 | timp = 0.42 * p
+               4 | total = p + timp
+
+======================================================================

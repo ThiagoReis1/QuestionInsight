@@ -1,0 +1,101 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 3069_4165.py
+Questão  : 3069
+Aluno    : 4165
+Total MCs: 3
+
+⚠️  Misconceptions detectados: A3, B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | a = input("digite qual foi o ataque: ").upper()
+     2 | b = int(input("digite a numeracao do dado: "))
+     3 | c = int(input("digite a numeracao do segundo dado: "))
+     4 | if(b<1) or (b>8) and (c<1) or (c>8):
+     5 | 
+     6 | 	if(b == "FURIA"):
+     7 | 		x = (10 + b * 2)
+     8 | 	elif(b == "GRITO"):
+     9 | 		x = (6 + b * 2)
+    10 | 	elif(b == "TOQUE"):
+    11 | 		x = (b * 2 + c * 2)
+    12 | else:
+    13 | 	print(x)
+    14 | 		
+    15 | 	
+    16 | 		
+    17 | 
+    18 | 
+    19 | 		
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 1
+
+  [1] Linha 1: Variável 'a' declarada mas nunca utilizada
+      Trecho  : a = ...
+      Contexto:
+        >>>    1 | a = input("digite qual foi o ataque: ").upper()
+               2 | b = int(input("digite a numeracao do dado: "))
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 8: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 8) / elif ... sem else
+      Contexto:
+               7 | 		x = (10 + b * 2)
+        >>>    8 | 	elif(b == "GRITO"):
+               9 | 		x = (6 + b * 2)
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 6
+
+  [1] Linha 1: Variável 'a' com nome muito curto (≤4 chars)
+      Trecho  : a = ...
+      Contexto:
+        >>>    1 | a = input("digite qual foi o ataque: ").upper()
+               2 | b = int(input("digite a numeracao do dado: "))
+
+  [2] Linha 2: Variável 'b' com nome muito curto (≤4 chars)
+      Trecho  : b = ...
+      Contexto:
+               1 | a = input("digite qual foi o ataque: ").upper()
+        >>>    2 | b = int(input("digite a numeracao do dado: "))
+               3 | c = int(input("digite a numeracao do segundo dado: "))
+
+  [3] Linha 3: Variável 'c' com nome muito curto (≤4 chars)
+      Trecho  : c = ...
+      Contexto:
+               2 | b = int(input("digite a numeracao do dado: "))
+        >>>    3 | c = int(input("digite a numeracao do segundo dado: "))
+               4 | if(b<1) or (b>8) and (c<1) or (c>8):
+
+  [4] Linha 7: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+               6 | 	if(b == "FURIA"):
+        >>>    7 | 		x = (10 + b * 2)
+               8 | 	elif(b == "GRITO"):
+
+  [5] Linha 9: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+               8 | 	elif(b == "GRITO"):
+        >>>    9 | 		x = (6 + b * 2)
+              10 | 	elif(b == "TOQUE"):
+
+  [6] Linha 11: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+              10 | 	elif(b == "TOQUE"):
+        >>>   11 | 		x = (b * 2 + c * 2)
+              12 | else:
+
+======================================================================

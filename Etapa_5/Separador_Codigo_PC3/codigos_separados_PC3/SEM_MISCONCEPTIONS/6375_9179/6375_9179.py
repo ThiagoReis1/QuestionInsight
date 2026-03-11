@@ -1,0 +1,10 @@
+spring = input("A: ")
+spring = input("B: ")
+spring = input("C: ")
+spring = input("D: ")
+
+vetor = ("candidato A,candidato B,candidato C,candidato D")
+candidato A = (0)
+candidato B = (2)
+candidato C = (3)
+candidato D = (4)

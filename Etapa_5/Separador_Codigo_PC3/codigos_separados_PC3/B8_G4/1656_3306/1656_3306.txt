@@ -1,0 +1,165 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1656_3306.py
+Questão  : 1656
+Aluno    : 3306
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | s= input("pais:").split(',')
+     3 | BE=0
+     4 | ES=0
+     5 | FR=0
+     6 | IT=0
+     7 | PT= 0
+     8 | cont=zeros(5, dtype=int)
+     9 | #quantidade do pais mais representativo
+    10 | for i in range(0, len(s)):
+    11 | 	if(s[i]=="BE"):
+    12 | 		BE= BE +1
+    13 | 		cont[0]= BE
+    14 | 	elif(s[i]=="ES"):
+    15 | 		ES= ES+1
+    16 | 		cont[1]=ES
+    17 | 	elif(s[i]=="FR"):
+    18 | 		FR= FR +1
+    19 | 		cont[2]=FR
+    20 | 	elif(s[i]=="IT"):
+    21 | 		IT= IT +1
+    22 | 		cont[3]=IT
+    23 | 	elif(s[i]=="PT"):
+    24 | 		PT= PT+1
+    25 | 		cont[4]=PT
+    26 | 
+    27 | print(max(cont))
+    28 | 
+    29 | pessoas= zeros(5, dtype=int)
+    30 | for i in range(0,len(s)):
+    31 | 	if(s[i]=="BE"):
+    32 | 		pessoas[0]= BE
+    33 | 	elif(s[i]=="ES"):
+    34 | 		pessoas[1]=ES
+    35 | 	elif(s[i]=="FR"):
+    36 | 		pessoas[2]=FR
+    37 | 	elif(s[i]=="IT"):
+    38 | 		pessoas[3]=IT
+    39 | 	elif(s[i]=="PT"):
+    40 | 		pessoas[4]=PT
+    41 | 	
+    42 | print(pessoas)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 2
+
+  [1] Linha 20: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 20) / elif ... sem else
+      Contexto:
+              19 | 		cont[2]=FR
+        >>>   20 | 	elif(s[i]=="IT"):
+              21 | 		IT= IT +1
+
+  [2] Linha 37: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 37) / elif ... sem else
+      Contexto:
+              36 | 		pessoas[2]=FR
+        >>>   37 | 	elif(s[i]=="IT"):
+              38 | 		pessoas[3]=IT
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 12
+
+  [1] Linha 2: Variável 's' com nome muito curto (≤4 chars)
+      Trecho  : s = ...
+      Contexto:
+               1 | from numpy import*
+        >>>    2 | s= input("pais:").split(',')
+               3 | BE=0
+
+  [2] Linha 3: Variável 'BE' com nome muito curto (≤4 chars)
+      Trecho  : BE = ...
+      Contexto:
+               2 | s= input("pais:").split(',')
+        >>>    3 | BE=0
+               4 | ES=0
+
+  [3] Linha 4: Variável 'ES' com nome muito curto (≤4 chars)
+      Trecho  : ES = ...
+      Contexto:
+               3 | BE=0
+        >>>    4 | ES=0
+               5 | FR=0
+
+  [4] Linha 5: Variável 'FR' com nome muito curto (≤4 chars)
+      Trecho  : FR = ...
+      Contexto:
+               4 | ES=0
+        >>>    5 | FR=0
+               6 | IT=0
+
+  [5] Linha 6: Variável 'IT' com nome muito curto (≤4 chars)
+      Trecho  : IT = ...
+      Contexto:
+               5 | FR=0
+        >>>    6 | IT=0
+               7 | PT= 0
+
+  [6] Linha 7: Variável 'PT' com nome muito curto (≤4 chars)
+      Trecho  : PT = ...
+      Contexto:
+               6 | IT=0
+        >>>    7 | PT= 0
+               8 | cont=zeros(5, dtype=int)
+
+  [7] Linha 8: Variável 'cont' com nome muito curto (≤4 chars)
+      Trecho  : cont = ...
+      Contexto:
+               7 | PT= 0
+        >>>    8 | cont=zeros(5, dtype=int)
+               9 | #quantidade do pais mais representativo
+
+  [8] Linha 12: Variável 'BE' com nome muito curto (≤4 chars)
+      Trecho  : BE = ...
+      Contexto:
+              11 | 	if(s[i]=="BE"):
+        >>>   12 | 		BE= BE +1
+              13 | 		cont[0]= BE
+
+  [9] Linha 15: Variável 'ES' com nome muito curto (≤4 chars)
+      Trecho  : ES = ...
+      Contexto:
+              14 | 	elif(s[i]=="ES"):
+        >>>   15 | 		ES= ES+1
+              16 | 		cont[1]=ES
+
+  [10] Linha 18: Variável 'FR' com nome muito curto (≤4 chars)
+      Trecho  : FR = ...
+      Contexto:
+              17 | 	elif(s[i]=="FR"):
+        >>>   18 | 		FR= FR +1
+              19 | 		cont[2]=FR
+
+  [11] Linha 21: Variável 'IT' com nome muito curto (≤4 chars)
+      Trecho  : IT = ...
+      Contexto:
+              20 | 	elif(s[i]=="IT"):
+        >>>   21 | 		IT= IT +1
+              22 | 		cont[3]=IT
+
+  [12] Linha 24: Variável 'PT' com nome muito curto (≤4 chars)
+      Trecho  : PT = ...
+      Contexto:
+              23 | 	elif(s[i]=="PT"):
+        >>>   24 | 		PT= PT+1
+              25 | 		cont[4]=PT
+
+======================================================================

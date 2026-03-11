@@ -1,0 +1,45 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1648_7567.py
+Questão  : 1648
+Aluno    : 7567
+Total MCs: 1
+
+⚠️  Misconceptions detectados: A3
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | freq = array(eval(input("")))
+     3 | j = 0
+     4 | k = 0
+     5 | reprovados = 0
+     6 | for i in range(size(freq)):
+     7 | 	if(freq[i] < 70):
+     8 | 		reprovados = reprovados + 1
+     9 | 
+    10 | reprovou = zeros(reprovados , dtype = int)
+    11 | for i in range(size(freq)):
+    12 | 	if(freq[i] < 70):
+    13 | 		reprovou[j] = reprovou[j] + i
+    14 | 		j = j + 1
+    15 | print(reprovados)
+    16 | print(reprovou)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 1
+
+  [1] Linha 4: Variável 'k' declarada mas nunca utilizada
+      Trecho  : k = ...
+      Contexto:
+               3 | j = 0
+        >>>    4 | k = 0
+               5 | reprovados = 0
+
+======================================================================

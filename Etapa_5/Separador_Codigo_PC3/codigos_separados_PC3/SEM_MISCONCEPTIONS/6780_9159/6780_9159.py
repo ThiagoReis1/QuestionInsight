@@ -1,0 +1,1 @@
+na proxima eu tiro 10 (DEZ)  tlgd?

@@ -1,0 +1,197 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1652_2397.py
+Questão  : 1652
+Aluno    : 2397
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | from math import*
+     3 | st=input()
+     4 | v=st.split(',')
+     5 | i=0
+     6 | B=0
+     7 | PA=0
+     8 | PR=0
+     9 | A=0
+    10 | I=0
+    11 | while(i<size(v)):
+    12 | 	if(v[i]=='B'):
+    13 | 		B=B+1
+    14 | 	elif(v[i]=='PA'):
+    15 | 		PA=PA+1
+    16 | 	elif(v[i]=='PR'):
+    17 | 		PR=PR+1
+    18 | 	elif(v[i]=='A'):
+    19 | 		A=A+1
+    20 | 	elif(v[i]=='I'):
+    21 | 		I=I+1
+    22 | 	i=i+1
+    23 | 
+    24 | vr=zeros(5,dtype=int)
+    25 | j=0
+    26 | while(j<size(vr)):
+    27 | 	if(j==0):
+    28 | 		vr[j]=B
+    29 | 	elif(j==1):
+    30 | 		vr[j]=PA
+    31 | 	elif(j==2):
+    32 | 		vr[j]=PR
+    33 | 	elif(j==3):
+    34 | 		vr[j]=A
+    35 | 	elif(j==4):
+    36 | 		vr[j]=I
+    37 | 	j=j+1
+    38 | print(max(vr))
+    39 | print(vr)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 2
+
+  [1] Linha 18: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 18) / elif ... sem else
+      Contexto:
+              17 | 		PR=PR+1
+        >>>   18 | 	elif(v[i]=='A'):
+              19 | 		A=A+1
+
+  [2] Linha 33: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 33) / elif ... sem else
+      Contexto:
+              32 | 		vr[j]=PR
+        >>>   33 | 	elif(j==3):
+              34 | 		vr[j]=A
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 17
+
+  [1] Linha 3: Variável 'st' com nome muito curto (≤4 chars)
+      Trecho  : st = ...
+      Contexto:
+               2 | from math import*
+        >>>    3 | st=input()
+               4 | v=st.split(',')
+
+  [2] Linha 4: Variável 'v' com nome muito curto (≤4 chars)
+      Trecho  : v = ...
+      Contexto:
+               3 | st=input()
+        >>>    4 | v=st.split(',')
+               5 | i=0
+
+  [3] Linha 5: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+               4 | v=st.split(',')
+        >>>    5 | i=0
+               6 | B=0
+
+  [4] Linha 6: Variável 'B' com nome muito curto (≤4 chars)
+      Trecho  : B = ...
+      Contexto:
+               5 | i=0
+        >>>    6 | B=0
+               7 | PA=0
+
+  [5] Linha 7: Variável 'PA' com nome muito curto (≤4 chars)
+      Trecho  : PA = ...
+      Contexto:
+               6 | B=0
+        >>>    7 | PA=0
+               8 | PR=0
+
+  [6] Linha 8: Variável 'PR' com nome muito curto (≤4 chars)
+      Trecho  : PR = ...
+      Contexto:
+               7 | PA=0
+        >>>    8 | PR=0
+               9 | A=0
+
+  [7] Linha 9: Variável 'A' com nome muito curto (≤4 chars)
+      Trecho  : A = ...
+      Contexto:
+               8 | PR=0
+        >>>    9 | A=0
+              10 | I=0
+
+  [8] Linha 10: Variável 'I' com nome muito curto (≤4 chars)
+      Trecho  : I = ...
+      Contexto:
+               9 | A=0
+        >>>   10 | I=0
+              11 | while(i<size(v)):
+
+  [9] Linha 24: Variável 'vr' com nome muito curto (≤4 chars)
+      Trecho  : vr = ...
+      Contexto:
+              23 | 
+        >>>   24 | vr=zeros(5,dtype=int)
+              25 | j=0
+
+  [10] Linha 25: Variável 'j' com nome muito curto (≤4 chars)
+      Trecho  : j = ...
+      Contexto:
+              24 | vr=zeros(5,dtype=int)
+        >>>   25 | j=0
+              26 | while(j<size(vr)):
+
+  [11] Linha 22: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+              21 | 		I=I+1
+        >>>   22 | 	i=i+1
+              23 | 
+
+  [12] Linha 37: Variável 'j' com nome muito curto (≤4 chars)
+      Trecho  : j = ...
+      Contexto:
+              36 | 		vr[j]=I
+        >>>   37 | 	j=j+1
+              38 | print(max(vr))
+
+  [13] Linha 13: Variável 'B' com nome muito curto (≤4 chars)
+      Trecho  : B = ...
+      Contexto:
+              12 | 	if(v[i]=='B'):
+        >>>   13 | 		B=B+1
+              14 | 	elif(v[i]=='PA'):
+
+  [14] Linha 15: Variável 'PA' com nome muito curto (≤4 chars)
+      Trecho  : PA = ...
+      Contexto:
+              14 | 	elif(v[i]=='PA'):
+        >>>   15 | 		PA=PA+1
+              16 | 	elif(v[i]=='PR'):
+
+  [15] Linha 17: Variável 'PR' com nome muito curto (≤4 chars)
+      Trecho  : PR = ...
+      Contexto:
+              16 | 	elif(v[i]=='PR'):
+        >>>   17 | 		PR=PR+1
+              18 | 	elif(v[i]=='A'):
+
+  [16] Linha 19: Variável 'A' com nome muito curto (≤4 chars)
+      Trecho  : A = ...
+      Contexto:
+              18 | 	elif(v[i]=='A'):
+        >>>   19 | 		A=A+1
+              20 | 	elif(v[i]=='I'):
+
+  [17] Linha 21: Variável 'I' com nome muito curto (≤4 chars)
+      Trecho  : I = ...
+      Contexto:
+              20 | 	elif(v[i]=='I'):
+        >>>   21 | 		I=I+1
+              22 | 	i=i+1
+
+======================================================================

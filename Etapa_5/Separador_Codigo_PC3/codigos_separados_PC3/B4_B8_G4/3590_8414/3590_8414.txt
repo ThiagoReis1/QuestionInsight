@@ -1,0 +1,131 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 3590_8414.py
+Questão  : 3590
+Aluno    : 8414
+Total MCs: 3
+
+⚠️  Misconceptions detectados: B4, B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | 
+     3 | vet = array(eval(input(" insira o vetor: ")), dtype = int)
+     4 | cont = 0
+     5 | 
+     6 | for i in vet: 
+     7 | 	if i == 1: 
+     8 | 		cont = cont + 10
+     9 | 	elif i == 2: 
+    10 | 		cont = cont + 5
+    11 | 	elif i == 3: 
+    12 | 		cont = cont + 0
+    13 | 	elif i == 4:
+    14 | 		cont = cont + 5
+    15 | 	elif i == 5:
+    16 | 		cont = cont + 20
+    17 | 	elif i == 6: 
+    18 | 		cont = cont + 10
+    19 | print(cont)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B4 — Comandos repetidos dentro de blocos if-elif-else
+  Ocorrências: 3
+
+  [1] Linha 13: Bloco idêntico ao da linha 9
+      Trecho  : cont = cont + 5
+      Contexto:
+              12 | 		cont = cont + 0
+        >>>   13 | 	elif i == 4:
+              14 | 		cont = cont + 5
+
+  [2] Linha 17: Bloco idêntico ao da linha 7
+      Trecho  : cont = cont + 10
+      Contexto:
+              16 | 		cont = cont + 20
+        >>>   17 | 	elif i == 6: 
+              18 | 		cont = cont + 10
+
+  [3] Linha 13: Bloco idêntico ao da linha 9
+      Trecho  : cont = cont + 5
+      Contexto:
+              12 | 		cont = cont + 0
+        >>>   13 | 	elif i == 4:
+              14 | 		cont = cont + 5
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 15: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 15) / elif ... sem else
+      Contexto:
+              14 | 		cont = cont + 5
+        >>>   15 | 	elif i == 5:
+              16 | 		cont = cont + 20
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 8
+
+  [1] Linha 3: Variável 'vet' com nome muito curto (≤4 chars)
+      Trecho  : vet = ...
+      Contexto:
+               2 | 
+        >>>    3 | vet = array(eval(input(" insira o vetor: ")), dtype = int)
+               4 | cont = 0
+
+  [2] Linha 4: Variável 'cont' com nome muito curto (≤4 chars)
+      Trecho  : cont = ...
+      Contexto:
+               3 | vet = array(eval(input(" insira o vetor: ")), dtype = int)
+        >>>    4 | cont = 0
+               5 | 
+
+  [3] Linha 8: Variável 'cont' com nome muito curto (≤4 chars)
+      Trecho  : cont = ...
+      Contexto:
+               7 | 	if i == 1: 
+        >>>    8 | 		cont = cont + 10
+               9 | 	elif i == 2: 
+
+  [4] Linha 10: Variável 'cont' com nome muito curto (≤4 chars)
+      Trecho  : cont = ...
+      Contexto:
+               9 | 	elif i == 2: 
+        >>>   10 | 		cont = cont + 5
+              11 | 	elif i == 3: 
+
+  [5] Linha 12: Variável 'cont' com nome muito curto (≤4 chars)
+      Trecho  : cont = ...
+      Contexto:
+              11 | 	elif i == 3: 
+        >>>   12 | 		cont = cont + 0
+              13 | 	elif i == 4:
+
+  [6] Linha 14: Variável 'cont' com nome muito curto (≤4 chars)
+      Trecho  : cont = ...
+      Contexto:
+              13 | 	elif i == 4:
+        >>>   14 | 		cont = cont + 5
+              15 | 	elif i == 5:
+
+  [7] Linha 16: Variável 'cont' com nome muito curto (≤4 chars)
+      Trecho  : cont = ...
+      Contexto:
+              15 | 	elif i == 5:
+        >>>   16 | 		cont = cont + 20
+              17 | 	elif i == 6: 
+
+  [8] Linha 18: Variável 'cont' com nome muito curto (≤4 chars)
+      Trecho  : cont = ...
+      Contexto:
+              17 | 	elif i == 6: 
+        >>>   18 | 		cont = cont + 10
+              19 | print(cont)
+
+======================================================================

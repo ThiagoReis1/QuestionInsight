@@ -1,0 +1,56 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1658_7660.py
+Questão  : 1658
+Aluno    : 7660
+Total MCs: 1
+
+⚠️  Misconceptions detectados: B8
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | #-------------------------------------------------------------------
+     2 | # Nome: Ivan Lucas de Oliveira Pacheco
+     3 | # Data: 13/02/2023
+     4 | # Objetivo: Contar a quantidade de pessoas de cada país.
+     5 | #-------------------------------------------------------------------
+     6 | from numpy import*
+     7 | 
+     8 | part = input("Defina os paises dos participantes: ")
+     9 | part = part.upper()
+    10 | paises = part.split(',')
+    11 | 
+    12 | qtd = zeros(5, dtype = int)
+    13 | for i in range(size(paises)):
+    14 | 	# print (paises[i])
+    15 | 	if paises[i] == 'CHN':
+    16 | 		qtd[0] = qtd[0] + 1
+    17 | 	elif paises[i] == 'JPN':
+    18 | 		qtd[1] = qtd[1] + 1
+    19 | 	elif paises[i] == 'KOR':
+    20 | 		qtd[2] = qtd[2] + 1
+    21 | 	elif paises[i] == 'MGL':
+    22 | 		qtd[3] = qtd[3] + 1
+    23 | 	elif paises[i] == 'THA':
+    24 | 		qtd[4] = qtd[4] + 1
+    25 | 		
+    26 | print (max(qtd))
+    27 | print (qtd)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 21: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 21) / elif ... sem else
+      Contexto:
+              20 | 		qtd[2] = qtd[2] + 1
+        >>>   21 | 	elif paises[i] == 'MGL':
+              22 | 		qtd[3] = qtd[3] + 1
+
+======================================================================

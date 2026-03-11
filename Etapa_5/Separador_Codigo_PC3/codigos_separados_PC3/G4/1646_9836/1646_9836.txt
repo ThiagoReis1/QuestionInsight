@@ -1,0 +1,61 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1646_9836.py
+Questão  : 1646
+Aluno    : 9836
+Total MCs: 1
+
+⚠️  Misconceptions detectados: G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | 
+     3 | saques= array(eval(input('insira:')))
+     4 | v1=0
+     5 | 
+     6 | for i in range(size(saques)):
+     7 | 	if saques[i] <= 50:
+     8 | 		v1 += 1 
+     9 | 	
+    10 | ind=zeros(v1,dtype=int)
+    11 | print(v1)
+    12 | v=0 
+    13 | 
+    14 | for i in range(size(saques)):
+    15 | 	if saques[i] <= 50:
+    16 | 		ind[v]= i
+    17 | 		v += 1
+    18 | print(ind)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 3
+
+  [1] Linha 4: Variável 'v1' com nome muito curto (≤4 chars)
+      Trecho  : v1 = ...
+      Contexto:
+               3 | saques= array(eval(input('insira:')))
+        >>>    4 | v1=0
+               5 | 
+
+  [2] Linha 10: Variável 'ind' com nome muito curto (≤4 chars)
+      Trecho  : ind = ...
+      Contexto:
+               9 | 	
+        >>>   10 | ind=zeros(v1,dtype=int)
+              11 | print(v1)
+
+  [3] Linha 12: Variável 'v' com nome muito curto (≤4 chars)
+      Trecho  : v = ...
+      Contexto:
+              11 | print(v1)
+        >>>   12 | v=0 
+              13 | 
+
+======================================================================

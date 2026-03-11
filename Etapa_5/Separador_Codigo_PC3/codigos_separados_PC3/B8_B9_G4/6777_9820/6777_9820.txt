@@ -1,0 +1,114 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 6777_9820.py
+Questão  : 6777
+Aluno    : 9820
+Total MCs: 3
+
+⚠️  Misconceptions detectados: B8, B9, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | ano = int(input(''))
+     2 | pais = (input('(B) ou (I)')).upper()
+     3 | 
+     4 | f = 2023 - ano
+     5 | 
+     6 | if (pais == 'I'):
+     7 | 	if (f >= 17):
+     8 | 		print ('sim')
+     9 | 		ing = f - 17
+    10 | 		print (ing)
+    11 | 	else:
+    12 | 		print ('nao')
+    13 | 		ing = 17 - f
+    14 | 		print (ing)
+    15 | if (pais == 'B'):
+    16 | 	if (f >= 18):
+    17 | 		print ('sim')
+    18 | 		br = f - 18
+    19 | 		print (br)
+    20 | 	else:
+    21 | 		print ('nao')
+    22 | 		br = 18 - f
+    23 | 		print (br)
+    24 | elif (pais != 'I') and (pais != 'B'):
+    25 | 	print ('invalido')
+    26 | 
+    27 | 
+    28 | 
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 15: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 15) / elif ... sem else
+      Contexto:
+              14 | 		print (ing)
+        >>>   15 | if (pais == 'B'):
+              16 | 	if (f >= 18):
+
+▶ B9 — elif/else retestando condições já verificadas
+  Ocorrências: 1
+
+  [1] Linha 0: B9 detectado pelo VisitorMC3 (localização exata não mapeada)
+      Trecho  : —
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 7
+
+  [1] Linha 1: Variável 'ano' com nome muito curto (≤4 chars)
+      Trecho  : ano = ...
+      Contexto:
+        >>>    1 | ano = int(input(''))
+               2 | pais = (input('(B) ou (I)')).upper()
+
+  [2] Linha 2: Variável 'pais' com nome muito curto (≤4 chars)
+      Trecho  : pais = ...
+      Contexto:
+               1 | ano = int(input(''))
+        >>>    2 | pais = (input('(B) ou (I)')).upper()
+               3 | 
+
+  [3] Linha 4: Variável 'f' com nome muito curto (≤4 chars)
+      Trecho  : f = ...
+      Contexto:
+               3 | 
+        >>>    4 | f = 2023 - ano
+               5 | 
+
+  [4] Linha 9: Variável 'ing' com nome muito curto (≤4 chars)
+      Trecho  : ing = ...
+      Contexto:
+               8 | 		print ('sim')
+        >>>    9 | 		ing = f - 17
+              10 | 		print (ing)
+
+  [5] Linha 13: Variável 'ing' com nome muito curto (≤4 chars)
+      Trecho  : ing = ...
+      Contexto:
+              12 | 		print ('nao')
+        >>>   13 | 		ing = 17 - f
+              14 | 		print (ing)
+
+  [6] Linha 18: Variável 'br' com nome muito curto (≤4 chars)
+      Trecho  : br = ...
+      Contexto:
+              17 | 		print ('sim')
+        >>>   18 | 		br = f - 18
+              19 | 		print (br)
+
+  [7] Linha 22: Variável 'br' com nome muito curto (≤4 chars)
+      Trecho  : br = ...
+      Contexto:
+              21 | 		print ('nao')
+        >>>   22 | 		br = 18 - f
+              23 | 		print (br)
+
+======================================================================

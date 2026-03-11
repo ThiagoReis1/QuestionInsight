@@ -1,0 +1,51 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1643_9250.py
+Questão  : 1643
+Aluno    : 9250
+Total MCs: 1
+
+⚠️  Misconceptions detectados: A3
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import *
+     2 | 
+     3 | nota = array(eval(input("")))
+     4 | 
+     5 | aprovados = 0
+     6 | val_indice = 0
+     7 | 
+     8 | for i in range (len(nota)):
+     9 | 	if nota[i] >= 5:
+    10 | 		aprovados += 1
+    11 | 		
+    12 | vet = zeros(aprovados, dtype=int)	
+    13 | j = 0
+    14 | for i in range  (len(nota)):
+    15 | 	if nota[i] >= 5:
+    16 | 		vet[j] = i
+    17 | 		j = j+1
+    18 | 		
+    19 | 	
+    20 | 		
+    21 | print(aprovados)
+    22 | print(vet)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 1
+
+  [1] Linha 6: Variável 'val_indice' declarada mas nunca utilizada
+      Trecho  : val_indice = ...
+      Contexto:
+               5 | aprovados = 0
+        >>>    6 | val_indice = 0
+               7 | 
+
+======================================================================

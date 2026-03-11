@@ -1,0 +1,56 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 3588_6340.py
+Questão  : 3588
+Aluno    : 6340
+Total MCs: 2
+
+⚠️  Misconceptions detectados: A2, B8
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import *
+     2 | 
+     3 | ponto = 10000
+     4 | n = array(eval(input("")))
+     5 | cont = 0
+     6 | 
+     7 | while(cont<size(n)):
+     8 | 	if(n[cont] == 1):
+     9 | 		ponto = ponto * 2
+    10 | 	elif(n[cont] == 2):
+    11 | 		ponto = ponto
+    12 | 	elif(n[cont] == 3):
+    13 | 		ponto = ponto/2
+    14 | 	elif(n[cont] == 4):
+    15 | 		ponto = ponto/4
+    16 | 	cont += 1
+    17 | print(round(ponto,2))
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A2 — Variável atribuída a si mesma
+  Ocorrências: 1
+
+  [1] Linha 11: 'ponto' atribuído a si mesmo
+      Trecho  : ponto = ponto
+      Contexto:
+              10 | 	elif(n[cont] == 2):
+        >>>   11 | 		ponto = ponto
+              12 | 	elif(n[cont] == 3):
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 12: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 12) / elif ... sem else
+      Contexto:
+              11 | 		ponto = ponto
+        >>>   12 | 	elif(n[cont] == 3):
+              13 | 		ponto = ponto/2
+
+======================================================================

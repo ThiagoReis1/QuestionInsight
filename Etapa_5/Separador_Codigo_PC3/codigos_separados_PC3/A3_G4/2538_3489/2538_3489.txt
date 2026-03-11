@@ -1,0 +1,104 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 2538_3489.py
+Questão  : 2538
+Aluno    : 3489
+Total MCs: 2
+
+⚠️  Misconceptions detectados: A3, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | S = float(input("valor do sitio: "))
+     2 | D = float(input("deposito inicial: "))
+     3 | M = float(input("deposito mensal: "))
+     4 | j = float(input("taxa de juros: "))
+     5 | 
+     6 | d = D
+     7 | tempo = 0
+     8 | soma = 0
+     9 | fim = S
+    10 | 
+    11 | if (S > 0 and d > 0 and M > 0 and j > 0):
+    12 | 	while ( d < fim):
+    13 | 		d = d + (d * j/100) + M
+    14 | 		tempo = tempo + 1
+    15 | 	print(tempo)
+    16 | else:
+    17 | 	print("Dados incorretos")
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 1
+
+  [1] Linha 8: Variável 'soma' declarada mas nunca utilizada
+      Trecho  : soma = ...
+      Contexto:
+               7 | tempo = 0
+        >>>    8 | soma = 0
+               9 | fim = S
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 8
+
+  [1] Linha 1: Variável 'S' com nome muito curto (≤4 chars)
+      Trecho  : S = ...
+      Contexto:
+        >>>    1 | S = float(input("valor do sitio: "))
+               2 | D = float(input("deposito inicial: "))
+
+  [2] Linha 2: Variável 'D' com nome muito curto (≤4 chars)
+      Trecho  : D = ...
+      Contexto:
+               1 | S = float(input("valor do sitio: "))
+        >>>    2 | D = float(input("deposito inicial: "))
+               3 | M = float(input("deposito mensal: "))
+
+  [3] Linha 3: Variável 'M' com nome muito curto (≤4 chars)
+      Trecho  : M = ...
+      Contexto:
+               2 | D = float(input("deposito inicial: "))
+        >>>    3 | M = float(input("deposito mensal: "))
+               4 | j = float(input("taxa de juros: "))
+
+  [4] Linha 4: Variável 'j' com nome muito curto (≤4 chars)
+      Trecho  : j = ...
+      Contexto:
+               3 | M = float(input("deposito mensal: "))
+        >>>    4 | j = float(input("taxa de juros: "))
+               5 | 
+
+  [5] Linha 6: Variável 'd' com nome muito curto (≤4 chars)
+      Trecho  : d = ...
+      Contexto:
+               5 | 
+        >>>    6 | d = D
+               7 | tempo = 0
+
+  [6] Linha 8: Variável 'soma' com nome muito curto (≤4 chars)
+      Trecho  : soma = ...
+      Contexto:
+               7 | tempo = 0
+        >>>    8 | soma = 0
+               9 | fim = S
+
+  [7] Linha 9: Variável 'fim' com nome muito curto (≤4 chars)
+      Trecho  : fim = ...
+      Contexto:
+               8 | soma = 0
+        >>>    9 | fim = S
+              10 | 
+
+  [8] Linha 13: Variável 'd' com nome muito curto (≤4 chars)
+      Trecho  : d = ...
+      Contexto:
+              12 | 	while ( d < fim):
+        >>>   13 | 		d = d + (d * j/100) + M
+              14 | 		tempo = tempo + 1
+
+======================================================================

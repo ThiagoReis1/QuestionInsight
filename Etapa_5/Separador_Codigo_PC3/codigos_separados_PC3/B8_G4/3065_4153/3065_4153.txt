@@ -1,0 +1,88 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 3065_4153.py
+Questão  : 3065
+Aluno    : 4153
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | t = input("Insira o tipo do ataque: ").upper()# tipo de ataque
+     2 | n = int(input("Insira o valor sorteado: "))   # valor sorteado pelo dado
+     3 | r = int(input("Insira o numero de turnos: ")) # numero de turnos
+     4 | 
+     5 | if((t != "CAUDA") and (t != "CUSPE") and (t != "PATADA") or (n < 1) or (n > 4)):
+     6 | 	print("Entrada invalida")
+     7 | elif(t == "CAUDA"):
+     8 | 	d = n * r
+     9 | 	print(d)
+    10 | elif(t == "CUSPE"):
+    11 | 	d = 2 * n * r
+    12 | 	print(d)
+    13 | elif(t == "PATADA"):
+    14 | 	d = 2 * n - 5 * r
+    15 | 	print(d)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 10: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 10) / elif ... sem else
+      Contexto:
+               9 | 	print(d)
+        >>>   10 | elif(t == "CUSPE"):
+              11 | 	d = 2 * n * r
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 6
+
+  [1] Linha 1: Variável 't' com nome muito curto (≤4 chars)
+      Trecho  : t = ...
+      Contexto:
+        >>>    1 | t = input("Insira o tipo do ataque: ").upper()# tipo de ataque
+               2 | n = int(input("Insira o valor sorteado: "))   # valor sorteado pelo dado
+
+  [2] Linha 2: Variável 'n' com nome muito curto (≤4 chars)
+      Trecho  : n = ...
+      Contexto:
+               1 | t = input("Insira o tipo do ataque: ").upper()# tipo de ataque
+        >>>    2 | n = int(input("Insira o valor sorteado: "))   # valor sorteado pelo dado
+               3 | r = int(input("Insira o numero de turnos: ")) # numero de turnos
+
+  [3] Linha 3: Variável 'r' com nome muito curto (≤4 chars)
+      Trecho  : r = ...
+      Contexto:
+               2 | n = int(input("Insira o valor sorteado: "))   # valor sorteado pelo dado
+        >>>    3 | r = int(input("Insira o numero de turnos: ")) # numero de turnos
+               4 | 
+
+  [4] Linha 8: Variável 'd' com nome muito curto (≤4 chars)
+      Trecho  : d = ...
+      Contexto:
+               7 | elif(t == "CAUDA"):
+        >>>    8 | 	d = n * r
+               9 | 	print(d)
+
+  [5] Linha 11: Variável 'd' com nome muito curto (≤4 chars)
+      Trecho  : d = ...
+      Contexto:
+              10 | elif(t == "CUSPE"):
+        >>>   11 | 	d = 2 * n * r
+              12 | 	print(d)
+
+  [6] Linha 14: Variável 'd' com nome muito curto (≤4 chars)
+      Trecho  : d = ...
+      Contexto:
+              13 | elif(t == "PATADA"):
+        >>>   14 | 	d = 2 * n - 5 * r
+              15 | 	print(d)
+
+======================================================================

@@ -1,0 +1,79 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1645_9897.py
+Questão  : 1645
+Aluno    : 9897
+Total MCs: 2
+
+⚠️  Misconceptions detectados: A3, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import * 
+     2 | 
+     3 | saques = array(eval(input('')))
+     4 | acum = zeros(size(saques), dtype=int)#numeros inteiros
+     5 | #saques efetuados acima do limite
+     6 | n = 0
+     7 | for i in range(size(saques)):
+     8 | 	if saques[i] >= 2000:
+     9 | 		n += 1
+    10 | print(n)
+    11 | 
+    12 | ind = 0 #indices
+    13 | vet = zeros(n)
+    14 | for i in range(size(saques)):
+    15 | 	if saques[i] >= 2000:
+    16 | 		acum[ind] = i
+    17 | 		ind += 1
+    18 | print(ind) 
+    19 | 	
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 1
+
+  [1] Linha 13: Variável 'vet' declarada mas nunca utilizada
+      Trecho  : vet = ...
+      Contexto:
+              12 | ind = 0 #indices
+        >>>   13 | vet = zeros(n)
+              14 | for i in range(size(saques)):
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 4
+
+  [1] Linha 4: Variável 'acum' com nome muito curto (≤4 chars)
+      Trecho  : acum = ...
+      Contexto:
+               3 | saques = array(eval(input('')))
+        >>>    4 | acum = zeros(size(saques), dtype=int)#numeros inteiros
+               5 | #saques efetuados acima do limite
+
+  [2] Linha 6: Variável 'n' com nome muito curto (≤4 chars)
+      Trecho  : n = ...
+      Contexto:
+               5 | #saques efetuados acima do limite
+        >>>    6 | n = 0
+               7 | for i in range(size(saques)):
+
+  [3] Linha 12: Variável 'ind' com nome muito curto (≤4 chars)
+      Trecho  : ind = ...
+      Contexto:
+              11 | 
+        >>>   12 | ind = 0 #indices
+              13 | vet = zeros(n)
+
+  [4] Linha 13: Variável 'vet' com nome muito curto (≤4 chars)
+      Trecho  : vet = ...
+      Contexto:
+              12 | ind = 0 #indices
+        >>>   13 | vet = zeros(n)
+              14 | for i in range(size(saques)):
+
+======================================================================

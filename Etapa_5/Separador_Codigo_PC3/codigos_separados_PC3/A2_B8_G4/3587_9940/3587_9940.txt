@@ -1,0 +1,111 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 3587_9940.py
+Questão  : 3587
+Aluno    : 9940
+Total MCs: 3
+
+⚠️  Misconceptions detectados: A2, B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | a=input()
+     2 | i=0
+     3 | s=100
+     4 | while i<len(a):
+     5 | 	if a[i]=="1":
+     6 | 		s=s*5
+     7 | 	elif a[i]=="2":
+     8 | 		s=s*3
+     9 | 	elif a[i]=="3":
+    10 | 		s=s
+    11 | 	elif a[i]=="4":
+    12 | 		s=s/2
+    13 | 	i=i+1
+    14 | print(round(s,2))
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A2 — Variável atribuída a si mesma
+  Ocorrências: 1
+
+  [1] Linha 10: 's' atribuído a si mesmo
+      Trecho  : s = s
+      Contexto:
+               9 | 	elif a[i]=="3":
+        >>>   10 | 		s=s
+              11 | 	elif a[i]=="4":
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 9: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 9) / elif ... sem else
+      Contexto:
+               8 | 		s=s*3
+        >>>    9 | 	elif a[i]=="3":
+              10 | 		s=s
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 8
+
+  [1] Linha 1: Variável 'a' com nome muito curto (≤4 chars)
+      Trecho  : a = ...
+      Contexto:
+        >>>    1 | a=input()
+               2 | i=0
+
+  [2] Linha 2: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+               1 | a=input()
+        >>>    2 | i=0
+               3 | s=100
+
+  [3] Linha 3: Variável 's' com nome muito curto (≤4 chars)
+      Trecho  : s = ...
+      Contexto:
+               2 | i=0
+        >>>    3 | s=100
+               4 | while i<len(a):
+
+  [4] Linha 13: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+              12 | 		s=s/2
+        >>>   13 | 	i=i+1
+              14 | print(round(s,2))
+
+  [5] Linha 6: Variável 's' com nome muito curto (≤4 chars)
+      Trecho  : s = ...
+      Contexto:
+               5 | 	if a[i]=="1":
+        >>>    6 | 		s=s*5
+               7 | 	elif a[i]=="2":
+
+  [6] Linha 8: Variável 's' com nome muito curto (≤4 chars)
+      Trecho  : s = ...
+      Contexto:
+               7 | 	elif a[i]=="2":
+        >>>    8 | 		s=s*3
+               9 | 	elif a[i]=="3":
+
+  [7] Linha 10: Variável 's' com nome muito curto (≤4 chars)
+      Trecho  : s = ...
+      Contexto:
+               9 | 	elif a[i]=="3":
+        >>>   10 | 		s=s
+              11 | 	elif a[i]=="4":
+
+  [8] Linha 12: Variável 's' com nome muito curto (≤4 chars)
+      Trecho  : s = ...
+      Contexto:
+              11 | 	elif a[i]=="4":
+        >>>   12 | 		s=s/2
+              13 | 	i=i+1
+
+======================================================================

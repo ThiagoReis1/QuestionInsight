@@ -1,0 +1,77 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 3384_7172.py
+Questão  : 3384
+Aluno    : 7172
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | med=input("O para oncas ou K para quilogramas: ")
+     2 | 
+     3 | if(med.upper()=="K"):
+     4 | 	Kg=float(input("para quilogramas: "))
+     5 | 	Oz=35.274*Kg
+     6 | 	print(round(Oz, 2))
+     7 | else:
+     8 | 	if(med.upper()=="O"):
+     9 | 		Oz=float(input("para oncas: "))
+    10 | 		Kg=Oz/35.274
+    11 | 		print(round(Kg, 2))
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 3: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 3) / elif ... sem else
+      Contexto:
+               2 | 
+        >>>    3 | if(med.upper()=="K"):
+               4 | 	Kg=float(input("para quilogramas: "))
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 5
+
+  [1] Linha 1: Variável 'med' com nome muito curto (≤4 chars)
+      Trecho  : med = ...
+      Contexto:
+        >>>    1 | med=input("O para oncas ou K para quilogramas: ")
+               2 | 
+
+  [2] Linha 4: Variável 'Kg' com nome muito curto (≤4 chars)
+      Trecho  : Kg = ...
+      Contexto:
+               3 | if(med.upper()=="K"):
+        >>>    4 | 	Kg=float(input("para quilogramas: "))
+               5 | 	Oz=35.274*Kg
+
+  [3] Linha 5: Variável 'Oz' com nome muito curto (≤4 chars)
+      Trecho  : Oz = ...
+      Contexto:
+               4 | 	Kg=float(input("para quilogramas: "))
+        >>>    5 | 	Oz=35.274*Kg
+               6 | 	print(round(Oz, 2))
+
+  [4] Linha 9: Variável 'Oz' com nome muito curto (≤4 chars)
+      Trecho  : Oz = ...
+      Contexto:
+               8 | 	if(med.upper()=="O"):
+        >>>    9 | 		Oz=float(input("para oncas: "))
+              10 | 		Kg=Oz/35.274
+
+  [5] Linha 10: Variável 'Kg' com nome muito curto (≤4 chars)
+      Trecho  : Kg = ...
+      Contexto:
+               9 | 		Oz=float(input("para oncas: "))
+        >>>   10 | 		Kg=Oz/35.274
+              11 | 		print(round(Kg, 2))
+
+======================================================================

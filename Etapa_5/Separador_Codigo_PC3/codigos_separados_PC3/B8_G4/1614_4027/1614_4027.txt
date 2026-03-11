@@ -1,0 +1,128 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1614_4027.py
+Questão  : 1614
+Aluno    : 4027
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import *
+     2 | nome = array(eval(input("Nomes dos alimentos: ")))
+     3 | q = array(eval(input("Quantidade em gramas dos alimentos: ")))
+     4 | n = size(q)
+     5 | i = 0
+     6 | cal = 0
+     7 | while(i < n):
+     8 | 	if(nome[i] == "BANANA"):
+     9 | 		cal = cal + int(q[i])*0.97
+    10 | 	elif(nome[i] == "BIFE"):
+    11 | 		cal = cal + int(q[i])*2.95
+    12 | 	elif(nome[i] == "FEIJOADA"):
+    13 | 		cal = cal + int(q[i])*1.27
+    14 | 	elif(nome[i] == "OMELETE"):
+    15 | 		cal = cal + int(q[i])*1.04
+    16 | 	elif(nome[i] == "TOMATE"):
+    17 | 		cal = cal + int(q[i])*0.2
+    18 | 	i = i + 1
+    19 | print(round(cal,2))
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 14: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 14) / elif ... sem else
+      Contexto:
+              13 | 		cal = cal + int(q[i])*1.27
+        >>>   14 | 	elif(nome[i] == "OMELETE"):
+              15 | 		cal = cal + int(q[i])*1.04
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 11
+
+  [1] Linha 2: Variável 'nome' com nome muito curto (≤4 chars)
+      Trecho  : nome = ...
+      Contexto:
+               1 | from numpy import *
+        >>>    2 | nome = array(eval(input("Nomes dos alimentos: ")))
+               3 | q = array(eval(input("Quantidade em gramas dos alimentos: ")))
+
+  [2] Linha 3: Variável 'q' com nome muito curto (≤4 chars)
+      Trecho  : q = ...
+      Contexto:
+               2 | nome = array(eval(input("Nomes dos alimentos: ")))
+        >>>    3 | q = array(eval(input("Quantidade em gramas dos alimentos: ")))
+               4 | n = size(q)
+
+  [3] Linha 4: Variável 'n' com nome muito curto (≤4 chars)
+      Trecho  : n = ...
+      Contexto:
+               3 | q = array(eval(input("Quantidade em gramas dos alimentos: ")))
+        >>>    4 | n = size(q)
+               5 | i = 0
+
+  [4] Linha 5: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+               4 | n = size(q)
+        >>>    5 | i = 0
+               6 | cal = 0
+
+  [5] Linha 6: Variável 'cal' com nome muito curto (≤4 chars)
+      Trecho  : cal = ...
+      Contexto:
+               5 | i = 0
+        >>>    6 | cal = 0
+               7 | while(i < n):
+
+  [6] Linha 18: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+              17 | 		cal = cal + int(q[i])*0.2
+        >>>   18 | 	i = i + 1
+              19 | print(round(cal,2))
+
+  [7] Linha 9: Variável 'cal' com nome muito curto (≤4 chars)
+      Trecho  : cal = ...
+      Contexto:
+               8 | 	if(nome[i] == "BANANA"):
+        >>>    9 | 		cal = cal + int(q[i])*0.97
+              10 | 	elif(nome[i] == "BIFE"):
+
+  [8] Linha 11: Variável 'cal' com nome muito curto (≤4 chars)
+      Trecho  : cal = ...
+      Contexto:
+              10 | 	elif(nome[i] == "BIFE"):
+        >>>   11 | 		cal = cal + int(q[i])*2.95
+              12 | 	elif(nome[i] == "FEIJOADA"):
+
+  [9] Linha 13: Variável 'cal' com nome muito curto (≤4 chars)
+      Trecho  : cal = ...
+      Contexto:
+              12 | 	elif(nome[i] == "FEIJOADA"):
+        >>>   13 | 		cal = cal + int(q[i])*1.27
+              14 | 	elif(nome[i] == "OMELETE"):
+
+  [10] Linha 15: Variável 'cal' com nome muito curto (≤4 chars)
+      Trecho  : cal = ...
+      Contexto:
+              14 | 	elif(nome[i] == "OMELETE"):
+        >>>   15 | 		cal = cal + int(q[i])*1.04
+              16 | 	elif(nome[i] == "TOMATE"):
+
+  [11] Linha 17: Variável 'cal' com nome muito curto (≤4 chars)
+      Trecho  : cal = ...
+      Contexto:
+              16 | 	elif(nome[i] == "TOMATE"):
+        >>>   17 | 		cal = cal + int(q[i])*0.2
+              18 | 	i = i + 1
+
+======================================================================

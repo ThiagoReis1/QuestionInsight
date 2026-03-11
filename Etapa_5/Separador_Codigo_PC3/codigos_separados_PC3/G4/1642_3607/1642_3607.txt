@@ -1,0 +1,76 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1642_3607.py
+Questão  : 1642
+Aluno    : 3607
+Total MCs: 1
+
+⚠️  Misconceptions detectados: G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import *
+     2 | 
+     3 | turm = array(eval(input()), dtype=int)
+     4 | 
+     5 | acc = 0
+     6 | 
+     7 | for i in range(size(turm)):
+     8 | 	if turm[i] % 5 == 0:
+     9 | 		acc = acc + 1
+    10 | 
+    11 | j = 0
+    12 | result = zeros(acc, dtype=int)
+    13 | for i in range(size(turm)):
+    14 | 	if turm[i] % 5 == 0:
+    15 | 		result[j] = i
+    16 | 		j = j + 1
+    17 | 
+    18 | print(acc)
+    19 | print(result)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 5
+
+  [1] Linha 3: Variável 'turm' com nome muito curto (≤4 chars)
+      Trecho  : turm = ...
+      Contexto:
+               2 | 
+        >>>    3 | turm = array(eval(input()), dtype=int)
+               4 | 
+
+  [2] Linha 5: Variável 'acc' com nome muito curto (≤4 chars)
+      Trecho  : acc = ...
+      Contexto:
+               4 | 
+        >>>    5 | acc = 0
+               6 | 
+
+  [3] Linha 11: Variável 'j' com nome muito curto (≤4 chars)
+      Trecho  : j = ...
+      Contexto:
+              10 | 
+        >>>   11 | j = 0
+              12 | result = zeros(acc, dtype=int)
+
+  [4] Linha 9: Variável 'acc' com nome muito curto (≤4 chars)
+      Trecho  : acc = ...
+      Contexto:
+               8 | 	if turm[i] % 5 == 0:
+        >>>    9 | 		acc = acc + 1
+              10 | 
+
+  [5] Linha 16: Variável 'j' com nome muito curto (≤4 chars)
+      Trecho  : j = ...
+      Contexto:
+              15 | 		result[j] = i
+        >>>   16 | 		j = j + 1
+              17 | 
+
+======================================================================

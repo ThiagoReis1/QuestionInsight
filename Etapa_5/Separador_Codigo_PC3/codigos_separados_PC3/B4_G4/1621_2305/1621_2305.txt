@@ -1,0 +1,184 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1621_2305.py
+Questão  : 1621
+Aluno    : 2305
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B4, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | 
+     3 | nome = input ().upper()
+     4 | v = array(eval(input()))
+     5 | 
+     6 | ar = 1.25*[v]
+     7 | fe = 2.60*[v]
+     8 | bi = 1.80*[v]
+     9 | mi = 0.85*[v]
+    10 | fa = 3.20*[v]
+    11 | cf = 0
+    12 | 
+    13 | if (nome==ar):
+    14 | 	cf = cf + 1
+    15 | elif (nome == fe):
+    16 | 		cf = cf + 1
+    17 | elif (nome == bi):
+    18 | 		cf = cf + 1
+    19 | elif (nome == mi):
+    20 | 		cf = cf + 1
+    21 | else:
+    22 | 	(nome==fa)
+    23 | 	cf = cf + 1
+    24 | 
+    25 | print (cf)
+    26 | 	
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B4 — Comandos repetidos dentro de blocos if-elif-else
+  Ocorrências: 6
+
+  [1] Linha 15: Bloco idêntico ao da linha 13
+      Trecho  : cf = cf + 1
+      Contexto:
+              14 | 	cf = cf + 1
+        >>>   15 | elif (nome == fe):
+              16 | 		cf = cf + 1
+
+  [2] Linha 17: Bloco idêntico ao da linha 13
+      Trecho  : cf = cf + 1
+      Contexto:
+              16 | 		cf = cf + 1
+        >>>   17 | elif (nome == bi):
+              18 | 		cf = cf + 1
+
+  [3] Linha 19: Bloco idêntico ao da linha 13
+      Trecho  : cf = cf + 1
+      Contexto:
+              18 | 		cf = cf + 1
+        >>>   19 | elif (nome == mi):
+              20 | 		cf = cf + 1
+
+  [4] Linha 17: Bloco idêntico ao da linha 15
+      Trecho  : cf = cf + 1
+      Contexto:
+              16 | 		cf = cf + 1
+        >>>   17 | elif (nome == bi):
+              18 | 		cf = cf + 1
+
+  [5] Linha 19: Bloco idêntico ao da linha 15
+      Trecho  : cf = cf + 1
+      Contexto:
+              18 | 		cf = cf + 1
+        >>>   19 | elif (nome == mi):
+              20 | 		cf = cf + 1
+
+  [6] Linha 19: Bloco idêntico ao da linha 17
+      Trecho  : cf = cf + 1
+      Contexto:
+              18 | 		cf = cf + 1
+        >>>   19 | elif (nome == mi):
+              20 | 		cf = cf + 1
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 13
+
+  [1] Linha 3: Variável 'nome' com nome muito curto (≤4 chars)
+      Trecho  : nome = ...
+      Contexto:
+               2 | 
+        >>>    3 | nome = input ().upper()
+               4 | v = array(eval(input()))
+
+  [2] Linha 4: Variável 'v' com nome muito curto (≤4 chars)
+      Trecho  : v = ...
+      Contexto:
+               3 | nome = input ().upper()
+        >>>    4 | v = array(eval(input()))
+               5 | 
+
+  [3] Linha 6: Variável 'ar' com nome muito curto (≤4 chars)
+      Trecho  : ar = ...
+      Contexto:
+               5 | 
+        >>>    6 | ar = 1.25*[v]
+               7 | fe = 2.60*[v]
+
+  [4] Linha 7: Variável 'fe' com nome muito curto (≤4 chars)
+      Trecho  : fe = ...
+      Contexto:
+               6 | ar = 1.25*[v]
+        >>>    7 | fe = 2.60*[v]
+               8 | bi = 1.80*[v]
+
+  [5] Linha 8: Variável 'bi' com nome muito curto (≤4 chars)
+      Trecho  : bi = ...
+      Contexto:
+               7 | fe = 2.60*[v]
+        >>>    8 | bi = 1.80*[v]
+               9 | mi = 0.85*[v]
+
+  [6] Linha 9: Variável 'mi' com nome muito curto (≤4 chars)
+      Trecho  : mi = ...
+      Contexto:
+               8 | bi = 1.80*[v]
+        >>>    9 | mi = 0.85*[v]
+              10 | fa = 3.20*[v]
+
+  [7] Linha 10: Variável 'fa' com nome muito curto (≤4 chars)
+      Trecho  : fa = ...
+      Contexto:
+               9 | mi = 0.85*[v]
+        >>>   10 | fa = 3.20*[v]
+              11 | cf = 0
+
+  [8] Linha 11: Variável 'cf' com nome muito curto (≤4 chars)
+      Trecho  : cf = ...
+      Contexto:
+              10 | fa = 3.20*[v]
+        >>>   11 | cf = 0
+              12 | 
+
+  [9] Linha 14: Variável 'cf' com nome muito curto (≤4 chars)
+      Trecho  : cf = ...
+      Contexto:
+              13 | if (nome==ar):
+        >>>   14 | 	cf = cf + 1
+              15 | elif (nome == fe):
+
+  [10] Linha 16: Variável 'cf' com nome muito curto (≤4 chars)
+      Trecho  : cf = ...
+      Contexto:
+              15 | elif (nome == fe):
+        >>>   16 | 		cf = cf + 1
+              17 | elif (nome == bi):
+
+  [11] Linha 18: Variável 'cf' com nome muito curto (≤4 chars)
+      Trecho  : cf = ...
+      Contexto:
+              17 | elif (nome == bi):
+        >>>   18 | 		cf = cf + 1
+              19 | elif (nome == mi):
+
+  [12] Linha 20: Variável 'cf' com nome muito curto (≤4 chars)
+      Trecho  : cf = ...
+      Contexto:
+              19 | elif (nome == mi):
+        >>>   20 | 		cf = cf + 1
+              21 | else:
+
+  [13] Linha 23: Variável 'cf' com nome muito curto (≤4 chars)
+      Trecho  : cf = ...
+      Contexto:
+              22 | 	(nome==fa)
+        >>>   23 | 	cf = cf + 1
+              24 | 
+
+======================================================================

@@ -1,0 +1,87 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1643_3086.py
+Questão  : 1643
+Aluno    : 3086
+Total MCs: 2
+
+⚠️  Misconceptions detectados: A3, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | v = array(eval(input("notas: ")))
+     3 | x = 0
+     4 | for i in v:
+     5 | 	if(i>=5):
+     6 | 		x = x + 1
+     7 | y = zeros(x, dtype= int)
+     8 | a = 0
+     9 | for d in y:
+    10 | 	if(i>=5):
+    11 | 		d = y + 1
+    12 | print(x)
+    13 | print(d)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 1
+
+  [1] Linha 8: Variável 'a' declarada mas nunca utilizada
+      Trecho  : a = ...
+      Contexto:
+               7 | y = zeros(x, dtype= int)
+        >>>    8 | a = 0
+               9 | for d in y:
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 6
+
+  [1] Linha 2: Variável 'v' com nome muito curto (≤4 chars)
+      Trecho  : v = ...
+      Contexto:
+               1 | from numpy import*
+        >>>    2 | v = array(eval(input("notas: ")))
+               3 | x = 0
+
+  [2] Linha 3: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+               2 | v = array(eval(input("notas: ")))
+        >>>    3 | x = 0
+               4 | for i in v:
+
+  [3] Linha 7: Variável 'y' com nome muito curto (≤4 chars)
+      Trecho  : y = ...
+      Contexto:
+               6 | 		x = x + 1
+        >>>    7 | y = zeros(x, dtype= int)
+               8 | a = 0
+
+  [4] Linha 8: Variável 'a' com nome muito curto (≤4 chars)
+      Trecho  : a = ...
+      Contexto:
+               7 | y = zeros(x, dtype= int)
+        >>>    8 | a = 0
+               9 | for d in y:
+
+  [5] Linha 6: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+               5 | 	if(i>=5):
+        >>>    6 | 		x = x + 1
+               7 | y = zeros(x, dtype= int)
+
+  [6] Linha 11: Variável 'd' com nome muito curto (≤4 chars)
+      Trecho  : d = ...
+      Contexto:
+              10 | 	if(i>=5):
+        >>>   11 | 		d = y + 1
+              12 | print(x)
+
+======================================================================

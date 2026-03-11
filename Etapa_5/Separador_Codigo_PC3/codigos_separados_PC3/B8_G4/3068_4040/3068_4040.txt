@@ -1,0 +1,76 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 3068_4040.py
+Questão  : 3068
+Aluno    : 4040
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | # Incertables
+     2 | 
+     3 | wpn = input("Weapon of choice: ")
+     4 | dex = int(input("Destreza do jogador: "))
+     5 | d10 = int(input("Result of first d10: "))
+     6 | d102 = int(input("Result of second d10: "))
+     7 | 
+     8 | # Computables
+     9 | if( (d10 > 10) or (d102 > 10) or ((d10 > 10) and (d102 > 10))):
+    10 | 	print("Entrada invalida")
+    11 | elif((wpn == "CIMITARRA")):
+    12 | 	print(2*(d10 + d102) + 2*dex)
+    13 | elif(wpn == "KATANA"):
+    14 | 	print(2*(d10 + d102) + dex)
+    15 | elif(wpn == "SABRE"):
+    16 | 	print(d10 + d102 + 2*dex)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 13: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 13) / elif ... sem else
+      Contexto:
+              12 | 	print(2*(d10 + d102) + 2*dex)
+        >>>   13 | elif(wpn == "KATANA"):
+              14 | 	print(2*(d10 + d102) + dex)
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 4
+
+  [1] Linha 3: Variável 'wpn' com nome muito curto (≤4 chars)
+      Trecho  : wpn = ...
+      Contexto:
+               2 | 
+        >>>    3 | wpn = input("Weapon of choice: ")
+               4 | dex = int(input("Destreza do jogador: "))
+
+  [2] Linha 4: Variável 'dex' com nome muito curto (≤4 chars)
+      Trecho  : dex = ...
+      Contexto:
+               3 | wpn = input("Weapon of choice: ")
+        >>>    4 | dex = int(input("Destreza do jogador: "))
+               5 | d10 = int(input("Result of first d10: "))
+
+  [3] Linha 5: Variável 'd10' com nome muito curto (≤4 chars)
+      Trecho  : d10 = ...
+      Contexto:
+               4 | dex = int(input("Destreza do jogador: "))
+        >>>    5 | d10 = int(input("Result of first d10: "))
+               6 | d102 = int(input("Result of second d10: "))
+
+  [4] Linha 6: Variável 'd102' com nome muito curto (≤4 chars)
+      Trecho  : d102 = ...
+      Contexto:
+               5 | d10 = int(input("Result of first d10: "))
+        >>>    6 | d102 = int(input("Result of second d10: "))
+               7 | 
+
+======================================================================

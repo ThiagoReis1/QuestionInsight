@@ -1,0 +1,6 @@
+preco_area = int(input("insira o preco da area por metro quadrado"))
+area_privativa = int(input("insira a area privativa por metro quadrado"))
+area_comum = int(input("insira a area comum por metro quadrado"))
+area_garagem = int(input("insira a area da garagem por metro quadrado"))
+preco_total = ((area_privativa + area_comum + area_garagem)*preco_area)
+print(round(preco_total,2))

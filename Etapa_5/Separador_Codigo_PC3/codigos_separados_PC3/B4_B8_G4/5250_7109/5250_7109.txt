@@ -1,0 +1,94 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 5250_7109.py
+Questão  : 5250
+Aluno    : 7109
+Total MCs: 3
+
+⚠️  Misconceptions detectados: B4, B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | v = float(input("Km/h: "))
+     2 | t = float(input("Tempo de viagem: "))
+     3 | z = "Proxima parada:"
+     4 | h = v*t
+     5 | if v> 0 and t >=0:
+     6 | 	print("Entradas:",v,"km/h e",t,"h")
+     7 | 	if t>1400:
+     8 | 		print(z,"Hogsmead")
+     9 | 	elif 0<h<100:
+    10 | 		print(z,"Bravos")
+    11 | 	elif 100<=h<200:
+    12 | 		print(z,"Castamere")
+    13 | 	elif 200 <=h<400:
+    14 | 		print(z,"Doriath")
+    15 | 	elif 400<=h<600:
+    16 | 		print(z,"Edoras")
+    17 | 	elif 600<=h<750:
+    18 | 		print(z,"Fangorn")
+    19 | 	elif 750<=h<1150:
+    20 | 		print(z,"Gondor")
+    21 | 	elif 1150<=h<1400:
+    22 | 		print(z,"Hogsmead")
+    23 | else:
+    24 | 	print("Dados invalidos")
+    25 | 	
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B4 — Comandos repetidos dentro de blocos if-elif-else
+  Ocorrências: 1
+
+  [1] Linha 21: Bloco idêntico ao da linha 7
+      Trecho  : print(z, 'Hogsmead')
+      Contexto:
+              20 | 		print(z,"Gondor")
+        >>>   21 | 	elif 1150<=h<1400:
+              22 | 		print(z,"Hogsmead")
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 19: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 19) / elif ... sem else
+      Contexto:
+              18 | 		print(z,"Fangorn")
+        >>>   19 | 	elif 750<=h<1150:
+              20 | 		print(z,"Gondor")
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 4
+
+  [1] Linha 1: Variável 'v' com nome muito curto (≤4 chars)
+      Trecho  : v = ...
+      Contexto:
+        >>>    1 | v = float(input("Km/h: "))
+               2 | t = float(input("Tempo de viagem: "))
+
+  [2] Linha 2: Variável 't' com nome muito curto (≤4 chars)
+      Trecho  : t = ...
+      Contexto:
+               1 | v = float(input("Km/h: "))
+        >>>    2 | t = float(input("Tempo de viagem: "))
+               3 | z = "Proxima parada:"
+
+  [3] Linha 3: Variável 'z' com nome muito curto (≤4 chars)
+      Trecho  : z = ...
+      Contexto:
+               2 | t = float(input("Tempo de viagem: "))
+        >>>    3 | z = "Proxima parada:"
+               4 | h = v*t
+
+  [4] Linha 4: Variável 'h' com nome muito curto (≤4 chars)
+      Trecho  : h = ...
+      Contexto:
+               3 | z = "Proxima parada:"
+        >>>    4 | h = v*t
+               5 | if v> 0 and t >=0:
+
+======================================================================

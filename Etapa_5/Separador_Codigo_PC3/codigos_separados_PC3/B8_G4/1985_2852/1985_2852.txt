@@ -1,0 +1,67 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1985_2852.py
+Questão  : 1985
+Aluno    : 2852
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | r = input(" regiao ").upper()
+     2 | e = input(" estado ").upper()
+     3 | if (r == "NORTE" or r == "SUL"):
+     4 | 	if (r == "NORTE"):
+     5 | 		if(e == "AMAZONAS" ):
+     6 | 			print("UNIVERSIDADE FEDERAL DO AMAZONAS")
+     7 | 		elif(e == "RORAIMA"):
+     8 | 			print("UNIVERSIDADE FEDERAL DE RORAIMA")
+     9 | 		else:
+    10 | 			print("UNIVERSIDADE NAO IDENTIFICADA")
+    11 | 
+    12 | 	elif (r == "SUL"):
+    13 | 		if (e == "PARANA"):
+    14 | 			print("UNIVERSIDADE FEDERAL DO PARANA")
+    15 | 		elif(e == "SANTA CATARINA"):
+    16 | 			print("UNIVERSIDADE FEDERAL DE SANTA CATARINA")
+    17 | 		else:
+    18 | 			print("UNIVERSIDADE NAO IDENTIFICADA")
+    19 | else:
+    20 | 	print("UNIVERSIDADE NAO IDENTIFICADA")
+    21 | 
+    22 | 	
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 4: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 4) / elif ... sem else
+      Contexto:
+               3 | if (r == "NORTE" or r == "SUL"):
+        >>>    4 | 	if (r == "NORTE"):
+               5 | 		if(e == "AMAZONAS" ):
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 2
+
+  [1] Linha 1: Variável 'r' com nome muito curto (≤4 chars)
+      Trecho  : r = ...
+      Contexto:
+        >>>    1 | r = input(" regiao ").upper()
+               2 | e = input(" estado ").upper()
+
+  [2] Linha 2: Variável 'e' com nome muito curto (≤4 chars)
+      Trecho  : e = ...
+      Contexto:
+               1 | r = input(" regiao ").upper()
+        >>>    2 | e = input(" estado ").upper()
+               3 | if (r == "NORTE" or r == "SUL"):
+
+======================================================================

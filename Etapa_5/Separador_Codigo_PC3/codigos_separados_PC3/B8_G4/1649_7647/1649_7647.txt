@@ -1,0 +1,65 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1649_7647.py
+Questão  : 1649
+Aluno    : 7647
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | 
+     3 | a = input("Insira a Cor do Olho do Cliente: ").split(",")
+     4 | n = zeros(5, dtype=int)
+     5 | 
+     6 | for i in range(size(a)):
+     7 | 	if(a[i] == "P"):
+     8 | 		n[0] += 1
+     9 | 	elif a[i] == "C":
+    10 | 		n[1] += 1
+    11 | 	elif a[i] == "M":
+    12 | 		n[2] += 1
+    13 | 	elif a[i] == "V":
+    14 | 		n[3] += 1
+    15 | 	elif a[i] == "A":
+    16 | 		n[4] += 1
+    17 | 	
+    18 | print(max(n))
+    19 | print(n)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 13: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 13) / elif ... sem else
+      Contexto:
+              12 | 		n[2] += 1
+        >>>   13 | 	elif a[i] == "V":
+              14 | 		n[3] += 1
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 2
+
+  [1] Linha 3: Variável 'a' com nome muito curto (≤4 chars)
+      Trecho  : a = ...
+      Contexto:
+               2 | 
+        >>>    3 | a = input("Insira a Cor do Olho do Cliente: ").split(",")
+               4 | n = zeros(5, dtype=int)
+
+  [2] Linha 4: Variável 'n' com nome muito curto (≤4 chars)
+      Trecho  : n = ...
+      Contexto:
+               3 | a = input("Insira a Cor do Olho do Cliente: ").split(",")
+        >>>    4 | n = zeros(5, dtype=int)
+               5 | 
+
+======================================================================

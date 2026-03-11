@@ -1,0 +1,121 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1111_3199.py
+Questão  : 1111
+Aluno    : 3199
+Total MCs: 3
+
+⚠️  Misconceptions detectados: B8, B9, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | e = float(input("numero de horas extras: "))
+     2 | f = float(input("horas faltadas: ")) 
+     3 | h = e -((2/3)*f)
+     4 | if (e>0 and f>0):
+     5 | 	if(h>2400):
+     6 | 		g = 500.00
+     7 | 		print("Entradas: ", e, "horas extras e ", f, "horas de falta")
+     8 | 		print("Gratificacao: R$ ", round(g,2))
+     9 | 	elif(h>1800 and h<=2400):
+    10 | 		g = 400.00
+    11 | 		print("Entradas: ", e, "horas extras e ", f, "horas de falta")
+    12 | 		print("Gratificacao: R$ ", round(g,2))
+    13 | 	elif (h>1200 and h<=1800):
+    14 | 		g = 300.00
+    15 | 		print("Entradas: ", e, "horas extras e ", f, "horas de falta")
+    16 | 		print("Gratificacao: R$ ", round(g,2))
+    17 | 	elif (h>600 and h<=1200):
+    18 | 		g = 200.00
+    19 | 		print("Entradas: ", e, "horas extras e ", f, "horas de falta")
+    20 | 		print("Gratificacao: R$ ", round(g,2))
+    21 | 	elif(h<=600):
+    22 | 		g = 100.00
+    23 | 		print("Entradas: ", e, "horas extras e ", f, "horas de falta")
+    24 | 		print("Gratificacao: R$ ", round(g,2))
+    25 | else:
+    26 | 	print("Entradas: ", e, "horas extras e ", f, "horas de falta")
+    27 | 	print("Dados invalidos")
+    28 | 	
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 17: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 17) / elif ... sem else
+      Contexto:
+              16 | 		print("Gratificacao: R$ ", round(g,2))
+        >>>   17 | 	elif (h>600 and h<=1200):
+              18 | 		g = 200.00
+
+▶ B9 — elif/else retestando condições já verificadas
+  Ocorrências: 1
+
+  [1] Linha 0: B9 detectado pelo VisitorMC3 (localização exata não mapeada)
+      Trecho  : —
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 8
+
+  [1] Linha 1: Variável 'e' com nome muito curto (≤4 chars)
+      Trecho  : e = ...
+      Contexto:
+        >>>    1 | e = float(input("numero de horas extras: "))
+               2 | f = float(input("horas faltadas: ")) 
+
+  [2] Linha 2: Variável 'f' com nome muito curto (≤4 chars)
+      Trecho  : f = ...
+      Contexto:
+               1 | e = float(input("numero de horas extras: "))
+        >>>    2 | f = float(input("horas faltadas: ")) 
+               3 | h = e -((2/3)*f)
+
+  [3] Linha 3: Variável 'h' com nome muito curto (≤4 chars)
+      Trecho  : h = ...
+      Contexto:
+               2 | f = float(input("horas faltadas: ")) 
+        >>>    3 | h = e -((2/3)*f)
+               4 | if (e>0 and f>0):
+
+  [4] Linha 6: Variável 'g' com nome muito curto (≤4 chars)
+      Trecho  : g = ...
+      Contexto:
+               5 | 	if(h>2400):
+        >>>    6 | 		g = 500.00
+               7 | 		print("Entradas: ", e, "horas extras e ", f, "horas de falta")
+
+  [5] Linha 10: Variável 'g' com nome muito curto (≤4 chars)
+      Trecho  : g = ...
+      Contexto:
+               9 | 	elif(h>1800 and h<=2400):
+        >>>   10 | 		g = 400.00
+              11 | 		print("Entradas: ", e, "horas extras e ", f, "horas de falta")
+
+  [6] Linha 14: Variável 'g' com nome muito curto (≤4 chars)
+      Trecho  : g = ...
+      Contexto:
+              13 | 	elif (h>1200 and h<=1800):
+        >>>   14 | 		g = 300.00
+              15 | 		print("Entradas: ", e, "horas extras e ", f, "horas de falta")
+
+  [7] Linha 18: Variável 'g' com nome muito curto (≤4 chars)
+      Trecho  : g = ...
+      Contexto:
+              17 | 	elif (h>600 and h<=1200):
+        >>>   18 | 		g = 200.00
+              19 | 		print("Entradas: ", e, "horas extras e ", f, "horas de falta")
+
+  [8] Linha 22: Variável 'g' com nome muito curto (≤4 chars)
+      Trecho  : g = ...
+      Contexto:
+              21 | 	elif(h<=600):
+        >>>   22 | 		g = 100.00
+              23 | 		print("Entradas: ", e, "horas extras e ", f, "horas de falta")
+
+======================================================================

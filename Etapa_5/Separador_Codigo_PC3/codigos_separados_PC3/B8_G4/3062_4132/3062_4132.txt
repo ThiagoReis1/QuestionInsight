@@ -1,0 +1,103 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 3062_4132.py
+Questão  : 3062
+Aluno    : 4132
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | 
+     2 | po = int(input("Digite po: "))
+     3 | arma = input("Digite arma: ").upper()
+     4 | d = int(input("Digite dano: "))
+     5 | 
+     6 | 
+     7 | 
+     8 | if(d >=1 and d <=10 and arma=="ESPADA" or arma=="MARRETA" or arma=="MACHADO"):
+     9 | 	if(arma == "ESPADA"):
+    10 | 		if(po>=100):
+    11 | 			dano = d*10
+    12 | 			print(dano)
+    13 | 		else:
+    14 | 			print("PO insuficiente")
+    15 | 	elif(arma == "MACHADO"):
+    16 | 		if(po>=30):
+    17 | 			dano = d+3
+    18 | 			print(dano)
+    19 | 		else:
+    20 | 			print("PO insuficiente")
+    21 | 	elif(arma == "MARRETA"):
+    22 | 		if(po>=50):
+    23 | 			dano = d+5
+    24 | 			print(dano)
+    25 | 		else:
+    26 | 			print("PO insuficiente")
+    27 | else:
+    28 | 	print("Entrada invalida")
+    29 | 		
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 15: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 15) / elif ... sem else
+      Contexto:
+              14 | 			print("PO insuficiente")
+        >>>   15 | 	elif(arma == "MACHADO"):
+              16 | 		if(po>=30):
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 6
+
+  [1] Linha 2: Variável 'po' com nome muito curto (≤4 chars)
+      Trecho  : po = ...
+      Contexto:
+               1 | 
+        >>>    2 | po = int(input("Digite po: "))
+               3 | arma = input("Digite arma: ").upper()
+
+  [2] Linha 3: Variável 'arma' com nome muito curto (≤4 chars)
+      Trecho  : arma = ...
+      Contexto:
+               2 | po = int(input("Digite po: "))
+        >>>    3 | arma = input("Digite arma: ").upper()
+               4 | d = int(input("Digite dano: "))
+
+  [3] Linha 4: Variável 'd' com nome muito curto (≤4 chars)
+      Trecho  : d = ...
+      Contexto:
+               3 | arma = input("Digite arma: ").upper()
+        >>>    4 | d = int(input("Digite dano: "))
+               5 | 
+
+  [4] Linha 11: Variável 'dano' com nome muito curto (≤4 chars)
+      Trecho  : dano = ...
+      Contexto:
+              10 | 		if(po>=100):
+        >>>   11 | 			dano = d*10
+              12 | 			print(dano)
+
+  [5] Linha 17: Variável 'dano' com nome muito curto (≤4 chars)
+      Trecho  : dano = ...
+      Contexto:
+              16 | 		if(po>=30):
+        >>>   17 | 			dano = d+3
+              18 | 			print(dano)
+
+  [6] Linha 23: Variável 'dano' com nome muito curto (≤4 chars)
+      Trecho  : dano = ...
+      Contexto:
+              22 | 		if(po>=50):
+        >>>   23 | 			dano = d+5
+              24 | 			print(dano)
+
+======================================================================

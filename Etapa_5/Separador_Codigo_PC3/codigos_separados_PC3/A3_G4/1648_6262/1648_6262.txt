@@ -1,0 +1,83 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1648_6262.py
+Questão  : 1648
+Aluno    : 6262
+Total MCs: 2
+
+⚠️  Misconceptions detectados: A3, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | 
+     3 | nota = array(eval(input("Digite a frequencia: ")))
+     4 | cont = 0
+     5 | a = 0
+     6 | for i in range(size(nota)):
+     7 | 	if(nota[i] < 70):
+     8 | 		cont = cont + 1
+     9 | print(cont)
+    10 | 
+    11 | a = zeros(cont, dtype = int)
+    12 | 
+    13 | cont1 = 0
+    14 | 
+    15 | for i in range(size(nota)):
+    16 | 	if(nota[i] < 70):
+    17 | 		a[cont1] = i
+    18 | 		cont1 = cont1 + 1
+    19 | 
+    20 | print(a)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 1
+
+  [1] Linha 0: A3 detectado pelo VisitorMC3 (localização exata não mapeada)
+      Trecho  : —
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 5
+
+  [1] Linha 3: Variável 'nota' com nome muito curto (≤4 chars)
+      Trecho  : nota = ...
+      Contexto:
+               2 | 
+        >>>    3 | nota = array(eval(input("Digite a frequencia: ")))
+               4 | cont = 0
+
+  [2] Linha 4: Variável 'cont' com nome muito curto (≤4 chars)
+      Trecho  : cont = ...
+      Contexto:
+               3 | nota = array(eval(input("Digite a frequencia: ")))
+        >>>    4 | cont = 0
+               5 | a = 0
+
+  [3] Linha 5: Variável 'a' com nome muito curto (≤4 chars)
+      Trecho  : a = ...
+      Contexto:
+               4 | cont = 0
+        >>>    5 | a = 0
+               6 | for i in range(size(nota)):
+
+  [4] Linha 11: Variável 'a' com nome muito curto (≤4 chars)
+      Trecho  : a = ...
+      Contexto:
+              10 | 
+        >>>   11 | a = zeros(cont, dtype = int)
+              12 | 
+
+  [5] Linha 8: Variável 'cont' com nome muito curto (≤4 chars)
+      Trecho  : cont = ...
+      Contexto:
+               7 | 	if(nota[i] < 70):
+        >>>    8 | 		cont = cont + 1
+               9 | print(cont)
+
+======================================================================

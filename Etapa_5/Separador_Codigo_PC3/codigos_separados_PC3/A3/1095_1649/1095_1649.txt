@@ -1,0 +1,61 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1095_1649.py
+Questão  : 1095
+Aluno    : 1649
+Total MCs: 1
+
+⚠️  Misconceptions detectados: A3
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | num = float(input("Escreva um numero de  8 digitos: "))
+     2 | num1 = num / 10000000
+     3 | resto1 = num % 10000000
+     4 | num2 = resto1 / 1000000
+     5 | resto2 = resto1 % 1000000
+     6 | num3 = resto2 / 100000
+     7 | resto3 = resto2 % 100000
+     8 | num4 = resto3 / 10000
+     9 | resto4 = resto3 % 10000
+    10 | num5 = resto4 / 1000
+    11 | resto5 = resto4 % 1000
+    12 | num6 = resto5 / 100
+    13 | resto6 = resto5 % 100
+    14 | num7 = resto6 / 10
+    15 | resto7 = resto6 % 10
+    16 | num8 = resto7 / 1
+    17 | resto8 = resto7 % 1
+    18 | 
+    19 | num1 = (int(num / 10000000))
+    20 | num2 = (int(resto1 / 1000000))
+    21 | num3 = (int(resto2 / 100000))
+    22 | num4 = (int(resto3 / 10000))
+    23 | num5 = (int(resto4 / 1000))
+    24 | num6 = (int(resto5 / 100))
+    25 | num7 = (int(resto6 / 10))
+    26 | num8 = (int(resto7 / 1))
+    27 | x1 = (num1*1000+num2*100+num3*10+num4*1)
+    28 | x2 = (num5*1000+num6*100+num7*10+num8*1)
+    29 | if((x1+x2)**2 == num):
+    30 | 	print(num,"atende a propriedade")
+    31 | else:
+    32 | 	print((x1+x2)**2)	
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 1
+
+  [1] Linha 17: Variável 'resto8' declarada mas nunca utilizada
+      Trecho  : resto8 = ...
+      Contexto:
+              16 | num8 = resto7 / 1
+        >>>   17 | resto8 = resto7 % 1
+              18 | 
+
+======================================================================

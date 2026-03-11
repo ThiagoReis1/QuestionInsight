@@ -1,0 +1,61 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1655_3245.py
+Questão  : 1655
+Aluno    : 3245
+Total MCs: 1
+
+⚠️  Misconceptions detectados: B8
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import *
+     2 | 
+     3 | s = input().split(',')
+     4 | 
+     5 | contAC = 0
+     6 | contAM = 0
+     7 | contPA = 0
+     8 | contRO = 0
+     9 | contRR = 0
+    10 | 
+    11 | for i in range(len(s)):
+    12 | 	if(s[i] == 'AC'):
+    13 | 		contAC = contAC + 1
+    14 | 	elif (s[i] == 'AM'):
+    15 | 		contAM = contAM + 1
+    16 | 	elif (s[i] == 'PA'):
+    17 | 		contPA = contPA + 1
+    18 | 	elif (s[i] == 'RO'):
+    19 | 		contRO = contRO + 1
+    20 | 	elif (s[i] == 'RR'):
+    21 | 		contRR = contRR + 1	
+    22 | 
+    23 | v = zeros(5, dtype=int)		
+    24 | 
+    25 | v[0] = contAC
+    26 | v[1] = contAM
+    27 | v[2] = contPA
+    28 | v[3] = contRO
+    29 | v[4] = contRR
+    30 | 
+    31 | print(max(v))
+    32 | print(v)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 18: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 18) / elif ... sem else
+      Contexto:
+              17 | 		contPA = contPA + 1
+        >>>   18 | 	elif (s[i] == 'RO'):
+              19 | 		contRO = contRO + 1
+
+======================================================================

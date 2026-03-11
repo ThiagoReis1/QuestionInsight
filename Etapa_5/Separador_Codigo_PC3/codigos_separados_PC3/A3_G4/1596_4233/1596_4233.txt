@@ -1,0 +1,91 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1596_4233.py
+Questão  : 1596
+Aluno    : 4233
+Total MCs: 2
+
+⚠️  Misconceptions detectados: A3, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | from numpy.linalg import*
+     3 | 
+     4 | vet = array(eval(input("")))
+     5 | 
+     6 | soma = 0
+     7 | 
+     8 | for i in range(size(vet)):
+     9 | 	vet[i] = vet[i] - min(vet)
+    10 | 
+    11 | a = size(min(shape(vet)))
+    12 | 
+    13 | tamanho = shape(vet)[0]
+    14 | 
+    15 | m = sum(vet)/(size(vet)-1)
+    16 | 
+    17 | print(round(m,2))
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 3
+
+  [1] Linha 6: Variável 'soma' declarada mas nunca utilizada
+      Trecho  : soma = ...
+      Contexto:
+               5 | 
+        >>>    6 | soma = 0
+               7 | 
+
+  [2] Linha 11: Variável 'a' declarada mas nunca utilizada
+      Trecho  : a = ...
+      Contexto:
+              10 | 
+        >>>   11 | a = size(min(shape(vet)))
+              12 | 
+
+  [3] Linha 13: Variável 'tamanho' declarada mas nunca utilizada
+      Trecho  : tamanho = ...
+      Contexto:
+              12 | 
+        >>>   13 | tamanho = shape(vet)[0]
+              14 | 
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 4
+
+  [1] Linha 4: Variável 'vet' com nome muito curto (≤4 chars)
+      Trecho  : vet = ...
+      Contexto:
+               3 | 
+        >>>    4 | vet = array(eval(input("")))
+               5 | 
+
+  [2] Linha 6: Variável 'soma' com nome muito curto (≤4 chars)
+      Trecho  : soma = ...
+      Contexto:
+               5 | 
+        >>>    6 | soma = 0
+               7 | 
+
+  [3] Linha 11: Variável 'a' com nome muito curto (≤4 chars)
+      Trecho  : a = ...
+      Contexto:
+              10 | 
+        >>>   11 | a = size(min(shape(vet)))
+              12 | 
+
+  [4] Linha 15: Variável 'm' com nome muito curto (≤4 chars)
+      Trecho  : m = ...
+      Contexto:
+              14 | 
+        >>>   15 | m = sum(vet)/(size(vet)-1)
+              16 | 
+
+======================================================================

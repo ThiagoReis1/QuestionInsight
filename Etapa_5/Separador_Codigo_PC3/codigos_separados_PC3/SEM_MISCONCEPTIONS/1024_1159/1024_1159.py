@@ -1,0 +1,7 @@
+a=float(round(input("digite o comprimento de a:")),2)("metros")
+b=float(round(input("digite o comprimento de b:")),2)("metros")
+c=float(round(input("digite o comprimento de c:")),2)("metros")
+perimetro=float(round(a+b+c,2))("metros")
+custo=float(round(input("digite o custo por metro")),2("R$")
+valor=(round(perimetro*custo,2))("R$")
+print(valor)

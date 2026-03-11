@@ -1,0 +1,4 @@
+preco = input("destino: ")
+preco 
+
+

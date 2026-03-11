@@ -1,0 +1,57 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1657_2561.py
+Questão  : 1657
+Aluno    : 2561
+Total MCs: 1
+
+⚠️  Misconceptions detectados: B8
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | # 0 - AZ - Arizona
+     2 | # 1 - CA - Califórnia
+     3 | # 2 - FL - Flórida
+     4 | # 3 - PA - Pensilvânia
+     5 | # 4 - WI - Wisconsin
+     6 | 
+     7 | import numpy as np
+     8 | 
+     9 | entrada = input("Informe os dados: ").split(",")
+    10 | 
+    11 | conta = np.zeros(5, dtype = int)
+    12 | 
+    13 | for i in entrada:
+    14 | 	if (i.upper() == "AZ"):
+    15 | 		conta[0] += 1
+    16 | 	elif (i.upper() == "CA"):
+    17 | 		conta[1] += 1
+    18 | 	elif (i.upper() == "FL"):
+    19 | 		conta[2] += 1
+    20 | 	elif (i.upper() == "PA"):
+    21 | 		conta[3] += 1
+    22 | 	elif (i.upper() == "WI"):
+    23 | 		conta[4] += 1
+    24 | 		
+    25 | print(max(conta))
+    26 | print(conta)
+    27 | 
+    28 | 
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 20: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 20) / elif ... sem else
+      Contexto:
+              19 | 		conta[2] += 1
+        >>>   20 | 	elif (i.upper() == "PA"):
+              21 | 		conta[3] += 1
+
+======================================================================

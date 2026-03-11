@@ -1,0 +1,126 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 3593_9880.py
+Questão  : 3593
+Aluno    : 9880
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B4, B8
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import *
+     2 | 
+     3 | face = array(eval(input("Insira o valor da face do dado: ")))
+     4 | 				
+     5 | i = 0
+     6 | pontuacao_total = 200.
+     7 | 				 
+     8 | while i < size(face):
+     9 | 	if face[i] == 1:
+    10 | 		pontuacao_total /= 2
+    11 | 	elif face[i] == 2:
+    12 | 		pontuacao_total *= 3
+    13 | 	elif face[i] == 3:
+    14 | 		pontuacao_total /= 2
+    15 | 	elif face[i] == 4:
+    16 | 		pontuacao_total *= 3
+    17 | 	elif face[i] == 5:
+    18 | 		pontuacao_total /= 2
+    19 | 	elif face[i] == 6:
+    20 | 		pontuacao_total *= 3
+    21 | 	i +=1
+    22 | print(round(pontuacao_total, 2))
+    23 | 		
+    24 | 				 
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B4 — Comandos repetidos dentro de blocos if-elif-else
+  Ocorrências: 10
+
+  [1] Linha 13: Bloco idêntico ao da linha 9
+      Trecho  : pontuacao_total /= 2
+      Contexto:
+              12 | 		pontuacao_total *= 3
+        >>>   13 | 	elif face[i] == 3:
+              14 | 		pontuacao_total /= 2
+
+  [2] Linha 15: Bloco idêntico ao da linha 11
+      Trecho  : pontuacao_total *= 3
+      Contexto:
+              14 | 		pontuacao_total /= 2
+        >>>   15 | 	elif face[i] == 4:
+              16 | 		pontuacao_total *= 3
+
+  [3] Linha 17: Bloco idêntico ao da linha 9
+      Trecho  : pontuacao_total /= 2
+      Contexto:
+              16 | 		pontuacao_total *= 3
+        >>>   17 | 	elif face[i] == 5:
+              18 | 		pontuacao_total /= 2
+
+  [4] Linha 19: Bloco idêntico ao da linha 11
+      Trecho  : pontuacao_total *= 3
+      Contexto:
+              18 | 		pontuacao_total /= 2
+        >>>   19 | 	elif face[i] == 6:
+              20 | 		pontuacao_total *= 3
+
+  [5] Linha 15: Bloco idêntico ao da linha 11
+      Trecho  : pontuacao_total *= 3
+      Contexto:
+              14 | 		pontuacao_total /= 2
+        >>>   15 | 	elif face[i] == 4:
+              16 | 		pontuacao_total *= 3
+
+  [6] Linha 17: Bloco idêntico ao da linha 13
+      Trecho  : pontuacao_total /= 2
+      Contexto:
+              16 | 		pontuacao_total *= 3
+        >>>   17 | 	elif face[i] == 5:
+              18 | 		pontuacao_total /= 2
+
+  [7] Linha 19: Bloco idêntico ao da linha 11
+      Trecho  : pontuacao_total *= 3
+      Contexto:
+              18 | 		pontuacao_total /= 2
+        >>>   19 | 	elif face[i] == 6:
+              20 | 		pontuacao_total *= 3
+
+  [8] Linha 17: Bloco idêntico ao da linha 13
+      Trecho  : pontuacao_total /= 2
+      Contexto:
+              16 | 		pontuacao_total *= 3
+        >>>   17 | 	elif face[i] == 5:
+              18 | 		pontuacao_total /= 2
+
+  [9] Linha 19: Bloco idêntico ao da linha 15
+      Trecho  : pontuacao_total *= 3
+      Contexto:
+              18 | 		pontuacao_total /= 2
+        >>>   19 | 	elif face[i] == 6:
+              20 | 		pontuacao_total *= 3
+
+  [10] Linha 19: Bloco idêntico ao da linha 15
+      Trecho  : pontuacao_total *= 3
+      Contexto:
+              18 | 		pontuacao_total /= 2
+        >>>   19 | 	elif face[i] == 6:
+              20 | 		pontuacao_total *= 3
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 17: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 17) / elif ... sem else
+      Contexto:
+              16 | 		pontuacao_total *= 3
+        >>>   17 | 	elif face[i] == 5:
+              18 | 		pontuacao_total /= 2
+
+======================================================================

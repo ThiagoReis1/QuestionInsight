@@ -1,0 +1,1 @@
+laranjas=int(input())

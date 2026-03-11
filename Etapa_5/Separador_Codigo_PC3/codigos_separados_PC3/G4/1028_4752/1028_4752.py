@@ -1,0 +1,7 @@
+T= input()
+C= input() 
+K= input()
+A= input()
+M= float(T + C + K + A)
+V= input(M)
+print(round (V, 2))

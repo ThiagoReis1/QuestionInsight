@@ -1,0 +1,69 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1361_2202.py
+Questão  : 1361
+Aluno    : 2202
+Total MCs: 3
+
+⚠️  Misconceptions detectados: A3, A4, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | sn=float(input("Quantidade de snowberry em g "))
+     2 | qf=float(input("Quantidade de sais de fogo em g "))
+     3 | qa=float(input("Quantidade de amanita em g "))
+     4 | 
+     5 | psn=(((5**0.5)-1)/4)*sn
+     6 | pqf=(((5)-(2)*5**0.5)**0.5)*qf
+     7 | pqa=5*(5-2*(5**2))*qa
+     8 | 
+     9 | print=("A quantidade de snowberry é:",psn)
+    10 | print=("A quantidade de sais de fogo é:",pqf)
+    11 | print=("A quantidade de amanita é:",pqa)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 1
+
+  [1] Linha 9: Variável 'print' declarada mas nunca utilizada
+      Trecho  : print = ...
+      Contexto:
+               8 | 
+        >>>    9 | print=("A quantidade de snowberry é:",psn)
+              10 | print=("A quantidade de sais de fogo é:",pqf)
+
+▶ A4 — Redefinição de built-in
+  Ocorrências: 3
+
+  [1] Linha 9: Built-in 'print' redefinido como variável
+      Trecho  : print = ('A quantidade de snowberry é:', psn)
+      Contexto:
+               8 | 
+        >>>    9 | print=("A quantidade de snowberry é:",psn)
+              10 | print=("A quantidade de sais de fogo é:",pqf)
+
+  [2] Linha 10: Built-in 'print' redefinido como variável
+      Trecho  : print = ('A quantidade de sais de fogo é:', pqf)
+      Contexto:
+               9 | print=("A quantidade de snowberry é:",psn)
+        >>>   10 | print=("A quantidade de sais de fogo é:",pqf)
+              11 | print=("A quantidade de amanita é:",pqa)
+
+  [3] Linha 11: Built-in 'print' redefinido como variável
+      Trecho  : print = ('A quantidade de amanita é:', pqa)
+      Contexto:
+              10 | print=("A quantidade de sais de fogo é:",pqf)
+        >>>   11 | print=("A quantidade de amanita é:",pqa)
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 1
+
+  [1] Linha 0: G4 detectado pelo VisitorMC3 (localização exata não mapeada)
+      Trecho  : —
+
+======================================================================

@@ -1,0 +1,5 @@
+medidalado=float(input("medida do lado"))
+preco=float(input("preco por metro quadrado"))
+area=2*medidalado**2*(2**0.5+1)
+custo=round(preco*area,2)
+print(custo)

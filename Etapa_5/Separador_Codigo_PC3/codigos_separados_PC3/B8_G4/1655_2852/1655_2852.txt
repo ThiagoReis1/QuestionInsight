@@ -1,0 +1,171 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1655_2852.py
+Questão  : 1655
+Aluno    : 2852
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | a = input("sigla: ").split(",")
+     3 | k = 0
+     4 | ac = 0
+     5 | am = 0
+     6 | pa = 0
+     7 | ro = 0
+     8 | rr = 0
+     9 | for i in a:
+    10 | 	if (i.upper()=="AC"):
+    11 | 		ac = ac + 1
+    12 | 	elif (i.upper()=="AM"):
+    13 | 		am = am + 1
+    14 | 	elif (i.upper()=="PA"):
+    15 | 		pa = pa + 1
+    16 | 	elif (i.upper()=="RO"):
+    17 | 		ro = ro + 1
+    18 | 	elif (i.upper()=="RR"):
+    19 | 		rr = rr + 1
+    20 | b = zeros(5, dtype=int)
+    21 | for n in b:
+    22 | 	if(k==0):
+    23 | 		b[k] = ac
+    24 | 	elif(k==1):
+    25 | 		b[k] = am
+    26 | 	elif(k==2):
+    27 | 		b[k] = pa
+    28 | 	elif (k==3):
+    29 | 		b[k] = ro
+    30 | 	elif (k==4):
+    31 | 		b[k] = rr
+    32 | 	k = k + 1
+    33 | print(max(b))
+    34 | print(b)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 2
+
+  [1] Linha 16: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 16) / elif ... sem else
+      Contexto:
+              15 | 		pa = pa + 1
+        >>>   16 | 	elif (i.upper()=="RO"):
+              17 | 		ro = ro + 1
+
+  [2] Linha 28: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 28) / elif ... sem else
+      Contexto:
+              27 | 		b[k] = pa
+        >>>   28 | 	elif (k==3):
+              29 | 		b[k] = ro
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 14
+
+  [1] Linha 2: Variável 'a' com nome muito curto (≤4 chars)
+      Trecho  : a = ...
+      Contexto:
+               1 | from numpy import*
+        >>>    2 | a = input("sigla: ").split(",")
+               3 | k = 0
+
+  [2] Linha 3: Variável 'k' com nome muito curto (≤4 chars)
+      Trecho  : k = ...
+      Contexto:
+               2 | a = input("sigla: ").split(",")
+        >>>    3 | k = 0
+               4 | ac = 0
+
+  [3] Linha 4: Variável 'ac' com nome muito curto (≤4 chars)
+      Trecho  : ac = ...
+      Contexto:
+               3 | k = 0
+        >>>    4 | ac = 0
+               5 | am = 0
+
+  [4] Linha 5: Variável 'am' com nome muito curto (≤4 chars)
+      Trecho  : am = ...
+      Contexto:
+               4 | ac = 0
+        >>>    5 | am = 0
+               6 | pa = 0
+
+  [5] Linha 6: Variável 'pa' com nome muito curto (≤4 chars)
+      Trecho  : pa = ...
+      Contexto:
+               5 | am = 0
+        >>>    6 | pa = 0
+               7 | ro = 0
+
+  [6] Linha 7: Variável 'ro' com nome muito curto (≤4 chars)
+      Trecho  : ro = ...
+      Contexto:
+               6 | pa = 0
+        >>>    7 | ro = 0
+               8 | rr = 0
+
+  [7] Linha 8: Variável 'rr' com nome muito curto (≤4 chars)
+      Trecho  : rr = ...
+      Contexto:
+               7 | ro = 0
+        >>>    8 | rr = 0
+               9 | for i in a:
+
+  [8] Linha 20: Variável 'b' com nome muito curto (≤4 chars)
+      Trecho  : b = ...
+      Contexto:
+              19 | 		rr = rr + 1
+        >>>   20 | b = zeros(5, dtype=int)
+              21 | for n in b:
+
+  [9] Linha 32: Variável 'k' com nome muito curto (≤4 chars)
+      Trecho  : k = ...
+      Contexto:
+              31 | 		b[k] = rr
+        >>>   32 | 	k = k + 1
+              33 | print(max(b))
+
+  [10] Linha 11: Variável 'ac' com nome muito curto (≤4 chars)
+      Trecho  : ac = ...
+      Contexto:
+              10 | 	if (i.upper()=="AC"):
+        >>>   11 | 		ac = ac + 1
+              12 | 	elif (i.upper()=="AM"):
+
+  [11] Linha 13: Variável 'am' com nome muito curto (≤4 chars)
+      Trecho  : am = ...
+      Contexto:
+              12 | 	elif (i.upper()=="AM"):
+        >>>   13 | 		am = am + 1
+              14 | 	elif (i.upper()=="PA"):
+
+  [12] Linha 15: Variável 'pa' com nome muito curto (≤4 chars)
+      Trecho  : pa = ...
+      Contexto:
+              14 | 	elif (i.upper()=="PA"):
+        >>>   15 | 		pa = pa + 1
+              16 | 	elif (i.upper()=="RO"):
+
+  [13] Linha 17: Variável 'ro' com nome muito curto (≤4 chars)
+      Trecho  : ro = ...
+      Contexto:
+              16 | 	elif (i.upper()=="RO"):
+        >>>   17 | 		ro = ro + 1
+              18 | 	elif (i.upper()=="RR"):
+
+  [14] Linha 19: Variável 'rr' com nome muito curto (≤4 chars)
+      Trecho  : rr = ...
+      Contexto:
+              18 | 	elif (i.upper()=="RR"):
+        >>>   19 | 		rr = rr + 1
+              20 | b = zeros(5, dtype=int)
+
+======================================================================

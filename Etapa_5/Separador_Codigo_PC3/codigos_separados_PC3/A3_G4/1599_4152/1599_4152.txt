@@ -1,0 +1,124 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1599_4152.py
+Questão  : 1599
+Aluno    : 4152
+Total MCs: 2
+
+⚠️  Misconceptions detectados: A3, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import *
+     2 | v = array(eval(input("Digite o vetor de custos: ")))
+     3 | i = 0
+     4 | soma1 = 0
+     5 | desc = 15 / 100
+     6 | s = 0
+     7 | a = 0
+     8 | c = 0
+     9 | tf = zeros(int(size(v)), dtype=int)
+    10 | while (i < size(v)):
+    11 | 	if (v[i] >= 80.0):
+    12 | 		soma1 = soma1 + v[i] * desc
+    13 | 	i = i + 1
+    14 | while (s < size(v)):
+    15 | 	if (v[a] >= 80.0):
+    16 | 		c = tf[a]
+    17 | 	s = s + 1
+    18 | d = (sum(v) - sum(c)) + soma1
+    19 | print(round(d, 2))
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 1
+
+  [1] Linha 0: A3 detectado pelo VisitorMC3 (localização exata não mapeada)
+      Trecho  : —
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 11
+
+  [1] Linha 2: Variável 'v' com nome muito curto (≤4 chars)
+      Trecho  : v = ...
+      Contexto:
+               1 | from numpy import *
+        >>>    2 | v = array(eval(input("Digite o vetor de custos: ")))
+               3 | i = 0
+
+  [2] Linha 3: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+               2 | v = array(eval(input("Digite o vetor de custos: ")))
+        >>>    3 | i = 0
+               4 | soma1 = 0
+
+  [3] Linha 5: Variável 'desc' com nome muito curto (≤4 chars)
+      Trecho  : desc = ...
+      Contexto:
+               4 | soma1 = 0
+        >>>    5 | desc = 15 / 100
+               6 | s = 0
+
+  [4] Linha 6: Variável 's' com nome muito curto (≤4 chars)
+      Trecho  : s = ...
+      Contexto:
+               5 | desc = 15 / 100
+        >>>    6 | s = 0
+               7 | a = 0
+
+  [5] Linha 7: Variável 'a' com nome muito curto (≤4 chars)
+      Trecho  : a = ...
+      Contexto:
+               6 | s = 0
+        >>>    7 | a = 0
+               8 | c = 0
+
+  [6] Linha 8: Variável 'c' com nome muito curto (≤4 chars)
+      Trecho  : c = ...
+      Contexto:
+               7 | a = 0
+        >>>    8 | c = 0
+               9 | tf = zeros(int(size(v)), dtype=int)
+
+  [7] Linha 9: Variável 'tf' com nome muito curto (≤4 chars)
+      Trecho  : tf = ...
+      Contexto:
+               8 | c = 0
+        >>>    9 | tf = zeros(int(size(v)), dtype=int)
+              10 | while (i < size(v)):
+
+  [8] Linha 18: Variável 'd' com nome muito curto (≤4 chars)
+      Trecho  : d = ...
+      Contexto:
+              17 | 	s = s + 1
+        >>>   18 | d = (sum(v) - sum(c)) + soma1
+              19 | print(round(d, 2))
+
+  [9] Linha 13: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+              12 | 		soma1 = soma1 + v[i] * desc
+        >>>   13 | 	i = i + 1
+              14 | while (s < size(v)):
+
+  [10] Linha 17: Variável 's' com nome muito curto (≤4 chars)
+      Trecho  : s = ...
+      Contexto:
+              16 | 		c = tf[a]
+        >>>   17 | 	s = s + 1
+              18 | d = (sum(v) - sum(c)) + soma1
+
+  [11] Linha 16: Variável 'c' com nome muito curto (≤4 chars)
+      Trecho  : c = ...
+      Contexto:
+              15 | 	if (v[a] >= 80.0):
+        >>>   16 | 		c = tf[a]
+              17 | 	s = s + 1
+
+======================================================================

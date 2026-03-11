@@ -1,0 +1,74 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1614_3721.py
+Questão  : 1614
+Aluno    : 3721
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import *
+     2 | 
+     3 | 
+     4 | a = array(eval(input("Alimentos: ")))
+     5 | b = array(eval(input("Quantidade: ")))
+     6 | 
+     7 | s = 0
+     8 | 
+     9 | for i in range(size(a)):
+    10 |     if a[i].upper() == "BANANA":
+    11 |         s += b[i]*0.97
+    12 |     elif a[i].upper() == "BIFE":
+    13 |         s += b[i]*2.95
+    14 |     elif a[i].upper() == "FEIJOADA":
+    15 |         s += b[i]*1.27
+    16 |     elif a[i].upper() == "OMELETE":
+    17 |         s += b[i]*1.04
+    18 |     elif a[i].upper() == "TOMATE":
+    19 |         s += b[i]*0.2
+    20 | 
+    21 | print(round(s,2))
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 16: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 16) / elif ... sem else
+      Contexto:
+              15 |         s += b[i]*1.27
+        >>>   16 |     elif a[i].upper() == "OMELETE":
+              17 |         s += b[i]*1.04
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 3
+
+  [1] Linha 4: Variável 'a' com nome muito curto (≤4 chars)
+      Trecho  : a = ...
+      Contexto:
+               3 | 
+        >>>    4 | a = array(eval(input("Alimentos: ")))
+               5 | b = array(eval(input("Quantidade: ")))
+
+  [2] Linha 5: Variável 'b' com nome muito curto (≤4 chars)
+      Trecho  : b = ...
+      Contexto:
+               4 | a = array(eval(input("Alimentos: ")))
+        >>>    5 | b = array(eval(input("Quantidade: ")))
+               6 | 
+
+  [3] Linha 7: Variável 's' com nome muito curto (≤4 chars)
+      Trecho  : s = ...
+      Contexto:
+               6 | 
+        >>>    7 | s = 0
+               8 | 
+
+======================================================================

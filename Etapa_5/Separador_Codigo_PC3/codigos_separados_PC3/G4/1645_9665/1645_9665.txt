@@ -1,0 +1,84 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1645_9665.py
+Questão  : 1645
+Aluno    : 9665
+Total MCs: 1
+
+⚠️  Misconceptions detectados: G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import * 
+     2 | 
+     3 | Qsq = array(eval(input("digite a quantidade de saque: ")))
+     4 | y = 0
+     5 | Qmax = 0
+     6 | 
+     7 | for x in range(size(Qsq)):
+     8 | 	if Qsq[x] >= 2000:
+     9 | 		Qmax = Qmax + 1
+    10 | 	
+    11 | print(Qmax)
+    12 | 
+    13 | cont = zeros(Qmax,dtype=int)
+    14 | 
+    15 | for x in range(size(Qsq)): 
+    16 | 	if Qsq[x] >= 2000:
+    17 | 		cont[y] = x
+    18 | 		y = y + 1
+    19 | 	
+    20 | print(cont)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 6
+
+  [1] Linha 3: Variável 'Qsq' com nome muito curto (≤4 chars)
+      Trecho  : Qsq = ...
+      Contexto:
+               2 | 
+        >>>    3 | Qsq = array(eval(input("digite a quantidade de saque: ")))
+               4 | y = 0
+
+  [2] Linha 4: Variável 'y' com nome muito curto (≤4 chars)
+      Trecho  : y = ...
+      Contexto:
+               3 | Qsq = array(eval(input("digite a quantidade de saque: ")))
+        >>>    4 | y = 0
+               5 | Qmax = 0
+
+  [3] Linha 5: Variável 'Qmax' com nome muito curto (≤4 chars)
+      Trecho  : Qmax = ...
+      Contexto:
+               4 | y = 0
+        >>>    5 | Qmax = 0
+               6 | 
+
+  [4] Linha 13: Variável 'cont' com nome muito curto (≤4 chars)
+      Trecho  : cont = ...
+      Contexto:
+              12 | 
+        >>>   13 | cont = zeros(Qmax,dtype=int)
+              14 | 
+
+  [5] Linha 9: Variável 'Qmax' com nome muito curto (≤4 chars)
+      Trecho  : Qmax = ...
+      Contexto:
+               8 | 	if Qsq[x] >= 2000:
+        >>>    9 | 		Qmax = Qmax + 1
+              10 | 	
+
+  [6] Linha 18: Variável 'y' com nome muito curto (≤4 chars)
+      Trecho  : y = ...
+      Contexto:
+              17 | 		cont[y] = x
+        >>>   18 | 		y = y + 1
+              19 | 	
+
+======================================================================

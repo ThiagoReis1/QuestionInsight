@@ -1,0 +1,111 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1526_2963.py
+Questão  : 1526
+Aluno    : 2963
+Total MCs: 3
+
+⚠️  Misconceptions detectados: A3, C1, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | qi = int(input("quantidade incial de mana:\n"))
+     2 | qd = int(input("quantidade de mana que ela gasta por dia:\n"))
+     3 | rn = int(input("quanto de energia recupera por noite:\n"))
+     4 | ma = 0
+     5 | dt = 0
+     6 | while (qi > 0):
+     7 | 	qi = qi - (qd - rn)
+     8 | 	mt = ma + (qd - rn)
+     9 | 	dt = dt + 1
+    10 | 	if (qi <= 0):
+    11 | 		print(dt)
+    12 | 	
+    13 | 
+    14 | 	
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 1
+
+  [1] Linha 8: Variável 'mt' declarada mas nunca utilizada
+      Trecho  : mt = ...
+      Contexto:
+               7 | 	qi = qi - (qd - rn)
+        >>>    8 | 	mt = ma + (qd - rn)
+               9 | 	dt = dt + 1
+
+▶ C1 — Condição while testada novamente dentro do seu bloco
+  Ocorrências: 1
+
+  [1] Linha 10: If retesta condição inversa do while da linha 6
+      Trecho  : while qi > 0 → if qi <= 0
+      Contexto:
+               9 | 	dt = dt + 1
+        >>>   10 | 	if (qi <= 0):
+              11 | 		print(dt)
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 8
+
+  [1] Linha 1: Variável 'qi' com nome muito curto (≤4 chars)
+      Trecho  : qi = ...
+      Contexto:
+        >>>    1 | qi = int(input("quantidade incial de mana:\n"))
+               2 | qd = int(input("quantidade de mana que ela gasta por dia:\n"))
+
+  [2] Linha 2: Variável 'qd' com nome muito curto (≤4 chars)
+      Trecho  : qd = ...
+      Contexto:
+               1 | qi = int(input("quantidade incial de mana:\n"))
+        >>>    2 | qd = int(input("quantidade de mana que ela gasta por dia:\n"))
+               3 | rn = int(input("quanto de energia recupera por noite:\n"))
+
+  [3] Linha 3: Variável 'rn' com nome muito curto (≤4 chars)
+      Trecho  : rn = ...
+      Contexto:
+               2 | qd = int(input("quantidade de mana que ela gasta por dia:\n"))
+        >>>    3 | rn = int(input("quanto de energia recupera por noite:\n"))
+               4 | ma = 0
+
+  [4] Linha 4: Variável 'ma' com nome muito curto (≤4 chars)
+      Trecho  : ma = ...
+      Contexto:
+               3 | rn = int(input("quanto de energia recupera por noite:\n"))
+        >>>    4 | ma = 0
+               5 | dt = 0
+
+  [5] Linha 5: Variável 'dt' com nome muito curto (≤4 chars)
+      Trecho  : dt = ...
+      Contexto:
+               4 | ma = 0
+        >>>    5 | dt = 0
+               6 | while (qi > 0):
+
+  [6] Linha 7: Variável 'qi' com nome muito curto (≤4 chars)
+      Trecho  : qi = ...
+      Contexto:
+               6 | while (qi > 0):
+        >>>    7 | 	qi = qi - (qd - rn)
+               8 | 	mt = ma + (qd - rn)
+
+  [7] Linha 8: Variável 'mt' com nome muito curto (≤4 chars)
+      Trecho  : mt = ...
+      Contexto:
+               7 | 	qi = qi - (qd - rn)
+        >>>    8 | 	mt = ma + (qd - rn)
+               9 | 	dt = dt + 1
+
+  [8] Linha 9: Variável 'dt' com nome muito curto (≤4 chars)
+      Trecho  : dt = ...
+      Contexto:
+               8 | 	mt = ma + (qd - rn)
+        >>>    9 | 	dt = dt + 1
+              10 | 	if (qi <= 0):
+
+======================================================================

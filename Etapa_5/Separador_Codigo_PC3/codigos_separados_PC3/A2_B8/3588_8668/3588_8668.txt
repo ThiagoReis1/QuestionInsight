@@ -1,0 +1,56 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 3588_8668.py
+Questão  : 3588
+Aluno    : 8668
+Total MCs: 2
+
+⚠️  Misconceptions detectados: A2, B8
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | 
+     3 | aneis = array(eval(input()))
+     4 | i = 0
+     5 | total = 10000
+     6 | while i < size(aneis):
+     7 | 	if aneis[i] == 1:
+     8 | 		total = total * 2
+     9 | 	elif aneis[i] == 2:
+    10 | 		total = total 
+    11 | 	elif aneis[i] == 3:
+    12 | 		total = total / 2
+    13 | 	elif aneis[i] == 4:
+    14 | 		total = total / 4
+    15 | 	i += 1
+    16 | print(round(total, 2))
+    17 | 	
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A2 — Variável atribuída a si mesma
+  Ocorrências: 1
+
+  [1] Linha 10: 'total' atribuído a si mesmo
+      Trecho  : total = total
+      Contexto:
+               9 | 	elif aneis[i] == 2:
+        >>>   10 | 		total = total 
+              11 | 	elif aneis[i] == 3:
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 11: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 11) / elif ... sem else
+      Contexto:
+              10 | 		total = total 
+        >>>   11 | 	elif aneis[i] == 3:
+              12 | 		total = total / 2
+
+======================================================================

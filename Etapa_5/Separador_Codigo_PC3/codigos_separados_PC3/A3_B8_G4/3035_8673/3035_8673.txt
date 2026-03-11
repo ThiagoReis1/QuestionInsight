@@ -1,0 +1,80 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 3035_8673.py
+Questão  : 3035
+Aluno    : 8673
+Total MCs: 3
+
+⚠️  Misconceptions detectados: A3, B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from math import *
+     2 | 
+     3 | x = float(input("insira o valor: "))
+     4 | 
+     5 | ans = 0.
+     6 | 
+     7 | if 0 <= x < 90 or 180 <= x < 270: 
+     8 | 	ans = sin(radians(x))
+     9 | 	print(round(ans, 4))
+    10 | elif 90 <= x < 180 or 270 <= x < 360:
+    11 | 	ans = cos(radians(x))
+    12 | 	print(round(ans, 4))
+    13 | elif x < 0:
+    14 | 	print('entrada invalida')
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 1
+
+  [1] Linha 0: A3 detectado pelo VisitorMC3 (localização exata não mapeada)
+      Trecho  : —
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 10: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 10) / elif ... sem else
+      Contexto:
+               9 | 	print(round(ans, 4))
+        >>>   10 | elif 90 <= x < 180 or 270 <= x < 360:
+              11 | 	ans = cos(radians(x))
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 4
+
+  [1] Linha 3: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+               2 | 
+        >>>    3 | x = float(input("insira o valor: "))
+               4 | 
+
+  [2] Linha 5: Variável 'ans' com nome muito curto (≤4 chars)
+      Trecho  : ans = ...
+      Contexto:
+               4 | 
+        >>>    5 | ans = 0.
+               6 | 
+
+  [3] Linha 8: Variável 'ans' com nome muito curto (≤4 chars)
+      Trecho  : ans = ...
+      Contexto:
+               7 | if 0 <= x < 90 or 180 <= x < 270: 
+        >>>    8 | 	ans = sin(radians(x))
+               9 | 	print(round(ans, 4))
+
+  [4] Linha 11: Variável 'ans' com nome muito curto (≤4 chars)
+      Trecho  : ans = ...
+      Contexto:
+              10 | elif 90 <= x < 180 or 270 <= x < 360:
+        >>>   11 | 	ans = cos(radians(x))
+              12 | 	print(round(ans, 4))
+
+======================================================================

@@ -1,0 +1,69 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 2531_3054.py
+Questão  : 2531
+Aluno    : 3054
+Total MCs: 1
+
+⚠️  Misconceptions detectados: G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | V = float(input("premio da mega sena: "))
+     2 | M = float(input("saque mensal fixo: "))
+     3 | i = float(input("informe o juros: "))
+     4 | 
+     5 | mes = 1
+     6 | saldo = V
+     7 | 
+     8 | while(saldo < 0.1 * V ):
+     9 | 	saldo = (saldo + (saldo * i) - M) * mes
+    10 | 	mes = mes + 1
+    11 | if(V <0 ) and (M < 0) and (i< 0):
+    12 | 	print("Dados incorretos")
+    13 | print(round(mes, 2))	
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 5
+
+  [1] Linha 1: Variável 'V' com nome muito curto (≤4 chars)
+      Trecho  : V = ...
+      Contexto:
+        >>>    1 | V = float(input("premio da mega sena: "))
+               2 | M = float(input("saque mensal fixo: "))
+
+  [2] Linha 2: Variável 'M' com nome muito curto (≤4 chars)
+      Trecho  : M = ...
+      Contexto:
+               1 | V = float(input("premio da mega sena: "))
+        >>>    2 | M = float(input("saque mensal fixo: "))
+               3 | i = float(input("informe o juros: "))
+
+  [3] Linha 3: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+               2 | M = float(input("saque mensal fixo: "))
+        >>>    3 | i = float(input("informe o juros: "))
+               4 | 
+
+  [4] Linha 5: Variável 'mes' com nome muito curto (≤4 chars)
+      Trecho  : mes = ...
+      Contexto:
+               4 | 
+        >>>    5 | mes = 1
+               6 | saldo = V
+
+  [5] Linha 10: Variável 'mes' com nome muito curto (≤4 chars)
+      Trecho  : mes = ...
+      Contexto:
+               9 | 	saldo = (saldo + (saldo * i) - M) * mes
+        >>>   10 | 	mes = mes + 1
+              11 | if(V <0 ) and (M < 0) and (i< 0):
+
+======================================================================

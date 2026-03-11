@@ -1,0 +1,51 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1614_2156.py
+Questão  : 1614
+Aluno    : 2156
+Total MCs: 1
+
+⚠️  Misconceptions detectados: B8
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | 
+     3 | frutas = array(eval(input("Digite as frutas: ")))
+     4 | gramas = array(eval(input("Digite as gramas ingeridas: ")))
+     5 | 
+     6 | i = 0
+     7 | kcal = 0
+     8 | 
+     9 | while (i != size(frutas)):
+    10 | 	if(frutas[i] == "BANANA"):
+    11 | 		kcal = (gramas[i] * 0.97) + kcal
+    12 | 	elif (frutas[i] == "BIFE"):
+    13 | 		kcal = (gramas[i] * 2.95) + kcal
+    14 | 	elif (frutas[i] == "FEIJOADA"):
+    15 | 		kcal = (gramas[i] * 1.27) + kcal
+    16 | 	elif (frutas[i] == "OMELETE"):
+    17 | 		kcal = (gramas[i] * 1.04) + kcal
+    18 | 	elif (frutas[i] == "TOMATE"):
+    19 | 		kcal = (gramas[i] * 0.2) + kcal
+    20 | 	i = i+1
+    21 | 	
+    22 | print(round(kcal, 2))
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 16: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 16) / elif ... sem else
+      Contexto:
+              15 | 		kcal = (gramas[i] * 1.27) + kcal
+        >>>   16 | 	elif (frutas[i] == "OMELETE"):
+              17 | 		kcal = (gramas[i] * 1.04) + kcal
+
+======================================================================

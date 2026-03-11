@@ -1,0 +1,73 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1644_3080.py
+Questão  : 1644
+Aluno    : 3080
+Total MCs: 2
+
+⚠️  Misconceptions detectados: A3, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | vnf= array(eval(input())) #pede as notas finais dos alunos
+     3 | r=0 #variavel acumuladora de alunos reprovados
+     4 | vi= zeros(r, dtype=int)
+     5 | for x in vnf :
+     6 | 	if( x < 5):
+     7 | 		r= r + 1
+     8 | print(r)
+     9 | 
+    10 | 		
+    11 | 		
+    12 | 		
+    13 | 	
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 1
+
+  [1] Linha 4: Variável 'vi' declarada mas nunca utilizada
+      Trecho  : vi = ...
+      Contexto:
+               3 | r=0 #variavel acumuladora de alunos reprovados
+        >>>    4 | vi= zeros(r, dtype=int)
+               5 | for x in vnf :
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 4
+
+  [1] Linha 2: Variável 'vnf' com nome muito curto (≤4 chars)
+      Trecho  : vnf = ...
+      Contexto:
+               1 | from numpy import*
+        >>>    2 | vnf= array(eval(input())) #pede as notas finais dos alunos
+               3 | r=0 #variavel acumuladora de alunos reprovados
+
+  [2] Linha 3: Variável 'r' com nome muito curto (≤4 chars)
+      Trecho  : r = ...
+      Contexto:
+               2 | vnf= array(eval(input())) #pede as notas finais dos alunos
+        >>>    3 | r=0 #variavel acumuladora de alunos reprovados
+               4 | vi= zeros(r, dtype=int)
+
+  [3] Linha 4: Variável 'vi' com nome muito curto (≤4 chars)
+      Trecho  : vi = ...
+      Contexto:
+               3 | r=0 #variavel acumuladora de alunos reprovados
+        >>>    4 | vi= zeros(r, dtype=int)
+               5 | for x in vnf :
+
+  [4] Linha 7: Variável 'r' com nome muito curto (≤4 chars)
+      Trecho  : r = ...
+      Contexto:
+               6 | 	if( x < 5):
+        >>>    7 | 		r= r + 1
+               8 | print(r)
+
+======================================================================

@@ -1,0 +1,5 @@
+s0=int(float(1/60))
+v=int(float(10))
+t=int(float(20))
+s = s0 + (v*t)
+print(round(s,2))

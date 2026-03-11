@@ -1,0 +1,97 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1994_2221.py
+Questão  : 1994
+Aluno    : 2221
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | amino= input("digite o nome do aminoacido: ").lower()
+     2 | o=15.9994
+     3 | c=12.011
+     4 | n=14.00674
+     5 | h=1.0079
+     6 | if (amino == "histidina")or (amino == "leucina") or (amino == "lisina"):
+     7 | 	if (amino == "histidina"):
+     8 | 		y= c*6 + h*10 + n*3 + o*2
+     9 | 	elif (amino == "leucina"):
+    10 | 		y= c*6 + h*13 + n*1 + o*2
+    11 | 	elif (amino == "lisina"):
+    12 | 		y= c*6 + h*15 + n*2 + o*2
+    13 | 	print(round(y,2))
+    14 | else:
+    15 | 	print("Entrada:", amino)
+    16 | 	print("Dado Invalido")
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 9: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 9) / elif ... sem else
+      Contexto:
+               8 | 		y= c*6 + h*10 + n*3 + o*2
+        >>>    9 | 	elif (amino == "leucina"):
+              10 | 		y= c*6 + h*13 + n*1 + o*2
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 7
+
+  [1] Linha 2: Variável 'o' com nome muito curto (≤4 chars)
+      Trecho  : o = ...
+      Contexto:
+               1 | amino= input("digite o nome do aminoacido: ").lower()
+        >>>    2 | o=15.9994
+               3 | c=12.011
+
+  [2] Linha 3: Variável 'c' com nome muito curto (≤4 chars)
+      Trecho  : c = ...
+      Contexto:
+               2 | o=15.9994
+        >>>    3 | c=12.011
+               4 | n=14.00674
+
+  [3] Linha 4: Variável 'n' com nome muito curto (≤4 chars)
+      Trecho  : n = ...
+      Contexto:
+               3 | c=12.011
+        >>>    4 | n=14.00674
+               5 | h=1.0079
+
+  [4] Linha 5: Variável 'h' com nome muito curto (≤4 chars)
+      Trecho  : h = ...
+      Contexto:
+               4 | n=14.00674
+        >>>    5 | h=1.0079
+               6 | if (amino == "histidina")or (amino == "leucina") or (amino == "lisina"):
+
+  [5] Linha 8: Variável 'y' com nome muito curto (≤4 chars)
+      Trecho  : y = ...
+      Contexto:
+               7 | 	if (amino == "histidina"):
+        >>>    8 | 		y= c*6 + h*10 + n*3 + o*2
+               9 | 	elif (amino == "leucina"):
+
+  [6] Linha 10: Variável 'y' com nome muito curto (≤4 chars)
+      Trecho  : y = ...
+      Contexto:
+               9 | 	elif (amino == "leucina"):
+        >>>   10 | 		y= c*6 + h*13 + n*1 + o*2
+              11 | 	elif (amino == "lisina"):
+
+  [7] Linha 12: Variável 'y' com nome muito curto (≤4 chars)
+      Trecho  : y = ...
+      Contexto:
+              11 | 	elif (amino == "lisina"):
+        >>>   12 | 		y= c*6 + h*15 + n*2 + o*2
+              13 | 	print(round(y,2))
+
+======================================================================

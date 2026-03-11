@@ -1,0 +1,63 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 3060_4184.py
+Questão  : 3060
+Aluno    : 4184
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | r=int(input("ataque: "))
+     2 | d1=int(input("regra: "))
+     3 | d2=int(input("pontos de vida: "))
+     4 | 
+     5 | if ((d1+d2==12) and  (d1+d2+1)):
+     6 | 	print("ENTRADA: FRAQUEZA")
+     7 | elif ((d1+d2<5) and ((d1+d2+1)*r)):
+     8 | 	print("ENTRADA: CONSTRICAO")
+     9 | elif (("caso contrario") and (d1*d2)):
+    10 | 	print("ENTRADA: POLEN")
+    11 | 						  
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 7: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 7) / elif ... sem else
+      Contexto:
+               6 | 	print("ENTRADA: FRAQUEZA")
+        >>>    7 | elif ((d1+d2<5) and ((d1+d2+1)*r)):
+               8 | 	print("ENTRADA: CONSTRICAO")
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 3
+
+  [1] Linha 1: Variável 'r' com nome muito curto (≤4 chars)
+      Trecho  : r = ...
+      Contexto:
+        >>>    1 | r=int(input("ataque: "))
+               2 | d1=int(input("regra: "))
+
+  [2] Linha 2: Variável 'd1' com nome muito curto (≤4 chars)
+      Trecho  : d1 = ...
+      Contexto:
+               1 | r=int(input("ataque: "))
+        >>>    2 | d1=int(input("regra: "))
+               3 | d2=int(input("pontos de vida: "))
+
+  [3] Linha 3: Variável 'd2' com nome muito curto (≤4 chars)
+      Trecho  : d2 = ...
+      Contexto:
+               2 | d1=int(input("regra: "))
+        >>>    3 | d2=int(input("pontos de vida: "))
+               4 | 
+
+======================================================================

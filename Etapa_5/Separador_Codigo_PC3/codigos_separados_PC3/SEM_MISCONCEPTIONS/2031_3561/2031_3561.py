@@ -1,0 +1,10 @@
+l1=int(float(input("1:")))
+l2=int(float(input("2:")))
+l3=int(float(input("3:")))
+l4=int(float(input("4:")))
+l5=int(float(input("5:")))
+l6=int(float(input("6:")))
+f=6
+if(l1!=-1):
+	if(l1==6):
+while

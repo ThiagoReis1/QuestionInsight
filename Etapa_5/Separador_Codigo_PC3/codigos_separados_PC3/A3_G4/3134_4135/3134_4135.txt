@@ -1,0 +1,68 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 3134_4135.py
+Questão  : 3134
+Aluno    : 4135
+Total MCs: 2
+
+⚠️  Misconceptions detectados: A3, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | v = array(eval(input("Insira um vetor:")))
+     3 | n = size(v)
+     4 | v1 = arange(n)
+     5 | 
+     6 | m = ((v*vt**2)/n)**0.5
+     7 | print(round(m,2))
+     8 | 
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 1
+
+  [1] Linha 4: Variável 'v1' declarada mas nunca utilizada
+      Trecho  : v1 = ...
+      Contexto:
+               3 | n = size(v)
+        >>>    4 | v1 = arange(n)
+               5 | 
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 4
+
+  [1] Linha 2: Variável 'v' com nome muito curto (≤4 chars)
+      Trecho  : v = ...
+      Contexto:
+               1 | from numpy import*
+        >>>    2 | v = array(eval(input("Insira um vetor:")))
+               3 | n = size(v)
+
+  [2] Linha 3: Variável 'n' com nome muito curto (≤4 chars)
+      Trecho  : n = ...
+      Contexto:
+               2 | v = array(eval(input("Insira um vetor:")))
+        >>>    3 | n = size(v)
+               4 | v1 = arange(n)
+
+  [3] Linha 4: Variável 'v1' com nome muito curto (≤4 chars)
+      Trecho  : v1 = ...
+      Contexto:
+               3 | n = size(v)
+        >>>    4 | v1 = arange(n)
+               5 | 
+
+  [4] Linha 6: Variável 'm' com nome muito curto (≤4 chars)
+      Trecho  : m = ...
+      Contexto:
+               5 | 
+        >>>    6 | m = ((v*vt**2)/n)**0.5
+               7 | print(round(m,2))
+
+======================================================================

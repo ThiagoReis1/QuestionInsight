@@ -1,0 +1,61 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 6377_9737.py
+Questão  : 6377
+Aluno    : 9737
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | 
+     3 | st = input().upper().split(',')
+     4 | ax = zeros(4, dtype=int)
+     5 | 
+     6 | for i in range(len(st)):
+     7 | 	if st[i] == 'A':
+     8 | 		ax[0] = ax[0] + 1
+     9 | 	elif st[i] == 'B':
+    10 | 		ax[1] = ax[1] + 1
+    11 | 	elif st[i] == 'C':
+    12 | 		ax[2] = ax[2] + 1
+    13 | 	elif st[i] == 'D':
+    14 | 		ax[3] = ax[3] + 1
+    15 | print(ax)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 11: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 11) / elif ... sem else
+      Contexto:
+              10 | 		ax[1] = ax[1] + 1
+        >>>   11 | 	elif st[i] == 'C':
+              12 | 		ax[2] = ax[2] + 1
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 2
+
+  [1] Linha 3: Variável 'st' com nome muito curto (≤4 chars)
+      Trecho  : st = ...
+      Contexto:
+               2 | 
+        >>>    3 | st = input().upper().split(',')
+               4 | ax = zeros(4, dtype=int)
+
+  [2] Linha 4: Variável 'ax' com nome muito curto (≤4 chars)
+      Trecho  : ax = ...
+      Contexto:
+               3 | st = input().upper().split(',')
+        >>>    4 | ax = zeros(4, dtype=int)
+               5 | 
+
+======================================================================

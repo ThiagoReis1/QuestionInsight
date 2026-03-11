@@ -1,0 +1,77 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1642_7118.py
+Questão  : 1642
+Aluno    : 7118
+Total MCs: 1
+
+⚠️  Misconceptions detectados: G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | 
+     3 | turma = array(eval(input()))
+     4 | acum = 0
+     5 | 
+     6 | for i in range(size(turma)):
+     7 | 	if turma[i] % 5 == 0:
+     8 | 		acum = acum + 1
+     9 | 		
+    10 | a = zeros(acum, dtype = int)
+    11 | b = 0
+    12 | 		
+    13 | for i in range(size(turma)):
+    14 | 	if turma[i] % 5 == 0:
+    15 | 		a[b] = i
+    16 | 		b = b + 1
+    17 | 
+    18 | print(acum)
+    19 | print(a)
+    20 | 
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 5
+
+  [1] Linha 4: Variável 'acum' com nome muito curto (≤4 chars)
+      Trecho  : acum = ...
+      Contexto:
+               3 | turma = array(eval(input()))
+        >>>    4 | acum = 0
+               5 | 
+
+  [2] Linha 10: Variável 'a' com nome muito curto (≤4 chars)
+      Trecho  : a = ...
+      Contexto:
+               9 | 		
+        >>>   10 | a = zeros(acum, dtype = int)
+              11 | b = 0
+
+  [3] Linha 11: Variável 'b' com nome muito curto (≤4 chars)
+      Trecho  : b = ...
+      Contexto:
+              10 | a = zeros(acum, dtype = int)
+        >>>   11 | b = 0
+              12 | 		
+
+  [4] Linha 8: Variável 'acum' com nome muito curto (≤4 chars)
+      Trecho  : acum = ...
+      Contexto:
+               7 | 	if turma[i] % 5 == 0:
+        >>>    8 | 		acum = acum + 1
+               9 | 		
+
+  [5] Linha 16: Variável 'b' com nome muito curto (≤4 chars)
+      Trecho  : b = ...
+      Contexto:
+              15 | 		a[b] = i
+        >>>   16 | 		b = b + 1
+              17 | 
+
+======================================================================

@@ -1,0 +1,7 @@
+a = float(input(""))
+b = (8.42/100*a)
+c = (19.83/100*a)
+d = (71.75/100*a)
+print(round(b,2))
+print(round(c,2))
+print(round(d,2))

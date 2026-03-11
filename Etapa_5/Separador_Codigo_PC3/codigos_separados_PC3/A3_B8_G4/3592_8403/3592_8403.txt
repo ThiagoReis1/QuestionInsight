@@ -1,0 +1,123 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 3592_8403.py
+Questão  : 3592
+Aluno    : 8403
+Total MCs: 3
+
+⚠️  Misconceptions detectados: A3, B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import *
+     2 | 
+     3 | v = array(eval(input('pontos:')))
+     4 | x = 100
+     5 | S = 0
+     6 | 
+     7 | for i in range(size(v)):
+     8 | 	if v[i] == 2:
+     9 | 		s = x * 2
+    10 | 		
+    11 | 	elif v[i] == 3:
+    12 | 		s = (x/3)
+    13 | 		
+    14 | 	elif v[i] == 4:
+    15 | 		s = x * 4
+    16 | 		
+    17 | 	elif v[i] == 5:
+    18 | 		s = x/5
+    19 | 		
+    20 | 	elif v[i] == 6:
+    21 | 		s = x * 6
+    22 | 		
+    23 | print(round(s,2))
+    24 | 		
+    25 | 		
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 1
+
+  [1] Linha 5: Variável 'S' declarada mas nunca utilizada
+      Trecho  : S = ...
+      Contexto:
+               4 | x = 100
+        >>>    5 | S = 0
+               6 | 
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 17: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 17) / elif ... sem else
+      Contexto:
+              16 | 		
+        >>>   17 | 	elif v[i] == 5:
+              18 | 		s = x/5
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 8
+
+  [1] Linha 3: Variável 'v' com nome muito curto (≤4 chars)
+      Trecho  : v = ...
+      Contexto:
+               2 | 
+        >>>    3 | v = array(eval(input('pontos:')))
+               4 | x = 100
+
+  [2] Linha 4: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+               3 | v = array(eval(input('pontos:')))
+        >>>    4 | x = 100
+               5 | S = 0
+
+  [3] Linha 5: Variável 'S' com nome muito curto (≤4 chars)
+      Trecho  : S = ...
+      Contexto:
+               4 | x = 100
+        >>>    5 | S = 0
+               6 | 
+
+  [4] Linha 9: Variável 's' com nome muito curto (≤4 chars)
+      Trecho  : s = ...
+      Contexto:
+               8 | 	if v[i] == 2:
+        >>>    9 | 		s = x * 2
+              10 | 		
+
+  [5] Linha 12: Variável 's' com nome muito curto (≤4 chars)
+      Trecho  : s = ...
+      Contexto:
+              11 | 	elif v[i] == 3:
+        >>>   12 | 		s = (x/3)
+              13 | 		
+
+  [6] Linha 15: Variável 's' com nome muito curto (≤4 chars)
+      Trecho  : s = ...
+      Contexto:
+              14 | 	elif v[i] == 4:
+        >>>   15 | 		s = x * 4
+              16 | 		
+
+  [7] Linha 18: Variável 's' com nome muito curto (≤4 chars)
+      Trecho  : s = ...
+      Contexto:
+              17 | 	elif v[i] == 5:
+        >>>   18 | 		s = x/5
+              19 | 		
+
+  [8] Linha 21: Variável 's' com nome muito curto (≤4 chars)
+      Trecho  : s = ...
+      Contexto:
+              20 | 	elif v[i] == 6:
+        >>>   21 | 		s = x * 6
+              22 | 		
+
+======================================================================

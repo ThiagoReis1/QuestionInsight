@@ -1,0 +1,5 @@
+float(input(EA= 0.12))
+float(input(CSMA = 0.12))
+float(input(CSME = 0.6))
+float(input(EA*CSMA*CSME))
+print(float(input(EA*CSMA*CSME))

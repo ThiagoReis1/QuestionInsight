@@ -1,0 +1,77 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1109_1176.py
+Questão  : 1109
+Aluno    : 1176
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B8, B9
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | idade= int(input("Digite a idade: "))
+     2 | peso= float(input("Digite o peso: "))
+     3 | if(idade>=0 and idade<=130):
+     4 | 	if(peso>=0.0 and peso<=550.0):
+     5 | 		if (idade>=12 and peso>=60):
+     6 | 			print("Entradas: ",idade,"anos e ",peso,"kg")
+     7 | 			print("Dosagem: 1000 mg")
+     8 | 		elif (idade>=12 and peso<60):
+     9 | 			print("Entradas: ",idade,"anos e ",peso,"kg")
+    10 | 			print("Dosagem: 875 mg")
+    11 | 		elif(idade<=12):
+    12 | 			if(peso<=5):
+    13 | 				print("Entradas:",idade,"anos e ",peso,"kg")
+    14 | 				print("Dosagem:75 mg")
+    15 | 			elif (peso>5 and peso<=9):
+    16 | 				print("Entradas:",idade,"anos e ",peso,"kg")
+    17 | 				print("Dosagem: 125 mg")
+    18 | 			elif(peso>9 and peso<=16):
+    19 | 				print("Entradas:",idade,"anos e ",peso,"kg")
+    20 | 				print("Dosagem: 250 mg")
+    21 | 			elif(peso>16 and peso<=24):
+    22 | 				print("Entradas:",idade,"anos e ",peso,"kg")
+    23 | 				print("Dosagem: 375 mg")
+    24 | 			elif(peso>24 and peso<=30):
+    25 | 				print("Entradas: ",idade,"anos e ",peso,"kg")
+    26 | 				print("Dosagem: 500 mg")
+    27 | 			elif (peso>30):
+    28 | 				print("Entradas:",idade,"anos e ",peso,"kg")
+    29 | 				print("Dosagem: 750 mg")
+    30 | else:
+    31 | 	print("Entradas:",idade,"anos e ",peso,"kg")
+    32 | 	print("Dados invalidos")
+    33 | 		
+    34 | 		
+    35 | 	
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 2
+
+  [1] Linha 8: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 8) / elif ... sem else
+      Contexto:
+               7 | 			print("Dosagem: 1000 mg")
+        >>>    8 | 		elif (idade>=12 and peso<60):
+               9 | 			print("Entradas: ",idade,"anos e ",peso,"kg")
+
+  [2] Linha 24: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 24) / elif ... sem else
+      Contexto:
+              23 | 				print("Dosagem: 375 mg")
+        >>>   24 | 			elif(peso>24 and peso<=30):
+              25 | 				print("Entradas: ",idade,"anos e ",peso,"kg")
+
+▶ B9 — elif/else retestando condições já verificadas
+  Ocorrências: 1
+
+  [1] Linha 0: B9 detectado pelo VisitorMC3 (localização exata não mapeada)
+      Trecho  : —
+
+======================================================================

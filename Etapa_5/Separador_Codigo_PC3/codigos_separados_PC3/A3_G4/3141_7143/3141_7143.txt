@@ -1,0 +1,74 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 3141_7143.py
+Questão  : 3141
+Aluno    : 7143
+Total MCs: 2
+
+⚠️  Misconceptions detectados: A3, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | 
+     3 | v = array(eval(input()))
+     4 | 
+     5 | soma = 0
+     6 | p = 0
+     7 | 
+     8 | for i in range(size(v)):
+     9 | 	soma = soma + v[i]**(1/6)
+    10 | 	p = (soma/size(v))**6
+    11 | print(round(p, 2))
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 1
+
+  [1] Linha 0: A3 detectado pelo VisitorMC3 (localização exata não mapeada)
+      Trecho  : —
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 5
+
+  [1] Linha 3: Variável 'v' com nome muito curto (≤4 chars)
+      Trecho  : v = ...
+      Contexto:
+               2 | 
+        >>>    3 | v = array(eval(input()))
+               4 | 
+
+  [2] Linha 5: Variável 'soma' com nome muito curto (≤4 chars)
+      Trecho  : soma = ...
+      Contexto:
+               4 | 
+        >>>    5 | soma = 0
+               6 | p = 0
+
+  [3] Linha 6: Variável 'p' com nome muito curto (≤4 chars)
+      Trecho  : p = ...
+      Contexto:
+               5 | soma = 0
+        >>>    6 | p = 0
+               7 | 
+
+  [4] Linha 9: Variável 'soma' com nome muito curto (≤4 chars)
+      Trecho  : soma = ...
+      Contexto:
+               8 | for i in range(size(v)):
+        >>>    9 | 	soma = soma + v[i]**(1/6)
+              10 | 	p = (soma/size(v))**6
+
+  [5] Linha 10: Variável 'p' com nome muito curto (≤4 chars)
+      Trecho  : p = ...
+      Contexto:
+               9 | 	soma = soma + v[i]**(1/6)
+        >>>   10 | 	p = (soma/size(v))**6
+              11 | print(round(p, 2))
+
+======================================================================

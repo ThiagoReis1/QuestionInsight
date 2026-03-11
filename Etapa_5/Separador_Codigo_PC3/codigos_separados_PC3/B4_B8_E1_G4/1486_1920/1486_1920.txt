@@ -1,0 +1,136 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1486_1920.py
+Questão  : 1486
+Aluno    : 1920
+Total MCs: 4
+
+⚠️  Misconceptions detectados: B4, B8, E1, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | i = input("INGREDIENTE: ").upper()
+     2 | qt = int(input("Quantidade(g):"))
+     3 | if (i=='ARROZ' or i=='CENOURA' or i=='KAMPYO'\
+     4 | or i=='NORI' or i=='OMELETE' or i=='PEPINO'\
+     5 | or i=='SALMAO' or i=='SHITAKE'):
+     6 | #tested before here
+     7 | 	if(qt<0 or qt>10000):
+     8 | 		print('Entrada invalida')
+     9 | 	else:
+    10 | 		#determinar numero de sushis
+    11 | 		if (i=='ARROZ'):
+    12 | 			print(qt//500)
+    13 | 		elif (i=='CENOURA'):
+    14 | 			print(qt//100)
+    15 | 		elif (i=='KAMPYO'):
+    16 | 			print(qt//20)
+    17 | 		elif(i=='NORI'):
+    18 | 			print(qt//50)
+    19 | 		elif (i=='OMELETE'):
+    20 | 			print(qt//200)
+    21 | 		elif (i=='PEPINO'):
+    22 | 			print(qt//150)
+    23 | 		elif (i=='SALMAO'):
+    24 | 			print(qt//300)
+    25 | 		elif (i=='SHITAKE'):
+    26 | 			print(qt//150)
+    27 | #tested 1if 2if 1else
+    28 | else:
+    29 | 	print('Entrada invalida')
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B4 — Comandos repetidos dentro de blocos if-elif-else
+  Ocorrências: 7
+
+  [1] Linha 25: Bloco idêntico ao da linha 21
+      Trecho  : print(qt // 150)
+      Contexto:
+              24 | 			print(qt//300)
+        >>>   25 | 		elif (i=='SHITAKE'):
+              26 | 			print(qt//150)
+
+  [2] Linha 25: Bloco idêntico ao da linha 21
+      Trecho  : print(qt // 150)
+      Contexto:
+              24 | 			print(qt//300)
+        >>>   25 | 		elif (i=='SHITAKE'):
+              26 | 			print(qt//150)
+
+  [3] Linha 25: Bloco idêntico ao da linha 21
+      Trecho  : print(qt // 150)
+      Contexto:
+              24 | 			print(qt//300)
+        >>>   25 | 		elif (i=='SHITAKE'):
+              26 | 			print(qt//150)
+
+  [4] Linha 25: Bloco idêntico ao da linha 21
+      Trecho  : print(qt // 150)
+      Contexto:
+              24 | 			print(qt//300)
+        >>>   25 | 		elif (i=='SHITAKE'):
+              26 | 			print(qt//150)
+
+  [5] Linha 25: Bloco idêntico ao da linha 21
+      Trecho  : print(qt // 150)
+      Contexto:
+              24 | 			print(qt//300)
+        >>>   25 | 		elif (i=='SHITAKE'):
+              26 | 			print(qt//150)
+
+  [6] Linha 25: Bloco idêntico ao da linha 21
+      Trecho  : print(qt // 150)
+      Contexto:
+              24 | 			print(qt//300)
+        >>>   25 | 		elif (i=='SHITAKE'):
+              26 | 			print(qt//150)
+
+  [7] Linha 25: Bloco idêntico ao da linha 21
+      Trecho  : print(qt // 150)
+      Contexto:
+              24 | 			print(qt//300)
+        >>>   25 | 		elif (i=='SHITAKE'):
+              26 | 			print(qt//150)
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 23: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 23) / elif ... sem else
+      Contexto:
+              22 | 			print(qt//150)
+        >>>   23 | 		elif (i=='SALMAO'):
+              24 | 			print(qt//300)
+
+▶ E1 — Verificação desnecessária de todas as combinações possíveis
+  Ocorrências: 1
+
+  [1] Linha 3: 8 condições em um único if — verificação excessiva
+      Trecho  : i == 'ARROZ' or i == 'CENOURA' or i == 'KAMPYO' or (i == 'NORI') or (i == 'OMELETE') or (i == 'PEPINO') or (i == 'SALMAO') or (i == 'SHITAKE')
+      Contexto:
+               2 | qt = int(input("Quantidade(g):"))
+        >>>    3 | if (i=='ARROZ' or i=='CENOURA' or i=='KAMPYO'\
+               4 | or i=='NORI' or i=='OMELETE' or i=='PEPINO'\
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 2
+
+  [1] Linha 1: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+        >>>    1 | i = input("INGREDIENTE: ").upper()
+               2 | qt = int(input("Quantidade(g):"))
+
+  [2] Linha 2: Variável 'qt' com nome muito curto (≤4 chars)
+      Trecho  : qt = ...
+      Contexto:
+               1 | i = input("INGREDIENTE: ").upper()
+        >>>    2 | qt = int(input("Quantidade(g):"))
+               3 | if (i=='ARROZ' or i=='CENOURA' or i=='KAMPYO'\
+
+======================================================================

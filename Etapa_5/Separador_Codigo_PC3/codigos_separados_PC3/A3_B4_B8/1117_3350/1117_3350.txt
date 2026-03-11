@@ -1,0 +1,272 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1117_3350.py
+Questão  : 1117
+Aluno    : 3350
+Total MCs: 3
+
+⚠️  Misconceptions detectados: A3, B4, B8
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | p = float(input("preco do ingresso normal"))
+     2 | d = int(input("dia da semana"))
+     3 | m = input("musica ao vivo")
+     4 | domingo = 1
+     5 | segunda =2
+     6 | terca = 3
+     7 | quarta = 4
+     8 | quinta = 5
+     9 | sexta = 6 
+    10 | sabado = 7
+    11 | n = 20.00
+    12 | e1 = (p)*0.75
+    13 | e2 = (p)*0.75+n
+    14 | e3 = (p)
+    15 | e4 = (p+n)
+    16 | if((p>0) and (d>0 and d<=7) and (m == "S" or m == "N")):
+    17 | 	if((d == 1) and (m == "S")):
+    18 | 		print("Entradas:",p, "," ,d, "," ,m )
+    19 | 		print("Valor a pagar:R$", round(e4,2))
+    20 | 	elif((d == 2) and (m == "S")):
+    21 | 		print("Entradas:",p, "," ,d, "," ,m )
+    22 | 		print("Valor a pagar:R$", round(e2,2))
+    23 | 	elif((d == 3) and (m == "S")):
+    24 | 		print("Entradas:",p, "," ,d, "," ,m )
+    25 | 		print("Valor a pagar:R$", round(e4,2))
+    26 | 	elif((d == 4) and (m == "S")):
+    27 | 		print("Entradas:",p, "," ,d, "," ,m )
+    28 | 		print("Valor a pagar:R$", round(e4,2))
+    29 | 	elif((d == 5) and (m == "S")):
+    30 | 		print("Entradas:",p, "," ,d, "," ,m )
+    31 | 		print("Valor a pagar:R$", round(e4,2))  
+    32 | 	elif((d == 6) and (m == "S")):
+    33 | 		print("Entradas:",p, "," ,d, "," ,m )
+    34 | 		print("Valor a pagar:R$", round(e4,2))
+    35 | 	elif((d == 7) and (m == "S")):
+    36 | 		print("Entradas:",p, "," ,d, "," ,m )
+    37 | 		print("Valor a pagar:R$", round(e4,2))
+    38 | else:
+    39 | 	print("Entradas:",p, "," ,d, "," ,m )
+    40 | 	print("Dados invalidos")
+    41 | 
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 9
+
+  [1] Linha 4: Variável 'domingo' declarada mas nunca utilizada
+      Trecho  : domingo = ...
+      Contexto:
+               3 | m = input("musica ao vivo")
+        >>>    4 | domingo = 1
+               5 | segunda =2
+
+  [2] Linha 5: Variável 'segunda' declarada mas nunca utilizada
+      Trecho  : segunda = ...
+      Contexto:
+               4 | domingo = 1
+        >>>    5 | segunda =2
+               6 | terca = 3
+
+  [3] Linha 6: Variável 'terca' declarada mas nunca utilizada
+      Trecho  : terca = ...
+      Contexto:
+               5 | segunda =2
+        >>>    6 | terca = 3
+               7 | quarta = 4
+
+  [4] Linha 7: Variável 'quarta' declarada mas nunca utilizada
+      Trecho  : quarta = ...
+      Contexto:
+               6 | terca = 3
+        >>>    7 | quarta = 4
+               8 | quinta = 5
+
+  [5] Linha 8: Variável 'quinta' declarada mas nunca utilizada
+      Trecho  : quinta = ...
+      Contexto:
+               7 | quarta = 4
+        >>>    8 | quinta = 5
+               9 | sexta = 6 
+
+  [6] Linha 9: Variável 'sexta' declarada mas nunca utilizada
+      Trecho  : sexta = ...
+      Contexto:
+               8 | quinta = 5
+        >>>    9 | sexta = 6 
+              10 | sabado = 7
+
+  [7] Linha 10: Variável 'sabado' declarada mas nunca utilizada
+      Trecho  : sabado = ...
+      Contexto:
+               9 | sexta = 6 
+        >>>   10 | sabado = 7
+              11 | n = 20.00
+
+  [8] Linha 12: Variável 'e1' declarada mas nunca utilizada
+      Trecho  : e1 = ...
+      Contexto:
+              11 | n = 20.00
+        >>>   12 | e1 = (p)*0.75
+              13 | e2 = (p)*0.75+n
+
+  [9] Linha 14: Variável 'e3' declarada mas nunca utilizada
+      Trecho  : e3 = ...
+      Contexto:
+              13 | e2 = (p)*0.75+n
+        >>>   14 | e3 = (p)
+              15 | e4 = (p+n)
+
+▶ B4 — Comandos repetidos dentro de blocos if-elif-else
+  Ocorrências: 19
+
+  [1] Linha 23: Bloco idêntico ao da linha 17
+      Trecho  : print('Entradas:', p, ',', d, ',', m)
+      Contexto:
+              22 | 		print("Valor a pagar:R$", round(e2,2))
+        >>>   23 | 	elif((d == 3) and (m == "S")):
+              24 | 		print("Entradas:",p, "," ,d, "," ,m )
+
+  [2] Linha 26: Bloco idêntico ao da linha 17
+      Trecho  : print('Entradas:', p, ',', d, ',', m)
+      Contexto:
+              25 | 		print("Valor a pagar:R$", round(e4,2))
+        >>>   26 | 	elif((d == 4) and (m == "S")):
+              27 | 		print("Entradas:",p, "," ,d, "," ,m )
+
+  [3] Linha 29: Bloco idêntico ao da linha 17
+      Trecho  : print('Entradas:', p, ',', d, ',', m)
+      Contexto:
+              28 | 		print("Valor a pagar:R$", round(e4,2))
+        >>>   29 | 	elif((d == 5) and (m == "S")):
+              30 | 		print("Entradas:",p, "," ,d, "," ,m )
+
+  [4] Linha 32: Bloco idêntico ao da linha 17
+      Trecho  : print('Entradas:', p, ',', d, ',', m)
+      Contexto:
+              31 | 		print("Valor a pagar:R$", round(e4,2))  
+        >>>   32 | 	elif((d == 6) and (m == "S")):
+              33 | 		print("Entradas:",p, "," ,d, "," ,m )
+
+  [5] Linha 35: Bloco idêntico ao da linha 17
+      Trecho  : print('Entradas:', p, ',', d, ',', m)
+      Contexto:
+              34 | 		print("Valor a pagar:R$", round(e4,2))
+        >>>   35 | 	elif((d == 7) and (m == "S")):
+              36 | 		print("Entradas:",p, "," ,d, "," ,m )
+
+  [6] Linha 26: Bloco idêntico ao da linha 23
+      Trecho  : print('Entradas:', p, ',', d, ',', m)
+      Contexto:
+              25 | 		print("Valor a pagar:R$", round(e4,2))
+        >>>   26 | 	elif((d == 4) and (m == "S")):
+              27 | 		print("Entradas:",p, "," ,d, "," ,m )
+
+  [7] Linha 29: Bloco idêntico ao da linha 23
+      Trecho  : print('Entradas:', p, ',', d, ',', m)
+      Contexto:
+              28 | 		print("Valor a pagar:R$", round(e4,2))
+        >>>   29 | 	elif((d == 5) and (m == "S")):
+              30 | 		print("Entradas:",p, "," ,d, "," ,m )
+
+  [8] Linha 32: Bloco idêntico ao da linha 23
+      Trecho  : print('Entradas:', p, ',', d, ',', m)
+      Contexto:
+              31 | 		print("Valor a pagar:R$", round(e4,2))  
+        >>>   32 | 	elif((d == 6) and (m == "S")):
+              33 | 		print("Entradas:",p, "," ,d, "," ,m )
+
+  [9] Linha 35: Bloco idêntico ao da linha 23
+      Trecho  : print('Entradas:', p, ',', d, ',', m)
+      Contexto:
+              34 | 		print("Valor a pagar:R$", round(e4,2))
+        >>>   35 | 	elif((d == 7) and (m == "S")):
+              36 | 		print("Entradas:",p, "," ,d, "," ,m )
+
+  [10] Linha 26: Bloco idêntico ao da linha 23
+      Trecho  : print('Entradas:', p, ',', d, ',', m)
+      Contexto:
+              25 | 		print("Valor a pagar:R$", round(e4,2))
+        >>>   26 | 	elif((d == 4) and (m == "S")):
+              27 | 		print("Entradas:",p, "," ,d, "," ,m )
+
+  [11] Linha 29: Bloco idêntico ao da linha 23
+      Trecho  : print('Entradas:', p, ',', d, ',', m)
+      Contexto:
+              28 | 		print("Valor a pagar:R$", round(e4,2))
+        >>>   29 | 	elif((d == 5) and (m == "S")):
+              30 | 		print("Entradas:",p, "," ,d, "," ,m )
+
+  [12] Linha 32: Bloco idêntico ao da linha 23
+      Trecho  : print('Entradas:', p, ',', d, ',', m)
+      Contexto:
+              31 | 		print("Valor a pagar:R$", round(e4,2))  
+        >>>   32 | 	elif((d == 6) and (m == "S")):
+              33 | 		print("Entradas:",p, "," ,d, "," ,m )
+
+  [13] Linha 35: Bloco idêntico ao da linha 23
+      Trecho  : print('Entradas:', p, ',', d, ',', m)
+      Contexto:
+              34 | 		print("Valor a pagar:R$", round(e4,2))
+        >>>   35 | 	elif((d == 7) and (m == "S")):
+              36 | 		print("Entradas:",p, "," ,d, "," ,m )
+
+  [14] Linha 29: Bloco idêntico ao da linha 26
+      Trecho  : print('Entradas:', p, ',', d, ',', m)
+      Contexto:
+              28 | 		print("Valor a pagar:R$", round(e4,2))
+        >>>   29 | 	elif((d == 5) and (m == "S")):
+              30 | 		print("Entradas:",p, "," ,d, "," ,m )
+
+  [15] Linha 32: Bloco idêntico ao da linha 26
+      Trecho  : print('Entradas:', p, ',', d, ',', m)
+      Contexto:
+              31 | 		print("Valor a pagar:R$", round(e4,2))  
+        >>>   32 | 	elif((d == 6) and (m == "S")):
+              33 | 		print("Entradas:",p, "," ,d, "," ,m )
+
+  [16] Linha 35: Bloco idêntico ao da linha 26
+      Trecho  : print('Entradas:', p, ',', d, ',', m)
+      Contexto:
+              34 | 		print("Valor a pagar:R$", round(e4,2))
+        >>>   35 | 	elif((d == 7) and (m == "S")):
+              36 | 		print("Entradas:",p, "," ,d, "," ,m )
+
+  [17] Linha 32: Bloco idêntico ao da linha 29
+      Trecho  : print('Entradas:', p, ',', d, ',', m)
+      Contexto:
+              31 | 		print("Valor a pagar:R$", round(e4,2))  
+        >>>   32 | 	elif((d == 6) and (m == "S")):
+              33 | 		print("Entradas:",p, "," ,d, "," ,m )
+
+  [18] Linha 35: Bloco idêntico ao da linha 29
+      Trecho  : print('Entradas:', p, ',', d, ',', m)
+      Contexto:
+              34 | 		print("Valor a pagar:R$", round(e4,2))
+        >>>   35 | 	elif((d == 7) and (m == "S")):
+              36 | 		print("Entradas:",p, "," ,d, "," ,m )
+
+  [19] Linha 35: Bloco idêntico ao da linha 32
+      Trecho  : print('Entradas:', p, ',', d, ',', m)
+      Contexto:
+              34 | 		print("Valor a pagar:R$", round(e4,2))
+        >>>   35 | 	elif((d == 7) and (m == "S")):
+              36 | 		print("Entradas:",p, "," ,d, "," ,m )
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 32: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 32) / elif ... sem else
+      Contexto:
+              31 | 		print("Valor a pagar:R$", round(e4,2))  
+        >>>   32 | 	elif((d == 6) and (m == "S")):
+              33 | 		print("Entradas:",p, "," ,d, "," ,m )
+
+======================================================================

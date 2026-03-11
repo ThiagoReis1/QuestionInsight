@@ -1,0 +1,77 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1247_1703.py
+Questão  : 1247
+Aluno    : 1703
+Total MCs: 1
+
+⚠️  Misconceptions detectados: G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | # Hanna Soares Rodrigues - 21650885
+     2 | 
+     3 | from numpy import*
+     4 | 
+     5 | vetor = array(eval(input("Digite o vetor: ")))
+     6 | 
+     7 | a = min(vetor)
+     8 | b = max(vetor)
+     9 | c = (0.75*a) + (0.25*b)
+    10 | d = (0.25*a) + (0.75*b)
+    11 | 
+    12 | x = zeros(2,dtype=int)
+    13 | 
+    14 | for i in range(size(vetor)):
+    15 | 	if (vetor[i] >= a) and (vetor[i] < c): 
+    16 | 		x[0] = x[0] + 1
+    17 | 	if (vetor[i] >= d) and (vetor[i] < b): 
+    18 | 		x[1] = x[1] + 1
+    19 | 	
+    20 | print(x)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 5
+
+  [1] Linha 7: Variável 'a' com nome muito curto (≤4 chars)
+      Trecho  : a = ...
+      Contexto:
+               6 | 
+        >>>    7 | a = min(vetor)
+               8 | b = max(vetor)
+
+  [2] Linha 8: Variável 'b' com nome muito curto (≤4 chars)
+      Trecho  : b = ...
+      Contexto:
+               7 | a = min(vetor)
+        >>>    8 | b = max(vetor)
+               9 | c = (0.75*a) + (0.25*b)
+
+  [3] Linha 9: Variável 'c' com nome muito curto (≤4 chars)
+      Trecho  : c = ...
+      Contexto:
+               8 | b = max(vetor)
+        >>>    9 | c = (0.75*a) + (0.25*b)
+              10 | d = (0.25*a) + (0.75*b)
+
+  [4] Linha 10: Variável 'd' com nome muito curto (≤4 chars)
+      Trecho  : d = ...
+      Contexto:
+               9 | c = (0.75*a) + (0.25*b)
+        >>>   10 | d = (0.25*a) + (0.75*b)
+              11 | 
+
+  [5] Linha 12: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+              11 | 
+        >>>   12 | x = zeros(2,dtype=int)
+              13 | 
+
+======================================================================

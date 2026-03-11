@@ -1,0 +1,277 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 5251_7564.py
+Questão  : 5251
+Aluno    : 7564
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B4, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | cid = input("Digite o destino: ").lower()
+     2 | age = int(input("Digite a idade: "))
+     3 | 
+     4 | if((cid!="porto velho" and cid!="santarem" and cid!="belem" and cid!="tefe" and cid!="tabatinga")):
+     5 | 	print("Entradas invalidas")
+     6 | 
+     7 | if(cid=="porto velho"):
+     8 | 	if(age<0 or age>150):
+     9 | 		print("Entradas invalidas")
+    10 | 	elif(age>0 and age<=2):
+    11 | 		print("Passagem: R$0.00")
+    12 | 	elif(age>=3 and age<=12):
+    13 | 		z = 500/2
+    14 | 		print("Passagem: R$",round(z,2))
+    15 | 	elif(age<=13 and age<=64):
+    16 | 		print("Passagem: R$ 500.0")
+    17 | 	elif(age>=65 or age<150):
+    18 | 		z = 500-(500*0.30)
+    19 | 		print("Passagem: R$",round(z,2))
+    20 | 	else:
+    21 | 		print("Passagem: R$500.0")
+    22 | 
+    23 | if(cid=="santarem"):
+    24 | 	if(age<0 or age>150):
+    25 | 		print("Entradas invalidas")
+    26 | 	if(age>0 and age<=2):
+    27 | 		print("Passagem: R$0.00")
+    28 | 	elif(age>=3 and age<=12):
+    29 | 		z = 370/2
+    30 | 		print("Passagem: R$",round(z,2))
+    31 | 	elif(age<=13 and age<=64):
+    32 | 		print("Passagem: R$370.0")
+    33 | 	elif(age>=65 or age<150):
+    34 | 		z = 370-(370*0.30)
+    35 | 		print("Passagem: R$",round(z,2))
+    36 | 	else:
+    37 | 		print("Passagem: R$370.0")
+    38 | 		
+    39 | if(cid=="belem"):
+    40 | 	if(age<0 or age>150):
+    41 | 		print("Entradas invalidas")
+    42 | 	if(age>0 and age<=2):
+    43 | 		print("Passagem: R$0.00")
+    44 | 	elif(age>=3 and age<=12):
+    45 | 		z = 600/2
+    46 | 		print("Passagem: R$",round(z,2))
+    47 | 	elif(age>=13 and age<=64):
+    48 | 		print("Passagem: R$600.0")
+    49 | 	elif(age>=65 or age<150):
+    50 | 		z = 600-(600*0.30)
+    51 | 		print("Passagem: R$",round(z,2))
+    52 | 	else:
+    53 | 		print("Passagem: R$600.0")
+    54 | 		
+    55 | if(cid=="tefe"):
+    56 | 	if(age<0 or age>150):
+    57 | 		print("Entradas invalidas")
+    58 | 	if(age>0 and age<=2):
+    59 | 		print("Passagem: R$0.00")
+    60 | 	elif(age>=3 and age<=12):
+    61 | 		z = 360/2
+    62 | 		print("Passagem: R$",round(z,2))
+    63 | 	elif(age>=13 and age<=64):
+    64 | 		print("Passagem: R$360.0")
+    65 | 	elif(age>=65 or age<150):
+    66 | 		z = 360-(360*0.30)
+    67 | 		print("Passagem: R$",round(z,2))
+    68 | 	else:
+    69 | 		print("Passagem: R$360.0")
+    70 | 		
+    71 | if(cid=="tabatinga"):
+    72 | 	if(age<0 or age>150):
+    73 | 		print("Entradas invalidas")
+    74 | 	if(age>0 and age<=2):
+    75 | 		print("Passagem: R$0.00")
+    76 | 	elif(age>=3 and age<=12):
+    77 | 		z = 550/2
+    78 | 		print("Passagem: R$",round(z,2))
+    79 | 	elif(age>=13 and age<=64):
+    80 | 		print("Passagem: R$550.0")
+    81 | 	elif(age>=65 or age<150):
+    82 | 		z = 550-(550*0.30)
+    83 | 		print("Passagem: R$",round(z,2))
+    84 | 	else:
+    85 | 		print("Passagem: R$550.0")
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B4 — Comandos repetidos dentro de blocos if-elif-else
+  Ocorrências: 12
+
+  [1] Linha 33: Bloco idêntico ao da linha 31
+      Trecho  : print('Passagem: R$370.0')
+      Contexto:
+              32 | 		print("Passagem: R$370.0")
+        >>>   33 | 	elif(age>=65 or age<150):
+              34 | 		z = 370-(370*0.30)
+
+  [2] Linha 49: Bloco idêntico ao da linha 47
+      Trecho  : print('Passagem: R$600.0')
+      Contexto:
+              48 | 		print("Passagem: R$600.0")
+        >>>   49 | 	elif(age>=65 or age<150):
+              50 | 		z = 600-(600*0.30)
+
+  [3] Linha 65: Bloco idêntico ao da linha 63
+      Trecho  : print('Passagem: R$360.0')
+      Contexto:
+              64 | 		print("Passagem: R$360.0")
+        >>>   65 | 	elif(age>=65 or age<150):
+              66 | 		z = 360-(360*0.30)
+
+  [4] Linha 81: Bloco idêntico ao da linha 79
+      Trecho  : print('Passagem: R$550.0')
+      Contexto:
+              80 | 		print("Passagem: R$550.0")
+        >>>   81 | 	elif(age>=65 or age<150):
+              82 | 		z = 550-(550*0.30)
+
+  [5] Linha 33: Bloco idêntico ao da linha 31
+      Trecho  : print('Passagem: R$370.0')
+      Contexto:
+              32 | 		print("Passagem: R$370.0")
+        >>>   33 | 	elif(age>=65 or age<150):
+              34 | 		z = 370-(370*0.30)
+
+  [6] Linha 49: Bloco idêntico ao da linha 47
+      Trecho  : print('Passagem: R$600.0')
+      Contexto:
+              48 | 		print("Passagem: R$600.0")
+        >>>   49 | 	elif(age>=65 or age<150):
+              50 | 		z = 600-(600*0.30)
+
+  [7] Linha 65: Bloco idêntico ao da linha 63
+      Trecho  : print('Passagem: R$360.0')
+      Contexto:
+              64 | 		print("Passagem: R$360.0")
+        >>>   65 | 	elif(age>=65 or age<150):
+              66 | 		z = 360-(360*0.30)
+
+  [8] Linha 81: Bloco idêntico ao da linha 79
+      Trecho  : print('Passagem: R$550.0')
+      Contexto:
+              80 | 		print("Passagem: R$550.0")
+        >>>   81 | 	elif(age>=65 or age<150):
+              82 | 		z = 550-(550*0.30)
+
+  [9] Linha 33: Bloco idêntico ao da linha 31
+      Trecho  : print('Passagem: R$370.0')
+      Contexto:
+              32 | 		print("Passagem: R$370.0")
+        >>>   33 | 	elif(age>=65 or age<150):
+              34 | 		z = 370-(370*0.30)
+
+  [10] Linha 49: Bloco idêntico ao da linha 47
+      Trecho  : print('Passagem: R$600.0')
+      Contexto:
+              48 | 		print("Passagem: R$600.0")
+        >>>   49 | 	elif(age>=65 or age<150):
+              50 | 		z = 600-(600*0.30)
+
+  [11] Linha 65: Bloco idêntico ao da linha 63
+      Trecho  : print('Passagem: R$360.0')
+      Contexto:
+              64 | 		print("Passagem: R$360.0")
+        >>>   65 | 	elif(age>=65 or age<150):
+              66 | 		z = 360-(360*0.30)
+
+  [12] Linha 81: Bloco idêntico ao da linha 79
+      Trecho  : print('Passagem: R$550.0')
+      Contexto:
+              80 | 		print("Passagem: R$550.0")
+        >>>   81 | 	elif(age>=65 or age<150):
+              82 | 		z = 550-(550*0.30)
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 12
+
+  [1] Linha 1: Variável 'cid' com nome muito curto (≤4 chars)
+      Trecho  : cid = ...
+      Contexto:
+        >>>    1 | cid = input("Digite o destino: ").lower()
+               2 | age = int(input("Digite a idade: "))
+
+  [2] Linha 2: Variável 'age' com nome muito curto (≤4 chars)
+      Trecho  : age = ...
+      Contexto:
+               1 | cid = input("Digite o destino: ").lower()
+        >>>    2 | age = int(input("Digite a idade: "))
+               3 | 
+
+  [3] Linha 29: Variável 'z' com nome muito curto (≤4 chars)
+      Trecho  : z = ...
+      Contexto:
+              28 | 	elif(age>=3 and age<=12):
+        >>>   29 | 		z = 370/2
+              30 | 		print("Passagem: R$",round(z,2))
+
+  [4] Linha 45: Variável 'z' com nome muito curto (≤4 chars)
+      Trecho  : z = ...
+      Contexto:
+              44 | 	elif(age>=3 and age<=12):
+        >>>   45 | 		z = 600/2
+              46 | 		print("Passagem: R$",round(z,2))
+
+  [5] Linha 61: Variável 'z' com nome muito curto (≤4 chars)
+      Trecho  : z = ...
+      Contexto:
+              60 | 	elif(age>=3 and age<=12):
+        >>>   61 | 		z = 360/2
+              62 | 		print("Passagem: R$",round(z,2))
+
+  [6] Linha 77: Variável 'z' com nome muito curto (≤4 chars)
+      Trecho  : z = ...
+      Contexto:
+              76 | 	elif(age>=3 and age<=12):
+        >>>   77 | 		z = 550/2
+              78 | 		print("Passagem: R$",round(z,2))
+
+  [7] Linha 13: Variável 'z' com nome muito curto (≤4 chars)
+      Trecho  : z = ...
+      Contexto:
+              12 | 	elif(age>=3 and age<=12):
+        >>>   13 | 		z = 500/2
+              14 | 		print("Passagem: R$",round(z,2))
+
+  [8] Linha 34: Variável 'z' com nome muito curto (≤4 chars)
+      Trecho  : z = ...
+      Contexto:
+              33 | 	elif(age>=65 or age<150):
+        >>>   34 | 		z = 370-(370*0.30)
+              35 | 		print("Passagem: R$",round(z,2))
+
+  [9] Linha 50: Variável 'z' com nome muito curto (≤4 chars)
+      Trecho  : z = ...
+      Contexto:
+              49 | 	elif(age>=65 or age<150):
+        >>>   50 | 		z = 600-(600*0.30)
+              51 | 		print("Passagem: R$",round(z,2))
+
+  [10] Linha 66: Variável 'z' com nome muito curto (≤4 chars)
+      Trecho  : z = ...
+      Contexto:
+              65 | 	elif(age>=65 or age<150):
+        >>>   66 | 		z = 360-(360*0.30)
+              67 | 		print("Passagem: R$",round(z,2))
+
+  [11] Linha 82: Variável 'z' com nome muito curto (≤4 chars)
+      Trecho  : z = ...
+      Contexto:
+              81 | 	elif(age>=65 or age<150):
+        >>>   82 | 		z = 550-(550*0.30)
+              83 | 		print("Passagem: R$",round(z,2))
+
+  [12] Linha 18: Variável 'z' com nome muito curto (≤4 chars)
+      Trecho  : z = ...
+      Contexto:
+              17 | 	elif(age>=65 or age<150):
+        >>>   18 | 		z = 500-(500*0.30)
+              19 | 		print("Passagem: R$",round(z,2))
+
+======================================================================

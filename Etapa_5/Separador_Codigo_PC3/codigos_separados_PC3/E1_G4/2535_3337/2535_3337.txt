@@ -1,0 +1,104 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 2535_3337.py
+Questão  : 2535
+Aluno    : 3337
+Total MCs: 2
+
+⚠️  Misconceptions detectados: E1, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | DA = float(input())
+     2 | DB = float(input())
+     3 | jA = float(input())
+     4 | jB = float(input())
+     5 | t = 0
+     6 | 
+     7 | if DA<=0 or DB <= 0 or jA <= 0 or jB <= 0 or DA <= DB or jA >= jB:
+     8 | 	print("Dados incorretos")
+     9 | else:
+    10 | 	while DA >= DB:
+    11 | 		t = t + 1
+    12 | 		DA = round(DA + DA*jA/100, 2)
+    13 | 		DB = round(DB + DB*jB/100, 2)
+    14 | 		
+    15 | 	print(t)
+    16 | 	
+    17 | 	
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ E1 — Verificação desnecessária de todas as combinações possíveis
+  Ocorrências: 1
+
+  [1] Linha 7: 6 condições em um único if — verificação excessiva
+      Trecho  : DA <= 0 or DB <= 0 or jA <= 0 or (jB <= 0) or (DA <= DB) or (jA >= jB)
+      Contexto:
+               6 | 
+        >>>    7 | if DA<=0 or DB <= 0 or jA <= 0 or jB <= 0 or DA <= DB or jA >= jB:
+               8 | 	print("Dados incorretos")
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 8
+
+  [1] Linha 1: Variável 'DA' com nome muito curto (≤4 chars)
+      Trecho  : DA = ...
+      Contexto:
+        >>>    1 | DA = float(input())
+               2 | DB = float(input())
+
+  [2] Linha 2: Variável 'DB' com nome muito curto (≤4 chars)
+      Trecho  : DB = ...
+      Contexto:
+               1 | DA = float(input())
+        >>>    2 | DB = float(input())
+               3 | jA = float(input())
+
+  [3] Linha 3: Variável 'jA' com nome muito curto (≤4 chars)
+      Trecho  : jA = ...
+      Contexto:
+               2 | DB = float(input())
+        >>>    3 | jA = float(input())
+               4 | jB = float(input())
+
+  [4] Linha 4: Variável 'jB' com nome muito curto (≤4 chars)
+      Trecho  : jB = ...
+      Contexto:
+               3 | jA = float(input())
+        >>>    4 | jB = float(input())
+               5 | t = 0
+
+  [5] Linha 5: Variável 't' com nome muito curto (≤4 chars)
+      Trecho  : t = ...
+      Contexto:
+               4 | jB = float(input())
+        >>>    5 | t = 0
+               6 | 
+
+  [6] Linha 11: Variável 't' com nome muito curto (≤4 chars)
+      Trecho  : t = ...
+      Contexto:
+              10 | 	while DA >= DB:
+        >>>   11 | 		t = t + 1
+              12 | 		DA = round(DA + DA*jA/100, 2)
+
+  [7] Linha 12: Variável 'DA' com nome muito curto (≤4 chars)
+      Trecho  : DA = ...
+      Contexto:
+              11 | 		t = t + 1
+        >>>   12 | 		DA = round(DA + DA*jA/100, 2)
+              13 | 		DB = round(DB + DB*jB/100, 2)
+
+  [8] Linha 13: Variável 'DB' com nome muito curto (≤4 chars)
+      Trecho  : DB = ...
+      Contexto:
+              12 | 		DA = round(DA + DA*jA/100, 2)
+        >>>   13 | 		DB = round(DB + DB*jB/100, 2)
+              14 | 		
+
+======================================================================

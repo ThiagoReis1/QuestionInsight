@@ -1,0 +1,109 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1644_4001.py
+Questão  : 1644
+Aluno    : 4001
+Total MCs: 3
+
+⚠️  Misconceptions detectados: A2, B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import *
+     2 | a = array(eval(input("Notas finais: ")))
+     3 | 
+     4 | R = 0
+     5 | for i in range(size(a)):
+     6 | 	if (a[i] >= 5):
+     7 | 		R = R
+     8 | 	elif (a[i] < 5):
+     9 | 		R = R + 1	
+    10 | v = zeros(R, dtype=int)
+    11 | vs = 0
+    12 | for i in range(size(a)):
+    13 | 	if (a[i] < 5):
+    14 | 		v[vs] = i
+    15 | 		vs = vs + 1
+    16 | 
+    17 | print(R)
+    18 | print(v)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A2 — Variável atribuída a si mesma
+  Ocorrências: 1
+
+  [1] Linha 7: 'R' atribuído a si mesmo
+      Trecho  : R = R
+      Contexto:
+               6 | 	if (a[i] >= 5):
+        >>>    7 | 		R = R
+               8 | 	elif (a[i] < 5):
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 6: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 6) / elif ... sem else
+      Contexto:
+               5 | for i in range(size(a)):
+        >>>    6 | 	if (a[i] >= 5):
+               7 | 		R = R
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 7
+
+  [1] Linha 2: Variável 'a' com nome muito curto (≤4 chars)
+      Trecho  : a = ...
+      Contexto:
+               1 | from numpy import *
+        >>>    2 | a = array(eval(input("Notas finais: ")))
+               3 | 
+
+  [2] Linha 4: Variável 'R' com nome muito curto (≤4 chars)
+      Trecho  : R = ...
+      Contexto:
+               3 | 
+        >>>    4 | R = 0
+               5 | for i in range(size(a)):
+
+  [3] Linha 10: Variável 'v' com nome muito curto (≤4 chars)
+      Trecho  : v = ...
+      Contexto:
+               9 | 		R = R + 1	
+        >>>   10 | v = zeros(R, dtype=int)
+              11 | vs = 0
+
+  [4] Linha 11: Variável 'vs' com nome muito curto (≤4 chars)
+      Trecho  : vs = ...
+      Contexto:
+              10 | v = zeros(R, dtype=int)
+        >>>   11 | vs = 0
+              12 | for i in range(size(a)):
+
+  [5] Linha 7: Variável 'R' com nome muito curto (≤4 chars)
+      Trecho  : R = ...
+      Contexto:
+               6 | 	if (a[i] >= 5):
+        >>>    7 | 		R = R
+               8 | 	elif (a[i] < 5):
+
+  [6] Linha 15: Variável 'vs' com nome muito curto (≤4 chars)
+      Trecho  : vs = ...
+      Contexto:
+              14 | 		v[vs] = i
+        >>>   15 | 		vs = vs + 1
+              16 | 
+
+  [7] Linha 9: Variável 'R' com nome muito curto (≤4 chars)
+      Trecho  : R = ...
+      Contexto:
+               8 | 	elif (a[i] < 5):
+        >>>    9 | 		R = R + 1	
+              10 | v = zeros(R, dtype=int)
+
+======================================================================

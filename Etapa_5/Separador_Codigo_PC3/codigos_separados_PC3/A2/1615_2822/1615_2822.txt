@@ -1,0 +1,70 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1615_2822.py
+Questão  : 1615
+Aluno    : 2822
+Total MCs: 1
+
+⚠️  Misconceptions detectados: A2
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | 
+     3 | num_1 = array(eval(input("Jogador 1: ")))
+     4 | num_2 = array(eval(input("Jogador 2: ")))
+     5 | 
+     6 | i = 0
+     7 | soma1 = 0
+     8 | soma2 = 0
+     9 | while(i<size(num_1)):
+    10 | 	if(num_1[i] == 1):
+    11 | 		soma1 = soma1 + 40
+    12 | 	elif(num_1[i] == 2):
+    13 | 		soma1 = soma1 + 20
+    14 | 	elif(num_1[i] == 3):
+    15 | 		soma1 = soma1 + 10
+    16 | 	else:
+    17 | 		soma1 = soma1
+    18 | 	if(num_2[i] == 1):
+    19 | 		soma2 = soma2 + 40
+    20 | 	elif(num_2[i] == 2):
+    21 | 		soma2 = soma2 + 20
+    22 | 	elif(num_2[i] == 3):
+    23 | 		soma2 = soma2 + 10
+    24 | 	else:
+    25 | 		soma2 = soma2
+    26 | 	i = i + 1
+    27 | 		
+    28 | 
+    29 | if(soma2 < soma1):
+    30 | 	print("JOGADOR UM")
+    31 | elif(soma1 == soma2):
+    32 | 	print("EMPATE")
+    33 | else:
+    34 | 	print("JOGADOR DOIS")
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A2 — Variável atribuída a si mesma
+  Ocorrências: 2
+
+  [1] Linha 17: 'soma1' atribuído a si mesmo
+      Trecho  : soma1 = soma1
+      Contexto:
+              16 | 	else:
+        >>>   17 | 		soma1 = soma1
+              18 | 	if(num_2[i] == 1):
+
+  [2] Linha 25: 'soma2' atribuído a si mesmo
+      Trecho  : soma2 = soma2
+      Contexto:
+              24 | 	else:
+        >>>   25 | 		soma2 = soma2
+              26 | 	i = i + 1
+
+======================================================================

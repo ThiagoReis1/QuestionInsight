@@ -1,0 +1,68 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 5300_7159.py
+Questão  : 5300
+Aluno    : 7159
+Total MCs: 3
+
+⚠️  Misconceptions detectados: A3, A4, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | rpm = float(input())
+     2 | 
+     3 | min = 0
+     4 | 
+     5 | while(rpm >= 50):
+     6 | 	print(round(rpm, 2))
+     7 | 	rpm = rpm - rpm*0.25
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 1
+
+  [1] Linha 3: Variável 'min' declarada mas nunca utilizada
+      Trecho  : min = ...
+      Contexto:
+               2 | 
+        >>>    3 | min = 0
+               4 | 
+
+▶ A4 — Redefinição de built-in
+  Ocorrências: 1
+
+  [1] Linha 3: Built-in 'min' redefinido como variável
+      Trecho  : min = 0
+      Contexto:
+               2 | 
+        >>>    3 | min = 0
+               4 | 
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 3
+
+  [1] Linha 1: Variável 'rpm' com nome muito curto (≤4 chars)
+      Trecho  : rpm = ...
+      Contexto:
+        >>>    1 | rpm = float(input())
+               2 | 
+
+  [2] Linha 3: Variável 'min' com nome muito curto (≤4 chars)
+      Trecho  : min = ...
+      Contexto:
+               2 | 
+        >>>    3 | min = 0
+               4 | 
+
+  [3] Linha 7: Variável 'rpm' com nome muito curto (≤4 chars)
+      Trecho  : rpm = ...
+      Contexto:
+               6 | 	print(round(rpm, 2))
+        >>>    7 | 	rpm = rpm - rpm*0.25
+
+======================================================================

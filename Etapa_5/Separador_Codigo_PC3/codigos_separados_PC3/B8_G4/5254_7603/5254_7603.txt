@@ -1,0 +1,90 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 5254_7603.py
+Questão  : 5254
+Aluno    : 7603
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | 
+     2 | p = float(input("preco do produto:"))
+     3 | c = int(input("codigo da regiao"))
+     4 | 
+     5 | if c >=1 and c <=4:
+     6 | 	if c == 1:
+     7 | 		s = (( p -  p * 0.4) + p * ( 10 / 100))
+     8 | 	elif c == 2:
+     9 | 		s = ((p - ( p * 0.4)) + p * ( 8 / 100))
+    10 | 	elif c == 3:
+    11 | 		s = ((p - ( p * 0.4)) )
+    12 | 	elif c == 4:
+    13 | 		s = ((p - (p * 0.4)) + p * ( 2 / 100))
+    14 | 		
+    15 | print(round(s, 2))
+    16 | 
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 10: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 10) / elif ... sem else
+      Contexto:
+               9 | 		s = ((p - ( p * 0.4)) + p * ( 8 / 100))
+        >>>   10 | 	elif c == 3:
+              11 | 		s = ((p - ( p * 0.4)) )
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 6
+
+  [1] Linha 2: Variável 'p' com nome muito curto (≤4 chars)
+      Trecho  : p = ...
+      Contexto:
+               1 | 
+        >>>    2 | p = float(input("preco do produto:"))
+               3 | c = int(input("codigo da regiao"))
+
+  [2] Linha 3: Variável 'c' com nome muito curto (≤4 chars)
+      Trecho  : c = ...
+      Contexto:
+               2 | p = float(input("preco do produto:"))
+        >>>    3 | c = int(input("codigo da regiao"))
+               4 | 
+
+  [3] Linha 7: Variável 's' com nome muito curto (≤4 chars)
+      Trecho  : s = ...
+      Contexto:
+               6 | 	if c == 1:
+        >>>    7 | 		s = (( p -  p * 0.4) + p * ( 10 / 100))
+               8 | 	elif c == 2:
+
+  [4] Linha 9: Variável 's' com nome muito curto (≤4 chars)
+      Trecho  : s = ...
+      Contexto:
+               8 | 	elif c == 2:
+        >>>    9 | 		s = ((p - ( p * 0.4)) + p * ( 8 / 100))
+              10 | 	elif c == 3:
+
+  [5] Linha 11: Variável 's' com nome muito curto (≤4 chars)
+      Trecho  : s = ...
+      Contexto:
+              10 | 	elif c == 3:
+        >>>   11 | 		s = ((p - ( p * 0.4)) )
+              12 | 	elif c == 4:
+
+  [6] Linha 13: Variável 's' com nome muito curto (≤4 chars)
+      Trecho  : s = ...
+      Contexto:
+              12 | 	elif c == 4:
+        >>>   13 | 		s = ((p - (p * 0.4)) + p * ( 2 / 100))
+              14 | 		
+
+======================================================================

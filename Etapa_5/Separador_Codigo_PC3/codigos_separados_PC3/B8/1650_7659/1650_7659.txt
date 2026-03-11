@@ -1,0 +1,49 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1650_7659.py
+Questão  : 1650
+Aluno    : 7659
+Total MCs: 1
+
+⚠️  Misconceptions detectados: B8
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import *
+     2 | 
+     3 | cabelos = input("digite: ").upper().split(',')
+     4 | 
+     5 | soma = zeros(5, dtype=int)
+     6 | 
+     7 | for i in range(size(cabelos)):
+     8 | 	if cabelos[i] == 'P' :
+     9 | 		soma[0] = soma[0] + 1
+    10 | 	elif cabelos[i] == 'C':
+    11 | 		soma[1] = soma[1] + 1
+    12 | 	elif cabelos[i] == 'R':
+    13 | 		soma[2] = soma[2] + 1
+    14 | 	elif cabelos[i] == 'L':
+    15 | 		soma[3] = soma[3] + 1
+    16 | 	elif cabelos[i] == 'B':
+    17 | 		soma[4] = soma[4] + 1
+    18 | 
+    19 | print(max(soma))
+    20 | print(soma)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 14: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 14) / elif ... sem else
+      Contexto:
+              13 | 		soma[2] = soma[2] + 1
+        >>>   14 | 	elif cabelos[i] == 'L':
+              15 | 		soma[3] = soma[3] + 1
+
+======================================================================

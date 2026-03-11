@@ -1,0 +1,88 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 3590_8230.py
+Questão  : 3590
+Aluno    : 8230
+Total MCs: 3
+
+⚠️  Misconceptions detectados: A2, B4, B8
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import *
+     2 | 
+     3 | faces = array(eval(input("informe as faces do dado sorteadas pelo jogador: ")))
+     4 | total = 0
+     5 | i = 0
+     6 | 
+     7 | while i < size(faces):
+     8 | 	face = faces[i]
+     9 | 	
+    10 | 	if(face == 1):
+    11 | 		total = total + 10
+    12 | 	elif(face == 2):
+    13 | 		total = total + 5
+    14 | 	elif(face == 3):
+    15 | 		total = total
+    16 | 	elif(face == 4):
+    17 | 		total = total + 5
+    18 | 	elif(face == 5):
+    19 | 		total = total + 20
+    20 | 	elif(face == 6):
+    21 | 		total = total + 10
+    22 | 		
+    23 | 	i = i + 1
+    24 | 	
+    25 | print(total)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A2 — Variável atribuída a si mesma
+  Ocorrências: 1
+
+  [1] Linha 15: 'total' atribuído a si mesmo
+      Trecho  : total = total
+      Contexto:
+              14 | 	elif(face == 3):
+        >>>   15 | 		total = total
+              16 | 	elif(face == 4):
+
+▶ B4 — Comandos repetidos dentro de blocos if-elif-else
+  Ocorrências: 3
+
+  [1] Linha 16: Bloco idêntico ao da linha 12
+      Trecho  : total = total + 5
+      Contexto:
+              15 | 		total = total
+        >>>   16 | 	elif(face == 4):
+              17 | 		total = total + 5
+
+  [2] Linha 20: Bloco idêntico ao da linha 10
+      Trecho  : total = total + 10
+      Contexto:
+              19 | 		total = total + 20
+        >>>   20 | 	elif(face == 6):
+              21 | 		total = total + 10
+
+  [3] Linha 16: Bloco idêntico ao da linha 12
+      Trecho  : total = total + 5
+      Contexto:
+              15 | 		total = total
+        >>>   16 | 	elif(face == 4):
+              17 | 		total = total + 5
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 18: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 18) / elif ... sem else
+      Contexto:
+              17 | 		total = total + 5
+        >>>   18 | 	elif(face == 5):
+              19 | 		total = total + 20
+
+======================================================================

@@ -1,0 +1,72 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 6175_8201.py
+Questão  : 6175
+Aluno    : 8201
+Total MCs: 2
+
+⚠️  Misconceptions detectados: A3, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from math import *
+     2 | x=float(input("x: "))
+     3 | if x<-4 or x>4:
+     4 | 	print("entrada invalida")
+     5 | else:
+     6 | 	if x>=-4 or x<0:
+     7 | 		h=abs(x)
+     8 | 		g=sqrt(abs(x))
+     9 | 		print(round(g, 4))
+    10 | 	else:
+    11 | 		h=sqrt(x)
+    12 | 		print(round(x, 4))
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 1
+
+  [1] Linha 7: Variável 'h' declarada mas nunca utilizada
+      Trecho  : h = ...
+      Contexto:
+               6 | 	if x>=-4 or x<0:
+        >>>    7 | 		h=abs(x)
+               8 | 		g=sqrt(abs(x))
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 4
+
+  [1] Linha 2: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+               1 | from math import *
+        >>>    2 | x=float(input("x: "))
+               3 | if x<-4 or x>4:
+
+  [2] Linha 7: Variável 'h' com nome muito curto (≤4 chars)
+      Trecho  : h = ...
+      Contexto:
+               6 | 	if x>=-4 or x<0:
+        >>>    7 | 		h=abs(x)
+               8 | 		g=sqrt(abs(x))
+
+  [3] Linha 8: Variável 'g' com nome muito curto (≤4 chars)
+      Trecho  : g = ...
+      Contexto:
+               7 | 		h=abs(x)
+        >>>    8 | 		g=sqrt(abs(x))
+               9 | 		print(round(g, 4))
+
+  [4] Linha 11: Variável 'h' com nome muito curto (≤4 chars)
+      Trecho  : h = ...
+      Contexto:
+              10 | 	else:
+        >>>   11 | 		h=sqrt(x)
+              12 | 		print(round(x, 4))
+
+======================================================================

@@ -1,0 +1,90 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 3593_9252.py
+Questão  : 3593
+Aluno    : 9252
+Total MCs: 3
+
+⚠️  Misconceptions detectados: A3, B11, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import *
+     2 | num = eval(input("Lances: "))
+     3 | ptf=0
+     4 | pti=200
+     5 | i=0
+     6 | 
+     7 | while i<size(num):
+     8 | 	if num[i]==1:
+     9 | 		pti /= 2
+    10 | 	if num[i]==2:
+    11 | 		pti *=3
+    12 | 	if num[i]==3:
+    13 | 		pti /=2
+    14 | 	if num[i]==4:
+    15 | 		pti *=3
+    16 | 	if num[i]==5:
+    17 | 		pti /=2
+    18 | 	if num[i]==6:
+    19 | 		pti *=3
+    20 | 	i+=1
+    21 | 	
+    22 | print(round(pti,2))	
+    23 | 	
+    24 | 
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 1
+
+  [1] Linha 3: Variável 'ptf' declarada mas nunca utilizada
+      Trecho  : ptf = ...
+      Contexto:
+               2 | num = eval(input("Lances: "))
+        >>>    3 | ptf=0
+               4 | pti=200
+
+▶ B11 — Ifs distintos com blocos idênticos
+  Ocorrências: 1
+
+  [1] Linha 0: B11 detectado pelo VisitorMC3 (localização exata não mapeada)
+      Trecho  : —
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 4
+
+  [1] Linha 2: Variável 'num' com nome muito curto (≤4 chars)
+      Trecho  : num = ...
+      Contexto:
+               1 | from numpy import *
+        >>>    2 | num = eval(input("Lances: "))
+               3 | ptf=0
+
+  [2] Linha 3: Variável 'ptf' com nome muito curto (≤4 chars)
+      Trecho  : ptf = ...
+      Contexto:
+               2 | num = eval(input("Lances: "))
+        >>>    3 | ptf=0
+               4 | pti=200
+
+  [3] Linha 4: Variável 'pti' com nome muito curto (≤4 chars)
+      Trecho  : pti = ...
+      Contexto:
+               3 | ptf=0
+        >>>    4 | pti=200
+               5 | i=0
+
+  [4] Linha 5: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+               4 | pti=200
+        >>>    5 | i=0
+               6 | 
+
+======================================================================

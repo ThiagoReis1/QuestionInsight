@@ -1,0 +1,84 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 6107_6376.py
+Questão  : 6107
+Aluno    : 6376
+Total MCs: 3
+
+⚠️  Misconceptions detectados: B8, B9, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | x = float(input("quantidade: "))
+     2 | if (x < 17.5 ):
+     3 | 	z = x + 1.5
+     4 | elif (x >= 17.5) and (x < 35.0):
+     5 | 	z = x + 2.3
+     6 | elif (x >= 35.0) and (x < 50.0):
+     7 | 	z =  x + 3.3
+     8 | elif (x >= 50.0):
+     9 | 	z = x + 4.7
+    10 | 
+    11 | print(round(z, 2))
+    12 | 	
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 6: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 6) / elif ... sem else
+      Contexto:
+               5 | 	z = x + 2.3
+        >>>    6 | elif (x >= 35.0) and (x < 50.0):
+               7 | 	z =  x + 3.3
+
+▶ B9 — elif/else retestando condições já verificadas
+  Ocorrências: 1
+
+  [1] Linha 0: B9 detectado pelo VisitorMC3 (localização exata não mapeada)
+      Trecho  : —
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 5
+
+  [1] Linha 1: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+        >>>    1 | x = float(input("quantidade: "))
+               2 | if (x < 17.5 ):
+
+  [2] Linha 3: Variável 'z' com nome muito curto (≤4 chars)
+      Trecho  : z = ...
+      Contexto:
+               2 | if (x < 17.5 ):
+        >>>    3 | 	z = x + 1.5
+               4 | elif (x >= 17.5) and (x < 35.0):
+
+  [3] Linha 5: Variável 'z' com nome muito curto (≤4 chars)
+      Trecho  : z = ...
+      Contexto:
+               4 | elif (x >= 17.5) and (x < 35.0):
+        >>>    5 | 	z = x + 2.3
+               6 | elif (x >= 35.0) and (x < 50.0):
+
+  [4] Linha 7: Variável 'z' com nome muito curto (≤4 chars)
+      Trecho  : z = ...
+      Contexto:
+               6 | elif (x >= 35.0) and (x < 50.0):
+        >>>    7 | 	z =  x + 3.3
+               8 | elif (x >= 50.0):
+
+  [5] Linha 9: Variável 'z' com nome muito curto (≤4 chars)
+      Trecho  : z = ...
+      Contexto:
+               8 | elif (x >= 50.0):
+        >>>    9 | 	z = x + 4.7
+              10 | 
+
+======================================================================

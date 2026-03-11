@@ -1,0 +1,122 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 6935_9767.py
+Questão  : 6935
+Aluno    : 9767
+Total MCs: 3
+
+⚠️  Misconceptions detectados: B4, B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | vdc = float ( input ("Valor da compra: "))
+     2 | mt = str ( input ("Metodo de pagamento(D/P/C): "))
+     3 | 
+     4 | if mt.upper() == "C":
+     5 | 	nv = int ( input ("Numero de vezes: "))
+     6 | 	if nv == 1:
+     7 | 		soma = vdc
+     8 | 		print (round ( soma , 2))
+     9 | 	elif nv == 2:
+    10 | 		soma = vdc + vdc * 0.07
+    11 | 		print (round ( soma , 2 ))
+    12 | elif mt.upper() == "D":
+    13 | 	soma = vdc * 0.88
+    14 | 	print (round ( soma , 2 ))
+    15 | elif mt.upper() == "P":
+    16 | 	soma = vdc * 0.88
+    17 | 	print (round ( soma , 2 ))
+    18 | 	
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B4 — Comandos repetidos dentro de blocos if-elif-else
+  Ocorrências: 2
+
+  [1] Linha 15: Bloco idêntico ao da linha 12
+      Trecho  : soma = vdc * 0.88
+      Contexto:
+              14 | 	print (round ( soma , 2 ))
+        >>>   15 | elif mt.upper() == "P":
+              16 | 	soma = vdc * 0.88
+
+  [2] Linha 15: Bloco idêntico ao da linha 12
+      Trecho  : soma = vdc * 0.88
+      Contexto:
+              14 | 	print (round ( soma , 2 ))
+        >>>   15 | elif mt.upper() == "P":
+              16 | 	soma = vdc * 0.88
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 2
+
+  [1] Linha 6: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 6) / elif ... sem else
+      Contexto:
+               5 | 	nv = int ( input ("Numero de vezes: "))
+        >>>    6 | 	if nv == 1:
+               7 | 		soma = vdc
+
+  [2] Linha 12: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 12) / elif ... sem else
+      Contexto:
+              11 | 		print (round ( soma , 2 ))
+        >>>   12 | elif mt.upper() == "D":
+              13 | 	soma = vdc * 0.88
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 7
+
+  [1] Linha 1: Variável 'vdc' com nome muito curto (≤4 chars)
+      Trecho  : vdc = ...
+      Contexto:
+        >>>    1 | vdc = float ( input ("Valor da compra: "))
+               2 | mt = str ( input ("Metodo de pagamento(D/P/C): "))
+
+  [2] Linha 2: Variável 'mt' com nome muito curto (≤4 chars)
+      Trecho  : mt = ...
+      Contexto:
+               1 | vdc = float ( input ("Valor da compra: "))
+        >>>    2 | mt = str ( input ("Metodo de pagamento(D/P/C): "))
+               3 | 
+
+  [3] Linha 5: Variável 'nv' com nome muito curto (≤4 chars)
+      Trecho  : nv = ...
+      Contexto:
+               4 | if mt.upper() == "C":
+        >>>    5 | 	nv = int ( input ("Numero de vezes: "))
+               6 | 	if nv == 1:
+
+  [4] Linha 7: Variável 'soma' com nome muito curto (≤4 chars)
+      Trecho  : soma = ...
+      Contexto:
+               6 | 	if nv == 1:
+        >>>    7 | 		soma = vdc
+               8 | 		print (round ( soma , 2))
+
+  [5] Linha 13: Variável 'soma' com nome muito curto (≤4 chars)
+      Trecho  : soma = ...
+      Contexto:
+              12 | elif mt.upper() == "D":
+        >>>   13 | 	soma = vdc * 0.88
+              14 | 	print (round ( soma , 2 ))
+
+  [6] Linha 10: Variável 'soma' com nome muito curto (≤4 chars)
+      Trecho  : soma = ...
+      Contexto:
+               9 | 	elif nv == 2:
+        >>>   10 | 		soma = vdc + vdc * 0.07
+              11 | 		print (round ( soma , 2 ))
+
+  [7] Linha 16: Variável 'soma' com nome muito curto (≤4 chars)
+      Trecho  : soma = ...
+      Contexto:
+              15 | elif mt.upper() == "P":
+        >>>   16 | 	soma = vdc * 0.88
+              17 | 	print (round ( soma , 2 ))
+
+======================================================================

@@ -1,0 +1,22 @@
+from numpy import*
+a=input("Digite:").split(',')
+b=zeros(5,dtype=int)
+i=0
+while(i<len(a)):
+	if(a[i]=="P"):
+		b[0]=b[0]+1
+		i=i+1
+	elif(a[i]=="C"):
+		b[1]=b[1]+1
+		i=i+1
+	elif(a[i]=="M"):
+		b[2]=b[2]+1
+		i=i+1
+	elif(a[i]=="V"):
+		b[3]=b[3]+1
+		i=i+1
+	else:
+		b[4]=b[4]+1
+		i=i+1
+print(max(b))
+print(b)

@@ -1,0 +1,58 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 2535_3213.py
+Questão  : 2535
+Aluno    : 3213
+Total MCs: 2
+
+⚠️  Misconceptions detectados: E1, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | da = float(input("DA: "))
+     2 | db = float(input("DB: "))
+     3 | ja = float(input("TJA: "))
+     4 | jb = float(input("TJB: "))
+     5 | 
+     6 | cont = 0
+     7 | somaa = da
+     8 | somab = db
+     9 | 
+    10 | if (da > 0 and db > 0 and ja > 0 and jb > 0 and da > db and ja < jb):
+    11 | 	while ( somaa > somab):
+    12 | 		ta = (somaa * ja)/100
+    13 | 		somaa = somaa + ta
+    14 | 		tb = (somab * jb)/100
+    15 | 		somab = somab + tb
+    16 | 		cont = cont + 1
+    17 | 		somaa = round(somaa, 2) 
+    18 | 		somab = round(somab, 2)
+    19 | 	print(cont)
+    20 | else:
+    21 | 	print("Dados incorretos")
+    22 | 	
+    23 | #print(cont)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ E1 — Verificação desnecessária de todas as combinações possíveis
+  Ocorrências: 1
+
+  [1] Linha 10: 6 condições em um único if — verificação excessiva
+      Trecho  : da > 0 and db > 0 and (ja > 0) and (jb > 0) and (da > db) and (ja < jb)
+      Contexto:
+               9 | 
+        >>>   10 | if (da > 0 and db > 0 and ja > 0 and jb > 0 and da > db and ja < jb):
+              11 | 	while ( somaa > somab):
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 1
+
+  [1] Linha 0: G4 detectado pelo VisitorMC3 (localização exata não mapeada)
+      Trecho  : —
+
+======================================================================

@@ -1,0 +1,80 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 2590_3092.py
+Questão  : 2590
+Aluno    : 3092
+Total MCs: 2
+
+⚠️  Misconceptions detectados: C8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from math import*
+     2 | from numpy import*
+     3 | 
+     4 | v= array(eval(input("v:")))
+     5 | i=1
+     6 | n=0
+     7 | 
+     8 | for i in range(size(v)):
+     9 | 	if v[i]<v[0]:
+    10 | 		print(i)
+    11 | 		n=n+1
+    12 | 	i=i+1
+    13 | print(n)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ C8 — Loop for com sua variável de iteração sobrescrita
+  Ocorrências: 1
+
+  [1] Linha 12: Variável de iteração 'i' sobrescrita no loop
+      Trecho  : i = i + 1
+      Contexto:
+              11 | 		n=n+1
+        >>>   12 | 	i=i+1
+              13 | print(n)
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 5
+
+  [1] Linha 4: Variável 'v' com nome muito curto (≤4 chars)
+      Trecho  : v = ...
+      Contexto:
+               3 | 
+        >>>    4 | v= array(eval(input("v:")))
+               5 | i=1
+
+  [2] Linha 5: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+               4 | v= array(eval(input("v:")))
+        >>>    5 | i=1
+               6 | n=0
+
+  [3] Linha 6: Variável 'n' com nome muito curto (≤4 chars)
+      Trecho  : n = ...
+      Contexto:
+               5 | i=1
+        >>>    6 | n=0
+               7 | 
+
+  [4] Linha 12: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+              11 | 		n=n+1
+        >>>   12 | 	i=i+1
+              13 | print(n)
+
+  [5] Linha 11: Variável 'n' com nome muito curto (≤4 chars)
+      Trecho  : n = ...
+      Contexto:
+              10 | 		print(i)
+        >>>   11 | 		n=n+1
+              12 | 	i=i+1
+
+======================================================================

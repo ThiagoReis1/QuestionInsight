@@ -1,0 +1,69 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 3177_5013.py
+Questão  : 3177
+Aluno    : 5013
+Total MCs: 2
+
+⚠️  Misconceptions detectados: A3, B8
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | 
+     3 | s = input(": ")
+     4 | 
+     5 | v = 'aeiou'
+     6 | 
+     7 | conta = 0
+     8 | conte = 0
+     9 | conti = 0
+    10 | conto = 0
+    11 | contu = 0
+    12 | 
+    13 | for i in range(len(s)):
+    14 | 	if s[i] == 'a':
+    15 | 		conta = conta + 1
+    16 | 	elif s[i] == 'e':
+    17 | 		conte = conte + 1
+    18 | 	elif s[i] == 'i':
+    19 | 		conti = conti + 1
+    20 | 	elif s[i] == 'o':
+    21 | 		conto = conto + 1
+    22 | 	elif s[i] == 'u':
+    23 | 		contu = contu + 1
+    24 | 		
+    25 | print('a:', conta)
+    26 | print('e:', conte)
+    27 | print('i:', conti)
+    28 | print('o:', conto)
+    29 | print('u:', contu)
+    30 | 	
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 1
+
+  [1] Linha 5: Variável 'v' declarada mas nunca utilizada
+      Trecho  : v = ...
+      Contexto:
+               4 | 
+        >>>    5 | v = 'aeiou'
+               6 | 
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 20: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 20) / elif ... sem else
+      Contexto:
+              19 | 		conti = conti + 1
+        >>>   20 | 	elif s[i] == 'o':
+              21 | 		conto = conto + 1
+
+======================================================================

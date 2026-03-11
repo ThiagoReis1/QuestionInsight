@@ -1,0 +1,51 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1650_3311.py
+Questão  : 1650
+Aluno    : 3311
+Total MCs: 1
+
+⚠️  Misconceptions detectados: B8
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | #cor do cabelo
+     2 | from numpy import*
+     3 | from math import*
+     4 | nome = input("Digite:")
+     5 | vetor = nome.split(',')
+     6 | vetor_resposta = zeros(5,dtype=int)#numero de cores de cabelo(pele ou estados) disponiveis -> 5
+     7 | for cont in vetor:
+     8 | 	if(cont.upper()=="P"):
+     9 | 		vetor_resposta[0]=vetor_resposta[0]+1
+    10 | 	elif(cont.upper()=="C"):
+    11 | 		vetor_resposta[1]=vetor_resposta[1]+1
+    12 | 	elif(cont.upper()=="R"):
+    13 | 		vetor_resposta[2]=vetor_resposta[2]+1
+    14 | 	elif(cont.upper()=="L"):
+    15 | 		vetor_resposta[3]=vetor_resposta[3]+1
+    16 | 	elif(cont.upper()=="B"):
+    17 | 		vetor_resposta[4]=vetor_resposta[4]+1
+    18 | print(max(vetor_resposta))
+    19 | print(vetor_resposta)
+    20 | 
+    21 | 
+    22 | 
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 14: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 14) / elif ... sem else
+      Contexto:
+              13 | 		vetor_resposta[2]=vetor_resposta[2]+1
+        >>>   14 | 	elif(cont.upper()=="L"):
+              15 | 		vetor_resposta[3]=vetor_resposta[3]+1
+
+======================================================================

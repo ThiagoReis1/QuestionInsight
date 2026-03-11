@@ -1,0 +1,60 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 3180_4125.py
+Questão  : 3180
+Aluno    : 4125
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | 
+     3 | x = array(eval(input("digite os pacientes diagnosticados com dengue: ")))
+     4 | a = zeros(4, dtype= int)
+     5 | for i in range(size(x)):
+     6 | 	if (x[i]==1):
+     7 | 		a[0]= a[0] + 1
+     8 | 	elif(x[i]==2):
+     9 | 		a[1]= a[1] + 1
+    10 | 	elif(x[i]==3):
+    11 | 		a[2]= a[2] + 1
+    12 | 	elif(x[i]==4):
+    13 | 		a[3]= a[3] + 1
+    14 | print(a)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 10: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 10) / elif ... sem else
+      Contexto:
+               9 | 		a[1]= a[1] + 1
+        >>>   10 | 	elif(x[i]==3):
+              11 | 		a[2]= a[2] + 1
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 2
+
+  [1] Linha 3: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+               2 | 
+        >>>    3 | x = array(eval(input("digite os pacientes diagnosticados com dengue: ")))
+               4 | a = zeros(4, dtype= int)
+
+  [2] Linha 4: Variável 'a' com nome muito curto (≤4 chars)
+      Trecho  : a = ...
+      Contexto:
+               3 | x = array(eval(input("digite os pacientes diagnosticados com dengue: ")))
+        >>>    4 | a = zeros(4, dtype= int)
+               5 | for i in range(size(x)):
+
+======================================================================

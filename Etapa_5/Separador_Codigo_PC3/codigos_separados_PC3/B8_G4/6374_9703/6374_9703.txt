@@ -1,0 +1,63 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 6374_9703.py
+Questão  : 6374
+Aluno    : 9703
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import *
+     2 | 
+     3 | 
+     4 | p = input().upper().split(",")
+     5 | cm = zeros(4,dtype=int)
+     6 | for i in p:
+     7 | 	if i == "O":
+     8 | 		cm[0] = cm[0] + 1
+     9 | 	elif i == "D":
+    10 | 		cm[1] = cm[1] + 1
+    11 | 	elif i == "N":
+    12 | 		cm[2]= cm[2] + 1
+    13 | 	elif i == "C":
+    14 | 		cm[3]= cm[3] + 1
+    15 | print(cm)
+    16 | 		
+    17 | 
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 11: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 11) / elif ... sem else
+      Contexto:
+              10 | 		cm[1] = cm[1] + 1
+        >>>   11 | 	elif i == "N":
+              12 | 		cm[2]= cm[2] + 1
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 2
+
+  [1] Linha 4: Variável 'p' com nome muito curto (≤4 chars)
+      Trecho  : p = ...
+      Contexto:
+               3 | 
+        >>>    4 | p = input().upper().split(",")
+               5 | cm = zeros(4,dtype=int)
+
+  [2] Linha 5: Variável 'cm' com nome muito curto (≤4 chars)
+      Trecho  : cm = ...
+      Contexto:
+               4 | p = input().upper().split(",")
+        >>>    5 | cm = zeros(4,dtype=int)
+               6 | for i in p:
+
+======================================================================

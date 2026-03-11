@@ -1,0 +1,73 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 6391_8753.py
+Questão  : 6391
+Aluno    : 8753
+Total MCs: 2
+
+⚠️  Misconceptions detectados: A3, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | vet = array(eval(input("vetor: ")))
+     3 | verb = zeros(size(vet), dtype = int)
+     4 | k = 0
+     5 | numi = size(vet)
+     6 | 
+     7 | for i in vet:
+     8 | 	if (i != 0):
+     9 | 		verb[k] = (vet[k] - 1) ** 3
+    10 | 	else:
+    11 | 		verb[k] = 9 ** 3
+    12 | 	k += 1
+    13 | print(verb)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 1
+
+  [1] Linha 5: Variável 'numi' declarada mas nunca utilizada
+      Trecho  : numi = ...
+      Contexto:
+               4 | k = 0
+        >>>    5 | numi = size(vet)
+               6 | 
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 4
+
+  [1] Linha 2: Variável 'vet' com nome muito curto (≤4 chars)
+      Trecho  : vet = ...
+      Contexto:
+               1 | from numpy import*
+        >>>    2 | vet = array(eval(input("vetor: ")))
+               3 | verb = zeros(size(vet), dtype = int)
+
+  [2] Linha 3: Variável 'verb' com nome muito curto (≤4 chars)
+      Trecho  : verb = ...
+      Contexto:
+               2 | vet = array(eval(input("vetor: ")))
+        >>>    3 | verb = zeros(size(vet), dtype = int)
+               4 | k = 0
+
+  [3] Linha 4: Variável 'k' com nome muito curto (≤4 chars)
+      Trecho  : k = ...
+      Contexto:
+               3 | verb = zeros(size(vet), dtype = int)
+        >>>    4 | k = 0
+               5 | numi = size(vet)
+
+  [4] Linha 5: Variável 'numi' com nome muito curto (≤4 chars)
+      Trecho  : numi = ...
+      Contexto:
+               4 | k = 0
+        >>>    5 | numi = size(vet)
+               6 | 
+
+======================================================================

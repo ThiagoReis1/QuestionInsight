@@ -1,0 +1,15 @@
+from numpy import *
+
+c = input('contagem').upper().split(',')
+j = zeros(4, dtype=int)
+
+for i in c:
+	if i == 'A':
+		j[0] += 1
+	elif i == 'B':
+		j[1] += 1
+	elif i == 'C':
+		j[2] += 1
+	elif i == 'D':
+		j[3] += 1
+print(j)

@@ -1,0 +1,118 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1613_3570.py
+Questão  : 1613
+Aluno    : 3570
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import *
+     2 | atv = array(eval(input("atividade:")))
+     3 | gas = array(eval(input("gasto calorico:")))
+     4 | 
+     5 | i = 0
+     6 | cal = zeros(size(atv))
+     7 | while(i < size(atv)):
+     8 | 	if(atv[i] == "ALONGAMENTO"):
+     9 | 		cal[i] = 3*gas[i]
+    10 | 		i = i + 1
+    11 | 	elif(atv[i] == "CORRIDA"):
+    12 | 		cal[i] = gas[i]*10.3
+    13 | 		i = i + 1
+    14 | 	elif(atv[i] == "DANCA"):
+    15 | 		cal[i] = gas[i]*6.7
+    16 | 		i = i + 1
+    17 | 	elif(atv[i] == "ESCALADA"):
+    18 | 		cal[i] = gas[i]*9.7
+    19 | 		i = i + 1
+    20 | 	elif(atv[i] == "HIDROGINASTICA"):
+    21 | 		cal[i] = gas[i]*5
+    22 | 		i = i + 1
+    23 | print(round(sum(cal),2))		
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 17: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 17) / elif ... sem else
+      Contexto:
+              16 | 		i = i + 1
+        >>>   17 | 	elif(atv[i] == "ESCALADA"):
+              18 | 		cal[i] = gas[i]*9.7
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 9
+
+  [1] Linha 2: Variável 'atv' com nome muito curto (≤4 chars)
+      Trecho  : atv = ...
+      Contexto:
+               1 | from numpy import *
+        >>>    2 | atv = array(eval(input("atividade:")))
+               3 | gas = array(eval(input("gasto calorico:")))
+
+  [2] Linha 3: Variável 'gas' com nome muito curto (≤4 chars)
+      Trecho  : gas = ...
+      Contexto:
+               2 | atv = array(eval(input("atividade:")))
+        >>>    3 | gas = array(eval(input("gasto calorico:")))
+               4 | 
+
+  [3] Linha 5: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+               4 | 
+        >>>    5 | i = 0
+               6 | cal = zeros(size(atv))
+
+  [4] Linha 6: Variável 'cal' com nome muito curto (≤4 chars)
+      Trecho  : cal = ...
+      Contexto:
+               5 | i = 0
+        >>>    6 | cal = zeros(size(atv))
+               7 | while(i < size(atv)):
+
+  [5] Linha 10: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+               9 | 		cal[i] = 3*gas[i]
+        >>>   10 | 		i = i + 1
+              11 | 	elif(atv[i] == "CORRIDA"):
+
+  [6] Linha 13: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+              12 | 		cal[i] = gas[i]*10.3
+        >>>   13 | 		i = i + 1
+              14 | 	elif(atv[i] == "DANCA"):
+
+  [7] Linha 16: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+              15 | 		cal[i] = gas[i]*6.7
+        >>>   16 | 		i = i + 1
+              17 | 	elif(atv[i] == "ESCALADA"):
+
+  [8] Linha 19: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+              18 | 		cal[i] = gas[i]*9.7
+        >>>   19 | 		i = i + 1
+              20 | 	elif(atv[i] == "HIDROGINASTICA"):
+
+  [9] Linha 22: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+              21 | 		cal[i] = gas[i]*5
+        >>>   22 | 		i = i + 1
+              23 | print(round(sum(cal),2))		
+
+======================================================================

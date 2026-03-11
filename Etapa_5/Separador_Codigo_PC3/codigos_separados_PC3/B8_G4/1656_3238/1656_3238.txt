@@ -1,0 +1,112 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1656_3238.py
+Questão  : 1656
+Aluno    : 3238
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import *
+     2 | 
+     3 | a = input("Digite ").upper()
+     4 | v = a.split(',')
+     5 | vet_z = zeros(5, dtype=int)
+     6 | be = 0
+     7 | es = 0
+     8 | fr = 0
+     9 | it = 0
+    10 | pt = 0
+    11 | 
+    12 | for i in range(len(v)):
+    13 | 	if v[i] == "BE":
+    14 | 		be += 1
+    15 | 	elif v[i] == "ES":
+    16 | 		es += 1
+    17 | 	elif v[i] == "FR":
+    18 | 		fr += 1
+    19 | 	elif v[i] == "IT":
+    20 | 		it += 1
+    21 | 	elif v[i] == "PT":
+    22 | 		pt += 1
+    23 | 
+    24 | vet_z[0] = be 
+    25 | vet_z[1] = es
+    26 | vet_z[2] = fr
+    27 | vet_z[3] = it
+    28 | vet_z[4] = pt
+    29 | 
+    30 | print(max(vet_z))
+    31 | print(vet_z)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 19: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 19) / elif ... sem else
+      Contexto:
+              18 | 		fr += 1
+        >>>   19 | 	elif v[i] == "IT":
+              20 | 		it += 1
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 7
+
+  [1] Linha 3: Variável 'a' com nome muito curto (≤4 chars)
+      Trecho  : a = ...
+      Contexto:
+               2 | 
+        >>>    3 | a = input("Digite ").upper()
+               4 | v = a.split(',')
+
+  [2] Linha 4: Variável 'v' com nome muito curto (≤4 chars)
+      Trecho  : v = ...
+      Contexto:
+               3 | a = input("Digite ").upper()
+        >>>    4 | v = a.split(',')
+               5 | vet_z = zeros(5, dtype=int)
+
+  [3] Linha 6: Variável 'be' com nome muito curto (≤4 chars)
+      Trecho  : be = ...
+      Contexto:
+               5 | vet_z = zeros(5, dtype=int)
+        >>>    6 | be = 0
+               7 | es = 0
+
+  [4] Linha 7: Variável 'es' com nome muito curto (≤4 chars)
+      Trecho  : es = ...
+      Contexto:
+               6 | be = 0
+        >>>    7 | es = 0
+               8 | fr = 0
+
+  [5] Linha 8: Variável 'fr' com nome muito curto (≤4 chars)
+      Trecho  : fr = ...
+      Contexto:
+               7 | es = 0
+        >>>    8 | fr = 0
+               9 | it = 0
+
+  [6] Linha 9: Variável 'it' com nome muito curto (≤4 chars)
+      Trecho  : it = ...
+      Contexto:
+               8 | fr = 0
+        >>>    9 | it = 0
+              10 | pt = 0
+
+  [7] Linha 10: Variável 'pt' com nome muito curto (≤4 chars)
+      Trecho  : pt = ...
+      Contexto:
+               9 | it = 0
+        >>>   10 | pt = 0
+              11 | 
+
+======================================================================

@@ -1,0 +1,115 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1111_3044.py
+Questão  : 1111
+Aluno    : 3044
+Total MCs: 3
+
+⚠️  Misconceptions detectados: B8, B9, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | x=float(input("horas extras: "))
+     2 | y=float(input("horas faltas: "))
+     3 | h=x-(2/3)*y
+     4 | print("Entradas: ",x,"horas extras e ",y,"horas de falta")
+     5 | if(x<0 or y<0):
+     6 | 	print("Dados invalidos")
+     7 | else:
+     8 | 	if(h>2400):
+     9 | 		g=500.0
+    10 | 		print("Gratificacao: R$",round(g,2))
+    11 | 	elif(h>1800 and h<=2400):
+    12 | 		g=400.0
+    13 | 		print("Gratificacao: R$",round(g,2))
+    14 | 	elif(h>1200 and h<=1800):
+    15 | 		g=300.0
+    16 | 		print("Gratificacao: R$",round(g,2))
+    17 | 	elif(h>600 and h<=1200):
+    18 | 		g=200.0
+    19 | 		print("Gratificacao: R$",round(g,2))
+    20 | 	elif(h<=600):
+    21 | 		g=100.0
+    22 | 		print("Gratificacao: R$",round(g,2))
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 17: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 17) / elif ... sem else
+      Contexto:
+              16 | 		print("Gratificacao: R$",round(g,2))
+        >>>   17 | 	elif(h>600 and h<=1200):
+              18 | 		g=200.0
+
+▶ B9 — elif/else retestando condições já verificadas
+  Ocorrências: 1
+
+  [1] Linha 0: B9 detectado pelo VisitorMC3 (localização exata não mapeada)
+      Trecho  : —
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 8
+
+  [1] Linha 1: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+        >>>    1 | x=float(input("horas extras: "))
+               2 | y=float(input("horas faltas: "))
+
+  [2] Linha 2: Variável 'y' com nome muito curto (≤4 chars)
+      Trecho  : y = ...
+      Contexto:
+               1 | x=float(input("horas extras: "))
+        >>>    2 | y=float(input("horas faltas: "))
+               3 | h=x-(2/3)*y
+
+  [3] Linha 3: Variável 'h' com nome muito curto (≤4 chars)
+      Trecho  : h = ...
+      Contexto:
+               2 | y=float(input("horas faltas: "))
+        >>>    3 | h=x-(2/3)*y
+               4 | print("Entradas: ",x,"horas extras e ",y,"horas de falta")
+
+  [4] Linha 9: Variável 'g' com nome muito curto (≤4 chars)
+      Trecho  : g = ...
+      Contexto:
+               8 | 	if(h>2400):
+        >>>    9 | 		g=500.0
+              10 | 		print("Gratificacao: R$",round(g,2))
+
+  [5] Linha 12: Variável 'g' com nome muito curto (≤4 chars)
+      Trecho  : g = ...
+      Contexto:
+              11 | 	elif(h>1800 and h<=2400):
+        >>>   12 | 		g=400.0
+              13 | 		print("Gratificacao: R$",round(g,2))
+
+  [6] Linha 15: Variável 'g' com nome muito curto (≤4 chars)
+      Trecho  : g = ...
+      Contexto:
+              14 | 	elif(h>1200 and h<=1800):
+        >>>   15 | 		g=300.0
+              16 | 		print("Gratificacao: R$",round(g,2))
+
+  [7] Linha 18: Variável 'g' com nome muito curto (≤4 chars)
+      Trecho  : g = ...
+      Contexto:
+              17 | 	elif(h>600 and h<=1200):
+        >>>   18 | 		g=200.0
+              19 | 		print("Gratificacao: R$",round(g,2))
+
+  [8] Linha 21: Variável 'g' com nome muito curto (≤4 chars)
+      Trecho  : g = ...
+      Contexto:
+              20 | 	elif(h<=600):
+        >>>   21 | 		g=100.0
+              22 | 		print("Gratificacao: R$",round(g,2))
+
+======================================================================

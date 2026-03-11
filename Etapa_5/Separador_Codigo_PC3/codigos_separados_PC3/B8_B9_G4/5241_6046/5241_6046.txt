@@ -1,0 +1,86 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 5241_6046.py
+Questão  : 5241
+Aluno    : 6046
+Total MCs: 3
+
+⚠️  Misconceptions detectados: B8, B9, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | ca= int(input("consumo de agua: "))
+     2 | 
+     3 | if ca<10:
+     4 | 	tca= (2*ca)+20
+     5 | 	print(round(tca, 2))
+     6 | elif ca>=10 and ca<20:
+     7 | 	tca= (2.5*ca)+20
+     8 | 	print(round(tca, 2))
+     9 | elif ca>=20 and ca<40:
+    10 | 	tca= (2.75*ca)+20
+    11 | 	print(round(tca, 2))
+    12 | elif ca>=40: 
+    13 | 	tca= (3*ca)+20
+    14 | 	print(round(tca, 2))
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 9: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 9) / elif ... sem else
+      Contexto:
+               8 | 	print(round(tca, 2))
+        >>>    9 | elif ca>=20 and ca<40:
+              10 | 	tca= (2.75*ca)+20
+
+▶ B9 — elif/else retestando condições já verificadas
+  Ocorrências: 1
+
+  [1] Linha 0: B9 detectado pelo VisitorMC3 (localização exata não mapeada)
+      Trecho  : —
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 5
+
+  [1] Linha 1: Variável 'ca' com nome muito curto (≤4 chars)
+      Trecho  : ca = ...
+      Contexto:
+        >>>    1 | ca= int(input("consumo de agua: "))
+               2 | 
+
+  [2] Linha 4: Variável 'tca' com nome muito curto (≤4 chars)
+      Trecho  : tca = ...
+      Contexto:
+               3 | if ca<10:
+        >>>    4 | 	tca= (2*ca)+20
+               5 | 	print(round(tca, 2))
+
+  [3] Linha 7: Variável 'tca' com nome muito curto (≤4 chars)
+      Trecho  : tca = ...
+      Contexto:
+               6 | elif ca>=10 and ca<20:
+        >>>    7 | 	tca= (2.5*ca)+20
+               8 | 	print(round(tca, 2))
+
+  [4] Linha 10: Variável 'tca' com nome muito curto (≤4 chars)
+      Trecho  : tca = ...
+      Contexto:
+               9 | elif ca>=20 and ca<40:
+        >>>   10 | 	tca= (2.75*ca)+20
+              11 | 	print(round(tca, 2))
+
+  [5] Linha 13: Variável 'tca' com nome muito curto (≤4 chars)
+      Trecho  : tca = ...
+      Contexto:
+              12 | elif ca>=40: 
+        >>>   13 | 	tca= (3*ca)+20
+              14 | 	print(round(tca, 2))
+
+======================================================================

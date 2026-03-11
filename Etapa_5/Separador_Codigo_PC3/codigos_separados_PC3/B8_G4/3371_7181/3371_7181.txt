@@ -1,0 +1,77 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 3371_7181.py
+Questão  : 3371
+Aluno    : 7181
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | med=input("K para quilometro M para milhas:  ")
+     2 | 
+     3 | if(med.upper()=="M"):  
+     4 | 	ml=float(input("entre com as milhas:  "))
+     5 | 	km=1.60934*ml
+     6 | 	print(round(km, 2))
+     7 | else:
+     8 | 	if(med.upper()=="K"):
+     9 | 		km=float(input("entre com os km:  "))
+    10 | 		ml=km/1.60934
+    11 | 		print(round(ml, 2))
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 3: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 3) / elif ... sem else
+      Contexto:
+               2 | 
+        >>>    3 | if(med.upper()=="M"):  
+               4 | 	ml=float(input("entre com as milhas:  "))
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 5
+
+  [1] Linha 1: Variável 'med' com nome muito curto (≤4 chars)
+      Trecho  : med = ...
+      Contexto:
+        >>>    1 | med=input("K para quilometro M para milhas:  ")
+               2 | 
+
+  [2] Linha 4: Variável 'ml' com nome muito curto (≤4 chars)
+      Trecho  : ml = ...
+      Contexto:
+               3 | if(med.upper()=="M"):  
+        >>>    4 | 	ml=float(input("entre com as milhas:  "))
+               5 | 	km=1.60934*ml
+
+  [3] Linha 5: Variável 'km' com nome muito curto (≤4 chars)
+      Trecho  : km = ...
+      Contexto:
+               4 | 	ml=float(input("entre com as milhas:  "))
+        >>>    5 | 	km=1.60934*ml
+               6 | 	print(round(km, 2))
+
+  [4] Linha 9: Variável 'km' com nome muito curto (≤4 chars)
+      Trecho  : km = ...
+      Contexto:
+               8 | 	if(med.upper()=="K"):
+        >>>    9 | 		km=float(input("entre com os km:  "))
+              10 | 		ml=km/1.60934
+
+  [5] Linha 10: Variável 'ml' com nome muito curto (≤4 chars)
+      Trecho  : ml = ...
+      Contexto:
+               9 | 		km=float(input("entre com os km:  "))
+        >>>   10 | 		ml=km/1.60934
+              11 | 		print(round(ml, 2))
+
+======================================================================

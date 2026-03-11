@@ -1,0 +1,73 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 6833_9221.py
+Questão  : 6833
+Aluno    : 9221
+Total MCs: 2
+
+⚠️  Misconceptions detectados: A3, B8
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | produto = input ("digite uma letra: ").upper()
+     2 | 
+     3 | i= 0
+     4 | valor_total = 0
+     5 | qtd_mercearia = 0
+     6 | qtd_padaria = 0
+     7 | qtd_rotisseria = 0
+     8 | 
+     9 | while i < len (produto):
+    10 | 	if produto [i] == "M":
+    11 | 		valor_total += 7.25
+    12 | 		qtd_mercearia += 1
+    13 | 	elif produto [i] == "P":
+    14 | 		valor_total += 4.75
+    15 | 		qtd_padaria += 1
+    16 | 	elif produto [i] == "R":
+    17 | 		valor_total += 3.50
+    18 | 		qtd_rotisseria += 1 
+    19 | 	i += 1
+    20 | print (round (valor_total, 2))
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 3
+
+  [1] Linha 5: Variável 'qtd_mercearia' declarada mas nunca utilizada
+      Trecho  : qtd_mercearia = ...
+      Contexto:
+               4 | valor_total = 0
+        >>>    5 | qtd_mercearia = 0
+               6 | qtd_padaria = 0
+
+  [2] Linha 6: Variável 'qtd_padaria' declarada mas nunca utilizada
+      Trecho  : qtd_padaria = ...
+      Contexto:
+               5 | qtd_mercearia = 0
+        >>>    6 | qtd_padaria = 0
+               7 | qtd_rotisseria = 0
+
+  [3] Linha 7: Variável 'qtd_rotisseria' declarada mas nunca utilizada
+      Trecho  : qtd_rotisseria = ...
+      Contexto:
+               6 | qtd_padaria = 0
+        >>>    7 | qtd_rotisseria = 0
+               8 | 
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 13: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 13) / elif ... sem else
+      Contexto:
+              12 | 		qtd_mercearia += 1
+        >>>   13 | 	elif produto [i] == "P":
+              14 | 		valor_total += 4.75
+
+======================================================================

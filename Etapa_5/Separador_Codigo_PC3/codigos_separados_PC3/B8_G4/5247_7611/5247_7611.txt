@@ -1,0 +1,90 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 5247_7611.py
+Questão  : 5247
+Aluno    : 7611
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | sa = float(input('salario atual: '))
+     2 | cod = int(input('codigo do cargo: '))
+     3 | if (sa>0) and (cod==101 or cod==102 or cod==103 or cod==104):
+     4 | 	if cod==101:
+     5 | 		ns = (sa*0.008) + sa
+     6 | 		
+     7 | 	elif cod==102:
+     8 | 		ns = (sa*0.0065) + sa
+     9 | 		
+    10 | 	elif cod==103:
+    11 | 		ns = (sa*0.006) + sa
+    12 | 		
+    13 | 	elif cod==104:
+    14 | 		ns = (sa*0.0055) + sa
+    15 | 	print('Novo salario: R$',round(ns,2))
+    16 | else:
+    17 | 	print('Dados invalidos')
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 10: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 10) / elif ... sem else
+      Contexto:
+               9 | 		
+        >>>   10 | 	elif cod==103:
+              11 | 		ns = (sa*0.006) + sa
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 6
+
+  [1] Linha 1: Variável 'sa' com nome muito curto (≤4 chars)
+      Trecho  : sa = ...
+      Contexto:
+        >>>    1 | sa = float(input('salario atual: '))
+               2 | cod = int(input('codigo do cargo: '))
+
+  [2] Linha 2: Variável 'cod' com nome muito curto (≤4 chars)
+      Trecho  : cod = ...
+      Contexto:
+               1 | sa = float(input('salario atual: '))
+        >>>    2 | cod = int(input('codigo do cargo: '))
+               3 | if (sa>0) and (cod==101 or cod==102 or cod==103 or cod==104):
+
+  [3] Linha 5: Variável 'ns' com nome muito curto (≤4 chars)
+      Trecho  : ns = ...
+      Contexto:
+               4 | 	if cod==101:
+        >>>    5 | 		ns = (sa*0.008) + sa
+               6 | 		
+
+  [4] Linha 8: Variável 'ns' com nome muito curto (≤4 chars)
+      Trecho  : ns = ...
+      Contexto:
+               7 | 	elif cod==102:
+        >>>    8 | 		ns = (sa*0.0065) + sa
+               9 | 		
+
+  [5] Linha 11: Variável 'ns' com nome muito curto (≤4 chars)
+      Trecho  : ns = ...
+      Contexto:
+              10 | 	elif cod==103:
+        >>>   11 | 		ns = (sa*0.006) + sa
+              12 | 		
+
+  [6] Linha 14: Variável 'ns' com nome muito curto (≤4 chars)
+      Trecho  : ns = ...
+      Contexto:
+              13 | 	elif cod==104:
+        >>>   14 | 		ns = (sa*0.0055) + sa
+              15 | 	print('Novo salario: R$',round(ns,2))
+
+======================================================================

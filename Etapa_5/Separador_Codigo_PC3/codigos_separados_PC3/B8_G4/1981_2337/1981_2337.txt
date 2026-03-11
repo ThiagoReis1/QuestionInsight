@@ -1,0 +1,91 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1981_2337.py
+Questão  : 1981
+Aluno    : 2337
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | r = input("digite o resultado do time de futebol")
+     2 | v = input("digite quantas vezes o time de futebol alcançou esse resultado")
+     3 | 
+     4 | if(r != "Campeao" and r != "Vice-campeao") or (v != "06-vezes" and v != "03-vezes" and v != "01-vezes"):
+     5 | 	print("TIME DE FUTEBOL NAO IDENTIFICADO")
+     6 | else:
+     7 | 	if r == "Campeao" and v == "06-vezes":
+     8 | 		X = "Corinthians"
+     9 | 		print(X.upper())
+    10 | 	elif r == "Campeao" and v == "03-vezes":
+    11 | 		X = "Santos"
+    12 | 		print(X.upper())
+    13 | 	elif r == "Vice-campeao" and v == "01-vezes":
+    14 | 		X = "Flamengo"
+    15 | 		print(X.upper())
+    16 | 	elif r == "Vice-campeao" and v == "06-vezes":
+    17 | 		X = "Internacional"
+    18 | 		print(X.upper())
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 13: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 13) / elif ... sem else
+      Contexto:
+              12 | 		print(X.upper())
+        >>>   13 | 	elif r == "Vice-campeao" and v == "01-vezes":
+              14 | 		X = "Flamengo"
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 6
+
+  [1] Linha 1: Variável 'r' com nome muito curto (≤4 chars)
+      Trecho  : r = ...
+      Contexto:
+        >>>    1 | r = input("digite o resultado do time de futebol")
+               2 | v = input("digite quantas vezes o time de futebol alcançou esse resultado")
+
+  [2] Linha 2: Variável 'v' com nome muito curto (≤4 chars)
+      Trecho  : v = ...
+      Contexto:
+               1 | r = input("digite o resultado do time de futebol")
+        >>>    2 | v = input("digite quantas vezes o time de futebol alcançou esse resultado")
+               3 | 
+
+  [3] Linha 8: Variável 'X' com nome muito curto (≤4 chars)
+      Trecho  : X = ...
+      Contexto:
+               7 | 	if r == "Campeao" and v == "06-vezes":
+        >>>    8 | 		X = "Corinthians"
+               9 | 		print(X.upper())
+
+  [4] Linha 11: Variável 'X' com nome muito curto (≤4 chars)
+      Trecho  : X = ...
+      Contexto:
+              10 | 	elif r == "Campeao" and v == "03-vezes":
+        >>>   11 | 		X = "Santos"
+              12 | 		print(X.upper())
+
+  [5] Linha 14: Variável 'X' com nome muito curto (≤4 chars)
+      Trecho  : X = ...
+      Contexto:
+              13 | 	elif r == "Vice-campeao" and v == "01-vezes":
+        >>>   14 | 		X = "Flamengo"
+              15 | 		print(X.upper())
+
+  [6] Linha 17: Variável 'X' com nome muito curto (≤4 chars)
+      Trecho  : X = ...
+      Contexto:
+              16 | 	elif r == "Vice-campeao" and v == "06-vezes":
+        >>>   17 | 		X = "Internacional"
+              18 | 		print(X.upper())
+
+======================================================================

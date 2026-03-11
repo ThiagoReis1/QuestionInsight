@@ -1,0 +1,79 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 2590_3104.py
+Questão  : 2590
+Aluno    : 3104
+Total MCs: 2
+
+⚠️  Misconceptions detectados: C8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | acid = array(eval(input()))
+     3 | i = 0
+     4 | j = 0
+     5 | for i in range(size(acid)): 
+     6 | 	if(acid[i]<acid[0]):
+     7 | 		j = j + 1
+     8 | 		print(i)
+     9 | 	i = i +1
+    10 | 	
+    11 | print(j)
+    12 | 		
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ C8 — Loop for com sua variável de iteração sobrescrita
+  Ocorrências: 1
+
+  [1] Linha 9: Variável de iteração 'i' sobrescrita no loop
+      Trecho  : i = i + 1
+      Contexto:
+               8 | 		print(i)
+        >>>    9 | 	i = i +1
+              10 | 	
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 5
+
+  [1] Linha 2: Variável 'acid' com nome muito curto (≤4 chars)
+      Trecho  : acid = ...
+      Contexto:
+               1 | from numpy import*
+        >>>    2 | acid = array(eval(input()))
+               3 | i = 0
+
+  [2] Linha 3: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+               2 | acid = array(eval(input()))
+        >>>    3 | i = 0
+               4 | j = 0
+
+  [3] Linha 4: Variável 'j' com nome muito curto (≤4 chars)
+      Trecho  : j = ...
+      Contexto:
+               3 | i = 0
+        >>>    4 | j = 0
+               5 | for i in range(size(acid)): 
+
+  [4] Linha 9: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+               8 | 		print(i)
+        >>>    9 | 	i = i +1
+              10 | 	
+
+  [5] Linha 7: Variável 'j' com nome muito curto (≤4 chars)
+      Trecho  : j = ...
+      Contexto:
+               6 | 	if(acid[i]<acid[0]):
+        >>>    7 | 		j = j + 1
+               8 | 		print(i)
+
+======================================================================

@@ -1,0 +1,124 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 3591_8677.py
+Questão  : 3591
+Aluno    : 8677
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B4, B8
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import *
+     2 | 
+     3 | vet = array(eval(input("Insira o vetor: ")))
+     4 | 
+     5 | i = 0
+     6 | ganho = 0
+     7 | 
+     8 | while i < size(vet):
+     9 | 	if vet[i] == 1:
+    10 | 		ganho = ganho + 10
+    11 | 	elif vet[i] == 2:
+    12 | 		ganho = ganho + 5
+    13 | 	elif vet[i] == 3:
+    14 | 		ganho = ganho + 10
+    15 | 	elif vet[i] == 4:
+    16 | 		ganho = ganho + 5
+    17 | 	elif vet[i] == 5:
+    18 | 		ganho = ganho + 10
+    19 | 	elif vet[i] == 6:
+    20 | 		ganho = ganho + 5
+    21 | 	i += 1
+    22 | print(ganho)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B4 — Comandos repetidos dentro de blocos if-elif-else
+  Ocorrências: 10
+
+  [1] Linha 13: Bloco idêntico ao da linha 9
+      Trecho  : ganho = ganho + 10
+      Contexto:
+              12 | 		ganho = ganho + 5
+        >>>   13 | 	elif vet[i] == 3:
+              14 | 		ganho = ganho + 10
+
+  [2] Linha 15: Bloco idêntico ao da linha 11
+      Trecho  : ganho = ganho + 5
+      Contexto:
+              14 | 		ganho = ganho + 10
+        >>>   15 | 	elif vet[i] == 4:
+              16 | 		ganho = ganho + 5
+
+  [3] Linha 17: Bloco idêntico ao da linha 9
+      Trecho  : ganho = ganho + 10
+      Contexto:
+              16 | 		ganho = ganho + 5
+        >>>   17 | 	elif vet[i] == 5:
+              18 | 		ganho = ganho + 10
+
+  [4] Linha 19: Bloco idêntico ao da linha 11
+      Trecho  : ganho = ganho + 5
+      Contexto:
+              18 | 		ganho = ganho + 10
+        >>>   19 | 	elif vet[i] == 6:
+              20 | 		ganho = ganho + 5
+
+  [5] Linha 15: Bloco idêntico ao da linha 11
+      Trecho  : ganho = ganho + 5
+      Contexto:
+              14 | 		ganho = ganho + 10
+        >>>   15 | 	elif vet[i] == 4:
+              16 | 		ganho = ganho + 5
+
+  [6] Linha 17: Bloco idêntico ao da linha 13
+      Trecho  : ganho = ganho + 10
+      Contexto:
+              16 | 		ganho = ganho + 5
+        >>>   17 | 	elif vet[i] == 5:
+              18 | 		ganho = ganho + 10
+
+  [7] Linha 19: Bloco idêntico ao da linha 11
+      Trecho  : ganho = ganho + 5
+      Contexto:
+              18 | 		ganho = ganho + 10
+        >>>   19 | 	elif vet[i] == 6:
+              20 | 		ganho = ganho + 5
+
+  [8] Linha 17: Bloco idêntico ao da linha 13
+      Trecho  : ganho = ganho + 10
+      Contexto:
+              16 | 		ganho = ganho + 5
+        >>>   17 | 	elif vet[i] == 5:
+              18 | 		ganho = ganho + 10
+
+  [9] Linha 19: Bloco idêntico ao da linha 15
+      Trecho  : ganho = ganho + 5
+      Contexto:
+              18 | 		ganho = ganho + 10
+        >>>   19 | 	elif vet[i] == 6:
+              20 | 		ganho = ganho + 5
+
+  [10] Linha 19: Bloco idêntico ao da linha 15
+      Trecho  : ganho = ganho + 5
+      Contexto:
+              18 | 		ganho = ganho + 10
+        >>>   19 | 	elif vet[i] == 6:
+              20 | 		ganho = ganho + 5
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 17: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 17) / elif ... sem else
+      Contexto:
+              16 | 		ganho = ganho + 5
+        >>>   17 | 	elif vet[i] == 5:
+              18 | 		ganho = ganho + 10
+
+======================================================================

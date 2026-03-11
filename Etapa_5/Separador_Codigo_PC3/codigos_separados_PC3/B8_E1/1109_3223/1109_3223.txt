@@ -1,0 +1,93 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1109_3223.py
+Questão  : 1109
+Aluno    : 3223
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B8, E1
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | idade = int(input())
+     2 | peso = float(input())
+     3 | 
+     4 | print ("Entradas:",idade , "anos e", peso ,"kg")
+     5 | 
+     6 | 
+     7 | if ((idade >= 12) and (peso >= 60)):
+     8 | 	 print("Dosagem: 1000 mg")
+     9 | 		
+    10 | elif ((idade >= 12) and (peso < 60)):
+    11 | 		print ("Dosagem: 875 mg")
+    12 | 	
+    13 | elif ((idade < 12)):
+    14 | 		if ((peso == 1) or (peso == 2) or (peso ==3) or (peso ==4) or (peso==5)):
+    15 | 		   print ("Dosagem: 75 mg")
+    16 | 	
+    17 | 		elif ((peso == 6) or (peso ==7) or (peso==8) or (peso==9)):
+    18 | 		   print("Dosagem: 125 mg")
+    19 | 		
+    20 | 		elif ((peso == 9) or (peso  ==10) or (peso ==11) or (peso==12) or (peso==13) or (peso==14) or (peso==15)):
+    21 | 		   print("Dosagem: 250 mg")
+    22 | 		
+    23 | 		elif ((peso == 16) or (peso==17) or (peso==17) or (peso==19) or (peso==20) or (peso==21) or (peso==22) or (peso==23) or (peso==24)):
+    24 | 		   print("Dosagem: 375 mg")
+    25 | 		
+    26 | 		elif ((peso == 24) or (peso==25) or (peso==26) or (peso==27) or (peso==28) or (peso==29) or (peso==30)):
+    27 | 		   print("Dosagem: 500 mg")
+    28 | 		
+    29 | 		elif ((peso > 30) or(peso < 500)):
+    30 | 			print("Dosagem: 750 mg")
+    31 | 		
+    32 | if (((idade <=0) or (idade >= 130)) and ((peso <= 0.0) or (peso >= 550))):
+    33 | 	print("Dados invalidos")
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 2
+
+  [1] Linha 10: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 10) / elif ... sem else
+      Contexto:
+               9 | 		
+        >>>   10 | elif ((idade >= 12) and (peso < 60)):
+              11 | 		print ("Dosagem: 875 mg")
+
+  [2] Linha 26: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 26) / elif ... sem else
+      Contexto:
+              25 | 		
+        >>>   26 | 		elif ((peso == 24) or (peso==25) or (peso==26) or (peso==27) or (peso==28) or (peso==29) or (peso==30)):
+              27 | 		   print("Dosagem: 500 mg")
+
+▶ E1 — Verificação desnecessária de todas as combinações possíveis
+  Ocorrências: 3
+
+  [1] Linha 20: 7 condições em um único if — verificação excessiva
+      Trecho  : peso == 9 or peso == 10 or peso == 11 or (peso == 12) or (peso == 13) or (peso == 14) or (peso == 15)
+      Contexto:
+              19 | 		
+        >>>   20 | 		elif ((peso == 9) or (peso  ==10) or (peso ==11) or (peso==12) or (peso==13) or (peso==14) or (peso==15)):
+              21 | 		   print("Dosagem: 250 mg")
+
+  [2] Linha 23: 9 condições em um único if — verificação excessiva
+      Trecho  : peso == 16 or peso == 17 or peso == 17 or (peso == 19) or (peso == 20) or (peso == 21) or (peso == 22) or (peso == 23) or (peso == 24)
+      Contexto:
+              22 | 		
+        >>>   23 | 		elif ((peso == 16) or (peso==17) or (peso==17) or (peso==19) or (peso==20) or (peso==21) or (peso==22) or (peso==23) or (peso==24)):
+              24 | 		   print("Dosagem: 375 mg")
+
+  [3] Linha 26: 7 condições em um único if — verificação excessiva
+      Trecho  : peso == 24 or peso == 25 or peso == 26 or (peso == 27) or (peso == 28) or (peso == 29) or (peso == 30)
+      Contexto:
+              25 | 		
+        >>>   26 | 		elif ((peso == 24) or (peso==25) or (peso==26) or (peso==27) or (peso==28) or (peso==29) or (peso==30)):
+              27 | 		   print("Dosagem: 500 mg")
+
+======================================================================

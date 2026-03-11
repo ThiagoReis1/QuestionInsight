@@ -1,0 +1,84 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1523_2284.py
+Questão  : 1523
+Aluno    : 2284
+Total MCs: 2
+
+⚠️  Misconceptions detectados: A3, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | qi = int(input("Qtd. inicial: "))
+     2 | qc = int(input("Qtd. balões construídos: "))
+     3 | qd = int(input("Qtc. balões destruídos: "))
+     4 | 
+     5 | t = 0
+     6 | 
+     7 | while (qi < 200):
+     8 | 	qi = (qi - qd) + qc
+     9 | 	saldo = qi
+    10 | 	t = t + 1
+    11 | print(t)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 1
+
+  [1] Linha 9: Variável 'saldo' declarada mas nunca utilizada
+      Trecho  : saldo = ...
+      Contexto:
+               8 | 	qi = (qi - qd) + qc
+        >>>    9 | 	saldo = qi
+              10 | 	t = t + 1
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 6
+
+  [1] Linha 1: Variável 'qi' com nome muito curto (≤4 chars)
+      Trecho  : qi = ...
+      Contexto:
+        >>>    1 | qi = int(input("Qtd. inicial: "))
+               2 | qc = int(input("Qtd. balões construídos: "))
+
+  [2] Linha 2: Variável 'qc' com nome muito curto (≤4 chars)
+      Trecho  : qc = ...
+      Contexto:
+               1 | qi = int(input("Qtd. inicial: "))
+        >>>    2 | qc = int(input("Qtd. balões construídos: "))
+               3 | qd = int(input("Qtc. balões destruídos: "))
+
+  [3] Linha 3: Variável 'qd' com nome muito curto (≤4 chars)
+      Trecho  : qd = ...
+      Contexto:
+               2 | qc = int(input("Qtd. balões construídos: "))
+        >>>    3 | qd = int(input("Qtc. balões destruídos: "))
+               4 | 
+
+  [4] Linha 5: Variável 't' com nome muito curto (≤4 chars)
+      Trecho  : t = ...
+      Contexto:
+               4 | 
+        >>>    5 | t = 0
+               6 | 
+
+  [5] Linha 8: Variável 'qi' com nome muito curto (≤4 chars)
+      Trecho  : qi = ...
+      Contexto:
+               7 | while (qi < 200):
+        >>>    8 | 	qi = (qi - qd) + qc
+               9 | 	saldo = qi
+
+  [6] Linha 10: Variável 't' com nome muito curto (≤4 chars)
+      Trecho  : t = ...
+      Contexto:
+               9 | 	saldo = qi
+        >>>   10 | 	t = t + 1
+              11 | print(t)
+
+======================================================================

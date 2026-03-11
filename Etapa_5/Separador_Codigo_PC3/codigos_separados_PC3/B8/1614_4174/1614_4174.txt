@@ -1,0 +1,54 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1614_4174.py
+Questão  : 1614
+Aluno    : 4174
+Total MCs: 1
+
+⚠️  Misconceptions detectados: B8
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | 
+     3 | alimento = array(eval(input("nomes dos alimentos:")))
+     4 | grama = array(eval(input("kcal por grama:")))
+     5 | 
+     6 | quantidade = zeros(size(alimento))
+     7 | for i in range(size(alimento)):
+     8 | 	if(alimento[i] == "BANANA"):
+     9 | 		quantidade[i] = round((0.97 * grama[i]),2)	
+    10 | 	elif(alimento[i] == "BIFE"):
+    11 | 		quantidade[i] = round((2.95* grama[i]),2)
+    12 | 	elif(alimento[i] == "FEIJOADA"):
+    13 | 		quantidade[i] = round((1.27* grama[i]),2)
+    14 | 	elif(alimento[i] == "OMELETE"):
+    15 | 		quantidade[i] = round((1.04* grama[i]),2)
+    16 | 	elif(alimento[i] == "TOMATE")	:
+    17 | 		quantidade[i] = round((0.2 *grama[i]),2)
+    18 | 		
+    19 | 
+    20 | print(sum(quantidade))	
+    21 | 		
+    22 | 	
+    23 | 				 
+    24 | 
+    25 | 
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 14: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 14) / elif ... sem else
+      Contexto:
+              13 | 		quantidade[i] = round((1.27* grama[i]),2)
+        >>>   14 | 	elif(alimento[i] == "OMELETE"):
+              15 | 		quantidade[i] = round((1.04* grama[i]),2)
+
+======================================================================

@@ -1,0 +1,91 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 5287_7109.py
+Questão  : 5287
+Aluno    : 7109
+Total MCs: 2
+
+⚠️  Misconceptions detectados: C1, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | m = input().upper()
+     2 | CARA = 0
+     3 | COROA = 0
+     4 | while m !="S":
+     5 | 		CARA = CARA + 1
+     6 | 		COROA = COROA + 1
+     7 | 		H = COROA + CARA
+     8 | 		m = input().upper()
+     9 | 		if m == "S":
+    10 | 			print(H)
+    11 | 			pa = (CARA*100)/H
+    12 | 			print(round(pa,2))
+    13 | 			
+    14 | 		
+    15 | 		
+    16 | 		
+    17 | 	
+    18 | 	
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ C1 — Condição while testada novamente dentro do seu bloco
+  Ocorrências: 1
+
+  [1] Linha 9: If retesta condição inversa do while da linha 4
+      Trecho  : while m != 'S' → if m == 'S'
+      Contexto:
+               8 | 		m = input().upper()
+        >>>    9 | 		if m == "S":
+              10 | 			print(H)
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 6
+
+  [1] Linha 1: Variável 'm' com nome muito curto (≤4 chars)
+      Trecho  : m = ...
+      Contexto:
+        >>>    1 | m = input().upper()
+               2 | CARA = 0
+
+  [2] Linha 2: Variável 'CARA' com nome muito curto (≤4 chars)
+      Trecho  : CARA = ...
+      Contexto:
+               1 | m = input().upper()
+        >>>    2 | CARA = 0
+               3 | COROA = 0
+
+  [3] Linha 5: Variável 'CARA' com nome muito curto (≤4 chars)
+      Trecho  : CARA = ...
+      Contexto:
+               4 | while m !="S":
+        >>>    5 | 		CARA = CARA + 1
+               6 | 		COROA = COROA + 1
+
+  [4] Linha 7: Variável 'H' com nome muito curto (≤4 chars)
+      Trecho  : H = ...
+      Contexto:
+               6 | 		COROA = COROA + 1
+        >>>    7 | 		H = COROA + CARA
+               8 | 		m = input().upper()
+
+  [5] Linha 8: Variável 'm' com nome muito curto (≤4 chars)
+      Trecho  : m = ...
+      Contexto:
+               7 | 		H = COROA + CARA
+        >>>    8 | 		m = input().upper()
+               9 | 		if m == "S":
+
+  [6] Linha 11: Variável 'pa' com nome muito curto (≤4 chars)
+      Trecho  : pa = ...
+      Contexto:
+              10 | 			print(H)
+        >>>   11 | 			pa = (CARA*100)/H
+              12 | 			print(round(pa,2))
+
+======================================================================

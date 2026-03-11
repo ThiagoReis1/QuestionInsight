@@ -1,0 +1,222 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 5251_6448.py
+Questão  : 5251
+Aluno    : 6448
+Total MCs: 3
+
+⚠️  Misconceptions detectados: B4, B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | d= input("Cidade de destino: ").lower()
+     2 | i= int(input("Idade do passageiro: "))
+     3 | 
+     4 | #if (d!="porto velho") or (d!="santarem") or (d!="belem") or (d!="tefe") or (d!="tabatinga"):
+     5 | #	print("Entradas invalidas")
+     6 | 
+     7 | if (i>=0) and (i<=2):
+     8 | 	p=0
+     9 | 	print("Passagem: R$",p)
+    10 | elif (i>=3) and (i<=12):
+    11 | 	if (d=="porto velho"):
+    12 | 		p = (500)*(0.50)
+    13 | 		print("Passagem: R$",round(p,2))
+    14 | 	elif (d=="santarem"):
+    15 | 		p=370*0.50
+    16 | 		print("Passagem: R$",round(p,2))
+    17 | 	elif (d=="belem"):
+    18 | 		p=600*0.50
+    19 | 		print("Passagem: R$",round(p,2))
+    20 | 	elif (d=="tefe"):
+    21 | 		p=360/2
+    22 | 		print("Passagem: R$",rounf(p,2))
+    23 | 	elif(d=="tabatinga"):
+    24 | 		p=550/2
+    25 | 		print("Passagem: R$:",round(p,2))
+    26 | elif (i>=65) and (i<150):
+    27 | 	if (d=="porto velho"):
+    28 | 		p=500*0.70
+    29 | 		print("Passagem: R$",round(p,2))
+    30 | 	elif(d=="santarem"):
+    31 | 		p=370*0.70
+    32 | 		print("Passagem: R$",round(p,2))
+    33 | 	elif (d=="belem"):
+    34 | 		p=600*0.70
+    35 | 		print("Passagem: R$",round(p,2))
+    36 | 	elif (d=="tefe"):
+    37 | 		p=360*0.70
+    38 | 		print("Passagem: R$",round(p,2))
+    39 | 	elif (d=="tabatinga"):
+    40 | 		p=550*0.70
+    41 | 		print("Passagem: R$",round(p,2))
+    42 | elif (i>150):
+    43 | 	print("Entradas invalidas")
+    44 | elif (i<0):
+    45 | 	print("Entradas invalidas")
+    46 | """elif (d!="porto velho"):
+    47 | 	print("Entradas invalidas")
+    48 | elif (d!="santarem"):
+    49 | 	print("Entradas invalidas")
+    50 | elif (d!="belem"):
+    51 | 	print("Entradas invalidas")
+    52 | elif (d!="tefe"):
+    53 | 	print("Entradas invalidas")
+    54 | elif (d!="tabatinga"):
+    55 | 	print("Entradas invalidas")"""
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B4 — Comandos repetidos dentro de blocos if-elif-else
+  Ocorrências: 4
+
+  [1] Linha 44: Bloco idêntico ao da linha 42
+      Trecho  : print('Entradas invalidas')
+      Contexto:
+              43 | 	print("Entradas invalidas")
+        >>>   44 | elif (i<0):
+              45 | 	print("Entradas invalidas")
+
+  [2] Linha 44: Bloco idêntico ao da linha 42
+      Trecho  : print('Entradas invalidas')
+      Contexto:
+              43 | 	print("Entradas invalidas")
+        >>>   44 | elif (i<0):
+              45 | 	print("Entradas invalidas")
+
+  [3] Linha 44: Bloco idêntico ao da linha 42
+      Trecho  : print('Entradas invalidas')
+      Contexto:
+              43 | 	print("Entradas invalidas")
+        >>>   44 | elif (i<0):
+              45 | 	print("Entradas invalidas")
+
+  [4] Linha 44: Bloco idêntico ao da linha 42
+      Trecho  : print('Entradas invalidas')
+      Contexto:
+              43 | 	print("Entradas invalidas")
+        >>>   44 | elif (i<0):
+              45 | 	print("Entradas invalidas")
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 3
+
+  [1] Linha 42: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 42) / elif ... sem else
+      Contexto:
+              41 | 		print("Passagem: R$",round(p,2))
+        >>>   42 | elif (i>150):
+              43 | 	print("Entradas invalidas")
+
+  [2] Linha 20: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 20) / elif ... sem else
+      Contexto:
+              19 | 		print("Passagem: R$",round(p,2))
+        >>>   20 | 	elif (d=="tefe"):
+              21 | 		p=360/2
+
+  [3] Linha 36: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 36) / elif ... sem else
+      Contexto:
+              35 | 		print("Passagem: R$",round(p,2))
+        >>>   36 | 	elif (d=="tefe"):
+              37 | 		p=360*0.70
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 13
+
+  [1] Linha 1: Variável 'd' com nome muito curto (≤4 chars)
+      Trecho  : d = ...
+      Contexto:
+        >>>    1 | d= input("Cidade de destino: ").lower()
+               2 | i= int(input("Idade do passageiro: "))
+
+  [2] Linha 2: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+               1 | d= input("Cidade de destino: ").lower()
+        >>>    2 | i= int(input("Idade do passageiro: "))
+               3 | 
+
+  [3] Linha 8: Variável 'p' com nome muito curto (≤4 chars)
+      Trecho  : p = ...
+      Contexto:
+               7 | if (i>=0) and (i<=2):
+        >>>    8 | 	p=0
+               9 | 	print("Passagem: R$",p)
+
+  [4] Linha 12: Variável 'p' com nome muito curto (≤4 chars)
+      Trecho  : p = ...
+      Contexto:
+              11 | 	if (d=="porto velho"):
+        >>>   12 | 		p = (500)*(0.50)
+              13 | 		print("Passagem: R$",round(p,2))
+
+  [5] Linha 15: Variável 'p' com nome muito curto (≤4 chars)
+      Trecho  : p = ...
+      Contexto:
+              14 | 	elif (d=="santarem"):
+        >>>   15 | 		p=370*0.50
+              16 | 		print("Passagem: R$",round(p,2))
+
+  [6] Linha 28: Variável 'p' com nome muito curto (≤4 chars)
+      Trecho  : p = ...
+      Contexto:
+              27 | 	if (d=="porto velho"):
+        >>>   28 | 		p=500*0.70
+              29 | 		print("Passagem: R$",round(p,2))
+
+  [7] Linha 18: Variável 'p' com nome muito curto (≤4 chars)
+      Trecho  : p = ...
+      Contexto:
+              17 | 	elif (d=="belem"):
+        >>>   18 | 		p=600*0.50
+              19 | 		print("Passagem: R$",round(p,2))
+
+  [8] Linha 31: Variável 'p' com nome muito curto (≤4 chars)
+      Trecho  : p = ...
+      Contexto:
+              30 | 	elif(d=="santarem"):
+        >>>   31 | 		p=370*0.70
+              32 | 		print("Passagem: R$",round(p,2))
+
+  [9] Linha 21: Variável 'p' com nome muito curto (≤4 chars)
+      Trecho  : p = ...
+      Contexto:
+              20 | 	elif (d=="tefe"):
+        >>>   21 | 		p=360/2
+              22 | 		print("Passagem: R$",rounf(p,2))
+
+  [10] Linha 34: Variável 'p' com nome muito curto (≤4 chars)
+      Trecho  : p = ...
+      Contexto:
+              33 | 	elif (d=="belem"):
+        >>>   34 | 		p=600*0.70
+              35 | 		print("Passagem: R$",round(p,2))
+
+  [11] Linha 24: Variável 'p' com nome muito curto (≤4 chars)
+      Trecho  : p = ...
+      Contexto:
+              23 | 	elif(d=="tabatinga"):
+        >>>   24 | 		p=550/2
+              25 | 		print("Passagem: R$:",round(p,2))
+
+  [12] Linha 37: Variável 'p' com nome muito curto (≤4 chars)
+      Trecho  : p = ...
+      Contexto:
+              36 | 	elif (d=="tefe"):
+        >>>   37 | 		p=360*0.70
+              38 | 		print("Passagem: R$",round(p,2))
+
+  [13] Linha 40: Variável 'p' com nome muito curto (≤4 chars)
+      Trecho  : p = ...
+      Contexto:
+              39 | 	elif (d=="tabatinga"):
+        >>>   40 | 		p=550*0.70
+              41 | 		print("Passagem: R$",round(p,2))
+
+======================================================================

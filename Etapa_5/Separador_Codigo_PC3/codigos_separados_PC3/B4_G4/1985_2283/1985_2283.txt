@@ -1,0 +1,65 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1985_2283.py
+Questão  : 1985
+Aluno    : 2283
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B4, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | r = input("Regiao do Pais: ")
+     2 | e = input("Qual o Estado?: ")
+     3 | 
+     4 | if (r != "Norte") and (r != "Sul") or (e != "Amazonas") and (e != "Roraima") and (e != "Parana") and (e != "Santa Catarina"):
+     5 | 	print("UNIVERSIDADE NAO IDENTIFICADA")
+     6 | 	
+     7 | elif (r == "Norte") and (e == "Amazonas"):
+     8 | 	print("UNIVERSIDADE FEDERAL DO AMAZONAS")
+     9 | 	
+    10 | elif (r == "Norte") and (e == "Roraima"):
+    11 | 	print("UNIVERSIDADE FEDERAL DE RORAIMA")
+    12 | 	
+    13 | elif(r == "Sul") and (e == "Parana"):
+    14 | 	print("UNIVERSIDADE FEDERAL DO PARANA")
+    15 | 	
+    16 | elif (r == "Sul") and (e == "Santa Catarina"):
+    17 | 	print("UNIVERSIDADE FEDERAL DE SANTA CATARINA")
+    18 | 	
+    19 | else:
+    20 | 	print("UNIVERSIDADE NAO IDENTIFICADA")
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B4 — Comandos repetidos dentro de blocos if-elif-else
+  Ocorrências: 1
+
+  [1] Linha 16: Bloco idêntico ao da linha 4
+      Trecho  : print('UNIVERSIDADE NAO IDENTIFICADA')
+      Contexto:
+              15 | 	
+        >>>   16 | elif (r == "Sul") and (e == "Santa Catarina"):
+              17 | 	print("UNIVERSIDADE FEDERAL DE SANTA CATARINA")
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 2
+
+  [1] Linha 1: Variável 'r' com nome muito curto (≤4 chars)
+      Trecho  : r = ...
+      Contexto:
+        >>>    1 | r = input("Regiao do Pais: ")
+               2 | e = input("Qual o Estado?: ")
+
+  [2] Linha 2: Variável 'e' com nome muito curto (≤4 chars)
+      Trecho  : e = ...
+      Contexto:
+               1 | r = input("Regiao do Pais: ")
+        >>>    2 | e = input("Qual o Estado?: ")
+               3 | 
+
+======================================================================

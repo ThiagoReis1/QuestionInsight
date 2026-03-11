@@ -1,0 +1,122 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1648_7181.py
+Questão  : 1648
+Aluno    : 7181
+Total MCs: 2
+
+⚠️  Misconceptions detectados: A3, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import *
+     2 | 
+     3 | al=array(eval(input("frequencia:  ")))
+     4 | aux=zeros(size(al), dtype=int)
+     5 | cont=0
+     6 | 
+     7 | for i in range(0, size(al)):
+     8 | 	if(al[i-1]<70):
+     9 | 		cont=cont+1
+    10 | 		
+    11 | aux=zeros(cont, dtype=int)
+    12 | j=0
+    13 | a=0
+    14 | for i in range(0, size(al)):
+    15 | 	if(al[i]<70):
+    16 | 		aux[j]=a
+    17 | 		j=j+1
+    18 | 		a=a+1
+    19 | 	else:
+    20 | 		a=a+1
+    21 | 
+    22 | print(cont)
+    23 | 
+    24 | print(aux)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 1
+
+  [1] Linha 0: A3 detectado pelo VisitorMC3 (localização exata não mapeada)
+      Trecho  : —
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 10
+
+  [1] Linha 3: Variável 'al' com nome muito curto (≤4 chars)
+      Trecho  : al = ...
+      Contexto:
+               2 | 
+        >>>    3 | al=array(eval(input("frequencia:  ")))
+               4 | aux=zeros(size(al), dtype=int)
+
+  [2] Linha 4: Variável 'aux' com nome muito curto (≤4 chars)
+      Trecho  : aux = ...
+      Contexto:
+               3 | al=array(eval(input("frequencia:  ")))
+        >>>    4 | aux=zeros(size(al), dtype=int)
+               5 | cont=0
+
+  [3] Linha 5: Variável 'cont' com nome muito curto (≤4 chars)
+      Trecho  : cont = ...
+      Contexto:
+               4 | aux=zeros(size(al), dtype=int)
+        >>>    5 | cont=0
+               6 | 
+
+  [4] Linha 11: Variável 'aux' com nome muito curto (≤4 chars)
+      Trecho  : aux = ...
+      Contexto:
+              10 | 		
+        >>>   11 | aux=zeros(cont, dtype=int)
+              12 | j=0
+
+  [5] Linha 12: Variável 'j' com nome muito curto (≤4 chars)
+      Trecho  : j = ...
+      Contexto:
+              11 | aux=zeros(cont, dtype=int)
+        >>>   12 | j=0
+              13 | a=0
+
+  [6] Linha 13: Variável 'a' com nome muito curto (≤4 chars)
+      Trecho  : a = ...
+      Contexto:
+              12 | j=0
+        >>>   13 | a=0
+              14 | for i in range(0, size(al)):
+
+  [7] Linha 9: Variável 'cont' com nome muito curto (≤4 chars)
+      Trecho  : cont = ...
+      Contexto:
+               8 | 	if(al[i-1]<70):
+        >>>    9 | 		cont=cont+1
+              10 | 		
+
+  [8] Linha 17: Variável 'j' com nome muito curto (≤4 chars)
+      Trecho  : j = ...
+      Contexto:
+              16 | 		aux[j]=a
+        >>>   17 | 		j=j+1
+              18 | 		a=a+1
+
+  [9] Linha 18: Variável 'a' com nome muito curto (≤4 chars)
+      Trecho  : a = ...
+      Contexto:
+              17 | 		j=j+1
+        >>>   18 | 		a=a+1
+              19 | 	else:
+
+  [10] Linha 20: Variável 'a' com nome muito curto (≤4 chars)
+      Trecho  : a = ...
+      Contexto:
+              19 | 	else:
+        >>>   20 | 		a=a+1
+              21 | 
+
+======================================================================

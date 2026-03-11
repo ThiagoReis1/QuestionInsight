@@ -1,0 +1,5 @@
+a =float(input('Classe A'))
+b =float(input('Classe B'))
+c =float(input('Classe C'))
+renda = (a * 80  + b * 50 + c * 30)
+print(round(renda, 2))

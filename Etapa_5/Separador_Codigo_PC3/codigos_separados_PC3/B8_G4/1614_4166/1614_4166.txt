@@ -1,0 +1,142 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1614_4166.py
+Questão  : 1614
+Aluno    : 4166
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | from numpy.linalg import*
+     3 | A=array(eval(input("Alimentos:")))
+     4 | Q=array((eval(input("Quantidade:"))))
+     5 | n=size(Q)
+     6 | x=zeros(n, dtype=int)
+     7 | k=zeros(n, dtype=int)
+     8 | y=0
+     9 | 
+    10 | for i in range(n):
+    11 | 	if(A[i]== "BANANA"):
+    12 | 		x[i]=0.97
+    13 | 		k[i]=Q[i]*x[i]
+    14 | 		y=y+k[i]
+    15 | 	elif(A[i]=="BIFE"):
+    16 | 		x[i]=2.95
+    17 | 		k[i]=Q[i]*x[i]
+    18 | 		y=y+k[i]
+    19 | 		
+    20 | 	elif(A[i]=="FEIJOADA"):
+    21 | 		x[i]=1.27
+    22 | 		k[i]=Q[i]*x[i]
+    23 | 		y=y+k[i]
+    24 | 	elif(A[i]=="OMELETE"):
+    25 | 		x[i]=1.04
+    26 | 		k[i]=Q[i]*x[i]
+    27 | 		y=y+k[i]
+    28 | 	elif(A[i]=="TOMATE"):
+    29 | 		x[i]=0.2
+    30 | 		k[i]=Q[i]*x[i]
+    31 | 		y=y+k[i]
+    32 | 
+    33 | print(y)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 24: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 24) / elif ... sem else
+      Contexto:
+              23 | 		y=y+k[i]
+        >>>   24 | 	elif(A[i]=="OMELETE"):
+              25 | 		x[i]=1.04
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 11
+
+  [1] Linha 3: Variável 'A' com nome muito curto (≤4 chars)
+      Trecho  : A = ...
+      Contexto:
+               2 | from numpy.linalg import*
+        >>>    3 | A=array(eval(input("Alimentos:")))
+               4 | Q=array((eval(input("Quantidade:"))))
+
+  [2] Linha 4: Variável 'Q' com nome muito curto (≤4 chars)
+      Trecho  : Q = ...
+      Contexto:
+               3 | A=array(eval(input("Alimentos:")))
+        >>>    4 | Q=array((eval(input("Quantidade:"))))
+               5 | n=size(Q)
+
+  [3] Linha 5: Variável 'n' com nome muito curto (≤4 chars)
+      Trecho  : n = ...
+      Contexto:
+               4 | Q=array((eval(input("Quantidade:"))))
+        >>>    5 | n=size(Q)
+               6 | x=zeros(n, dtype=int)
+
+  [4] Linha 6: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+               5 | n=size(Q)
+        >>>    6 | x=zeros(n, dtype=int)
+               7 | k=zeros(n, dtype=int)
+
+  [5] Linha 7: Variável 'k' com nome muito curto (≤4 chars)
+      Trecho  : k = ...
+      Contexto:
+               6 | x=zeros(n, dtype=int)
+        >>>    7 | k=zeros(n, dtype=int)
+               8 | y=0
+
+  [6] Linha 8: Variável 'y' com nome muito curto (≤4 chars)
+      Trecho  : y = ...
+      Contexto:
+               7 | k=zeros(n, dtype=int)
+        >>>    8 | y=0
+               9 | 
+
+  [7] Linha 14: Variável 'y' com nome muito curto (≤4 chars)
+      Trecho  : y = ...
+      Contexto:
+              13 | 		k[i]=Q[i]*x[i]
+        >>>   14 | 		y=y+k[i]
+              15 | 	elif(A[i]=="BIFE"):
+
+  [8] Linha 18: Variável 'y' com nome muito curto (≤4 chars)
+      Trecho  : y = ...
+      Contexto:
+              17 | 		k[i]=Q[i]*x[i]
+        >>>   18 | 		y=y+k[i]
+              19 | 		
+
+  [9] Linha 23: Variável 'y' com nome muito curto (≤4 chars)
+      Trecho  : y = ...
+      Contexto:
+              22 | 		k[i]=Q[i]*x[i]
+        >>>   23 | 		y=y+k[i]
+              24 | 	elif(A[i]=="OMELETE"):
+
+  [10] Linha 27: Variável 'y' com nome muito curto (≤4 chars)
+      Trecho  : y = ...
+      Contexto:
+              26 | 		k[i]=Q[i]*x[i]
+        >>>   27 | 		y=y+k[i]
+              28 | 	elif(A[i]=="TOMATE"):
+
+  [11] Linha 31: Variável 'y' com nome muito curto (≤4 chars)
+      Trecho  : y = ...
+      Contexto:
+              30 | 		k[i]=Q[i]*x[i]
+        >>>   31 | 		y=y+k[i]
+              32 | 
+
+======================================================================

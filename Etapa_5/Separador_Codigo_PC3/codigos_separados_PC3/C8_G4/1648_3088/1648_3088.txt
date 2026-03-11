@@ -1,0 +1,106 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1648_3088.py
+Questão  : 1648
+Aluno    : 3088
+Total MCs: 2
+
+⚠️  Misconceptions detectados: C8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | v = array(eval(input("Insira o vetor: ")))
+     3 | r = 0
+     4 | for i in range(size(v)):
+     5 | 	if v[i]<70:
+     6 | 		r = r + 1
+     7 | 	i = i + 1
+     8 | v0 = zeros(r, dtype=int)
+     9 | i = 0
+    10 | c = 0
+    11 | for i in range(size(v)):
+    12 | 	if v[i]<70:
+    13 | 		v0[c] = i
+    14 | 		c = c + 1
+    15 | print(r)
+    16 | print(v0)
+    17 | 	
+    18 | 	
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ C8 — Loop for com sua variável de iteração sobrescrita
+  Ocorrências: 1
+
+  [1] Linha 7: Variável de iteração 'i' sobrescrita no loop
+      Trecho  : i = i + 1
+      Contexto:
+               6 | 		r = r + 1
+        >>>    7 | 	i = i + 1
+               8 | v0 = zeros(r, dtype=int)
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 8
+
+  [1] Linha 2: Variável 'v' com nome muito curto (≤4 chars)
+      Trecho  : v = ...
+      Contexto:
+               1 | from numpy import*
+        >>>    2 | v = array(eval(input("Insira o vetor: ")))
+               3 | r = 0
+
+  [2] Linha 3: Variável 'r' com nome muito curto (≤4 chars)
+      Trecho  : r = ...
+      Contexto:
+               2 | v = array(eval(input("Insira o vetor: ")))
+        >>>    3 | r = 0
+               4 | for i in range(size(v)):
+
+  [3] Linha 8: Variável 'v0' com nome muito curto (≤4 chars)
+      Trecho  : v0 = ...
+      Contexto:
+               7 | 	i = i + 1
+        >>>    8 | v0 = zeros(r, dtype=int)
+               9 | i = 0
+
+  [4] Linha 9: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+               8 | v0 = zeros(r, dtype=int)
+        >>>    9 | i = 0
+              10 | c = 0
+
+  [5] Linha 10: Variável 'c' com nome muito curto (≤4 chars)
+      Trecho  : c = ...
+      Contexto:
+               9 | i = 0
+        >>>   10 | c = 0
+              11 | for i in range(size(v)):
+
+  [6] Linha 7: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+               6 | 		r = r + 1
+        >>>    7 | 	i = i + 1
+               8 | v0 = zeros(r, dtype=int)
+
+  [7] Linha 6: Variável 'r' com nome muito curto (≤4 chars)
+      Trecho  : r = ...
+      Contexto:
+               5 | 	if v[i]<70:
+        >>>    6 | 		r = r + 1
+               7 | 	i = i + 1
+
+  [8] Linha 14: Variável 'c' com nome muito curto (≤4 chars)
+      Trecho  : c = ...
+      Contexto:
+              13 | 		v0[c] = i
+        >>>   14 | 		c = c + 1
+              15 | print(r)
+
+======================================================================

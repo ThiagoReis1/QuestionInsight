@@ -1,0 +1,46 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 5385_4282.py
+Questão  : 5385
+Aluno    : 4282
+Total MCs: 1
+
+⚠️  Misconceptions detectados: A4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import *
+     2 | str = input().upper()
+     3 | vogais = ['A', 'E', 'I', 'O', 'U']
+     4 | sum = 0
+     5 | for char in str:
+     6 | 	if char in vogais:
+     7 | 		sum += 35.15
+     8 | 	else:
+     9 | 		sum += 42.17
+    10 | print(round(sum, 2))
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A4 — Redefinição de built-in
+  Ocorrências: 2
+
+  [1] Linha 2: Built-in 'str' redefinido como variável
+      Trecho  : str = input().upper()
+      Contexto:
+               1 | from numpy import *
+        >>>    2 | str = input().upper()
+               3 | vogais = ['A', 'E', 'I', 'O', 'U']
+
+  [2] Linha 4: Built-in 'sum' redefinido como variável
+      Trecho  : sum = 0
+      Contexto:
+               3 | vogais = ['A', 'E', 'I', 'O', 'U']
+        >>>    4 | sum = 0
+               5 | for char in str:
+
+======================================================================

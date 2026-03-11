@@ -1,0 +1,102 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 3068_4501.py
+Questão  : 3068
+Aluno    : 4501
+Total MCs: 3
+
+⚠️  Misconceptions detectados: A3, B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | a=input("nome da arma: ")
+     2 | b=int(input("destreza: "))
+     3 | c=int(input("valores sorteados: "))
+     4 | d=int(input("dano: "))
+     5 | if(c>2 and c>20):
+     6 | 	if(a.upper()=="CIMITARRA"):
+     7 | 		d=2*c+2*b
+     8 | 		print(d)
+     9 | 	elif(a.upper()=="KATANA"):
+    10 | 		d=2*c+b
+    11 | 		print(d)
+    12 | 	elif(a.upper()=="SABRE"):
+    13 | 		d=c+2*b
+    14 | 		print(d)
+    15 | else:
+    16 | 	print("Entrada invalida")
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 1
+
+  [1] Linha 0: A3 detectado pelo VisitorMC3 (localização exata não mapeada)
+      Trecho  : —
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 9: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 9) / elif ... sem else
+      Contexto:
+               8 | 		print(d)
+        >>>    9 | 	elif(a.upper()=="KATANA"):
+              10 | 		d=2*c+b
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 7
+
+  [1] Linha 1: Variável 'a' com nome muito curto (≤4 chars)
+      Trecho  : a = ...
+      Contexto:
+        >>>    1 | a=input("nome da arma: ")
+               2 | b=int(input("destreza: "))
+
+  [2] Linha 2: Variável 'b' com nome muito curto (≤4 chars)
+      Trecho  : b = ...
+      Contexto:
+               1 | a=input("nome da arma: ")
+        >>>    2 | b=int(input("destreza: "))
+               3 | c=int(input("valores sorteados: "))
+
+  [3] Linha 3: Variável 'c' com nome muito curto (≤4 chars)
+      Trecho  : c = ...
+      Contexto:
+               2 | b=int(input("destreza: "))
+        >>>    3 | c=int(input("valores sorteados: "))
+               4 | d=int(input("dano: "))
+
+  [4] Linha 4: Variável 'd' com nome muito curto (≤4 chars)
+      Trecho  : d = ...
+      Contexto:
+               3 | c=int(input("valores sorteados: "))
+        >>>    4 | d=int(input("dano: "))
+               5 | if(c>2 and c>20):
+
+  [5] Linha 7: Variável 'd' com nome muito curto (≤4 chars)
+      Trecho  : d = ...
+      Contexto:
+               6 | 	if(a.upper()=="CIMITARRA"):
+        >>>    7 | 		d=2*c+2*b
+               8 | 		print(d)
+
+  [6] Linha 10: Variável 'd' com nome muito curto (≤4 chars)
+      Trecho  : d = ...
+      Contexto:
+               9 | 	elif(a.upper()=="KATANA"):
+        >>>   10 | 		d=2*c+b
+              11 | 		print(d)
+
+  [7] Linha 13: Variável 'd' com nome muito curto (≤4 chars)
+      Trecho  : d = ...
+      Contexto:
+              12 | 	elif(a.upper()=="SABRE"):
+        >>>   13 | 		d=c+2*b
+              14 | 		print(d)
+
+======================================================================

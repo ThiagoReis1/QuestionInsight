@@ -1,0 +1,80 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1615_4413.py
+Questão  : 1615
+Aluno    : 4413
+Total MCs: 2
+
+⚠️  Misconceptions detectados: A3, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | v1 = array(eval(int(input("aneis do primeiro jogador: "))))
+     3 | v2 = array(eval(int(input("aneis do segundo jogador: "))))
+     4 | dtype=int
+     5 | 
+     6 | if(sum(v1) < sum(v2)):
+     7 | 	msg="jogador um"
+     8 | elif(sum(v2) < sum(v1)):
+     9 | 	msg="jogador dois"
+    10 | else:
+    11 | 	msg="empate"
+    12 | 		
+    13 | print(upper(msg))
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 1
+
+  [1] Linha 4: Variável 'dtype' declarada mas nunca utilizada
+      Trecho  : dtype = ...
+      Contexto:
+               3 | v2 = array(eval(int(input("aneis do segundo jogador: "))))
+        >>>    4 | dtype=int
+               5 | 
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 5
+
+  [1] Linha 2: Variável 'v1' com nome muito curto (≤4 chars)
+      Trecho  : v1 = ...
+      Contexto:
+               1 | from numpy import*
+        >>>    2 | v1 = array(eval(int(input("aneis do primeiro jogador: "))))
+               3 | v2 = array(eval(int(input("aneis do segundo jogador: "))))
+
+  [2] Linha 3: Variável 'v2' com nome muito curto (≤4 chars)
+      Trecho  : v2 = ...
+      Contexto:
+               2 | v1 = array(eval(int(input("aneis do primeiro jogador: "))))
+        >>>    3 | v2 = array(eval(int(input("aneis do segundo jogador: "))))
+               4 | dtype=int
+
+  [3] Linha 7: Variável 'msg' com nome muito curto (≤4 chars)
+      Trecho  : msg = ...
+      Contexto:
+               6 | if(sum(v1) < sum(v2)):
+        >>>    7 | 	msg="jogador um"
+               8 | elif(sum(v2) < sum(v1)):
+
+  [4] Linha 9: Variável 'msg' com nome muito curto (≤4 chars)
+      Trecho  : msg = ...
+      Contexto:
+               8 | elif(sum(v2) < sum(v1)):
+        >>>    9 | 	msg="jogador dois"
+              10 | else:
+
+  [5] Linha 11: Variável 'msg' com nome muito curto (≤4 chars)
+      Trecho  : msg = ...
+      Contexto:
+              10 | else:
+        >>>   11 | 	msg="empate"
+              12 | 		
+
+======================================================================

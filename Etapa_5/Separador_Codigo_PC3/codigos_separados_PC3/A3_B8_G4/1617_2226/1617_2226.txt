@@ -1,0 +1,129 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1617_2226.py
+Questão  : 1617
+Aluno    : 2226
+Total MCs: 3
+
+⚠️  Misconceptions detectados: A3, B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from math import*
+     2 | 
+     3 | dc=array(eval(input("combate: ").upper()))
+     4 | nc=array(eval(input("nivel: ")))
+     5 | i=0
+     6 | ee=0
+     7 | 
+     8 | while(i<size(dc)):
+     9 | 	if(dc[i] == "CENOURA"):
+    10 | 		ee=dc[i]*2*nc
+    11 | 	elif(dc[i]== "FERRO"):
+    12 | 		ee=dc[i]*4*nc
+    13 | 	elif(dc[i]== "DWARVEN"):
+    14 | 		ee=dc[i]*8*nc
+    15 | 	elif(dc[i]=="ELVEN"):
+    16 | 		ee=dc[i]*11*dc[i]*nc
+    17 | 	elif(dc[i]=="DAEDRIC"):
+    18 | 		ee=dc[i]*14*nc
+    19 | 	i=i+1
+    20 | print(ee)
+    21 | 	
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 1
+
+  [1] Linha 0: A3 detectado pelo VisitorMC3 (localização exata não mapeada)
+      Trecho  : —
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 15: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 15) / elif ... sem else
+      Contexto:
+              14 | 		ee=dc[i]*8*nc
+        >>>   15 | 	elif(dc[i]=="ELVEN"):
+              16 | 		ee=dc[i]*11*dc[i]*nc
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 10
+
+  [1] Linha 3: Variável 'dc' com nome muito curto (≤4 chars)
+      Trecho  : dc = ...
+      Contexto:
+               2 | 
+        >>>    3 | dc=array(eval(input("combate: ").upper()))
+               4 | nc=array(eval(input("nivel: ")))
+
+  [2] Linha 4: Variável 'nc' com nome muito curto (≤4 chars)
+      Trecho  : nc = ...
+      Contexto:
+               3 | dc=array(eval(input("combate: ").upper()))
+        >>>    4 | nc=array(eval(input("nivel: ")))
+               5 | i=0
+
+  [3] Linha 5: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+               4 | nc=array(eval(input("nivel: ")))
+        >>>    5 | i=0
+               6 | ee=0
+
+  [4] Linha 6: Variável 'ee' com nome muito curto (≤4 chars)
+      Trecho  : ee = ...
+      Contexto:
+               5 | i=0
+        >>>    6 | ee=0
+               7 | 
+
+  [5] Linha 19: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+              18 | 		ee=dc[i]*14*nc
+        >>>   19 | 	i=i+1
+              20 | print(ee)
+
+  [6] Linha 10: Variável 'ee' com nome muito curto (≤4 chars)
+      Trecho  : ee = ...
+      Contexto:
+               9 | 	if(dc[i] == "CENOURA"):
+        >>>   10 | 		ee=dc[i]*2*nc
+              11 | 	elif(dc[i]== "FERRO"):
+
+  [7] Linha 12: Variável 'ee' com nome muito curto (≤4 chars)
+      Trecho  : ee = ...
+      Contexto:
+              11 | 	elif(dc[i]== "FERRO"):
+        >>>   12 | 		ee=dc[i]*4*nc
+              13 | 	elif(dc[i]== "DWARVEN"):
+
+  [8] Linha 14: Variável 'ee' com nome muito curto (≤4 chars)
+      Trecho  : ee = ...
+      Contexto:
+              13 | 	elif(dc[i]== "DWARVEN"):
+        >>>   14 | 		ee=dc[i]*8*nc
+              15 | 	elif(dc[i]=="ELVEN"):
+
+  [9] Linha 16: Variável 'ee' com nome muito curto (≤4 chars)
+      Trecho  : ee = ...
+      Contexto:
+              15 | 	elif(dc[i]=="ELVEN"):
+        >>>   16 | 		ee=dc[i]*11*dc[i]*nc
+              17 | 	elif(dc[i]=="DAEDRIC"):
+
+  [10] Linha 18: Variável 'ee' com nome muito curto (≤4 chars)
+      Trecho  : ee = ...
+      Contexto:
+              17 | 	elif(dc[i]=="DAEDRIC"):
+        >>>   18 | 		ee=dc[i]*14*nc
+              19 | 	i=i+1
+
+======================================================================

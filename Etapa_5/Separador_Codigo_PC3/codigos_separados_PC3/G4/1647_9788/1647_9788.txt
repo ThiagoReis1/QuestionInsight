@@ -1,0 +1,74 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1647_9788.py
+Questão  : 1647
+Aluno    : 9788
+Total MCs: 1
+
+⚠️  Misconceptions detectados: G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | 
+     3 | apf = array(eval(input('alunos aprovados na disciplina:')))
+     4 | posi = 0 
+     5 | 
+     6 | for i in range(size(apf)):
+     7 | 	if apf[i] >= 70:
+     8 | 		posi += 1
+     9 | 
+    10 | ind = zeros(posi, dtype = 'int')
+    11 | print(posi)
+    12 | ç = 0
+    13 | for i in range(size(apf)):
+    14 | 	if apf[i] >= 70:
+    15 | 		ind[ç] = i
+    16 | 		ç = ç + 1
+    17 | print(ind)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 5
+
+  [1] Linha 3: Variável 'apf' com nome muito curto (≤4 chars)
+      Trecho  : apf = ...
+      Contexto:
+               2 | 
+        >>>    3 | apf = array(eval(input('alunos aprovados na disciplina:')))
+               4 | posi = 0 
+
+  [2] Linha 4: Variável 'posi' com nome muito curto (≤4 chars)
+      Trecho  : posi = ...
+      Contexto:
+               3 | apf = array(eval(input('alunos aprovados na disciplina:')))
+        >>>    4 | posi = 0 
+               5 | 
+
+  [3] Linha 10: Variável 'ind' com nome muito curto (≤4 chars)
+      Trecho  : ind = ...
+      Contexto:
+               9 | 
+        >>>   10 | ind = zeros(posi, dtype = 'int')
+              11 | print(posi)
+
+  [4] Linha 12: Variável 'ç' com nome muito curto (≤4 chars)
+      Trecho  : ç = ...
+      Contexto:
+              11 | print(posi)
+        >>>   12 | ç = 0
+              13 | for i in range(size(apf)):
+
+  [5] Linha 16: Variável 'ç' com nome muito curto (≤4 chars)
+      Trecho  : ç = ...
+      Contexto:
+              15 | 		ind[ç] = i
+        >>>   16 | 		ç = ç + 1
+              17 | print(ind)
+
+======================================================================

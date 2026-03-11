@@ -1,0 +1,68 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1363_3725.py
+Questão  : 1363
+Aluno    : 3725
+Total MCs: 3
+
+⚠️  Misconceptions detectados: A3, A5, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from math import pi
+     2 | valor=float(input("qual e o valor de p"))
+     3 | pf=2**(1+p/100)
+     4 | ps=p.pi**2/3141
+     5 | pd=2*math.sqrt(p/40)
+     6 | print(round(pf+ps+pd,2))
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 1
+
+  [1] Linha 2: Variável 'valor' declarada mas nunca utilizada
+      Trecho  : valor = ...
+      Contexto:
+               1 | from math import pi
+        >>>    2 | valor=float(input("qual e o valor de p"))
+               3 | pf=2**(1+p/100)
+
+▶ A5 — Importação não utilizada
+  Ocorrências: 1
+
+  [1] Linha 1: 'pi' importado mas nunca utilizado
+      Trecho  : from math import pi
+      Contexto:
+        >>>    1 | from math import pi
+               2 | valor=float(input("qual e o valor de p"))
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 3
+
+  [1] Linha 3: Variável 'pf' com nome muito curto (≤4 chars)
+      Trecho  : pf = ...
+      Contexto:
+               2 | valor=float(input("qual e o valor de p"))
+        >>>    3 | pf=2**(1+p/100)
+               4 | ps=p.pi**2/3141
+
+  [2] Linha 4: Variável 'ps' com nome muito curto (≤4 chars)
+      Trecho  : ps = ...
+      Contexto:
+               3 | pf=2**(1+p/100)
+        >>>    4 | ps=p.pi**2/3141
+               5 | pd=2*math.sqrt(p/40)
+
+  [3] Linha 5: Variável 'pd' com nome muito curto (≤4 chars)
+      Trecho  : pd = ...
+      Contexto:
+               4 | ps=p.pi**2/3141
+        >>>    5 | pd=2*math.sqrt(p/40)
+               6 | print(round(pf+ps+pd,2))
+
+======================================================================

@@ -1,0 +1,69 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 5246_6452.py
+Questão  : 5246
+Aluno    : 6452
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | i=int(input('idade: '))
+     2 | p=round(float(input('peso: ')),1)
+     3 | print('Entradas: {} anos e {} kg'.format(i,p))
+     4 | if (i>=0 and i<=130) and (p>=0 and p<=550):
+     5 | 	if i<=20 and p<=60:
+     6 | 		print('Grupo de risco: 9')
+     7 | 	elif (i <=20) and (p>60 and p<=90):
+     8 | 		print('Grupo de risco: 8')
+     9 | 	elif (i<=20) and (p>90):
+    10 | 		print('Grupo de risco: 7')
+    11 | 	elif (i>20 and i<=50) and (p<=60):
+    12 | 		print('Grupo de risco: 6')
+    13 | 	elif (i>20 and i<=50) and (p>60 and p<=90):
+    14 | 		print('Grupo de risco: 5')
+    15 | 	elif (i>20 and i<=50) and (p>90):
+    16 | 		print('Grupo de risco: 4')
+    17 | 	elif (i>50) and (p<=60):
+    18 | 		print('Grupo de risco: 3')
+    19 | 	elif (i>50) and (p>60 and p<=90):
+    20 | 		print('Grupo de risco: 2')
+    21 | 	elif (i>50) and (p>90):
+    22 | 		print('Grupo de risco: 1')
+    23 | else:
+    24 | 	print('Dados invalidos')
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 19: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 19) / elif ... sem else
+      Contexto:
+              18 | 		print('Grupo de risco: 3')
+        >>>   19 | 	elif (i>50) and (p>60 and p<=90):
+              20 | 		print('Grupo de risco: 2')
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 2
+
+  [1] Linha 1: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+        >>>    1 | i=int(input('idade: '))
+               2 | p=round(float(input('peso: ')),1)
+
+  [2] Linha 2: Variável 'p' com nome muito curto (≤4 chars)
+      Trecho  : p = ...
+      Contexto:
+               1 | i=int(input('idade: '))
+        >>>    2 | p=round(float(input('peso: ')),1)
+               3 | print('Entradas: {} anos e {} kg'.format(i,p))
+
+======================================================================

@@ -1,0 +1,85 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 6782_9821.py
+Questão  : 6782
+Aluno    : 9821
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B8, B9
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | ano =int(input("ano de nascimento:"))
+     2 | pais = input("pais selecionado:").upper()
+     3 | 
+     4 | im = (2023 - ano)
+     5 | sobra = (im - 18)
+     6 | falta = (18 - im)
+     7 | sobrae = (im -16)
+     8 | faltae = (16 - im)
+     9 | 
+    10 | if pais == 'B':
+    11 | 	if im >=18:
+    12 | 		print("sim")
+    13 | 		print(sobra)
+    14 | 	elif im <18:
+    15 | 		print ("nao")
+    16 | 		print (falta)
+    17 | 		
+    18 | 	
+    19 | elif pais == 'E':
+    20 | 	if im >=16:
+    21 | 		print("sim")
+    22 | 		print (sobrae)
+    23 | 	elif im < 16:
+    24 | 		print ("nao")
+    25 | 		print (faltae)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 3
+
+  [1] Linha 10: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 10) / elif ... sem else
+      Contexto:
+               9 | 
+        >>>   10 | if pais == 'B':
+              11 | 	if im >=18:
+
+  [2] Linha 11: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 11) / elif ... sem else
+      Contexto:
+              10 | if pais == 'B':
+        >>>   11 | 	if im >=18:
+              12 | 		print("sim")
+
+  [3] Linha 20: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 20) / elif ... sem else
+      Contexto:
+              19 | elif pais == 'E':
+        >>>   20 | 	if im >=16:
+              21 | 		print("sim")
+
+▶ B9 — elif/else retestando condições já verificadas
+  Ocorrências: 2
+
+  [1] Linha 14: elif retesta condição inversa do if da linha 11
+      Trecho  : if im >= 18 ... elif im < 18
+      Contexto:
+              13 | 		print(sobra)
+        >>>   14 | 	elif im <18:
+              15 | 		print ("nao")
+
+  [2] Linha 23: elif retesta condição inversa do if da linha 20
+      Trecho  : if im >= 16 ... elif im < 16
+      Contexto:
+              22 | 		print (sobrae)
+        >>>   23 | 	elif im < 16:
+              24 | 		print ("nao")
+
+======================================================================

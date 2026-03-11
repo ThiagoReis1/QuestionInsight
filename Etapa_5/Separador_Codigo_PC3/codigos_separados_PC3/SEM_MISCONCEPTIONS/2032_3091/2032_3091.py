@@ -1,0 +1,13 @@
+x=int(input("digite nummero: "))
+x1=int(input("digite nummero: "))
+x2=int(input("digite nummero: "))
+x3=int(input("digite nummero: "))
+x4=int(input("digite nummero: "))
+x5=int(input("digite nummero: "))
+x6=int(input("digite nummero: "))
+x7=int(input("digite nummero: "))
+x8=int(input("digite nummero: "))
+x9=int(input("digite nummero: "))
+x10=int(input("digite nummero: "))
+
+while((x1 and x2 and x3 and x4 and x5 and x6 and and x8 and x9 and x1)!=())

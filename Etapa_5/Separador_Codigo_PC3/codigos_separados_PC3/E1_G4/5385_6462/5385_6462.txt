@@ -1,0 +1,94 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 5385_6462.py
+Questão  : 5385
+Aluno    : 6462
+Total MCs: 2
+
+⚠️  Misconceptions detectados: E1, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | v = input("").upper()
+     3 | a = 0
+     4 | d = 0
+     5 | c = 0
+     6 | while a < len(v):
+     7 | 	if v[a] == "A" or v[a] == "E" or v[a] == "I" or v[a] == "I" or v[a] == "O" or v[a] == "U":
+     8 | 		c = c + 35.15
+     9 | 	else:
+    10 | 		d = d + 42.17
+    11 | 	a = a + 1
+    12 | total = c + d
+    13 | print(round(total , 2))
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ E1 — Verificação desnecessária de todas as combinações possíveis
+  Ocorrências: 1
+
+  [1] Linha 7: 6 condições em um único if — verificação excessiva
+      Trecho  : v[a] == 'A' or v[a] == 'E' or v[a] == 'I' or (v[a] == 'I') or (v[a] == 'O') or (v[a] == 'U')
+      Contexto:
+               6 | while a < len(v):
+        >>>    7 | 	if v[a] == "A" or v[a] == "E" or v[a] == "I" or v[a] == "I" or v[a] == "O" or v[a] == "U":
+               8 | 		c = c + 35.15
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 7
+
+  [1] Linha 2: Variável 'v' com nome muito curto (≤4 chars)
+      Trecho  : v = ...
+      Contexto:
+               1 | from numpy import*
+        >>>    2 | v = input("").upper()
+               3 | a = 0
+
+  [2] Linha 3: Variável 'a' com nome muito curto (≤4 chars)
+      Trecho  : a = ...
+      Contexto:
+               2 | v = input("").upper()
+        >>>    3 | a = 0
+               4 | d = 0
+
+  [3] Linha 4: Variável 'd' com nome muito curto (≤4 chars)
+      Trecho  : d = ...
+      Contexto:
+               3 | a = 0
+        >>>    4 | d = 0
+               5 | c = 0
+
+  [4] Linha 5: Variável 'c' com nome muito curto (≤4 chars)
+      Trecho  : c = ...
+      Contexto:
+               4 | d = 0
+        >>>    5 | c = 0
+               6 | while a < len(v):
+
+  [5] Linha 11: Variável 'a' com nome muito curto (≤4 chars)
+      Trecho  : a = ...
+      Contexto:
+              10 | 		d = d + 42.17
+        >>>   11 | 	a = a + 1
+              12 | total = c + d
+
+  [6] Linha 8: Variável 'c' com nome muito curto (≤4 chars)
+      Trecho  : c = ...
+      Contexto:
+               7 | 	if v[a] == "A" or v[a] == "E" or v[a] == "I" or v[a] == "I" or v[a] == "O" or v[a] == "U":
+        >>>    8 | 		c = c + 35.15
+               9 | 	else:
+
+  [7] Linha 10: Variável 'd' com nome muito curto (≤4 chars)
+      Trecho  : d = ...
+      Contexto:
+               9 | 	else:
+        >>>   10 | 		d = d + 42.17
+              11 | 	a = a + 1
+
+======================================================================

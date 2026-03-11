@@ -1,0 +1,57 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 5240_7666.py
+Questão  : 5240
+Aluno    : 7666
+Total MCs: 3
+
+⚠️  Misconceptions detectados: A3, B8, B9
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | used = int(input())
+     2 | valor = 0
+     3 | if(used < 100):
+     4 | 	valor = used/2
+     5 | elif(used < 250):
+     6 | 	valor = used*0.75
+     7 | elif(used < 500):
+     8 | 	valor = used
+     9 | elif(used >= 500):
+    10 | 	valor = used*1.25
+    11 | 	
+    12 | print(round(valor + 50,2))
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 1
+
+  [1] Linha 0: A3 detectado pelo VisitorMC3 (localização exata não mapeada)
+      Trecho  : —
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 7: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 7) / elif ... sem else
+      Contexto:
+               6 | 	valor = used*0.75
+        >>>    7 | elif(used < 500):
+               8 | 	valor = used
+
+▶ B9 — elif/else retestando condições já verificadas
+  Ocorrências: 1
+
+  [1] Linha 9: elif retesta condição inversa do if da linha 7
+      Trecho  : if used < 500 ... elif used >= 500
+      Contexto:
+               8 | 	valor = used
+        >>>    9 | elif(used >= 500):
+              10 | 	valor = used*1.25
+
+======================================================================

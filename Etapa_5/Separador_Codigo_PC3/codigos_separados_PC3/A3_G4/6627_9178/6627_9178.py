@@ -1,0 +1,7 @@
+x = input("Palavra: ").upper()
+
+
+
+
+
+

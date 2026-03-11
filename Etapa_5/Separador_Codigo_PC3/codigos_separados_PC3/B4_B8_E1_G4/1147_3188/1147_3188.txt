@@ -1,0 +1,160 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1147_3188.py
+Questão  : 1147
+Aluno    : 3188
+Total MCs: 4
+
+⚠️  Misconceptions detectados: B4, B8, E1, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | #Personagem mulher de a guerra dos tronos (pm)
+     2 | pm=input("Nome da personagem:")
+     3 | 
+     4 | #Validacao
+     5 | if((pm=="Daenerys")or(pm=="Cersei")or(pm=="Brienne")or(pm=="Arya")or(pm=="Sansa")or(pm=="Margaery")or(pm=="Catelyn")or(pm=="Meera")):
+     6 | 	if(pm=="Daenerys"):
+     7 | 		nome="Aegon IV Targaryen"
+     8 | 	elif(pm=="Cersei"):
+     9 | 		 nome="Tywin Lannister"
+    10 | 	elif(pm=="Brienne"):
+    11 | 		nome="Selwyn Tarth"
+    12 | 	elif(pm=="Arya"):
+    13 | 		nome="Eddard Stark"
+    14 | 	elif(pm=="Sansa"):
+    15 | 		nome="Eddard Stark"
+    16 | 	elif(pm=="Margaery"):
+    17 | 		nome="Garth Tyrell"
+    18 | 	elif(pm=="Catelyn"):
+    19 | 		nome="Hoster Tully"
+    20 | 	elif(pm=="Meera"):
+    21 | 		nome="Howland Reed"
+    22 | 	print(nome)
+    23 | else:
+    24 | 	print("Entrada ", pm , "invalida")
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B4 — Comandos repetidos dentro de blocos if-elif-else
+  Ocorrências: 4
+
+  [1] Linha 14: Bloco idêntico ao da linha 12
+      Trecho  : nome = 'Eddard Stark'
+      Contexto:
+              13 | 		nome="Eddard Stark"
+        >>>   14 | 	elif(pm=="Sansa"):
+              15 | 		nome="Eddard Stark"
+
+  [2] Linha 14: Bloco idêntico ao da linha 12
+      Trecho  : nome = 'Eddard Stark'
+      Contexto:
+              13 | 		nome="Eddard Stark"
+        >>>   14 | 	elif(pm=="Sansa"):
+              15 | 		nome="Eddard Stark"
+
+  [3] Linha 14: Bloco idêntico ao da linha 12
+      Trecho  : nome = 'Eddard Stark'
+      Contexto:
+              13 | 		nome="Eddard Stark"
+        >>>   14 | 	elif(pm=="Sansa"):
+              15 | 		nome="Eddard Stark"
+
+  [4] Linha 14: Bloco idêntico ao da linha 12
+      Trecho  : nome = 'Eddard Stark'
+      Contexto:
+              13 | 		nome="Eddard Stark"
+        >>>   14 | 	elif(pm=="Sansa"):
+              15 | 		nome="Eddard Stark"
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 18: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 18) / elif ... sem else
+      Contexto:
+              17 | 		nome="Garth Tyrell"
+        >>>   18 | 	elif(pm=="Catelyn"):
+              19 | 		nome="Hoster Tully"
+
+▶ E1 — Verificação desnecessária de todas as combinações possíveis
+  Ocorrências: 1
+
+  [1] Linha 5: 8 condições em um único if — verificação excessiva
+      Trecho  : pm == 'Daenerys' or pm == 'Cersei' or pm == 'Brienne' or (pm == 'Arya') or (pm == 'Sansa') or (pm == 'Margaery') or (pm == 'Catelyn') or (pm == 'Meera')
+      Contexto:
+               4 | #Validacao
+        >>>    5 | if((pm=="Daenerys")or(pm=="Cersei")or(pm=="Brienne")or(pm=="Arya")or(pm=="Sansa")or(pm=="Margaery")or(pm=="Catelyn")or(pm=="Meera")):
+               6 | 	if(pm=="Daenerys"):
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 9
+
+  [1] Linha 2: Variável 'pm' com nome muito curto (≤4 chars)
+      Trecho  : pm = ...
+      Contexto:
+               1 | #Personagem mulher de a guerra dos tronos (pm)
+        >>>    2 | pm=input("Nome da personagem:")
+               3 | 
+
+  [2] Linha 7: Variável 'nome' com nome muito curto (≤4 chars)
+      Trecho  : nome = ...
+      Contexto:
+               6 | 	if(pm=="Daenerys"):
+        >>>    7 | 		nome="Aegon IV Targaryen"
+               8 | 	elif(pm=="Cersei"):
+
+  [3] Linha 9: Variável 'nome' com nome muito curto (≤4 chars)
+      Trecho  : nome = ...
+      Contexto:
+               8 | 	elif(pm=="Cersei"):
+        >>>    9 | 		 nome="Tywin Lannister"
+              10 | 	elif(pm=="Brienne"):
+
+  [4] Linha 11: Variável 'nome' com nome muito curto (≤4 chars)
+      Trecho  : nome = ...
+      Contexto:
+              10 | 	elif(pm=="Brienne"):
+        >>>   11 | 		nome="Selwyn Tarth"
+              12 | 	elif(pm=="Arya"):
+
+  [5] Linha 13: Variável 'nome' com nome muito curto (≤4 chars)
+      Trecho  : nome = ...
+      Contexto:
+              12 | 	elif(pm=="Arya"):
+        >>>   13 | 		nome="Eddard Stark"
+              14 | 	elif(pm=="Sansa"):
+
+  [6] Linha 15: Variável 'nome' com nome muito curto (≤4 chars)
+      Trecho  : nome = ...
+      Contexto:
+              14 | 	elif(pm=="Sansa"):
+        >>>   15 | 		nome="Eddard Stark"
+              16 | 	elif(pm=="Margaery"):
+
+  [7] Linha 17: Variável 'nome' com nome muito curto (≤4 chars)
+      Trecho  : nome = ...
+      Contexto:
+              16 | 	elif(pm=="Margaery"):
+        >>>   17 | 		nome="Garth Tyrell"
+              18 | 	elif(pm=="Catelyn"):
+
+  [8] Linha 19: Variável 'nome' com nome muito curto (≤4 chars)
+      Trecho  : nome = ...
+      Contexto:
+              18 | 	elif(pm=="Catelyn"):
+        >>>   19 | 		nome="Hoster Tully"
+              20 | 	elif(pm=="Meera"):
+
+  [9] Linha 21: Variável 'nome' com nome muito curto (≤4 chars)
+      Trecho  : nome = ...
+      Contexto:
+              20 | 	elif(pm=="Meera"):
+        >>>   21 | 		nome="Howland Reed"
+              22 | 	print(nome)
+
+======================================================================

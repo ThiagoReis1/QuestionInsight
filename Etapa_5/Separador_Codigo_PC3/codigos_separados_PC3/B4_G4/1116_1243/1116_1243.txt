@@ -1,0 +1,84 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1116_1243.py
+Questão  : 1116
+Aluno    : 1243
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B4, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | 
+     2 | X = float(input("digite a coordenada X:"))
+     3 | Y = float(input("digite a coordenada Y:"))
+     4 | 
+     5 | if(((X == 1.0) and (Y == 2.5)) or ((X>0) and (Y>0))):
+     6 | 	print("O ponto", "(", X, ",", Y, ")", "estah no quadrante 1")
+     7 | 
+     8 | elif (((X == -1.0) and (Y == - 2.5)) or ((X<0) and (Y<0))):
+     9 | 	print("O ponto", "(", X, ",", Y, ")", "estah no quadrante 3")
+    10 | elif ((X == 1.0) and (Y == - 2.0)) or ((X>0) and (Y<0)):
+    11 | 	print("O ponto", "(", X, ",", Y, ")", "estah no quadrante 4")
+    12 | elif (((X == 0.0) and (Y < 0)) or((X == 0.0) and (Y > 0)) or ((X>0) and (Y == 0)) or ((X<0) and (Y == 0))):
+    13 | 	print("O ponto", "(", X,",", Y, ")", "estah situado sobre um dos eixos")
+    14 | elif ((X == 0.0) and (Y == 0.0)):
+    15 | 	print("O ponto", "(", X, ",", Y, ")", "estah situado sobre um dos eixos")
+    16 | else:
+    17 | 	print("O ponto", "(", X, ",", Y, ")", "estah no quadrante 2")
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B4 — Comandos repetidos dentro de blocos if-elif-else
+  Ocorrências: 4
+
+  [1] Linha 14: Bloco idêntico ao da linha 12
+      Trecho  : print('O ponto', '(', X, ',', Y, ')', 'estah situado sobre um dos eixos')
+      Contexto:
+              13 | 	print("O ponto", "(", X,",", Y, ")", "estah situado sobre um dos eixos")
+        >>>   14 | elif ((X == 0.0) and (Y == 0.0)):
+              15 | 	print("O ponto", "(", X, ",", Y, ")", "estah situado sobre um dos eixos")
+
+  [2] Linha 14: Bloco idêntico ao da linha 12
+      Trecho  : print('O ponto', '(', X, ',', Y, ')', 'estah situado sobre um dos eixos')
+      Contexto:
+              13 | 	print("O ponto", "(", X,",", Y, ")", "estah situado sobre um dos eixos")
+        >>>   14 | elif ((X == 0.0) and (Y == 0.0)):
+              15 | 	print("O ponto", "(", X, ",", Y, ")", "estah situado sobre um dos eixos")
+
+  [3] Linha 14: Bloco idêntico ao da linha 12
+      Trecho  : print('O ponto', '(', X, ',', Y, ')', 'estah situado sobre um dos eixos')
+      Contexto:
+              13 | 	print("O ponto", "(", X,",", Y, ")", "estah situado sobre um dos eixos")
+        >>>   14 | elif ((X == 0.0) and (Y == 0.0)):
+              15 | 	print("O ponto", "(", X, ",", Y, ")", "estah situado sobre um dos eixos")
+
+  [4] Linha 14: Bloco idêntico ao da linha 12
+      Trecho  : print('O ponto', '(', X, ',', Y, ')', 'estah situado sobre um dos eixos')
+      Contexto:
+              13 | 	print("O ponto", "(", X,",", Y, ")", "estah situado sobre um dos eixos")
+        >>>   14 | elif ((X == 0.0) and (Y == 0.0)):
+              15 | 	print("O ponto", "(", X, ",", Y, ")", "estah situado sobre um dos eixos")
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 2
+
+  [1] Linha 2: Variável 'X' com nome muito curto (≤4 chars)
+      Trecho  : X = ...
+      Contexto:
+               1 | 
+        >>>    2 | X = float(input("digite a coordenada X:"))
+               3 | Y = float(input("digite a coordenada Y:"))
+
+  [2] Linha 3: Variável 'Y' com nome muito curto (≤4 chars)
+      Trecho  : Y = ...
+      Contexto:
+               2 | X = float(input("digite a coordenada X:"))
+        >>>    3 | Y = float(input("digite a coordenada Y:"))
+               4 | 
+
+======================================================================

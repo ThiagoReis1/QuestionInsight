@@ -1,0 +1,52 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 6781_9254.py
+Questão  : 6781
+Aluno    : 9254
+Total MCs: 1
+
+⚠️  Misconceptions detectados: B8
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | ano = int(input("ano de nascimento: "))
+     2 | local = input("B ou E: ")
+     3 | 
+     4 | if local.upper() == "B" or local.upper() == "E":
+     5 | 	if ano <= 2005 and local.upper() == "E":
+     6 | 		tempo = 2005 - ano
+     7 | 		print("sim")
+     8 | 		print(tempo)
+     9 | 	elif ano <= 2002 and local.upper() == "B":
+    10 | 		tempo = 2002 - ano
+    11 | 		print("sim")
+    12 | 		print(tempo)
+    13 | 	elif ano > 2005 and local.upper() == "E":
+    14 | 		tempo = ano - 2005
+    15 | 		print("nao")
+    16 | 		print(tempo)
+    17 | 	elif ano > 2002 and local.upper() == "B":
+    18 | 		tempo =  ano - 2002
+    19 | 		print("nao")
+    20 | 		print(tempo)
+    21 | else:
+    22 | 	print("invalido")
+    23 | 		
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 13: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 13) / elif ... sem else
+      Contexto:
+              12 | 		print(tempo)
+        >>>   13 | 	elif ano > 2005 and local.upper() == "E":
+              14 | 		tempo = ano - 2005
+
+======================================================================

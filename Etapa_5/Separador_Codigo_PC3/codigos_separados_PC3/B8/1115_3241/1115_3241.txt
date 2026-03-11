@@ -1,0 +1,43 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1115_3241.py
+Questão  : 1115
+Aluno    : 3241
+Total MCs: 1
+
+⚠️  Misconceptions detectados: B8
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | salario = float(input())
+     2 | codigo = int(input())
+     3 | print("Entradas:","R$",salario,"e codigo",codigo)
+     4 | 
+     5 | if((codigo != 101) and (codigo != 102) and (codigo != 103) and (codigo != 104) or (salario <= 0)):
+     6 | 	print("Dados invalidos")
+     7 | elif(codigo == 101):
+     8 | 	print("Novo salario:","R$",(round(salario + (0.80 * salario / 100), 2)))
+     9 | elif(codigo == 102):
+    10 | 	print("Novo salario:","R$",(round(salario + (0.65 * salario / 100), 2)))
+    11 | elif(codigo == 103):
+    12 | 	print("Novo salario:","R$",(round(salario + (0.60 * salario / 100), 2)))
+    13 | elif(codigo == 104):
+    14 | 	print("Novo salario:","R$",(round(salario + (0.55 * salario / 100), 2)))
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 11: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 11) / elif ... sem else
+      Contexto:
+              10 | 	print("Novo salario:","R$",(round(salario + (0.65 * salario / 100), 2)))
+        >>>   11 | elif(codigo == 103):
+              12 | 	print("Novo salario:","R$",(round(salario + (0.60 * salario / 100), 2)))
+
+======================================================================

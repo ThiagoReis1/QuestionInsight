@@ -1,0 +1,55 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 6935_9770.py
+Questão  : 6935
+Aluno    : 9770
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B4, B8
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | valor_total = float(input("Digite um valor:"))
+     2 | codigo = input("opcao de pagamento:").upper()
+     3 | 
+     4 | if codigo == "D":
+     5 |   	valor_final = valor_total - (valor_total * 0.12)
+     6 | 	
+     7 | elif codigo == "P":
+     8 | 	valor_final = valor_total - (valor_total * 0.12)
+     9 | elif codigo == " C":
+    10 | 	vezes = int(input("1 ou 2"))
+    11 | 	if vezes == 1:
+    12 | 		valor_final == valor_total
+    13 | 	else:
+    14 | 		valor_final = valor_total +  (valor_total * 0.07)
+    15 | print(round(valor_final,2))
+    16 | 	
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B4 — Comandos repetidos dentro de blocos if-elif-else
+  Ocorrências: 1
+
+  [1] Linha 7: Bloco idêntico ao da linha 4
+      Trecho  : valor_final = valor_total - valor_total * 0.12
+      Contexto:
+               6 | 	
+        >>>    7 | elif codigo == "P":
+               8 | 	valor_final = valor_total - (valor_total * 0.12)
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 7: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 7) / elif ... sem else
+      Contexto:
+               6 | 	
+        >>>    7 | elif codigo == "P":
+               8 | 	valor_final = valor_total - (valor_total * 0.12)
+
+======================================================================

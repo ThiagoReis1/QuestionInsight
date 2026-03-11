@@ -1,0 +1,70 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1146_3379.py
+Questão  : 1146
+Aluno    : 3379
+Total MCs: 3
+
+⚠️  Misconceptions detectados: B8, E1, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | nome= input("Insira o nome do personagem de Game of Thrones")
+     2 | if (nome=="Joffrey" or  nome=="Robert" or nome=="Sandor" or nome=="Theon" or nome=="Cersei" or nome=="Jaime" or nome=="Tyrion" or nome=="Jorah" or nome=="Jon"):
+     3 | 	if nome=="Joffrey":
+     4 | 		print("Jack Gleeson")
+     5 | 	elif nome=="Robert":
+     6 | 		print("Mark Addy")
+     7 | 	elif nome=="Sandor":
+     8 | 		print("Rory McCann")
+     9 | 	elif nome=="Theon":
+    10 | 		print("Alfie Allen")
+    11 | 	elif nome=="Cersei":
+    12 | 		print("Lena Headey")
+    13 | 	elif nome=="Jaime":
+    14 | 		print("Nikolaj Coster-Waldau")
+    15 | 	elif nome=="Tyrion":
+    16 | 		print("Peter Dinklage")
+    17 | 	elif nome=="Jorah":
+    18 | 		print("Iain Glen")
+    19 | 	elif nome=="Jon":
+    20 | 		print("Kit Harington")
+    21 | else:
+    22 | 	print("Entrada",nome,"invalida")
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 17: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 17) / elif ... sem else
+      Contexto:
+              16 | 		print("Peter Dinklage")
+        >>>   17 | 	elif nome=="Jorah":
+              18 | 		print("Iain Glen")
+
+▶ E1 — Verificação desnecessária de todas as combinações possíveis
+  Ocorrências: 1
+
+  [1] Linha 2: 9 condições em um único if — verificação excessiva
+      Trecho  : nome == 'Joffrey' or nome == 'Robert' or nome == 'Sandor' or (nome == 'Theon') or (nome == 'Cersei') or (nome == 'Jaime') or (nome == 'Tyrion') or (nome == 'Jorah') or (nome == 'Jon')
+      Contexto:
+               1 | nome= input("Insira o nome do personagem de Game of Thrones")
+        >>>    2 | if (nome=="Joffrey" or  nome=="Robert" or nome=="Sandor" or nome=="Theon" or nome=="Cersei" or nome=="Jaime" or nome=="Tyrion" or nome=="Jorah" or nome=="Jon"):
+               3 | 	if nome=="Joffrey":
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 1
+
+  [1] Linha 1: Variável 'nome' com nome muito curto (≤4 chars)
+      Trecho  : nome = ...
+      Contexto:
+        >>>    1 | nome= input("Insira o nome do personagem de Game of Thrones")
+               2 | if (nome=="Joffrey" or  nome=="Robert" or nome=="Sandor" or nome=="Theon" or nome=="Cersei" or nome=="Jaime" or nome=="Tyrion" or nome=="Jorah" or nome=="Jon"):
+
+======================================================================

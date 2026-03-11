@@ -1,0 +1,10 @@
+from math import*
+x = (eval(input ("x: ")))
+k = int (input ("k: "))
+a = 0
+c = 0
+
+while(c < k):
+	a = a + ((-1)**c)*((x**(2*c+1))/factorial(2*c+1))
+	c = c + 1
+print(round (a,6))

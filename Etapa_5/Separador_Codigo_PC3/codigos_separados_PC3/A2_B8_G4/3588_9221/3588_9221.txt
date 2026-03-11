@@ -1,0 +1,95 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 3588_9221.py
+Questão  : 3588
+Aluno    : 9221
+Total MCs: 3
+
+⚠️  Misconceptions detectados: A2, B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | 
+     3 | anel = array (eval (input ("digite um vetor: ")))
+     4 | pto= 10000
+     5 | 
+     6 | i= 0
+     7 | while i < size(anel):
+     8 | 	if anel[i] == 1 :
+     9 | 		pto *= 2 
+    10 | 	elif anel[i] == 2:
+    11 | 		pto = pto
+    12 | 	elif anel[i]== 3 :
+    13 | 		pto /= 2
+    14 | 	elif anel[i] == 4:
+    15 | 		pto /= 4
+    16 | 	i = i + 1
+    17 | 
+    18 | print (round (pto, 2))
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A2 — Variável atribuída a si mesma
+  Ocorrências: 1
+
+  [1] Linha 11: 'pto' atribuído a si mesmo
+      Trecho  : pto = pto
+      Contexto:
+              10 | 	elif anel[i] == 2:
+        >>>   11 | 		pto = pto
+              12 | 	elif anel[i]== 3 :
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 12: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 12) / elif ... sem else
+      Contexto:
+              11 | 		pto = pto
+        >>>   12 | 	elif anel[i]== 3 :
+              13 | 		pto /= 2
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 5
+
+  [1] Linha 3: Variável 'anel' com nome muito curto (≤4 chars)
+      Trecho  : anel = ...
+      Contexto:
+               2 | 
+        >>>    3 | anel = array (eval (input ("digite um vetor: ")))
+               4 | pto= 10000
+
+  [2] Linha 4: Variável 'pto' com nome muito curto (≤4 chars)
+      Trecho  : pto = ...
+      Contexto:
+               3 | anel = array (eval (input ("digite um vetor: ")))
+        >>>    4 | pto= 10000
+               5 | 
+
+  [3] Linha 6: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+               5 | 
+        >>>    6 | i= 0
+               7 | while i < size(anel):
+
+  [4] Linha 16: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+              15 | 		pto /= 4
+        >>>   16 | 	i = i + 1
+              17 | 
+
+  [5] Linha 11: Variável 'pto' com nome muito curto (≤4 chars)
+      Trecho  : pto = ...
+      Contexto:
+              10 | 	elif anel[i] == 2:
+        >>>   11 | 		pto = pto
+              12 | 	elif anel[i]== 3 :
+
+======================================================================

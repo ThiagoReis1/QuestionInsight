@@ -1,0 +1,48 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1651_3322.py
+Questão  : 1651
+Aluno    : 3322
+Total MCs: 1
+
+⚠️  Misconceptions detectados: B8
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import *
+     2 | pele = input()
+     3 | vetor = pele.split(',')
+     4 | vet_resp = zeros(6, dtype=int)
+     5 | for cont in vetor:
+     6 | 	if cont.upper()=="MC":
+     7 | 		vet_resp[0]=vet_resp[0] + 1
+     8 | 	elif cont.upper()=="C":
+     9 | 		vet_resp[1]=vet_resp[1] + 1
+    10 | 	elif cont.upper()=="CM":
+    11 | 		vet_resp[2]=vet_resp[2] + 1
+    12 | 	elif cont.upper()=="EM":
+    13 | 		vet_resp[3]=vet_resp[3] + 1
+    14 | 	elif cont.upper()=="E":
+    15 | 		vet_resp[4]=vet_resp[4] + 1
+    16 | 	elif cont.upper()=="ME":
+    17 | 		vet_resp[5]=vet_resp[5] + 1
+    18 | print(max(vet_resp))
+    19 | print(vet_resp)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 14: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 14) / elif ... sem else
+      Contexto:
+              13 | 		vet_resp[3]=vet_resp[3] + 1
+        >>>   14 | 	elif cont.upper()=="E":
+              15 | 		vet_resp[4]=vet_resp[4] + 1
+
+======================================================================

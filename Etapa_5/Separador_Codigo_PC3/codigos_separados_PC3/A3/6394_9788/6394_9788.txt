@@ -1,0 +1,40 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 6394_9788.py
+Questão  : 6394
+Aluno    : 9788
+Total MCs: 1
+
+⚠️  Misconceptions detectados: A3
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | 
+     3 | mens = array(eval(input("mensagem:")))
+     4 | mens_cod = zeros(size(mens), dtype = int)
+     5 | 
+     6 | for i in range(size(mens)):
+     7 | 	if mens[i] == 9:
+     8 | 		mens[i] = 0
+     9 | 	else:
+    10 | 		mens[i] = mens[i] + 1
+    11 | print(mens)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 1
+
+  [1] Linha 4: Variável 'mens_cod' declarada mas nunca utilizada
+      Trecho  : mens_cod = ...
+      Contexto:
+               3 | mens = array(eval(input("mensagem:")))
+        >>>    4 | mens_cod = zeros(size(mens), dtype = int)
+               5 | 
+
+======================================================================

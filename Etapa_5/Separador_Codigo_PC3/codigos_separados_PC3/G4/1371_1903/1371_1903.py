@@ -1,0 +1,7 @@
+gramas = float(input("Digite a quantidade de gramas: "))
+cc = round(gramas*0.1105,2)
+al = round(gramas*0.1768,2)
+ot = round(gramas*0.7127,2)
+print(cc)
+print(al)
+print(ot)

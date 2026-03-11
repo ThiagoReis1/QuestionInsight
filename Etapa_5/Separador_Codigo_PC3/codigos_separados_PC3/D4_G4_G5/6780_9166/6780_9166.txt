@@ -1,0 +1,128 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 6780_9166.py
+Questão  : 6780
+Aluno    : 9166
+Total MCs: 3
+
+⚠️  Misconceptions detectados: D4, G4, G5
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | ano_consulta = 2023
+     2 | minimo_brasil = 21
+     3 | minimo_china = 24
+     4 | 
+     5 | def idade_minima(a: int, p: str) -> str:
+     6 | 	idade = ano_consulta - a
+     7 | 	# BRASIL ------------------------------------
+     8 | 	if (p == "B" and idade < 21):
+     9 | 		print("nao")
+    10 | 		print(minimo_brasil - (ano_consulta - a))
+    11 | 		
+    12 | 	elif (p == "B" and idade >= 21):
+    13 | 		print("sim")
+    14 | 		print((ano_consulta - a) - minimo_brasil)
+    15 | 	# CHINA --------------------------------------
+    16 | 	elif (p == "C" and idade < 24):
+    17 | 		print("nao")
+    18 | 		print(minimo_china - (ano_consulta - a))
+    19 | 		
+    20 | 	elif (p == "C" and idade >= 24):
+    21 | 		print("sim")
+    22 | 		print((ano_consulta - a) - minimo_china)
+    23 | 	# NENHUM -------------------------------------
+    24 | 	else:
+    25 | 		print("invalido")
+    26 | 		
+    27 | if __name__ == "__main__":
+    28 | 	ano_nascimento = int(input(""))
+    29 | 	pais_nascimento = input("").upper()
+    30 | 	
+    31 | 	idade_minima(ano_nascimento, pais_nascimento)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ D4 — Variável fora do escopo da função
+  Ocorrências: 9
+
+  [1] Linha 6: Global 'ano_consulta' usada em 'idade_minima' sem ser parâmetro
+      Trecho  : ano_consulta
+      Contexto:
+               5 | def idade_minima(a: int, p: str) -> str:
+        >>>    6 | 	idade = ano_consulta - a
+               7 | 	# BRASIL ------------------------------------
+
+  [2] Linha 10: Global 'minimo_brasil' usada em 'idade_minima' sem ser parâmetro
+      Trecho  : minimo_brasil
+      Contexto:
+               9 | 		print("nao")
+        >>>   10 | 		print(minimo_brasil - (ano_consulta - a))
+              11 | 		
+
+  [3] Linha 10: Global 'ano_consulta' usada em 'idade_minima' sem ser parâmetro
+      Trecho  : ano_consulta
+      Contexto:
+               9 | 		print("nao")
+        >>>   10 | 		print(minimo_brasil - (ano_consulta - a))
+              11 | 		
+
+  [4] Linha 14: Global 'minimo_brasil' usada em 'idade_minima' sem ser parâmetro
+      Trecho  : minimo_brasil
+      Contexto:
+              13 | 		print("sim")
+        >>>   14 | 		print((ano_consulta - a) - minimo_brasil)
+              15 | 	# CHINA --------------------------------------
+
+  [5] Linha 14: Global 'ano_consulta' usada em 'idade_minima' sem ser parâmetro
+      Trecho  : ano_consulta
+      Contexto:
+              13 | 		print("sim")
+        >>>   14 | 		print((ano_consulta - a) - minimo_brasil)
+              15 | 	# CHINA --------------------------------------
+
+  [6] Linha 18: Global 'minimo_china' usada em 'idade_minima' sem ser parâmetro
+      Trecho  : minimo_china
+      Contexto:
+              17 | 		print("nao")
+        >>>   18 | 		print(minimo_china - (ano_consulta - a))
+              19 | 		
+
+  [7] Linha 18: Global 'ano_consulta' usada em 'idade_minima' sem ser parâmetro
+      Trecho  : ano_consulta
+      Contexto:
+              17 | 		print("nao")
+        >>>   18 | 		print(minimo_china - (ano_consulta - a))
+              19 | 		
+
+  [8] Linha 22: Global 'minimo_china' usada em 'idade_minima' sem ser parâmetro
+      Trecho  : minimo_china
+      Contexto:
+              21 | 		print("sim")
+        >>>   22 | 		print((ano_consulta - a) - minimo_china)
+              23 | 	# NENHUM -------------------------------------
+
+  [9] Linha 22: Global 'ano_consulta' usada em 'idade_minima' sem ser parâmetro
+      Trecho  : ano_consulta
+      Contexto:
+              21 | 		print("sim")
+        >>>   22 | 		print((ano_consulta - a) - minimo_china)
+              23 | 	# NENHUM -------------------------------------
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 1
+
+  [1] Linha 0: G4 detectado pelo VisitorMC3 (localização exata não mapeada)
+      Trecho  : —
+
+▶ G5 — Organização arbitrária de declarações
+  Ocorrências: 1
+
+  [1] Linha 0: G5 detectado pelo VisitorMC3 (localização exata não mapeada)
+      Trecho  : —
+
+======================================================================

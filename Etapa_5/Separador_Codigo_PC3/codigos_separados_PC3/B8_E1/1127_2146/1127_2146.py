@@ -1,0 +1,24 @@
+cidade = input("Cidade: ")
+
+if(cidade == "Pentos" or cidade == "Bravos" or cidade == "Lys" or cidade == "Qohor" or cidade == "Norvos" or cidade == "Myr" or cidade == "Tyrosh" or cidade == "Volantis" or cidade == "Lorath"):
+	if(cidade == "Pentos"):
+		print("pentoshi")
+	elif(cidade == "Bravos"):
+		print("bravosiano")
+	elif(cidade == "Lys"):
+		print("liseno")
+	elif(cidade == "Qohor"):
+		print("qohorik")
+	elif(cidade == "Norvos"):
+		print("norvoshi")
+	elif(cidade == "Myr"):
+		print("myrano")
+	elif(cidade == "Tyrosh"):
+		print("tyroshi")
+	elif(cidade == "Volantis"):
+		print("volantino")
+	elif(cidade == "Lorath"):
+		print("lorathi")
+else:
+	print("Entrada",cidade ,"invalida")
+		

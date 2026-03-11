@@ -1,0 +1,121 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1196_1339.py
+Questão  : 1196
+Aluno    : 1339
+Total MCs: 2
+
+⚠️  Misconceptions detectados: A3, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | t=eval(input())
+     3 | i=0
+     4 | c=0
+     5 | l=0
+     6 | while i<size(t):
+     7 | 	if t[i]<60 or t[i]>-60:
+     8 | 		c+=1
+     9 | 	i+=1
+    10 | i=0
+    11 | 
+    12 | t2= zeros(c,dtype=float)
+    13 | while i<size(t):
+    14 | 	if t[i]<60 and t[i]>-60:
+    15 | 		t2[i]=t[i]
+    16 | 	i+=1
+    17 | vet2=(zeros(c,dtype=float))
+    18 | y=0
+    19 | z=0
+    20 | while(y<size(t2)):
+    21 | 	if(t2[y]!=0):
+    22 | 		vet2[z]=t2[y]
+    23 | 		z+=1
+    24 | 	y+=1
+    25 | 
+    26 | print(trim_zeros(vet2))
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 1
+
+  [1] Linha 5: Variável 'l' declarada mas nunca utilizada
+      Trecho  : l = ...
+      Contexto:
+               4 | c=0
+        >>>    5 | l=0
+               6 | while i<size(t):
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 9
+
+  [1] Linha 2: Variável 't' com nome muito curto (≤4 chars)
+      Trecho  : t = ...
+      Contexto:
+               1 | from numpy import*
+        >>>    2 | t=eval(input())
+               3 | i=0
+
+  [2] Linha 3: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+               2 | t=eval(input())
+        >>>    3 | i=0
+               4 | c=0
+
+  [3] Linha 4: Variável 'c' com nome muito curto (≤4 chars)
+      Trecho  : c = ...
+      Contexto:
+               3 | i=0
+        >>>    4 | c=0
+               5 | l=0
+
+  [4] Linha 5: Variável 'l' com nome muito curto (≤4 chars)
+      Trecho  : l = ...
+      Contexto:
+               4 | c=0
+        >>>    5 | l=0
+               6 | while i<size(t):
+
+  [5] Linha 10: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+               9 | 	i+=1
+        >>>   10 | i=0
+              11 | 
+
+  [6] Linha 12: Variável 't2' com nome muito curto (≤4 chars)
+      Trecho  : t2 = ...
+      Contexto:
+              11 | 
+        >>>   12 | t2= zeros(c,dtype=float)
+              13 | while i<size(t):
+
+  [7] Linha 17: Variável 'vet2' com nome muito curto (≤4 chars)
+      Trecho  : vet2 = ...
+      Contexto:
+              16 | 	i+=1
+        >>>   17 | vet2=(zeros(c,dtype=float))
+              18 | y=0
+
+  [8] Linha 18: Variável 'y' com nome muito curto (≤4 chars)
+      Trecho  : y = ...
+      Contexto:
+              17 | vet2=(zeros(c,dtype=float))
+        >>>   18 | y=0
+              19 | z=0
+
+  [9] Linha 19: Variável 'z' com nome muito curto (≤4 chars)
+      Trecho  : z = ...
+      Contexto:
+              18 | y=0
+        >>>   19 | z=0
+              20 | while(y<size(t2)):
+
+======================================================================

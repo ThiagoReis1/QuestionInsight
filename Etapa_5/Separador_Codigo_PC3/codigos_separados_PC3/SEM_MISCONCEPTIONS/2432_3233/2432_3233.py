@@ -1,0 +1,7 @@
+precoaream2 = round(float(input()), 2)
+areaa=float(input())
+areac=float(input())
+areag=float(input())
+areatotal= (areaa + areac + areag)
+precototal = float(areatotal* precoaream2)
+print(round(precototal, 2))

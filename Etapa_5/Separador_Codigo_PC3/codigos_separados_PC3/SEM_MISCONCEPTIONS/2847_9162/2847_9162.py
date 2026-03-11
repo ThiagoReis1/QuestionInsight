@@ -1,0 +1,3 @@
+for numpy import *
+
+a =

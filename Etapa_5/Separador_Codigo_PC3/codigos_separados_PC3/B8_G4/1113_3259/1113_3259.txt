@@ -1,0 +1,71 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1113_3259.py
+Questão  : 1113
+Aluno    : 3259
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | X = int(input("Digite a idade: ")) 
+     2 | Y = float(input("Digite o peso: "))
+     3 | print("Entradas:",X,"anos e",Y,"kg")
+     4 | 
+     5 | if ( X <= 0) or ( X >=130 ) or ( Y <= 0) or ( Y >= 550):
+     6 | 	print("Dados invalidos")
+     7 | elif ( X <= 20) and ( Y <= 60):
+     8 | 	print("Grupo de risco: 9")
+     9 | elif (X >20) and ( X <= 50) and ( Y <= 60):
+    10 | 	print("Grupo de risco: 6")
+    11 | elif (X >50) and (Y <= 60):
+    12 | 	print("Grupo de risco: 3")
+    13 | elif (X <= 20) and (Y >60 ) and ( Y<= 90):
+    14 | 	print("Grupo de risco: 8")
+    15 | elif (X >20) and (X <=50) and (Y >60) and (Y <=90):
+    16 | 	print("Grupo de risco: 5")
+    17 | elif ( X >50) and (Y >60) and (Y <=90):
+    18 | 	print("Grupo de risco: 2")
+    19 | elif (X <=20) and (Y>90):
+    20 | 	print("Grupo de risco: 7")
+    21 | elif ( X>20) and (X <=50) and (Y>90):
+    22 | 	print("Grupo de risco: 4")
+    23 | elif (X>50) and (Y>90):
+    24 | 	print("Grupo de risco: 1")
+    25 | 
+    26 | 	
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 21: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 21) / elif ... sem else
+      Contexto:
+              20 | 	print("Grupo de risco: 7")
+        >>>   21 | elif ( X>20) and (X <=50) and (Y>90):
+              22 | 	print("Grupo de risco: 4")
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 2
+
+  [1] Linha 1: Variável 'X' com nome muito curto (≤4 chars)
+      Trecho  : X = ...
+      Contexto:
+        >>>    1 | X = int(input("Digite a idade: ")) 
+               2 | Y = float(input("Digite o peso: "))
+
+  [2] Linha 2: Variável 'Y' com nome muito curto (≤4 chars)
+      Trecho  : Y = ...
+      Contexto:
+               1 | X = int(input("Digite a idade: ")) 
+        >>>    2 | Y = float(input("Digite o peso: "))
+               3 | print("Entradas:",X,"anos e",Y,"kg")
+
+======================================================================

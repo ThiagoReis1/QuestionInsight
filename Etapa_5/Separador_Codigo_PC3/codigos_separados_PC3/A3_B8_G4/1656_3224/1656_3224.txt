@@ -1,0 +1,158 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1656_3224.py
+Questão  : 1656
+Aluno    : 3224
+Total MCs: 3
+
+⚠️  Misconceptions detectados: A3, B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | 
+     3 | vet = input().split(',')
+     4 | vat = zeros(5, dtype=int)
+     5 | be = 0
+     6 | es = 0       
+     7 | fr = 0    						
+     8 | it = 0
+     9 | pt = 0
+    10 | maior = 0
+    11 | for elemento in vet:
+    12 | 
+    13 | 	if(elemento == 'BE'):
+    14 | 		vat[0] = vat[0] + 1
+    15 | 		be = be + 1
+    16 | 		
+    17 | 	elif(elemento == 'ES'):
+    18 | 		vat[1] = vat[1] + 1
+    19 | 		es = es +1
+    20 | 		
+    21 | 	elif(elemento == 'FR'):    
+    22 | 		vat[2] = vat[2] + 1
+    23 | 		fr = fr +1     
+    24 | 	elif(elemento == 'IT'):
+    25 | 		vat[3] = vat[3] + 1
+    26 | 		it = it +1
+    27 | 	elif(elemento == 'PT'):
+    28 | 		vat[4] = vat[4] + 1
+    29 | 		pt = pt +1
+    30 | 		
+    31 | print(max(vat))
+    32 | print(vat)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 1
+
+  [1] Linha 10: Variável 'maior' declarada mas nunca utilizada
+      Trecho  : maior = ...
+      Contexto:
+               9 | pt = 0
+        >>>   10 | maior = 0
+              11 | for elemento in vet:
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 24: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 24) / elif ... sem else
+      Contexto:
+              23 | 		fr = fr +1     
+        >>>   24 | 	elif(elemento == 'IT'):
+              25 | 		vat[3] = vat[3] + 1
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 12
+
+  [1] Linha 3: Variável 'vet' com nome muito curto (≤4 chars)
+      Trecho  : vet = ...
+      Contexto:
+               2 | 
+        >>>    3 | vet = input().split(',')
+               4 | vat = zeros(5, dtype=int)
+
+  [2] Linha 4: Variável 'vat' com nome muito curto (≤4 chars)
+      Trecho  : vat = ...
+      Contexto:
+               3 | vet = input().split(',')
+        >>>    4 | vat = zeros(5, dtype=int)
+               5 | be = 0
+
+  [3] Linha 5: Variável 'be' com nome muito curto (≤4 chars)
+      Trecho  : be = ...
+      Contexto:
+               4 | vat = zeros(5, dtype=int)
+        >>>    5 | be = 0
+               6 | es = 0       
+
+  [4] Linha 6: Variável 'es' com nome muito curto (≤4 chars)
+      Trecho  : es = ...
+      Contexto:
+               5 | be = 0
+        >>>    6 | es = 0       
+               7 | fr = 0    						
+
+  [5] Linha 7: Variável 'fr' com nome muito curto (≤4 chars)
+      Trecho  : fr = ...
+      Contexto:
+               6 | es = 0       
+        >>>    7 | fr = 0    						
+               8 | it = 0
+
+  [6] Linha 8: Variável 'it' com nome muito curto (≤4 chars)
+      Trecho  : it = ...
+      Contexto:
+               7 | fr = 0    						
+        >>>    8 | it = 0
+               9 | pt = 0
+
+  [7] Linha 9: Variável 'pt' com nome muito curto (≤4 chars)
+      Trecho  : pt = ...
+      Contexto:
+               8 | it = 0
+        >>>    9 | pt = 0
+              10 | maior = 0
+
+  [8] Linha 15: Variável 'be' com nome muito curto (≤4 chars)
+      Trecho  : be = ...
+      Contexto:
+              14 | 		vat[0] = vat[0] + 1
+        >>>   15 | 		be = be + 1
+              16 | 		
+
+  [9] Linha 19: Variável 'es' com nome muito curto (≤4 chars)
+      Trecho  : es = ...
+      Contexto:
+              18 | 		vat[1] = vat[1] + 1
+        >>>   19 | 		es = es +1
+              20 | 		
+
+  [10] Linha 23: Variável 'fr' com nome muito curto (≤4 chars)
+      Trecho  : fr = ...
+      Contexto:
+              22 | 		vat[2] = vat[2] + 1
+        >>>   23 | 		fr = fr +1     
+              24 | 	elif(elemento == 'IT'):
+
+  [11] Linha 26: Variável 'it' com nome muito curto (≤4 chars)
+      Trecho  : it = ...
+      Contexto:
+              25 | 		vat[3] = vat[3] + 1
+        >>>   26 | 		it = it +1
+              27 | 	elif(elemento == 'PT'):
+
+  [12] Linha 29: Variável 'pt' com nome muito curto (≤4 chars)
+      Trecho  : pt = ...
+      Contexto:
+              28 | 		vat[4] = vat[4] + 1
+        >>>   29 | 		pt = pt +1
+              30 | 		
+
+======================================================================

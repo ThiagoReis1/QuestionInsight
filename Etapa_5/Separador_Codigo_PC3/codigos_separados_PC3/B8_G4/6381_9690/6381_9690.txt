@@ -1,0 +1,61 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 6381_9690.py
+Questão  : 6381
+Aluno    : 9690
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import *
+     2 | 
+     3 | s = input("cartas: ").upper().split(",")
+     4 | v = zeros(4,dtype=int)
+     5 | 
+     6 | for i in range(len(s)):
+     7 | 	if s[i]=="C":
+     8 | 		v[0]+=1
+     9 | 	elif s[i]=="O":
+    10 | 		v[1]+=1
+    11 | 	elif s[i]=="P":
+    12 | 		v[2]+=1
+    13 | 	elif s[i]=="E":
+    14 | 		v[3]+=1
+    15 | print(v)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 11: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 11) / elif ... sem else
+      Contexto:
+              10 | 		v[1]+=1
+        >>>   11 | 	elif s[i]=="P":
+              12 | 		v[2]+=1
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 2
+
+  [1] Linha 3: Variável 's' com nome muito curto (≤4 chars)
+      Trecho  : s = ...
+      Contexto:
+               2 | 
+        >>>    3 | s = input("cartas: ").upper().split(",")
+               4 | v = zeros(4,dtype=int)
+
+  [2] Linha 4: Variável 'v' com nome muito curto (≤4 chars)
+      Trecho  : v = ...
+      Contexto:
+               3 | s = input("cartas: ").upper().split(",")
+        >>>    4 | v = zeros(4,dtype=int)
+               5 | 
+
+======================================================================

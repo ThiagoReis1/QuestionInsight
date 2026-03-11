@@ -1,0 +1,85 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1648_4312.py
+Questão  : 1648
+Aluno    : 4312
+Total MCs: 2
+
+⚠️  Misconceptions detectados: A3, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | aulas = array(eval(input("Aulas frequentadas: ")))
+     3 | x = 0
+     4 | for i in range(0, size(aulas)):
+     5 | 	if(aulas[i]< 70):
+     6 | 		x = x + 1
+     7 | 
+     8 | vet = zeros(x, dtype=int)
+     9 | 
+    10 | for i in range(0, size(vet)):
+    11 | 	y = 0
+    12 | 	if(aulas[i]< 70):
+    13 | 		y = vet[i] + aulas[i] 
+    14 | 		
+    15 | 
+    16 | print(x)
+    17 | print(vet)
+    18 | 		
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 1
+
+  [1] Linha 11: Variável 'y' declarada mas nunca utilizada
+      Trecho  : y = ...
+      Contexto:
+              10 | for i in range(0, size(vet)):
+        >>>   11 | 	y = 0
+              12 | 	if(aulas[i]< 70):
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 5
+
+  [1] Linha 3: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+               2 | aulas = array(eval(input("Aulas frequentadas: ")))
+        >>>    3 | x = 0
+               4 | for i in range(0, size(aulas)):
+
+  [2] Linha 8: Variável 'vet' com nome muito curto (≤4 chars)
+      Trecho  : vet = ...
+      Contexto:
+               7 | 
+        >>>    8 | vet = zeros(x, dtype=int)
+               9 | 
+
+  [3] Linha 11: Variável 'y' com nome muito curto (≤4 chars)
+      Trecho  : y = ...
+      Contexto:
+              10 | for i in range(0, size(vet)):
+        >>>   11 | 	y = 0
+              12 | 	if(aulas[i]< 70):
+
+  [4] Linha 6: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+               5 | 	if(aulas[i]< 70):
+        >>>    6 | 		x = x + 1
+               7 | 
+
+  [5] Linha 13: Variável 'y' com nome muito curto (≤4 chars)
+      Trecho  : y = ...
+      Contexto:
+              12 | 	if(aulas[i]< 70):
+        >>>   13 | 		y = vet[i] + aulas[i] 
+              14 | 		
+
+======================================================================

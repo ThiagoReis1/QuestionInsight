@@ -1,0 +1,186 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1616_2323.py
+Questão  : 1616
+Aluno    : 2323
+Total MCs: 3
+
+⚠️  Misconceptions detectados: A3, B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | 
+     3 | GELO = 2
+     4 | FOGO = 3
+     5 | CHOQUE = 4
+     6 | CONJURACAO = 8
+     7 | ILUSAO = 10
+     8 | dm = 0
+     9 | n = array(eval(input()))
+    10 | v = array(eval(input()))
+    11 | i = 0
+    12 | t = []
+    13 | while i < size(n):
+    14 | 	if n[i] == "GELO":
+    15 | 		dm = dm + 2* v[i]
+    16 | 	elif n[i] == "FOGO":
+    17 | 		dm = dm + 3* v[i]
+    18 | 	elif n[i] == "CHOQUE":
+    19 | 		dm = dm + 4* v[i]
+    20 | 	elif n[i] == "CONJURACAO":
+    21 | 		dm = dm + 8* v[i]
+    22 | 	elif n[i] == "ILUSAO":
+    23 | 		dm = dm + 10* v[i]
+    24 | 	i+=1	
+    25 | print(round(dm,2))
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 6
+
+  [1] Linha 3: Variável 'GELO' declarada mas nunca utilizada
+      Trecho  : GELO = ...
+      Contexto:
+               2 | 
+        >>>    3 | GELO = 2
+               4 | FOGO = 3
+
+  [2] Linha 4: Variável 'FOGO' declarada mas nunca utilizada
+      Trecho  : FOGO = ...
+      Contexto:
+               3 | GELO = 2
+        >>>    4 | FOGO = 3
+               5 | CHOQUE = 4
+
+  [3] Linha 5: Variável 'CHOQUE' declarada mas nunca utilizada
+      Trecho  : CHOQUE = ...
+      Contexto:
+               4 | FOGO = 3
+        >>>    5 | CHOQUE = 4
+               6 | CONJURACAO = 8
+
+  [4] Linha 6: Variável 'CONJURACAO' declarada mas nunca utilizada
+      Trecho  : CONJURACAO = ...
+      Contexto:
+               5 | CHOQUE = 4
+        >>>    6 | CONJURACAO = 8
+               7 | ILUSAO = 10
+
+  [5] Linha 7: Variável 'ILUSAO' declarada mas nunca utilizada
+      Trecho  : ILUSAO = ...
+      Contexto:
+               6 | CONJURACAO = 8
+        >>>    7 | ILUSAO = 10
+               8 | dm = 0
+
+  [6] Linha 12: Variável 't' declarada mas nunca utilizada
+      Trecho  : t = ...
+      Contexto:
+              11 | i = 0
+        >>>   12 | t = []
+              13 | while i < size(n):
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 20: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 20) / elif ... sem else
+      Contexto:
+              19 | 		dm = dm + 4* v[i]
+        >>>   20 | 	elif n[i] == "CONJURACAO":
+              21 | 		dm = dm + 8* v[i]
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 12
+
+  [1] Linha 3: Variável 'GELO' com nome muito curto (≤4 chars)
+      Trecho  : GELO = ...
+      Contexto:
+               2 | 
+        >>>    3 | GELO = 2
+               4 | FOGO = 3
+
+  [2] Linha 4: Variável 'FOGO' com nome muito curto (≤4 chars)
+      Trecho  : FOGO = ...
+      Contexto:
+               3 | GELO = 2
+        >>>    4 | FOGO = 3
+               5 | CHOQUE = 4
+
+  [3] Linha 8: Variável 'dm' com nome muito curto (≤4 chars)
+      Trecho  : dm = ...
+      Contexto:
+               7 | ILUSAO = 10
+        >>>    8 | dm = 0
+               9 | n = array(eval(input()))
+
+  [4] Linha 9: Variável 'n' com nome muito curto (≤4 chars)
+      Trecho  : n = ...
+      Contexto:
+               8 | dm = 0
+        >>>    9 | n = array(eval(input()))
+              10 | v = array(eval(input()))
+
+  [5] Linha 10: Variável 'v' com nome muito curto (≤4 chars)
+      Trecho  : v = ...
+      Contexto:
+               9 | n = array(eval(input()))
+        >>>   10 | v = array(eval(input()))
+              11 | i = 0
+
+  [6] Linha 11: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+              10 | v = array(eval(input()))
+        >>>   11 | i = 0
+              12 | t = []
+
+  [7] Linha 12: Variável 't' com nome muito curto (≤4 chars)
+      Trecho  : t = ...
+      Contexto:
+              11 | i = 0
+        >>>   12 | t = []
+              13 | while i < size(n):
+
+  [8] Linha 15: Variável 'dm' com nome muito curto (≤4 chars)
+      Trecho  : dm = ...
+      Contexto:
+              14 | 	if n[i] == "GELO":
+        >>>   15 | 		dm = dm + 2* v[i]
+              16 | 	elif n[i] == "FOGO":
+
+  [9] Linha 17: Variável 'dm' com nome muito curto (≤4 chars)
+      Trecho  : dm = ...
+      Contexto:
+              16 | 	elif n[i] == "FOGO":
+        >>>   17 | 		dm = dm + 3* v[i]
+              18 | 	elif n[i] == "CHOQUE":
+
+  [10] Linha 19: Variável 'dm' com nome muito curto (≤4 chars)
+      Trecho  : dm = ...
+      Contexto:
+              18 | 	elif n[i] == "CHOQUE":
+        >>>   19 | 		dm = dm + 4* v[i]
+              20 | 	elif n[i] == "CONJURACAO":
+
+  [11] Linha 21: Variável 'dm' com nome muito curto (≤4 chars)
+      Trecho  : dm = ...
+      Contexto:
+              20 | 	elif n[i] == "CONJURACAO":
+        >>>   21 | 		dm = dm + 8* v[i]
+              22 | 	elif n[i] == "ILUSAO":
+
+  [12] Linha 23: Variável 'dm' com nome muito curto (≤4 chars)
+      Trecho  : dm = ...
+      Contexto:
+              22 | 	elif n[i] == "ILUSAO":
+        >>>   23 | 		dm = dm + 10* v[i]
+              24 | 	i+=1	
+
+======================================================================

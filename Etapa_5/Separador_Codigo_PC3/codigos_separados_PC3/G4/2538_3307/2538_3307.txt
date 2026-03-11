@@ -1,0 +1,90 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 2538_3307.py
+Questão  : 2538
+Aluno    : 3307
+Total MCs: 1
+
+⚠️  Misconceptions detectados: G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | # Entradas
+     2 | vs = float(input('Valor do sitio: '))
+     3 | vi = float(input('Valor inicial depositado: '))
+     4 | dm = float(input('Deposito mensal: '))
+     5 | juros = float(input('Juros: '))
+     6 | 
+     7 | mes = 0  # contador
+     8 | 
+     9 | if vs > 0 and vi > 0 and dm > 0 and juros > 0:
+    10 | 	while vi < vs:
+    11 | 		vi = vi + (vi * juros/100)
+    12 | 		vi = vi + dm 
+    13 | 		mes = mes + 1
+    14 | 	if vi > vs:
+    15 | 		print(mes)
+    16 | else:
+    17 | 	print('Dados incorretos')
+    18 | 		
+    19 | 		
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 7
+
+  [1] Linha 2: Variável 'vs' com nome muito curto (≤4 chars)
+      Trecho  : vs = ...
+      Contexto:
+               1 | # Entradas
+        >>>    2 | vs = float(input('Valor do sitio: '))
+               3 | vi = float(input('Valor inicial depositado: '))
+
+  [2] Linha 3: Variável 'vi' com nome muito curto (≤4 chars)
+      Trecho  : vi = ...
+      Contexto:
+               2 | vs = float(input('Valor do sitio: '))
+        >>>    3 | vi = float(input('Valor inicial depositado: '))
+               4 | dm = float(input('Deposito mensal: '))
+
+  [3] Linha 4: Variável 'dm' com nome muito curto (≤4 chars)
+      Trecho  : dm = ...
+      Contexto:
+               3 | vi = float(input('Valor inicial depositado: '))
+        >>>    4 | dm = float(input('Deposito mensal: '))
+               5 | juros = float(input('Juros: '))
+
+  [4] Linha 7: Variável 'mes' com nome muito curto (≤4 chars)
+      Trecho  : mes = ...
+      Contexto:
+               6 | 
+        >>>    7 | mes = 0  # contador
+               8 | 
+
+  [5] Linha 11: Variável 'vi' com nome muito curto (≤4 chars)
+      Trecho  : vi = ...
+      Contexto:
+              10 | 	while vi < vs:
+        >>>   11 | 		vi = vi + (vi * juros/100)
+              12 | 		vi = vi + dm 
+
+  [6] Linha 12: Variável 'vi' com nome muito curto (≤4 chars)
+      Trecho  : vi = ...
+      Contexto:
+              11 | 		vi = vi + (vi * juros/100)
+        >>>   12 | 		vi = vi + dm 
+              13 | 		mes = mes + 1
+
+  [7] Linha 13: Variável 'mes' com nome muito curto (≤4 chars)
+      Trecho  : mes = ...
+      Contexto:
+              12 | 		vi = vi + dm 
+        >>>   13 | 		mes = mes + 1
+              14 | 	if vi > vs:
+
+======================================================================

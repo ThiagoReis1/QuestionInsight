@@ -1,0 +1,111 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1996_2222.py
+Questão  : 1996
+Aluno    : 2222
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | aminoacido=input("digite o nome de aminoacido: ").lower()
+     2 | 
+     3 | o=15.9994
+     4 | c=12.011
+     5 | n=14.0067
+     6 | s=32.066
+     7 | h=1.0079
+     8 | 
+     9 | #Aspartato=(C*4)(H*6)(N*1)(O*4)
+    10 | #Fenilalanina =(c*9)(h*11)(o*2)(s*1)
+    11 | #Tirosina= (C*9)(H*11)(N*1)(O*3)
+    12 | if ((aminoacido == "aspartato") or (aminoacido == "fenilalanina") or (aminoacido == "tirosina")):
+    13 | 	if(aminoacido=="aspartato"):
+    14 | 		cal=c*4+c*6+n*1+o*4
+    15 | 	elif(aminoacido=="fenilalanina"):
+    16 | 		cal=c*9+h*11+o*2+s*1
+    17 | 	elif(aminoacido=="tirosina"):
+    18 | 		cal=c*9+h*11+n*1+o*3
+    19 | 	print(round(cal,2))
+    20 | else:
+    21 | 	print("Entrada:",aminoacido)
+    22 | 	print("Dado Invalido")
+    23 | 	
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 15: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 15) / elif ... sem else
+      Contexto:
+              14 | 		cal=c*4+c*6+n*1+o*4
+        >>>   15 | 	elif(aminoacido=="fenilalanina"):
+              16 | 		cal=c*9+h*11+o*2+s*1
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 8
+
+  [1] Linha 3: Variável 'o' com nome muito curto (≤4 chars)
+      Trecho  : o = ...
+      Contexto:
+               2 | 
+        >>>    3 | o=15.9994
+               4 | c=12.011
+
+  [2] Linha 4: Variável 'c' com nome muito curto (≤4 chars)
+      Trecho  : c = ...
+      Contexto:
+               3 | o=15.9994
+        >>>    4 | c=12.011
+               5 | n=14.0067
+
+  [3] Linha 5: Variável 'n' com nome muito curto (≤4 chars)
+      Trecho  : n = ...
+      Contexto:
+               4 | c=12.011
+        >>>    5 | n=14.0067
+               6 | s=32.066
+
+  [4] Linha 6: Variável 's' com nome muito curto (≤4 chars)
+      Trecho  : s = ...
+      Contexto:
+               5 | n=14.0067
+        >>>    6 | s=32.066
+               7 | h=1.0079
+
+  [5] Linha 7: Variável 'h' com nome muito curto (≤4 chars)
+      Trecho  : h = ...
+      Contexto:
+               6 | s=32.066
+        >>>    7 | h=1.0079
+               8 | 
+
+  [6] Linha 14: Variável 'cal' com nome muito curto (≤4 chars)
+      Trecho  : cal = ...
+      Contexto:
+              13 | 	if(aminoacido=="aspartato"):
+        >>>   14 | 		cal=c*4+c*6+n*1+o*4
+              15 | 	elif(aminoacido=="fenilalanina"):
+
+  [7] Linha 16: Variável 'cal' com nome muito curto (≤4 chars)
+      Trecho  : cal = ...
+      Contexto:
+              15 | 	elif(aminoacido=="fenilalanina"):
+        >>>   16 | 		cal=c*9+h*11+o*2+s*1
+              17 | 	elif(aminoacido=="tirosina"):
+
+  [8] Linha 18: Variável 'cal' com nome muito curto (≤4 chars)
+      Trecho  : cal = ...
+      Contexto:
+              17 | 	elif(aminoacido=="tirosina"):
+        >>>   18 | 		cal=c*9+h*11+n*1+o*3
+              19 | 	print(round(cal,2))
+
+======================================================================

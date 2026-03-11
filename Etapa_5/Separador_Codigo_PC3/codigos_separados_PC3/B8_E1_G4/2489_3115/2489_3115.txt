@@ -1,0 +1,221 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 2489_3115.py
+Questão  : 2489
+Aluno    : 3115
+Total MCs: 3
+
+⚠️  Misconceptions detectados: B8, E1, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | d = input("")
+     2 | i = int(input(""))
+     3 | print("Entradas:",d,",",i)
+     4 | if(d=="Porto Velho")or(d=="Santarem")or(d=="Belem")or(d=="Tefe")or(d=="Tabatinga")and(i>0)and(i<150):
+     5 | 	if(i>0)and(i<=2)or(d=="Porto Velho")or(d=="Santarem")or(d=="Belem")or(d=="Tefe")or(d=="Tabatinga"):
+     6 | 		p = 0
+     7 | 		print("Passagem: R$",round(p,2))
+     8 | 	if(i>=3)and(i<=12)and(d=="Porto Velho"):
+     9 | 		p = 500/2 
+    10 | 		print("Passagem: R$",round(p,2))
+    11 | 	if(i>=3)and(i<=12)and(d=="Santarem"):
+    12 | 		p = 370/2
+    13 | 		print("Passagem: R$",round(p,2))
+    14 | 	if(i>=3)and(i<=12)and(d=="Belem"):
+    15 | 		p = 600/2
+    16 | 		print("Passagem: R$",round(p,2))
+    17 | 	if(i>=3)and(i<=12)and(d=="Tefe"):
+    18 | 		p = 360/2
+    19 | 		print("Passagem: R$",round(p,2))
+    20 | 	if(i>=3)and(i<=12)and(d=="Tabatinga"):
+    21 | 		p = 550/2
+    22 | 		print("Passagem: R$",round(p,2))
+    23 | 	elif(i>=65)and(d=="Porto Velho"): 
+    24 | 		p = (30/100)*500
+    25 | 		print("Passagem: R$",round(p,2))
+    26 | 	elif(i>=65)and(d=="Santarem"):
+    27 | 		p = (30/100)*370
+    28 | 		print("Passagem: R$",round(p,2))	
+    29 | 	elif(i>=65)and(d=="Belem"):
+    30 | 		p = (30/100)*600
+    31 | 		print("Passagem: R$",round(p,2))
+    32 | 	elif(i>=65)and(d=="Tefe"):
+    33 | 		p = (30/100)*360
+    34 | 		print("Passagem: R$",round(p,2))
+    35 | 	elif(i>=65)and(d=="Tabatinga"):
+    36 | 		p = (30/100)*550
+    37 | 		print("Passagem: R$",round(p,2))
+    38 | 	if(i>12)and(i<65)and(d=="Porto Velho"):
+    39 | 		p = 500
+    40 | 		print("Passagem: R$",round(p,2))
+    41 | 	if(i>12)and(i<65)and(d=="Santarem"):
+    42 | 		p = 370
+    43 | 		print("Passagem: R$",round(p,2))
+    44 | 	if(i>12)and(i<65)and(d=="Belem"):
+    45 | 		p = 600
+    46 | 		print("Passagem: R$",round(p,2))
+    47 | 	if(i>12)and(i<65)and(d=="Tefe"):
+    48 | 		p = 360
+    49 | 		print("Passagem: R$",round(p,2))
+    50 | 	if(i>12)and(i<65)and(d=="Tabatinga"):
+    51 | 		p = 550
+    52 | 		print("Passagem: R$",round(p,2))
+    53 | else:
+    54 | 	print("entradas invalidas")
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 32: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 32) / elif ... sem else
+      Contexto:
+              31 | 		print("Passagem: R$",round(p,2))
+        >>>   32 | 	elif(i>=65)and(d=="Tefe"):
+              33 | 		p = (30/100)*360
+
+▶ E1 — Verificação desnecessária de todas as combinações possíveis
+  Ocorrências: 1
+
+  [1] Linha 5: 6 condições em um único if — verificação excessiva
+      Trecho  : i > 0 and i <= 2 or d == 'Porto Velho' or d == 'Santarem' or (d == 'Belem') or (d == 'Tefe') or (d == 'Tabatinga')
+      Contexto:
+               4 | if(d=="Porto Velho")or(d=="Santarem")or(d=="Belem")or(d=="Tefe")or(d=="Tabatinga")and(i>0)and(i<150):
+        >>>    5 | 	if(i>0)and(i<=2)or(d=="Porto Velho")or(d=="Santarem")or(d=="Belem")or(d=="Tefe")or(d=="Tabatinga"):
+               6 | 		p = 0
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 18
+
+  [1] Linha 1: Variável 'd' com nome muito curto (≤4 chars)
+      Trecho  : d = ...
+      Contexto:
+        >>>    1 | d = input("")
+               2 | i = int(input(""))
+
+  [2] Linha 2: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+               1 | d = input("")
+        >>>    2 | i = int(input(""))
+               3 | print("Entradas:",d,",",i)
+
+  [3] Linha 6: Variável 'p' com nome muito curto (≤4 chars)
+      Trecho  : p = ...
+      Contexto:
+               5 | 	if(i>0)and(i<=2)or(d=="Porto Velho")or(d=="Santarem")or(d=="Belem")or(d=="Tefe")or(d=="Tabatinga"):
+        >>>    6 | 		p = 0
+               7 | 		print("Passagem: R$",round(p,2))
+
+  [4] Linha 9: Variável 'p' com nome muito curto (≤4 chars)
+      Trecho  : p = ...
+      Contexto:
+               8 | 	if(i>=3)and(i<=12)and(d=="Porto Velho"):
+        >>>    9 | 		p = 500/2 
+              10 | 		print("Passagem: R$",round(p,2))
+
+  [5] Linha 12: Variável 'p' com nome muito curto (≤4 chars)
+      Trecho  : p = ...
+      Contexto:
+              11 | 	if(i>=3)and(i<=12)and(d=="Santarem"):
+        >>>   12 | 		p = 370/2
+              13 | 		print("Passagem: R$",round(p,2))
+
+  [6] Linha 15: Variável 'p' com nome muito curto (≤4 chars)
+      Trecho  : p = ...
+      Contexto:
+              14 | 	if(i>=3)and(i<=12)and(d=="Belem"):
+        >>>   15 | 		p = 600/2
+              16 | 		print("Passagem: R$",round(p,2))
+
+  [7] Linha 18: Variável 'p' com nome muito curto (≤4 chars)
+      Trecho  : p = ...
+      Contexto:
+              17 | 	if(i>=3)and(i<=12)and(d=="Tefe"):
+        >>>   18 | 		p = 360/2
+              19 | 		print("Passagem: R$",round(p,2))
+
+  [8] Linha 21: Variável 'p' com nome muito curto (≤4 chars)
+      Trecho  : p = ...
+      Contexto:
+              20 | 	if(i>=3)and(i<=12)and(d=="Tabatinga"):
+        >>>   21 | 		p = 550/2
+              22 | 		print("Passagem: R$",round(p,2))
+
+  [9] Linha 39: Variável 'p' com nome muito curto (≤4 chars)
+      Trecho  : p = ...
+      Contexto:
+              38 | 	if(i>12)and(i<65)and(d=="Porto Velho"):
+        >>>   39 | 		p = 500
+              40 | 		print("Passagem: R$",round(p,2))
+
+  [10] Linha 42: Variável 'p' com nome muito curto (≤4 chars)
+      Trecho  : p = ...
+      Contexto:
+              41 | 	if(i>12)and(i<65)and(d=="Santarem"):
+        >>>   42 | 		p = 370
+              43 | 		print("Passagem: R$",round(p,2))
+
+  [11] Linha 45: Variável 'p' com nome muito curto (≤4 chars)
+      Trecho  : p = ...
+      Contexto:
+              44 | 	if(i>12)and(i<65)and(d=="Belem"):
+        >>>   45 | 		p = 600
+              46 | 		print("Passagem: R$",round(p,2))
+
+  [12] Linha 48: Variável 'p' com nome muito curto (≤4 chars)
+      Trecho  : p = ...
+      Contexto:
+              47 | 	if(i>12)and(i<65)and(d=="Tefe"):
+        >>>   48 | 		p = 360
+              49 | 		print("Passagem: R$",round(p,2))
+
+  [13] Linha 51: Variável 'p' com nome muito curto (≤4 chars)
+      Trecho  : p = ...
+      Contexto:
+              50 | 	if(i>12)and(i<65)and(d=="Tabatinga"):
+        >>>   51 | 		p = 550
+              52 | 		print("Passagem: R$",round(p,2))
+
+  [14] Linha 24: Variável 'p' com nome muito curto (≤4 chars)
+      Trecho  : p = ...
+      Contexto:
+              23 | 	elif(i>=65)and(d=="Porto Velho"): 
+        >>>   24 | 		p = (30/100)*500
+              25 | 		print("Passagem: R$",round(p,2))
+
+  [15] Linha 27: Variável 'p' com nome muito curto (≤4 chars)
+      Trecho  : p = ...
+      Contexto:
+              26 | 	elif(i>=65)and(d=="Santarem"):
+        >>>   27 | 		p = (30/100)*370
+              28 | 		print("Passagem: R$",round(p,2))	
+
+  [16] Linha 30: Variável 'p' com nome muito curto (≤4 chars)
+      Trecho  : p = ...
+      Contexto:
+              29 | 	elif(i>=65)and(d=="Belem"):
+        >>>   30 | 		p = (30/100)*600
+              31 | 		print("Passagem: R$",round(p,2))
+
+  [17] Linha 33: Variável 'p' com nome muito curto (≤4 chars)
+      Trecho  : p = ...
+      Contexto:
+              32 | 	elif(i>=65)and(d=="Tefe"):
+        >>>   33 | 		p = (30/100)*360
+              34 | 		print("Passagem: R$",round(p,2))
+
+  [18] Linha 36: Variável 'p' com nome muito curto (≤4 chars)
+      Trecho  : p = ...
+      Contexto:
+              35 | 	elif(i>=65)and(d=="Tabatinga"):
+        >>>   36 | 		p = (30/100)*550
+              37 | 		print("Passagem: R$",round(p,2))
+
+======================================================================

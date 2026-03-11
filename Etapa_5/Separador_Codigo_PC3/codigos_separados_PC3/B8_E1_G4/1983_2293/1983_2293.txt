@@ -1,0 +1,69 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1983_2293.py
+Questão  : 1983
+Aluno    : 2293
+Total MCs: 3
+
+⚠️  Misconceptions detectados: B8, E1, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | c = input("continente: ")
+     2 | p = input("pais: ")
+     3 | if((c.lower() != 'asia') and (c.lower() != 'america-do-sul') and (p.lower() != 'jordania') and (p.lower() != 'india') and (p.lower() != 'peru') and (p.lower() != 'brasil')):
+     4 | 	print('informacao nao identificada'.upper())
+     5 | else:
+     6 | 	if (c.lower() == 'asia') and (p.lower() == 'jordania'):
+     7 | 	   print("as ruinas de petra".upper())
+     8 | 	elif((c.lower() == 'asia') and (p.lower() == 'india')):
+     9 | 		print("taj mahal".upper())
+    10 | 	elif (c.lower() == 'america-do-sul') and (p.lower() == 'peru'):
+    11 | 		print('MACHU PICCHU')
+    12 | 	elif (c.lower() == 'america-do-sul') and (p.lower() == 'brasil'):
+    13 | 		print('cristo redentor'.upper())
+    14 | 	
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 10: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 10) / elif ... sem else
+      Contexto:
+               9 | 		print("taj mahal".upper())
+        >>>   10 | 	elif (c.lower() == 'america-do-sul') and (p.lower() == 'peru'):
+              11 | 		print('MACHU PICCHU')
+
+▶ E1 — Verificação desnecessária de todas as combinações possíveis
+  Ocorrências: 1
+
+  [1] Linha 3: 6 condições em um único if — verificação excessiva
+      Trecho  : c.lower() != 'asia' and c.lower() != 'america-do-sul' and (p.lower() != 'jordania') and (p.lower() != 'india') and (p.lower() != 'peru') and (p.lower() != 'brasil')
+      Contexto:
+               2 | p = input("pais: ")
+        >>>    3 | if((c.lower() != 'asia') and (c.lower() != 'america-do-sul') and (p.lower() != 'jordania') and (p.lower() != 'india') and (p.lower() != 'peru') and (p.lower() != 'brasil')):
+               4 | 	print('informacao nao identificada'.upper())
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 2
+
+  [1] Linha 1: Variável 'c' com nome muito curto (≤4 chars)
+      Trecho  : c = ...
+      Contexto:
+        >>>    1 | c = input("continente: ")
+               2 | p = input("pais: ")
+
+  [2] Linha 2: Variável 'p' com nome muito curto (≤4 chars)
+      Trecho  : p = ...
+      Contexto:
+               1 | c = input("continente: ")
+        >>>    2 | p = input("pais: ")
+               3 | if((c.lower() != 'asia') and (c.lower() != 'america-do-sul') and (p.lower() != 'jordania') and (p.lower() != 'india') and (p.lower() != 'peru') and (p.lower() != 'brasil')):
+
+======================================================================

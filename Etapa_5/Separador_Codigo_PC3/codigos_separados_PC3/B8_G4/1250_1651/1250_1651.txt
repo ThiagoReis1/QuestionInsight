@@ -1,0 +1,88 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1250_1651.py
+Questão  : 1250
+Aluno    : 1651
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import *
+     2 | v=array(eval(input("Qual eh o vetor?")))
+     3 | vet=zeros(2, dtype=int)
+     4 | a=min(v)
+     5 | b=max(v)
+     6 | c=0.7*a+0.3*b
+     7 | d=0.4*a+0.6*b
+     8 | 
+     9 | for i in range (size(v)):
+    10 | 	if((v[i]>a or v[i]==a) and v[i]<c):
+    11 | 		vet[0]=vet[0]+1
+    12 | 	elif((v[i]>d or v[i]==d) and v[i]<b):
+    13 | 		vet[1]=vet[1]+1
+    14 | print(vet)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 10: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 10) / elif ... sem else
+      Contexto:
+               9 | for i in range (size(v)):
+        >>>   10 | 	if((v[i]>a or v[i]==a) and v[i]<c):
+              11 | 		vet[0]=vet[0]+1
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 6
+
+  [1] Linha 2: Variável 'v' com nome muito curto (≤4 chars)
+      Trecho  : v = ...
+      Contexto:
+               1 | from numpy import *
+        >>>    2 | v=array(eval(input("Qual eh o vetor?")))
+               3 | vet=zeros(2, dtype=int)
+
+  [2] Linha 3: Variável 'vet' com nome muito curto (≤4 chars)
+      Trecho  : vet = ...
+      Contexto:
+               2 | v=array(eval(input("Qual eh o vetor?")))
+        >>>    3 | vet=zeros(2, dtype=int)
+               4 | a=min(v)
+
+  [3] Linha 4: Variável 'a' com nome muito curto (≤4 chars)
+      Trecho  : a = ...
+      Contexto:
+               3 | vet=zeros(2, dtype=int)
+        >>>    4 | a=min(v)
+               5 | b=max(v)
+
+  [4] Linha 5: Variável 'b' com nome muito curto (≤4 chars)
+      Trecho  : b = ...
+      Contexto:
+               4 | a=min(v)
+        >>>    5 | b=max(v)
+               6 | c=0.7*a+0.3*b
+
+  [5] Linha 6: Variável 'c' com nome muito curto (≤4 chars)
+      Trecho  : c = ...
+      Contexto:
+               5 | b=max(v)
+        >>>    6 | c=0.7*a+0.3*b
+               7 | d=0.4*a+0.6*b
+
+  [6] Linha 7: Variável 'd' com nome muito curto (≤4 chars)
+      Trecho  : d = ...
+      Contexto:
+               6 | c=0.7*a+0.3*b
+        >>>    7 | d=0.4*a+0.6*b
+               8 | 
+
+======================================================================

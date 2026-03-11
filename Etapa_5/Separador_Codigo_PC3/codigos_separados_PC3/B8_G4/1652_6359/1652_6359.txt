@@ -1,0 +1,64 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1652_6359.py
+Questão  : 1652
+Aluno    : 6359
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | et=input("Etinias: ").split(',')
+     3 | v=zeros(5,dtype=int)
+     4 | 
+     5 | for i in range(size(et)):
+     6 | 	if et[i]=="B":
+     7 | 		v[0]+=1
+     8 | 	elif et[i]=="PA":
+     9 | 		v[1]+=1
+    10 | 	elif et[i]=="PR":
+    11 | 		v[2]+=1
+    12 | 	elif et[i]=="A":
+    13 | 		v[3]+=1
+    14 | 	elif et[i]=="I":
+    15 | 		v[4]+=1
+    16 | print(max(v))
+    17 | print(v)
+    18 | 		
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 12: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 12) / elif ... sem else
+      Contexto:
+              11 | 		v[2]+=1
+        >>>   12 | 	elif et[i]=="A":
+              13 | 		v[3]+=1
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 2
+
+  [1] Linha 2: Variável 'et' com nome muito curto (≤4 chars)
+      Trecho  : et = ...
+      Contexto:
+               1 | from numpy import*
+        >>>    2 | et=input("Etinias: ").split(',')
+               3 | v=zeros(5,dtype=int)
+
+  [2] Linha 3: Variável 'v' com nome muito curto (≤4 chars)
+      Trecho  : v = ...
+      Contexto:
+               2 | et=input("Etinias: ").split(',')
+        >>>    3 | v=zeros(5,dtype=int)
+               4 | 
+
+======================================================================

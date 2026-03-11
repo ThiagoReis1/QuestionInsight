@@ -1,0 +1,104 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1643_3081.py
+Questão  : 1643
+Aluno    : 3081
+Total MCs: 1
+
+⚠️  Misconceptions detectados: G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | notas = array(eval(input("Notas: ")))
+     3 | apr = 0
+     4 | y = 0
+     5 | k = 0
+     6 | for i in notas:
+     7 | 	if(i>=5):
+     8 | 		apr = apr + 1
+     9 | x = zeros(apr,dtype=int)
+    10 | for z in notas:
+    11 | 	if(z>=5):
+    12 | 		z = k
+    13 | 		x[y] = z
+    14 | 		y = y + 1
+    15 | 		k = k + 1
+    16 | 	else:
+    17 | 		k = k + 1
+    18 | print(apr)
+    19 | print(x)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 9
+
+  [1] Linha 3: Variável 'apr' com nome muito curto (≤4 chars)
+      Trecho  : apr = ...
+      Contexto:
+               2 | notas = array(eval(input("Notas: ")))
+        >>>    3 | apr = 0
+               4 | y = 0
+
+  [2] Linha 4: Variável 'y' com nome muito curto (≤4 chars)
+      Trecho  : y = ...
+      Contexto:
+               3 | apr = 0
+        >>>    4 | y = 0
+               5 | k = 0
+
+  [3] Linha 5: Variável 'k' com nome muito curto (≤4 chars)
+      Trecho  : k = ...
+      Contexto:
+               4 | y = 0
+        >>>    5 | k = 0
+               6 | for i in notas:
+
+  [4] Linha 9: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+               8 | 		apr = apr + 1
+        >>>    9 | x = zeros(apr,dtype=int)
+              10 | for z in notas:
+
+  [5] Linha 8: Variável 'apr' com nome muito curto (≤4 chars)
+      Trecho  : apr = ...
+      Contexto:
+               7 | 	if(i>=5):
+        >>>    8 | 		apr = apr + 1
+               9 | x = zeros(apr,dtype=int)
+
+  [6] Linha 12: Variável 'z' com nome muito curto (≤4 chars)
+      Trecho  : z = ...
+      Contexto:
+              11 | 	if(z>=5):
+        >>>   12 | 		z = k
+              13 | 		x[y] = z
+
+  [7] Linha 14: Variável 'y' com nome muito curto (≤4 chars)
+      Trecho  : y = ...
+      Contexto:
+              13 | 		x[y] = z
+        >>>   14 | 		y = y + 1
+              15 | 		k = k + 1
+
+  [8] Linha 15: Variável 'k' com nome muito curto (≤4 chars)
+      Trecho  : k = ...
+      Contexto:
+              14 | 		y = y + 1
+        >>>   15 | 		k = k + 1
+              16 | 	else:
+
+  [9] Linha 17: Variável 'k' com nome muito curto (≤4 chars)
+      Trecho  : k = ...
+      Contexto:
+              16 | 	else:
+        >>>   17 | 		k = k + 1
+              18 | print(apr)
+
+======================================================================

@@ -1,0 +1,72 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 2849_7635.py
+Questão  : 2849
+Aluno    : 7635
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | 
+     3 | v = array(eval(input("")))
+     4 | a = 0
+     5 | for i in range(size(v)):
+     6 | 	if(v[i] != 0):
+     7 | 		v[i] = v[i]
+     8 | 		a = v[i] + a
+     9 | 		
+    10 | 	elif(v[i] == 0):
+    11 | 		a = a * 0
+    12 | print(a)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 6: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 6) / elif ... sem else
+      Contexto:
+               5 | for i in range(size(v)):
+        >>>    6 | 	if(v[i] != 0):
+               7 | 		v[i] = v[i]
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 4
+
+  [1] Linha 3: Variável 'v' com nome muito curto (≤4 chars)
+      Trecho  : v = ...
+      Contexto:
+               2 | 
+        >>>    3 | v = array(eval(input("")))
+               4 | a = 0
+
+  [2] Linha 4: Variável 'a' com nome muito curto (≤4 chars)
+      Trecho  : a = ...
+      Contexto:
+               3 | v = array(eval(input("")))
+        >>>    4 | a = 0
+               5 | for i in range(size(v)):
+
+  [3] Linha 8: Variável 'a' com nome muito curto (≤4 chars)
+      Trecho  : a = ...
+      Contexto:
+               7 | 		v[i] = v[i]
+        >>>    8 | 		a = v[i] + a
+               9 | 		
+
+  [4] Linha 11: Variável 'a' com nome muito curto (≤4 chars)
+      Trecho  : a = ...
+      Contexto:
+              10 | 	elif(v[i] == 0):
+        >>>   11 | 		a = a * 0
+              12 | print(a)
+
+======================================================================

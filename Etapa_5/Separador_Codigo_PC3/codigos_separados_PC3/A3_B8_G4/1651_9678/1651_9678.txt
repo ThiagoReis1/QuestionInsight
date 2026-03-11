@@ -1,0 +1,83 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1651_9678.py
+Questão  : 1651
+Aluno    : 9678
+Total MCs: 3
+
+⚠️  Misconceptions detectados: A3, B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import * 
+     2 | y = zeros(6, dtype = int)
+     3 | x = input(":").upper().split(',')
+     4 | cont = 0
+     5 | for i in x:
+     6 | 	if (i == 'MC'):
+     7 | 		y[0] += 1
+     8 | 	elif (i == 'C'):
+     9 | 		y[1] += 1
+    10 | 	elif (i == 'CM'):
+    11 | 		y[2] += 1
+    12 | 	elif (i == 'EM'):
+    13 | 		y[3] += 1
+    14 | 	elif (i == 'E'):
+    15 | 		y[4] += 1 
+    16 | 	elif (i == 'ME'):
+    17 | 		y[5] += 1
+    18 | 
+    19 | print(max(y))
+    20 | print(y)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 1
+
+  [1] Linha 4: Variável 'cont' declarada mas nunca utilizada
+      Trecho  : cont = ...
+      Contexto:
+               3 | x = input(":").upper().split(',')
+        >>>    4 | cont = 0
+               5 | for i in x:
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 14: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 14) / elif ... sem else
+      Contexto:
+              13 | 		y[3] += 1
+        >>>   14 | 	elif (i == 'E'):
+              15 | 		y[4] += 1 
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 3
+
+  [1] Linha 2: Variável 'y' com nome muito curto (≤4 chars)
+      Trecho  : y = ...
+      Contexto:
+               1 | from numpy import * 
+        >>>    2 | y = zeros(6, dtype = int)
+               3 | x = input(":").upper().split(',')
+
+  [2] Linha 3: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+               2 | y = zeros(6, dtype = int)
+        >>>    3 | x = input(":").upper().split(',')
+               4 | cont = 0
+
+  [3] Linha 4: Variável 'cont' com nome muito curto (≤4 chars)
+      Trecho  : cont = ...
+      Contexto:
+               3 | x = input(":").upper().split(',')
+        >>>    4 | cont = 0
+               5 | for i in x:
+
+======================================================================

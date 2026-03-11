@@ -1,0 +1,94 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1261_1109.py
+Questão  : 1261
+Aluno    : 1109
+Total MCs: 1
+
+⚠️  Misconceptions detectados: G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | from math import*
+     3 | 
+     4 | p = float(input("Digite um valor p: "))
+     5 | x = array(eval(input("Digite o vetor X: ")))
+     6 | y = array(eval(input("Digite o vetor Y: ")))
+     7 | t = p/(p-1)
+     8 | raiz = 1/t
+     9 | v = zeros(size(x), dtype = float)
+    10 | v1 = 0
+    11 | for k in range(size(x)):
+    12 | 	v[k] = x[k] + y[k]
+    13 | for i in range(size(v)):
+    14 | 	v1 = v1 + abs(v[i]) ** t
+    15 | print(round((v1 ** raiz), 5))
+    16 | 	
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 8
+
+  [1] Linha 4: Variável 'p' com nome muito curto (≤4 chars)
+      Trecho  : p = ...
+      Contexto:
+               3 | 
+        >>>    4 | p = float(input("Digite um valor p: "))
+               5 | x = array(eval(input("Digite o vetor X: ")))
+
+  [2] Linha 5: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+               4 | p = float(input("Digite um valor p: "))
+        >>>    5 | x = array(eval(input("Digite o vetor X: ")))
+               6 | y = array(eval(input("Digite o vetor Y: ")))
+
+  [3] Linha 6: Variável 'y' com nome muito curto (≤4 chars)
+      Trecho  : y = ...
+      Contexto:
+               5 | x = array(eval(input("Digite o vetor X: ")))
+        >>>    6 | y = array(eval(input("Digite o vetor Y: ")))
+               7 | t = p/(p-1)
+
+  [4] Linha 7: Variável 't' com nome muito curto (≤4 chars)
+      Trecho  : t = ...
+      Contexto:
+               6 | y = array(eval(input("Digite o vetor Y: ")))
+        >>>    7 | t = p/(p-1)
+               8 | raiz = 1/t
+
+  [5] Linha 8: Variável 'raiz' com nome muito curto (≤4 chars)
+      Trecho  : raiz = ...
+      Contexto:
+               7 | t = p/(p-1)
+        >>>    8 | raiz = 1/t
+               9 | v = zeros(size(x), dtype = float)
+
+  [6] Linha 9: Variável 'v' com nome muito curto (≤4 chars)
+      Trecho  : v = ...
+      Contexto:
+               8 | raiz = 1/t
+        >>>    9 | v = zeros(size(x), dtype = float)
+              10 | v1 = 0
+
+  [7] Linha 10: Variável 'v1' com nome muito curto (≤4 chars)
+      Trecho  : v1 = ...
+      Contexto:
+               9 | v = zeros(size(x), dtype = float)
+        >>>   10 | v1 = 0
+              11 | for k in range(size(x)):
+
+  [8] Linha 14: Variável 'v1' com nome muito curto (≤4 chars)
+      Trecho  : v1 = ...
+      Contexto:
+              13 | for i in range(size(v)):
+        >>>   14 | 	v1 = v1 + abs(v[i]) ** t
+              15 | print(round((v1 ** raiz), 5))
+
+======================================================================

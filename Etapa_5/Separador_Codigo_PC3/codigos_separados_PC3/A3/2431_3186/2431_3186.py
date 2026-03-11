@@ -1,0 +1,1 @@
+preco_area = float(input("informe o preco da area "))

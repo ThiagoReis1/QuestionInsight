@@ -1,0 +1,86 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1639_4161.py
+Questão  : 1639
+Aluno    : 4161
+Total MCs: 1
+
+⚠️  Misconceptions detectados: G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | v = array(eval(input("turmas: ")))
+     3 | q = 0
+     4 | for x in v:
+     5 | 	if x%2 == 0:
+     6 | 		q = q + 1
+     7 | print(q)
+     8 | v0 = zeros(q,dtype=int)
+     9 | a = 0
+    10 | n = size(v)
+    11 | for x in range(n):
+    12 | 	if v[x]%2 == 0:
+    13 | 		v0[a] = x
+    14 | 		a = a + 1
+    15 | print(v0)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 7
+
+  [1] Linha 2: Variável 'v' com nome muito curto (≤4 chars)
+      Trecho  : v = ...
+      Contexto:
+               1 | from numpy import*
+        >>>    2 | v = array(eval(input("turmas: ")))
+               3 | q = 0
+
+  [2] Linha 3: Variável 'q' com nome muito curto (≤4 chars)
+      Trecho  : q = ...
+      Contexto:
+               2 | v = array(eval(input("turmas: ")))
+        >>>    3 | q = 0
+               4 | for x in v:
+
+  [3] Linha 8: Variável 'v0' com nome muito curto (≤4 chars)
+      Trecho  : v0 = ...
+      Contexto:
+               7 | print(q)
+        >>>    8 | v0 = zeros(q,dtype=int)
+               9 | a = 0
+
+  [4] Linha 9: Variável 'a' com nome muito curto (≤4 chars)
+      Trecho  : a = ...
+      Contexto:
+               8 | v0 = zeros(q,dtype=int)
+        >>>    9 | a = 0
+              10 | n = size(v)
+
+  [5] Linha 10: Variável 'n' com nome muito curto (≤4 chars)
+      Trecho  : n = ...
+      Contexto:
+               9 | a = 0
+        >>>   10 | n = size(v)
+              11 | for x in range(n):
+
+  [6] Linha 6: Variável 'q' com nome muito curto (≤4 chars)
+      Trecho  : q = ...
+      Contexto:
+               5 | 	if x%2 == 0:
+        >>>    6 | 		q = q + 1
+               7 | print(q)
+
+  [7] Linha 14: Variável 'a' com nome muito curto (≤4 chars)
+      Trecho  : a = ...
+      Contexto:
+              13 | 		v0[a] = x
+        >>>   14 | 		a = a + 1
+              15 | print(v0)
+
+======================================================================

@@ -1,0 +1,104 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1648_7162.py
+Questão  : 1648
+Aluno    : 7162
+Total MCs: 2
+
+⚠️  Misconceptions detectados: A2, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | # Importar módulo de vetor
+     2 | from numpy import *
+     3 | 
+     4 | # Leitura do vetor
+     5 | v = array(eval(input("Digite um vetor: ")))
+     6 | 
+     7 | r = 0 # variável contadora
+     8 | 
+     9 | for i in range(size(v)):
+    10 | 	if v[i] < 70:
+    11 | 		r = r + 1
+    12 | 	else:
+    13 | 		r = r
+    14 | print(r)
+    15 | 
+    16 | z = zeros(r, dtype = int)
+    17 | j = 0 # posição
+    18 | for i in range(size(v)):
+    19 | 	if v[i] < 70:
+    20 | 		z[j] = i
+    21 | 		j = j+1
+    22 | 
+    23 | print(z)		
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A2 — Variável atribuída a si mesma
+  Ocorrências: 1
+
+  [1] Linha 13: 'r' atribuído a si mesmo
+      Trecho  : r = r
+      Contexto:
+              12 | 	else:
+        >>>   13 | 		r = r
+              14 | print(r)
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 7
+
+  [1] Linha 5: Variável 'v' com nome muito curto (≤4 chars)
+      Trecho  : v = ...
+      Contexto:
+               4 | # Leitura do vetor
+        >>>    5 | v = array(eval(input("Digite um vetor: ")))
+               6 | 
+
+  [2] Linha 7: Variável 'r' com nome muito curto (≤4 chars)
+      Trecho  : r = ...
+      Contexto:
+               6 | 
+        >>>    7 | r = 0 # variável contadora
+               8 | 
+
+  [3] Linha 16: Variável 'z' com nome muito curto (≤4 chars)
+      Trecho  : z = ...
+      Contexto:
+              15 | 
+        >>>   16 | z = zeros(r, dtype = int)
+              17 | j = 0 # posição
+
+  [4] Linha 17: Variável 'j' com nome muito curto (≤4 chars)
+      Trecho  : j = ...
+      Contexto:
+              16 | z = zeros(r, dtype = int)
+        >>>   17 | j = 0 # posição
+              18 | for i in range(size(v)):
+
+  [5] Linha 11: Variável 'r' com nome muito curto (≤4 chars)
+      Trecho  : r = ...
+      Contexto:
+              10 | 	if v[i] < 70:
+        >>>   11 | 		r = r + 1
+              12 | 	else:
+
+  [6] Linha 13: Variável 'r' com nome muito curto (≤4 chars)
+      Trecho  : r = ...
+      Contexto:
+              12 | 	else:
+        >>>   13 | 		r = r
+              14 | print(r)
+
+  [7] Linha 21: Variável 'j' com nome muito curto (≤4 chars)
+      Trecho  : j = ...
+      Contexto:
+              20 | 		z[j] = i
+        >>>   21 | 		j = j+1
+              22 | 
+
+======================================================================

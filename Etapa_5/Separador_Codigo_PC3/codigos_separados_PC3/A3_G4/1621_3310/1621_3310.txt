@@ -1,0 +1,154 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1621_3310.py
+Questão  : 1621
+Aluno    : 3310
+Total MCs: 2
+
+⚠️  Misconceptions detectados: A3, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | #
+     2 | #
+     3 | 
+     4 | from numpy import*
+     5 | prod = array(["ARROZ","FEIJAO","BIS","MIOJO","FANTA"])
+     6 | preco = array([1.25, 2.60, 1.80, 0.85, 3.20])
+     7 | 
+     8 | 
+     9 | vnp = array(eval(input("Digite os nomes: ").upper()))
+    10 | vq = array(eval(input("Digite a quantidade: ")))
+    11 | 
+    12 | i = 0
+    13 | t = 0
+    14 | 
+    15 | while(i < size(vq)):
+    16 | 	if("ARROZ" == vnp[i]):
+    17 | 		t = t + (vq[i]*1.25)
+    18 | 		
+    19 | 	elif("FEIJAO" == vnp[i]):
+    20 | 		t = t + (vq[i]*2.60)
+    21 | 		
+    22 | 	elif("BIS" == vnp[i]):
+    23 | 		t = t + (vq[i]*1.80)
+    24 | 		
+    25 | 	elif("MIOJO" == vnp[i]):
+    26 | 		t = t + (vq[i]*0.85)
+    27 | 		
+    28 | 	else:
+    29 | 		t = t+(vq[i]*3.20)
+    30 | 		
+    31 | 	i = i + 1
+    32 | print(round(t,2))
+    33 | 
+    34 | 
+    35 | 
+    36 | 
+    37 | 
+    38 | 
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 2
+
+  [1] Linha 5: Variável 'prod' declarada mas nunca utilizada
+      Trecho  : prod = ...
+      Contexto:
+               4 | from numpy import*
+        >>>    5 | prod = array(["ARROZ","FEIJAO","BIS","MIOJO","FANTA"])
+               6 | preco = array([1.25, 2.60, 1.80, 0.85, 3.20])
+
+  [2] Linha 6: Variável 'preco' declarada mas nunca utilizada
+      Trecho  : preco = ...
+      Contexto:
+               5 | prod = array(["ARROZ","FEIJAO","BIS","MIOJO","FANTA"])
+        >>>    6 | preco = array([1.25, 2.60, 1.80, 0.85, 3.20])
+               7 | 
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 11
+
+  [1] Linha 5: Variável 'prod' com nome muito curto (≤4 chars)
+      Trecho  : prod = ...
+      Contexto:
+               4 | from numpy import*
+        >>>    5 | prod = array(["ARROZ","FEIJAO","BIS","MIOJO","FANTA"])
+               6 | preco = array([1.25, 2.60, 1.80, 0.85, 3.20])
+
+  [2] Linha 9: Variável 'vnp' com nome muito curto (≤4 chars)
+      Trecho  : vnp = ...
+      Contexto:
+               8 | 
+        >>>    9 | vnp = array(eval(input("Digite os nomes: ").upper()))
+              10 | vq = array(eval(input("Digite a quantidade: ")))
+
+  [3] Linha 10: Variável 'vq' com nome muito curto (≤4 chars)
+      Trecho  : vq = ...
+      Contexto:
+               9 | vnp = array(eval(input("Digite os nomes: ").upper()))
+        >>>   10 | vq = array(eval(input("Digite a quantidade: ")))
+              11 | 
+
+  [4] Linha 12: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+              11 | 
+        >>>   12 | i = 0
+              13 | t = 0
+
+  [5] Linha 13: Variável 't' com nome muito curto (≤4 chars)
+      Trecho  : t = ...
+      Contexto:
+              12 | i = 0
+        >>>   13 | t = 0
+              14 | 
+
+  [6] Linha 31: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+              30 | 		
+        >>>   31 | 	i = i + 1
+              32 | print(round(t,2))
+
+  [7] Linha 17: Variável 't' com nome muito curto (≤4 chars)
+      Trecho  : t = ...
+      Contexto:
+              16 | 	if("ARROZ" == vnp[i]):
+        >>>   17 | 		t = t + (vq[i]*1.25)
+              18 | 		
+
+  [8] Linha 20: Variável 't' com nome muito curto (≤4 chars)
+      Trecho  : t = ...
+      Contexto:
+              19 | 	elif("FEIJAO" == vnp[i]):
+        >>>   20 | 		t = t + (vq[i]*2.60)
+              21 | 		
+
+  [9] Linha 23: Variável 't' com nome muito curto (≤4 chars)
+      Trecho  : t = ...
+      Contexto:
+              22 | 	elif("BIS" == vnp[i]):
+        >>>   23 | 		t = t + (vq[i]*1.80)
+              24 | 		
+
+  [10] Linha 26: Variável 't' com nome muito curto (≤4 chars)
+      Trecho  : t = ...
+      Contexto:
+              25 | 	elif("MIOJO" == vnp[i]):
+        >>>   26 | 		t = t + (vq[i]*0.85)
+              27 | 		
+
+  [11] Linha 29: Variável 't' com nome muito curto (≤4 chars)
+      Trecho  : t = ...
+      Contexto:
+              28 | 	else:
+        >>>   29 | 		t = t+(vq[i]*3.20)
+              30 | 		
+
+======================================================================

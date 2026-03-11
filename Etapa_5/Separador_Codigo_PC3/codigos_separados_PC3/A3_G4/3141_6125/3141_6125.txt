@@ -1,0 +1,75 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 3141_6125.py
+Questão  : 3141
+Aluno    : 6125
+Total MCs: 2
+
+⚠️  Misconceptions detectados: A3, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import *
+     2 | v= array(eval(input()))
+     3 | p= 0
+     4 | m= 0
+     5 | for i in range(size(v)):
+     6 | 	m= m + v[i]**(1/6)
+     7 | m = (m/size(v))**6
+     8 | print(round(m, 2))		
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 1
+
+  [1] Linha 3: Variável 'p' declarada mas nunca utilizada
+      Trecho  : p = ...
+      Contexto:
+               2 | v= array(eval(input()))
+        >>>    3 | p= 0
+               4 | m= 0
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 5
+
+  [1] Linha 2: Variável 'v' com nome muito curto (≤4 chars)
+      Trecho  : v = ...
+      Contexto:
+               1 | from numpy import *
+        >>>    2 | v= array(eval(input()))
+               3 | p= 0
+
+  [2] Linha 3: Variável 'p' com nome muito curto (≤4 chars)
+      Trecho  : p = ...
+      Contexto:
+               2 | v= array(eval(input()))
+        >>>    3 | p= 0
+               4 | m= 0
+
+  [3] Linha 4: Variável 'm' com nome muito curto (≤4 chars)
+      Trecho  : m = ...
+      Contexto:
+               3 | p= 0
+        >>>    4 | m= 0
+               5 | for i in range(size(v)):
+
+  [4] Linha 7: Variável 'm' com nome muito curto (≤4 chars)
+      Trecho  : m = ...
+      Contexto:
+               6 | 	m= m + v[i]**(1/6)
+        >>>    7 | m = (m/size(v))**6
+               8 | print(round(m, 2))		
+
+  [5] Linha 6: Variável 'm' com nome muito curto (≤4 chars)
+      Trecho  : m = ...
+      Contexto:
+               5 | for i in range(size(v)):
+        >>>    6 | 	m= m + v[i]**(1/6)
+               7 | m = (m/size(v))**6
+
+======================================================================

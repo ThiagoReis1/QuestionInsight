@@ -1,0 +1,77 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1113_1473.py
+Questão  : 1113
+Aluno    : 1473
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | x=int(input("Qual a idade: "))
+     2 | y=float(input("Qual o peso: "))
+     3 | if((x<0)or(x>130)or(y<0)or(y>550)):
+     4 | 	print("Entradas:",x,"anos e",y,"kg") 
+     5 | 	print("Dados invalidos")
+     6 | elif((x<=20)and(y<=60)):
+     7 | 	print("Entradas:",x,"anos e",y,"kg")
+     8 | 	print("Grupo de risco: 9")
+     9 | elif((x<=20)and(60<y<=90)):
+    10 | 	print("Entradas:",x,"anos e",y,"kg")
+    11 | 	print("Grupo de risco: 8")
+    12 | elif((x<=20)and(90<y)):
+    13 | 	print("Entradas:",x,"anos e",y,"kg")
+    14 | 	print("Grupo de risco: 7")
+    15 | elif((120<x<=50)and(y<=60)):
+    16 | 	print("Entradas:",x,"anos e",y,"kg")
+    17 | 	print("Grupo de risco: 6")
+    18 | elif((120<x<=50)and(60<y<=90)):
+    19 | 	print("Entradas:",x,"anos e",y,"kg")
+    20 | 	print("Grupo de risco: 5")
+    21 | elif((120<x<=50)and(90<y)):
+    22 | 	print("Entradas:",x,"anos e",y,"kg")
+    23 | 	print("Grupo de risco: 4")
+    24 | elif((x>50)and(y<=60)):
+    25 | 	print("Entradas:",x,"anos e",y,"kg")
+    26 | 	print("Grupo de risco: 3")
+    27 | elif((x>50)and(60<y<=90)):
+    28 | 	print("Entradas:",x,"anos e",y,"kg")
+    29 | 	print("Grupo de risco: 2")
+    30 | elif((x>50)and(90<y)):
+    31 | 	print("Entradas:",x,"anos e",y,"kg")
+    32 | 	print("Grupo de risco: 1")
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 27: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 27) / elif ... sem else
+      Contexto:
+              26 | 	print("Grupo de risco: 3")
+        >>>   27 | elif((x>50)and(60<y<=90)):
+              28 | 	print("Entradas:",x,"anos e",y,"kg")
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 2
+
+  [1] Linha 1: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+        >>>    1 | x=int(input("Qual a idade: "))
+               2 | y=float(input("Qual o peso: "))
+
+  [2] Linha 2: Variável 'y' com nome muito curto (≤4 chars)
+      Trecho  : y = ...
+      Contexto:
+               1 | x=int(input("Qual a idade: "))
+        >>>    2 | y=float(input("Qual o peso: "))
+               3 | if((x<0)or(x>130)or(y<0)or(y>550)):
+
+======================================================================

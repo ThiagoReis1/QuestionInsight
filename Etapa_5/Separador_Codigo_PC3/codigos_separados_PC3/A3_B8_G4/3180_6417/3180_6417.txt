@@ -1,0 +1,72 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 3180_6417.py
+Questão  : 3180
+Aluno    : 6417
+Total MCs: 3
+
+⚠️  Misconceptions detectados: A3, B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import *
+     2 | 
+     3 | vet = array(eval(input("Sorotipos dos pacientes: ")))
+     4 | m = size(vet)
+     5 | 
+     6 | vetf = zeros(4, dtype=int)
+     7 | soum = 0
+     8 | sdois = 0
+     9 | stres = 0
+    10 | squa = 0
+    11 | 
+    12 | for i in vet:
+    13 | 	if i == 1:
+    14 | 		soum = soum + 1
+    15 | 		vetf[0] = soum
+    16 | 	elif i == 2:
+    17 | 		sdois = sdois + 1
+    18 | 		vetf[1] = sdois
+    19 | 	elif i == 3:
+    20 | 		stres = stres + 1
+    21 | 		vetf[2] = stres
+    22 | 	elif i == 4:
+    23 | 		squa = squa + 1
+    24 | 		vetf[3] = squa
+    25 | 		
+    26 | print(vetf)
+    27 | 	
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 1
+
+  [1] Linha 4: Variável 'm' declarada mas nunca utilizada
+      Trecho  : m = ...
+      Contexto:
+               3 | vet = array(eval(input("Sorotipos dos pacientes: ")))
+        >>>    4 | m = size(vet)
+               5 | 
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 19: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 19) / elif ... sem else
+      Contexto:
+              18 | 		vetf[1] = sdois
+        >>>   19 | 	elif i == 3:
+              20 | 		stres = stres + 1
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 1
+
+  [1] Linha 0: G4 detectado pelo VisitorMC3 (localização exata não mapeada)
+      Trecho  : —
+
+======================================================================

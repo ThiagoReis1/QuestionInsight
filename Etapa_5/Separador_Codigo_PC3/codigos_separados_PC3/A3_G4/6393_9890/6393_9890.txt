@@ -1,0 +1,95 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 6393_9890.py
+Questão  : 6393
+Aluno    : 9890
+Total MCs: 2
+
+⚠️  Misconceptions detectados: A3, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import *
+     2 | 
+     3 | vet=array(eval(input("VALORES: ")))
+     4 | cont=zeros(size(vet),dtype=int)
+     5 | 
+     6 | num=0
+     7 | k=0
+     8 | 
+     9 | for i in range(size(vet)):
+    10 | 	if vet[i]==9:
+    11 | 		vet[i]=0
+    12 | 	else:
+    13 | 		num=vet[i]+1
+    14 | 		vet[i]=num**3
+    15 | 	
+    16 | print(vet)
+    17 | 	
+    18 | 	
+    19 | 
+    20 | 
+    21 | 
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 2
+
+  [1] Linha 4: Variável 'cont' declarada mas nunca utilizada
+      Trecho  : cont = ...
+      Contexto:
+               3 | vet=array(eval(input("VALORES: ")))
+        >>>    4 | cont=zeros(size(vet),dtype=int)
+               5 | 
+
+  [2] Linha 7: Variável 'k' declarada mas nunca utilizada
+      Trecho  : k = ...
+      Contexto:
+               6 | num=0
+        >>>    7 | k=0
+               8 | 
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 5
+
+  [1] Linha 3: Variável 'vet' com nome muito curto (≤4 chars)
+      Trecho  : vet = ...
+      Contexto:
+               2 | 
+        >>>    3 | vet=array(eval(input("VALORES: ")))
+               4 | cont=zeros(size(vet),dtype=int)
+
+  [2] Linha 4: Variável 'cont' com nome muito curto (≤4 chars)
+      Trecho  : cont = ...
+      Contexto:
+               3 | vet=array(eval(input("VALORES: ")))
+        >>>    4 | cont=zeros(size(vet),dtype=int)
+               5 | 
+
+  [3] Linha 6: Variável 'num' com nome muito curto (≤4 chars)
+      Trecho  : num = ...
+      Contexto:
+               5 | 
+        >>>    6 | num=0
+               7 | k=0
+
+  [4] Linha 7: Variável 'k' com nome muito curto (≤4 chars)
+      Trecho  : k = ...
+      Contexto:
+               6 | num=0
+        >>>    7 | k=0
+               8 | 
+
+  [5] Linha 13: Variável 'num' com nome muito curto (≤4 chars)
+      Trecho  : num = ...
+      Contexto:
+              12 | 	else:
+        >>>   13 | 		num=vet[i]+1
+              14 | 		vet[i]=num**3
+
+======================================================================

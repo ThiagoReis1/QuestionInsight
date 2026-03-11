@@ -1,0 +1,76 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1113_1392.py
+Questão  : 1113
+Aluno    : 1392
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B8, B9
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | idade = int(input("diga sua idade"))
+     2 | peso = float(input("informe seu peso"))
+     3 | print("Entradas:", idade, "anos e", peso, "kg")
+     4 | 
+     5 | #definição dos grupos de risco
+     6 | if(0 <= idade <= 130 and 0.0 <= peso <= 550.0):
+     7 | 	if(idade <= 20):
+     8 | 		if(peso <= 60):
+     9 | 			gr = 9
+    10 | 		elif(peso <= 90):
+    11 | 			gr = 8
+    12 | 		else:
+    13 | 			gr = 7
+    14 | 	elif(idade <= 50):
+    15 | 		if(peso <= 60):
+    16 | 			gr = 6
+    17 | 		elif(peso <= 90):
+    18 | 			gr = 5
+    19 | 		else:
+    20 | 			gr = 4
+    21 | 	elif(idade > 50):
+    22 | 		if(peso <= 60):
+    23 | 			gr = 3
+    24 | 		elif(peso <= 90):
+    25 | 			gr = 2
+    26 | 		else:
+    27 | 			gr = 1
+    28 | else:
+    29 | 	gr = -1
+    30 | #Resultados
+    31 | if(gr == -1):
+    32 | 	print("Dados invalidos")
+    33 | else:
+    34 | 	print("Grupo de risco:", gr)
+    35 | 			
+    36 | 
+    37 | 		
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 14: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 14) / elif ... sem else
+      Contexto:
+              13 | 			gr = 7
+        >>>   14 | 	elif(idade <= 50):
+              15 | 		if(peso <= 60):
+
+▶ B9 — elif/else retestando condições já verificadas
+  Ocorrências: 1
+
+  [1] Linha 21: elif retesta condição inversa do if da linha 14
+      Trecho  : if idade <= 50 ... elif idade > 50
+      Contexto:
+              20 | 			gr = 4
+        >>>   21 | 	elif(idade > 50):
+              22 | 		if(peso <= 60):
+
+======================================================================

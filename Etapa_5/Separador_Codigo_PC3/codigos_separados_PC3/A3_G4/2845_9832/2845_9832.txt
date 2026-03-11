@@ -1,0 +1,90 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 2845_9832.py
+Questão  : 2845
+Aluno    : 9832
+Total MCs: 2
+
+⚠️  Misconceptions detectados: A3, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | try :
+     2 | 	from numpy import *
+     3 | 	n = array(eval(input("Digite os numeros: ")))
+     4 | 	
+     5 | except NameError :
+     6 | 	print("Somente numeros!")
+     7 | 	
+     8 | except TypeError :
+     9 | 	print("Cuidado com os espacos!")
+    10 | 	
+    11 | except SyntaxError :
+    12 | 	print("Escreve direito!")
+    13 | 	
+    14 | else :
+    15 | 	i = 0
+    16 | 	tf = True
+    17 | 	while ( i < size(n) ) :
+    18 | 		if ( n[i] < 0 or n[i] > 9) :
+    19 | 			tf = False
+    20 | 			break
+    21 | 			
+    22 | 		i += 1
+    23 | 		
+    24 | 	if ( tf ) :
+    25 | 		for i in range(size(n)) :
+    26 | 			if ( n[i] < 9 ) :
+    27 | 				n[i] += 1
+    28 | 				
+    29 | 			else :
+    30 | 				n[i] = 0
+    31 | 				
+    32 | 		print(n)
+    33 | 	else :
+    34 | 		print("Numeros positivos!")
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 1
+
+  [1] Linha 0: A3 detectado pelo VisitorMC3 (localização exata não mapeada)
+      Trecho  : —
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 4
+
+  [1] Linha 3: Variável 'n' com nome muito curto (≤4 chars)
+      Trecho  : n = ...
+      Contexto:
+               2 | 	from numpy import *
+        >>>    3 | 	n = array(eval(input("Digite os numeros: ")))
+               4 | 	
+
+  [2] Linha 15: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+              14 | else :
+        >>>   15 | 	i = 0
+              16 | 	tf = True
+
+  [3] Linha 16: Variável 'tf' com nome muito curto (≤4 chars)
+      Trecho  : tf = ...
+      Contexto:
+              15 | 	i = 0
+        >>>   16 | 	tf = True
+              17 | 	while ( i < size(n) ) :
+
+  [4] Linha 19: Variável 'tf' com nome muito curto (≤4 chars)
+      Trecho  : tf = ...
+      Contexto:
+              18 | 		if ( n[i] < 0 or n[i] > 9) :
+        >>>   19 | 			tf = False
+              20 | 			break
+
+======================================================================

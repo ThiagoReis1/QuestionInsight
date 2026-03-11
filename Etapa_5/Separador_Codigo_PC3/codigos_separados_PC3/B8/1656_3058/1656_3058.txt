@@ -1,0 +1,77 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1656_3058.py
+Questão  : 1656
+Aluno    : 3058
+Total MCs: 1
+
+⚠️  Misconceptions detectados: B8
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | s= input("Digite o vetor com origem das pessoas: ").upper().split(",")
+     3 | soma= 0
+     4 | soma1= 0
+     5 | soma2= 0
+     6 | soma3= 0
+     7 | soma4= 0
+     8 | 
+     9 | for i in range(len(s)):
+    10 | 	if(s[i]== "BE"):
+    11 | 		soma= soma + 1
+    12 | 	elif(s[i]== "ES"):
+    13 | 		soma1= soma1 + 1
+    14 | 	elif(s[i]== "FR"):
+    15 | 		soma2= soma2 + 1
+    16 | 	elif(s[i]== "IT"):
+    17 | 		soma3= soma3 + 1
+    18 | 	elif(s[i]== "PT"):
+    19 | 		soma4= soma4 + 1
+    20 | soma5= [soma, soma1, soma2, soma3, soma4]
+    21 | print(max(soma5))
+    22 | 
+    23 | v0= zeros(5, dtype= int)
+    24 | for i in range(len(s)):
+    25 | 	if(s[i]== "BE"):
+    26 | 		v0[0]= v0[0] + 1
+    27 | 	elif(s[i]== "ES"):
+    28 | 		v0[1]= v0[1] + 1
+    29 | 	elif(s[i]== "FR"):
+    30 | 		v0[2]= v0[2] + 1
+    31 | 	elif(s[i]== "IT"):
+    32 | 		v0[3]= v0[3] + 1
+    33 | 	elif(s[i]== "PT"):
+    34 | 		v0[4]= v0[4] + 1
+    35 | print(v0)
+    36 | 
+    37 | 
+    38 | 	
+    39 | 		
+    40 | 	
+    41 | 	
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 2
+
+  [1] Linha 16: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 16) / elif ... sem else
+      Contexto:
+              15 | 		soma2= soma2 + 1
+        >>>   16 | 	elif(s[i]== "IT"):
+              17 | 		soma3= soma3 + 1
+
+  [2] Linha 31: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 31) / elif ... sem else
+      Contexto:
+              30 | 		v0[2]= v0[2] + 1
+        >>>   31 | 	elif(s[i]== "IT"):
+              32 | 		v0[3]= v0[3] + 1
+
+======================================================================

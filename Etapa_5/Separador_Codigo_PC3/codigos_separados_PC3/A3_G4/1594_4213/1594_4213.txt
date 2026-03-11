@@ -1,0 +1,92 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1594_4213.py
+Questão  : 1594
+Aluno    : 4213
+Total MCs: 2
+
+⚠️  Misconceptions detectados: A3, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import *
+     2 | a=array(eval(input("Ataques:")))
+     3 | b=size(a)
+     4 | x=0
+     5 | m=1
+     6 | at=ones(b,dtype=int)
+     7 | while(x<b):
+     8 | 	a[x]=a[x]*m
+     9 | 	x=x+1
+    10 | 	m=m+1
+    11 | print(sum(a))
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 1
+
+  [1] Linha 6: Variável 'at' declarada mas nunca utilizada
+      Trecho  : at = ...
+      Contexto:
+               5 | m=1
+        >>>    6 | at=ones(b,dtype=int)
+               7 | while(x<b):
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 7
+
+  [1] Linha 2: Variável 'a' com nome muito curto (≤4 chars)
+      Trecho  : a = ...
+      Contexto:
+               1 | from numpy import *
+        >>>    2 | a=array(eval(input("Ataques:")))
+               3 | b=size(a)
+
+  [2] Linha 3: Variável 'b' com nome muito curto (≤4 chars)
+      Trecho  : b = ...
+      Contexto:
+               2 | a=array(eval(input("Ataques:")))
+        >>>    3 | b=size(a)
+               4 | x=0
+
+  [3] Linha 4: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+               3 | b=size(a)
+        >>>    4 | x=0
+               5 | m=1
+
+  [4] Linha 5: Variável 'm' com nome muito curto (≤4 chars)
+      Trecho  : m = ...
+      Contexto:
+               4 | x=0
+        >>>    5 | m=1
+               6 | at=ones(b,dtype=int)
+
+  [5] Linha 6: Variável 'at' com nome muito curto (≤4 chars)
+      Trecho  : at = ...
+      Contexto:
+               5 | m=1
+        >>>    6 | at=ones(b,dtype=int)
+               7 | while(x<b):
+
+  [6] Linha 9: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+               8 | 	a[x]=a[x]*m
+        >>>    9 | 	x=x+1
+              10 | 	m=m+1
+
+  [7] Linha 10: Variável 'm' com nome muito curto (≤4 chars)
+      Trecho  : m = ...
+      Contexto:
+               9 | 	x=x+1
+        >>>   10 | 	m=m+1
+              11 | print(sum(a))
+
+======================================================================

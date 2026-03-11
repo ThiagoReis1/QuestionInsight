@@ -1,0 +1,203 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 3593_5308.py
+Questão  : 3593
+Aluno    : 5308
+Total MCs: 3
+
+⚠️  Misconceptions detectados: B4, B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | 
+     3 | dado = array(eval(input("dado:")))
+     4 | 
+     5 | comp = 200
+     6 | 
+     7 | i = 0
+     8 | 
+     9 | while i < size(dado):
+    10 | 	if dado[i] == 1:
+    11 | 		comp = comp / 2
+    12 | 		
+    13 | 	elif dado[i] == 2:
+    14 | 		comp = comp * 3
+    15 | 		
+    16 | 	elif dado[i] == 3:
+    17 | 		comp = comp / 2
+    18 | 		
+    19 | 	elif dado[i] == 4:
+    20 | 		comp = comp * 3
+    21 | 		
+    22 | 	elif dado[i] == 5:
+    23 | 		comp = comp / 2
+    24 | 		
+    25 | 	elif dado[i] == 6:
+    26 | 		comp = comp * 3
+    27 | 	i = i + 1
+    28 | print(round(comp, 2))
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B4 — Comandos repetidos dentro de blocos if-elif-else
+  Ocorrências: 10
+
+  [1] Linha 16: Bloco idêntico ao da linha 10
+      Trecho  : comp = comp / 2
+      Contexto:
+              15 | 		
+        >>>   16 | 	elif dado[i] == 3:
+              17 | 		comp = comp / 2
+
+  [2] Linha 19: Bloco idêntico ao da linha 13
+      Trecho  : comp = comp * 3
+      Contexto:
+              18 | 		
+        >>>   19 | 	elif dado[i] == 4:
+              20 | 		comp = comp * 3
+
+  [3] Linha 22: Bloco idêntico ao da linha 10
+      Trecho  : comp = comp / 2
+      Contexto:
+              21 | 		
+        >>>   22 | 	elif dado[i] == 5:
+              23 | 		comp = comp / 2
+
+  [4] Linha 25: Bloco idêntico ao da linha 13
+      Trecho  : comp = comp * 3
+      Contexto:
+              24 | 		
+        >>>   25 | 	elif dado[i] == 6:
+              26 | 		comp = comp * 3
+
+  [5] Linha 19: Bloco idêntico ao da linha 13
+      Trecho  : comp = comp * 3
+      Contexto:
+              18 | 		
+        >>>   19 | 	elif dado[i] == 4:
+              20 | 		comp = comp * 3
+
+  [6] Linha 22: Bloco idêntico ao da linha 16
+      Trecho  : comp = comp / 2
+      Contexto:
+              21 | 		
+        >>>   22 | 	elif dado[i] == 5:
+              23 | 		comp = comp / 2
+
+  [7] Linha 25: Bloco idêntico ao da linha 13
+      Trecho  : comp = comp * 3
+      Contexto:
+              24 | 		
+        >>>   25 | 	elif dado[i] == 6:
+              26 | 		comp = comp * 3
+
+  [8] Linha 22: Bloco idêntico ao da linha 16
+      Trecho  : comp = comp / 2
+      Contexto:
+              21 | 		
+        >>>   22 | 	elif dado[i] == 5:
+              23 | 		comp = comp / 2
+
+  [9] Linha 25: Bloco idêntico ao da linha 19
+      Trecho  : comp = comp * 3
+      Contexto:
+              24 | 		
+        >>>   25 | 	elif dado[i] == 6:
+              26 | 		comp = comp * 3
+
+  [10] Linha 25: Bloco idêntico ao da linha 19
+      Trecho  : comp = comp * 3
+      Contexto:
+              24 | 		
+        >>>   25 | 	elif dado[i] == 6:
+              26 | 		comp = comp * 3
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 22: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 22) / elif ... sem else
+      Contexto:
+              21 | 		
+        >>>   22 | 	elif dado[i] == 5:
+              23 | 		comp = comp / 2
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 10
+
+  [1] Linha 3: Variável 'dado' com nome muito curto (≤4 chars)
+      Trecho  : dado = ...
+      Contexto:
+               2 | 
+        >>>    3 | dado = array(eval(input("dado:")))
+               4 | 
+
+  [2] Linha 5: Variável 'comp' com nome muito curto (≤4 chars)
+      Trecho  : comp = ...
+      Contexto:
+               4 | 
+        >>>    5 | comp = 200
+               6 | 
+
+  [3] Linha 7: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+               6 | 
+        >>>    7 | i = 0
+               8 | 
+
+  [4] Linha 27: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+              26 | 		comp = comp * 3
+        >>>   27 | 	i = i + 1
+              28 | print(round(comp, 2))
+
+  [5] Linha 11: Variável 'comp' com nome muito curto (≤4 chars)
+      Trecho  : comp = ...
+      Contexto:
+              10 | 	if dado[i] == 1:
+        >>>   11 | 		comp = comp / 2
+              12 | 		
+
+  [6] Linha 14: Variável 'comp' com nome muito curto (≤4 chars)
+      Trecho  : comp = ...
+      Contexto:
+              13 | 	elif dado[i] == 2:
+        >>>   14 | 		comp = comp * 3
+              15 | 		
+
+  [7] Linha 17: Variável 'comp' com nome muito curto (≤4 chars)
+      Trecho  : comp = ...
+      Contexto:
+              16 | 	elif dado[i] == 3:
+        >>>   17 | 		comp = comp / 2
+              18 | 		
+
+  [8] Linha 20: Variável 'comp' com nome muito curto (≤4 chars)
+      Trecho  : comp = ...
+      Contexto:
+              19 | 	elif dado[i] == 4:
+        >>>   20 | 		comp = comp * 3
+              21 | 		
+
+  [9] Linha 23: Variável 'comp' com nome muito curto (≤4 chars)
+      Trecho  : comp = ...
+      Contexto:
+              22 | 	elif dado[i] == 5:
+        >>>   23 | 		comp = comp / 2
+              24 | 		
+
+  [10] Linha 26: Variável 'comp' com nome muito curto (≤4 chars)
+      Trecho  : comp = ...
+      Contexto:
+              25 | 	elif dado[i] == 6:
+        >>>   26 | 		comp = comp * 3
+              27 | 	i = i + 1
+
+======================================================================

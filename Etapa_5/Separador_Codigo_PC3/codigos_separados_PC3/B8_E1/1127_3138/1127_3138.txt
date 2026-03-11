@@ -1,0 +1,70 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1127_3138.py
+Questão  : 1127
+Aluno    : 3138
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B8, E1
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | cidade=input("")
+     2 | 
+     3 | if(cidade!="Pentos" and cidade!="Bravos" and cidade!="Lys" and cidade!="Qohor" and cidade!="Norvos" and cidade!="Myr" and cidade!="Tyrosh" and cidade!="Volantis" and cidade!="Lorath"):
+     4 | 	print("Entrada",cidade, "invalida")
+     5 | 	exit()
+     6 | 	
+     7 | if(cidade=="Pentos"):
+     8 | 	gen="pentoshi"
+     9 | elif(cidade=="Bravos"):
+    10 | 	gen="bravosiano"
+    11 | elif(cidade=="Lys"):
+    12 | 	gen="liseno"
+    13 | elif(cidade=="Qohor"):
+    14 | 	gen="qohorik"
+    15 | elif(cidade=="Norvos"):
+    16 | 	gen="norvoshi"
+    17 | elif(cidade=="Myr"):
+    18 | 	gen="myrano"
+    19 | elif(cidade=="Tyrosh"):
+    20 | 	gen="tyroshi"
+    21 | elif(cidade=="Volantis"):
+    22 | 	gen="volantino"
+    23 | elif(cidade=="Lorath"):
+    24 | 	gen="lorathi"
+    25 | 	
+    26 | print(gen)
+    27 | 	
+    28 | 	
+    29 | 	
+    30 | 	
+    31 | 
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 21: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 21) / elif ... sem else
+      Contexto:
+              20 | 	gen="tyroshi"
+        >>>   21 | elif(cidade=="Volantis"):
+              22 | 	gen="volantino"
+
+▶ E1 — Verificação desnecessária de todas as combinações possíveis
+  Ocorrências: 1
+
+  [1] Linha 3: 9 condições em um único if — verificação excessiva
+      Trecho  : cidade != 'Pentos' and cidade != 'Bravos' and (cidade != 'Lys') and (cidade != 'Qohor') and (cidade != 'Norvos') and (cidade != 'Myr') and (cidade != 'Tyrosh') and (cidade != 'Volantis') and (cidade != 'Lorath')
+      Contexto:
+               2 | 
+        >>>    3 | if(cidade!="Pentos" and cidade!="Bravos" and cidade!="Lys" and cidade!="Qohor" and cidade!="Norvos" and cidade!="Myr" and cidade!="Tyrosh" and cidade!="Volantis" and cidade!="Lorath"):
+               4 | 	print("Entrada",cidade, "invalida")
+
+======================================================================

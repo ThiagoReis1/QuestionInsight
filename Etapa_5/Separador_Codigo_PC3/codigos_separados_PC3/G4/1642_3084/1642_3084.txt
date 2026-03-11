@@ -1,0 +1,103 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1642_3084.py
+Questão  : 1642
+Aluno    : 3084
+Total MCs: 1
+
+⚠️  Misconceptions detectados: G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import * 
+     2 | q = array(eval(input("quantidade de alunos matriculados: ")))
+     3 | ne = 0
+     4 | for i in q:
+     5 | 	if(i % 5 == 0):
+     6 | 		ne = ne + 1 
+     7 | print(ne)
+     8 | a = zeros(ne, dtype = int)
+     9 | x=0
+    10 | y = 0
+    11 | for i in q:
+    12 | 	if(i % 5 == 0):
+    13 | 		a[y] = x
+    14 | 		x = x + 1
+    15 | 		y = y + 1
+    16 | 	else:
+    17 | 		x = x + 1
+    18 | print(a)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 9
+
+  [1] Linha 2: Variável 'q' com nome muito curto (≤4 chars)
+      Trecho  : q = ...
+      Contexto:
+               1 | from numpy import * 
+        >>>    2 | q = array(eval(input("quantidade de alunos matriculados: ")))
+               3 | ne = 0
+
+  [2] Linha 3: Variável 'ne' com nome muito curto (≤4 chars)
+      Trecho  : ne = ...
+      Contexto:
+               2 | q = array(eval(input("quantidade de alunos matriculados: ")))
+        >>>    3 | ne = 0
+               4 | for i in q:
+
+  [3] Linha 8: Variável 'a' com nome muito curto (≤4 chars)
+      Trecho  : a = ...
+      Contexto:
+               7 | print(ne)
+        >>>    8 | a = zeros(ne, dtype = int)
+               9 | x=0
+
+  [4] Linha 9: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+               8 | a = zeros(ne, dtype = int)
+        >>>    9 | x=0
+              10 | y = 0
+
+  [5] Linha 10: Variável 'y' com nome muito curto (≤4 chars)
+      Trecho  : y = ...
+      Contexto:
+               9 | x=0
+        >>>   10 | y = 0
+              11 | for i in q:
+
+  [6] Linha 6: Variável 'ne' com nome muito curto (≤4 chars)
+      Trecho  : ne = ...
+      Contexto:
+               5 | 	if(i % 5 == 0):
+        >>>    6 | 		ne = ne + 1 
+               7 | print(ne)
+
+  [7] Linha 14: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+              13 | 		a[y] = x
+        >>>   14 | 		x = x + 1
+              15 | 		y = y + 1
+
+  [8] Linha 15: Variável 'y' com nome muito curto (≤4 chars)
+      Trecho  : y = ...
+      Contexto:
+              14 | 		x = x + 1
+        >>>   15 | 		y = y + 1
+              16 | 	else:
+
+  [9] Linha 17: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+              16 | 	else:
+        >>>   17 | 		x = x + 1
+              18 | print(a)
+
+======================================================================

@@ -1,0 +1,94 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 3069_4342.py
+Questão  : 3069
+Aluno    : 4342
+Total MCs: 3
+
+⚠️  Misconceptions detectados: B8, B9, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | var=input("nome do ataque:")
+     2 | var2=int(input("dado1:"))
+     3 | var3=int(input("dado2:"))
+     4 | fi=10+(var2+var3)
+     5 | ga=6+(var2+var3)
+     6 | tm=(var2+var3)**2
+     7 | 
+     8 | if(var=="FURIA"):
+     9 | 	  print(fi)
+    10 | elif(var=="GRITO"):
+    11 | 	  print(ga)
+    12 | elif(var=="TOQUE"):
+    13 | 	  print(tm)
+    14 | elif((var!="FURIA") and (var!="GRITO") and (var!="TOQUE")):
+    15 | 	print("Entrada invalida")
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 12: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 12) / elif ... sem else
+      Contexto:
+              11 | 	  print(ga)
+        >>>   12 | elif(var=="TOQUE"):
+              13 | 	  print(tm)
+
+▶ B9 — elif/else retestando condições já verificadas
+  Ocorrências: 1
+
+  [1] Linha 0: B9 detectado pelo VisitorMC3 (localização exata não mapeada)
+      Trecho  : —
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 6
+
+  [1] Linha 1: Variável 'var' com nome muito curto (≤4 chars)
+      Trecho  : var = ...
+      Contexto:
+        >>>    1 | var=input("nome do ataque:")
+               2 | var2=int(input("dado1:"))
+
+  [2] Linha 2: Variável 'var2' com nome muito curto (≤4 chars)
+      Trecho  : var2 = ...
+      Contexto:
+               1 | var=input("nome do ataque:")
+        >>>    2 | var2=int(input("dado1:"))
+               3 | var3=int(input("dado2:"))
+
+  [3] Linha 3: Variável 'var3' com nome muito curto (≤4 chars)
+      Trecho  : var3 = ...
+      Contexto:
+               2 | var2=int(input("dado1:"))
+        >>>    3 | var3=int(input("dado2:"))
+               4 | fi=10+(var2+var3)
+
+  [4] Linha 4: Variável 'fi' com nome muito curto (≤4 chars)
+      Trecho  : fi = ...
+      Contexto:
+               3 | var3=int(input("dado2:"))
+        >>>    4 | fi=10+(var2+var3)
+               5 | ga=6+(var2+var3)
+
+  [5] Linha 5: Variável 'ga' com nome muito curto (≤4 chars)
+      Trecho  : ga = ...
+      Contexto:
+               4 | fi=10+(var2+var3)
+        >>>    5 | ga=6+(var2+var3)
+               6 | tm=(var2+var3)**2
+
+  [6] Linha 6: Variável 'tm' com nome muito curto (≤4 chars)
+      Trecho  : tm = ...
+      Contexto:
+               5 | ga=6+(var2+var3)
+        >>>    6 | tm=(var2+var3)**2
+               7 | 
+
+======================================================================

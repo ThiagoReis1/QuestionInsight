@@ -1,0 +1,108 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 6935_9745.py
+Questão  : 6935
+Aluno    : 9745
+Total MCs: 3
+
+⚠️  Misconceptions detectados: B4, B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | val = float(input("Valor da compra:"))
+     2 | op = input("Opcao de pagamento:")
+     3 | 
+     4 | if (op.upper() == 'C'):
+     5 | 	qual = int(input("1 ou 2:"))
+     6 | 	if (qual == 1):
+     7 | 		print(round(val,2))
+     8 | 	else:
+     9 | 		cal = val + val*0.07
+    10 | 		print(round(cal,2))
+    11 | 		
+    12 | elif (op.upper() == 'D'):
+    13 | 	cal = val*0.88
+    14 | 	print(round(cal,2))
+    15 | 	
+    16 | elif (op.upper() == 'P'):
+    17 | 	cal = val*0.88
+    18 | 	print(round(cal,2))
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B4 — Comandos repetidos dentro de blocos if-elif-else
+  Ocorrências: 2
+
+  [1] Linha 16: Bloco idêntico ao da linha 12
+      Trecho  : cal = val * 0.88
+      Contexto:
+              15 | 	
+        >>>   16 | elif (op.upper() == 'P'):
+              17 | 	cal = val*0.88
+
+  [2] Linha 16: Bloco idêntico ao da linha 12
+      Trecho  : cal = val * 0.88
+      Contexto:
+              15 | 	
+        >>>   16 | elif (op.upper() == 'P'):
+              17 | 	cal = val*0.88
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 12: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 12) / elif ... sem else
+      Contexto:
+              11 | 		
+        >>>   12 | elif (op.upper() == 'D'):
+              13 | 	cal = val*0.88
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 6
+
+  [1] Linha 1: Variável 'val' com nome muito curto (≤4 chars)
+      Trecho  : val = ...
+      Contexto:
+        >>>    1 | val = float(input("Valor da compra:"))
+               2 | op = input("Opcao de pagamento:")
+
+  [2] Linha 2: Variável 'op' com nome muito curto (≤4 chars)
+      Trecho  : op = ...
+      Contexto:
+               1 | val = float(input("Valor da compra:"))
+        >>>    2 | op = input("Opcao de pagamento:")
+               3 | 
+
+  [3] Linha 5: Variável 'qual' com nome muito curto (≤4 chars)
+      Trecho  : qual = ...
+      Contexto:
+               4 | if (op.upper() == 'C'):
+        >>>    5 | 	qual = int(input("1 ou 2:"))
+               6 | 	if (qual == 1):
+
+  [4] Linha 9: Variável 'cal' com nome muito curto (≤4 chars)
+      Trecho  : cal = ...
+      Contexto:
+               8 | 	else:
+        >>>    9 | 		cal = val + val*0.07
+              10 | 		print(round(cal,2))
+
+  [5] Linha 13: Variável 'cal' com nome muito curto (≤4 chars)
+      Trecho  : cal = ...
+      Contexto:
+              12 | elif (op.upper() == 'D'):
+        >>>   13 | 	cal = val*0.88
+              14 | 	print(round(cal,2))
+
+  [6] Linha 17: Variável 'cal' com nome muito curto (≤4 chars)
+      Trecho  : cal = ...
+      Contexto:
+              16 | elif (op.upper() == 'P'):
+        >>>   17 | 	cal = val*0.88
+              18 | 	print(round(cal,2))
+
+======================================================================

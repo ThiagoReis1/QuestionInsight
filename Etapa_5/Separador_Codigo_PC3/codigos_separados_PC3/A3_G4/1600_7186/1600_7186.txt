@@ -1,0 +1,114 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1600_7186.py
+Questão  : 1600
+Aluno    : 7186
+Total MCs: 2
+
+⚠️  Misconceptions detectados: A3, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | 
+     3 | l = array(eval(input()))
+     4 | n = zeros(shape(l)[0], dtype = float)
+     5 | m = 0
+     6 | #v = l - l%0.15
+     7 | #t = sum(v)
+     8 | 
+     9 | for i in range(shape(l)[0]):
+    10 | 	for j in range(shape(n)[0]):
+    11 | 		if(l[j] >= 80):
+    12 | 			m = m + 1
+    13 | 			v = l - (l % 0.15)
+    14 | 			t= sum(v)
+    15 | 		if(l[i]<=80):
+    16 | 			tv = sum(l)
+    17 | 			vt = t + tv
+    18 | 			m = m + 1
+    19 | 	print(round(tv,2))
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 1
+
+  [1] Linha 17: Variável 'vt' declarada mas nunca utilizada
+      Trecho  : vt = ...
+      Contexto:
+              16 | 			tv = sum(l)
+        >>>   17 | 			vt = t + tv
+              18 | 			m = m + 1
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 9
+
+  [1] Linha 3: Variável 'l' com nome muito curto (≤4 chars)
+      Trecho  : l = ...
+      Contexto:
+               2 | 
+        >>>    3 | l = array(eval(input()))
+               4 | n = zeros(shape(l)[0], dtype = float)
+
+  [2] Linha 4: Variável 'n' com nome muito curto (≤4 chars)
+      Trecho  : n = ...
+      Contexto:
+               3 | l = array(eval(input()))
+        >>>    4 | n = zeros(shape(l)[0], dtype = float)
+               5 | m = 0
+
+  [3] Linha 5: Variável 'm' com nome muito curto (≤4 chars)
+      Trecho  : m = ...
+      Contexto:
+               4 | n = zeros(shape(l)[0], dtype = float)
+        >>>    5 | m = 0
+               6 | #v = l - l%0.15
+
+  [4] Linha 12: Variável 'm' com nome muito curto (≤4 chars)
+      Trecho  : m = ...
+      Contexto:
+              11 | 		if(l[j] >= 80):
+        >>>   12 | 			m = m + 1
+              13 | 			v = l - (l % 0.15)
+
+  [5] Linha 13: Variável 'v' com nome muito curto (≤4 chars)
+      Trecho  : v = ...
+      Contexto:
+              12 | 			m = m + 1
+        >>>   13 | 			v = l - (l % 0.15)
+              14 | 			t= sum(v)
+
+  [6] Linha 14: Variável 't' com nome muito curto (≤4 chars)
+      Trecho  : t = ...
+      Contexto:
+              13 | 			v = l - (l % 0.15)
+        >>>   14 | 			t= sum(v)
+              15 | 		if(l[i]<=80):
+
+  [7] Linha 16: Variável 'tv' com nome muito curto (≤4 chars)
+      Trecho  : tv = ...
+      Contexto:
+              15 | 		if(l[i]<=80):
+        >>>   16 | 			tv = sum(l)
+              17 | 			vt = t + tv
+
+  [8] Linha 17: Variável 'vt' com nome muito curto (≤4 chars)
+      Trecho  : vt = ...
+      Contexto:
+              16 | 			tv = sum(l)
+        >>>   17 | 			vt = t + tv
+              18 | 			m = m + 1
+
+  [9] Linha 18: Variável 'm' com nome muito curto (≤4 chars)
+      Trecho  : m = ...
+      Contexto:
+              17 | 			vt = t + tv
+        >>>   18 | 			m = m + 1
+              19 | 	print(round(tv,2))
+
+======================================================================

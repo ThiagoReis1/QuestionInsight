@@ -1,0 +1,184 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 2032_2261.py
+Questão  : 2032
+Aluno    : 2261
+Total MCs: 2
+
+⚠️  Misconceptions detectados: A2, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | re = int(input("resultado: "))
+     2 | if(re == 5):
+     3 | 	i = 1
+     4 | 	s = 5
+     5 | 	while(re != -1):
+     6 | 		re = int(input("resultado: "))
+     7 | 		if(re == 5):
+     8 | 			s = i * s
+     9 | 		else:
+    10 | 			s = s
+    11 | 		i = i + 1
+    12 | 	if(s >= 5):
+    13 | 		v = s / 5
+    14 | 		print(v)			
+    15 | else:
+    16 | 	while(re != -1):
+    17 | 		re = int(input("resultado: "))
+    18 | 		if(re == 5):
+    19 | 			i = 1
+    20 | 			s = 5
+    21 | 			while(re != -1):
+    22 | 				re = int(input("resultado: "))
+    23 | 				if(re == 5):
+    24 | 					s = i * s
+    25 | 				else:
+    26 | 					s = s
+    27 | 					i = i + 1
+    28 | 			if(s >= 5):
+    29 | 				v = s / 5
+    30 | 				print(v)			
+    31 | 		
+    32 | 	
+    33 | 	
+    34 | 	
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A2 — Variável atribuída a si mesma
+  Ocorrências: 2
+
+  [1] Linha 10: 's' atribuído a si mesmo
+      Trecho  : s = s
+      Contexto:
+               9 | 		else:
+        >>>   10 | 			s = s
+              11 | 		i = i + 1
+
+  [2] Linha 26: 's' atribuído a si mesmo
+      Trecho  : s = s
+      Contexto:
+              25 | 				else:
+        >>>   26 | 					s = s
+              27 | 					i = i + 1
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 16
+
+  [1] Linha 1: Variável 're' com nome muito curto (≤4 chars)
+      Trecho  : re = ...
+      Contexto:
+        >>>    1 | re = int(input("resultado: "))
+               2 | if(re == 5):
+
+  [2] Linha 3: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+               2 | if(re == 5):
+        >>>    3 | 	i = 1
+               4 | 	s = 5
+
+  [3] Linha 4: Variável 's' com nome muito curto (≤4 chars)
+      Trecho  : s = ...
+      Contexto:
+               3 | 	i = 1
+        >>>    4 | 	s = 5
+               5 | 	while(re != -1):
+
+  [4] Linha 6: Variável 're' com nome muito curto (≤4 chars)
+      Trecho  : re = ...
+      Contexto:
+               5 | 	while(re != -1):
+        >>>    6 | 		re = int(input("resultado: "))
+               7 | 		if(re == 5):
+
+  [5] Linha 11: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+              10 | 			s = s
+        >>>   11 | 		i = i + 1
+              12 | 	if(s >= 5):
+
+  [6] Linha 13: Variável 'v' com nome muito curto (≤4 chars)
+      Trecho  : v = ...
+      Contexto:
+              12 | 	if(s >= 5):
+        >>>   13 | 		v = s / 5
+              14 | 		print(v)			
+
+  [7] Linha 17: Variável 're' com nome muito curto (≤4 chars)
+      Trecho  : re = ...
+      Contexto:
+              16 | 	while(re != -1):
+        >>>   17 | 		re = int(input("resultado: "))
+              18 | 		if(re == 5):
+
+  [8] Linha 8: Variável 's' com nome muito curto (≤4 chars)
+      Trecho  : s = ...
+      Contexto:
+               7 | 		if(re == 5):
+        >>>    8 | 			s = i * s
+               9 | 		else:
+
+  [9] Linha 10: Variável 's' com nome muito curto (≤4 chars)
+      Trecho  : s = ...
+      Contexto:
+               9 | 		else:
+        >>>   10 | 			s = s
+              11 | 		i = i + 1
+
+  [10] Linha 19: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+              18 | 		if(re == 5):
+        >>>   19 | 			i = 1
+              20 | 			s = 5
+
+  [11] Linha 20: Variável 's' com nome muito curto (≤4 chars)
+      Trecho  : s = ...
+      Contexto:
+              19 | 			i = 1
+        >>>   20 | 			s = 5
+              21 | 			while(re != -1):
+
+  [12] Linha 22: Variável 're' com nome muito curto (≤4 chars)
+      Trecho  : re = ...
+      Contexto:
+              21 | 			while(re != -1):
+        >>>   22 | 				re = int(input("resultado: "))
+              23 | 				if(re == 5):
+
+  [13] Linha 29: Variável 'v' com nome muito curto (≤4 chars)
+      Trecho  : v = ...
+      Contexto:
+              28 | 			if(s >= 5):
+        >>>   29 | 				v = s / 5
+              30 | 				print(v)			
+
+  [14] Linha 24: Variável 's' com nome muito curto (≤4 chars)
+      Trecho  : s = ...
+      Contexto:
+              23 | 				if(re == 5):
+        >>>   24 | 					s = i * s
+              25 | 				else:
+
+  [15] Linha 26: Variável 's' com nome muito curto (≤4 chars)
+      Trecho  : s = ...
+      Contexto:
+              25 | 				else:
+        >>>   26 | 					s = s
+              27 | 					i = i + 1
+
+  [16] Linha 27: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+              26 | 					s = s
+        >>>   27 | 					i = i + 1
+              28 | 			if(s >= 5):
+
+======================================================================

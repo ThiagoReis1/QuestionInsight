@@ -1,0 +1,130 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 3590_6420.py
+Questão  : 3590
+Aluno    : 6420
+Total MCs: 3
+
+⚠️  Misconceptions detectados: A2, B11, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | 
+     3 | f = array(eval(input("Faces do dado:")))
+     4 | 
+     5 | i = 0
+     6 | soma = 0
+     7 | 
+     8 | while (i < size(f)):
+     9 | 	if (f[i] == 1):
+    10 | 		soma = soma + 10
+    11 | 	if (f[i] == 2):
+    12 | 		soma = soma + 5
+    13 | 	if (f[i] == 3):
+    14 | 		soma = soma
+    15 | 	if (f[i] == 4):
+    16 | 		soma = soma + 5
+    17 | 	if (f[i] == 5):
+    18 | 		soma = soma + 20
+    19 | 	if (f[i] == 6):
+    20 | 		soma = soma + 10
+    21 | 	i = i + 1
+    22 | print(soma)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A2 — Variável atribuída a si mesma
+  Ocorrências: 1
+
+  [1] Linha 14: 'soma' atribuído a si mesmo
+      Trecho  : soma = soma
+      Contexto:
+              13 | 	if (f[i] == 3):
+        >>>   14 | 		soma = soma
+              15 | 	if (f[i] == 4):
+
+▶ B11 — Ifs distintos com blocos idênticos
+  Ocorrências: 1
+
+  [1] Linha 0: B11 detectado pelo VisitorMC3 (localização exata não mapeada)
+      Trecho  : —
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 10
+
+  [1] Linha 3: Variável 'f' com nome muito curto (≤4 chars)
+      Trecho  : f = ...
+      Contexto:
+               2 | 
+        >>>    3 | f = array(eval(input("Faces do dado:")))
+               4 | 
+
+  [2] Linha 5: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+               4 | 
+        >>>    5 | i = 0
+               6 | soma = 0
+
+  [3] Linha 6: Variável 'soma' com nome muito curto (≤4 chars)
+      Trecho  : soma = ...
+      Contexto:
+               5 | i = 0
+        >>>    6 | soma = 0
+               7 | 
+
+  [4] Linha 21: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+              20 | 		soma = soma + 10
+        >>>   21 | 	i = i + 1
+              22 | print(soma)
+
+  [5] Linha 10: Variável 'soma' com nome muito curto (≤4 chars)
+      Trecho  : soma = ...
+      Contexto:
+               9 | 	if (f[i] == 1):
+        >>>   10 | 		soma = soma + 10
+              11 | 	if (f[i] == 2):
+
+  [6] Linha 12: Variável 'soma' com nome muito curto (≤4 chars)
+      Trecho  : soma = ...
+      Contexto:
+              11 | 	if (f[i] == 2):
+        >>>   12 | 		soma = soma + 5
+              13 | 	if (f[i] == 3):
+
+  [7] Linha 14: Variável 'soma' com nome muito curto (≤4 chars)
+      Trecho  : soma = ...
+      Contexto:
+              13 | 	if (f[i] == 3):
+        >>>   14 | 		soma = soma
+              15 | 	if (f[i] == 4):
+
+  [8] Linha 16: Variável 'soma' com nome muito curto (≤4 chars)
+      Trecho  : soma = ...
+      Contexto:
+              15 | 	if (f[i] == 4):
+        >>>   16 | 		soma = soma + 5
+              17 | 	if (f[i] == 5):
+
+  [9] Linha 18: Variável 'soma' com nome muito curto (≤4 chars)
+      Trecho  : soma = ...
+      Contexto:
+              17 | 	if (f[i] == 5):
+        >>>   18 | 		soma = soma + 20
+              19 | 	if (f[i] == 6):
+
+  [10] Linha 20: Variável 'soma' com nome muito curto (≤4 chars)
+      Trecho  : soma = ...
+      Contexto:
+              19 | 	if (f[i] == 6):
+        >>>   20 | 		soma = soma + 10
+              21 | 	i = i + 1
+
+======================================================================

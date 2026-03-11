@@ -1,0 +1,55 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1649_3146.py
+Questão  : 1649
+Aluno    : 3146
+Total MCs: 1
+
+⚠️  Misconceptions detectados: B8
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | olhos = input("cor dos olhos: ")
+     3 | aolhos = array(olhos.split(","))
+     4 | 
+     5 | listaolhos = zeros(5, dtype=int)
+     6 | 
+     7 | for i in range(size(aolhos)):
+     8 | 	if((aolhos[i]).upper() == 'P'):
+     9 | 		listaolhos[0] += 1
+    10 | 	elif((aolhos[i]).upper() == 'C'):
+    11 | 		listaolhos[1] += 1
+    12 | 	elif((aolhos[i]).upper() == 'M'):
+    13 | 		listaolhos[2] += 1
+    14 | 	elif((aolhos[i]).upper() == 'V'):
+    15 | 		listaolhos[3] += 1
+    16 | 	elif((aolhos[i]).upper() == 'A'):
+    17 | 		listaolhos[4] += 1
+    18 | 
+    19 | maiscomum = 0;
+    20 | for i in range(5):
+    21 | 	if(listaolhos[i] > maiscomum):
+    22 | 		maiscomum = listaolhos[i]
+    23 | 		
+    24 | print(maiscomum)
+    25 | print(listaolhos)
+    26 | 		
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 14: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 14) / elif ... sem else
+      Contexto:
+              13 | 		listaolhos[2] += 1
+        >>>   14 | 	elif((aolhos[i]).upper() == 'V'):
+              15 | 		listaolhos[3] += 1
+
+======================================================================

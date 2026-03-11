@@ -1,0 +1,72 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 3038_6404.py
+Questão  : 3038
+Aluno    : 6404
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from math import *
+     2 | 
+     3 | x = float(input(": "))
+     4 | 
+     5 | if x <= -1 or x >= 1:
+     6 | 	f_x = sqrt(abs(x))
+     7 | elif -1 < x < 0 or 0 < x < 1:
+     8 | 	f_x = abs(x)
+     9 | elif x == 0:
+    10 | 	f_x = 0
+    11 | 	
+    12 | print(round(f_x, 2))
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 7: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 7) / elif ... sem else
+      Contexto:
+               6 | 	f_x = sqrt(abs(x))
+        >>>    7 | elif -1 < x < 0 or 0 < x < 1:
+               8 | 	f_x = abs(x)
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 4
+
+  [1] Linha 3: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+               2 | 
+        >>>    3 | x = float(input(": "))
+               4 | 
+
+  [2] Linha 6: Variável 'f_x' com nome muito curto (≤4 chars)
+      Trecho  : f_x = ...
+      Contexto:
+               5 | if x <= -1 or x >= 1:
+        >>>    6 | 	f_x = sqrt(abs(x))
+               7 | elif -1 < x < 0 or 0 < x < 1:
+
+  [3] Linha 8: Variável 'f_x' com nome muito curto (≤4 chars)
+      Trecho  : f_x = ...
+      Contexto:
+               7 | elif -1 < x < 0 or 0 < x < 1:
+        >>>    8 | 	f_x = abs(x)
+               9 | elif x == 0:
+
+  [4] Linha 10: Variável 'f_x' com nome muito curto (≤4 chars)
+      Trecho  : f_x = ...
+      Contexto:
+               9 | elif x == 0:
+        >>>   10 | 	f_x = 0
+              11 | 	
+
+======================================================================

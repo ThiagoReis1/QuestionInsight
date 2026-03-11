@@ -1,0 +1,44 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1598_2853.py
+Questão  : 1598
+Aluno    : 2853
+Total MCs: 1
+
+⚠️  Misconceptions detectados: A3
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import *
+     2 | 
+     3 | custo = array(eval(input("Vetor de custo: ")))
+     4 | 
+     5 | cont = 0
+     6 | custo_total = 0
+     7 | soma = 0 
+     8 | desconto = 0
+     9 | 
+    10 | while(cont < size(custo)):
+    11 | 	if(custo[cont] > 80):
+    12 | 		desconto = desconto + 5
+    13 | 	cont = cont + 1
+    14 | custo_total = sum(custo) - desconto
+    15 | print(round(custo_total, 2))
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 1
+
+  [1] Linha 7: Variável 'soma' declarada mas nunca utilizada
+      Trecho  : soma = ...
+      Contexto:
+               6 | custo_total = 0
+        >>>    7 | soma = 0 
+               8 | desconto = 0
+
+======================================================================

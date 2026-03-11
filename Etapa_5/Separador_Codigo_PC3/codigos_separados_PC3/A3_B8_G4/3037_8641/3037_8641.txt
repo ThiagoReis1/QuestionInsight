@@ -1,0 +1,81 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 3037_8641.py
+Questão  : 3037
+Aluno    : 8641
+Total MCs: 3
+
+⚠️  Misconceptions detectados: A3, B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from math import*
+     2 | 
+     3 | x = float(input(""))
+     4 | 
+     5 | if((x <= (-1)) or (x >= 1)):
+     6 | 	g = print(round(x**2, 4))
+     7 | 				 
+     8 | elif(((-1) < x) and (x < 0) or (0 < x) and (x < 1)):
+     9 | 	g = print(round(x, 4))
+    10 | 			 
+    11 | elif ( x == 0):
+    12 | 	g = print(round(1, 4))
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 1
+
+  [1] Linha 6: Variável 'g' declarada mas nunca utilizada
+      Trecho  : g = ...
+      Contexto:
+               5 | if((x <= (-1)) or (x >= 1)):
+        >>>    6 | 	g = print(round(x**2, 4))
+               7 | 				 
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 8: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 8) / elif ... sem else
+      Contexto:
+               7 | 				 
+        >>>    8 | elif(((-1) < x) and (x < 0) or (0 < x) and (x < 1)):
+               9 | 	g = print(round(x, 4))
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 4
+
+  [1] Linha 3: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+               2 | 
+        >>>    3 | x = float(input(""))
+               4 | 
+
+  [2] Linha 6: Variável 'g' com nome muito curto (≤4 chars)
+      Trecho  : g = ...
+      Contexto:
+               5 | if((x <= (-1)) or (x >= 1)):
+        >>>    6 | 	g = print(round(x**2, 4))
+               7 | 				 
+
+  [3] Linha 9: Variável 'g' com nome muito curto (≤4 chars)
+      Trecho  : g = ...
+      Contexto:
+               8 | elif(((-1) < x) and (x < 0) or (0 < x) and (x < 1)):
+        >>>    9 | 	g = print(round(x, 4))
+              10 | 			 
+
+  [4] Linha 12: Variável 'g' com nome muito curto (≤4 chars)
+      Trecho  : g = ...
+      Contexto:
+              11 | elif ( x == 0):
+        >>>   12 | 	g = print(round(1, 4))
+
+======================================================================

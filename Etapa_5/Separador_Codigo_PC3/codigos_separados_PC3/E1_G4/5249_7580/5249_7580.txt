@@ -1,0 +1,91 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 5249_7580.py
+Questão  : 5249
+Aluno    : 7580
+Total MCs: 2
+
+⚠️  Misconceptions detectados: E1, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | p1 = int(input(': '))
+     2 | p2 = int(input(': '))
+     3 | p3 = int(input(': '))
+     4 | w = 0
+     5 | if p1<1 or p1>4 or p2>4 or p2<1 or p3<1 or p3>4:
+     6 | 	print('Dados invalidos')
+     7 | else:
+     8 | 	if p1 == 1:
+     9 | 		w += 180
+    10 | 	elif p1 ==2:
+    11 | 		w += 230
+    12 | 	elif p1 ==3:
+    13 | 		w += 250
+    14 | 	else:
+    15 | 		w += 350
+    16 | 	if p2 ==1:
+    17 | 		w += 75
+    18 | 	elif p2 ==2:
+    19 | 		w += 110 
+    20 | 	elif p2 ==3:
+    21 | 		w += 170
+    22 | 	else:
+    23 | 		w += 200
+    24 | 	if p3 == 1:
+    25 | 		w += 20
+    26 | 	elif p3 == 2:
+    27 | 		w += 70
+    28 | 	elif p3 == 3:
+    29 | 		w += 100
+    30 | 	else:
+    31 | 		w += 65
+    32 | 	print('Calorias: {} cal'.format(w))
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ E1 — Verificação desnecessária de todas as combinações possíveis
+  Ocorrências: 1
+
+  [1] Linha 5: 6 condições em um único if — verificação excessiva
+      Trecho  : p1 < 1 or p1 > 4 or p2 > 4 or (p2 < 1) or (p3 < 1) or (p3 > 4)
+      Contexto:
+               4 | w = 0
+        >>>    5 | if p1<1 or p1>4 or p2>4 or p2<1 or p3<1 or p3>4:
+               6 | 	print('Dados invalidos')
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 4
+
+  [1] Linha 1: Variável 'p1' com nome muito curto (≤4 chars)
+      Trecho  : p1 = ...
+      Contexto:
+        >>>    1 | p1 = int(input(': '))
+               2 | p2 = int(input(': '))
+
+  [2] Linha 2: Variável 'p2' com nome muito curto (≤4 chars)
+      Trecho  : p2 = ...
+      Contexto:
+               1 | p1 = int(input(': '))
+        >>>    2 | p2 = int(input(': '))
+               3 | p3 = int(input(': '))
+
+  [3] Linha 3: Variável 'p3' com nome muito curto (≤4 chars)
+      Trecho  : p3 = ...
+      Contexto:
+               2 | p2 = int(input(': '))
+        >>>    3 | p3 = int(input(': '))
+               4 | w = 0
+
+  [4] Linha 4: Variável 'w' com nome muito curto (≤4 chars)
+      Trecho  : w = ...
+      Contexto:
+               3 | p3 = int(input(': '))
+        >>>    4 | w = 0
+               5 | if p1<1 or p1>4 or p2>4 or p2<1 or p3<1 or p3>4:
+
+======================================================================

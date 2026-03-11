@@ -1,0 +1,73 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1149_3351.py
+Questão  : 1149
+Aluno    : 3351
+Total MCs: 3
+
+⚠️  Misconceptions detectados: B8, E1, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | #Entrada
+     2 | r = input("Insira a regiao: ")
+     3 | #Condições
+     4 | if(r.lower() == "ponta tempestade" or r.lower()== "ilha do dragao" or r.lower()=="campina" or r.lower() == "winterfell" or r.lower() == "rochedo casterly" or r.lower() == "pyke" or r.lower() == "correrio" or r.lower() == "ninho da aguia" or r.lower() == "dorne"):
+     5 | 	if(r.lower() == "ponta tempestade"):
+     6 | 		print("Baratheon")
+     7 | 	elif(r.lower()== "ilha do dragao"):
+     8 | 		print("Targaryen")
+     9 | 	elif(r.lower()=="campina"):
+    10 | 		print("Tyrell")
+    11 | 	elif(r.lower() == "winterfell"):
+    12 | 		print("Stark")
+    13 | 	elif(r.lower() == "rochedo casterly"):
+    14 | 		print("Lannister")
+    15 | 	elif(r.lower() == "pyke"):
+    16 | 		print("Greyjoy")
+    17 | 	elif(r.lower() == "correrio"):	
+    18 | 		print("Tully")
+    19 | 	elif(r.lower() == "ninho da aguia"):
+    20 | 		print("Arryn")
+    21 | 	elif(r.lower() == "dorne"):
+    22 | 		print("Martell")
+    23 | else:
+    24 | 	print("Entrada", r, "invalida")
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 19: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 19) / elif ... sem else
+      Contexto:
+              18 | 		print("Tully")
+        >>>   19 | 	elif(r.lower() == "ninho da aguia"):
+              20 | 		print("Arryn")
+
+▶ E1 — Verificação desnecessária de todas as combinações possíveis
+  Ocorrências: 1
+
+  [1] Linha 4: 9 condições em um único if — verificação excessiva
+      Trecho  : r.lower() == 'ponta tempestade' or r.lower() == 'ilha do dragao' or r.lower() == 'campina' or (r.lower() == 'winterfell') or (r.lower() == 'rochedo casterly') or (r.lower() == 'pyke') or (r.lower() == 'correrio') or (r.lower() == 'ninho da aguia') or (r.lower() == 'dorne')
+      Contexto:
+               3 | #Condições
+        >>>    4 | if(r.lower() == "ponta tempestade" or r.lower()== "ilha do dragao" or r.lower()=="campina" or r.lower() == "winterfell" or r.lower() == "rochedo casterly" or r.lower() == "pyke" or r.lower() == "correrio" or r.lower() == "ninho da aguia" or r.lower() == "dorne"):
+               5 | 	if(r.lower() == "ponta tempestade"):
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 1
+
+  [1] Linha 2: Variável 'r' com nome muito curto (≤4 chars)
+      Trecho  : r = ...
+      Contexto:
+               1 | #Entrada
+        >>>    2 | r = input("Insira a regiao: ")
+               3 | #Condições
+
+======================================================================

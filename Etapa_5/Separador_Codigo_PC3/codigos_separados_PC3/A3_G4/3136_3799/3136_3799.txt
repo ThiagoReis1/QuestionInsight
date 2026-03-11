@@ -1,0 +1,76 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 3136_3799.py
+Questão  : 3136
+Aluno    : 3799
+Total MCs: 2
+
+⚠️  Misconceptions detectados: A3, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | from math import*
+     3 | x=array(eval(input("x:")))
+     4 | m=0
+     5 | a=0
+     6 | for i in range(size(x)):
+     7 | 	m=m+log(x[i]+1)
+     8 | r=exp(m/size(x))
+     9 | print(round(r-1,2))
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 1
+
+  [1] Linha 5: Variável 'a' declarada mas nunca utilizada
+      Trecho  : a = ...
+      Contexto:
+               4 | m=0
+        >>>    5 | a=0
+               6 | for i in range(size(x)):
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 5
+
+  [1] Linha 3: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+               2 | from math import*
+        >>>    3 | x=array(eval(input("x:")))
+               4 | m=0
+
+  [2] Linha 4: Variável 'm' com nome muito curto (≤4 chars)
+      Trecho  : m = ...
+      Contexto:
+               3 | x=array(eval(input("x:")))
+        >>>    4 | m=0
+               5 | a=0
+
+  [3] Linha 5: Variável 'a' com nome muito curto (≤4 chars)
+      Trecho  : a = ...
+      Contexto:
+               4 | m=0
+        >>>    5 | a=0
+               6 | for i in range(size(x)):
+
+  [4] Linha 8: Variável 'r' com nome muito curto (≤4 chars)
+      Trecho  : r = ...
+      Contexto:
+               7 | 	m=m+log(x[i]+1)
+        >>>    8 | r=exp(m/size(x))
+               9 | print(round(r-1,2))
+
+  [5] Linha 7: Variável 'm' com nome muito curto (≤4 chars)
+      Trecho  : m = ...
+      Contexto:
+               6 | for i in range(size(x)):
+        >>>    7 | 	m=m+log(x[i]+1)
+               8 | r=exp(m/size(x))
+
+======================================================================

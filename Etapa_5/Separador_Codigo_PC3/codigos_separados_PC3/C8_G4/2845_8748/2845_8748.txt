@@ -1,0 +1,75 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 2845_8748.py
+Questão  : 2845
+Aluno    : 8748
+Total MCs: 2
+
+⚠️  Misconceptions detectados: C8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | 
+     3 | vetor = array(eval(input("manda: ")))
+     4 | a = []
+     5 | 
+     6 | for num in vetor:
+     7 | 	num = int(num)
+     8 | 	x = num + 1
+     9 | 	if x > 9:
+    10 | 		x = 0
+    11 | 	a.append(x)
+    12 | print(array(a))
+    13 | 
+    14 | 
+    15 | 
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ C8 — Loop for com sua variável de iteração sobrescrita
+  Ocorrências: 1
+
+  [1] Linha 7: Variável de iteração 'num' sobrescrita no loop
+      Trecho  : num = int(num)
+      Contexto:
+               6 | for num in vetor:
+        >>>    7 | 	num = int(num)
+               8 | 	x = num + 1
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 4
+
+  [1] Linha 4: Variável 'a' com nome muito curto (≤4 chars)
+      Trecho  : a = ...
+      Contexto:
+               3 | vetor = array(eval(input("manda: ")))
+        >>>    4 | a = []
+               5 | 
+
+  [2] Linha 7: Variável 'num' com nome muito curto (≤4 chars)
+      Trecho  : num = ...
+      Contexto:
+               6 | for num in vetor:
+        >>>    7 | 	num = int(num)
+               8 | 	x = num + 1
+
+  [3] Linha 8: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+               7 | 	num = int(num)
+        >>>    8 | 	x = num + 1
+               9 | 	if x > 9:
+
+  [4] Linha 10: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+               9 | 	if x > 9:
+        >>>   10 | 		x = 0
+              11 | 	a.append(x)
+
+======================================================================

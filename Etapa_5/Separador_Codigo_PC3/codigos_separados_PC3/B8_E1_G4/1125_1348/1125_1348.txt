@@ -1,0 +1,64 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1125_1348.py
+Questão  : 1125
+Aluno    : 1348
+Total MCs: 3
+
+⚠️  Misconceptions detectados: B8, E1, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | n=input("Nome do lobo:")
+     2 | 
+     3 | if((n!="Lady")and(n!="Vento Cinzento")and(n!="Cao Felpudo")and(n!="Fantasma")and(n!="Verao")and(n!="Nymeria")):
+     4 | 	print("Entrada",n,"invalida")
+     5 | elif(n=="Lady"):
+     6 | 	print("Sansa")
+     7 | elif(n=="Vento Cinzento"):
+     8 | 	print("Robb")
+     9 | elif(n=="Cao Felpudo"):
+    10 | 	print("Rickon")
+    11 | elif(n=="Fantasma"):
+    12 | 	print("Jon Snow")
+    13 | elif(n=="Verao"):
+    14 | 	print("bran")
+    15 | elif(n=="Nymeria"):
+    16 | 	print("Arya")
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 13: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 13) / elif ... sem else
+      Contexto:
+              12 | 	print("Jon Snow")
+        >>>   13 | elif(n=="Verao"):
+              14 | 	print("bran")
+
+▶ E1 — Verificação desnecessária de todas as combinações possíveis
+  Ocorrências: 1
+
+  [1] Linha 3: 6 condições em um único if — verificação excessiva
+      Trecho  : n != 'Lady' and n != 'Vento Cinzento' and (n != 'Cao Felpudo') and (n != 'Fantasma') and (n != 'Verao') and (n != 'Nymeria')
+      Contexto:
+               2 | 
+        >>>    3 | if((n!="Lady")and(n!="Vento Cinzento")and(n!="Cao Felpudo")and(n!="Fantasma")and(n!="Verao")and(n!="Nymeria")):
+               4 | 	print("Entrada",n,"invalida")
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 1
+
+  [1] Linha 1: Variável 'n' com nome muito curto (≤4 chars)
+      Trecho  : n = ...
+      Contexto:
+        >>>    1 | n=input("Nome do lobo:")
+               2 | 
+
+======================================================================

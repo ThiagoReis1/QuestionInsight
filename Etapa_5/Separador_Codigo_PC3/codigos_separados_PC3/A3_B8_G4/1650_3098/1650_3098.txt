@@ -1,0 +1,178 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1650_3098.py
+Questão  : 1650
+Aluno    : 3098
+Total MCs: 3
+
+⚠️  Misconceptions detectados: A3, B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | ##lembrar que é uma string
+     2 | ##codigos do cabelo é armazenados por virgulas
+     3 |   #saidas#
+     4 | #maior numero de pessoas com a mesma cor de cabelo
+     5 | #ele quer a quantidade de clientes de cada tipo(checar a ordem no final)
+     6 | from numpy import*
+     7 | string=input("siglas dos clientes:   ")
+     8 | vet = string.split(",")#transformei para vetor
+     9 | tvet=size(vet)
+    10 | #criaçao de contadoras para o cabelo
+    11 | p = 0
+    12 | c = 0
+    13 | r = 0
+    14 | l = 0
+    15 | b = 0
+    16 | k = 0#isso é para o vetor saida
+    17 | #meu vetor saida
+    18 | saida = zeros(5,dtype=int)
+    19 | #criaçao do meu laço para atribuiçao e checagem
+    20 | for i in range(size(vet)):
+    21 | 	if(vet[i]=="P"):
+    22 | 		p = p + 1	
+    23 | 	elif(vet[i]=="C"):
+    24 | 		c = c + 1
+    25 | 	elif(vet[i]=="R"):
+    26 | 		r = r + 1
+    27 | 	elif(vet[i]=="L"):
+    28 | 		l = l + 1
+    29 | 	elif(vet[i]=="B"):
+    30 | 		b = b + 1
+    31 | saida[0]=p
+    32 | saida[1]=c
+    33 | saida[2]=r	
+    34 | saida[3]=l
+    35 | saida[4]=b
+    36 | print(max(saida))
+    37 | print(saida)
+    38 | 	
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 2
+
+  [1] Linha 9: Variável 'tvet' declarada mas nunca utilizada
+      Trecho  : tvet = ...
+      Contexto:
+               8 | vet = string.split(",")#transformei para vetor
+        >>>    9 | tvet=size(vet)
+              10 | #criaçao de contadoras para o cabelo
+
+  [2] Linha 16: Variável 'k' declarada mas nunca utilizada
+      Trecho  : k = ...
+      Contexto:
+              15 | b = 0
+        >>>   16 | k = 0#isso é para o vetor saida
+              17 | #meu vetor saida
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 27: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 27) / elif ... sem else
+      Contexto:
+              26 | 		r = r + 1
+        >>>   27 | 	elif(vet[i]=="L"):
+              28 | 		l = l + 1
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 13
+
+  [1] Linha 8: Variável 'vet' com nome muito curto (≤4 chars)
+      Trecho  : vet = ...
+      Contexto:
+               7 | string=input("siglas dos clientes:   ")
+        >>>    8 | vet = string.split(",")#transformei para vetor
+               9 | tvet=size(vet)
+
+  [2] Linha 9: Variável 'tvet' com nome muito curto (≤4 chars)
+      Trecho  : tvet = ...
+      Contexto:
+               8 | vet = string.split(",")#transformei para vetor
+        >>>    9 | tvet=size(vet)
+              10 | #criaçao de contadoras para o cabelo
+
+  [3] Linha 11: Variável 'p' com nome muito curto (≤4 chars)
+      Trecho  : p = ...
+      Contexto:
+              10 | #criaçao de contadoras para o cabelo
+        >>>   11 | p = 0
+              12 | c = 0
+
+  [4] Linha 12: Variável 'c' com nome muito curto (≤4 chars)
+      Trecho  : c = ...
+      Contexto:
+              11 | p = 0
+        >>>   12 | c = 0
+              13 | r = 0
+
+  [5] Linha 13: Variável 'r' com nome muito curto (≤4 chars)
+      Trecho  : r = ...
+      Contexto:
+              12 | c = 0
+        >>>   13 | r = 0
+              14 | l = 0
+
+  [6] Linha 14: Variável 'l' com nome muito curto (≤4 chars)
+      Trecho  : l = ...
+      Contexto:
+              13 | r = 0
+        >>>   14 | l = 0
+              15 | b = 0
+
+  [7] Linha 15: Variável 'b' com nome muito curto (≤4 chars)
+      Trecho  : b = ...
+      Contexto:
+              14 | l = 0
+        >>>   15 | b = 0
+              16 | k = 0#isso é para o vetor saida
+
+  [8] Linha 16: Variável 'k' com nome muito curto (≤4 chars)
+      Trecho  : k = ...
+      Contexto:
+              15 | b = 0
+        >>>   16 | k = 0#isso é para o vetor saida
+              17 | #meu vetor saida
+
+  [9] Linha 22: Variável 'p' com nome muito curto (≤4 chars)
+      Trecho  : p = ...
+      Contexto:
+              21 | 	if(vet[i]=="P"):
+        >>>   22 | 		p = p + 1	
+              23 | 	elif(vet[i]=="C"):
+
+  [10] Linha 24: Variável 'c' com nome muito curto (≤4 chars)
+      Trecho  : c = ...
+      Contexto:
+              23 | 	elif(vet[i]=="C"):
+        >>>   24 | 		c = c + 1
+              25 | 	elif(vet[i]=="R"):
+
+  [11] Linha 26: Variável 'r' com nome muito curto (≤4 chars)
+      Trecho  : r = ...
+      Contexto:
+              25 | 	elif(vet[i]=="R"):
+        >>>   26 | 		r = r + 1
+              27 | 	elif(vet[i]=="L"):
+
+  [12] Linha 28: Variável 'l' com nome muito curto (≤4 chars)
+      Trecho  : l = ...
+      Contexto:
+              27 | 	elif(vet[i]=="L"):
+        >>>   28 | 		l = l + 1
+              29 | 	elif(vet[i]=="B"):
+
+  [13] Linha 30: Variável 'b' com nome muito curto (≤4 chars)
+      Trecho  : b = ...
+      Contexto:
+              29 | 	elif(vet[i]=="B"):
+        >>>   30 | 		b = b + 1
+              31 | saida[0]=p
+
+======================================================================

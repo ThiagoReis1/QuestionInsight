@@ -1,0 +1,126 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1166_1492.py
+Questão  : 1166
+Aluno    : 1492
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B4, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from math import *
+     2 | n = int(input("n de termos:"))
+     3 | num = 1
+     4 | den = 1
+     5 | i = 1
+     6 | var = 0
+     7 | while(i<=n):
+     8 | 	if(i==1):
+     9 | 		var = var + (sqrt(num)/(6+den))
+    10 | 	elif(i % 2 == 1):
+    11 | 		  var = var + (sqrt(num)/(6+den))
+    12 | 	else:
+    13 | 		  var = var - (sqrt(num)/(6+den))
+    14 | 	i = i + 1
+    15 | 	num  = num + 1
+    16 | 	den = den + 2
+    17 | print(round(var,10))
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B4 — Comandos repetidos dentro de blocos if-elif-else
+  Ocorrências: 1
+
+  [1] Linha 10: Bloco idêntico ao da linha 8
+      Trecho  : var = var + sqrt(num) / (6 + den)
+      Contexto:
+               9 | 		var = var + (sqrt(num)/(6+den))
+        >>>   10 | 	elif(i % 2 == 1):
+              11 | 		  var = var + (sqrt(num)/(6+den))
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 11
+
+  [1] Linha 2: Variável 'n' com nome muito curto (≤4 chars)
+      Trecho  : n = ...
+      Contexto:
+               1 | from math import *
+        >>>    2 | n = int(input("n de termos:"))
+               3 | num = 1
+
+  [2] Linha 3: Variável 'num' com nome muito curto (≤4 chars)
+      Trecho  : num = ...
+      Contexto:
+               2 | n = int(input("n de termos:"))
+        >>>    3 | num = 1
+               4 | den = 1
+
+  [3] Linha 4: Variável 'den' com nome muito curto (≤4 chars)
+      Trecho  : den = ...
+      Contexto:
+               3 | num = 1
+        >>>    4 | den = 1
+               5 | i = 1
+
+  [4] Linha 5: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+               4 | den = 1
+        >>>    5 | i = 1
+               6 | var = 0
+
+  [5] Linha 6: Variável 'var' com nome muito curto (≤4 chars)
+      Trecho  : var = ...
+      Contexto:
+               5 | i = 1
+        >>>    6 | var = 0
+               7 | while(i<=n):
+
+  [6] Linha 14: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+              13 | 		  var = var - (sqrt(num)/(6+den))
+        >>>   14 | 	i = i + 1
+              15 | 	num  = num + 1
+
+  [7] Linha 15: Variável 'num' com nome muito curto (≤4 chars)
+      Trecho  : num = ...
+      Contexto:
+              14 | 	i = i + 1
+        >>>   15 | 	num  = num + 1
+              16 | 	den = den + 2
+
+  [8] Linha 16: Variável 'den' com nome muito curto (≤4 chars)
+      Trecho  : den = ...
+      Contexto:
+              15 | 	num  = num + 1
+        >>>   16 | 	den = den + 2
+              17 | print(round(var,10))
+
+  [9] Linha 9: Variável 'var' com nome muito curto (≤4 chars)
+      Trecho  : var = ...
+      Contexto:
+               8 | 	if(i==1):
+        >>>    9 | 		var = var + (sqrt(num)/(6+den))
+              10 | 	elif(i % 2 == 1):
+
+  [10] Linha 11: Variável 'var' com nome muito curto (≤4 chars)
+      Trecho  : var = ...
+      Contexto:
+              10 | 	elif(i % 2 == 1):
+        >>>   11 | 		  var = var + (sqrt(num)/(6+den))
+              12 | 	else:
+
+  [11] Linha 13: Variável 'var' com nome muito curto (≤4 chars)
+      Trecho  : var = ...
+      Contexto:
+              12 | 	else:
+        >>>   13 | 		  var = var - (sqrt(num)/(6+den))
+              14 | 	i = i + 1
+
+======================================================================

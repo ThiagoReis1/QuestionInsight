@@ -1,0 +1,45 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 5254_7165.py
+Questão  : 5254
+Aluno    : 7165
+Total MCs: 1
+
+⚠️  Misconceptions detectados: B8
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | preco = float(input("Preco do produto sem desconto: "))
+     2 | codigo = int(input("Codigo da regiao de entrega: "))
+     3 | dbf = 0.4 * preco
+     4 | if(codigo == 1):
+     5 | 	valor_da_venda = round((preco - dbf) + preco * 0.1, 2)
+     6 | 	print(valor_da_venda)
+     7 | elif(codigo == 2):
+     8 | 	valor_da_venda = round(preco - dbf + preco * 0.08, 2)
+     9 | 	print(valor_da_venda)
+    10 | elif(codigo == 3):
+    11 | 	valor_da_venda = round(preco - dbf, 2)
+    12 | 	print(valor_da_venda)
+    13 | elif(codigo == 4):
+    14 | 	valor_da_venda = round(preco - dbf + preco *0.02, 20)
+    15 | 	print(valor_da_venda)
+    16 | 	
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 10: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 10) / elif ... sem else
+      Contexto:
+               9 | 	print(valor_da_venda)
+        >>>   10 | elif(codigo == 3):
+              11 | 	valor_da_venda = round(preco - dbf, 2)
+
+======================================================================

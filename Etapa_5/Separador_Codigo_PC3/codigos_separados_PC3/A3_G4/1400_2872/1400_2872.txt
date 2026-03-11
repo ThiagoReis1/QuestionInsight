@@ -1,0 +1,83 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1400_2872.py
+Questão  : 1400
+Aluno    : 2872
+Total MCs: 2
+
+⚠️  Misconceptions detectados: A3, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | ataque = (input("Qual tipo de ataque a vitima sofreu? "))
+     2 | rodadas = int(input("Informe o numero de rodadas que o personagem permaneceu nas vinhas"))
+     3 | d1 = int(input("Qual falor sorteado em d1? "))
+     4 | d2 = int(input("Qual falor sorteado em d2? "))
+     5 | 
+     6 | if (ataque.lower() == "constricao"):
+     7 | 	n = d1+d2
+     8 | 	a = n+1
+     9 | 	dano = (a *rodadas)
+    10 | 	
+    11 | if (ataque.lower() == "polen"):
+    12 | 	dano = d1*d2
+    13 | print (dano)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 1
+
+  [1] Linha 0: A3 detectado pelo VisitorMC3 (localização exata não mapeada)
+      Trecho  : —
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 6
+
+  [1] Linha 3: Variável 'd1' com nome muito curto (≤4 chars)
+      Trecho  : d1 = ...
+      Contexto:
+               2 | rodadas = int(input("Informe o numero de rodadas que o personagem permaneceu nas vinhas"))
+        >>>    3 | d1 = int(input("Qual falor sorteado em d1? "))
+               4 | d2 = int(input("Qual falor sorteado em d2? "))
+
+  [2] Linha 4: Variável 'd2' com nome muito curto (≤4 chars)
+      Trecho  : d2 = ...
+      Contexto:
+               3 | d1 = int(input("Qual falor sorteado em d1? "))
+        >>>    4 | d2 = int(input("Qual falor sorteado em d2? "))
+               5 | 
+
+  [3] Linha 7: Variável 'n' com nome muito curto (≤4 chars)
+      Trecho  : n = ...
+      Contexto:
+               6 | if (ataque.lower() == "constricao"):
+        >>>    7 | 	n = d1+d2
+               8 | 	a = n+1
+
+  [4] Linha 8: Variável 'a' com nome muito curto (≤4 chars)
+      Trecho  : a = ...
+      Contexto:
+               7 | 	n = d1+d2
+        >>>    8 | 	a = n+1
+               9 | 	dano = (a *rodadas)
+
+  [5] Linha 9: Variável 'dano' com nome muito curto (≤4 chars)
+      Trecho  : dano = ...
+      Contexto:
+               8 | 	a = n+1
+        >>>    9 | 	dano = (a *rodadas)
+              10 | 	
+
+  [6] Linha 12: Variável 'dano' com nome muito curto (≤4 chars)
+      Trecho  : dano = ...
+      Contexto:
+              11 | if (ataque.lower() == "polen"):
+        >>>   12 | 	dano = d1*d2
+              13 | print (dano)
+
+======================================================================

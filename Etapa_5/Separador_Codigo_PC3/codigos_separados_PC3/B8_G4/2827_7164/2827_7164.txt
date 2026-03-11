@@ -1,0 +1,63 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 2827_7164.py
+Questão  : 2827
+Aluno    : 7164
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | x=array(eval(input("Notas: ")))
+     3 | i=0
+     4 | while i<size(x):
+     5 | 	if 4<=x[i]<=5:
+     6 | 		x[i]=4
+     7 | 	elif 9<=x[i]<=10:
+     8 | 		x[i]=10
+     9 | 	i=i+1
+    10 | print(x)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 5: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 5) / elif ... sem else
+      Contexto:
+               4 | while i<size(x):
+        >>>    5 | 	if 4<=x[i]<=5:
+               6 | 		x[i]=4
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 3
+
+  [1] Linha 2: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+               1 | from numpy import*
+        >>>    2 | x=array(eval(input("Notas: ")))
+               3 | i=0
+
+  [2] Linha 3: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+               2 | x=array(eval(input("Notas: ")))
+        >>>    3 | i=0
+               4 | while i<size(x):
+
+  [3] Linha 9: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+               8 | 		x[i]=10
+        >>>    9 | 	i=i+1
+              10 | print(x)
+
+======================================================================

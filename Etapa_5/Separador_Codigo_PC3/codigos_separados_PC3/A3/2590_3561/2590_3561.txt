@@ -1,0 +1,43 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 2590_3561.py
+Questão  : 2590
+Aluno    : 3561
+Total MCs: 1
+
+⚠️  Misconceptions detectados: A3
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from  numpy import *
+     2 | vet1=array(eval(input("vet1:")))  
+     3 | acidentes=0
+     4 | for i in range(size(vet1)):
+     5 | 	if(notas[i]<5):
+     6 | 	   reprovados= reprovados+1
+     7 | print(reprovados)
+     8 | j=0
+     9 | vet2= zeros(reprovados, dtype=int)
+    10 | for i in range(size(notas)):
+    11 | 	if(notas[i]<5):
+    12 | 		vet2[j]=i
+    13 | 		j=j+1
+    14 | print(vet2)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 1
+
+  [1] Linha 3: Variável 'acidentes' declarada mas nunca utilizada
+      Trecho  : acidentes = ...
+      Contexto:
+               2 | vet1=array(eval(input("vet1:")))  
+        >>>    3 | acidentes=0
+               4 | for i in range(size(vet1)):
+
+======================================================================

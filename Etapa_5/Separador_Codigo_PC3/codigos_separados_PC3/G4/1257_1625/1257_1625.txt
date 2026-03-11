@@ -1,0 +1,118 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1257_1625.py
+Questão  : 1257
+Aluno    : 1625
+Total MCs: 1
+
+⚠️  Misconceptions detectados: G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import *
+     2 | vet = array(eval(input()))
+     3 | a = min(vet)
+     4 | b = max(vet)
+     5 | c = 0.85 * a + 0.15 * b
+     6 | d = 0.4 * a + 0.6 * b
+     7 | saida = zeros(2, dtype=int)
+     8 | i = 0
+     9 | x1 = 0
+    10 | x2 = 0
+    11 | while (i < size(vet)):
+    12 | 	if ((vet[i] >= a) and (vet[i] < c)):
+    13 | 		x1 = x1 + 1
+    14 | 	if ((vet[i] >= d) and (vet[i] < b)):
+    15 | 		x2 = x2 + 1
+    16 | 	i = i +1
+    17 | saida[0] = x1
+    18 | saida[1] = x2
+    19 | print(saida)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 11
+
+  [1] Linha 2: Variável 'vet' com nome muito curto (≤4 chars)
+      Trecho  : vet = ...
+      Contexto:
+               1 | from numpy import *
+        >>>    2 | vet = array(eval(input()))
+               3 | a = min(vet)
+
+  [2] Linha 3: Variável 'a' com nome muito curto (≤4 chars)
+      Trecho  : a = ...
+      Contexto:
+               2 | vet = array(eval(input()))
+        >>>    3 | a = min(vet)
+               4 | b = max(vet)
+
+  [3] Linha 4: Variável 'b' com nome muito curto (≤4 chars)
+      Trecho  : b = ...
+      Contexto:
+               3 | a = min(vet)
+        >>>    4 | b = max(vet)
+               5 | c = 0.85 * a + 0.15 * b
+
+  [4] Linha 5: Variável 'c' com nome muito curto (≤4 chars)
+      Trecho  : c = ...
+      Contexto:
+               4 | b = max(vet)
+        >>>    5 | c = 0.85 * a + 0.15 * b
+               6 | d = 0.4 * a + 0.6 * b
+
+  [5] Linha 6: Variável 'd' com nome muito curto (≤4 chars)
+      Trecho  : d = ...
+      Contexto:
+               5 | c = 0.85 * a + 0.15 * b
+        >>>    6 | d = 0.4 * a + 0.6 * b
+               7 | saida = zeros(2, dtype=int)
+
+  [6] Linha 8: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+               7 | saida = zeros(2, dtype=int)
+        >>>    8 | i = 0
+               9 | x1 = 0
+
+  [7] Linha 9: Variável 'x1' com nome muito curto (≤4 chars)
+      Trecho  : x1 = ...
+      Contexto:
+               8 | i = 0
+        >>>    9 | x1 = 0
+              10 | x2 = 0
+
+  [8] Linha 10: Variável 'x2' com nome muito curto (≤4 chars)
+      Trecho  : x2 = ...
+      Contexto:
+               9 | x1 = 0
+        >>>   10 | x2 = 0
+              11 | while (i < size(vet)):
+
+  [9] Linha 16: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+              15 | 		x2 = x2 + 1
+        >>>   16 | 	i = i +1
+              17 | saida[0] = x1
+
+  [10] Linha 13: Variável 'x1' com nome muito curto (≤4 chars)
+      Trecho  : x1 = ...
+      Contexto:
+              12 | 	if ((vet[i] >= a) and (vet[i] < c)):
+        >>>   13 | 		x1 = x1 + 1
+              14 | 	if ((vet[i] >= d) and (vet[i] < b)):
+
+  [11] Linha 15: Variável 'x2' com nome muito curto (≤4 chars)
+      Trecho  : x2 = ...
+      Contexto:
+              14 | 	if ((vet[i] >= d) and (vet[i] < b)):
+        >>>   15 | 		x2 = x2 + 1
+              16 | 	i = i +1
+
+======================================================================

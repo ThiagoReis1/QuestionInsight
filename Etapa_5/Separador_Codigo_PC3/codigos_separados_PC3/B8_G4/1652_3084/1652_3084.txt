@@ -1,0 +1,71 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1652_3084.py
+Questão  : 1652
+Aluno    : 3084
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | from numpy.linalg import*
+     3 | x = input().split(',')
+     4 | y = zeros(5,dtype=int)		 
+     5 | for i in x:
+     6 | 	if(i == "B"):
+     7 | 		y[0] = y[0]+1
+     8 | 	elif(i == "PA"):
+     9 | 		y[1] = y[1]+1
+    10 | 	elif(i == "PR"):
+    11 | 		y[2] = y[2]+1
+    12 | 	elif(i == "A"):
+    13 | 		y[3] = y[3]+1
+    14 | 	elif(i == "I"):
+    15 | 		y[4] = y[4]+1
+    16 | z = y.max()
+    17 | print(z)
+    18 | print(y)	
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 12: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 12) / elif ... sem else
+      Contexto:
+              11 | 		y[2] = y[2]+1
+        >>>   12 | 	elif(i == "A"):
+              13 | 		y[3] = y[3]+1
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 3
+
+  [1] Linha 3: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+               2 | from numpy.linalg import*
+        >>>    3 | x = input().split(',')
+               4 | y = zeros(5,dtype=int)		 
+
+  [2] Linha 4: Variável 'y' com nome muito curto (≤4 chars)
+      Trecho  : y = ...
+      Contexto:
+               3 | x = input().split(',')
+        >>>    4 | y = zeros(5,dtype=int)		 
+               5 | for i in x:
+
+  [3] Linha 16: Variável 'z' com nome muito curto (≤4 chars)
+      Trecho  : z = ...
+      Contexto:
+              15 | 		y[4] = y[4]+1
+        >>>   16 | z = y.max()
+              17 | print(z)
+
+======================================================================

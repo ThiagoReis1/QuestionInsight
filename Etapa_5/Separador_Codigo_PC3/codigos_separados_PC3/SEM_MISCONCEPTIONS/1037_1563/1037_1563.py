@@ -1,0 +1,5 @@
+reais = float(input("Informe o valor em reais a ser trocado por pesos: "))
+total_reais = (reais - 9)
+pesos = (total_reais / 0.26)
+pesos2 = round(pesos,2)
+print (pesos2)

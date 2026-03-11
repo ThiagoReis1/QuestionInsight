@@ -1,0 +1,100 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1615_1466.py
+Questão  : 1615
+Aluno    : 1466
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import *
+     2 | a=array(eval(input())).astype(dtype=int)
+     3 | b=array(eval(input())).astype(dtype=int)
+     4 | i=0
+     5 | s1=0
+     6 | s2=0
+     7 | while(i<size(a)):
+     8 | 	if(a[i]==1):
+     9 | 		s1+=40
+    10 | 	elif(a[i]==2):
+    11 | 		s1+=20
+    12 | 	elif(a[i]==3):
+    13 | 		s1+=10
+    14 | 	if(b[i]==1):
+    15 | 		s2+=40
+    16 | 	elif(b[i]==2):
+    17 | 		s2+=20
+    18 | 	elif(b[i]==3):
+    19 | 		s2+=10		
+    20 | 	i+=1
+    21 | if(s1>s2):
+    22 | 	print("JOGADOR UM")
+    23 | elif(s2>s1):
+    24 | 	print("JOGADOR DOIS")
+    25 | else:
+    26 | 	print("EMPATE")
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 2
+
+  [1] Linha 10: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 10) / elif ... sem else
+      Contexto:
+               9 | 		s1+=40
+        >>>   10 | 	elif(a[i]==2):
+              11 | 		s1+=20
+
+  [2] Linha 16: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 16) / elif ... sem else
+      Contexto:
+              15 | 		s2+=40
+        >>>   16 | 	elif(b[i]==2):
+              17 | 		s2+=20
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 5
+
+  [1] Linha 2: Variável 'a' com nome muito curto (≤4 chars)
+      Trecho  : a = ...
+      Contexto:
+               1 | from numpy import *
+        >>>    2 | a=array(eval(input())).astype(dtype=int)
+               3 | b=array(eval(input())).astype(dtype=int)
+
+  [2] Linha 3: Variável 'b' com nome muito curto (≤4 chars)
+      Trecho  : b = ...
+      Contexto:
+               2 | a=array(eval(input())).astype(dtype=int)
+        >>>    3 | b=array(eval(input())).astype(dtype=int)
+               4 | i=0
+
+  [3] Linha 4: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+               3 | b=array(eval(input())).astype(dtype=int)
+        >>>    4 | i=0
+               5 | s1=0
+
+  [4] Linha 5: Variável 's1' com nome muito curto (≤4 chars)
+      Trecho  : s1 = ...
+      Contexto:
+               4 | i=0
+        >>>    5 | s1=0
+               6 | s2=0
+
+  [5] Linha 6: Variável 's2' com nome muito curto (≤4 chars)
+      Trecho  : s2 = ...
+      Contexto:
+               5 | s1=0
+        >>>    6 | s2=0
+               7 | while(i<size(a)):
+
+======================================================================

@@ -1,0 +1,55 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 2918_4326.py
+Questão  : 2918
+Aluno    : 4326
+Total MCs: 2
+
+⚠️  Misconceptions detectados: A3, A4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | precoIngresso=float(input("Digite o preco do Ingresso:"))
+     2 | precoPromocional=float(input("Digite a quantidade de Ingresso:"))
+     3 | 
+     4 | 
+     5 | print=round(precoPromocional=precoIngresso-(presoIngresso*0.2/100))
+     6 | 
+     7 | 
+     8 | 
+     9 | 
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 2
+
+  [1] Linha 2: Variável 'precoPromocional' declarada mas nunca utilizada
+      Trecho  : precoPromocional = ...
+      Contexto:
+               1 | precoIngresso=float(input("Digite o preco do Ingresso:"))
+        >>>    2 | precoPromocional=float(input("Digite a quantidade de Ingresso:"))
+               3 | 
+
+  [2] Linha 5: Variável 'print' declarada mas nunca utilizada
+      Trecho  : print = ...
+      Contexto:
+               4 | 
+        >>>    5 | print=round(precoPromocional=precoIngresso-(presoIngresso*0.2/100))
+               6 | 
+
+▶ A4 — Redefinição de built-in
+  Ocorrências: 1
+
+  [1] Linha 5: Built-in 'print' redefinido como variável
+      Trecho  : print = round(precoPromocional=precoIngresso - presoIngresso * 0.2 / 100)
+      Contexto:
+               4 | 
+        >>>    5 | print=round(precoPromocional=precoIngresso-(presoIngresso*0.2/100))
+               6 | 
+
+======================================================================

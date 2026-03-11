@@ -1,0 +1,1 @@
+entre_com_valor=input()

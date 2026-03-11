@@ -1,0 +1,159 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1621_3122.py
+Questão  : 1621
+Aluno    : 3122
+Total MCs: 2
+
+⚠️  Misconceptions detectados: A3, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import * 
+     2 | 
+     3 | # Entradas
+     4 | 
+     5 | v1 = array(['ARROZ', 'FEIJAO', 'BIS', 'MIOJO', 'FANTA'])
+     6 | # v2 = array(['1.25', '2.60', '1.80', '0.85', '3.20'])
+     7 | 
+     8 | # Leituras
+     9 | v3 = array(eval(input("Produto: ")))
+    10 | v4 = array(eval(input("Quantidade: ")))
+    11 | 
+    12 | # Contador
+    13 | i = 0
+    14 | c = 0
+    15 | x = 0
+    16 | 
+    17 | while (i <= size(v3)):
+    18 | 	if(v3[i] == "ARROZ"):
+    19 | 		c = c + v4[0] * 1.25
+    20 | 	elif(v3[i] == "FEIJAO"):
+    21 | 		c = c + v4[1] * 2.60
+    22 | 	elif(v3[i] == "BIS"):
+    23 | 		c = c + v4[2] * 1.80
+    24 | 	elif(v3[i] == "MIOJO"):
+    25 | 		c = c + v4[3] * 0.85
+    26 | 	else:
+    27 | 		c = c + v4[4] * 3.20
+    28 | 	i = i + 1
+    29 | print(c)
+    30 | 
+    31 | 	
+    32 | 	
+    33 | 	
+    34 | 	
+    35 | 	
+    36 | 	
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 2
+
+  [1] Linha 5: Variável 'v1' declarada mas nunca utilizada
+      Trecho  : v1 = ...
+      Contexto:
+               4 | 
+        >>>    5 | v1 = array(['ARROZ', 'FEIJAO', 'BIS', 'MIOJO', 'FANTA'])
+               6 | # v2 = array(['1.25', '2.60', '1.80', '0.85', '3.20'])
+
+  [2] Linha 15: Variável 'x' declarada mas nunca utilizada
+      Trecho  : x = ...
+      Contexto:
+              14 | c = 0
+        >>>   15 | x = 0
+              16 | 
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 12
+
+  [1] Linha 5: Variável 'v1' com nome muito curto (≤4 chars)
+      Trecho  : v1 = ...
+      Contexto:
+               4 | 
+        >>>    5 | v1 = array(['ARROZ', 'FEIJAO', 'BIS', 'MIOJO', 'FANTA'])
+               6 | # v2 = array(['1.25', '2.60', '1.80', '0.85', '3.20'])
+
+  [2] Linha 9: Variável 'v3' com nome muito curto (≤4 chars)
+      Trecho  : v3 = ...
+      Contexto:
+               8 | # Leituras
+        >>>    9 | v3 = array(eval(input("Produto: ")))
+              10 | v4 = array(eval(input("Quantidade: ")))
+
+  [3] Linha 10: Variável 'v4' com nome muito curto (≤4 chars)
+      Trecho  : v4 = ...
+      Contexto:
+               9 | v3 = array(eval(input("Produto: ")))
+        >>>   10 | v4 = array(eval(input("Quantidade: ")))
+              11 | 
+
+  [4] Linha 13: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+              12 | # Contador
+        >>>   13 | i = 0
+              14 | c = 0
+
+  [5] Linha 14: Variável 'c' com nome muito curto (≤4 chars)
+      Trecho  : c = ...
+      Contexto:
+              13 | i = 0
+        >>>   14 | c = 0
+              15 | x = 0
+
+  [6] Linha 15: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+              14 | c = 0
+        >>>   15 | x = 0
+              16 | 
+
+  [7] Linha 28: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+              27 | 		c = c + v4[4] * 3.20
+        >>>   28 | 	i = i + 1
+              29 | print(c)
+
+  [8] Linha 19: Variável 'c' com nome muito curto (≤4 chars)
+      Trecho  : c = ...
+      Contexto:
+              18 | 	if(v3[i] == "ARROZ"):
+        >>>   19 | 		c = c + v4[0] * 1.25
+              20 | 	elif(v3[i] == "FEIJAO"):
+
+  [9] Linha 21: Variável 'c' com nome muito curto (≤4 chars)
+      Trecho  : c = ...
+      Contexto:
+              20 | 	elif(v3[i] == "FEIJAO"):
+        >>>   21 | 		c = c + v4[1] * 2.60
+              22 | 	elif(v3[i] == "BIS"):
+
+  [10] Linha 23: Variável 'c' com nome muito curto (≤4 chars)
+      Trecho  : c = ...
+      Contexto:
+              22 | 	elif(v3[i] == "BIS"):
+        >>>   23 | 		c = c + v4[2] * 1.80
+              24 | 	elif(v3[i] == "MIOJO"):
+
+  [11] Linha 25: Variável 'c' com nome muito curto (≤4 chars)
+      Trecho  : c = ...
+      Contexto:
+              24 | 	elif(v3[i] == "MIOJO"):
+        >>>   25 | 		c = c + v4[3] * 0.85
+              26 | 	else:
+
+  [12] Linha 27: Variável 'c' com nome muito curto (≤4 chars)
+      Trecho  : c = ...
+      Contexto:
+              26 | 	else:
+        >>>   27 | 		c = c + v4[4] * 3.20
+              28 | 	i = i + 1
+
+======================================================================

@@ -1,0 +1,76 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1117_1307.py
+Questão  : 1117
+Aluno    : 1307
+Total MCs: 1
+
+⚠️  Misconceptions detectados: G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | p = float(input("Digite o preco normal da entrada:"))
+     2 | d = int(input("Digite o numero do dia da semana: "))
+     3 | m = input("E dia de musica ao vivo? (S/N)")
+     4 | 
+     5 | print("Entradas:", p , ",", d , ",", m)
+     6 | 
+     7 | v = p - (p * 25 / 100)
+     8 | 
+     9 | if(p >= 0):
+    10 | 	if(d >= 1 and d <= 7):
+    11 | 		if(m == "S" or m == "N"):
+    12 | 			if(m == "S"):
+    13 | 				if(d == 2 or d == 3 or d == 5):         
+    14 | 					print("Valor a pagar: R$", round(v + 20,2))
+    15 | 				else:
+    16 | 					print("Valor a pagar: R$", round(p + 20,2))
+    17 | 			if(m == "N"):
+    18 | 				if(d == 2 or d == 3 or d == 5):
+    19 | 					print("Valor a pagar: R$", round(v,2))
+    20 | 				else:
+    21 | 					print("Valor a pagar: R$", round(p,2))
+    22 | 		else:
+    23 | 			print("Dados invalidos")
+    24 | 	else:
+    25 | 		print("Dados invalidos")
+    26 | else:
+    27 | 	print("Dados invalidos")
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 4
+
+  [1] Linha 1: Variável 'p' com nome muito curto (≤4 chars)
+      Trecho  : p = ...
+      Contexto:
+        >>>    1 | p = float(input("Digite o preco normal da entrada:"))
+               2 | d = int(input("Digite o numero do dia da semana: "))
+
+  [2] Linha 2: Variável 'd' com nome muito curto (≤4 chars)
+      Trecho  : d = ...
+      Contexto:
+               1 | p = float(input("Digite o preco normal da entrada:"))
+        >>>    2 | d = int(input("Digite o numero do dia da semana: "))
+               3 | m = input("E dia de musica ao vivo? (S/N)")
+
+  [3] Linha 3: Variável 'm' com nome muito curto (≤4 chars)
+      Trecho  : m = ...
+      Contexto:
+               2 | d = int(input("Digite o numero do dia da semana: "))
+        >>>    3 | m = input("E dia de musica ao vivo? (S/N)")
+               4 | 
+
+  [4] Linha 7: Variável 'v' com nome muito curto (≤4 chars)
+      Trecho  : v = ...
+      Contexto:
+               6 | 
+        >>>    7 | v = p - (p * 25 / 100)
+               8 | 
+
+======================================================================

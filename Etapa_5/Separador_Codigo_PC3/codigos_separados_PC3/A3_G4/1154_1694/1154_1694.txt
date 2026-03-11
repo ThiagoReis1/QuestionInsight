@@ -1,0 +1,96 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1154_1694.py
+Questão  : 1154
+Aluno    : 1694
+Total MCs: 2
+
+⚠️  Misconceptions detectados: A3, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | hiv=float(input("Num inicial:"))
+     2 | taxa=float(input("Taxa redução:"))
+     3 | num=float(input("Num copias/semana:"))
+     4 | 
+     5 | taxap=taxa/100
+     6 | #acumuladora HIV/semana
+     7 | virus=hiv
+     8 | #contadora semana
+     9 | s=0
+    10 | 
+    11 | while virus<1000000:
+    12 | 	dim=(virus*taxa)
+    13 | 	res=num-dim
+    14 | 	virus=virus+res
+    15 | 	s=s+1
+    16 | print(s+1)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 1
+
+  [1] Linha 5: Variável 'taxap' declarada mas nunca utilizada
+      Trecho  : taxap = ...
+      Contexto:
+               4 | 
+        >>>    5 | taxap=taxa/100
+               6 | #acumuladora HIV/semana
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 7
+
+  [1] Linha 1: Variável 'hiv' com nome muito curto (≤4 chars)
+      Trecho  : hiv = ...
+      Contexto:
+        >>>    1 | hiv=float(input("Num inicial:"))
+               2 | taxa=float(input("Taxa redução:"))
+
+  [2] Linha 2: Variável 'taxa' com nome muito curto (≤4 chars)
+      Trecho  : taxa = ...
+      Contexto:
+               1 | hiv=float(input("Num inicial:"))
+        >>>    2 | taxa=float(input("Taxa redução:"))
+               3 | num=float(input("Num copias/semana:"))
+
+  [3] Linha 3: Variável 'num' com nome muito curto (≤4 chars)
+      Trecho  : num = ...
+      Contexto:
+               2 | taxa=float(input("Taxa redução:"))
+        >>>    3 | num=float(input("Num copias/semana:"))
+               4 | 
+
+  [4] Linha 9: Variável 's' com nome muito curto (≤4 chars)
+      Trecho  : s = ...
+      Contexto:
+               8 | #contadora semana
+        >>>    9 | s=0
+              10 | 
+
+  [5] Linha 12: Variável 'dim' com nome muito curto (≤4 chars)
+      Trecho  : dim = ...
+      Contexto:
+              11 | while virus<1000000:
+        >>>   12 | 	dim=(virus*taxa)
+              13 | 	res=num-dim
+
+  [6] Linha 13: Variável 'res' com nome muito curto (≤4 chars)
+      Trecho  : res = ...
+      Contexto:
+              12 | 	dim=(virus*taxa)
+        >>>   13 | 	res=num-dim
+              14 | 	virus=virus+res
+
+  [7] Linha 15: Variável 's' com nome muito curto (≤4 chars)
+      Trecho  : s = ...
+      Contexto:
+              14 | 	virus=virus+res
+        >>>   15 | 	s=s+1
+              16 | print(s+1)
+
+======================================================================

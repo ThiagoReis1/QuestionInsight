@@ -1,0 +1,91 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1098_1606.py
+Questão  : 1098
+Aluno    : 1606
+Total MCs: 2
+
+⚠️  Misconceptions detectados: A3, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | x = int(input("digite um numero:"))
+     2 | v1 = int(x//100000.0)
+     3 | v2 = int(v1%100000.0//10000.0)
+     4 | v3 = int(v2%10000.0//1000.0)
+     5 | v4 = int(v3%1000.0//100.0)
+     6 | v5 = int(v4%100.0//10.0)
+     7 | v6 = int(v4%10.0)
+     8 | if (x==v6**4):
+     9 | 	print("x atende a propriedade")
+    10 | else:
+    11 | 	print("")
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 1
+
+  [1] Linha 6: Variável 'v5' declarada mas nunca utilizada
+      Trecho  : v5 = ...
+      Contexto:
+               5 | v4 = int(v3%1000.0//100.0)
+        >>>    6 | v5 = int(v4%100.0//10.0)
+               7 | v6 = int(v4%10.0)
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 7
+
+  [1] Linha 1: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+        >>>    1 | x = int(input("digite um numero:"))
+               2 | v1 = int(x//100000.0)
+
+  [2] Linha 2: Variável 'v1' com nome muito curto (≤4 chars)
+      Trecho  : v1 = ...
+      Contexto:
+               1 | x = int(input("digite um numero:"))
+        >>>    2 | v1 = int(x//100000.0)
+               3 | v2 = int(v1%100000.0//10000.0)
+
+  [3] Linha 3: Variável 'v2' com nome muito curto (≤4 chars)
+      Trecho  : v2 = ...
+      Contexto:
+               2 | v1 = int(x//100000.0)
+        >>>    3 | v2 = int(v1%100000.0//10000.0)
+               4 | v3 = int(v2%10000.0//1000.0)
+
+  [4] Linha 4: Variável 'v3' com nome muito curto (≤4 chars)
+      Trecho  : v3 = ...
+      Contexto:
+               3 | v2 = int(v1%100000.0//10000.0)
+        >>>    4 | v3 = int(v2%10000.0//1000.0)
+               5 | v4 = int(v3%1000.0//100.0)
+
+  [5] Linha 5: Variável 'v4' com nome muito curto (≤4 chars)
+      Trecho  : v4 = ...
+      Contexto:
+               4 | v3 = int(v2%10000.0//1000.0)
+        >>>    5 | v4 = int(v3%1000.0//100.0)
+               6 | v5 = int(v4%100.0//10.0)
+
+  [6] Linha 6: Variável 'v5' com nome muito curto (≤4 chars)
+      Trecho  : v5 = ...
+      Contexto:
+               5 | v4 = int(v3%1000.0//100.0)
+        >>>    6 | v5 = int(v4%100.0//10.0)
+               7 | v6 = int(v4%10.0)
+
+  [7] Linha 7: Variável 'v6' com nome muito curto (≤4 chars)
+      Trecho  : v6 = ...
+      Contexto:
+               6 | v5 = int(v4%100.0//10.0)
+        >>>    7 | v6 = int(v4%10.0)
+               8 | if (x==v6**4):
+
+======================================================================

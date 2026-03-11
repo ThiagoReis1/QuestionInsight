@@ -1,0 +1,91 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1117_2146.py
+Questão  : 1117
+Aluno    : 2146
+Total MCs: 1
+
+⚠️  Misconceptions detectados: A3
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | preco = float(input("Preco normal: "))
+     2 | dia = int(input("Dia da semana: "))
+     3 | musica = input("Musica ao vivo? ")
+     4 | taxa = 20
+     5 | domingo = 1
+     6 | segunda = 2
+     7 | terça = 3
+     8 | quarta = 4
+     9 | quinta = 5
+    10 | sexta = 6
+    11 | sabado = 7
+    12 | 
+    13 | if(dia == 1 and dia == 3 and dia == 5 and musica == "N"):
+    14 | 	print(preco, dia, musica)
+    15 | 	print(preco - ((25 / 100)* preco))
+    16 | 	
+    17 | if(dia == 1 and dia == 3 and dia == 5 and musica == "S"):
+    18 | 	print("Entradas: ", preco, dia, musica)
+    19 | 	print("Valor a pagar: ", preco + taxa)
+    20 | 	
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 7
+
+  [1] Linha 5: Variável 'domingo' declarada mas nunca utilizada
+      Trecho  : domingo = ...
+      Contexto:
+               4 | taxa = 20
+        >>>    5 | domingo = 1
+               6 | segunda = 2
+
+  [2] Linha 6: Variável 'segunda' declarada mas nunca utilizada
+      Trecho  : segunda = ...
+      Contexto:
+               5 | domingo = 1
+        >>>    6 | segunda = 2
+               7 | terça = 3
+
+  [3] Linha 7: Variável 'terça' declarada mas nunca utilizada
+      Trecho  : terça = ...
+      Contexto:
+               6 | segunda = 2
+        >>>    7 | terça = 3
+               8 | quarta = 4
+
+  [4] Linha 8: Variável 'quarta' declarada mas nunca utilizada
+      Trecho  : quarta = ...
+      Contexto:
+               7 | terça = 3
+        >>>    8 | quarta = 4
+               9 | quinta = 5
+
+  [5] Linha 9: Variável 'quinta' declarada mas nunca utilizada
+      Trecho  : quinta = ...
+      Contexto:
+               8 | quarta = 4
+        >>>    9 | quinta = 5
+              10 | sexta = 6
+
+  [6] Linha 10: Variável 'sexta' declarada mas nunca utilizada
+      Trecho  : sexta = ...
+      Contexto:
+               9 | quinta = 5
+        >>>   10 | sexta = 6
+              11 | sabado = 7
+
+  [7] Linha 11: Variável 'sabado' declarada mas nunca utilizada
+      Trecho  : sabado = ...
+      Contexto:
+              10 | sexta = 6
+        >>>   11 | sabado = 7
+              12 | 
+
+======================================================================

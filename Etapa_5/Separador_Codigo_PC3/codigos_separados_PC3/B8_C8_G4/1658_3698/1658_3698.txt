@@ -1,0 +1,140 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1658_3698.py
+Questão  : 1658
+Aluno    : 3698
+Total MCs: 3
+
+⚠️  Misconceptions detectados: B8, C8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import * 
+     2 | 
+     3 | p = input("Digite: ").split(",")
+     4 | cont=zeros(5, dtype=int)
+     5 | i=0
+     6 | c=0
+     7 | j=0
+     8 | k=0
+     9 | m=0
+    10 | t=0
+    11 | 
+    12 | for i in range(size(p)):
+    13 | 	if p[i]=="CHN":
+    14 | 		c+=1
+    15 | 		cont[0]+=1
+    16 | 	elif p[i]=="JPN":
+    17 | 		j+=1
+    18 | 		cont[1]+=1
+    19 | 	elif p[i]=="KOR":
+    20 | 		k+=1
+    21 | 		cont[2]+=1
+    22 | 	elif p[i]=="MGL":
+    23 | 		m+=1
+    24 | 		cont[3]+=1
+    25 | 	elif p[i]=="THA":
+    26 | 		t+=1
+    27 | 		cont[4]+=1
+    28 | 	i+=1
+    29 | m1=max(c,j,k,m,t)
+    30 | print(m1)
+    31 | print(cont)
+    32 | 	
+    33 | 		
+    34 | 		
+    35 | 		
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 22: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 22) / elif ... sem else
+      Contexto:
+              21 | 		cont[2]+=1
+        >>>   22 | 	elif p[i]=="MGL":
+              23 | 		m+=1
+
+▶ C8 — Loop for com sua variável de iteração sobrescrita
+  Ocorrências: 1
+
+  [1] Linha 28: Variável de iteração 'i' modificada no loop
+      Trecho  : i += 1
+      Contexto:
+              27 | 		cont[4]+=1
+        >>>   28 | 	i+=1
+              29 | m1=max(c,j,k,m,t)
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 9
+
+  [1] Linha 3: Variável 'p' com nome muito curto (≤4 chars)
+      Trecho  : p = ...
+      Contexto:
+               2 | 
+        >>>    3 | p = input("Digite: ").split(",")
+               4 | cont=zeros(5, dtype=int)
+
+  [2] Linha 4: Variável 'cont' com nome muito curto (≤4 chars)
+      Trecho  : cont = ...
+      Contexto:
+               3 | p = input("Digite: ").split(",")
+        >>>    4 | cont=zeros(5, dtype=int)
+               5 | i=0
+
+  [3] Linha 5: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+               4 | cont=zeros(5, dtype=int)
+        >>>    5 | i=0
+               6 | c=0
+
+  [4] Linha 6: Variável 'c' com nome muito curto (≤4 chars)
+      Trecho  : c = ...
+      Contexto:
+               5 | i=0
+        >>>    6 | c=0
+               7 | j=0
+
+  [5] Linha 7: Variável 'j' com nome muito curto (≤4 chars)
+      Trecho  : j = ...
+      Contexto:
+               6 | c=0
+        >>>    7 | j=0
+               8 | k=0
+
+  [6] Linha 8: Variável 'k' com nome muito curto (≤4 chars)
+      Trecho  : k = ...
+      Contexto:
+               7 | j=0
+        >>>    8 | k=0
+               9 | m=0
+
+  [7] Linha 9: Variável 'm' com nome muito curto (≤4 chars)
+      Trecho  : m = ...
+      Contexto:
+               8 | k=0
+        >>>    9 | m=0
+              10 | t=0
+
+  [8] Linha 10: Variável 't' com nome muito curto (≤4 chars)
+      Trecho  : t = ...
+      Contexto:
+               9 | m=0
+        >>>   10 | t=0
+              11 | 
+
+  [9] Linha 29: Variável 'm1' com nome muito curto (≤4 chars)
+      Trecho  : m1 = ...
+      Contexto:
+              28 | 	i+=1
+        >>>   29 | m1=max(c,j,k,m,t)
+              30 | print(m1)
+
+======================================================================

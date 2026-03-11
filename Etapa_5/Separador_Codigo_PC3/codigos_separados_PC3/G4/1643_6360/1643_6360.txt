@@ -1,0 +1,81 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1643_6360.py
+Questão  : 1643
+Aluno    : 6360
+Total MCs: 1
+
+⚠️  Misconceptions detectados: G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import *
+     2 | 
+     3 | v = array(eval(input()))
+     4 | 
+     5 | var = 0
+     6 | for i in range(size(v)):
+     7 | 	if v[i] >= 5:
+     8 | 		var = var + 1
+     9 | print(var)
+    10 | m = zeros(var, dtype=int)
+    11 | 
+    12 | cont = 0
+    13 | for j in range(size(v)):
+    14 | 	if v[j] >= 5:
+    15 | 		m[cont] = j
+    16 | 		cont = cont + 1
+    17 | print(m)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 6
+
+  [1] Linha 3: Variável 'v' com nome muito curto (≤4 chars)
+      Trecho  : v = ...
+      Contexto:
+               2 | 
+        >>>    3 | v = array(eval(input()))
+               4 | 
+
+  [2] Linha 5: Variável 'var' com nome muito curto (≤4 chars)
+      Trecho  : var = ...
+      Contexto:
+               4 | 
+        >>>    5 | var = 0
+               6 | for i in range(size(v)):
+
+  [3] Linha 10: Variável 'm' com nome muito curto (≤4 chars)
+      Trecho  : m = ...
+      Contexto:
+               9 | print(var)
+        >>>   10 | m = zeros(var, dtype=int)
+              11 | 
+
+  [4] Linha 12: Variável 'cont' com nome muito curto (≤4 chars)
+      Trecho  : cont = ...
+      Contexto:
+              11 | 
+        >>>   12 | cont = 0
+              13 | for j in range(size(v)):
+
+  [5] Linha 8: Variável 'var' com nome muito curto (≤4 chars)
+      Trecho  : var = ...
+      Contexto:
+               7 | 	if v[i] >= 5:
+        >>>    8 | 		var = var + 1
+               9 | print(var)
+
+  [6] Linha 16: Variável 'cont' com nome muito curto (≤4 chars)
+      Trecho  : cont = ...
+      Contexto:
+              15 | 		m[cont] = j
+        >>>   16 | 		cont = cont + 1
+              17 | print(m)
+
+======================================================================

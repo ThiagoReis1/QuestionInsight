@@ -1,0 +1,58 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 6783_9296.py
+Questão  : 6783
+Aluno    : 9296
+Total MCs: 2
+
+⚠️  Misconceptions detectados: A3, B8
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | ano = int(input("Qual o ano de nascimento do candidato? "))
+     2 | pais = input("Qual o pais que o candidato esta, Brasil(B) ou Estados Unudos(E)? ").upper()
+     3 | anoat = 2023
+     4 | anobe = 2023 - ano
+     5 | if((anobe <= 2005) and (pais == "B")):
+     6 | 	print("sim")
+     7 | 	print(anobe - 18)
+     8 | elif((anobe > 2005) and (pais == "B")):
+     9 | 	print("nao")
+    10 | 	print(anobe-18)
+    11 | elif((anobe <= 2007) and (pais == "E")):
+    12 | 	print("sim")
+    13 | 	print(anobe - 16)
+    14 | elif((anobe > 2007) and (pais == "E")):
+    15 | 	print("nao")
+    16 | 	print(16 - (anobe - 2023))
+    17 | elif((pais != "B") or (pais != "E")):
+    18 | 	print("invalido")
+    19 | 	
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 1
+
+  [1] Linha 3: Variável 'anoat' declarada mas nunca utilizada
+      Trecho  : anoat = ...
+      Contexto:
+               2 | pais = input("Qual o pais que o candidato esta, Brasil(B) ou Estados Unudos(E)? ").upper()
+        >>>    3 | anoat = 2023
+               4 | anobe = 2023 - ano
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 14: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 14) / elif ... sem else
+      Contexto:
+              13 | 	print(anobe - 16)
+        >>>   14 | elif((anobe > 2007) and (pais == "E")):
+              15 | 	print("nao")
+
+======================================================================

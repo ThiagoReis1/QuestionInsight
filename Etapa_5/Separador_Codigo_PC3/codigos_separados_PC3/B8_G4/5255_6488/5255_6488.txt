@@ -1,0 +1,107 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 5255_6488.py
+Questão  : 5255
+Aluno    : 6488
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | p = float(input("Digite o peso do produto (kg): "))
+     2 | d = float(input("Digite a distancia entre o ponto de origem e o destino (km): "))
+     3 | c = int(input("Codigo do estado de destino: "))
+     4 | 
+     5 | # p = peso
+     6 | # d = distancia
+     7 | # c = CEP
+     8 | 
+     9 | if (c == 1):
+    10 | 	icms = 17
+    11 | elif (c == 2):
+    12 | 	icms = 17.5
+    13 | elif (c == 3):
+    14 | 	icms = 18
+    15 | elif (c == 4):
+    16 | 	icms = 20
+    17 | 	
+    18 | s = (p * 25 + d * 0.10) * (1 + (icms / 100))
+    19 | 
+    20 | print(round(s, 2))
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 13: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 13) / elif ... sem else
+      Contexto:
+              12 | 	icms = 17.5
+        >>>   13 | elif (c == 3):
+              14 | 	icms = 18
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 8
+
+  [1] Linha 1: Variável 'p' com nome muito curto (≤4 chars)
+      Trecho  : p = ...
+      Contexto:
+        >>>    1 | p = float(input("Digite o peso do produto (kg): "))
+               2 | d = float(input("Digite a distancia entre o ponto de origem e o destino (km): "))
+
+  [2] Linha 2: Variável 'd' com nome muito curto (≤4 chars)
+      Trecho  : d = ...
+      Contexto:
+               1 | p = float(input("Digite o peso do produto (kg): "))
+        >>>    2 | d = float(input("Digite a distancia entre o ponto de origem e o destino (km): "))
+               3 | c = int(input("Codigo do estado de destino: "))
+
+  [3] Linha 3: Variável 'c' com nome muito curto (≤4 chars)
+      Trecho  : c = ...
+      Contexto:
+               2 | d = float(input("Digite a distancia entre o ponto de origem e o destino (km): "))
+        >>>    3 | c = int(input("Codigo do estado de destino: "))
+               4 | 
+
+  [4] Linha 18: Variável 's' com nome muito curto (≤4 chars)
+      Trecho  : s = ...
+      Contexto:
+              17 | 	
+        >>>   18 | s = (p * 25 + d * 0.10) * (1 + (icms / 100))
+              19 | 
+
+  [5] Linha 10: Variável 'icms' com nome muito curto (≤4 chars)
+      Trecho  : icms = ...
+      Contexto:
+               9 | if (c == 1):
+        >>>   10 | 	icms = 17
+              11 | elif (c == 2):
+
+  [6] Linha 12: Variável 'icms' com nome muito curto (≤4 chars)
+      Trecho  : icms = ...
+      Contexto:
+              11 | elif (c == 2):
+        >>>   12 | 	icms = 17.5
+              13 | elif (c == 3):
+
+  [7] Linha 14: Variável 'icms' com nome muito curto (≤4 chars)
+      Trecho  : icms = ...
+      Contexto:
+              13 | elif (c == 3):
+        >>>   14 | 	icms = 18
+              15 | elif (c == 4):
+
+  [8] Linha 16: Variável 'icms' com nome muito curto (≤4 chars)
+      Trecho  : icms = ...
+      Contexto:
+              15 | elif (c == 4):
+        >>>   16 | 	icms = 20
+              17 | 	
+
+======================================================================

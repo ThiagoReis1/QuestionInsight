@@ -1,0 +1,72 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1655_2085.py
+Questão  : 1655
+Aluno    : 2085
+Total MCs: 2
+
+⚠️  Misconceptions detectados: A4, B8
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import *
+     2 | 
+     3 | vetor = input().split(',')
+     4 | 
+     5 | #incidencia = [0] * 5
+     6 | incidencia = array(eval('[0,0,0,0,0]'))
+     7 | 
+     8 | for i in range(len(vetor)):
+     9 | 	if (vetor[i] == 'AC'):
+    10 | 		incidencia[0] += 1
+    11 | 	elif (vetor[i] == 'AM'):
+    12 | 		incidencia[1] += 1
+    13 | 	elif (vetor[i] == 'PA'):
+    14 | 			incidencia[2] += 1
+    15 | 	elif (vetor[i] == 'RO'):
+    16 | 			incidencia[3] += 1
+    17 | 	elif (vetor[i] == 'RR'):
+    18 | 			incidencia[4] += 1
+    19 | 	
+    20 | max = 0
+    21 | for i in range(len(incidencia)):
+    22 | 	if (incidencia[i] > incidencia[max]):
+    23 | 		max = i
+    24 | 		
+    25 | print (incidencia[max])
+    26 | print (incidencia)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A4 — Redefinição de built-in
+  Ocorrências: 2
+
+  [1] Linha 20: Built-in 'max' redefinido como variável
+      Trecho  : max = 0
+      Contexto:
+              19 | 	
+        >>>   20 | max = 0
+              21 | for i in range(len(incidencia)):
+
+  [2] Linha 23: Built-in 'max' redefinido como variável
+      Trecho  : max = i
+      Contexto:
+              22 | 	if (incidencia[i] > incidencia[max]):
+        >>>   23 | 		max = i
+              24 | 		
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 15: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 15) / elif ... sem else
+      Contexto:
+              14 | 			incidencia[2] += 1
+        >>>   15 | 	elif (vetor[i] == 'RO'):
+              16 | 			incidencia[3] += 1
+
+======================================================================

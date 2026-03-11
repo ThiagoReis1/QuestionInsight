@@ -1,0 +1,74 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1117_1300.py
+Questão  : 1117
+Aluno    : 1300
+Total MCs: 1
+
+⚠️  Misconceptions detectados: G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | p = float(input("Digite o preço normal da boate "))
+     2 | d = int(input("Digite o numero do dia: "))	
+     3 | m = input("Hoje é dia de música ao vivo?")
+     4 | print("Entradas:", p, ",", d, ",", m)
+     5 | v = p - (p* 25/100)
+     6 | if(p>=0):
+     7 | 	if(d >=1 and d<=7):
+     8 | 		if(m == "S" or m == "N"):
+     9 | 			if(m == "S"):
+    10 | 				if(d == 2 or d == 5 or d == 3):
+    11 | 					print("Valor a pagar: R$", round(v + 20,2))
+    12 | 				else:
+    13 | 					print("Valor a pagar: R$", round(p + 20,2))
+    14 | 			if(m == "N"):
+    15 | 				if(d == 2 or d == 5 or d == 3):
+    16 | 					print("Valor a pagar: R$", round(v,2))
+    17 | 				else:
+    18 | 					print("Valor a pagar: R$", round(p,2))
+    19 | 	else:
+    20 | 		print("Dados invalidos")
+    21 | else:
+    22 | 	print("Dados invalidos")
+    23 |             	
+    24 |                           
+    25 | 
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 4
+
+  [1] Linha 1: Variável 'p' com nome muito curto (≤4 chars)
+      Trecho  : p = ...
+      Contexto:
+        >>>    1 | p = float(input("Digite o preço normal da boate "))
+               2 | d = int(input("Digite o numero do dia: "))	
+
+  [2] Linha 2: Variável 'd' com nome muito curto (≤4 chars)
+      Trecho  : d = ...
+      Contexto:
+               1 | p = float(input("Digite o preço normal da boate "))
+        >>>    2 | d = int(input("Digite o numero do dia: "))	
+               3 | m = input("Hoje é dia de música ao vivo?")
+
+  [3] Linha 3: Variável 'm' com nome muito curto (≤4 chars)
+      Trecho  : m = ...
+      Contexto:
+               2 | d = int(input("Digite o numero do dia: "))	
+        >>>    3 | m = input("Hoje é dia de música ao vivo?")
+               4 | print("Entradas:", p, ",", d, ",", m)
+
+  [4] Linha 5: Variável 'v' com nome muito curto (≤4 chars)
+      Trecho  : v = ...
+      Contexto:
+               4 | print("Entradas:", p, ",", d, ",", m)
+        >>>    5 | v = p - (p* 25/100)
+               6 | if(p>=0):
+
+======================================================================

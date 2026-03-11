@@ -1,0 +1,103 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 6830_9826.py
+Questão  : 6830
+Aluno    : 9826
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | c = input("digite a secao: ").upper()
+     3 | hf = 3.85
+     4 | lac = 2.95
+     5 | enl = 7.90
+     6 | 
+     7 | nm_hf = 0
+     8 | nm_lac = 0
+     9 | nm_enl = 0
+    10 | i = 0 
+    11 | 
+    12 | while i < len(c):
+    13 | 	prod = c[i]
+    14 | 	if prod == "H":
+    15 | 		nm_hf += 1
+    16 | 	elif prod == "L":
+    17 | 		nm_lac += 1
+    18 | 	elif prod == "E":
+    19 | 		nm_enl += 1
+    20 | 	i += 1
+    21 | vf = (nm_hf * hf) + (nm_lac * lac) + (nm_enl * enl)
+    22 | print(round(vf, 2))
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 16: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 16) / elif ... sem else
+      Contexto:
+              15 | 		nm_hf += 1
+        >>>   16 | 	elif prod == "L":
+              17 | 		nm_lac += 1
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 7
+
+  [1] Linha 2: Variável 'c' com nome muito curto (≤4 chars)
+      Trecho  : c = ...
+      Contexto:
+               1 | from numpy import*
+        >>>    2 | c = input("digite a secao: ").upper()
+               3 | hf = 3.85
+
+  [2] Linha 3: Variável 'hf' com nome muito curto (≤4 chars)
+      Trecho  : hf = ...
+      Contexto:
+               2 | c = input("digite a secao: ").upper()
+        >>>    3 | hf = 3.85
+               4 | lac = 2.95
+
+  [3] Linha 4: Variável 'lac' com nome muito curto (≤4 chars)
+      Trecho  : lac = ...
+      Contexto:
+               3 | hf = 3.85
+        >>>    4 | lac = 2.95
+               5 | enl = 7.90
+
+  [4] Linha 5: Variável 'enl' com nome muito curto (≤4 chars)
+      Trecho  : enl = ...
+      Contexto:
+               4 | lac = 2.95
+        >>>    5 | enl = 7.90
+               6 | 
+
+  [5] Linha 10: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+               9 | nm_enl = 0
+        >>>   10 | i = 0 
+              11 | 
+
+  [6] Linha 21: Variável 'vf' com nome muito curto (≤4 chars)
+      Trecho  : vf = ...
+      Contexto:
+              20 | 	i += 1
+        >>>   21 | vf = (nm_hf * hf) + (nm_lac * lac) + (nm_enl * enl)
+              22 | print(round(vf, 2))
+
+  [7] Linha 13: Variável 'prod' com nome muito curto (≤4 chars)
+      Trecho  : prod = ...
+      Contexto:
+              12 | while i < len(c):
+        >>>   13 | 	prod = c[i]
+              14 | 	if prod == "H":
+
+======================================================================

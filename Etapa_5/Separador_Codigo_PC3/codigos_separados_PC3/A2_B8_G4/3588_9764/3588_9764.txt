@@ -1,0 +1,128 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 3588_9764.py
+Questão  : 3588
+Aluno    : 9764
+Total MCs: 3
+
+⚠️  Misconceptions detectados: A2, B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | n = array(eval(input("pontos: ")))
+     3 | i = 0
+     4 | c = 10000
+     5 | tan = size(n)
+     6 | while i < tan:
+     7 | 	if n[i] == 1:
+     8 | 		c = c * 2
+     9 | 	elif n[i] == 2:
+    10 | 		c = c 
+    11 | 	if n[i] == 3:
+    12 | 		c = c / 2
+    13 | 	elif n[i] == 4:
+    14 | 		c = c / 4
+    15 | 	i = i +1
+    16 | print(round(c,2))
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A2 — Variável atribuída a si mesma
+  Ocorrências: 1
+
+  [1] Linha 10: 'c' atribuído a si mesmo
+      Trecho  : c = c
+      Contexto:
+               9 | 	elif n[i] == 2:
+        >>>   10 | 		c = c 
+              11 | 	if n[i] == 3:
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 2
+
+  [1] Linha 7: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 7) / elif ... sem else
+      Contexto:
+               6 | while i < tan:
+        >>>    7 | 	if n[i] == 1:
+               8 | 		c = c * 2
+
+  [2] Linha 11: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 11) / elif ... sem else
+      Contexto:
+              10 | 		c = c 
+        >>>   11 | 	if n[i] == 3:
+              12 | 		c = c / 2
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 9
+
+  [1] Linha 2: Variável 'n' com nome muito curto (≤4 chars)
+      Trecho  : n = ...
+      Contexto:
+               1 | from numpy import*
+        >>>    2 | n = array(eval(input("pontos: ")))
+               3 | i = 0
+
+  [2] Linha 3: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+               2 | n = array(eval(input("pontos: ")))
+        >>>    3 | i = 0
+               4 | c = 10000
+
+  [3] Linha 4: Variável 'c' com nome muito curto (≤4 chars)
+      Trecho  : c = ...
+      Contexto:
+               3 | i = 0
+        >>>    4 | c = 10000
+               5 | tan = size(n)
+
+  [4] Linha 5: Variável 'tan' com nome muito curto (≤4 chars)
+      Trecho  : tan = ...
+      Contexto:
+               4 | c = 10000
+        >>>    5 | tan = size(n)
+               6 | while i < tan:
+
+  [5] Linha 15: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+              14 | 		c = c / 4
+        >>>   15 | 	i = i +1
+              16 | print(round(c,2))
+
+  [6] Linha 8: Variável 'c' com nome muito curto (≤4 chars)
+      Trecho  : c = ...
+      Contexto:
+               7 | 	if n[i] == 1:
+        >>>    8 | 		c = c * 2
+               9 | 	elif n[i] == 2:
+
+  [7] Linha 12: Variável 'c' com nome muito curto (≤4 chars)
+      Trecho  : c = ...
+      Contexto:
+              11 | 	if n[i] == 3:
+        >>>   12 | 		c = c / 2
+              13 | 	elif n[i] == 4:
+
+  [8] Linha 10: Variável 'c' com nome muito curto (≤4 chars)
+      Trecho  : c = ...
+      Contexto:
+               9 | 	elif n[i] == 2:
+        >>>   10 | 		c = c 
+              11 | 	if n[i] == 3:
+
+  [9] Linha 14: Variável 'c' com nome muito curto (≤4 chars)
+      Trecho  : c = ...
+      Contexto:
+              13 | 	elif n[i] == 4:
+        >>>   14 | 		c = c / 4
+              15 | 	i = i +1
+
+======================================================================

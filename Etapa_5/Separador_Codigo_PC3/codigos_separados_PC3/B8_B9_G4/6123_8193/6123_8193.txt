@@ -1,0 +1,86 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 6123_8193.py
+Questão  : 6123
+Aluno    : 8193
+Total MCs: 3
+
+⚠️  Misconceptions detectados: B8, B9, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | c = float(input("combustivel:"))
+     2 | 
+     3 | if (c<17.5):
+     4 | 	x=c+0.8
+     5 | 	print(round(x, 1))
+     6 | elif (c>=17.5 and c<35):
+     7 | 	y=c+1.3
+     8 | 	print(round(y, 1))
+     9 | elif (c>=35 and c<50):
+    10 | 	z=c+2.1
+    11 | 	print(round(z, 1))
+    12 | elif (c>=50):
+    13 | 	a=c+3
+    14 | 	print(round(a, 1))
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 9: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 9) / elif ... sem else
+      Contexto:
+               8 | 	print(round(y, 1))
+        >>>    9 | elif (c>=35 and c<50):
+              10 | 	z=c+2.1
+
+▶ B9 — elif/else retestando condições já verificadas
+  Ocorrências: 1
+
+  [1] Linha 0: B9 detectado pelo VisitorMC3 (localização exata não mapeada)
+      Trecho  : —
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 5
+
+  [1] Linha 1: Variável 'c' com nome muito curto (≤4 chars)
+      Trecho  : c = ...
+      Contexto:
+        >>>    1 | c = float(input("combustivel:"))
+               2 | 
+
+  [2] Linha 4: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+               3 | if (c<17.5):
+        >>>    4 | 	x=c+0.8
+               5 | 	print(round(x, 1))
+
+  [3] Linha 7: Variável 'y' com nome muito curto (≤4 chars)
+      Trecho  : y = ...
+      Contexto:
+               6 | elif (c>=17.5 and c<35):
+        >>>    7 | 	y=c+1.3
+               8 | 	print(round(y, 1))
+
+  [4] Linha 10: Variável 'z' com nome muito curto (≤4 chars)
+      Trecho  : z = ...
+      Contexto:
+               9 | elif (c>=35 and c<50):
+        >>>   10 | 	z=c+2.1
+              11 | 	print(round(z, 1))
+
+  [5] Linha 13: Variável 'a' com nome muito curto (≤4 chars)
+      Trecho  : a = ...
+      Contexto:
+              12 | elif (c>=50):
+        >>>   13 | 	a=c+3
+              14 | 	print(round(a, 1))
+
+======================================================================

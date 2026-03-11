@@ -1,0 +1,79 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1651_2314.py
+Questão  : 1651
+Aluno    : 2314
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import *
+     2 | 
+     3 | vet1 = input("Tons:")
+     4 | 
+     5 | tons = vet1.split(',')
+     6 | 
+     7 | aux = zeros(6,dtype=int)
+     8 | 
+     9 | for i in range(size(tons)):
+    10 | 	if tons[i] == "MC":
+    11 | 		aux[0] = aux[0] + 1
+    12 | 	elif tons[i] == "C":
+    13 | 		aux[1] = aux[1] + 1
+    14 | 	elif tons[i] == "CM":
+    15 | 		aux[2] = aux[2] + 1
+    16 | 	elif tons[i] == "EM":
+    17 | 		aux[3] = aux[3] + 1
+    18 | 	elif tons[i] == "E":
+    19 | 		aux[4] = aux[4] + 1
+    20 | 	elif tons[i] == "ME":
+    21 | 		aux[5]= aux[5] + 1
+    22 | 
+    23 | print(max(aux))
+    24 | print(aux)
+    25 | 	
+    26 | 
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 18: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 18) / elif ... sem else
+      Contexto:
+              17 | 		aux[3] = aux[3] + 1
+        >>>   18 | 	elif tons[i] == "E":
+              19 | 		aux[4] = aux[4] + 1
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 3
+
+  [1] Linha 3: Variável 'vet1' com nome muito curto (≤4 chars)
+      Trecho  : vet1 = ...
+      Contexto:
+               2 | 
+        >>>    3 | vet1 = input("Tons:")
+               4 | 
+
+  [2] Linha 5: Variável 'tons' com nome muito curto (≤4 chars)
+      Trecho  : tons = ...
+      Contexto:
+               4 | 
+        >>>    5 | tons = vet1.split(',')
+               6 | 
+
+  [3] Linha 7: Variável 'aux' com nome muito curto (≤4 chars)
+      Trecho  : aux = ...
+      Contexto:
+               6 | 
+        >>>    7 | aux = zeros(6,dtype=int)
+               8 | 
+
+======================================================================

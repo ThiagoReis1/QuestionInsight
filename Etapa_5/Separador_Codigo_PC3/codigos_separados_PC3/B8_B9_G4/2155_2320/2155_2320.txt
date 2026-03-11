@@ -1,0 +1,92 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 2155_2320.py
+Questão  : 2155
+Aluno    : 2320
+Total MCs: 3
+
+⚠️  Misconceptions detectados: B8, B9, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | peso= array(eval(input("Digite seu peso:")))
+     3 | altura = array(eval(input("Digite a sua altura:")))
+     4 | 
+     5 | var1 = zeros(size(peso),dtype=float)
+     6 | 
+     7 | for i in range(size(peso)):
+     8 | 	var1[i] = round(peso[i]/(altura[i]*altura[i]),2)
+     9 | 
+    10 | print(var1)
+    11 | print("O MAIOR IMC DA TURMA EH:",round(max(var1),2))
+    12 | var = max(var1)
+    13 | 
+    14 | if(var < 17.0):
+    15 | 	 print ("MUITO ABAIXO DO PESO")
+    16 | 	
+    17 | elif var >= 17 and var<= 18.49:
+    18 | 	 print("ABAIXO DO PESO")
+    19 | 	
+    20 | elif var >= 18.5 and var<= 24.99:
+    21 | 	 print("PESO NORMAL")
+    22 | 		
+    23 | elif var >= 25 and var <= 29.99:
+    24 | 	 print("ACIMA DO PESO")
+    25 | 
+    26 | elif var >= 30 and var <= 34.99:
+    27 | 	 print ("OBESIDADE")
+    28 | 	
+    29 | elif var >= 35 and var <=39.99:
+    30 | 	print ("OBESIDADE SEVERA")
+    31 | 	
+    32 | elif var >= 40:
+    33 | 	print ("OBESIDADE MORBIDA")
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 29: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 29) / elif ... sem else
+      Contexto:
+              28 | 	
+        >>>   29 | elif var >= 35 and var <=39.99:
+              30 | 	print ("OBESIDADE SEVERA")
+
+▶ B9 — elif/else retestando condições já verificadas
+  Ocorrências: 1
+
+  [1] Linha 0: B9 detectado pelo VisitorMC3 (localização exata não mapeada)
+      Trecho  : —
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 3
+
+  [1] Linha 2: Variável 'peso' com nome muito curto (≤4 chars)
+      Trecho  : peso = ...
+      Contexto:
+               1 | from numpy import*
+        >>>    2 | peso= array(eval(input("Digite seu peso:")))
+               3 | altura = array(eval(input("Digite a sua altura:")))
+
+  [2] Linha 5: Variável 'var1' com nome muito curto (≤4 chars)
+      Trecho  : var1 = ...
+      Contexto:
+               4 | 
+        >>>    5 | var1 = zeros(size(peso),dtype=float)
+               6 | 
+
+  [3] Linha 12: Variável 'var' com nome muito curto (≤4 chars)
+      Trecho  : var = ...
+      Contexto:
+              11 | print("O MAIOR IMC DA TURMA EH:",round(max(var1),2))
+        >>>   12 | var = max(var1)
+              13 | 
+
+======================================================================

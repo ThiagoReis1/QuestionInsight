@@ -1,0 +1,160 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1995_2367.py
+Questão  : 1995
+Aluno    : 2367
+Total MCs: 3
+
+⚠️  Misconceptions detectados: A3, B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | X = input("Nome do aminoacido:").lower()
+     2 | 
+     3 | O = 15.994
+     4 | C = 12.011
+     5 | N = 14.0067
+     6 | S = 32.066
+     7 | H = 1.00794
+     8 | 
+     9 | if(X!="aspartato" and X!="cisteina" and X!="metionina"):
+    10 | 	X = "Dado invalido"
+    11 | 	print(X)
+    12 | 
+    13 | elif(X == "aspartato"):
+    14 |  	X = 4*o + 6*h + n + 4*o
+    15 |  
+    16 | elif(X == "cisteina"):
+    17 |  	X = 3*o+7*h+n+2*o+s
+    18 | elif(X == "metionina"):
+    19 | 	X = 5*c+11*h+n+2*o+s
+    20 | 
+    21 | print(round(X,2))
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 5
+
+  [1] Linha 3: Variável 'O' declarada mas nunca utilizada
+      Trecho  : O = ...
+      Contexto:
+               2 | 
+        >>>    3 | O = 15.994
+               4 | C = 12.011
+
+  [2] Linha 4: Variável 'C' declarada mas nunca utilizada
+      Trecho  : C = ...
+      Contexto:
+               3 | O = 15.994
+        >>>    4 | C = 12.011
+               5 | N = 14.0067
+
+  [3] Linha 5: Variável 'N' declarada mas nunca utilizada
+      Trecho  : N = ...
+      Contexto:
+               4 | C = 12.011
+        >>>    5 | N = 14.0067
+               6 | S = 32.066
+
+  [4] Linha 6: Variável 'S' declarada mas nunca utilizada
+      Trecho  : S = ...
+      Contexto:
+               5 | N = 14.0067
+        >>>    6 | S = 32.066
+               7 | H = 1.00794
+
+  [5] Linha 7: Variável 'H' declarada mas nunca utilizada
+      Trecho  : H = ...
+      Contexto:
+               6 | S = 32.066
+        >>>    7 | H = 1.00794
+               8 | 
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 16: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 16) / elif ... sem else
+      Contexto:
+              15 |  
+        >>>   16 | elif(X == "cisteina"):
+              17 |  	X = 3*o+7*h+n+2*o+s
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 10
+
+  [1] Linha 1: Variável 'X' com nome muito curto (≤4 chars)
+      Trecho  : X = ...
+      Contexto:
+        >>>    1 | X = input("Nome do aminoacido:").lower()
+               2 | 
+
+  [2] Linha 3: Variável 'O' com nome muito curto (≤4 chars)
+      Trecho  : O = ...
+      Contexto:
+               2 | 
+        >>>    3 | O = 15.994
+               4 | C = 12.011
+
+  [3] Linha 4: Variável 'C' com nome muito curto (≤4 chars)
+      Trecho  : C = ...
+      Contexto:
+               3 | O = 15.994
+        >>>    4 | C = 12.011
+               5 | N = 14.0067
+
+  [4] Linha 5: Variável 'N' com nome muito curto (≤4 chars)
+      Trecho  : N = ...
+      Contexto:
+               4 | C = 12.011
+        >>>    5 | N = 14.0067
+               6 | S = 32.066
+
+  [5] Linha 6: Variável 'S' com nome muito curto (≤4 chars)
+      Trecho  : S = ...
+      Contexto:
+               5 | N = 14.0067
+        >>>    6 | S = 32.066
+               7 | H = 1.00794
+
+  [6] Linha 7: Variável 'H' com nome muito curto (≤4 chars)
+      Trecho  : H = ...
+      Contexto:
+               6 | S = 32.066
+        >>>    7 | H = 1.00794
+               8 | 
+
+  [7] Linha 10: Variável 'X' com nome muito curto (≤4 chars)
+      Trecho  : X = ...
+      Contexto:
+               9 | if(X!="aspartato" and X!="cisteina" and X!="metionina"):
+        >>>   10 | 	X = "Dado invalido"
+              11 | 	print(X)
+
+  [8] Linha 14: Variável 'X' com nome muito curto (≤4 chars)
+      Trecho  : X = ...
+      Contexto:
+              13 | elif(X == "aspartato"):
+        >>>   14 |  	X = 4*o + 6*h + n + 4*o
+              15 |  
+
+  [9] Linha 17: Variável 'X' com nome muito curto (≤4 chars)
+      Trecho  : X = ...
+      Contexto:
+              16 | elif(X == "cisteina"):
+        >>>   17 |  	X = 3*o+7*h+n+2*o+s
+              18 | elif(X == "metionina"):
+
+  [10] Linha 19: Variável 'X' com nome muito curto (≤4 chars)
+      Trecho  : X = ...
+      Contexto:
+              18 | elif(X == "metionina"):
+        >>>   19 | 	X = 5*c+11*h+n+2*o+s
+              20 | 
+
+======================================================================

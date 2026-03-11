@@ -1,0 +1,46 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1641_8230.py
+Questão  : 1641
+Aluno    : 8230
+Total MCs: 1
+
+⚠️  Misconceptions detectados: A3
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import *
+     2 | 
+     3 | qtd_alunos = array(eval(input("informe os numeros: ")))
+     4 | indice_trios = 0
+     5 | turmas_trios = [ ]
+     6 | 
+     7 | for i in range(len(qtd_alunos)):
+     8 | 	if qtd_alunos[i] % 3 == 0:
+     9 | 		turmas_trios += 1
+    10 | 		
+    11 | indice = 0
+    12 | 
+    13 | for i in range(len(qtd_alunos)):
+    14 | 	if qtd_alunos[i] % 3 == 0:
+    15 | 		indice_trios.append(i)
+    16 | 		indice += 1
+    17 | print(turmas_trios, indice_trios)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 1
+
+  [1] Linha 11: Variável 'indice' declarada mas nunca utilizada
+      Trecho  : indice = ...
+      Contexto:
+              10 | 		
+        >>>   11 | indice = 0
+              12 | 
+
+======================================================================

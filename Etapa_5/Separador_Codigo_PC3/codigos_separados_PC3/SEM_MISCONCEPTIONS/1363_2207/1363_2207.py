@@ -1,0 +1,7 @@
+print("peso de uma espada em gramas")
+print("a quantidade de flawssless ruby")
+print("a quantidade de soulgem")
+print("a quantidade de oleo de dwarven")
+input(float(2 * 1 + 1000))
+input(float(3.14 / 3141))
+input(float(2 * 40 ** 2))

@@ -1,0 +1,1 @@
+c = float(iput("Digite o valor"))

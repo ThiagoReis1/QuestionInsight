@@ -1,0 +1,72 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1114_2372.py
+Questão  : 1114
+Aluno    : 2372
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | vel = float(input())
+     2 | time = float(input())
+     3 | # time > 250 km entao temos Hogsmead
+     4 | # time < 100 ou time = 0 ou time < 0 entao temos uma invalidez
+     5 | km = vel * time
+     6 | print("Entradas:", vel, "km/h e", time, "h")
+     7 | if(km > 1400):
+     8 | 	print("Proxima parada: Hogsmead")
+     9 | elif(km == 100):
+    10 | 	print("Proxima parada: Castamare")
+    11 | elif(km == 200):
+    12 | 	print("Proxima parada: Doriath")
+    13 | elif(km == 400):
+    14 | 	print("Proxima parada: Edoras")
+    15 | elif(km == 600):
+    16 | 	print("Proxima parada: Fangorn")
+    17 | elif(km == 750):
+    18 | 	print("Proxima parada: Gondor")
+    19 | elif(vel < 0 or vel == 0 or time < 0):
+    20 | 	print("Dados invalidos")
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 17: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 17) / elif ... sem else
+      Contexto:
+              16 | 	print("Proxima parada: Fangorn")
+        >>>   17 | elif(km == 750):
+              18 | 	print("Proxima parada: Gondor")
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 3
+
+  [1] Linha 1: Variável 'vel' com nome muito curto (≤4 chars)
+      Trecho  : vel = ...
+      Contexto:
+        >>>    1 | vel = float(input())
+               2 | time = float(input())
+
+  [2] Linha 2: Variável 'time' com nome muito curto (≤4 chars)
+      Trecho  : time = ...
+      Contexto:
+               1 | vel = float(input())
+        >>>    2 | time = float(input())
+               3 | # time > 250 km entao temos Hogsmead
+
+  [3] Linha 5: Variável 'km' com nome muito curto (≤4 chars)
+      Trecho  : km = ...
+      Contexto:
+               4 | # time < 100 ou time = 0 ou time < 0 entao temos uma invalidez
+        >>>    5 | km = vel * time
+               6 | print("Entradas:", vel, "km/h e", time, "h")
+
+======================================================================

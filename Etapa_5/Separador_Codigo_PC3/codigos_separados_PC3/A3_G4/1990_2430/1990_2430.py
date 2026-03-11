@@ -1,0 +1,1 @@
+nome = input("GLUTAMINA, SERINA OU TREONINA: ")

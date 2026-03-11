@@ -1,0 +1,45 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1726_3202.py
+Questão  : 1726
+Aluno    : 3202
+Total MCs: 1
+
+⚠️  Misconceptions detectados: A3
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | m = array(eval(input()))
+     3 | lin = shape(m)[0]
+     4 | col = shape(m)[1]
+     5 | indice = 0
+     6 | #no teu codigo vai ser em vez de menor maior = 0
+     7 | menor = 999999999999999999999999
+     8 | for i in range(lin):
+     9 | 	for j in range(col):
+    10 | 		#aqui tu muda so o sinal
+    11 | 		if (m[i][j] < menor):
+    12 | 			indice = 1
+    13 | 			menor = m[i][j]
+    14 | 		else:
+    15 | 			j = j + 1
+    16 | print(menor)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 1
+
+  [1] Linha 5: Variável 'indice' declarada mas nunca utilizada
+      Trecho  : indice = ...
+      Contexto:
+               4 | col = shape(m)[1]
+        >>>    5 | indice = 0
+               6 | #no teu codigo vai ser em vez de menor maior = 0
+
+======================================================================

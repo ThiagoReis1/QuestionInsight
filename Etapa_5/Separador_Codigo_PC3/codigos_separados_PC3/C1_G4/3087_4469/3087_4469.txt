@@ -1,0 +1,162 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 3087_4469.py
+Questão  : 3087
+Aluno    : 4469
+Total MCs: 2
+
+⚠️  Misconceptions detectados: C1, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | x = 1
+     2 | sp = 0
+     3 | si = 0
+     4 | cp = 0
+     5 | ci = 0
+     6 | 
+     7 | while(x != 0):
+     8 | 	x = int(input())
+     9 | 	
+    10 | 	if(x == 0):
+    11 | 		break
+    12 | 	
+    13 | 	if(x % 2 == 0):
+    14 | 		sp = sp + x
+    15 | 		cp = cp + 1
+    16 | 	else:
+    17 | 		si = si + x
+    18 | 		ci = ci + 1
+    19 | 
+    20 | 
+    21 | if(cp == 0 and ci != 0):
+    22 | 	mi = si/ci
+    23 | 	print(0.0)
+    24 | 	print(round(mi, 2))
+    25 | elif(cp != 0 and ci == 0):
+    26 | 	mp = sp/cp
+    27 | 	print(round(mp, 2))
+    28 | 	print(0.0)
+    29 | else:
+    30 | 	mi = si/ci
+    31 | 	mp = sp/cp
+    32 | 	print(round(mp, 2))
+    33 | 	print(round(mi, 2))
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ C1 — Condição while testada novamente dentro do seu bloco
+  Ocorrências: 1
+
+  [1] Linha 10: If retesta condição inversa do while da linha 7
+      Trecho  : while x != 0 → if x == 0
+      Contexto:
+               9 | 	
+        >>>   10 | 	if(x == 0):
+              11 | 		break
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 14
+
+  [1] Linha 1: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+        >>>    1 | x = 1
+               2 | sp = 0
+
+  [2] Linha 2: Variável 'sp' com nome muito curto (≤4 chars)
+      Trecho  : sp = ...
+      Contexto:
+               1 | x = 1
+        >>>    2 | sp = 0
+               3 | si = 0
+
+  [3] Linha 3: Variável 'si' com nome muito curto (≤4 chars)
+      Trecho  : si = ...
+      Contexto:
+               2 | sp = 0
+        >>>    3 | si = 0
+               4 | cp = 0
+
+  [4] Linha 4: Variável 'cp' com nome muito curto (≤4 chars)
+      Trecho  : cp = ...
+      Contexto:
+               3 | si = 0
+        >>>    4 | cp = 0
+               5 | ci = 0
+
+  [5] Linha 5: Variável 'ci' com nome muito curto (≤4 chars)
+      Trecho  : ci = ...
+      Contexto:
+               4 | cp = 0
+        >>>    5 | ci = 0
+               6 | 
+
+  [6] Linha 8: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+               7 | while(x != 0):
+        >>>    8 | 	x = int(input())
+               9 | 	
+
+  [7] Linha 22: Variável 'mi' com nome muito curto (≤4 chars)
+      Trecho  : mi = ...
+      Contexto:
+              21 | if(cp == 0 and ci != 0):
+        >>>   22 | 	mi = si/ci
+              23 | 	print(0.0)
+
+  [8] Linha 14: Variável 'sp' com nome muito curto (≤4 chars)
+      Trecho  : sp = ...
+      Contexto:
+              13 | 	if(x % 2 == 0):
+        >>>   14 | 		sp = sp + x
+              15 | 		cp = cp + 1
+
+  [9] Linha 15: Variável 'cp' com nome muito curto (≤4 chars)
+      Trecho  : cp = ...
+      Contexto:
+              14 | 		sp = sp + x
+        >>>   15 | 		cp = cp + 1
+              16 | 	else:
+
+  [10] Linha 17: Variável 'si' com nome muito curto (≤4 chars)
+      Trecho  : si = ...
+      Contexto:
+              16 | 	else:
+        >>>   17 | 		si = si + x
+              18 | 		ci = ci + 1
+
+  [11] Linha 18: Variável 'ci' com nome muito curto (≤4 chars)
+      Trecho  : ci = ...
+      Contexto:
+              17 | 		si = si + x
+        >>>   18 | 		ci = ci + 1
+              19 | 
+
+  [12] Linha 26: Variável 'mp' com nome muito curto (≤4 chars)
+      Trecho  : mp = ...
+      Contexto:
+              25 | elif(cp != 0 and ci == 0):
+        >>>   26 | 	mp = sp/cp
+              27 | 	print(round(mp, 2))
+
+  [13] Linha 30: Variável 'mi' com nome muito curto (≤4 chars)
+      Trecho  : mi = ...
+      Contexto:
+              29 | else:
+        >>>   30 | 	mi = si/ci
+              31 | 	mp = sp/cp
+
+  [14] Linha 31: Variável 'mp' com nome muito curto (≤4 chars)
+      Trecho  : mp = ...
+      Contexto:
+              30 | 	mi = si/ci
+        >>>   31 | 	mp = sp/cp
+              32 | 	print(round(mp, 2))
+
+======================================================================

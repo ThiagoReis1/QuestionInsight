@@ -1,0 +1,7 @@
+snowberry = float(input("Quantidade maxima de snowberry"))
+sais = float(input("Quant maxima de sais"))
+amanita = float(input("Quant maxima de amanita"))
+x = int(snowberry/0.31)
+y = int(sais/0.73)
+z = int(amanita/2.64)
+print(int(min(x, y, z)))

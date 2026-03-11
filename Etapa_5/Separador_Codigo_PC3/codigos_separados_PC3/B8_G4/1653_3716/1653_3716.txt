@@ -1,0 +1,117 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1653_3716.py
+Questão  : 1653
+Aluno    : 3716
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | s=input().split(",")
+     3 | f=zeros(5,dtype=int)
+     4 | ar=0
+     5 | br=0
+     6 | cl=0
+     7 | co=0
+     8 | uy=0
+     9 | for i in range (size(s)):
+    10 | 	if s[i]=="ar" or s[i]=="AR":
+    11 | 		ar+=1
+    12 | 		f[0]+=1
+    13 | 	elif s[i]=="br" or s[i]=="BR":
+    14 | 		f[1]+=1
+    15 | 		br+=1
+    16 | 	elif s[i]=="cl" or s[i]=="CL":
+    17 | 		f[2]+=1
+    18 | 		cl+=1
+    19 | 	elif s[i]=="co" or s[i]=="CO":
+    20 | 		f[3]+=1
+    21 | 		co+=1
+    22 | 	elif s[i]=="uy" or s[i]=="UY":
+    23 | 		f[4]+=1
+    24 | 		uy+=1		
+    25 | if ar>br and ar>cl and ar>co and ar>uy:
+    26 | 	print(ar)
+    27 | elif  br>ar and br>cl and br>co and br>uy:
+    28 | 	print(br)
+    29 | elif  cl>ar and cl>br and cl>co and cl>uy:
+    30 | 	print(cl)
+    31 | elif co>ar and co>br and co>cl and co>uy:
+    32 | 	print(co)
+    33 | else:
+    34 | 	print(uy)
+    35 | 	
+    36 | print(f)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 19: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 19) / elif ... sem else
+      Contexto:
+              18 | 		cl+=1
+        >>>   19 | 	elif s[i]=="co" or s[i]=="CO":
+              20 | 		f[3]+=1
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 7
+
+  [1] Linha 2: Variável 's' com nome muito curto (≤4 chars)
+      Trecho  : s = ...
+      Contexto:
+               1 | from numpy import*
+        >>>    2 | s=input().split(",")
+               3 | f=zeros(5,dtype=int)
+
+  [2] Linha 3: Variável 'f' com nome muito curto (≤4 chars)
+      Trecho  : f = ...
+      Contexto:
+               2 | s=input().split(",")
+        >>>    3 | f=zeros(5,dtype=int)
+               4 | ar=0
+
+  [3] Linha 4: Variável 'ar' com nome muito curto (≤4 chars)
+      Trecho  : ar = ...
+      Contexto:
+               3 | f=zeros(5,dtype=int)
+        >>>    4 | ar=0
+               5 | br=0
+
+  [4] Linha 5: Variável 'br' com nome muito curto (≤4 chars)
+      Trecho  : br = ...
+      Contexto:
+               4 | ar=0
+        >>>    5 | br=0
+               6 | cl=0
+
+  [5] Linha 6: Variável 'cl' com nome muito curto (≤4 chars)
+      Trecho  : cl = ...
+      Contexto:
+               5 | br=0
+        >>>    6 | cl=0
+               7 | co=0
+
+  [6] Linha 7: Variável 'co' com nome muito curto (≤4 chars)
+      Trecho  : co = ...
+      Contexto:
+               6 | cl=0
+        >>>    7 | co=0
+               8 | uy=0
+
+  [7] Linha 8: Variável 'uy' com nome muito curto (≤4 chars)
+      Trecho  : uy = ...
+      Contexto:
+               7 | co=0
+        >>>    8 | uy=0
+               9 | for i in range (size(s)):
+
+======================================================================

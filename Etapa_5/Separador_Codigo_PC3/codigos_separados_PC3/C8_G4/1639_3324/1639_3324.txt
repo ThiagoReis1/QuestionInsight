@@ -1,0 +1,94 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1639_3324.py
+Questão  : 1639
+Aluno    : 3324
+Total MCs: 2
+
+⚠️  Misconceptions detectados: C8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | 
+     3 | vet= array(eval(input()))
+     4 | 
+     5 | cont=0
+     6 | for i in vet:
+     7 | 	if(i%2 == 0):
+     8 | 		cont= cont + 1
+     9 | 		
+    10 | vetor= zeros(cont,dtype=int)
+    11 | 
+    12 | j=0
+    13 | for i in range(0,size(vet)):
+    14 | 	if(vet[i]%2 == 0):
+    15 | 		vetor[j]=i
+    16 | 		j= j+1
+    17 | 	i=i+1
+    18 | 
+    19 | print(cont)
+    20 | print(vetor)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ C8 — Loop for com sua variável de iteração sobrescrita
+  Ocorrências: 1
+
+  [1] Linha 17: Variável de iteração 'i' sobrescrita no loop
+      Trecho  : i = i + 1
+      Contexto:
+              16 | 		j= j+1
+        >>>   17 | 	i=i+1
+              18 | 
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 6
+
+  [1] Linha 3: Variável 'vet' com nome muito curto (≤4 chars)
+      Trecho  : vet = ...
+      Contexto:
+               2 | 
+        >>>    3 | vet= array(eval(input()))
+               4 | 
+
+  [2] Linha 5: Variável 'cont' com nome muito curto (≤4 chars)
+      Trecho  : cont = ...
+      Contexto:
+               4 | 
+        >>>    5 | cont=0
+               6 | for i in vet:
+
+  [3] Linha 12: Variável 'j' com nome muito curto (≤4 chars)
+      Trecho  : j = ...
+      Contexto:
+              11 | 
+        >>>   12 | j=0
+              13 | for i in range(0,size(vet)):
+
+  [4] Linha 17: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+              16 | 		j= j+1
+        >>>   17 | 	i=i+1
+              18 | 
+
+  [5] Linha 8: Variável 'cont' com nome muito curto (≤4 chars)
+      Trecho  : cont = ...
+      Contexto:
+               7 | 	if(i%2 == 0):
+        >>>    8 | 		cont= cont + 1
+               9 | 		
+
+  [6] Linha 16: Variável 'j' com nome muito curto (≤4 chars)
+      Trecho  : j = ...
+      Contexto:
+              15 | 		vetor[j]=i
+        >>>   16 | 		j= j+1
+              17 | 	i=i+1
+
+======================================================================

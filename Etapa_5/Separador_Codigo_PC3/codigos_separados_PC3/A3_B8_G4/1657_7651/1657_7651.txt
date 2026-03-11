@@ -1,0 +1,160 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1657_7651.py
+Questão  : 1657
+Aluno    : 7651
+Total MCs: 3
+
+⚠️  Misconceptions detectados: A3, B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | v = input().upper().split(',')
+     3 | l = 0
+     4 | l1 = 0
+     5 | l2 = 0
+     6 | l3 = 0
+     7 | l4 = 0
+     8 | l5 = 0
+     9 | v1 = zeros(5, dtype=int)
+    10 | for i in range(0, size(v)):
+    11 | 	if (v[i] == "AZ"):
+    12 | 		l += 1
+    13 | 		v1[0]= v1[0]+1
+    14 | 	elif (v[i] == "CA"):
+    15 | 		l1 += 1
+    16 | 		v1[1]= v1[1]+1
+    17 | 	elif (v[i] == "FL"):
+    18 | 		l2 += 1
+    19 | 		v1[2]= v1[2]+1
+    20 | 	elif (v[i] == "PA"):
+    21 | 		l3 += 1
+    22 | 		v1[3]= v1[3]+1
+    23 | 	elif (v[i] == "WI"):
+    24 | 		l4 += 1
+    25 | 		v1[4]= v1[4]+1
+    26 | print (max(v1))
+    27 | print(v1)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 6
+
+  [1] Linha 3: Variável 'l' declarada mas nunca utilizada
+      Trecho  : l = ...
+      Contexto:
+               2 | v = input().upper().split(',')
+        >>>    3 | l = 0
+               4 | l1 = 0
+
+  [2] Linha 4: Variável 'l1' declarada mas nunca utilizada
+      Trecho  : l1 = ...
+      Contexto:
+               3 | l = 0
+        >>>    4 | l1 = 0
+               5 | l2 = 0
+
+  [3] Linha 5: Variável 'l2' declarada mas nunca utilizada
+      Trecho  : l2 = ...
+      Contexto:
+               4 | l1 = 0
+        >>>    5 | l2 = 0
+               6 | l3 = 0
+
+  [4] Linha 6: Variável 'l3' declarada mas nunca utilizada
+      Trecho  : l3 = ...
+      Contexto:
+               5 | l2 = 0
+        >>>    6 | l3 = 0
+               7 | l4 = 0
+
+  [5] Linha 7: Variável 'l4' declarada mas nunca utilizada
+      Trecho  : l4 = ...
+      Contexto:
+               6 | l3 = 0
+        >>>    7 | l4 = 0
+               8 | l5 = 0
+
+  [6] Linha 8: Variável 'l5' declarada mas nunca utilizada
+      Trecho  : l5 = ...
+      Contexto:
+               7 | l4 = 0
+        >>>    8 | l5 = 0
+               9 | v1 = zeros(5, dtype=int)
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 20: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 20) / elif ... sem else
+      Contexto:
+              19 | 		v1[2]= v1[2]+1
+        >>>   20 | 	elif (v[i] == "PA"):
+              21 | 		l3 += 1
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 8
+
+  [1] Linha 2: Variável 'v' com nome muito curto (≤4 chars)
+      Trecho  : v = ...
+      Contexto:
+               1 | from numpy import*
+        >>>    2 | v = input().upper().split(',')
+               3 | l = 0
+
+  [2] Linha 3: Variável 'l' com nome muito curto (≤4 chars)
+      Trecho  : l = ...
+      Contexto:
+               2 | v = input().upper().split(',')
+        >>>    3 | l = 0
+               4 | l1 = 0
+
+  [3] Linha 4: Variável 'l1' com nome muito curto (≤4 chars)
+      Trecho  : l1 = ...
+      Contexto:
+               3 | l = 0
+        >>>    4 | l1 = 0
+               5 | l2 = 0
+
+  [4] Linha 5: Variável 'l2' com nome muito curto (≤4 chars)
+      Trecho  : l2 = ...
+      Contexto:
+               4 | l1 = 0
+        >>>    5 | l2 = 0
+               6 | l3 = 0
+
+  [5] Linha 6: Variável 'l3' com nome muito curto (≤4 chars)
+      Trecho  : l3 = ...
+      Contexto:
+               5 | l2 = 0
+        >>>    6 | l3 = 0
+               7 | l4 = 0
+
+  [6] Linha 7: Variável 'l4' com nome muito curto (≤4 chars)
+      Trecho  : l4 = ...
+      Contexto:
+               6 | l3 = 0
+        >>>    7 | l4 = 0
+               8 | l5 = 0
+
+  [7] Linha 8: Variável 'l5' com nome muito curto (≤4 chars)
+      Trecho  : l5 = ...
+      Contexto:
+               7 | l4 = 0
+        >>>    8 | l5 = 0
+               9 | v1 = zeros(5, dtype=int)
+
+  [8] Linha 9: Variável 'v1' com nome muito curto (≤4 chars)
+      Trecho  : v1 = ...
+      Contexto:
+               8 | l5 = 0
+        >>>    9 | v1 = zeros(5, dtype=int)
+              10 | for i in range(0, size(v)):
+
+======================================================================

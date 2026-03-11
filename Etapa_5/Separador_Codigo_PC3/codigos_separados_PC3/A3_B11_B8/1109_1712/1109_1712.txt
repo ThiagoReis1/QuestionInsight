@@ -1,0 +1,73 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1109_1712.py
+Questão  : 1109
+Aluno    : 1712
+Total MCs: 3
+
+⚠️  Misconceptions detectados: A3, B11, B8
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | idade=float(input("qual a idade do paciente: "))
+     2 | peso=float(input("qual o peso do paciente: "))
+     3 | 
+     4 | if(idade>12 and peso>= 60):
+     5 |    dosagem = 1000 
+     6 | elif(peso<60 ):
+     7 |    dosagem = 875 
+     8 | elif(idade<12 ):	  
+     9 | 	if(peso<=5 ):
+    10 | 		dosagem = 75
+    11 | 	if(peso>5 and peso<9 ):
+    12 | 		dosagem = 125 
+    13 | 	if(peso>9  and peso<16 ):
+    14 | 		dosagem = 250 
+    15 | 	if(peso>24  and peso<30 ):
+    16 | 		dosagem = 500 
+    17 | 	if(peso>30 ):
+    18 | 	   dosagem = 750 
+    19 | if(idade<0 and idade>130):
+    20 | 		dosagem = invalida
+    21 | if(peso<0.0 and peso>550.0):
+    22 | 		dosagem = invalida
+    23 | 	
+    24 | 	
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 1
+
+  [1] Linha 5: Variável 'dosagem' declarada mas nunca utilizada
+      Trecho  : dosagem = ...
+      Contexto:
+               4 | if(idade>12 and peso>= 60):
+        >>>    5 |    dosagem = 1000 
+               6 | elif(peso<60 ):
+
+▶ B11 — Ifs distintos com blocos idênticos
+  Ocorrências: 1
+
+  [1] Linha 21: Bloco idêntico ao if da linha 19
+      Trecho  : dosagem = invalida
+      Contexto:
+              20 | 		dosagem = invalida
+        >>>   21 | if(peso<0.0 and peso>550.0):
+              22 | 		dosagem = invalida
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 6: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 6) / elif ... sem else
+      Contexto:
+               5 |    dosagem = 1000 
+        >>>    6 | elif(peso<60 ):
+               7 |    dosagem = 875 
+
+======================================================================

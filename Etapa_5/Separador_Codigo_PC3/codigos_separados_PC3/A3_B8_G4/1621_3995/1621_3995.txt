@@ -1,0 +1,142 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1621_3995.py
+Questão  : 1621
+Aluno    : 3995
+Total MCs: 3
+
+⚠️  Misconceptions detectados: A3, B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | n=array(eval(input("nomes:")))
+     3 | v=array(eval(input("quantos?")))
+     4 | 
+     5 | i=0
+     6 | j=0
+     7 | t=0
+     8 | 
+     9 | while(i<len(n)):
+    10 | 	if(n[i]=="ARROZ"):
+    11 | 		t=t+(v[i]*1.25)
+    12 | 	elif(n[i]=="FEIJAO"):
+    13 | 		t=t+(v[i]*2.60)
+    14 | 	elif(n[i]=="BIS"):
+    15 | 		t=t+(v[i]*1.80)
+    16 | 	elif(n[i]=="MIOJO"):
+    17 | 		t=t+(v[i]*0.85)
+    18 | 	elif(n[i]=="FANTA"):
+    19 | 		t=t+(v[i]*3.20)
+    20 | 	i=i+1
+    21 | 	j+=t
+    22 | 	
+    23 | print(round(t,2))
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 1
+
+  [1] Linha 6: Variável 'j' declarada mas nunca utilizada
+      Trecho  : j = ...
+      Contexto:
+               5 | i=0
+        >>>    6 | j=0
+               7 | t=0
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 16: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 16) / elif ... sem else
+      Contexto:
+              15 | 		t=t+(v[i]*1.80)
+        >>>   16 | 	elif(n[i]=="MIOJO"):
+              17 | 		t=t+(v[i]*0.85)
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 11
+
+  [1] Linha 2: Variável 'n' com nome muito curto (≤4 chars)
+      Trecho  : n = ...
+      Contexto:
+               1 | from numpy import*
+        >>>    2 | n=array(eval(input("nomes:")))
+               3 | v=array(eval(input("quantos?")))
+
+  [2] Linha 3: Variável 'v' com nome muito curto (≤4 chars)
+      Trecho  : v = ...
+      Contexto:
+               2 | n=array(eval(input("nomes:")))
+        >>>    3 | v=array(eval(input("quantos?")))
+               4 | 
+
+  [3] Linha 5: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+               4 | 
+        >>>    5 | i=0
+               6 | j=0
+
+  [4] Linha 6: Variável 'j' com nome muito curto (≤4 chars)
+      Trecho  : j = ...
+      Contexto:
+               5 | i=0
+        >>>    6 | j=0
+               7 | t=0
+
+  [5] Linha 7: Variável 't' com nome muito curto (≤4 chars)
+      Trecho  : t = ...
+      Contexto:
+               6 | j=0
+        >>>    7 | t=0
+               8 | 
+
+  [6] Linha 20: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+              19 | 		t=t+(v[i]*3.20)
+        >>>   20 | 	i=i+1
+              21 | 	j+=t
+
+  [7] Linha 11: Variável 't' com nome muito curto (≤4 chars)
+      Trecho  : t = ...
+      Contexto:
+              10 | 	if(n[i]=="ARROZ"):
+        >>>   11 | 		t=t+(v[i]*1.25)
+              12 | 	elif(n[i]=="FEIJAO"):
+
+  [8] Linha 13: Variável 't' com nome muito curto (≤4 chars)
+      Trecho  : t = ...
+      Contexto:
+              12 | 	elif(n[i]=="FEIJAO"):
+        >>>   13 | 		t=t+(v[i]*2.60)
+              14 | 	elif(n[i]=="BIS"):
+
+  [9] Linha 15: Variável 't' com nome muito curto (≤4 chars)
+      Trecho  : t = ...
+      Contexto:
+              14 | 	elif(n[i]=="BIS"):
+        >>>   15 | 		t=t+(v[i]*1.80)
+              16 | 	elif(n[i]=="MIOJO"):
+
+  [10] Linha 17: Variável 't' com nome muito curto (≤4 chars)
+      Trecho  : t = ...
+      Contexto:
+              16 | 	elif(n[i]=="MIOJO"):
+        >>>   17 | 		t=t+(v[i]*0.85)
+              18 | 	elif(n[i]=="FANTA"):
+
+  [11] Linha 19: Variável 't' com nome muito curto (≤4 chars)
+      Trecho  : t = ...
+      Contexto:
+              18 | 	elif(n[i]=="FANTA"):
+        >>>   19 | 		t=t+(v[i]*3.20)
+              20 | 	i=i+1
+
+======================================================================

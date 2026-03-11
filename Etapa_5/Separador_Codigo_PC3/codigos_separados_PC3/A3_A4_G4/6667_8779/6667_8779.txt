@@ -1,0 +1,71 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 6667_8779.py
+Questão  : 6667
+Aluno    : 8779
+Total MCs: 3
+
+⚠️  Misconceptions detectados: A3, A4, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | vet = zeros(10, dtype= float)
+     3 | for i in range(10):
+     4 | 	n= float()
+     5 | 	if 0<=n<=10:
+     6 | 		vet[i]= n
+     7 | min= float()
+     8 | print(vet)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 1
+
+  [1] Linha 7: Variável 'min' declarada mas nunca utilizada
+      Trecho  : min = ...
+      Contexto:
+               6 | 		vet[i]= n
+        >>>    7 | min= float()
+               8 | print(vet)
+
+▶ A4 — Redefinição de built-in
+  Ocorrências: 1
+
+  [1] Linha 7: Built-in 'min' redefinido como variável
+      Trecho  : min = float()
+      Contexto:
+               6 | 		vet[i]= n
+        >>>    7 | min= float()
+               8 | print(vet)
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 3
+
+  [1] Linha 2: Variável 'vet' com nome muito curto (≤4 chars)
+      Trecho  : vet = ...
+      Contexto:
+               1 | from numpy import*
+        >>>    2 | vet = zeros(10, dtype= float)
+               3 | for i in range(10):
+
+  [2] Linha 7: Variável 'min' com nome muito curto (≤4 chars)
+      Trecho  : min = ...
+      Contexto:
+               6 | 		vet[i]= n
+        >>>    7 | min= float()
+               8 | print(vet)
+
+  [3] Linha 4: Variável 'n' com nome muito curto (≤4 chars)
+      Trecho  : n = ...
+      Contexto:
+               3 | for i in range(10):
+        >>>    4 | 	n= float()
+               5 | 	if 0<=n<=10:
+
+======================================================================

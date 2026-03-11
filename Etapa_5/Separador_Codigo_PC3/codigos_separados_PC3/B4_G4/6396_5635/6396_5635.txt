@@ -1,0 +1,58 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 6396_5635.py
+Questão  : 6396
+Aluno    : 5635
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B4, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import *
+     2 | v = array(eval(input("valor: ")))
+     3 | v1 = zeros(size(v), dtype = int)
+     4 | 
+     5 | for i in range(size(v)):
+     6 | 	if v[i] == 0:
+     7 | 		v1[i] = v[i]*2
+     8 | 		
+     9 | 	else: v1[i] = v[i]*2
+    10 | 		
+    11 | 		
+    12 | print(v1)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B4 — Comandos repetidos dentro de blocos if-elif-else
+  Ocorrências: 1
+
+  [1] Linha 6: Bloco idêntico ao da linha 6
+      Trecho  : v1[i] = v[i] * 2
+      Contexto:
+               5 | for i in range(size(v)):
+        >>>    6 | 	if v[i] == 0:
+               7 | 		v1[i] = v[i]*2
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 2
+
+  [1] Linha 2: Variável 'v' com nome muito curto (≤4 chars)
+      Trecho  : v = ...
+      Contexto:
+               1 | from numpy import *
+        >>>    2 | v = array(eval(input("valor: ")))
+               3 | v1 = zeros(size(v), dtype = int)
+
+  [2] Linha 3: Variável 'v1' com nome muito curto (≤4 chars)
+      Trecho  : v1 = ...
+      Contexto:
+               2 | v = array(eval(input("valor: ")))
+        >>>    3 | v1 = zeros(size(v), dtype = int)
+               4 | 
+
+======================================================================

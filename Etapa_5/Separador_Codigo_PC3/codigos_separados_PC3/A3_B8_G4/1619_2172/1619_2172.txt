@@ -1,0 +1,136 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1619_2172.py
+Questão  : 1619
+Aluno    : 2172
+Total MCs: 3
+
+⚠️  Misconceptions detectados: A3, B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import *
+     2 | t=array(eval(input("informe os tempos:")))
+     3 | m=array(eval(input("informe os modos:")))
+     4 | 
+     5 | i=0
+     6 | 
+     7 | q=90
+     8 | m=45
+     9 | f=0
+    10 | 
+    11 | while(i<size(m)):
+    12 | 	if(str(m[i])=="QUENTE"):
+    13 | 		ct=q*t[i]*q*0.005
+    14 | 	elif(str(m[i])=="MORNO"):
+    15 | 		ct=m*t[i]*m*0.005
+    16 | 	elif(str(m[i])=="FRIO"):
+    17 | 		ct=f*t[i]*f*0.005
+    18 | 	soma=soma+ct
+    19 | 	i=i+1
+    20 | print(round(soma,2))
+    21 | 	
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 1
+
+  [1] Linha 0: A3 detectado pelo VisitorMC3 (localização exata não mapeada)
+      Trecho  : —
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 14: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 14) / elif ... sem else
+      Contexto:
+              13 | 		ct=q*t[i]*q*0.005
+        >>>   14 | 	elif(str(m[i])=="MORNO"):
+              15 | 		ct=m*t[i]*m*0.005
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 11
+
+  [1] Linha 2: Variável 't' com nome muito curto (≤4 chars)
+      Trecho  : t = ...
+      Contexto:
+               1 | from numpy import *
+        >>>    2 | t=array(eval(input("informe os tempos:")))
+               3 | m=array(eval(input("informe os modos:")))
+
+  [2] Linha 3: Variável 'm' com nome muito curto (≤4 chars)
+      Trecho  : m = ...
+      Contexto:
+               2 | t=array(eval(input("informe os tempos:")))
+        >>>    3 | m=array(eval(input("informe os modos:")))
+               4 | 
+
+  [3] Linha 5: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+               4 | 
+        >>>    5 | i=0
+               6 | 
+
+  [4] Linha 7: Variável 'q' com nome muito curto (≤4 chars)
+      Trecho  : q = ...
+      Contexto:
+               6 | 
+        >>>    7 | q=90
+               8 | m=45
+
+  [5] Linha 8: Variável 'm' com nome muito curto (≤4 chars)
+      Trecho  : m = ...
+      Contexto:
+               7 | q=90
+        >>>    8 | m=45
+               9 | f=0
+
+  [6] Linha 9: Variável 'f' com nome muito curto (≤4 chars)
+      Trecho  : f = ...
+      Contexto:
+               8 | m=45
+        >>>    9 | f=0
+              10 | 
+
+  [7] Linha 18: Variável 'soma' com nome muito curto (≤4 chars)
+      Trecho  : soma = ...
+      Contexto:
+              17 | 		ct=f*t[i]*f*0.005
+        >>>   18 | 	soma=soma+ct
+              19 | 	i=i+1
+
+  [8] Linha 19: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+              18 | 	soma=soma+ct
+        >>>   19 | 	i=i+1
+              20 | print(round(soma,2))
+
+  [9] Linha 13: Variável 'ct' com nome muito curto (≤4 chars)
+      Trecho  : ct = ...
+      Contexto:
+              12 | 	if(str(m[i])=="QUENTE"):
+        >>>   13 | 		ct=q*t[i]*q*0.005
+              14 | 	elif(str(m[i])=="MORNO"):
+
+  [10] Linha 15: Variável 'ct' com nome muito curto (≤4 chars)
+      Trecho  : ct = ...
+      Contexto:
+              14 | 	elif(str(m[i])=="MORNO"):
+        >>>   15 | 		ct=m*t[i]*m*0.005
+              16 | 	elif(str(m[i])=="FRIO"):
+
+  [11] Linha 17: Variável 'ct' com nome muito curto (≤4 chars)
+      Trecho  : ct = ...
+      Contexto:
+              16 | 	elif(str(m[i])=="FRIO"):
+        >>>   17 | 		ct=f*t[i]*f*0.005
+              18 | 	soma=soma+ct
+
+======================================================================

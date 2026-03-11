@@ -1,0 +1,88 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1640_1903.py
+Questão  : 1640
+Aluno    : 1903
+Total MCs: 2
+
+⚠️  Misconceptions detectados: A3, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | 
+     3 | vet = array(eval(input("vet: ")))
+     4 | 
+     5 | 
+     6 | nimp = 0
+     7 | j = 0
+     8 | 
+     9 | for i in range(size(vet)):
+    10 | 	if(vet[i]%2 != 0):
+    11 | 		nimp += 1
+    12 | 
+    13 | nvet = zeros(nimp, dtype = int)
+    14 | nimp = 0
+    15 | for i in range(size(vet)):
+    16 | 	if(vet[i]%2 != 0):
+    17 | 		nvet[nimp] = i
+    18 | 		nimp += 1
+    19 | 		
+    20 | print(nimp)
+    21 | print(nvet)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 1
+
+  [1] Linha 7: Variável 'j' declarada mas nunca utilizada
+      Trecho  : j = ...
+      Contexto:
+               6 | nimp = 0
+        >>>    7 | j = 0
+               8 | 
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 5
+
+  [1] Linha 3: Variável 'vet' com nome muito curto (≤4 chars)
+      Trecho  : vet = ...
+      Contexto:
+               2 | 
+        >>>    3 | vet = array(eval(input("vet: ")))
+               4 | 
+
+  [2] Linha 6: Variável 'nimp' com nome muito curto (≤4 chars)
+      Trecho  : nimp = ...
+      Contexto:
+               5 | 
+        >>>    6 | nimp = 0
+               7 | j = 0
+
+  [3] Linha 7: Variável 'j' com nome muito curto (≤4 chars)
+      Trecho  : j = ...
+      Contexto:
+               6 | nimp = 0
+        >>>    7 | j = 0
+               8 | 
+
+  [4] Linha 13: Variável 'nvet' com nome muito curto (≤4 chars)
+      Trecho  : nvet = ...
+      Contexto:
+              12 | 
+        >>>   13 | nvet = zeros(nimp, dtype = int)
+              14 | nimp = 0
+
+  [5] Linha 14: Variável 'nimp' com nome muito curto (≤4 chars)
+      Trecho  : nimp = ...
+      Contexto:
+              13 | nvet = zeros(nimp, dtype = int)
+        >>>   14 | nimp = 0
+              15 | for i in range(size(vet)):
+
+======================================================================

@@ -1,0 +1,80 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1620_2407.py
+Questão  : 1620
+Aluno    : 2407
+Total MCs: 1
+
+⚠️  Misconceptions detectados: G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import *
+     2 | 
+     3 | vt = array(eval(input("Tempo dos banhos: ")))
+     4 | vp = array(eval(input("Percentual de abertura da torneira: ")))
+     5 | 
+     6 | c = 0 
+     7 | i = 0
+     8 | consumo = 0
+     9 | 
+    10 | while (c < size(vt)):
+    11 | 
+    12 | 	consumo = consumo + 0.05 * vp[i] * vt[i]	
+    13 | 	c = c + 1
+    14 | 	i = i + 1
+    15 | 	
+    16 | print(round(consumo, 2))
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 6
+
+  [1] Linha 3: Variável 'vt' com nome muito curto (≤4 chars)
+      Trecho  : vt = ...
+      Contexto:
+               2 | 
+        >>>    3 | vt = array(eval(input("Tempo dos banhos: ")))
+               4 | vp = array(eval(input("Percentual de abertura da torneira: ")))
+
+  [2] Linha 4: Variável 'vp' com nome muito curto (≤4 chars)
+      Trecho  : vp = ...
+      Contexto:
+               3 | vt = array(eval(input("Tempo dos banhos: ")))
+        >>>    4 | vp = array(eval(input("Percentual de abertura da torneira: ")))
+               5 | 
+
+  [3] Linha 6: Variável 'c' com nome muito curto (≤4 chars)
+      Trecho  : c = ...
+      Contexto:
+               5 | 
+        >>>    6 | c = 0 
+               7 | i = 0
+
+  [4] Linha 7: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+               6 | c = 0 
+        >>>    7 | i = 0
+               8 | consumo = 0
+
+  [5] Linha 13: Variável 'c' com nome muito curto (≤4 chars)
+      Trecho  : c = ...
+      Contexto:
+              12 | 	consumo = consumo + 0.05 * vp[i] * vt[i]	
+        >>>   13 | 	c = c + 1
+              14 | 	i = i + 1
+
+  [6] Linha 14: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+              13 | 	c = c + 1
+        >>>   14 | 	i = i + 1
+              15 | 	
+
+======================================================================

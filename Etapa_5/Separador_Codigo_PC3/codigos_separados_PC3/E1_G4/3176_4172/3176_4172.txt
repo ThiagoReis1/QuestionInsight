@@ -1,0 +1,67 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 3176_4172.py
+Questão  : 3176
+Aluno    : 4172
+Total MCs: 2
+
+⚠️  Misconceptions detectados: E1, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | 
+     3 | x=input("")
+     4 | 
+     5 | v=0
+     6 | c=0
+     7 | 
+     8 | for i in range(len(x)):
+     9 | 	if x[i]=="a" or x[i]=="e" or x[i]=="i" or x[i]=="o" or x[i]=="u":
+    10 | 		v+=1
+    11 | 	if x[i]=="b" or x[i]=="c"or x[i]=="d" or x[i]=="f" or x[i]=="g" or x[i]=="h" or x[i]=="j" or x[i]=="k" or x[i]=="l" or x[i]=="m" or x[i]=="n" or x[i]=="p" or x[i]=="q" or x[i]=="r" or x[i]=="s" or x[i]=="t" or x[i]=="v" or x[i]=="w" or x[i]=="z" or x[i]=="x" or x[i]=='y' :
+    12 | 		c+=1
+    13 | print(v)
+    14 | print(c)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ E1 — Verificação desnecessária de todas as combinações possíveis
+  Ocorrências: 1
+
+  [1] Linha 11: 21 condições em um único if — verificação excessiva
+      Trecho  : x[i] == 'b' or x[i] == 'c' or x[i] == 'd' or (x[i] == 'f') or (x[i] == 'g') or (x[i] == 'h') or (x[i] == 'j') or (x[i] == 'k') or (x[i] == 'l') or (x[i] == 'm') or (x[i] == 'n') or (x[i] == 'p') or (x[i] == 'q') or (x[i] == 'r') or (x[i] == 's') or (x[i] == 't') or (x[i] == 'v') or (x[i] == 'w') or (x[i] == 'z') or (x[i] == 'x') or (x[i] == 'y')
+      Contexto:
+              10 | 		v+=1
+        >>>   11 | 	if x[i]=="b" or x[i]=="c"or x[i]=="d" or x[i]=="f" or x[i]=="g" or x[i]=="h" or x[i]=="j" or x[i]=="k" or x[i]=="l" or x[i]=="m" or x[i]=="n" or x[i]=="p" or x[i]=="q" or x[i]=="r" or x[i]=="s" or x[i]=="t" or x[i]=="v" or x[i]=="w" or x[i]=="z" or x[i]=="x" or x[i]=='y' :
+              12 | 		c+=1
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 3
+
+  [1] Linha 3: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+               2 | 
+        >>>    3 | x=input("")
+               4 | 
+
+  [2] Linha 5: Variável 'v' com nome muito curto (≤4 chars)
+      Trecho  : v = ...
+      Contexto:
+               4 | 
+        >>>    5 | v=0
+               6 | c=0
+
+  [3] Linha 6: Variável 'c' com nome muito curto (≤4 chars)
+      Trecho  : c = ...
+      Contexto:
+               5 | v=0
+        >>>    6 | c=0
+               7 | 
+
+======================================================================

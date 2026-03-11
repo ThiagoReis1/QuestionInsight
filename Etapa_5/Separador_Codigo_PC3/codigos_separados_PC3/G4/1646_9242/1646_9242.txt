@@ -1,0 +1,80 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1646_9242.py
+Questão  : 1646
+Aluno    : 9242
+Total MCs: 1
+
+⚠️  Misconceptions detectados: G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | v = array(eval(input('s')))
+     3 | c = 0
+     4 | d = 0
+     5 | 
+     6 | for i in range(size(v)):
+     7 | 	if v[i] <= 50:
+     8 | 		c = c + 1
+     9 | v1 = zeros(c, dtype=int)
+    10 | 
+    11 | for x in range(size(v)):
+    12 | 	if v[x] <= 50:
+    13 | 		v1[d] = x
+    14 | 		d = d + 1
+    15 | print(c)
+    16 | print(v1)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 6
+
+  [1] Linha 2: Variável 'v' com nome muito curto (≤4 chars)
+      Trecho  : v = ...
+      Contexto:
+               1 | from numpy import*
+        >>>    2 | v = array(eval(input('s')))
+               3 | c = 0
+
+  [2] Linha 3: Variável 'c' com nome muito curto (≤4 chars)
+      Trecho  : c = ...
+      Contexto:
+               2 | v = array(eval(input('s')))
+        >>>    3 | c = 0
+               4 | d = 0
+
+  [3] Linha 4: Variável 'd' com nome muito curto (≤4 chars)
+      Trecho  : d = ...
+      Contexto:
+               3 | c = 0
+        >>>    4 | d = 0
+               5 | 
+
+  [4] Linha 9: Variável 'v1' com nome muito curto (≤4 chars)
+      Trecho  : v1 = ...
+      Contexto:
+               8 | 		c = c + 1
+        >>>    9 | v1 = zeros(c, dtype=int)
+              10 | 
+
+  [5] Linha 8: Variável 'c' com nome muito curto (≤4 chars)
+      Trecho  : c = ...
+      Contexto:
+               7 | 	if v[i] <= 50:
+        >>>    8 | 		c = c + 1
+               9 | v1 = zeros(c, dtype=int)
+
+  [6] Linha 14: Variável 'd' com nome muito curto (≤4 chars)
+      Trecho  : d = ...
+      Contexto:
+              13 | 		v1[d] = x
+        >>>   14 | 		d = d + 1
+              15 | print(c)
+
+======================================================================

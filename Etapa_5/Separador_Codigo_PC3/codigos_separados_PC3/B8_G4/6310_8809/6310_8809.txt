@@ -1,0 +1,127 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 6310_8809.py
+Questão  : 6310
+Aluno    : 8809
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | preco=input("ponha aqui os locais de compra (M,P,R): ")
+     3 | m=0
+     4 | p=0
+     5 | r=0
+     6 | q=len(preco)
+     7 | i=0
+     8 | while i < q:
+     9 | 	d=preco[i]
+    10 | 	if d.upper() == "M":
+    11 | 		m=m+1
+    12 | 	elif d.upper() == "P":
+    13 | 		p=p+1
+    14 | 	elif d.upper() == "R":
+    15 | 		r=r+1
+    16 | 	i=i+1
+    17 | t=(m*7.25)+(p*4.75)+(r*3.50)
+    18 | print(round(t,2),m,p,r)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 12: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 12) / elif ... sem else
+      Contexto:
+              11 | 		m=m+1
+        >>>   12 | 	elif d.upper() == "P":
+              13 | 		p=p+1
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 11
+
+  [1] Linha 3: Variável 'm' com nome muito curto (≤4 chars)
+      Trecho  : m = ...
+      Contexto:
+               2 | preco=input("ponha aqui os locais de compra (M,P,R): ")
+        >>>    3 | m=0
+               4 | p=0
+
+  [2] Linha 4: Variável 'p' com nome muito curto (≤4 chars)
+      Trecho  : p = ...
+      Contexto:
+               3 | m=0
+        >>>    4 | p=0
+               5 | r=0
+
+  [3] Linha 5: Variável 'r' com nome muito curto (≤4 chars)
+      Trecho  : r = ...
+      Contexto:
+               4 | p=0
+        >>>    5 | r=0
+               6 | q=len(preco)
+
+  [4] Linha 6: Variável 'q' com nome muito curto (≤4 chars)
+      Trecho  : q = ...
+      Contexto:
+               5 | r=0
+        >>>    6 | q=len(preco)
+               7 | i=0
+
+  [5] Linha 7: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+               6 | q=len(preco)
+        >>>    7 | i=0
+               8 | while i < q:
+
+  [6] Linha 17: Variável 't' com nome muito curto (≤4 chars)
+      Trecho  : t = ...
+      Contexto:
+              16 | 	i=i+1
+        >>>   17 | t=(m*7.25)+(p*4.75)+(r*3.50)
+              18 | print(round(t,2),m,p,r)
+
+  [7] Linha 9: Variável 'd' com nome muito curto (≤4 chars)
+      Trecho  : d = ...
+      Contexto:
+               8 | while i < q:
+        >>>    9 | 	d=preco[i]
+              10 | 	if d.upper() == "M":
+
+  [8] Linha 16: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+              15 | 		r=r+1
+        >>>   16 | 	i=i+1
+              17 | t=(m*7.25)+(p*4.75)+(r*3.50)
+
+  [9] Linha 11: Variável 'm' com nome muito curto (≤4 chars)
+      Trecho  : m = ...
+      Contexto:
+              10 | 	if d.upper() == "M":
+        >>>   11 | 		m=m+1
+              12 | 	elif d.upper() == "P":
+
+  [10] Linha 13: Variável 'p' com nome muito curto (≤4 chars)
+      Trecho  : p = ...
+      Contexto:
+              12 | 	elif d.upper() == "P":
+        >>>   13 | 		p=p+1
+              14 | 	elif d.upper() == "R":
+
+  [11] Linha 15: Variável 'r' com nome muito curto (≤4 chars)
+      Trecho  : r = ...
+      Contexto:
+              14 | 	elif d.upper() == "R":
+        >>>   15 | 		r=r+1
+              16 | 	i=i+1
+
+======================================================================

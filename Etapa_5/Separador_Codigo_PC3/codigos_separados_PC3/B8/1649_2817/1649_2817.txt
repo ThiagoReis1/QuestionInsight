@@ -1,0 +1,49 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1649_2817.py
+Questão  : 1649
+Aluno    : 2817
+Total MCs: 1
+
+⚠️  Misconceptions detectados: B8
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import *
+     2 | 
+     3 | vet = input("").split(",")
+     4 | 
+     5 | qntd_cores = zeros(5, dtype=int)
+     6 | 
+     7 | for i in vet:
+     8 | 	if(i.upper() == "P"):
+     9 | 		qntd_cores[0] += 1
+    10 | 	elif(i.upper() == "C"):
+    11 | 		qntd_cores[1] += 1
+    12 | 	elif(i.upper() == "M"):
+    13 | 		qntd_cores[2] += 1
+    14 | 	elif(i.upper() == "V"):
+    15 | 		qntd_cores[3] += 1
+    16 | 	elif(i.upper() == "A"):
+    17 | 		qntd_cores[4] += 1
+    18 | 		
+    19 | print(max(qntd_cores))
+    20 | print(qntd_cores)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 14: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 14) / elif ... sem else
+      Contexto:
+              13 | 		qntd_cores[2] += 1
+        >>>   14 | 	elif(i.upper() == "V"):
+              15 | 		qntd_cores[3] += 1
+
+======================================================================

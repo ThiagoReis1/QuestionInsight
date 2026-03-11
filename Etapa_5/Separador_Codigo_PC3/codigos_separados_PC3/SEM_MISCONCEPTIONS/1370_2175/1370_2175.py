@@ -1,0 +1,8 @@
+snowberry = float(input("quantidade de snowberry "))
+sais de fogo = float(input("quantidade de sais de fogo " ))
+amanita = float(input("quantidade de amanita "))
+quantidade de porcao = float(input("quantidade de porcao em gramas "))
+print(round(snowberry, 2) )
+print(round(sais de fogo, 2))
+print(round(amanita, 2))
+print = ("snowberry %")

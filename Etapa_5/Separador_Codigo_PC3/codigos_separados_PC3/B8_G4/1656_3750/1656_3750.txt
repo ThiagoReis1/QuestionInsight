@@ -1,0 +1,78 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1656_3750.py
+Questão  : 1656
+Aluno    : 3750
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | p = array(input("").split(','))
+     3 | v = zeros(5,dtype=int)
+     4 | i= 0
+     5 | while(i < size(p)):
+     6 | 	if(p[i] == "BE"):
+     7 | 		v[0] = v[0] + 1
+     8 | 	elif(p[i] == "ES"):
+     9 | 		v[1] = v[1] + 1
+    10 | 	elif(p[i] == "FR"):
+    11 | 		v[2] = v[2] + 1
+    12 | 	elif(p[i] == "IT"):
+    13 | 		v[3] = v[3] + 1
+    14 | 	elif(p[i] == "PT"):
+    15 | 		v[4] = v[4] + 1
+    16 | 	i = i + 1
+    17 | print(max(v))
+    18 | print(v)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 12: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 12) / elif ... sem else
+      Contexto:
+              11 | 		v[2] = v[2] + 1
+        >>>   12 | 	elif(p[i] == "IT"):
+              13 | 		v[3] = v[3] + 1
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 4
+
+  [1] Linha 2: Variável 'p' com nome muito curto (≤4 chars)
+      Trecho  : p = ...
+      Contexto:
+               1 | from numpy import*
+        >>>    2 | p = array(input("").split(','))
+               3 | v = zeros(5,dtype=int)
+
+  [2] Linha 3: Variável 'v' com nome muito curto (≤4 chars)
+      Trecho  : v = ...
+      Contexto:
+               2 | p = array(input("").split(','))
+        >>>    3 | v = zeros(5,dtype=int)
+               4 | i= 0
+
+  [3] Linha 4: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+               3 | v = zeros(5,dtype=int)
+        >>>    4 | i= 0
+               5 | while(i < size(p)):
+
+  [4] Linha 16: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+              15 | 		v[4] = v[4] + 1
+        >>>   16 | 	i = i + 1
+              17 | print(max(v))
+
+======================================================================

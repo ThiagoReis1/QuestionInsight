@@ -1,0 +1,47 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 6939_9778.py
+Questão  : 6939
+Aluno    : 9778
+Total MCs: 2
+
+⚠️  Misconceptions detectados: A3, B8
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | subtotal = float(input("valor total da compra: "))
+     2 | cod = input("('D') dinheiro; ('P') pix; ('C') cartao: "). upper()
+     3 | 
+     4 | total = subtotal
+     5 | 
+     6 | if cod == "D" or cod == "P":
+     7 | 	total = subtotal - subtotal * (19/100)
+     8 | elif cod == "C":
+     9 | 	parcelas = int(input("qnts parcelas? (1) ou (2): "))
+    10 | 	if parcelas == 2:
+    11 | 		total= subtotal + subtotal * (9/100)
+    12 | print(round(total, 2))
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 1
+
+  [1] Linha 0: A3 detectado pelo VisitorMC3 (localização exata não mapeada)
+      Trecho  : —
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 6: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 6) / elif ... sem else
+      Contexto:
+               5 | 
+        >>>    6 | if cod == "D" or cod == "P":
+               7 | 	total = subtotal - subtotal * (19/100)
+
+======================================================================

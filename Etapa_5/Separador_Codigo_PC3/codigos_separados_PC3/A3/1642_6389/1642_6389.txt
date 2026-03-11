@@ -1,0 +1,49 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1642_6389.py
+Questão  : 1642
+Aluno    : 6389
+Total MCs: 1
+
+⚠️  Misconceptions detectados: A3
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import *
+     2 | 
+     3 | q = array(eval(input("Digite a quantidade de alunos: ")))
+     4 | i = 0
+     5 | t = 0
+     6 | 
+     7 | for i in range(size(q)):
+     8 | 	if(q[i] % 5 == 0):
+     9 | 		t = t + 1
+    10 | print(t)
+    11 | 	
+    12 | N = zeros(t, dtype = int)
+    13 | entrada = 0
+    14 | saida = 0
+    15 | 
+    16 | for i in range(size(q)):
+    17 | 	if(q[i] % 5 == 0):
+    18 | 		N[entrada] = i
+    19 | 		entrada = entrada + 1
+    20 | print(N)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 1
+
+  [1] Linha 14: Variável 'saida' declarada mas nunca utilizada
+      Trecho  : saida = ...
+      Contexto:
+              13 | entrada = 0
+        >>>   14 | saida = 0
+              15 | 
+
+======================================================================

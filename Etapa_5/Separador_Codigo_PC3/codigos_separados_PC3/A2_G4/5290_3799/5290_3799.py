@@ -1,0 +1,14 @@
+d=int(input("dado:"))
+c=0
+n=0
+while(d!=-1):
+	if(d==5):
+		c=c+1
+		n=n+1
+	else:
+		c=c+1
+		n=n
+	d=int(input("dado:"))
+x=(n*100)/c
+print(c)
+print(round(x,2))

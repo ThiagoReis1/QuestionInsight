@@ -1,0 +1,52 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 6961_9775.py
+Questão  : 6961
+Aluno    : 9775
+Total MCs: 2
+
+⚠️  Misconceptions detectados: A4, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | X = int(input())
+     2 | Y = int(input())
+     3 | sum = 0
+     4 | elevator = X
+     5 | 
+     6 | while elevator <= Y:
+     7 | 	if elevator % 3 == 0:
+     8 | 		sum = sum + elevator
+     9 | 	elevator = elevator + 1
+    10 | print(sum)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A4 — Redefinição de built-in
+  Ocorrências: 2
+
+  [1] Linha 3: Built-in 'sum' redefinido como variável
+      Trecho  : sum = 0
+      Contexto:
+               2 | Y = int(input())
+        >>>    3 | sum = 0
+               4 | elevator = X
+
+  [2] Linha 8: Built-in 'sum' redefinido como variável
+      Trecho  : sum = sum + elevator
+      Contexto:
+               7 | 	if elevator % 3 == 0:
+        >>>    8 | 		sum = sum + elevator
+               9 | 	elevator = elevator + 1
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 1
+
+  [1] Linha 0: G4 detectado pelo VisitorMC3 (localização exata não mapeada)
+      Trecho  : —
+
+======================================================================

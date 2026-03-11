@@ -1,0 +1,172 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 6311_8643.py
+Questão  : 6311
+Aluno    : 8643
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | a = input("").upper()
+     3 | c = 0
+     4 | b = 0
+     5 | h = 0
+     6 | f = 0
+     7 | while(c < len(a)):
+     8 | 	if(a[c] == "C"):
+     9 | 		b = b + 1
+    10 | 	elif(a[c] == "E"):
+    11 | 		h = h + 1
+    12 | 	elif(a[c] == "P"):
+    13 | 		f = f + 1
+    14 | 	c = c + 1
+    15 | i = 0
+    16 | cont = 0 
+    17 | while(i < len(a)):
+    18 | 	if(a[i] == "C"):
+    19 | 		cont = cont + 10.50
+    20 | 	elif(a[i] == "E"):
+    21 | 		cont = cont + 8.75
+    22 | 	elif(a[i] == "P"):
+    23 | 		cont = cont + 17.90
+    24 | 	i = i + 1
+    25 | 
+    26 | print(round(cont, 2), b, h, f)
+    27 | 	
+    28 | 	
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 2
+
+  [1] Linha 10: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 10) / elif ... sem else
+      Contexto:
+               9 | 		b = b + 1
+        >>>   10 | 	elif(a[c] == "E"):
+              11 | 		h = h + 1
+
+  [2] Linha 20: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 20) / elif ... sem else
+      Contexto:
+              19 | 		cont = cont + 10.50
+        >>>   20 | 	elif(a[i] == "E"):
+              21 | 		cont = cont + 8.75
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 15
+
+  [1] Linha 2: Variável 'a' com nome muito curto (≤4 chars)
+      Trecho  : a = ...
+      Contexto:
+               1 | from numpy import*
+        >>>    2 | a = input("").upper()
+               3 | c = 0
+
+  [2] Linha 3: Variável 'c' com nome muito curto (≤4 chars)
+      Trecho  : c = ...
+      Contexto:
+               2 | a = input("").upper()
+        >>>    3 | c = 0
+               4 | b = 0
+
+  [3] Linha 4: Variável 'b' com nome muito curto (≤4 chars)
+      Trecho  : b = ...
+      Contexto:
+               3 | c = 0
+        >>>    4 | b = 0
+               5 | h = 0
+
+  [4] Linha 5: Variável 'h' com nome muito curto (≤4 chars)
+      Trecho  : h = ...
+      Contexto:
+               4 | b = 0
+        >>>    5 | h = 0
+               6 | f = 0
+
+  [5] Linha 6: Variável 'f' com nome muito curto (≤4 chars)
+      Trecho  : f = ...
+      Contexto:
+               5 | h = 0
+        >>>    6 | f = 0
+               7 | while(c < len(a)):
+
+  [6] Linha 15: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+              14 | 	c = c + 1
+        >>>   15 | i = 0
+              16 | cont = 0 
+
+  [7] Linha 16: Variável 'cont' com nome muito curto (≤4 chars)
+      Trecho  : cont = ...
+      Contexto:
+              15 | i = 0
+        >>>   16 | cont = 0 
+              17 | while(i < len(a)):
+
+  [8] Linha 14: Variável 'c' com nome muito curto (≤4 chars)
+      Trecho  : c = ...
+      Contexto:
+              13 | 		f = f + 1
+        >>>   14 | 	c = c + 1
+              15 | i = 0
+
+  [9] Linha 24: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+              23 | 		cont = cont + 17.90
+        >>>   24 | 	i = i + 1
+              25 | 
+
+  [10] Linha 9: Variável 'b' com nome muito curto (≤4 chars)
+      Trecho  : b = ...
+      Contexto:
+               8 | 	if(a[c] == "C"):
+        >>>    9 | 		b = b + 1
+              10 | 	elif(a[c] == "E"):
+
+  [11] Linha 19: Variável 'cont' com nome muito curto (≤4 chars)
+      Trecho  : cont = ...
+      Contexto:
+              18 | 	if(a[i] == "C"):
+        >>>   19 | 		cont = cont + 10.50
+              20 | 	elif(a[i] == "E"):
+
+  [12] Linha 11: Variável 'h' com nome muito curto (≤4 chars)
+      Trecho  : h = ...
+      Contexto:
+              10 | 	elif(a[c] == "E"):
+        >>>   11 | 		h = h + 1
+              12 | 	elif(a[c] == "P"):
+
+  [13] Linha 21: Variável 'cont' com nome muito curto (≤4 chars)
+      Trecho  : cont = ...
+      Contexto:
+              20 | 	elif(a[i] == "E"):
+        >>>   21 | 		cont = cont + 8.75
+              22 | 	elif(a[i] == "P"):
+
+  [14] Linha 13: Variável 'f' com nome muito curto (≤4 chars)
+      Trecho  : f = ...
+      Contexto:
+              12 | 	elif(a[c] == "P"):
+        >>>   13 | 		f = f + 1
+              14 | 	c = c + 1
+
+  [15] Linha 23: Variável 'cont' com nome muito curto (≤4 chars)
+      Trecho  : cont = ...
+      Contexto:
+              22 | 	elif(a[i] == "P"):
+        >>>   23 | 		cont = cont + 17.90
+              24 | 	i = i + 1
+
+======================================================================

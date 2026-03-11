@@ -1,0 +1,50 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 3587_7588.py
+Questão  : 3587
+Aluno    : 7588
+Total MCs: 1
+
+⚠️  Misconceptions detectados: B8
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import *
+     2 | 
+     3 | h = array(eval(input()))
+     4 | 
+     5 | score = 100
+     6 | 
+     7 | i = 0
+     8 | 
+     9 | 
+    10 | while(i < size(h)):
+    11 | 	if(h[i] == 1):
+    12 | 		score *= 5
+    13 | 	elif(h[i] == 2):
+    14 | 		score *= 3
+    15 | 	elif(h[i] == 3):
+    16 | 		score += 0
+    17 | 	elif(h[i]):
+    18 | 		score /= 2
+    19 | 	i += 1
+    20 | 
+    21 | print(round(score, 2))
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 15: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 15) / elif ... sem else
+      Contexto:
+              14 | 		score *= 3
+        >>>   15 | 	elif(h[i] == 3):
+              16 | 		score += 0
+
+======================================================================

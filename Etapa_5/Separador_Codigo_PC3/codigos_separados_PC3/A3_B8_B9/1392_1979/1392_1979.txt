@@ -1,0 +1,57 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1392_1979.py
+Questão  : 1392
+Aluno    : 1979
+Total MCs: 3
+
+⚠️  Misconceptions detectados: A3, B8, B9
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | consumo = float(input("Insira o valor do consumo (em m3):\n"))
+     2 | tarifa = 0
+     3 | 
+     4 | if (consumo < 10):
+     5 | 	tarifa = 3 * consumo
+     6 | else:
+     7 | 	if (consumo >= 10):
+     8 | 		tarifa = 3.5 * consumo
+     9 | 		
+    10 | taxa_total = tarifa + 30
+    11 | print(taxa_total)
+    12 | 	
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 1
+
+  [1] Linha 0: A3 detectado pelo VisitorMC3 (localização exata não mapeada)
+      Trecho  : —
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 4: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 4) / elif ... sem else
+      Contexto:
+               3 | 
+        >>>    4 | if (consumo < 10):
+               5 | 	tarifa = 3 * consumo
+
+▶ B9 — elif/else retestando condições já verificadas
+  Ocorrências: 1
+
+  [1] Linha 7: elif retesta condição inversa do if da linha 4
+      Trecho  : if consumo < 10 ... elif consumo >= 10
+      Contexto:
+               6 | else:
+        >>>    7 | 	if (consumo >= 10):
+               8 | 		tarifa = 3.5 * consumo
+
+======================================================================

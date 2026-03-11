@@ -1,0 +1,129 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1649_3710.py
+Questão  : 1649
+Aluno    : 3710
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import *
+     2 | 
+     3 | x = input("Cor dos olhos: ").split(',')
+     4 | 
+     5 | p = 0
+     6 | c = 0
+     7 | m = 0
+     8 | v = 0
+     9 | a = 0
+    10 | 
+    11 | f=zeros(5,dtype=int)
+    12 | 
+    13 | for i in range (size(x)):
+    14 | 	if x[i] == 'p' or x [i] == 'P':
+    15 | 		p +=1
+    16 | 		f[0] +=1
+    17 | 	elif x[i] == 'c' or x [i] == 'C':
+    18 | 		c += 1
+    19 | 		f[1] +=1
+    20 | 	elif x[i] == 'm' or x [i] == 'M':
+    21 | 		m += 1
+    22 | 		f[2] +=1
+    23 | 	elif x[i] == 'v' or x [i] == 'V':
+    24 | 		v += 1
+    25 | 		f[3]+=1
+    26 | 	elif x[i]=='a'or x[i] == 'A':
+    27 | 		a+= 1
+    28 | 		f[4]+=1
+    29 | 
+    30 | 
+    31 | if (p>=c and p>=m and p>=v and p>=a):
+    32 | 	print(p)
+    33 | elif (c>=p and c>=m and c>=v and c>=a):
+    34 | 	print(c)
+    35 | elif(m>=c and m>=p and m>=v and m>=a):
+    36 | 	print(m)
+    37 | elif(v>=p and v>=c and v>=m and v>=a):
+    38 | 	print(v)
+    39 | elif(a>=p and a>=c and a>=v and a>=m):
+    40 | 	print(a)
+    41 | print(f)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 2
+
+  [1] Linha 37: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 37) / elif ... sem else
+      Contexto:
+              36 | 	print(m)
+        >>>   37 | elif(v>=p and v>=c and v>=m and v>=a):
+              38 | 	print(v)
+
+  [2] Linha 23: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 23) / elif ... sem else
+      Contexto:
+              22 | 		f[2] +=1
+        >>>   23 | 	elif x[i] == 'v' or x [i] == 'V':
+              24 | 		v += 1
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 7
+
+  [1] Linha 3: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+               2 | 
+        >>>    3 | x = input("Cor dos olhos: ").split(',')
+               4 | 
+
+  [2] Linha 5: Variável 'p' com nome muito curto (≤4 chars)
+      Trecho  : p = ...
+      Contexto:
+               4 | 
+        >>>    5 | p = 0
+               6 | c = 0
+
+  [3] Linha 6: Variável 'c' com nome muito curto (≤4 chars)
+      Trecho  : c = ...
+      Contexto:
+               5 | p = 0
+        >>>    6 | c = 0
+               7 | m = 0
+
+  [4] Linha 7: Variável 'm' com nome muito curto (≤4 chars)
+      Trecho  : m = ...
+      Contexto:
+               6 | c = 0
+        >>>    7 | m = 0
+               8 | v = 0
+
+  [5] Linha 8: Variável 'v' com nome muito curto (≤4 chars)
+      Trecho  : v = ...
+      Contexto:
+               7 | m = 0
+        >>>    8 | v = 0
+               9 | a = 0
+
+  [6] Linha 9: Variável 'a' com nome muito curto (≤4 chars)
+      Trecho  : a = ...
+      Contexto:
+               8 | v = 0
+        >>>    9 | a = 0
+              10 | 
+
+  [7] Linha 11: Variável 'f' com nome muito curto (≤4 chars)
+      Trecho  : f = ...
+      Contexto:
+              10 | 
+        >>>   11 | f=zeros(5,dtype=int)
+              12 | 
+
+======================================================================

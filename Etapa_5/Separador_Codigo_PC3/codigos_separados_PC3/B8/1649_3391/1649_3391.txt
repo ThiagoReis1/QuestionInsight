@@ -1,0 +1,53 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1649_3391.py
+Questão  : 1649
+Aluno    : 3391
+Total MCs: 1
+
+⚠️  Misconceptions detectados: B8
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import *
+     2 | from numpy.linalg import *
+     3 | 
+     4 | entrada= input().upper()
+     5 | entrada= entrada.split(',')
+     6 | 
+     7 | cont= zeros(5, dtype=int)
+     8 | i=0
+     9 | while i < len(entrada):
+    10 | 	if entrada[i] == 'P':
+    11 | 		cont[0]= cont[0] + 1
+    12 | 	elif entrada[i] == 'C':
+    13 | 		cont[1]= cont[1] + 1
+    14 | 	elif entrada[i] == 'M':
+    15 | 		cont[2]= cont[2] + 1
+    16 | 	elif entrada[i] == 'V':
+    17 | 		cont[3]= cont[3] + 1
+    18 | 	elif entrada[i] == 'A':
+    19 | 		cont[4]= cont[4] + 1
+    20 | 	elif entrada[i] == 'ME':
+    21 | 		cont[5]= cont[5] + 1
+    22 | 	i=i+1	
+    23 | print(max(cont))
+    24 | print(cont)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 18: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 18) / elif ... sem else
+      Contexto:
+              17 | 		cont[3]= cont[3] + 1
+        >>>   18 | 	elif entrada[i] == 'A':
+              19 | 		cont[4]= cont[4] + 1
+
+======================================================================

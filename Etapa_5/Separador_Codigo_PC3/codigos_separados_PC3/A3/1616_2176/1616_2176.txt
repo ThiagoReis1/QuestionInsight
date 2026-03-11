@@ -1,0 +1,48 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1616_2176.py
+Questão  : 1616
+Aluno    : 2176
+Total MCs: 1
+
+⚠️  Misconceptions detectados: A3
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import *
+     2 | vnome = array(eval(input("Digite o tipo de Magia: ")))
+     3 | tam = size(vnome)
+     4 | i = 0
+     5 | vetor = array([[11,12,7,8,10]])
+     6 | 
+     7 | while(i<size(vnome)):
+     8 | 	if(vnome[i] == "GELO"):
+     9 | 		vetor[0] = 2
+    10 | 	elif(vnome[i] == "FOGO"):
+    11 | 		vetor[1] = 3
+    12 | 	elif(vnome[i] == "CHOQUE"):
+    13 | 		vetor[2] = 4
+    14 | 	elif(vnome[i] == "CONJURACAO"):
+    15 | 		vetor[4] = 8
+    16 | 	else:
+    17 |   		vetor[i] = 10
+    18 | 	i = i + 1
+    19 | print(vetor)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 1
+
+  [1] Linha 3: Variável 'tam' declarada mas nunca utilizada
+      Trecho  : tam = ...
+      Contexto:
+               2 | vnome = array(eval(input("Digite o tipo de Magia: ")))
+        >>>    3 | tam = size(vnome)
+               4 | i = 0
+
+======================================================================

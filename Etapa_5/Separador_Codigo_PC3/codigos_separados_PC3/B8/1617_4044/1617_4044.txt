@@ -1,0 +1,65 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1617_4044.py
+Questão  : 1617
+Aluno    : 4044
+Total MCs: 1
+
+⚠️  Misconceptions detectados: B8
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | '''
+     2 | 	|-----------|
+     3 | 	| Questão 1 |
+     4 | 	|-----------|
+     5 | 	
+     6 | 	Universidade Federal do Amazonas
+     7 | 	Instituto de Ciências Exatas
+     8 | 	Departamento de Física
+     9 | 	
+    10 | 	Aluno: Micael Davi Lima de Oliveira
+    11 | 	Matrícula: 21851626 | Turma: FB01
+    12 | 
+    13 | '''
+    14 | from numpy import* # biblioteca necessária para utilizar a função array
+    15 | 
+    16 | # o vetor 'tipo' armazenará strings, e será crucial para armazenar todos os correspondentes tipos de espada dos combatentes. 
+    17 | tipo = array(eval(input("Tipos de Espada: \n 1.CENOURA \n 2.FERRO \n 3.DWARVEN \n 4.ELVEN \n 5.DAEDRIC \n  *Escolha: ")))
+    18 | # o vetor 'nivel' armanará valores inteiros, e será importante para armzenas os níveis dos combatentes.
+    19 | nivel = array(eval(input("Nivel do Combatente: ")))
+    20 | 
+    21 | dano_total = 0 # varíavel acumuladora
+    22 | 
+    23 | i = 0 # variável contadora
+    24 | while (i < size(tipo)): # laço de repetição para percorrer os vetores
+    25 | 	if (tipo[i] == "CENOURA"):
+    26 | 		dano_total += 2*nivel[i]
+    27 | 	elif (tipo[i] == "FERRO"):
+    28 | 		dano_total += 4*nivel[i]
+    29 | 	elif (tipo[i] == "DWARVEN"):
+    30 | 		dano_total += 8*nivel[i]
+    31 | 	elif (tipo[i] == "ELVEN"):
+    32 | 		dano_total += 11*nivel[i]
+    33 | 	elif (tipo[i] == "DAEDRIC"):
+    34 | 		dano_total += 14*nivel[i]
+    35 | 	i += 1 # para cada combatente analisado, 'i' precisa ser incrementado
+    36 | print("%d" %(dano_total)) # por último, é impresso como saída o valor final da variável acumuladora(dano_total)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 31: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 31) / elif ... sem else
+      Contexto:
+              30 | 		dano_total += 8*nivel[i]
+        >>>   31 | 	elif (tipo[i] == "ELVEN"):
+              32 | 		dano_total += 11*nivel[i]
+
+======================================================================

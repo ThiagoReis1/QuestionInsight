@@ -1,0 +1,52 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1598_4351.py
+Questão  : 1598
+Aluno    : 4351
+Total MCs: 2
+
+⚠️  Misconceptions detectados: A3, B8
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | preco= array(eval(input("vetor custo dos produtos: ")))
+     3 | pagar=0
+     4 | pro=0
+     5 | desconto= 0
+     6 | while (pro< size(preco)):
+     7 | 	if (preco[pro] <= 80.0):
+     8 | 		pagar= pagar + preco[pro]
+     9 | 		pro= pro + 1
+    10 | 	elif (preco[pro] > 80.0):
+    11 | 		pagar = pagar + preco[pro] - 5
+    12 | 		pro = pro + 1
+    13 | print(round(pagar, 2))
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 1
+
+  [1] Linha 5: Variável 'desconto' declarada mas nunca utilizada
+      Trecho  : desconto = ...
+      Contexto:
+               4 | pro=0
+        >>>    5 | desconto= 0
+               6 | while (pro< size(preco)):
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 7: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 7) / elif ... sem else
+      Contexto:
+               6 | while (pro< size(preco)):
+        >>>    7 | 	if (preco[pro] <= 80.0):
+               8 | 		pagar= pagar + preco[pro]
+
+======================================================================

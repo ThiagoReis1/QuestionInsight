@@ -1,0 +1,68 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1613_2882.py
+Questão  : 1613
+Aluno    : 2882
+Total MCs: 2
+
+⚠️  Misconceptions detectados: A3, B8
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | 
+     3 | nome=array(eval(input("Atividade:")))
+     4 | minut=array(eval(input("Minutos: ")))
+     5 | 
+     6 | ati=array(['ALONGAMENTO','CORRIDA','DANCA','ESCALADA','HIDROGINASTICA'])
+     7 | calo=array([3,10.3,6.7,9.7,5])
+     8 | 
+     9 | total=zeros(4,dtype=int)
+    10 | if(nome=="ALONGAMENTO"):
+    11 | 	total[0]=total[0]+(minut[i]*3)
+    12 | elif(nome=="CORRIDA"):
+    13 | 	total[1]=total[1]+(minut[i]*(10.3))
+    14 | elif(nome=="DANCA"):
+    15 | 	total[2]=total[2]+(minut[i]*(6.7))
+    16 | elif(nome=="ESCALADA"):
+    17 | 	total[3]=total[3]+(minut[i]*(9.7))
+    18 | elif(nome=="HIDROGINASTICA"):
+    19 | 	total[4]=total[4]+(minut[i]*(5))
+    20 | 		
+    21 | print(round(total,2))
+    22 | 	
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 2
+
+  [1] Linha 6: Variável 'ati' declarada mas nunca utilizada
+      Trecho  : ati = ...
+      Contexto:
+               5 | 
+        >>>    6 | ati=array(['ALONGAMENTO','CORRIDA','DANCA','ESCALADA','HIDROGINASTICA'])
+               7 | calo=array([3,10.3,6.7,9.7,5])
+
+  [2] Linha 7: Variável 'calo' declarada mas nunca utilizada
+      Trecho  : calo = ...
+      Contexto:
+               6 | ati=array(['ALONGAMENTO','CORRIDA','DANCA','ESCALADA','HIDROGINASTICA'])
+        >>>    7 | calo=array([3,10.3,6.7,9.7,5])
+               8 | 
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 16: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 16) / elif ... sem else
+      Contexto:
+              15 | 	total[2]=total[2]+(minut[i]*(6.7))
+        >>>   16 | elif(nome=="ESCALADA"):
+              17 | 	total[3]=total[3]+(minut[i]*(9.7))
+
+======================================================================

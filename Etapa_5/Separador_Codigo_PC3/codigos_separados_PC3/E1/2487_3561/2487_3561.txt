@@ -1,0 +1,62 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 2487_3561.py
+Questão  : 2487
+Aluno    : 3561
+Total MCs: 1
+
+⚠️  Misconceptions detectados: E1
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | numero1=int(input("informe o prato:"))
+     2 | numero2=int(input("informe o prato:"))
+     3 | numero3=int(input("informe o prato:"))
+     4 | print("Entradas:",numero1,",",numero2,",",numero3)
+     5 | if(numero1>=1)and(numero1<=4)and(numero2>=1)and(numero2<=4)and(numero3>=1)and(numero3<=4):
+     6 | 	ct=0
+     7 | 	if(numero1==1):
+     8 | 		ct+=180
+     9 | 	elif(numero1==2):
+    10 | 		ct+=230
+    11 | 	elif(numero1==3):
+    12 | 		ct+=250
+    13 | 	else:
+    14 | 	   ct+=350
+    15 | 	if(numero2==1):
+    16 | 		ct+=75
+    17 | 	elif(numero2==2):
+    18 | 		ct+=110
+    19 | 	elif(numero2==3):
+    20 | 		ct+=170
+    21 | 	else:
+    22 | 		ct+=200
+    23 | 	if(numero3==1):
+    24 | 		ct+=20
+    25 | 	elif(numero3==2):
+    26 | 		ct+=70
+    27 | 	elif(numero3==3):
+    28 | 		ct+=100
+    29 | 	else:
+    30 | 		ct+=65
+    31 | 	print("Calorias:",ct,"cal")
+    32 | else:
+    33 | 	print("Dados invalidos")
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ E1 — Verificação desnecessária de todas as combinações possíveis
+  Ocorrências: 1
+
+  [1] Linha 5: 6 condições em um único if — verificação excessiva
+      Trecho  : numero1 >= 1 and numero1 <= 4 and (numero2 >= 1) and (numero2 <= 4) and (numero3 >= 1) and (numero3 <= 4)
+      Contexto:
+               4 | print("Entradas:",numero1,",",numero2,",",numero3)
+        >>>    5 | if(numero1>=1)and(numero1<=4)and(numero2>=1)and(numero2<=4)and(numero3>=1)and(numero3<=4):
+               6 | 	ct=0
+
+======================================================================

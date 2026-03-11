@@ -1,0 +1,88 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 6780_9676.py
+Questão  : 6780
+Aluno    : 9676
+Total MCs: 2
+
+⚠️  Misconceptions detectados: A4, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | ano = int(input("ano de nascimento"))
+     2 | pais = input("B para Brasil e C para China")
+     3 | 
+     4 | if pais.upper() == "B":
+     5 | 	min = 2023 - ano
+     6 | 	if min < 21:
+     7 | 		print("nao")
+     8 | 		print(21 - min)
+     9 | 	else:
+    10 | 		print("sim")
+    11 | 		print(min - 21)
+    12 | elif pais.upper() == "C":
+    13 | 	min = 2023 - ano
+    14 | 	if min < 24:
+    15 | 		print("nao")
+    16 | 		print(24 - min)
+    17 | 	else:
+    18 | 		print("sim")
+    19 | 		print(min-24)
+    20 | else:
+    21 | 	print("invalido")
+    22 | 		
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A4 — Redefinição de built-in
+  Ocorrências: 2
+
+  [1] Linha 5: Built-in 'min' redefinido como variável
+      Trecho  : min = 2023 - ano
+      Contexto:
+               4 | if pais.upper() == "B":
+        >>>    5 | 	min = 2023 - ano
+               6 | 	if min < 21:
+
+  [2] Linha 13: Built-in 'min' redefinido como variável
+      Trecho  : min = 2023 - ano
+      Contexto:
+              12 | elif pais.upper() == "C":
+        >>>   13 | 	min = 2023 - ano
+              14 | 	if min < 24:
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 4
+
+  [1] Linha 1: Variável 'ano' com nome muito curto (≤4 chars)
+      Trecho  : ano = ...
+      Contexto:
+        >>>    1 | ano = int(input("ano de nascimento"))
+               2 | pais = input("B para Brasil e C para China")
+
+  [2] Linha 2: Variável 'pais' com nome muito curto (≤4 chars)
+      Trecho  : pais = ...
+      Contexto:
+               1 | ano = int(input("ano de nascimento"))
+        >>>    2 | pais = input("B para Brasil e C para China")
+               3 | 
+
+  [3] Linha 5: Variável 'min' com nome muito curto (≤4 chars)
+      Trecho  : min = ...
+      Contexto:
+               4 | if pais.upper() == "B":
+        >>>    5 | 	min = 2023 - ano
+               6 | 	if min < 21:
+
+  [4] Linha 13: Variável 'min' com nome muito curto (≤4 chars)
+      Trecho  : min = ...
+      Contexto:
+              12 | elif pais.upper() == "C":
+        >>>   13 | 	min = 2023 - ano
+              14 | 	if min < 24:
+
+======================================================================

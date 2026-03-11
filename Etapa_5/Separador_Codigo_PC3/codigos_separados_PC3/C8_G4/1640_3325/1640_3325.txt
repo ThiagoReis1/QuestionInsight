@@ -1,0 +1,107 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1640_3325.py
+Questão  : 1640
+Aluno    : 3325
+Total MCs: 2
+
+⚠️  Misconceptions detectados: C8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | qta = array(eval(input("quant de alunos:")))
+     3 | ip = 0
+     4 | # quantidades impares de alunos
+     5 | for i in qta:
+     6 | 	if (i%2 != 0):
+     7 | 		ip = ip + 1
+     8 | 
+     9 | # valor dos indices
+    10 | n = zeros(ip,dtype=int)
+    11 | v = 0
+    12 | i = 0
+    13 | for i in range(0,size(qta)):
+    14 | 	if(qta[i]%2 != 0):
+    15 | 		n[v] = i
+    16 | 		v = v +1
+    17 | 	i = i + 1
+    18 | print(ip)
+    19 | print(n)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ C8 — Loop for com sua variável de iteração sobrescrita
+  Ocorrências: 1
+
+  [1] Linha 17: Variável de iteração 'i' sobrescrita no loop
+      Trecho  : i = i + 1
+      Contexto:
+              16 | 		v = v +1
+        >>>   17 | 	i = i + 1
+              18 | print(ip)
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 8
+
+  [1] Linha 2: Variável 'qta' com nome muito curto (≤4 chars)
+      Trecho  : qta = ...
+      Contexto:
+               1 | from numpy import*
+        >>>    2 | qta = array(eval(input("quant de alunos:")))
+               3 | ip = 0
+
+  [2] Linha 3: Variável 'ip' com nome muito curto (≤4 chars)
+      Trecho  : ip = ...
+      Contexto:
+               2 | qta = array(eval(input("quant de alunos:")))
+        >>>    3 | ip = 0
+               4 | # quantidades impares de alunos
+
+  [3] Linha 10: Variável 'n' com nome muito curto (≤4 chars)
+      Trecho  : n = ...
+      Contexto:
+               9 | # valor dos indices
+        >>>   10 | n = zeros(ip,dtype=int)
+              11 | v = 0
+
+  [4] Linha 11: Variável 'v' com nome muito curto (≤4 chars)
+      Trecho  : v = ...
+      Contexto:
+              10 | n = zeros(ip,dtype=int)
+        >>>   11 | v = 0
+              12 | i = 0
+
+  [5] Linha 12: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+              11 | v = 0
+        >>>   12 | i = 0
+              13 | for i in range(0,size(qta)):
+
+  [6] Linha 17: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+              16 | 		v = v +1
+        >>>   17 | 	i = i + 1
+              18 | print(ip)
+
+  [7] Linha 7: Variável 'ip' com nome muito curto (≤4 chars)
+      Trecho  : ip = ...
+      Contexto:
+               6 | 	if (i%2 != 0):
+        >>>    7 | 		ip = ip + 1
+               8 | 
+
+  [8] Linha 16: Variável 'v' com nome muito curto (≤4 chars)
+      Trecho  : v = ...
+      Contexto:
+              15 | 		n[v] = i
+        >>>   16 | 		v = v +1
+              17 | 	i = i + 1
+
+======================================================================

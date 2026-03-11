@@ -1,0 +1,71 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1117_3308.py
+Questão  : 1117
+Aluno    : 3308
+Total MCs: 1
+
+⚠️  Misconceptions detectados: G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | x =float(input("preco da entrada:"))
+     2 | y = int(input("dia da semana:"))
+     3 | c = input("digite se tem musica ao vivo:")
+     4 | if((x>=0)and(1<y<7)and(c=="S")or(c=="N")):
+     5 | 	if(y==2)or(y==3)or(y==5):
+     6 | 		b= x-(x*25/100)
+     7 | 		print("Entradas:",x,",",y,",",c)
+     8 | 		print("Valor a pagar: R$",round(b,2))
+     9 | 	if(c=="S")and(1<y<7):
+    10 | 		d=(20.00+x)+(x-(x*25/100))
+    11 | 		print("Entradas:",x,",",y,",",c)
+    12 | 		print("Valor a pagar: R$",round(d,2))
+    13 | else:
+    14 | 	print("Entradas:",x,",",y,",",c)
+    15 | 	print("Dados invalidos")
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 5
+
+  [1] Linha 1: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+        >>>    1 | x =float(input("preco da entrada:"))
+               2 | y = int(input("dia da semana:"))
+
+  [2] Linha 2: Variável 'y' com nome muito curto (≤4 chars)
+      Trecho  : y = ...
+      Contexto:
+               1 | x =float(input("preco da entrada:"))
+        >>>    2 | y = int(input("dia da semana:"))
+               3 | c = input("digite se tem musica ao vivo:")
+
+  [3] Linha 3: Variável 'c' com nome muito curto (≤4 chars)
+      Trecho  : c = ...
+      Contexto:
+               2 | y = int(input("dia da semana:"))
+        >>>    3 | c = input("digite se tem musica ao vivo:")
+               4 | if((x>=0)and(1<y<7)and(c=="S")or(c=="N")):
+
+  [4] Linha 6: Variável 'b' com nome muito curto (≤4 chars)
+      Trecho  : b = ...
+      Contexto:
+               5 | 	if(y==2)or(y==3)or(y==5):
+        >>>    6 | 		b= x-(x*25/100)
+               7 | 		print("Entradas:",x,",",y,",",c)
+
+  [5] Linha 10: Variável 'd' com nome muito curto (≤4 chars)
+      Trecho  : d = ...
+      Contexto:
+               9 | 	if(c=="S")and(1<y<7):
+        >>>   10 | 		d=(20.00+x)+(x-(x*25/100))
+              11 | 		print("Entradas:",x,",",y,",",c)
+
+======================================================================

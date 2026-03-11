@@ -1,0 +1,107 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1652_3092.py
+Questão  : 1652
+Aluno    : 3092
+Total MCs: 3
+
+⚠️  Misconceptions detectados: B8, C8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from math import*
+     2 | from numpy import*
+     3 | s= input("String:")
+     4 | s=s.upper()
+     5 | s=s.split(',')
+     6 | 
+     7 | z= zeros(5, dtype=int)
+     8 | i=0
+     9 | 
+    10 | for i in range(size(s)) :
+    11 | 	if s[i]=="B":
+    12 | 		z[0]=z[0]+1
+    13 | 	elif s[i]=="PA":
+    14 | 		z[1]=z[1]+1
+    15 | 	elif s[i]=="PR":
+    16 | 		z[2]=z[2]+1
+    17 | 	elif s[i]=="A":
+    18 | 		z[3]=z[3]+1
+    19 | 	elif s[i]=="I":
+    20 | 		z[4]=z[4]+1
+    21 | 	i=i+1
+    22 | print(max(z))
+    23 | print(z)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 17: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 17) / elif ... sem else
+      Contexto:
+              16 | 		z[2]=z[2]+1
+        >>>   17 | 	elif s[i]=="A":
+              18 | 		z[3]=z[3]+1
+
+▶ C8 — Loop for com sua variável de iteração sobrescrita
+  Ocorrências: 1
+
+  [1] Linha 21: Variável de iteração 'i' sobrescrita no loop
+      Trecho  : i = i + 1
+      Contexto:
+              20 | 		z[4]=z[4]+1
+        >>>   21 | 	i=i+1
+              22 | print(max(z))
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 6
+
+  [1] Linha 3: Variável 's' com nome muito curto (≤4 chars)
+      Trecho  : s = ...
+      Contexto:
+               2 | from numpy import*
+        >>>    3 | s= input("String:")
+               4 | s=s.upper()
+
+  [2] Linha 4: Variável 's' com nome muito curto (≤4 chars)
+      Trecho  : s = ...
+      Contexto:
+               3 | s= input("String:")
+        >>>    4 | s=s.upper()
+               5 | s=s.split(',')
+
+  [3] Linha 5: Variável 's' com nome muito curto (≤4 chars)
+      Trecho  : s = ...
+      Contexto:
+               4 | s=s.upper()
+        >>>    5 | s=s.split(',')
+               6 | 
+
+  [4] Linha 7: Variável 'z' com nome muito curto (≤4 chars)
+      Trecho  : z = ...
+      Contexto:
+               6 | 
+        >>>    7 | z= zeros(5, dtype=int)
+               8 | i=0
+
+  [5] Linha 8: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+               7 | z= zeros(5, dtype=int)
+        >>>    8 | i=0
+               9 | 
+
+  [6] Linha 21: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+              20 | 		z[4]=z[4]+1
+        >>>   21 | 	i=i+1
+              22 | print(max(z))
+
+======================================================================

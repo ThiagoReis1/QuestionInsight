@@ -1,0 +1,56 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1403_5536.py
+Questão  : 1403
+Aluno    : 5536
+Total MCs: 2
+
+⚠️  Misconceptions detectados: A3, A4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | na = int(input("armadura: "))
+     2 | fd = int(input("fator d: "))
+     3 | 
+     4 | 
+     5 | if (na == "malha"):
+     6 | 	print = (15*fd-1)
+     7 | 	
+     8 | else:
+     9 | 	print = (20*fd-18)
+    10 | 	
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 1
+
+  [1] Linha 6: Variável 'print' declarada mas nunca utilizada
+      Trecho  : print = ...
+      Contexto:
+               5 | if (na == "malha"):
+        >>>    6 | 	print = (15*fd-1)
+               7 | 	
+
+▶ A4 — Redefinição de built-in
+  Ocorrências: 2
+
+  [1] Linha 6: Built-in 'print' redefinido como variável
+      Trecho  : print = 15 * fd - 1
+      Contexto:
+               5 | if (na == "malha"):
+        >>>    6 | 	print = (15*fd-1)
+               7 | 	
+
+  [2] Linha 9: Built-in 'print' redefinido como variável
+      Trecho  : print = 20 * fd - 18
+      Contexto:
+               8 | else:
+        >>>    9 | 	print = (20*fd-18)
+              10 | 	
+
+======================================================================

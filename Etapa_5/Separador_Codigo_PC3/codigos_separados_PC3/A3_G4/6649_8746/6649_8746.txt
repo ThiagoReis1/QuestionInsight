@@ -1,0 +1,93 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 6649_8746.py
+Questão  : 6649
+Aluno    : 8746
+Total MCs: 2
+
+⚠️  Misconceptions detectados: A3, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | 
+     3 | v = array(eval(input("NUMEROS: ")))
+     4 | x = [3,2,4,1,3]
+     5 | mv = v[i] * x[i]
+     6 | mp = sum(mv)
+     7 | mi = sum(x)
+     8 | ma = mp * mi
+     9 | mf = mp / mi
+    10 | print(mf)
+    11 | 
+    12 | 
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 1
+
+  [1] Linha 8: Variável 'ma' declarada mas nunca utilizada
+      Trecho  : ma = ...
+      Contexto:
+               7 | mi = sum(x)
+        >>>    8 | ma = mp * mi
+               9 | mf = mp / mi
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 7
+
+  [1] Linha 3: Variável 'v' com nome muito curto (≤4 chars)
+      Trecho  : v = ...
+      Contexto:
+               2 | 
+        >>>    3 | v = array(eval(input("NUMEROS: ")))
+               4 | x = [3,2,4,1,3]
+
+  [2] Linha 4: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+               3 | v = array(eval(input("NUMEROS: ")))
+        >>>    4 | x = [3,2,4,1,3]
+               5 | mv = v[i] * x[i]
+
+  [3] Linha 5: Variável 'mv' com nome muito curto (≤4 chars)
+      Trecho  : mv = ...
+      Contexto:
+               4 | x = [3,2,4,1,3]
+        >>>    5 | mv = v[i] * x[i]
+               6 | mp = sum(mv)
+
+  [4] Linha 6: Variável 'mp' com nome muito curto (≤4 chars)
+      Trecho  : mp = ...
+      Contexto:
+               5 | mv = v[i] * x[i]
+        >>>    6 | mp = sum(mv)
+               7 | mi = sum(x)
+
+  [5] Linha 7: Variável 'mi' com nome muito curto (≤4 chars)
+      Trecho  : mi = ...
+      Contexto:
+               6 | mp = sum(mv)
+        >>>    7 | mi = sum(x)
+               8 | ma = mp * mi
+
+  [6] Linha 8: Variável 'ma' com nome muito curto (≤4 chars)
+      Trecho  : ma = ...
+      Contexto:
+               7 | mi = sum(x)
+        >>>    8 | ma = mp * mi
+               9 | mf = mp / mi
+
+  [7] Linha 9: Variável 'mf' com nome muito curto (≤4 chars)
+      Trecho  : mf = ...
+      Contexto:
+               8 | ma = mp * mi
+        >>>    9 | mf = mp / mi
+              10 | print(mf)
+
+======================================================================

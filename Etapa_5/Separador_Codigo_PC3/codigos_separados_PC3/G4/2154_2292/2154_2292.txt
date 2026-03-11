@@ -1,0 +1,65 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 2154_2292.py
+Questão  : 2154
+Aluno    : 2292
+Total MCs: 1
+
+⚠️  Misconceptions detectados: G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | v = array(eval(input()))
+     3 | v1 = array(eval(input()))
+     4 | b = 0
+     5 | for i in range(size(v)):
+     6 | 	b = b + (v1[i] - v[i]) ** 2
+     7 | b = 1/(1 + sqrt(b))
+     8 | print(round(b, 4))
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 5
+
+  [1] Linha 2: Variável 'v' com nome muito curto (≤4 chars)
+      Trecho  : v = ...
+      Contexto:
+               1 | from numpy import*
+        >>>    2 | v = array(eval(input()))
+               3 | v1 = array(eval(input()))
+
+  [2] Linha 3: Variável 'v1' com nome muito curto (≤4 chars)
+      Trecho  : v1 = ...
+      Contexto:
+               2 | v = array(eval(input()))
+        >>>    3 | v1 = array(eval(input()))
+               4 | b = 0
+
+  [3] Linha 4: Variável 'b' com nome muito curto (≤4 chars)
+      Trecho  : b = ...
+      Contexto:
+               3 | v1 = array(eval(input()))
+        >>>    4 | b = 0
+               5 | for i in range(size(v)):
+
+  [4] Linha 7: Variável 'b' com nome muito curto (≤4 chars)
+      Trecho  : b = ...
+      Contexto:
+               6 | 	b = b + (v1[i] - v[i]) ** 2
+        >>>    7 | b = 1/(1 + sqrt(b))
+               8 | print(round(b, 4))
+
+  [5] Linha 6: Variável 'b' com nome muito curto (≤4 chars)
+      Trecho  : b = ...
+      Contexto:
+               5 | for i in range(size(v)):
+        >>>    6 | 	b = b + (v1[i] - v[i]) ** 2
+               7 | b = 1/(1 + sqrt(b))
+
+======================================================================

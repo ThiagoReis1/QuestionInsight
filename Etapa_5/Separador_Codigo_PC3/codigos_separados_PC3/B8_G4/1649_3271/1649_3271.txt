@@ -1,0 +1,102 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1649_3271.py
+Questão  : 1649
+Aluno    : 3271
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | vet = input("Informe: ").upper().split(',')
+     3 | res = zeros(5, dtype=int)
+     4 | xp = 0
+     5 | xc = 0
+     6 | xm = 0
+     7 | xv = 0
+     8 | xa = 0
+     9 | for i in range(size(vet)):
+    10 | 	if(xp=='P'):
+    11 | 		res[0] = res[0]+ 1
+    12 | 	elif(xc=='C'):
+    13 | 		res[1] = res[1] + 1
+    14 | 	elif(xm=='M'):
+    15 | 		res[2]= res[2] + 1
+    16 | 	elif(xv=='V'):
+    17 | 		res[3]= res[3] + 1
+    18 | 	elif(xa=='A'):
+    19 | 		res[4]= res[4] + 1
+    20 | print(max(res))
+    21 | print(res)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 16: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 16) / elif ... sem else
+      Contexto:
+              15 | 		res[2]= res[2] + 1
+        >>>   16 | 	elif(xv=='V'):
+              17 | 		res[3]= res[3] + 1
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 7
+
+  [1] Linha 2: Variável 'vet' com nome muito curto (≤4 chars)
+      Trecho  : vet = ...
+      Contexto:
+               1 | from numpy import*
+        >>>    2 | vet = input("Informe: ").upper().split(',')
+               3 | res = zeros(5, dtype=int)
+
+  [2] Linha 3: Variável 'res' com nome muito curto (≤4 chars)
+      Trecho  : res = ...
+      Contexto:
+               2 | vet = input("Informe: ").upper().split(',')
+        >>>    3 | res = zeros(5, dtype=int)
+               4 | xp = 0
+
+  [3] Linha 4: Variável 'xp' com nome muito curto (≤4 chars)
+      Trecho  : xp = ...
+      Contexto:
+               3 | res = zeros(5, dtype=int)
+        >>>    4 | xp = 0
+               5 | xc = 0
+
+  [4] Linha 5: Variável 'xc' com nome muito curto (≤4 chars)
+      Trecho  : xc = ...
+      Contexto:
+               4 | xp = 0
+        >>>    5 | xc = 0
+               6 | xm = 0
+
+  [5] Linha 6: Variável 'xm' com nome muito curto (≤4 chars)
+      Trecho  : xm = ...
+      Contexto:
+               5 | xc = 0
+        >>>    6 | xm = 0
+               7 | xv = 0
+
+  [6] Linha 7: Variável 'xv' com nome muito curto (≤4 chars)
+      Trecho  : xv = ...
+      Contexto:
+               6 | xm = 0
+        >>>    7 | xv = 0
+               8 | xa = 0
+
+  [7] Linha 8: Variável 'xa' com nome muito curto (≤4 chars)
+      Trecho  : xa = ...
+      Contexto:
+               7 | xv = 0
+        >>>    8 | xa = 0
+               9 | for i in range(size(vet)):
+
+======================================================================

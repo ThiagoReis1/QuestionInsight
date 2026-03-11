@@ -1,0 +1,148 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 3591_9227.py
+Questão  : 3591
+Aluno    : 9227
+Total MCs: 3
+
+⚠️  Misconceptions detectados: B4, B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | v = array(eval(input("")))
+     3 | 
+     4 | i = 0
+     5 | p = 0
+     6 | 
+     7 | while i < size(v):
+     8 | 	
+     9 | 	if v[i] ==  1:
+    10 | 		p += 10
+    11 | 	elif v[i] == 2:
+    12 | 		p += 5
+    13 | 	elif v[i] == 3:
+    14 | 		p += 10
+    15 | 	elif v[i] == 4:
+    16 | 		p += 5
+    17 | 	elif v[i] == 5:
+    18 | 		p += 10
+    19 | 	elif v[i] == 6:
+    20 | 		p += 5
+    21 | 	i += 1
+    22 | print(p)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B4 — Comandos repetidos dentro de blocos if-elif-else
+  Ocorrências: 10
+
+  [1] Linha 13: Bloco idêntico ao da linha 9
+      Trecho  : p += 10
+      Contexto:
+              12 | 		p += 5
+        >>>   13 | 	elif v[i] == 3:
+              14 | 		p += 10
+
+  [2] Linha 15: Bloco idêntico ao da linha 11
+      Trecho  : p += 5
+      Contexto:
+              14 | 		p += 10
+        >>>   15 | 	elif v[i] == 4:
+              16 | 		p += 5
+
+  [3] Linha 17: Bloco idêntico ao da linha 9
+      Trecho  : p += 10
+      Contexto:
+              16 | 		p += 5
+        >>>   17 | 	elif v[i] == 5:
+              18 | 		p += 10
+
+  [4] Linha 19: Bloco idêntico ao da linha 11
+      Trecho  : p += 5
+      Contexto:
+              18 | 		p += 10
+        >>>   19 | 	elif v[i] == 6:
+              20 | 		p += 5
+
+  [5] Linha 15: Bloco idêntico ao da linha 11
+      Trecho  : p += 5
+      Contexto:
+              14 | 		p += 10
+        >>>   15 | 	elif v[i] == 4:
+              16 | 		p += 5
+
+  [6] Linha 17: Bloco idêntico ao da linha 13
+      Trecho  : p += 10
+      Contexto:
+              16 | 		p += 5
+        >>>   17 | 	elif v[i] == 5:
+              18 | 		p += 10
+
+  [7] Linha 19: Bloco idêntico ao da linha 11
+      Trecho  : p += 5
+      Contexto:
+              18 | 		p += 10
+        >>>   19 | 	elif v[i] == 6:
+              20 | 		p += 5
+
+  [8] Linha 17: Bloco idêntico ao da linha 13
+      Trecho  : p += 10
+      Contexto:
+              16 | 		p += 5
+        >>>   17 | 	elif v[i] == 5:
+              18 | 		p += 10
+
+  [9] Linha 19: Bloco idêntico ao da linha 15
+      Trecho  : p += 5
+      Contexto:
+              18 | 		p += 10
+        >>>   19 | 	elif v[i] == 6:
+              20 | 		p += 5
+
+  [10] Linha 19: Bloco idêntico ao da linha 15
+      Trecho  : p += 5
+      Contexto:
+              18 | 		p += 10
+        >>>   19 | 	elif v[i] == 6:
+              20 | 		p += 5
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 17: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 17) / elif ... sem else
+      Contexto:
+              16 | 		p += 5
+        >>>   17 | 	elif v[i] == 5:
+              18 | 		p += 10
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 3
+
+  [1] Linha 2: Variável 'v' com nome muito curto (≤4 chars)
+      Trecho  : v = ...
+      Contexto:
+               1 | from numpy import*
+        >>>    2 | v = array(eval(input("")))
+               3 | 
+
+  [2] Linha 4: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+               3 | 
+        >>>    4 | i = 0
+               5 | p = 0
+
+  [3] Linha 5: Variável 'p' com nome muito curto (≤4 chars)
+      Trecho  : p = ...
+      Contexto:
+               4 | i = 0
+        >>>    5 | p = 0
+               6 | 
+
+======================================================================

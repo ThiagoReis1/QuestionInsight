@@ -1,0 +1,48 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 3039_3473.py
+Questão  : 3039
+Aluno    : 3473
+Total MCs: 2
+
+⚠️  Misconceptions detectados: A3, B8
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | import math as mt
+     2 | x = float(input())
+     3 | 
+     4 | saida = "entrada invalida"
+     5 | 
+     6 | if( (-1 <= x and x<-0.5) or (0.5 < x and x <= 1) ):
+     7 | 	saida = mt.degrees(mt.asin(x))
+     8 | 	saida = round(saida,2)
+     9 | elif( -0.5 <= x and x <= 0.5):
+    10 | 	saida = mt.degrees(mt.acos(x))
+    11 | 	saida = round(saida,2)
+    12 | 
+    13 | print(saida)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 1
+
+  [1] Linha 0: A3 detectado pelo VisitorMC3 (localização exata não mapeada)
+      Trecho  : —
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 6: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 6) / elif ... sem else
+      Contexto:
+               5 | 
+        >>>    6 | if( (-1 <= x and x<-0.5) or (0.5 < x and x <= 1) ):
+               7 | 	saida = mt.degrees(mt.asin(x))
+
+======================================================================

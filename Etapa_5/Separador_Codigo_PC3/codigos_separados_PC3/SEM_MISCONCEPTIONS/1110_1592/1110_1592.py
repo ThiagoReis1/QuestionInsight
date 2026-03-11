@@ -1,0 +1,1 @@
+H==float(input("numero de hora"))

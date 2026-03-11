@@ -1,0 +1,53 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 2827_7132.py
+Questão  : 2827
+Aluno    : 7132
+Total MCs: 2
+
+⚠️  Misconceptions detectados: A3, B8
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import *
+     2 | 
+     3 | notas = array(eval(input(": ")))
+     4 | 
+     5 | n = 0
+     6 | v = 0
+     7 | while n < size(notas):
+     8 | 	if notas[n] > 4 and notas[n] < 5:
+     9 | 		notas[n] = 4
+    10 | 	elif notas[n] > 9 and notas[n] < 10:
+    11 | 		notas[n] = 10
+    12 | 	n = n + 1
+    13 | print(notas)
+    14 | 	
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 1
+
+  [1] Linha 6: Variável 'v' declarada mas nunca utilizada
+      Trecho  : v = ...
+      Contexto:
+               5 | n = 0
+        >>>    6 | v = 0
+               7 | while n < size(notas):
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 8: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 8) / elif ... sem else
+      Contexto:
+               7 | while n < size(notas):
+        >>>    8 | 	if notas[n] > 4 and notas[n] < 5:
+               9 | 		notas[n] = 4
+
+======================================================================

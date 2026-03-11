@@ -1,0 +1,68 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1365_7583.py
+Questão  : 1365
+Aluno    : 7583
+Total MCs: 2
+
+⚠️  Misconceptions detectados: A3, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from math import radians
+     2 | from math import sin
+     3 | from math import sqrt
+     4 | a = float(input("angulo: "))					 
+     5 | b = float(input("distancia: "))
+     6 | x = radians(a)
+     7 | y = sqrt((b* 9.8)/(sin(2*a)))
+     8 | print(round(y,2))
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 1
+
+  [1] Linha 6: Variável 'x' declarada mas nunca utilizada
+      Trecho  : x = ...
+      Contexto:
+               5 | b = float(input("distancia: "))
+        >>>    6 | x = radians(a)
+               7 | y = sqrt((b* 9.8)/(sin(2*a)))
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 4
+
+  [1] Linha 4: Variável 'a' com nome muito curto (≤4 chars)
+      Trecho  : a = ...
+      Contexto:
+               3 | from math import sqrt
+        >>>    4 | a = float(input("angulo: "))					 
+               5 | b = float(input("distancia: "))
+
+  [2] Linha 5: Variável 'b' com nome muito curto (≤4 chars)
+      Trecho  : b = ...
+      Contexto:
+               4 | a = float(input("angulo: "))					 
+        >>>    5 | b = float(input("distancia: "))
+               6 | x = radians(a)
+
+  [3] Linha 6: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+               5 | b = float(input("distancia: "))
+        >>>    6 | x = radians(a)
+               7 | y = sqrt((b* 9.8)/(sin(2*a)))
+
+  [4] Linha 7: Variável 'y' com nome muito curto (≤4 chars)
+      Trecho  : y = ...
+      Contexto:
+               6 | x = radians(a)
+        >>>    7 | y = sqrt((b* 9.8)/(sin(2*a)))
+               8 | print(round(y,2))
+
+======================================================================

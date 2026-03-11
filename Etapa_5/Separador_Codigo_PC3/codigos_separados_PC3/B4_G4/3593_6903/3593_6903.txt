@@ -1,0 +1,186 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 3593_6903.py
+Questão  : 3593
+Aluno    : 6903
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B4, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import *
+     2 | j = array(eval(input("Insira as jogadas: ")))
+     3 | t = size(j) - 1
+     4 | i = 0
+     5 | j1 = 200
+     6 | 
+     7 | while i <= t:
+     8 | 	if j[i] == 1:
+     9 | 		j1 = j1/2
+    10 | 	elif j[i] == 2:
+    11 | 		j1 = j1*3
+    12 | 	elif j[i] == 3:
+    13 | 		j1 = j1/2
+    14 | 	elif j[i] == 4:
+    15 | 		j1 = j1*3
+    16 | 	elif j[i] == 5:
+    17 | 		j1 = j1/2
+    18 | 	else:
+    19 | 		j1 = j1*3
+    20 | 	i += 1
+    21 | print(round(j1,2))
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B4 — Comandos repetidos dentro de blocos if-elif-else
+  Ocorrências: 10
+
+  [1] Linha 12: Bloco idêntico ao da linha 8
+      Trecho  : j1 = j1 / 2
+      Contexto:
+              11 | 		j1 = j1*3
+        >>>   12 | 	elif j[i] == 3:
+              13 | 		j1 = j1/2
+
+  [2] Linha 14: Bloco idêntico ao da linha 10
+      Trecho  : j1 = j1 * 3
+      Contexto:
+              13 | 		j1 = j1/2
+        >>>   14 | 	elif j[i] == 4:
+              15 | 		j1 = j1*3
+
+  [3] Linha 16: Bloco idêntico ao da linha 8
+      Trecho  : j1 = j1 / 2
+      Contexto:
+              15 | 		j1 = j1*3
+        >>>   16 | 	elif j[i] == 5:
+              17 | 		j1 = j1/2
+
+  [4] Linha 16: Bloco idêntico ao da linha 10
+      Trecho  : j1 = j1 * 3
+      Contexto:
+              15 | 		j1 = j1*3
+        >>>   16 | 	elif j[i] == 5:
+              17 | 		j1 = j1/2
+
+  [5] Linha 14: Bloco idêntico ao da linha 10
+      Trecho  : j1 = j1 * 3
+      Contexto:
+              13 | 		j1 = j1/2
+        >>>   14 | 	elif j[i] == 4:
+              15 | 		j1 = j1*3
+
+  [6] Linha 16: Bloco idêntico ao da linha 12
+      Trecho  : j1 = j1 / 2
+      Contexto:
+              15 | 		j1 = j1*3
+        >>>   16 | 	elif j[i] == 5:
+              17 | 		j1 = j1/2
+
+  [7] Linha 16: Bloco idêntico ao da linha 10
+      Trecho  : j1 = j1 * 3
+      Contexto:
+              15 | 		j1 = j1*3
+        >>>   16 | 	elif j[i] == 5:
+              17 | 		j1 = j1/2
+
+  [8] Linha 16: Bloco idêntico ao da linha 12
+      Trecho  : j1 = j1 / 2
+      Contexto:
+              15 | 		j1 = j1*3
+        >>>   16 | 	elif j[i] == 5:
+              17 | 		j1 = j1/2
+
+  [9] Linha 16: Bloco idêntico ao da linha 14
+      Trecho  : j1 = j1 * 3
+      Contexto:
+              15 | 		j1 = j1*3
+        >>>   16 | 	elif j[i] == 5:
+              17 | 		j1 = j1/2
+
+  [10] Linha 16: Bloco idêntico ao da linha 14
+      Trecho  : j1 = j1 * 3
+      Contexto:
+              15 | 		j1 = j1*3
+        >>>   16 | 	elif j[i] == 5:
+              17 | 		j1 = j1/2
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 10
+
+  [1] Linha 2: Variável 'j' com nome muito curto (≤4 chars)
+      Trecho  : j = ...
+      Contexto:
+               1 | from numpy import *
+        >>>    2 | j = array(eval(input("Insira as jogadas: ")))
+               3 | t = size(j) - 1
+
+  [2] Linha 3: Variável 't' com nome muito curto (≤4 chars)
+      Trecho  : t = ...
+      Contexto:
+               2 | j = array(eval(input("Insira as jogadas: ")))
+        >>>    3 | t = size(j) - 1
+               4 | i = 0
+
+  [3] Linha 4: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+               3 | t = size(j) - 1
+        >>>    4 | i = 0
+               5 | j1 = 200
+
+  [4] Linha 5: Variável 'j1' com nome muito curto (≤4 chars)
+      Trecho  : j1 = ...
+      Contexto:
+               4 | i = 0
+        >>>    5 | j1 = 200
+               6 | 
+
+  [5] Linha 9: Variável 'j1' com nome muito curto (≤4 chars)
+      Trecho  : j1 = ...
+      Contexto:
+               8 | 	if j[i] == 1:
+        >>>    9 | 		j1 = j1/2
+              10 | 	elif j[i] == 2:
+
+  [6] Linha 11: Variável 'j1' com nome muito curto (≤4 chars)
+      Trecho  : j1 = ...
+      Contexto:
+              10 | 	elif j[i] == 2:
+        >>>   11 | 		j1 = j1*3
+              12 | 	elif j[i] == 3:
+
+  [7] Linha 13: Variável 'j1' com nome muito curto (≤4 chars)
+      Trecho  : j1 = ...
+      Contexto:
+              12 | 	elif j[i] == 3:
+        >>>   13 | 		j1 = j1/2
+              14 | 	elif j[i] == 4:
+
+  [8] Linha 15: Variável 'j1' com nome muito curto (≤4 chars)
+      Trecho  : j1 = ...
+      Contexto:
+              14 | 	elif j[i] == 4:
+        >>>   15 | 		j1 = j1*3
+              16 | 	elif j[i] == 5:
+
+  [9] Linha 17: Variável 'j1' com nome muito curto (≤4 chars)
+      Trecho  : j1 = ...
+      Contexto:
+              16 | 	elif j[i] == 5:
+        >>>   17 | 		j1 = j1/2
+              18 | 	else:
+
+  [10] Linha 19: Variável 'j1' com nome muito curto (≤4 chars)
+      Trecho  : j1 = ...
+      Contexto:
+              18 | 	else:
+        >>>   19 | 		j1 = j1*3
+              20 | 	i += 1
+
+======================================================================

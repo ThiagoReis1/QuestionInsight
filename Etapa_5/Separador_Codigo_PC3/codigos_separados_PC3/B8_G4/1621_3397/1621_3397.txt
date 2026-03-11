@@ -1,0 +1,115 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1621_3397.py
+Questão  : 1621
+Aluno    : 3397
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | prod = input("Digite o produto: ").upper()
+     3 | qt = input("Digite a quantidade do produto: ")
+     4 | i = 0
+     5 | 
+     6 | while(i < size(prod)):
+     7 | 	if('arroz' == prod[i]):
+     8 | 		soma = soma + (qt[i] * 1.25)
+     9 | 	elif ('feijao' == prod[i]):
+    10 | 		soma = soma + (qt[i] * 2.60)
+    11 | 	elif ('bis' == prod[i]):
+    12 | 		soma = soma + (qt[i] * 1.80)
+    13 | 	elif ('miojo' == prod[i]):
+    14 | 		soma = soma + (qt[i] * 0.85)
+    15 | 	elif ('fanta' == prod[i]):
+    16 | 		soma = soma + (qt[i] * 3.20)
+    17 | 	i = i + 1
+    18 | 	
+    19 | print(round(soma, 2))
+    20 | 		
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 13: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 13) / elif ... sem else
+      Contexto:
+              12 | 		soma = soma + (qt[i] * 1.80)
+        >>>   13 | 	elif ('miojo' == prod[i]):
+              14 | 		soma = soma + (qt[i] * 0.85)
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 9
+
+  [1] Linha 2: Variável 'prod' com nome muito curto (≤4 chars)
+      Trecho  : prod = ...
+      Contexto:
+               1 | from numpy import*
+        >>>    2 | prod = input("Digite o produto: ").upper()
+               3 | qt = input("Digite a quantidade do produto: ")
+
+  [2] Linha 3: Variável 'qt' com nome muito curto (≤4 chars)
+      Trecho  : qt = ...
+      Contexto:
+               2 | prod = input("Digite o produto: ").upper()
+        >>>    3 | qt = input("Digite a quantidade do produto: ")
+               4 | i = 0
+
+  [3] Linha 4: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+               3 | qt = input("Digite a quantidade do produto: ")
+        >>>    4 | i = 0
+               5 | 
+
+  [4] Linha 17: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+              16 | 		soma = soma + (qt[i] * 3.20)
+        >>>   17 | 	i = i + 1
+              18 | 	
+
+  [5] Linha 8: Variável 'soma' com nome muito curto (≤4 chars)
+      Trecho  : soma = ...
+      Contexto:
+               7 | 	if('arroz' == prod[i]):
+        >>>    8 | 		soma = soma + (qt[i] * 1.25)
+               9 | 	elif ('feijao' == prod[i]):
+
+  [6] Linha 10: Variável 'soma' com nome muito curto (≤4 chars)
+      Trecho  : soma = ...
+      Contexto:
+               9 | 	elif ('feijao' == prod[i]):
+        >>>   10 | 		soma = soma + (qt[i] * 2.60)
+              11 | 	elif ('bis' == prod[i]):
+
+  [7] Linha 12: Variável 'soma' com nome muito curto (≤4 chars)
+      Trecho  : soma = ...
+      Contexto:
+              11 | 	elif ('bis' == prod[i]):
+        >>>   12 | 		soma = soma + (qt[i] * 1.80)
+              13 | 	elif ('miojo' == prod[i]):
+
+  [8] Linha 14: Variável 'soma' com nome muito curto (≤4 chars)
+      Trecho  : soma = ...
+      Contexto:
+              13 | 	elif ('miojo' == prod[i]):
+        >>>   14 | 		soma = soma + (qt[i] * 0.85)
+              15 | 	elif ('fanta' == prod[i]):
+
+  [9] Linha 16: Variável 'soma' com nome muito curto (≤4 chars)
+      Trecho  : soma = ...
+      Contexto:
+              15 | 	elif ('fanta' == prod[i]):
+        >>>   16 | 		soma = soma + (qt[i] * 3.20)
+              17 | 	i = i + 1
+
+======================================================================

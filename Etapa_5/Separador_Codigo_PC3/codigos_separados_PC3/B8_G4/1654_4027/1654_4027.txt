@@ -1,0 +1,145 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1654_4027.py
+Questão  : 1654
+Aluno    : 4027
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import *
+     2 | string = input("Insira a string contendo as siglas dos estados: ")
+     3 | string = string.split(',')
+     4 | vet = zeros(5, dtype = int)
+     5 | n = size(string)
+     6 | AM = 0
+     7 | PE = 0
+     8 | MG = 0
+     9 | SP = 0
+    10 | RS = 0
+    11 | for i in range(n):
+    12 | 	if(string[i] == "AM"):
+    13 | 		AM = AM + 1
+    14 | 	elif(string[i] == "PE"):
+    15 | 		PE = PE + 1
+    16 | 	elif(string[i] == "MG"):
+    17 | 		MG = MG + 1
+    18 | 	elif(string[i] == "SP"):
+    19 | 		SP = SP + 1
+    20 | 	elif(string[i] == "RS"):
+    21 | 		RS = RS + 1
+    22 | vet[0] = AM
+    23 | vet[1] = PE
+    24 | vet[2] = MG
+    25 | vet[3] = SP
+    26 | vet[4] = RS
+    27 | 
+    28 | print(max(vet))
+    29 | print(vet)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 18: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 18) / elif ... sem else
+      Contexto:
+              17 | 		MG = MG + 1
+        >>>   18 | 	elif(string[i] == "SP"):
+              19 | 		SP = SP + 1
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 12
+
+  [1] Linha 4: Variável 'vet' com nome muito curto (≤4 chars)
+      Trecho  : vet = ...
+      Contexto:
+               3 | string = string.split(',')
+        >>>    4 | vet = zeros(5, dtype = int)
+               5 | n = size(string)
+
+  [2] Linha 5: Variável 'n' com nome muito curto (≤4 chars)
+      Trecho  : n = ...
+      Contexto:
+               4 | vet = zeros(5, dtype = int)
+        >>>    5 | n = size(string)
+               6 | AM = 0
+
+  [3] Linha 6: Variável 'AM' com nome muito curto (≤4 chars)
+      Trecho  : AM = ...
+      Contexto:
+               5 | n = size(string)
+        >>>    6 | AM = 0
+               7 | PE = 0
+
+  [4] Linha 7: Variável 'PE' com nome muito curto (≤4 chars)
+      Trecho  : PE = ...
+      Contexto:
+               6 | AM = 0
+        >>>    7 | PE = 0
+               8 | MG = 0
+
+  [5] Linha 8: Variável 'MG' com nome muito curto (≤4 chars)
+      Trecho  : MG = ...
+      Contexto:
+               7 | PE = 0
+        >>>    8 | MG = 0
+               9 | SP = 0
+
+  [6] Linha 9: Variável 'SP' com nome muito curto (≤4 chars)
+      Trecho  : SP = ...
+      Contexto:
+               8 | MG = 0
+        >>>    9 | SP = 0
+              10 | RS = 0
+
+  [7] Linha 10: Variável 'RS' com nome muito curto (≤4 chars)
+      Trecho  : RS = ...
+      Contexto:
+               9 | SP = 0
+        >>>   10 | RS = 0
+              11 | for i in range(n):
+
+  [8] Linha 13: Variável 'AM' com nome muito curto (≤4 chars)
+      Trecho  : AM = ...
+      Contexto:
+              12 | 	if(string[i] == "AM"):
+        >>>   13 | 		AM = AM + 1
+              14 | 	elif(string[i] == "PE"):
+
+  [9] Linha 15: Variável 'PE' com nome muito curto (≤4 chars)
+      Trecho  : PE = ...
+      Contexto:
+              14 | 	elif(string[i] == "PE"):
+        >>>   15 | 		PE = PE + 1
+              16 | 	elif(string[i] == "MG"):
+
+  [10] Linha 17: Variável 'MG' com nome muito curto (≤4 chars)
+      Trecho  : MG = ...
+      Contexto:
+              16 | 	elif(string[i] == "MG"):
+        >>>   17 | 		MG = MG + 1
+              18 | 	elif(string[i] == "SP"):
+
+  [11] Linha 19: Variável 'SP' com nome muito curto (≤4 chars)
+      Trecho  : SP = ...
+      Contexto:
+              18 | 	elif(string[i] == "SP"):
+        >>>   19 | 		SP = SP + 1
+              20 | 	elif(string[i] == "RS"):
+
+  [12] Linha 21: Variável 'RS' com nome muito curto (≤4 chars)
+      Trecho  : RS = ...
+      Contexto:
+              20 | 	elif(string[i] == "RS"):
+        >>>   21 | 		RS = RS + 1
+              22 | vet[0] = AM
+
+======================================================================

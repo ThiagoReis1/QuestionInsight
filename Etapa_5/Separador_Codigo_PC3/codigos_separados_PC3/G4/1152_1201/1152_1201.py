@@ -1,0 +1,13 @@
+nb=int(input())
+np=int(input())
+npr=int(input())
+pb=float(input())
+pp=float(input())
+ppr=float(input())
+anos=1
+while(nb+np<npr):
+	nb=nb+nb*(pb/100)
+	np=np+np*(pp/100)
+	npr=npr+npr*(ppr/100)
+	anos=anos+1
+print(anos)

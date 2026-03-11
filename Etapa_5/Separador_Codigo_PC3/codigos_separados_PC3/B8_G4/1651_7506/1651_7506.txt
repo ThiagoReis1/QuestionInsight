@@ -1,0 +1,75 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1651_7506.py
+Questão  : 1651
+Aluno    : 7506
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import *
+     2 | 
+     3 | # Contar pessoas com mesmo tom de pele
+     4 | # Determinar a maior quantidade de clientes com o MESMO tom de pele
+     5 | # Vetor com a qt. de clientes com o mesmo tom, na ordem: MC, C, CM, EM, E, ME
+     6 | 
+     7 | #x = "c,c,c,mc,me".upper().split(",")
+     8 | x = input("x: ").upper().split(",")
+     9 | 
+    10 | v = zeros(6, dtype=int)
+    11 | 
+    12 | for i in range(len(x)):
+    13 | 	if x[i] == "MC":
+    14 | 		v[0] += 1
+    15 | 	elif x[i] == "C":
+    16 | 		v[1] += 1
+    17 | 	elif x[i] == "CM":
+    18 | 		v[2] += 1
+    19 | 	elif x[i] == "EM":
+    20 | 		v[3] += 1
+    21 | 	elif x[i] == "E":
+    22 | 		v[4] += 1
+    23 | 	elif x[i] == "ME":
+    24 | 		v[5] += 1
+    25 | 
+    26 | print(max(v))
+    27 | print(v)
+    28 | 	
+    29 | 	
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 21: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 21) / elif ... sem else
+      Contexto:
+              20 | 		v[3] += 1
+        >>>   21 | 	elif x[i] == "E":
+              22 | 		v[4] += 1
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 2
+
+  [1] Linha 8: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+               7 | #x = "c,c,c,mc,me".upper().split(",")
+        >>>    8 | x = input("x: ").upper().split(",")
+               9 | 
+
+  [2] Linha 10: Variável 'v' com nome muito curto (≤4 chars)
+      Trecho  : v = ...
+      Contexto:
+               9 | 
+        >>>   10 | v = zeros(6, dtype=int)
+              11 | 
+
+======================================================================

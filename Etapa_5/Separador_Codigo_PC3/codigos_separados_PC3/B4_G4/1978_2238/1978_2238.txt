@@ -1,0 +1,82 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1978_2238.py
+Questão  : 1978
+Aluno    : 2238
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B4, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | est = input("Estilo musical:").lower()
+     2 | sub = input("Subgênero musical:").lower()
+     3 | 
+     4 | if (est!="misturado")and(est!="vertente"):
+     5 | 	print("instrumento nao identificado")
+     6 | elif (sub!="samba-de-raiz")and(sub!="partido-alto")and(sub!="samba-choro")and(sub!="samba-jazz"):
+     7 | 	print("instrumento nao identificado")
+     8 | else:
+     9 | 	if (est=="vertente")and((sub=="samba-de-raiz")or(sub=="partido-alto")):
+    10 | 		if(sub=="samba-de-raiz"):
+    11 | 			print("cavaquinho")
+    12 | 		else:
+    13 | 			print("surdo")
+    14 | 	elif(est=="misturado")and((sub=="samba-choro")or(sub=="samba-jazz")):
+    15 | 		if(sub=="samba-choro"):
+    16 | 			print("violao de seis cordas")
+    17 | 		else:
+    18 | 			print("saxofone")	
+    19 | 	else:
+    20 | 		print("instrumento nao identificado")
+    21 | 		
+    22 | 			
+    23 | 		
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B4 — Comandos repetidos dentro de blocos if-elif-else
+  Ocorrências: 3
+
+  [1] Linha 6: Bloco idêntico ao da linha 4
+      Trecho  : print('instrumento nao identificado')
+      Contexto:
+               5 | 	print("instrumento nao identificado")
+        >>>    6 | elif (sub!="samba-de-raiz")and(sub!="partido-alto")and(sub!="samba-choro")and(sub!="samba-jazz"):
+               7 | 	print("instrumento nao identificado")
+
+  [2] Linha 14: Bloco idêntico ao da linha 4
+      Trecho  : print('instrumento nao identificado')
+      Contexto:
+              13 | 			print("surdo")
+        >>>   14 | 	elif(est=="misturado")and((sub=="samba-choro")or(sub=="samba-jazz")):
+              15 | 		if(sub=="samba-choro"):
+
+  [3] Linha 14: Bloco idêntico ao da linha 6
+      Trecho  : print('instrumento nao identificado')
+      Contexto:
+              13 | 			print("surdo")
+        >>>   14 | 	elif(est=="misturado")and((sub=="samba-choro")or(sub=="samba-jazz")):
+              15 | 		if(sub=="samba-choro"):
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 2
+
+  [1] Linha 1: Variável 'est' com nome muito curto (≤4 chars)
+      Trecho  : est = ...
+      Contexto:
+        >>>    1 | est = input("Estilo musical:").lower()
+               2 | sub = input("Subgênero musical:").lower()
+
+  [2] Linha 2: Variável 'sub' com nome muito curto (≤4 chars)
+      Trecho  : sub = ...
+      Contexto:
+               1 | est = input("Estilo musical:").lower()
+        >>>    2 | sub = input("Subgênero musical:").lower()
+               3 | 
+
+======================================================================

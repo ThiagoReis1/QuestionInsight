@@ -1,0 +1,100 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 2537_3355.py
+Questão  : 2537
+Aluno    : 3355
+Total MCs: 1
+
+⚠️  Misconceptions detectados: G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | e = float(input("Heranca em reais: "))
+     2 | s = float(input("Saque mensal fixo: "))
+     3 | j = float(input("Taxa de juros: "))
+     4 | j = j/100
+     5 | 
+     6 | if ((e > 0) and (s > 0) and (j > 0)):
+     7 | 	t=0
+     8 | 	a = e
+     9 | 	while(a < 1.2*e):
+    10 | 		a = a + a*j
+    11 | 		round(a, 2)
+    12 | 		a = a - s
+    13 | 		t=t+1
+    14 | 	print(t)
+    15 | else:
+    16 | 	print("Dados incorretos")
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 9
+
+  [1] Linha 1: Variável 'e' com nome muito curto (≤4 chars)
+      Trecho  : e = ...
+      Contexto:
+        >>>    1 | e = float(input("Heranca em reais: "))
+               2 | s = float(input("Saque mensal fixo: "))
+
+  [2] Linha 2: Variável 's' com nome muito curto (≤4 chars)
+      Trecho  : s = ...
+      Contexto:
+               1 | e = float(input("Heranca em reais: "))
+        >>>    2 | s = float(input("Saque mensal fixo: "))
+               3 | j = float(input("Taxa de juros: "))
+
+  [3] Linha 3: Variável 'j' com nome muito curto (≤4 chars)
+      Trecho  : j = ...
+      Contexto:
+               2 | s = float(input("Saque mensal fixo: "))
+        >>>    3 | j = float(input("Taxa de juros: "))
+               4 | j = j/100
+
+  [4] Linha 4: Variável 'j' com nome muito curto (≤4 chars)
+      Trecho  : j = ...
+      Contexto:
+               3 | j = float(input("Taxa de juros: "))
+        >>>    4 | j = j/100
+               5 | 
+
+  [5] Linha 7: Variável 't' com nome muito curto (≤4 chars)
+      Trecho  : t = ...
+      Contexto:
+               6 | if ((e > 0) and (s > 0) and (j > 0)):
+        >>>    7 | 	t=0
+               8 | 	a = e
+
+  [6] Linha 8: Variável 'a' com nome muito curto (≤4 chars)
+      Trecho  : a = ...
+      Contexto:
+               7 | 	t=0
+        >>>    8 | 	a = e
+               9 | 	while(a < 1.2*e):
+
+  [7] Linha 10: Variável 'a' com nome muito curto (≤4 chars)
+      Trecho  : a = ...
+      Contexto:
+               9 | 	while(a < 1.2*e):
+        >>>   10 | 		a = a + a*j
+              11 | 		round(a, 2)
+
+  [8] Linha 12: Variável 'a' com nome muito curto (≤4 chars)
+      Trecho  : a = ...
+      Contexto:
+              11 | 		round(a, 2)
+        >>>   12 | 		a = a - s
+              13 | 		t=t+1
+
+  [9] Linha 13: Variável 't' com nome muito curto (≤4 chars)
+      Trecho  : t = ...
+      Contexto:
+              12 | 		a = a - s
+        >>>   13 | 		t=t+1
+              14 | 	print(t)
+
+======================================================================

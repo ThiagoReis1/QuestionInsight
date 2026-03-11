@@ -1,0 +1,48 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 2966_4376.py
+Questão  : 2966
+Aluno    : 4376
+Total MCs: 2
+
+⚠️  Misconceptions detectados: A3, B8
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | bonificacao=input("recebera bonificacao:?   (S/N) ")
+     2 | preco=float(input("valor do ing:   "))
+     3 | ingressos=int(input("qtd de ing:   "))
+     4 | if(bonificacao.upper()=="S"):
+     5 | 	x=preco+preco*0.2
+     6 | 	print(round(x))
+     7 | else:
+     8 | 	if(bonificacao.upper()=="N"):
+     9 | 		print(round(bonificacao))
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 1
+
+  [1] Linha 3: Variável 'ingressos' declarada mas nunca utilizada
+      Trecho  : ingressos = ...
+      Contexto:
+               2 | preco=float(input("valor do ing:   "))
+        >>>    3 | ingressos=int(input("qtd de ing:   "))
+               4 | if(bonificacao.upper()=="S"):
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 4: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 4) / elif ... sem else
+      Contexto:
+               3 | ingressos=int(input("qtd de ing:   "))
+        >>>    4 | if(bonificacao.upper()=="S"):
+               5 | 	x=preco+preco*0.2
+
+======================================================================

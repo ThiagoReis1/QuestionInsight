@@ -1,0 +1,57 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 2125_2185.py
+Questão  : 2125
+Aluno    : 2185
+Total MCs: 1
+
+⚠️  Misconceptions detectados: A3
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import *
+     2 | 
+     3 | vet_notas = array(eval(input("notas: ")))
+     4 | Prova = vet_notas[0]
+     5 | Seminario = vet_notas[1]
+     6 | Trabalho = vet_notas[2]
+     7 | Nota_Final = (vet_notas[0]* 3.0 + vet_notas[1] * 3.0 + vet_notas[2] * 4.0)/10.0
+     8 | if(Nota_Final >= 5.0):
+     9 | 	print(round(Nota_Final, 2))
+    10 | 	print("APROVADO")
+    11 | else:
+    12 | 	print(round(Nota_Final, 2))
+    13 | 	print("REPROVADO")
+    14 | 	
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 3
+
+  [1] Linha 4: Variável 'Prova' declarada mas nunca utilizada
+      Trecho  : Prova = ...
+      Contexto:
+               3 | vet_notas = array(eval(input("notas: ")))
+        >>>    4 | Prova = vet_notas[0]
+               5 | Seminario = vet_notas[1]
+
+  [2] Linha 5: Variável 'Seminario' declarada mas nunca utilizada
+      Trecho  : Seminario = ...
+      Contexto:
+               4 | Prova = vet_notas[0]
+        >>>    5 | Seminario = vet_notas[1]
+               6 | Trabalho = vet_notas[2]
+
+  [3] Linha 6: Variável 'Trabalho' declarada mas nunca utilizada
+      Trecho  : Trabalho = ...
+      Contexto:
+               5 | Seminario = vet_notas[1]
+        >>>    6 | Trabalho = vet_notas[2]
+               7 | Nota_Final = (vet_notas[0]* 3.0 + vet_notas[1] * 3.0 + vet_notas[2] * 4.0)/10.0
+
+======================================================================

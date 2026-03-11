@@ -1,0 +1,109 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1269_1430.py
+Questão  : 1269
+Aluno    : 1430
+Total MCs: 1
+
+⚠️  Misconceptions detectados: G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import *
+     2 | p = float(input())
+     3 | x = array(eval(input()))
+     4 | y = array(eval(input()))
+     5 | t = p/(p + 1)
+     6 | z = x + y
+     7 | w = x - y
+     8 | n = 0
+     9 | m = 0
+    10 | for i in range(size(z)):
+    11 | 	n += abs(z[i]) ** t
+    12 | fx = n ** (1/t)
+    13 | for j in range(size(w)):
+    14 | 	m += abs(w[j]) ** t
+    15 | fy = m ** (1/t)	
+    16 | print(round(fx - fy,7))
+    17 | 
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 10
+
+  [1] Linha 2: Variável 'p' com nome muito curto (≤4 chars)
+      Trecho  : p = ...
+      Contexto:
+               1 | from numpy import *
+        >>>    2 | p = float(input())
+               3 | x = array(eval(input()))
+
+  [2] Linha 3: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+               2 | p = float(input())
+        >>>    3 | x = array(eval(input()))
+               4 | y = array(eval(input()))
+
+  [3] Linha 4: Variável 'y' com nome muito curto (≤4 chars)
+      Trecho  : y = ...
+      Contexto:
+               3 | x = array(eval(input()))
+        >>>    4 | y = array(eval(input()))
+               5 | t = p/(p + 1)
+
+  [4] Linha 5: Variável 't' com nome muito curto (≤4 chars)
+      Trecho  : t = ...
+      Contexto:
+               4 | y = array(eval(input()))
+        >>>    5 | t = p/(p + 1)
+               6 | z = x + y
+
+  [5] Linha 6: Variável 'z' com nome muito curto (≤4 chars)
+      Trecho  : z = ...
+      Contexto:
+               5 | t = p/(p + 1)
+        >>>    6 | z = x + y
+               7 | w = x - y
+
+  [6] Linha 7: Variável 'w' com nome muito curto (≤4 chars)
+      Trecho  : w = ...
+      Contexto:
+               6 | z = x + y
+        >>>    7 | w = x - y
+               8 | n = 0
+
+  [7] Linha 8: Variável 'n' com nome muito curto (≤4 chars)
+      Trecho  : n = ...
+      Contexto:
+               7 | w = x - y
+        >>>    8 | n = 0
+               9 | m = 0
+
+  [8] Linha 9: Variável 'm' com nome muito curto (≤4 chars)
+      Trecho  : m = ...
+      Contexto:
+               8 | n = 0
+        >>>    9 | m = 0
+              10 | for i in range(size(z)):
+
+  [9] Linha 12: Variável 'fx' com nome muito curto (≤4 chars)
+      Trecho  : fx = ...
+      Contexto:
+              11 | 	n += abs(z[i]) ** t
+        >>>   12 | fx = n ** (1/t)
+              13 | for j in range(size(w)):
+
+  [10] Linha 15: Variável 'fy' com nome muito curto (≤4 chars)
+      Trecho  : fy = ...
+      Contexto:
+              14 | 	m += abs(w[j]) ** t
+        >>>   15 | fy = m ** (1/t)	
+              16 | print(round(fx - fy,7))
+
+======================================================================

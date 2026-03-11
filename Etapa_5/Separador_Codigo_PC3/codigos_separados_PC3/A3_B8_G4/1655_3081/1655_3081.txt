@@ -1,0 +1,274 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1655_3081.py
+Questão  : 1655
+Aluno    : 3081
+Total MCs: 3
+
+⚠️  Misconceptions detectados: A3, B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | x = input("Estados: ")
+     3 | y = x.split(',')
+     4 | AM = 0
+     5 | AC = 0
+     6 | PA = 0
+     7 | RO = 0
+     8 | RR = 0
+     9 | est = 0
+    10 | est2 = 0
+    11 | est3 = 0
+    12 | est4 = 0
+    13 | est5 = 0
+    14 | for i in y:
+    15 | 	if(i=="AM"):
+    16 | 		AM = AM + 1
+    17 | 	elif(i=="AC"):
+    18 | 		AC = AC + 1
+    19 | 	elif(i=="PA"):
+    20 | 		PA = PA + 1
+    21 | 	elif(i=="RO"):
+    22 | 		RO = RO + 1
+    23 | 	elif(i=="RR"):
+    24 | 		RR = RR + 1
+    25 | if(AM>0):
+    26 | 	est = 1
+    27 | if(AC>0):
+    28 | 	est2 = 1
+    29 | if(PA>0):
+    30 | 	est3 = 1
+    31 | if(RO>0):
+    32 | 	est4 = 1
+    33 | if(RR>0):
+    34 | 	est5 = 1
+    35 | j = zeros(5,dtype=int)
+    36 | j[0] = AC
+    37 | j[1] = AM
+    38 | j[2] = PA
+    39 | j[3] = RO
+    40 | j[4] = RR
+    41 | print(max(j))
+    42 | print(j)
+    43 | 	
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 5
+
+  [1] Linha 9: Variável 'est' declarada mas nunca utilizada
+      Trecho  : est = ...
+      Contexto:
+               8 | RR = 0
+        >>>    9 | est = 0
+              10 | est2 = 0
+
+  [2] Linha 10: Variável 'est2' declarada mas nunca utilizada
+      Trecho  : est2 = ...
+      Contexto:
+               9 | est = 0
+        >>>   10 | est2 = 0
+              11 | est3 = 0
+
+  [3] Linha 11: Variável 'est3' declarada mas nunca utilizada
+      Trecho  : est3 = ...
+      Contexto:
+              10 | est2 = 0
+        >>>   11 | est3 = 0
+              12 | est4 = 0
+
+  [4] Linha 12: Variável 'est4' declarada mas nunca utilizada
+      Trecho  : est4 = ...
+      Contexto:
+              11 | est3 = 0
+        >>>   12 | est4 = 0
+              13 | est5 = 0
+
+  [5] Linha 13: Variável 'est5' declarada mas nunca utilizada
+      Trecho  : est5 = ...
+      Contexto:
+              12 | est4 = 0
+        >>>   13 | est5 = 0
+              14 | for i in y:
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 21: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 21) / elif ... sem else
+      Contexto:
+              20 | 		PA = PA + 1
+        >>>   21 | 	elif(i=="RO"):
+              22 | 		RO = RO + 1
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 23
+
+  [1] Linha 2: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+               1 | from numpy import*
+        >>>    2 | x = input("Estados: ")
+               3 | y = x.split(',')
+
+  [2] Linha 3: Variável 'y' com nome muito curto (≤4 chars)
+      Trecho  : y = ...
+      Contexto:
+               2 | x = input("Estados: ")
+        >>>    3 | y = x.split(',')
+               4 | AM = 0
+
+  [3] Linha 4: Variável 'AM' com nome muito curto (≤4 chars)
+      Trecho  : AM = ...
+      Contexto:
+               3 | y = x.split(',')
+        >>>    4 | AM = 0
+               5 | AC = 0
+
+  [4] Linha 5: Variável 'AC' com nome muito curto (≤4 chars)
+      Trecho  : AC = ...
+      Contexto:
+               4 | AM = 0
+        >>>    5 | AC = 0
+               6 | PA = 0
+
+  [5] Linha 6: Variável 'PA' com nome muito curto (≤4 chars)
+      Trecho  : PA = ...
+      Contexto:
+               5 | AC = 0
+        >>>    6 | PA = 0
+               7 | RO = 0
+
+  [6] Linha 7: Variável 'RO' com nome muito curto (≤4 chars)
+      Trecho  : RO = ...
+      Contexto:
+               6 | PA = 0
+        >>>    7 | RO = 0
+               8 | RR = 0
+
+  [7] Linha 8: Variável 'RR' com nome muito curto (≤4 chars)
+      Trecho  : RR = ...
+      Contexto:
+               7 | RO = 0
+        >>>    8 | RR = 0
+               9 | est = 0
+
+  [8] Linha 9: Variável 'est' com nome muito curto (≤4 chars)
+      Trecho  : est = ...
+      Contexto:
+               8 | RR = 0
+        >>>    9 | est = 0
+              10 | est2 = 0
+
+  [9] Linha 10: Variável 'est2' com nome muito curto (≤4 chars)
+      Trecho  : est2 = ...
+      Contexto:
+               9 | est = 0
+        >>>   10 | est2 = 0
+              11 | est3 = 0
+
+  [10] Linha 11: Variável 'est3' com nome muito curto (≤4 chars)
+      Trecho  : est3 = ...
+      Contexto:
+              10 | est2 = 0
+        >>>   11 | est3 = 0
+              12 | est4 = 0
+
+  [11] Linha 12: Variável 'est4' com nome muito curto (≤4 chars)
+      Trecho  : est4 = ...
+      Contexto:
+              11 | est3 = 0
+        >>>   12 | est4 = 0
+              13 | est5 = 0
+
+  [12] Linha 13: Variável 'est5' com nome muito curto (≤4 chars)
+      Trecho  : est5 = ...
+      Contexto:
+              12 | est4 = 0
+        >>>   13 | est5 = 0
+              14 | for i in y:
+
+  [13] Linha 35: Variável 'j' com nome muito curto (≤4 chars)
+      Trecho  : j = ...
+      Contexto:
+              34 | 	est5 = 1
+        >>>   35 | j = zeros(5,dtype=int)
+              36 | j[0] = AC
+
+  [14] Linha 26: Variável 'est' com nome muito curto (≤4 chars)
+      Trecho  : est = ...
+      Contexto:
+              25 | if(AM>0):
+        >>>   26 | 	est = 1
+              27 | if(AC>0):
+
+  [15] Linha 28: Variável 'est2' com nome muito curto (≤4 chars)
+      Trecho  : est2 = ...
+      Contexto:
+              27 | if(AC>0):
+        >>>   28 | 	est2 = 1
+              29 | if(PA>0):
+
+  [16] Linha 30: Variável 'est3' com nome muito curto (≤4 chars)
+      Trecho  : est3 = ...
+      Contexto:
+              29 | if(PA>0):
+        >>>   30 | 	est3 = 1
+              31 | if(RO>0):
+
+  [17] Linha 32: Variável 'est4' com nome muito curto (≤4 chars)
+      Trecho  : est4 = ...
+      Contexto:
+              31 | if(RO>0):
+        >>>   32 | 	est4 = 1
+              33 | if(RR>0):
+
+  [18] Linha 34: Variável 'est5' com nome muito curto (≤4 chars)
+      Trecho  : est5 = ...
+      Contexto:
+              33 | if(RR>0):
+        >>>   34 | 	est5 = 1
+              35 | j = zeros(5,dtype=int)
+
+  [19] Linha 16: Variável 'AM' com nome muito curto (≤4 chars)
+      Trecho  : AM = ...
+      Contexto:
+              15 | 	if(i=="AM"):
+        >>>   16 | 		AM = AM + 1
+              17 | 	elif(i=="AC"):
+
+  [20] Linha 18: Variável 'AC' com nome muito curto (≤4 chars)
+      Trecho  : AC = ...
+      Contexto:
+              17 | 	elif(i=="AC"):
+        >>>   18 | 		AC = AC + 1
+              19 | 	elif(i=="PA"):
+
+  [21] Linha 20: Variável 'PA' com nome muito curto (≤4 chars)
+      Trecho  : PA = ...
+      Contexto:
+              19 | 	elif(i=="PA"):
+        >>>   20 | 		PA = PA + 1
+              21 | 	elif(i=="RO"):
+
+  [22] Linha 22: Variável 'RO' com nome muito curto (≤4 chars)
+      Trecho  : RO = ...
+      Contexto:
+              21 | 	elif(i=="RO"):
+        >>>   22 | 		RO = RO + 1
+              23 | 	elif(i=="RR"):
+
+  [23] Linha 24: Variável 'RR' com nome muito curto (≤4 chars)
+      Trecho  : RR = ...
+      Contexto:
+              23 | 	elif(i=="RR"):
+        >>>   24 | 		RR = RR + 1
+              25 | if(AM>0):
+
+======================================================================

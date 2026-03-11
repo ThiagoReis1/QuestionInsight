@@ -1,0 +1,61 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 6936_9771.py
+Questão  : 6936
+Aluno    : 9771
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B4, B8
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | total = float(input())
+     2 | codigo = input()
+     3 | 
+     4 | if codigo == 'D':
+     5 | 	final = total - (total * (13/100))
+     6 | elif codigo == 'P':
+     7 | 	final = total - (total *(13/100))
+     8 | elif codigo == 'C':
+     9 | 	parcela = int(input())
+    10 | 	if parcela == 1:
+    11 | 		final = total
+    12 | 	elif parcela == 2:
+    13 | 		final = total + (total * (8/100))
+    14 | 	
+    15 | print(round(final, 2))
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B4 — Comandos repetidos dentro de blocos if-elif-else
+  Ocorrências: 1
+
+  [1] Linha 6: Bloco idêntico ao da linha 4
+      Trecho  : final = total - total * (13 / 100)
+      Contexto:
+               5 | 	final = total - (total * (13/100))
+        >>>    6 | elif codigo == 'P':
+               7 | 	final = total - (total *(13/100))
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 2
+
+  [1] Linha 6: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 6) / elif ... sem else
+      Contexto:
+               5 | 	final = total - (total * (13/100))
+        >>>    6 | elif codigo == 'P':
+               7 | 	final = total - (total *(13/100))
+
+  [2] Linha 10: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 10) / elif ... sem else
+      Contexto:
+               9 | 	parcela = int(input())
+        >>>   10 | 	if parcela == 1:
+              11 | 		final = total
+
+======================================================================

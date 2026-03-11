@@ -1,0 +1,66 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 6835_5292.py
+Questão  : 6835
+Aluno    : 5292
+Total MCs: 2
+
+⚠️  Misconceptions detectados: A3, B8
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | produtos =input("digite os produtos (B)biscoito , (C)cereais e (E)enlatados: ").upper()
+     2 | 
+     3 | total= 0
+     4 | i = 0 
+     5 | cont_b=0
+     6 | cont_c=0
+     7 | cont_e=0
+     8 | 
+     9 | while i < len(produtos):
+    10 | 	if produtos[i] == "B":
+    11 | 		total = total + 3.75
+    12 | 		cont_b = cont_b + 1
+    13 | 	elif produtos[i] == "C":
+    14 | 		total = total + 7.9
+    15 | 		cont_c += 1
+    16 | 	elif produtos[i] == "E":
+    17 | 		total = total + 9.85
+    18 | 		cont_e += 1
+    19 | 	i += 1
+    20 | print(round(total, 2))
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 2
+
+  [1] Linha 6: Variável 'cont_c' declarada mas nunca utilizada
+      Trecho  : cont_c = ...
+      Contexto:
+               5 | cont_b=0
+        >>>    6 | cont_c=0
+               7 | cont_e=0
+
+  [2] Linha 7: Variável 'cont_e' declarada mas nunca utilizada
+      Trecho  : cont_e = ...
+      Contexto:
+               6 | cont_c=0
+        >>>    7 | cont_e=0
+               8 | 
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 13: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 13) / elif ... sem else
+      Contexto:
+              12 | 		cont_b = cont_b + 1
+        >>>   13 | 	elif produtos[i] == "C":
+              14 | 		total = total + 7.9
+
+======================================================================

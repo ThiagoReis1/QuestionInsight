@@ -1,0 +1,93 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1621_4190.py
+Questão  : 1621
+Aluno    : 4190
+Total MCs: 2
+
+⚠️  Misconceptions detectados: A3, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import *
+     2 | 
+     3 | n = array(eval(input('N: ')))
+     4 | q = array(eval(input('Q: ')))
+     5 | 
+     6 | total = 0 
+     7 | 
+     8 | for i in range(size(n)):
+     9 | 	if n[i]=='ARROZ':
+    10 | 		a = 1.25*q[i]
+    11 | 	if n[i]=='FEIJAO':
+    12 | 		a = 2.60*q[i]
+    13 | 	if n[i]=='BIS':
+    14 | 		a==1.80*q[i]
+    15 | 	if n[i]=='MIOJO':
+    16 | 		a = 0.85*q[i]
+    17 | 	if n[i]=='FANTA':
+    18 | 		a = 3.20*q[i]
+    19 | print(round(sum(a), 2))
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 1
+
+  [1] Linha 6: Variável 'total' declarada mas nunca utilizada
+      Trecho  : total = ...
+      Contexto:
+               5 | 
+        >>>    6 | total = 0 
+               7 | 
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 6
+
+  [1] Linha 3: Variável 'n' com nome muito curto (≤4 chars)
+      Trecho  : n = ...
+      Contexto:
+               2 | 
+        >>>    3 | n = array(eval(input('N: ')))
+               4 | q = array(eval(input('Q: ')))
+
+  [2] Linha 4: Variável 'q' com nome muito curto (≤4 chars)
+      Trecho  : q = ...
+      Contexto:
+               3 | n = array(eval(input('N: ')))
+        >>>    4 | q = array(eval(input('Q: ')))
+               5 | 
+
+  [3] Linha 10: Variável 'a' com nome muito curto (≤4 chars)
+      Trecho  : a = ...
+      Contexto:
+               9 | 	if n[i]=='ARROZ':
+        >>>   10 | 		a = 1.25*q[i]
+              11 | 	if n[i]=='FEIJAO':
+
+  [4] Linha 12: Variável 'a' com nome muito curto (≤4 chars)
+      Trecho  : a = ...
+      Contexto:
+              11 | 	if n[i]=='FEIJAO':
+        >>>   12 | 		a = 2.60*q[i]
+              13 | 	if n[i]=='BIS':
+
+  [5] Linha 16: Variável 'a' com nome muito curto (≤4 chars)
+      Trecho  : a = ...
+      Contexto:
+              15 | 	if n[i]=='MIOJO':
+        >>>   16 | 		a = 0.85*q[i]
+              17 | 	if n[i]=='FANTA':
+
+  [6] Linha 18: Variável 'a' com nome muito curto (≤4 chars)
+      Trecho  : a = ...
+      Contexto:
+              17 | 	if n[i]=='FANTA':
+        >>>   18 | 		a = 3.20*q[i]
+              19 | print(round(sum(a), 2))
+
+======================================================================

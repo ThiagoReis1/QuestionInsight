@@ -1,0 +1,88 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 3590_5839.py
+Questão  : 3590
+Aluno    : 5839
+Total MCs: 3
+
+⚠️  Misconceptions detectados: B4, B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import * 
+     2 | 
+     3 | face = array(eval(input("Digite as faces tiradas: ")))
+     4 | x = size(face)
+     5 | 
+     6 | i = 0
+     7 | pontos = 0
+     8 | 
+     9 | while (i < x):
+    10 | 	if (face[i] == 1):
+    11 | 		pontos = pontos + 10
+    12 | 		i = i + 1
+    13 | 	elif (face[i] == 2):
+    14 | 		pontos = pontos + 5
+    15 | 		i = i + 1
+    16 | 	elif (face[i] == 3):
+    17 | 		pontos = pontos + 0
+    18 | 		i = i + 1
+    19 | 	elif (face[i] == 4):
+    20 | 		pontos = pontos + 5
+    21 | 		i = i + 1
+    22 | 	elif (face[i] == 5):
+    23 | 		pontos = pontos + 20
+    24 | 		i = i + 1
+    25 | 	elif (face[i] == 6):
+    26 | 		pontos = pontos + 10
+    27 | 		i = i + 1
+    28 | 		
+    29 | print(pontos)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B4 — Comandos repetidos dentro de blocos if-elif-else
+  Ocorrências: 3
+
+  [1] Linha 19: Bloco idêntico ao da linha 13
+      Trecho  : pontos = pontos + 5
+      Contexto:
+              18 | 		i = i + 1
+        >>>   19 | 	elif (face[i] == 4):
+              20 | 		pontos = pontos + 5
+
+  [2] Linha 25: Bloco idêntico ao da linha 10
+      Trecho  : pontos = pontos + 10
+      Contexto:
+              24 | 		i = i + 1
+        >>>   25 | 	elif (face[i] == 6):
+              26 | 		pontos = pontos + 10
+
+  [3] Linha 19: Bloco idêntico ao da linha 13
+      Trecho  : pontos = pontos + 5
+      Contexto:
+              18 | 		i = i + 1
+        >>>   19 | 	elif (face[i] == 4):
+              20 | 		pontos = pontos + 5
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 22: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 22) / elif ... sem else
+      Contexto:
+              21 | 		i = i + 1
+        >>>   22 | 	elif (face[i] == 5):
+              23 | 		pontos = pontos + 20
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 1
+
+  [1] Linha 0: G4 detectado pelo VisitorMC3 (localização exata não mapeada)
+      Trecho  : —
+
+======================================================================

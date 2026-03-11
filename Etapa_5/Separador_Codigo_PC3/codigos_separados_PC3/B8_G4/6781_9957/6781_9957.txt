@@ -1,0 +1,80 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 6781_9957.py
+Questão  : 6781
+Aluno    : 9957
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | nascimento = int(input())
+     2 | pais = input()
+     3 | 
+     4 | #Brasil
+     5 | if pais == "B" or "b":
+     6 | 	if (2023 - nascimento) >= 21:
+     7 | 		print("sim")
+     8 | 		Print((2023 - nascimento) -18)
+     9 | 	else:
+    10 | 		print("nao")
+    11 | 		nao1 = ((2023 - nascimento) - 21)* -1
+    12 | 		print(nao1)
+    13 | 		
+    14 | #Estados Unidos
+    15 | elif pais == "E" or "e":
+    16 | 	if (2023 - nascimento) >= 18:
+    17 | 		print("sim")
+    18 | 		print((2023 - nascimento) - 18)
+    19 | 	else:
+    20 | 		print("nao")
+    21 | 		nao = ((2023 - nascimento) - 18)* -1
+    22 | 		up(print(nao))
+    23 | 		
+    24 | 
+    25 | elif not pais == "B" or "E" or "b" or "e":
+    26 | 	print("invalido")
+    27 | 	
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 15: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 15) / elif ... sem else
+      Contexto:
+              14 | #Estados Unidos
+        >>>   15 | elif pais == "E" or "e":
+              16 | 	if (2023 - nascimento) >= 18:
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 3
+
+  [1] Linha 2: Variável 'pais' com nome muito curto (≤4 chars)
+      Trecho  : pais = ...
+      Contexto:
+               1 | nascimento = int(input())
+        >>>    2 | pais = input()
+               3 | 
+
+  [2] Linha 11: Variável 'nao1' com nome muito curto (≤4 chars)
+      Trecho  : nao1 = ...
+      Contexto:
+              10 | 		print("nao")
+        >>>   11 | 		nao1 = ((2023 - nascimento) - 21)* -1
+              12 | 		print(nao1)
+
+  [3] Linha 21: Variável 'nao' com nome muito curto (≤4 chars)
+      Trecho  : nao = ...
+      Contexto:
+              20 | 		print("nao")
+        >>>   21 | 		nao = ((2023 - nascimento) - 18)* -1
+              22 | 		up(print(nao))
+
+======================================================================

@@ -1,0 +1,6 @@
+mg=int(input("magrande: "))
+vg=int(input("velgrande: "))
+mp=int(input("mapeq: "))
+vp=int(input("velpeq: "))
+vf=((mg*vg)-(mp*vp))/ (mg+mp)
+print (vf)

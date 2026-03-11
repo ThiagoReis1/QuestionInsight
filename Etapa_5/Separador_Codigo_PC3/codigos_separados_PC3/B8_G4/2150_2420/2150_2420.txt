@@ -1,0 +1,59 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 2150_2420.py
+Questão  : 2150
+Aluno    : 2420
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | vet = array(eval(input("times: ")))
+     3 | m = zeros(4, dtype=int)
+     4 | for i in vet:
+     5 | 	if i == 'BOTAFOGO':
+     6 | 		m[0] += 1
+     7 | 	elif i == 'FLAMENGO':
+     8 | 		m[1] += 1
+     9 | 	elif i == 'FLUMINENSE':
+    10 | 		m[2] += 1
+    11 | 	elif i == 'VASCO':
+    12 | 		m[3] += 1
+    13 | print(m)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 9: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 9) / elif ... sem else
+      Contexto:
+               8 | 		m[1] += 1
+        >>>    9 | 	elif i == 'FLUMINENSE':
+              10 | 		m[2] += 1
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 2
+
+  [1] Linha 2: Variável 'vet' com nome muito curto (≤4 chars)
+      Trecho  : vet = ...
+      Contexto:
+               1 | from numpy import*
+        >>>    2 | vet = array(eval(input("times: ")))
+               3 | m = zeros(4, dtype=int)
+
+  [2] Linha 3: Variável 'm' com nome muito curto (≤4 chars)
+      Trecho  : m = ...
+      Contexto:
+               2 | vet = array(eval(input("times: ")))
+        >>>    3 | m = zeros(4, dtype=int)
+               4 | for i in vet:
+
+======================================================================

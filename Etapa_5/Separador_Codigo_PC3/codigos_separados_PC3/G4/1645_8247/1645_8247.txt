@@ -1,0 +1,67 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1645_8247.py
+Questão  : 1645
+Aluno    : 8247
+Total MCs: 1
+
+⚠️  Misconceptions detectados: G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | vet = array(eval(input()))
+     3 | c = 0
+     4 | 
+     5 | for i in range(size(vet)):
+     6 | 	if vet[i] >= 2000:
+     7 | 		c += 1
+     8 | 
+     9 | j = 0
+    10 | vs = zeros(c, dtype=int)
+    11 | for ch in range(size(vet)):
+    12 | 	if vet[ch] >= 2000:
+    13 | 		vs[j] = ch
+    14 | 		j += 1
+    15 | 
+    16 | print(c)
+    17 | print(vs)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 4
+
+  [1] Linha 2: Variável 'vet' com nome muito curto (≤4 chars)
+      Trecho  : vet = ...
+      Contexto:
+               1 | from numpy import*
+        >>>    2 | vet = array(eval(input()))
+               3 | c = 0
+
+  [2] Linha 3: Variável 'c' com nome muito curto (≤4 chars)
+      Trecho  : c = ...
+      Contexto:
+               2 | vet = array(eval(input()))
+        >>>    3 | c = 0
+               4 | 
+
+  [3] Linha 9: Variável 'j' com nome muito curto (≤4 chars)
+      Trecho  : j = ...
+      Contexto:
+               8 | 
+        >>>    9 | j = 0
+              10 | vs = zeros(c, dtype=int)
+
+  [4] Linha 10: Variável 'vs' com nome muito curto (≤4 chars)
+      Trecho  : vs = ...
+      Contexto:
+               9 | j = 0
+        >>>   10 | vs = zeros(c, dtype=int)
+              11 | for ch in range(size(vet)):
+
+======================================================================

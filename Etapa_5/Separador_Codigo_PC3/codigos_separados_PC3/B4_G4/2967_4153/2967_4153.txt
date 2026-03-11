@@ -1,0 +1,83 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 2967_4153.py
+Questão  : 2967
+Aluno    : 4153
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B4, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | a1 = float(input("Insira a sua altura: "))              #a sua altura
+     2 | a2 = float(input("Insira a altura do acompanhante: "))  #a altura do seu amigo
+     3 | if(a1 >= 1.37):         # mensagem
+     4 | 	msg = "Sim"          # mensagem
+     5 | 	print(msg)
+     6 | else:                   # mensagem
+     7 | 	if(a2 >= 1.37):      # mensagem
+     8 | 		msg = "Sim"       # mensagem
+     9 | 		print(msg)
+    10 | 	else:                # mensagem
+    11 | 		msg = "Nao"       # mensagem
+    12 | 		print(msg)
+    13 | 
+    14 | if(a1 >= a2):            # ordem
+    15 | 	print(a1)            # ordem
+    16 | if(a2 > a1):            # ordem
+    17 | 	print(a2)            # ordem
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B4 — Comandos repetidos dentro de blocos if-elif-else
+  Ocorrências: 1
+
+  [1] Linha 7: Bloco idêntico ao da linha 3
+      Trecho  : msg = 'Sim'
+      Contexto:
+               6 | else:                   # mensagem
+        >>>    7 | 	if(a2 >= 1.37):      # mensagem
+               8 | 		msg = "Sim"       # mensagem
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 5
+
+  [1] Linha 1: Variável 'a1' com nome muito curto (≤4 chars)
+      Trecho  : a1 = ...
+      Contexto:
+        >>>    1 | a1 = float(input("Insira a sua altura: "))              #a sua altura
+               2 | a2 = float(input("Insira a altura do acompanhante: "))  #a altura do seu amigo
+
+  [2] Linha 2: Variável 'a2' com nome muito curto (≤4 chars)
+      Trecho  : a2 = ...
+      Contexto:
+               1 | a1 = float(input("Insira a sua altura: "))              #a sua altura
+        >>>    2 | a2 = float(input("Insira a altura do acompanhante: "))  #a altura do seu amigo
+               3 | if(a1 >= 1.37):         # mensagem
+
+  [3] Linha 4: Variável 'msg' com nome muito curto (≤4 chars)
+      Trecho  : msg = ...
+      Contexto:
+               3 | if(a1 >= 1.37):         # mensagem
+        >>>    4 | 	msg = "Sim"          # mensagem
+               5 | 	print(msg)
+
+  [4] Linha 8: Variável 'msg' com nome muito curto (≤4 chars)
+      Trecho  : msg = ...
+      Contexto:
+               7 | 	if(a2 >= 1.37):      # mensagem
+        >>>    8 | 		msg = "Sim"       # mensagem
+               9 | 		print(msg)
+
+  [5] Linha 11: Variável 'msg' com nome muito curto (≤4 chars)
+      Trecho  : msg = ...
+      Contexto:
+              10 | 	else:                # mensagem
+        >>>   11 | 		msg = "Nao"       # mensagem
+              12 | 		print(msg)
+
+======================================================================

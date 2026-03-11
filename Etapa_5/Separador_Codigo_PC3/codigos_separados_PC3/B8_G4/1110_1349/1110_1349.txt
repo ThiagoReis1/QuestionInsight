@@ -1,0 +1,199 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1110_1349.py
+Questão  : 1110
+Aluno    : 1349
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | p=int(input("Qual o prato? "))
+     2 | s=int(input("Qual o sobremesa? "))
+     3 | b=int(input("Qual o bebida? "))
+     4 | 
+     5 | prato= (p==1 or p==2 or p==3 or p==4)
+     6 | sobremesa= (s==1 or s==2 or s==3 or s==4)
+     7 | bebida= (b==1 or b==2 or b==3 or b==4)
+     8 | 
+     9 | if not(prato and sobremesa and bebida):
+    10 | 	print("Entradas:",p,",",s,",",b)
+    11 | 	print("Dados invalidos")
+    12 | else:
+    13 | 	#Pratos
+    14 | 	if p==1:
+    15 | 		p1=180
+    16 | 	elif p==2:
+    17 | 		p1=230
+    18 | 	elif p==3:
+    19 | 		p1=250
+    20 | 	elif p==4:
+    21 | 		p1=350
+    22 | 	#Sobremesas
+    23 | 	if s==1:
+    24 | 		s1=75
+    25 | 	elif s==2:
+    26 | 		s1=110
+    27 | 	elif s==3:
+    28 | 		s1=170
+    29 | 	elif s==4:
+    30 | 		s1=200
+    31 | 	#Bebidas
+    32 | 	if b==1:
+    33 | 		b1=20
+    34 | 	elif b==2:
+    35 | 		b1=70
+    36 | 	elif b==3:
+    37 | 		b1=100
+    38 | 	elif b==4:
+    39 | 		b1=65
+    40 | 	cal=p1+b1+s1
+    41 | 	print("Entradas:",p,",",s,",",b)
+    42 | 	print("Calorias:",cal,"cal")
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 3
+
+  [1] Linha 18: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 18) / elif ... sem else
+      Contexto:
+              17 | 		p1=230
+        >>>   18 | 	elif p==3:
+              19 | 		p1=250
+
+  [2] Linha 27: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 27) / elif ... sem else
+      Contexto:
+              26 | 		s1=110
+        >>>   27 | 	elif s==3:
+              28 | 		s1=170
+
+  [3] Linha 36: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 36) / elif ... sem else
+      Contexto:
+              35 | 		b1=70
+        >>>   36 | 	elif b==3:
+              37 | 		b1=100
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 16
+
+  [1] Linha 1: Variável 'p' com nome muito curto (≤4 chars)
+      Trecho  : p = ...
+      Contexto:
+        >>>    1 | p=int(input("Qual o prato? "))
+               2 | s=int(input("Qual o sobremesa? "))
+
+  [2] Linha 2: Variável 's' com nome muito curto (≤4 chars)
+      Trecho  : s = ...
+      Contexto:
+               1 | p=int(input("Qual o prato? "))
+        >>>    2 | s=int(input("Qual o sobremesa? "))
+               3 | b=int(input("Qual o bebida? "))
+
+  [3] Linha 3: Variável 'b' com nome muito curto (≤4 chars)
+      Trecho  : b = ...
+      Contexto:
+               2 | s=int(input("Qual o sobremesa? "))
+        >>>    3 | b=int(input("Qual o bebida? "))
+               4 | 
+
+  [4] Linha 40: Variável 'cal' com nome muito curto (≤4 chars)
+      Trecho  : cal = ...
+      Contexto:
+              39 | 		b1=65
+        >>>   40 | 	cal=p1+b1+s1
+              41 | 	print("Entradas:",p,",",s,",",b)
+
+  [5] Linha 15: Variável 'p1' com nome muito curto (≤4 chars)
+      Trecho  : p1 = ...
+      Contexto:
+              14 | 	if p==1:
+        >>>   15 | 		p1=180
+              16 | 	elif p==2:
+
+  [6] Linha 24: Variável 's1' com nome muito curto (≤4 chars)
+      Trecho  : s1 = ...
+      Contexto:
+              23 | 	if s==1:
+        >>>   24 | 		s1=75
+              25 | 	elif s==2:
+
+  [7] Linha 33: Variável 'b1' com nome muito curto (≤4 chars)
+      Trecho  : b1 = ...
+      Contexto:
+              32 | 	if b==1:
+        >>>   33 | 		b1=20
+              34 | 	elif b==2:
+
+  [8] Linha 17: Variável 'p1' com nome muito curto (≤4 chars)
+      Trecho  : p1 = ...
+      Contexto:
+              16 | 	elif p==2:
+        >>>   17 | 		p1=230
+              18 | 	elif p==3:
+
+  [9] Linha 26: Variável 's1' com nome muito curto (≤4 chars)
+      Trecho  : s1 = ...
+      Contexto:
+              25 | 	elif s==2:
+        >>>   26 | 		s1=110
+              27 | 	elif s==3:
+
+  [10] Linha 35: Variável 'b1' com nome muito curto (≤4 chars)
+      Trecho  : b1 = ...
+      Contexto:
+              34 | 	elif b==2:
+        >>>   35 | 		b1=70
+              36 | 	elif b==3:
+
+  [11] Linha 19: Variável 'p1' com nome muito curto (≤4 chars)
+      Trecho  : p1 = ...
+      Contexto:
+              18 | 	elif p==3:
+        >>>   19 | 		p1=250
+              20 | 	elif p==4:
+
+  [12] Linha 28: Variável 's1' com nome muito curto (≤4 chars)
+      Trecho  : s1 = ...
+      Contexto:
+              27 | 	elif s==3:
+        >>>   28 | 		s1=170
+              29 | 	elif s==4:
+
+  [13] Linha 37: Variável 'b1' com nome muito curto (≤4 chars)
+      Trecho  : b1 = ...
+      Contexto:
+              36 | 	elif b==3:
+        >>>   37 | 		b1=100
+              38 | 	elif b==4:
+
+  [14] Linha 21: Variável 'p1' com nome muito curto (≤4 chars)
+      Trecho  : p1 = ...
+      Contexto:
+              20 | 	elif p==4:
+        >>>   21 | 		p1=350
+              22 | 	#Sobremesas
+
+  [15] Linha 30: Variável 's1' com nome muito curto (≤4 chars)
+      Trecho  : s1 = ...
+      Contexto:
+              29 | 	elif s==4:
+        >>>   30 | 		s1=200
+              31 | 	#Bebidas
+
+  [16] Linha 39: Variável 'b1' com nome muito curto (≤4 chars)
+      Trecho  : b1 = ...
+      Contexto:
+              38 | 	elif b==4:
+        >>>   39 | 		b1=65
+              40 | 	cal=p1+b1+s1
+
+======================================================================

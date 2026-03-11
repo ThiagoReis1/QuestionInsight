@@ -1,0 +1,76 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1594_3476.py
+Questão  : 1594
+Aluno    : 3476
+Total MCs: 2
+
+⚠️  Misconceptions detectados: A3, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | vet=array(eval(input()))
+     3 | cont = 0
+     4 | peso = 0
+     5 | dano = 0
+     6 | while(cont<size(vet)):
+     7 | 	dano+= vet[cont]*(cont+1)
+     8 | 	cont = cont+1
+     9 | print(dano)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 1
+
+  [1] Linha 4: Variável 'peso' declarada mas nunca utilizada
+      Trecho  : peso = ...
+      Contexto:
+               3 | cont = 0
+        >>>    4 | peso = 0
+               5 | dano = 0
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 5
+
+  [1] Linha 2: Variável 'vet' com nome muito curto (≤4 chars)
+      Trecho  : vet = ...
+      Contexto:
+               1 | from numpy import*
+        >>>    2 | vet=array(eval(input()))
+               3 | cont = 0
+
+  [2] Linha 3: Variável 'cont' com nome muito curto (≤4 chars)
+      Trecho  : cont = ...
+      Contexto:
+               2 | vet=array(eval(input()))
+        >>>    3 | cont = 0
+               4 | peso = 0
+
+  [3] Linha 4: Variável 'peso' com nome muito curto (≤4 chars)
+      Trecho  : peso = ...
+      Contexto:
+               3 | cont = 0
+        >>>    4 | peso = 0
+               5 | dano = 0
+
+  [4] Linha 5: Variável 'dano' com nome muito curto (≤4 chars)
+      Trecho  : dano = ...
+      Contexto:
+               4 | peso = 0
+        >>>    5 | dano = 0
+               6 | while(cont<size(vet)):
+
+  [5] Linha 8: Variável 'cont' com nome muito curto (≤4 chars)
+      Trecho  : cont = ...
+      Contexto:
+               7 | 	dano+= vet[cont]*(cont+1)
+        >>>    8 | 	cont = cont+1
+               9 | print(dano)
+
+======================================================================

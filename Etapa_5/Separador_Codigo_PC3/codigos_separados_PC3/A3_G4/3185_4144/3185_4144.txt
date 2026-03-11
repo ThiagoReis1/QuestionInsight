@@ -1,0 +1,66 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 3185_4144.py
+Questão  : 3185
+Aluno    : 4144
+Total MCs: 2
+
+⚠️  Misconceptions detectados: A3, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import *
+     2 | a = input("digite a palavra: ")
+     3 | aux=""
+     4 | 
+     5 | for i in range(len(a)//2):
+     6 | 	j = len(a) - 1 - i
+     7 | 	aux = a[i]
+     8 | 	a[i] = a[j]
+     9 | 	a[j] = aux
+    10 | print(aux)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 1
+
+  [1] Linha 0: A3 detectado pelo VisitorMC3 (localização exata não mapeada)
+      Trecho  : —
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 4
+
+  [1] Linha 2: Variável 'a' com nome muito curto (≤4 chars)
+      Trecho  : a = ...
+      Contexto:
+               1 | from numpy import *
+        >>>    2 | a = input("digite a palavra: ")
+               3 | aux=""
+
+  [2] Linha 3: Variável 'aux' com nome muito curto (≤4 chars)
+      Trecho  : aux = ...
+      Contexto:
+               2 | a = input("digite a palavra: ")
+        >>>    3 | aux=""
+               4 | 
+
+  [3] Linha 6: Variável 'j' com nome muito curto (≤4 chars)
+      Trecho  : j = ...
+      Contexto:
+               5 | for i in range(len(a)//2):
+        >>>    6 | 	j = len(a) - 1 - i
+               7 | 	aux = a[i]
+
+  [4] Linha 7: Variável 'aux' com nome muito curto (≤4 chars)
+      Trecho  : aux = ...
+      Contexto:
+               6 | 	j = len(a) - 1 - i
+        >>>    7 | 	aux = a[i]
+               8 | 	a[i] = a[j]
+
+======================================================================

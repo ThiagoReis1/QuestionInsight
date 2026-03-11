@@ -1,0 +1,68 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 6377_9826.py
+Questão  : 6377
+Aluno    : 9826
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | fut = input(":").upper().split(",")
+     3 | jog = zeros(4, dtype=int)
+     4 | j = size(fut)
+     5 | 
+     6 | for i in range (j):
+     7 | 	if fut[i] == "A":
+     8 | 		jog[0] += 1
+     9 | 	elif fut[i] == "B":
+    10 | 		jog[1] += 1 
+    11 | 	elif fut[i] == "C":
+    12 | 		jog[2] += 1
+    13 | 	elif fut[i] == "D":
+    14 | 		jog[3] += 1
+    15 | print(jog)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 11: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 11) / elif ... sem else
+      Contexto:
+              10 | 		jog[1] += 1 
+        >>>   11 | 	elif fut[i] == "C":
+              12 | 		jog[2] += 1
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 3
+
+  [1] Linha 2: Variável 'fut' com nome muito curto (≤4 chars)
+      Trecho  : fut = ...
+      Contexto:
+               1 | from numpy import*
+        >>>    2 | fut = input(":").upper().split(",")
+               3 | jog = zeros(4, dtype=int)
+
+  [2] Linha 3: Variável 'jog' com nome muito curto (≤4 chars)
+      Trecho  : jog = ...
+      Contexto:
+               2 | fut = input(":").upper().split(",")
+        >>>    3 | jog = zeros(4, dtype=int)
+               4 | j = size(fut)
+
+  [3] Linha 4: Variável 'j' com nome muito curto (≤4 chars)
+      Trecho  : j = ...
+      Contexto:
+               3 | jog = zeros(4, dtype=int)
+        >>>    4 | j = size(fut)
+               5 | 
+
+======================================================================

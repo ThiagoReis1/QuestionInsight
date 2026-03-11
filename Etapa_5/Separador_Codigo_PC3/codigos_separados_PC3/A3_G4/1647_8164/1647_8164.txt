@@ -1,0 +1,88 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1647_8164.py
+Questão  : 1647
+Aluno    : 8164
+Total MCs: 2
+
+⚠️  Misconceptions detectados: A3, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | 
+     3 | freq = array(eval(input("digite as frequencias: ")))
+     4 | aprov = 0
+     5 | 
+     6 | for i in range(size(freq)):
+     7 | 	if freq[i] >= 70:
+     8 | 		aprov = aprov + 1
+     9 | 		
+    10 | pa = zeros(aprov, dtype=int)
+    11 | pac = 0
+    12 | 
+    13 | j = 0
+    14 | for x in range(size(freq)):
+    15 | 	if freq[x]>= 70:
+    16 | 		pa[j] = x
+    17 | 		j = j + 1
+    18 | 		
+    19 | 		
+    20 | print(aprov)
+    21 | print(pa)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 1
+
+  [1] Linha 11: Variável 'pac' declarada mas nunca utilizada
+      Trecho  : pac = ...
+      Contexto:
+              10 | pa = zeros(aprov, dtype=int)
+        >>>   11 | pac = 0
+              12 | 
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 5
+
+  [1] Linha 3: Variável 'freq' com nome muito curto (≤4 chars)
+      Trecho  : freq = ...
+      Contexto:
+               2 | 
+        >>>    3 | freq = array(eval(input("digite as frequencias: ")))
+               4 | aprov = 0
+
+  [2] Linha 10: Variável 'pa' com nome muito curto (≤4 chars)
+      Trecho  : pa = ...
+      Contexto:
+               9 | 		
+        >>>   10 | pa = zeros(aprov, dtype=int)
+              11 | pac = 0
+
+  [3] Linha 11: Variável 'pac' com nome muito curto (≤4 chars)
+      Trecho  : pac = ...
+      Contexto:
+              10 | pa = zeros(aprov, dtype=int)
+        >>>   11 | pac = 0
+              12 | 
+
+  [4] Linha 13: Variável 'j' com nome muito curto (≤4 chars)
+      Trecho  : j = ...
+      Contexto:
+              12 | 
+        >>>   13 | j = 0
+              14 | for x in range(size(freq)):
+
+  [5] Linha 17: Variável 'j' com nome muito curto (≤4 chars)
+      Trecho  : j = ...
+      Contexto:
+              16 | 		pa[j] = x
+        >>>   17 | 		j = j + 1
+              18 | 		
+
+======================================================================

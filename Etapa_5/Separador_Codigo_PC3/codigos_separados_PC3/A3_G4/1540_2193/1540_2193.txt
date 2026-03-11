@@ -1,0 +1,109 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1540_2193.py
+Questão  : 1540
+Aluno    : 2193
+Total MCs: 2
+
+⚠️  Misconceptions detectados: A3, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from math import *
+     2 | x = eval(input(""))
+     3 | k = int(input(""))
+     4 | exp = 0
+     5 | fac = 2
+     6 | soma = 0
+     7 | sinal = 1
+     8 | i = 0
+     9 | while (i < k):
+    10 | 	soma = soma + sinal * (x**(exp)) / (factorial(2*exp))
+    11 | 	sinal = sinal * (-1)
+    12 | 	i = i + 1
+    13 | 	exp = exp + 1
+    14 | print(round(soma, 6))
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 1
+
+  [1] Linha 5: Variável 'fac' declarada mas nunca utilizada
+      Trecho  : fac = ...
+      Contexto:
+               4 | exp = 0
+        >>>    5 | fac = 2
+               6 | soma = 0
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 9
+
+  [1] Linha 2: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+               1 | from math import *
+        >>>    2 | x = eval(input(""))
+               3 | k = int(input(""))
+
+  [2] Linha 3: Variável 'k' com nome muito curto (≤4 chars)
+      Trecho  : k = ...
+      Contexto:
+               2 | x = eval(input(""))
+        >>>    3 | k = int(input(""))
+               4 | exp = 0
+
+  [3] Linha 4: Variável 'exp' com nome muito curto (≤4 chars)
+      Trecho  : exp = ...
+      Contexto:
+               3 | k = int(input(""))
+        >>>    4 | exp = 0
+               5 | fac = 2
+
+  [4] Linha 5: Variável 'fac' com nome muito curto (≤4 chars)
+      Trecho  : fac = ...
+      Contexto:
+               4 | exp = 0
+        >>>    5 | fac = 2
+               6 | soma = 0
+
+  [5] Linha 6: Variável 'soma' com nome muito curto (≤4 chars)
+      Trecho  : soma = ...
+      Contexto:
+               5 | fac = 2
+        >>>    6 | soma = 0
+               7 | sinal = 1
+
+  [6] Linha 8: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+               7 | sinal = 1
+        >>>    8 | i = 0
+               9 | while (i < k):
+
+  [7] Linha 10: Variável 'soma' com nome muito curto (≤4 chars)
+      Trecho  : soma = ...
+      Contexto:
+               9 | while (i < k):
+        >>>   10 | 	soma = soma + sinal * (x**(exp)) / (factorial(2*exp))
+              11 | 	sinal = sinal * (-1)
+
+  [8] Linha 12: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+              11 | 	sinal = sinal * (-1)
+        >>>   12 | 	i = i + 1
+              13 | 	exp = exp + 1
+
+  [9] Linha 13: Variável 'exp' com nome muito curto (≤4 chars)
+      Trecho  : exp = ...
+      Contexto:
+              12 | 	i = i + 1
+        >>>   13 | 	exp = exp + 1
+              14 | print(round(soma, 6))
+
+======================================================================

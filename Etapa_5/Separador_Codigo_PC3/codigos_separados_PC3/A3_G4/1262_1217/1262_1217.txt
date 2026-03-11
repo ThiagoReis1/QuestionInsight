@@ -1,0 +1,102 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1262_1217.py
+Questão  : 1262
+Aluno    : 1217
+Total MCs: 2
+
+⚠️  Misconceptions detectados: A3, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | from math import*
+     3 | a = float(input("digite"))
+     4 | b = array(eval(input("digite")))
+     5 | c = array(eval(input("digite")))
+     6 | cont=zeros(2,dtype=(int))
+     7 | t=(a/a-1)
+     8 | soma =0
+     9 | for i in range(size(b)):
+    10 | 	soma =soma + abs(b[i] - c[i])**t			
+    11 | 	raiz =soma ** (1/t)		
+    12 | print(round(raiz,6))
+    13 | 					
+    14 | 	
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 1
+
+  [1] Linha 6: Variável 'cont' declarada mas nunca utilizada
+      Trecho  : cont = ...
+      Contexto:
+               5 | c = array(eval(input("digite")))
+        >>>    6 | cont=zeros(2,dtype=(int))
+               7 | t=(a/a-1)
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 8
+
+  [1] Linha 3: Variável 'a' com nome muito curto (≤4 chars)
+      Trecho  : a = ...
+      Contexto:
+               2 | from math import*
+        >>>    3 | a = float(input("digite"))
+               4 | b = array(eval(input("digite")))
+
+  [2] Linha 4: Variável 'b' com nome muito curto (≤4 chars)
+      Trecho  : b = ...
+      Contexto:
+               3 | a = float(input("digite"))
+        >>>    4 | b = array(eval(input("digite")))
+               5 | c = array(eval(input("digite")))
+
+  [3] Linha 5: Variável 'c' com nome muito curto (≤4 chars)
+      Trecho  : c = ...
+      Contexto:
+               4 | b = array(eval(input("digite")))
+        >>>    5 | c = array(eval(input("digite")))
+               6 | cont=zeros(2,dtype=(int))
+
+  [4] Linha 6: Variável 'cont' com nome muito curto (≤4 chars)
+      Trecho  : cont = ...
+      Contexto:
+               5 | c = array(eval(input("digite")))
+        >>>    6 | cont=zeros(2,dtype=(int))
+               7 | t=(a/a-1)
+
+  [5] Linha 7: Variável 't' com nome muito curto (≤4 chars)
+      Trecho  : t = ...
+      Contexto:
+               6 | cont=zeros(2,dtype=(int))
+        >>>    7 | t=(a/a-1)
+               8 | soma =0
+
+  [6] Linha 8: Variável 'soma' com nome muito curto (≤4 chars)
+      Trecho  : soma = ...
+      Contexto:
+               7 | t=(a/a-1)
+        >>>    8 | soma =0
+               9 | for i in range(size(b)):
+
+  [7] Linha 10: Variável 'soma' com nome muito curto (≤4 chars)
+      Trecho  : soma = ...
+      Contexto:
+               9 | for i in range(size(b)):
+        >>>   10 | 	soma =soma + abs(b[i] - c[i])**t			
+              11 | 	raiz =soma ** (1/t)		
+
+  [8] Linha 11: Variável 'raiz' com nome muito curto (≤4 chars)
+      Trecho  : raiz = ...
+      Contexto:
+              10 | 	soma =soma + abs(b[i] - c[i])**t			
+        >>>   11 | 	raiz =soma ** (1/t)		
+              12 | print(round(raiz,6))
+
+======================================================================

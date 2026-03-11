@@ -1,0 +1,153 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1615_2384.py
+Questão  : 1615
+Aluno    : 2384
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import *
+     2 | 
+     3 | v1 = array(eval(input("v1: ")))
+     4 | v2 = array(eval(input("v2: ")))
+     5 | s1 = 0
+     6 | s2 = 0
+     7 | i = 0
+     8 | 
+     9 | while(i<size(v1) and i<size(v2)):
+    10 | 	if(v1[i]==1):
+    11 | 		s1=s1+40
+    12 | 	elif(v1[i]==2):
+    13 | 		s1=s1+20
+    14 | 	elif(v1[i]==3):
+    15 | 		s1=s1+10
+    16 | 	if(v2[i]==1):
+    17 | 		s2=s2+40
+    18 | 	elif(v2[i]==2):
+    19 | 		s2=s2+20
+    20 | 	elif(v2[i]==3):
+    21 | 		s2=s2+10
+    22 | 	i=i+1
+    23 | 	
+    24 | if(s1>s2):
+    25 | 	print("JOGADOR UM")
+    26 | elif(s2>s1):
+    27 | 	print("JOGADOR DOIS")
+    28 | else:
+    29 | 	print("EMPATE")
+    30 | 
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 2
+
+  [1] Linha 12: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 12) / elif ... sem else
+      Contexto:
+              11 | 		s1=s1+40
+        >>>   12 | 	elif(v1[i]==2):
+              13 | 		s1=s1+20
+
+  [2] Linha 18: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 18) / elif ... sem else
+      Contexto:
+              17 | 		s2=s2+40
+        >>>   18 | 	elif(v2[i]==2):
+              19 | 		s2=s2+20
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 12
+
+  [1] Linha 3: Variável 'v1' com nome muito curto (≤4 chars)
+      Trecho  : v1 = ...
+      Contexto:
+               2 | 
+        >>>    3 | v1 = array(eval(input("v1: ")))
+               4 | v2 = array(eval(input("v2: ")))
+
+  [2] Linha 4: Variável 'v2' com nome muito curto (≤4 chars)
+      Trecho  : v2 = ...
+      Contexto:
+               3 | v1 = array(eval(input("v1: ")))
+        >>>    4 | v2 = array(eval(input("v2: ")))
+               5 | s1 = 0
+
+  [3] Linha 5: Variável 's1' com nome muito curto (≤4 chars)
+      Trecho  : s1 = ...
+      Contexto:
+               4 | v2 = array(eval(input("v2: ")))
+        >>>    5 | s1 = 0
+               6 | s2 = 0
+
+  [4] Linha 6: Variável 's2' com nome muito curto (≤4 chars)
+      Trecho  : s2 = ...
+      Contexto:
+               5 | s1 = 0
+        >>>    6 | s2 = 0
+               7 | i = 0
+
+  [5] Linha 7: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+               6 | s2 = 0
+        >>>    7 | i = 0
+               8 | 
+
+  [6] Linha 22: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+              21 | 		s2=s2+10
+        >>>   22 | 	i=i+1
+              23 | 	
+
+  [7] Linha 11: Variável 's1' com nome muito curto (≤4 chars)
+      Trecho  : s1 = ...
+      Contexto:
+              10 | 	if(v1[i]==1):
+        >>>   11 | 		s1=s1+40
+              12 | 	elif(v1[i]==2):
+
+  [8] Linha 17: Variável 's2' com nome muito curto (≤4 chars)
+      Trecho  : s2 = ...
+      Contexto:
+              16 | 	if(v2[i]==1):
+        >>>   17 | 		s2=s2+40
+              18 | 	elif(v2[i]==2):
+
+  [9] Linha 13: Variável 's1' com nome muito curto (≤4 chars)
+      Trecho  : s1 = ...
+      Contexto:
+              12 | 	elif(v1[i]==2):
+        >>>   13 | 		s1=s1+20
+              14 | 	elif(v1[i]==3):
+
+  [10] Linha 19: Variável 's2' com nome muito curto (≤4 chars)
+      Trecho  : s2 = ...
+      Contexto:
+              18 | 	elif(v2[i]==2):
+        >>>   19 | 		s2=s2+20
+              20 | 	elif(v2[i]==3):
+
+  [11] Linha 15: Variável 's1' com nome muito curto (≤4 chars)
+      Trecho  : s1 = ...
+      Contexto:
+              14 | 	elif(v1[i]==3):
+        >>>   15 | 		s1=s1+10
+              16 | 	if(v2[i]==1):
+
+  [12] Linha 21: Variável 's2' com nome muito curto (≤4 chars)
+      Trecho  : s2 = ...
+      Contexto:
+              20 | 	elif(v2[i]==3):
+        >>>   21 | 		s2=s2+10
+              22 | 	i=i+1
+
+======================================================================

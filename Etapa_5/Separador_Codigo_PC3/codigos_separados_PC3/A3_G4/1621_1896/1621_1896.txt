@@ -1,0 +1,177 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1621_1896.py
+Questão  : 1621
+Aluno    : 1896
+Total MCs: 2
+
+⚠️  Misconceptions detectados: A3, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | nome=array(eval(input("NOMES:")))
+     3 | quant=array(eval(input("quantidade: ")))
+     4 | i=0
+     5 | n=size(nome)
+     6 | q=size(quant)
+     7 | A=0
+     8 | FA=0
+     9 | B=0
+    10 | M=0
+    11 | FE=0
+    12 | v=""
+    13 | while(i<n):
+    14 | 	v=nome[i].upper()
+    15 | 	if(v=='ARROZ'):
+    16 | 		A=A+(quant[i]*(1.25))
+    17 | 	if(v=='FEIJAO'):
+    18 | 		FE=FE+(quant[i]*2.60)
+    19 | 	if(v=='BIS'):
+    20 | 		B=B+(quant[i]*1.80)
+    21 | 	if(v=='MIOJO'):
+    22 | 		M=M+(quant[i]*0.85)
+    23 | 	if(v=='FANTA'):
+    24 | 		FA=FA+(quant[i]*3.20)
+    25 | 	i=i+1
+    26 | print(round(float(A+B+M+FE+FA),2))
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 1
+
+  [1] Linha 6: Variável 'q' declarada mas nunca utilizada
+      Trecho  : q = ...
+      Contexto:
+               5 | n=size(nome)
+        >>>    6 | q=size(quant)
+               7 | A=0
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 17
+
+  [1] Linha 2: Variável 'nome' com nome muito curto (≤4 chars)
+      Trecho  : nome = ...
+      Contexto:
+               1 | from numpy import*
+        >>>    2 | nome=array(eval(input("NOMES:")))
+               3 | quant=array(eval(input("quantidade: ")))
+
+  [2] Linha 4: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+               3 | quant=array(eval(input("quantidade: ")))
+        >>>    4 | i=0
+               5 | n=size(nome)
+
+  [3] Linha 5: Variável 'n' com nome muito curto (≤4 chars)
+      Trecho  : n = ...
+      Contexto:
+               4 | i=0
+        >>>    5 | n=size(nome)
+               6 | q=size(quant)
+
+  [4] Linha 6: Variável 'q' com nome muito curto (≤4 chars)
+      Trecho  : q = ...
+      Contexto:
+               5 | n=size(nome)
+        >>>    6 | q=size(quant)
+               7 | A=0
+
+  [5] Linha 7: Variável 'A' com nome muito curto (≤4 chars)
+      Trecho  : A = ...
+      Contexto:
+               6 | q=size(quant)
+        >>>    7 | A=0
+               8 | FA=0
+
+  [6] Linha 8: Variável 'FA' com nome muito curto (≤4 chars)
+      Trecho  : FA = ...
+      Contexto:
+               7 | A=0
+        >>>    8 | FA=0
+               9 | B=0
+
+  [7] Linha 9: Variável 'B' com nome muito curto (≤4 chars)
+      Trecho  : B = ...
+      Contexto:
+               8 | FA=0
+        >>>    9 | B=0
+              10 | M=0
+
+  [8] Linha 10: Variável 'M' com nome muito curto (≤4 chars)
+      Trecho  : M = ...
+      Contexto:
+               9 | B=0
+        >>>   10 | M=0
+              11 | FE=0
+
+  [9] Linha 11: Variável 'FE' com nome muito curto (≤4 chars)
+      Trecho  : FE = ...
+      Contexto:
+              10 | M=0
+        >>>   11 | FE=0
+              12 | v=""
+
+  [10] Linha 12: Variável 'v' com nome muito curto (≤4 chars)
+      Trecho  : v = ...
+      Contexto:
+              11 | FE=0
+        >>>   12 | v=""
+              13 | while(i<n):
+
+  [11] Linha 14: Variável 'v' com nome muito curto (≤4 chars)
+      Trecho  : v = ...
+      Contexto:
+              13 | while(i<n):
+        >>>   14 | 	v=nome[i].upper()
+              15 | 	if(v=='ARROZ'):
+
+  [12] Linha 25: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+              24 | 		FA=FA+(quant[i]*3.20)
+        >>>   25 | 	i=i+1
+              26 | print(round(float(A+B+M+FE+FA),2))
+
+  [13] Linha 16: Variável 'A' com nome muito curto (≤4 chars)
+      Trecho  : A = ...
+      Contexto:
+              15 | 	if(v=='ARROZ'):
+        >>>   16 | 		A=A+(quant[i]*(1.25))
+              17 | 	if(v=='FEIJAO'):
+
+  [14] Linha 18: Variável 'FE' com nome muito curto (≤4 chars)
+      Trecho  : FE = ...
+      Contexto:
+              17 | 	if(v=='FEIJAO'):
+        >>>   18 | 		FE=FE+(quant[i]*2.60)
+              19 | 	if(v=='BIS'):
+
+  [15] Linha 20: Variável 'B' com nome muito curto (≤4 chars)
+      Trecho  : B = ...
+      Contexto:
+              19 | 	if(v=='BIS'):
+        >>>   20 | 		B=B+(quant[i]*1.80)
+              21 | 	if(v=='MIOJO'):
+
+  [16] Linha 22: Variável 'M' com nome muito curto (≤4 chars)
+      Trecho  : M = ...
+      Contexto:
+              21 | 	if(v=='MIOJO'):
+        >>>   22 | 		M=M+(quant[i]*0.85)
+              23 | 	if(v=='FANTA'):
+
+  [17] Linha 24: Variável 'FA' com nome muito curto (≤4 chars)
+      Trecho  : FA = ...
+      Contexto:
+              23 | 	if(v=='FANTA'):
+        >>>   24 | 		FA=FA+(quant[i]*3.20)
+              25 | 	i=i+1
+
+======================================================================

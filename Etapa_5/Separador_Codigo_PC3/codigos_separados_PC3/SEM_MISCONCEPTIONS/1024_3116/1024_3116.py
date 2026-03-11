@@ -1,0 +1,6 @@
+compA = float(input("Digite o comprimento do lado A: "))
+compB = float(input("Digite o comprimento do lado B: "))
+compC = float(input("Digite o comprimento do lado C: "))
+custometro = float(input("Digite o valor do metro quadrado: "))
+custo = float(custometro*compA)+(custometro*compB)+(custometro*compC)
+print(round(custo,2))

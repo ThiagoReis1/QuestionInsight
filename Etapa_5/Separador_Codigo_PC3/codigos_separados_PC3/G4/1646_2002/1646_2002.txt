@@ -1,0 +1,91 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1646_2002.py
+Questão  : 1646
+Aluno    : 2002
+Total MCs: 1
+
+⚠️  Misconceptions detectados: G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import *
+     2 | A = array(eval(input("Entrada: ")))
+     3 | n = 0 #numero de saques <= 50
+     4 | 
+     5 | for i in arange(size(A)):
+     6 | 	if A[i] <= 50.00:
+     7 | 		n = n + 1
+     8 | 
+     9 | B = zeros(n, dtype = int)
+    10 | C = arange(size(A))
+    11 | n = 0
+    12 | 
+    13 | 
+    14 | for i in C:
+    15 | 	if A[i] <= 50.00:
+    16 | 		B[n] = C[i]
+    17 | 		n = n + 1
+    18 | 		
+    19 | print(n)
+    20 | print(B)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 7
+
+  [1] Linha 2: Variável 'A' com nome muito curto (≤4 chars)
+      Trecho  : A = ...
+      Contexto:
+               1 | from numpy import *
+        >>>    2 | A = array(eval(input("Entrada: ")))
+               3 | n = 0 #numero de saques <= 50
+
+  [2] Linha 3: Variável 'n' com nome muito curto (≤4 chars)
+      Trecho  : n = ...
+      Contexto:
+               2 | A = array(eval(input("Entrada: ")))
+        >>>    3 | n = 0 #numero de saques <= 50
+               4 | 
+
+  [3] Linha 9: Variável 'B' com nome muito curto (≤4 chars)
+      Trecho  : B = ...
+      Contexto:
+               8 | 
+        >>>    9 | B = zeros(n, dtype = int)
+              10 | C = arange(size(A))
+
+  [4] Linha 10: Variável 'C' com nome muito curto (≤4 chars)
+      Trecho  : C = ...
+      Contexto:
+               9 | B = zeros(n, dtype = int)
+        >>>   10 | C = arange(size(A))
+              11 | n = 0
+
+  [5] Linha 11: Variável 'n' com nome muito curto (≤4 chars)
+      Trecho  : n = ...
+      Contexto:
+              10 | C = arange(size(A))
+        >>>   11 | n = 0
+              12 | 
+
+  [6] Linha 7: Variável 'n' com nome muito curto (≤4 chars)
+      Trecho  : n = ...
+      Contexto:
+               6 | 	if A[i] <= 50.00:
+        >>>    7 | 		n = n + 1
+               8 | 
+
+  [7] Linha 17: Variável 'n' com nome muito curto (≤4 chars)
+      Trecho  : n = ...
+      Contexto:
+              16 | 		B[n] = C[i]
+        >>>   17 | 		n = n + 1
+              18 | 		
+
+======================================================================

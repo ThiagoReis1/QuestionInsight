@@ -1,0 +1,58 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1726_3385.py
+Questão  : 1726
+Aluno    : 3385
+Total MCs: 1
+
+⚠️  Misconceptions detectados: A3
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | 
+     3 | matriz_notas=array= (eval(input("m:")))
+     4 | lin= shape (matriz_notas)[0]
+     5 | col= shape (matriz_notas)[1]
+     6 | menor=9999999999999999999999
+     7 | indices=3
+     8 | for i in range(lin):
+     9 | 	for j in range (col):
+    10 | 		if matriz_notas[i][j]<menor:
+    11 | 			indice=i
+    12 | 			menor=matriz_notas[i][j]
+    13 | 		else:
+    14 | 			j=j+2
+    15 | print(menor)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 3
+
+  [1] Linha 3: Variável 'array' declarada mas nunca utilizada
+      Trecho  : array = ...
+      Contexto:
+               2 | 
+        >>>    3 | matriz_notas=array= (eval(input("m:")))
+               4 | lin= shape (matriz_notas)[0]
+
+  [2] Linha 7: Variável 'indices' declarada mas nunca utilizada
+      Trecho  : indices = ...
+      Contexto:
+               6 | menor=9999999999999999999999
+        >>>    7 | indices=3
+               8 | for i in range(lin):
+
+  [3] Linha 11: Variável 'indice' declarada mas nunca utilizada
+      Trecho  : indice = ...
+      Contexto:
+              10 | 		if matriz_notas[i][j]<menor:
+        >>>   11 | 			indice=i
+              12 | 			menor=matriz_notas[i][j]
+
+======================================================================

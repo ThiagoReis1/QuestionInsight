@@ -1,0 +1,3 @@
+num = float(input())
+
+if = ()

@@ -1,0 +1,6 @@
+largura=float(input())
+comprimento=float(input())
+custo=float(input())
+perimetro=(2*(largura+comprimento))
+total=(custo*perimetro)
+print(round(total,2))

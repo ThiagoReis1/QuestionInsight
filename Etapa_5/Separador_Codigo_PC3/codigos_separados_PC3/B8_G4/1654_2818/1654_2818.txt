@@ -1,0 +1,218 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1654_2818.py
+Questão  : 1654
+Aluno    : 2818
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import *
+     2 | vet = input("Estados: ")
+     3 | vet = vet.split(',')
+     4 | vet2 = zeros(5, dtype = int)
+     5 | i = 0
+     6 | am = 0
+     7 | pe = 0
+     8 | mg = 0
+     9 | sp = 0
+    10 | rs = 0
+    11 | tamanho = size(vet)
+    12 | while (i < tamanho):
+    13 | 	if (vet[i] == 'AM'):
+    14 | 		vet2[0] = vet2[0] + 1
+    15 | 		am = am + 1
+    16 | 		i = i + 1
+    17 | 	elif (vet[i] == 'PE'):
+    18 | 		vet2[1] = vet2[1] + 1
+    19 | 		pe = pe + 1
+    20 | 		i = i + 1
+    21 | 	elif (vet[i] == 'MG'):
+    22 | 		vet2[2] = vet2[2] + 1
+    23 | 		mg = mg + 1
+    24 | 		i = i + 1
+    25 | 	elif (vet[i] == 'SP'):
+    26 | 		vet2[3] = vet2[3] + 1
+    27 | 		sp = sp + 1
+    28 | 		i = i + 1
+    29 | 	elif (vet[i] == 'RS'):
+    30 | 		vet2[4] = vet2[4] + 1
+    31 | 		rs = rs + 1
+    32 | 		i = i + 1
+    33 | 	
+    34 | if (am > pe and am > mg and am > sp and am > rs):
+    35 | 	print (am)
+    36 | elif (pe > am and pe > mg and pe > sp and pe > rs):
+    37 | 	print (pe)
+    38 | elif (mg > pe and mg > am and mg > sp and mg > rs):
+    39 | 	print (mg)
+    40 | elif (sp > am and sp > pe and sp > mg and sp > rs):
+    41 | 	print (sp)
+    42 | elif (rs > am and rs > pe and rs > mg and rs > sp):
+    43 | 	print (rs)
+    44 | 	
+    45 | 	
+    46 | print (vet2)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 2
+
+  [1] Linha 40: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 40) / elif ... sem else
+      Contexto:
+              39 | 	print (mg)
+        >>>   40 | elif (sp > am and sp > pe and sp > mg and sp > rs):
+              41 | 	print (sp)
+
+  [2] Linha 25: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 25) / elif ... sem else
+      Contexto:
+              24 | 		i = i + 1
+        >>>   25 | 	elif (vet[i] == 'SP'):
+              26 | 		vet2[3] = vet2[3] + 1
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 19
+
+  [1] Linha 2: Variável 'vet' com nome muito curto (≤4 chars)
+      Trecho  : vet = ...
+      Contexto:
+               1 | from numpy import *
+        >>>    2 | vet = input("Estados: ")
+               3 | vet = vet.split(',')
+
+  [2] Linha 3: Variável 'vet' com nome muito curto (≤4 chars)
+      Trecho  : vet = ...
+      Contexto:
+               2 | vet = input("Estados: ")
+        >>>    3 | vet = vet.split(',')
+               4 | vet2 = zeros(5, dtype = int)
+
+  [3] Linha 4: Variável 'vet2' com nome muito curto (≤4 chars)
+      Trecho  : vet2 = ...
+      Contexto:
+               3 | vet = vet.split(',')
+        >>>    4 | vet2 = zeros(5, dtype = int)
+               5 | i = 0
+
+  [4] Linha 5: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+               4 | vet2 = zeros(5, dtype = int)
+        >>>    5 | i = 0
+               6 | am = 0
+
+  [5] Linha 6: Variável 'am' com nome muito curto (≤4 chars)
+      Trecho  : am = ...
+      Contexto:
+               5 | i = 0
+        >>>    6 | am = 0
+               7 | pe = 0
+
+  [6] Linha 7: Variável 'pe' com nome muito curto (≤4 chars)
+      Trecho  : pe = ...
+      Contexto:
+               6 | am = 0
+        >>>    7 | pe = 0
+               8 | mg = 0
+
+  [7] Linha 8: Variável 'mg' com nome muito curto (≤4 chars)
+      Trecho  : mg = ...
+      Contexto:
+               7 | pe = 0
+        >>>    8 | mg = 0
+               9 | sp = 0
+
+  [8] Linha 9: Variável 'sp' com nome muito curto (≤4 chars)
+      Trecho  : sp = ...
+      Contexto:
+               8 | mg = 0
+        >>>    9 | sp = 0
+              10 | rs = 0
+
+  [9] Linha 10: Variável 'rs' com nome muito curto (≤4 chars)
+      Trecho  : rs = ...
+      Contexto:
+               9 | sp = 0
+        >>>   10 | rs = 0
+              11 | tamanho = size(vet)
+
+  [10] Linha 15: Variável 'am' com nome muito curto (≤4 chars)
+      Trecho  : am = ...
+      Contexto:
+              14 | 		vet2[0] = vet2[0] + 1
+        >>>   15 | 		am = am + 1
+              16 | 		i = i + 1
+
+  [11] Linha 16: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+              15 | 		am = am + 1
+        >>>   16 | 		i = i + 1
+              17 | 	elif (vet[i] == 'PE'):
+
+  [12] Linha 19: Variável 'pe' com nome muito curto (≤4 chars)
+      Trecho  : pe = ...
+      Contexto:
+              18 | 		vet2[1] = vet2[1] + 1
+        >>>   19 | 		pe = pe + 1
+              20 | 		i = i + 1
+
+  [13] Linha 20: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+              19 | 		pe = pe + 1
+        >>>   20 | 		i = i + 1
+              21 | 	elif (vet[i] == 'MG'):
+
+  [14] Linha 23: Variável 'mg' com nome muito curto (≤4 chars)
+      Trecho  : mg = ...
+      Contexto:
+              22 | 		vet2[2] = vet2[2] + 1
+        >>>   23 | 		mg = mg + 1
+              24 | 		i = i + 1
+
+  [15] Linha 24: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+              23 | 		mg = mg + 1
+        >>>   24 | 		i = i + 1
+              25 | 	elif (vet[i] == 'SP'):
+
+  [16] Linha 27: Variável 'sp' com nome muito curto (≤4 chars)
+      Trecho  : sp = ...
+      Contexto:
+              26 | 		vet2[3] = vet2[3] + 1
+        >>>   27 | 		sp = sp + 1
+              28 | 		i = i + 1
+
+  [17] Linha 28: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+              27 | 		sp = sp + 1
+        >>>   28 | 		i = i + 1
+              29 | 	elif (vet[i] == 'RS'):
+
+  [18] Linha 31: Variável 'rs' com nome muito curto (≤4 chars)
+      Trecho  : rs = ...
+      Contexto:
+              30 | 		vet2[4] = vet2[4] + 1
+        >>>   31 | 		rs = rs + 1
+              32 | 		i = i + 1
+
+  [19] Linha 32: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+              31 | 		rs = rs + 1
+        >>>   32 | 		i = i + 1
+              33 | 	
+
+======================================================================

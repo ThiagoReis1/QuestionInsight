@@ -1,0 +1,97 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1643_3652.py
+Questão  : 1643
+Aluno    : 3652
+Total MCs: 2
+
+⚠️  Misconceptions detectados: A2, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import *
+     2 | n = array(eval(input("notas finais: ")))
+     3 | i = 0
+     4 | for x in range(size(n)):
+     5 | 	if (n[x] >= 5) :
+     6 | 		i = i + 1
+     7 | 	else:
+     8 | 		i = i
+     9 | print(i)
+    10 | z = zeros(i, dtype = int)
+    11 | q = 0
+    12 | for w in range(size(n)):
+    13 | 	if (n[w] >= 5):
+    14 | 		z[q] = z[q] + w
+    15 | 		q = q + 1
+    16 | print(z)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A2 — Variável atribuída a si mesma
+  Ocorrências: 1
+
+  [1] Linha 8: 'i' atribuído a si mesmo
+      Trecho  : i = i
+      Contexto:
+               7 | 	else:
+        >>>    8 | 		i = i
+               9 | print(i)
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 7
+
+  [1] Linha 2: Variável 'n' com nome muito curto (≤4 chars)
+      Trecho  : n = ...
+      Contexto:
+               1 | from numpy import *
+        >>>    2 | n = array(eval(input("notas finais: ")))
+               3 | i = 0
+
+  [2] Linha 3: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+               2 | n = array(eval(input("notas finais: ")))
+        >>>    3 | i = 0
+               4 | for x in range(size(n)):
+
+  [3] Linha 10: Variável 'z' com nome muito curto (≤4 chars)
+      Trecho  : z = ...
+      Contexto:
+               9 | print(i)
+        >>>   10 | z = zeros(i, dtype = int)
+              11 | q = 0
+
+  [4] Linha 11: Variável 'q' com nome muito curto (≤4 chars)
+      Trecho  : q = ...
+      Contexto:
+              10 | z = zeros(i, dtype = int)
+        >>>   11 | q = 0
+              12 | for w in range(size(n)):
+
+  [5] Linha 6: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+               5 | 	if (n[x] >= 5) :
+        >>>    6 | 		i = i + 1
+               7 | 	else:
+
+  [6] Linha 8: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+               7 | 	else:
+        >>>    8 | 		i = i
+               9 | print(i)
+
+  [7] Linha 15: Variável 'q' com nome muito curto (≤4 chars)
+      Trecho  : q = ...
+      Contexto:
+              14 | 		z[q] = z[q] + w
+        >>>   15 | 		q = q + 1
+              16 | print(z)
+
+======================================================================

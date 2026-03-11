@@ -1,0 +1,9 @@
+X=int(input())
+d=X%13
+q=X//13
+if(d==0):
+	print(q)
+	print("sim")
+else:
+	print(d)
+	print("nao")

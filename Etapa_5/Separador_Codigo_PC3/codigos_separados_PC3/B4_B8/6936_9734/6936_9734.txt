@@ -1,0 +1,58 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 6936_9734.py
+Questão  : 6936
+Aluno    : 9734
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B4, B8
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | valorcompra = float(input("valor da compra"))
+     2 | formapag = input("forma de pagamento")
+     3 | 
+     4 | if formapag == "D":
+     5 | 	valorA = 13/100
+     6 | 	valorf = valorcompra - valorcompra*valorA
+     7 | 	print(round(valorf, 2))
+     8 | elif formapag == "P":
+     9 | 	valorA = 13/100
+    10 | 	valorf = valorcompra - valorcompra * valorA
+    11 | 	print(round(valorf, 2))
+    12 | else:
+    13 | 	vezes = int(input("1 ou 2"))
+    14 | 	if vezes == 1:
+    15 | 		print(round(valorcompra, 2))
+    16 | 	elif vezes == 2:
+    17 | 		valorA =  8/100
+    18 | 		valorf = valorcompra + valorcompra*valorA
+    19 | 		print(round(valorf, 2))
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B4 — Comandos repetidos dentro de blocos if-elif-else
+  Ocorrências: 1
+
+  [1] Linha 8: Bloco idêntico ao da linha 4
+      Trecho  : valorA = 13 / 100
+      Contexto:
+               7 | 	print(round(valorf, 2))
+        >>>    8 | elif formapag == "P":
+               9 | 	valorA = 13/100
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 14: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 14) / elif ... sem else
+      Contexto:
+              13 | 	vezes = int(input("1 ou 2"))
+        >>>   14 | 	if vezes == 1:
+              15 | 		print(round(valorcompra, 2))
+
+======================================================================

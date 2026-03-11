@@ -1,0 +1,125 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1260_1309.py
+Questão  : 1260
+Aluno    : 1309
+Total MCs: 2
+
+⚠️  Misconceptions detectados: C8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import *
+     2 | 
+     3 | p= eval(input("digite um numero maior que 1:"))
+     4 | 
+     5 | x=array(eval(input("digite um vetor:")))
+     6 | y= array (eval(input("digite um vetor:")))
+     7 | 
+     8 | k=0
+     9 | i=0
+    10 | for i in range(size(x)):
+    11 | 	x[i]=x[i]-y[k]
+    12 | 	i=i+1
+    13 | 	k=k+1
+    14 | print(x)
+    15 | 
+    16 | q= p/(p+1)
+    17 | 
+    18 | soma=0
+    19 | 
+    20 | for t in x:
+    21 | 	soma = soma + (abs(t))**(q)
+    22 | norma= (soma)**(1/q)
+    23 | print(round(norma,4))
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ C8 — Loop for com sua variável de iteração sobrescrita
+  Ocorrências: 1
+
+  [1] Linha 12: Variável de iteração 'i' sobrescrita no loop
+      Trecho  : i = i + 1
+      Contexto:
+              11 | 	x[i]=x[i]-y[k]
+        >>>   12 | 	i=i+1
+              13 | 	k=k+1
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 10
+
+  [1] Linha 3: Variável 'p' com nome muito curto (≤4 chars)
+      Trecho  : p = ...
+      Contexto:
+               2 | 
+        >>>    3 | p= eval(input("digite um numero maior que 1:"))
+               4 | 
+
+  [2] Linha 5: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+               4 | 
+        >>>    5 | x=array(eval(input("digite um vetor:")))
+               6 | y= array (eval(input("digite um vetor:")))
+
+  [3] Linha 6: Variável 'y' com nome muito curto (≤4 chars)
+      Trecho  : y = ...
+      Contexto:
+               5 | x=array(eval(input("digite um vetor:")))
+        >>>    6 | y= array (eval(input("digite um vetor:")))
+               7 | 
+
+  [4] Linha 8: Variável 'k' com nome muito curto (≤4 chars)
+      Trecho  : k = ...
+      Contexto:
+               7 | 
+        >>>    8 | k=0
+               9 | i=0
+
+  [5] Linha 9: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+               8 | k=0
+        >>>    9 | i=0
+              10 | for i in range(size(x)):
+
+  [6] Linha 16: Variável 'q' com nome muito curto (≤4 chars)
+      Trecho  : q = ...
+      Contexto:
+              15 | 
+        >>>   16 | q= p/(p+1)
+              17 | 
+
+  [7] Linha 18: Variável 'soma' com nome muito curto (≤4 chars)
+      Trecho  : soma = ...
+      Contexto:
+              17 | 
+        >>>   18 | soma=0
+              19 | 
+
+  [8] Linha 12: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+              11 | 	x[i]=x[i]-y[k]
+        >>>   12 | 	i=i+1
+              13 | 	k=k+1
+
+  [9] Linha 13: Variável 'k' com nome muito curto (≤4 chars)
+      Trecho  : k = ...
+      Contexto:
+              12 | 	i=i+1
+        >>>   13 | 	k=k+1
+              14 | print(x)
+
+  [10] Linha 21: Variável 'soma' com nome muito curto (≤4 chars)
+      Trecho  : soma = ...
+      Contexto:
+              20 | for t in x:
+        >>>   21 | 	soma = soma + (abs(t))**(q)
+              22 | norma= (soma)**(1/q)
+
+======================================================================

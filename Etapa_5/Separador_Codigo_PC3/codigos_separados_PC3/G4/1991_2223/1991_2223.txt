@@ -1,0 +1,89 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1991_2223.py
+Questão  : 1991
+Aluno    : 2223
+Total MCs: 1
+
+⚠️  Misconceptions detectados: G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | amino = input("Informe o aminoacido: ").upper()
+     2 | 
+     3 | O = 15.9994
+     4 | C = 12.011
+     5 | N = 14.00674
+     6 | H = 1.0079
+     7 | 
+     8 | if(amino == "GLICINA" or amino == "PROLINA" or amino == "SERINA"):
+     9 | 	if(amino == "GLICINA"):
+    10 | 		peso = C * 2 + H * 5 + N + O * 2
+    11 | 	elif(amino == "PROLINA"):
+    12 | 		peso = C * 5 + H * 10 + N + O * 2
+    13 | 	else:
+    14 | 		peso = C* 3 + H * 7 + N + O * 3
+    15 | 	print(round(peso,2))
+    16 | else:
+    17 | 	print("Entrada:", amino)
+    18 | 	print("Dado Invalido")
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 7
+
+  [1] Linha 3: Variável 'O' com nome muito curto (≤4 chars)
+      Trecho  : O = ...
+      Contexto:
+               2 | 
+        >>>    3 | O = 15.9994
+               4 | C = 12.011
+
+  [2] Linha 4: Variável 'C' com nome muito curto (≤4 chars)
+      Trecho  : C = ...
+      Contexto:
+               3 | O = 15.9994
+        >>>    4 | C = 12.011
+               5 | N = 14.00674
+
+  [3] Linha 5: Variável 'N' com nome muito curto (≤4 chars)
+      Trecho  : N = ...
+      Contexto:
+               4 | C = 12.011
+        >>>    5 | N = 14.00674
+               6 | H = 1.0079
+
+  [4] Linha 6: Variável 'H' com nome muito curto (≤4 chars)
+      Trecho  : H = ...
+      Contexto:
+               5 | N = 14.00674
+        >>>    6 | H = 1.0079
+               7 | 
+
+  [5] Linha 10: Variável 'peso' com nome muito curto (≤4 chars)
+      Trecho  : peso = ...
+      Contexto:
+               9 | 	if(amino == "GLICINA"):
+        >>>   10 | 		peso = C * 2 + H * 5 + N + O * 2
+              11 | 	elif(amino == "PROLINA"):
+
+  [6] Linha 12: Variável 'peso' com nome muito curto (≤4 chars)
+      Trecho  : peso = ...
+      Contexto:
+              11 | 	elif(amino == "PROLINA"):
+        >>>   12 | 		peso = C * 5 + H * 10 + N + O * 2
+              13 | 	else:
+
+  [7] Linha 14: Variável 'peso' com nome muito curto (≤4 chars)
+      Trecho  : peso = ...
+      Contexto:
+              13 | 	else:
+        >>>   14 | 		peso = C* 3 + H * 7 + N + O * 3
+              15 | 	print(round(peso,2))
+
+======================================================================

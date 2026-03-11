@@ -1,0 +1,9 @@
+qi=int(input())
+qg=int(input())
+qr=int(input())
+q=qi
+t=0
+while(0<q):
+	q=q+qr-qg
+	t=t+1
+print(t)

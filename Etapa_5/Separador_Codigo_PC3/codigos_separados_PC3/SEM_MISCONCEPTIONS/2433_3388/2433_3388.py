@@ -1,0 +1,6 @@
+vl_ingresso = float(input())
+seg_ingresso = vl_ingresso - (vl_ingresso * (60/100))
+print(vl_ingresso)
+print(seg_ingresso)
+print(round(vl_ingresso + seg_ingresso,2))
+

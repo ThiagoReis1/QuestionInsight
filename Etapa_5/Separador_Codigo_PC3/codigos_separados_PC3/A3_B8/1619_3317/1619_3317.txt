@@ -1,0 +1,49 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1619_3317.py
+Questão  : 1619
+Aluno    : 3317
+Total MCs: 2
+
+⚠️  Misconceptions detectados: A3, B8
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | vetor1 = array(eval(input("dig: ")))
+     3 | vetor2 = array(eval(input("dig: ")))
+     4 | cont = 0
+     5 | soma = 0
+     6 | while(cont<size(vetor1)):
+     7 | 	if(vetor2[cont] == "QUENTE"):
+     8 | 		soma = 90 * 0.005
+     9 | 	elif(vetor2[cont] == "MORNO"):
+    10 | 		soma = 45 * 0.005
+    11 | 	elif(vetor2[cont] == "FRIO"):
+    12 | 		soma = 0 * 0.005
+    13 | 	cont = cont + 1
+    14 | print(round(soma, 2))
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 1
+
+  [1] Linha 0: A3 detectado pelo VisitorMC3 (localização exata não mapeada)
+      Trecho  : —
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 9: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 9) / elif ... sem else
+      Contexto:
+               8 | 		soma = 90 * 0.005
+        >>>    9 | 	elif(vetor2[cont] == "MORNO"):
+              10 | 		soma = 45 * 0.005
+
+======================================================================

@@ -1,0 +1,85 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1656_3054.py
+Questão  : 1656
+Aluno    : 3054
+Total MCs: 3
+
+⚠️  Misconceptions detectados: A3, B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | 
+     3 | v = input("ler: ").split(",")
+     4 | z = zeros(5, dtype = int)
+     5 | cont = 0
+     6 | for i in range(len(v)):
+     7 | 	if(v[i] == "BE"):
+     8 | 		z[0] = z[0] + 1
+     9 | 	elif(v[i] == "ES"):
+    10 | 		z[1] = z[1] + 1
+    11 | 	elif(v[i] == "FR"):
+    12 | 		z[2] = z[2] + 1
+    13 | 	elif(v[i] == "IT"):
+    14 | 		z[3] = z[3] + 1
+    15 | 	elif(v[i] == "PT"):
+    16 | 		z[4] = z[4] + 1
+    17 | print(max(z))
+    18 | print(z)
+    19 | 	
+    20 | 
+    21 | 
+    22 | 	
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 1
+
+  [1] Linha 5: Variável 'cont' declarada mas nunca utilizada
+      Trecho  : cont = ...
+      Contexto:
+               4 | z = zeros(5, dtype = int)
+        >>>    5 | cont = 0
+               6 | for i in range(len(v)):
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 13: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 13) / elif ... sem else
+      Contexto:
+              12 | 		z[2] = z[2] + 1
+        >>>   13 | 	elif(v[i] == "IT"):
+              14 | 		z[3] = z[3] + 1
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 3
+
+  [1] Linha 3: Variável 'v' com nome muito curto (≤4 chars)
+      Trecho  : v = ...
+      Contexto:
+               2 | 
+        >>>    3 | v = input("ler: ").split(",")
+               4 | z = zeros(5, dtype = int)
+
+  [2] Linha 4: Variável 'z' com nome muito curto (≤4 chars)
+      Trecho  : z = ...
+      Contexto:
+               3 | v = input("ler: ").split(",")
+        >>>    4 | z = zeros(5, dtype = int)
+               5 | cont = 0
+
+  [3] Linha 5: Variável 'cont' com nome muito curto (≤4 chars)
+      Trecho  : cont = ...
+      Contexto:
+               4 | z = zeros(5, dtype = int)
+        >>>    5 | cont = 0
+               6 | for i in range(len(v)):
+
+======================================================================

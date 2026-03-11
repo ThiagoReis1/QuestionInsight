@@ -1,0 +1,62 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1655_8227.py
+Questão  : 1655
+Aluno    : 8227
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B8, C8
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | string_estado = input("digite:")
+     2 | 
+     3 | estados = string_estado.split(',')
+     4 | 
+     5 | contagem = [0,0,0,0,0]
+     6 | 
+     7 | for estado in estados:
+     8 | 	estado = estado.strip().upper()
+     9 | 	if estado == 'AC':
+    10 | 		contagem[0] += 1
+    11 | 	elif estado == 'AM':
+    12 | 		contagem[1] += 1
+    13 | 	elif estado == 'PA':
+    14 | 		contagem[2] += 1
+    15 | 	elif estado == 'RO':
+    16 | 		contagem[3] += 1
+    17 | 	elif estado == 'RR':
+    18 | 		contagem[4] += 1
+    19 | 		
+    20 | maior_quantidade = max(contagem)
+    21 | 
+    22 | print(maior_quantidade)
+    23 | print('[' + ' '.join(map(str, contagem)) + ']')
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 15: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 15) / elif ... sem else
+      Contexto:
+              14 | 		contagem[2] += 1
+        >>>   15 | 	elif estado == 'RO':
+              16 | 		contagem[3] += 1
+
+▶ C8 — Loop for com sua variável de iteração sobrescrita
+  Ocorrências: 1
+
+  [1] Linha 8: Variável de iteração 'estado' sobrescrita no loop
+      Trecho  : estado = estado.strip().upper()
+      Contexto:
+               7 | for estado in estados:
+        >>>    8 | 	estado = estado.strip().upper()
+               9 | 	if estado == 'AC':
+
+======================================================================

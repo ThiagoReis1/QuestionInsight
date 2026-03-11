@@ -1,0 +1,101 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1117_3057.py
+Questão  : 1117
+Aluno    : 3057
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | x = float (input ("Informe o preco normal da entrada: "))
+     2 | y = int (input ("Informe o dia da semana: "))
+     3 | z = (input ("Eh dia de musica ao vivo, S ou N? "))
+     4 | 
+     5 | 
+     6 | print ("Entradas:",x,",", y,",", z)
+     7 | if	(x>=0)and((y==1)or(y==2)or(y==3)or(y==4)or(y==5)or(y==6)or(y==7))and((z=="S")or(z=="N")):
+     8 | 	if	((y==2)or(y==3)or(y==5))and(z=="N"):
+     9 | 		a = x-(x*(25/100))
+    10 | 		print ("Valor a pagar: R$", round(a, 2))
+    11 | 	elif	((y==1)or(y==4)or(y==6)or(y==7))and(z=="N"):
+    12 | 		print ("Valor a pagar: R$", round (x, 2))
+    13 | 	elif	((y==1)or(y==4)or(y==6)or(y==7))and(z=="S"):
+    14 | 		d = x + 20 
+    15 | 		print	("Valor a pagar: R$", round (d, 2))
+    16 | 	elif	((y==2)or(y==3)or(y==5))and(z=="S"):
+    17 | 		c = x-(x*(25/100))
+    18 | 		b = c + 20
+    19 | 		print ("Valor a pagar: R$", round (b, 2))
+    20 | else:
+    21 | 	print ("Dados invalidos")			 
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 13: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 13) / elif ... sem else
+      Contexto:
+              12 | 		print ("Valor a pagar: R$", round (x, 2))
+        >>>   13 | 	elif	((y==1)or(y==4)or(y==6)or(y==7))and(z=="S"):
+              14 | 		d = x + 20 
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 7
+
+  [1] Linha 1: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+        >>>    1 | x = float (input ("Informe o preco normal da entrada: "))
+               2 | y = int (input ("Informe o dia da semana: "))
+
+  [2] Linha 2: Variável 'y' com nome muito curto (≤4 chars)
+      Trecho  : y = ...
+      Contexto:
+               1 | x = float (input ("Informe o preco normal da entrada: "))
+        >>>    2 | y = int (input ("Informe o dia da semana: "))
+               3 | z = (input ("Eh dia de musica ao vivo, S ou N? "))
+
+  [3] Linha 3: Variável 'z' com nome muito curto (≤4 chars)
+      Trecho  : z = ...
+      Contexto:
+               2 | y = int (input ("Informe o dia da semana: "))
+        >>>    3 | z = (input ("Eh dia de musica ao vivo, S ou N? "))
+               4 | 
+
+  [4] Linha 9: Variável 'a' com nome muito curto (≤4 chars)
+      Trecho  : a = ...
+      Contexto:
+               8 | 	if	((y==2)or(y==3)or(y==5))and(z=="N"):
+        >>>    9 | 		a = x-(x*(25/100))
+              10 | 		print ("Valor a pagar: R$", round(a, 2))
+
+  [5] Linha 14: Variável 'd' com nome muito curto (≤4 chars)
+      Trecho  : d = ...
+      Contexto:
+              13 | 	elif	((y==1)or(y==4)or(y==6)or(y==7))and(z=="S"):
+        >>>   14 | 		d = x + 20 
+              15 | 		print	("Valor a pagar: R$", round (d, 2))
+
+  [6] Linha 17: Variável 'c' com nome muito curto (≤4 chars)
+      Trecho  : c = ...
+      Contexto:
+              16 | 	elif	((y==2)or(y==3)or(y==5))and(z=="S"):
+        >>>   17 | 		c = x-(x*(25/100))
+              18 | 		b = c + 20
+
+  [7] Linha 18: Variável 'b' com nome muito curto (≤4 chars)
+      Trecho  : b = ...
+      Contexto:
+              17 | 		c = x-(x*(25/100))
+        >>>   18 | 		b = c + 20
+              19 | 		print ("Valor a pagar: R$", round (b, 2))
+
+======================================================================

@@ -1,0 +1,37 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 2436_3232.py
+Questão  : 2436
+Aluno    : 3232
+Total MCs: 1
+
+⚠️  Misconceptions detectados: A3
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | peso = float(input())
+     2 | distancia = float(input())
+     3 | kg = 25*peso
+     4 | km = 0.10*distancia
+     5 | icms = 0.12*kg + 0.12*km
+     6 | preco = kg + km + icms
+     7 | valordoimposto = preco * (icms/100)
+     8 | print(float(round(preco, 2)))
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 1
+
+  [1] Linha 7: Variável 'valordoimposto' declarada mas nunca utilizada
+      Trecho  : valordoimposto = ...
+      Contexto:
+               6 | preco = kg + km + icms
+        >>>    7 | valordoimposto = preco * (icms/100)
+               8 | print(float(round(preco, 2)))
+
+======================================================================

@@ -1,0 +1,79 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 5257_6452.py
+Questão  : 5257
+Aluno    : 6452
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | p=round(float(input('Preco: ')),2)
+     2 | if p<=50.00:
+     3 | 	c=p+p
+     4 | 	print(round(c,2))
+     5 | elif (p>50.01 and p<=100.00):
+     6 | 	c=(0.5*p+p)
+     7 | 	print(round(c,2))
+     8 | elif p>100.01 and p<=500.00:
+     9 | 	c=(0.40*p+p)
+    10 | 	print(round(c,2))
+    11 | elif p>500.00:
+    12 | 	c=(0.30*p+p)
+    13 | 	print(round(c,2))
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 8: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 8) / elif ... sem else
+      Contexto:
+               7 | 	print(round(c,2))
+        >>>    8 | elif p>100.01 and p<=500.00:
+               9 | 	c=(0.40*p+p)
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 5
+
+  [1] Linha 1: Variável 'p' com nome muito curto (≤4 chars)
+      Trecho  : p = ...
+      Contexto:
+        >>>    1 | p=round(float(input('Preco: ')),2)
+               2 | if p<=50.00:
+
+  [2] Linha 3: Variável 'c' com nome muito curto (≤4 chars)
+      Trecho  : c = ...
+      Contexto:
+               2 | if p<=50.00:
+        >>>    3 | 	c=p+p
+               4 | 	print(round(c,2))
+
+  [3] Linha 6: Variável 'c' com nome muito curto (≤4 chars)
+      Trecho  : c = ...
+      Contexto:
+               5 | elif (p>50.01 and p<=100.00):
+        >>>    6 | 	c=(0.5*p+p)
+               7 | 	print(round(c,2))
+
+  [4] Linha 9: Variável 'c' com nome muito curto (≤4 chars)
+      Trecho  : c = ...
+      Contexto:
+               8 | elif p>100.01 and p<=500.00:
+        >>>    9 | 	c=(0.40*p+p)
+              10 | 	print(round(c,2))
+
+  [5] Linha 12: Variável 'c' com nome muito curto (≤4 chars)
+      Trecho  : c = ...
+      Contexto:
+              11 | elif p>500.00:
+        >>>   12 | 	c=(0.30*p+p)
+              13 | 	print(round(c,2))
+
+======================================================================

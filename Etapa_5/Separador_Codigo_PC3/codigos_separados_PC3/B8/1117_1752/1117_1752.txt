@@ -1,0 +1,51 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1117_1752.py
+Questão  : 1117
+Aluno    : 1752
+Total MCs: 1
+
+⚠️  Misconceptions detectados: B8
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | preco_entrada=float(input("Informe preço da entrada: "))
+     2 | dia_da_semana=int(input("Informe dia da semana: "))
+     3 | musica_ao_vivo=input("Digite S para sim e N para nao")
+     4 | if(preco_entrada<0) and (dia_da_semana>7 or dia_da_semana<1) and (musica_ao_vivo!=S or musica_ao_vivo!=N):
+     5 | 	print("Entradas:", preco_entrada, dia_da_semana, musica_ao_vivo)
+     6 | 	print("Dados invalidos")
+     7 | elif((dia_da_semana%7==3 or dia_da_semana%7==2 or dia_da_semana%7==5) and (musica_ao_vivo==S)):
+     8 | 	preco=(preco_entrada+20)*(25/100)
+     9 | 	print("Entradas:", preco_entrada, dia_da_semana, musica_ao_vivo)
+    10 | 	print("Valor a pagar: R$", round(preco, 2))
+    11 | elif(dia_da_semana%7!=3 or dia_da_semana%7!=2 or dia_da_semana%7!=5) and (musica_ao_vivo==S):
+    12 | 	preco=(preco_entrada+20)
+    13 | 	print("Entradas:", preco_entrada, dia_da_semana, musica_ao_vivo)
+    14 | 	print("Valor a pagar: R$", round(preco, 2))
+    15 | elif(dia_da_semana%7!=3 or dia_da_semana%7!=2 or dia_da_semana%7!=5) and (musica_ao_vivo!=N):
+    16 | 	preco=preco_entrada
+    17 | 	print("Entradas:", preco_entrada, dia_da_semana, musica_ao_vivo)
+    18 | 	print("Valor a pagar: R$", round(preco, 2))
+    19 | elif((dia_da_semana%7==3 or dia_da_semana%7==2 or dia_da_semana%7==5) and (musica_ao_vivo==N)):
+    20 | 	preco=(preco_entrada*(25/100))
+    21 | 	print("Entradas:", preco_entrada, dia_da_semana, musica_ao_vivo)
+    22 | 	print("Valor a pegar: R$", round(preco, 2))
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 15: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 15) / elif ... sem else
+      Contexto:
+              14 | 	print("Valor a pagar: R$", round(preco, 2))
+        >>>   15 | elif(dia_da_semana%7!=3 or dia_da_semana%7!=2 or dia_da_semana%7!=5) and (musica_ao_vivo!=N):
+              16 | 	preco=preco_entrada
+
+======================================================================

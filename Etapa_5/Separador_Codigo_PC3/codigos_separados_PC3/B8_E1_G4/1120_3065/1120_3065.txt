@@ -1,0 +1,69 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1120_3065.py
+Questão  : 1120
+Aluno    : 3065
+Total MCs: 3
+
+⚠️  Misconceptions detectados: B8, E1, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | X = input("nome de X:")
+     2 | if (X!='Baratheon') and (X!='Targaryen') and (X!='Tyrell') and (X!='Stark') and (X!='Lannister') and (X!='Greyjoy') and (X!='Tully') and (X!='Arryn') and (X!='Martell'):
+     3 | 	print("Entrada X invalida")
+     4 | elif (X=='Baratheon'):
+     5 | 	print("Ponta Tempestade")
+     6 | elif (X=='Targaryen'):
+     7 | 	print("Ilha do Dragao")
+     8 | elif (X=='Tyrell'):
+     9 | 	print("Campina")
+    10 | elif (X=='Stark'):
+    11 | 	print("Winterfell")
+    12 | elif (X=='Lannister'):
+    13 | 	print("Rochedo Casterly")
+    14 | elif (X=='Greyjoy'):
+    15 | 	print("Pyke")
+    16 | elif (X=='Tully'):
+    17 | 	print("Correrio")
+    18 | elif (X=='Arryn'):
+    19 | 	print("Ninho da Aguia")
+    20 | elif (X=='Martell'):
+    21 | 	print("Dorne")	
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 18: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 18) / elif ... sem else
+      Contexto:
+              17 | 	print("Correrio")
+        >>>   18 | elif (X=='Arryn'):
+              19 | 	print("Ninho da Aguia")
+
+▶ E1 — Verificação desnecessária de todas as combinações possíveis
+  Ocorrências: 1
+
+  [1] Linha 2: 9 condições em um único if — verificação excessiva
+      Trecho  : X != 'Baratheon' and X != 'Targaryen' and (X != 'Tyrell') and (X != 'Stark') and (X != 'Lannister') and (X != 'Greyjoy') and (X != 'Tully') and (X != 'Arryn') and (X != 'Martell')
+      Contexto:
+               1 | X = input("nome de X:")
+        >>>    2 | if (X!='Baratheon') and (X!='Targaryen') and (X!='Tyrell') and (X!='Stark') and (X!='Lannister') and (X!='Greyjoy') and (X!='Tully') and (X!='Arryn') and (X!='Martell'):
+               3 | 	print("Entrada X invalida")
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 1
+
+  [1] Linha 1: Variável 'X' com nome muito curto (≤4 chars)
+      Trecho  : X = ...
+      Contexto:
+        >>>    1 | X = input("nome de X:")
+               2 | if (X!='Baratheon') and (X!='Targaryen') and (X!='Tyrell') and (X!='Stark') and (X!='Lannister') and (X!='Greyjoy') and (X!='Tully') and (X!='Arryn') and (X!='Martell'):
+
+======================================================================

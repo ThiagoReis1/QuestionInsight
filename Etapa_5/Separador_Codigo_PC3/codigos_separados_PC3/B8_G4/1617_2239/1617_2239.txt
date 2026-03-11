@@ -1,0 +1,79 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1617_2239.py
+Questão  : 1617
+Aluno    : 2239
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import *
+     2 | tesp = array(eval(input()))
+     3 | niv = array(eval(input()))
+     4 | i=0
+     5 | soma=0
+     6 | 
+     7 | while(i<size(tesp)):
+     8 | 	if(tesp[i]=="CENOURA"):
+     9 | 		soma += (2*(niv[i]))
+    10 | 	elif(tesp[i]=="FERRO"):
+    11 | 		soma += (4*(niv[i]))
+    12 | 	elif(tesp[i]=="DWARVEN"):
+    13 | 		soma += (8*(niv[i]))
+    14 | 	elif(tesp[i]=="ELVEN"):
+    15 | 		soma += (11*(niv[i]))
+    16 | 	elif(tesp[i]=="DAEDRIC"):
+    17 | 		soma += (14*(niv[i]))
+    18 | 	i += 1
+    19 | print(soma)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 14: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 14) / elif ... sem else
+      Contexto:
+              13 | 		soma += (8*(niv[i]))
+        >>>   14 | 	elif(tesp[i]=="ELVEN"):
+              15 | 		soma += (11*(niv[i]))
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 4
+
+  [1] Linha 2: Variável 'tesp' com nome muito curto (≤4 chars)
+      Trecho  : tesp = ...
+      Contexto:
+               1 | from numpy import *
+        >>>    2 | tesp = array(eval(input()))
+               3 | niv = array(eval(input()))
+
+  [2] Linha 3: Variável 'niv' com nome muito curto (≤4 chars)
+      Trecho  : niv = ...
+      Contexto:
+               2 | tesp = array(eval(input()))
+        >>>    3 | niv = array(eval(input()))
+               4 | i=0
+
+  [3] Linha 4: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+               3 | niv = array(eval(input()))
+        >>>    4 | i=0
+               5 | soma=0
+
+  [4] Linha 5: Variável 'soma' com nome muito curto (≤4 chars)
+      Trecho  : soma = ...
+      Contexto:
+               4 | i=0
+        >>>    5 | soma=0
+               6 | 
+
+======================================================================

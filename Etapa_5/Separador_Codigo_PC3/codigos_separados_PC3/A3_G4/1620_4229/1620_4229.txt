@@ -1,0 +1,101 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1620_4229.py
+Questão  : 1620
+Aluno    : 4229
+Total MCs: 2
+
+⚠️  Misconceptions detectados: A3, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import *
+     2 | tempo = array(eval(input("tempo de banho: ")))
+     3 | percentual = array(eval(input("percentual de abertura da torneira: ")))
+     4 | tam = size(tempo)
+     5 | cont = 0
+     6 | l=0
+     7 | tot=0
+     8 | while cont<tam:
+     9 | 	l = l + 5 * tempo[cont]*percentual[cont]/100
+    10 | 	cont = cont + 1
+    11 | fin =  round(l,2)
+    12 | print(fin)
+    13 | 
+    14 | 
+    15 | 
+    16 | 
+    17 | 
+    18 | 
+    19 | 
+    20 | 
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 1
+
+  [1] Linha 7: Variável 'tot' declarada mas nunca utilizada
+      Trecho  : tot = ...
+      Contexto:
+               6 | l=0
+        >>>    7 | tot=0
+               8 | while cont<tam:
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 7
+
+  [1] Linha 4: Variável 'tam' com nome muito curto (≤4 chars)
+      Trecho  : tam = ...
+      Contexto:
+               3 | percentual = array(eval(input("percentual de abertura da torneira: ")))
+        >>>    4 | tam = size(tempo)
+               5 | cont = 0
+
+  [2] Linha 5: Variável 'cont' com nome muito curto (≤4 chars)
+      Trecho  : cont = ...
+      Contexto:
+               4 | tam = size(tempo)
+        >>>    5 | cont = 0
+               6 | l=0
+
+  [3] Linha 6: Variável 'l' com nome muito curto (≤4 chars)
+      Trecho  : l = ...
+      Contexto:
+               5 | cont = 0
+        >>>    6 | l=0
+               7 | tot=0
+
+  [4] Linha 7: Variável 'tot' com nome muito curto (≤4 chars)
+      Trecho  : tot = ...
+      Contexto:
+               6 | l=0
+        >>>    7 | tot=0
+               8 | while cont<tam:
+
+  [5] Linha 11: Variável 'fin' com nome muito curto (≤4 chars)
+      Trecho  : fin = ...
+      Contexto:
+              10 | 	cont = cont + 1
+        >>>   11 | fin =  round(l,2)
+              12 | print(fin)
+
+  [6] Linha 9: Variável 'l' com nome muito curto (≤4 chars)
+      Trecho  : l = ...
+      Contexto:
+               8 | while cont<tam:
+        >>>    9 | 	l = l + 5 * tempo[cont]*percentual[cont]/100
+              10 | 	cont = cont + 1
+
+  [7] Linha 10: Variável 'cont' com nome muito curto (≤4 chars)
+      Trecho  : cont = ...
+      Contexto:
+               9 | 	l = l + 5 * tempo[cont]*percentual[cont]/100
+        >>>   10 | 	cont = cont + 1
+              11 | fin =  round(l,2)
+
+======================================================================

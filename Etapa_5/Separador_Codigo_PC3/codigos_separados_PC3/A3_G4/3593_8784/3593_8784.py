@@ -1,0 +1,1 @@
+f = array(eval(input("insira")))

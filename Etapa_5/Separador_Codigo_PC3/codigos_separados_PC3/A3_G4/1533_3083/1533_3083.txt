@@ -1,0 +1,74 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1533_3083.py
+Questão  : 1533
+Aluno    : 3083
+Total MCs: 2
+
+⚠️  Misconceptions detectados: A3, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | v = int(input("valor "))
+     2 | j = float(input("juros "))
+     3 | nv = v + (v/100*10)
+     4 | t = 0
+     5 | while (v > nv):
+     6 | 	saldo = v + (v/100*j)
+     7 | 	t = t + 1
+     8 | print(t)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 1
+
+  [1] Linha 6: Variável 'saldo' declarada mas nunca utilizada
+      Trecho  : saldo = ...
+      Contexto:
+               5 | while (v > nv):
+        >>>    6 | 	saldo = v + (v/100*j)
+               7 | 	t = t + 1
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 5
+
+  [1] Linha 1: Variável 'v' com nome muito curto (≤4 chars)
+      Trecho  : v = ...
+      Contexto:
+        >>>    1 | v = int(input("valor "))
+               2 | j = float(input("juros "))
+
+  [2] Linha 2: Variável 'j' com nome muito curto (≤4 chars)
+      Trecho  : j = ...
+      Contexto:
+               1 | v = int(input("valor "))
+        >>>    2 | j = float(input("juros "))
+               3 | nv = v + (v/100*10)
+
+  [3] Linha 3: Variável 'nv' com nome muito curto (≤4 chars)
+      Trecho  : nv = ...
+      Contexto:
+               2 | j = float(input("juros "))
+        >>>    3 | nv = v + (v/100*10)
+               4 | t = 0
+
+  [4] Linha 4: Variável 't' com nome muito curto (≤4 chars)
+      Trecho  : t = ...
+      Contexto:
+               3 | nv = v + (v/100*10)
+        >>>    4 | t = 0
+               5 | while (v > nv):
+
+  [5] Linha 7: Variável 't' com nome muito curto (≤4 chars)
+      Trecho  : t = ...
+      Contexto:
+               6 | 	saldo = v + (v/100*j)
+        >>>    7 | 	t = t + 1
+               8 | print(t)
+
+======================================================================

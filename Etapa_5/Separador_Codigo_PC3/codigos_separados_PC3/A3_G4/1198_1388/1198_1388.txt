@@ -1,0 +1,118 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1198_1388.py
+Questão  : 1198
+Aluno    : 1388
+Total MCs: 2
+
+⚠️  Misconceptions detectados: A3, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import *
+     2 | v = array(eval(input("As temperaturas sao: ")))
+     3 | 
+     4 | i = 0
+     5 | l = size(v)
+     6 | negativo = 0
+     7 | while (i < size (v)):
+     8 | 	if(v[i] < 10):
+     9 | 		negativo = negativo + 1
+    10 | 	i = i + 1
+    11 | l = size(v) - negativo
+    12 | i = 0
+    13 | k = 0
+    14 | v2 = array(ones(l, dtype = float))
+    15 | while (i < size(v)):
+    16 | 	if(v[i] >= 10):
+    17 | 		v2[k] = v[i]
+    18 | 		k = k + 1
+    19 | 	i = i + 1
+    20 | print(v2)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 1
+
+  [1] Linha 0: A3 detectado pelo VisitorMC3 (localização exata não mapeada)
+      Trecho  : —
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 10
+
+  [1] Linha 2: Variável 'v' com nome muito curto (≤4 chars)
+      Trecho  : v = ...
+      Contexto:
+               1 | from numpy import *
+        >>>    2 | v = array(eval(input("As temperaturas sao: ")))
+               3 | 
+
+  [2] Linha 4: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+               3 | 
+        >>>    4 | i = 0
+               5 | l = size(v)
+
+  [3] Linha 5: Variável 'l' com nome muito curto (≤4 chars)
+      Trecho  : l = ...
+      Contexto:
+               4 | i = 0
+        >>>    5 | l = size(v)
+               6 | negativo = 0
+
+  [4] Linha 11: Variável 'l' com nome muito curto (≤4 chars)
+      Trecho  : l = ...
+      Contexto:
+              10 | 	i = i + 1
+        >>>   11 | l = size(v) - negativo
+              12 | i = 0
+
+  [5] Linha 12: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+              11 | l = size(v) - negativo
+        >>>   12 | i = 0
+              13 | k = 0
+
+  [6] Linha 13: Variável 'k' com nome muito curto (≤4 chars)
+      Trecho  : k = ...
+      Contexto:
+              12 | i = 0
+        >>>   13 | k = 0
+              14 | v2 = array(ones(l, dtype = float))
+
+  [7] Linha 14: Variável 'v2' com nome muito curto (≤4 chars)
+      Trecho  : v2 = ...
+      Contexto:
+              13 | k = 0
+        >>>   14 | v2 = array(ones(l, dtype = float))
+              15 | while (i < size(v)):
+
+  [8] Linha 10: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+               9 | 		negativo = negativo + 1
+        >>>   10 | 	i = i + 1
+              11 | l = size(v) - negativo
+
+  [9] Linha 19: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+              18 | 		k = k + 1
+        >>>   19 | 	i = i + 1
+              20 | print(v2)
+
+  [10] Linha 18: Variável 'k' com nome muito curto (≤4 chars)
+      Trecho  : k = ...
+      Contexto:
+              17 | 		v2[k] = v[i]
+        >>>   18 | 		k = k + 1
+              19 | 	i = i + 1
+
+======================================================================

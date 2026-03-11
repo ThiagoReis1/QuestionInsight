@@ -1,0 +1,7 @@
+antidoto = float(input("Quantidade de antídoto: "))
+casca = antidoto * (1105 / 10000)
+alho = antidoto * (1768 / 10000)
+oleo = antidoto * (7127 / 10000)
+print(round(casca, 2))
+print(round(alho, 2))
+print(round(oleo, 2))

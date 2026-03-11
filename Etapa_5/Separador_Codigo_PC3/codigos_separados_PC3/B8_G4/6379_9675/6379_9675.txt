@@ -1,0 +1,63 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 6379_9675.py
+Questão  : 6379
+Aluno    : 9675
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import *
+     2 | 
+     3 | nota = input().upper().split(",")
+     4 | aux = zeros(5, dtype=int)
+     5 | 
+     6 | for i in range(size(nota)):
+     7 | 	if nota[i] == "A":
+     8 | 		aux[0] += 1
+     9 | 	elif nota[i] == "B":
+    10 | 		aux[1] += 1
+    11 | 	elif nota[i] == "C":
+    12 | 		aux[2] += 1
+    13 | 	elif nota[i] == "D":
+    14 | 		aux[3] += 1
+    15 | 	elif nota[i] == "E":
+    16 | 		aux[4] += 1
+    17 | print(aux)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 13: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 13) / elif ... sem else
+      Contexto:
+              12 | 		aux[2] += 1
+        >>>   13 | 	elif nota[i] == "D":
+              14 | 		aux[3] += 1
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 2
+
+  [1] Linha 3: Variável 'nota' com nome muito curto (≤4 chars)
+      Trecho  : nota = ...
+      Contexto:
+               2 | 
+        >>>    3 | nota = input().upper().split(",")
+               4 | aux = zeros(5, dtype=int)
+
+  [2] Linha 4: Variável 'aux' com nome muito curto (≤4 chars)
+      Trecho  : aux = ...
+      Contexto:
+               3 | nota = input().upper().split(",")
+        >>>    4 | aux = zeros(5, dtype=int)
+               5 | 
+
+======================================================================

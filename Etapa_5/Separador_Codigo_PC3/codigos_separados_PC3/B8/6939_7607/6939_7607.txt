@@ -1,0 +1,43 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 6939_7607.py
+Questão  : 6939
+Aluno    : 7607
+Total MCs: 1
+
+⚠️  Misconceptions detectados: B8
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | compra = float(input("Digite o valor total da compra: "))
+     2 | pagamento = input("Digite D para dinheiro e p para pix ou C para credito: ").upper()
+     3 | 
+     4 | if pagamento == "D" or pagamento == "P":
+     5 | 	desconto = compra -(0.19 * compra)
+     6 | 	print(round(desconto,2))
+     7 | elif pagamento == "C":
+     8 | 	parcelas = int(input("De quantas vezes sera o pagamento? "))
+     9 | 	if parcelas == 1:
+    10 | 		print(compra)
+    11 | 	else: 
+    12 | 		desconto = compra + (0.09 * compra)
+    13 | 		print(round(desconto,2))
+    14 | 	
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 4: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 4) / elif ... sem else
+      Contexto:
+               3 | 
+        >>>    4 | if pagamento == "D" or pagamento == "P":
+               5 | 	desconto = compra -(0.19 * compra)
+
+======================================================================

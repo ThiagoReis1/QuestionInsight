@@ -1,0 +1,65 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1986_2276.py
+Questão  : 1986
+Aluno    : 2276
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | m = input().upper()
+     2 | t = input().upper()
+     3 | 
+     4 | if m == "BACHARELADO" or t == "LICENCIATURA" and (t == "DIURNO" or t == "NOTURNO" or t == "VESPERTINO"):
+     5 | 	if m == "BACHARELADO":
+     6 | 		if t== "DIURNO":
+     7 | 			print("DIREITO")
+     8 | 		elif t== "NOTURNO":
+     9 | 			print("ADMINISTRACAO")
+    10 | 		else:
+    11 | 			print("CURSO DE GRADUACAO NAO IDENTIFICADO")
+    12 | 	elif m == "LICENCIATURA":
+    13 | 		if t == "VESPERTINO":
+    14 | 			print("FILOSOFIA")
+    15 | 		elif t == "NOTURNO":
+    16 | 			print("GEOGRAFIA")
+    17 | 		else:
+    18 | 			print("CURSO DE GRADUACAO NAO IDENTIFICADO")
+    19 | else:
+    20 | 	print("CURSO DE GRADUACAO NAO IDENTIFICADO")
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 5: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 5) / elif ... sem else
+      Contexto:
+               4 | if m == "BACHARELADO" or t == "LICENCIATURA" and (t == "DIURNO" or t == "NOTURNO" or t == "VESPERTINO"):
+        >>>    5 | 	if m == "BACHARELADO":
+               6 | 		if t== "DIURNO":
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 2
+
+  [1] Linha 1: Variável 'm' com nome muito curto (≤4 chars)
+      Trecho  : m = ...
+      Contexto:
+        >>>    1 | m = input().upper()
+               2 | t = input().upper()
+
+  [2] Linha 2: Variável 't' com nome muito curto (≤4 chars)
+      Trecho  : t = ...
+      Contexto:
+               1 | m = input().upper()
+        >>>    2 | t = input().upper()
+               3 | 
+
+======================================================================

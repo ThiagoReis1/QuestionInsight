@@ -1,0 +1,71 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 3386_6387.py
+Questão  : 3386
+Aluno    : 6387
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from math import * 
+     2 | 
+     3 | r = input("Unidade de medida: ")
+     4 | a = float(input("Valor do angulo: "))
+     5 | 
+     6 | if r == "R":
+     7 | 	gr = a / 0.0174533
+     8 | 	print(round(gr,2))
+     9 | elif r == "G":
+    10 | 	rad = 0.0174533 * a
+    11 | 	print(round(rad,2))
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 6: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 6) / elif ... sem else
+      Contexto:
+               5 | 
+        >>>    6 | if r == "R":
+               7 | 	gr = a / 0.0174533
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 4
+
+  [1] Linha 3: Variável 'r' com nome muito curto (≤4 chars)
+      Trecho  : r = ...
+      Contexto:
+               2 | 
+        >>>    3 | r = input("Unidade de medida: ")
+               4 | a = float(input("Valor do angulo: "))
+
+  [2] Linha 4: Variável 'a' com nome muito curto (≤4 chars)
+      Trecho  : a = ...
+      Contexto:
+               3 | r = input("Unidade de medida: ")
+        >>>    4 | a = float(input("Valor do angulo: "))
+               5 | 
+
+  [3] Linha 7: Variável 'gr' com nome muito curto (≤4 chars)
+      Trecho  : gr = ...
+      Contexto:
+               6 | if r == "R":
+        >>>    7 | 	gr = a / 0.0174533
+               8 | 	print(round(gr,2))
+
+  [4] Linha 10: Variável 'rad' com nome muito curto (≤4 chars)
+      Trecho  : rad = ...
+      Contexto:
+               9 | elif r == "G":
+        >>>   10 | 	rad = 0.0174533 * a
+              11 | 	print(round(rad,2))
+
+======================================================================

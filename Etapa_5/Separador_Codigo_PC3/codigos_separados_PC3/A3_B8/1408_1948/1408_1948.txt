@@ -1,0 +1,58 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1408_1948.py
+Questão  : 1408
+Aluno    : 1948
+Total MCs: 2
+
+⚠️  Misconceptions detectados: A3, B8
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | #--------------------------------------------------
+     2 | #Universidade Federal do Amazonas
+     3 | #Larisse Gabriele Ramos de Abreu
+     4 | #Data: 22/11/2016
+     5 | #
+     6 | #Objetivo: Katana ou sabre?
+     7 | #---------------------------------------------------
+     8 | from math import*
+     9 | nome_da_arma = input("Nome da arma escolhida para o ataque(katana/sabre): ")
+    10 | destreza = int(input("Destreza do personagem: "))
+    11 | dado1 = int(input("Valor sorteado no dado 1: "))
+    12 | dado2 = int(input("Valor sorteado no dado 2: "))
+    13 | S = (dado1 + dado2)
+    14 | if (nome_da_arma == "Katana"):
+    15 | 	dono = (2 * S) + destreza
+    16 | 	print(dano)
+    17 | elif (nome_da_arma == "sabre"):
+    18 | 	dano = S + (2 * destreza)
+    19 | 	print(dano)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 1
+
+  [1] Linha 15: Variável 'dono' declarada mas nunca utilizada
+      Trecho  : dono = ...
+      Contexto:
+              14 | if (nome_da_arma == "Katana"):
+        >>>   15 | 	dono = (2 * S) + destreza
+              16 | 	print(dano)
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 14: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 14) / elif ... sem else
+      Contexto:
+              13 | S = (dado1 + dado2)
+        >>>   14 | if (nome_da_arma == "Katana"):
+              15 | 	dono = (2 * S) + destreza
+
+======================================================================

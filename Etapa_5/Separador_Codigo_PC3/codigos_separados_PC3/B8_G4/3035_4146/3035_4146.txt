@@ -1,0 +1,75 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 3035_4146.py
+Questão  : 3035
+Aluno    : 4146
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from math import *
+     2 | 
+     3 | x1 = float(input("Valor de x: "))
+     4 | 
+     5 | x = radians(x1)
+     6 | 
+     7 | if (0 <= x1 < 360):
+     8 | 	if (0 <= x1 < 90) or (180 <= x1 < 270):
+     9 | 		y = sin(x)
+    10 | 		print(round(y, 4))
+    11 | 	elif (90 <= x1 < 180) or (270 <= x1 < 360):
+    12 | 		y = cos(x)
+    13 | 		print(round(y, 4))
+    14 | else:
+    15 | 	print("entrada invalida")
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 8: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 8) / elif ... sem else
+      Contexto:
+               7 | if (0 <= x1 < 360):
+        >>>    8 | 	if (0 <= x1 < 90) or (180 <= x1 < 270):
+               9 | 		y = sin(x)
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 4
+
+  [1] Linha 3: Variável 'x1' com nome muito curto (≤4 chars)
+      Trecho  : x1 = ...
+      Contexto:
+               2 | 
+        >>>    3 | x1 = float(input("Valor de x: "))
+               4 | 
+
+  [2] Linha 5: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+               4 | 
+        >>>    5 | x = radians(x1)
+               6 | 
+
+  [3] Linha 9: Variável 'y' com nome muito curto (≤4 chars)
+      Trecho  : y = ...
+      Contexto:
+               8 | 	if (0 <= x1 < 90) or (180 <= x1 < 270):
+        >>>    9 | 		y = sin(x)
+              10 | 		print(round(y, 4))
+
+  [4] Linha 12: Variável 'y' com nome muito curto (≤4 chars)
+      Trecho  : y = ...
+      Contexto:
+              11 | 	elif (90 <= x1 < 180) or (270 <= x1 < 360):
+        >>>   12 | 		y = cos(x)
+              13 | 		print(round(y, 4))
+
+======================================================================

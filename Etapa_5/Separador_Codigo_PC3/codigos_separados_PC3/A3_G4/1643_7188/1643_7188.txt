@@ -1,0 +1,97 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1643_7188.py
+Questão  : 1643
+Aluno    : 7188
+Total MCs: 2
+
+⚠️  Misconceptions detectados: A3, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | vet= array(eval(input()))
+     3 | nap=0
+     4 | ac=0
+     5 | for i in range(size(vet)):
+     6 | 	if vet[i]>= 5:
+     7 | 		nap= nap +1
+     8 | print(nap)
+     9 | 	
+    10 | n= zeros(nap, dtype=int)
+    11 | k=0
+    12 | for j in range(size(vet)):
+    13 | 	if vet[j]>= 5:
+    14 | 		n[k]= j
+    15 | 		k= k+1
+    16 | print(n)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 1
+
+  [1] Linha 4: Variável 'ac' declarada mas nunca utilizada
+      Trecho  : ac = ...
+      Contexto:
+               3 | nap=0
+        >>>    4 | ac=0
+               5 | for i in range(size(vet)):
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 7
+
+  [1] Linha 2: Variável 'vet' com nome muito curto (≤4 chars)
+      Trecho  : vet = ...
+      Contexto:
+               1 | from numpy import*
+        >>>    2 | vet= array(eval(input()))
+               3 | nap=0
+
+  [2] Linha 3: Variável 'nap' com nome muito curto (≤4 chars)
+      Trecho  : nap = ...
+      Contexto:
+               2 | vet= array(eval(input()))
+        >>>    3 | nap=0
+               4 | ac=0
+
+  [3] Linha 4: Variável 'ac' com nome muito curto (≤4 chars)
+      Trecho  : ac = ...
+      Contexto:
+               3 | nap=0
+        >>>    4 | ac=0
+               5 | for i in range(size(vet)):
+
+  [4] Linha 10: Variável 'n' com nome muito curto (≤4 chars)
+      Trecho  : n = ...
+      Contexto:
+               9 | 	
+        >>>   10 | n= zeros(nap, dtype=int)
+              11 | k=0
+
+  [5] Linha 11: Variável 'k' com nome muito curto (≤4 chars)
+      Trecho  : k = ...
+      Contexto:
+              10 | n= zeros(nap, dtype=int)
+        >>>   11 | k=0
+              12 | for j in range(size(vet)):
+
+  [6] Linha 7: Variável 'nap' com nome muito curto (≤4 chars)
+      Trecho  : nap = ...
+      Contexto:
+               6 | 	if vet[i]>= 5:
+        >>>    7 | 		nap= nap +1
+               8 | print(nap)
+
+  [7] Linha 15: Variável 'k' com nome muito curto (≤4 chars)
+      Trecho  : k = ...
+      Contexto:
+              14 | 		n[k]= j
+        >>>   15 | 		k= k+1
+              16 | print(n)
+
+======================================================================

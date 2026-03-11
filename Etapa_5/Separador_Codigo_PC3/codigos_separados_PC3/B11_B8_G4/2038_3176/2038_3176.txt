@@ -1,0 +1,102 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 2038_3176.py
+Questão  : 2038
+Aluno    : 3176
+Total MCs: 3
+
+⚠️  Misconceptions detectados: B11, B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | n = input('digite s ou n:')
+     2 | 
+     3 | SIM = 0
+     4 | NAO = 0
+     5 | 
+     6 | while (n != 'S'):
+     7 | 	if (n == 'SIM' and SIM == 0):
+     8 | 		SIM = SIM + 1
+     9 | 	n = input('digite s ou n:')
+    10 | 	if (n == 'SIM'):
+    11 | 		SIM = SIM + 1
+    12 | 	elif (n == 'NAO'):
+    13 | 		NAO = NAO + 1 
+    14 | 
+    15 | print (SIM)		
+    16 | 
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B11 — Ifs distintos com blocos idênticos
+  Ocorrências: 1
+
+  [1] Linha 0: B11 detectado pelo VisitorMC3 (localização exata não mapeada)
+      Trecho  : —
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 10: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 10) / elif ... sem else
+      Contexto:
+               9 | 	n = input('digite s ou n:')
+        >>>   10 | 	if (n == 'SIM'):
+              11 | 		SIM = SIM + 1
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 7
+
+  [1] Linha 1: Variável 'n' com nome muito curto (≤4 chars)
+      Trecho  : n = ...
+      Contexto:
+        >>>    1 | n = input('digite s ou n:')
+               2 | 
+
+  [2] Linha 3: Variável 'SIM' com nome muito curto (≤4 chars)
+      Trecho  : SIM = ...
+      Contexto:
+               2 | 
+        >>>    3 | SIM = 0
+               4 | NAO = 0
+
+  [3] Linha 4: Variável 'NAO' com nome muito curto (≤4 chars)
+      Trecho  : NAO = ...
+      Contexto:
+               3 | SIM = 0
+        >>>    4 | NAO = 0
+               5 | 
+
+  [4] Linha 9: Variável 'n' com nome muito curto (≤4 chars)
+      Trecho  : n = ...
+      Contexto:
+               8 | 		SIM = SIM + 1
+        >>>    9 | 	n = input('digite s ou n:')
+              10 | 	if (n == 'SIM'):
+
+  [5] Linha 8: Variável 'SIM' com nome muito curto (≤4 chars)
+      Trecho  : SIM = ...
+      Contexto:
+               7 | 	if (n == 'SIM' and SIM == 0):
+        >>>    8 | 		SIM = SIM + 1
+               9 | 	n = input('digite s ou n:')
+
+  [6] Linha 11: Variável 'SIM' com nome muito curto (≤4 chars)
+      Trecho  : SIM = ...
+      Contexto:
+              10 | 	if (n == 'SIM'):
+        >>>   11 | 		SIM = SIM + 1
+              12 | 	elif (n == 'NAO'):
+
+  [7] Linha 13: Variável 'NAO' com nome muito curto (≤4 chars)
+      Trecho  : NAO = ...
+      Contexto:
+              12 | 	elif (n == 'NAO'):
+        >>>   13 | 		NAO = NAO + 1 
+              14 | 
+
+======================================================================

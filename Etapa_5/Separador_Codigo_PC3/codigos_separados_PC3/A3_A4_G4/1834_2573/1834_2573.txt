@@ -1,0 +1,126 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1834_2573.py
+Questão  : 1834
+Aluno    : 2573
+Total MCs: 3
+
+⚠️  Misconceptions detectados: A3, A4, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | a = "mg"
+     2 | b = "vg"
+     3 | c = "mp"
+     4 | d = "vp"
+     5 | abcd = ("int(a, b , c, d)")
+     6 | velocidadeVf = ("mg*vg-mp*vp/mg+mp")
+     7 | print = ("float(velocidadeVf),2")
+     8 | 
+     9 | 
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 7
+
+  [1] Linha 1: Variável 'a' declarada mas nunca utilizada
+      Trecho  : a = ...
+      Contexto:
+        >>>    1 | a = "mg"
+               2 | b = "vg"
+
+  [2] Linha 2: Variável 'b' declarada mas nunca utilizada
+      Trecho  : b = ...
+      Contexto:
+               1 | a = "mg"
+        >>>    2 | b = "vg"
+               3 | c = "mp"
+
+  [3] Linha 3: Variável 'c' declarada mas nunca utilizada
+      Trecho  : c = ...
+      Contexto:
+               2 | b = "vg"
+        >>>    3 | c = "mp"
+               4 | d = "vp"
+
+  [4] Linha 4: Variável 'd' declarada mas nunca utilizada
+      Trecho  : d = ...
+      Contexto:
+               3 | c = "mp"
+        >>>    4 | d = "vp"
+               5 | abcd = ("int(a, b , c, d)")
+
+  [5] Linha 5: Variável 'abcd' declarada mas nunca utilizada
+      Trecho  : abcd = ...
+      Contexto:
+               4 | d = "vp"
+        >>>    5 | abcd = ("int(a, b , c, d)")
+               6 | velocidadeVf = ("mg*vg-mp*vp/mg+mp")
+
+  [6] Linha 6: Variável 'velocidadeVf' declarada mas nunca utilizada
+      Trecho  : velocidadeVf = ...
+      Contexto:
+               5 | abcd = ("int(a, b , c, d)")
+        >>>    6 | velocidadeVf = ("mg*vg-mp*vp/mg+mp")
+               7 | print = ("float(velocidadeVf),2")
+
+  [7] Linha 7: Variável 'print' declarada mas nunca utilizada
+      Trecho  : print = ...
+      Contexto:
+               6 | velocidadeVf = ("mg*vg-mp*vp/mg+mp")
+        >>>    7 | print = ("float(velocidadeVf),2")
+               8 | 
+
+▶ A4 — Redefinição de built-in
+  Ocorrências: 1
+
+  [1] Linha 7: Built-in 'print' redefinido como variável
+      Trecho  : print = 'float(velocidadeVf),2'
+      Contexto:
+               6 | velocidadeVf = ("mg*vg-mp*vp/mg+mp")
+        >>>    7 | print = ("float(velocidadeVf),2")
+               8 | 
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 5
+
+  [1] Linha 1: Variável 'a' com nome muito curto (≤4 chars)
+      Trecho  : a = ...
+      Contexto:
+        >>>    1 | a = "mg"
+               2 | b = "vg"
+
+  [2] Linha 2: Variável 'b' com nome muito curto (≤4 chars)
+      Trecho  : b = ...
+      Contexto:
+               1 | a = "mg"
+        >>>    2 | b = "vg"
+               3 | c = "mp"
+
+  [3] Linha 3: Variável 'c' com nome muito curto (≤4 chars)
+      Trecho  : c = ...
+      Contexto:
+               2 | b = "vg"
+        >>>    3 | c = "mp"
+               4 | d = "vp"
+
+  [4] Linha 4: Variável 'd' com nome muito curto (≤4 chars)
+      Trecho  : d = ...
+      Contexto:
+               3 | c = "mp"
+        >>>    4 | d = "vp"
+               5 | abcd = ("int(a, b , c, d)")
+
+  [5] Linha 5: Variável 'abcd' com nome muito curto (≤4 chars)
+      Trecho  : abcd = ...
+      Contexto:
+               4 | d = "vp"
+        >>>    5 | abcd = ("int(a, b , c, d)")
+               6 | velocidadeVf = ("mg*vg-mp*vp/mg+mp")
+
+======================================================================

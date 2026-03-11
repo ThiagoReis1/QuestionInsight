@@ -1,0 +1,11 @@
+num=int(input("numero:"))
+quo=(num//19)
+resto=num%19
+if(num%19==0):
+	mensagem="sim"
+	print(quo)
+	print(mensagem)
+else:
+	mensagem="nao"
+	print(resto)
+	print(mensagem)

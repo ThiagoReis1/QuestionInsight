@@ -1,0 +1,71 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 3182_4219.py
+Questão  : 3182
+Aluno    : 4219
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | jog = array(eval(input("jogadas: ")))
+     3 | tam = size(jog)
+     4 | vet = zeros(10, dtype=int)
+     5 | 
+     6 | for i in range(0,tam,3) :
+     7 | 	if jog[i] == jog[i+1] and jog[i]==jog[i+2] :
+     8 | 			if i == 0 :
+     9 | 				vet[0] = vet[0] + 1
+    10 | 			elif i == 1 :
+    11 | 				vet[1] = vet[1] + 1
+    12 | 			elif i == 2 :
+    13 | 				vet[2] = vet[2] + 1
+    14 | 			elif i == 3 :
+    15 | 				vet[3] = vet[3] + 1
+    16 | 			elif i == 4 :
+    17 | 				vet[4] = vet[4] + 1
+    18 | print(vet)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 14: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 14) / elif ... sem else
+      Contexto:
+              13 | 				vet[2] = vet[2] + 1
+        >>>   14 | 			elif i == 3 :
+              15 | 				vet[3] = vet[3] + 1
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 3
+
+  [1] Linha 2: Variável 'jog' com nome muito curto (≤4 chars)
+      Trecho  : jog = ...
+      Contexto:
+               1 | from numpy import*
+        >>>    2 | jog = array(eval(input("jogadas: ")))
+               3 | tam = size(jog)
+
+  [2] Linha 3: Variável 'tam' com nome muito curto (≤4 chars)
+      Trecho  : tam = ...
+      Contexto:
+               2 | jog = array(eval(input("jogadas: ")))
+        >>>    3 | tam = size(jog)
+               4 | vet = zeros(10, dtype=int)
+
+  [3] Linha 4: Variável 'vet' com nome muito curto (≤4 chars)
+      Trecho  : vet = ...
+      Contexto:
+               3 | tam = size(jog)
+        >>>    4 | vet = zeros(10, dtype=int)
+               5 | 
+
+======================================================================

@@ -1,0 +1,92 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1979_2554.py
+Questão  : 1979
+Aluno    : 2554
+Total MCs: 3
+
+⚠️  Misconceptions detectados: B4, B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | C = input("O resultado da selecao na competicao: ")
+     2 | N = input("Qnts vezes a selecao alcancou o resultado: ")
+     3 | if(not(C == "Campeao" or C == "Vice-Campeao")):
+     4 | 	print("SELECAO NAO IDENTIFICADA")
+     5 | else:
+     6 | 	if(not(N == "03-vezes" or N == "04-vezes" or N == "05-vezes")):
+     7 | 		print("SELECAO NAO IDENTIFICADA")
+     8 | 	else:
+     9 | 		if(C == "Campeao"):
+    10 | 			if(N == "05-vezes"):
+    11 | 				print("brasil".upper())
+    12 | 			else:
+    13 | 				if(N == "04-vezes"):
+    14 | 					print("italia".upper())
+    15 | 		else:
+    16 | 			if(C == "Vice-Campeao"):
+    17 | 				if(N == "04-vezes"):
+    18 | 					print("alemanha".upper())
+    19 | 				else:
+    20 | 					if(N == "03-vezes"):
+    21 | 						print("argentina".upper())
+    22 | 
+    23 | 		
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B4 — Comandos repetidos dentro de blocos if-elif-else
+  Ocorrências: 1
+
+  [1] Linha 6: Bloco idêntico ao da linha 3
+      Trecho  : print('SELECAO NAO IDENTIFICADA')
+      Contexto:
+               5 | else:
+        >>>    6 | 	if(not(N == "03-vezes" or N == "04-vezes" or N == "05-vezes")):
+               7 | 		print("SELECAO NAO IDENTIFICADA")
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 3
+
+  [1] Linha 9: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 9) / elif ... sem else
+      Contexto:
+               8 | 	else:
+        >>>    9 | 		if(C == "Campeao"):
+              10 | 			if(N == "05-vezes"):
+
+  [2] Linha 10: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 10) / elif ... sem else
+      Contexto:
+               9 | 		if(C == "Campeao"):
+        >>>   10 | 			if(N == "05-vezes"):
+              11 | 				print("brasil".upper())
+
+  [3] Linha 17: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 17) / elif ... sem else
+      Contexto:
+              16 | 			if(C == "Vice-Campeao"):
+        >>>   17 | 				if(N == "04-vezes"):
+              18 | 					print("alemanha".upper())
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 2
+
+  [1] Linha 1: Variável 'C' com nome muito curto (≤4 chars)
+      Trecho  : C = ...
+      Contexto:
+        >>>    1 | C = input("O resultado da selecao na competicao: ")
+               2 | N = input("Qnts vezes a selecao alcancou o resultado: ")
+
+  [2] Linha 2: Variável 'N' com nome muito curto (≤4 chars)
+      Trecho  : N = ...
+      Contexto:
+               1 | C = input("O resultado da selecao na competicao: ")
+        >>>    2 | N = input("Qnts vezes a selecao alcancou o resultado: ")
+               3 | if(not(C == "Campeao" or C == "Vice-Campeao")):
+
+======================================================================

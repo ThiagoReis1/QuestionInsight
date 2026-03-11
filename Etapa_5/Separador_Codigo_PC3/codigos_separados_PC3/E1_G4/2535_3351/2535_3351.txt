@@ -1,0 +1,118 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 2535_3351.py
+Questão  : 2535
+Aluno    : 3351
+Total MCs: 2
+
+⚠️  Misconceptions detectados: E1, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | da = float(input("Insira o investimento A: "))
+     2 | db = float(input("Insira o investimento B: "))
+     3 | ta = float(input("Insira a taxa de juros do Banco A: "))/100
+     4 | tb = float(input("Insira a taxa de juros do Banco B: "))/100
+     5 | #Acumulando Grana
+     6 | ma = da 
+     7 | mb = db
+     8 | #Acumulando tempo
+     9 | mes = 0
+    10 | if(da >0 and db>0 and ta>0 and tb>0 and da>db and ta<tb):
+    11 | 	while(ma > mb):
+    12 | 		ma = round(ma + ma*ta,2)
+    13 | 		mb = round(mb + mb*tb,2)
+    14 | 		mes = mes + 1
+    15 | 	print(mes)
+    16 | else:
+    17 | 	print("Dados incorretos")
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ E1 — Verificação desnecessária de todas as combinações possíveis
+  Ocorrências: 1
+
+  [1] Linha 10: 6 condições em um único if — verificação excessiva
+      Trecho  : da > 0 and db > 0 and (ta > 0) and (tb > 0) and (da > db) and (ta < tb)
+      Contexto:
+               9 | mes = 0
+        >>>   10 | if(da >0 and db>0 and ta>0 and tb>0 and da>db and ta<tb):
+              11 | 	while(ma > mb):
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 10
+
+  [1] Linha 1: Variável 'da' com nome muito curto (≤4 chars)
+      Trecho  : da = ...
+      Contexto:
+        >>>    1 | da = float(input("Insira o investimento A: "))
+               2 | db = float(input("Insira o investimento B: "))
+
+  [2] Linha 2: Variável 'db' com nome muito curto (≤4 chars)
+      Trecho  : db = ...
+      Contexto:
+               1 | da = float(input("Insira o investimento A: "))
+        >>>    2 | db = float(input("Insira o investimento B: "))
+               3 | ta = float(input("Insira a taxa de juros do Banco A: "))/100
+
+  [3] Linha 3: Variável 'ta' com nome muito curto (≤4 chars)
+      Trecho  : ta = ...
+      Contexto:
+               2 | db = float(input("Insira o investimento B: "))
+        >>>    3 | ta = float(input("Insira a taxa de juros do Banco A: "))/100
+               4 | tb = float(input("Insira a taxa de juros do Banco B: "))/100
+
+  [4] Linha 4: Variável 'tb' com nome muito curto (≤4 chars)
+      Trecho  : tb = ...
+      Contexto:
+               3 | ta = float(input("Insira a taxa de juros do Banco A: "))/100
+        >>>    4 | tb = float(input("Insira a taxa de juros do Banco B: "))/100
+               5 | #Acumulando Grana
+
+  [5] Linha 6: Variável 'ma' com nome muito curto (≤4 chars)
+      Trecho  : ma = ...
+      Contexto:
+               5 | #Acumulando Grana
+        >>>    6 | ma = da 
+               7 | mb = db
+
+  [6] Linha 7: Variável 'mb' com nome muito curto (≤4 chars)
+      Trecho  : mb = ...
+      Contexto:
+               6 | ma = da 
+        >>>    7 | mb = db
+               8 | #Acumulando tempo
+
+  [7] Linha 9: Variável 'mes' com nome muito curto (≤4 chars)
+      Trecho  : mes = ...
+      Contexto:
+               8 | #Acumulando tempo
+        >>>    9 | mes = 0
+              10 | if(da >0 and db>0 and ta>0 and tb>0 and da>db and ta<tb):
+
+  [8] Linha 12: Variável 'ma' com nome muito curto (≤4 chars)
+      Trecho  : ma = ...
+      Contexto:
+              11 | 	while(ma > mb):
+        >>>   12 | 		ma = round(ma + ma*ta,2)
+              13 | 		mb = round(mb + mb*tb,2)
+
+  [9] Linha 13: Variável 'mb' com nome muito curto (≤4 chars)
+      Trecho  : mb = ...
+      Contexto:
+              12 | 		ma = round(ma + ma*ta,2)
+        >>>   13 | 		mb = round(mb + mb*tb,2)
+              14 | 		mes = mes + 1
+
+  [10] Linha 14: Variável 'mes' com nome muito curto (≤4 chars)
+      Trecho  : mes = ...
+      Contexto:
+              13 | 		mb = round(mb + mb*tb,2)
+        >>>   14 | 		mes = mes + 1
+              15 | 	print(mes)
+
+======================================================================

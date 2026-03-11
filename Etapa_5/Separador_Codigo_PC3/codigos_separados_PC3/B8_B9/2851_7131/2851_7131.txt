@@ -1,0 +1,48 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 2851_7131.py
+Questão  : 2851
+Aluno    : 7131
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B8, B9
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | vetor=array(eval(input("digite a qntd de alunos:  ")))
+     3 | soma=0
+     4 | for i in vetor:
+     5 | 	if i!=99:
+     6 | 		soma=soma+i
+     7 | 	elif i==99:
+     8 | 		soma=(soma*2)
+     9 | print(soma)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 5: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 5) / elif ... sem else
+      Contexto:
+               4 | for i in vetor:
+        >>>    5 | 	if i!=99:
+               6 | 		soma=soma+i
+
+▶ B9 — elif/else retestando condições já verificadas
+  Ocorrências: 1
+
+  [1] Linha 7: elif retesta condição inversa do if da linha 5
+      Trecho  : if i != 99 ... elif i == 99
+      Contexto:
+               6 | 		soma=soma+i
+        >>>    7 | 	elif i==99:
+               8 | 		soma=(soma*2)
+
+======================================================================

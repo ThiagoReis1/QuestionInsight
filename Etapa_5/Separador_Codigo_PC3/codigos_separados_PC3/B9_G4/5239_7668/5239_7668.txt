@@ -1,0 +1,56 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 5239_7668.py
+Questão  : 5239
+Aluno    : 7668
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B9, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | x=float(input(""))
+     2 | if(0<=x<=10):
+     3 | 	if(x>=9):
+     4 | 		print("A")
+     5 | 	elif(x>=8):
+     6 | 		print("B")
+     7 | 	elif(x>=7):
+     8 | 		print("C")
+     9 | 	elif(x>=6):
+    10 | 		print("D")
+    11 | 	elif(x>=5):
+    12 | 		print("E")
+    13 | 	elif(x<5):
+    14 | 		print("F")
+    15 | 	else:
+    16 | 		print("ERRO")
+    17 | else:
+    18 | 	print("ERRO")
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B9 — elif/else retestando condições já verificadas
+  Ocorrências: 1
+
+  [1] Linha 13: elif retesta condição inversa do if da linha 11
+      Trecho  : if x >= 5 ... elif x < 5
+      Contexto:
+              12 | 		print("E")
+        >>>   13 | 	elif(x<5):
+              14 | 		print("F")
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 1
+
+  [1] Linha 1: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+        >>>    1 | x=float(input(""))
+               2 | if(0<=x<=10):
+
+======================================================================

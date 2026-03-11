@@ -1,0 +1,128 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1605_3091.py
+Questão  : 1605
+Aluno    : 3091
+Total MCs: 3
+
+⚠️  Misconceptions detectados: A2, A3, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | v=array(eval(input("")))
+     3 | 
+     4 | p=200
+     5 | pot=0
+     6 | i=0
+     7 | 
+     8 | while i<size(v):
+     9 | 	if v[i]==1:
+    10 | 		p=p*4
+    11 | 	if v[i]==2:
+    12 | 		p=p*2
+    13 | 	if v[i]==3:
+    14 | 		p=p
+    15 | 	if v[i]==4:
+    16 | 		p=p/2
+    17 | 	pot=p
+    18 | 	i=i+1
+    19 | print(round(pot, 2))
+    20 | 	
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A2 — Variável atribuída a si mesma
+  Ocorrências: 1
+
+  [1] Linha 14: 'p' atribuído a si mesmo
+      Trecho  : p = p
+      Contexto:
+              13 | 	if v[i]==3:
+        >>>   14 | 		p=p
+              15 | 	if v[i]==4:
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 1
+
+  [1] Linha 0: A3 detectado pelo VisitorMC3 (localização exata não mapeada)
+      Trecho  : —
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 10
+
+  [1] Linha 2: Variável 'v' com nome muito curto (≤4 chars)
+      Trecho  : v = ...
+      Contexto:
+               1 | from numpy import*
+        >>>    2 | v=array(eval(input("")))
+               3 | 
+
+  [2] Linha 4: Variável 'p' com nome muito curto (≤4 chars)
+      Trecho  : p = ...
+      Contexto:
+               3 | 
+        >>>    4 | p=200
+               5 | pot=0
+
+  [3] Linha 5: Variável 'pot' com nome muito curto (≤4 chars)
+      Trecho  : pot = ...
+      Contexto:
+               4 | p=200
+        >>>    5 | pot=0
+               6 | i=0
+
+  [4] Linha 6: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+               5 | pot=0
+        >>>    6 | i=0
+               7 | 
+
+  [5] Linha 17: Variável 'pot' com nome muito curto (≤4 chars)
+      Trecho  : pot = ...
+      Contexto:
+              16 | 		p=p/2
+        >>>   17 | 	pot=p
+              18 | 	i=i+1
+
+  [6] Linha 18: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+              17 | 	pot=p
+        >>>   18 | 	i=i+1
+              19 | print(round(pot, 2))
+
+  [7] Linha 10: Variável 'p' com nome muito curto (≤4 chars)
+      Trecho  : p = ...
+      Contexto:
+               9 | 	if v[i]==1:
+        >>>   10 | 		p=p*4
+              11 | 	if v[i]==2:
+
+  [8] Linha 12: Variável 'p' com nome muito curto (≤4 chars)
+      Trecho  : p = ...
+      Contexto:
+              11 | 	if v[i]==2:
+        >>>   12 | 		p=p*2
+              13 | 	if v[i]==3:
+
+  [9] Linha 14: Variável 'p' com nome muito curto (≤4 chars)
+      Trecho  : p = ...
+      Contexto:
+              13 | 	if v[i]==3:
+        >>>   14 | 		p=p
+              15 | 	if v[i]==4:
+
+  [10] Linha 16: Variável 'p' com nome muito curto (≤4 chars)
+      Trecho  : p = ...
+      Contexto:
+              15 | 	if v[i]==4:
+        >>>   16 | 		p=p/2
+              17 | 	pot=p
+
+======================================================================

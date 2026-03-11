@@ -1,0 +1,77 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1651_3828.py
+Questão  : 1651
+Aluno    : 3828
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | 
+     3 | cont = zeros(6, dtype = int)
+     4 | 
+     5 | vet = input("Tipos de pele: ").upper().split(',')
+     6 | 
+     7 | for i in range(size(vet)):
+     8 | 	if (vet[i] == 'MC'):
+     9 | 		cont[0] = cont[0] + 1
+    10 | 	elif (vet[i] == 'C'):
+    11 | 		cont[1] = cont[1] + 1
+    12 | 	elif (vet[i] == 'CM'):
+    13 | 		cont[2] = cont[2] + 1
+    14 | 	elif (vet[i] == 'EM'):
+    15 | 		cont[3] = cont[3] + 1
+    16 | 	elif (vet[i] == 'E'):
+    17 | 		cont[4] = cont[4] + 1
+    18 | 	elif (vet[i] == 'ME'):
+    19 | 		cont[5] = cont[5] + 1
+    20 | i = cont[0]
+    21 | for i in range(1, size(cont)):
+    22 | 	if (i == max(cont)):
+    23 | 		print (i)
+    24 | print(cont)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 16: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 16) / elif ... sem else
+      Contexto:
+              15 | 		cont[3] = cont[3] + 1
+        >>>   16 | 	elif (vet[i] == 'E'):
+              17 | 		cont[4] = cont[4] + 1
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 3
+
+  [1] Linha 3: Variável 'cont' com nome muito curto (≤4 chars)
+      Trecho  : cont = ...
+      Contexto:
+               2 | 
+        >>>    3 | cont = zeros(6, dtype = int)
+               4 | 
+
+  [2] Linha 5: Variável 'vet' com nome muito curto (≤4 chars)
+      Trecho  : vet = ...
+      Contexto:
+               4 | 
+        >>>    5 | vet = input("Tipos de pele: ").upper().split(',')
+               6 | 
+
+  [3] Linha 20: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+              19 | 		cont[5] = cont[5] + 1
+        >>>   20 | i = cont[0]
+              21 | for i in range(1, size(cont)):
+
+======================================================================

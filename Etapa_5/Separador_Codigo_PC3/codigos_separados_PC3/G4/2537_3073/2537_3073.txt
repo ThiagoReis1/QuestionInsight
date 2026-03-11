@@ -1,0 +1,81 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 2537_3073.py
+Questão  : 2537
+Aluno    : 3073
+Total MCs: 1
+
+⚠️  Misconceptions detectados: G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from math import * 
+     2 | v = float(input("Valor da heranca:")) 
+     3 | m = float(input("Saque mensal:")) 
+     4 | j = float(input("Taxa de juros:")) 
+     5 | 
+     6 | pj = j / 100
+     7 | i = 0
+     8 | saldo = v
+     9 | 
+    10 | if ((v >0) and (m >0)):
+    11 | 	while (saldo < (v + (20 /100) * v)):
+    12 | 		saldo = saldo + (saldo * pj) - m
+    13 | 		round(saldo, 2)
+    14 | 		i = i + 1
+    15 | 	print(i)
+    16 | else:
+    17 | 	print("Dados incorretos")	
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 6
+
+  [1] Linha 2: Variável 'v' com nome muito curto (≤4 chars)
+      Trecho  : v = ...
+      Contexto:
+               1 | from math import * 
+        >>>    2 | v = float(input("Valor da heranca:")) 
+               3 | m = float(input("Saque mensal:")) 
+
+  [2] Linha 3: Variável 'm' com nome muito curto (≤4 chars)
+      Trecho  : m = ...
+      Contexto:
+               2 | v = float(input("Valor da heranca:")) 
+        >>>    3 | m = float(input("Saque mensal:")) 
+               4 | j = float(input("Taxa de juros:")) 
+
+  [3] Linha 4: Variável 'j' com nome muito curto (≤4 chars)
+      Trecho  : j = ...
+      Contexto:
+               3 | m = float(input("Saque mensal:")) 
+        >>>    4 | j = float(input("Taxa de juros:")) 
+               5 | 
+
+  [4] Linha 6: Variável 'pj' com nome muito curto (≤4 chars)
+      Trecho  : pj = ...
+      Contexto:
+               5 | 
+        >>>    6 | pj = j / 100
+               7 | i = 0
+
+  [5] Linha 7: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+               6 | pj = j / 100
+        >>>    7 | i = 0
+               8 | saldo = v
+
+  [6] Linha 14: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+              13 | 		round(saldo, 2)
+        >>>   14 | 		i = i + 1
+              15 | 	print(i)
+
+======================================================================

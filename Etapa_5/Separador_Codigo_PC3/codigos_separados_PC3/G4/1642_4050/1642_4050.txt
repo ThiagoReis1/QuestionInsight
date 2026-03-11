@@ -1,0 +1,81 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1642_4050.py
+Questão  : 1642
+Aluno    : 4050
+Total MCs: 1
+
+⚠️  Misconceptions detectados: G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import *
+     2 | x = array(eval(input("Quantidade de turmas: ")))
+     3 | 
+     4 | cont = 0
+     5 | j = 0
+     6 | for i in range(size(x)):
+     7 | 	if(x[i] % 5 == 0):
+     8 | 		cont = cont + 1
+     9 | 		
+    10 | s = zeros(cont, dtype=int)
+    11 | for i in range(size(x)):
+    12 | 	if (x[i] % 5 == 0):
+    13 | 		s[j] = i
+    14 | 		j = j + 1
+    15 | 		
+    16 | print(cont)
+    17 | print(s)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 6
+
+  [1] Linha 2: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+               1 | from numpy import *
+        >>>    2 | x = array(eval(input("Quantidade de turmas: ")))
+               3 | 
+
+  [2] Linha 4: Variável 'cont' com nome muito curto (≤4 chars)
+      Trecho  : cont = ...
+      Contexto:
+               3 | 
+        >>>    4 | cont = 0
+               5 | j = 0
+
+  [3] Linha 5: Variável 'j' com nome muito curto (≤4 chars)
+      Trecho  : j = ...
+      Contexto:
+               4 | cont = 0
+        >>>    5 | j = 0
+               6 | for i in range(size(x)):
+
+  [4] Linha 10: Variável 's' com nome muito curto (≤4 chars)
+      Trecho  : s = ...
+      Contexto:
+               9 | 		
+        >>>   10 | s = zeros(cont, dtype=int)
+              11 | for i in range(size(x)):
+
+  [5] Linha 8: Variável 'cont' com nome muito curto (≤4 chars)
+      Trecho  : cont = ...
+      Contexto:
+               7 | 	if(x[i] % 5 == 0):
+        >>>    8 | 		cont = cont + 1
+               9 | 		
+
+  [6] Linha 14: Variável 'j' com nome muito curto (≤4 chars)
+      Trecho  : j = ...
+      Contexto:
+              13 | 		s[j] = i
+        >>>   14 | 		j = j + 1
+              15 | 		
+
+======================================================================

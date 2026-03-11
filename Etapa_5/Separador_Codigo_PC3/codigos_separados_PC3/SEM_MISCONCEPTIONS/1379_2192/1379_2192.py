@@ -1,0 +1,6 @@
+carrometro = float(input("Quantidade de carro por m2: "))
+catetoa = float(input("Cateto a: "))
+catetob = float(input("Cateto b: "))
+area = float((catetoa*catetob)/2)
+carro = int(area * carrometro)
+print(carro)

@@ -1,0 +1,125 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1258_1358.py
+Questão  : 1258
+Aluno    : 1358
+Total MCs: 3
+
+⚠️  Misconceptions detectados: A3, C8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | p = float(input("digite um numero: "))
+     3 | x = eval(input("Informe o vetor: "))
+     4 | y = eval(input("Informe o vetor: "))
+     5 | v = v[0]**t + v[1]**t + v[2]**t + v[n]**t
+     6 | v1 = x + y
+     7 | t = p / p + 1
+     8 | a = size(v)
+     9 | norma_de_v = abs(a)
+    10 | z = ((x * v) + (y * v))
+    11 | for i in v:
+    12 | 	i = i + 1
+    13 | print(round(z, 3))
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 2
+
+  [1] Linha 6: Variável 'v1' declarada mas nunca utilizada
+      Trecho  : v1 = ...
+      Contexto:
+               5 | v = v[0]**t + v[1]**t + v[2]**t + v[n]**t
+        >>>    6 | v1 = x + y
+               7 | t = p / p + 1
+
+  [2] Linha 9: Variável 'norma_de_v' declarada mas nunca utilizada
+      Trecho  : norma_de_v = ...
+      Contexto:
+               8 | a = size(v)
+        >>>    9 | norma_de_v = abs(a)
+              10 | z = ((x * v) + (y * v))
+
+▶ C8 — Loop for com sua variável de iteração sobrescrita
+  Ocorrências: 1
+
+  [1] Linha 12: Variável de iteração 'i' sobrescrita no loop
+      Trecho  : i = i + 1
+      Contexto:
+              11 | for i in v:
+        >>>   12 | 	i = i + 1
+              13 | print(round(z, 3))
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 9
+
+  [1] Linha 2: Variável 'p' com nome muito curto (≤4 chars)
+      Trecho  : p = ...
+      Contexto:
+               1 | from numpy import*
+        >>>    2 | p = float(input("digite um numero: "))
+               3 | x = eval(input("Informe o vetor: "))
+
+  [2] Linha 3: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+               2 | p = float(input("digite um numero: "))
+        >>>    3 | x = eval(input("Informe o vetor: "))
+               4 | y = eval(input("Informe o vetor: "))
+
+  [3] Linha 4: Variável 'y' com nome muito curto (≤4 chars)
+      Trecho  : y = ...
+      Contexto:
+               3 | x = eval(input("Informe o vetor: "))
+        >>>    4 | y = eval(input("Informe o vetor: "))
+               5 | v = v[0]**t + v[1]**t + v[2]**t + v[n]**t
+
+  [4] Linha 5: Variável 'v' com nome muito curto (≤4 chars)
+      Trecho  : v = ...
+      Contexto:
+               4 | y = eval(input("Informe o vetor: "))
+        >>>    5 | v = v[0]**t + v[1]**t + v[2]**t + v[n]**t
+               6 | v1 = x + y
+
+  [5] Linha 6: Variável 'v1' com nome muito curto (≤4 chars)
+      Trecho  : v1 = ...
+      Contexto:
+               5 | v = v[0]**t + v[1]**t + v[2]**t + v[n]**t
+        >>>    6 | v1 = x + y
+               7 | t = p / p + 1
+
+  [6] Linha 7: Variável 't' com nome muito curto (≤4 chars)
+      Trecho  : t = ...
+      Contexto:
+               6 | v1 = x + y
+        >>>    7 | t = p / p + 1
+               8 | a = size(v)
+
+  [7] Linha 8: Variável 'a' com nome muito curto (≤4 chars)
+      Trecho  : a = ...
+      Contexto:
+               7 | t = p / p + 1
+        >>>    8 | a = size(v)
+               9 | norma_de_v = abs(a)
+
+  [8] Linha 10: Variável 'z' com nome muito curto (≤4 chars)
+      Trecho  : z = ...
+      Contexto:
+               9 | norma_de_v = abs(a)
+        >>>   10 | z = ((x * v) + (y * v))
+              11 | for i in v:
+
+  [9] Linha 12: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+              11 | for i in v:
+        >>>   12 | 	i = i + 1
+              13 | print(round(z, 3))
+
+======================================================================

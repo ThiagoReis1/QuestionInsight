@@ -1,0 +1,67 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 2121_2565.py
+Questão  : 2121
+Aluno    : 2565
+Total MCs: 2
+
+⚠️  Misconceptions detectados: A3, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | n = array(eval(input("")))
+     3 | 
+     4 | m = (sum(n) - max(n))
+     5 | #calculo da nota final
+     6 | nf = ((n[0]*5.0) + (n[1]*3.0) + n[2]*2.0)/10.0
+     7 | 
+     8 | print(round(nf, 2))
+     9 | 
+    10 | if(nf >= 5.0):
+    11 | 	print("APROVADO")
+    12 | else:
+    13 | 	print("REPROVADO")
+    14 | 		
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 1
+
+  [1] Linha 4: Variável 'm' declarada mas nunca utilizada
+      Trecho  : m = ...
+      Contexto:
+               3 | 
+        >>>    4 | m = (sum(n) - max(n))
+               5 | #calculo da nota final
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 3
+
+  [1] Linha 2: Variável 'n' com nome muito curto (≤4 chars)
+      Trecho  : n = ...
+      Contexto:
+               1 | from numpy import*
+        >>>    2 | n = array(eval(input("")))
+               3 | 
+
+  [2] Linha 4: Variável 'm' com nome muito curto (≤4 chars)
+      Trecho  : m = ...
+      Contexto:
+               3 | 
+        >>>    4 | m = (sum(n) - max(n))
+               5 | #calculo da nota final
+
+  [3] Linha 6: Variável 'nf' com nome muito curto (≤4 chars)
+      Trecho  : nf = ...
+      Contexto:
+               5 | #calculo da nota final
+        >>>    6 | nf = ((n[0]*5.0) + (n[1]*3.0) + n[2]*2.0)/10.0
+               7 | 
+
+======================================================================

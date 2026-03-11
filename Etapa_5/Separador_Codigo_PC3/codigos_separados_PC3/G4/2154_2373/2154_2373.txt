@@ -1,0 +1,53 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 2154_2373.py
+Questão  : 2154
+Aluno    : 2373
+Total MCs: 1
+
+⚠️  Misconceptions detectados: G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import * 
+     2 | from math import *
+     3 | vetP = array(eval(int(input("vetor: "))))
+     4 | vetQ = array(eval(int(input("vetor: "))))
+     5 | distancia = sqrt((vetP[0]-vetQ[0])**2 + (vetP[1]-vetQ[1])**2 + (vetP[-1]-vetQ[-1])**2)
+     6 | 
+     7 | sim = 1/(1+distancia)
+     8 | 
+     9 | print(round(distancia, 4))
+    10 | print(round(sim, 2))
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 3
+
+  [1] Linha 3: Variável 'vetP' com nome muito curto (≤4 chars)
+      Trecho  : vetP = ...
+      Contexto:
+               2 | from math import *
+        >>>    3 | vetP = array(eval(int(input("vetor: "))))
+               4 | vetQ = array(eval(int(input("vetor: "))))
+
+  [2] Linha 4: Variável 'vetQ' com nome muito curto (≤4 chars)
+      Trecho  : vetQ = ...
+      Contexto:
+               3 | vetP = array(eval(int(input("vetor: "))))
+        >>>    4 | vetQ = array(eval(int(input("vetor: "))))
+               5 | distancia = sqrt((vetP[0]-vetQ[0])**2 + (vetP[1]-vetQ[1])**2 + (vetP[-1]-vetQ[-1])**2)
+
+  [3] Linha 7: Variável 'sim' com nome muito curto (≤4 chars)
+      Trecho  : sim = ...
+      Contexto:
+               6 | 
+        >>>    7 | sim = 1/(1+distancia)
+               8 | 
+
+======================================================================

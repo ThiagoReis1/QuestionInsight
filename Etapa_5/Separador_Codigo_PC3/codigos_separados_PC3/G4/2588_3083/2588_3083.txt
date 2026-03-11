@@ -1,0 +1,68 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 2588_3083.py
+Questão  : 2588
+Aluno    : 3083
+Total MCs: 1
+
+⚠️  Misconceptions detectados: G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | v = array(eval(input('')))
+     3 | l1 = v[0]*0.20 + v[0]
+     4 | l2 = v[0]*0.50 + v[0]
+     5 | 
+     6 | inf = 0
+     7 | for i in range(size(v)):
+     8 | 	if(v[i] != v[0]) and (l1 > v[i] < l2):
+     9 | 		inf = inf + 1
+    10 | 		print(i)
+    11 | 		print(inf)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 5
+
+  [1] Linha 2: Variável 'v' com nome muito curto (≤4 chars)
+      Trecho  : v = ...
+      Contexto:
+               1 | from numpy import*
+        >>>    2 | v = array(eval(input('')))
+               3 | l1 = v[0]*0.20 + v[0]
+
+  [2] Linha 3: Variável 'l1' com nome muito curto (≤4 chars)
+      Trecho  : l1 = ...
+      Contexto:
+               2 | v = array(eval(input('')))
+        >>>    3 | l1 = v[0]*0.20 + v[0]
+               4 | l2 = v[0]*0.50 + v[0]
+
+  [3] Linha 4: Variável 'l2' com nome muito curto (≤4 chars)
+      Trecho  : l2 = ...
+      Contexto:
+               3 | l1 = v[0]*0.20 + v[0]
+        >>>    4 | l2 = v[0]*0.50 + v[0]
+               5 | 
+
+  [4] Linha 6: Variável 'inf' com nome muito curto (≤4 chars)
+      Trecho  : inf = ...
+      Contexto:
+               5 | 
+        >>>    6 | inf = 0
+               7 | for i in range(size(v)):
+
+  [5] Linha 9: Variável 'inf' com nome muito curto (≤4 chars)
+      Trecho  : inf = ...
+      Contexto:
+               8 | 	if(v[i] != v[0]) and (l1 > v[i] < l2):
+        >>>    9 | 		inf = inf + 1
+              10 | 		print(i)
+
+======================================================================

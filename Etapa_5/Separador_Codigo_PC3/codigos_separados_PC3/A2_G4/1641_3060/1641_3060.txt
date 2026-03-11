@@ -1,0 +1,98 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1641_3060.py
+Questão  : 1641
+Aluno    : 3060
+Total MCs: 2
+
+⚠️  Misconceptions detectados: A2, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import *
+     2 | v = array(eval(input("Turmas: ")))
+     3 | trio = 0
+     4 | 
+     5 | for i in range(size(v)):
+     6 | 	if (v[i] % 3 == 0):
+     7 | 		trio = trio + 1
+     8 | print(trio)
+     9 | vs = zeros(trio, dtype = int)
+    10 | j = 0
+    11 | for i in range(size(v)):
+    12 | 	if (v[i] % 3 == 0):
+    13 | 		vs[j] = vs[j] + i
+    14 | 		j = j + 1
+    15 | 	else:
+    16 | 		j = j
+    17 | print(vs)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A2 — Variável atribuída a si mesma
+  Ocorrências: 1
+
+  [1] Linha 16: 'j' atribuído a si mesmo
+      Trecho  : j = j
+      Contexto:
+              15 | 	else:
+        >>>   16 | 		j = j
+              17 | print(vs)
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 7
+
+  [1] Linha 2: Variável 'v' com nome muito curto (≤4 chars)
+      Trecho  : v = ...
+      Contexto:
+               1 | from numpy import *
+        >>>    2 | v = array(eval(input("Turmas: ")))
+               3 | trio = 0
+
+  [2] Linha 3: Variável 'trio' com nome muito curto (≤4 chars)
+      Trecho  : trio = ...
+      Contexto:
+               2 | v = array(eval(input("Turmas: ")))
+        >>>    3 | trio = 0
+               4 | 
+
+  [3] Linha 9: Variável 'vs' com nome muito curto (≤4 chars)
+      Trecho  : vs = ...
+      Contexto:
+               8 | print(trio)
+        >>>    9 | vs = zeros(trio, dtype = int)
+              10 | j = 0
+
+  [4] Linha 10: Variável 'j' com nome muito curto (≤4 chars)
+      Trecho  : j = ...
+      Contexto:
+               9 | vs = zeros(trio, dtype = int)
+        >>>   10 | j = 0
+              11 | for i in range(size(v)):
+
+  [5] Linha 7: Variável 'trio' com nome muito curto (≤4 chars)
+      Trecho  : trio = ...
+      Contexto:
+               6 | 	if (v[i] % 3 == 0):
+        >>>    7 | 		trio = trio + 1
+               8 | print(trio)
+
+  [6] Linha 14: Variável 'j' com nome muito curto (≤4 chars)
+      Trecho  : j = ...
+      Contexto:
+              13 | 		vs[j] = vs[j] + i
+        >>>   14 | 		j = j + 1
+              15 | 	else:
+
+  [7] Linha 16: Variável 'j' com nome muito curto (≤4 chars)
+      Trecho  : j = ...
+      Contexto:
+              15 | 	else:
+        >>>   16 | 		j = j
+              17 | print(vs)
+
+======================================================================

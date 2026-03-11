@@ -1,0 +1,126 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1605_3705.py
+Questão  : 1605
+Aluno    : 3705
+Total MCs: 3
+
+⚠️  Misconceptions detectados: A3, B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import *
+     2 | anel= array (eval(input()))
+     3 | i=0
+     4 | x=200
+     5 | y=0
+     6 | while(i<size(anel)):
+     7 | 	if(anel[i]==1):
+     8 | 		anel[i]=x * 4
+     9 | 		x=anel[i]
+    10 | 	elif(anel[i]==2):	
+    11 | 		anel[i]=x * 2
+    12 | 		x=anel[i]
+    13 | 	elif(anel[i]==3):	
+    14 | 		anel[i]=x
+    15 | 		x=anel[i]
+    16 | 	elif(anel[i]==4):
+    17 | 		anel[i]=x/2
+    18 | 		x=anel[i]
+    19 | 	i=i+1
+    20 | 
+    21 | print(round(x,2))
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 1
+
+  [1] Linha 5: Variável 'y' declarada mas nunca utilizada
+      Trecho  : y = ...
+      Contexto:
+               4 | x=200
+        >>>    5 | y=0
+               6 | while(i<size(anel)):
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 13: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 13) / elif ... sem else
+      Contexto:
+              12 | 		x=anel[i]
+        >>>   13 | 	elif(anel[i]==3):	
+              14 | 		anel[i]=x
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 9
+
+  [1] Linha 2: Variável 'anel' com nome muito curto (≤4 chars)
+      Trecho  : anel = ...
+      Contexto:
+               1 | from numpy import *
+        >>>    2 | anel= array (eval(input()))
+               3 | i=0
+
+  [2] Linha 3: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+               2 | anel= array (eval(input()))
+        >>>    3 | i=0
+               4 | x=200
+
+  [3] Linha 4: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+               3 | i=0
+        >>>    4 | x=200
+               5 | y=0
+
+  [4] Linha 5: Variável 'y' com nome muito curto (≤4 chars)
+      Trecho  : y = ...
+      Contexto:
+               4 | x=200
+        >>>    5 | y=0
+               6 | while(i<size(anel)):
+
+  [5] Linha 19: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+              18 | 		x=anel[i]
+        >>>   19 | 	i=i+1
+              20 | 
+
+  [6] Linha 9: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+               8 | 		anel[i]=x * 4
+        >>>    9 | 		x=anel[i]
+              10 | 	elif(anel[i]==2):	
+
+  [7] Linha 12: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+              11 | 		anel[i]=x * 2
+        >>>   12 | 		x=anel[i]
+              13 | 	elif(anel[i]==3):	
+
+  [8] Linha 15: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+              14 | 		anel[i]=x
+        >>>   15 | 		x=anel[i]
+              16 | 	elif(anel[i]==4):
+
+  [9] Linha 18: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+              17 | 		anel[i]=x/2
+        >>>   18 | 		x=anel[i]
+              19 | 	i=i+1
+
+======================================================================

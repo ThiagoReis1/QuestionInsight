@@ -1,0 +1,158 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 3590_8733.py
+Questão  : 3590
+Aluno    : 8733
+Total MCs: 4
+
+⚠️  Misconceptions detectados: A2, B4, B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | 
+     3 | dado = array(eval(input("face do dado: ")))
+     4 | p = 0
+     5 | i = 0
+     6 | 
+     7 | while i < size(dado):
+     8 | 	if dado[i] == 1:
+     9 | 		p = p + 10
+    10 | 	elif dado[i] == 2:
+    11 | 		p = p + 5
+    12 | 	elif dado[i] == 3:
+    13 | 		p = p
+    14 | 	elif dado[i] == 4:
+    15 | 		p = p + 5
+    16 | 	elif dado[i] == 5:
+    17 | 		p = p + 20
+    18 | 	elif dado[i] == 6:
+    19 | 		p = p + 10
+    20 | 	i = i + 1
+    21 | 	
+    22 | print(p)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A2 — Variável atribuída a si mesma
+  Ocorrências: 1
+
+  [1] Linha 13: 'p' atribuído a si mesmo
+      Trecho  : p = p
+      Contexto:
+              12 | 	elif dado[i] == 3:
+        >>>   13 | 		p = p
+              14 | 	elif dado[i] == 4:
+
+▶ B4 — Comandos repetidos dentro de blocos if-elif-else
+  Ocorrências: 3
+
+  [1] Linha 14: Bloco idêntico ao da linha 10
+      Trecho  : p = p + 5
+      Contexto:
+              13 | 		p = p
+        >>>   14 | 	elif dado[i] == 4:
+              15 | 		p = p + 5
+
+  [2] Linha 18: Bloco idêntico ao da linha 8
+      Trecho  : p = p + 10
+      Contexto:
+              17 | 		p = p + 20
+        >>>   18 | 	elif dado[i] == 6:
+              19 | 		p = p + 10
+
+  [3] Linha 14: Bloco idêntico ao da linha 10
+      Trecho  : p = p + 5
+      Contexto:
+              13 | 		p = p
+        >>>   14 | 	elif dado[i] == 4:
+              15 | 		p = p + 5
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 16: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 16) / elif ... sem else
+      Contexto:
+              15 | 		p = p + 5
+        >>>   16 | 	elif dado[i] == 5:
+              17 | 		p = p + 20
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 10
+
+  [1] Linha 3: Variável 'dado' com nome muito curto (≤4 chars)
+      Trecho  : dado = ...
+      Contexto:
+               2 | 
+        >>>    3 | dado = array(eval(input("face do dado: ")))
+               4 | p = 0
+
+  [2] Linha 4: Variável 'p' com nome muito curto (≤4 chars)
+      Trecho  : p = ...
+      Contexto:
+               3 | dado = array(eval(input("face do dado: ")))
+        >>>    4 | p = 0
+               5 | i = 0
+
+  [3] Linha 5: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+               4 | p = 0
+        >>>    5 | i = 0
+               6 | 
+
+  [4] Linha 20: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+              19 | 		p = p + 10
+        >>>   20 | 	i = i + 1
+              21 | 	
+
+  [5] Linha 9: Variável 'p' com nome muito curto (≤4 chars)
+      Trecho  : p = ...
+      Contexto:
+               8 | 	if dado[i] == 1:
+        >>>    9 | 		p = p + 10
+              10 | 	elif dado[i] == 2:
+
+  [6] Linha 11: Variável 'p' com nome muito curto (≤4 chars)
+      Trecho  : p = ...
+      Contexto:
+              10 | 	elif dado[i] == 2:
+        >>>   11 | 		p = p + 5
+              12 | 	elif dado[i] == 3:
+
+  [7] Linha 13: Variável 'p' com nome muito curto (≤4 chars)
+      Trecho  : p = ...
+      Contexto:
+              12 | 	elif dado[i] == 3:
+        >>>   13 | 		p = p
+              14 | 	elif dado[i] == 4:
+
+  [8] Linha 15: Variável 'p' com nome muito curto (≤4 chars)
+      Trecho  : p = ...
+      Contexto:
+              14 | 	elif dado[i] == 4:
+        >>>   15 | 		p = p + 5
+              16 | 	elif dado[i] == 5:
+
+  [9] Linha 17: Variável 'p' com nome muito curto (≤4 chars)
+      Trecho  : p = ...
+      Contexto:
+              16 | 	elif dado[i] == 5:
+        >>>   17 | 		p = p + 20
+              18 | 	elif dado[i] == 6:
+
+  [10] Linha 19: Variável 'p' com nome muito curto (≤4 chars)
+      Trecho  : p = ...
+      Contexto:
+              18 | 	elif dado[i] == 6:
+        >>>   19 | 		p = p + 10
+              20 | 	i = i + 1
+
+======================================================================

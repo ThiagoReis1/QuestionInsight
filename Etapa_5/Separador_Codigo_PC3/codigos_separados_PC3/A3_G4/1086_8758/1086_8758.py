@@ -1,0 +1,2 @@
+nota = float(input("digite: "))
+

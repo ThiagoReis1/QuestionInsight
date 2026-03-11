@@ -1,0 +1,102 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 3065_4347.py
+Questão  : 3065
+Aluno    : 4347
+Total MCs: 3
+
+⚠️  Misconceptions detectados: B4, B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | x=input("digite o ataque:").upper()
+     2 | y=int(input("digite o valor:"))
+     3 | z=int(input("digite o turno: "))
+     4 | 
+     5 | if(y<1) or (y>4):
+     6 | 	print("Entrada invalida")
+     7 | elif(x!="CAUDA") and (x!="CUSPE") and (x!="PATADA"):
+     8 | 	print("Entrada invalida")
+     9 | elif(x=="CAUDA"):
+    10 | 	h=y*z
+    11 | 	print(h)
+    12 | elif(x=="CUSPE"):
+    13 | 	h=2*y*z
+    14 | 	print(h)
+    15 | elif(x=="PATADA"):
+    16 | 	h=2*y-(5*z)
+    17 | 	print(h)
+    18 | 
+    19 | 	
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B4 — Comandos repetidos dentro de blocos if-elif-else
+  Ocorrências: 1
+
+  [1] Linha 7: Bloco idêntico ao da linha 5
+      Trecho  : print('Entrada invalida')
+      Contexto:
+               6 | 	print("Entrada invalida")
+        >>>    7 | elif(x!="CAUDA") and (x!="CUSPE") and (x!="PATADA"):
+               8 | 	print("Entrada invalida")
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 12: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 12) / elif ... sem else
+      Contexto:
+              11 | 	print(h)
+        >>>   12 | elif(x=="CUSPE"):
+              13 | 	h=2*y*z
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 6
+
+  [1] Linha 1: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+        >>>    1 | x=input("digite o ataque:").upper()
+               2 | y=int(input("digite o valor:"))
+
+  [2] Linha 2: Variável 'y' com nome muito curto (≤4 chars)
+      Trecho  : y = ...
+      Contexto:
+               1 | x=input("digite o ataque:").upper()
+        >>>    2 | y=int(input("digite o valor:"))
+               3 | z=int(input("digite o turno: "))
+
+  [3] Linha 3: Variável 'z' com nome muito curto (≤4 chars)
+      Trecho  : z = ...
+      Contexto:
+               2 | y=int(input("digite o valor:"))
+        >>>    3 | z=int(input("digite o turno: "))
+               4 | 
+
+  [4] Linha 10: Variável 'h' com nome muito curto (≤4 chars)
+      Trecho  : h = ...
+      Contexto:
+               9 | elif(x=="CAUDA"):
+        >>>   10 | 	h=y*z
+              11 | 	print(h)
+
+  [5] Linha 13: Variável 'h' com nome muito curto (≤4 chars)
+      Trecho  : h = ...
+      Contexto:
+              12 | elif(x=="CUSPE"):
+        >>>   13 | 	h=2*y*z
+              14 | 	print(h)
+
+  [6] Linha 16: Variável 'h' com nome muito curto (≤4 chars)
+      Trecho  : h = ...
+      Contexto:
+              15 | elif(x=="PATADA"):
+        >>>   16 | 	h=2*y-(5*z)
+              17 | 	print(h)
+
+======================================================================

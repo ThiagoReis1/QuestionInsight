@@ -1,0 +1,94 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1641_4160.py
+Questão  : 1641
+Aluno    : 4160
+Total MCs: 2
+
+⚠️  Misconceptions detectados: C8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | v = array(eval(input("Quant. de alunos: ")))
+     3 | 
+     4 | for i in range(size(v)):
+     5 | 	if i % 3 ==0:		
+     6 | 		k =0
+     7 | 		k = k + 1
+     8 | print(k)
+     9 | v1 = zeros(k, dtype= int)
+    10 | for j in v:
+    11 | 	j = 0
+    12 | 	j= j + 1
+    13 | 	print(v1)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ C8 — Loop for com sua variável de iteração sobrescrita
+  Ocorrências: 2
+
+  [1] Linha 11: Variável de iteração 'j' sobrescrita no loop
+      Trecho  : j = 0
+      Contexto:
+              10 | for j in v:
+        >>>   11 | 	j = 0
+              12 | 	j= j + 1
+
+  [2] Linha 12: Variável de iteração 'j' sobrescrita no loop
+      Trecho  : j = j + 1
+      Contexto:
+              11 | 	j = 0
+        >>>   12 | 	j= j + 1
+              13 | 	print(v1)
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 6
+
+  [1] Linha 2: Variável 'v' com nome muito curto (≤4 chars)
+      Trecho  : v = ...
+      Contexto:
+               1 | from numpy import*
+        >>>    2 | v = array(eval(input("Quant. de alunos: ")))
+               3 | 
+
+  [2] Linha 9: Variável 'v1' com nome muito curto (≤4 chars)
+      Trecho  : v1 = ...
+      Contexto:
+               8 | print(k)
+        >>>    9 | v1 = zeros(k, dtype= int)
+              10 | for j in v:
+
+  [3] Linha 11: Variável 'j' com nome muito curto (≤4 chars)
+      Trecho  : j = ...
+      Contexto:
+              10 | for j in v:
+        >>>   11 | 	j = 0
+              12 | 	j= j + 1
+
+  [4] Linha 12: Variável 'j' com nome muito curto (≤4 chars)
+      Trecho  : j = ...
+      Contexto:
+              11 | 	j = 0
+        >>>   12 | 	j= j + 1
+              13 | 	print(v1)
+
+  [5] Linha 6: Variável 'k' com nome muito curto (≤4 chars)
+      Trecho  : k = ...
+      Contexto:
+               5 | 	if i % 3 ==0:		
+        >>>    6 | 		k =0
+               7 | 		k = k + 1
+
+  [6] Linha 7: Variável 'k' com nome muito curto (≤4 chars)
+      Trecho  : k = ...
+      Contexto:
+               6 | 		k =0
+        >>>    7 | 		k = k + 1
+               8 | print(k)
+
+======================================================================

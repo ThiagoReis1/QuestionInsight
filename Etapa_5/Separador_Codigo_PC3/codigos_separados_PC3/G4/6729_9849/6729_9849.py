@@ -1,0 +1,9 @@
+X=int(input())
+d=X%41
+q=X//41
+if(d==0):
+	print(q)
+	print("sim")
+else:
+	print(d)
+	print("nao")

@@ -1,0 +1,50 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 2845_7659.py
+Questão  : 2845
+Aluno    : 7659
+Total MCs: 1
+
+⚠️  Misconceptions detectados: G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | 
+     3 | num = array(eval(input("digite a senha: ")))
+     4 | 
+     5 | soma = zeros(size(num), dtype=int)
+     6 | 
+     7 | for i in range(size(num)):
+     8 | 	if num[i] >= 0 and num[i] <= 9:
+     9 | 		soma[i] = num[i] + 1
+    10 | 	if num[i] == 9 :
+    11 | 		num[i] = 0
+    12 | 		soma[i] = num[i]
+    13 | 
+    14 | print(soma)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 2
+
+  [1] Linha 3: Variável 'num' com nome muito curto (≤4 chars)
+      Trecho  : num = ...
+      Contexto:
+               2 | 
+        >>>    3 | num = array(eval(input("digite a senha: ")))
+               4 | 
+
+  [2] Linha 5: Variável 'soma' com nome muito curto (≤4 chars)
+      Trecho  : soma = ...
+      Contexto:
+               4 | 
+        >>>    5 | soma = zeros(size(num), dtype=int)
+               6 | 
+
+======================================================================

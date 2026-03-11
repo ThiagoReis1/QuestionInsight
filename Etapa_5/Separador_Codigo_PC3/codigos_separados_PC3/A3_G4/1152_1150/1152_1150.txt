@@ -1,0 +1,169 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1152_1150.py
+Questão  : 1152
+Aluno    : 1150
+Total MCs: 2
+
+⚠️  Misconceptions detectados: A3, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | pb=int(input("numeros de habitantes de Bravos? "))
+     2 | pp=int(input("numeros de habitantes de Pentos? "))
+     3 | ppr=int(input("numeros de habitantes de Porto Real? "))
+     4 | tcb=int(input("taxa de crescimento da cidade de Bravos? "))
+     5 | tcp=int(input("taxa de crescimento da cidade de Pentos? "))
+     6 | tcpr=int(input("taxa de crescimento da cidade de Porto Real? "))
+     7 | pt=pb+pp
+     8 | pta=pb*tcn+pp*tcp
+     9 | ptw=ppr*tcpr
+    10 | a=0
+    11 | while(pta>=ptw):
+    12 | 	pb=pb*(1+tcb)
+    13 | 	pp=pp*(1+tcp)
+    14 | 	ppr=ppr*(1+tcpr)
+    15 | 	pt=pb+pp
+    16 | 	pta=pb*tcn+pp*tcp
+    17 | 	ptw=ppr*tcpr
+    18 | 	a=a+1
+    19 | print(a)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 1
+
+  [1] Linha 7: Variável 'pt' declarada mas nunca utilizada
+      Trecho  : pt = ...
+      Contexto:
+               6 | tcpr=int(input("taxa de crescimento da cidade de Porto Real? "))
+        >>>    7 | pt=pb+pp
+               8 | pta=pb*tcn+pp*tcp
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 17
+
+  [1] Linha 1: Variável 'pb' com nome muito curto (≤4 chars)
+      Trecho  : pb = ...
+      Contexto:
+        >>>    1 | pb=int(input("numeros de habitantes de Bravos? "))
+               2 | pp=int(input("numeros de habitantes de Pentos? "))
+
+  [2] Linha 2: Variável 'pp' com nome muito curto (≤4 chars)
+      Trecho  : pp = ...
+      Contexto:
+               1 | pb=int(input("numeros de habitantes de Bravos? "))
+        >>>    2 | pp=int(input("numeros de habitantes de Pentos? "))
+               3 | ppr=int(input("numeros de habitantes de Porto Real? "))
+
+  [3] Linha 3: Variável 'ppr' com nome muito curto (≤4 chars)
+      Trecho  : ppr = ...
+      Contexto:
+               2 | pp=int(input("numeros de habitantes de Pentos? "))
+        >>>    3 | ppr=int(input("numeros de habitantes de Porto Real? "))
+               4 | tcb=int(input("taxa de crescimento da cidade de Bravos? "))
+
+  [4] Linha 4: Variável 'tcb' com nome muito curto (≤4 chars)
+      Trecho  : tcb = ...
+      Contexto:
+               3 | ppr=int(input("numeros de habitantes de Porto Real? "))
+        >>>    4 | tcb=int(input("taxa de crescimento da cidade de Bravos? "))
+               5 | tcp=int(input("taxa de crescimento da cidade de Pentos? "))
+
+  [5] Linha 5: Variável 'tcp' com nome muito curto (≤4 chars)
+      Trecho  : tcp = ...
+      Contexto:
+               4 | tcb=int(input("taxa de crescimento da cidade de Bravos? "))
+        >>>    5 | tcp=int(input("taxa de crescimento da cidade de Pentos? "))
+               6 | tcpr=int(input("taxa de crescimento da cidade de Porto Real? "))
+
+  [6] Linha 6: Variável 'tcpr' com nome muito curto (≤4 chars)
+      Trecho  : tcpr = ...
+      Contexto:
+               5 | tcp=int(input("taxa de crescimento da cidade de Pentos? "))
+        >>>    6 | tcpr=int(input("taxa de crescimento da cidade de Porto Real? "))
+               7 | pt=pb+pp
+
+  [7] Linha 7: Variável 'pt' com nome muito curto (≤4 chars)
+      Trecho  : pt = ...
+      Contexto:
+               6 | tcpr=int(input("taxa de crescimento da cidade de Porto Real? "))
+        >>>    7 | pt=pb+pp
+               8 | pta=pb*tcn+pp*tcp
+
+  [8] Linha 8: Variável 'pta' com nome muito curto (≤4 chars)
+      Trecho  : pta = ...
+      Contexto:
+               7 | pt=pb+pp
+        >>>    8 | pta=pb*tcn+pp*tcp
+               9 | ptw=ppr*tcpr
+
+  [9] Linha 9: Variável 'ptw' com nome muito curto (≤4 chars)
+      Trecho  : ptw = ...
+      Contexto:
+               8 | pta=pb*tcn+pp*tcp
+        >>>    9 | ptw=ppr*tcpr
+              10 | a=0
+
+  [10] Linha 10: Variável 'a' com nome muito curto (≤4 chars)
+      Trecho  : a = ...
+      Contexto:
+               9 | ptw=ppr*tcpr
+        >>>   10 | a=0
+              11 | while(pta>=ptw):
+
+  [11] Linha 12: Variável 'pb' com nome muito curto (≤4 chars)
+      Trecho  : pb = ...
+      Contexto:
+              11 | while(pta>=ptw):
+        >>>   12 | 	pb=pb*(1+tcb)
+              13 | 	pp=pp*(1+tcp)
+
+  [12] Linha 13: Variável 'pp' com nome muito curto (≤4 chars)
+      Trecho  : pp = ...
+      Contexto:
+              12 | 	pb=pb*(1+tcb)
+        >>>   13 | 	pp=pp*(1+tcp)
+              14 | 	ppr=ppr*(1+tcpr)
+
+  [13] Linha 14: Variável 'ppr' com nome muito curto (≤4 chars)
+      Trecho  : ppr = ...
+      Contexto:
+              13 | 	pp=pp*(1+tcp)
+        >>>   14 | 	ppr=ppr*(1+tcpr)
+              15 | 	pt=pb+pp
+
+  [14] Linha 15: Variável 'pt' com nome muito curto (≤4 chars)
+      Trecho  : pt = ...
+      Contexto:
+              14 | 	ppr=ppr*(1+tcpr)
+        >>>   15 | 	pt=pb+pp
+              16 | 	pta=pb*tcn+pp*tcp
+
+  [15] Linha 16: Variável 'pta' com nome muito curto (≤4 chars)
+      Trecho  : pta = ...
+      Contexto:
+              15 | 	pt=pb+pp
+        >>>   16 | 	pta=pb*tcn+pp*tcp
+              17 | 	ptw=ppr*tcpr
+
+  [16] Linha 17: Variável 'ptw' com nome muito curto (≤4 chars)
+      Trecho  : ptw = ...
+      Contexto:
+              16 | 	pta=pb*tcn+pp*tcp
+        >>>   17 | 	ptw=ppr*tcpr
+              18 | 	a=a+1
+
+  [17] Linha 18: Variável 'a' com nome muito curto (≤4 chars)
+      Trecho  : a = ...
+      Contexto:
+              17 | 	ptw=ppr*tcpr
+        >>>   18 | 	a=a+1
+              19 | print(a)
+
+======================================================================

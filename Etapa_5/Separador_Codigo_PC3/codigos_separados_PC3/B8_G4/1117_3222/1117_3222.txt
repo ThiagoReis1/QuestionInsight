@@ -1,0 +1,114 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1117_3222.py
+Questão  : 1117
+Aluno    : 3222
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | p = float(input("Preco: "))
+     2 | d = int(input("dia: "))
+     3 | m = input("Musica (s ou n)").upper()
+     4 | ds = (p * 0.25)
+     5 | tx = 20.00
+     6 | 
+     7 | print("Entradas: ", p, ",", d, ",", m)
+     8 | 
+     9 | if ((p >= 0) and (1 <= d <= 7) and ((m == "S") or (m == "N"))):
+    10 | 	if (((d == 2) or (d == 3) or (d == 5)) and (m == "N")):
+    11 | 		pt = p - ds
+    12 | 	elif ((d == 2) or (d == 3) or (d == 5) and (m == "S")):
+    13 | 		pt = (p - ds) + tx
+    14 | 	elif (((d == 1) or (d == 4) or (d == 6) or (d == 7)) and (m == "N")):
+    15 | 		pt = p
+    16 | 	elif (((d == 1) or (d == 4) or (d == 6) or (d == 7)) and (m == "S")):
+    17 | 		pt = p + tx
+    18 | 	print("Valor a pagar: R$", round(pt, 2))
+    19 | else:
+    20 | 	print("Dados invalidos")
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 14: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 14) / elif ... sem else
+      Contexto:
+              13 | 		pt = (p - ds) + tx
+        >>>   14 | 	elif (((d == 1) or (d == 4) or (d == 6) or (d == 7)) and (m == "N")):
+              15 | 		pt = p
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 9
+
+  [1] Linha 1: Variável 'p' com nome muito curto (≤4 chars)
+      Trecho  : p = ...
+      Contexto:
+        >>>    1 | p = float(input("Preco: "))
+               2 | d = int(input("dia: "))
+
+  [2] Linha 2: Variável 'd' com nome muito curto (≤4 chars)
+      Trecho  : d = ...
+      Contexto:
+               1 | p = float(input("Preco: "))
+        >>>    2 | d = int(input("dia: "))
+               3 | m = input("Musica (s ou n)").upper()
+
+  [3] Linha 3: Variável 'm' com nome muito curto (≤4 chars)
+      Trecho  : m = ...
+      Contexto:
+               2 | d = int(input("dia: "))
+        >>>    3 | m = input("Musica (s ou n)").upper()
+               4 | ds = (p * 0.25)
+
+  [4] Linha 4: Variável 'ds' com nome muito curto (≤4 chars)
+      Trecho  : ds = ...
+      Contexto:
+               3 | m = input("Musica (s ou n)").upper()
+        >>>    4 | ds = (p * 0.25)
+               5 | tx = 20.00
+
+  [5] Linha 5: Variável 'tx' com nome muito curto (≤4 chars)
+      Trecho  : tx = ...
+      Contexto:
+               4 | ds = (p * 0.25)
+        >>>    5 | tx = 20.00
+               6 | 
+
+  [6] Linha 11: Variável 'pt' com nome muito curto (≤4 chars)
+      Trecho  : pt = ...
+      Contexto:
+              10 | 	if (((d == 2) or (d == 3) or (d == 5)) and (m == "N")):
+        >>>   11 | 		pt = p - ds
+              12 | 	elif ((d == 2) or (d == 3) or (d == 5) and (m == "S")):
+
+  [7] Linha 13: Variável 'pt' com nome muito curto (≤4 chars)
+      Trecho  : pt = ...
+      Contexto:
+              12 | 	elif ((d == 2) or (d == 3) or (d == 5) and (m == "S")):
+        >>>   13 | 		pt = (p - ds) + tx
+              14 | 	elif (((d == 1) or (d == 4) or (d == 6) or (d == 7)) and (m == "N")):
+
+  [8] Linha 15: Variável 'pt' com nome muito curto (≤4 chars)
+      Trecho  : pt = ...
+      Contexto:
+              14 | 	elif (((d == 1) or (d == 4) or (d == 6) or (d == 7)) and (m == "N")):
+        >>>   15 | 		pt = p
+              16 | 	elif (((d == 1) or (d == 4) or (d == 6) or (d == 7)) and (m == "S")):
+
+  [9] Linha 17: Variável 'pt' com nome muito curto (≤4 chars)
+      Trecho  : pt = ...
+      Contexto:
+              16 | 	elif (((d == 1) or (d == 4) or (d == 6) or (d == 7)) and (m == "S")):
+        >>>   17 | 		pt = p + tx
+              18 | 	print("Valor a pagar: R$", round(pt, 2))
+
+======================================================================

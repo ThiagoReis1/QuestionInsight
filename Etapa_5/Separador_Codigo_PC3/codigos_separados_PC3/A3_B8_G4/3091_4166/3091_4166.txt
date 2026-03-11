@@ -1,0 +1,169 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 3091_4166.py
+Questão  : 3091
+Aluno    : 4166
+Total MCs: 3
+
+⚠️  Misconceptions detectados: A3, B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | r=input("resultados possiveis:").upper()
+     2 | p1=3
+     3 | p2=1
+     4 | p3=0
+     5 | jogo=1
+     6 | resultado=0
+     7 | 
+     8 | while(r!="X"):
+     9 | 		r=input("res:").upper()
+    10 | 		if(r=="V"):
+    11 | 			p1=3
+    12 | 			soma=resultado+p1
+    13 | 			jogo=jogo+1
+    14 | 		elif(r=="E"):
+    15 | 			p2=1
+    16 | 			soma=soma+p2
+    17 | 			jogo=jogo+1
+    18 | 		elif(r=="D"):
+    19 | 			p3=0
+    20 | 			soma=soma+p3
+    21 | 			jogo=jogo+1
+    22 | total=p1+p2+p3
+    23 | 		
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 1
+
+  [1] Linha 22: Variável 'total' declarada mas nunca utilizada
+      Trecho  : total = ...
+      Contexto:
+              21 | 			jogo=jogo+1
+        >>>   22 | total=p1+p2+p3
+              23 | 		
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 14: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 14) / elif ... sem else
+      Contexto:
+              13 | 			jogo=jogo+1
+        >>>   14 | 		elif(r=="E"):
+              15 | 			p2=1
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 15
+
+  [1] Linha 1: Variável 'r' com nome muito curto (≤4 chars)
+      Trecho  : r = ...
+      Contexto:
+        >>>    1 | r=input("resultados possiveis:").upper()
+               2 | p1=3
+
+  [2] Linha 2: Variável 'p1' com nome muito curto (≤4 chars)
+      Trecho  : p1 = ...
+      Contexto:
+               1 | r=input("resultados possiveis:").upper()
+        >>>    2 | p1=3
+               3 | p2=1
+
+  [3] Linha 3: Variável 'p2' com nome muito curto (≤4 chars)
+      Trecho  : p2 = ...
+      Contexto:
+               2 | p1=3
+        >>>    3 | p2=1
+               4 | p3=0
+
+  [4] Linha 4: Variável 'p3' com nome muito curto (≤4 chars)
+      Trecho  : p3 = ...
+      Contexto:
+               3 | p2=1
+        >>>    4 | p3=0
+               5 | jogo=1
+
+  [5] Linha 5: Variável 'jogo' com nome muito curto (≤4 chars)
+      Trecho  : jogo = ...
+      Contexto:
+               4 | p3=0
+        >>>    5 | jogo=1
+               6 | resultado=0
+
+  [6] Linha 9: Variável 'r' com nome muito curto (≤4 chars)
+      Trecho  : r = ...
+      Contexto:
+               8 | while(r!="X"):
+        >>>    9 | 		r=input("res:").upper()
+              10 | 		if(r=="V"):
+
+  [7] Linha 11: Variável 'p1' com nome muito curto (≤4 chars)
+      Trecho  : p1 = ...
+      Contexto:
+              10 | 		if(r=="V"):
+        >>>   11 | 			p1=3
+              12 | 			soma=resultado+p1
+
+  [8] Linha 12: Variável 'soma' com nome muito curto (≤4 chars)
+      Trecho  : soma = ...
+      Contexto:
+              11 | 			p1=3
+        >>>   12 | 			soma=resultado+p1
+              13 | 			jogo=jogo+1
+
+  [9] Linha 13: Variável 'jogo' com nome muito curto (≤4 chars)
+      Trecho  : jogo = ...
+      Contexto:
+              12 | 			soma=resultado+p1
+        >>>   13 | 			jogo=jogo+1
+              14 | 		elif(r=="E"):
+
+  [10] Linha 15: Variável 'p2' com nome muito curto (≤4 chars)
+      Trecho  : p2 = ...
+      Contexto:
+              14 | 		elif(r=="E"):
+        >>>   15 | 			p2=1
+              16 | 			soma=soma+p2
+
+  [11] Linha 16: Variável 'soma' com nome muito curto (≤4 chars)
+      Trecho  : soma = ...
+      Contexto:
+              15 | 			p2=1
+        >>>   16 | 			soma=soma+p2
+              17 | 			jogo=jogo+1
+
+  [12] Linha 17: Variável 'jogo' com nome muito curto (≤4 chars)
+      Trecho  : jogo = ...
+      Contexto:
+              16 | 			soma=soma+p2
+        >>>   17 | 			jogo=jogo+1
+              18 | 		elif(r=="D"):
+
+  [13] Linha 19: Variável 'p3' com nome muito curto (≤4 chars)
+      Trecho  : p3 = ...
+      Contexto:
+              18 | 		elif(r=="D"):
+        >>>   19 | 			p3=0
+              20 | 			soma=soma+p3
+
+  [14] Linha 20: Variável 'soma' com nome muito curto (≤4 chars)
+      Trecho  : soma = ...
+      Contexto:
+              19 | 			p3=0
+        >>>   20 | 			soma=soma+p3
+              21 | 			jogo=jogo+1
+
+  [15] Linha 21: Variável 'jogo' com nome muito curto (≤4 chars)
+      Trecho  : jogo = ...
+      Contexto:
+              20 | 			soma=soma+p3
+        >>>   21 | 			jogo=jogo+1
+              22 | total=p1+p2+p3
+
+======================================================================

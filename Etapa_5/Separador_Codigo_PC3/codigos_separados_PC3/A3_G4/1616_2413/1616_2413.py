@@ -1,0 +1,1 @@
+vet2= array(eval(input))

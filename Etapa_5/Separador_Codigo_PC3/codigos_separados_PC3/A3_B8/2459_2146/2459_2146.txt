@@ -1,0 +1,82 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 2459_2146.py
+Questão  : 2459
+Aluno    : 2146
+Total MCs: 2
+
+⚠️  Misconceptions detectados: A3, B8
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | peso = float(input("Peso do produto: "))
+     2 | distancia = float(input("Distancia: "))
+     3 | codigo = input("Codigo estado: ")
+     4 | custokg = 25
+     5 | custokm = 0.10
+     6 | 
+     7 | icms1 = 17
+     8 | icms2 = 17.5
+     9 | icms3 = 18
+    10 | icms4 = 20
+    11 | 
+    12 | sevico1 = (peso * custokg + distancia * custokm) * (1 + (icms1 / 100))
+    13 | 
+    14 | if(codigo == 1 or codigo == 2 or codigo == 3 or codigo == 4):
+    15 | 	if(codigo == 1):
+    16 | 		print(servico1)
+    17 | 	elif(cidade == "Bravos"):
+    18 | 		print("bravosiano")
+    19 | 	elif(cidade == "Lys"):
+    20 | 		print("liseno")
+    21 | 	elif(cidade == "Qohor"):
+    22 | 		print("qohorik")
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 4
+
+  [1] Linha 8: Variável 'icms2' declarada mas nunca utilizada
+      Trecho  : icms2 = ...
+      Contexto:
+               7 | icms1 = 17
+        >>>    8 | icms2 = 17.5
+               9 | icms3 = 18
+
+  [2] Linha 9: Variável 'icms3' declarada mas nunca utilizada
+      Trecho  : icms3 = ...
+      Contexto:
+               8 | icms2 = 17.5
+        >>>    9 | icms3 = 18
+              10 | icms4 = 20
+
+  [3] Linha 10: Variável 'icms4' declarada mas nunca utilizada
+      Trecho  : icms4 = ...
+      Contexto:
+               9 | icms3 = 18
+        >>>   10 | icms4 = 20
+              11 | 
+
+  [4] Linha 12: Variável 'sevico1' declarada mas nunca utilizada
+      Trecho  : sevico1 = ...
+      Contexto:
+              11 | 
+        >>>   12 | sevico1 = (peso * custokg + distancia * custokm) * (1 + (icms1 / 100))
+              13 | 
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 19: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 19) / elif ... sem else
+      Contexto:
+              18 | 		print("bravosiano")
+        >>>   19 | 	elif(cidade == "Lys"):
+              20 | 		print("liseno")
+
+======================================================================

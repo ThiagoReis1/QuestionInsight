@@ -1,0 +1,61 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 6351_9167.py
+Questão  : 6351
+Aluno    : 9167
+Total MCs: 3
+
+⚠️  Misconceptions detectados: A3, B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | p = input("nome;   ")
+     2 | i = 0
+     3 | if p[-1] == 's' or p[-1] == 'S':
+     4 | 	print(p.upper())
+     5 | elif p[-1] != 's' or p[-1] != 'S':
+     6 | 	print("nome invalido")
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 1
+
+  [1] Linha 2: Variável 'i' declarada mas nunca utilizada
+      Trecho  : i = ...
+      Contexto:
+               1 | p = input("nome;   ")
+        >>>    2 | i = 0
+               3 | if p[-1] == 's' or p[-1] == 'S':
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 3: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 3) / elif ... sem else
+      Contexto:
+               2 | i = 0
+        >>>    3 | if p[-1] == 's' or p[-1] == 'S':
+               4 | 	print(p.upper())
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 2
+
+  [1] Linha 1: Variável 'p' com nome muito curto (≤4 chars)
+      Trecho  : p = ...
+      Contexto:
+        >>>    1 | p = input("nome;   ")
+               2 | i = 0
+
+  [2] Linha 2: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+               1 | p = input("nome;   ")
+        >>>    2 | i = 0
+               3 | if p[-1] == 's' or p[-1] == 'S':
+
+======================================================================

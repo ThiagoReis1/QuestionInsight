@@ -1,0 +1,9 @@
+n = int(input("numeros bacterias: "))
+taxa = int(input("taxa: "))
+q = n
+i = 0
+while q < 2*n:
+	q +=(taxa/(100))*q
+	i += 1
+	
+print(i)

@@ -1,0 +1,235 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1615_2011.py
+Questão  : 1615
+Aluno    : 2011
+Total MCs: 2
+
+⚠️  Misconceptions detectados: A2, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import *
+     2 | 
+     3 | jog1 = array(eval(input("  jog1 :  ")))
+     4 | jog2 = array(eval(input("  jog2 :  ")))
+     5 | 
+     6 | p1=0
+     7 | i=0
+     8 | while (i < size(jog1)):
+     9 | 	if(jog1[i] == 1):
+    10 | 		p1=p1+40
+    11 | 		i=i+1
+    12 | 	elif(jog1[i] == 2):
+    13 | 		p1=p1+20
+    14 | 		i=i+1
+    15 | 	elif(jog1[i] == 3):
+    16 | 		p1=p1+10
+    17 | 		i=i+1
+    18 | 	else:
+    19 | 		p1=p1
+    20 | 		i=i+1
+    21 | p2=0
+    22 | i=0
+    23 | while (i < size(jog2)):
+    24 | 	if(jog2[i] == 1):
+    25 | 		p2=p2+40
+    26 | 		i=i+1
+    27 | 	elif(jog2[i] == 2):
+    28 | 		p2=p2+20
+    29 | 		i=i+1
+    30 | 	elif(jog2[i] == 3):
+    31 | 		p2=p2+10
+    32 | 		i=i+1
+    33 | 	else:
+    34 | 		p2=p2
+    35 | 		i=i+1
+    36 | 		
+    37 | if (p1 > p2):
+    38 | 	print("JOGADOR UM")
+    39 | elif(p2 > p1):
+    40 | 	print("JOGADOR DOIS")
+    41 | else:
+    42 | 	print("EMPATE")
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A2 — Variável atribuída a si mesma
+  Ocorrências: 2
+
+  [1] Linha 19: 'p1' atribuído a si mesmo
+      Trecho  : p1 = p1
+      Contexto:
+              18 | 	else:
+        >>>   19 | 		p1=p1
+              20 | 		i=i+1
+
+  [2] Linha 34: 'p2' atribuído a si mesmo
+      Trecho  : p2 = p2
+      Contexto:
+              33 | 	else:
+        >>>   34 | 		p2=p2
+              35 | 		i=i+1
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 22
+
+  [1] Linha 3: Variável 'jog1' com nome muito curto (≤4 chars)
+      Trecho  : jog1 = ...
+      Contexto:
+               2 | 
+        >>>    3 | jog1 = array(eval(input("  jog1 :  ")))
+               4 | jog2 = array(eval(input("  jog2 :  ")))
+
+  [2] Linha 4: Variável 'jog2' com nome muito curto (≤4 chars)
+      Trecho  : jog2 = ...
+      Contexto:
+               3 | jog1 = array(eval(input("  jog1 :  ")))
+        >>>    4 | jog2 = array(eval(input("  jog2 :  ")))
+               5 | 
+
+  [3] Linha 6: Variável 'p1' com nome muito curto (≤4 chars)
+      Trecho  : p1 = ...
+      Contexto:
+               5 | 
+        >>>    6 | p1=0
+               7 | i=0
+
+  [4] Linha 7: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+               6 | p1=0
+        >>>    7 | i=0
+               8 | while (i < size(jog1)):
+
+  [5] Linha 21: Variável 'p2' com nome muito curto (≤4 chars)
+      Trecho  : p2 = ...
+      Contexto:
+              20 | 		i=i+1
+        >>>   21 | p2=0
+              22 | i=0
+
+  [6] Linha 22: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+              21 | p2=0
+        >>>   22 | i=0
+              23 | while (i < size(jog2)):
+
+  [7] Linha 10: Variável 'p1' com nome muito curto (≤4 chars)
+      Trecho  : p1 = ...
+      Contexto:
+               9 | 	if(jog1[i] == 1):
+        >>>   10 | 		p1=p1+40
+              11 | 		i=i+1
+
+  [8] Linha 11: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+              10 | 		p1=p1+40
+        >>>   11 | 		i=i+1
+              12 | 	elif(jog1[i] == 2):
+
+  [9] Linha 25: Variável 'p2' com nome muito curto (≤4 chars)
+      Trecho  : p2 = ...
+      Contexto:
+              24 | 	if(jog2[i] == 1):
+        >>>   25 | 		p2=p2+40
+              26 | 		i=i+1
+
+  [10] Linha 26: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+              25 | 		p2=p2+40
+        >>>   26 | 		i=i+1
+              27 | 	elif(jog2[i] == 2):
+
+  [11] Linha 13: Variável 'p1' com nome muito curto (≤4 chars)
+      Trecho  : p1 = ...
+      Contexto:
+              12 | 	elif(jog1[i] == 2):
+        >>>   13 | 		p1=p1+20
+              14 | 		i=i+1
+
+  [12] Linha 14: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+              13 | 		p1=p1+20
+        >>>   14 | 		i=i+1
+              15 | 	elif(jog1[i] == 3):
+
+  [13] Linha 28: Variável 'p2' com nome muito curto (≤4 chars)
+      Trecho  : p2 = ...
+      Contexto:
+              27 | 	elif(jog2[i] == 2):
+        >>>   28 | 		p2=p2+20
+              29 | 		i=i+1
+
+  [14] Linha 29: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+              28 | 		p2=p2+20
+        >>>   29 | 		i=i+1
+              30 | 	elif(jog2[i] == 3):
+
+  [15] Linha 16: Variável 'p1' com nome muito curto (≤4 chars)
+      Trecho  : p1 = ...
+      Contexto:
+              15 | 	elif(jog1[i] == 3):
+        >>>   16 | 		p1=p1+10
+              17 | 		i=i+1
+
+  [16] Linha 17: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+              16 | 		p1=p1+10
+        >>>   17 | 		i=i+1
+              18 | 	else:
+
+  [17] Linha 19: Variável 'p1' com nome muito curto (≤4 chars)
+      Trecho  : p1 = ...
+      Contexto:
+              18 | 	else:
+        >>>   19 | 		p1=p1
+              20 | 		i=i+1
+
+  [18] Linha 20: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+              19 | 		p1=p1
+        >>>   20 | 		i=i+1
+              21 | p2=0
+
+  [19] Linha 31: Variável 'p2' com nome muito curto (≤4 chars)
+      Trecho  : p2 = ...
+      Contexto:
+              30 | 	elif(jog2[i] == 3):
+        >>>   31 | 		p2=p2+10
+              32 | 		i=i+1
+
+  [20] Linha 32: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+              31 | 		p2=p2+10
+        >>>   32 | 		i=i+1
+              33 | 	else:
+
+  [21] Linha 34: Variável 'p2' com nome muito curto (≤4 chars)
+      Trecho  : p2 = ...
+      Contexto:
+              33 | 	else:
+        >>>   34 | 		p2=p2
+              35 | 		i=i+1
+
+  [22] Linha 35: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+              34 | 		p2=p2
+        >>>   35 | 		i=i+1
+              36 | 		
+
+======================================================================

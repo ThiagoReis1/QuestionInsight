@@ -1,0 +1,22 @@
+amino = str(input()).lower()
+
+O = 15.9994
+C = 12.011
+N = 14.00674
+S = 32.066
+H = 1.00794
+
+
+if(amino == "aspartato"):
+	x = ((C * 4) + (H * 6) + (N * 1) + (O * 4))
+	print(round(x, 2))
+elif(amino == "fenilalanina"):
+	x =((C * 9) + (H * 11) + (O * 2) + (S * 1))
+	print(round(x, 2))
+elif(amino == "tirosina"):
+	x = ((C * 9) + (H * 11) + (N * 1) + (O * 3))
+	print(round(x, 2))
+else:
+	print("Entrada:", amino)
+	print("Dado Invalido")
+	

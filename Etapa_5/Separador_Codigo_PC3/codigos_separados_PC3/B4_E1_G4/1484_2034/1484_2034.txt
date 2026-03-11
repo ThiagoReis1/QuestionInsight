@@ -1,0 +1,172 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1484_2034.py
+Questão  : 1484
+Aluno    : 2034
+Total MCs: 3
+
+⚠️  Misconceptions detectados: B4, E1, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | eq= input("digite o equipamento:").upper()
+     2 | cap= int(input("digite a capacidade do caminhão:"))
+     3 | if((0<cap<=1000) and eq=='COMPUTADOR'or eq=='FREEZER' or eq=='FURADEIRA' or eq=='LIQUIDIFICADOR'
+     4 | or eq=='MICROONDAS'or eq=='NOTEBOOK'or eq=='TELEVISOR'or
+     5 | 	eq=='VENTILADOR' ):
+     6 | 	if(eq=='COMPUTADOR'):
+     7 | 		qtd=cap//12
+     8 | 		print(int(qtd))
+     9 | 	elif(eq=='FREEZER')	:
+    10 | 		qtd=cap//52
+    11 | 		print(int(qtd))
+    12 | 	elif(eq=='FURADEIRA'):
+    13 | 		qtd=cap//1.7
+    14 | 		print(int(qtd))
+    15 | 	elif(eq=='LIQUIDIFICADOR'):
+    16 | 		qtd=cap//1.8
+    17 | 		print(int(qtd))
+    18 | 	elif(eq=='MICROONDAS'):
+    19 | 		qtd=cap//15
+    20 | 		print(int(qtd))
+    21 | 	elif(eq=='NOTEBOOK'):
+    22 | 		qtd=cap//2.5
+    23 | 		print(int(qtd))
+    24 | 	elif(eq=='TELEVISOR'):
+    25 | 		qtd=cap//15
+    26 | 		print(int(qtd))
+    27 | 	elif(eq=='VENTILADOR'):
+    28 | 		qtd=cap//2.4
+    29 | 		print(int(qtd))
+    30 | 	else:
+    31 | 		print('Entrada invalida')
+    32 | else:
+    33 | 	print('Entrada invalida')
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B4 — Comandos repetidos dentro de blocos if-elif-else
+  Ocorrências: 5
+
+  [1] Linha 24: Bloco idêntico ao da linha 18
+      Trecho  : qtd = cap // 15
+      Contexto:
+              23 | 		print(int(qtd))
+        >>>   24 | 	elif(eq=='TELEVISOR'):
+              25 | 		qtd=cap//15
+
+  [2] Linha 24: Bloco idêntico ao da linha 18
+      Trecho  : qtd = cap // 15
+      Contexto:
+              23 | 		print(int(qtd))
+        >>>   24 | 	elif(eq=='TELEVISOR'):
+              25 | 		qtd=cap//15
+
+  [3] Linha 24: Bloco idêntico ao da linha 18
+      Trecho  : qtd = cap // 15
+      Contexto:
+              23 | 		print(int(qtd))
+        >>>   24 | 	elif(eq=='TELEVISOR'):
+              25 | 		qtd=cap//15
+
+  [4] Linha 24: Bloco idêntico ao da linha 18
+      Trecho  : qtd = cap // 15
+      Contexto:
+              23 | 		print(int(qtd))
+        >>>   24 | 	elif(eq=='TELEVISOR'):
+              25 | 		qtd=cap//15
+
+  [5] Linha 24: Bloco idêntico ao da linha 18
+      Trecho  : qtd = cap // 15
+      Contexto:
+              23 | 		print(int(qtd))
+        >>>   24 | 	elif(eq=='TELEVISOR'):
+              25 | 		qtd=cap//15
+
+▶ E1 — Verificação desnecessária de todas as combinações possíveis
+  Ocorrências: 1
+
+  [1] Linha 3: 8 condições em um único if — verificação excessiva
+      Trecho  : 0 < cap <= 1000 and eq == 'COMPUTADOR' or eq == 'FREEZER' or eq == 'FURADEIRA' or (eq == 'LIQUIDIFICADOR') or (eq == 'MICROONDAS') or (eq == 'NOTEBOOK') or (eq == 'TELEVISOR') or (eq == 'VENTILADOR')
+      Contexto:
+               2 | cap= int(input("digite a capacidade do caminhão:"))
+        >>>    3 | if((0<cap<=1000) and eq=='COMPUTADOR'or eq=='FREEZER' or eq=='FURADEIRA' or eq=='LIQUIDIFICADOR'
+               4 | or eq=='MICROONDAS'or eq=='NOTEBOOK'or eq=='TELEVISOR'or
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 10
+
+  [1] Linha 1: Variável 'eq' com nome muito curto (≤4 chars)
+      Trecho  : eq = ...
+      Contexto:
+        >>>    1 | eq= input("digite o equipamento:").upper()
+               2 | cap= int(input("digite a capacidade do caminhão:"))
+
+  [2] Linha 2: Variável 'cap' com nome muito curto (≤4 chars)
+      Trecho  : cap = ...
+      Contexto:
+               1 | eq= input("digite o equipamento:").upper()
+        >>>    2 | cap= int(input("digite a capacidade do caminhão:"))
+               3 | if((0<cap<=1000) and eq=='COMPUTADOR'or eq=='FREEZER' or eq=='FURADEIRA' or eq=='LIQUIDIFICADOR'
+
+  [3] Linha 7: Variável 'qtd' com nome muito curto (≤4 chars)
+      Trecho  : qtd = ...
+      Contexto:
+               6 | 	if(eq=='COMPUTADOR'):
+        >>>    7 | 		qtd=cap//12
+               8 | 		print(int(qtd))
+
+  [4] Linha 10: Variável 'qtd' com nome muito curto (≤4 chars)
+      Trecho  : qtd = ...
+      Contexto:
+               9 | 	elif(eq=='FREEZER')	:
+        >>>   10 | 		qtd=cap//52
+              11 | 		print(int(qtd))
+
+  [5] Linha 13: Variável 'qtd' com nome muito curto (≤4 chars)
+      Trecho  : qtd = ...
+      Contexto:
+              12 | 	elif(eq=='FURADEIRA'):
+        >>>   13 | 		qtd=cap//1.7
+              14 | 		print(int(qtd))
+
+  [6] Linha 16: Variável 'qtd' com nome muito curto (≤4 chars)
+      Trecho  : qtd = ...
+      Contexto:
+              15 | 	elif(eq=='LIQUIDIFICADOR'):
+        >>>   16 | 		qtd=cap//1.8
+              17 | 		print(int(qtd))
+
+  [7] Linha 19: Variável 'qtd' com nome muito curto (≤4 chars)
+      Trecho  : qtd = ...
+      Contexto:
+              18 | 	elif(eq=='MICROONDAS'):
+        >>>   19 | 		qtd=cap//15
+              20 | 		print(int(qtd))
+
+  [8] Linha 22: Variável 'qtd' com nome muito curto (≤4 chars)
+      Trecho  : qtd = ...
+      Contexto:
+              21 | 	elif(eq=='NOTEBOOK'):
+        >>>   22 | 		qtd=cap//2.5
+              23 | 		print(int(qtd))
+
+  [9] Linha 25: Variável 'qtd' com nome muito curto (≤4 chars)
+      Trecho  : qtd = ...
+      Contexto:
+              24 | 	elif(eq=='TELEVISOR'):
+        >>>   25 | 		qtd=cap//15
+              26 | 		print(int(qtd))
+
+  [10] Linha 28: Variável 'qtd' com nome muito curto (≤4 chars)
+      Trecho  : qtd = ...
+      Contexto:
+              27 | 	elif(eq=='VENTILADOR'):
+        >>>   28 | 		qtd=cap//2.4
+              29 | 		print(int(qtd))
+
+======================================================================

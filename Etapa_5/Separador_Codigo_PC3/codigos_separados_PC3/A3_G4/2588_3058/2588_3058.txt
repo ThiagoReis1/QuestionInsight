@@ -1,0 +1,85 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 2588_3058.py
+Questão  : 2588
+Aluno    : 3058
+Total MCs: 2
+
+⚠️  Misconceptions detectados: A3, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | v= array(eval(input("Digite o vetor com as velocidades: ")))
+     3 | soma= 0
+     4 | j= 0
+     5 | for i in range(size(v)):
+     6 | 	v1= (v[0] * 20/100) + v[0]
+     7 | 	v2= (v[0] * 50/100) + v[0]
+     8 | 	if(v[i] > v1) and (v[i] < v2):
+     9 | 		soma= soma + 1
+    10 | 		print(i)
+    11 | print(soma)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 1
+
+  [1] Linha 4: Variável 'j' declarada mas nunca utilizada
+      Trecho  : j = ...
+      Contexto:
+               3 | soma= 0
+        >>>    4 | j= 0
+               5 | for i in range(size(v)):
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 6
+
+  [1] Linha 2: Variável 'v' com nome muito curto (≤4 chars)
+      Trecho  : v = ...
+      Contexto:
+               1 | from numpy import*
+        >>>    2 | v= array(eval(input("Digite o vetor com as velocidades: ")))
+               3 | soma= 0
+
+  [2] Linha 3: Variável 'soma' com nome muito curto (≤4 chars)
+      Trecho  : soma = ...
+      Contexto:
+               2 | v= array(eval(input("Digite o vetor com as velocidades: ")))
+        >>>    3 | soma= 0
+               4 | j= 0
+
+  [3] Linha 4: Variável 'j' com nome muito curto (≤4 chars)
+      Trecho  : j = ...
+      Contexto:
+               3 | soma= 0
+        >>>    4 | j= 0
+               5 | for i in range(size(v)):
+
+  [4] Linha 6: Variável 'v1' com nome muito curto (≤4 chars)
+      Trecho  : v1 = ...
+      Contexto:
+               5 | for i in range(size(v)):
+        >>>    6 | 	v1= (v[0] * 20/100) + v[0]
+               7 | 	v2= (v[0] * 50/100) + v[0]
+
+  [5] Linha 7: Variável 'v2' com nome muito curto (≤4 chars)
+      Trecho  : v2 = ...
+      Contexto:
+               6 | 	v1= (v[0] * 20/100) + v[0]
+        >>>    7 | 	v2= (v[0] * 50/100) + v[0]
+               8 | 	if(v[i] > v1) and (v[i] < v2):
+
+  [6] Linha 9: Variável 'soma' com nome muito curto (≤4 chars)
+      Trecho  : soma = ...
+      Contexto:
+               8 | 	if(v[i] > v1) and (v[i] < v2):
+        >>>    9 | 		soma= soma + 1
+              10 | 		print(i)
+
+======================================================================

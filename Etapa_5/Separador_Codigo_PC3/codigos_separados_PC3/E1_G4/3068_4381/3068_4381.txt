@@ -1,0 +1,117 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 3068_4381.py
+Questão  : 3068
+Aluno    : 4381
+Total MCs: 2
+
+⚠️  Misconceptions detectados: E1, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | n = input("nome da arma:")
+     2 | D = int(input("destreza do personagem:"))
+     3 | d1 = int(input("dado 1:"))
+     4 | d2 = int(input("dado 2:"))
+     5 | s = d1 + d2
+     6 | if ((n == "CIMITARRA") and (d1 >=1) and (d1 <=10) and (d2 >=1) and (d2 <= 10) and (D >0)):
+     7 | 	d = 2 * s + 2 * D
+     8 | 	print(d)
+     9 | elif((n == "KATANA") and (d1 >=1) and (d1 <=10) and (d2 >=1) and (d2 <=10) and (D >0)):
+    10 | 	d = 2 * s + D
+    11 | 	print(d)
+    12 | elif((n == "SABRE") and (d1 >=1) and (d1 <=10) and (d2 >=1) and (d2 <=10) and (D >0)):
+    13 |    d = s + 2*D
+    14 |    print(d)
+    15 | else:
+    16 | 	print("entrada invalida")
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ E1 — Verificação desnecessária de todas as combinações possíveis
+  Ocorrências: 3
+
+  [1] Linha 6: 6 condições em um único if — verificação excessiva
+      Trecho  : n == 'CIMITARRA' and d1 >= 1 and (d1 <= 10) and (d2 >= 1) and (d2 <= 10) and (D > 0)
+      Contexto:
+               5 | s = d1 + d2
+        >>>    6 | if ((n == "CIMITARRA") and (d1 >=1) and (d1 <=10) and (d2 >=1) and (d2 <= 10) and (D >0)):
+               7 | 	d = 2 * s + 2 * D
+
+  [2] Linha 9: 6 condições em um único if — verificação excessiva
+      Trecho  : n == 'KATANA' and d1 >= 1 and (d1 <= 10) and (d2 >= 1) and (d2 <= 10) and (D > 0)
+      Contexto:
+               8 | 	print(d)
+        >>>    9 | elif((n == "KATANA") and (d1 >=1) and (d1 <=10) and (d2 >=1) and (d2 <=10) and (D >0)):
+              10 | 	d = 2 * s + D
+
+  [3] Linha 12: 6 condições em um único if — verificação excessiva
+      Trecho  : n == 'SABRE' and d1 >= 1 and (d1 <= 10) and (d2 >= 1) and (d2 <= 10) and (D > 0)
+      Contexto:
+              11 | 	print(d)
+        >>>   12 | elif((n == "SABRE") and (d1 >=1) and (d1 <=10) and (d2 >=1) and (d2 <=10) and (D >0)):
+              13 |    d = s + 2*D
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 8
+
+  [1] Linha 1: Variável 'n' com nome muito curto (≤4 chars)
+      Trecho  : n = ...
+      Contexto:
+        >>>    1 | n = input("nome da arma:")
+               2 | D = int(input("destreza do personagem:"))
+
+  [2] Linha 2: Variável 'D' com nome muito curto (≤4 chars)
+      Trecho  : D = ...
+      Contexto:
+               1 | n = input("nome da arma:")
+        >>>    2 | D = int(input("destreza do personagem:"))
+               3 | d1 = int(input("dado 1:"))
+
+  [3] Linha 3: Variável 'd1' com nome muito curto (≤4 chars)
+      Trecho  : d1 = ...
+      Contexto:
+               2 | D = int(input("destreza do personagem:"))
+        >>>    3 | d1 = int(input("dado 1:"))
+               4 | d2 = int(input("dado 2:"))
+
+  [4] Linha 4: Variável 'd2' com nome muito curto (≤4 chars)
+      Trecho  : d2 = ...
+      Contexto:
+               3 | d1 = int(input("dado 1:"))
+        >>>    4 | d2 = int(input("dado 2:"))
+               5 | s = d1 + d2
+
+  [5] Linha 5: Variável 's' com nome muito curto (≤4 chars)
+      Trecho  : s = ...
+      Contexto:
+               4 | d2 = int(input("dado 2:"))
+        >>>    5 | s = d1 + d2
+               6 | if ((n == "CIMITARRA") and (d1 >=1) and (d1 <=10) and (d2 >=1) and (d2 <= 10) and (D >0)):
+
+  [6] Linha 7: Variável 'd' com nome muito curto (≤4 chars)
+      Trecho  : d = ...
+      Contexto:
+               6 | if ((n == "CIMITARRA") and (d1 >=1) and (d1 <=10) and (d2 >=1) and (d2 <= 10) and (D >0)):
+        >>>    7 | 	d = 2 * s + 2 * D
+               8 | 	print(d)
+
+  [7] Linha 10: Variável 'd' com nome muito curto (≤4 chars)
+      Trecho  : d = ...
+      Contexto:
+               9 | elif((n == "KATANA") and (d1 >=1) and (d1 <=10) and (d2 >=1) and (d2 <=10) and (D >0)):
+        >>>   10 | 	d = 2 * s + D
+              11 | 	print(d)
+
+  [8] Linha 13: Variável 'd' com nome muito curto (≤4 chars)
+      Trecho  : d = ...
+      Contexto:
+              12 | elif((n == "SABRE") and (d1 >=1) and (d1 <=10) and (d2 >=1) and (d2 <=10) and (D >0)):
+        >>>   13 |    d = s + 2*D
+              14 |    print(d)
+
+======================================================================

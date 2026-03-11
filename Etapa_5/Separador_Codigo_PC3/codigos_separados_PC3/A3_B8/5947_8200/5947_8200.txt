@@ -1,0 +1,64 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 5947_8200.py
+Questão  : 5947
+Aluno    : 8200
+Total MCs: 2
+
+⚠️  Misconceptions detectados: A3, B8
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | qtdd_cox = 0
+     2 | qtdd_esf = 0
+     3 | 
+     4 | tipo_salg = input('informequal salgado: (C)oxinha / (E)sfirra ').upper()
+     5 | qtdd_salg = int(input('quantos salgados ? '))
+     6 | qtdd_sucos = int(input('quantos sucos ? '))
+     7 | 
+     8 | coxinha = 2.
+     9 | esfirra = 4.5
+    10 | suco = 6.
+    11 | 
+    12 | if tipo_salg == "C":
+    13 |   preco_conta = qtdd_salg * coxinha +qtdd_sucos * suco
+    14 | else:
+    15 |   if tipo_salg == "E":
+    16 |     preco_conta = qtdd_salg * esfirra + qtdd_sucos * suco
+    17 | 		
+    18 | print(round(preco_conta, 2))
+    19 | 		
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 2
+
+  [1] Linha 1: Variável 'qtdd_cox' declarada mas nunca utilizada
+      Trecho  : qtdd_cox = ...
+      Contexto:
+        >>>    1 | qtdd_cox = 0
+               2 | qtdd_esf = 0
+
+  [2] Linha 2: Variável 'qtdd_esf' declarada mas nunca utilizada
+      Trecho  : qtdd_esf = ...
+      Contexto:
+               1 | qtdd_cox = 0
+        >>>    2 | qtdd_esf = 0
+               3 | 
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 12: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 12) / elif ... sem else
+      Contexto:
+              11 | 
+        >>>   12 | if tipo_salg == "C":
+              13 |   preco_conta = qtdd_salg * coxinha +qtdd_sucos * suco
+
+======================================================================

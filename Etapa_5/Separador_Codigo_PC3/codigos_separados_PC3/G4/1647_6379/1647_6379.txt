@@ -1,0 +1,78 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1647_6379.py
+Questão  : 1647
+Aluno    : 6379
+Total MCs: 1
+
+⚠️  Misconceptions detectados: G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import *
+     2 | x = array(eval(input()))
+     3 | c = 0
+     4 | for i in x:
+     5 | 	if i >= 70:
+     6 | 		c = c + 1
+     7 | print(c)
+     8 | z = zeros(c,dtype = int)
+     9 | d = 0
+    10 | for i in range(size(x)):
+    11 | 	if x[i] >= 70:
+    12 | 		z[d] = i
+    13 | 		d = d + 1
+    14 | print(z)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 6
+
+  [1] Linha 2: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+               1 | from numpy import *
+        >>>    2 | x = array(eval(input()))
+               3 | c = 0
+
+  [2] Linha 3: Variável 'c' com nome muito curto (≤4 chars)
+      Trecho  : c = ...
+      Contexto:
+               2 | x = array(eval(input()))
+        >>>    3 | c = 0
+               4 | for i in x:
+
+  [3] Linha 8: Variável 'z' com nome muito curto (≤4 chars)
+      Trecho  : z = ...
+      Contexto:
+               7 | print(c)
+        >>>    8 | z = zeros(c,dtype = int)
+               9 | d = 0
+
+  [4] Linha 9: Variável 'd' com nome muito curto (≤4 chars)
+      Trecho  : d = ...
+      Contexto:
+               8 | z = zeros(c,dtype = int)
+        >>>    9 | d = 0
+              10 | for i in range(size(x)):
+
+  [5] Linha 6: Variável 'c' com nome muito curto (≤4 chars)
+      Trecho  : c = ...
+      Contexto:
+               5 | 	if i >= 70:
+        >>>    6 | 		c = c + 1
+               7 | print(c)
+
+  [6] Linha 13: Variável 'd' com nome muito curto (≤4 chars)
+      Trecho  : d = ...
+      Contexto:
+              12 | 		z[d] = i
+        >>>   13 | 		d = d + 1
+              14 | print(z)
+
+======================================================================

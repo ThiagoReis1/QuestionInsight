@@ -1,0 +1,65 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 6305_8192.py
+Questão  : 6305
+Aluno    : 8192
+Total MCs: 2
+
+⚠️  Misconceptions detectados: A3, B8
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | 
+     3 | v = input("digite o pedido?; ").upper()
+     4 | 
+     5 | i = 0 
+     6 | cont = 0
+     7 | cont1 = 0 
+     8 | cont2 = 0
+     9 | cont3 = 0
+    10 | cont4 = 0
+    11 | cont5 = 0
+    12 | cont6 = 0
+    13 | while ( i < len(v)):
+    14 | 	if (v[i] == "H"):
+    15 | 		cont = cont + 3.85
+    16 | 		cont2 = cont2 + 1
+    17 | 	elif (v[i] == "L"):
+    18 | 		cont3 = cont3 + 2.95
+    19 | 		cont4 = cont4 + 1
+    20 | 	elif ( v[i] == "E"):
+    21 | 		cont5 = cont5 + 7.90
+    22 | 		cont6 = cont6 + 1	
+    23 | 	i = i + 1
+    24 | contat = cont + cont3 + cont5
+    25 | contc = round(contat, 2)
+    26 | print(contc, cont2, cont4, cont6)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 1
+
+  [1] Linha 7: Variável 'cont1' declarada mas nunca utilizada
+      Trecho  : cont1 = ...
+      Contexto:
+               6 | cont = 0
+        >>>    7 | cont1 = 0 
+               8 | cont2 = 0
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 17: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 17) / elif ... sem else
+      Contexto:
+              16 | 		cont2 = cont2 + 1
+        >>>   17 | 	elif (v[i] == "L"):
+              18 | 		cont3 = cont3 + 2.95
+
+======================================================================

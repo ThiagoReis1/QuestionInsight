@@ -1,0 +1,299 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 5251_7111.py
+Questão  : 5251
+Aluno    : 7111
+Total MCs: 4
+
+⚠️  Misconceptions detectados: A3, B4, B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | d= input("Qual o destino?")
+     2 | i= int(input("Qual a idade?"))
+     3 | 
+     4 | print("Entradas:",d,",",i)
+     5 | if (d!= "Porto Velho") or (d!= "Santarem") or (d!="Belem") or (d!="Tefe") or (d!="Tabatinga"):
+     6 | 	s="entradas invalidas"
+     7 | if (i<0) or (i>150):
+     8 | 	s="entradas infalidas"
+     9 | if (i<=2):
+    10 | 	if (d=="Porto Velho"):
+    11 | 		s=0
+    12 | 	elif (d=="Santarem"):
+    13 | 		s=0
+    14 | 	elif (d=="Belem"):
+    15 | 		s=0
+    16 | 	elif (d=="Tefe"):
+    17 | 		s=0
+    18 | 	elif (d=="Tabatinga"):
+    19 | 		s=0
+    20 | if (i>=3) or (i<=12):
+    21 | 	if (d=="Porto Velho"):
+    22 | 		s= 500/2
+    23 | 	elif (d=="Santarem"):
+    24 | 		s= 370/2
+    25 | 	elif (d=="Belem"):
+    26 | 		s= 600/2
+    27 | 	elif (d=="Tefe"):
+    28 | 		s= 360/2
+    29 | 	elif (d=="Tabatinga"):
+    30 | 		s= 550/2
+    31 | if (i>=65):
+    32 | 	if(d=="Porto Velho"):
+    33 | 		s= 500 - (500*0.3)
+    34 | 	elif (d=="Santarem"):
+    35 | 		s= 370 - (360*0.3)
+    36 | 	elif (d=="Belem"):
+    37 | 		s = 600 - (600*0.3)
+    38 | 	elif (d=="Tefe"):
+    39 | 		s = 360 - 360*0.3
+    40 | 	elif (d=="Tabatinga"):
+    41 | 		s= 550 - (550*0.3)
+    42 | print("Passagem: R$", round(s,2))
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 1
+
+  [1] Linha 0: A3 detectado pelo VisitorMC3 (localização exata não mapeada)
+      Trecho  : —
+
+▶ B4 — Comandos repetidos dentro de blocos if-elif-else
+  Ocorrências: 10
+
+  [1] Linha 12: Bloco idêntico ao da linha 10
+      Trecho  : s = 0
+      Contexto:
+              11 | 		s=0
+        >>>   12 | 	elif (d=="Santarem"):
+              13 | 		s=0
+
+  [2] Linha 14: Bloco idêntico ao da linha 10
+      Trecho  : s = 0
+      Contexto:
+              13 | 		s=0
+        >>>   14 | 	elif (d=="Belem"):
+              15 | 		s=0
+
+  [3] Linha 16: Bloco idêntico ao da linha 10
+      Trecho  : s = 0
+      Contexto:
+              15 | 		s=0
+        >>>   16 | 	elif (d=="Tefe"):
+              17 | 		s=0
+
+  [4] Linha 18: Bloco idêntico ao da linha 10
+      Trecho  : s = 0
+      Contexto:
+              17 | 		s=0
+        >>>   18 | 	elif (d=="Tabatinga"):
+              19 | 		s=0
+
+  [5] Linha 14: Bloco idêntico ao da linha 12
+      Trecho  : s = 0
+      Contexto:
+              13 | 		s=0
+        >>>   14 | 	elif (d=="Belem"):
+              15 | 		s=0
+
+  [6] Linha 16: Bloco idêntico ao da linha 12
+      Trecho  : s = 0
+      Contexto:
+              15 | 		s=0
+        >>>   16 | 	elif (d=="Tefe"):
+              17 | 		s=0
+
+  [7] Linha 18: Bloco idêntico ao da linha 12
+      Trecho  : s = 0
+      Contexto:
+              17 | 		s=0
+        >>>   18 | 	elif (d=="Tabatinga"):
+              19 | 		s=0
+
+  [8] Linha 16: Bloco idêntico ao da linha 14
+      Trecho  : s = 0
+      Contexto:
+              15 | 		s=0
+        >>>   16 | 	elif (d=="Tefe"):
+              17 | 		s=0
+
+  [9] Linha 18: Bloco idêntico ao da linha 14
+      Trecho  : s = 0
+      Contexto:
+              17 | 		s=0
+        >>>   18 | 	elif (d=="Tabatinga"):
+              19 | 		s=0
+
+  [10] Linha 18: Bloco idêntico ao da linha 16
+      Trecho  : s = 0
+      Contexto:
+              17 | 		s=0
+        >>>   18 | 	elif (d=="Tabatinga"):
+              19 | 		s=0
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 3
+
+  [1] Linha 16: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 16) / elif ... sem else
+      Contexto:
+              15 | 		s=0
+        >>>   16 | 	elif (d=="Tefe"):
+              17 | 		s=0
+
+  [2] Linha 27: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 27) / elif ... sem else
+      Contexto:
+              26 | 		s= 600/2
+        >>>   27 | 	elif (d=="Tefe"):
+              28 | 		s= 360/2
+
+  [3] Linha 38: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 38) / elif ... sem else
+      Contexto:
+              37 | 		s = 600 - (600*0.3)
+        >>>   38 | 	elif (d=="Tefe"):
+              39 | 		s = 360 - 360*0.3
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 19
+
+  [1] Linha 1: Variável 'd' com nome muito curto (≤4 chars)
+      Trecho  : d = ...
+      Contexto:
+        >>>    1 | d= input("Qual o destino?")
+               2 | i= int(input("Qual a idade?"))
+
+  [2] Linha 2: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+               1 | d= input("Qual o destino?")
+        >>>    2 | i= int(input("Qual a idade?"))
+               3 | 
+
+  [3] Linha 6: Variável 's' com nome muito curto (≤4 chars)
+      Trecho  : s = ...
+      Contexto:
+               5 | if (d!= "Porto Velho") or (d!= "Santarem") or (d!="Belem") or (d!="Tefe") or (d!="Tabatinga"):
+        >>>    6 | 	s="entradas invalidas"
+               7 | if (i<0) or (i>150):
+
+  [4] Linha 8: Variável 's' com nome muito curto (≤4 chars)
+      Trecho  : s = ...
+      Contexto:
+               7 | if (i<0) or (i>150):
+        >>>    8 | 	s="entradas infalidas"
+               9 | if (i<=2):
+
+  [5] Linha 11: Variável 's' com nome muito curto (≤4 chars)
+      Trecho  : s = ...
+      Contexto:
+              10 | 	if (d=="Porto Velho"):
+        >>>   11 | 		s=0
+              12 | 	elif (d=="Santarem"):
+
+  [6] Linha 22: Variável 's' com nome muito curto (≤4 chars)
+      Trecho  : s = ...
+      Contexto:
+              21 | 	if (d=="Porto Velho"):
+        >>>   22 | 		s= 500/2
+              23 | 	elif (d=="Santarem"):
+
+  [7] Linha 33: Variável 's' com nome muito curto (≤4 chars)
+      Trecho  : s = ...
+      Contexto:
+              32 | 	if(d=="Porto Velho"):
+        >>>   33 | 		s= 500 - (500*0.3)
+              34 | 	elif (d=="Santarem"):
+
+  [8] Linha 13: Variável 's' com nome muito curto (≤4 chars)
+      Trecho  : s = ...
+      Contexto:
+              12 | 	elif (d=="Santarem"):
+        >>>   13 | 		s=0
+              14 | 	elif (d=="Belem"):
+
+  [9] Linha 24: Variável 's' com nome muito curto (≤4 chars)
+      Trecho  : s = ...
+      Contexto:
+              23 | 	elif (d=="Santarem"):
+        >>>   24 | 		s= 370/2
+              25 | 	elif (d=="Belem"):
+
+  [10] Linha 35: Variável 's' com nome muito curto (≤4 chars)
+      Trecho  : s = ...
+      Contexto:
+              34 | 	elif (d=="Santarem"):
+        >>>   35 | 		s= 370 - (360*0.3)
+              36 | 	elif (d=="Belem"):
+
+  [11] Linha 15: Variável 's' com nome muito curto (≤4 chars)
+      Trecho  : s = ...
+      Contexto:
+              14 | 	elif (d=="Belem"):
+        >>>   15 | 		s=0
+              16 | 	elif (d=="Tefe"):
+
+  [12] Linha 26: Variável 's' com nome muito curto (≤4 chars)
+      Trecho  : s = ...
+      Contexto:
+              25 | 	elif (d=="Belem"):
+        >>>   26 | 		s= 600/2
+              27 | 	elif (d=="Tefe"):
+
+  [13] Linha 37: Variável 's' com nome muito curto (≤4 chars)
+      Trecho  : s = ...
+      Contexto:
+              36 | 	elif (d=="Belem"):
+        >>>   37 | 		s = 600 - (600*0.3)
+              38 | 	elif (d=="Tefe"):
+
+  [14] Linha 17: Variável 's' com nome muito curto (≤4 chars)
+      Trecho  : s = ...
+      Contexto:
+              16 | 	elif (d=="Tefe"):
+        >>>   17 | 		s=0
+              18 | 	elif (d=="Tabatinga"):
+
+  [15] Linha 28: Variável 's' com nome muito curto (≤4 chars)
+      Trecho  : s = ...
+      Contexto:
+              27 | 	elif (d=="Tefe"):
+        >>>   28 | 		s= 360/2
+              29 | 	elif (d=="Tabatinga"):
+
+  [16] Linha 39: Variável 's' com nome muito curto (≤4 chars)
+      Trecho  : s = ...
+      Contexto:
+              38 | 	elif (d=="Tefe"):
+        >>>   39 | 		s = 360 - 360*0.3
+              40 | 	elif (d=="Tabatinga"):
+
+  [17] Linha 19: Variável 's' com nome muito curto (≤4 chars)
+      Trecho  : s = ...
+      Contexto:
+              18 | 	elif (d=="Tabatinga"):
+        >>>   19 | 		s=0
+              20 | if (i>=3) or (i<=12):
+
+  [18] Linha 30: Variável 's' com nome muito curto (≤4 chars)
+      Trecho  : s = ...
+      Contexto:
+              29 | 	elif (d=="Tabatinga"):
+        >>>   30 | 		s= 550/2
+              31 | if (i>=65):
+
+  [19] Linha 41: Variável 's' com nome muito curto (≤4 chars)
+      Trecho  : s = ...
+      Contexto:
+              40 | 	elif (d=="Tabatinga"):
+        >>>   41 | 		s= 550 - (550*0.3)
+              42 | print("Passagem: R$", round(s,2))
+
+======================================================================

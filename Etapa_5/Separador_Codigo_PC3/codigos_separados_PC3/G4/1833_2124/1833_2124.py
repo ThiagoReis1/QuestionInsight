@@ -1,0 +1,5 @@
+mA= int(input("Digite um numero:"))
+mB= int(input("Digite um numero:"))
+vB= int(input("Digite um numero:"))
+formula=((2*mA+mB)/(mA+mB)*vB)
+print(formula)

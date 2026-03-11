@@ -1,0 +1,55 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 3582_6340.py
+Questão  : 3582
+Aluno    : 6340
+Total MCs: 2
+
+⚠️  Misconceptions detectados: A3, B8
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | 
+     3 | custo = array(eval(input("")))
+     4 | cont = 0
+     5 | total = 0
+     6 | i = 0
+     7 | 
+     8 | while(cont<size(custo)):
+     9 | 	if(custo[cont] > 160):
+    10 | 		total += custo[cont] - 25
+    11 | 		cont += 1
+    12 | 		i += 1
+    13 | 	elif(custo[cont]<=160):
+    14 | 		total += custo[cont]
+    15 | 		cont += 1
+    16 | print(round(total,2))
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 1
+
+  [1] Linha 6: Variável 'i' declarada mas nunca utilizada
+      Trecho  : i = ...
+      Contexto:
+               5 | total = 0
+        >>>    6 | i = 0
+               7 | 
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 9: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 9) / elif ... sem else
+      Contexto:
+               8 | while(cont<size(custo)):
+        >>>    9 | 	if(custo[cont] > 160):
+              10 | 		total += custo[cont] - 25
+
+======================================================================

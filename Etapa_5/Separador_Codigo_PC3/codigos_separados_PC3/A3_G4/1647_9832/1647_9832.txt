@@ -1,0 +1,120 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1647_9832.py
+Questão  : 1647
+Aluno    : 9832
+Total MCs: 2
+
+⚠️  Misconceptions detectados: A3, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | try :
+     2 | 	from numpy import *
+     3 | 	a = array(eval(input("Digite as porcentagens de presenca: ")))
+     4 | 	
+     5 | except NameError :
+     6 | 	print("Digite numeros!")
+     7 | 	
+     8 | except TypeError :
+     9 | 	print("Cuidado com o que digita!")
+    10 | 	
+    11 | except SyntaxError :
+    12 | 	print("Digita direito!")
+    13 | 	
+    14 | else :
+    15 | 	tf = True
+    16 | 	i = 0
+    17 | 	while ( i < size(a) ) :
+    18 | 		if ( a[i] < 0 or a[i] > 100 or a[i] % 1 != 0 ) :
+    19 | 			tf = False
+    20 | 			break
+    21 | 			
+    22 | 		i += 1
+    23 | 		
+    24 | 	if ( tf ) :
+    25 | 		cont = 0
+    26 | 		j = 0
+    27 | 		for i in range(size(a)) :
+    28 | 			if ( a[i] >= 70 ) :
+    29 | 				cont += 1
+    30 | 		print(cont)
+    31 | 		v = zeros(cont, dtype = int)
+    32 | 		for i in range(size(a)) :
+    33 | 			if ( a[i] >= 70 ) :
+    34 | 				v[j] = i
+    35 | 				j += 1
+    36 | 				
+    37 | 		if ( cont > 0 ) :
+    38 | 			print(v)
+    39 | 			
+    40 | 		else :
+    41 | 			print("Kuen kuen kuen...")
+    42 | 	else :
+    43 | 		print("Numeros positivos entre 0 e 100!")
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 1
+
+  [1] Linha 0: A3 detectado pelo VisitorMC3 (localização exata não mapeada)
+      Trecho  : —
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 7
+
+  [1] Linha 3: Variável 'a' com nome muito curto (≤4 chars)
+      Trecho  : a = ...
+      Contexto:
+               2 | 	from numpy import *
+        >>>    3 | 	a = array(eval(input("Digite as porcentagens de presenca: ")))
+               4 | 	
+
+  [2] Linha 15: Variável 'tf' com nome muito curto (≤4 chars)
+      Trecho  : tf = ...
+      Contexto:
+              14 | else :
+        >>>   15 | 	tf = True
+              16 | 	i = 0
+
+  [3] Linha 16: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+              15 | 	tf = True
+        >>>   16 | 	i = 0
+              17 | 	while ( i < size(a) ) :
+
+  [4] Linha 25: Variável 'cont' com nome muito curto (≤4 chars)
+      Trecho  : cont = ...
+      Contexto:
+              24 | 	if ( tf ) :
+        >>>   25 | 		cont = 0
+              26 | 		j = 0
+
+  [5] Linha 26: Variável 'j' com nome muito curto (≤4 chars)
+      Trecho  : j = ...
+      Contexto:
+              25 | 		cont = 0
+        >>>   26 | 		j = 0
+              27 | 		for i in range(size(a)) :
+
+  [6] Linha 31: Variável 'v' com nome muito curto (≤4 chars)
+      Trecho  : v = ...
+      Contexto:
+              30 | 		print(cont)
+        >>>   31 | 		v = zeros(cont, dtype = int)
+              32 | 		for i in range(size(a)) :
+
+  [7] Linha 19: Variável 'tf' com nome muito curto (≤4 chars)
+      Trecho  : tf = ...
+      Contexto:
+              18 | 		if ( a[i] < 0 or a[i] > 100 or a[i] % 1 != 0 ) :
+        >>>   19 | 			tf = False
+              20 | 			break
+
+======================================================================

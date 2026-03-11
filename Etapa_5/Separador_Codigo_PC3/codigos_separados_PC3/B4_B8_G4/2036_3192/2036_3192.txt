@@ -1,0 +1,77 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 2036_3192.py
+Questão  : 2036
+Aluno    : 3192
+Total MCs: 3
+
+⚠️  Misconceptions detectados: B4, B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | casa = str(input("Insira a cor: ")).upper()
+     2 | c = 0
+     3 | while(casa!="s"):
+     4 | 	if(casa == "PRETA"):
+     5 | 		c =c+1
+     6 | 	elif(casa == "VERMELHA"):
+     7 | 		c=c+1
+     8 | print(c)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B4 — Comandos repetidos dentro de blocos if-elif-else
+  Ocorrências: 1
+
+  [1] Linha 6: Bloco idêntico ao da linha 4
+      Trecho  : c = c + 1
+      Contexto:
+               5 | 		c =c+1
+        >>>    6 | 	elif(casa == "VERMELHA"):
+               7 | 		c=c+1
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 4: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 4) / elif ... sem else
+      Contexto:
+               3 | while(casa!="s"):
+        >>>    4 | 	if(casa == "PRETA"):
+               5 | 		c =c+1
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 4
+
+  [1] Linha 1: Variável 'casa' com nome muito curto (≤4 chars)
+      Trecho  : casa = ...
+      Contexto:
+        >>>    1 | casa = str(input("Insira a cor: ")).upper()
+               2 | c = 0
+
+  [2] Linha 2: Variável 'c' com nome muito curto (≤4 chars)
+      Trecho  : c = ...
+      Contexto:
+               1 | casa = str(input("Insira a cor: ")).upper()
+        >>>    2 | c = 0
+               3 | while(casa!="s"):
+
+  [3] Linha 5: Variável 'c' com nome muito curto (≤4 chars)
+      Trecho  : c = ...
+      Contexto:
+               4 | 	if(casa == "PRETA"):
+        >>>    5 | 		c =c+1
+               6 | 	elif(casa == "VERMELHA"):
+
+  [4] Linha 7: Variável 'c' com nome muito curto (≤4 chars)
+      Trecho  : c = ...
+      Contexto:
+               6 | 	elif(casa == "VERMELHA"):
+        >>>    7 | 		c=c+1
+               8 | print(c)
+
+======================================================================

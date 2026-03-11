@@ -1,0 +1,64 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1126_1602.py
+Questão  : 1126
+Aluno    : 1602
+Total MCs: 3
+
+⚠️  Misconceptions detectados: B8, E1, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | lobo=input("qual o Stark ?:")
+     2 | if(lobo=="Sansa" or lobo=="Robb" or lobo=="Rickon" or lobo == "Jon Snow" or lobo == "Bran" or lobo == "Arya"):
+     3 | 	if(lobo=="Sansa"):
+     4 | 		print("Lady")
+     5 | 	elif(lobo=="Robb"):
+     6 | 		print("Vento Cinzento")
+     7 | 	elif(lobo=="Rickon"):
+     8 | 		print("Cao Felpudo")
+     9 | 	elif(lobo=="Jon Snow"):
+    10 | 		print("Fantasma")
+    11 | 	elif(lobo=="Bran"):
+    12 | 		print("Verao")
+    13 | 	elif(lobo=="Arya"):
+    14 | 		print("Nymeria")
+    15 | else:
+    16 | 	print("Entrada",lobo,"invalida")
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 11: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 11) / elif ... sem else
+      Contexto:
+              10 | 		print("Fantasma")
+        >>>   11 | 	elif(lobo=="Bran"):
+              12 | 		print("Verao")
+
+▶ E1 — Verificação desnecessária de todas as combinações possíveis
+  Ocorrências: 1
+
+  [1] Linha 2: 6 condições em um único if — verificação excessiva
+      Trecho  : lobo == 'Sansa' or lobo == 'Robb' or lobo == 'Rickon' or (lobo == 'Jon Snow') or (lobo == 'Bran') or (lobo == 'Arya')
+      Contexto:
+               1 | lobo=input("qual o Stark ?:")
+        >>>    2 | if(lobo=="Sansa" or lobo=="Robb" or lobo=="Rickon" or lobo == "Jon Snow" or lobo == "Bran" or lobo == "Arya"):
+               3 | 	if(lobo=="Sansa"):
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 1
+
+  [1] Linha 1: Variável 'lobo' com nome muito curto (≤4 chars)
+      Trecho  : lobo = ...
+      Contexto:
+        >>>    1 | lobo=input("qual o Stark ?:")
+               2 | if(lobo=="Sansa" or lobo=="Robb" or lobo=="Rickon" or lobo == "Jon Snow" or lobo == "Bran" or lobo == "Arya"):
+
+======================================================================

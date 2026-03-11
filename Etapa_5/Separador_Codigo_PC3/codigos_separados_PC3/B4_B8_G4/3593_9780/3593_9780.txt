@@ -1,0 +1,147 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 3593_9780.py
+Questão  : 3593
+Aluno    : 9780
+Total MCs: 3
+
+⚠️  Misconceptions detectados: B4, B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | dado = array(eval(input("Quais os numeros das faces: ")))
+     3 | i = 0
+     4 | pts = 200.
+     5 | 
+     6 | while i < size(dado):
+     7 | 	if dado [i] == 1:
+     8 | 	 	pts/= 2
+     9 | 	elif dado [i] == 2:
+    10 | 	 	pts *= 3
+    11 | 	elif dado [i] == 3:
+    12 | 		 pts /= 2
+    13 | 	elif dado [i] == 4:
+    14 | 		pts *= 3
+    15 | 	elif dado [i] == 5:
+    16 | 		pts /=2
+    17 | 	elif dado [i] == 6:
+    18 | 		pts *=3
+    19 | 
+    20 | 	i += 1 
+    21 | print(round(pts,2))
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B4 — Comandos repetidos dentro de blocos if-elif-else
+  Ocorrências: 10
+
+  [1] Linha 11: Bloco idêntico ao da linha 7
+      Trecho  : pts /= 2
+      Contexto:
+              10 | 	 	pts *= 3
+        >>>   11 | 	elif dado [i] == 3:
+              12 | 		 pts /= 2
+
+  [2] Linha 13: Bloco idêntico ao da linha 9
+      Trecho  : pts *= 3
+      Contexto:
+              12 | 		 pts /= 2
+        >>>   13 | 	elif dado [i] == 4:
+              14 | 		pts *= 3
+
+  [3] Linha 15: Bloco idêntico ao da linha 7
+      Trecho  : pts /= 2
+      Contexto:
+              14 | 		pts *= 3
+        >>>   15 | 	elif dado [i] == 5:
+              16 | 		pts /=2
+
+  [4] Linha 17: Bloco idêntico ao da linha 9
+      Trecho  : pts *= 3
+      Contexto:
+              16 | 		pts /=2
+        >>>   17 | 	elif dado [i] == 6:
+              18 | 		pts *=3
+
+  [5] Linha 13: Bloco idêntico ao da linha 9
+      Trecho  : pts *= 3
+      Contexto:
+              12 | 		 pts /= 2
+        >>>   13 | 	elif dado [i] == 4:
+              14 | 		pts *= 3
+
+  [6] Linha 15: Bloco idêntico ao da linha 11
+      Trecho  : pts /= 2
+      Contexto:
+              14 | 		pts *= 3
+        >>>   15 | 	elif dado [i] == 5:
+              16 | 		pts /=2
+
+  [7] Linha 17: Bloco idêntico ao da linha 9
+      Trecho  : pts *= 3
+      Contexto:
+              16 | 		pts /=2
+        >>>   17 | 	elif dado [i] == 6:
+              18 | 		pts *=3
+
+  [8] Linha 15: Bloco idêntico ao da linha 11
+      Trecho  : pts /= 2
+      Contexto:
+              14 | 		pts *= 3
+        >>>   15 | 	elif dado [i] == 5:
+              16 | 		pts /=2
+
+  [9] Linha 17: Bloco idêntico ao da linha 13
+      Trecho  : pts *= 3
+      Contexto:
+              16 | 		pts /=2
+        >>>   17 | 	elif dado [i] == 6:
+              18 | 		pts *=3
+
+  [10] Linha 17: Bloco idêntico ao da linha 13
+      Trecho  : pts *= 3
+      Contexto:
+              16 | 		pts /=2
+        >>>   17 | 	elif dado [i] == 6:
+              18 | 		pts *=3
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 15: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 15) / elif ... sem else
+      Contexto:
+              14 | 		pts *= 3
+        >>>   15 | 	elif dado [i] == 5:
+              16 | 		pts /=2
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 3
+
+  [1] Linha 2: Variável 'dado' com nome muito curto (≤4 chars)
+      Trecho  : dado = ...
+      Contexto:
+               1 | from numpy import*
+        >>>    2 | dado = array(eval(input("Quais os numeros das faces: ")))
+               3 | i = 0
+
+  [2] Linha 3: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+               2 | dado = array(eval(input("Quais os numeros das faces: ")))
+        >>>    3 | i = 0
+               4 | pts = 200.
+
+  [3] Linha 4: Variável 'pts' com nome muito curto (≤4 chars)
+      Trecho  : pts = ...
+      Contexto:
+               3 | i = 0
+        >>>    4 | pts = 200.
+               5 | 
+
+======================================================================

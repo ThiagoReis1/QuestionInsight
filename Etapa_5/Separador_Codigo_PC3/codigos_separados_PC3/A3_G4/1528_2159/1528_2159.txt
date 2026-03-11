@@ -1,0 +1,87 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1528_2159.py
+Questão  : 1528
+Aluno    : 2159
+Total MCs: 2
+
+⚠️  Misconceptions detectados: A3, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | # Entradas
+     2 | pg = int(input("A quantidade de pontos de força que cada guerreiro tira do troll: "))
+     3 | p0 = int(input("A quantidade inicial de pontos de força do troll: "))
+     4 | pr = int(input("A quantidade de pontos de força que o troll recupera: "))
+     5 | 
+     6 | i = 0 		# Contador de rodadas
+     7 | pontos = 0	# Pontos de força perdidas pelo troll
+     8 | 
+     9 | while p0 > 0:
+    10 | 	p0 = p0 - 5*pg + pr
+    11 | 	i = i + 1
+    12 | 	
+    13 | print(i)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 1
+
+  [1] Linha 7: Variável 'pontos' declarada mas nunca utilizada
+      Trecho  : pontos = ...
+      Contexto:
+               6 | i = 0 		# Contador de rodadas
+        >>>    7 | pontos = 0	# Pontos de força perdidas pelo troll
+               8 | 
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 6
+
+  [1] Linha 2: Variável 'pg' com nome muito curto (≤4 chars)
+      Trecho  : pg = ...
+      Contexto:
+               1 | # Entradas
+        >>>    2 | pg = int(input("A quantidade de pontos de força que cada guerreiro tira do troll: "))
+               3 | p0 = int(input("A quantidade inicial de pontos de força do troll: "))
+
+  [2] Linha 3: Variável 'p0' com nome muito curto (≤4 chars)
+      Trecho  : p0 = ...
+      Contexto:
+               2 | pg = int(input("A quantidade de pontos de força que cada guerreiro tira do troll: "))
+        >>>    3 | p0 = int(input("A quantidade inicial de pontos de força do troll: "))
+               4 | pr = int(input("A quantidade de pontos de força que o troll recupera: "))
+
+  [3] Linha 4: Variável 'pr' com nome muito curto (≤4 chars)
+      Trecho  : pr = ...
+      Contexto:
+               3 | p0 = int(input("A quantidade inicial de pontos de força do troll: "))
+        >>>    4 | pr = int(input("A quantidade de pontos de força que o troll recupera: "))
+               5 | 
+
+  [4] Linha 6: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+               5 | 
+        >>>    6 | i = 0 		# Contador de rodadas
+               7 | pontos = 0	# Pontos de força perdidas pelo troll
+
+  [5] Linha 10: Variável 'p0' com nome muito curto (≤4 chars)
+      Trecho  : p0 = ...
+      Contexto:
+               9 | while p0 > 0:
+        >>>   10 | 	p0 = p0 - 5*pg + pr
+              11 | 	i = i + 1
+
+  [6] Linha 11: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+              10 | 	p0 = p0 - 5*pg + pr
+        >>>   11 | 	i = i + 1
+              12 | 	
+
+======================================================================

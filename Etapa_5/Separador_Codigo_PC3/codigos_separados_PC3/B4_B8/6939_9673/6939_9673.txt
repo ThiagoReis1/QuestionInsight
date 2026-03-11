@@ -1,0 +1,63 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 6939_9673.py
+Questão  : 6939
+Aluno    : 9673
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B4, B8
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | valor = float(input("total da compra: "))
+     2 | codigo = input("opcao: ").upper()
+     3 | 
+     4 | if codigo == "C":
+     5 | 	x = int(input("de quantas vezes voce quer: "))
+     6 | 	if x == 2:
+     7 | 		t = valor + (valor * (9/100))
+     8 | 		print(round(t, 2))
+     9 | 	else:
+    10 | 		t = valor 
+    11 | 		print(t)
+    12 | elif codigo == "P":
+    13 | 	f = valor - (valor * 0.19)
+    14 | 	print(round(f, 2))
+    15 | elif codigo == "D":
+    16 | 	f = valor -  (valor * 0.19)
+    17 | 	print(round(f, 2))
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B4 — Comandos repetidos dentro de blocos if-elif-else
+  Ocorrências: 2
+
+  [1] Linha 15: Bloco idêntico ao da linha 12
+      Trecho  : f = valor - valor * 0.19
+      Contexto:
+              14 | 	print(round(f, 2))
+        >>>   15 | elif codigo == "D":
+              16 | 	f = valor -  (valor * 0.19)
+
+  [2] Linha 15: Bloco idêntico ao da linha 12
+      Trecho  : f = valor - valor * 0.19
+      Contexto:
+              14 | 	print(round(f, 2))
+        >>>   15 | elif codigo == "D":
+              16 | 	f = valor -  (valor * 0.19)
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 12: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 12) / elif ... sem else
+      Contexto:
+              11 | 		print(t)
+        >>>   12 | elif codigo == "P":
+              13 | 	f = valor - (valor * 0.19)
+
+======================================================================

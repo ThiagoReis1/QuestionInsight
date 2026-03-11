@@ -1,0 +1,71 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1599_4001.py
+Questão  : 1599
+Aluno    : 4001
+Total MCs: 2
+
+⚠️  Misconceptions detectados: A3, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from  numpy import*
+     2 | c = array(eval(input("Valor: ")))
+     3 | i = 0 
+     4 | d = 0
+     5 | while (i < size(c)):
+     6 | 	if (c[i] > 80):
+     7 | 		c[i] = c[i] - (c[i] * 15/100) 
+     8 | 	else:
+     9 | 		c[i] = c[i]
+    10 | 	i = i + 1
+    11 | print(round(sum(c), 2))
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 1
+
+  [1] Linha 4: Variável 'd' declarada mas nunca utilizada
+      Trecho  : d = ...
+      Contexto:
+               3 | i = 0 
+        >>>    4 | d = 0
+               5 | while (i < size(c)):
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 4
+
+  [1] Linha 2: Variável 'c' com nome muito curto (≤4 chars)
+      Trecho  : c = ...
+      Contexto:
+               1 | from  numpy import*
+        >>>    2 | c = array(eval(input("Valor: ")))
+               3 | i = 0 
+
+  [2] Linha 3: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+               2 | c = array(eval(input("Valor: ")))
+        >>>    3 | i = 0 
+               4 | d = 0
+
+  [3] Linha 4: Variável 'd' com nome muito curto (≤4 chars)
+      Trecho  : d = ...
+      Contexto:
+               3 | i = 0 
+        >>>    4 | d = 0
+               5 | while (i < size(c)):
+
+  [4] Linha 10: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+               9 | 		c[i] = c[i]
+        >>>   10 | 	i = i + 1
+              11 | print(round(sum(c), 2))
+
+======================================================================

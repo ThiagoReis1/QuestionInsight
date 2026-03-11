@@ -1,0 +1,67 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1652_5013.py
+Questão  : 1652
+Aluno    : 5013
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | 
+     3 | et = input(": ").split(",")
+     4 | 
+     5 | cont = zeros(5, dtype = int)
+     6 | 
+     7 | for i in et:
+     8 | 	if i == 'B':
+     9 | 		cont[0] = cont[0] + 1
+    10 | 	elif i == 'PA':
+    11 | 		cont[1] = cont [1] + 1
+    12 | 	elif i == 'PR':
+    13 | 		cont[2] = cont[2] + 1
+    14 | 	elif i == 'A':
+    15 | 		cont[3] = cont[3] + 1
+    16 | 	elif i == 'I':
+    17 | 		cont[4] = cont[4] + 1
+    18 | 
+    19 | print(max(cont))
+    20 | 
+    21 | print(cont)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 14: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 14) / elif ... sem else
+      Contexto:
+              13 | 		cont[2] = cont[2] + 1
+        >>>   14 | 	elif i == 'A':
+              15 | 		cont[3] = cont[3] + 1
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 2
+
+  [1] Linha 3: Variável 'et' com nome muito curto (≤4 chars)
+      Trecho  : et = ...
+      Contexto:
+               2 | 
+        >>>    3 | et = input(": ").split(",")
+               4 | 
+
+  [2] Linha 5: Variável 'cont' com nome muito curto (≤4 chars)
+      Trecho  : cont = ...
+      Contexto:
+               4 | 
+        >>>    5 | cont = zeros(5, dtype = int)
+               6 | 
+
+======================================================================

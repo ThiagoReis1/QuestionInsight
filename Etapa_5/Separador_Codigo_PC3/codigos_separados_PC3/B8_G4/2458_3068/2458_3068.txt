@@ -1,0 +1,84 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 2458_3068.py
+Questão  : 2458
+Aluno    : 3068
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | prc = float(input("Preco:"))
+     2 | cdg = float(input("Codigo(1-4):"))
+     3 | if(cdg == 1):
+     4 | 	vnd = prc - (prc*(40/100)) + prc*(10/100)
+     5 | elif(cdg == 2):
+     6 | 	vnd = prc - (prc*(40/100)) + prc*(8/100)
+     7 | elif(cdg == 3):
+     8 | 	vnd = prc - (prc*(40/100)) + prc*(0/100)
+     9 | elif(cdg == 4):
+    10 | 	vnd = prc - (prc*(40/100)) + prc*(2/100)
+    11 | print(round(vnd,2))
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 7: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 7) / elif ... sem else
+      Contexto:
+               6 | 	vnd = prc - (prc*(40/100)) + prc*(8/100)
+        >>>    7 | elif(cdg == 3):
+               8 | 	vnd = prc - (prc*(40/100)) + prc*(0/100)
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 6
+
+  [1] Linha 1: Variável 'prc' com nome muito curto (≤4 chars)
+      Trecho  : prc = ...
+      Contexto:
+        >>>    1 | prc = float(input("Preco:"))
+               2 | cdg = float(input("Codigo(1-4):"))
+
+  [2] Linha 2: Variável 'cdg' com nome muito curto (≤4 chars)
+      Trecho  : cdg = ...
+      Contexto:
+               1 | prc = float(input("Preco:"))
+        >>>    2 | cdg = float(input("Codigo(1-4):"))
+               3 | if(cdg == 1):
+
+  [3] Linha 4: Variável 'vnd' com nome muito curto (≤4 chars)
+      Trecho  : vnd = ...
+      Contexto:
+               3 | if(cdg == 1):
+        >>>    4 | 	vnd = prc - (prc*(40/100)) + prc*(10/100)
+               5 | elif(cdg == 2):
+
+  [4] Linha 6: Variável 'vnd' com nome muito curto (≤4 chars)
+      Trecho  : vnd = ...
+      Contexto:
+               5 | elif(cdg == 2):
+        >>>    6 | 	vnd = prc - (prc*(40/100)) + prc*(8/100)
+               7 | elif(cdg == 3):
+
+  [5] Linha 8: Variável 'vnd' com nome muito curto (≤4 chars)
+      Trecho  : vnd = ...
+      Contexto:
+               7 | elif(cdg == 3):
+        >>>    8 | 	vnd = prc - (prc*(40/100)) + prc*(0/100)
+               9 | elif(cdg == 4):
+
+  [6] Linha 10: Variável 'vnd' com nome muito curto (≤4 chars)
+      Trecho  : vnd = ...
+      Contexto:
+               9 | elif(cdg == 4):
+        >>>   10 | 	vnd = prc - (prc*(40/100)) + prc*(2/100)
+              11 | print(round(vnd,2))
+
+======================================================================

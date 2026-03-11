@@ -1,0 +1,85 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 5390_7190.py
+Questão  : 5390
+Aluno    : 7190
+Total MCs: 2
+
+⚠️  Misconceptions detectados: A3, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import *
+     2 | 
+     3 | v = input(":").upper()
+     4 | v1 = zeros(len(v),dtype=float)
+     5 | i = 0
+     6 | c= 0
+     7 | 
+     8 | while(i<len(v)):
+     9 | 	
+    10 | 	if(v[i]== "A" or v[i]=="E" or v[i]=="I" or v[i]=="O" or v[i]=="U"):
+    11 | 		v1[i]= 0.19
+    12 | 
+    13 | 	else:
+    14 | 		v1[i]= 0.23
+    15 | 
+    16 | 	i = i+1
+    17 | 	
+    18 | print(round(sum(v1),2))
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 1
+
+  [1] Linha 6: Variável 'c' declarada mas nunca utilizada
+      Trecho  : c = ...
+      Contexto:
+               5 | i = 0
+        >>>    6 | c= 0
+               7 | 
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 5
+
+  [1] Linha 3: Variável 'v' com nome muito curto (≤4 chars)
+      Trecho  : v = ...
+      Contexto:
+               2 | 
+        >>>    3 | v = input(":").upper()
+               4 | v1 = zeros(len(v),dtype=float)
+
+  [2] Linha 4: Variável 'v1' com nome muito curto (≤4 chars)
+      Trecho  : v1 = ...
+      Contexto:
+               3 | v = input(":").upper()
+        >>>    4 | v1 = zeros(len(v),dtype=float)
+               5 | i = 0
+
+  [3] Linha 5: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+               4 | v1 = zeros(len(v),dtype=float)
+        >>>    5 | i = 0
+               6 | c= 0
+
+  [4] Linha 6: Variável 'c' com nome muito curto (≤4 chars)
+      Trecho  : c = ...
+      Contexto:
+               5 | i = 0
+        >>>    6 | c= 0
+               7 | 
+
+  [5] Linha 16: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+              15 | 
+        >>>   16 | 	i = i+1
+              17 | 	
+
+======================================================================

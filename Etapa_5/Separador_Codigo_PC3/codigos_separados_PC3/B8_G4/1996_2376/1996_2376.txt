@@ -1,0 +1,127 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1996_2376.py
+Questão  : 1996
+Aluno    : 2376
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | #Inserindo o tipo de aminoacido
+     2 | m = input("Insira o nome do aminoacido: ").lower()
+     3 | 
+     4 | #Pesos moleculares de um atomo
+     5 | #Oxigenio
+     6 | o = 15.9994
+     7 | #Carbono
+     8 | c = 12.011
+     9 | #Nitrogenio
+    10 | n = 14.0067
+    11 | #Enxofre
+    12 | e = 32.066
+    13 | #Hidrogenio
+    14 | h = 1.0079
+    15 | 
+    16 | #Validacao de entradas
+    17 | if (m != "aspartato") and (m != "fenilalanina") and (m != "tirosina"):
+    18 | 	print("Entrada:", m)
+    19 | 	print("Dado Invalido")
+    20 | elif (m == "aspartato"):
+    21 | 	peso = (4 * c) + (6 * h) + n + (4 * o)
+    22 | 	print(round(peso, 2))
+    23 | elif (m == "fenilalanina"):
+    24 | 	peso = (9 * c) + (11 * h) + (2 * o) + e
+    25 | 	print(round(peso, 2))
+    26 | elif (m == "tirosina"):
+    27 | 	peso = (9 * c) + (11 * h) + n + (3 * o)
+    28 | 	print(round(peso, 2))
+    29 | 
+    30 | 
+    31 | 
+    32 | 
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 23: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 23) / elif ... sem else
+      Contexto:
+              22 | 	print(round(peso, 2))
+        >>>   23 | elif (m == "fenilalanina"):
+              24 | 	peso = (9 * c) + (11 * h) + (2 * o) + e
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 9
+
+  [1] Linha 2: Variável 'm' com nome muito curto (≤4 chars)
+      Trecho  : m = ...
+      Contexto:
+               1 | #Inserindo o tipo de aminoacido
+        >>>    2 | m = input("Insira o nome do aminoacido: ").lower()
+               3 | 
+
+  [2] Linha 6: Variável 'o' com nome muito curto (≤4 chars)
+      Trecho  : o = ...
+      Contexto:
+               5 | #Oxigenio
+        >>>    6 | o = 15.9994
+               7 | #Carbono
+
+  [3] Linha 8: Variável 'c' com nome muito curto (≤4 chars)
+      Trecho  : c = ...
+      Contexto:
+               7 | #Carbono
+        >>>    8 | c = 12.011
+               9 | #Nitrogenio
+
+  [4] Linha 10: Variável 'n' com nome muito curto (≤4 chars)
+      Trecho  : n = ...
+      Contexto:
+               9 | #Nitrogenio
+        >>>   10 | n = 14.0067
+              11 | #Enxofre
+
+  [5] Linha 12: Variável 'e' com nome muito curto (≤4 chars)
+      Trecho  : e = ...
+      Contexto:
+              11 | #Enxofre
+        >>>   12 | e = 32.066
+              13 | #Hidrogenio
+
+  [6] Linha 14: Variável 'h' com nome muito curto (≤4 chars)
+      Trecho  : h = ...
+      Contexto:
+              13 | #Hidrogenio
+        >>>   14 | h = 1.0079
+              15 | 
+
+  [7] Linha 21: Variável 'peso' com nome muito curto (≤4 chars)
+      Trecho  : peso = ...
+      Contexto:
+              20 | elif (m == "aspartato"):
+        >>>   21 | 	peso = (4 * c) + (6 * h) + n + (4 * o)
+              22 | 	print(round(peso, 2))
+
+  [8] Linha 24: Variável 'peso' com nome muito curto (≤4 chars)
+      Trecho  : peso = ...
+      Contexto:
+              23 | elif (m == "fenilalanina"):
+        >>>   24 | 	peso = (9 * c) + (11 * h) + (2 * o) + e
+              25 | 	print(round(peso, 2))
+
+  [9] Linha 27: Variável 'peso' com nome muito curto (≤4 chars)
+      Trecho  : peso = ...
+      Contexto:
+              26 | elif (m == "tirosina"):
+        >>>   27 | 	peso = (9 * c) + (11 * h) + n + (3 * o)
+              28 | 	print(round(peso, 2))
+
+======================================================================

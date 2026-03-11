@@ -1,0 +1,3 @@
+n=(int(input"valor de n:"))
+i=1
+Sc=(sqrt,1/6+1)-(sqrt,2/6+3)+(sqrt,3/6+5)-(sqrt,4/6+7)+(sqrt,5/6+9)-(sqrt,6/6+11)+...

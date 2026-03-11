@@ -1,0 +1,65 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1126_3213.py
+Questão  : 1126
+Aluno    : 3213
+Total MCs: 2
+
+⚠️  Misconceptions detectados: E1, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | nm = input("Digite o nome do Stark: ")
+     2 | n = nm.upper()
+     3 | 
+     4 | if (n == "SANSA" or n == "ROBB" or n == "RICKON" or n == "JON SNOW" or n == "BRAN" or n == "ARYA"):
+     5 | 	if (n == "SANSA"):
+     6 | 		print("Lady")
+     7 | 	elif (n == "ROBB"):
+     8 | 		print("Vento Cinzento")
+     9 | 	elif (n == "RICKON"):
+    10 | 		print("Cao Felpudo")
+    11 | 	elif (n == "JON SNOW"):
+    12 | 		print("Fantasma")
+    13 | 	elif (n == "BRAN"):
+    14 | 		print("Verao")
+    15 | 	elif (n == "ARYA"):
+    16 | 		print("Nymeria")
+    17 | 	else:
+    18 | 		print("Entrada", nm, "invalida")
+    19 | else:
+    20 | 	print("Entrada", nm, "invalida")
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ E1 — Verificação desnecessária de todas as combinações possíveis
+  Ocorrências: 1
+
+  [1] Linha 4: 6 condições em um único if — verificação excessiva
+      Trecho  : n == 'SANSA' or n == 'ROBB' or n == 'RICKON' or (n == 'JON SNOW') or (n == 'BRAN') or (n == 'ARYA')
+      Contexto:
+               3 | 
+        >>>    4 | if (n == "SANSA" or n == "ROBB" or n == "RICKON" or n == "JON SNOW" or n == "BRAN" or n == "ARYA"):
+               5 | 	if (n == "SANSA"):
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 2
+
+  [1] Linha 1: Variável 'nm' com nome muito curto (≤4 chars)
+      Trecho  : nm = ...
+      Contexto:
+        >>>    1 | nm = input("Digite o nome do Stark: ")
+               2 | n = nm.upper()
+
+  [2] Linha 2: Variável 'n' com nome muito curto (≤4 chars)
+      Trecho  : n = ...
+      Contexto:
+               1 | nm = input("Digite o nome do Stark: ")
+        >>>    2 | n = nm.upper()
+               3 | 
+
+======================================================================

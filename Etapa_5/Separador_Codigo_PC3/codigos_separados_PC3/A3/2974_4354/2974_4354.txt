@@ -1,0 +1,41 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 2974_4354.py
+Questão  : 2974
+Aluno    : 4354
+Total MCs: 1
+
+⚠️  Misconceptions detectados: A3
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | qte_acai = float(input("quantidade do acai: "))
+     2 | qte_salgados = float(input("quantidade de salgados: "))
+     3 | valor_pago = float(input("valor pago: "))
+     4 | acai = qte_acai * 0.024
+     5 | salgado = 3 * qte_salgados
+     6 | if(valor_pago == acai + salgado) :
+     7 | 	print(round(acai+salgado,2))
+     8 | 	print("Nao")
+     9 | if(valor_pago > acai + salgado) :
+    10 | 	troco = valor_pago -(acai + salgado)
+    11 | 	print(round(acai+salgado,2))
+    12 | 	print("Sim")
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 1
+
+  [1] Linha 10: Variável 'troco' declarada mas nunca utilizada
+      Trecho  : troco = ...
+      Contexto:
+               9 | if(valor_pago > acai + salgado) :
+        >>>   10 | 	troco = valor_pago -(acai + salgado)
+              11 | 	print(round(acai+salgado,2))
+
+======================================================================

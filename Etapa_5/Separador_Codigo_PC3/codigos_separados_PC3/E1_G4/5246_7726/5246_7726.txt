@@ -1,0 +1,141 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 5246_7726.py
+Questão  : 5246
+Aluno    : 7726
+Total MCs: 2
+
+⚠️  Misconceptions detectados: E1, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | i = int(input("idade: "))
+     2 | p = float(input("peso: "))
+     3 | 
+     4 | if(i>0) and (i<=20) and (p>0) and(p<=60):
+     5 | 	x = "9"
+     6 | 	print("Grupo de risco:",x)
+     7 | elif(i>0) and (i<=20) and (p>0) and (p>60) and (p<=90):
+     8 | 	x = "8"
+     9 | 	print("Grupo de risco:",x)
+    10 | elif(i>0) and (i<=20) and (p>0) and (p>=90):
+    11 | 	x = "7"
+    12 | 	print("Grupo de risco:",x)
+    13 | elif(i>0) and (i>20) and (i<=50) and (p>0) and (p<=60):
+    14 | 	x ="6"
+    15 | 	print("Grupo de risco:",x)
+    16 | elif(i>0) and (i>20) and (i<=50) and (p>0) and (p>60) and (p<=90):
+    17 | 	x ="5"
+    18 | 	print("Grupo de risco:",x)
+    19 | elif(i>0) and (i>20) and (i<=50) and (p>=90):
+    20 | 	x ="4"
+    21 | 	print("Grupo de risco:",x)
+    22 | elif(i>0) and (i>50) and (p>0) and (p<=60):
+    23 | 	x = "3"
+    24 | 	print("Grupo de risco:",x)
+    25 | elif(i>0) and (i>50) and (p>0) and (p>60) and (p<=90):
+    26 | 	x ="2"
+    27 | 	print("Grupo de risco:",x)
+    28 | elif(i>0) and (i>50) and (p>0) and (p>90):
+    29 | 	x ="1"
+    30 | 	print("Grupo de risco:",x)
+    31 | else:
+    32 | 	print("Dados invalidos")
+    33 | 	
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ E1 — Verificação desnecessária de todas as combinações possíveis
+  Ocorrências: 1
+
+  [1] Linha 16: 6 condições em um único if — verificação excessiva
+      Trecho  : i > 0 and i > 20 and (i <= 50) and (p > 0) and (p > 60) and (p <= 90)
+      Contexto:
+              15 | 	print("Grupo de risco:",x)
+        >>>   16 | elif(i>0) and (i>20) and (i<=50) and (p>0) and (p>60) and (p<=90):
+              17 | 	x ="5"
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 11
+
+  [1] Linha 1: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+        >>>    1 | i = int(input("idade: "))
+               2 | p = float(input("peso: "))
+
+  [2] Linha 2: Variável 'p' com nome muito curto (≤4 chars)
+      Trecho  : p = ...
+      Contexto:
+               1 | i = int(input("idade: "))
+        >>>    2 | p = float(input("peso: "))
+               3 | 
+
+  [3] Linha 5: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+               4 | if(i>0) and (i<=20) and (p>0) and(p<=60):
+        >>>    5 | 	x = "9"
+               6 | 	print("Grupo de risco:",x)
+
+  [4] Linha 8: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+               7 | elif(i>0) and (i<=20) and (p>0) and (p>60) and (p<=90):
+        >>>    8 | 	x = "8"
+               9 | 	print("Grupo de risco:",x)
+
+  [5] Linha 11: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+              10 | elif(i>0) and (i<=20) and (p>0) and (p>=90):
+        >>>   11 | 	x = "7"
+              12 | 	print("Grupo de risco:",x)
+
+  [6] Linha 14: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+              13 | elif(i>0) and (i>20) and (i<=50) and (p>0) and (p<=60):
+        >>>   14 | 	x ="6"
+              15 | 	print("Grupo de risco:",x)
+
+  [7] Linha 17: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+              16 | elif(i>0) and (i>20) and (i<=50) and (p>0) and (p>60) and (p<=90):
+        >>>   17 | 	x ="5"
+              18 | 	print("Grupo de risco:",x)
+
+  [8] Linha 20: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+              19 | elif(i>0) and (i>20) and (i<=50) and (p>=90):
+        >>>   20 | 	x ="4"
+              21 | 	print("Grupo de risco:",x)
+
+  [9] Linha 23: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+              22 | elif(i>0) and (i>50) and (p>0) and (p<=60):
+        >>>   23 | 	x = "3"
+              24 | 	print("Grupo de risco:",x)
+
+  [10] Linha 26: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+              25 | elif(i>0) and (i>50) and (p>0) and (p>60) and (p<=90):
+        >>>   26 | 	x ="2"
+              27 | 	print("Grupo de risco:",x)
+
+  [11] Linha 29: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+              28 | elif(i>0) and (i>50) and (p>0) and (p>90):
+        >>>   29 | 	x ="1"
+              30 | 	print("Grupo de risco:",x)
+
+======================================================================

@@ -1,0 +1,137 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 2535_3222.py
+Questão  : 2535
+Aluno    : 3222
+Total MCs: 2
+
+⚠️  Misconceptions detectados: E1, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | da = float(input("Valor depositado no Banco A: "))
+     2 | db = float(input("Valor depositado no Banco B: "))
+     3 | 
+     4 | jA = float(input("Taxa de juros no Banco A: "))
+     5 | 
+     6 | jB = float(input("Taxa de juros no Banco B: "))
+     7 | 
+     8 | DA = da
+     9 | DB = db
+    10 | m = 0
+    11 | 
+    12 | 
+    13 | if ((da > 0) and (db > 0) and (jA > 0) and (jB > 0) and (DA > DB) and (jA < jB)):
+    14 | 	while (DB < DA):
+    15 | 		DA = DA + (DA * (jA / 100))
+    16 | 		DB = DB + (DB * (jB / 100))
+    17 | 		DA = round(DA, 2)
+    18 | 		DB = round(DB, 2)
+    19 | 		m = m + 1
+    20 | 	print(m)
+    21 | else:
+    22 | 	print("Dados incorretos")
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ E1 — Verificação desnecessária de todas as combinações possíveis
+  Ocorrências: 1
+
+  [1] Linha 13: 6 condições em um único if — verificação excessiva
+      Trecho  : da > 0 and db > 0 and (jA > 0) and (jB > 0) and (DA > DB) and (jA < jB)
+      Contexto:
+              12 | 
+        >>>   13 | if ((da > 0) and (db > 0) and (jA > 0) and (jB > 0) and (DA > DB) and (jA < jB)):
+              14 | 	while (DB < DA):
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 12
+
+  [1] Linha 1: Variável 'da' com nome muito curto (≤4 chars)
+      Trecho  : da = ...
+      Contexto:
+        >>>    1 | da = float(input("Valor depositado no Banco A: "))
+               2 | db = float(input("Valor depositado no Banco B: "))
+
+  [2] Linha 2: Variável 'db' com nome muito curto (≤4 chars)
+      Trecho  : db = ...
+      Contexto:
+               1 | da = float(input("Valor depositado no Banco A: "))
+        >>>    2 | db = float(input("Valor depositado no Banco B: "))
+               3 | 
+
+  [3] Linha 4: Variável 'jA' com nome muito curto (≤4 chars)
+      Trecho  : jA = ...
+      Contexto:
+               3 | 
+        >>>    4 | jA = float(input("Taxa de juros no Banco A: "))
+               5 | 
+
+  [4] Linha 6: Variável 'jB' com nome muito curto (≤4 chars)
+      Trecho  : jB = ...
+      Contexto:
+               5 | 
+        >>>    6 | jB = float(input("Taxa de juros no Banco B: "))
+               7 | 
+
+  [5] Linha 8: Variável 'DA' com nome muito curto (≤4 chars)
+      Trecho  : DA = ...
+      Contexto:
+               7 | 
+        >>>    8 | DA = da
+               9 | DB = db
+
+  [6] Linha 9: Variável 'DB' com nome muito curto (≤4 chars)
+      Trecho  : DB = ...
+      Contexto:
+               8 | DA = da
+        >>>    9 | DB = db
+              10 | m = 0
+
+  [7] Linha 10: Variável 'm' com nome muito curto (≤4 chars)
+      Trecho  : m = ...
+      Contexto:
+               9 | DB = db
+        >>>   10 | m = 0
+              11 | 
+
+  [8] Linha 15: Variável 'DA' com nome muito curto (≤4 chars)
+      Trecho  : DA = ...
+      Contexto:
+              14 | 	while (DB < DA):
+        >>>   15 | 		DA = DA + (DA * (jA / 100))
+              16 | 		DB = DB + (DB * (jB / 100))
+
+  [9] Linha 16: Variável 'DB' com nome muito curto (≤4 chars)
+      Trecho  : DB = ...
+      Contexto:
+              15 | 		DA = DA + (DA * (jA / 100))
+        >>>   16 | 		DB = DB + (DB * (jB / 100))
+              17 | 		DA = round(DA, 2)
+
+  [10] Linha 17: Variável 'DA' com nome muito curto (≤4 chars)
+      Trecho  : DA = ...
+      Contexto:
+              16 | 		DB = DB + (DB * (jB / 100))
+        >>>   17 | 		DA = round(DA, 2)
+              18 | 		DB = round(DB, 2)
+
+  [11] Linha 18: Variável 'DB' com nome muito curto (≤4 chars)
+      Trecho  : DB = ...
+      Contexto:
+              17 | 		DA = round(DA, 2)
+        >>>   18 | 		DB = round(DB, 2)
+              19 | 		m = m + 1
+
+  [12] Linha 19: Variável 'm' com nome muito curto (≤4 chars)
+      Trecho  : m = ...
+      Contexto:
+              18 | 		DB = round(DB, 2)
+        >>>   19 | 		m = m + 1
+              20 | 	print(m)
+
+======================================================================

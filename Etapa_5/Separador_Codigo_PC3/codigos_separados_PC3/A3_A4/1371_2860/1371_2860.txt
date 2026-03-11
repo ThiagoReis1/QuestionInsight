@@ -1,0 +1,95 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1371_2860.py
+Questão  : 1371
+Aluno    : 2860
+Total MCs: 2
+
+⚠️  Misconceptions detectados: A3, A4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | input(int("Qual a quantidade de antidoto em gramas?"))
+     2 | 
+     3 | cascaDe_comeia = proporcaoA
+     4 | alho = proporcaoB
+     5 | oleoDe_troll = proporcaoC
+     6 | 
+     7 | proporcaoA = quantidadeA
+     8 | proporcaoB = quantidadeB
+     9 | proporcaoC = quantidadeC
+    10 | 
+    11 | print = input(int(quantidadeA))
+    12 | print = input(int(quantidadeB))
+    13 | print = input(int(quantidadeC))
+    14 | 
+    15 | print = int(grama,2)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 4
+
+  [1] Linha 3: Variável 'cascaDe_comeia' declarada mas nunca utilizada
+      Trecho  : cascaDe_comeia = ...
+      Contexto:
+               2 | 
+        >>>    3 | cascaDe_comeia = proporcaoA
+               4 | alho = proporcaoB
+
+  [2] Linha 4: Variável 'alho' declarada mas nunca utilizada
+      Trecho  : alho = ...
+      Contexto:
+               3 | cascaDe_comeia = proporcaoA
+        >>>    4 | alho = proporcaoB
+               5 | oleoDe_troll = proporcaoC
+
+  [3] Linha 5: Variável 'oleoDe_troll' declarada mas nunca utilizada
+      Trecho  : oleoDe_troll = ...
+      Contexto:
+               4 | alho = proporcaoB
+        >>>    5 | oleoDe_troll = proporcaoC
+               6 | 
+
+  [4] Linha 11: Variável 'print' declarada mas nunca utilizada
+      Trecho  : print = ...
+      Contexto:
+              10 | 
+        >>>   11 | print = input(int(quantidadeA))
+              12 | print = input(int(quantidadeB))
+
+▶ A4 — Redefinição de built-in
+  Ocorrências: 4
+
+  [1] Linha 11: Built-in 'print' redefinido como variável
+      Trecho  : print = input(int(quantidadeA))
+      Contexto:
+              10 | 
+        >>>   11 | print = input(int(quantidadeA))
+              12 | print = input(int(quantidadeB))
+
+  [2] Linha 12: Built-in 'print' redefinido como variável
+      Trecho  : print = input(int(quantidadeB))
+      Contexto:
+              11 | print = input(int(quantidadeA))
+        >>>   12 | print = input(int(quantidadeB))
+              13 | print = input(int(quantidadeC))
+
+  [3] Linha 13: Built-in 'print' redefinido como variável
+      Trecho  : print = input(int(quantidadeC))
+      Contexto:
+              12 | print = input(int(quantidadeB))
+        >>>   13 | print = input(int(quantidadeC))
+              14 | 
+
+  [4] Linha 15: Built-in 'print' redefinido como variável
+      Trecho  : print = int(grama, 2)
+      Contexto:
+              14 | 
+        >>>   15 | print = int(grama,2)
+
+======================================================================

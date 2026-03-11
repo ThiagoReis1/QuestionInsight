@@ -1,0 +1,71 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1122_3344.py
+Questão  : 1122
+Aluno    : 3344
+Total MCs: 3
+
+⚠️  Misconceptions detectados: B8, E1, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | a = input("Digite: ")
+     2 | 
+     3 | if(a == "Snow" or a == "Stone" or a=="Rivers" or a=="Storm" or a=="Sand" or a== "Pyke" or a=="Flowers" or a== "Hill" or a=="Waters"):
+     4 | 	if(a == "Snow"):
+     5 | 		print("Norte")
+     6 | 	elif(a=="Stone"):
+     7 | 		print("Vale")
+     8 | 	elif(a=="Rivers"):
+     9 | 		print("Terras Fluviais")
+    10 | 	elif(a== "Storm"):
+    11 | 		print("Terras da Tempestade")
+    12 | 	elif(a=="Sand"):
+    13 | 		print("Dorne")
+    14 | 	elif(a=="Pyke"):
+    15 | 		print("Ilhas de Ferro")
+    16 | 	elif(a=="Flowers"):
+    17 | 		print("Campina")
+    18 | 	elif("Hill"):
+    19 | 		print("Terras Ocidentais")
+    20 | 	elif("Waters"):
+    21 | 		print("Terras da Coroa")
+    22 | else:
+    23 | 	print("Entrada",a,"invalida")
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 18: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 18) / elif ... sem else
+      Contexto:
+              17 | 		print("Campina")
+        >>>   18 | 	elif("Hill"):
+              19 | 		print("Terras Ocidentais")
+
+▶ E1 — Verificação desnecessária de todas as combinações possíveis
+  Ocorrências: 1
+
+  [1] Linha 3: 9 condições em um único if — verificação excessiva
+      Trecho  : a == 'Snow' or a == 'Stone' or a == 'Rivers' or (a == 'Storm') or (a == 'Sand') or (a == 'Pyke') or (a == 'Flowers') or (a == 'Hill') or (a == 'Waters')
+      Contexto:
+               2 | 
+        >>>    3 | if(a == "Snow" or a == "Stone" or a=="Rivers" or a=="Storm" or a=="Sand" or a== "Pyke" or a=="Flowers" or a== "Hill" or a=="Waters"):
+               4 | 	if(a == "Snow"):
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 1
+
+  [1] Linha 1: Variável 'a' com nome muito curto (≤4 chars)
+      Trecho  : a = ...
+      Contexto:
+        >>>    1 | a = input("Digite: ")
+               2 | 
+
+======================================================================

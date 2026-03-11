@@ -1,0 +1,75 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1642_9233.py
+Questão  : 1642
+Aluno    : 9233
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | 
+     2 | v = array(eval(input("quantidade de cinco alunos: ")))
+     3 | 
+     4 | cinco = 0 
+     5 |  #contar grupos
+     6 | for i in range(size(v)):
+     7 | 	if (v[i]%5 ==0):
+     8 | 		cinco+= 1
+     9 | 		
+    10 | #vetor com quantidade de cinco 
+    11 | a = zeros(cinco, dtype = int)
+    12 | 
+    13 | x=0
+    14 | for i in range(size(v)):
+    15 | 	if i == 0 and v [0] % 5 ==0:
+    16 | 		a[0] = 0 
+    17 | 		x+=1
+    18 | 	elif(v[i] % 5 ==0):
+    19 | 		a[x]= i
+    20 | 		x += 1
+    21 | print(cinco)
+    22 | print(a)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 15: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 15) / elif ... sem else
+      Contexto:
+              14 | for i in range(size(v)):
+        >>>   15 | 	if i == 0 and v [0] % 5 ==0:
+              16 | 		a[0] = 0 
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 3
+
+  [1] Linha 2: Variável 'v' com nome muito curto (≤4 chars)
+      Trecho  : v = ...
+      Contexto:
+               1 | 
+        >>>    2 | v = array(eval(input("quantidade de cinco alunos: ")))
+               3 | 
+
+  [2] Linha 11: Variável 'a' com nome muito curto (≤4 chars)
+      Trecho  : a = ...
+      Contexto:
+              10 | #vetor com quantidade de cinco 
+        >>>   11 | a = zeros(cinco, dtype = int)
+              12 | 
+
+  [3] Linha 13: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+              12 | 
+        >>>   13 | x=0
+              14 | for i in range(size(v)):
+
+======================================================================

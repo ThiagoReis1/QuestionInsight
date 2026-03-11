@@ -1,0 +1,195 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 3593_8731.py
+Questão  : 3593
+Aluno    : 8731
+Total MCs: 3
+
+⚠️  Misconceptions detectados: B4, B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import *
+     2 | num = array(eval(input("dados lancados: ")))
+     3 | 
+     4 | i=0  
+     5 | cont=200
+     6 | while i < size(num):
+     7 | 	if num[i] == 1:
+     8 | 		cont = cont / 2
+     9 | 	elif num [i] == 2:
+    10 | 		cont = cont * 3
+    11 | 	elif num [i] == 3:
+    12 | 		cont = cont / 2
+    13 | 	elif num [i] == 4:
+    14 | 		cont = cont * 3 
+    15 | 	elif num [i] == 5:
+    16 | 		cont = cont / 2 
+    17 | 	elif num [i] == 6:
+    18 | 		cont = cont * 3
+    19 | 	i = i + 1
+    20 | print(round(cont, 2))
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B4 — Comandos repetidos dentro de blocos if-elif-else
+  Ocorrências: 10
+
+  [1] Linha 11: Bloco idêntico ao da linha 7
+      Trecho  : cont = cont / 2
+      Contexto:
+              10 | 		cont = cont * 3
+        >>>   11 | 	elif num [i] == 3:
+              12 | 		cont = cont / 2
+
+  [2] Linha 13: Bloco idêntico ao da linha 9
+      Trecho  : cont = cont * 3
+      Contexto:
+              12 | 		cont = cont / 2
+        >>>   13 | 	elif num [i] == 4:
+              14 | 		cont = cont * 3 
+
+  [3] Linha 15: Bloco idêntico ao da linha 7
+      Trecho  : cont = cont / 2
+      Contexto:
+              14 | 		cont = cont * 3 
+        >>>   15 | 	elif num [i] == 5:
+              16 | 		cont = cont / 2 
+
+  [4] Linha 17: Bloco idêntico ao da linha 9
+      Trecho  : cont = cont * 3
+      Contexto:
+              16 | 		cont = cont / 2 
+        >>>   17 | 	elif num [i] == 6:
+              18 | 		cont = cont * 3
+
+  [5] Linha 13: Bloco idêntico ao da linha 9
+      Trecho  : cont = cont * 3
+      Contexto:
+              12 | 		cont = cont / 2
+        >>>   13 | 	elif num [i] == 4:
+              14 | 		cont = cont * 3 
+
+  [6] Linha 15: Bloco idêntico ao da linha 11
+      Trecho  : cont = cont / 2
+      Contexto:
+              14 | 		cont = cont * 3 
+        >>>   15 | 	elif num [i] == 5:
+              16 | 		cont = cont / 2 
+
+  [7] Linha 17: Bloco idêntico ao da linha 9
+      Trecho  : cont = cont * 3
+      Contexto:
+              16 | 		cont = cont / 2 
+        >>>   17 | 	elif num [i] == 6:
+              18 | 		cont = cont * 3
+
+  [8] Linha 15: Bloco idêntico ao da linha 11
+      Trecho  : cont = cont / 2
+      Contexto:
+              14 | 		cont = cont * 3 
+        >>>   15 | 	elif num [i] == 5:
+              16 | 		cont = cont / 2 
+
+  [9] Linha 17: Bloco idêntico ao da linha 13
+      Trecho  : cont = cont * 3
+      Contexto:
+              16 | 		cont = cont / 2 
+        >>>   17 | 	elif num [i] == 6:
+              18 | 		cont = cont * 3
+
+  [10] Linha 17: Bloco idêntico ao da linha 13
+      Trecho  : cont = cont * 3
+      Contexto:
+              16 | 		cont = cont / 2 
+        >>>   17 | 	elif num [i] == 6:
+              18 | 		cont = cont * 3
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 15: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 15) / elif ... sem else
+      Contexto:
+              14 | 		cont = cont * 3 
+        >>>   15 | 	elif num [i] == 5:
+              16 | 		cont = cont / 2 
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 10
+
+  [1] Linha 2: Variável 'num' com nome muito curto (≤4 chars)
+      Trecho  : num = ...
+      Contexto:
+               1 | from numpy import *
+        >>>    2 | num = array(eval(input("dados lancados: ")))
+               3 | 
+
+  [2] Linha 4: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+               3 | 
+        >>>    4 | i=0  
+               5 | cont=200
+
+  [3] Linha 5: Variável 'cont' com nome muito curto (≤4 chars)
+      Trecho  : cont = ...
+      Contexto:
+               4 | i=0  
+        >>>    5 | cont=200
+               6 | while i < size(num):
+
+  [4] Linha 19: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+              18 | 		cont = cont * 3
+        >>>   19 | 	i = i + 1
+              20 | print(round(cont, 2))
+
+  [5] Linha 8: Variável 'cont' com nome muito curto (≤4 chars)
+      Trecho  : cont = ...
+      Contexto:
+               7 | 	if num[i] == 1:
+        >>>    8 | 		cont = cont / 2
+               9 | 	elif num [i] == 2:
+
+  [6] Linha 10: Variável 'cont' com nome muito curto (≤4 chars)
+      Trecho  : cont = ...
+      Contexto:
+               9 | 	elif num [i] == 2:
+        >>>   10 | 		cont = cont * 3
+              11 | 	elif num [i] == 3:
+
+  [7] Linha 12: Variável 'cont' com nome muito curto (≤4 chars)
+      Trecho  : cont = ...
+      Contexto:
+              11 | 	elif num [i] == 3:
+        >>>   12 | 		cont = cont / 2
+              13 | 	elif num [i] == 4:
+
+  [8] Linha 14: Variável 'cont' com nome muito curto (≤4 chars)
+      Trecho  : cont = ...
+      Contexto:
+              13 | 	elif num [i] == 4:
+        >>>   14 | 		cont = cont * 3 
+              15 | 	elif num [i] == 5:
+
+  [9] Linha 16: Variável 'cont' com nome muito curto (≤4 chars)
+      Trecho  : cont = ...
+      Contexto:
+              15 | 	elif num [i] == 5:
+        >>>   16 | 		cont = cont / 2 
+              17 | 	elif num [i] == 6:
+
+  [10] Linha 18: Variável 'cont' com nome muito curto (≤4 chars)
+      Trecho  : cont = ...
+      Contexto:
+              17 | 	elif num [i] == 6:
+        >>>   18 | 		cont = cont * 3
+              19 | 	i = i + 1
+
+======================================================================

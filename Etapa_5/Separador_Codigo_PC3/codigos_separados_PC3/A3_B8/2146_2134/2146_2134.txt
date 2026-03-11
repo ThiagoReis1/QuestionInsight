@@ -1,0 +1,65 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 2146_2134.py
+Questão  : 2146
+Aluno    : 2134
+Total MCs: 2
+
+⚠️  Misconceptions detectados: A3, B8
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | 
+     3 | a=input("digite:").lower().upper()
+     4 | b=len(a)
+     5 | 
+     6 | c_maiuscula=False
+     7 | c_minuscula=False
+     8 | 
+     9 | for i in range(b):
+    10 | 	if(a[i].islower()==True):
+    11 | 		a[i].upper()
+    12 | 	elif(a[i].isupper()==True):
+    13 | 		a[i].lower()
+    14 | 		
+    15 | 
+    16 | 		
+    17 | print(a)
+    18 | 		
+    19 | 		
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 2
+
+  [1] Linha 6: Variável 'c_maiuscula' declarada mas nunca utilizada
+      Trecho  : c_maiuscula = ...
+      Contexto:
+               5 | 
+        >>>    6 | c_maiuscula=False
+               7 | c_minuscula=False
+
+  [2] Linha 7: Variável 'c_minuscula' declarada mas nunca utilizada
+      Trecho  : c_minuscula = ...
+      Contexto:
+               6 | c_maiuscula=False
+        >>>    7 | c_minuscula=False
+               8 | 
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 10: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 10) / elif ... sem else
+      Contexto:
+               9 | for i in range(b):
+        >>>   10 | 	if(a[i].islower()==True):
+              11 | 		a[i].upper()
+
+======================================================================

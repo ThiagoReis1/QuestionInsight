@@ -1,0 +1,65 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 6767_9241.py
+Questão  : 6767
+Aluno    : 9241
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B4, H1
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | valor= float(input("insira o valor total da compra: "))
+     2 | codigo= input("digite (D) a vista, (P) pix (C1) cartao e (C2) cartao com juros: ")
+     3 | 
+     4 | if codigo == "D":
+     5 | 	total= valor - (valor * 12/100)
+     6 | 	print(round(total, 2))
+     7 | elif codigo == "P":
+     8 | 	total= valor - (valor * 12/100)
+     9 | 	print(round(total, 2))
+    10 | elif codigo == "C1":
+    11 | 	total= valor
+    12 | 	print(round(total, 2))
+    13 | else:
+    14 | 	codigo == "C2"
+    15 | 	total= valor + (valor* 7/100)
+    16 | 	print(round(total, 2))
+    17 | 	
+    18 | 	
+    19 | 	33
+    20 | 	1
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B4 — Comandos repetidos dentro de blocos if-elif-else
+  Ocorrências: 1
+
+  [1] Linha 7: Bloco idêntico ao da linha 4
+      Trecho  : total = valor - valor * 12 / 100
+      Contexto:
+               6 | 	print(round(total, 2))
+        >>>    7 | elif codigo == "P":
+               8 | 	total= valor - (valor * 12/100)
+
+▶ H1 — Declaração sem efeito
+  Ocorrências: 2
+
+  [1] Linha 19: Expressão '33' não tem efeito
+      Trecho  : 33
+      Contexto:
+              18 | 	
+        >>>   19 | 	33
+              20 | 	1
+
+  [2] Linha 20: Expressão '1' não tem efeito
+      Trecho  : 1
+      Contexto:
+              19 | 	33
+        >>>   20 | 	1
+
+======================================================================

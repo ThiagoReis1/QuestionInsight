@@ -1,0 +1,123 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1651_3242.py
+Questão  : 1651
+Aluno    : 3242
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import *
+     2 | 
+     3 | a = input("Digite ").upper()
+     4 | v = a.split(',')
+     5 | vet_z = zeros(6, dtype=int)
+     6 | mc = 0
+     7 | c = 0
+     8 | cm = 0
+     9 | em = 0
+    10 | e = 0
+    11 | me = 0
+    12 | 
+    13 | for i in range(len(v)):
+    14 | 	if v[i] == "MC":
+    15 | 		mc += 1
+    16 | 	elif v[i] == "C":
+    17 | 		c += 1
+    18 | 	elif v[i] == "CM":
+    19 | 		cm += 1
+    20 | 	elif v[i] == "EM":
+    21 | 		em += 1
+    22 | 	elif v[i] == "E":
+    23 | 		e += 1
+    24 | 	elif v[i] == "ME":
+    25 | 		me += 1
+    26 | 
+    27 | vet_z[0] = mc
+    28 | vet_z[1] = c
+    29 | vet_z[2] = cm
+    30 | vet_z[3] = em
+    31 | vet_z[4] = e
+    32 | vet_z[5] = me
+    33 | 
+    34 | print(max(vet_z))
+    35 | print(vet_z)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 22: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 22) / elif ... sem else
+      Contexto:
+              21 | 		em += 1
+        >>>   22 | 	elif v[i] == "E":
+              23 | 		e += 1
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 8
+
+  [1] Linha 3: Variável 'a' com nome muito curto (≤4 chars)
+      Trecho  : a = ...
+      Contexto:
+               2 | 
+        >>>    3 | a = input("Digite ").upper()
+               4 | v = a.split(',')
+
+  [2] Linha 4: Variável 'v' com nome muito curto (≤4 chars)
+      Trecho  : v = ...
+      Contexto:
+               3 | a = input("Digite ").upper()
+        >>>    4 | v = a.split(',')
+               5 | vet_z = zeros(6, dtype=int)
+
+  [3] Linha 6: Variável 'mc' com nome muito curto (≤4 chars)
+      Trecho  : mc = ...
+      Contexto:
+               5 | vet_z = zeros(6, dtype=int)
+        >>>    6 | mc = 0
+               7 | c = 0
+
+  [4] Linha 7: Variável 'c' com nome muito curto (≤4 chars)
+      Trecho  : c = ...
+      Contexto:
+               6 | mc = 0
+        >>>    7 | c = 0
+               8 | cm = 0
+
+  [5] Linha 8: Variável 'cm' com nome muito curto (≤4 chars)
+      Trecho  : cm = ...
+      Contexto:
+               7 | c = 0
+        >>>    8 | cm = 0
+               9 | em = 0
+
+  [6] Linha 9: Variável 'em' com nome muito curto (≤4 chars)
+      Trecho  : em = ...
+      Contexto:
+               8 | cm = 0
+        >>>    9 | em = 0
+              10 | e = 0
+
+  [7] Linha 10: Variável 'e' com nome muito curto (≤4 chars)
+      Trecho  : e = ...
+      Contexto:
+               9 | em = 0
+        >>>   10 | e = 0
+              11 | me = 0
+
+  [8] Linha 11: Variável 'me' com nome muito curto (≤4 chars)
+      Trecho  : me = ...
+      Contexto:
+              10 | e = 0
+        >>>   11 | me = 0
+              12 | 
+
+======================================================================

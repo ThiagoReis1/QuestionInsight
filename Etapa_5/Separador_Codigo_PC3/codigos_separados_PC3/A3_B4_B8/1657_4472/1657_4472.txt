@@ -1,0 +1,163 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1657_4472.py
+Questão  : 1657
+Aluno    : 4472
+Total MCs: 3
+
+⚠️  Misconceptions detectados: A3, B4, B8
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import *
+     2 | from numpy.linalg import *
+     3 | from math import *
+     4 | 
+     5 | vetor = array(eval(input("informe: ")))
+     6 | vetor1 = vetor.T
+     7 | 
+     8 | vetor2 = dot(inv(vetor),vetor1)
+     9 | i = 0
+    10 | 
+    11 | AZ = 0
+    12 | CA = 0
+    13 | FL = 0
+    14 | PA = 0
+    15 | WI = 0
+    16 | 
+    17 | if vetor[i] == "AZ":
+    18 | 	vetor[i] = vetor[i] + 1
+    19 | 	resultado = sum(vetor)
+    20 | elif vetor [i] == "CA":
+    21 | 	vetor[i] = vetor[i] + 1
+    22 | elif vetor[i] == "FL":
+    23 | 	vetor[i] = vetor[i] + 1
+    24 | elif vetor[i] == "PA":
+    25 | 	vetor[i] = vetor[i] + 1
+    26 | elif vetor[i] == "WI":
+    27 | 	vetor[i] = vetor[i] + 1
+    28 | 
+    29 | print (resultado)
+    30 | print(vetor2)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 5
+
+  [1] Linha 11: Variável 'AZ' declarada mas nunca utilizada
+      Trecho  : AZ = ...
+      Contexto:
+              10 | 
+        >>>   11 | AZ = 0
+              12 | CA = 0
+
+  [2] Linha 12: Variável 'CA' declarada mas nunca utilizada
+      Trecho  : CA = ...
+      Contexto:
+              11 | AZ = 0
+        >>>   12 | CA = 0
+              13 | FL = 0
+
+  [3] Linha 13: Variável 'FL' declarada mas nunca utilizada
+      Trecho  : FL = ...
+      Contexto:
+              12 | CA = 0
+        >>>   13 | FL = 0
+              14 | PA = 0
+
+  [4] Linha 14: Variável 'PA' declarada mas nunca utilizada
+      Trecho  : PA = ...
+      Contexto:
+              13 | FL = 0
+        >>>   14 | PA = 0
+              15 | WI = 0
+
+  [5] Linha 15: Variável 'WI' declarada mas nunca utilizada
+      Trecho  : WI = ...
+      Contexto:
+              14 | PA = 0
+        >>>   15 | WI = 0
+              16 | 
+
+▶ B4 — Comandos repetidos dentro de blocos if-elif-else
+  Ocorrências: 9
+
+  [1] Linha 22: Bloco idêntico ao da linha 20
+      Trecho  : vetor[i] = vetor[i] + 1
+      Contexto:
+              21 | 	vetor[i] = vetor[i] + 1
+        >>>   22 | elif vetor[i] == "FL":
+              23 | 	vetor[i] = vetor[i] + 1
+
+  [2] Linha 24: Bloco idêntico ao da linha 20
+      Trecho  : vetor[i] = vetor[i] + 1
+      Contexto:
+              23 | 	vetor[i] = vetor[i] + 1
+        >>>   24 | elif vetor[i] == "PA":
+              25 | 	vetor[i] = vetor[i] + 1
+
+  [3] Linha 26: Bloco idêntico ao da linha 20
+      Trecho  : vetor[i] = vetor[i] + 1
+      Contexto:
+              25 | 	vetor[i] = vetor[i] + 1
+        >>>   26 | elif vetor[i] == "WI":
+              27 | 	vetor[i] = vetor[i] + 1
+
+  [4] Linha 22: Bloco idêntico ao da linha 20
+      Trecho  : vetor[i] = vetor[i] + 1
+      Contexto:
+              21 | 	vetor[i] = vetor[i] + 1
+        >>>   22 | elif vetor[i] == "FL":
+              23 | 	vetor[i] = vetor[i] + 1
+
+  [5] Linha 24: Bloco idêntico ao da linha 20
+      Trecho  : vetor[i] = vetor[i] + 1
+      Contexto:
+              23 | 	vetor[i] = vetor[i] + 1
+        >>>   24 | elif vetor[i] == "PA":
+              25 | 	vetor[i] = vetor[i] + 1
+
+  [6] Linha 26: Bloco idêntico ao da linha 20
+      Trecho  : vetor[i] = vetor[i] + 1
+      Contexto:
+              25 | 	vetor[i] = vetor[i] + 1
+        >>>   26 | elif vetor[i] == "WI":
+              27 | 	vetor[i] = vetor[i] + 1
+
+  [7] Linha 24: Bloco idêntico ao da linha 22
+      Trecho  : vetor[i] = vetor[i] + 1
+      Contexto:
+              23 | 	vetor[i] = vetor[i] + 1
+        >>>   24 | elif vetor[i] == "PA":
+              25 | 	vetor[i] = vetor[i] + 1
+
+  [8] Linha 26: Bloco idêntico ao da linha 22
+      Trecho  : vetor[i] = vetor[i] + 1
+      Contexto:
+              25 | 	vetor[i] = vetor[i] + 1
+        >>>   26 | elif vetor[i] == "WI":
+              27 | 	vetor[i] = vetor[i] + 1
+
+  [9] Linha 26: Bloco idêntico ao da linha 24
+      Trecho  : vetor[i] = vetor[i] + 1
+      Contexto:
+              25 | 	vetor[i] = vetor[i] + 1
+        >>>   26 | elif vetor[i] == "WI":
+              27 | 	vetor[i] = vetor[i] + 1
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 24: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 24) / elif ... sem else
+      Contexto:
+              23 | 	vetor[i] = vetor[i] + 1
+        >>>   24 | elif vetor[i] == "PA":
+              25 | 	vetor[i] = vetor[i] + 1
+
+======================================================================

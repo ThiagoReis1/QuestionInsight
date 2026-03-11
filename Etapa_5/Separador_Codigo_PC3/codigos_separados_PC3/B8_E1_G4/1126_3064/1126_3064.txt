@@ -1,0 +1,65 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1126_3064.py
+Questão  : 1126
+Aluno    : 3064
+Total MCs: 3
+
+⚠️  Misconceptions detectados: B8, E1, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | # informe sem acentos e as primeiras letras do nome e sobrenome com letras maiusculas
+     2 | x= input("Digite o nome do Stark: ")
+     3 | if (x!='Sansa')and(x!='Robb')and(x!='Rickon')and(x!='Jon Snow')and(x!='Bran')and(x!='Arya'):
+     4 | 	print("Entrada",x,"invalida")
+     5 | elif (x=='Sansa'):
+     6 | 	print("Lady" )
+     7 | elif (x=='Robb'):
+     8 | 	print("Vento Cinzento")
+     9 | elif (x=='Rickon'):
+    10 | 	print("Cao Felpudo")
+    11 | elif (x=='Jon Snow'):
+    12 | 	print("Fantasma")
+    13 | elif (x=='Bran'):
+    14 | 	print("Verao")
+    15 | elif (x=='Arya'):
+    16 | 	print("Nymeria")
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 13: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 13) / elif ... sem else
+      Contexto:
+              12 | 	print("Fantasma")
+        >>>   13 | elif (x=='Bran'):
+              14 | 	print("Verao")
+
+▶ E1 — Verificação desnecessária de todas as combinações possíveis
+  Ocorrências: 1
+
+  [1] Linha 3: 6 condições em um único if — verificação excessiva
+      Trecho  : x != 'Sansa' and x != 'Robb' and (x != 'Rickon') and (x != 'Jon Snow') and (x != 'Bran') and (x != 'Arya')
+      Contexto:
+               2 | x= input("Digite o nome do Stark: ")
+        >>>    3 | if (x!='Sansa')and(x!='Robb')and(x!='Rickon')and(x!='Jon Snow')and(x!='Bran')and(x!='Arya'):
+               4 | 	print("Entrada",x,"invalida")
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 1
+
+  [1] Linha 2: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+               1 | # informe sem acentos e as primeiras letras do nome e sobrenome com letras maiusculas
+        >>>    2 | x= input("Digite o nome do Stark: ")
+               3 | if (x!='Sansa')and(x!='Robb')and(x!='Rickon')and(x!='Jon Snow')and(x!='Bran')and(x!='Arya'):
+
+======================================================================

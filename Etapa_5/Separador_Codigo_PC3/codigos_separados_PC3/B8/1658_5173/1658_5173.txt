@@ -1,0 +1,54 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1658_5173.py
+Questão  : 1658
+Aluno    : 5173
+Total MCs: 1
+
+⚠️  Misconceptions detectados: B8
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import * 
+     2 | 
+     3 | vetor = array(input("entre com: ").split(","))
+     4 | 
+     5 | acumu = zeros(5,dtype=int)
+     6 | 		
+     7 | for i in range(size(vetor)):
+     8 | 	if vetor[i] == "CHN":
+     9 | 		acumu[0] += 1
+    10 | 	elif vetor[i] == "JPN":
+    11 | 		acumu[1] += 1 
+    12 | 	elif vetor[i] == "KOR":
+    13 | 		acumu[2] += 1
+    14 | 	elif vetor[i] == "MGL":
+    15 | 		acumu[3] += 1
+    16 | 	elif vetor[i] == "THA":
+    17 | 		acumu[4] += 1
+    18 | 		
+    19 | maior = 0
+    20 | 
+    21 | for i in range(size(acumu)):
+    22 | 	if acumu[i] > maior:
+    23 | 		maior = acumu[i]
+    24 | print((maior))
+    25 | print(acumu)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 14: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 14) / elif ... sem else
+      Contexto:
+              13 | 		acumu[2] += 1
+        >>>   14 | 	elif vetor[i] == "MGL":
+              15 | 		acumu[3] += 1
+
+======================================================================

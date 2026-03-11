@@ -1,0 +1,117 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 2535_3102.py
+Questão  : 2535
+Aluno    : 3102
+Total MCs: 2
+
+⚠️  Misconceptions detectados: E1, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | va = float(input("investimento A:"))
+     2 | vb = float(input("investimento B:"))
+     3 | ja = float(input("juros A:"))/100
+     4 | jb = float(input("juros B:"))/100
+     5 | t = 0
+     6 | 
+     7 | if((va>0)and(vb>0)and(ja>0)and(jb>0)and(va>vb)and(ja<jb)):
+     8 | 	while(vb<va):
+     9 | 		va = va + va*ja
+    10 | 		vb = vb + vb * jb
+    11 | 		va = round(va,2)
+    12 | 		vb = round(vb,2)
+    13 | 		t = t+1
+    14 | 	print(t)
+    15 | else:
+    16 | 	print("Dados incorretos")
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ E1 — Verificação desnecessária de todas as combinações possíveis
+  Ocorrências: 1
+
+  [1] Linha 7: 6 condições em um único if — verificação excessiva
+      Trecho  : va > 0 and vb > 0 and (ja > 0) and (jb > 0) and (va > vb) and (ja < jb)
+      Contexto:
+               6 | 
+        >>>    7 | if((va>0)and(vb>0)and(ja>0)and(jb>0)and(va>vb)and(ja<jb)):
+               8 | 	while(vb<va):
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 10
+
+  [1] Linha 1: Variável 'va' com nome muito curto (≤4 chars)
+      Trecho  : va = ...
+      Contexto:
+        >>>    1 | va = float(input("investimento A:"))
+               2 | vb = float(input("investimento B:"))
+
+  [2] Linha 2: Variável 'vb' com nome muito curto (≤4 chars)
+      Trecho  : vb = ...
+      Contexto:
+               1 | va = float(input("investimento A:"))
+        >>>    2 | vb = float(input("investimento B:"))
+               3 | ja = float(input("juros A:"))/100
+
+  [3] Linha 3: Variável 'ja' com nome muito curto (≤4 chars)
+      Trecho  : ja = ...
+      Contexto:
+               2 | vb = float(input("investimento B:"))
+        >>>    3 | ja = float(input("juros A:"))/100
+               4 | jb = float(input("juros B:"))/100
+
+  [4] Linha 4: Variável 'jb' com nome muito curto (≤4 chars)
+      Trecho  : jb = ...
+      Contexto:
+               3 | ja = float(input("juros A:"))/100
+        >>>    4 | jb = float(input("juros B:"))/100
+               5 | t = 0
+
+  [5] Linha 5: Variável 't' com nome muito curto (≤4 chars)
+      Trecho  : t = ...
+      Contexto:
+               4 | jb = float(input("juros B:"))/100
+        >>>    5 | t = 0
+               6 | 
+
+  [6] Linha 9: Variável 'va' com nome muito curto (≤4 chars)
+      Trecho  : va = ...
+      Contexto:
+               8 | 	while(vb<va):
+        >>>    9 | 		va = va + va*ja
+              10 | 		vb = vb + vb * jb
+
+  [7] Linha 10: Variável 'vb' com nome muito curto (≤4 chars)
+      Trecho  : vb = ...
+      Contexto:
+               9 | 		va = va + va*ja
+        >>>   10 | 		vb = vb + vb * jb
+              11 | 		va = round(va,2)
+
+  [8] Linha 11: Variável 'va' com nome muito curto (≤4 chars)
+      Trecho  : va = ...
+      Contexto:
+              10 | 		vb = vb + vb * jb
+        >>>   11 | 		va = round(va,2)
+              12 | 		vb = round(vb,2)
+
+  [9] Linha 12: Variável 'vb' com nome muito curto (≤4 chars)
+      Trecho  : vb = ...
+      Contexto:
+              11 | 		va = round(va,2)
+        >>>   12 | 		vb = round(vb,2)
+              13 | 		t = t+1
+
+  [10] Linha 13: Variável 't' com nome muito curto (≤4 chars)
+      Trecho  : t = ...
+      Contexto:
+              12 | 		vb = round(vb,2)
+        >>>   13 | 		t = t+1
+              14 | 	print(t)
+
+======================================================================

@@ -1,0 +1,59 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 6245_8200.py
+Questão  : 6245
+Aluno    : 8200
+Total MCs: 2
+
+⚠️  Misconceptions detectados: A3, B8
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | pesq = input('qual opiniao(OUT): ').upper()
+     2 | cont_S = 0
+     3 | cont_I = 0
+     4 | cont_N = 0
+     5 | while pesq != 'X':
+     6 |   if pesq == 'S':
+     7 |     cont_S += 1
+     8 |   elif pesq == 'I':
+     9 |     cont_I += 1
+    10 |   elif pesq == 'N':
+    11 |     cont_N += 1
+    12 |   pesq = input('qual opiniao(IN): ').upper()
+    13 | print(cont_S)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 2
+
+  [1] Linha 3: Variável 'cont_I' declarada mas nunca utilizada
+      Trecho  : cont_I = ...
+      Contexto:
+               2 | cont_S = 0
+        >>>    3 | cont_I = 0
+               4 | cont_N = 0
+
+  [2] Linha 4: Variável 'cont_N' declarada mas nunca utilizada
+      Trecho  : cont_N = ...
+      Contexto:
+               3 | cont_I = 0
+        >>>    4 | cont_N = 0
+               5 | while pesq != 'X':
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 8: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 8) / elif ... sem else
+      Contexto:
+               7 |     cont_S += 1
+        >>>    8 |   elif pesq == 'I':
+               9 |     cont_I += 1
+
+======================================================================

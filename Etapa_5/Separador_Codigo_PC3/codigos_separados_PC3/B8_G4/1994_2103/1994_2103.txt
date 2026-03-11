@@ -1,0 +1,83 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1994_2103.py
+Questão  : 1994
+Aluno    : 2103
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | o = 15.9994
+     2 | c = 12.011
+     3 | n = 14.00674
+     4 | h = 1.0079
+     5 | 
+     6 | mol = input("Digite um aminoacido: ").lower()
+     7 | 
+     8 | if(mol!="histidina" and mol!="leucina" and mol!="lisina"):
+     9 | 	print("Entrada:",mol)
+    10 | 	print("Dado Invalido")
+    11 | else:
+    12 | 	if(mol=="histidina"):
+    13 | 		print(round(6*c + 10*h + 3*n + 2*o, 2))
+    14 | 	if(mol=="leucina"):
+    15 | 		print(round(6*c + 13*h + n + 2*o, 2))
+    16 | 	if(mol=="lisina"):
+    17 | 		print(round(c*6 + h*15 + n*2 + o*2, 2))
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 8: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 8) / elif ... sem else
+      Contexto:
+               7 | 
+        >>>    8 | if(mol!="histidina" and mol!="leucina" and mol!="lisina"):
+               9 | 	print("Entrada:",mol)
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 5
+
+  [1] Linha 1: Variável 'o' com nome muito curto (≤4 chars)
+      Trecho  : o = ...
+      Contexto:
+        >>>    1 | o = 15.9994
+               2 | c = 12.011
+
+  [2] Linha 2: Variável 'c' com nome muito curto (≤4 chars)
+      Trecho  : c = ...
+      Contexto:
+               1 | o = 15.9994
+        >>>    2 | c = 12.011
+               3 | n = 14.00674
+
+  [3] Linha 3: Variável 'n' com nome muito curto (≤4 chars)
+      Trecho  : n = ...
+      Contexto:
+               2 | c = 12.011
+        >>>    3 | n = 14.00674
+               4 | h = 1.0079
+
+  [4] Linha 4: Variável 'h' com nome muito curto (≤4 chars)
+      Trecho  : h = ...
+      Contexto:
+               3 | n = 14.00674
+        >>>    4 | h = 1.0079
+               5 | 
+
+  [5] Linha 6: Variável 'mol' com nome muito curto (≤4 chars)
+      Trecho  : mol = ...
+      Contexto:
+               5 | 
+        >>>    6 | mol = input("Digite um aminoacido: ").lower()
+               7 | 
+
+======================================================================

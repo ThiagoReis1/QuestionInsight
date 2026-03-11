@@ -1,0 +1,91 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 2147_2185.py
+Questão  : 2147
+Aluno    : 2185
+Total MCs: 1
+
+⚠️  Misconceptions detectados: G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import *
+     2 | cpf = int(input("cpf:"))
+     3 | vet = len(cpf)
+     4 | x = 0
+     5 | 
+     6 | if (len(cpf) == 11):
+     7 | 	for i in range(size(vet)):
+     8 | 		if(vet[i] % 2 != 0):
+     9 | 			x = x + 1
+    10 | 	vet2 = zeros(x, dtype = int)
+    11 | 
+    12 | 	y = 0
+    13 | 
+    14 | 	for j in range(size(vet2)):
+    15 | 		if(vet[j] % 2!= 0):
+    16 | 			vet2[y] = vet[j]
+    17 | 			y = y + 1
+    18 | 	print(vet2)
+    19 | else:
+    20 | 	print("INVALIDO")
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 7
+
+  [1] Linha 2: Variável 'cpf' com nome muito curto (≤4 chars)
+      Trecho  : cpf = ...
+      Contexto:
+               1 | from numpy import *
+        >>>    2 | cpf = int(input("cpf:"))
+               3 | vet = len(cpf)
+
+  [2] Linha 3: Variável 'vet' com nome muito curto (≤4 chars)
+      Trecho  : vet = ...
+      Contexto:
+               2 | cpf = int(input("cpf:"))
+        >>>    3 | vet = len(cpf)
+               4 | x = 0
+
+  [3] Linha 4: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+               3 | vet = len(cpf)
+        >>>    4 | x = 0
+               5 | 
+
+  [4] Linha 10: Variável 'vet2' com nome muito curto (≤4 chars)
+      Trecho  : vet2 = ...
+      Contexto:
+               9 | 			x = x + 1
+        >>>   10 | 	vet2 = zeros(x, dtype = int)
+              11 | 
+
+  [5] Linha 12: Variável 'y' com nome muito curto (≤4 chars)
+      Trecho  : y = ...
+      Contexto:
+              11 | 
+        >>>   12 | 	y = 0
+              13 | 
+
+  [6] Linha 9: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+               8 | 		if(vet[i] % 2 != 0):
+        >>>    9 | 			x = x + 1
+              10 | 	vet2 = zeros(x, dtype = int)
+
+  [7] Linha 17: Variável 'y' com nome muito curto (≤4 chars)
+      Trecho  : y = ...
+      Contexto:
+              16 | 			vet2[y] = vet[j]
+        >>>   17 | 			y = y + 1
+              18 | 	print(vet2)
+
+======================================================================

@@ -1,0 +1,63 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 2146_2126.py
+Questão  : 2146
+Aluno    : 2126
+Total MCs: 2
+
+⚠️  Misconceptions detectados: A3, B8
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | a = input("Digite algo :")
+     3 | x = len(a)
+     4 | 
+     5 | c_minuscula=False
+     6 | c_maiuscula=False
+     7 | 
+     8 | for i in range(x):
+     9 | 	if(a[i].islower()==True):
+    10 | 		a[i].upper()
+    11 | 	elif(a[i].isupper()==True):
+    12 | 		a[i].lower()
+    13 | 
+    14 | print(a)
+    15 | 
+    16 | 
+    17 | 	
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 2
+
+  [1] Linha 5: Variável 'c_minuscula' declarada mas nunca utilizada
+      Trecho  : c_minuscula = ...
+      Contexto:
+               4 | 
+        >>>    5 | c_minuscula=False
+               6 | c_maiuscula=False
+
+  [2] Linha 6: Variável 'c_maiuscula' declarada mas nunca utilizada
+      Trecho  : c_maiuscula = ...
+      Contexto:
+               5 | c_minuscula=False
+        >>>    6 | c_maiuscula=False
+               7 | 
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 9: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 9) / elif ... sem else
+      Contexto:
+               8 | for i in range(x):
+        >>>    9 | 	if(a[i].islower()==True):
+              10 | 		a[i].upper()
+
+======================================================================

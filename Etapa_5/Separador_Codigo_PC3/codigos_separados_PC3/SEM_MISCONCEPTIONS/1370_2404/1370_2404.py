@@ -1,0 +1,7 @@
+pocao = float(input("Quantidade de poção"))
+snowberry = pocao * (8.42/100)
+saisdefogo = pocao * (19.83/100)
+amanita = pocao * (71.75/100)
+print(round(snowberry, 2))
+print(round(saisdefogo,2))
+print(round(amanita, 2))

@@ -1,0 +1,136 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1111_3307.py
+Questão  : 1111
+Aluno    : 3307
+Total MCs: 2
+
+⚠️  Misconceptions detectados: A3, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | # 	UNIVERSIDADE FEDERAL DO AMAZONAS
+     2 | # NATÁLIA DE SOUSA RUFINO
+     3 | 
+     4 | # Caso 1
+     5 | nhe = float(input('Numero de horas extras de F: '))
+     6 | nhf = float(input('Numero de horas nao trabalhadas de F: '))
+     7 | nhe = round(nhe, 2)
+     8 | nhf = round(nhf, 1)
+     9 | print('Entradas:', nhe, 'horas extras e', nhf, 'horas de falta')
+    10 | 
+    11 | # Indice H
+    12 | H = nhe - ((2 / 3) * nhf)
+    13 | # Faixas de H
+    14 | f1 = 600
+    15 | f2 = 1200
+    16 | f3 = 1800
+    17 | f4 = 2400
+    18 | 
+    19 | if nhe > 0 and nhf > 0:
+    20 | 	if H <= 600:
+    21 | 		print('Gratificacao: R$ 100.0')
+    22 | 	elif H <= 1200:
+    23 | 		print('Gratificacao: R$ 200.0')
+    24 | 	elif H <= f3:
+    25 | 		print('Gratificacao: R$ 300.0')
+    26 | 	elif H <= f4:
+    27 | 		print('Gratificacao: R$ 400.0')
+    28 | 	else:
+    29 | 		print('Gratificacao: R$ 500.0')
+    30 | else: 
+    31 | 	print('Dados invalidos')
+    32 | 		
+    33 | 
+    34 | 
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 2
+
+  [1] Linha 14: Variável 'f1' declarada mas nunca utilizada
+      Trecho  : f1 = ...
+      Contexto:
+              13 | # Faixas de H
+        >>>   14 | f1 = 600
+              15 | f2 = 1200
+
+  [2] Linha 15: Variável 'f2' declarada mas nunca utilizada
+      Trecho  : f2 = ...
+      Contexto:
+              14 | f1 = 600
+        >>>   15 | f2 = 1200
+              16 | f3 = 1800
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 9
+
+  [1] Linha 5: Variável 'nhe' com nome muito curto (≤4 chars)
+      Trecho  : nhe = ...
+      Contexto:
+               4 | # Caso 1
+        >>>    5 | nhe = float(input('Numero de horas extras de F: '))
+               6 | nhf = float(input('Numero de horas nao trabalhadas de F: '))
+
+  [2] Linha 6: Variável 'nhf' com nome muito curto (≤4 chars)
+      Trecho  : nhf = ...
+      Contexto:
+               5 | nhe = float(input('Numero de horas extras de F: '))
+        >>>    6 | nhf = float(input('Numero de horas nao trabalhadas de F: '))
+               7 | nhe = round(nhe, 2)
+
+  [3] Linha 7: Variável 'nhe' com nome muito curto (≤4 chars)
+      Trecho  : nhe = ...
+      Contexto:
+               6 | nhf = float(input('Numero de horas nao trabalhadas de F: '))
+        >>>    7 | nhe = round(nhe, 2)
+               8 | nhf = round(nhf, 1)
+
+  [4] Linha 8: Variável 'nhf' com nome muito curto (≤4 chars)
+      Trecho  : nhf = ...
+      Contexto:
+               7 | nhe = round(nhe, 2)
+        >>>    8 | nhf = round(nhf, 1)
+               9 | print('Entradas:', nhe, 'horas extras e', nhf, 'horas de falta')
+
+  [5] Linha 12: Variável 'H' com nome muito curto (≤4 chars)
+      Trecho  : H = ...
+      Contexto:
+              11 | # Indice H
+        >>>   12 | H = nhe - ((2 / 3) * nhf)
+              13 | # Faixas de H
+
+  [6] Linha 14: Variável 'f1' com nome muito curto (≤4 chars)
+      Trecho  : f1 = ...
+      Contexto:
+              13 | # Faixas de H
+        >>>   14 | f1 = 600
+              15 | f2 = 1200
+
+  [7] Linha 15: Variável 'f2' com nome muito curto (≤4 chars)
+      Trecho  : f2 = ...
+      Contexto:
+              14 | f1 = 600
+        >>>   15 | f2 = 1200
+              16 | f3 = 1800
+
+  [8] Linha 16: Variável 'f3' com nome muito curto (≤4 chars)
+      Trecho  : f3 = ...
+      Contexto:
+              15 | f2 = 1200
+        >>>   16 | f3 = 1800
+              17 | f4 = 2400
+
+  [9] Linha 17: Variável 'f4' com nome muito curto (≤4 chars)
+      Trecho  : f4 = ...
+      Contexto:
+              16 | f3 = 1800
+        >>>   17 | f4 = 2400
+              18 | 
+
+======================================================================

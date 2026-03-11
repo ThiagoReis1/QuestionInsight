@@ -1,0 +1,2 @@
+v = float(input(""))
+c = 

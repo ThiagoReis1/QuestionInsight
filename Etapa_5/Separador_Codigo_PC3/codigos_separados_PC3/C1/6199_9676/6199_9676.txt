@@ -1,0 +1,44 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 6199_9676.py
+Questão  : 6199
+Aluno    : 9676
+Total MCs: 1
+
+⚠️  Misconceptions detectados: C1
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | altura_cicero = 1.8
+     2 | taxa_cicero = 0.01
+     3 | 
+     4 | altura_aluno = float(input())
+     5 | taxa_aluno = float(input())
+     6 | 
+     7 | cont = 0
+     8 | 
+     9 | while altura_aluno <= altura_cicero:
+    10 | 	altura_cicero = altura_cicero + taxa_cicero
+    11 | 	altura_aluno = altura_aluno + taxa_aluno
+    12 | 	cont += 1
+    13 | 	
+    14 | 	if altura_aluno > altura_cicero:
+    15 | 		print(cont)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ C1 — Condição while testada novamente dentro do seu bloco
+  Ocorrências: 1
+
+  [1] Linha 14: If retesta condição inversa do while da linha 9
+      Trecho  : while altura_aluno <= altura_cicero → if altura_aluno > altura_cicero
+      Contexto:
+              13 | 	
+        >>>   14 | 	if altura_aluno > altura_cicero:
+              15 | 		print(cont)
+
+======================================================================

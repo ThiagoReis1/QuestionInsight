@@ -1,0 +1,5 @@
+k = float(input("Quantos kwt foram consumidos?  "))
+mult = ((k*0.43)+10)
+sob = ((mult/100)*25)
+total = (sob + mult)
+print(round(total, 2))

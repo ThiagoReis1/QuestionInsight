@@ -1,0 +1,67 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1656_2123.py
+Questão  : 1656
+Aluno    : 2123
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | v=input("digite o pais:").upper().split(',')
+     3 | p = zeros(5,dtype=int)
+     4 | 
+     5 | for a in v:
+     6 | 	if (a=="BE"):
+     7 | 		p[0] = p[0]+1
+     8 | 	elif(a=="ES"):
+     9 | 		p[1] = p[1]+1
+    10 | 	elif(a=="FR"):
+    11 | 		p[2]=p[2]+1
+    12 | 	elif(a=="IT"):
+    13 | 		p[3]=p[3]+1
+    14 | 	elif(a=="PT"):
+    15 | 		p[4] = p[4]+1
+    16 | print(max(p))
+    17 | print(p)
+    18 | 		
+    19 | 		
+    20 | 		
+    21 | 		
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 12: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 12) / elif ... sem else
+      Contexto:
+              11 | 		p[2]=p[2]+1
+        >>>   12 | 	elif(a=="IT"):
+              13 | 		p[3]=p[3]+1
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 2
+
+  [1] Linha 2: Variável 'v' com nome muito curto (≤4 chars)
+      Trecho  : v = ...
+      Contexto:
+               1 | from numpy import*
+        >>>    2 | v=input("digite o pais:").upper().split(',')
+               3 | p = zeros(5,dtype=int)
+
+  [2] Linha 3: Variável 'p' com nome muito curto (≤4 chars)
+      Trecho  : p = ...
+      Contexto:
+               2 | v=input("digite o pais:").upper().split(',')
+        >>>    3 | p = zeros(5,dtype=int)
+               4 | 
+
+======================================================================

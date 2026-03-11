@@ -1,0 +1,157 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 3590_9742.py
+Questão  : 3590
+Aluno    : 9742
+Total MCs: 4
+
+⚠️  Misconceptions detectados: A2, B4, B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import *
+     2 | 
+     3 | n = array(eval(input("N: ")))
+     4 | i = 0 
+     5 | s = 0
+     6 | 
+     7 | while i<size(n):
+     8 | 	if n[i]==1:
+     9 | 		s = s + 10
+    10 | 	elif n[i]==2:
+    11 | 		s = s + 5
+    12 | 	elif n[i]==3:
+    13 | 		s = s
+    14 | 	elif n[i]==4:
+    15 | 		s = s + 5
+    16 | 	elif n[i]==5:
+    17 | 		s = s + 20
+    18 | 	elif n[i]==6:
+    19 | 		s = s + 10
+    20 | 	i = i + 1	
+    21 | print(s)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A2 — Variável atribuída a si mesma
+  Ocorrências: 1
+
+  [1] Linha 13: 's' atribuído a si mesmo
+      Trecho  : s = s
+      Contexto:
+              12 | 	elif n[i]==3:
+        >>>   13 | 		s = s
+              14 | 	elif n[i]==4:
+
+▶ B4 — Comandos repetidos dentro de blocos if-elif-else
+  Ocorrências: 3
+
+  [1] Linha 14: Bloco idêntico ao da linha 10
+      Trecho  : s = s + 5
+      Contexto:
+              13 | 		s = s
+        >>>   14 | 	elif n[i]==4:
+              15 | 		s = s + 5
+
+  [2] Linha 18: Bloco idêntico ao da linha 8
+      Trecho  : s = s + 10
+      Contexto:
+              17 | 		s = s + 20
+        >>>   18 | 	elif n[i]==6:
+              19 | 		s = s + 10
+
+  [3] Linha 14: Bloco idêntico ao da linha 10
+      Trecho  : s = s + 5
+      Contexto:
+              13 | 		s = s
+        >>>   14 | 	elif n[i]==4:
+              15 | 		s = s + 5
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 16: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 16) / elif ... sem else
+      Contexto:
+              15 | 		s = s + 5
+        >>>   16 | 	elif n[i]==5:
+              17 | 		s = s + 20
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 10
+
+  [1] Linha 3: Variável 'n' com nome muito curto (≤4 chars)
+      Trecho  : n = ...
+      Contexto:
+               2 | 
+        >>>    3 | n = array(eval(input("N: ")))
+               4 | i = 0 
+
+  [2] Linha 4: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+               3 | n = array(eval(input("N: ")))
+        >>>    4 | i = 0 
+               5 | s = 0
+
+  [3] Linha 5: Variável 's' com nome muito curto (≤4 chars)
+      Trecho  : s = ...
+      Contexto:
+               4 | i = 0 
+        >>>    5 | s = 0
+               6 | 
+
+  [4] Linha 20: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+              19 | 		s = s + 10
+        >>>   20 | 	i = i + 1	
+              21 | print(s)
+
+  [5] Linha 9: Variável 's' com nome muito curto (≤4 chars)
+      Trecho  : s = ...
+      Contexto:
+               8 | 	if n[i]==1:
+        >>>    9 | 		s = s + 10
+              10 | 	elif n[i]==2:
+
+  [6] Linha 11: Variável 's' com nome muito curto (≤4 chars)
+      Trecho  : s = ...
+      Contexto:
+              10 | 	elif n[i]==2:
+        >>>   11 | 		s = s + 5
+              12 | 	elif n[i]==3:
+
+  [7] Linha 13: Variável 's' com nome muito curto (≤4 chars)
+      Trecho  : s = ...
+      Contexto:
+              12 | 	elif n[i]==3:
+        >>>   13 | 		s = s
+              14 | 	elif n[i]==4:
+
+  [8] Linha 15: Variável 's' com nome muito curto (≤4 chars)
+      Trecho  : s = ...
+      Contexto:
+              14 | 	elif n[i]==4:
+        >>>   15 | 		s = s + 5
+              16 | 	elif n[i]==5:
+
+  [9] Linha 17: Variável 's' com nome muito curto (≤4 chars)
+      Trecho  : s = ...
+      Contexto:
+              16 | 	elif n[i]==5:
+        >>>   17 | 		s = s + 20
+              18 | 	elif n[i]==6:
+
+  [10] Linha 19: Variável 's' com nome muito curto (≤4 chars)
+      Trecho  : s = ...
+      Contexto:
+              18 | 	elif n[i]==6:
+        >>>   19 | 		s = s + 10
+              20 | 	i = i + 1	
+
+======================================================================

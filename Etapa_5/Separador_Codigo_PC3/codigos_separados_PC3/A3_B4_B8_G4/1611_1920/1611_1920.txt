@@ -1,0 +1,165 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1611_1920.py
+Questão  : 1611
+Aluno    : 1920
+Total MCs: 4
+
+⚠️  Misconceptions detectados: A3, B4, B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | v = array(input())
+     3 | cv = 0
+     4 | cc = 0
+     5 | i = 0
+     6 | while (i<size(v)):
+     7 | 	if ("A"== v[i]):
+     8 | 		cv +=1
+     9 | 	elif ("E"== v[i]):
+    10 | 		cv +=1
+    11 | 	elif ("I"== v[i]):
+    12 | 		cv +=1
+    13 | 	elif ("O"== v[i]):
+    14 | 		cv +=1
+    15 | 	elif ("U"== v[i]):
+    16 | 		cv +=1
+    17 | 	i += 1
+    18 | 	print(i)
+    19 | 	print(size(v))
+    20 | print (cv)
+    21 | 	
+    22 | 	
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 1
+
+  [1] Linha 4: Variável 'cc' declarada mas nunca utilizada
+      Trecho  : cc = ...
+      Contexto:
+               3 | cv = 0
+        >>>    4 | cc = 0
+               5 | i = 0
+
+▶ B4 — Comandos repetidos dentro de blocos if-elif-else
+  Ocorrências: 10
+
+  [1] Linha 9: Bloco idêntico ao da linha 7
+      Trecho  : cv += 1
+      Contexto:
+               8 | 		cv +=1
+        >>>    9 | 	elif ("E"== v[i]):
+              10 | 		cv +=1
+
+  [2] Linha 11: Bloco idêntico ao da linha 7
+      Trecho  : cv += 1
+      Contexto:
+              10 | 		cv +=1
+        >>>   11 | 	elif ("I"== v[i]):
+              12 | 		cv +=1
+
+  [3] Linha 13: Bloco idêntico ao da linha 7
+      Trecho  : cv += 1
+      Contexto:
+              12 | 		cv +=1
+        >>>   13 | 	elif ("O"== v[i]):
+              14 | 		cv +=1
+
+  [4] Linha 15: Bloco idêntico ao da linha 7
+      Trecho  : cv += 1
+      Contexto:
+              14 | 		cv +=1
+        >>>   15 | 	elif ("U"== v[i]):
+              16 | 		cv +=1
+
+  [5] Linha 11: Bloco idêntico ao da linha 9
+      Trecho  : cv += 1
+      Contexto:
+              10 | 		cv +=1
+        >>>   11 | 	elif ("I"== v[i]):
+              12 | 		cv +=1
+
+  [6] Linha 13: Bloco idêntico ao da linha 9
+      Trecho  : cv += 1
+      Contexto:
+              12 | 		cv +=1
+        >>>   13 | 	elif ("O"== v[i]):
+              14 | 		cv +=1
+
+  [7] Linha 15: Bloco idêntico ao da linha 9
+      Trecho  : cv += 1
+      Contexto:
+              14 | 		cv +=1
+        >>>   15 | 	elif ("U"== v[i]):
+              16 | 		cv +=1
+
+  [8] Linha 13: Bloco idêntico ao da linha 11
+      Trecho  : cv += 1
+      Contexto:
+              12 | 		cv +=1
+        >>>   13 | 	elif ("O"== v[i]):
+              14 | 		cv +=1
+
+  [9] Linha 15: Bloco idêntico ao da linha 11
+      Trecho  : cv += 1
+      Contexto:
+              14 | 		cv +=1
+        >>>   15 | 	elif ("U"== v[i]):
+              16 | 		cv +=1
+
+  [10] Linha 15: Bloco idêntico ao da linha 13
+      Trecho  : cv += 1
+      Contexto:
+              14 | 		cv +=1
+        >>>   15 | 	elif ("U"== v[i]):
+              16 | 		cv +=1
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 13: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 13) / elif ... sem else
+      Contexto:
+              12 | 		cv +=1
+        >>>   13 | 	elif ("O"== v[i]):
+              14 | 		cv +=1
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 4
+
+  [1] Linha 2: Variável 'v' com nome muito curto (≤4 chars)
+      Trecho  : v = ...
+      Contexto:
+               1 | from numpy import*
+        >>>    2 | v = array(input())
+               3 | cv = 0
+
+  [2] Linha 3: Variável 'cv' com nome muito curto (≤4 chars)
+      Trecho  : cv = ...
+      Contexto:
+               2 | v = array(input())
+        >>>    3 | cv = 0
+               4 | cc = 0
+
+  [3] Linha 4: Variável 'cc' com nome muito curto (≤4 chars)
+      Trecho  : cc = ...
+      Contexto:
+               3 | cv = 0
+        >>>    4 | cc = 0
+               5 | i = 0
+
+  [4] Linha 5: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+               4 | cc = 0
+        >>>    5 | i = 0
+               6 | while (i<size(v)):
+
+======================================================================

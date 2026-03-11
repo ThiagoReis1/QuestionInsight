@@ -1,0 +1,49 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1656_6407.py
+Questão  : 1656
+Aluno    : 6407
+Total MCs: 1
+
+⚠️  Misconceptions detectados: B8
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import *
+     2 | fras = input("insert countries: ").split(',')
+     3 | paises = zeros(5,dtype=int)
+     4 | for i in range(size(fras)):
+     5 | 	if(fras[i].upper() == "BE"):
+     6 | 		paises[0] = paises[0] + 1
+     7 | 	elif(fras[i].upper() == "ES"):
+     8 | 		paises[1] = paises[1] + 1
+     9 | 	elif(fras[i].upper() == "FR"):
+    10 | 		paises[2] = paises[2] + 1
+    11 | 	elif(fras[i].upper() == "IT"):
+    12 | 		paises[3] = paises[3] + 1
+    13 | 	elif(fras[i].upper() == "PT"):
+    14 | 		paises[4] = paises[4] + 1
+    15 | record = 0
+    16 | for g in range(size(paises)):
+    17 | 	if(paises[g] >= record):
+    18 | 		record = paises[g]
+    19 | print(record)
+    20 | print(paises)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 11: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 11) / elif ... sem else
+      Contexto:
+              10 | 		paises[2] = paises[2] + 1
+        >>>   11 | 	elif(fras[i].upper() == "IT"):
+              12 | 		paises[3] = paises[3] + 1
+
+======================================================================

@@ -1,0 +1,67 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 2827_7626.py
+Questão  : 2827
+Aluno    : 7626
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | 
+     3 | n= array(eval(input("")))
+     4 | i= 0
+     5 | 
+     6 | while i < size(n):
+     7 | 	if n[i] >= 9:
+     8 | 		n[i]= 10
+     9 | 	elif n[i] == 10:
+    10 | 		n[i] = n[i]+ 0
+    11 | 	elif n[i] > 4 and n[i] < 5:
+    12 | 		n[i] = 4
+    13 | 	i= i + 1
+    14 | print(n)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 9: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 9) / elif ... sem else
+      Contexto:
+               8 | 		n[i]= 10
+        >>>    9 | 	elif n[i] == 10:
+              10 | 		n[i] = n[i]+ 0
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 3
+
+  [1] Linha 3: Variável 'n' com nome muito curto (≤4 chars)
+      Trecho  : n = ...
+      Contexto:
+               2 | 
+        >>>    3 | n= array(eval(input("")))
+               4 | i= 0
+
+  [2] Linha 4: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+               3 | n= array(eval(input("")))
+        >>>    4 | i= 0
+               5 | 
+
+  [3] Linha 13: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+              12 | 		n[i] = 4
+        >>>   13 | 	i= i + 1
+              14 | print(n)
+
+======================================================================

@@ -1,0 +1,1 @@
+int=s=a====== input=[n] - g =delta s

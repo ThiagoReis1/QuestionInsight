@@ -1,0 +1,46 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1258_1431.py
+Questão  : 1258
+Aluno    : 1431
+Total MCs: 1
+
+⚠️  Misconceptions detectados: A3
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import *
+     2 | numero = float(input("digite o valor:"))
+     3 | vetorx = array(eval(input("insira o vetor:")))
+     4 | vetory = array(eval(input("insira o outro vetor:")))
+     5 | q = (numero/numero+1)
+     6 | i = 0
+     7 | soma = 0
+     8 | while (i <= size(vetorx)):
+     9 | 	for i in range (size(vetorx)):
+    10 | 		valorx = array([vetorx[i] * numero])
+    11 | 	for i in range (size(vetory)):
+    12 | 		valory = array([vetory[i]*numero])
+    13 | somavetor = valorx + valory
+    14 | resultado0 = soma + abs(somavetor[i]) ** q
+    15 | resultado1 = resultado0 ** (1/q)
+    16 | resultado2 = round(resultado2,3)
+    17 | print(resultado2)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 1
+
+  [1] Linha 15: Variável 'resultado1' declarada mas nunca utilizada
+      Trecho  : resultado1 = ...
+      Contexto:
+              14 | resultado0 = soma + abs(somavetor[i]) ** q
+        >>>   15 | resultado1 = resultado0 ** (1/q)
+              16 | resultado2 = round(resultado2,3)
+
+======================================================================

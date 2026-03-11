@@ -1,0 +1,97 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1619_2566.py
+Questão  : 1619
+Aluno    : 2566
+Total MCs: 2
+
+⚠️  Misconceptions detectados: A3, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | vt = array(eval(input("")))
+     3 | vm = array(eval(input("")))
+     4 | 
+     5 | ct = vt*0.005 
+     6 | 
+     7 | if vt[0] == 90:
+     8 | 	msg = "QUENTE"
+     9 | elif vt[1] == 45:
+    10 | 	msg = "MORNO"
+    11 | else:
+    12 | 	msg = "FRIO"
+    13 | 	
+    14 | print(round(ct, 2))
+    15 | 
+    16 | 	
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 2
+
+  [1] Linha 3: Variável 'vm' declarada mas nunca utilizada
+      Trecho  : vm = ...
+      Contexto:
+               2 | vt = array(eval(input("")))
+        >>>    3 | vm = array(eval(input("")))
+               4 | 
+
+  [2] Linha 8: Variável 'msg' declarada mas nunca utilizada
+      Trecho  : msg = ...
+      Contexto:
+               7 | if vt[0] == 90:
+        >>>    8 | 	msg = "QUENTE"
+               9 | elif vt[1] == 45:
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 6
+
+  [1] Linha 2: Variável 'vt' com nome muito curto (≤4 chars)
+      Trecho  : vt = ...
+      Contexto:
+               1 | from numpy import*
+        >>>    2 | vt = array(eval(input("")))
+               3 | vm = array(eval(input("")))
+
+  [2] Linha 3: Variável 'vm' com nome muito curto (≤4 chars)
+      Trecho  : vm = ...
+      Contexto:
+               2 | vt = array(eval(input("")))
+        >>>    3 | vm = array(eval(input("")))
+               4 | 
+
+  [3] Linha 5: Variável 'ct' com nome muito curto (≤4 chars)
+      Trecho  : ct = ...
+      Contexto:
+               4 | 
+        >>>    5 | ct = vt*0.005 
+               6 | 
+
+  [4] Linha 8: Variável 'msg' com nome muito curto (≤4 chars)
+      Trecho  : msg = ...
+      Contexto:
+               7 | if vt[0] == 90:
+        >>>    8 | 	msg = "QUENTE"
+               9 | elif vt[1] == 45:
+
+  [5] Linha 10: Variável 'msg' com nome muito curto (≤4 chars)
+      Trecho  : msg = ...
+      Contexto:
+               9 | elif vt[1] == 45:
+        >>>   10 | 	msg = "MORNO"
+              11 | else:
+
+  [6] Linha 12: Variável 'msg' com nome muito curto (≤4 chars)
+      Trecho  : msg = ...
+      Contexto:
+              11 | else:
+        >>>   12 | 	msg = "FRIO"
+              13 | 	
+
+======================================================================

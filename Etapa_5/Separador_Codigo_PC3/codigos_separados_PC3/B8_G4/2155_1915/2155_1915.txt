@@ -1,0 +1,99 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 2155_1915.py
+Questão  : 2155
+Aluno    : 1915
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | peso = array(eval(input("digite o peso: ")))
+     3 | alt = array(eval(input("digite a altura: ")))
+     4 | imc = zeros(size(peso))
+     5 | k = 0
+     6 | for i in range(size(peso)):
+     7 | 	imc[k] = round((peso[i]/alt[i]**2),2)
+     8 | 	k = k + 1
+     9 | print(imc)
+    10 | print("O MAIOR IMC DA TURMA EH:", max(imc))
+    11 | imc1 = max(imc)
+    12 | if(imc1 < 17):
+    13 | 	print("MUITO ABAIXO DO PESO")
+    14 | elif(imc1 > 17) and (imc1 < 18.49):
+    15 | 	print("ABAIXO DO PESO")
+    16 | elif(imc1 > 18.5) and (imc1 < 25.99):
+    17 | 	print("PESO NORMAL")
+    18 | elif	(imc1 > 25) and (imc1 < 29.99):
+    19 | 	print("ACIMA DO PESO")
+    20 | elif (imc1 > 30) and (imc1 < 34.99):
+    21 | 	print("OBESIDADE")
+    22 | elif (imc1 > 35) and (imc1 < 39.99):
+    23 | 	print("OBESIDADE SEVERA")
+    24 | elif( imc1 > 40):
+    25 | 	print("OBESIDADE MORBIDA")
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 22: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 22) / elif ... sem else
+      Contexto:
+              21 | 	print("OBESIDADE")
+        >>>   22 | elif (imc1 > 35) and (imc1 < 39.99):
+              23 | 	print("OBESIDADE SEVERA")
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 6
+
+  [1] Linha 2: Variável 'peso' com nome muito curto (≤4 chars)
+      Trecho  : peso = ...
+      Contexto:
+               1 | from numpy import*
+        >>>    2 | peso = array(eval(input("digite o peso: ")))
+               3 | alt = array(eval(input("digite a altura: ")))
+
+  [2] Linha 3: Variável 'alt' com nome muito curto (≤4 chars)
+      Trecho  : alt = ...
+      Contexto:
+               2 | peso = array(eval(input("digite o peso: ")))
+        >>>    3 | alt = array(eval(input("digite a altura: ")))
+               4 | imc = zeros(size(peso))
+
+  [3] Linha 4: Variável 'imc' com nome muito curto (≤4 chars)
+      Trecho  : imc = ...
+      Contexto:
+               3 | alt = array(eval(input("digite a altura: ")))
+        >>>    4 | imc = zeros(size(peso))
+               5 | k = 0
+
+  [4] Linha 5: Variável 'k' com nome muito curto (≤4 chars)
+      Trecho  : k = ...
+      Contexto:
+               4 | imc = zeros(size(peso))
+        >>>    5 | k = 0
+               6 | for i in range(size(peso)):
+
+  [5] Linha 11: Variável 'imc1' com nome muito curto (≤4 chars)
+      Trecho  : imc1 = ...
+      Contexto:
+              10 | print("O MAIOR IMC DA TURMA EH:", max(imc))
+        >>>   11 | imc1 = max(imc)
+              12 | if(imc1 < 17):
+
+  [6] Linha 8: Variável 'k' com nome muito curto (≤4 chars)
+      Trecho  : k = ...
+      Contexto:
+               7 | 	imc[k] = round((peso[i]/alt[i]**2),2)
+        >>>    8 | 	k = k + 1
+               9 | print(imc)
+
+======================================================================

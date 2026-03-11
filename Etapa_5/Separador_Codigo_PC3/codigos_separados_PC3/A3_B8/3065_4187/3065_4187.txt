@@ -1,0 +1,53 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 3065_4187.py
+Questão  : 3065
+Aluno    : 4187
+Total MCs: 2
+
+⚠️  Misconceptions detectados: A3, B8
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | tipataq = input("tipo de ataque que o cornugon utilizou:").upper()
+     2 | valdado = int(input("numero sorteado pelo dado de 4 faces:"))
+     3 | numturnos = int(input("numero de turnos ate receber magia de cura:"))
+     4 | 
+     5 | if(tipataq != "CAUDA" or tipataq != "CUSPE" or tipataq != "PATADA" ) or (valdado != 1 and valdado != 2 and valdado != 3 and valdado != 4):
+     6 | 	print("Entrada invalida")
+     7 | 	
+     8 | dano = 0
+     9 | if(tipataq == "CAUDA" and (valdado >= 1 and valdado <= 4) ):
+    10 | 	dano = valdado * numturnos
+    11 | 	print(dano)
+    12 | elif(tipataq == "CUSPE" and (valdado >= 1 and valdado <= 4)):
+    13 | 	dano = (2 * valdado) * numturnos
+    14 | 	print(dano)
+    15 | elif(tipataq == "PATADA" and (valdado >= 1 and valdado <= 4)):
+    16 | 	dano = ((2 * valdado) - 5) * numturnos
+    17 | 	print(dano)
+    18 | 	
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 1
+
+  [1] Linha 0: A3 detectado pelo VisitorMC3 (localização exata não mapeada)
+      Trecho  : —
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 12: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 12) / elif ... sem else
+      Contexto:
+              11 | 	print(dano)
+        >>>   12 | elif(tipataq == "CUSPE" and (valdado >= 1 and valdado <= 4)):
+              13 | 	dano = (2 * valdado) * numturnos
+
+======================================================================

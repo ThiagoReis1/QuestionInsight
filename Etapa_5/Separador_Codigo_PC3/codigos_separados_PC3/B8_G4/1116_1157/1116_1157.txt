@@ -1,0 +1,59 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1116_1157.py
+Questão  : 1116
+Aluno    : 1157
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | x = float(input("a"))
+     2 | y = float(input("b"))
+     3 | if(x == 1.0 , y == 2.5):
+     4 | 	print("O ponto ( 1.0 , 2.5 ) esta no quadrante 1")
+     5 | elif(x == 0.0 , y == -2.5):
+     6 | 	print("O ponto ( 0.0 , -2.5 ) esta sintuado sobre um dos eixos")
+     7 | elif(x == 0.0 , y == 0.0):
+     8 | 	print("O ponto ( 0.0 , 0.0 ) esta situado sobre um dos eixos")
+     9 | elif(x == -1.0 , y == 2.0):
+    10 | 	print("O ponto ( -1.0 , 2.0 ) esta no quadrante 2")
+    11 | elif(x == -1.0 , y == -2.5):
+    12 | 	print("O ponto ( -1.0 , -2.5 )esta no quadrante 3")  
+    13 | elif(x == 1.0 , y == -2.0):
+    14 | 	print("O ponto ( 1.0 , -2.0 )esta no quadrante 4")
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 11: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 11) / elif ... sem else
+      Contexto:
+              10 | 	print("O ponto ( -1.0 , 2.0 ) esta no quadrante 2")
+        >>>   11 | elif(x == -1.0 , y == -2.5):
+              12 | 	print("O ponto ( -1.0 , -2.5 )esta no quadrante 3")  
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 2
+
+  [1] Linha 1: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+        >>>    1 | x = float(input("a"))
+               2 | y = float(input("b"))
+
+  [2] Linha 2: Variável 'y' com nome muito curto (≤4 chars)
+      Trecho  : y = ...
+      Contexto:
+               1 | x = float(input("a"))
+        >>>    2 | y = float(input("b"))
+               3 | if(x == 1.0 , y == 2.5):
+
+======================================================================

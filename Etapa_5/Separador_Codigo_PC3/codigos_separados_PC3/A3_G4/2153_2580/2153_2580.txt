@@ -1,0 +1,92 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 2153_2580.py
+Questão  : 2153
+Aluno    : 2580
+Total MCs: 2
+
+⚠️  Misconceptions detectados: A3, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from math import*
+     2 | from numpy import*
+     3 | x=array(eval(input("vetor1: ")))
+     4 | y=array(eval(input("vetor2: ")))
+     5 | z=zeros(x,dtype=float)
+     6 | w=zeros(y,dtype=float)
+     7 | i=0
+     8 | for i in range (x):
+     9 | 	for j in range (y):
+    10 | 		d=(sqrt((x[i]-y[j])**2))
+    11 | print(round(d,4))
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 2
+
+  [1] Linha 5: Variável 'z' declarada mas nunca utilizada
+      Trecho  : z = ...
+      Contexto:
+               4 | y=array(eval(input("vetor2: ")))
+        >>>    5 | z=zeros(x,dtype=float)
+               6 | w=zeros(y,dtype=float)
+
+  [2] Linha 6: Variável 'w' declarada mas nunca utilizada
+      Trecho  : w = ...
+      Contexto:
+               5 | z=zeros(x,dtype=float)
+        >>>    6 | w=zeros(y,dtype=float)
+               7 | i=0
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 6
+
+  [1] Linha 3: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+               2 | from numpy import*
+        >>>    3 | x=array(eval(input("vetor1: ")))
+               4 | y=array(eval(input("vetor2: ")))
+
+  [2] Linha 4: Variável 'y' com nome muito curto (≤4 chars)
+      Trecho  : y = ...
+      Contexto:
+               3 | x=array(eval(input("vetor1: ")))
+        >>>    4 | y=array(eval(input("vetor2: ")))
+               5 | z=zeros(x,dtype=float)
+
+  [3] Linha 5: Variável 'z' com nome muito curto (≤4 chars)
+      Trecho  : z = ...
+      Contexto:
+               4 | y=array(eval(input("vetor2: ")))
+        >>>    5 | z=zeros(x,dtype=float)
+               6 | w=zeros(y,dtype=float)
+
+  [4] Linha 6: Variável 'w' com nome muito curto (≤4 chars)
+      Trecho  : w = ...
+      Contexto:
+               5 | z=zeros(x,dtype=float)
+        >>>    6 | w=zeros(y,dtype=float)
+               7 | i=0
+
+  [5] Linha 7: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+               6 | w=zeros(y,dtype=float)
+        >>>    7 | i=0
+               8 | for i in range (x):
+
+  [6] Linha 10: Variável 'd' com nome muito curto (≤4 chars)
+      Trecho  : d = ...
+      Contexto:
+               9 | 	for j in range (y):
+        >>>   10 | 		d=(sqrt((x[i]-y[j])**2))
+              11 | print(round(d,4))
+
+======================================================================

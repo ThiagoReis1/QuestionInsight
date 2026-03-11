@@ -1,0 +1,154 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 2155_2201.py
+Questão  : 2155
+Aluno    : 2201
+Total MCs: 2
+
+⚠️  Misconceptions detectados: A3, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | 
+     3 | p = array(eval(input()))
+     4 | a = array(eval(input()))
+     5 | k = size(p)
+     6 | m = zeros(k, dtype=float)
+     7 | j = 0
+     8 | while (j < size(p)):
+     9 | 	imc = p[j]/(a[j]**2)
+    10 | 	m[j] = (round(m[j] + imc, 2))
+    11 | 	j = j + 1
+    12 | if (max(m) < 17.00):
+    13 | 	l = "MUITO ABAIXO DO PESO"
+    14 | if (max(m) >= 17.00 and max(m) <= 18.49):
+    15 | 	l = "ABAIXO DO PESO"
+    16 | if (max(m) >= 18.50 and max(m) <= 24.99):
+    17 | 	l = "PESO NORMAL"
+    18 | if (max(m) >= 25.00 and max(m) <= 29.99):
+    19 | 	l = "ACIMA DO PESO"
+    20 | if (max(m) >= 30.00 and max(m) <= 34.99):
+    21 | 	l = "OBESIDADE"
+    22 | if (max(m) >= 35.00 and max(m) <= 39.99):
+    23 | 	l = "OBESIDADE SEVERA"
+    24 | if (max(m) >= 40.00):
+    25 | 	l = "OBESIDADE MORBIDA"
+    26 | print(m)
+    27 | print("O MAIOR IMC DA TURMA EH:",round(max(m),2))
+    28 | print(l)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 1
+
+  [1] Linha 0: A3 detectado pelo VisitorMC3 (localização exata não mapeada)
+      Trecho  : —
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 14
+
+  [1] Linha 3: Variável 'p' com nome muito curto (≤4 chars)
+      Trecho  : p = ...
+      Contexto:
+               2 | 
+        >>>    3 | p = array(eval(input()))
+               4 | a = array(eval(input()))
+
+  [2] Linha 4: Variável 'a' com nome muito curto (≤4 chars)
+      Trecho  : a = ...
+      Contexto:
+               3 | p = array(eval(input()))
+        >>>    4 | a = array(eval(input()))
+               5 | k = size(p)
+
+  [3] Linha 5: Variável 'k' com nome muito curto (≤4 chars)
+      Trecho  : k = ...
+      Contexto:
+               4 | a = array(eval(input()))
+        >>>    5 | k = size(p)
+               6 | m = zeros(k, dtype=float)
+
+  [4] Linha 6: Variável 'm' com nome muito curto (≤4 chars)
+      Trecho  : m = ...
+      Contexto:
+               5 | k = size(p)
+        >>>    6 | m = zeros(k, dtype=float)
+               7 | j = 0
+
+  [5] Linha 7: Variável 'j' com nome muito curto (≤4 chars)
+      Trecho  : j = ...
+      Contexto:
+               6 | m = zeros(k, dtype=float)
+        >>>    7 | j = 0
+               8 | while (j < size(p)):
+
+  [6] Linha 9: Variável 'imc' com nome muito curto (≤4 chars)
+      Trecho  : imc = ...
+      Contexto:
+               8 | while (j < size(p)):
+        >>>    9 | 	imc = p[j]/(a[j]**2)
+              10 | 	m[j] = (round(m[j] + imc, 2))
+
+  [7] Linha 11: Variável 'j' com nome muito curto (≤4 chars)
+      Trecho  : j = ...
+      Contexto:
+              10 | 	m[j] = (round(m[j] + imc, 2))
+        >>>   11 | 	j = j + 1
+              12 | if (max(m) < 17.00):
+
+  [8] Linha 13: Variável 'l' com nome muito curto (≤4 chars)
+      Trecho  : l = ...
+      Contexto:
+              12 | if (max(m) < 17.00):
+        >>>   13 | 	l = "MUITO ABAIXO DO PESO"
+              14 | if (max(m) >= 17.00 and max(m) <= 18.49):
+
+  [9] Linha 15: Variável 'l' com nome muito curto (≤4 chars)
+      Trecho  : l = ...
+      Contexto:
+              14 | if (max(m) >= 17.00 and max(m) <= 18.49):
+        >>>   15 | 	l = "ABAIXO DO PESO"
+              16 | if (max(m) >= 18.50 and max(m) <= 24.99):
+
+  [10] Linha 17: Variável 'l' com nome muito curto (≤4 chars)
+      Trecho  : l = ...
+      Contexto:
+              16 | if (max(m) >= 18.50 and max(m) <= 24.99):
+        >>>   17 | 	l = "PESO NORMAL"
+              18 | if (max(m) >= 25.00 and max(m) <= 29.99):
+
+  [11] Linha 19: Variável 'l' com nome muito curto (≤4 chars)
+      Trecho  : l = ...
+      Contexto:
+              18 | if (max(m) >= 25.00 and max(m) <= 29.99):
+        >>>   19 | 	l = "ACIMA DO PESO"
+              20 | if (max(m) >= 30.00 and max(m) <= 34.99):
+
+  [12] Linha 21: Variável 'l' com nome muito curto (≤4 chars)
+      Trecho  : l = ...
+      Contexto:
+              20 | if (max(m) >= 30.00 and max(m) <= 34.99):
+        >>>   21 | 	l = "OBESIDADE"
+              22 | if (max(m) >= 35.00 and max(m) <= 39.99):
+
+  [13] Linha 23: Variável 'l' com nome muito curto (≤4 chars)
+      Trecho  : l = ...
+      Contexto:
+              22 | if (max(m) >= 35.00 and max(m) <= 39.99):
+        >>>   23 | 	l = "OBESIDADE SEVERA"
+              24 | if (max(m) >= 40.00):
+
+  [14] Linha 25: Variável 'l' com nome muito curto (≤4 chars)
+      Trecho  : l = ...
+      Contexto:
+              24 | if (max(m) >= 40.00):
+        >>>   25 | 	l = "OBESIDADE MORBIDA"
+              26 | print(m)
+
+======================================================================

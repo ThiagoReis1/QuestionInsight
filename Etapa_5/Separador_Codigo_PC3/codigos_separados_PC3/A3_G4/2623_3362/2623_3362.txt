@@ -1,0 +1,80 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 2623_3362.py
+Questão  : 2623
+Aluno    : 3362
+Total MCs: 2
+
+⚠️  Misconceptions detectados: A3, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import *
+     2 | from numpy.linalg import *
+     3 | 
+     4 | a = array(eval(input("digite: ")))
+     5 | 
+     6 | lin = a.shape[1]
+     7 | b= zeros(lin,dtype=int)
+     8 | 
+     9 | for i in range(size(a)):
+    10 | 	b[i]= sum(a[:,i])
+    11 | ind = 0
+    12 | for i in range(size(b)):
+    13 | 	if (min(b) == b)[i]:
+    14 | 		ind = i
+    15 | print(ind)	
+    16 | 	
+    17 | 		
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 1
+
+  [1] Linha 0: A3 detectado pelo VisitorMC3 (localização exata não mapeada)
+      Trecho  : —
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 5
+
+  [1] Linha 4: Variável 'a' com nome muito curto (≤4 chars)
+      Trecho  : a = ...
+      Contexto:
+               3 | 
+        >>>    4 | a = array(eval(input("digite: ")))
+               5 | 
+
+  [2] Linha 6: Variável 'lin' com nome muito curto (≤4 chars)
+      Trecho  : lin = ...
+      Contexto:
+               5 | 
+        >>>    6 | lin = a.shape[1]
+               7 | b= zeros(lin,dtype=int)
+
+  [3] Linha 7: Variável 'b' com nome muito curto (≤4 chars)
+      Trecho  : b = ...
+      Contexto:
+               6 | lin = a.shape[1]
+        >>>    7 | b= zeros(lin,dtype=int)
+               8 | 
+
+  [4] Linha 11: Variável 'ind' com nome muito curto (≤4 chars)
+      Trecho  : ind = ...
+      Contexto:
+              10 | 	b[i]= sum(a[:,i])
+        >>>   11 | ind = 0
+              12 | for i in range(size(b)):
+
+  [5] Linha 14: Variável 'ind' com nome muito curto (≤4 chars)
+      Trecho  : ind = ...
+      Contexto:
+              13 | 	if (min(b) == b)[i]:
+        >>>   14 | 		ind = i
+              15 | print(ind)	
+
+======================================================================

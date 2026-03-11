@@ -1,0 +1,118 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1614_4066.py
+Questão  : 1614
+Aluno    : 4066
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import *
+     2 | n = array(eval(input("Nome dos alimentos: ")))
+     3 | q = array(eval(input("Quantidade: ")), dtype=float)
+     4 | 
+     5 | t = 0
+     6 | 
+     7 | qt = 0
+     8 | i = 0
+     9 | 
+    10 | while (t < size(q)):
+    11 | 	if (n[t] == "BANANA"):
+    12 | 		q[t] = q[t]*(0.97)
+    13 | 	elif (n[t] == "BIFE"):
+    14 | 		q[t] = q[t]*(2.95)
+    15 | 	elif (n[t] == "FEIJOADA"):
+    16 | 		q[t] = q[t]*(1.27)
+    17 | 	elif (n[t] == "OMELETE"):
+    18 | 		q[t] = q[t]*(1.04)
+    19 | 	elif (n[t] == "TOMATE"):
+    20 | 		q[t] = q[t]*(0.2)
+    21 | 
+    22 | 	t = t + 1
+    23 | 	
+    24 | while (i < size(q)):
+    25 | 	qt = qt + q[i]
+    26 | 	i = i + 1
+    27 | 	
+    28 | print(qt)
+    29 | 
+    30 | 
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 17: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 17) / elif ... sem else
+      Contexto:
+              16 | 		q[t] = q[t]*(1.27)
+        >>>   17 | 	elif (n[t] == "OMELETE"):
+              18 | 		q[t] = q[t]*(1.04)
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 8
+
+  [1] Linha 2: Variável 'n' com nome muito curto (≤4 chars)
+      Trecho  : n = ...
+      Contexto:
+               1 | from numpy import *
+        >>>    2 | n = array(eval(input("Nome dos alimentos: ")))
+               3 | q = array(eval(input("Quantidade: ")), dtype=float)
+
+  [2] Linha 3: Variável 'q' com nome muito curto (≤4 chars)
+      Trecho  : q = ...
+      Contexto:
+               2 | n = array(eval(input("Nome dos alimentos: ")))
+        >>>    3 | q = array(eval(input("Quantidade: ")), dtype=float)
+               4 | 
+
+  [3] Linha 5: Variável 't' com nome muito curto (≤4 chars)
+      Trecho  : t = ...
+      Contexto:
+               4 | 
+        >>>    5 | t = 0
+               6 | 
+
+  [4] Linha 7: Variável 'qt' com nome muito curto (≤4 chars)
+      Trecho  : qt = ...
+      Contexto:
+               6 | 
+        >>>    7 | qt = 0
+               8 | i = 0
+
+  [5] Linha 8: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+               7 | qt = 0
+        >>>    8 | i = 0
+               9 | 
+
+  [6] Linha 22: Variável 't' com nome muito curto (≤4 chars)
+      Trecho  : t = ...
+      Contexto:
+              21 | 
+        >>>   22 | 	t = t + 1
+              23 | 	
+
+  [7] Linha 25: Variável 'qt' com nome muito curto (≤4 chars)
+      Trecho  : qt = ...
+      Contexto:
+              24 | while (i < size(q)):
+        >>>   25 | 	qt = qt + q[i]
+              26 | 	i = i + 1
+
+  [8] Linha 26: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+              25 | 	qt = qt + q[i]
+        >>>   26 | 	i = i + 1
+              27 | 	
+
+======================================================================

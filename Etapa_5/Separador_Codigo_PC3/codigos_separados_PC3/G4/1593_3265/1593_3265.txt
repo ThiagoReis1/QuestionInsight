@@ -1,0 +1,69 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1593_3265.py
+Questão  : 1593
+Aluno    : 3265
+Total MCs: 1
+
+⚠️  Misconceptions detectados: G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import *
+     2 | from numpy.linalg import*
+     3 | 
+     4 | notas = array(eval(input("NOTAS: ")))
+     5 | soma = 0
+     6 | j = 0
+     7 | for i in range(size(notas)):
+     8 | 	soma = soma +(notas[i]*(i + 1))
+     9 | 	j = j + (i+1)
+    10 | m = soma/j
+    11 | print(round(m, 2))
+    12 | 
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 5
+
+  [1] Linha 5: Variável 'soma' com nome muito curto (≤4 chars)
+      Trecho  : soma = ...
+      Contexto:
+               4 | notas = array(eval(input("NOTAS: ")))
+        >>>    5 | soma = 0
+               6 | j = 0
+
+  [2] Linha 6: Variável 'j' com nome muito curto (≤4 chars)
+      Trecho  : j = ...
+      Contexto:
+               5 | soma = 0
+        >>>    6 | j = 0
+               7 | for i in range(size(notas)):
+
+  [3] Linha 10: Variável 'm' com nome muito curto (≤4 chars)
+      Trecho  : m = ...
+      Contexto:
+               9 | 	j = j + (i+1)
+        >>>   10 | m = soma/j
+              11 | print(round(m, 2))
+
+  [4] Linha 8: Variável 'soma' com nome muito curto (≤4 chars)
+      Trecho  : soma = ...
+      Contexto:
+               7 | for i in range(size(notas)):
+        >>>    8 | 	soma = soma +(notas[i]*(i + 1))
+               9 | 	j = j + (i+1)
+
+  [5] Linha 9: Variável 'j' com nome muito curto (≤4 chars)
+      Trecho  : j = ...
+      Contexto:
+               8 | 	soma = soma +(notas[i]*(i + 1))
+        >>>    9 | 	j = j + (i+1)
+              10 | m = soma/j
+
+======================================================================

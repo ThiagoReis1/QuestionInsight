@@ -1,0 +1,15 @@
+altura_bia = 1.69
+taxa_bia = 0.01
+
+altura = float(input("Diga a altura: "))
+taxa = float(input("Diga a taxa: "))
+
+cont =0 
+
+while (altura < altura_bia):
+	altura_bia = altura_bia + taxa_bia
+	altura = altura + taxa
+	cont = cont + 1
+	
+print(cont)
+	

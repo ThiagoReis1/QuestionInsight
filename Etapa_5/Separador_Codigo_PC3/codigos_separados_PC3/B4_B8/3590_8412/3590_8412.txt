@@ -1,0 +1,69 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 3590_8412.py
+Questão  : 3590
+Aluno    : 8412
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B4, B8
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import *
+     2 | vet = array(eval(input("insira o vetor: ")))
+     3 | pontuacao = 0
+     4 | 
+     5 | for i in range(size(vet)):
+     6 | 	if vet[i] == 1:
+     7 | 		pontuacao = pontuacao + 10
+     8 | 	elif vet[i] == 2:
+     9 | 		pontuacao = pontuacao + 5
+    10 | 	elif vet[i] == 4:
+    11 | 		pontuacao = pontuacao + 5
+    12 | 	elif vet[i] == 5:
+    13 | 		pontuacao = pontuacao + 20
+    14 | 	elif vet[i] == 6:
+    15 | 			pontuacao = pontuacao + 10
+    16 | print(pontuacao)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B4 — Comandos repetidos dentro de blocos if-elif-else
+  Ocorrências: 3
+
+  [1] Linha 10: Bloco idêntico ao da linha 8
+      Trecho  : pontuacao = pontuacao + 5
+      Contexto:
+               9 | 		pontuacao = pontuacao + 5
+        >>>   10 | 	elif vet[i] == 4:
+              11 | 		pontuacao = pontuacao + 5
+
+  [2] Linha 14: Bloco idêntico ao da linha 6
+      Trecho  : pontuacao = pontuacao + 10
+      Contexto:
+              13 | 		pontuacao = pontuacao + 20
+        >>>   14 | 	elif vet[i] == 6:
+              15 | 			pontuacao = pontuacao + 10
+
+  [3] Linha 10: Bloco idêntico ao da linha 8
+      Trecho  : pontuacao = pontuacao + 5
+      Contexto:
+               9 | 		pontuacao = pontuacao + 5
+        >>>   10 | 	elif vet[i] == 4:
+              11 | 		pontuacao = pontuacao + 5
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 12: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 12) / elif ... sem else
+      Contexto:
+              11 | 		pontuacao = pontuacao + 5
+        >>>   12 | 	elif vet[i] == 5:
+              13 | 		pontuacao = pontuacao + 20
+
+======================================================================

@@ -1,0 +1,61 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 2623_3350.py
+Questão  : 2623
+Aluno    : 3350
+Total MCs: 3
+
+⚠️  Misconceptions detectados: A3, B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | from numpy.linalg import*
+     3 | v = array(eval(input("")))
+     4 | i = 0
+     5 | j = 0
+     6 | menor = -1
+     7 | ind=0
+     8 | for i in range(shape(v)[0]):
+     9 | 	mt = min(v[i,:])
+    10 | 	if menor == -1:
+    11 | 		menor = mt
+    12 | 	else:
+    13 | 		if menor > mt:
+    14 | 			menor = mt
+    15 | 			ind=i
+    16 | print(ind)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 1
+
+  [1] Linha 5: Variável 'j' declarada mas nunca utilizada
+      Trecho  : j = ...
+      Contexto:
+               4 | i = 0
+        >>>    5 | j = 0
+               6 | menor = -1
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 10: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 10) / elif ... sem else
+      Contexto:
+               9 | 	mt = min(v[i,:])
+        >>>   10 | 	if menor == -1:
+              11 | 		menor = mt
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 1
+
+  [1] Linha 0: G4 detectado pelo VisitorMC3 (localização exata não mapeada)
+      Trecho  : —
+
+======================================================================

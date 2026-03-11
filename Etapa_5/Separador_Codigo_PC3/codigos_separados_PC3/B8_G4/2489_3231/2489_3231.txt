@@ -1,0 +1,134 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 2489_3231.py
+Questão  : 2489
+Aluno    : 3231
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | d = input()
+     2 | i = int(input())
+     3 | print("Entradas:", d, ",", i)
+     4 | if((d=="Porto Velho" or d=="Santarem" or d=="Belem" or d=="Tefe" or d=="Tabatinga") and i>0 and i<150):
+     5 | 		if (d == "Porto Velho"):
+     6 | 			p = 500
+     7 | 		elif (d == "Santarem"):
+     8 | 			p = 370
+     9 | 		elif (d == "Belem"):
+    10 | 			p = 600
+    11 | 		elif (d == "Tefe"):
+    12 | 			p = 360
+    13 | 		elif (d == "Tabatinga"):
+    14 | 			p = 550
+    15 | 
+    16 | 		if (i==2):
+    17 | 			x = 0
+    18 | 			print("Passagem: R$", x)
+    19 | 		elif (i>=3 and i<=12):
+    20 | 			x = p / 2
+    21 | 			print("Passagem: R$", x)
+    22 | 		elif (i >= 65):
+    23 | 			x = p - (p * 0.3)
+    24 | 			print("Passagem: R$", x)
+    25 | else:
+    26 | 	print("entradas invalidas")
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 2
+
+  [1] Linha 19: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 19) / elif ... sem else
+      Contexto:
+              18 | 			print("Passagem: R$", x)
+        >>>   19 | 		elif (i>=3 and i<=12):
+              20 | 			x = p / 2
+
+  [2] Linha 11: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 11) / elif ... sem else
+      Contexto:
+              10 | 			p = 600
+        >>>   11 | 		elif (d == "Tefe"):
+              12 | 			p = 360
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 10
+
+  [1] Linha 1: Variável 'd' com nome muito curto (≤4 chars)
+      Trecho  : d = ...
+      Contexto:
+        >>>    1 | d = input()
+               2 | i = int(input())
+
+  [2] Linha 2: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+               1 | d = input()
+        >>>    2 | i = int(input())
+               3 | print("Entradas:", d, ",", i)
+
+  [3] Linha 6: Variável 'p' com nome muito curto (≤4 chars)
+      Trecho  : p = ...
+      Contexto:
+               5 | 		if (d == "Porto Velho"):
+        >>>    6 | 			p = 500
+               7 | 		elif (d == "Santarem"):
+
+  [4] Linha 17: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+              16 | 		if (i==2):
+        >>>   17 | 			x = 0
+              18 | 			print("Passagem: R$", x)
+
+  [5] Linha 8: Variável 'p' com nome muito curto (≤4 chars)
+      Trecho  : p = ...
+      Contexto:
+               7 | 		elif (d == "Santarem"):
+        >>>    8 | 			p = 370
+               9 | 		elif (d == "Belem"):
+
+  [6] Linha 20: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+              19 | 		elif (i>=3 and i<=12):
+        >>>   20 | 			x = p / 2
+              21 | 			print("Passagem: R$", x)
+
+  [7] Linha 10: Variável 'p' com nome muito curto (≤4 chars)
+      Trecho  : p = ...
+      Contexto:
+               9 | 		elif (d == "Belem"):
+        >>>   10 | 			p = 600
+              11 | 		elif (d == "Tefe"):
+
+  [8] Linha 23: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+              22 | 		elif (i >= 65):
+        >>>   23 | 			x = p - (p * 0.3)
+              24 | 			print("Passagem: R$", x)
+
+  [9] Linha 12: Variável 'p' com nome muito curto (≤4 chars)
+      Trecho  : p = ...
+      Contexto:
+              11 | 		elif (d == "Tefe"):
+        >>>   12 | 			p = 360
+              13 | 		elif (d == "Tabatinga"):
+
+  [10] Linha 14: Variável 'p' com nome muito curto (≤4 chars)
+      Trecho  : p = ...
+      Contexto:
+              13 | 		elif (d == "Tabatinga"):
+        >>>   14 | 			p = 550
+              15 | 
+
+======================================================================

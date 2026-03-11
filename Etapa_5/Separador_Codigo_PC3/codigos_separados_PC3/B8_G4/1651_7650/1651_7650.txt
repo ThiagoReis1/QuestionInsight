@@ -1,0 +1,67 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1651_7650.py
+Questão  : 1651
+Aluno    : 7650
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | 
+     3 | tp = input("vetor:").split(',')
+     4 | vac = zeros(6 , dtype = int)
+     5 | 
+     6 | for i in range (size(tp)):
+     7 | 	if(tp[i] == "MC"):
+     8 | 		vac[0] += 1
+     9 | 	elif(tp[i] == "C"):
+    10 | 		vac[1] += 1
+    11 | 	elif(tp[i] == "CM"):
+    12 | 		vac[2] += 1
+    13 | 	elif(tp[i] == "EM"):
+    14 | 		vac[3] += 1 
+    15 | 	elif(tp[i] == "E"):
+    16 | 		vac[4] += 1
+    17 | 	elif(tp[i] == "ME"):
+    18 | 		vac[5] += 1
+    19 | 		
+    20 | print(max(vac))
+    21 | print(vac)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 15: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 15) / elif ... sem else
+      Contexto:
+              14 | 		vac[3] += 1 
+        >>>   15 | 	elif(tp[i] == "E"):
+              16 | 		vac[4] += 1
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 2
+
+  [1] Linha 3: Variável 'tp' com nome muito curto (≤4 chars)
+      Trecho  : tp = ...
+      Contexto:
+               2 | 
+        >>>    3 | tp = input("vetor:").split(',')
+               4 | vac = zeros(6 , dtype = int)
+
+  [2] Linha 4: Variável 'vac' com nome muito curto (≤4 chars)
+      Trecho  : vac = ...
+      Contexto:
+               3 | tp = input("vetor:").split(',')
+        >>>    4 | vac = zeros(6 , dtype = int)
+               5 | 
+
+======================================================================

@@ -1,0 +1,9 @@
+a=float(input())
+if(a<5000):
+	b=a*0.05
+	msg=b
+else:
+	c=a*0.04
+	d=c+60
+	msg=d
+print(round(msg,2))	

@@ -1,0 +1,110 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1647_4066.py
+Questão  : 1647
+Aluno    : 4066
+Total MCs: 2
+
+⚠️  Misconceptions detectados: A3, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | 
+     3 | v = array(eval(input("Frequencia: ")), dtype=float)
+     4 | s = size(v)
+     5 | 
+     6 | ap = 0
+     7 | for i in v:
+     8 | 	if i >= 70:
+     9 | 		ap = ap + 1
+    10 | print(ap)
+    11 | w = zeros(size(v), dtype=int)
+    12 | 
+    13 | z = zeros(ap, dtype=int)
+    14 | 
+    15 | k = 0
+    16 | 
+    17 | for j in range(s):
+    18 | 	if (v[j] >= 70):
+    19 | 		z[k] = j
+    20 | 		k = k + 1
+    21 | 
+    22 | print(z)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 1
+
+  [1] Linha 11: Variável 'w' declarada mas nunca utilizada
+      Trecho  : w = ...
+      Contexto:
+              10 | print(ap)
+        >>>   11 | w = zeros(size(v), dtype=int)
+              12 | 
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 8
+
+  [1] Linha 3: Variável 'v' com nome muito curto (≤4 chars)
+      Trecho  : v = ...
+      Contexto:
+               2 | 
+        >>>    3 | v = array(eval(input("Frequencia: ")), dtype=float)
+               4 | s = size(v)
+
+  [2] Linha 4: Variável 's' com nome muito curto (≤4 chars)
+      Trecho  : s = ...
+      Contexto:
+               3 | v = array(eval(input("Frequencia: ")), dtype=float)
+        >>>    4 | s = size(v)
+               5 | 
+
+  [3] Linha 6: Variável 'ap' com nome muito curto (≤4 chars)
+      Trecho  : ap = ...
+      Contexto:
+               5 | 
+        >>>    6 | ap = 0
+               7 | for i in v:
+
+  [4] Linha 11: Variável 'w' com nome muito curto (≤4 chars)
+      Trecho  : w = ...
+      Contexto:
+              10 | print(ap)
+        >>>   11 | w = zeros(size(v), dtype=int)
+              12 | 
+
+  [5] Linha 13: Variável 'z' com nome muito curto (≤4 chars)
+      Trecho  : z = ...
+      Contexto:
+              12 | 
+        >>>   13 | z = zeros(ap, dtype=int)
+              14 | 
+
+  [6] Linha 15: Variável 'k' com nome muito curto (≤4 chars)
+      Trecho  : k = ...
+      Contexto:
+              14 | 
+        >>>   15 | k = 0
+              16 | 
+
+  [7] Linha 9: Variável 'ap' com nome muito curto (≤4 chars)
+      Trecho  : ap = ...
+      Contexto:
+               8 | 	if i >= 70:
+        >>>    9 | 		ap = ap + 1
+              10 | print(ap)
+
+  [8] Linha 20: Variável 'k' com nome muito curto (≤4 chars)
+      Trecho  : k = ...
+      Contexto:
+              19 | 		z[k] = j
+        >>>   20 | 		k = k + 1
+              21 | 
+
+======================================================================

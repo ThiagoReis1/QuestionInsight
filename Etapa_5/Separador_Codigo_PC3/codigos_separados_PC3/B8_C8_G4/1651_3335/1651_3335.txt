@@ -1,0 +1,91 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1651_3335.py
+Questão  : 1651
+Aluno    : 3335
+Total MCs: 3
+
+⚠️  Misconceptions detectados: B8, C8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | s =  input('vetor po: ').split(',') #aqui coloca a string que vira vetor
+     3 | v = zeros(6,dtype=int) #vetor contador
+     4 | i = 0 #contador
+     5 | 
+     6 | for i in range(size(s)): #vai do primeiro elemento ate o ultimo
+     7 | 	if s[i] == 'MC': #verifica se o elemento do vetor string é igual a essa e...
+     8 | 		v[0] = v[0] + 1 #soma o elemento dessa posição do vetor contador mais 1 sempre que se repetir
+     9 | 	elif s[i] == 'C':
+    10 | 		v[1] = v[1] + 1
+    11 | 	elif s[i] == 'CM':
+    12 | 		v[2] = v[2] + 1
+    13 | 	elif s[i] == 'EM':
+    14 | 		v[3] = v[3] + 1
+    15 | 	elif s[i] == 'E':
+    16 | 		v[4] = v[4] + 1
+    17 | 	elif s[i] == 'ME':
+    18 | 		v[5] = v[5] + 1
+    19 | 	i = i + 1
+    20 | print(max(v))
+    21 | print(v)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 15: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 15) / elif ... sem else
+      Contexto:
+              14 | 		v[3] = v[3] + 1
+        >>>   15 | 	elif s[i] == 'E':
+              16 | 		v[4] = v[4] + 1
+
+▶ C8 — Loop for com sua variável de iteração sobrescrita
+  Ocorrências: 1
+
+  [1] Linha 19: Variável de iteração 'i' sobrescrita no loop
+      Trecho  : i = i + 1
+      Contexto:
+              18 | 		v[5] = v[5] + 1
+        >>>   19 | 	i = i + 1
+              20 | print(max(v))
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 4
+
+  [1] Linha 2: Variável 's' com nome muito curto (≤4 chars)
+      Trecho  : s = ...
+      Contexto:
+               1 | from numpy import*
+        >>>    2 | s =  input('vetor po: ').split(',') #aqui coloca a string que vira vetor
+               3 | v = zeros(6,dtype=int) #vetor contador
+
+  [2] Linha 3: Variável 'v' com nome muito curto (≤4 chars)
+      Trecho  : v = ...
+      Contexto:
+               2 | s =  input('vetor po: ').split(',') #aqui coloca a string que vira vetor
+        >>>    3 | v = zeros(6,dtype=int) #vetor contador
+               4 | i = 0 #contador
+
+  [3] Linha 4: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+               3 | v = zeros(6,dtype=int) #vetor contador
+        >>>    4 | i = 0 #contador
+               5 | 
+
+  [4] Linha 19: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+              18 | 		v[5] = v[5] + 1
+        >>>   19 | 	i = i + 1
+              20 | print(max(v))
+
+======================================================================

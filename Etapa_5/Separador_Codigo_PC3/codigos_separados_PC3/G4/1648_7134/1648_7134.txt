@@ -1,0 +1,92 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1648_7134.py
+Questão  : 1648
+Aluno    : 7134
+Total MCs: 1
+
+⚠️  Misconceptions detectados: G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import *
+     2 | alu = array(eval(input("alunos: ")))
+     3 | rep = 0
+     4 | j = zeros(size(alu), dtype=int)
+     5 | 
+     6 | for i in range(size(alu)):
+     7 | 	if alu[i] < 70:
+     8 | 		rep = rep + 1
+     9 | 		j[i] = i
+    10 | 		
+    11 | print(rep)
+    12 | 
+    13 | apro = zeros(rep, dtype=int)
+    14 | a = 0
+    15 | 
+    16 | for i in range(size(alu)):
+    17 | 	if alu[i] < 70:
+    18 | 		apro[a] = i
+    19 | 		a = a + 1
+    20 | 
+    21 | print(apro)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 7
+
+  [1] Linha 2: Variável 'alu' com nome muito curto (≤4 chars)
+      Trecho  : alu = ...
+      Contexto:
+               1 | from numpy import *
+        >>>    2 | alu = array(eval(input("alunos: ")))
+               3 | rep = 0
+
+  [2] Linha 3: Variável 'rep' com nome muito curto (≤4 chars)
+      Trecho  : rep = ...
+      Contexto:
+               2 | alu = array(eval(input("alunos: ")))
+        >>>    3 | rep = 0
+               4 | j = zeros(size(alu), dtype=int)
+
+  [3] Linha 4: Variável 'j' com nome muito curto (≤4 chars)
+      Trecho  : j = ...
+      Contexto:
+               3 | rep = 0
+        >>>    4 | j = zeros(size(alu), dtype=int)
+               5 | 
+
+  [4] Linha 13: Variável 'apro' com nome muito curto (≤4 chars)
+      Trecho  : apro = ...
+      Contexto:
+              12 | 
+        >>>   13 | apro = zeros(rep, dtype=int)
+              14 | a = 0
+
+  [5] Linha 14: Variável 'a' com nome muito curto (≤4 chars)
+      Trecho  : a = ...
+      Contexto:
+              13 | apro = zeros(rep, dtype=int)
+        >>>   14 | a = 0
+              15 | 
+
+  [6] Linha 8: Variável 'rep' com nome muito curto (≤4 chars)
+      Trecho  : rep = ...
+      Contexto:
+               7 | 	if alu[i] < 70:
+        >>>    8 | 		rep = rep + 1
+               9 | 		j[i] = i
+
+  [7] Linha 19: Variável 'a' com nome muito curto (≤4 chars)
+      Trecho  : a = ...
+      Contexto:
+              18 | 		apro[a] = i
+        >>>   19 | 		a = a + 1
+              20 | 
+
+======================================================================

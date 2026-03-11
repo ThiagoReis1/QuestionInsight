@@ -1,0 +1,732 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1117_1464.py
+Questão  : 1117
+Aluno    : 1464
+Total MCs: 3
+
+⚠️  Misconceptions detectados: B4, B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | x=float(input("preco normal:"))
+     2 | y=int(input("dia:(1,2,3,4,5,6,7)"))
+     3 | z=input("dia de musica ao vivo?")
+     4 | print("Entradas:",x,",",y,",",z)
+     5 | 
+     6 | 
+     7 | if(x>=0 and y>=1 and y<8 and z=="S" or z=="N"):
+     8 |       if(y==2 and z=="N"):
+     9 |                 w=round(x*0.25,2)
+    10 |                 print("Valor a pagar: R$",w)
+    11 |       elif(y==3 and z=="N"):
+    12 |                 w=round(x*0.25,2)
+    13 |                 print("Valor a pagar: R$",w)
+    14 |       elif(y==5 and z=="N"):
+    15 | 					  w=round(x*0.25,2)
+    16 | 					  print("Valor a pagar: R$",w)
+    17 |       elif(y==2 and z=="S"):
+    18 | 						 a=x*0.25
+    19 | 						 w=round((x-a)+20,2)
+    20 | 						 print("Valor a pagar: R$",w)
+    21 |       elif(y==3 and z=="S"):
+    22 | 						  a=x*0.25
+    23 | 						  w=round((x-a)+20,2)
+    24 | 						  print("Valor a pagar: R$",w) 
+    25 |       elif(y==5 and z=="S"):
+    26 | 						  a=x*0.25
+    27 | 						  w=round((x-a)+20,2)
+    28 | 						  print("Valor a pagar: R$",w)
+    29 |       elif(y==1 and z=="N"):
+    30 | 						  w=round(x,2)
+    31 | 						  print("Valor a pagar: R$",w)
+    32 |       elif(y==4 and z=="N"):
+    33 | 						  w=round(x,2)
+    34 | 						  print("Valor a pagar: R$",w)
+    35 |       elif(y==6 and z=="N"):
+    36 | 						  w=round(x,2)
+    37 | 						  print("Valor a pagar: R$",w)
+    38 |       elif(y==7 and z=="N"):
+    39 | 						  w=round(x,2)
+    40 | 						  print("Valor a pagar: R$",w)
+    41 |       elif(y==1 and z=="S"):
+    42 | 						  w=round(x+20,2)
+    43 | 						  print("Valor a pagar: R$",w)
+    44 |       elif(y==4 and z=="S"):
+    45 | 						  w=round(x+20,2)
+    46 | 						  print("Valor a pagar: R$",w)
+    47 |       elif(y==6 and z=="S"):
+    48 | 						  w=round(x+20,2)
+    49 | 						  print("Valor a pagar: R$",w)
+    50 |       elif(y==7 and z=="S"):
+    51 | 						  w=round(x+20,2)
+    52 | 						  print("Valor a pagar: R$",w)      
+    53 | else:
+    54 | 	print("Dados invalidos")
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B4 — Comandos repetidos dentro de blocos if-elif-else
+  Ocorrências: 72
+
+  [1] Linha 11: Bloco idêntico ao da linha 8
+      Trecho  : w = round(x * 0.25, 2)
+      Contexto:
+              10 |                 print("Valor a pagar: R$",w)
+        >>>   11 |       elif(y==3 and z=="N"):
+              12 |                 w=round(x*0.25,2)
+
+  [2] Linha 14: Bloco idêntico ao da linha 8
+      Trecho  : w = round(x * 0.25, 2)
+      Contexto:
+              13 |                 print("Valor a pagar: R$",w)
+        >>>   14 |       elif(y==5 and z=="N"):
+              15 | 					  w=round(x*0.25,2)
+
+  [3] Linha 21: Bloco idêntico ao da linha 17
+      Trecho  : a = x * 0.25
+      Contexto:
+              20 | 						 print("Valor a pagar: R$",w)
+        >>>   21 |       elif(y==3 and z=="S"):
+              22 | 						  a=x*0.25
+
+  [4] Linha 25: Bloco idêntico ao da linha 17
+      Trecho  : a = x * 0.25
+      Contexto:
+              24 | 						  print("Valor a pagar: R$",w) 
+        >>>   25 |       elif(y==5 and z=="S"):
+              26 | 						  a=x*0.25
+
+  [5] Linha 32: Bloco idêntico ao da linha 29
+      Trecho  : w = round(x, 2)
+      Contexto:
+              31 | 						  print("Valor a pagar: R$",w)
+        >>>   32 |       elif(y==4 and z=="N"):
+              33 | 						  w=round(x,2)
+
+  [6] Linha 35: Bloco idêntico ao da linha 29
+      Trecho  : w = round(x, 2)
+      Contexto:
+              34 | 						  print("Valor a pagar: R$",w)
+        >>>   35 |       elif(y==6 and z=="N"):
+              36 | 						  w=round(x,2)
+
+  [7] Linha 38: Bloco idêntico ao da linha 29
+      Trecho  : w = round(x, 2)
+      Contexto:
+              37 | 						  print("Valor a pagar: R$",w)
+        >>>   38 |       elif(y==7 and z=="N"):
+              39 | 						  w=round(x,2)
+
+  [8] Linha 44: Bloco idêntico ao da linha 41
+      Trecho  : w = round(x + 20, 2)
+      Contexto:
+              43 | 						  print("Valor a pagar: R$",w)
+        >>>   44 |       elif(y==4 and z=="S"):
+              45 | 						  w=round(x+20,2)
+
+  [9] Linha 47: Bloco idêntico ao da linha 41
+      Trecho  : w = round(x + 20, 2)
+      Contexto:
+              46 | 						  print("Valor a pagar: R$",w)
+        >>>   47 |       elif(y==6 and z=="S"):
+              48 | 						  w=round(x+20,2)
+
+  [10] Linha 50: Bloco idêntico ao da linha 41
+      Trecho  : w = round(x + 20, 2)
+      Contexto:
+              49 | 						  print("Valor a pagar: R$",w)
+        >>>   50 |       elif(y==7 and z=="S"):
+              51 | 						  w=round(x+20,2)
+
+  [11] Linha 14: Bloco idêntico ao da linha 11
+      Trecho  : w = round(x * 0.25, 2)
+      Contexto:
+              13 |                 print("Valor a pagar: R$",w)
+        >>>   14 |       elif(y==5 and z=="N"):
+              15 | 					  w=round(x*0.25,2)
+
+  [12] Linha 21: Bloco idêntico ao da linha 17
+      Trecho  : a = x * 0.25
+      Contexto:
+              20 | 						 print("Valor a pagar: R$",w)
+        >>>   21 |       elif(y==3 and z=="S"):
+              22 | 						  a=x*0.25
+
+  [13] Linha 25: Bloco idêntico ao da linha 17
+      Trecho  : a = x * 0.25
+      Contexto:
+              24 | 						  print("Valor a pagar: R$",w) 
+        >>>   25 |       elif(y==5 and z=="S"):
+              26 | 						  a=x*0.25
+
+  [14] Linha 32: Bloco idêntico ao da linha 29
+      Trecho  : w = round(x, 2)
+      Contexto:
+              31 | 						  print("Valor a pagar: R$",w)
+        >>>   32 |       elif(y==4 and z=="N"):
+              33 | 						  w=round(x,2)
+
+  [15] Linha 35: Bloco idêntico ao da linha 29
+      Trecho  : w = round(x, 2)
+      Contexto:
+              34 | 						  print("Valor a pagar: R$",w)
+        >>>   35 |       elif(y==6 and z=="N"):
+              36 | 						  w=round(x,2)
+
+  [16] Linha 38: Bloco idêntico ao da linha 29
+      Trecho  : w = round(x, 2)
+      Contexto:
+              37 | 						  print("Valor a pagar: R$",w)
+        >>>   38 |       elif(y==7 and z=="N"):
+              39 | 						  w=round(x,2)
+
+  [17] Linha 44: Bloco idêntico ao da linha 41
+      Trecho  : w = round(x + 20, 2)
+      Contexto:
+              43 | 						  print("Valor a pagar: R$",w)
+        >>>   44 |       elif(y==4 and z=="S"):
+              45 | 						  w=round(x+20,2)
+
+  [18] Linha 47: Bloco idêntico ao da linha 41
+      Trecho  : w = round(x + 20, 2)
+      Contexto:
+              46 | 						  print("Valor a pagar: R$",w)
+        >>>   47 |       elif(y==6 and z=="S"):
+              48 | 						  w=round(x+20,2)
+
+  [19] Linha 50: Bloco idêntico ao da linha 41
+      Trecho  : w = round(x + 20, 2)
+      Contexto:
+              49 | 						  print("Valor a pagar: R$",w)
+        >>>   50 |       elif(y==7 and z=="S"):
+              51 | 						  w=round(x+20,2)
+
+  [20] Linha 21: Bloco idêntico ao da linha 17
+      Trecho  : a = x * 0.25
+      Contexto:
+              20 | 						 print("Valor a pagar: R$",w)
+        >>>   21 |       elif(y==3 and z=="S"):
+              22 | 						  a=x*0.25
+
+  [21] Linha 25: Bloco idêntico ao da linha 17
+      Trecho  : a = x * 0.25
+      Contexto:
+              24 | 						  print("Valor a pagar: R$",w) 
+        >>>   25 |       elif(y==5 and z=="S"):
+              26 | 						  a=x*0.25
+
+  [22] Linha 32: Bloco idêntico ao da linha 29
+      Trecho  : w = round(x, 2)
+      Contexto:
+              31 | 						  print("Valor a pagar: R$",w)
+        >>>   32 |       elif(y==4 and z=="N"):
+              33 | 						  w=round(x,2)
+
+  [23] Linha 35: Bloco idêntico ao da linha 29
+      Trecho  : w = round(x, 2)
+      Contexto:
+              34 | 						  print("Valor a pagar: R$",w)
+        >>>   35 |       elif(y==6 and z=="N"):
+              36 | 						  w=round(x,2)
+
+  [24] Linha 38: Bloco idêntico ao da linha 29
+      Trecho  : w = round(x, 2)
+      Contexto:
+              37 | 						  print("Valor a pagar: R$",w)
+        >>>   38 |       elif(y==7 and z=="N"):
+              39 | 						  w=round(x,2)
+
+  [25] Linha 44: Bloco idêntico ao da linha 41
+      Trecho  : w = round(x + 20, 2)
+      Contexto:
+              43 | 						  print("Valor a pagar: R$",w)
+        >>>   44 |       elif(y==4 and z=="S"):
+              45 | 						  w=round(x+20,2)
+
+  [26] Linha 47: Bloco idêntico ao da linha 41
+      Trecho  : w = round(x + 20, 2)
+      Contexto:
+              46 | 						  print("Valor a pagar: R$",w)
+        >>>   47 |       elif(y==6 and z=="S"):
+              48 | 						  w=round(x+20,2)
+
+  [27] Linha 50: Bloco idêntico ao da linha 41
+      Trecho  : w = round(x + 20, 2)
+      Contexto:
+              49 | 						  print("Valor a pagar: R$",w)
+        >>>   50 |       elif(y==7 and z=="S"):
+              51 | 						  w=round(x+20,2)
+
+  [28] Linha 21: Bloco idêntico ao da linha 17
+      Trecho  : a = x * 0.25
+      Contexto:
+              20 | 						 print("Valor a pagar: R$",w)
+        >>>   21 |       elif(y==3 and z=="S"):
+              22 | 						  a=x*0.25
+
+  [29] Linha 25: Bloco idêntico ao da linha 17
+      Trecho  : a = x * 0.25
+      Contexto:
+              24 | 						  print("Valor a pagar: R$",w) 
+        >>>   25 |       elif(y==5 and z=="S"):
+              26 | 						  a=x*0.25
+
+  [30] Linha 32: Bloco idêntico ao da linha 29
+      Trecho  : w = round(x, 2)
+      Contexto:
+              31 | 						  print("Valor a pagar: R$",w)
+        >>>   32 |       elif(y==4 and z=="N"):
+              33 | 						  w=round(x,2)
+
+  [31] Linha 35: Bloco idêntico ao da linha 29
+      Trecho  : w = round(x, 2)
+      Contexto:
+              34 | 						  print("Valor a pagar: R$",w)
+        >>>   35 |       elif(y==6 and z=="N"):
+              36 | 						  w=round(x,2)
+
+  [32] Linha 38: Bloco idêntico ao da linha 29
+      Trecho  : w = round(x, 2)
+      Contexto:
+              37 | 						  print("Valor a pagar: R$",w)
+        >>>   38 |       elif(y==7 and z=="N"):
+              39 | 						  w=round(x,2)
+
+  [33] Linha 44: Bloco idêntico ao da linha 41
+      Trecho  : w = round(x + 20, 2)
+      Contexto:
+              43 | 						  print("Valor a pagar: R$",w)
+        >>>   44 |       elif(y==4 and z=="S"):
+              45 | 						  w=round(x+20,2)
+
+  [34] Linha 47: Bloco idêntico ao da linha 41
+      Trecho  : w = round(x + 20, 2)
+      Contexto:
+              46 | 						  print("Valor a pagar: R$",w)
+        >>>   47 |       elif(y==6 and z=="S"):
+              48 | 						  w=round(x+20,2)
+
+  [35] Linha 50: Bloco idêntico ao da linha 41
+      Trecho  : w = round(x + 20, 2)
+      Contexto:
+              49 | 						  print("Valor a pagar: R$",w)
+        >>>   50 |       elif(y==7 and z=="S"):
+              51 | 						  w=round(x+20,2)
+
+  [36] Linha 25: Bloco idêntico ao da linha 21
+      Trecho  : a = x * 0.25
+      Contexto:
+              24 | 						  print("Valor a pagar: R$",w) 
+        >>>   25 |       elif(y==5 and z=="S"):
+              26 | 						  a=x*0.25
+
+  [37] Linha 32: Bloco idêntico ao da linha 29
+      Trecho  : w = round(x, 2)
+      Contexto:
+              31 | 						  print("Valor a pagar: R$",w)
+        >>>   32 |       elif(y==4 and z=="N"):
+              33 | 						  w=round(x,2)
+
+  [38] Linha 35: Bloco idêntico ao da linha 29
+      Trecho  : w = round(x, 2)
+      Contexto:
+              34 | 						  print("Valor a pagar: R$",w)
+        >>>   35 |       elif(y==6 and z=="N"):
+              36 | 						  w=round(x,2)
+
+  [39] Linha 38: Bloco idêntico ao da linha 29
+      Trecho  : w = round(x, 2)
+      Contexto:
+              37 | 						  print("Valor a pagar: R$",w)
+        >>>   38 |       elif(y==7 and z=="N"):
+              39 | 						  w=round(x,2)
+
+  [40] Linha 44: Bloco idêntico ao da linha 41
+      Trecho  : w = round(x + 20, 2)
+      Contexto:
+              43 | 						  print("Valor a pagar: R$",w)
+        >>>   44 |       elif(y==4 and z=="S"):
+              45 | 						  w=round(x+20,2)
+
+  [41] Linha 47: Bloco idêntico ao da linha 41
+      Trecho  : w = round(x + 20, 2)
+      Contexto:
+              46 | 						  print("Valor a pagar: R$",w)
+        >>>   47 |       elif(y==6 and z=="S"):
+              48 | 						  w=round(x+20,2)
+
+  [42] Linha 50: Bloco idêntico ao da linha 41
+      Trecho  : w = round(x + 20, 2)
+      Contexto:
+              49 | 						  print("Valor a pagar: R$",w)
+        >>>   50 |       elif(y==7 and z=="S"):
+              51 | 						  w=round(x+20,2)
+
+  [43] Linha 32: Bloco idêntico ao da linha 29
+      Trecho  : w = round(x, 2)
+      Contexto:
+              31 | 						  print("Valor a pagar: R$",w)
+        >>>   32 |       elif(y==4 and z=="N"):
+              33 | 						  w=round(x,2)
+
+  [44] Linha 35: Bloco idêntico ao da linha 29
+      Trecho  : w = round(x, 2)
+      Contexto:
+              34 | 						  print("Valor a pagar: R$",w)
+        >>>   35 |       elif(y==6 and z=="N"):
+              36 | 						  w=round(x,2)
+
+  [45] Linha 38: Bloco idêntico ao da linha 29
+      Trecho  : w = round(x, 2)
+      Contexto:
+              37 | 						  print("Valor a pagar: R$",w)
+        >>>   38 |       elif(y==7 and z=="N"):
+              39 | 						  w=round(x,2)
+
+  [46] Linha 44: Bloco idêntico ao da linha 41
+      Trecho  : w = round(x + 20, 2)
+      Contexto:
+              43 | 						  print("Valor a pagar: R$",w)
+        >>>   44 |       elif(y==4 and z=="S"):
+              45 | 						  w=round(x+20,2)
+
+  [47] Linha 47: Bloco idêntico ao da linha 41
+      Trecho  : w = round(x + 20, 2)
+      Contexto:
+              46 | 						  print("Valor a pagar: R$",w)
+        >>>   47 |       elif(y==6 and z=="S"):
+              48 | 						  w=round(x+20,2)
+
+  [48] Linha 50: Bloco idêntico ao da linha 41
+      Trecho  : w = round(x + 20, 2)
+      Contexto:
+              49 | 						  print("Valor a pagar: R$",w)
+        >>>   50 |       elif(y==7 and z=="S"):
+              51 | 						  w=round(x+20,2)
+
+  [49] Linha 32: Bloco idêntico ao da linha 29
+      Trecho  : w = round(x, 2)
+      Contexto:
+              31 | 						  print("Valor a pagar: R$",w)
+        >>>   32 |       elif(y==4 and z=="N"):
+              33 | 						  w=round(x,2)
+
+  [50] Linha 35: Bloco idêntico ao da linha 29
+      Trecho  : w = round(x, 2)
+      Contexto:
+              34 | 						  print("Valor a pagar: R$",w)
+        >>>   35 |       elif(y==6 and z=="N"):
+              36 | 						  w=round(x,2)
+
+  [51] Linha 38: Bloco idêntico ao da linha 29
+      Trecho  : w = round(x, 2)
+      Contexto:
+              37 | 						  print("Valor a pagar: R$",w)
+        >>>   38 |       elif(y==7 and z=="N"):
+              39 | 						  w=round(x,2)
+
+  [52] Linha 44: Bloco idêntico ao da linha 41
+      Trecho  : w = round(x + 20, 2)
+      Contexto:
+              43 | 						  print("Valor a pagar: R$",w)
+        >>>   44 |       elif(y==4 and z=="S"):
+              45 | 						  w=round(x+20,2)
+
+  [53] Linha 47: Bloco idêntico ao da linha 41
+      Trecho  : w = round(x + 20, 2)
+      Contexto:
+              46 | 						  print("Valor a pagar: R$",w)
+        >>>   47 |       elif(y==6 and z=="S"):
+              48 | 						  w=round(x+20,2)
+
+  [54] Linha 50: Bloco idêntico ao da linha 41
+      Trecho  : w = round(x + 20, 2)
+      Contexto:
+              49 | 						  print("Valor a pagar: R$",w)
+        >>>   50 |       elif(y==7 and z=="S"):
+              51 | 						  w=round(x+20,2)
+
+  [55] Linha 35: Bloco idêntico ao da linha 32
+      Trecho  : w = round(x, 2)
+      Contexto:
+              34 | 						  print("Valor a pagar: R$",w)
+        >>>   35 |       elif(y==6 and z=="N"):
+              36 | 						  w=round(x,2)
+
+  [56] Linha 38: Bloco idêntico ao da linha 32
+      Trecho  : w = round(x, 2)
+      Contexto:
+              37 | 						  print("Valor a pagar: R$",w)
+        >>>   38 |       elif(y==7 and z=="N"):
+              39 | 						  w=round(x,2)
+
+  [57] Linha 44: Bloco idêntico ao da linha 41
+      Trecho  : w = round(x + 20, 2)
+      Contexto:
+              43 | 						  print("Valor a pagar: R$",w)
+        >>>   44 |       elif(y==4 and z=="S"):
+              45 | 						  w=round(x+20,2)
+
+  [58] Linha 47: Bloco idêntico ao da linha 41
+      Trecho  : w = round(x + 20, 2)
+      Contexto:
+              46 | 						  print("Valor a pagar: R$",w)
+        >>>   47 |       elif(y==6 and z=="S"):
+              48 | 						  w=round(x+20,2)
+
+  [59] Linha 50: Bloco idêntico ao da linha 41
+      Trecho  : w = round(x + 20, 2)
+      Contexto:
+              49 | 						  print("Valor a pagar: R$",w)
+        >>>   50 |       elif(y==7 and z=="S"):
+              51 | 						  w=round(x+20,2)
+
+  [60] Linha 38: Bloco idêntico ao da linha 35
+      Trecho  : w = round(x, 2)
+      Contexto:
+              37 | 						  print("Valor a pagar: R$",w)
+        >>>   38 |       elif(y==7 and z=="N"):
+              39 | 						  w=round(x,2)
+
+  [61] Linha 44: Bloco idêntico ao da linha 41
+      Trecho  : w = round(x + 20, 2)
+      Contexto:
+              43 | 						  print("Valor a pagar: R$",w)
+        >>>   44 |       elif(y==4 and z=="S"):
+              45 | 						  w=round(x+20,2)
+
+  [62] Linha 47: Bloco idêntico ao da linha 41
+      Trecho  : w = round(x + 20, 2)
+      Contexto:
+              46 | 						  print("Valor a pagar: R$",w)
+        >>>   47 |       elif(y==6 and z=="S"):
+              48 | 						  w=round(x+20,2)
+
+  [63] Linha 50: Bloco idêntico ao da linha 41
+      Trecho  : w = round(x + 20, 2)
+      Contexto:
+              49 | 						  print("Valor a pagar: R$",w)
+        >>>   50 |       elif(y==7 and z=="S"):
+              51 | 						  w=round(x+20,2)
+
+  [64] Linha 44: Bloco idêntico ao da linha 41
+      Trecho  : w = round(x + 20, 2)
+      Contexto:
+              43 | 						  print("Valor a pagar: R$",w)
+        >>>   44 |       elif(y==4 and z=="S"):
+              45 | 						  w=round(x+20,2)
+
+  [65] Linha 47: Bloco idêntico ao da linha 41
+      Trecho  : w = round(x + 20, 2)
+      Contexto:
+              46 | 						  print("Valor a pagar: R$",w)
+        >>>   47 |       elif(y==6 and z=="S"):
+              48 | 						  w=round(x+20,2)
+
+  [66] Linha 50: Bloco idêntico ao da linha 41
+      Trecho  : w = round(x + 20, 2)
+      Contexto:
+              49 | 						  print("Valor a pagar: R$",w)
+        >>>   50 |       elif(y==7 and z=="S"):
+              51 | 						  w=round(x+20,2)
+
+  [67] Linha 44: Bloco idêntico ao da linha 41
+      Trecho  : w = round(x + 20, 2)
+      Contexto:
+              43 | 						  print("Valor a pagar: R$",w)
+        >>>   44 |       elif(y==4 and z=="S"):
+              45 | 						  w=round(x+20,2)
+
+  [68] Linha 47: Bloco idêntico ao da linha 41
+      Trecho  : w = round(x + 20, 2)
+      Contexto:
+              46 | 						  print("Valor a pagar: R$",w)
+        >>>   47 |       elif(y==6 and z=="S"):
+              48 | 						  w=round(x+20,2)
+
+  [69] Linha 50: Bloco idêntico ao da linha 41
+      Trecho  : w = round(x + 20, 2)
+      Contexto:
+              49 | 						  print("Valor a pagar: R$",w)
+        >>>   50 |       elif(y==7 and z=="S"):
+              51 | 						  w=round(x+20,2)
+
+  [70] Linha 47: Bloco idêntico ao da linha 44
+      Trecho  : w = round(x + 20, 2)
+      Contexto:
+              46 | 						  print("Valor a pagar: R$",w)
+        >>>   47 |       elif(y==6 and z=="S"):
+              48 | 						  w=round(x+20,2)
+
+  [71] Linha 50: Bloco idêntico ao da linha 44
+      Trecho  : w = round(x + 20, 2)
+      Contexto:
+              49 | 						  print("Valor a pagar: R$",w)
+        >>>   50 |       elif(y==7 and z=="S"):
+              51 | 						  w=round(x+20,2)
+
+  [72] Linha 50: Bloco idêntico ao da linha 47
+      Trecho  : w = round(x + 20, 2)
+      Contexto:
+              49 | 						  print("Valor a pagar: R$",w)
+        >>>   50 |       elif(y==7 and z=="S"):
+              51 | 						  w=round(x+20,2)
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 47: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 47) / elif ... sem else
+      Contexto:
+              46 | 						  print("Valor a pagar: R$",w)
+        >>>   47 |       elif(y==6 and z=="S"):
+              48 | 						  w=round(x+20,2)
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 20
+
+  [1] Linha 1: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+        >>>    1 | x=float(input("preco normal:"))
+               2 | y=int(input("dia:(1,2,3,4,5,6,7)"))
+
+  [2] Linha 2: Variável 'y' com nome muito curto (≤4 chars)
+      Trecho  : y = ...
+      Contexto:
+               1 | x=float(input("preco normal:"))
+        >>>    2 | y=int(input("dia:(1,2,3,4,5,6,7)"))
+               3 | z=input("dia de musica ao vivo?")
+
+  [3] Linha 3: Variável 'z' com nome muito curto (≤4 chars)
+      Trecho  : z = ...
+      Contexto:
+               2 | y=int(input("dia:(1,2,3,4,5,6,7)"))
+        >>>    3 | z=input("dia de musica ao vivo?")
+               4 | print("Entradas:",x,",",y,",",z)
+
+  [4] Linha 9: Variável 'w' com nome muito curto (≤4 chars)
+      Trecho  : w = ...
+      Contexto:
+               8 |       if(y==2 and z=="N"):
+        >>>    9 |                 w=round(x*0.25,2)
+              10 |                 print("Valor a pagar: R$",w)
+
+  [5] Linha 12: Variável 'w' com nome muito curto (≤4 chars)
+      Trecho  : w = ...
+      Contexto:
+              11 |       elif(y==3 and z=="N"):
+        >>>   12 |                 w=round(x*0.25,2)
+              13 |                 print("Valor a pagar: R$",w)
+
+  [6] Linha 15: Variável 'w' com nome muito curto (≤4 chars)
+      Trecho  : w = ...
+      Contexto:
+              14 |       elif(y==5 and z=="N"):
+        >>>   15 | 					  w=round(x*0.25,2)
+              16 | 					  print("Valor a pagar: R$",w)
+
+  [7] Linha 18: Variável 'a' com nome muito curto (≤4 chars)
+      Trecho  : a = ...
+      Contexto:
+              17 |       elif(y==2 and z=="S"):
+        >>>   18 | 						 a=x*0.25
+              19 | 						 w=round((x-a)+20,2)
+
+  [8] Linha 19: Variável 'w' com nome muito curto (≤4 chars)
+      Trecho  : w = ...
+      Contexto:
+              18 | 						 a=x*0.25
+        >>>   19 | 						 w=round((x-a)+20,2)
+              20 | 						 print("Valor a pagar: R$",w)
+
+  [9] Linha 22: Variável 'a' com nome muito curto (≤4 chars)
+      Trecho  : a = ...
+      Contexto:
+              21 |       elif(y==3 and z=="S"):
+        >>>   22 | 						  a=x*0.25
+              23 | 						  w=round((x-a)+20,2)
+
+  [10] Linha 23: Variável 'w' com nome muito curto (≤4 chars)
+      Trecho  : w = ...
+      Contexto:
+              22 | 						  a=x*0.25
+        >>>   23 | 						  w=round((x-a)+20,2)
+              24 | 						  print("Valor a pagar: R$",w) 
+
+  [11] Linha 26: Variável 'a' com nome muito curto (≤4 chars)
+      Trecho  : a = ...
+      Contexto:
+              25 |       elif(y==5 and z=="S"):
+        >>>   26 | 						  a=x*0.25
+              27 | 						  w=round((x-a)+20,2)
+
+  [12] Linha 27: Variável 'w' com nome muito curto (≤4 chars)
+      Trecho  : w = ...
+      Contexto:
+              26 | 						  a=x*0.25
+        >>>   27 | 						  w=round((x-a)+20,2)
+              28 | 						  print("Valor a pagar: R$",w)
+
+  [13] Linha 30: Variável 'w' com nome muito curto (≤4 chars)
+      Trecho  : w = ...
+      Contexto:
+              29 |       elif(y==1 and z=="N"):
+        >>>   30 | 						  w=round(x,2)
+              31 | 						  print("Valor a pagar: R$",w)
+
+  [14] Linha 33: Variável 'w' com nome muito curto (≤4 chars)
+      Trecho  : w = ...
+      Contexto:
+              32 |       elif(y==4 and z=="N"):
+        >>>   33 | 						  w=round(x,2)
+              34 | 						  print("Valor a pagar: R$",w)
+
+  [15] Linha 36: Variável 'w' com nome muito curto (≤4 chars)
+      Trecho  : w = ...
+      Contexto:
+              35 |       elif(y==6 and z=="N"):
+        >>>   36 | 						  w=round(x,2)
+              37 | 						  print("Valor a pagar: R$",w)
+
+  [16] Linha 39: Variável 'w' com nome muito curto (≤4 chars)
+      Trecho  : w = ...
+      Contexto:
+              38 |       elif(y==7 and z=="N"):
+        >>>   39 | 						  w=round(x,2)
+              40 | 						  print("Valor a pagar: R$",w)
+
+  [17] Linha 42: Variável 'w' com nome muito curto (≤4 chars)
+      Trecho  : w = ...
+      Contexto:
+              41 |       elif(y==1 and z=="S"):
+        >>>   42 | 						  w=round(x+20,2)
+              43 | 						  print("Valor a pagar: R$",w)
+
+  [18] Linha 45: Variável 'w' com nome muito curto (≤4 chars)
+      Trecho  : w = ...
+      Contexto:
+              44 |       elif(y==4 and z=="S"):
+        >>>   45 | 						  w=round(x+20,2)
+              46 | 						  print("Valor a pagar: R$",w)
+
+  [19] Linha 48: Variável 'w' com nome muito curto (≤4 chars)
+      Trecho  : w = ...
+      Contexto:
+              47 |       elif(y==6 and z=="S"):
+        >>>   48 | 						  w=round(x+20,2)
+              49 | 						  print("Valor a pagar: R$",w)
+
+  [20] Linha 51: Variável 'w' com nome muito curto (≤4 chars)
+      Trecho  : w = ...
+      Contexto:
+              50 |       elif(y==7 and z=="S"):
+        >>>   51 | 						  w=round(x+20,2)
+              52 | 						  print("Valor a pagar: R$",w)      
+
+======================================================================

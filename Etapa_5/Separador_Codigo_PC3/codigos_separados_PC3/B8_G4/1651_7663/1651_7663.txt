@@ -1,0 +1,65 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1651_7663.py
+Questão  : 1651
+Aluno    : 7663
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | cor = array(input("cor: ").upper().split(','))
+     3 | v = zeros(6,dtype = int)
+     4 | 
+     5 | for i in range(size(cor)):
+     6 | 	if cor[i] == "MC":
+     7 | 		v[0] = v[0] + 1
+     8 | 	elif cor[i] == "C":
+     9 | 		v[1] = v[1] + 1
+    10 | 	elif cor[i] == "CM":
+    11 | 		v[2] = v[2] + 1
+    12 | 	elif cor[i] == "EM":
+    13 | 		v[3] = v[3] + 1
+    14 | 	elif cor[i] == "E":
+    15 | 		v[4] = v[4] + 1
+    16 | 	elif cor[i] == "ME":
+    17 | 		v[5] = v[5] + 1
+    18 | print(max(v))
+    19 | print(v)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 14: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 14) / elif ... sem else
+      Contexto:
+              13 | 		v[3] = v[3] + 1
+        >>>   14 | 	elif cor[i] == "E":
+              15 | 		v[4] = v[4] + 1
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 2
+
+  [1] Linha 2: Variável 'cor' com nome muito curto (≤4 chars)
+      Trecho  : cor = ...
+      Contexto:
+               1 | from numpy import*
+        >>>    2 | cor = array(input("cor: ").upper().split(','))
+               3 | v = zeros(6,dtype = int)
+
+  [2] Linha 3: Variável 'v' com nome muito curto (≤4 chars)
+      Trecho  : v = ...
+      Contexto:
+               2 | cor = array(input("cor: ").upper().split(','))
+        >>>    3 | v = zeros(6,dtype = int)
+               4 | 
+
+======================================================================

@@ -1,0 +1,46 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1643_4060.py
+Questão  : 1643
+Aluno    : 4060
+Total MCs: 1
+
+⚠️  Misconceptions detectados: A3
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | notas=array(eval(input("notas: ")))
+     3 | cont=0
+     4 | aux=0
+     5 | aux_b=0
+     6 | v_arange=arange(size(notas))
+     7 | for i in notas:
+     8 | 	if(i >= 5):
+     9 | 		cont=cont+1
+    10 | print(cont)	
+    11 | v_zeros=zeros(cont, dtype=int)
+    12 | for i in notas:
+    13 | 	if(i>=5):
+    14 | 		v_zeros[aux]=v_zeros[aux]+aux_b
+    15 | 		aux=aux+1
+    16 | 	aux_b=aux_b+1		
+    17 | print(v_zeros)	
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 1
+
+  [1] Linha 6: Variável 'v_arange' declarada mas nunca utilizada
+      Trecho  : v_arange = ...
+      Contexto:
+               5 | aux_b=0
+        >>>    6 | v_arange=arange(size(notas))
+               7 | for i in notas:
+
+======================================================================

@@ -1,0 +1,85 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1031_4832.py
+Questão  : 1031
+Aluno    : 4832
+Total MCs: 2
+
+⚠️  Misconceptions detectados: A3, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | preco_l = 2.86
+     2 | t_oleo = 50.00
+     3 | icms = 0.34
+     4 | ql = float(input('Digite a quantidade de litros: '))
+     5 | v1 = (preco_l * ql)
+     6 | v2 = (v1 + t_oleo)
+     7 | v3 = (v2 * 34/100)
+     8 | v4 = (v2 + v3)
+     9 | print(round(v4, 2))
+    10 | 
+    11 | 
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 1
+
+  [1] Linha 3: Variável 'icms' declarada mas nunca utilizada
+      Trecho  : icms = ...
+      Contexto:
+               2 | t_oleo = 50.00
+        >>>    3 | icms = 0.34
+               4 | ql = float(input('Digite a quantidade de litros: '))
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 6
+
+  [1] Linha 3: Variável 'icms' com nome muito curto (≤4 chars)
+      Trecho  : icms = ...
+      Contexto:
+               2 | t_oleo = 50.00
+        >>>    3 | icms = 0.34
+               4 | ql = float(input('Digite a quantidade de litros: '))
+
+  [2] Linha 4: Variável 'ql' com nome muito curto (≤4 chars)
+      Trecho  : ql = ...
+      Contexto:
+               3 | icms = 0.34
+        >>>    4 | ql = float(input('Digite a quantidade de litros: '))
+               5 | v1 = (preco_l * ql)
+
+  [3] Linha 5: Variável 'v1' com nome muito curto (≤4 chars)
+      Trecho  : v1 = ...
+      Contexto:
+               4 | ql = float(input('Digite a quantidade de litros: '))
+        >>>    5 | v1 = (preco_l * ql)
+               6 | v2 = (v1 + t_oleo)
+
+  [4] Linha 6: Variável 'v2' com nome muito curto (≤4 chars)
+      Trecho  : v2 = ...
+      Contexto:
+               5 | v1 = (preco_l * ql)
+        >>>    6 | v2 = (v1 + t_oleo)
+               7 | v3 = (v2 * 34/100)
+
+  [5] Linha 7: Variável 'v3' com nome muito curto (≤4 chars)
+      Trecho  : v3 = ...
+      Contexto:
+               6 | v2 = (v1 + t_oleo)
+        >>>    7 | v3 = (v2 * 34/100)
+               8 | v4 = (v2 + v3)
+
+  [6] Linha 8: Variável 'v4' com nome muito curto (≤4 chars)
+      Trecho  : v4 = ...
+      Contexto:
+               7 | v3 = (v2 * 34/100)
+        >>>    8 | v4 = (v2 + v3)
+               9 | print(round(v4, 2))
+
+======================================================================

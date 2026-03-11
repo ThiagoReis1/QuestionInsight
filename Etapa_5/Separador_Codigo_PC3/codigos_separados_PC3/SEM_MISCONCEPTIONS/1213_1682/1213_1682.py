@@ -1,0 +1,12 @@
+from numpy import*
+vetor = array(eval(input("Digite os pesos: ")))
+i = 0 
+k= 0 
+recorde = 217
+while(i<size(vetor)):
+	if(vetor[i]>recorde):
+		k = k +1
+	i = i + 1
+print(recorde)
+print(k)
+

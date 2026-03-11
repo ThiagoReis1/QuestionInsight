@@ -1,0 +1,178 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 3593_8728.py
+Questão  : 3593
+Aluno    : 8728
+Total MCs: 3
+
+⚠️  Misconceptions detectados: B4, B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | x = array(eval(input()))
+     3 | t = 200
+     4 | for i in range(len(x)):
+     5 | 	if x[i]==1:
+     6 | 		t=t/2
+     7 | 	elif x[i]==2:
+     8 | 		t=t*3
+     9 | 	elif x[i]==3:
+    10 | 		t=t/2
+    11 | 	elif x[i]==4:
+    12 | 		t=t*3
+    13 | 	elif x[i]==5:
+    14 | 		t=t/2
+    15 | 	elif x[i]==6:
+    16 | 		t=t*3
+    17 | print(round(t,2))
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B4 — Comandos repetidos dentro de blocos if-elif-else
+  Ocorrências: 10
+
+  [1] Linha 9: Bloco idêntico ao da linha 5
+      Trecho  : t = t / 2
+      Contexto:
+               8 | 		t=t*3
+        >>>    9 | 	elif x[i]==3:
+              10 | 		t=t/2
+
+  [2] Linha 11: Bloco idêntico ao da linha 7
+      Trecho  : t = t * 3
+      Contexto:
+              10 | 		t=t/2
+        >>>   11 | 	elif x[i]==4:
+              12 | 		t=t*3
+
+  [3] Linha 13: Bloco idêntico ao da linha 5
+      Trecho  : t = t / 2
+      Contexto:
+              12 | 		t=t*3
+        >>>   13 | 	elif x[i]==5:
+              14 | 		t=t/2
+
+  [4] Linha 15: Bloco idêntico ao da linha 7
+      Trecho  : t = t * 3
+      Contexto:
+              14 | 		t=t/2
+        >>>   15 | 	elif x[i]==6:
+              16 | 		t=t*3
+
+  [5] Linha 11: Bloco idêntico ao da linha 7
+      Trecho  : t = t * 3
+      Contexto:
+              10 | 		t=t/2
+        >>>   11 | 	elif x[i]==4:
+              12 | 		t=t*3
+
+  [6] Linha 13: Bloco idêntico ao da linha 9
+      Trecho  : t = t / 2
+      Contexto:
+              12 | 		t=t*3
+        >>>   13 | 	elif x[i]==5:
+              14 | 		t=t/2
+
+  [7] Linha 15: Bloco idêntico ao da linha 7
+      Trecho  : t = t * 3
+      Contexto:
+              14 | 		t=t/2
+        >>>   15 | 	elif x[i]==6:
+              16 | 		t=t*3
+
+  [8] Linha 13: Bloco idêntico ao da linha 9
+      Trecho  : t = t / 2
+      Contexto:
+              12 | 		t=t*3
+        >>>   13 | 	elif x[i]==5:
+              14 | 		t=t/2
+
+  [9] Linha 15: Bloco idêntico ao da linha 11
+      Trecho  : t = t * 3
+      Contexto:
+              14 | 		t=t/2
+        >>>   15 | 	elif x[i]==6:
+              16 | 		t=t*3
+
+  [10] Linha 15: Bloco idêntico ao da linha 11
+      Trecho  : t = t * 3
+      Contexto:
+              14 | 		t=t/2
+        >>>   15 | 	elif x[i]==6:
+              16 | 		t=t*3
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 13: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 13) / elif ... sem else
+      Contexto:
+              12 | 		t=t*3
+        >>>   13 | 	elif x[i]==5:
+              14 | 		t=t/2
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 8
+
+  [1] Linha 2: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+               1 | from numpy import*
+        >>>    2 | x = array(eval(input()))
+               3 | t = 200
+
+  [2] Linha 3: Variável 't' com nome muito curto (≤4 chars)
+      Trecho  : t = ...
+      Contexto:
+               2 | x = array(eval(input()))
+        >>>    3 | t = 200
+               4 | for i in range(len(x)):
+
+  [3] Linha 6: Variável 't' com nome muito curto (≤4 chars)
+      Trecho  : t = ...
+      Contexto:
+               5 | 	if x[i]==1:
+        >>>    6 | 		t=t/2
+               7 | 	elif x[i]==2:
+
+  [4] Linha 8: Variável 't' com nome muito curto (≤4 chars)
+      Trecho  : t = ...
+      Contexto:
+               7 | 	elif x[i]==2:
+        >>>    8 | 		t=t*3
+               9 | 	elif x[i]==3:
+
+  [5] Linha 10: Variável 't' com nome muito curto (≤4 chars)
+      Trecho  : t = ...
+      Contexto:
+               9 | 	elif x[i]==3:
+        >>>   10 | 		t=t/2
+              11 | 	elif x[i]==4:
+
+  [6] Linha 12: Variável 't' com nome muito curto (≤4 chars)
+      Trecho  : t = ...
+      Contexto:
+              11 | 	elif x[i]==4:
+        >>>   12 | 		t=t*3
+              13 | 	elif x[i]==5:
+
+  [7] Linha 14: Variável 't' com nome muito curto (≤4 chars)
+      Trecho  : t = ...
+      Contexto:
+              13 | 	elif x[i]==5:
+        >>>   14 | 		t=t/2
+              15 | 	elif x[i]==6:
+
+  [8] Linha 16: Variável 't' com nome muito curto (≤4 chars)
+      Trecho  : t = ...
+      Contexto:
+              15 | 	elif x[i]==6:
+        >>>   16 | 		t=t*3
+              17 | print(round(t,2))
+
+======================================================================

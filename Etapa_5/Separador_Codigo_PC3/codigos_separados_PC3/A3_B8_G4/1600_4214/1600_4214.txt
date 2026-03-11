@@ -1,0 +1,55 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1600_4214.py
+Questão  : 1600
+Aluno    : 4214
+Total MCs: 3
+
+⚠️  Misconceptions detectados: A3, B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import *
+     2 | vet=array(eval(input("Custo dos itens:")))
+     3 | i=0
+     4 | j=size(vet)
+     5 | valor= 0
+     6 | while(j<sum(vet)):
+     7 | 	if(vet[i]<=80 and vet[i]>0):
+     8 | 		valor= sum(vet)
+     9 | 		j=j+1
+    10 | 	elif(vet[i] > 80):
+    11 | 		desc= vet* (15/100)
+    12 | 		valor= valor + desc
+    13 | 		j=j+1
+    14 | print(round(valor,2))
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 1
+
+  [1] Linha 0: A3 detectado pelo VisitorMC3 (localização exata não mapeada)
+      Trecho  : —
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 7: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 7) / elif ... sem else
+      Contexto:
+               6 | while(j<sum(vet)):
+        >>>    7 | 	if(vet[i]<=80 and vet[i]>0):
+               8 | 		valor= sum(vet)
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 1
+
+  [1] Linha 0: G4 detectado pelo VisitorMC3 (localização exata não mapeada)
+      Trecho  : —
+
+======================================================================

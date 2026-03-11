@@ -1,0 +1,192 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1654_2409.py
+Questão  : 1654
+Aluno    : 2409
+Total MCs: 3
+
+⚠️  Misconceptions detectados: A3, B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import *
+     2 | estado = input("estados: ").split(',')
+     3 | vet = len(estado)
+     4 | i = 0 
+     5 | soma = 0
+     6 | while(i < vet):
+     7 | 	if(estado == "AM"):
+     8 | 		AM = AM + 1
+     9 | 		soma = AM + 1
+    10 | 	elif(estado == "PE"):
+    11 | 		PE = PE + 1
+    12 | 		soma = PE + 1
+    13 | 	elif(estado == "MG"):
+    14 | 		MG = MG + 1
+    15 | 		soma = MG + 1
+    16 | 	elif(estado == "SP"):
+    17 | 		SP = SP + 1
+    18 | 		soma = SP + 1
+    19 | 	elif(estado == "RS"):
+    20 | 		RS = RS + 1
+    21 | 		soma = RS + 1
+    22 | 	i = i + 1
+    23 | print(max(soma))
+    24 | 
+    25 | 
+    26 | 
+    27 | 
+    28 | 
+    29 | 
+    30 | #from numpy import *
+    31 | #estado = input("estados: ").split(',')
+    32 | #vet = len(estado)
+    33 | #AM = 0
+    34 | #PE = 0
+    35 | #SP = 0
+    36 | #RS = 0
+    37 | #PE = 0
+    38 | #MG = 0
+    39 | #soma = 0
+    40 | #for i in range(vet):
+    41 | #	if(estado == "AM"):
+    42 | #		AM = AM + 1
+    43 | #		soma = soma + 1
+    44 | #	elif(estado == "PE"):
+    45 | #		PE = PE + 1
+    46 | #		soma = soma + 1
+    47 | #	elif(estado == "MG"):
+    48 | #		MG = MG + 1
+    49 | #		soma = soma + 1
+    50 | #	elif(estado == "SP"):
+    51 | #		SP = SP + 1
+    52 | #		soma = soma + 1
+    53 | #	elif(estado == "RS"):
+    54 | #		RS = RS + 1
+    55 | #		soma = soma + 1
+    56 | #	print(soma)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 1
+
+  [1] Linha 0: A3 detectado pelo VisitorMC3 (localização exata não mapeada)
+      Trecho  : —
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 16: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 16) / elif ... sem else
+      Contexto:
+              15 | 		soma = MG + 1
+        >>>   16 | 	elif(estado == "SP"):
+              17 | 		SP = SP + 1
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 14
+
+  [1] Linha 3: Variável 'vet' com nome muito curto (≤4 chars)
+      Trecho  : vet = ...
+      Contexto:
+               2 | estado = input("estados: ").split(',')
+        >>>    3 | vet = len(estado)
+               4 | i = 0 
+
+  [2] Linha 4: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+               3 | vet = len(estado)
+        >>>    4 | i = 0 
+               5 | soma = 0
+
+  [3] Linha 5: Variável 'soma' com nome muito curto (≤4 chars)
+      Trecho  : soma = ...
+      Contexto:
+               4 | i = 0 
+        >>>    5 | soma = 0
+               6 | while(i < vet):
+
+  [4] Linha 22: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+              21 | 		soma = RS + 1
+        >>>   22 | 	i = i + 1
+              23 | print(max(soma))
+
+  [5] Linha 8: Variável 'AM' com nome muito curto (≤4 chars)
+      Trecho  : AM = ...
+      Contexto:
+               7 | 	if(estado == "AM"):
+        >>>    8 | 		AM = AM + 1
+               9 | 		soma = AM + 1
+
+  [6] Linha 9: Variável 'soma' com nome muito curto (≤4 chars)
+      Trecho  : soma = ...
+      Contexto:
+               8 | 		AM = AM + 1
+        >>>    9 | 		soma = AM + 1
+              10 | 	elif(estado == "PE"):
+
+  [7] Linha 11: Variável 'PE' com nome muito curto (≤4 chars)
+      Trecho  : PE = ...
+      Contexto:
+              10 | 	elif(estado == "PE"):
+        >>>   11 | 		PE = PE + 1
+              12 | 		soma = PE + 1
+
+  [8] Linha 12: Variável 'soma' com nome muito curto (≤4 chars)
+      Trecho  : soma = ...
+      Contexto:
+              11 | 		PE = PE + 1
+        >>>   12 | 		soma = PE + 1
+              13 | 	elif(estado == "MG"):
+
+  [9] Linha 14: Variável 'MG' com nome muito curto (≤4 chars)
+      Trecho  : MG = ...
+      Contexto:
+              13 | 	elif(estado == "MG"):
+        >>>   14 | 		MG = MG + 1
+              15 | 		soma = MG + 1
+
+  [10] Linha 15: Variável 'soma' com nome muito curto (≤4 chars)
+      Trecho  : soma = ...
+      Contexto:
+              14 | 		MG = MG + 1
+        >>>   15 | 		soma = MG + 1
+              16 | 	elif(estado == "SP"):
+
+  [11] Linha 17: Variável 'SP' com nome muito curto (≤4 chars)
+      Trecho  : SP = ...
+      Contexto:
+              16 | 	elif(estado == "SP"):
+        >>>   17 | 		SP = SP + 1
+              18 | 		soma = SP + 1
+
+  [12] Linha 18: Variável 'soma' com nome muito curto (≤4 chars)
+      Trecho  : soma = ...
+      Contexto:
+              17 | 		SP = SP + 1
+        >>>   18 | 		soma = SP + 1
+              19 | 	elif(estado == "RS"):
+
+  [13] Linha 20: Variável 'RS' com nome muito curto (≤4 chars)
+      Trecho  : RS = ...
+      Contexto:
+              19 | 	elif(estado == "RS"):
+        >>>   20 | 		RS = RS + 1
+              21 | 		soma = RS + 1
+
+  [14] Linha 21: Variável 'soma' com nome muito curto (≤4 chars)
+      Trecho  : soma = ...
+      Contexto:
+              20 | 		RS = RS + 1
+        >>>   21 | 		soma = RS + 1
+              22 | 	i = i + 1
+
+======================================================================

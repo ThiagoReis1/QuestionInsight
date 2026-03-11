@@ -1,0 +1,96 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1598_3192.py
+Questão  : 1598
+Aluno    : 3192
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import *
+     2 | 
+     3 | v = array(eval(input("")))
+     4 | i = 0
+     5 | d = []
+     6 | 
+     7 | while(i < size(v)):
+     8 | 	if(v[i] > 80):
+     9 | 		c = v[i] - 5
+    10 | 	elif(v[i] < 80):
+    11 | 		c = v[i]
+    12 | 	i = i + 1
+    13 | 	d = d + [c]
+    14 | 
+    15 | print(round(sum(d), 2))
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 8: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 8) / elif ... sem else
+      Contexto:
+               7 | while(i < size(v)):
+        >>>    8 | 	if(v[i] > 80):
+               9 | 		c = v[i] - 5
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 7
+
+  [1] Linha 3: Variável 'v' com nome muito curto (≤4 chars)
+      Trecho  : v = ...
+      Contexto:
+               2 | 
+        >>>    3 | v = array(eval(input("")))
+               4 | i = 0
+
+  [2] Linha 4: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+               3 | v = array(eval(input("")))
+        >>>    4 | i = 0
+               5 | d = []
+
+  [3] Linha 5: Variável 'd' com nome muito curto (≤4 chars)
+      Trecho  : d = ...
+      Contexto:
+               4 | i = 0
+        >>>    5 | d = []
+               6 | 
+
+  [4] Linha 12: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+              11 | 		c = v[i]
+        >>>   12 | 	i = i + 1
+              13 | 	d = d + [c]
+
+  [5] Linha 13: Variável 'd' com nome muito curto (≤4 chars)
+      Trecho  : d = ...
+      Contexto:
+              12 | 	i = i + 1
+        >>>   13 | 	d = d + [c]
+              14 | 
+
+  [6] Linha 9: Variável 'c' com nome muito curto (≤4 chars)
+      Trecho  : c = ...
+      Contexto:
+               8 | 	if(v[i] > 80):
+        >>>    9 | 		c = v[i] - 5
+              10 | 	elif(v[i] < 80):
+
+  [7] Linha 11: Variável 'c' com nome muito curto (≤4 chars)
+      Trecho  : c = ...
+      Contexto:
+              10 | 	elif(v[i] < 80):
+        >>>   11 | 		c = v[i]
+              12 | 	i = i + 1
+
+======================================================================

@@ -1,0 +1,97 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1639_5121.py
+Questão  : 1639
+Aluno    : 5121
+Total MCs: 1
+
+⚠️  Misconceptions detectados: G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | v = array(eval(input("Informe a quantidade de alunos matriculados: ")))
+     3 | i = 0
+     4 | j = 0
+     5 | l = 0
+     6 | x = []
+     7 | for a in v:
+     8 | 	if(a%2==0):
+     9 | 		i = i + 1
+    10 | 		x.extend([j])
+    11 | 	if(j==0 and a%2==0):
+    12 | 		x.extend([0])
+    13 | 	j = j + 1
+    14 | for b in x:
+    15 | 	if(b==0):
+    16 | 		del x[l]
+    17 | 	l = l + 1
+    18 | print(i)
+    19 | print(array(x))
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 8
+
+  [1] Linha 2: Variável 'v' com nome muito curto (≤4 chars)
+      Trecho  : v = ...
+      Contexto:
+               1 | from numpy import*
+        >>>    2 | v = array(eval(input("Informe a quantidade de alunos matriculados: ")))
+               3 | i = 0
+
+  [2] Linha 3: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+               2 | v = array(eval(input("Informe a quantidade de alunos matriculados: ")))
+        >>>    3 | i = 0
+               4 | j = 0
+
+  [3] Linha 4: Variável 'j' com nome muito curto (≤4 chars)
+      Trecho  : j = ...
+      Contexto:
+               3 | i = 0
+        >>>    4 | j = 0
+               5 | l = 0
+
+  [4] Linha 5: Variável 'l' com nome muito curto (≤4 chars)
+      Trecho  : l = ...
+      Contexto:
+               4 | j = 0
+        >>>    5 | l = 0
+               6 | x = []
+
+  [5] Linha 6: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+               5 | l = 0
+        >>>    6 | x = []
+               7 | for a in v:
+
+  [6] Linha 13: Variável 'j' com nome muito curto (≤4 chars)
+      Trecho  : j = ...
+      Contexto:
+              12 | 		x.extend([0])
+        >>>   13 | 	j = j + 1
+              14 | for b in x:
+
+  [7] Linha 17: Variável 'l' com nome muito curto (≤4 chars)
+      Trecho  : l = ...
+      Contexto:
+              16 | 		del x[l]
+        >>>   17 | 	l = l + 1
+              18 | print(i)
+
+  [8] Linha 9: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+               8 | 	if(a%2==0):
+        >>>    9 | 		i = i + 1
+              10 | 		x.extend([j])
+
+======================================================================

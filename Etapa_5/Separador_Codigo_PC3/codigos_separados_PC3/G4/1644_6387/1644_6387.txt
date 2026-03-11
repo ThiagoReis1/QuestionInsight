@@ -1,0 +1,71 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1644_6387.py
+Questão  : 1644
+Aluno    : 6387
+Total MCs: 1
+
+⚠️  Misconceptions detectados: G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import *
+     2 | 
+     3 | notas = array(eval(input("Informe as notas: ")))
+     4 | rp = 0 
+     5 | ind = []
+     6 | 
+     7 | for i in range(size(notas)):
+     8 | 	if notas[i] < 5:
+     9 | 		rp = rp + 1
+    10 | 		ind.append(i)
+    11 | u = zeros(size(ind),dtype=int)
+    12 | u = u + ind
+    13 | print(rp)
+    14 | print(u)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 5
+
+  [1] Linha 4: Variável 'rp' com nome muito curto (≤4 chars)
+      Trecho  : rp = ...
+      Contexto:
+               3 | notas = array(eval(input("Informe as notas: ")))
+        >>>    4 | rp = 0 
+               5 | ind = []
+
+  [2] Linha 5: Variável 'ind' com nome muito curto (≤4 chars)
+      Trecho  : ind = ...
+      Contexto:
+               4 | rp = 0 
+        >>>    5 | ind = []
+               6 | 
+
+  [3] Linha 11: Variável 'u' com nome muito curto (≤4 chars)
+      Trecho  : u = ...
+      Contexto:
+              10 | 		ind.append(i)
+        >>>   11 | u = zeros(size(ind),dtype=int)
+              12 | u = u + ind
+
+  [4] Linha 12: Variável 'u' com nome muito curto (≤4 chars)
+      Trecho  : u = ...
+      Contexto:
+              11 | u = zeros(size(ind),dtype=int)
+        >>>   12 | u = u + ind
+              13 | print(rp)
+
+  [5] Linha 9: Variável 'rp' com nome muito curto (≤4 chars)
+      Trecho  : rp = ...
+      Contexto:
+               8 | 	if notas[i] < 5:
+        >>>    9 | 		rp = rp + 1
+              10 | 		ind.append(i)
+
+======================================================================

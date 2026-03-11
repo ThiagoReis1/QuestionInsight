@@ -1,0 +1,61 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1597_3214.py
+Questão  : 1597
+Aluno    : 3214
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import *
+     2 | vet=array(eval(input()))
+     3 | for i in range(size(vet)):
+     4 | 	if vet[i]>80:
+     5 | 		x=sum(vet)-5
+     6 | 	elif i<=80:
+     7 | 		x=sum(vet)
+     8 | print(round(x,2))		
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 4: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 4) / elif ... sem else
+      Contexto:
+               3 | for i in range(size(vet)):
+        >>>    4 | 	if vet[i]>80:
+               5 | 		x=sum(vet)-5
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 3
+
+  [1] Linha 2: Variável 'vet' com nome muito curto (≤4 chars)
+      Trecho  : vet = ...
+      Contexto:
+               1 | from numpy import *
+        >>>    2 | vet=array(eval(input()))
+               3 | for i in range(size(vet)):
+
+  [2] Linha 5: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+               4 | 	if vet[i]>80:
+        >>>    5 | 		x=sum(vet)-5
+               6 | 	elif i<=80:
+
+  [3] Linha 7: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+               6 | 	elif i<=80:
+        >>>    7 | 		x=sum(vet)
+               8 | print(round(x,2))		
+
+======================================================================

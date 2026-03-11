@@ -1,0 +1,58 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1980_2587.py
+Questão  : 1980
+Aluno    : 2587
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | e = input("Nome do estado: ")
+     2 | c = input("Nome da cidade: ")
+     3 | 
+     4 | if( e != "Amazonas") or ( e != "Para"):
+     5 | 	print("BAIRRO NAO IDENTIFICADO")
+     6 | elif( e == "Amazonas" ) or ( c == "Manaus"):
+     7 | 	print("BAIRRO COROADO")
+     8 | elif( e == "Amazonas" ) or ( c == "Parintins"):
+     9 | 	print("BAIRRO PALMARES")
+    10 | elif( e == "Para" ) or ( c == "Belem"):
+    11 | 	print("BAIRRO CIDADE VELHA")
+    12 | elif( e == "Para" ) or (c == "Santarem"):
+    13 | 	print("BAIRRO CENTRO")
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 10: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 10) / elif ... sem else
+      Contexto:
+               9 | 	print("BAIRRO PALMARES")
+        >>>   10 | elif( e == "Para" ) or ( c == "Belem"):
+              11 | 	print("BAIRRO CIDADE VELHA")
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 2
+
+  [1] Linha 1: Variável 'e' com nome muito curto (≤4 chars)
+      Trecho  : e = ...
+      Contexto:
+        >>>    1 | e = input("Nome do estado: ")
+               2 | c = input("Nome da cidade: ")
+
+  [2] Linha 2: Variável 'c' com nome muito curto (≤4 chars)
+      Trecho  : c = ...
+      Contexto:
+               1 | e = input("Nome do estado: ")
+        >>>    2 | c = input("Nome da cidade: ")
+               3 | 
+
+======================================================================

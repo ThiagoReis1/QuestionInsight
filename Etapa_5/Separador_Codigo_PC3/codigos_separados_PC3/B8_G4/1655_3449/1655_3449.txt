@@ -1,0 +1,66 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1655_3449.py
+Questão  : 1655
+Aluno    : 3449
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | from numpy.linalg import*
+     3 | 
+     4 | x= input("").split(',')
+     5 | cont= zeros(5,dtype=int)
+     6 | 
+     7 | for x in x:
+     8 | 	if(x=="AC"):
+     9 | 		cont[0]=cont[0]+1
+    10 | 	elif(x=="AM"):
+    11 | 		cont[1]=cont[1]+1
+    12 | 	elif(x=="PA"):
+    13 | 		cont[2]=cont[2]+1
+    14 | 	elif(x=="RO"):
+    15 | 		cont[3]=cont[3]+1
+    16 | 	elif(x=="RR"):
+    17 | 		cont[4]=cont[4]+1
+    18 | 	
+    19 | print(max(cont))
+    20 | print(cont)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 14: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 14) / elif ... sem else
+      Contexto:
+              13 | 		cont[2]=cont[2]+1
+        >>>   14 | 	elif(x=="RO"):
+              15 | 		cont[3]=cont[3]+1
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 2
+
+  [1] Linha 4: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+               3 | 
+        >>>    4 | x= input("").split(',')
+               5 | cont= zeros(5,dtype=int)
+
+  [2] Linha 5: Variável 'cont' com nome muito curto (≤4 chars)
+      Trecho  : cont = ...
+      Contexto:
+               4 | x= input("").split(',')
+        >>>    5 | cont= zeros(5,dtype=int)
+               6 | 
+
+======================================================================

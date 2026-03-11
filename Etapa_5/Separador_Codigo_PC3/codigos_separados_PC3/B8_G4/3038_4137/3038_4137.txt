@@ -1,0 +1,48 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 3038_4137.py
+Questão  : 3038
+Aluno    : 4137
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from math import*
+     2 | x = float(input("Valor de x:"))
+     3 | 
+     4 | if(x <= -1 or x >= 1):
+     5 | 	print(round(abs(x**0.5), 2))
+     6 | elif( x > -1 and x < 0 or x > 0 and x < 1):
+     7 | 	print(round(abs(x), 2))
+     8 | elif( x == 0):
+     9 | 	print(0)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 6: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 6) / elif ... sem else
+      Contexto:
+               5 | 	print(round(abs(x**0.5), 2))
+        >>>    6 | elif( x > -1 and x < 0 or x > 0 and x < 1):
+               7 | 	print(round(abs(x), 2))
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 1
+
+  [1] Linha 2: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+               1 | from math import*
+        >>>    2 | x = float(input("Valor de x:"))
+               3 | 
+
+======================================================================

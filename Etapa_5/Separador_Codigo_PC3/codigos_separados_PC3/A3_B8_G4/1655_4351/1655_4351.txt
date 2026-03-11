@@ -1,0 +1,165 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1655_4351.py
+Questão  : 1655
+Aluno    : 4351
+Total MCs: 3
+
+⚠️  Misconceptions detectados: A3, B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | o=input("string com sigla de origem das pessoas separdas por virgula: ").split(',')
+     3 | ac= 0
+     4 | am=0
+     5 | pa=0
+     6 | ro=0
+     7 | rr=0
+     8 | np=0
+     9 | for ch in o:
+    10 | 	if ch=="AC":
+    11 | 		ac= ac + 1
+    12 | 		
+    13 | 	elif ch == "AM":
+    14 | 		am= am + 1
+    15 | 		
+    16 | 	elif ch== "PA":
+    17 | 		pa= pa +1
+    18 | 		
+    19 | 	elif ch== "RO":
+    20 | 		ro= ro + 1
+    21 | 	
+    22 | 	elif ch== "RR":
+    23 | 		rr= rr + 1
+    24 | 		
+    25 | vo=zeros(5, dtype=int)
+    26 | vo[0]=ac
+    27 | vo[1]=am
+    28 | vo[2]=pa
+    29 | vo[3]=ro
+    30 | vo[4]=rr
+    31 | print(max(vo))
+    32 | print(vo)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 1
+
+  [1] Linha 8: Variável 'np' declarada mas nunca utilizada
+      Trecho  : np = ...
+      Contexto:
+               7 | rr=0
+        >>>    8 | np=0
+               9 | for ch in o:
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 19: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 19) / elif ... sem else
+      Contexto:
+              18 | 		
+        >>>   19 | 	elif ch== "RO":
+              20 | 		ro= ro + 1
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 13
+
+  [1] Linha 2: Variável 'o' com nome muito curto (≤4 chars)
+      Trecho  : o = ...
+      Contexto:
+               1 | from numpy import*
+        >>>    2 | o=input("string com sigla de origem das pessoas separdas por virgula: ").split(',')
+               3 | ac= 0
+
+  [2] Linha 3: Variável 'ac' com nome muito curto (≤4 chars)
+      Trecho  : ac = ...
+      Contexto:
+               2 | o=input("string com sigla de origem das pessoas separdas por virgula: ").split(',')
+        >>>    3 | ac= 0
+               4 | am=0
+
+  [3] Linha 4: Variável 'am' com nome muito curto (≤4 chars)
+      Trecho  : am = ...
+      Contexto:
+               3 | ac= 0
+        >>>    4 | am=0
+               5 | pa=0
+
+  [4] Linha 5: Variável 'pa' com nome muito curto (≤4 chars)
+      Trecho  : pa = ...
+      Contexto:
+               4 | am=0
+        >>>    5 | pa=0
+               6 | ro=0
+
+  [5] Linha 6: Variável 'ro' com nome muito curto (≤4 chars)
+      Trecho  : ro = ...
+      Contexto:
+               5 | pa=0
+        >>>    6 | ro=0
+               7 | rr=0
+
+  [6] Linha 7: Variável 'rr' com nome muito curto (≤4 chars)
+      Trecho  : rr = ...
+      Contexto:
+               6 | ro=0
+        >>>    7 | rr=0
+               8 | np=0
+
+  [7] Linha 8: Variável 'np' com nome muito curto (≤4 chars)
+      Trecho  : np = ...
+      Contexto:
+               7 | rr=0
+        >>>    8 | np=0
+               9 | for ch in o:
+
+  [8] Linha 25: Variável 'vo' com nome muito curto (≤4 chars)
+      Trecho  : vo = ...
+      Contexto:
+              24 | 		
+        >>>   25 | vo=zeros(5, dtype=int)
+              26 | vo[0]=ac
+
+  [9] Linha 11: Variável 'ac' com nome muito curto (≤4 chars)
+      Trecho  : ac = ...
+      Contexto:
+              10 | 	if ch=="AC":
+        >>>   11 | 		ac= ac + 1
+              12 | 		
+
+  [10] Linha 14: Variável 'am' com nome muito curto (≤4 chars)
+      Trecho  : am = ...
+      Contexto:
+              13 | 	elif ch == "AM":
+        >>>   14 | 		am= am + 1
+              15 | 		
+
+  [11] Linha 17: Variável 'pa' com nome muito curto (≤4 chars)
+      Trecho  : pa = ...
+      Contexto:
+              16 | 	elif ch== "PA":
+        >>>   17 | 		pa= pa +1
+              18 | 		
+
+  [12] Linha 20: Variável 'ro' com nome muito curto (≤4 chars)
+      Trecho  : ro = ...
+      Contexto:
+              19 | 	elif ch== "RO":
+        >>>   20 | 		ro= ro + 1
+              21 | 	
+
+  [13] Linha 23: Variável 'rr' com nome muito curto (≤4 chars)
+      Trecho  : rr = ...
+      Contexto:
+              22 | 	elif ch== "RR":
+        >>>   23 | 		rr= rr + 1
+              24 | 		
+
+======================================================================

@@ -1,0 +1,57 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1645_3193.py
+Questão  : 1645
+Aluno    : 3193
+Total MCs: 1
+
+⚠️  Misconceptions detectados: G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import *
+     2 | saque = array(eval(input('')))
+     3 | cont = 0
+     4 | j = 0
+     5 | for i in range(0, size(saque)):
+     6 | 	if(saque[i] >= 2000):
+     7 | 		cont += 1
+     8 | z = zeros(cont, dtype = int)
+     9 | for i in range(0, size(saque)):
+    10 | 	if(saque[i] >= 2000):
+    11 | 		z[j] = i
+    12 | 		j += 1
+    13 | print(cont)
+    14 | print(z)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 3
+
+  [1] Linha 3: Variável 'cont' com nome muito curto (≤4 chars)
+      Trecho  : cont = ...
+      Contexto:
+               2 | saque = array(eval(input('')))
+        >>>    3 | cont = 0
+               4 | j = 0
+
+  [2] Linha 4: Variável 'j' com nome muito curto (≤4 chars)
+      Trecho  : j = ...
+      Contexto:
+               3 | cont = 0
+        >>>    4 | j = 0
+               5 | for i in range(0, size(saque)):
+
+  [3] Linha 8: Variável 'z' com nome muito curto (≤4 chars)
+      Trecho  : z = ...
+      Contexto:
+               7 | 		cont += 1
+        >>>    8 | z = zeros(cont, dtype = int)
+               9 | for i in range(0, size(saque)):
+
+======================================================================

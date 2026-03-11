@@ -1,0 +1,108 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1643_4443.py
+Questão  : 1643
+Aluno    : 4443
+Total MCs: 2
+
+⚠️  Misconceptions detectados: A2, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import *
+     2 | nota = array(eval(input("Digite as notas dos estudantes: ")))
+     3 | aprovados = 0
+     4 | for nta in nota:
+     5 | 	if(nta >=5):
+     6 | 		aprovados = aprovados +1
+     7 | 
+     8 | vi = zeros(aprovados, dtype=int)
+     9 | ve = 0
+    10 | vs = 0
+    11 | for nta in nota: 		
+    12 | 	if(nota[ve]>=5):
+    13 | 		vi[vs] = ve
+    14 | 		ve = ve+1
+    15 | 		vs = vs+1
+    16 | 	else:
+    17 | 		ve = ve+1
+    18 | 		vs = vs
+    19 | print(aprovados)
+    20 | print(vi)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A2 — Variável atribuída a si mesma
+  Ocorrências: 1
+
+  [1] Linha 18: 'vs' atribuído a si mesmo
+      Trecho  : vs = vs
+      Contexto:
+              17 | 		ve = ve+1
+        >>>   18 | 		vs = vs
+              19 | print(aprovados)
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 8
+
+  [1] Linha 2: Variável 'nota' com nome muito curto (≤4 chars)
+      Trecho  : nota = ...
+      Contexto:
+               1 | from numpy import *
+        >>>    2 | nota = array(eval(input("Digite as notas dos estudantes: ")))
+               3 | aprovados = 0
+
+  [2] Linha 8: Variável 'vi' com nome muito curto (≤4 chars)
+      Trecho  : vi = ...
+      Contexto:
+               7 | 
+        >>>    8 | vi = zeros(aprovados, dtype=int)
+               9 | ve = 0
+
+  [3] Linha 9: Variável 've' com nome muito curto (≤4 chars)
+      Trecho  : ve = ...
+      Contexto:
+               8 | vi = zeros(aprovados, dtype=int)
+        >>>    9 | ve = 0
+              10 | vs = 0
+
+  [4] Linha 10: Variável 'vs' com nome muito curto (≤4 chars)
+      Trecho  : vs = ...
+      Contexto:
+               9 | ve = 0
+        >>>   10 | vs = 0
+              11 | for nta in nota: 		
+
+  [5] Linha 14: Variável 've' com nome muito curto (≤4 chars)
+      Trecho  : ve = ...
+      Contexto:
+              13 | 		vi[vs] = ve
+        >>>   14 | 		ve = ve+1
+              15 | 		vs = vs+1
+
+  [6] Linha 15: Variável 'vs' com nome muito curto (≤4 chars)
+      Trecho  : vs = ...
+      Contexto:
+              14 | 		ve = ve+1
+        >>>   15 | 		vs = vs+1
+              16 | 	else:
+
+  [7] Linha 17: Variável 've' com nome muito curto (≤4 chars)
+      Trecho  : ve = ...
+      Contexto:
+              16 | 	else:
+        >>>   17 | 		ve = ve+1
+              18 | 		vs = vs
+
+  [8] Linha 18: Variável 'vs' com nome muito curto (≤4 chars)
+      Trecho  : vs = ...
+      Contexto:
+              17 | 		ve = ve+1
+        >>>   18 | 		vs = vs
+              19 | print(aprovados)
+
+======================================================================

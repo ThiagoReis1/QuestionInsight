@@ -1,0 +1,64 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1640_7580.py
+Questão  : 1640
+Aluno    : 7580
+Total MCs: 1
+
+⚠️  Misconceptions detectados: G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import *
+     2 | x = array(eval(input(': ')))
+     3 | c = 0
+     4 | for i in range(size(x)):
+     5 | 	if x[i] % 2 != 0:
+     6 | 		c += 1
+     7 | print(c)
+     8 | v = zeros(c,dtype=int)
+     9 | c = 0 
+    10 | for i in range(size(x)):
+    11 | 	if x[i]%2 != 0:
+    12 | 		v[c] = i
+    13 | 		c += 1
+    14 | print(v)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 4
+
+  [1] Linha 2: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+               1 | from numpy import *
+        >>>    2 | x = array(eval(input(': ')))
+               3 | c = 0
+
+  [2] Linha 3: Variável 'c' com nome muito curto (≤4 chars)
+      Trecho  : c = ...
+      Contexto:
+               2 | x = array(eval(input(': ')))
+        >>>    3 | c = 0
+               4 | for i in range(size(x)):
+
+  [3] Linha 8: Variável 'v' com nome muito curto (≤4 chars)
+      Trecho  : v = ...
+      Contexto:
+               7 | print(c)
+        >>>    8 | v = zeros(c,dtype=int)
+               9 | c = 0 
+
+  [4] Linha 9: Variável 'c' com nome muito curto (≤4 chars)
+      Trecho  : c = ...
+      Contexto:
+               8 | v = zeros(c,dtype=int)
+        >>>    9 | c = 0 
+              10 | for i in range(size(x)):
+
+======================================================================

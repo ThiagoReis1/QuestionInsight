@@ -1,0 +1,86 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 5240_7195.py
+Questão  : 5240
+Aluno    : 7195
+Total MCs: 3
+
+⚠️  Misconceptions detectados: B8, B9, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | con=int(input("qual seu consumo de energia:"))
+     2 | 
+     3 | if con <100:
+     4 | 	f=con*0.50+50
+     5 | 	print(round(f,2))
+     6 | elif con>=100 and con<250:
+     7 | 	f=con*0.75+50
+     8 | 	print(round(f,2))
+     9 | elif con>=250 and con<500:
+    10 | 	f=con*1+50
+    11 | 	print(round(f,2))
+    12 | elif con>=500:
+    13 | 	f=con*1.25+50
+    14 | 	print(round(f,2))
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 9: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 9) / elif ... sem else
+      Contexto:
+               8 | 	print(round(f,2))
+        >>>    9 | elif con>=250 and con<500:
+              10 | 	f=con*1+50
+
+▶ B9 — elif/else retestando condições já verificadas
+  Ocorrências: 1
+
+  [1] Linha 0: B9 detectado pelo VisitorMC3 (localização exata não mapeada)
+      Trecho  : —
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 5
+
+  [1] Linha 1: Variável 'con' com nome muito curto (≤4 chars)
+      Trecho  : con = ...
+      Contexto:
+        >>>    1 | con=int(input("qual seu consumo de energia:"))
+               2 | 
+
+  [2] Linha 4: Variável 'f' com nome muito curto (≤4 chars)
+      Trecho  : f = ...
+      Contexto:
+               3 | if con <100:
+        >>>    4 | 	f=con*0.50+50
+               5 | 	print(round(f,2))
+
+  [3] Linha 7: Variável 'f' com nome muito curto (≤4 chars)
+      Trecho  : f = ...
+      Contexto:
+               6 | elif con>=100 and con<250:
+        >>>    7 | 	f=con*0.75+50
+               8 | 	print(round(f,2))
+
+  [4] Linha 10: Variável 'f' com nome muito curto (≤4 chars)
+      Trecho  : f = ...
+      Contexto:
+               9 | elif con>=250 and con<500:
+        >>>   10 | 	f=con*1+50
+              11 | 	print(round(f,2))
+
+  [5] Linha 13: Variável 'f' com nome muito curto (≤4 chars)
+      Trecho  : f = ...
+      Contexto:
+              12 | elif con>=500:
+        >>>   13 | 	f=con*1.25+50
+              14 | 	print(round(f,2))
+
+======================================================================

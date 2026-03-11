@@ -1,0 +1,45 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 6935_9759.py
+Questão  : 6935
+Aluno    : 9759
+Total MCs: 1
+
+⚠️  Misconceptions detectados: B4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | valr = float(input("Informe o valor total da compra: "))
+     2 | cod = input("Informe o a forma de pagamento: ").upper()
+     3 | 
+     4 | if cod == "D":
+     5 | 	total = valr - (valr * (12/100))
+     6 | 	print(round(total, 2))
+     7 | elif cod == "C":
+     8 | 	vezes = int(input("Informe de quantas vezes sera o pagamento: "))
+     9 | 	if vezes == 1:
+    10 | 		print(round(valr, 2))
+    11 | 	else:
+    12 | 		total = valr + (valr * (7/100))
+    13 | 		print(round(total, 2))
+    14 | else:
+    15 | 	total =  valr - (valr * (12/100))
+    16 | 	print(round(total, 2))
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B4 — Comandos repetidos dentro de blocos if-elif-else
+  Ocorrências: 1
+
+  [1] Linha 7: Bloco idêntico ao da linha 4
+      Trecho  : total = valr - valr * (12 / 100)
+      Contexto:
+               6 | 	print(round(total, 2))
+        >>>    7 | elif cod == "C":
+               8 | 	vezes = int(input("Informe de quantas vezes sera o pagamento: "))
+
+======================================================================

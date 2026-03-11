@@ -1,0 +1,57 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 3592_8409.py
+Questão  : 3592
+Aluno    : 8409
+Total MCs: 2
+
+⚠️  Misconceptions detectados: A2, B8
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | cont = 100
+     3 | dados = array(eval(input("valores:")))
+     4 | for i in range (size(dados)):
+     5 | 	if dados[i] == 1:
+     6 | 		cont = cont
+     7 | 	elif dados[i] == 2:
+     8 | 		cont = cont*2
+     9 | 	elif dados[i] == 3:
+    10 | 		cont = (cont)/3
+    11 | 	elif dados[i] == 4:
+    12 | 		cont = cont*4
+    13 | 	elif dados[i] == 5:
+    14 | 		cont = cont/5
+    15 | 	elif dados[i] == 6:
+    16 | 		cont = cont*6
+    17 | 
+    18 | print(round(cont,2))
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A2 — Variável atribuída a si mesma
+  Ocorrências: 1
+
+  [1] Linha 6: 'cont' atribuído a si mesmo
+      Trecho  : cont = cont
+      Contexto:
+               5 | 	if dados[i] == 1:
+        >>>    6 | 		cont = cont
+               7 | 	elif dados[i] == 2:
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 13: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 13) / elif ... sem else
+      Contexto:
+              12 | 		cont = cont*4
+        >>>   13 | 	elif dados[i] == 5:
+              14 | 		cont = cont/5
+
+======================================================================

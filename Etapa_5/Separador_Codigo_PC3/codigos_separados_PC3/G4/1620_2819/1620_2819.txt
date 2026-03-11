@@ -1,0 +1,62 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1620_2819.py
+Questão  : 1620
+Aluno    : 2819
+Total MCs: 1
+
+⚠️  Misconceptions detectados: G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import *
+     2 | #vetores de entrada
+     3 | t = array(eval(input(""))) #tempos do banho (em min)
+     4 | a = array(eval(input(""))) #percentual de abertura (em %)
+     5 | #vetor de saída
+     6 | c = zeros(size(t), dtype=float)
+     7 | #contadores
+     8 | i = 0  #indice dos vetores de entrada  
+     9 | while(i < size(t)):
+    10 | 	c[i] = t[i]*(a[i]/20) 
+    11 | 	i += 1
+    12 | print(round(sum(c), 2))
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 4
+
+  [1] Linha 3: Variável 't' com nome muito curto (≤4 chars)
+      Trecho  : t = ...
+      Contexto:
+               2 | #vetores de entrada
+        >>>    3 | t = array(eval(input(""))) #tempos do banho (em min)
+               4 | a = array(eval(input(""))) #percentual de abertura (em %)
+
+  [2] Linha 4: Variável 'a' com nome muito curto (≤4 chars)
+      Trecho  : a = ...
+      Contexto:
+               3 | t = array(eval(input(""))) #tempos do banho (em min)
+        >>>    4 | a = array(eval(input(""))) #percentual de abertura (em %)
+               5 | #vetor de saída
+
+  [3] Linha 6: Variável 'c' com nome muito curto (≤4 chars)
+      Trecho  : c = ...
+      Contexto:
+               5 | #vetor de saída
+        >>>    6 | c = zeros(size(t), dtype=float)
+               7 | #contadores
+
+  [4] Linha 8: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+               7 | #contadores
+        >>>    8 | i = 0  #indice dos vetores de entrada  
+               9 | while(i < size(t)):
+
+======================================================================

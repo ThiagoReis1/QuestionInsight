@@ -1,0 +1,56 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1365_4685.py
+Questão  : 1365
+Aluno    : 4685
+Total MCs: 2
+
+⚠️  Misconceptions detectados: A3, A4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from math import*	
+     2 | d= input("A distacia:")
+     3 | g= input=("9.8**2")
+     4 | a= input("O angulo")
+     5 | print= sqtr(d*g/sin(2*alfa))
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 2
+
+  [1] Linha 4: Variável 'a' declarada mas nunca utilizada
+      Trecho  : a = ...
+      Contexto:
+               3 | g= input=("9.8**2")
+        >>>    4 | a= input("O angulo")
+               5 | print= sqtr(d*g/sin(2*alfa))
+
+  [2] Linha 5: Variável 'print' declarada mas nunca utilizada
+      Trecho  : print = ...
+      Contexto:
+               4 | a= input("O angulo")
+        >>>    5 | print= sqtr(d*g/sin(2*alfa))
+
+▶ A4 — Redefinição de built-in
+  Ocorrências: 2
+
+  [1] Linha 3: Built-in 'input' redefinido como variável
+      Trecho  : g = input = '9.8**2'
+      Contexto:
+               2 | d= input("A distacia:")
+        >>>    3 | g= input=("9.8**2")
+               4 | a= input("O angulo")
+
+  [2] Linha 5: Built-in 'print' redefinido como variável
+      Trecho  : print = sqtr(d * g / sin(2 * alfa))
+      Contexto:
+               4 | a= input("O angulo")
+        >>>    5 | print= sqtr(d*g/sin(2*alfa))
+
+======================================================================

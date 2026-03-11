@@ -1,0 +1,7 @@
+#REBECA MONTANHO VELASQUEZ
+#UNIVERSIDADE FEDERAL DO AMAZONAS
+#CALCULAR A QUANTIDADE DE RECEITAS DE SUSHIS
+ingrediente = "kampyo"
+print("kampio")
+gramas = int(input(20))
+quantidade 

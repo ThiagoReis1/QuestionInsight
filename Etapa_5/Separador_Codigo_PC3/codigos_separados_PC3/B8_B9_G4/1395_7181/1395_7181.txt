@@ -1,0 +1,71 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1395_7181.py
+Questão  : 1395
+Aluno    : 7181
+Total MCs: 3
+
+⚠️  Misconceptions detectados: B8, B9, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | vd=float(input("valor das vendas:  "))
+     2 | 
+     3 | if(vd<=1000):
+     4 | 	vc=(vd*0.05)
+     5 | else:
+     6 | 	if(vd>1000):
+     7 | 		vc=(1000*0.05)+(vd-1000)*0.1
+     8 | 
+     9 | print(round(vc, 2))
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 3: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 3) / elif ... sem else
+      Contexto:
+               2 | 
+        >>>    3 | if(vd<=1000):
+               4 | 	vc=(vd*0.05)
+
+▶ B9 — elif/else retestando condições já verificadas
+  Ocorrências: 1
+
+  [1] Linha 6: elif retesta condição inversa do if da linha 3
+      Trecho  : if vd <= 1000 ... elif vd > 1000
+      Contexto:
+               5 | else:
+        >>>    6 | 	if(vd>1000):
+               7 | 		vc=(1000*0.05)+(vd-1000)*0.1
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 3
+
+  [1] Linha 1: Variável 'vd' com nome muito curto (≤4 chars)
+      Trecho  : vd = ...
+      Contexto:
+        >>>    1 | vd=float(input("valor das vendas:  "))
+               2 | 
+
+  [2] Linha 4: Variável 'vc' com nome muito curto (≤4 chars)
+      Trecho  : vc = ...
+      Contexto:
+               3 | if(vd<=1000):
+        >>>    4 | 	vc=(vd*0.05)
+               5 | else:
+
+  [3] Linha 7: Variável 'vc' com nome muito curto (≤4 chars)
+      Trecho  : vc = ...
+      Contexto:
+               6 | 	if(vd>1000):
+        >>>    7 | 		vc=(1000*0.05)+(vd-1000)*0.1
+               8 | 
+
+======================================================================

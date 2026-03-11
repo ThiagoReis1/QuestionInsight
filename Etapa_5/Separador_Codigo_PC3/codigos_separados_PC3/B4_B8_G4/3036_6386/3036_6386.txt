@@ -1,0 +1,95 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 3036_6386.py
+Questão  : 3036
+Aluno    : 6386
+Total MCs: 3
+
+⚠️  Misconceptions detectados: B4, B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | x = float(input("valor de x: "))
+     2 | 
+     3 | if x <= -1 or x >= 1:
+     4 | 	fx = x
+     5 | elif (x > -1 and x < 0):
+     6 | 	fx = 1
+     7 | elif (x > 0 and x < 1):
+     8 | 	fx = 1
+     9 | elif x == 0:
+    10 | 	fx = 2
+    11 | 	
+    12 | print(round(fx,2))
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B4 — Comandos repetidos dentro de blocos if-elif-else
+  Ocorrências: 2
+
+  [1] Linha 7: Bloco idêntico ao da linha 5
+      Trecho  : fx = 1
+      Contexto:
+               6 | 	fx = 1
+        >>>    7 | elif (x > 0 and x < 1):
+               8 | 	fx = 1
+
+  [2] Linha 7: Bloco idêntico ao da linha 5
+      Trecho  : fx = 1
+      Contexto:
+               6 | 	fx = 1
+        >>>    7 | elif (x > 0 and x < 1):
+               8 | 	fx = 1
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 7: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 7) / elif ... sem else
+      Contexto:
+               6 | 	fx = 1
+        >>>    7 | elif (x > 0 and x < 1):
+               8 | 	fx = 1
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 5
+
+  [1] Linha 1: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+        >>>    1 | x = float(input("valor de x: "))
+               2 | 
+
+  [2] Linha 4: Variável 'fx' com nome muito curto (≤4 chars)
+      Trecho  : fx = ...
+      Contexto:
+               3 | if x <= -1 or x >= 1:
+        >>>    4 | 	fx = x
+               5 | elif (x > -1 and x < 0):
+
+  [3] Linha 6: Variável 'fx' com nome muito curto (≤4 chars)
+      Trecho  : fx = ...
+      Contexto:
+               5 | elif (x > -1 and x < 0):
+        >>>    6 | 	fx = 1
+               7 | elif (x > 0 and x < 1):
+
+  [4] Linha 8: Variável 'fx' com nome muito curto (≤4 chars)
+      Trecho  : fx = ...
+      Contexto:
+               7 | elif (x > 0 and x < 1):
+        >>>    8 | 	fx = 1
+               9 | elif x == 0:
+
+  [5] Linha 10: Variável 'fx' com nome muito curto (≤4 chars)
+      Trecho  : fx = ...
+      Contexto:
+               9 | elif x == 0:
+        >>>   10 | 	fx = 2
+              11 | 	
+
+======================================================================

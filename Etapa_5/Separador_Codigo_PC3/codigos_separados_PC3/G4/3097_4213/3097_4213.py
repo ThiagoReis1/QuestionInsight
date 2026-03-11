@@ -1,0 +1,16 @@
+a=int(input("Posicao:"))
+soma=0
+while(a!=0):
+	if(a==1):
+		p=25
+	elif(a==2):
+		p=18
+	elif(a==3):
+		p=12
+	elif((4<=a)and(a<=13)):
+		p=14-a
+	else:
+		p=0
+	soma=soma+p
+	a=int(input("Posicao:"))
+print(soma)

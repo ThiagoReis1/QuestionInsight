@@ -1,0 +1,79 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 3035_4431.py
+Questão  : 3035
+Aluno    : 4431
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from math import*
+     2 | x=float(input("Digite o numero em graus "))
+     3 | if(x<0)or(x>360):
+     4 | 	print("entrada invalida")
+     5 | elif((x>=0)and(x<90))or((x>=180)and(x<270)):
+     6 | 	x=radians(x)
+     7 | 	z=sin(x)
+     8 | 	print(round(z,4))
+     9 | elif((x>=90)and(x<180)or(x>=270)and(x<360)):
+    10 | 	x=radians(x)
+    11 | 	z=cos(x)
+    12 | 	print(round(z,4))
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 5: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 5) / elif ... sem else
+      Contexto:
+               4 | 	print("entrada invalida")
+        >>>    5 | elif((x>=0)and(x<90))or((x>=180)and(x<270)):
+               6 | 	x=radians(x)
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 5
+
+  [1] Linha 2: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+               1 | from math import*
+        >>>    2 | x=float(input("Digite o numero em graus "))
+               3 | if(x<0)or(x>360):
+
+  [2] Linha 6: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+               5 | elif((x>=0)and(x<90))or((x>=180)and(x<270)):
+        >>>    6 | 	x=radians(x)
+               7 | 	z=sin(x)
+
+  [3] Linha 7: Variável 'z' com nome muito curto (≤4 chars)
+      Trecho  : z = ...
+      Contexto:
+               6 | 	x=radians(x)
+        >>>    7 | 	z=sin(x)
+               8 | 	print(round(z,4))
+
+  [4] Linha 10: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+               9 | elif((x>=90)and(x<180)or(x>=270)and(x<360)):
+        >>>   10 | 	x=radians(x)
+              11 | 	z=cos(x)
+
+  [5] Linha 11: Variável 'z' com nome muito curto (≤4 chars)
+      Trecho  : z = ...
+      Contexto:
+              10 | 	x=radians(x)
+        >>>   11 | 	z=cos(x)
+              12 | 	print(round(z,4))
+
+======================================================================

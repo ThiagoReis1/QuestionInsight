@@ -1,0 +1,44 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 2538_3155.py
+Questão  : 2538
+Aluno    : 3155
+Total MCs: 1
+
+⚠️  Misconceptions detectados: A3
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | valor_sitio = float(input("Valor Inicial: "))
+     2 | valor_depositado = float(input("Valor Depositado: "))
+     3 | valor_mensal = float(input("Valor mensal fixo:"))
+     4 | tx = float(input("Taxa de Juros: "))
+     5 | mes = 0
+     6 | cont = 0
+     7 | if(valor_sitio > 0 and valor_depositado > 0 and valor_mensal > 0 and tx > 0):
+     8 | 	while(valor_depositado < valor_sitio):
+     9 | 		valor_depositado = valor_depositado + (valor_depositado * (tx / 100)) + valor_mensal
+    10 | 		valor_depositado = round(valor_depositado,2) 
+    11 | 		mes += 1
+    12 | 	print(mes)	
+    13 | else:
+    14 | 	print("Dados incorretos")
+    15 | 	
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 1
+
+  [1] Linha 6: Variável 'cont' declarada mas nunca utilizada
+      Trecho  : cont = ...
+      Contexto:
+               5 | mes = 0
+        >>>    6 | cont = 0
+               7 | if(valor_sitio > 0 and valor_depositado > 0 and valor_mensal > 0 and tx > 0):
+
+======================================================================

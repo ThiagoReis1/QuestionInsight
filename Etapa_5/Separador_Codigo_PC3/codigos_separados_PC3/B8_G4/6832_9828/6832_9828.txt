@@ -1,0 +1,68 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 6832_9828.py
+Questão  : 6832
+Aluno    : 9828
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import *
+     2 | cmp = input("Compras: ").upper()
+     3 | cm = list(cmp)
+     4 | c = 0
+     5 | 
+     6 | while c < len(cm):
+     7 | 	if cm[c] == "H":
+     8 | 		cm[c] = 5.4
+     9 | 	elif cm[c] == "C":
+    10 | 		cm[c] = 8.95
+    11 | 	elif cm[c] == "L":
+    12 | 		cm[c] = 4.5
+    13 | 	c+=1
+    14 | 
+    15 | print(sum(cm))
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 9: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 9) / elif ... sem else
+      Contexto:
+               8 | 		cm[c] = 5.4
+        >>>    9 | 	elif cm[c] == "C":
+              10 | 		cm[c] = 8.95
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 3
+
+  [1] Linha 2: Variável 'cmp' com nome muito curto (≤4 chars)
+      Trecho  : cmp = ...
+      Contexto:
+               1 | from numpy import *
+        >>>    2 | cmp = input("Compras: ").upper()
+               3 | cm = list(cmp)
+
+  [2] Linha 3: Variável 'cm' com nome muito curto (≤4 chars)
+      Trecho  : cm = ...
+      Contexto:
+               2 | cmp = input("Compras: ").upper()
+        >>>    3 | cm = list(cmp)
+               4 | c = 0
+
+  [3] Linha 4: Variável 'c' com nome muito curto (≤4 chars)
+      Trecho  : c = ...
+      Contexto:
+               3 | cm = list(cmp)
+        >>>    4 | c = 0
+               5 | 
+
+======================================================================

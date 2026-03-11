@@ -1,0 +1,96 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 6936_9735.py
+Questão  : 6936
+Aluno    : 9735
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B4, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | p = float(input("negocio: "))
+     2 | op = input("negoicio: ").upper()
+     3 | 
+     4 | if (op=="C"):
+     5 | 	a = int(input("em quantas vezes:"))
+     6 | 	if (a == 1):
+     7 | 		print(round(p, 2))
+     8 | 	else:
+     9 | 		a = p+((8/100)*p)
+    10 | 		print(round(a, 2))
+    11 | elif (op=="P"):
+    12 | 	a = p-((13/100)*p)
+    13 | 	print(round(a, 2))
+    14 | else:
+    15 | 	a = p-((13/100)*p)
+    16 | 	print(round(a, 2))
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B4 — Comandos repetidos dentro de blocos if-elif-else
+  Ocorrências: 2
+
+  [1] Linha 11: Bloco idêntico ao da linha 11
+      Trecho  : a = p - 13 / 100 * p
+      Contexto:
+              10 | 		print(round(a, 2))
+        >>>   11 | elif (op=="P"):
+              12 | 	a = p-((13/100)*p)
+
+  [2] Linha 11: Bloco idêntico ao da linha 11
+      Trecho  : a = p - 13 / 100 * p
+      Contexto:
+              10 | 		print(round(a, 2))
+        >>>   11 | elif (op=="P"):
+              12 | 	a = p-((13/100)*p)
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 6
+
+  [1] Linha 1: Variável 'p' com nome muito curto (≤4 chars)
+      Trecho  : p = ...
+      Contexto:
+        >>>    1 | p = float(input("negocio: "))
+               2 | op = input("negoicio: ").upper()
+
+  [2] Linha 2: Variável 'op' com nome muito curto (≤4 chars)
+      Trecho  : op = ...
+      Contexto:
+               1 | p = float(input("negocio: "))
+        >>>    2 | op = input("negoicio: ").upper()
+               3 | 
+
+  [3] Linha 5: Variável 'a' com nome muito curto (≤4 chars)
+      Trecho  : a = ...
+      Contexto:
+               4 | if (op=="C"):
+        >>>    5 | 	a = int(input("em quantas vezes:"))
+               6 | 	if (a == 1):
+
+  [4] Linha 9: Variável 'a' com nome muito curto (≤4 chars)
+      Trecho  : a = ...
+      Contexto:
+               8 | 	else:
+        >>>    9 | 		a = p+((8/100)*p)
+              10 | 		print(round(a, 2))
+
+  [5] Linha 12: Variável 'a' com nome muito curto (≤4 chars)
+      Trecho  : a = ...
+      Contexto:
+              11 | elif (op=="P"):
+        >>>   12 | 	a = p-((13/100)*p)
+              13 | 	print(round(a, 2))
+
+  [6] Linha 15: Variável 'a' com nome muito curto (≤4 chars)
+      Trecho  : a = ...
+      Contexto:
+              14 | else:
+        >>>   15 | 	a = p-((13/100)*p)
+              16 | 	print(round(a, 2))
+
+======================================================================

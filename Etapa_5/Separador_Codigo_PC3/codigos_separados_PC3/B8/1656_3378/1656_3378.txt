@@ -1,0 +1,52 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1656_3378.py
+Questão  : 1656
+Aluno    : 3378
+Total MCs: 1
+
+⚠️  Misconceptions detectados: B8
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import *
+     2 | from numpy.linalg import *
+     3 | 
+     4 | entrada= input().upper()
+     5 | entrada= entrada.split(',')
+     6 | 
+     7 | cont= zeros(5, dtype=int)
+     8 | i=0
+     9 | while i < len(entrada):
+    10 | 	if entrada[i] == 'BE':
+    11 | 		cont[0]= cont[0] + 1
+    12 | 	elif entrada[i] == 'ES':
+    13 | 		cont[1]= cont[1] + 1
+    14 | 	elif entrada[i] == 'FR':
+    15 | 		cont[2]= cont[2] + 1
+    16 | 	elif entrada[i] == 'IT':
+    17 | 		cont[3]= cont[3] + 1
+    18 | 	elif entrada[i] == 'PT':
+    19 | 		cont[4]= cont[4] + 1
+    20 | 
+    21 | i=i+1
+    22 | print(max(cont))
+    23 | print(cont)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 16: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 16) / elif ... sem else
+      Contexto:
+              15 | 		cont[2]= cont[2] + 1
+        >>>   16 | 	elif entrada[i] == 'IT':
+              17 | 		cont[3]= cont[3] + 1
+
+======================================================================

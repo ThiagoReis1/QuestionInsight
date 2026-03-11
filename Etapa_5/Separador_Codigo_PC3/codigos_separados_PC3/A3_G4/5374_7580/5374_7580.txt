@@ -1,0 +1,108 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 5374_7580.py
+Questão  : 5374
+Aluno    : 7580
+Total MCs: 2
+
+⚠️  Misconceptions detectados: A3, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | b1 = array(['A','E','I','O','U'])
+     3 | x = input(': ').upper()
+     4 | i = c = p1 = p = 0
+     5 | while i < len(x):
+     6 | 	while c < size(b1):
+     7 | 		if x[i] == b1[c]:
+     8 | 			p1 = 1
+     9 | 		c += 1
+    10 | 	if p1 == 1:
+    11 | 		p += 0.15
+    12 | 	else:
+    13 | 		p += 0.17
+    14 | 	i += 1
+    15 | 	c =0
+    16 | 	p1 = 0
+    17 | print(round(p,2))
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 1
+
+  [1] Linha 0: A3 detectado pelo VisitorMC3 (localização exata não mapeada)
+      Trecho  : —
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 9
+
+  [1] Linha 2: Variável 'b1' com nome muito curto (≤4 chars)
+      Trecho  : b1 = ...
+      Contexto:
+               1 | from numpy import*
+        >>>    2 | b1 = array(['A','E','I','O','U'])
+               3 | x = input(': ').upper()
+
+  [2] Linha 3: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+               2 | b1 = array(['A','E','I','O','U'])
+        >>>    3 | x = input(': ').upper()
+               4 | i = c = p1 = p = 0
+
+  [3] Linha 4: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+               3 | x = input(': ').upper()
+        >>>    4 | i = c = p1 = p = 0
+               5 | while i < len(x):
+
+  [4] Linha 4: Variável 'c' com nome muito curto (≤4 chars)
+      Trecho  : c = ...
+      Contexto:
+               3 | x = input(': ').upper()
+        >>>    4 | i = c = p1 = p = 0
+               5 | while i < len(x):
+
+  [5] Linha 4: Variável 'p1' com nome muito curto (≤4 chars)
+      Trecho  : p1 = ...
+      Contexto:
+               3 | x = input(': ').upper()
+        >>>    4 | i = c = p1 = p = 0
+               5 | while i < len(x):
+
+  [6] Linha 4: Variável 'p' com nome muito curto (≤4 chars)
+      Trecho  : p = ...
+      Contexto:
+               3 | x = input(': ').upper()
+        >>>    4 | i = c = p1 = p = 0
+               5 | while i < len(x):
+
+  [7] Linha 15: Variável 'c' com nome muito curto (≤4 chars)
+      Trecho  : c = ...
+      Contexto:
+              14 | 	i += 1
+        >>>   15 | 	c =0
+              16 | 	p1 = 0
+
+  [8] Linha 16: Variável 'p1' com nome muito curto (≤4 chars)
+      Trecho  : p1 = ...
+      Contexto:
+              15 | 	c =0
+        >>>   16 | 	p1 = 0
+              17 | print(round(p,2))
+
+  [9] Linha 8: Variável 'p1' com nome muito curto (≤4 chars)
+      Trecho  : p1 = ...
+      Contexto:
+               7 | 		if x[i] == b1[c]:
+        >>>    8 | 			p1 = 1
+               9 | 		c += 1
+
+======================================================================

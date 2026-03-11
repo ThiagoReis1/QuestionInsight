@@ -1,0 +1,16 @@
+from numpy import *
+from math import *
+
+p = float(input("Digite aqui um numero: "))
+x = array(eval(input("Digite X: ")))
+y = array(eval(input("Digite Y: ")))
+t = p/(p+1)
+raiz = 1/t
+v = zeros(size(x), dtype = float)
+v1 = 0
+for k in range(size(x)):
+	v[k] = 2 * x[k] + 3 * y[k]
+for i in range(size(v)):
+	v1 = v1 + abs(v[i]) ** t
+print(round((v1 ** raiz), 7))
+

@@ -1,0 +1,78 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1640_4097.py
+Questão  : 1640
+Aluno    : 4097
+Total MCs: 2
+
+⚠️  Misconceptions detectados: A3, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | v = array(eval(input("v: ")))
+     3 | 
+     4 | t = 0
+     5 | 
+     6 | for i in range(size(v)):
+     7 | 	if(v[i] % 2 != 0):
+     8 | 		t = t + 1
+     9 | 		
+    10 | vi = zeros(v, dtype = int)
+    11 | for o in range(size(v)):
+    12 | 	if(v[o] % 2 != 0):
+    13 | 		vi = v[o]
+    14 | print(t)
+    15 | print(vi)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 1
+
+  [1] Linha 0: A3 detectado pelo VisitorMC3 (localização exata não mapeada)
+      Trecho  : —
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 5
+
+  [1] Linha 2: Variável 'v' com nome muito curto (≤4 chars)
+      Trecho  : v = ...
+      Contexto:
+               1 | from numpy import*
+        >>>    2 | v = array(eval(input("v: ")))
+               3 | 
+
+  [2] Linha 4: Variável 't' com nome muito curto (≤4 chars)
+      Trecho  : t = ...
+      Contexto:
+               3 | 
+        >>>    4 | t = 0
+               5 | 
+
+  [3] Linha 10: Variável 'vi' com nome muito curto (≤4 chars)
+      Trecho  : vi = ...
+      Contexto:
+               9 | 		
+        >>>   10 | vi = zeros(v, dtype = int)
+              11 | for o in range(size(v)):
+
+  [4] Linha 8: Variável 't' com nome muito curto (≤4 chars)
+      Trecho  : t = ...
+      Contexto:
+               7 | 	if(v[i] % 2 != 0):
+        >>>    8 | 		t = t + 1
+               9 | 		
+
+  [5] Linha 13: Variável 'vi' com nome muito curto (≤4 chars)
+      Trecho  : vi = ...
+      Contexto:
+              12 | 	if(v[o] % 2 != 0):
+        >>>   13 | 		vi = v[o]
+              14 | print(t)
+
+======================================================================

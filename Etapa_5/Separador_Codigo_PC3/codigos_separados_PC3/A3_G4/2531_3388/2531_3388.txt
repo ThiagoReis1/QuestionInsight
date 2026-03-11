@@ -1,0 +1,107 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 2531_3388.py
+Questão  : 2531
+Aluno    : 3388
+Total MCs: 2
+
+⚠️  Misconceptions detectados: A3, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | v = float(input())
+     2 | m = float(input())
+     3 | j = float(input())
+     4 | 
+     5 | cont = 0
+     6 | inicial = v
+     7 | saldo = v
+     8 | dif = 0
+     9 | 
+    10 | if v > 0 and m > 0 and j > 0:
+    11 | 	while inicial < saldo:
+    12 | 		saldo = round((saldo + (saldo * (j/100)) - m),2)
+    13 | 		cont = cont + 1
+    14 | 		dif = saldo * 0.1 
+    15 | 		m = float(input())
+    16 | 	print(cont)
+    17 | else:
+    18 | 	print("Dados incorretos")
+    19 | 
+    20 | 	
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 1
+
+  [1] Linha 8: Variável 'dif' declarada mas nunca utilizada
+      Trecho  : dif = ...
+      Contexto:
+               7 | saldo = v
+        >>>    8 | dif = 0
+               9 | 
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 8
+
+  [1] Linha 1: Variável 'v' com nome muito curto (≤4 chars)
+      Trecho  : v = ...
+      Contexto:
+        >>>    1 | v = float(input())
+               2 | m = float(input())
+
+  [2] Linha 2: Variável 'm' com nome muito curto (≤4 chars)
+      Trecho  : m = ...
+      Contexto:
+               1 | v = float(input())
+        >>>    2 | m = float(input())
+               3 | j = float(input())
+
+  [3] Linha 3: Variável 'j' com nome muito curto (≤4 chars)
+      Trecho  : j = ...
+      Contexto:
+               2 | m = float(input())
+        >>>    3 | j = float(input())
+               4 | 
+
+  [4] Linha 5: Variável 'cont' com nome muito curto (≤4 chars)
+      Trecho  : cont = ...
+      Contexto:
+               4 | 
+        >>>    5 | cont = 0
+               6 | inicial = v
+
+  [5] Linha 8: Variável 'dif' com nome muito curto (≤4 chars)
+      Trecho  : dif = ...
+      Contexto:
+               7 | saldo = v
+        >>>    8 | dif = 0
+               9 | 
+
+  [6] Linha 13: Variável 'cont' com nome muito curto (≤4 chars)
+      Trecho  : cont = ...
+      Contexto:
+              12 | 		saldo = round((saldo + (saldo * (j/100)) - m),2)
+        >>>   13 | 		cont = cont + 1
+              14 | 		dif = saldo * 0.1 
+
+  [7] Linha 14: Variável 'dif' com nome muito curto (≤4 chars)
+      Trecho  : dif = ...
+      Contexto:
+              13 | 		cont = cont + 1
+        >>>   14 | 		dif = saldo * 0.1 
+              15 | 		m = float(input())
+
+  [8] Linha 15: Variável 'm' com nome muito curto (≤4 chars)
+      Trecho  : m = ...
+      Contexto:
+              14 | 		dif = saldo * 0.1 
+        >>>   15 | 		m = float(input())
+              16 | 	print(cont)
+
+======================================================================

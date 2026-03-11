@@ -1,0 +1,87 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 2851_7138.py
+Questão  : 2851
+Aluno    : 7138
+Total MCs: 2
+
+⚠️  Misconceptions detectados: A3, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | 
+     3 | v = array(eval(input()))
+     4 | i = 0
+     5 | g = 0 
+     6 | c = 0
+     7 | 
+     8 | for i in range(size(v)):
+     9 | 	if v[i] == 99:
+    10 | 		v[i] = 0 
+    11 | 		g = g*2
+    12 | 	g = g + v[i]
+    13 | print(g)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 1
+
+  [1] Linha 6: Variável 'c' declarada mas nunca utilizada
+      Trecho  : c = ...
+      Contexto:
+               5 | g = 0 
+        >>>    6 | c = 0
+               7 | 
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 6
+
+  [1] Linha 3: Variável 'v' com nome muito curto (≤4 chars)
+      Trecho  : v = ...
+      Contexto:
+               2 | 
+        >>>    3 | v = array(eval(input()))
+               4 | i = 0
+
+  [2] Linha 4: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+               3 | v = array(eval(input()))
+        >>>    4 | i = 0
+               5 | g = 0 
+
+  [3] Linha 5: Variável 'g' com nome muito curto (≤4 chars)
+      Trecho  : g = ...
+      Contexto:
+               4 | i = 0
+        >>>    5 | g = 0 
+               6 | c = 0
+
+  [4] Linha 6: Variável 'c' com nome muito curto (≤4 chars)
+      Trecho  : c = ...
+      Contexto:
+               5 | g = 0 
+        >>>    6 | c = 0
+               7 | 
+
+  [5] Linha 12: Variável 'g' com nome muito curto (≤4 chars)
+      Trecho  : g = ...
+      Contexto:
+              11 | 		g = g*2
+        >>>   12 | 	g = g + v[i]
+              13 | print(g)
+
+  [6] Linha 11: Variável 'g' com nome muito curto (≤4 chars)
+      Trecho  : g = ...
+      Contexto:
+              10 | 		v[i] = 0 
+        >>>   11 | 		g = g*2
+              12 | 	g = g + v[i]
+
+======================================================================

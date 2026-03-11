@@ -1,0 +1,61 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1115_1649.py
+Questão  : 1115
+Aluno    : 1649
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B4, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | x = float(input("Digite o salario: "))
+     2 | y = int(input("Digite o codigo: "))
+     3 | print("Entradas: R$",x,"e codigo",y)
+     4 | if(x <= 0):
+     5 | 	print("Dados invalidos")
+     6 | else:
+     7 | 	if(y == 101):
+     8 | 		print("Novo salario: R$",round(x + x*0.008,2))
+     9 | 	elif(y == 102):
+    10 | 		print("Novo salario: R$",round(x + x*0.0065,2))
+    11 | 	elif(y == 103):
+    12 | 		print("Novo salario: R$",round(x + x*0.006,2))
+    13 | 	elif(y == 104):
+    14 | 		print("Novo salario: R$",round(x + x*0.0055,2))
+    15 | 	else:
+    16 | 		print("Dados invalidos")
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B4 — Comandos repetidos dentro de blocos if-elif-else
+  Ocorrências: 1
+
+  [1] Linha 13: Bloco idêntico ao da linha 4
+      Trecho  : print('Dados invalidos')
+      Contexto:
+              12 | 		print("Novo salario: R$",round(x + x*0.006,2))
+        >>>   13 | 	elif(y == 104):
+              14 | 		print("Novo salario: R$",round(x + x*0.0055,2))
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 2
+
+  [1] Linha 1: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+        >>>    1 | x = float(input("Digite o salario: "))
+               2 | y = int(input("Digite o codigo: "))
+
+  [2] Linha 2: Variável 'y' com nome muito curto (≤4 chars)
+      Trecho  : y = ...
+      Contexto:
+               1 | x = float(input("Digite o salario: "))
+        >>>    2 | y = int(input("Digite o codigo: "))
+               3 | print("Entradas: R$",x,"e codigo",y)
+
+======================================================================

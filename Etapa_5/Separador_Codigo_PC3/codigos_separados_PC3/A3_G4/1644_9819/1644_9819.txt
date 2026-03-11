@@ -1,0 +1,82 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1644_9819.py
+Questão  : 1644
+Aluno    : 9819
+Total MCs: 2
+
+⚠️  Misconceptions detectados: A3, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import *
+     2 | 
+     3 | alunos = array(eval(input("insira a quantidade de alunos: ")))
+     4 | acum = zeros(size(alunos), dtype= int)
+     5 | 
+     6 | n = 0
+     7 | 
+     8 | for i in range(size(alunos)):
+     9 | 	if alunos[i] < 5.0:
+    10 | 		n += 1
+    11 | print(n)
+    12 | 
+    13 | ind = 0
+    14 | vet = zeros(n)
+    15 | for i in range(size(alunos)):
+    16 | 	if alunos[i] < 5.0:
+    17 | 		acum[ind] = i
+    18 | 		ind += 1
+    19 | 
+    20 | print(acum)
+    21 | 	
+    22 | 	
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 1
+
+  [1] Linha 14: Variável 'vet' declarada mas nunca utilizada
+      Trecho  : vet = ...
+      Contexto:
+              13 | ind = 0
+        >>>   14 | vet = zeros(n)
+              15 | for i in range(size(alunos)):
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 4
+
+  [1] Linha 4: Variável 'acum' com nome muito curto (≤4 chars)
+      Trecho  : acum = ...
+      Contexto:
+               3 | alunos = array(eval(input("insira a quantidade de alunos: ")))
+        >>>    4 | acum = zeros(size(alunos), dtype= int)
+               5 | 
+
+  [2] Linha 6: Variável 'n' com nome muito curto (≤4 chars)
+      Trecho  : n = ...
+      Contexto:
+               5 | 
+        >>>    6 | n = 0
+               7 | 
+
+  [3] Linha 13: Variável 'ind' com nome muito curto (≤4 chars)
+      Trecho  : ind = ...
+      Contexto:
+              12 | 
+        >>>   13 | ind = 0
+              14 | vet = zeros(n)
+
+  [4] Linha 14: Variável 'vet' com nome muito curto (≤4 chars)
+      Trecho  : vet = ...
+      Contexto:
+              13 | ind = 0
+        >>>   14 | vet = zeros(n)
+              15 | for i in range(size(alunos)):
+
+======================================================================

@@ -1,0 +1,51 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 2454_3058.py
+Questão  : 2454
+Aluno    : 3058
+Total MCs: 1
+
+⚠️  Misconceptions detectados: B8
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | altura= float(input("Qual a altura? "))
+     2 | sexo= input("Qual o sexo M ou F? ")
+     3 | 
+     4 | if((sexo == "M") or (sexo == "F")) and ((altura >= 1) and (altura <= 2.5)):
+     5 | 	if(sexo == "M"):
+     6 | 		peso= (72.7 * altura) - 58
+     7 | 		print(round(peso, 2))
+     8 | 	elif(sexo == "F"):
+     9 | 		peso= (62.1 * altura) - 44.7
+    10 | 		print(round(peso, 2))
+    11 | else:
+    12 | 	if(altura < 1) or (altura > 2.5):
+    13 | 		print("altura invalida")
+    14 | 	elif(sexo != "M") or (sexo != "F"):
+    15 | 		print("codigo invalido de sexo")
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 2
+
+  [1] Linha 5: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 5) / elif ... sem else
+      Contexto:
+               4 | if((sexo == "M") or (sexo == "F")) and ((altura >= 1) and (altura <= 2.5)):
+        >>>    5 | 	if(sexo == "M"):
+               6 | 		peso= (72.7 * altura) - 58
+
+  [2] Linha 12: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 12) / elif ... sem else
+      Contexto:
+              11 | else:
+        >>>   12 | 	if(altura < 1) or (altura > 2.5):
+              13 | 		print("altura invalida")
+
+======================================================================

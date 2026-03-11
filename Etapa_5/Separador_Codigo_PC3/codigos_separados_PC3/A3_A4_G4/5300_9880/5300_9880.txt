@@ -1,0 +1,74 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 5300_9880.py
+Questão  : 5300
+Aluno    : 9880
+Total MCs: 3
+
+⚠️  Misconceptions detectados: A3, A4, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | vel = float(input("Insira a velocidade de rotacao do piao lancado: "))
+     2 | 	
+     3 | min = 0	
+     4 | 
+     5 | while vel >= 50:
+     6 | 	print(round(vel, 2))
+     7 | 	vel = vel - vel*.25
+     8 | 	min += 1
+     9 | 				
+    10 | 
+    11 | 	
+    12 | 				
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 1
+
+  [1] Linha 3: Variável 'min' declarada mas nunca utilizada
+      Trecho  : min = ...
+      Contexto:
+               2 | 	
+        >>>    3 | min = 0	
+               4 | 
+
+▶ A4 — Redefinição de built-in
+  Ocorrências: 1
+
+  [1] Linha 3: Built-in 'min' redefinido como variável
+      Trecho  : min = 0
+      Contexto:
+               2 | 	
+        >>>    3 | min = 0	
+               4 | 
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 3
+
+  [1] Linha 1: Variável 'vel' com nome muito curto (≤4 chars)
+      Trecho  : vel = ...
+      Contexto:
+        >>>    1 | vel = float(input("Insira a velocidade de rotacao do piao lancado: "))
+               2 | 	
+
+  [2] Linha 3: Variável 'min' com nome muito curto (≤4 chars)
+      Trecho  : min = ...
+      Contexto:
+               2 | 	
+        >>>    3 | min = 0	
+               4 | 
+
+  [3] Linha 7: Variável 'vel' com nome muito curto (≤4 chars)
+      Trecho  : vel = ...
+      Contexto:
+               6 | 	print(round(vel, 2))
+        >>>    7 | 	vel = vel - vel*.25
+               8 | 	min += 1
+
+======================================================================

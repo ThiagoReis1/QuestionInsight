@@ -1,0 +1,47 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1619_4266.py
+Questão  : 1619
+Aluno    : 4266
+Total MCs: 1
+
+⚠️  Misconceptions detectados: B8
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | vbanho = array(eval(input("Digite o vetor tempo no banho(em minutos): ")))
+     3 | modo = array(eval(input("Digite o vetor modo de banho (QUENTE, MORNO OU FRIO): ")))
+     4 | 
+     5 | i=0
+     6 | total = 0
+     7 | 
+     8 | while(i<size(vbanho)):
+     9 | 	if(modo[i]=="QUENTE"):
+    10 | 		total = total + vbanho[i]*90*0.005
+    11 | 	elif(modo[i]=="MORNO"):
+    12 | 		total = total + vbanho[i]*45*0.005
+    13 | 	elif(modo[i]=="FRIO"):
+    14 | 		total = total + vbanho[i]*0*0.005
+    15 | 	i=i+1
+    16 | 
+    17 | print(round(total,2))
+    18 | 
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 11: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 11) / elif ... sem else
+      Contexto:
+              10 | 		total = total + vbanho[i]*90*0.005
+        >>>   11 | 	elif(modo[i]=="MORNO"):
+              12 | 		total = total + vbanho[i]*45*0.005
+
+======================================================================

@@ -1,0 +1,6 @@
+p = float(input("Pressao em atm:"))
+n = float(input("Numero de mols:"))
+T = float(input("Temperatura em graus Celsius:"))
+R = float(0.082)
+Volume = float(n*R*(T+273.15)/p)
+print(float(Volume))

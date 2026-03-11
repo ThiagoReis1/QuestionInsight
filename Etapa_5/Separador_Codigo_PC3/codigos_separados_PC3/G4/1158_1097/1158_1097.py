@@ -1,0 +1,10 @@
+pi=float(input())
+taxa=float(input())
+tr=float(input())
+p=0
+pr=500
+t=1
+while(p):
+	t=t+1
+	p=p+(pi+pi*taxa-tr-pr)
+print(t)

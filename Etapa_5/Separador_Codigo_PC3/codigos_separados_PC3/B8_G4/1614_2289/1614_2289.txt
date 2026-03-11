@@ -1,0 +1,185 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1614_2289.py
+Questão  : 1614
+Aluno    : 2289
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import *
+     2 | ali = array(eval(input()))
+     3 | cal = array(eval(input()))
+     4 | 
+     5 | g0 = 0
+     6 | g1 = 0
+     7 | g2 = 0
+     8 | g3 = 0
+     9 | g4 = 0
+    10 | i = 0
+    11 | while (i < size(ali)):
+    12 | 	if (ali[i] == "BANANA"):
+    13 | 		g0 = g0 + (cal[i]*0.97)
+    14 | 		i = i + 1
+    15 | 	elif (ali[i] == "BIFE"):
+    16 | 		g1 = g1 + (cal[i]*2.95)
+    17 | 		i = i + 1
+    18 | 	elif (ali[i] == "FEIJOADA"):
+    19 | 		g2 = g2 + (cal[i]*1.27)
+    20 | 		i = i + 1
+    21 | 	elif (ali[i] == "OMELETE"):
+    22 | 		g3 = g3 + (cal[i]*1.04)
+    23 | 		i = i + 1
+    24 | 	elif (ali[i] == "TOMATE"):
+    25 | 		g4 = g4 + (cal[i]*0.2)
+    26 | 		i = i + 1
+    27 | print(round(g0 + g1 + g2 + g3 + g4, 2))
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 21: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 21) / elif ... sem else
+      Contexto:
+              20 | 		i = i + 1
+        >>>   21 | 	elif (ali[i] == "OMELETE"):
+              22 | 		g3 = g3 + (cal[i]*1.04)
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 18
+
+  [1] Linha 2: Variável 'ali' com nome muito curto (≤4 chars)
+      Trecho  : ali = ...
+      Contexto:
+               1 | from numpy import *
+        >>>    2 | ali = array(eval(input()))
+               3 | cal = array(eval(input()))
+
+  [2] Linha 3: Variável 'cal' com nome muito curto (≤4 chars)
+      Trecho  : cal = ...
+      Contexto:
+               2 | ali = array(eval(input()))
+        >>>    3 | cal = array(eval(input()))
+               4 | 
+
+  [3] Linha 5: Variável 'g0' com nome muito curto (≤4 chars)
+      Trecho  : g0 = ...
+      Contexto:
+               4 | 
+        >>>    5 | g0 = 0
+               6 | g1 = 0
+
+  [4] Linha 6: Variável 'g1' com nome muito curto (≤4 chars)
+      Trecho  : g1 = ...
+      Contexto:
+               5 | g0 = 0
+        >>>    6 | g1 = 0
+               7 | g2 = 0
+
+  [5] Linha 7: Variável 'g2' com nome muito curto (≤4 chars)
+      Trecho  : g2 = ...
+      Contexto:
+               6 | g1 = 0
+        >>>    7 | g2 = 0
+               8 | g3 = 0
+
+  [6] Linha 8: Variável 'g3' com nome muito curto (≤4 chars)
+      Trecho  : g3 = ...
+      Contexto:
+               7 | g2 = 0
+        >>>    8 | g3 = 0
+               9 | g4 = 0
+
+  [7] Linha 9: Variável 'g4' com nome muito curto (≤4 chars)
+      Trecho  : g4 = ...
+      Contexto:
+               8 | g3 = 0
+        >>>    9 | g4 = 0
+              10 | i = 0
+
+  [8] Linha 10: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+               9 | g4 = 0
+        >>>   10 | i = 0
+              11 | while (i < size(ali)):
+
+  [9] Linha 13: Variável 'g0' com nome muito curto (≤4 chars)
+      Trecho  : g0 = ...
+      Contexto:
+              12 | 	if (ali[i] == "BANANA"):
+        >>>   13 | 		g0 = g0 + (cal[i]*0.97)
+              14 | 		i = i + 1
+
+  [10] Linha 14: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+              13 | 		g0 = g0 + (cal[i]*0.97)
+        >>>   14 | 		i = i + 1
+              15 | 	elif (ali[i] == "BIFE"):
+
+  [11] Linha 16: Variável 'g1' com nome muito curto (≤4 chars)
+      Trecho  : g1 = ...
+      Contexto:
+              15 | 	elif (ali[i] == "BIFE"):
+        >>>   16 | 		g1 = g1 + (cal[i]*2.95)
+              17 | 		i = i + 1
+
+  [12] Linha 17: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+              16 | 		g1 = g1 + (cal[i]*2.95)
+        >>>   17 | 		i = i + 1
+              18 | 	elif (ali[i] == "FEIJOADA"):
+
+  [13] Linha 19: Variável 'g2' com nome muito curto (≤4 chars)
+      Trecho  : g2 = ...
+      Contexto:
+              18 | 	elif (ali[i] == "FEIJOADA"):
+        >>>   19 | 		g2 = g2 + (cal[i]*1.27)
+              20 | 		i = i + 1
+
+  [14] Linha 20: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+              19 | 		g2 = g2 + (cal[i]*1.27)
+        >>>   20 | 		i = i + 1
+              21 | 	elif (ali[i] == "OMELETE"):
+
+  [15] Linha 22: Variável 'g3' com nome muito curto (≤4 chars)
+      Trecho  : g3 = ...
+      Contexto:
+              21 | 	elif (ali[i] == "OMELETE"):
+        >>>   22 | 		g3 = g3 + (cal[i]*1.04)
+              23 | 		i = i + 1
+
+  [16] Linha 23: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+              22 | 		g3 = g3 + (cal[i]*1.04)
+        >>>   23 | 		i = i + 1
+              24 | 	elif (ali[i] == "TOMATE"):
+
+  [17] Linha 25: Variável 'g4' com nome muito curto (≤4 chars)
+      Trecho  : g4 = ...
+      Contexto:
+              24 | 	elif (ali[i] == "TOMATE"):
+        >>>   25 | 		g4 = g4 + (cal[i]*0.2)
+              26 | 		i = i + 1
+
+  [18] Linha 26: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+              25 | 		g4 = g4 + (cal[i]*0.2)
+        >>>   26 | 		i = i + 1
+              27 | print(round(g0 + g1 + g2 + g3 + g4, 2))
+
+======================================================================

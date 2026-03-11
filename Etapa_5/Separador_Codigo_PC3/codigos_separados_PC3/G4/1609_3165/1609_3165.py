@@ -1,0 +1,1 @@
+v = array(eval(v.replace())) 

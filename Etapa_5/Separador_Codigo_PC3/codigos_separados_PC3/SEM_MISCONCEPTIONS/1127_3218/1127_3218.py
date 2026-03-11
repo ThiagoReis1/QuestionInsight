@@ -1,0 +1,22 @@
+gentilico=input()
+
+if(gentilico=="Pentos"):
+	print("pentoshi")
+elif(gentilico=="Bravos"):
+	print("bravosiano")
+elif(gentilico=="Lys"):
+		print("liseno")
+elif(gentilico=="Qohor"):
+		print("qohorik")
+elif(gentilico=="Norvos"):
+		print("norvoshi")
+elif(gentilico=="Myr"):
+		print("myrano")
+elif(gentilico=="Tyrosh"):
+		print("tyroshi")
+elif(gentilico=="Volantis"):
+		print("volantino")
+elif(gentilico=="Lorath"):
+		print("lorathi")
+else:
+	print("Entrada",gentilico,"invalida")

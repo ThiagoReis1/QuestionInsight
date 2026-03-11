@@ -1,0 +1,175 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1114_3345.py
+Questão  : 1114
+Aluno    : 3345
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B4, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | v = float(input("Velocidade do trem: "))
+     2 | t = float(input("Tempo de viagem: "))
+     3 | d = v*t
+     4 | if (v > 0) and (t >0):
+     5 | 	if (d > 0) and (d<100):
+     6 | 		m = "Bravos"
+     7 | 	elif (d>=100) and (d<200):
+     8 | 		m = "Castamere"
+     9 | 	elif (d>=200) and (d<400):
+    10 | 		m = "Doriath"
+    11 | 	elif (d>=400) and (d<600):
+    12 | 		m = "Edoras"
+    13 | 	elif (d>=600) and (d<750):
+    14 | 		m = "Fangorn"
+    15 | 	elif (d>=750) and (d<1150):
+    16 | 		m = "Gondor"
+    17 | 	elif (d>=1150) and (d<1400):
+    18 | 		m = "Hogsmead"
+    19 | 	else:
+    20 | 		m = "Hogsmead"
+    21 | 	print("Entradas: ", v, " km/h e ", t, " h")
+    22 | 	print("Proxima parada: ", m)
+    23 | else:
+    24 | 	print("Entradas: ", v, " km/h e ", t, " h")
+    25 | 	print("Dados invalidos")
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B4 — Comandos repetidos dentro de blocos if-elif-else
+  Ocorrências: 7
+
+  [1] Linha 17: Bloco idêntico ao da linha 17
+      Trecho  : m = 'Hogsmead'
+      Contexto:
+              16 | 		m = "Gondor"
+        >>>   17 | 	elif (d>=1150) and (d<1400):
+              18 | 		m = "Hogsmead"
+
+  [2] Linha 17: Bloco idêntico ao da linha 17
+      Trecho  : m = 'Hogsmead'
+      Contexto:
+              16 | 		m = "Gondor"
+        >>>   17 | 	elif (d>=1150) and (d<1400):
+              18 | 		m = "Hogsmead"
+
+  [3] Linha 17: Bloco idêntico ao da linha 17
+      Trecho  : m = 'Hogsmead'
+      Contexto:
+              16 | 		m = "Gondor"
+        >>>   17 | 	elif (d>=1150) and (d<1400):
+              18 | 		m = "Hogsmead"
+
+  [4] Linha 17: Bloco idêntico ao da linha 17
+      Trecho  : m = 'Hogsmead'
+      Contexto:
+              16 | 		m = "Gondor"
+        >>>   17 | 	elif (d>=1150) and (d<1400):
+              18 | 		m = "Hogsmead"
+
+  [5] Linha 17: Bloco idêntico ao da linha 17
+      Trecho  : m = 'Hogsmead'
+      Contexto:
+              16 | 		m = "Gondor"
+        >>>   17 | 	elif (d>=1150) and (d<1400):
+              18 | 		m = "Hogsmead"
+
+  [6] Linha 17: Bloco idêntico ao da linha 17
+      Trecho  : m = 'Hogsmead'
+      Contexto:
+              16 | 		m = "Gondor"
+        >>>   17 | 	elif (d>=1150) and (d<1400):
+              18 | 		m = "Hogsmead"
+
+  [7] Linha 17: Bloco idêntico ao da linha 17
+      Trecho  : m = 'Hogsmead'
+      Contexto:
+              16 | 		m = "Gondor"
+        >>>   17 | 	elif (d>=1150) and (d<1400):
+              18 | 		m = "Hogsmead"
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 11
+
+  [1] Linha 1: Variável 'v' com nome muito curto (≤4 chars)
+      Trecho  : v = ...
+      Contexto:
+        >>>    1 | v = float(input("Velocidade do trem: "))
+               2 | t = float(input("Tempo de viagem: "))
+
+  [2] Linha 2: Variável 't' com nome muito curto (≤4 chars)
+      Trecho  : t = ...
+      Contexto:
+               1 | v = float(input("Velocidade do trem: "))
+        >>>    2 | t = float(input("Tempo de viagem: "))
+               3 | d = v*t
+
+  [3] Linha 3: Variável 'd' com nome muito curto (≤4 chars)
+      Trecho  : d = ...
+      Contexto:
+               2 | t = float(input("Tempo de viagem: "))
+        >>>    3 | d = v*t
+               4 | if (v > 0) and (t >0):
+
+  [4] Linha 6: Variável 'm' com nome muito curto (≤4 chars)
+      Trecho  : m = ...
+      Contexto:
+               5 | 	if (d > 0) and (d<100):
+        >>>    6 | 		m = "Bravos"
+               7 | 	elif (d>=100) and (d<200):
+
+  [5] Linha 8: Variável 'm' com nome muito curto (≤4 chars)
+      Trecho  : m = ...
+      Contexto:
+               7 | 	elif (d>=100) and (d<200):
+        >>>    8 | 		m = "Castamere"
+               9 | 	elif (d>=200) and (d<400):
+
+  [6] Linha 10: Variável 'm' com nome muito curto (≤4 chars)
+      Trecho  : m = ...
+      Contexto:
+               9 | 	elif (d>=200) and (d<400):
+        >>>   10 | 		m = "Doriath"
+              11 | 	elif (d>=400) and (d<600):
+
+  [7] Linha 12: Variável 'm' com nome muito curto (≤4 chars)
+      Trecho  : m = ...
+      Contexto:
+              11 | 	elif (d>=400) and (d<600):
+        >>>   12 | 		m = "Edoras"
+              13 | 	elif (d>=600) and (d<750):
+
+  [8] Linha 14: Variável 'm' com nome muito curto (≤4 chars)
+      Trecho  : m = ...
+      Contexto:
+              13 | 	elif (d>=600) and (d<750):
+        >>>   14 | 		m = "Fangorn"
+              15 | 	elif (d>=750) and (d<1150):
+
+  [9] Linha 16: Variável 'm' com nome muito curto (≤4 chars)
+      Trecho  : m = ...
+      Contexto:
+              15 | 	elif (d>=750) and (d<1150):
+        >>>   16 | 		m = "Gondor"
+              17 | 	elif (d>=1150) and (d<1400):
+
+  [10] Linha 18: Variável 'm' com nome muito curto (≤4 chars)
+      Trecho  : m = ...
+      Contexto:
+              17 | 	elif (d>=1150) and (d<1400):
+        >>>   18 | 		m = "Hogsmead"
+              19 | 	else:
+
+  [11] Linha 20: Variável 'm' com nome muito curto (≤4 chars)
+      Trecho  : m = ...
+      Contexto:
+              19 | 	else:
+        >>>   20 | 		m = "Hogsmead"
+              21 | 	print("Entradas: ", v, " km/h e ", t, " h")
+
+======================================================================

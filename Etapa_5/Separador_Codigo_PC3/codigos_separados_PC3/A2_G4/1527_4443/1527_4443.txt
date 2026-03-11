@@ -1,0 +1,121 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1527_4443.py
+Questão  : 1527
+Aluno    : 4443
+Total MCs: 2
+
+⚠️  Misconceptions detectados: A2, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | sf = int(input("Quantidade inicial de seguidores do deus Forseti: "))
+     2 | sl = int(input("Quantidade inicial de seguidores do deus Loki: "))
+     3 | pf = float(input("Percentual anual de crescimento seguidores Forseti: "))
+     4 | pl = float(input("percentual anual de crescimento seguidores Loki:  "))
+     5 | 
+     6 | i = 0
+     7 | sl = sl
+     8 | sf = sf
+     9 | while(sl < sf):
+    10 | 	sl = sl + (sl*pl/100)
+    11 | 	sf = sf + (sf*pf/100)
+    12 | 	i = i+1
+    13 | print(i)	
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A2 — Variável atribuída a si mesma
+  Ocorrências: 2
+
+  [1] Linha 7: 'sl' atribuído a si mesmo
+      Trecho  : sl = sl
+      Contexto:
+               6 | i = 0
+        >>>    7 | sl = sl
+               8 | sf = sf
+
+  [2] Linha 8: 'sf' atribuído a si mesmo
+      Trecho  : sf = sf
+      Contexto:
+               7 | sl = sl
+        >>>    8 | sf = sf
+               9 | while(sl < sf):
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 10
+
+  [1] Linha 1: Variável 'sf' com nome muito curto (≤4 chars)
+      Trecho  : sf = ...
+      Contexto:
+        >>>    1 | sf = int(input("Quantidade inicial de seguidores do deus Forseti: "))
+               2 | sl = int(input("Quantidade inicial de seguidores do deus Loki: "))
+
+  [2] Linha 2: Variável 'sl' com nome muito curto (≤4 chars)
+      Trecho  : sl = ...
+      Contexto:
+               1 | sf = int(input("Quantidade inicial de seguidores do deus Forseti: "))
+        >>>    2 | sl = int(input("Quantidade inicial de seguidores do deus Loki: "))
+               3 | pf = float(input("Percentual anual de crescimento seguidores Forseti: "))
+
+  [3] Linha 3: Variável 'pf' com nome muito curto (≤4 chars)
+      Trecho  : pf = ...
+      Contexto:
+               2 | sl = int(input("Quantidade inicial de seguidores do deus Loki: "))
+        >>>    3 | pf = float(input("Percentual anual de crescimento seguidores Forseti: "))
+               4 | pl = float(input("percentual anual de crescimento seguidores Loki:  "))
+
+  [4] Linha 4: Variável 'pl' com nome muito curto (≤4 chars)
+      Trecho  : pl = ...
+      Contexto:
+               3 | pf = float(input("Percentual anual de crescimento seguidores Forseti: "))
+        >>>    4 | pl = float(input("percentual anual de crescimento seguidores Loki:  "))
+               5 | 
+
+  [5] Linha 6: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+               5 | 
+        >>>    6 | i = 0
+               7 | sl = sl
+
+  [6] Linha 7: Variável 'sl' com nome muito curto (≤4 chars)
+      Trecho  : sl = ...
+      Contexto:
+               6 | i = 0
+        >>>    7 | sl = sl
+               8 | sf = sf
+
+  [7] Linha 8: Variável 'sf' com nome muito curto (≤4 chars)
+      Trecho  : sf = ...
+      Contexto:
+               7 | sl = sl
+        >>>    8 | sf = sf
+               9 | while(sl < sf):
+
+  [8] Linha 10: Variável 'sl' com nome muito curto (≤4 chars)
+      Trecho  : sl = ...
+      Contexto:
+               9 | while(sl < sf):
+        >>>   10 | 	sl = sl + (sl*pl/100)
+              11 | 	sf = sf + (sf*pf/100)
+
+  [9] Linha 11: Variável 'sf' com nome muito curto (≤4 chars)
+      Trecho  : sf = ...
+      Contexto:
+              10 | 	sl = sl + (sl*pl/100)
+        >>>   11 | 	sf = sf + (sf*pf/100)
+              12 | 	i = i+1
+
+  [10] Linha 12: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+              11 | 	sf = sf + (sf*pf/100)
+        >>>   12 | 	i = i+1
+              13 | print(i)	
+
+======================================================================

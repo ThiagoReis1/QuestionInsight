@@ -1,0 +1,112 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1639_4044.py
+Questão  : 1639
+Aluno    : 4044
+Total MCs: 1
+
+⚠️  Misconceptions detectados: G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | '''
+     2 |   TP 6: Repetição por contagem(for)
+     3 |   
+     4 |   |-----------|
+     5 |   | Questão 1 |
+     6 |   |-----------|
+     7 | 
+     8 |   Universidade Federal do Amazonas
+     9 |   Instituto de Ciências Exatas
+    10 |   Departamento de Física
+    11 |   
+    12 |   Micael Davi Lima de Oliveira - 21851626
+    13 |   Turma: FB01  
+    14 | '''
+    15 | from numpy import* 
+    16 | # importação de uma biblioteca não nativa no Python3, que é crucial para o trabalho com arrays.
+    17 | 
+    18 | # inicialmente, criou-se um vetor que irá armazenar a quantidade de alunos que estão matriculados
+    19 | # em cada turma da escola. E sendo assim, esse vetor possui um tamanho definido pelo usuário, de
+    20 | # tal forma que o separador de cada elemento é uma (vírgula).
+    21 | 
+    22 | # a função 'eval' do Python3 permite que o compilador interprete alguns caracteres pré-definidos,
+    23 | # como por exemplo, uma vírgula; crucial para separar elementos. Além disso, em strings cada ele-
+    24 | # mento precisa ser colocado entre aspas duplas, afim de que o computador possa 'compreender' o 
+    25 | # tipo de dado inserido.
+    26 | vec = array(eval(input("Quantidade de alunos matriculados em cada turma: ")))
+    27 | cont = 0 # variável acumuladora
+    28 | 
+    29 | # um laço de repetição precisa ser repetido em uma quantidade equivalente ao tamanho do vetor inserido
+    30 | # pelo usuário. Fora utilizado uma repetição por contagem, afim de que se possa percorrer todo o vetor
+    31 | # quantidade à procura de quantidades que sejam pares. 
+    32 | 
+    33 | # pode-se afirmar que todo número par é necessariamente um número divisível por 2. Para cada vez que for
+    34 | # achado um elemento par, será incrementado em uma unidade o valor da variável 'cont'. Essa variável
+    35 | # tem a importante função de determinar o tamanho do vetor que armazenará os índices referentes às
+    36 | # turmas, que possuem valores pares.
+    37 | for i in range(size(vec)):
+    38 | 	if (vec[i] % 2 == 0):
+    39 | 		cont += 1
+    40 | 
+    41 | # será criado um outro vetor, cujo tamanho será igual a quantidade de elementos pares do vetor anterior.
+    42 | 
+    43 | # uma observação importante a ser destacada, é que deve estar expresso como um dos argumentos da
+    44 | # função 'zeros', o tipo de elemento que o vetor irá armazenar. Quantidades de alunos é sempre um
+    45 | # valor do tipo inteiro e positivo.
+    46 | vec_par = zeros(cont, dtype = int)
+    47 | j = 0 # variável contadora
+    48 | 
+    49 | # foi necessário construir um outro laço de repetição, pois apesar de o computador já ter uma variável
+    50 | # que armazena a quantidade de turma pares, é necessário ainda saber qual o índice associados aos elemen-
+    51 | # tos que possuem quantidade pares. 
+    52 | 
+    53 | # E por isso, o vetor digitado pelo usuário novamente será percorrido à procura de turmas pares. Contudo,
+    54 | # desta vez, um outro vetor irá ter a função de armazenar esse índice.
+    55 | 
+    56 | # Uma observação crucial, é que foi necessário declarar uma nova variável contadora. Isto porque, além
+    57 | # do 'i' que está presente no laço 'for', foi preciso construir uma variável 'j'. No entanto, 'j' apenas
+    58 | # será incrementado nas vezes em que for encontrado uma turma par. Isto porque, o índice 'j' não coincide
+    59 | # com o índice 'i', e portanto, seria uma grave equívoco não ter declarado uma segunda variável de controle.
+    60 | for i in range(size(vec)): 
+    61 | 	if (vec[i] % 2 == 0):
+    62 | 		vec_par[j] = i
+    63 | 		j += 1
+    64 | 
+    65 | # Por fim, agora é apenas preciso imprimir, respectivamente: 
+    66 | #	(1) O valor da variável 'cont', que acumulou a quantidade total de turmas que possuem quantidades pares.
+    67 | #  (2) O vetor 'vec_par', que armazenou o valor de cada índice associado à turma com quantidade par.
+    68 | print(cont)
+    69 | print(vec_par)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 3
+
+  [1] Linha 26: Variável 'vec' com nome muito curto (≤4 chars)
+      Trecho  : vec = ...
+      Contexto:
+              25 | # tipo de dado inserido.
+        >>>   26 | vec = array(eval(input("Quantidade de alunos matriculados em cada turma: ")))
+              27 | cont = 0 # variável acumuladora
+
+  [2] Linha 27: Variável 'cont' com nome muito curto (≤4 chars)
+      Trecho  : cont = ...
+      Contexto:
+              26 | vec = array(eval(input("Quantidade de alunos matriculados em cada turma: ")))
+        >>>   27 | cont = 0 # variável acumuladora
+              28 | 
+
+  [3] Linha 47: Variável 'j' com nome muito curto (≤4 chars)
+      Trecho  : j = ...
+      Contexto:
+              46 | vec_par = zeros(cont, dtype = int)
+        >>>   47 | j = 0 # variável contadora
+              48 | 
+
+======================================================================

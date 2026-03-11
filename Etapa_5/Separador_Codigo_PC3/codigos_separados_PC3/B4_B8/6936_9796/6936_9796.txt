@@ -1,0 +1,55 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 6936_9796.py
+Questão  : 6936
+Aluno    : 9796
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B4, B8
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | valor_compra = float(input("Digite o valor da compra:"))
+     2 | codigo = input("Digite o codigo da opcao de pagamento:")
+     3 | 
+     4 | if codigo == 'D':
+     5 | 	valor_pago = valor_compra - (valor_compra*0.13)
+     6 | 	print(round(valor_pago,2))
+     7 | elif codigo == 'P':
+     8 | 	valor_pago = valor_compra - (valor_compra*0.13)
+     9 | 	print(round(valor_pago,2))
+    10 | elif codigo == 'C':
+    11 | 	vezes = int(input("PAgar de 1 ou 2 vezes"))
+    12 | 	if vezes == 1:
+    13 | 		print(round(valor_compra,2))
+    14 | 	else:
+    15 | 		valor_pago = valor_compra+(valor_compra*0.08)
+    16 | 		print(round(valor_pago,2))
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B4 — Comandos repetidos dentro de blocos if-elif-else
+  Ocorrências: 1
+
+  [1] Linha 7: Bloco idêntico ao da linha 4
+      Trecho  : valor_pago = valor_compra - valor_compra * 0.13
+      Contexto:
+               6 | 	print(round(valor_pago,2))
+        >>>    7 | elif codigo == 'P':
+               8 | 	valor_pago = valor_compra - (valor_compra*0.13)
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 7: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 7) / elif ... sem else
+      Contexto:
+               6 | 	print(round(valor_pago,2))
+        >>>    7 | elif codigo == 'P':
+               8 | 	valor_pago = valor_compra - (valor_compra*0.13)
+
+======================================================================

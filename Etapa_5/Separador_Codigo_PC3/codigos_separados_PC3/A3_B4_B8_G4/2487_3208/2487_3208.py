@@ -1,0 +1,225 @@
+x=int(input())
+y=int(input())
+z=int(input())
+p1=180
+p2=230
+p3=250
+p4=350
+s1=75
+s2=110
+s3=170
+s4=200
+b1=20
+b2=70
+b3=100
+b4=65
+print("Entradas:",x,",",y,",",z)
+if(1>x>4)or(1>y>4)or(1>z>4):
+	print("Dados invalidos")
+elif(x==1)and(y==1)and(z==1):
+	p=p1+s1+b3
+	print("Calorias:",p,"cal")
+elif(x==2)and(y==2)and(z==2):
+	s=p2+s2+b3
+	print("Calorias:",s,"cal")
+elif(x==3)and(y==3)and(z==3):
+	b=p3+s3+b3
+	print("Calorias:",b,"cal")
+elif(x==3)and(y==3)and(z==3):
+	b=p3+s3+b3
+	print("Calorias:",b,"cal")
+elif(x==3)and(y==3)and(z==3):
+	b=p3+s3+b3
+	print("Calorias:",b,"cal")
+elif(x==3)and(y==3)and(z==3):
+	b=p3+s3+b3
+	print("Calorias:",b,"cal")
+elif(x==3)and(y==3)and(z==3):
+	b=p3+s3+b3
+	print("Calorias:",b,"cal")
+elif(x==3)and(y==3)and(z==3):
+	b=p3+s3+b3
+	print("Calorias:",b,"cal")
+elif(x==3)and(y==3)and(z==3):
+	b=p3+s3+b3
+	print("Calorias:",b,"cal")
+elif(x==3)and(y==3)and(z==3):
+	b=p3+s3+b3
+	print("Calorias:",b,"cal")
+elif(x==3)and(y==3)and(z==3):
+	b=p3+s3+b3
+	print("Calorias:",b,"cal")
+elif(x==3)and(y==3)and(z==3):
+	b=p3+s3+b3
+	print("Calorias:",b,"cal")
+elif(x==3)and(y==3)and(z==3):
+	b=p3+s3+b3
+	print("Calorias:",b,"cal")
+elif(x==3)and(y==3)and(z==3):
+	b=p3+s3+b3
+	print("Calorias:",b,"cal")
+elif(x==3)and(y==3)and(z==3):
+	b=p3+s3+b3
+	print("Calorias:",b,"cal")
+elif(x==3)and(y==3)and(z==3):
+	b=p3+s3+b3
+	print("Calorias:",b,"cal")
+elif(x==3)and(y==3)and(z==3):
+	b=p3+s3+b3
+	print("Calorias:",b,"cal")
+elif(x==3)and(y==3)and(z==3):
+	b=p3+s3+b3
+	print("Calorias:",b,"cal")
+elif(x==3)and(y==3)and(z==3):
+	b=p3+s3+b3
+	print("Calorias:",b,"cal")
+elif(x==3)and(y==3)and(z==3):
+	b=p3+s3+b3
+	print("Calorias:",b,"cal")
+elif(x==3)and(y==3)and(z==3):
+	b=p3+s3+b3
+	print("Calorias:",b,"cal")
+elif(x==3)and(y==3)and(z==3):
+	b=p3+s3+b3
+	print("Calorias:",b,"cal")
+elif(x==3)and(y==3)and(z==3):
+	b=p3+s3+b3
+	print("Calorias:",b,"cal")
+elif(x==3)and(y==3)and(z==3):
+	b=p3+s3+b3
+	print("Calorias:",b,"cal")
+elif(x==3)and(y==3)and(z==3):
+	b=p3+s3+b3
+	print("Calorias:",b,"cal")
+elif(x==3)and(y==3)and(z==3):
+	b=p3+s3+b3
+	print("Calorias:",b,"cal")
+elif(x==3)and(y==3)and(z==3):
+	b=p3+s3+b3
+	print("Calorias:",b,"cal")
+elif(x==3)and(y==3)and(z==3):
+	b=p3+s3+b3
+	print("Calorias:",b,"cal")
+elif(x==3)and(y==3)and(z==3):
+	b=p3+s3+b3
+	print("Calorias:",b,"cal")
+elif(x==3)and(y==3)and(z==3):
+	b=p3+s3+b3
+	print("Calorias:",b,"cal")
+elif(x==3)and(y==3)and(z==3):
+	b=p3+s3+b3
+	print("Calorias:",b,"cal")
+elif(x==3)and(y==3)and(z==3):
+	b=p3+s3+b3
+	print("Calorias:",b,"cal")
+elif(x==3)and(y==3)and(z==3):
+	b=p3+s3+b3
+	print("Calorias:",b,"cal")
+elif(x==3)and(y==3)and(z==3):
+	b=p3+s3+b3
+	print("Calorias:",b,"cal")
+elif(x==3)and(y==3)and(z==3):
+	b=p3+s3+b3
+	print("Calorias:",b,"cal")
+elif(x==3)and(y==3)and(z==3):
+	b=p3+s3+b3
+	print("Calorias:",b,"cal")
+elif(x==3)and(y==3)and(z==3):
+	b=p3+s3+b3
+	print("Calorias:",b,"cal")
+elif(x==3)and(y==3)and(z==3):
+	b=p3+s3+b3
+	print("Calorias:",b,"cal")
+elif(x==3)and(y==3)and(z==3):
+	b=p3+s3+b3
+	print("Calorias:",b,"cal")
+elif(x==3)and(y==3)and(z==3):
+	b=p3+s3+b3
+	print("Calorias:",b,"cal")
+elif(x==3)and(y==3)and(z==3):
+	b=p3+s3+b3
+	print("Calorias:",b,"cal")
+elif(x==3)and(y==3)and(z==3):
+	b=p3+s3+b3
+	print("Calorias:",b,"cal")
+elif(x==3)and(y==3)and(z==3):
+	b=p3+s3+b3
+	print("Calorias:",b,"cal")
+elif(x==3)and(y==3)and(z==3):
+	b=p3+s3+b3
+	print("Calorias:",b,"cal")
+elif(x==3)and(y==3)and(z==3):
+	b=p3+s3+b3
+	print("Calorias:",b,"cal")
+elif(x==3)and(y==3)and(z==3):
+	b=p3+s3+b3
+	print("Calorias:",b,"cal")
+elif(x==3)and(y==3)and(z==3):
+	b=p3+s3+b3
+	print("Calorias:",b,"cal")
+elif(x==3)and(y==3)and(z==3):
+	b=p3+s3+b3
+	print("Calorias:",b,"cal")
+elif(x==3)and(y==3)and(z==3):
+	b=p3+s3+b3
+	print("Calorias:",b,"cal")
+elif(x==3)and(y==3)and(z==3):
+	b=p3+s3+b3
+	print("Calorias:",b,"cal")
+elif(x==3)and(y==3)and(z==3):
+	b=p3+s3+b3
+	print("Calorias:",b,"cal")
+elif(x==3)and(y==3)and(z==3):
+	b=p3+s3+b3
+	print("Calorias:",b,"cal")
+elif(x==3)and(y==3)and(z==3):
+	b=p3+s3+b3
+	print("Calorias:",b,"cal")
+elif(x==3)and(y==3)and(z==3):
+	b=p3+s3+b3
+	print("Calorias:",b,"cal")
+elif(x==3)and(y==3)and(z==3):
+	b=p3+s3+b3
+	print("Calorias:",b,"cal")
+elif(x==3)and(y==3)and(z==3):
+	b=p3+s3+b3
+	print("Calorias:",b,"cal")
+elif(x==3)and(y==3)and(z==3):
+	b=p3+s3+b3
+	print("Calorias:",b,"cal")
+elif(x==3)and(y==3)and(z==3):
+	b=p3+s3+b3
+	print("Calorias:",b,"cal")
+elif(x==3)and(y==3)and(z==3):
+	b=p3+s3+b3
+	print("Calorias:",b,"cal")
+elif(x==3)and(y==3)and(z==3):
+	b=p3+s3+b3
+	print("Calorias:",b,"cal")
+elif(x==3)and(y==3)and(z==3):
+	b=p3+s3+b3
+	print("Calorias:",b,"cal")
+elif(x==3)and(y==3)and(z==3):
+	b=p3+s3+b3
+	print("Calorias:",b,"cal")
+elif(x==3)and(y==3)and(z==3):
+	b=p3+s3+b3
+	print("Calorias:",b,"cal")
+elif(x==3)and(y==3)and(z==3):
+	b=p3+s3+b3
+	print("Calorias:",b,"cal")
+elif(x==3)and(y==3)and(z==3):
+	b=p3+s3+b3
+	print("Calorias:",b,"cal")
+elif(x==3)and(y==3)and(z==3):
+	b=p3+s3+b3
+	print("Calorias:",b,"cal")
+elif(x==3)and(y==3)and(z==3):
+	b=p3+s3+b3
+	print("Calorias:",b,"cal")
+elif(x==3)and(y==3)and(z==3):
+	b=p3+s3+b3
+	print("Calorias:",b,"cal")
+
+
+	

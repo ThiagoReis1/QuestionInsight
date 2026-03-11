@@ -1,0 +1,3 @@
+
+
+amplo = eval (input()

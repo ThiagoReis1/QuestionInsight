@@ -1,0 +1,72 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1658_2323.py
+Questão  : 1658
+Aluno    : 2323
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import *
+     2 | ent = input("")
+     3 | vet = ent .split(",")
+     4 | vet1 = zeros(5, dtype=int)
+     5 | 
+     6 | for i in range(size(vet)):
+     7 | 	if(vet[i] == "CHN"):
+     8 | 		vet1[0] += 1
+     9 | 	elif(vet[i] == "JPN"):
+    10 | 		vet1[1] += 1
+    11 | 	elif(vet[i] == "KOR" ):
+    12 | 		vet1[2] += 1
+    13 | 	elif(vet[i] == "MGL"):	
+    14 | 		vet1[3] += 1
+    15 | 	elif(vet[i] == "THA"):	
+    16 | 		vet1[4] += 1
+    17 | 	
+    18 | print(max(vet1))
+    19 | print(vet1)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 13: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 13) / elif ... sem else
+      Contexto:
+              12 | 		vet1[2] += 1
+        >>>   13 | 	elif(vet[i] == "MGL"):	
+              14 | 		vet1[3] += 1
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 3
+
+  [1] Linha 2: Variável 'ent' com nome muito curto (≤4 chars)
+      Trecho  : ent = ...
+      Contexto:
+               1 | from numpy import *
+        >>>    2 | ent = input("")
+               3 | vet = ent .split(",")
+
+  [2] Linha 3: Variável 'vet' com nome muito curto (≤4 chars)
+      Trecho  : vet = ...
+      Contexto:
+               2 | ent = input("")
+        >>>    3 | vet = ent .split(",")
+               4 | vet1 = zeros(5, dtype=int)
+
+  [3] Linha 4: Variável 'vet1' com nome muito curto (≤4 chars)
+      Trecho  : vet1 = ...
+      Contexto:
+               3 | vet = ent .split(",")
+        >>>    4 | vet1 = zeros(5, dtype=int)
+               5 | 
+
+======================================================================

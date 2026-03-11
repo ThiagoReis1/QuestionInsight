@@ -1,0 +1,80 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 5255_4338.py
+Questão  : 5255
+Aluno    : 4338
+Total MCs: 2
+
+⚠️  Misconceptions detectados: A3, B8
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | peso = float(input("Peso: "))
+     2 | distancia = float(input("Distancia: "))
+     3 | codigo = int(input("Codigo: "))
+     4 | 
+     5 | custokg = 25
+     6 | custokm = 0.10
+     7 | icms1 = 17
+     8 | icms2 = 17.5
+     9 | icms3 = 18
+    10 | icms4 = 20
+    11 | 
+    12 | if ((codigo > 0) and (codigo <= 4)):
+    13 | 	if(codigo == 1):
+    14 | 		print(((peso * custokg) + (distancia * custokm)) * (1.0 + (17 / 100)))
+    15 | 	elif(codigo == 2):
+    16 | 		print(round(((peso * custokg) + (distancia * custokm)) * (1.0 + ( 17.5 / 100)),2 ))
+    17 | 	elif(codigo == 3):
+    18 | 		print(((peso * custokg) + (distancia * custokm)) * (1.0 + (18 / 100)))
+    19 | 	elif (codigo == 4):
+    20 | 		print(((peso * custokg) + (distancia * custokm)) * (1.0 + (20 / 100)))
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 4
+
+  [1] Linha 7: Variável 'icms1' declarada mas nunca utilizada
+      Trecho  : icms1 = ...
+      Contexto:
+               6 | custokm = 0.10
+        >>>    7 | icms1 = 17
+               8 | icms2 = 17.5
+
+  [2] Linha 8: Variável 'icms2' declarada mas nunca utilizada
+      Trecho  : icms2 = ...
+      Contexto:
+               7 | icms1 = 17
+        >>>    8 | icms2 = 17.5
+               9 | icms3 = 18
+
+  [3] Linha 9: Variável 'icms3' declarada mas nunca utilizada
+      Trecho  : icms3 = ...
+      Contexto:
+               8 | icms2 = 17.5
+        >>>    9 | icms3 = 18
+              10 | icms4 = 20
+
+  [4] Linha 10: Variável 'icms4' declarada mas nunca utilizada
+      Trecho  : icms4 = ...
+      Contexto:
+               9 | icms3 = 18
+        >>>   10 | icms4 = 20
+              11 | 
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 17: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 17) / elif ... sem else
+      Contexto:
+              16 | 		print(round(((peso * custokg) + (distancia * custokm)) * (1.0 + ( 17.5 / 100)),2 ))
+        >>>   17 | 	elif(codigo == 3):
+              18 | 		print(((peso * custokg) + (distancia * custokm)) * (1.0 + (18 / 100)))
+
+======================================================================

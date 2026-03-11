@@ -1,0 +1,113 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1258_1176.py
+Questão  : 1258
+Aluno    : 1176
+Total MCs: 2
+
+⚠️  Misconceptions detectados: A3, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import *
+     2 | from math import *
+     3 | p= float(input("Digite o numero: "))
+     4 | while (p < 1):
+     5 | 	p= float(input("Digite o numero: "))
+     6 | u = array(eval(input("Informe o vetor:")))
+     7 | w = array(eval(input("Informe o vetor:")))
+     8 | nu = 0.0
+     9 | nw = 0.0
+    10 | q= (p/p+1)
+    11 | for i in range (size(u)):
+    12 | 	norma = norma(abs(u[i]**q))
+    13 | 	z = nu ** (1/q)
+    14 | for i in range (size(w)):
+    15 | 	norma = norma(abs(w[i]**q))
+    16 | 	z = nw ** (1/q)	
+    17 | 
+    18 | print(round(nu+nw,3))
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 1
+
+  [1] Linha 13: Variável 'z' declarada mas nunca utilizada
+      Trecho  : z = ...
+      Contexto:
+              12 | 	norma = norma(abs(u[i]**q))
+        >>>   13 | 	z = nu ** (1/q)
+              14 | for i in range (size(w)):
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 9
+
+  [1] Linha 3: Variável 'p' com nome muito curto (≤4 chars)
+      Trecho  : p = ...
+      Contexto:
+               2 | from math import *
+        >>>    3 | p= float(input("Digite o numero: "))
+               4 | while (p < 1):
+
+  [2] Linha 6: Variável 'u' com nome muito curto (≤4 chars)
+      Trecho  : u = ...
+      Contexto:
+               5 | 	p= float(input("Digite o numero: "))
+        >>>    6 | u = array(eval(input("Informe o vetor:")))
+               7 | w = array(eval(input("Informe o vetor:")))
+
+  [3] Linha 7: Variável 'w' com nome muito curto (≤4 chars)
+      Trecho  : w = ...
+      Contexto:
+               6 | u = array(eval(input("Informe o vetor:")))
+        >>>    7 | w = array(eval(input("Informe o vetor:")))
+               8 | nu = 0.0
+
+  [4] Linha 8: Variável 'nu' com nome muito curto (≤4 chars)
+      Trecho  : nu = ...
+      Contexto:
+               7 | w = array(eval(input("Informe o vetor:")))
+        >>>    8 | nu = 0.0
+               9 | nw = 0.0
+
+  [5] Linha 9: Variável 'nw' com nome muito curto (≤4 chars)
+      Trecho  : nw = ...
+      Contexto:
+               8 | nu = 0.0
+        >>>    9 | nw = 0.0
+              10 | q= (p/p+1)
+
+  [6] Linha 10: Variável 'q' com nome muito curto (≤4 chars)
+      Trecho  : q = ...
+      Contexto:
+               9 | nw = 0.0
+        >>>   10 | q= (p/p+1)
+              11 | for i in range (size(u)):
+
+  [7] Linha 5: Variável 'p' com nome muito curto (≤4 chars)
+      Trecho  : p = ...
+      Contexto:
+               4 | while (p < 1):
+        >>>    5 | 	p= float(input("Digite o numero: "))
+               6 | u = array(eval(input("Informe o vetor:")))
+
+  [8] Linha 13: Variável 'z' com nome muito curto (≤4 chars)
+      Trecho  : z = ...
+      Contexto:
+              12 | 	norma = norma(abs(u[i]**q))
+        >>>   13 | 	z = nu ** (1/q)
+              14 | for i in range (size(w)):
+
+  [9] Linha 16: Variável 'z' com nome muito curto (≤4 chars)
+      Trecho  : z = ...
+      Contexto:
+              15 | 	norma = norma(abs(w[i]**q))
+        >>>   16 | 	z = nw ** (1/q)	
+              17 | 
+
+======================================================================

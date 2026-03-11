@@ -1,0 +1,122 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1652_2681.py
+Questão  : 1652
+Aluno    : 2681
+Total MCs: 2
+
+⚠️  Misconceptions detectados: A3, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import *
+     2 | 
+     3 | vet1 = input().split(',')
+     4 | 
+     5 | B= 0
+     6 | PA = 0
+     7 | PR = 0
+     8 | A = 0
+     9 | I = 0
+    10 | errado = 0
+    11 | vet2 = zeros(5,dtype=int)
+    12 | for x in range(len(vet1)):
+    13 | 	if(vet1[x].upper() == 'B'):
+    14 | 		B += 1
+    15 | 	elif(vet1[x].upper() == 'PA'):
+    16 | 		PA += 1
+    17 | 	elif(vet1[x].upper() == 'PR'):
+    18 | 		PR += 1
+    19 | 	elif(vet1[x].upper() == 'A'):
+    20 | 		A += 1
+    21 | 	elif(vet1[x].upper() == 'I'):
+    22 | 		I += 1
+    23 | 	else:
+    24 | 		errado=0
+    25 | 
+    26 | vet2[0]=B
+    27 | vet2[1]=PA
+    28 | vet2[2]= PR
+    29 | 
+    30 | 
+    31 | if((B>PA)  and (B>PR) and(B>A) and (B>I)):
+    32 | 	print(B)
+    33 | elif((PA>B) and (PA>PR) and (PA>A) and(PA>I)):
+    34 | 	print(PA)
+    35 | elif((PR > B) and (PR>PA) and(PR>A) and (PR>I)):
+    36 | 	print(PR)
+    37 | elif((I > B) and (I>PR) and(I>PA) and (I>A)):
+    38 | 	print(I)
+    39 | else:
+    40 | 	print(A)
+    41 | print(vet2)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 1
+
+  [1] Linha 10: Variável 'errado' declarada mas nunca utilizada
+      Trecho  : errado = ...
+      Contexto:
+               9 | I = 0
+        >>>   10 | errado = 0
+              11 | vet2 = zeros(5,dtype=int)
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 7
+
+  [1] Linha 3: Variável 'vet1' com nome muito curto (≤4 chars)
+      Trecho  : vet1 = ...
+      Contexto:
+               2 | 
+        >>>    3 | vet1 = input().split(',')
+               4 | 
+
+  [2] Linha 5: Variável 'B' com nome muito curto (≤4 chars)
+      Trecho  : B = ...
+      Contexto:
+               4 | 
+        >>>    5 | B= 0
+               6 | PA = 0
+
+  [3] Linha 6: Variável 'PA' com nome muito curto (≤4 chars)
+      Trecho  : PA = ...
+      Contexto:
+               5 | B= 0
+        >>>    6 | PA = 0
+               7 | PR = 0
+
+  [4] Linha 7: Variável 'PR' com nome muito curto (≤4 chars)
+      Trecho  : PR = ...
+      Contexto:
+               6 | PA = 0
+        >>>    7 | PR = 0
+               8 | A = 0
+
+  [5] Linha 8: Variável 'A' com nome muito curto (≤4 chars)
+      Trecho  : A = ...
+      Contexto:
+               7 | PR = 0
+        >>>    8 | A = 0
+               9 | I = 0
+
+  [6] Linha 9: Variável 'I' com nome muito curto (≤4 chars)
+      Trecho  : I = ...
+      Contexto:
+               8 | A = 0
+        >>>    9 | I = 0
+              10 | errado = 0
+
+  [7] Linha 11: Variável 'vet2' com nome muito curto (≤4 chars)
+      Trecho  : vet2 = ...
+      Contexto:
+              10 | errado = 0
+        >>>   11 | vet2 = zeros(5,dtype=int)
+              12 | for x in range(len(vet1)):
+
+======================================================================

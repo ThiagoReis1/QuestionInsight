@@ -1,0 +1,53 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1117_1461.py
+Questão  : 1117
+Aluno    : 1461
+Total MCs: 1
+
+⚠️  Misconceptions detectados: A2
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | # Monalisa Pereira 21600560
+     2 | # 140716
+     3 | # Av 03 - Ex 01
+     4 | 
+     5 | preco = float(input("Insira o preço normal da entrada: "))
+     6 | dia = int(input("Insira o dia da semana: "))
+     7 | musica = str(input("Dia de música ao vivo? (S/N)"))
+     8 | 
+     9 | print("Entradas: ", preco, ", ", dia, ", ", musica)
+    10 | 
+    11 | if (preco>=0) and (dia>=1) and (dia<=7) and ((musica=="S") or (musica=="N")):
+    12 | 	if (dia==2) or (dia==3) or (dia==5):
+    13 | 		entrada = (preco/100) * 75
+    14 | 	else:
+    15 | 		entrada = preco
+    16 | 	if (musica=="S"):
+    17 | 		entrada = entrada+20
+    18 | 	else:
+    19 | 		entrada = entrada
+    20 | 	print("Valor a pagar: R$ ", (round(entrada,2)))
+    21 | else:
+    22 | 	print("Dados invalidos")
+    23 | 	
+    24 | 	
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A2 — Variável atribuída a si mesma
+  Ocorrências: 1
+
+  [1] Linha 19: 'entrada' atribuído a si mesmo
+      Trecho  : entrada = entrada
+      Contexto:
+              18 | 	else:
+        >>>   19 | 		entrada = entrada
+              20 | 	print("Valor a pagar: R$ ", (round(entrada,2)))
+
+======================================================================

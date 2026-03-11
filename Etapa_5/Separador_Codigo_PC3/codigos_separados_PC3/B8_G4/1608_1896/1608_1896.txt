@@ -1,0 +1,111 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1608_1896.py
+Questão  : 1608
+Aluno    : 1896
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | vet=array(eval(input("Passageiros: ")))
+     3 | p=0
+     4 | t=size(vet)
+     5 | i=0
+     6 | for i in range(0,t):
+     7 | 	if(p>75):
+     8 | 		if(p-vet[i]<=75):
+     9 | 			p=p-vet[i]
+    10 | 			p=p+(p-vet[i])
+    11 | 	elif(vet[i]>0 and p<75):
+    12 | 		p=p+vet[i]
+    13 | 		
+    14 | 			
+    15 | 			
+    16 | 			
+    17 | 	if(vet[i]<0):
+    18 | 		p=p+vet[i]
+    19 | 	print(p)
+    20 | 	
+    21 | 		
+    22 | 		
+    23 | print(p)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 7: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 7) / elif ... sem else
+      Contexto:
+               6 | for i in range(0,t):
+        >>>    7 | 	if(p>75):
+               8 | 		if(p-vet[i]<=75):
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 8
+
+  [1] Linha 2: Variável 'vet' com nome muito curto (≤4 chars)
+      Trecho  : vet = ...
+      Contexto:
+               1 | from numpy import*
+        >>>    2 | vet=array(eval(input("Passageiros: ")))
+               3 | p=0
+
+  [2] Linha 3: Variável 'p' com nome muito curto (≤4 chars)
+      Trecho  : p = ...
+      Contexto:
+               2 | vet=array(eval(input("Passageiros: ")))
+        >>>    3 | p=0
+               4 | t=size(vet)
+
+  [3] Linha 4: Variável 't' com nome muito curto (≤4 chars)
+      Trecho  : t = ...
+      Contexto:
+               3 | p=0
+        >>>    4 | t=size(vet)
+               5 | i=0
+
+  [4] Linha 5: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+               4 | t=size(vet)
+        >>>    5 | i=0
+               6 | for i in range(0,t):
+
+  [5] Linha 18: Variável 'p' com nome muito curto (≤4 chars)
+      Trecho  : p = ...
+      Contexto:
+              17 | 	if(vet[i]<0):
+        >>>   18 | 		p=p+vet[i]
+              19 | 	print(p)
+
+  [6] Linha 9: Variável 'p' com nome muito curto (≤4 chars)
+      Trecho  : p = ...
+      Contexto:
+               8 | 		if(p-vet[i]<=75):
+        >>>    9 | 			p=p-vet[i]
+              10 | 			p=p+(p-vet[i])
+
+  [7] Linha 10: Variável 'p' com nome muito curto (≤4 chars)
+      Trecho  : p = ...
+      Contexto:
+               9 | 			p=p-vet[i]
+        >>>   10 | 			p=p+(p-vet[i])
+              11 | 	elif(vet[i]>0 and p<75):
+
+  [8] Linha 12: Variável 'p' com nome muito curto (≤4 chars)
+      Trecho  : p = ...
+      Contexto:
+              11 | 	elif(vet[i]>0 and p<75):
+        >>>   12 | 		p=p+vet[i]
+              13 | 		
+
+======================================================================

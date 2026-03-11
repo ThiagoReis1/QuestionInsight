@@ -1,0 +1,69 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 2847_8161.py
+Questão  : 2847
+Aluno    : 8161
+Total MCs: 2
+
+⚠️  Misconceptions detectados: A5, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import *
+     2 | import numpy as np
+     3 | n = array(eval(input("senha: ")))
+     4 | i = 0
+     5 | vq = zeros(size(n), dtype = int)
+     6 | 
+     7 | for i in range(size(n)):
+     8 | 	vq[i]=n[i]*n[i]
+     9 | print(vq)
+    10 | 
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A5 — Importação não utilizada
+  Ocorrências: 2
+
+  [1] Linha 1: '* (de numpy)' importado mas nunca utilizado
+      Trecho  : from numpy import *
+      Contexto:
+        >>>    1 | from numpy import *
+               2 | import numpy as np
+
+  [2] Linha 2: 'np' importado mas nunca utilizado
+      Trecho  : import numpy as np
+      Contexto:
+               1 | from numpy import *
+        >>>    2 | import numpy as np
+               3 | n = array(eval(input("senha: ")))
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 3
+
+  [1] Linha 3: Variável 'n' com nome muito curto (≤4 chars)
+      Trecho  : n = ...
+      Contexto:
+               2 | import numpy as np
+        >>>    3 | n = array(eval(input("senha: ")))
+               4 | i = 0
+
+  [2] Linha 4: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+               3 | n = array(eval(input("senha: ")))
+        >>>    4 | i = 0
+               5 | vq = zeros(size(n), dtype = int)
+
+  [3] Linha 5: Variável 'vq' com nome muito curto (≤4 chars)
+      Trecho  : vq = ...
+      Contexto:
+               4 | i = 0
+        >>>    5 | vq = zeros(size(n), dtype = int)
+               6 | 
+
+======================================================================

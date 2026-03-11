@@ -1,0 +1,144 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 2155_2251.py
+Questão  : 2155
+Aluno    : 2251
+Total MCs: 3
+
+⚠️  Misconceptions detectados: A3, B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | peso = array(eval(input("peso: ")))
+     3 | altura = array(eval(input("altura: ")))
+     4 | cont = zeros(3, dtype=float)
+     5 | 
+     6 | for x in range(size(peso)):
+     7 | 	imc = peso[x]/(altura[x]**2)
+     8 | 	if(imc < 17):	
+     9 | 		#cont[0] = cont[0] + 1
+    10 | 		p = "muito abaixo do peso"
+    11 | 	elif(imc <= 17 and imc >= 18.49):
+    12 | 		#cont[1] = cont[1] + 1
+    13 | 		p = "abaixo do peso"
+    14 | 	elif(imc <= 18.5 and imc >= 24.99):
+    15 | 		#cont[2] = cont[2] + 1
+    16 | 		p = "peso normal"
+    17 | 	elif(imc <= 25 and imc >= 29.99):
+    18 | 		#cont[3] = cont[3] + 1
+    19 | 		p = "acima do peso"
+    20 | 	elif(imc <= 30 and imc >= 34.99):
+    21 | 		#cont[4] = cont[4] + 1
+    22 | 		p = "obesidade"
+    23 | 	elif(imc <= 35 and imc >= 39.99):
+    24 | 		#cont[5] = cont[5] + 1
+    25 | 		p = "obesidade severa"
+    26 | 	elif(imc > 40):
+    27 | 		#cont[6] = cont[6] + 1
+    28 | 		p = "obesidade morbida"
+    29 | 	cont[x] = imc	
+    30 | print(cont)
+    31 | print("O MAIOR IMC DA TURMA EH:", max(cont).p.upper())
+    32 | 
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 1
+
+  [1] Linha 10: Variável 'p' declarada mas nunca utilizada
+      Trecho  : p = ...
+      Contexto:
+               9 | 		#cont[0] = cont[0] + 1
+        >>>   10 | 		p = "muito abaixo do peso"
+              11 | 	elif(imc <= 17 and imc >= 18.49):
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 23: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 23) / elif ... sem else
+      Contexto:
+              22 | 		p = "obesidade"
+        >>>   23 | 	elif(imc <= 35 and imc >= 39.99):
+              24 | 		#cont[5] = cont[5] + 1
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 10
+
+  [1] Linha 2: Variável 'peso' com nome muito curto (≤4 chars)
+      Trecho  : peso = ...
+      Contexto:
+               1 | from numpy import*
+        >>>    2 | peso = array(eval(input("peso: ")))
+               3 | altura = array(eval(input("altura: ")))
+
+  [2] Linha 4: Variável 'cont' com nome muito curto (≤4 chars)
+      Trecho  : cont = ...
+      Contexto:
+               3 | altura = array(eval(input("altura: ")))
+        >>>    4 | cont = zeros(3, dtype=float)
+               5 | 
+
+  [3] Linha 7: Variável 'imc' com nome muito curto (≤4 chars)
+      Trecho  : imc = ...
+      Contexto:
+               6 | for x in range(size(peso)):
+        >>>    7 | 	imc = peso[x]/(altura[x]**2)
+               8 | 	if(imc < 17):	
+
+  [4] Linha 10: Variável 'p' com nome muito curto (≤4 chars)
+      Trecho  : p = ...
+      Contexto:
+               9 | 		#cont[0] = cont[0] + 1
+        >>>   10 | 		p = "muito abaixo do peso"
+              11 | 	elif(imc <= 17 and imc >= 18.49):
+
+  [5] Linha 13: Variável 'p' com nome muito curto (≤4 chars)
+      Trecho  : p = ...
+      Contexto:
+              12 | 		#cont[1] = cont[1] + 1
+        >>>   13 | 		p = "abaixo do peso"
+              14 | 	elif(imc <= 18.5 and imc >= 24.99):
+
+  [6] Linha 16: Variável 'p' com nome muito curto (≤4 chars)
+      Trecho  : p = ...
+      Contexto:
+              15 | 		#cont[2] = cont[2] + 1
+        >>>   16 | 		p = "peso normal"
+              17 | 	elif(imc <= 25 and imc >= 29.99):
+
+  [7] Linha 19: Variável 'p' com nome muito curto (≤4 chars)
+      Trecho  : p = ...
+      Contexto:
+              18 | 		#cont[3] = cont[3] + 1
+        >>>   19 | 		p = "acima do peso"
+              20 | 	elif(imc <= 30 and imc >= 34.99):
+
+  [8] Linha 22: Variável 'p' com nome muito curto (≤4 chars)
+      Trecho  : p = ...
+      Contexto:
+              21 | 		#cont[4] = cont[4] + 1
+        >>>   22 | 		p = "obesidade"
+              23 | 	elif(imc <= 35 and imc >= 39.99):
+
+  [9] Linha 25: Variável 'p' com nome muito curto (≤4 chars)
+      Trecho  : p = ...
+      Contexto:
+              24 | 		#cont[5] = cont[5] + 1
+        >>>   25 | 		p = "obesidade severa"
+              26 | 	elif(imc > 40):
+
+  [10] Linha 28: Variável 'p' com nome muito curto (≤4 chars)
+      Trecho  : p = ...
+      Contexto:
+              27 | 		#cont[6] = cont[6] + 1
+        >>>   28 | 		p = "obesidade morbida"
+              29 | 	cont[x] = imc	
+
+======================================================================

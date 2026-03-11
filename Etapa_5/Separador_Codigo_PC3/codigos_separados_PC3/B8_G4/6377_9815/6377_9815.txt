@@ -1,0 +1,62 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 6377_9815.py
+Questão  : 6377
+Aluno    : 9815
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import *
+     2 | 
+     3 | gol = input("Insira os Jogadores: ").upper().split(",")
+     4 | arm = zeros(4, dtype=int)
+     5 | 
+     6 | for i in range(size(gol)):
+     7 | 	if gol[i] == "A":
+     8 | 		arm[0] += 1
+     9 | 	elif gol[i] == "B":
+    10 | 		arm[1] += 1
+    11 | 	elif gol[i] == "C":
+    12 | 		arm[2] += 1
+    13 | 	elif gol[i] == "D":
+    14 | 		arm[3] += 1
+    15 | 		
+    16 | print(arm)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 11: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 11) / elif ... sem else
+      Contexto:
+              10 | 		arm[1] += 1
+        >>>   11 | 	elif gol[i] == "C":
+              12 | 		arm[2] += 1
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 2
+
+  [1] Linha 3: Variável 'gol' com nome muito curto (≤4 chars)
+      Trecho  : gol = ...
+      Contexto:
+               2 | 
+        >>>    3 | gol = input("Insira os Jogadores: ").upper().split(",")
+               4 | arm = zeros(4, dtype=int)
+
+  [2] Linha 4: Variável 'arm' com nome muito curto (≤4 chars)
+      Trecho  : arm = ...
+      Contexto:
+               3 | gol = input("Insira os Jogadores: ").upper().split(",")
+        >>>    4 | arm = zeros(4, dtype=int)
+               5 | 
+
+======================================================================

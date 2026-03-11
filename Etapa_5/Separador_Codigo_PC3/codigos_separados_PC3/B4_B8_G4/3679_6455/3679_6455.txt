@@ -1,0 +1,69 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 3679_6455.py
+Questão  : 3679
+Aluno    : 6455
+Total MCs: 3
+
+⚠️  Misconceptions detectados: B4, B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import *
+     2 | N = int(input("Digite um numero: "))
+     3 | mat = zeros((N,N), dtype = int)
+     4 | 
+     5 | for i in range(shape(mat)[0]):
+     6 | 	for j in range(shape(mat)[1]):
+     7 | 		if(i == j):
+     8 | 			mat[i,j] = 1
+     9 | 		elif(i < j):
+    10 | 			mat[i,j] = 1
+    11 | 		elif(i > j):
+    12 | 			mat[i,j] = 0
+    13 | print(mat)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B4 — Comandos repetidos dentro de blocos if-elif-else
+  Ocorrências: 1
+
+  [1] Linha 9: Bloco idêntico ao da linha 7
+      Trecho  : mat[i, j] = 1
+      Contexto:
+               8 | 			mat[i,j] = 1
+        >>>    9 | 		elif(i < j):
+              10 | 			mat[i,j] = 1
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 9: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 9) / elif ... sem else
+      Contexto:
+               8 | 			mat[i,j] = 1
+        >>>    9 | 		elif(i < j):
+              10 | 			mat[i,j] = 1
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 2
+
+  [1] Linha 2: Variável 'N' com nome muito curto (≤4 chars)
+      Trecho  : N = ...
+      Contexto:
+               1 | from numpy import *
+        >>>    2 | N = int(input("Digite um numero: "))
+               3 | mat = zeros((N,N), dtype = int)
+
+  [2] Linha 3: Variável 'mat' com nome muito curto (≤4 chars)
+      Trecho  : mat = ...
+      Contexto:
+               2 | N = int(input("Digite um numero: "))
+        >>>    3 | mat = zeros((N,N), dtype = int)
+               4 | 
+
+======================================================================

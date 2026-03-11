@@ -1,0 +1,90 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1996_2120.py
+Questão  : 1996
+Aluno    : 2120
+Total MCs: 2
+
+⚠️  Misconceptions detectados: A3, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | #Start!
+     2 | ask = input("Qual o seu veneno?")
+     3 | #formulas
+     4 | feni = ((9*12.011)+(11*1.0079)+(2*15.9994)+(1*32.066))
+     5 | aspa = ((4*12.011)+(6*1.0079)+(1*14.0067)+(4*15.9994))
+     6 | tiro = ((9*12.011)+(11*1.0079)+(1*14.0067)+(3*15.9994))
+     7 | #process
+     8 | if(ask == "fenilalanina"):
+     9 | 	print(round(183.2507,2))
+    10 | elif(ask == "tirosina"):
+    11 | 	print(round(181.1908,2))
+    12 | elif(ask == "aspartato"):
+    13 | 	print(round(132.0957,2))
+    14 | else:
+    15 | 	print("Entrada:", ask)
+    16 | 	print("Dado Invalido")
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 3
+
+  [1] Linha 4: Variável 'feni' declarada mas nunca utilizada
+      Trecho  : feni = ...
+      Contexto:
+               3 | #formulas
+        >>>    4 | feni = ((9*12.011)+(11*1.0079)+(2*15.9994)+(1*32.066))
+               5 | aspa = ((4*12.011)+(6*1.0079)+(1*14.0067)+(4*15.9994))
+
+  [2] Linha 5: Variável 'aspa' declarada mas nunca utilizada
+      Trecho  : aspa = ...
+      Contexto:
+               4 | feni = ((9*12.011)+(11*1.0079)+(2*15.9994)+(1*32.066))
+        >>>    5 | aspa = ((4*12.011)+(6*1.0079)+(1*14.0067)+(4*15.9994))
+               6 | tiro = ((9*12.011)+(11*1.0079)+(1*14.0067)+(3*15.9994))
+
+  [3] Linha 6: Variável 'tiro' declarada mas nunca utilizada
+      Trecho  : tiro = ...
+      Contexto:
+               5 | aspa = ((4*12.011)+(6*1.0079)+(1*14.0067)+(4*15.9994))
+        >>>    6 | tiro = ((9*12.011)+(11*1.0079)+(1*14.0067)+(3*15.9994))
+               7 | #process
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 4
+
+  [1] Linha 2: Variável 'ask' com nome muito curto (≤4 chars)
+      Trecho  : ask = ...
+      Contexto:
+               1 | #Start!
+        >>>    2 | ask = input("Qual o seu veneno?")
+               3 | #formulas
+
+  [2] Linha 4: Variável 'feni' com nome muito curto (≤4 chars)
+      Trecho  : feni = ...
+      Contexto:
+               3 | #formulas
+        >>>    4 | feni = ((9*12.011)+(11*1.0079)+(2*15.9994)+(1*32.066))
+               5 | aspa = ((4*12.011)+(6*1.0079)+(1*14.0067)+(4*15.9994))
+
+  [3] Linha 5: Variável 'aspa' com nome muito curto (≤4 chars)
+      Trecho  : aspa = ...
+      Contexto:
+               4 | feni = ((9*12.011)+(11*1.0079)+(2*15.9994)+(1*32.066))
+        >>>    5 | aspa = ((4*12.011)+(6*1.0079)+(1*14.0067)+(4*15.9994))
+               6 | tiro = ((9*12.011)+(11*1.0079)+(1*14.0067)+(3*15.9994))
+
+  [4] Linha 6: Variável 'tiro' com nome muito curto (≤4 chars)
+      Trecho  : tiro = ...
+      Contexto:
+               5 | aspa = ((4*12.011)+(6*1.0079)+(1*14.0067)+(4*15.9994))
+        >>>    6 | tiro = ((9*12.011)+(11*1.0079)+(1*14.0067)+(3*15.9994))
+               7 | #process
+
+======================================================================

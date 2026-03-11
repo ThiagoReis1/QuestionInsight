@@ -1,0 +1,109 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 5247_7578.py
+Questão  : 5247
+Aluno    : 7578
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | a=float(input("salario"))
+     2 | b=int(input("codigo"))
+     3 | x=float(input("reajuste"))
+     4 | c=((x*a/100)+a)
+     5 | 
+     6 | if(b=="101"):
+     7 | 	x=0.80
+     8 | 	print("Novo salario: R$ ",(round(c,2)))
+     9 | 	
+    10 | elif(b=="102"):
+    11 | 	x=0.65
+    12 | 	print("Novo salario: R$ ",(round(c,2)))
+    13 | elif(b=="103"):
+    14 | 	x=0.60
+    15 | 	print("Novo salario: R$ ",(round(c,2)))
+    16 | elif(b=="104"):
+    17 | 	x=0.55
+    18 | 	print("Novo salario: R$ ",(round(c,2)))
+    19 | 	
+    20 | print()	
+    21 | if(b<101)or(b>104):
+    22 | 	print("Dados invalidos")
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 13: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 13) / elif ... sem else
+      Contexto:
+              12 | 	print("Novo salario: R$ ",(round(c,2)))
+        >>>   13 | elif(b=="103"):
+              14 | 	x=0.60
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 8
+
+  [1] Linha 1: Variável 'a' com nome muito curto (≤4 chars)
+      Trecho  : a = ...
+      Contexto:
+        >>>    1 | a=float(input("salario"))
+               2 | b=int(input("codigo"))
+
+  [2] Linha 2: Variável 'b' com nome muito curto (≤4 chars)
+      Trecho  : b = ...
+      Contexto:
+               1 | a=float(input("salario"))
+        >>>    2 | b=int(input("codigo"))
+               3 | x=float(input("reajuste"))
+
+  [3] Linha 3: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+               2 | b=int(input("codigo"))
+        >>>    3 | x=float(input("reajuste"))
+               4 | c=((x*a/100)+a)
+
+  [4] Linha 4: Variável 'c' com nome muito curto (≤4 chars)
+      Trecho  : c = ...
+      Contexto:
+               3 | x=float(input("reajuste"))
+        >>>    4 | c=((x*a/100)+a)
+               5 | 
+
+  [5] Linha 7: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+               6 | if(b=="101"):
+        >>>    7 | 	x=0.80
+               8 | 	print("Novo salario: R$ ",(round(c,2)))
+
+  [6] Linha 11: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+              10 | elif(b=="102"):
+        >>>   11 | 	x=0.65
+              12 | 	print("Novo salario: R$ ",(round(c,2)))
+
+  [7] Linha 14: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+              13 | elif(b=="103"):
+        >>>   14 | 	x=0.60
+              15 | 	print("Novo salario: R$ ",(round(c,2)))
+
+  [8] Linha 17: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+              16 | elif(b=="104"):
+        >>>   17 | 	x=0.55
+              18 | 	print("Novo salario: R$ ",(round(c,2)))
+
+======================================================================

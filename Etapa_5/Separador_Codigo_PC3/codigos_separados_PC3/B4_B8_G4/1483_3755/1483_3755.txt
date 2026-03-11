@@ -1,0 +1,168 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1483_3755.py
+Questão  : 1483
+Aluno    : 3755
+Total MCs: 3
+
+⚠️  Misconceptions detectados: B4, B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | eq=input('equipamento:').upper()
+     2 | q=int(input('quantidade:'))
+     3 | if((q>0)and(q<1000)and((eq=='FREEZER')or(eq=='COMPUTADOR')or(eq=='FURADEIRA')or(eq=='LIQUIDIFICADOR')or(eq=='MICROONDAS')or(eq=='NOTEBOOK')or(eq=='TELEVISOR')or(eq=='VENTILADOR'))):
+     4 | 	if(eq=='COMPUTADOR'):
+     5 | 		x=q*12
+     6 | 		print(round(x,2))
+     7 | 	elif(eq=='FREEZER'):
+     8 | 		x=q*52
+     9 | 		print(round(x,2))
+    10 | 	elif(eq=='FURADEIRA'):
+    11 | 		x=q*1.7
+    12 | 		print(round(x,2))
+    13 | 	elif(eq=='LIQUIDIFICADOR'):
+    14 | 		x=q*1.8
+    15 | 		print(round(x,2))
+    16 | 	elif(eq=='MICROONDAS'):
+    17 | 		x=q*15
+    18 | 		print(round(x,2))
+    19 | 	elif(eq=='NOTEBOOK'):
+    20 | 		x=q*2.5
+    21 | 		print(round(x,2))
+    22 | 	elif(eq=='TELEVISOR'):
+    23 | 		x=q*15
+    24 | 		print(round(x,2))
+    25 | 	elif(eq=='VENTILADOR'):
+    26 | 		x=q*2.4
+    27 | 		print(round(x,2))
+    28 | else:
+    29 | 	print('Entrada invalida')
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B4 — Comandos repetidos dentro de blocos if-elif-else
+  Ocorrências: 5
+
+  [1] Linha 22: Bloco idêntico ao da linha 16
+      Trecho  : x = q * 15
+      Contexto:
+              21 | 		print(round(x,2))
+        >>>   22 | 	elif(eq=='TELEVISOR'):
+              23 | 		x=q*15
+
+  [2] Linha 22: Bloco idêntico ao da linha 16
+      Trecho  : x = q * 15
+      Contexto:
+              21 | 		print(round(x,2))
+        >>>   22 | 	elif(eq=='TELEVISOR'):
+              23 | 		x=q*15
+
+  [3] Linha 22: Bloco idêntico ao da linha 16
+      Trecho  : x = q * 15
+      Contexto:
+              21 | 		print(round(x,2))
+        >>>   22 | 	elif(eq=='TELEVISOR'):
+              23 | 		x=q*15
+
+  [4] Linha 22: Bloco idêntico ao da linha 16
+      Trecho  : x = q * 15
+      Contexto:
+              21 | 		print(round(x,2))
+        >>>   22 | 	elif(eq=='TELEVISOR'):
+              23 | 		x=q*15
+
+  [5] Linha 22: Bloco idêntico ao da linha 16
+      Trecho  : x = q * 15
+      Contexto:
+              21 | 		print(round(x,2))
+        >>>   22 | 	elif(eq=='TELEVISOR'):
+              23 | 		x=q*15
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 22: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 22) / elif ... sem else
+      Contexto:
+              21 | 		print(round(x,2))
+        >>>   22 | 	elif(eq=='TELEVISOR'):
+              23 | 		x=q*15
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 10
+
+  [1] Linha 1: Variável 'eq' com nome muito curto (≤4 chars)
+      Trecho  : eq = ...
+      Contexto:
+        >>>    1 | eq=input('equipamento:').upper()
+               2 | q=int(input('quantidade:'))
+
+  [2] Linha 2: Variável 'q' com nome muito curto (≤4 chars)
+      Trecho  : q = ...
+      Contexto:
+               1 | eq=input('equipamento:').upper()
+        >>>    2 | q=int(input('quantidade:'))
+               3 | if((q>0)and(q<1000)and((eq=='FREEZER')or(eq=='COMPUTADOR')or(eq=='FURADEIRA')or(eq=='LIQUIDIFICADOR')or(eq=='MICROONDAS')or(eq=='NOTEBOOK')or(eq=='TELEVISOR')or(eq=='VENTILADOR'))):
+
+  [3] Linha 5: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+               4 | 	if(eq=='COMPUTADOR'):
+        >>>    5 | 		x=q*12
+               6 | 		print(round(x,2))
+
+  [4] Linha 8: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+               7 | 	elif(eq=='FREEZER'):
+        >>>    8 | 		x=q*52
+               9 | 		print(round(x,2))
+
+  [5] Linha 11: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+              10 | 	elif(eq=='FURADEIRA'):
+        >>>   11 | 		x=q*1.7
+              12 | 		print(round(x,2))
+
+  [6] Linha 14: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+              13 | 	elif(eq=='LIQUIDIFICADOR'):
+        >>>   14 | 		x=q*1.8
+              15 | 		print(round(x,2))
+
+  [7] Linha 17: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+              16 | 	elif(eq=='MICROONDAS'):
+        >>>   17 | 		x=q*15
+              18 | 		print(round(x,2))
+
+  [8] Linha 20: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+              19 | 	elif(eq=='NOTEBOOK'):
+        >>>   20 | 		x=q*2.5
+              21 | 		print(round(x,2))
+
+  [9] Linha 23: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+              22 | 	elif(eq=='TELEVISOR'):
+        >>>   23 | 		x=q*15
+              24 | 		print(round(x,2))
+
+  [10] Linha 26: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+              25 | 	elif(eq=='VENTILADOR'):
+        >>>   26 | 		x=q*2.4
+              27 | 		print(round(x,2))
+
+======================================================================

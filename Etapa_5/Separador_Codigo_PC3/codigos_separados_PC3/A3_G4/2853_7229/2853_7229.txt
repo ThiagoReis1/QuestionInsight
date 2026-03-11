@@ -1,0 +1,95 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 2853_7229.py
+Questão  : 2853
+Aluno    : 7229
+Total MCs: 2
+
+⚠️  Misconceptions detectados: A3, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import *
+     2 | 
+     3 | v=array(eval(input()))
+     4 | 
+     5 | vet=zeros(v,dtype=int)
+     6 | soma=0
+     7 | 
+     8 | 
+     9 | a=0
+    10 | for i in range(size(v)):
+    11 | 	if(v[i]==10):
+    12 | 		soma=soma*10
+    13 | 	soma=soma+v[i]
+    14 | print(soma)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 2
+
+  [1] Linha 5: Variável 'vet' declarada mas nunca utilizada
+      Trecho  : vet = ...
+      Contexto:
+               4 | 
+        >>>    5 | vet=zeros(v,dtype=int)
+               6 | soma=0
+
+  [2] Linha 9: Variável 'a' declarada mas nunca utilizada
+      Trecho  : a = ...
+      Contexto:
+               8 | 
+        >>>    9 | a=0
+              10 | for i in range(size(v)):
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 6
+
+  [1] Linha 3: Variável 'v' com nome muito curto (≤4 chars)
+      Trecho  : v = ...
+      Contexto:
+               2 | 
+        >>>    3 | v=array(eval(input()))
+               4 | 
+
+  [2] Linha 5: Variável 'vet' com nome muito curto (≤4 chars)
+      Trecho  : vet = ...
+      Contexto:
+               4 | 
+        >>>    5 | vet=zeros(v,dtype=int)
+               6 | soma=0
+
+  [3] Linha 6: Variável 'soma' com nome muito curto (≤4 chars)
+      Trecho  : soma = ...
+      Contexto:
+               5 | vet=zeros(v,dtype=int)
+        >>>    6 | soma=0
+               7 | 
+
+  [4] Linha 9: Variável 'a' com nome muito curto (≤4 chars)
+      Trecho  : a = ...
+      Contexto:
+               8 | 
+        >>>    9 | a=0
+              10 | for i in range(size(v)):
+
+  [5] Linha 13: Variável 'soma' com nome muito curto (≤4 chars)
+      Trecho  : soma = ...
+      Contexto:
+              12 | 		soma=soma*10
+        >>>   13 | 	soma=soma+v[i]
+              14 | print(soma)
+
+  [6] Linha 12: Variável 'soma' com nome muito curto (≤4 chars)
+      Trecho  : soma = ...
+      Contexto:
+              11 | 	if(v[i]==10):
+        >>>   12 | 		soma=soma*10
+              13 | 	soma=soma+v[i]
+
+======================================================================

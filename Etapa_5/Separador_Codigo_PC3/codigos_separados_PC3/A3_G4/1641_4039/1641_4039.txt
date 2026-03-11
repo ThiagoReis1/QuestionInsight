@@ -1,0 +1,82 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1641_4039.py
+Questão  : 1641
+Aluno    : 4039
+Total MCs: 2
+
+⚠️  Misconceptions detectados: A3, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import *
+     2 | from numpy.int64 import *
+     3 | 
+     4 | vet = array(eval(input()))
+     5 | q=0
+     6 | p=0
+     7 | for elemento in vet:
+     8 | 	if(elemento % 3):
+     9 | 		q=q+1
+    10 | for elemento in range(0, size(vet)):
+    11 | 	if(vet[elemento] % 3):
+    12 | 		a = vet[elemento](size(vet), dtype=int)
+    13 | 		
+    14 | print(q)
+    15 | print(p)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 1
+
+  [1] Linha 12: Variável 'a' declarada mas nunca utilizada
+      Trecho  : a = ...
+      Contexto:
+              11 | 	if(vet[elemento] % 3):
+        >>>   12 | 		a = vet[elemento](size(vet), dtype=int)
+              13 | 		
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 5
+
+  [1] Linha 4: Variável 'vet' com nome muito curto (≤4 chars)
+      Trecho  : vet = ...
+      Contexto:
+               3 | 
+        >>>    4 | vet = array(eval(input()))
+               5 | q=0
+
+  [2] Linha 5: Variável 'q' com nome muito curto (≤4 chars)
+      Trecho  : q = ...
+      Contexto:
+               4 | vet = array(eval(input()))
+        >>>    5 | q=0
+               6 | p=0
+
+  [3] Linha 6: Variável 'p' com nome muito curto (≤4 chars)
+      Trecho  : p = ...
+      Contexto:
+               5 | q=0
+        >>>    6 | p=0
+               7 | for elemento in vet:
+
+  [4] Linha 9: Variável 'q' com nome muito curto (≤4 chars)
+      Trecho  : q = ...
+      Contexto:
+               8 | 	if(elemento % 3):
+        >>>    9 | 		q=q+1
+              10 | for elemento in range(0, size(vet)):
+
+  [5] Linha 12: Variável 'a' com nome muito curto (≤4 chars)
+      Trecho  : a = ...
+      Contexto:
+              11 | 	if(vet[elemento] % 3):
+        >>>   12 | 		a = vet[elemento](size(vet), dtype=int)
+              13 | 		
+
+======================================================================

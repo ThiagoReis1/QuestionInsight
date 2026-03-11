@@ -1,0 +1,5 @@
+est=float(input("Estimativa:"))
+com=float(input("Comprimento da aresta:"))
+area=1.5*(3**0.5)*(com*com)
+num=(area*est)
+print(int(num))

@@ -1,0 +1,48 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1028_1549.py
+Questão  : 1028
+Aluno    : 1549
+Total MCs: 2
+
+⚠️  Misconceptions detectados: A3, A4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from math import *
+     2 | consumo = float(input("preco: 15"))
+     3 | total = 15 * 0,37
+     4 | print = (round(total, 2)) 
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 2
+
+  [1] Linha 2: Variável 'consumo' declarada mas nunca utilizada
+      Trecho  : consumo = ...
+      Contexto:
+               1 | from math import *
+        >>>    2 | consumo = float(input("preco: 15"))
+               3 | total = 15 * 0,37
+
+  [2] Linha 4: Variável 'print' declarada mas nunca utilizada
+      Trecho  : print = ...
+      Contexto:
+               3 | total = 15 * 0,37
+        >>>    4 | print = (round(total, 2)) 
+
+▶ A4 — Redefinição de built-in
+  Ocorrências: 1
+
+  [1] Linha 4: Built-in 'print' redefinido como variável
+      Trecho  : print = round(total, 2)
+      Contexto:
+               3 | total = 15 * 0,37
+        >>>    4 | print = (round(total, 2)) 
+
+======================================================================

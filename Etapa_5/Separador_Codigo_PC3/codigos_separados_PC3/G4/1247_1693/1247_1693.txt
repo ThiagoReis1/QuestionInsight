@@ -1,0 +1,97 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1247_1693.py
+Questão  : 1247
+Aluno    : 1693
+Total MCs: 1
+
+⚠️  Misconceptions detectados: G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | x=array(eval(input("qual vetor: ")))
+     3 | x1= array(zeros(2, dtype=int))
+     4 | cont = 0
+     5 | cont1 = 0
+     6 | for i in range(0, size(x)):
+     7 | 	a = min(x)
+     8 | 	b = max(x)
+     9 | c = (0.75 * a) + (0.25 * b)
+    10 | d = (0.25 * a) + (0.75 * b)
+    11 | for j in range(0, size(x)):
+    12 | 	if x[j] >= a and x[j] < c:
+    13 | 		cont = cont + 1
+    14 | for k in range(0, size(x)):	
+    15 | 	if x[k] >= d and x[k] < b:
+    16 | 		cont1 = cont1 + 1
+    17 | x1[0] = cont
+    18 | x1[1] = cont1
+    19 | print(x1)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 8
+
+  [1] Linha 2: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+               1 | from numpy import*
+        >>>    2 | x=array(eval(input("qual vetor: ")))
+               3 | x1= array(zeros(2, dtype=int))
+
+  [2] Linha 3: Variável 'x1' com nome muito curto (≤4 chars)
+      Trecho  : x1 = ...
+      Contexto:
+               2 | x=array(eval(input("qual vetor: ")))
+        >>>    3 | x1= array(zeros(2, dtype=int))
+               4 | cont = 0
+
+  [3] Linha 4: Variável 'cont' com nome muito curto (≤4 chars)
+      Trecho  : cont = ...
+      Contexto:
+               3 | x1= array(zeros(2, dtype=int))
+        >>>    4 | cont = 0
+               5 | cont1 = 0
+
+  [4] Linha 9: Variável 'c' com nome muito curto (≤4 chars)
+      Trecho  : c = ...
+      Contexto:
+               8 | 	b = max(x)
+        >>>    9 | c = (0.75 * a) + (0.25 * b)
+              10 | d = (0.25 * a) + (0.75 * b)
+
+  [5] Linha 10: Variável 'd' com nome muito curto (≤4 chars)
+      Trecho  : d = ...
+      Contexto:
+               9 | c = (0.75 * a) + (0.25 * b)
+        >>>   10 | d = (0.25 * a) + (0.75 * b)
+              11 | for j in range(0, size(x)):
+
+  [6] Linha 7: Variável 'a' com nome muito curto (≤4 chars)
+      Trecho  : a = ...
+      Contexto:
+               6 | for i in range(0, size(x)):
+        >>>    7 | 	a = min(x)
+               8 | 	b = max(x)
+
+  [7] Linha 8: Variável 'b' com nome muito curto (≤4 chars)
+      Trecho  : b = ...
+      Contexto:
+               7 | 	a = min(x)
+        >>>    8 | 	b = max(x)
+               9 | c = (0.75 * a) + (0.25 * b)
+
+  [8] Linha 13: Variável 'cont' com nome muito curto (≤4 chars)
+      Trecho  : cont = ...
+      Contexto:
+              12 | 	if x[j] >= a and x[j] < c:
+        >>>   13 | 		cont = cont + 1
+              14 | for k in range(0, size(x)):	
+
+======================================================================

@@ -1,0 +1,11 @@
+aminoacido=(input(""))
+O=15.9994
+C=12.011
+N=14.00674
+H=1.0079
+pesoG=(2*C)+(5*H)+N+(2*O)
+pesoS=(3*C)+(7*H)+N+(3*O)
+if(aminoacido=="glicina".upper()):
+	print(round(pesoG,2))
+else:
+	print(round(pesoS,2))

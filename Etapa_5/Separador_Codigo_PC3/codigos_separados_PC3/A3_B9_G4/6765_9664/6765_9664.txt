@@ -1,0 +1,65 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 6765_9664.py
+Questão  : 6765
+Aluno    : 9664
+Total MCs: 3
+
+⚠️  Misconceptions detectados: A3, B9, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | ni= int(input("numero inteiro: "))
+     2 | p= input("B ou R: ").upper()
+     3 | 
+     4 | if ni>=18:
+     5 | 	print("sim")
+     6 | elif ni<18:
+     7 | 	print("nao")
+     8 | else:
+     9 | 	print("invalido")
+    10 | 	
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 1
+
+  [1] Linha 2: Variável 'p' declarada mas nunca utilizada
+      Trecho  : p = ...
+      Contexto:
+               1 | ni= int(input("numero inteiro: "))
+        >>>    2 | p= input("B ou R: ").upper()
+               3 | 
+
+▶ B9 — elif/else retestando condições já verificadas
+  Ocorrências: 1
+
+  [1] Linha 6: elif retesta condição inversa do if da linha 4
+      Trecho  : if ni >= 18 ... elif ni < 18
+      Contexto:
+               5 | 	print("sim")
+        >>>    6 | elif ni<18:
+               7 | 	print("nao")
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 2
+
+  [1] Linha 1: Variável 'ni' com nome muito curto (≤4 chars)
+      Trecho  : ni = ...
+      Contexto:
+        >>>    1 | ni= int(input("numero inteiro: "))
+               2 | p= input("B ou R: ").upper()
+
+  [2] Linha 2: Variável 'p' com nome muito curto (≤4 chars)
+      Trecho  : p = ...
+      Contexto:
+               1 | ni= int(input("numero inteiro: "))
+        >>>    2 | p= input("B ou R: ").upper()
+               3 | 
+
+======================================================================

@@ -1,0 +1,80 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1253_1283.py
+Questão  : 1253
+Aluno    : 1283
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | base=array(eval(input("Vetor: ")))
+     3 | base1=array(zeros(2,dtype=int))
+     4 | a=min(base)
+     5 | b=max(base)
+     6 | c=(0.6*a) + (0.4*b)
+     7 | d=(0.3*a) + (0.7*b)
+     8 | for i in base:
+     9 | 	if (i>=a and i<c):
+    10 | 		base1[0]=base1[0]+1
+    11 | 	elif(i>=d and i<b):
+    12 | 		base1[1]=base1[1]+1
+    13 | print(base1)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 9: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 9) / elif ... sem else
+      Contexto:
+               8 | for i in base:
+        >>>    9 | 	if (i>=a and i<c):
+              10 | 		base1[0]=base1[0]+1
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 5
+
+  [1] Linha 2: Variável 'base' com nome muito curto (≤4 chars)
+      Trecho  : base = ...
+      Contexto:
+               1 | from numpy import*
+        >>>    2 | base=array(eval(input("Vetor: ")))
+               3 | base1=array(zeros(2,dtype=int))
+
+  [2] Linha 4: Variável 'a' com nome muito curto (≤4 chars)
+      Trecho  : a = ...
+      Contexto:
+               3 | base1=array(zeros(2,dtype=int))
+        >>>    4 | a=min(base)
+               5 | b=max(base)
+
+  [3] Linha 5: Variável 'b' com nome muito curto (≤4 chars)
+      Trecho  : b = ...
+      Contexto:
+               4 | a=min(base)
+        >>>    5 | b=max(base)
+               6 | c=(0.6*a) + (0.4*b)
+
+  [4] Linha 6: Variável 'c' com nome muito curto (≤4 chars)
+      Trecho  : c = ...
+      Contexto:
+               5 | b=max(base)
+        >>>    6 | c=(0.6*a) + (0.4*b)
+               7 | d=(0.3*a) + (0.7*b)
+
+  [5] Linha 7: Variável 'd' com nome muito curto (≤4 chars)
+      Trecho  : d = ...
+      Contexto:
+               6 | c=(0.6*a) + (0.4*b)
+        >>>    7 | d=(0.3*a) + (0.7*b)
+               8 | for i in base:
+
+======================================================================

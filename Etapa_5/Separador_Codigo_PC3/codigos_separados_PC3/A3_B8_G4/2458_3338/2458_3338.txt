@@ -1,0 +1,162 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 2458_3338.py
+Questão  : 2458
+Aluno    : 3338
+Total MCs: 3
+
+⚠️  Misconceptions detectados: A3, B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from math import*
+     2 | 
+     3 | p = float(input("sem desconto: "))
+     4 | c = float(input("codigo: "))
+     5 | 
+     6 | f1 = 0.10 
+     7 | f2 = 0.08
+     8 | f3 = 0.00
+     9 | f4 = 0.02
+    10 | d = 0.40
+    11 | v = (p - p * d) + p * (10 / 100)
+    12 | v1 = (p - p * d) + p * (8 / 100)
+    13 | v2 = (p - p * d) + p * (0 / 100)
+    14 | v3 = (p - p * d) + p * (2 / 100)
+    15 | if(c == 1):
+    16 | 	print(round(v, 2))
+    17 | elif(c==2):
+    18 | 	print(round(v1, 2))
+    19 | elif(c ==3):
+    20 | 	print(round(v2, 2))
+    21 | elif(c==4):
+    22 | 	print(round(v3, 2))
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 4
+
+  [1] Linha 6: Variável 'f1' declarada mas nunca utilizada
+      Trecho  : f1 = ...
+      Contexto:
+               5 | 
+        >>>    6 | f1 = 0.10 
+               7 | f2 = 0.08
+
+  [2] Linha 7: Variável 'f2' declarada mas nunca utilizada
+      Trecho  : f2 = ...
+      Contexto:
+               6 | f1 = 0.10 
+        >>>    7 | f2 = 0.08
+               8 | f3 = 0.00
+
+  [3] Linha 8: Variável 'f3' declarada mas nunca utilizada
+      Trecho  : f3 = ...
+      Contexto:
+               7 | f2 = 0.08
+        >>>    8 | f3 = 0.00
+               9 | f4 = 0.02
+
+  [4] Linha 9: Variável 'f4' declarada mas nunca utilizada
+      Trecho  : f4 = ...
+      Contexto:
+               8 | f3 = 0.00
+        >>>    9 | f4 = 0.02
+              10 | d = 0.40
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 19: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 19) / elif ... sem else
+      Contexto:
+              18 | 	print(round(v1, 2))
+        >>>   19 | elif(c ==3):
+              20 | 	print(round(v2, 2))
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 11
+
+  [1] Linha 3: Variável 'p' com nome muito curto (≤4 chars)
+      Trecho  : p = ...
+      Contexto:
+               2 | 
+        >>>    3 | p = float(input("sem desconto: "))
+               4 | c = float(input("codigo: "))
+
+  [2] Linha 4: Variável 'c' com nome muito curto (≤4 chars)
+      Trecho  : c = ...
+      Contexto:
+               3 | p = float(input("sem desconto: "))
+        >>>    4 | c = float(input("codigo: "))
+               5 | 
+
+  [3] Linha 6: Variável 'f1' com nome muito curto (≤4 chars)
+      Trecho  : f1 = ...
+      Contexto:
+               5 | 
+        >>>    6 | f1 = 0.10 
+               7 | f2 = 0.08
+
+  [4] Linha 7: Variável 'f2' com nome muito curto (≤4 chars)
+      Trecho  : f2 = ...
+      Contexto:
+               6 | f1 = 0.10 
+        >>>    7 | f2 = 0.08
+               8 | f3 = 0.00
+
+  [5] Linha 8: Variável 'f3' com nome muito curto (≤4 chars)
+      Trecho  : f3 = ...
+      Contexto:
+               7 | f2 = 0.08
+        >>>    8 | f3 = 0.00
+               9 | f4 = 0.02
+
+  [6] Linha 9: Variável 'f4' com nome muito curto (≤4 chars)
+      Trecho  : f4 = ...
+      Contexto:
+               8 | f3 = 0.00
+        >>>    9 | f4 = 0.02
+              10 | d = 0.40
+
+  [7] Linha 10: Variável 'd' com nome muito curto (≤4 chars)
+      Trecho  : d = ...
+      Contexto:
+               9 | f4 = 0.02
+        >>>   10 | d = 0.40
+              11 | v = (p - p * d) + p * (10 / 100)
+
+  [8] Linha 11: Variável 'v' com nome muito curto (≤4 chars)
+      Trecho  : v = ...
+      Contexto:
+              10 | d = 0.40
+        >>>   11 | v = (p - p * d) + p * (10 / 100)
+              12 | v1 = (p - p * d) + p * (8 / 100)
+
+  [9] Linha 12: Variável 'v1' com nome muito curto (≤4 chars)
+      Trecho  : v1 = ...
+      Contexto:
+              11 | v = (p - p * d) + p * (10 / 100)
+        >>>   12 | v1 = (p - p * d) + p * (8 / 100)
+              13 | v2 = (p - p * d) + p * (0 / 100)
+
+  [10] Linha 13: Variável 'v2' com nome muito curto (≤4 chars)
+      Trecho  : v2 = ...
+      Contexto:
+              12 | v1 = (p - p * d) + p * (8 / 100)
+        >>>   13 | v2 = (p - p * d) + p * (0 / 100)
+              14 | v3 = (p - p * d) + p * (2 / 100)
+
+  [11] Linha 14: Variável 'v3' com nome muito curto (≤4 chars)
+      Trecho  : v3 = ...
+      Contexto:
+              13 | v2 = (p - p * d) + p * (0 / 100)
+        >>>   14 | v3 = (p - p * d) + p * (2 / 100)
+              15 | if(c == 1):
+
+======================================================================

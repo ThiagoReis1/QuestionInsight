@@ -1,0 +1,188 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1615_2423.py
+Questão  : 1615
+Aluno    : 2423
+Total MCs: 2
+
+⚠️  Misconceptions detectados: A2, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | v1 = array(eval(input("Quais os aneis acertados: ")))
+     3 | v2 = array(eval(input("Quais os aneis acertados: ")))
+     4 | i = 0
+     5 | j = 0
+     6 | while(i < size(v1)):
+     7 | 	if(v1[i] == 1):
+     8 | 		j = j + 40
+     9 | 	elif(v1[i] == 2):
+    10 | 		j = j + 20
+    11 | 	elif(v1[i] == 3):
+    12 | 		j = j + 10
+    13 | 	else:
+    14 | 		j = j
+    15 | 	i = i + 1
+    16 | 	
+    17 | k = 0
+    18 | l = 0
+    19 | while(l < size(v2)):
+    20 | 	if(v2[l] == 1):
+    21 | 		k = k + 40
+    22 | 	elif(v2[l] == 2):
+    23 | 		k = k + 20
+    24 | 	elif(v2[l] == 3):
+    25 | 		k = k + 10
+    26 | 	else:
+    27 | 		k = k
+    28 | 	l = l + 1
+    29 | if(j > k):
+    30 | 	print("JOGADOR UM")
+    31 | elif(j < k):
+    32 | 	print("JOGADOR DOIS")
+    33 | else:
+    34 | 	print("EMPATE")
+    35 | 		  	  
+    36 | 		  
+    37 | 		  
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A2 — Variável atribuída a si mesma
+  Ocorrências: 2
+
+  [1] Linha 14: 'j' atribuído a si mesmo
+      Trecho  : j = j
+      Contexto:
+              13 | 	else:
+        >>>   14 | 		j = j
+              15 | 	i = i + 1
+
+  [2] Linha 27: 'k' atribuído a si mesmo
+      Trecho  : k = k
+      Contexto:
+              26 | 	else:
+        >>>   27 | 		k = k
+              28 | 	l = l + 1
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 16
+
+  [1] Linha 2: Variável 'v1' com nome muito curto (≤4 chars)
+      Trecho  : v1 = ...
+      Contexto:
+               1 | from numpy import*
+        >>>    2 | v1 = array(eval(input("Quais os aneis acertados: ")))
+               3 | v2 = array(eval(input("Quais os aneis acertados: ")))
+
+  [2] Linha 3: Variável 'v2' com nome muito curto (≤4 chars)
+      Trecho  : v2 = ...
+      Contexto:
+               2 | v1 = array(eval(input("Quais os aneis acertados: ")))
+        >>>    3 | v2 = array(eval(input("Quais os aneis acertados: ")))
+               4 | i = 0
+
+  [3] Linha 4: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+               3 | v2 = array(eval(input("Quais os aneis acertados: ")))
+        >>>    4 | i = 0
+               5 | j = 0
+
+  [4] Linha 5: Variável 'j' com nome muito curto (≤4 chars)
+      Trecho  : j = ...
+      Contexto:
+               4 | i = 0
+        >>>    5 | j = 0
+               6 | while(i < size(v1)):
+
+  [5] Linha 17: Variável 'k' com nome muito curto (≤4 chars)
+      Trecho  : k = ...
+      Contexto:
+              16 | 	
+        >>>   17 | k = 0
+              18 | l = 0
+
+  [6] Linha 18: Variável 'l' com nome muito curto (≤4 chars)
+      Trecho  : l = ...
+      Contexto:
+              17 | k = 0
+        >>>   18 | l = 0
+              19 | while(l < size(v2)):
+
+  [7] Linha 15: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+              14 | 		j = j
+        >>>   15 | 	i = i + 1
+              16 | 	
+
+  [8] Linha 28: Variável 'l' com nome muito curto (≤4 chars)
+      Trecho  : l = ...
+      Contexto:
+              27 | 		k = k
+        >>>   28 | 	l = l + 1
+              29 | if(j > k):
+
+  [9] Linha 8: Variável 'j' com nome muito curto (≤4 chars)
+      Trecho  : j = ...
+      Contexto:
+               7 | 	if(v1[i] == 1):
+        >>>    8 | 		j = j + 40
+               9 | 	elif(v1[i] == 2):
+
+  [10] Linha 21: Variável 'k' com nome muito curto (≤4 chars)
+      Trecho  : k = ...
+      Contexto:
+              20 | 	if(v2[l] == 1):
+        >>>   21 | 		k = k + 40
+              22 | 	elif(v2[l] == 2):
+
+  [11] Linha 10: Variável 'j' com nome muito curto (≤4 chars)
+      Trecho  : j = ...
+      Contexto:
+               9 | 	elif(v1[i] == 2):
+        >>>   10 | 		j = j + 20
+              11 | 	elif(v1[i] == 3):
+
+  [12] Linha 23: Variável 'k' com nome muito curto (≤4 chars)
+      Trecho  : k = ...
+      Contexto:
+              22 | 	elif(v2[l] == 2):
+        >>>   23 | 		k = k + 20
+              24 | 	elif(v2[l] == 3):
+
+  [13] Linha 12: Variável 'j' com nome muito curto (≤4 chars)
+      Trecho  : j = ...
+      Contexto:
+              11 | 	elif(v1[i] == 3):
+        >>>   12 | 		j = j + 10
+              13 | 	else:
+
+  [14] Linha 14: Variável 'j' com nome muito curto (≤4 chars)
+      Trecho  : j = ...
+      Contexto:
+              13 | 	else:
+        >>>   14 | 		j = j
+              15 | 	i = i + 1
+
+  [15] Linha 25: Variável 'k' com nome muito curto (≤4 chars)
+      Trecho  : k = ...
+      Contexto:
+              24 | 	elif(v2[l] == 3):
+        >>>   25 | 		k = k + 10
+              26 | 	else:
+
+  [16] Linha 27: Variável 'k' com nome muito curto (≤4 chars)
+      Trecho  : k = ...
+      Contexto:
+              26 | 	else:
+        >>>   27 | 		k = k
+              28 | 	l = l + 1
+
+======================================================================

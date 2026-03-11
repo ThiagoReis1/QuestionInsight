@@ -1,0 +1,72 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 6939_9812.py
+Questão  : 6939
+Aluno    : 9812
+Total MCs: 3
+
+⚠️  Misconceptions detectados: B4, B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | var = float(input("Valor total da compra: "))
+     2 | cod = input("Debito (D), PIX (P) ou Cartao (C): ").upper()
+     3 | 
+     4 | if cod == "C":
+     5 | 	n = int(input("1 ou 2 vezes: "))
+     6 | 	
+     7 | 	if n == 1:
+     8 | 		print(round(var,2))
+     9 | 	
+    10 | 	else:
+    11 | 		total = var + (var * 0.09)
+    12 | 		print(round(total,2))
+    13 | 	
+    14 | elif cod == "D":
+    15 | 	total = var * 0.81
+    16 | 	print(round(total,2))
+    17 | 	
+    18 | elif cod == "P":
+    19 | 	total = var * 0.81
+    20 | 	print(round(total,2))
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B4 — Comandos repetidos dentro de blocos if-elif-else
+  Ocorrências: 2
+
+  [1] Linha 18: Bloco idêntico ao da linha 14
+      Trecho  : total = var * 0.81
+      Contexto:
+              17 | 	
+        >>>   18 | elif cod == "P":
+              19 | 	total = var * 0.81
+
+  [2] Linha 18: Bloco idêntico ao da linha 14
+      Trecho  : total = var * 0.81
+      Contexto:
+              17 | 	
+        >>>   18 | elif cod == "P":
+              19 | 	total = var * 0.81
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 14: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 14) / elif ... sem else
+      Contexto:
+              13 | 	
+        >>>   14 | elif cod == "D":
+              15 | 	total = var * 0.81
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 1
+
+  [1] Linha 0: G4 detectado pelo VisitorMC3 (localização exata não mapeada)
+      Trecho  : —
+
+======================================================================

@@ -1,0 +1,94 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 3584_7598.py
+Questão  : 3584
+Aluno    : 7598
+Total MCs: 3
+
+⚠️  Misconceptions detectados: A3, B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | 
+     3 | vet = array(eval(input()))
+     4 | i = 0
+     5 | des = 0
+     6 | soma = 0
+     7 | 
+     8 | 
+     9 | for i in range(size(vet)):
+    10 | 	if(vet[i] > 200):
+    11 | 		des = vet[i] * 15/100
+    12 | 		vet[i] = vet[i] - des
+    13 | 		
+    14 | 	elif(vet[i] < 200):
+    15 | 		vet[i] = vet[i]
+    16 | 		
+    17 | print(round(sum(vet), 2))
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 1
+
+  [1] Linha 6: Variável 'soma' declarada mas nunca utilizada
+      Trecho  : soma = ...
+      Contexto:
+               5 | des = 0
+        >>>    6 | soma = 0
+               7 | 
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 10: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 10) / elif ... sem else
+      Contexto:
+               9 | for i in range(size(vet)):
+        >>>   10 | 	if(vet[i] > 200):
+              11 | 		des = vet[i] * 15/100
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 5
+
+  [1] Linha 3: Variável 'vet' com nome muito curto (≤4 chars)
+      Trecho  : vet = ...
+      Contexto:
+               2 | 
+        >>>    3 | vet = array(eval(input()))
+               4 | i = 0
+
+  [2] Linha 4: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+               3 | vet = array(eval(input()))
+        >>>    4 | i = 0
+               5 | des = 0
+
+  [3] Linha 5: Variável 'des' com nome muito curto (≤4 chars)
+      Trecho  : des = ...
+      Contexto:
+               4 | i = 0
+        >>>    5 | des = 0
+               6 | soma = 0
+
+  [4] Linha 6: Variável 'soma' com nome muito curto (≤4 chars)
+      Trecho  : soma = ...
+      Contexto:
+               5 | des = 0
+        >>>    6 | soma = 0
+               7 | 
+
+  [5] Linha 11: Variável 'des' com nome muito curto (≤4 chars)
+      Trecho  : des = ...
+      Contexto:
+              10 | 	if(vet[i] > 200):
+        >>>   11 | 		des = vet[i] * 15/100
+              12 | 		vet[i] = vet[i] - des
+
+======================================================================

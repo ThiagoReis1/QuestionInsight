@@ -1,0 +1,4 @@
+print 'area*alunos'
+input
+
+

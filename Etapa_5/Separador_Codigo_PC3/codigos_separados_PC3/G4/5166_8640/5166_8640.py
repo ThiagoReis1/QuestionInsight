@@ -1,0 +1,5 @@
+PC = float(input("peso do saco: "))
+A  = float(input("quantidade: "))
+print("quantidade: ")
+print(round(PC , 8000.3333))
+print(round(A , 1427.6))

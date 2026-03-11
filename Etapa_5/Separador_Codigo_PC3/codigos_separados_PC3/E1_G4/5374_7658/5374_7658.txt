@@ -1,0 +1,86 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 5374_7658.py
+Questão  : 5374
+Aluno    : 7658
+Total MCs: 2
+
+⚠️  Misconceptions detectados: E1, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import *
+     2 | n= input(":")
+     3 | c= 0
+     4 | i= 0
+     5 | while i < len(n):
+     6 | 	if n[i].upper() == "A" or n[i].upper()== "E" or n[i].upper()== "I" or n[i].upper()== "O" or n[i].upper()== "U" or n[i].upper() == "a" or n[i].upper() == "e" or n[i].upper() == "i" or n[i].upper() == "o" or n[i].upper()== "u": 
+     7 | 		c= c+ 0.15 
+     8 | 	else:
+     9 | 		c= c+0.17
+    10 | 	i= i+1
+    11 | print(round(c,2))
+    12 | 	
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ E1 — Verificação desnecessária de todas as combinações possíveis
+  Ocorrências: 1
+
+  [1] Linha 6: 10 condições em um único if — verificação excessiva
+      Trecho  : n[i].upper() == 'A' or n[i].upper() == 'E' or n[i].upper() == 'I' or (n[i].upper() == 'O') or (n[i].upper() == 'U') or (n[i].upper() == 'a') or (n[i].upper() == 'e') or (n[i].upper() == 'i') or (n[i].upper() == 'o') or (n[i].upper() == 'u')
+      Contexto:
+               5 | while i < len(n):
+        >>>    6 | 	if n[i].upper() == "A" or n[i].upper()== "E" or n[i].upper()== "I" or n[i].upper()== "O" or n[i].upper()== "U" or n[i].upper() == "a" or n[i].upper() == "e" or n[i].upper() == "i" or n[i].upper() == "o" or n[i].upper()== "u": 
+               7 | 		c= c+ 0.15 
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 6
+
+  [1] Linha 2: Variável 'n' com nome muito curto (≤4 chars)
+      Trecho  : n = ...
+      Contexto:
+               1 | from numpy import *
+        >>>    2 | n= input(":")
+               3 | c= 0
+
+  [2] Linha 3: Variável 'c' com nome muito curto (≤4 chars)
+      Trecho  : c = ...
+      Contexto:
+               2 | n= input(":")
+        >>>    3 | c= 0
+               4 | i= 0
+
+  [3] Linha 4: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+               3 | c= 0
+        >>>    4 | i= 0
+               5 | while i < len(n):
+
+  [4] Linha 10: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+               9 | 		c= c+0.17
+        >>>   10 | 	i= i+1
+              11 | print(round(c,2))
+
+  [5] Linha 7: Variável 'c' com nome muito curto (≤4 chars)
+      Trecho  : c = ...
+      Contexto:
+               6 | 	if n[i].upper() == "A" or n[i].upper()== "E" or n[i].upper()== "I" or n[i].upper()== "O" or n[i].upper()== "U" or n[i].upper() == "a" or n[i].upper() == "e" or n[i].upper() == "i" or n[i].upper() == "o" or n[i].upper()== "u": 
+        >>>    7 | 		c= c+ 0.15 
+               8 | 	else:
+
+  [6] Linha 9: Variável 'c' com nome muito curto (≤4 chars)
+      Trecho  : c = ...
+      Contexto:
+               8 | 	else:
+        >>>    9 | 		c= c+0.17
+              10 | 	i= i+1
+
+======================================================================

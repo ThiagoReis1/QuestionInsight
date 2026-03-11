@@ -1,0 +1,124 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 2155_2417.py
+Questão  : 2155
+Aluno    : 2417
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import *
+     2 | peso = array(eval(input("")))
+     3 | altura = array(eval(input("")))
+     4 | cont = zeros(size(peso), dtype = float)
+     5 | for i in range(size(peso)):
+     6 | 	cont[i] = round(peso[i] / (altura[i]) ** 2, 2)
+     7 | print(cont)
+     8 | print("O MAIOR IMC DA TURMA EH:", max(cont))
+     9 | 
+    10 | if max(cont) < 17:
+    11 | 	msg = "MUITO ABAIXO DO PESO"
+    12 | elif (max(cont) >= 17) and max(cont) <= 18.49:
+    13 | 	msg = "ABAIXO DO PESO"
+    14 | elif (max(cont) >= 18.5) and max(cont) <= 24.99:
+    15 | 	msg = "PESO NORMAL"
+    16 | elif (max(cont) >= 25) and max(cont) <= 29.99:
+    17 | 	msg = "ACIMA DO PESO"
+    18 | elif (max(cont) >= 30) and max(cont) <= 34.99:
+    19 | 	msg = "OBESIDADE"
+    20 | elif (max(cont) >= 35) and max(cont) <= 39.99:
+    21 | 	msg = "OBESIDADE SEVERA"
+    22 | elif max(cont) > 40:
+    23 | 	msg = "OBESIDADE MORBIDA"
+    24 | print(msg)
+    25 | 
+    26 | 
+    27 | 
+    28 | 
+    29 | 
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 20: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 20) / elif ... sem else
+      Contexto:
+              19 | 	msg = "OBESIDADE"
+        >>>   20 | elif (max(cont) >= 35) and max(cont) <= 39.99:
+              21 | 	msg = "OBESIDADE SEVERA"
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 9
+
+  [1] Linha 2: Variável 'peso' com nome muito curto (≤4 chars)
+      Trecho  : peso = ...
+      Contexto:
+               1 | from numpy import *
+        >>>    2 | peso = array(eval(input("")))
+               3 | altura = array(eval(input("")))
+
+  [2] Linha 4: Variável 'cont' com nome muito curto (≤4 chars)
+      Trecho  : cont = ...
+      Contexto:
+               3 | altura = array(eval(input("")))
+        >>>    4 | cont = zeros(size(peso), dtype = float)
+               5 | for i in range(size(peso)):
+
+  [3] Linha 11: Variável 'msg' com nome muito curto (≤4 chars)
+      Trecho  : msg = ...
+      Contexto:
+              10 | if max(cont) < 17:
+        >>>   11 | 	msg = "MUITO ABAIXO DO PESO"
+              12 | elif (max(cont) >= 17) and max(cont) <= 18.49:
+
+  [4] Linha 13: Variável 'msg' com nome muito curto (≤4 chars)
+      Trecho  : msg = ...
+      Contexto:
+              12 | elif (max(cont) >= 17) and max(cont) <= 18.49:
+        >>>   13 | 	msg = "ABAIXO DO PESO"
+              14 | elif (max(cont) >= 18.5) and max(cont) <= 24.99:
+
+  [5] Linha 15: Variável 'msg' com nome muito curto (≤4 chars)
+      Trecho  : msg = ...
+      Contexto:
+              14 | elif (max(cont) >= 18.5) and max(cont) <= 24.99:
+        >>>   15 | 	msg = "PESO NORMAL"
+              16 | elif (max(cont) >= 25) and max(cont) <= 29.99:
+
+  [6] Linha 17: Variável 'msg' com nome muito curto (≤4 chars)
+      Trecho  : msg = ...
+      Contexto:
+              16 | elif (max(cont) >= 25) and max(cont) <= 29.99:
+        >>>   17 | 	msg = "ACIMA DO PESO"
+              18 | elif (max(cont) >= 30) and max(cont) <= 34.99:
+
+  [7] Linha 19: Variável 'msg' com nome muito curto (≤4 chars)
+      Trecho  : msg = ...
+      Contexto:
+              18 | elif (max(cont) >= 30) and max(cont) <= 34.99:
+        >>>   19 | 	msg = "OBESIDADE"
+              20 | elif (max(cont) >= 35) and max(cont) <= 39.99:
+
+  [8] Linha 21: Variável 'msg' com nome muito curto (≤4 chars)
+      Trecho  : msg = ...
+      Contexto:
+              20 | elif (max(cont) >= 35) and max(cont) <= 39.99:
+        >>>   21 | 	msg = "OBESIDADE SEVERA"
+              22 | elif max(cont) > 40:
+
+  [9] Linha 23: Variável 'msg' com nome muito curto (≤4 chars)
+      Trecho  : msg = ...
+      Contexto:
+              22 | elif max(cont) > 40:
+        >>>   23 | 	msg = "OBESIDADE MORBIDA"
+              24 | print(msg)
+
+======================================================================

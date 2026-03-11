@@ -1,0 +1,93 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1109_3191.py
+Questão  : 1109
+Aluno    : 3191
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B8, B9
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | idade = int(input(''))
+     2 | peso = float(input(''))
+     3 | print('Entradas:', idade,'anos e', peso, 'kg')
+     4 | if 0 <= idade <= 130 and 0 < peso<= 550:
+     5 | 	if idade >= 12:
+     6 | 		if peso >= 60:
+     7 | 			dosagem = 1000
+     8 | 			print('Dosagem:', dosagem, 'mg')
+     9 | 		elif peso < 60:
+    10 | 			dosagem = 875
+    11 | 			print('Dosagem:', dosagem, 'mg')
+    12 | 	elif idade < 12:
+    13 | 		if peso <= 5:
+    14 | 			dosagem = 75
+    15 | 			print('Dosagem:', dosagem, 'mg')
+    16 | 		elif 5 < peso <= 9:
+    17 | 			dosagem = 125
+    18 | 			print('Dosagem:', dosagem, 'mg')
+    19 | 		elif 9 <peso<= 16:
+    20 | 			dosagem = 250
+    21 | 			print('Dosagem:', dosagem, 'mg')
+    22 | 		elif 16 < peso <= 24:
+    23 | 			dosagem = 375
+    24 | 			print('Dosagem:', dosagem, 'mg')
+    25 | 		elif 24 <peso<= 30:
+    26 | 			dosagem = 500
+    27 | 			print('Dosagem:', dosagem, 'mg')
+    28 | 		elif peso > 30:
+    29 | 			dosagem = 750
+    30 | 			print('Dosagem:', dosagem, 'mg')
+    31 | else:
+    32 | 	print('Dados invalidos')
+    33 | 	
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 3
+
+  [1] Linha 5: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 5) / elif ... sem else
+      Contexto:
+               4 | if 0 <= idade <= 130 and 0 < peso<= 550:
+        >>>    5 | 	if idade >= 12:
+               6 | 		if peso >= 60:
+
+  [2] Linha 6: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 6) / elif ... sem else
+      Contexto:
+               5 | 	if idade >= 12:
+        >>>    6 | 		if peso >= 60:
+               7 | 			dosagem = 1000
+
+  [3] Linha 25: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 25) / elif ... sem else
+      Contexto:
+              24 | 			print('Dosagem:', dosagem, 'mg')
+        >>>   25 | 		elif 24 <peso<= 30:
+              26 | 			dosagem = 500
+
+▶ B9 — elif/else retestando condições já verificadas
+  Ocorrências: 2
+
+  [1] Linha 12: elif retesta condição inversa do if da linha 5
+      Trecho  : if idade >= 12 ... elif idade < 12
+      Contexto:
+              11 | 			print('Dosagem:', dosagem, 'mg')
+        >>>   12 | 	elif idade < 12:
+              13 | 		if peso <= 5:
+
+  [2] Linha 9: elif retesta condição inversa do if da linha 6
+      Trecho  : if peso >= 60 ... elif peso < 60
+      Contexto:
+               8 | 			print('Dosagem:', dosagem, 'mg')
+        >>>    9 | 		elif peso < 60:
+              10 | 			dosagem = 875
+
+======================================================================

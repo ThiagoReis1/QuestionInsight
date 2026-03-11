@@ -1,0 +1,118 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1613_4258.py
+Questão  : 1613
+Aluno    : 4258
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import *
+     2 | 
+     3 | nomes = array(eval(input("Nomes de atividades: ")))
+     4 | dur = array(eval(input("DUracoes em minutos das atividades: ")))
+     5 | 
+     6 | i = 0
+     7 | cal = 0
+     8 | 
+     9 | while(i < (size(nomes) and size(dur))):
+    10 | 	if(nomes[i] == "ALONGAMENTO"):
+    11 | 		cal = cal + dur[i]*3
+    12 | 	elif(nomes[i] == "CORRIDA"):
+    13 | 		cal = cal + dur[i]*10.3
+    14 | 	elif(nomes[i] == "DANCA"):
+    15 | 		cal = cal + dur[i]*6.7
+    16 | 	elif(nomes[i] == "ESCALADA"):
+    17 | 		cal = cal + dur[i]*9.7
+    18 | 	elif(nomes[i] == "HIDROGINASTICA"):
+    19 | 		cal = cal + dur[i]*5
+    20 | 		
+    21 | 	i = i + 1
+    22 | 	
+    23 | print(round(cal, 2))
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 16: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 16) / elif ... sem else
+      Contexto:
+              15 | 		cal = cal + dur[i]*6.7
+        >>>   16 | 	elif(nomes[i] == "ESCALADA"):
+              17 | 		cal = cal + dur[i]*9.7
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 9
+
+  [1] Linha 4: Variável 'dur' com nome muito curto (≤4 chars)
+      Trecho  : dur = ...
+      Contexto:
+               3 | nomes = array(eval(input("Nomes de atividades: ")))
+        >>>    4 | dur = array(eval(input("DUracoes em minutos das atividades: ")))
+               5 | 
+
+  [2] Linha 6: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+               5 | 
+        >>>    6 | i = 0
+               7 | cal = 0
+
+  [3] Linha 7: Variável 'cal' com nome muito curto (≤4 chars)
+      Trecho  : cal = ...
+      Contexto:
+               6 | i = 0
+        >>>    7 | cal = 0
+               8 | 
+
+  [4] Linha 21: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+              20 | 		
+        >>>   21 | 	i = i + 1
+              22 | 	
+
+  [5] Linha 11: Variável 'cal' com nome muito curto (≤4 chars)
+      Trecho  : cal = ...
+      Contexto:
+              10 | 	if(nomes[i] == "ALONGAMENTO"):
+        >>>   11 | 		cal = cal + dur[i]*3
+              12 | 	elif(nomes[i] == "CORRIDA"):
+
+  [6] Linha 13: Variável 'cal' com nome muito curto (≤4 chars)
+      Trecho  : cal = ...
+      Contexto:
+              12 | 	elif(nomes[i] == "CORRIDA"):
+        >>>   13 | 		cal = cal + dur[i]*10.3
+              14 | 	elif(nomes[i] == "DANCA"):
+
+  [7] Linha 15: Variável 'cal' com nome muito curto (≤4 chars)
+      Trecho  : cal = ...
+      Contexto:
+              14 | 	elif(nomes[i] == "DANCA"):
+        >>>   15 | 		cal = cal + dur[i]*6.7
+              16 | 	elif(nomes[i] == "ESCALADA"):
+
+  [8] Linha 17: Variável 'cal' com nome muito curto (≤4 chars)
+      Trecho  : cal = ...
+      Contexto:
+              16 | 	elif(nomes[i] == "ESCALADA"):
+        >>>   17 | 		cal = cal + dur[i]*9.7
+              18 | 	elif(nomes[i] == "HIDROGINASTICA"):
+
+  [9] Linha 19: Variável 'cal' com nome muito curto (≤4 chars)
+      Trecho  : cal = ...
+      Contexto:
+              18 | 	elif(nomes[i] == "HIDROGINASTICA"):
+        >>>   19 | 		cal = cal + dur[i]*5
+              20 | 		
+
+======================================================================

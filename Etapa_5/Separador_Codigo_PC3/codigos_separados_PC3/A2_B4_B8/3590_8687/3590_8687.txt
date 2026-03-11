@@ -1,0 +1,85 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 3590_8687.py
+Questão  : 3590
+Aluno    : 8687
+Total MCs: 3
+
+⚠️  Misconceptions detectados: A2, B4, B8
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import *
+     2 | 
+     3 | vetor = array(eval(input()))
+     4 | 
+     5 | i = 0
+     6 | j = 0
+     7 | 
+     8 | while i < size(vetor):
+     9 | 	if vetor[i] == 1:
+    10 | 		j = j + 10
+    11 | 	elif vetor[i] == 2:
+    12 | 		j = j + 5
+    13 | 	elif vetor[i] == 3:
+    14 | 		j = j
+    15 | 	elif vetor[i] == 4:
+    16 | 		j = j + 5
+    17 | 	elif vetor[i] == 5:
+    18 | 		j = j + 20
+    19 | 	elif vetor[i] == 6:
+    20 | 		j = j + 10
+    21 | 	i += 1
+    22 | print(j)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A2 — Variável atribuída a si mesma
+  Ocorrências: 1
+
+  [1] Linha 14: 'j' atribuído a si mesmo
+      Trecho  : j = j
+      Contexto:
+              13 | 	elif vetor[i] == 3:
+        >>>   14 | 		j = j
+              15 | 	elif vetor[i] == 4:
+
+▶ B4 — Comandos repetidos dentro de blocos if-elif-else
+  Ocorrências: 3
+
+  [1] Linha 15: Bloco idêntico ao da linha 11
+      Trecho  : j = j + 5
+      Contexto:
+              14 | 		j = j
+        >>>   15 | 	elif vetor[i] == 4:
+              16 | 		j = j + 5
+
+  [2] Linha 19: Bloco idêntico ao da linha 9
+      Trecho  : j = j + 10
+      Contexto:
+              18 | 		j = j + 20
+        >>>   19 | 	elif vetor[i] == 6:
+              20 | 		j = j + 10
+
+  [3] Linha 15: Bloco idêntico ao da linha 11
+      Trecho  : j = j + 5
+      Contexto:
+              14 | 		j = j
+        >>>   15 | 	elif vetor[i] == 4:
+              16 | 		j = j + 5
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 17: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 17) / elif ... sem else
+      Contexto:
+              16 | 		j = j + 5
+        >>>   17 | 	elif vetor[i] == 5:
+              18 | 		j = j + 20
+
+======================================================================

@@ -1,0 +1,190 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 2147_2245.py
+Questão  : 2147
+Aluno    : 2245
+Total MCs: 4
+
+⚠️  Misconceptions detectados: A3, B4, B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import *
+     2 | n = input(": ")
+     3 | if(len(n) == 11):
+     4 | 	j = 0
+     5 | 	novo = ""
+     6 | 	for i in range(len(n)):
+     7 | 		if(i == 1):
+     8 | 			novo = novo + n[i]
+     9 | 		elif(i == 3):
+    10 | 			novo = novo + (n[i])
+    11 | 		elif(i == 5):
+    12 | 			novo = novo + (n[i])
+    13 | 		elif(i == 7):
+    14 | 			novo = novo + (n[i])
+    15 | 		elif(i == 9):
+    16 | 			novo = novo + (n[i])
+    17 | 	print(novo)
+    18 | else:
+    19 | 	print("INVALIDO")
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 1
+
+  [1] Linha 4: Variável 'j' declarada mas nunca utilizada
+      Trecho  : j = ...
+      Contexto:
+               3 | if(len(n) == 11):
+        >>>    4 | 	j = 0
+               5 | 	novo = ""
+
+▶ B4 — Comandos repetidos dentro de blocos if-elif-else
+  Ocorrências: 10
+
+  [1] Linha 9: Bloco idêntico ao da linha 7
+      Trecho  : novo = novo + n[i]
+      Contexto:
+               8 | 			novo = novo + n[i]
+        >>>    9 | 		elif(i == 3):
+              10 | 			novo = novo + (n[i])
+
+  [2] Linha 11: Bloco idêntico ao da linha 7
+      Trecho  : novo = novo + n[i]
+      Contexto:
+              10 | 			novo = novo + (n[i])
+        >>>   11 | 		elif(i == 5):
+              12 | 			novo = novo + (n[i])
+
+  [3] Linha 13: Bloco idêntico ao da linha 7
+      Trecho  : novo = novo + n[i]
+      Contexto:
+              12 | 			novo = novo + (n[i])
+        >>>   13 | 		elif(i == 7):
+              14 | 			novo = novo + (n[i])
+
+  [4] Linha 15: Bloco idêntico ao da linha 7
+      Trecho  : novo = novo + n[i]
+      Contexto:
+              14 | 			novo = novo + (n[i])
+        >>>   15 | 		elif(i == 9):
+              16 | 			novo = novo + (n[i])
+
+  [5] Linha 11: Bloco idêntico ao da linha 9
+      Trecho  : novo = novo + n[i]
+      Contexto:
+              10 | 			novo = novo + (n[i])
+        >>>   11 | 		elif(i == 5):
+              12 | 			novo = novo + (n[i])
+
+  [6] Linha 13: Bloco idêntico ao da linha 9
+      Trecho  : novo = novo + n[i]
+      Contexto:
+              12 | 			novo = novo + (n[i])
+        >>>   13 | 		elif(i == 7):
+              14 | 			novo = novo + (n[i])
+
+  [7] Linha 15: Bloco idêntico ao da linha 9
+      Trecho  : novo = novo + n[i]
+      Contexto:
+              14 | 			novo = novo + (n[i])
+        >>>   15 | 		elif(i == 9):
+              16 | 			novo = novo + (n[i])
+
+  [8] Linha 13: Bloco idêntico ao da linha 11
+      Trecho  : novo = novo + n[i]
+      Contexto:
+              12 | 			novo = novo + (n[i])
+        >>>   13 | 		elif(i == 7):
+              14 | 			novo = novo + (n[i])
+
+  [9] Linha 15: Bloco idêntico ao da linha 11
+      Trecho  : novo = novo + n[i]
+      Contexto:
+              14 | 			novo = novo + (n[i])
+        >>>   15 | 		elif(i == 9):
+              16 | 			novo = novo + (n[i])
+
+  [10] Linha 15: Bloco idêntico ao da linha 13
+      Trecho  : novo = novo + n[i]
+      Contexto:
+              14 | 			novo = novo + (n[i])
+        >>>   15 | 		elif(i == 9):
+              16 | 			novo = novo + (n[i])
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 13: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 13) / elif ... sem else
+      Contexto:
+              12 | 			novo = novo + (n[i])
+        >>>   13 | 		elif(i == 7):
+              14 | 			novo = novo + (n[i])
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 8
+
+  [1] Linha 2: Variável 'n' com nome muito curto (≤4 chars)
+      Trecho  : n = ...
+      Contexto:
+               1 | from numpy import *
+        >>>    2 | n = input(": ")
+               3 | if(len(n) == 11):
+
+  [2] Linha 4: Variável 'j' com nome muito curto (≤4 chars)
+      Trecho  : j = ...
+      Contexto:
+               3 | if(len(n) == 11):
+        >>>    4 | 	j = 0
+               5 | 	novo = ""
+
+  [3] Linha 5: Variável 'novo' com nome muito curto (≤4 chars)
+      Trecho  : novo = ...
+      Contexto:
+               4 | 	j = 0
+        >>>    5 | 	novo = ""
+               6 | 	for i in range(len(n)):
+
+  [4] Linha 8: Variável 'novo' com nome muito curto (≤4 chars)
+      Trecho  : novo = ...
+      Contexto:
+               7 | 		if(i == 1):
+        >>>    8 | 			novo = novo + n[i]
+               9 | 		elif(i == 3):
+
+  [5] Linha 10: Variável 'novo' com nome muito curto (≤4 chars)
+      Trecho  : novo = ...
+      Contexto:
+               9 | 		elif(i == 3):
+        >>>   10 | 			novo = novo + (n[i])
+              11 | 		elif(i == 5):
+
+  [6] Linha 12: Variável 'novo' com nome muito curto (≤4 chars)
+      Trecho  : novo = ...
+      Contexto:
+              11 | 		elif(i == 5):
+        >>>   12 | 			novo = novo + (n[i])
+              13 | 		elif(i == 7):
+
+  [7] Linha 14: Variável 'novo' com nome muito curto (≤4 chars)
+      Trecho  : novo = ...
+      Contexto:
+              13 | 		elif(i == 7):
+        >>>   14 | 			novo = novo + (n[i])
+              15 | 		elif(i == 9):
+
+  [8] Linha 16: Variável 'novo' com nome muito curto (≤4 chars)
+      Trecho  : novo = ...
+      Contexto:
+              15 | 		elif(i == 9):
+        >>>   16 | 			novo = novo + (n[i])
+              17 | 	print(novo)
+
+======================================================================

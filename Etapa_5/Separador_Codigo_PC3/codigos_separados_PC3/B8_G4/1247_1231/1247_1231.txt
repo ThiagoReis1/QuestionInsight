@@ -1,0 +1,120 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1247_1231.py
+Questão  : 1247
+Aluno    : 1231
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | 
+     3 | v = array(eval(input("Digite o Vetor: ")))
+     4 | p = 0
+     5 | s = 0
+     6 | B = max(v)
+     7 | A = min(v)
+     8 | 
+     9 | C = 0.75*A + 0.25*B
+    10 | D = 0.25*A + 0.75*B
+    11 | 
+    12 | for i in range(0, size(v)):
+    13 | 	if(A <= v[i] and C > v[i]):
+    14 | 		p = p + 1
+    15 | 	elif(D <= v[i] and B > v[i]):
+    16 | 		s = s + 1
+    17 | x = array([p, s])
+    18 | print(x)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 13: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 13) / elif ... sem else
+      Contexto:
+              12 | for i in range(0, size(v)):
+        >>>   13 | 	if(A <= v[i] and C > v[i]):
+              14 | 		p = p + 1
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 10
+
+  [1] Linha 3: Variável 'v' com nome muito curto (≤4 chars)
+      Trecho  : v = ...
+      Contexto:
+               2 | 
+        >>>    3 | v = array(eval(input("Digite o Vetor: ")))
+               4 | p = 0
+
+  [2] Linha 4: Variável 'p' com nome muito curto (≤4 chars)
+      Trecho  : p = ...
+      Contexto:
+               3 | v = array(eval(input("Digite o Vetor: ")))
+        >>>    4 | p = 0
+               5 | s = 0
+
+  [3] Linha 5: Variável 's' com nome muito curto (≤4 chars)
+      Trecho  : s = ...
+      Contexto:
+               4 | p = 0
+        >>>    5 | s = 0
+               6 | B = max(v)
+
+  [4] Linha 6: Variável 'B' com nome muito curto (≤4 chars)
+      Trecho  : B = ...
+      Contexto:
+               5 | s = 0
+        >>>    6 | B = max(v)
+               7 | A = min(v)
+
+  [5] Linha 7: Variável 'A' com nome muito curto (≤4 chars)
+      Trecho  : A = ...
+      Contexto:
+               6 | B = max(v)
+        >>>    7 | A = min(v)
+               8 | 
+
+  [6] Linha 9: Variável 'C' com nome muito curto (≤4 chars)
+      Trecho  : C = ...
+      Contexto:
+               8 | 
+        >>>    9 | C = 0.75*A + 0.25*B
+              10 | D = 0.25*A + 0.75*B
+
+  [7] Linha 10: Variável 'D' com nome muito curto (≤4 chars)
+      Trecho  : D = ...
+      Contexto:
+               9 | C = 0.75*A + 0.25*B
+        >>>   10 | D = 0.25*A + 0.75*B
+              11 | 
+
+  [8] Linha 17: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+              16 | 		s = s + 1
+        >>>   17 | x = array([p, s])
+              18 | print(x)
+
+  [9] Linha 14: Variável 'p' com nome muito curto (≤4 chars)
+      Trecho  : p = ...
+      Contexto:
+              13 | 	if(A <= v[i] and C > v[i]):
+        >>>   14 | 		p = p + 1
+              15 | 	elif(D <= v[i] and B > v[i]):
+
+  [10] Linha 16: Variável 's' com nome muito curto (≤4 chars)
+      Trecho  : s = ...
+      Contexto:
+              15 | 	elif(D <= v[i] and B > v[i]):
+        >>>   16 | 		s = s + 1
+              17 | x = array([p, s])
+
+======================================================================

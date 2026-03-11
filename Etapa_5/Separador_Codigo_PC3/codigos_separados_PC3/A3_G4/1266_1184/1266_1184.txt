@@ -1,0 +1,119 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1266_1184.py
+Questão  : 1266
+Aluno    : 1184
+Total MCs: 2
+
+⚠️  Misconceptions detectados: A3, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | 
+     3 | x = array(eval(input(" vetor 1:")))
+     4 | y = array(eval(input(" vetor 2:")))
+     5 | 
+     6 | p = float(input("numero:"))
+     7 | 
+     8 | q = p/(p-1)
+     9 | xq = 0
+    10 | yq = 0
+    11 | 
+    12 | for ind in range(size(x)):
+    13 | 	if (p > 1):
+    14 | 		xq = (abs(x[0]**q)+ abs(x[2])**q)**1/q
+    15 | 		yq = (abs(y[0]**q)+ abs(y[2])**q)**1/q
+    16 | 		soma = (2*x)-y
+    17 | print(round(soma, 4))						  
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 2
+
+  [1] Linha 9: Variável 'xq' declarada mas nunca utilizada
+      Trecho  : xq = ...
+      Contexto:
+               8 | q = p/(p-1)
+        >>>    9 | xq = 0
+              10 | yq = 0
+
+  [2] Linha 10: Variável 'yq' declarada mas nunca utilizada
+      Trecho  : yq = ...
+      Contexto:
+               9 | xq = 0
+        >>>   10 | yq = 0
+              11 | 
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 9
+
+  [1] Linha 3: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+               2 | 
+        >>>    3 | x = array(eval(input(" vetor 1:")))
+               4 | y = array(eval(input(" vetor 2:")))
+
+  [2] Linha 4: Variável 'y' com nome muito curto (≤4 chars)
+      Trecho  : y = ...
+      Contexto:
+               3 | x = array(eval(input(" vetor 1:")))
+        >>>    4 | y = array(eval(input(" vetor 2:")))
+               5 | 
+
+  [3] Linha 6: Variável 'p' com nome muito curto (≤4 chars)
+      Trecho  : p = ...
+      Contexto:
+               5 | 
+        >>>    6 | p = float(input("numero:"))
+               7 | 
+
+  [4] Linha 8: Variável 'q' com nome muito curto (≤4 chars)
+      Trecho  : q = ...
+      Contexto:
+               7 | 
+        >>>    8 | q = p/(p-1)
+               9 | xq = 0
+
+  [5] Linha 9: Variável 'xq' com nome muito curto (≤4 chars)
+      Trecho  : xq = ...
+      Contexto:
+               8 | q = p/(p-1)
+        >>>    9 | xq = 0
+              10 | yq = 0
+
+  [6] Linha 10: Variável 'yq' com nome muito curto (≤4 chars)
+      Trecho  : yq = ...
+      Contexto:
+               9 | xq = 0
+        >>>   10 | yq = 0
+              11 | 
+
+  [7] Linha 14: Variável 'xq' com nome muito curto (≤4 chars)
+      Trecho  : xq = ...
+      Contexto:
+              13 | 	if (p > 1):
+        >>>   14 | 		xq = (abs(x[0]**q)+ abs(x[2])**q)**1/q
+              15 | 		yq = (abs(y[0]**q)+ abs(y[2])**q)**1/q
+
+  [8] Linha 15: Variável 'yq' com nome muito curto (≤4 chars)
+      Trecho  : yq = ...
+      Contexto:
+              14 | 		xq = (abs(x[0]**q)+ abs(x[2])**q)**1/q
+        >>>   15 | 		yq = (abs(y[0]**q)+ abs(y[2])**q)**1/q
+              16 | 		soma = (2*x)-y
+
+  [9] Linha 16: Variável 'soma' com nome muito curto (≤4 chars)
+      Trecho  : soma = ...
+      Contexto:
+              15 | 		yq = (abs(y[0]**q)+ abs(y[2])**q)**1/q
+        >>>   16 | 		soma = (2*x)-y
+              17 | print(round(soma, 4))						  
+
+======================================================================

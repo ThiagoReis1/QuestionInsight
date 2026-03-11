@@ -1,0 +1,70 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 6837_9137.py
+Questão  : 6837
+Aluno    : 9137
+Total MCs: 2
+
+⚠️  Misconceptions detectados: A3, B8
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | produtos = input().upper()
+     2 | 
+     3 | total = 0
+     4 | i = 0
+     5 | I = 0
+     6 | M = 0
+     7 | S = 0
+     8 | 
+     9 | while i < len(produtos):
+    10 | 	if produtos[i] == "I":
+    11 | 		total += 3.75
+    12 | 	elif produtos[i] == "M":
+    13 | 		total += 4.5
+    14 | 	elif produtos[i] == "S":
+    15 | 		total += 2.9
+    16 | 	i += 1
+    17 | print(round(total, 2))
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 3
+
+  [1] Linha 5: Variável 'I' declarada mas nunca utilizada
+      Trecho  : I = ...
+      Contexto:
+               4 | i = 0
+        >>>    5 | I = 0
+               6 | M = 0
+
+  [2] Linha 6: Variável 'M' declarada mas nunca utilizada
+      Trecho  : M = ...
+      Contexto:
+               5 | I = 0
+        >>>    6 | M = 0
+               7 | S = 0
+
+  [3] Linha 7: Variável 'S' declarada mas nunca utilizada
+      Trecho  : S = ...
+      Contexto:
+               6 | M = 0
+        >>>    7 | S = 0
+               8 | 
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 12: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 12) / elif ... sem else
+      Contexto:
+              11 | 		total += 3.75
+        >>>   12 | 	elif produtos[i] == "M":
+              13 | 		total += 4.5
+
+======================================================================

@@ -1,0 +1,150 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 3590_9745.py
+Questão  : 3590
+Aluno    : 9745
+Total MCs: 3
+
+⚠️  Misconceptions detectados: B4, B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | 
+     3 | ent = array(eval(input("faces:")))
+     4 | 
+     5 | i = 0
+     6 | soma = 0
+     7 | 
+     8 | while i < size(ent):
+     9 | 	if ent[i] == 1:
+    10 | 		soma = soma + 10
+    11 | 	elif ent[i] == 2:
+    12 | 		soma = soma + 5
+    13 | 	elif ent[i] == 3:
+    14 | 		soma = soma + 0
+    15 | 	elif ent[i]	== 4:
+    16 | 		soma = soma + 5
+    17 | 	elif ent[i] == 5:
+    18 | 		soma = soma + 20
+    19 | 	elif ent[i] == 6:
+    20 | 		soma = soma + 10
+    21 | 		
+    22 | 	i = i + 1
+    23 | 	
+    24 | print(soma)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B4 — Comandos repetidos dentro de blocos if-elif-else
+  Ocorrências: 3
+
+  [1] Linha 15: Bloco idêntico ao da linha 11
+      Trecho  : soma = soma + 5
+      Contexto:
+              14 | 		soma = soma + 0
+        >>>   15 | 	elif ent[i]	== 4:
+              16 | 		soma = soma + 5
+
+  [2] Linha 19: Bloco idêntico ao da linha 9
+      Trecho  : soma = soma + 10
+      Contexto:
+              18 | 		soma = soma + 20
+        >>>   19 | 	elif ent[i] == 6:
+              20 | 		soma = soma + 10
+
+  [3] Linha 15: Bloco idêntico ao da linha 11
+      Trecho  : soma = soma + 5
+      Contexto:
+              14 | 		soma = soma + 0
+        >>>   15 | 	elif ent[i]	== 4:
+              16 | 		soma = soma + 5
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 17: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 17) / elif ... sem else
+      Contexto:
+              16 | 		soma = soma + 5
+        >>>   17 | 	elif ent[i] == 5:
+              18 | 		soma = soma + 20
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 10
+
+  [1] Linha 3: Variável 'ent' com nome muito curto (≤4 chars)
+      Trecho  : ent = ...
+      Contexto:
+               2 | 
+        >>>    3 | ent = array(eval(input("faces:")))
+               4 | 
+
+  [2] Linha 5: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+               4 | 
+        >>>    5 | i = 0
+               6 | soma = 0
+
+  [3] Linha 6: Variável 'soma' com nome muito curto (≤4 chars)
+      Trecho  : soma = ...
+      Contexto:
+               5 | i = 0
+        >>>    6 | soma = 0
+               7 | 
+
+  [4] Linha 22: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+              21 | 		
+        >>>   22 | 	i = i + 1
+              23 | 	
+
+  [5] Linha 10: Variável 'soma' com nome muito curto (≤4 chars)
+      Trecho  : soma = ...
+      Contexto:
+               9 | 	if ent[i] == 1:
+        >>>   10 | 		soma = soma + 10
+              11 | 	elif ent[i] == 2:
+
+  [6] Linha 12: Variável 'soma' com nome muito curto (≤4 chars)
+      Trecho  : soma = ...
+      Contexto:
+              11 | 	elif ent[i] == 2:
+        >>>   12 | 		soma = soma + 5
+              13 | 	elif ent[i] == 3:
+
+  [7] Linha 14: Variável 'soma' com nome muito curto (≤4 chars)
+      Trecho  : soma = ...
+      Contexto:
+              13 | 	elif ent[i] == 3:
+        >>>   14 | 		soma = soma + 0
+              15 | 	elif ent[i]	== 4:
+
+  [8] Linha 16: Variável 'soma' com nome muito curto (≤4 chars)
+      Trecho  : soma = ...
+      Contexto:
+              15 | 	elif ent[i]	== 4:
+        >>>   16 | 		soma = soma + 5
+              17 | 	elif ent[i] == 5:
+
+  [9] Linha 18: Variável 'soma' com nome muito curto (≤4 chars)
+      Trecho  : soma = ...
+      Contexto:
+              17 | 	elif ent[i] == 5:
+        >>>   18 | 		soma = soma + 20
+              19 | 	elif ent[i] == 6:
+
+  [10] Linha 20: Variável 'soma' com nome muito curto (≤4 chars)
+      Trecho  : soma = ...
+      Contexto:
+              19 | 	elif ent[i] == 6:
+        >>>   20 | 		soma = soma + 10
+              21 | 		
+
+======================================================================

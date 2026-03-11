@@ -1,0 +1,229 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1614_3124.py
+Questão  : 1614
+Aluno    : 3124
+Total MCs: 3
+
+⚠️  Misconceptions detectados: B4, B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | 
+     3 | v1 = array(eval(input("BANANA" and "BIFE" and "FEIJOADA" and "OMELETE" and "TOMATE")))
+     4 | v2 = array(eval(input()))
+     5 | 
+     6 | 
+     7 | c = 0
+     8 | s = 0
+     9 | 
+    10 | while(c < size(v1)):
+    11 | 	if(v1[c]=="BANANA"):
+    12 | 		s = s + (v2[c]*2)
+    13 | 		c = c + 1
+    14 | 	elif(v1[c]=="BIFE"):
+    15 | 		s = s + (v2[c]*2)
+    16 | 		c = c + 1
+    17 | 	elif(v1[c]=="FEIJOADA"):
+    18 | 		s = s + (v2[c]*2)
+    19 | 		c = c + 1
+    20 | 	elif(v1[c]=="OMELETE"):
+    21 | 		s = s + (v2[c]*2)
+    22 | 		c = c + 1
+    23 | 	elif(v1[c]=="TOMATE"):
+    24 | 		s = s + (v2[c]*2)
+    25 | 		c = c + 1
+    26 | print(s)		
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B4 — Comandos repetidos dentro de blocos if-elif-else
+  Ocorrências: 10
+
+  [1] Linha 14: Bloco idêntico ao da linha 11
+      Trecho  : s = s + v2[c] * 2
+      Contexto:
+              13 | 		c = c + 1
+        >>>   14 | 	elif(v1[c]=="BIFE"):
+              15 | 		s = s + (v2[c]*2)
+
+  [2] Linha 17: Bloco idêntico ao da linha 11
+      Trecho  : s = s + v2[c] * 2
+      Contexto:
+              16 | 		c = c + 1
+        >>>   17 | 	elif(v1[c]=="FEIJOADA"):
+              18 | 		s = s + (v2[c]*2)
+
+  [3] Linha 20: Bloco idêntico ao da linha 11
+      Trecho  : s = s + v2[c] * 2
+      Contexto:
+              19 | 		c = c + 1
+        >>>   20 | 	elif(v1[c]=="OMELETE"):
+              21 | 		s = s + (v2[c]*2)
+
+  [4] Linha 23: Bloco idêntico ao da linha 11
+      Trecho  : s = s + v2[c] * 2
+      Contexto:
+              22 | 		c = c + 1
+        >>>   23 | 	elif(v1[c]=="TOMATE"):
+              24 | 		s = s + (v2[c]*2)
+
+  [5] Linha 17: Bloco idêntico ao da linha 14
+      Trecho  : s = s + v2[c] * 2
+      Contexto:
+              16 | 		c = c + 1
+        >>>   17 | 	elif(v1[c]=="FEIJOADA"):
+              18 | 		s = s + (v2[c]*2)
+
+  [6] Linha 20: Bloco idêntico ao da linha 14
+      Trecho  : s = s + v2[c] * 2
+      Contexto:
+              19 | 		c = c + 1
+        >>>   20 | 	elif(v1[c]=="OMELETE"):
+              21 | 		s = s + (v2[c]*2)
+
+  [7] Linha 23: Bloco idêntico ao da linha 14
+      Trecho  : s = s + v2[c] * 2
+      Contexto:
+              22 | 		c = c + 1
+        >>>   23 | 	elif(v1[c]=="TOMATE"):
+              24 | 		s = s + (v2[c]*2)
+
+  [8] Linha 20: Bloco idêntico ao da linha 17
+      Trecho  : s = s + v2[c] * 2
+      Contexto:
+              19 | 		c = c + 1
+        >>>   20 | 	elif(v1[c]=="OMELETE"):
+              21 | 		s = s + (v2[c]*2)
+
+  [9] Linha 23: Bloco idêntico ao da linha 17
+      Trecho  : s = s + v2[c] * 2
+      Contexto:
+              22 | 		c = c + 1
+        >>>   23 | 	elif(v1[c]=="TOMATE"):
+              24 | 		s = s + (v2[c]*2)
+
+  [10] Linha 23: Bloco idêntico ao da linha 20
+      Trecho  : s = s + v2[c] * 2
+      Contexto:
+              22 | 		c = c + 1
+        >>>   23 | 	elif(v1[c]=="TOMATE"):
+              24 | 		s = s + (v2[c]*2)
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 20: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 20) / elif ... sem else
+      Contexto:
+              19 | 		c = c + 1
+        >>>   20 | 	elif(v1[c]=="OMELETE"):
+              21 | 		s = s + (v2[c]*2)
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 14
+
+  [1] Linha 3: Variável 'v1' com nome muito curto (≤4 chars)
+      Trecho  : v1 = ...
+      Contexto:
+               2 | 
+        >>>    3 | v1 = array(eval(input("BANANA" and "BIFE" and "FEIJOADA" and "OMELETE" and "TOMATE")))
+               4 | v2 = array(eval(input()))
+
+  [2] Linha 4: Variável 'v2' com nome muito curto (≤4 chars)
+      Trecho  : v2 = ...
+      Contexto:
+               3 | v1 = array(eval(input("BANANA" and "BIFE" and "FEIJOADA" and "OMELETE" and "TOMATE")))
+        >>>    4 | v2 = array(eval(input()))
+               5 | 
+
+  [3] Linha 7: Variável 'c' com nome muito curto (≤4 chars)
+      Trecho  : c = ...
+      Contexto:
+               6 | 
+        >>>    7 | c = 0
+               8 | s = 0
+
+  [4] Linha 8: Variável 's' com nome muito curto (≤4 chars)
+      Trecho  : s = ...
+      Contexto:
+               7 | c = 0
+        >>>    8 | s = 0
+               9 | 
+
+  [5] Linha 12: Variável 's' com nome muito curto (≤4 chars)
+      Trecho  : s = ...
+      Contexto:
+              11 | 	if(v1[c]=="BANANA"):
+        >>>   12 | 		s = s + (v2[c]*2)
+              13 | 		c = c + 1
+
+  [6] Linha 13: Variável 'c' com nome muito curto (≤4 chars)
+      Trecho  : c = ...
+      Contexto:
+              12 | 		s = s + (v2[c]*2)
+        >>>   13 | 		c = c + 1
+              14 | 	elif(v1[c]=="BIFE"):
+
+  [7] Linha 15: Variável 's' com nome muito curto (≤4 chars)
+      Trecho  : s = ...
+      Contexto:
+              14 | 	elif(v1[c]=="BIFE"):
+        >>>   15 | 		s = s + (v2[c]*2)
+              16 | 		c = c + 1
+
+  [8] Linha 16: Variável 'c' com nome muito curto (≤4 chars)
+      Trecho  : c = ...
+      Contexto:
+              15 | 		s = s + (v2[c]*2)
+        >>>   16 | 		c = c + 1
+              17 | 	elif(v1[c]=="FEIJOADA"):
+
+  [9] Linha 18: Variável 's' com nome muito curto (≤4 chars)
+      Trecho  : s = ...
+      Contexto:
+              17 | 	elif(v1[c]=="FEIJOADA"):
+        >>>   18 | 		s = s + (v2[c]*2)
+              19 | 		c = c + 1
+
+  [10] Linha 19: Variável 'c' com nome muito curto (≤4 chars)
+      Trecho  : c = ...
+      Contexto:
+              18 | 		s = s + (v2[c]*2)
+        >>>   19 | 		c = c + 1
+              20 | 	elif(v1[c]=="OMELETE"):
+
+  [11] Linha 21: Variável 's' com nome muito curto (≤4 chars)
+      Trecho  : s = ...
+      Contexto:
+              20 | 	elif(v1[c]=="OMELETE"):
+        >>>   21 | 		s = s + (v2[c]*2)
+              22 | 		c = c + 1
+
+  [12] Linha 22: Variável 'c' com nome muito curto (≤4 chars)
+      Trecho  : c = ...
+      Contexto:
+              21 | 		s = s + (v2[c]*2)
+        >>>   22 | 		c = c + 1
+              23 | 	elif(v1[c]=="TOMATE"):
+
+  [13] Linha 24: Variável 's' com nome muito curto (≤4 chars)
+      Trecho  : s = ...
+      Contexto:
+              23 | 	elif(v1[c]=="TOMATE"):
+        >>>   24 | 		s = s + (v2[c]*2)
+              25 | 		c = c + 1
+
+  [14] Linha 25: Variável 'c' com nome muito curto (≤4 chars)
+      Trecho  : c = ...
+      Contexto:
+              24 | 		s = s + (v2[c]*2)
+        >>>   25 | 		c = c + 1
+              26 | print(s)		
+
+======================================================================

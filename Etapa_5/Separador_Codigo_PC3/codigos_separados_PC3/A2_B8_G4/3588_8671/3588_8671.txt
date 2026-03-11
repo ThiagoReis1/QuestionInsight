@@ -1,0 +1,99 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 3588_8671.py
+Questão  : 3588
+Aluno    : 8671
+Total MCs: 3
+
+⚠️  Misconceptions detectados: A2, B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import *
+     2 | 
+     3 | a = array(eval(input("a: ")))
+     4 | p = 10000
+     5 | 
+     6 | for i in a:
+     7 | 	if i == 1:
+     8 | 		p = p * 2
+     9 | 	elif i == 2:
+    10 | 		p = p
+    11 | 	elif i == 3:
+    12 | 		p = p/2
+    13 | 	elif i == 4:
+    14 | 		p = p/4
+    15 | print(p)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A2 — Variável atribuída a si mesma
+  Ocorrências: 1
+
+  [1] Linha 10: 'p' atribuído a si mesmo
+      Trecho  : p = p
+      Contexto:
+               9 | 	elif i == 2:
+        >>>   10 | 		p = p
+              11 | 	elif i == 3:
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 11: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 11) / elif ... sem else
+      Contexto:
+              10 | 		p = p
+        >>>   11 | 	elif i == 3:
+              12 | 		p = p/2
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 6
+
+  [1] Linha 3: Variável 'a' com nome muito curto (≤4 chars)
+      Trecho  : a = ...
+      Contexto:
+               2 | 
+        >>>    3 | a = array(eval(input("a: ")))
+               4 | p = 10000
+
+  [2] Linha 4: Variável 'p' com nome muito curto (≤4 chars)
+      Trecho  : p = ...
+      Contexto:
+               3 | a = array(eval(input("a: ")))
+        >>>    4 | p = 10000
+               5 | 
+
+  [3] Linha 8: Variável 'p' com nome muito curto (≤4 chars)
+      Trecho  : p = ...
+      Contexto:
+               7 | 	if i == 1:
+        >>>    8 | 		p = p * 2
+               9 | 	elif i == 2:
+
+  [4] Linha 10: Variável 'p' com nome muito curto (≤4 chars)
+      Trecho  : p = ...
+      Contexto:
+               9 | 	elif i == 2:
+        >>>   10 | 		p = p
+              11 | 	elif i == 3:
+
+  [5] Linha 12: Variável 'p' com nome muito curto (≤4 chars)
+      Trecho  : p = ...
+      Contexto:
+              11 | 	elif i == 3:
+        >>>   12 | 		p = p/2
+              13 | 	elif i == 4:
+
+  [6] Linha 14: Variável 'p' com nome muito curto (≤4 chars)
+      Trecho  : p = ...
+      Contexto:
+              13 | 	elif i == 4:
+        >>>   14 | 		p = p/4
+              15 | print(p)
+
+======================================================================

@@ -1,0 +1,57 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1656_7596.py
+Questão  : 1656
+Aluno    : 7596
+Total MCs: 2
+
+⚠️  Misconceptions detectados: A3, B8
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import *
+     2 | 
+     3 | pais = input("pais: ").upper().split(",")
+     4 | resultado = zeros(5,dtype = int)
+     5 | cont = 0
+     6 | for i in range(size(pais)):
+     7 | 	if(pais[i] == "BE"):
+     8 | 		resultado[0] = resultado[0] + 1
+     9 | 	elif(pais[i] == "ES"):
+    10 | 		resultado[1] = resultado[1] + 1
+    11 | 	elif(pais[i] == "FR"):
+    12 | 		resultado[2] = resultado[2] + 1
+    13 | 	elif(pais[i] == "IT"):
+    14 | 		resultado[3] = resultado[3] + 1
+    15 | 	elif(pais[i] == "PT"):
+    16 | 		resultado[4] = resultado[4] + 1
+    17 | print(max(resultado))
+    18 | print(resultado)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 1
+
+  [1] Linha 5: Variável 'cont' declarada mas nunca utilizada
+      Trecho  : cont = ...
+      Contexto:
+               4 | resultado = zeros(5,dtype = int)
+        >>>    5 | cont = 0
+               6 | for i in range(size(pais)):
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 13: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 13) / elif ... sem else
+      Contexto:
+              12 | 		resultado[2] = resultado[2] + 1
+        >>>   13 | 	elif(pais[i] == "IT"):
+              14 | 		resultado[3] = resultado[3] + 1
+
+======================================================================

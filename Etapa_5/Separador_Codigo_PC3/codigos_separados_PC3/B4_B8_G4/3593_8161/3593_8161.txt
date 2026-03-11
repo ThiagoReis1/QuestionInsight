@@ -1,0 +1,196 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 3593_8161.py
+Questão  : 3593
+Aluno    : 8161
+Total MCs: 3
+
+⚠️  Misconceptions detectados: B4, B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import *
+     2 | n = array(eval(input("numero:")))
+     3 | p = 200
+     4 | i = 0
+     5 | while i<len(n):
+     6 | 	if n[i] == 1:
+     7 | 		p=p/2
+     8 | 	elif n[i] == 2:
+     9 | 		p=p*3
+    10 | 	elif n[i] == 3:
+    11 | 		p=p/2
+    12 | 	elif n[i] == 4:
+    13 | 		p=p*3
+    14 | 	elif n[i] == 5:
+    15 | 		p=p/2
+    16 | 	elif n[i] == 6:
+    17 | 		p=p*3
+    18 | 	i = i+1
+    19 | print(round(p, 2))
+    20 | 		
+    21 | 		
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B4 — Comandos repetidos dentro de blocos if-elif-else
+  Ocorrências: 10
+
+  [1] Linha 10: Bloco idêntico ao da linha 6
+      Trecho  : p = p / 2
+      Contexto:
+               9 | 		p=p*3
+        >>>   10 | 	elif n[i] == 3:
+              11 | 		p=p/2
+
+  [2] Linha 12: Bloco idêntico ao da linha 8
+      Trecho  : p = p * 3
+      Contexto:
+              11 | 		p=p/2
+        >>>   12 | 	elif n[i] == 4:
+              13 | 		p=p*3
+
+  [3] Linha 14: Bloco idêntico ao da linha 6
+      Trecho  : p = p / 2
+      Contexto:
+              13 | 		p=p*3
+        >>>   14 | 	elif n[i] == 5:
+              15 | 		p=p/2
+
+  [4] Linha 16: Bloco idêntico ao da linha 8
+      Trecho  : p = p * 3
+      Contexto:
+              15 | 		p=p/2
+        >>>   16 | 	elif n[i] == 6:
+              17 | 		p=p*3
+
+  [5] Linha 12: Bloco idêntico ao da linha 8
+      Trecho  : p = p * 3
+      Contexto:
+              11 | 		p=p/2
+        >>>   12 | 	elif n[i] == 4:
+              13 | 		p=p*3
+
+  [6] Linha 14: Bloco idêntico ao da linha 10
+      Trecho  : p = p / 2
+      Contexto:
+              13 | 		p=p*3
+        >>>   14 | 	elif n[i] == 5:
+              15 | 		p=p/2
+
+  [7] Linha 16: Bloco idêntico ao da linha 8
+      Trecho  : p = p * 3
+      Contexto:
+              15 | 		p=p/2
+        >>>   16 | 	elif n[i] == 6:
+              17 | 		p=p*3
+
+  [8] Linha 14: Bloco idêntico ao da linha 10
+      Trecho  : p = p / 2
+      Contexto:
+              13 | 		p=p*3
+        >>>   14 | 	elif n[i] == 5:
+              15 | 		p=p/2
+
+  [9] Linha 16: Bloco idêntico ao da linha 12
+      Trecho  : p = p * 3
+      Contexto:
+              15 | 		p=p/2
+        >>>   16 | 	elif n[i] == 6:
+              17 | 		p=p*3
+
+  [10] Linha 16: Bloco idêntico ao da linha 12
+      Trecho  : p = p * 3
+      Contexto:
+              15 | 		p=p/2
+        >>>   16 | 	elif n[i] == 6:
+              17 | 		p=p*3
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 14: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 14) / elif ... sem else
+      Contexto:
+              13 | 		p=p*3
+        >>>   14 | 	elif n[i] == 5:
+              15 | 		p=p/2
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 10
+
+  [1] Linha 2: Variável 'n' com nome muito curto (≤4 chars)
+      Trecho  : n = ...
+      Contexto:
+               1 | from numpy import *
+        >>>    2 | n = array(eval(input("numero:")))
+               3 | p = 200
+
+  [2] Linha 3: Variável 'p' com nome muito curto (≤4 chars)
+      Trecho  : p = ...
+      Contexto:
+               2 | n = array(eval(input("numero:")))
+        >>>    3 | p = 200
+               4 | i = 0
+
+  [3] Linha 4: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+               3 | p = 200
+        >>>    4 | i = 0
+               5 | while i<len(n):
+
+  [4] Linha 18: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+              17 | 		p=p*3
+        >>>   18 | 	i = i+1
+              19 | print(round(p, 2))
+
+  [5] Linha 7: Variável 'p' com nome muito curto (≤4 chars)
+      Trecho  : p = ...
+      Contexto:
+               6 | 	if n[i] == 1:
+        >>>    7 | 		p=p/2
+               8 | 	elif n[i] == 2:
+
+  [6] Linha 9: Variável 'p' com nome muito curto (≤4 chars)
+      Trecho  : p = ...
+      Contexto:
+               8 | 	elif n[i] == 2:
+        >>>    9 | 		p=p*3
+              10 | 	elif n[i] == 3:
+
+  [7] Linha 11: Variável 'p' com nome muito curto (≤4 chars)
+      Trecho  : p = ...
+      Contexto:
+              10 | 	elif n[i] == 3:
+        >>>   11 | 		p=p/2
+              12 | 	elif n[i] == 4:
+
+  [8] Linha 13: Variável 'p' com nome muito curto (≤4 chars)
+      Trecho  : p = ...
+      Contexto:
+              12 | 	elif n[i] == 4:
+        >>>   13 | 		p=p*3
+              14 | 	elif n[i] == 5:
+
+  [9] Linha 15: Variável 'p' com nome muito curto (≤4 chars)
+      Trecho  : p = ...
+      Contexto:
+              14 | 	elif n[i] == 5:
+        >>>   15 | 		p=p/2
+              16 | 	elif n[i] == 6:
+
+  [10] Linha 17: Variável 'p' com nome muito curto (≤4 chars)
+      Trecho  : p = ...
+      Contexto:
+              16 | 	elif n[i] == 6:
+        >>>   17 | 		p=p*3
+              18 | 	i = i+1
+
+======================================================================

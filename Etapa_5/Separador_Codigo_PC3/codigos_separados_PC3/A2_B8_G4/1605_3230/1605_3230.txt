@@ -1,0 +1,113 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1605_3230.py
+Questão  : 1605
+Aluno    : 3230
+Total MCs: 3
+
+⚠️  Misconceptions detectados: A2, B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import *
+     2 | vet = array(eval(input("v: ")))
+     3 | i = 0
+     4 | aux = 200
+     5 | while(i < size(vet)):
+     6 | 	if(vet[i] == 1):
+     7 | 		aux = aux*4
+     8 | 	elif(vet[i] == 2):
+     9 | 		aux = aux*2
+    10 | 	elif(vet[i == 3]):
+    11 | 		aux = aux
+    12 | 	elif(vet[i == 4]):
+    13 | 		aux = aux / 2
+    14 | 	i = i + 1
+    15 | print(aux)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A2 — Variável atribuída a si mesma
+  Ocorrências: 1
+
+  [1] Linha 11: 'aux' atribuído a si mesmo
+      Trecho  : aux = aux
+      Contexto:
+              10 | 	elif(vet[i == 3]):
+        >>>   11 | 		aux = aux
+              12 | 	elif(vet[i == 4]):
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 10: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 10) / elif ... sem else
+      Contexto:
+               9 | 		aux = aux*2
+        >>>   10 | 	elif(vet[i == 3]):
+              11 | 		aux = aux
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 8
+
+  [1] Linha 2: Variável 'vet' com nome muito curto (≤4 chars)
+      Trecho  : vet = ...
+      Contexto:
+               1 | from numpy import *
+        >>>    2 | vet = array(eval(input("v: ")))
+               3 | i = 0
+
+  [2] Linha 3: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+               2 | vet = array(eval(input("v: ")))
+        >>>    3 | i = 0
+               4 | aux = 200
+
+  [3] Linha 4: Variável 'aux' com nome muito curto (≤4 chars)
+      Trecho  : aux = ...
+      Contexto:
+               3 | i = 0
+        >>>    4 | aux = 200
+               5 | while(i < size(vet)):
+
+  [4] Linha 14: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+              13 | 		aux = aux / 2
+        >>>   14 | 	i = i + 1
+              15 | print(aux)
+
+  [5] Linha 7: Variável 'aux' com nome muito curto (≤4 chars)
+      Trecho  : aux = ...
+      Contexto:
+               6 | 	if(vet[i] == 1):
+        >>>    7 | 		aux = aux*4
+               8 | 	elif(vet[i] == 2):
+
+  [6] Linha 9: Variável 'aux' com nome muito curto (≤4 chars)
+      Trecho  : aux = ...
+      Contexto:
+               8 | 	elif(vet[i] == 2):
+        >>>    9 | 		aux = aux*2
+              10 | 	elif(vet[i == 3]):
+
+  [7] Linha 11: Variável 'aux' com nome muito curto (≤4 chars)
+      Trecho  : aux = ...
+      Contexto:
+              10 | 	elif(vet[i == 3]):
+        >>>   11 | 		aux = aux
+              12 | 	elif(vet[i == 4]):
+
+  [8] Linha 13: Variável 'aux' com nome muito curto (≤4 chars)
+      Trecho  : aux = ...
+      Contexto:
+              12 | 	elif(vet[i == 4]):
+        >>>   13 | 		aux = aux / 2
+              14 | 	i = i + 1
+
+======================================================================

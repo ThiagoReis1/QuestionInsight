@@ -1,0 +1,7 @@
+from math import *
+
+r1 = float(input())
+r2 = float(input())
+r3 = float(input())
+req = (r1*r2*r3)/((r1*r2)+(r2*r3)+(r1*r3))
+print(req)

@@ -1,0 +1,50 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 5999_9829.py
+Questão  : 5999
+Aluno    : 9829
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B8, B9
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | compra = int(input("Digite o numero de laranjas compradas: "))
+     2 | 
+     3 | if (compra < 6):
+     4 | 	laranja = 0.75
+     5 | 	total = laranja*compra
+     6 | 	print(round(total,2))
+     7 | elif (compra >= 6):
+     8 | 	laranja = 0.6
+     9 | 	total = laranja*compra
+    10 | 	print(round(total,2))
+    11 | 	
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 3: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 3) / elif ... sem else
+      Contexto:
+               2 | 
+        >>>    3 | if (compra < 6):
+               4 | 	laranja = 0.75
+
+▶ B9 — elif/else retestando condições já verificadas
+  Ocorrências: 1
+
+  [1] Linha 7: elif retesta condição inversa do if da linha 3
+      Trecho  : if compra < 6 ... elif compra >= 6
+      Contexto:
+               6 | 	print(round(total,2))
+        >>>    7 | elif (compra >= 6):
+               8 | 	laranja = 0.6
+
+======================================================================

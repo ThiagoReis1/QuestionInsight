@@ -1,0 +1,1 @@
+print (r*cos(pi/n))

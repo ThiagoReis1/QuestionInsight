@@ -1,0 +1,91 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 3588_9205.py
+Questão  : 3588
+Aluno    : 9205
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | 
+     3 | j= array(eval(input()))
+     4 | pon= 10000
+     5 | 
+     6 | i=0
+     7 | 
+     8 | while(i < size(j)):
+     9 | 	jogada = j[i]
+    10 | 	if(jogada == 1):
+    11 | 		pon = pon * 2
+    12 | 	elif(jogada == 3):
+    13 | 		pon = pon / 2
+    14 | 	elif(jogada == 4):
+    15 | 		pon = pon / 4
+    16 | 	i+=1
+    17 | print(round(pon,2))
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 12: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 12) / elif ... sem else
+      Contexto:
+              11 | 		pon = pon * 2
+        >>>   12 | 	elif(jogada == 3):
+              13 | 		pon = pon / 2
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 6
+
+  [1] Linha 3: Variável 'j' com nome muito curto (≤4 chars)
+      Trecho  : j = ...
+      Contexto:
+               2 | 
+        >>>    3 | j= array(eval(input()))
+               4 | pon= 10000
+
+  [2] Linha 4: Variável 'pon' com nome muito curto (≤4 chars)
+      Trecho  : pon = ...
+      Contexto:
+               3 | j= array(eval(input()))
+        >>>    4 | pon= 10000
+               5 | 
+
+  [3] Linha 6: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+               5 | 
+        >>>    6 | i=0
+               7 | 
+
+  [4] Linha 11: Variável 'pon' com nome muito curto (≤4 chars)
+      Trecho  : pon = ...
+      Contexto:
+              10 | 	if(jogada == 1):
+        >>>   11 | 		pon = pon * 2
+              12 | 	elif(jogada == 3):
+
+  [5] Linha 13: Variável 'pon' com nome muito curto (≤4 chars)
+      Trecho  : pon = ...
+      Contexto:
+              12 | 	elif(jogada == 3):
+        >>>   13 | 		pon = pon / 2
+              14 | 	elif(jogada == 4):
+
+  [6] Linha 15: Variável 'pon' com nome muito curto (≤4 chars)
+      Trecho  : pon = ...
+      Contexto:
+              14 | 	elif(jogada == 4):
+        >>>   15 | 		pon = pon / 4
+              16 | 	i+=1
+
+======================================================================

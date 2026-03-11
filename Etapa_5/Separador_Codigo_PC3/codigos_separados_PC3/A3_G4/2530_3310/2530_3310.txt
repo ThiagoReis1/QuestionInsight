@@ -1,0 +1,118 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 2530_3310.py
+Questão  : 2530
+Aluno    : 3310
+Total MCs: 2
+
+⚠️  Misconceptions detectados: A3, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | # D reias 
+     2 | # tmf de tf reais
+     3 | #tx = j% - tm
+     4 | #LEIA: DEPOSITO INICIAL
+     5 | #saida: tempo necessario saldo > 15% o valor do deposito
+     6 | 
+     7 | D = float(input("Digite o valor do deposito inicial: "))
+     8 | TF = float(input("Digite o valor da tarifa fixa mensal: "))
+     9 | J = float(input("Digite o valor do juros: "))
+    10 | 
+    11 | t = 0
+    12 | s = D
+    13 | fim = s*(15/100) + s
+    14 | 
+    15 | 
+    16 | 
+    17 | if(D>0 and TF>0 and J>0):
+    18 | 	while(s<=fim):
+    19 | 		s = s + s*(J/100) - TF
+    20 | 		novo_s = round(s,2)
+    21 | 		t = t + 1
+    22 | 	print(t)
+    23 | else:
+    24 | 	print("Dados incorretos")
+    25 | 
+    26 | 
+    27 | 
+    28 | 
+    29 | 
+    30 | 
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 1
+
+  [1] Linha 20: Variável 'novo_s' declarada mas nunca utilizada
+      Trecho  : novo_s = ...
+      Contexto:
+              19 | 		s = s + s*(J/100) - TF
+        >>>   20 | 		novo_s = round(s,2)
+              21 | 		t = t + 1
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 8
+
+  [1] Linha 7: Variável 'D' com nome muito curto (≤4 chars)
+      Trecho  : D = ...
+      Contexto:
+               6 | 
+        >>>    7 | D = float(input("Digite o valor do deposito inicial: "))
+               8 | TF = float(input("Digite o valor da tarifa fixa mensal: "))
+
+  [2] Linha 8: Variável 'TF' com nome muito curto (≤4 chars)
+      Trecho  : TF = ...
+      Contexto:
+               7 | D = float(input("Digite o valor do deposito inicial: "))
+        >>>    8 | TF = float(input("Digite o valor da tarifa fixa mensal: "))
+               9 | J = float(input("Digite o valor do juros: "))
+
+  [3] Linha 9: Variável 'J' com nome muito curto (≤4 chars)
+      Trecho  : J = ...
+      Contexto:
+               8 | TF = float(input("Digite o valor da tarifa fixa mensal: "))
+        >>>    9 | J = float(input("Digite o valor do juros: "))
+              10 | 
+
+  [4] Linha 11: Variável 't' com nome muito curto (≤4 chars)
+      Trecho  : t = ...
+      Contexto:
+              10 | 
+        >>>   11 | t = 0
+              12 | s = D
+
+  [5] Linha 12: Variável 's' com nome muito curto (≤4 chars)
+      Trecho  : s = ...
+      Contexto:
+              11 | t = 0
+        >>>   12 | s = D
+              13 | fim = s*(15/100) + s
+
+  [6] Linha 13: Variável 'fim' com nome muito curto (≤4 chars)
+      Trecho  : fim = ...
+      Contexto:
+              12 | s = D
+        >>>   13 | fim = s*(15/100) + s
+              14 | 
+
+  [7] Linha 19: Variável 's' com nome muito curto (≤4 chars)
+      Trecho  : s = ...
+      Contexto:
+              18 | 	while(s<=fim):
+        >>>   19 | 		s = s + s*(J/100) - TF
+              20 | 		novo_s = round(s,2)
+
+  [8] Linha 21: Variável 't' com nome muito curto (≤4 chars)
+      Trecho  : t = ...
+      Contexto:
+              20 | 		novo_s = round(s,2)
+        >>>   21 | 		t = t + 1
+              22 | 	print(t)
+
+======================================================================

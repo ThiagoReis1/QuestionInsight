@@ -1,0 +1,3 @@
+import numpy as np
+
+pesos = [3,2,4,1,3]

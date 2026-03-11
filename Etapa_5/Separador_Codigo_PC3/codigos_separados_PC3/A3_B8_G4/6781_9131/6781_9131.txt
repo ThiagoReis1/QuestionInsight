@@ -1,0 +1,125 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 6781_9131.py
+Questão  : 6781
+Aluno    : 9131
+Total MCs: 3
+
+⚠️  Misconceptions detectados: A3, B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | ano = int(input("ano de nascimento: "))
+     2 | pais = input("B ou E? ").upper()
+     3 | idade = 2023 - ano
+     4 | sim = "sim"
+     5 | nao = "nao"
+     6 | if pais == "B":
+     7 |    idade >= 21
+     8 |    print(nao)
+     9 |    ap = 21 - idade
+    10 |    print(ap)
+    11 | elif pais == "B":
+    12 |    idade < 21
+    13 |    print(sim)
+    14 |    p = idade - 21	
+    15 |    print(ap)
+    16 | elif pais == "E":
+    17 |    idade >= 18
+    18 |    print(sim)
+    19 |    ap = idade - 18
+    20 |    print(ap)
+    21 | elif pais == "E":
+    22 |    idade < 18
+    23 |    print(nao)
+    24 |    ap = 18 - idade
+    25 |    print(ap)
+    26 | elif pais != "B" or "E":
+    27 |    mensagem = "invalido"
+    28 |    print(mensagem)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 1
+
+  [1] Linha 14: Variável 'p' declarada mas nunca utilizada
+      Trecho  : p = ...
+      Contexto:
+              13 |    print(sim)
+        >>>   14 |    p = idade - 21	
+              15 |    print(ap)
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 21: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 21) / elif ... sem else
+      Contexto:
+              20 |    print(ap)
+        >>>   21 | elif pais == "E":
+              22 |    idade < 18
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 8
+
+  [1] Linha 1: Variável 'ano' com nome muito curto (≤4 chars)
+      Trecho  : ano = ...
+      Contexto:
+        >>>    1 | ano = int(input("ano de nascimento: "))
+               2 | pais = input("B ou E? ").upper()
+
+  [2] Linha 2: Variável 'pais' com nome muito curto (≤4 chars)
+      Trecho  : pais = ...
+      Contexto:
+               1 | ano = int(input("ano de nascimento: "))
+        >>>    2 | pais = input("B ou E? ").upper()
+               3 | idade = 2023 - ano
+
+  [3] Linha 4: Variável 'sim' com nome muito curto (≤4 chars)
+      Trecho  : sim = ...
+      Contexto:
+               3 | idade = 2023 - ano
+        >>>    4 | sim = "sim"
+               5 | nao = "nao"
+
+  [4] Linha 5: Variável 'nao' com nome muito curto (≤4 chars)
+      Trecho  : nao = ...
+      Contexto:
+               4 | sim = "sim"
+        >>>    5 | nao = "nao"
+               6 | if pais == "B":
+
+  [5] Linha 9: Variável 'ap' com nome muito curto (≤4 chars)
+      Trecho  : ap = ...
+      Contexto:
+               8 |    print(nao)
+        >>>    9 |    ap = 21 - idade
+              10 |    print(ap)
+
+  [6] Linha 14: Variável 'p' com nome muito curto (≤4 chars)
+      Trecho  : p = ...
+      Contexto:
+              13 |    print(sim)
+        >>>   14 |    p = idade - 21	
+              15 |    print(ap)
+
+  [7] Linha 19: Variável 'ap' com nome muito curto (≤4 chars)
+      Trecho  : ap = ...
+      Contexto:
+              18 |    print(sim)
+        >>>   19 |    ap = idade - 18
+              20 |    print(ap)
+
+  [8] Linha 24: Variável 'ap' com nome muito curto (≤4 chars)
+      Trecho  : ap = ...
+      Contexto:
+              23 |    print(nao)
+        >>>   24 |    ap = 18 - idade
+              25 |    print(ap)
+
+======================================================================

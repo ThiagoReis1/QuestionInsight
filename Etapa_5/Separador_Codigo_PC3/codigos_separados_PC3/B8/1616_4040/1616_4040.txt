@@ -1,0 +1,64 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1616_4040.py
+Questão  : 1616
+Aluno    : 4040
+Total MCs: 1
+
+⚠️  Misconceptions detectados: B8
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import *
+     2 | 
+     3 | # Notes to myself:
+     4 | 
+     5 | # The table in the left indicates the damage of a sorcerie by level of the caster, ergo I can define the sorcerie by it's damage per level
+     6 | 
+     7 | # Entries
+     8 | 
+     9 | sorcery = array(eval(input("Insert type of sorcery: ")))
+    10 | level = array(eval(input("Insert level of mage: ")))
+    11 | 
+    12 | # Definitions
+    13 | 
+    14 | i = 0
+    15 | s = size(level)
+    16 | dpl = zeros(s)
+    17 | dmg = 0
+    18 | 
+    19 | # Processing
+    20 | 
+    21 | while(i < s):
+    22 | 	if(sorcery[i] == ("GELO")):
+    23 | 		dpl[i] += 2
+    24 | 	elif(sorcery[i] == ("FOGO")):
+    25 | 		dpl[i] += 3
+    26 | 	elif(sorcery[i] == ("CHOQUE")):
+    27 | 		dpl[i] += 4
+    28 | 	elif(sorcery[i] == ("CONJURACAO")):
+    29 | 		dpl[i] += 8
+    30 | 	elif(sorcery[i] == ("ILUSAO")):
+    31 | 		dpl[i] += 10
+    32 | 	dmg = dmg + (dpl[i])*(level[i])
+    33 | 	i += 1
+    34 | 	
+    35 | print(dmg)	
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 28: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 28) / elif ... sem else
+      Contexto:
+              27 | 		dpl[i] += 4
+        >>>   28 | 	elif(sorcery[i] == ("CONJURACAO")):
+              29 | 		dpl[i] += 8
+
+======================================================================

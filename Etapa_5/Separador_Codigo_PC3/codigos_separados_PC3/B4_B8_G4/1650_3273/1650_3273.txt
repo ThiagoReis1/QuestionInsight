@@ -1,0 +1,127 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1650_3273.py
+Questão  : 1650
+Aluno    : 3273
+Total MCs: 3
+
+⚠️  Misconceptions detectados: B4, B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import *
+     2 | 
+     3 | a = input().upper()
+     4 | v = a.split(',')
+     5 | vet_z = zeros(5, dtype = int)
+     6 | 
+     7 | b = 0
+     8 | l = 0
+     9 | r = 0
+    10 | c = 0
+    11 | p = 0
+    12 | 
+    13 | 
+    14 | for i in range(len(v)):
+    15 | 	if v[i] == "B":
+    16 | 		b += 1
+    17 | 	elif v[i] == "L":
+    18 | 		l += 1
+    19 | 	elif v[i] == "R":
+    20 | 		r += 1
+    21 | 	elif v[i] == "C":
+    22 | 		c += 1
+    23 | 	elif v[i] == "P":
+    24 | 		p += 1
+    25 | 	elif v[i] == "B":
+    26 | 		b += 1
+    27 | 	
+    28 | 
+    29 | vet_z[4] = b
+    30 | vet_z[3] = l
+    31 | vet_z[2] = r
+    32 | vet_z[1] = c
+    33 | vet_z[0] = p
+    34 | 
+    35 | print(max(vet_z))
+    36 | print(vet_z)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B4 — Comandos repetidos dentro de blocos if-elif-else
+  Ocorrências: 1
+
+  [1] Linha 25: Bloco idêntico ao da linha 15
+      Trecho  : b += 1
+      Contexto:
+              24 | 		p += 1
+        >>>   25 | 	elif v[i] == "B":
+              26 | 		b += 1
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 23: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 23) / elif ... sem else
+      Contexto:
+              22 | 		c += 1
+        >>>   23 | 	elif v[i] == "P":
+              24 | 		p += 1
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 7
+
+  [1] Linha 3: Variável 'a' com nome muito curto (≤4 chars)
+      Trecho  : a = ...
+      Contexto:
+               2 | 
+        >>>    3 | a = input().upper()
+               4 | v = a.split(',')
+
+  [2] Linha 4: Variável 'v' com nome muito curto (≤4 chars)
+      Trecho  : v = ...
+      Contexto:
+               3 | a = input().upper()
+        >>>    4 | v = a.split(',')
+               5 | vet_z = zeros(5, dtype = int)
+
+  [3] Linha 7: Variável 'b' com nome muito curto (≤4 chars)
+      Trecho  : b = ...
+      Contexto:
+               6 | 
+        >>>    7 | b = 0
+               8 | l = 0
+
+  [4] Linha 8: Variável 'l' com nome muito curto (≤4 chars)
+      Trecho  : l = ...
+      Contexto:
+               7 | b = 0
+        >>>    8 | l = 0
+               9 | r = 0
+
+  [5] Linha 9: Variável 'r' com nome muito curto (≤4 chars)
+      Trecho  : r = ...
+      Contexto:
+               8 | l = 0
+        >>>    9 | r = 0
+              10 | c = 0
+
+  [6] Linha 10: Variável 'c' com nome muito curto (≤4 chars)
+      Trecho  : c = ...
+      Contexto:
+               9 | r = 0
+        >>>   10 | c = 0
+              11 | p = 0
+
+  [7] Linha 11: Variável 'p' com nome muito curto (≤4 chars)
+      Trecho  : p = ...
+      Contexto:
+              10 | c = 0
+        >>>   11 | p = 0
+              12 | 
+
+======================================================================

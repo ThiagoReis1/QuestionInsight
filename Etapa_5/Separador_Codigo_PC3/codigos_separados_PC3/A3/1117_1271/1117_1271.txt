@@ -1,0 +1,96 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1117_1271.py
+Questão  : 1117
+Aluno    : 1271
+Total MCs: 1
+
+⚠️  Misconceptions detectados: A3
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | pn = float(input("Digite o valor: "))
+     2 | d = input("Digite o dia: ")
+     3 | mao = input("Digite S ou N: ")
+     4 | segunda = "1"
+     5 | terca = "2"
+     6 | quarta = "3"
+     7 | quinta = "4"
+     8 | sexta = "5"
+     9 | sabado = "6"
+    10 | domingo = "7"
+    11 | print ("Entradas:", pn ,",",d,",",mao)
+    12 | if pn >=0:
+    13 | 	if d == "1" or d =="2" or d=="3" and mao=="S":
+    14 | 		valor = pn * 0.25
+    15 | 		valor_2 = pn - valor
+    16 | 		valor_total = (round(valor_2 + 20,2))
+    17 | 		print("Valor a pagar: R$",valor_total)
+    18 | 	elif mao=="S":
+    19 | 		valor = pn + 20
+    20 | 		print("Valor a pagar: R$",valor)
+    21 | 	else :
+    22 | 		mao=="N"
+    23 | 		print(round(pn,2))
+    24 | else:
+    25 | 	print("Dados invalidos")
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 7
+
+  [1] Linha 4: Variável 'segunda' declarada mas nunca utilizada
+      Trecho  : segunda = ...
+      Contexto:
+               3 | mao = input("Digite S ou N: ")
+        >>>    4 | segunda = "1"
+               5 | terca = "2"
+
+  [2] Linha 5: Variável 'terca' declarada mas nunca utilizada
+      Trecho  : terca = ...
+      Contexto:
+               4 | segunda = "1"
+        >>>    5 | terca = "2"
+               6 | quarta = "3"
+
+  [3] Linha 6: Variável 'quarta' declarada mas nunca utilizada
+      Trecho  : quarta = ...
+      Contexto:
+               5 | terca = "2"
+        >>>    6 | quarta = "3"
+               7 | quinta = "4"
+
+  [4] Linha 7: Variável 'quinta' declarada mas nunca utilizada
+      Trecho  : quinta = ...
+      Contexto:
+               6 | quarta = "3"
+        >>>    7 | quinta = "4"
+               8 | sexta = "5"
+
+  [5] Linha 8: Variável 'sexta' declarada mas nunca utilizada
+      Trecho  : sexta = ...
+      Contexto:
+               7 | quinta = "4"
+        >>>    8 | sexta = "5"
+               9 | sabado = "6"
+
+  [6] Linha 9: Variável 'sabado' declarada mas nunca utilizada
+      Trecho  : sabado = ...
+      Contexto:
+               8 | sexta = "5"
+        >>>    9 | sabado = "6"
+              10 | domingo = "7"
+
+  [7] Linha 10: Variável 'domingo' declarada mas nunca utilizada
+      Trecho  : domingo = ...
+      Contexto:
+               9 | sabado = "6"
+        >>>   10 | domingo = "7"
+              11 | print ("Entradas:", pn ,",",d,",",mao)
+
+======================================================================

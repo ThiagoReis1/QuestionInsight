@@ -1,0 +1,7 @@
+base_maior= float(input("Qual valor da Base Maior do trapezio?"))
+base_menor= float(input("Qual valor da Base Menor do trapezio?"))
+altura= float(input("Qual valor da Altura do trapezio?"))
+custo_de_aplicacao= float(input("Qual valor do custo da aplicacao?"))
+area=float(altura*(base_maior+base_menor)//2)
+custo_total_servico= float(area*custo_de_aplicacao)
+print(round(custo_total_servico,2))

@@ -1,0 +1,57 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 3229_4118.py
+Questão  : 3229
+Aluno    : 4118
+Total MCs: 1
+
+⚠️  Misconceptions detectados: G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | from numpy.linalg import*
+     3 | A = array([[1,1],[0.25,0.5]])
+     4 | B = array(eval(input("tal coisa ai: ")))
+     5 | B = B.T
+     6 | X = dot(inv(A), B)
+     7 | print(X)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 4
+
+  [1] Linha 3: Variável 'A' com nome muito curto (≤4 chars)
+      Trecho  : A = ...
+      Contexto:
+               2 | from numpy.linalg import*
+        >>>    3 | A = array([[1,1],[0.25,0.5]])
+               4 | B = array(eval(input("tal coisa ai: ")))
+
+  [2] Linha 4: Variável 'B' com nome muito curto (≤4 chars)
+      Trecho  : B = ...
+      Contexto:
+               3 | A = array([[1,1],[0.25,0.5]])
+        >>>    4 | B = array(eval(input("tal coisa ai: ")))
+               5 | B = B.T
+
+  [3] Linha 5: Variável 'B' com nome muito curto (≤4 chars)
+      Trecho  : B = ...
+      Contexto:
+               4 | B = array(eval(input("tal coisa ai: ")))
+        >>>    5 | B = B.T
+               6 | X = dot(inv(A), B)
+
+  [4] Linha 6: Variável 'X' com nome muito curto (≤4 chars)
+      Trecho  : X = ...
+      Contexto:
+               5 | B = B.T
+        >>>    6 | X = dot(inv(A), B)
+               7 | print(X)
+
+======================================================================

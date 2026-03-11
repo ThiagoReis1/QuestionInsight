@@ -1,0 +1,63 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1978_2376.py
+Questão  : 1978
+Aluno    : 2376
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | #Entrada do estilo musical
+     2 | x = input("Entre com o estilo musical: ").lower()
+     3 | 
+     4 | #Entrada do subgenero musical
+     5 | y = input("Entre com o subgenero musical: ").lower()
+     6 | 
+     7 | if ((x != "vertente") and (x != "misturado")) or ((y != "samba-de-raiz") and (y != "partido-alto") and (y != "samba-choro") and (y != "samba-jazz" )):
+     8 | 	print("instrumento nao identifcado.")
+     9 | elif (x == "vertente") and (y == "samba-de-raiz"):
+    10 | 	print("cavaquinho")
+    11 | elif (x == "vertente") and (y == "partido-alto"):
+    12 | 	print("surdo")
+    13 | elif (x == "misturado") and (y == "samba-choro"):
+    14 | 	print("violao de seis cordas")
+    15 | elif (x == "misturado") and (y == "samba-jazz"):
+    16 | 	print("saxofone")
+    17 | 
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 13: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 13) / elif ... sem else
+      Contexto:
+              12 | 	print("surdo")
+        >>>   13 | elif (x == "misturado") and (y == "samba-choro"):
+              14 | 	print("violao de seis cordas")
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 2
+
+  [1] Linha 2: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+               1 | #Entrada do estilo musical
+        >>>    2 | x = input("Entre com o estilo musical: ").lower()
+               3 | 
+
+  [2] Linha 5: Variável 'y' com nome muito curto (≤4 chars)
+      Trecho  : y = ...
+      Contexto:
+               4 | #Entrada do subgenero musical
+        >>>    5 | y = input("Entre com o subgenero musical: ").lower()
+               6 | 
+
+======================================================================

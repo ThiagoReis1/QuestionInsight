@@ -1,0 +1,88 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1397_3710.py
+Questão  : 1397
+Aluno    : 3710
+Total MCs: 2
+
+⚠️  Misconceptions detectados: A3, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | #caso seja  x <= 10000 o custo é de 5 reais por hectare
+     2 | #caso seja x > 10000 o custo é de 5 reais por hectare + 4 reais por excedente
+     3 | 
+     4 | x = float(input("Insira a quantidade da area a ser fertilizada: "))
+     5 | 
+     6 | res = x % 10000
+     7 | y = x - res
+     8 | if(x <= 10000):
+     9 | 	c = x * 5
+    10 | else:
+    11 | 	c = (y * 5) + (res * 4)
+    12 | 
+    13 | z = (res * 4)
+    14 | print(round(c, 2))
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 1
+
+  [1] Linha 13: Variável 'z' declarada mas nunca utilizada
+      Trecho  : z = ...
+      Contexto:
+              12 | 
+        >>>   13 | z = (res * 4)
+              14 | print(round(c, 2))
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 6
+
+  [1] Linha 4: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+               3 | 
+        >>>    4 | x = float(input("Insira a quantidade da area a ser fertilizada: "))
+               5 | 
+
+  [2] Linha 6: Variável 'res' com nome muito curto (≤4 chars)
+      Trecho  : res = ...
+      Contexto:
+               5 | 
+        >>>    6 | res = x % 10000
+               7 | y = x - res
+
+  [3] Linha 7: Variável 'y' com nome muito curto (≤4 chars)
+      Trecho  : y = ...
+      Contexto:
+               6 | res = x % 10000
+        >>>    7 | y = x - res
+               8 | if(x <= 10000):
+
+  [4] Linha 13: Variável 'z' com nome muito curto (≤4 chars)
+      Trecho  : z = ...
+      Contexto:
+              12 | 
+        >>>   13 | z = (res * 4)
+              14 | print(round(c, 2))
+
+  [5] Linha 9: Variável 'c' com nome muito curto (≤4 chars)
+      Trecho  : c = ...
+      Contexto:
+               8 | if(x <= 10000):
+        >>>    9 | 	c = x * 5
+              10 | else:
+
+  [6] Linha 11: Variável 'c' com nome muito curto (≤4 chars)
+      Trecho  : c = ...
+      Contexto:
+              10 | else:
+        >>>   11 | 	c = (y * 5) + (res * 4)
+              12 | 
+
+======================================================================

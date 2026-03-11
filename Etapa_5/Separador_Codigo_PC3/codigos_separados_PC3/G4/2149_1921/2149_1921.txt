@@ -1,0 +1,72 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 2149_1921.py
+Questão  : 2149
+Aluno    : 1921
+Total MCs: 1
+
+⚠️  Misconceptions detectados: G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | vet1 = array(eval(input("notas dos alunos ")))
+     3 | vet2 = array(eval(input("notas dos alunos ")))
+     4 | cont = zeros(size(vet1), dtype=float)
+     5 | a = 0
+     6 | for i in range(size(vet1)):
+     7 | 	cont[i] = cont[i] + vet1[i]
+     8 | for j in range(size(vet2)):
+     9 | 	cont[j] = cont[j] + vet2[j]
+    10 | for k in range(size(cont)):
+    11 | 	if(cont[k] >= 12):
+    12 | 		a = a + 1
+    13 | print(cont)
+    14 | print(a)
+    15 | 	
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 5
+
+  [1] Linha 2: Variável 'vet1' com nome muito curto (≤4 chars)
+      Trecho  : vet1 = ...
+      Contexto:
+               1 | from numpy import*
+        >>>    2 | vet1 = array(eval(input("notas dos alunos ")))
+               3 | vet2 = array(eval(input("notas dos alunos ")))
+
+  [2] Linha 3: Variável 'vet2' com nome muito curto (≤4 chars)
+      Trecho  : vet2 = ...
+      Contexto:
+               2 | vet1 = array(eval(input("notas dos alunos ")))
+        >>>    3 | vet2 = array(eval(input("notas dos alunos ")))
+               4 | cont = zeros(size(vet1), dtype=float)
+
+  [3] Linha 4: Variável 'cont' com nome muito curto (≤4 chars)
+      Trecho  : cont = ...
+      Contexto:
+               3 | vet2 = array(eval(input("notas dos alunos ")))
+        >>>    4 | cont = zeros(size(vet1), dtype=float)
+               5 | a = 0
+
+  [4] Linha 5: Variável 'a' com nome muito curto (≤4 chars)
+      Trecho  : a = ...
+      Contexto:
+               4 | cont = zeros(size(vet1), dtype=float)
+        >>>    5 | a = 0
+               6 | for i in range(size(vet1)):
+
+  [5] Linha 12: Variável 'a' com nome muito curto (≤4 chars)
+      Trecho  : a = ...
+      Contexto:
+              11 | 	if(cont[k] >= 12):
+        >>>   12 | 		a = a + 1
+              13 | print(cont)
+
+======================================================================

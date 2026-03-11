@@ -1,0 +1,27 @@
+num = float(input("Qual o numero? "))
+num1 = num / 10000000
+resto1 = num % 10000000
+num2 = resto1 / 1000000
+resto2 = resto1 % 1000000
+num3 = resto2 / 100000
+resto3 = resto2 % 100000
+num4 = resto3 / 10000
+resto4 = resto3 % 10000
+num5 = resto4 / 1000
+resto5 = resto4 % 1000
+num6 = resto5 / 100
+resto6 = resto5 % 100
+num7 = resto6 / 10
+resto7 = resto6 % 10
+num8 = resto7 / 1
+resto8 = resto7 % 1
+num1 = (int(num/1000000))
+num2 = (int(resto1 / 1000000))
+num3 = (int(resto2 / 100000))
+num4 = (int(resto3 / 10000))
+num5 = (int(resto4 / 1000))
+num6 = (int(resto5 / 100))
+num7 = (int(resto6 / 10))
+num8 = (int(resto7 / 1))
+valor_soma = num1*100000 + num2*10000 + num3*1000 +num4*100 + num5*10 + num6 * 1
+print(valor_soma)

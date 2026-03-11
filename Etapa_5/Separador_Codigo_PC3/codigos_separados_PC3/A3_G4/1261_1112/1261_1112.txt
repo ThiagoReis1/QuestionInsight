@@ -1,0 +1,79 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1261_1112.py
+Questão  : 1261
+Aluno    : 1112
+Total MCs: 2
+
+⚠️  Misconceptions detectados: A3, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | from math import*
+     3 | p=eval(input("Digite:"))
+     4 | vetor1= array(eval(input("Digite:")))
+     5 | vetor2= array(eval(input("Digite:")))
+     6 | soma=0
+     7 | cont=zeros(size(vetor1))
+     8 | for i in range(size(vetor1)):
+     9 | 	cont[i]= vetor1[i]+vetor2[i]
+    10 | 	t=p/p-1
+    11 | 	q=abs((cont[i]**t)/t)
+    12 | print(round(q,5))
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 1
+
+  [1] Linha 6: Variável 'soma' declarada mas nunca utilizada
+      Trecho  : soma = ...
+      Contexto:
+               5 | vetor2= array(eval(input("Digite:")))
+        >>>    6 | soma=0
+               7 | cont=zeros(size(vetor1))
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 5
+
+  [1] Linha 3: Variável 'p' com nome muito curto (≤4 chars)
+      Trecho  : p = ...
+      Contexto:
+               2 | from math import*
+        >>>    3 | p=eval(input("Digite:"))
+               4 | vetor1= array(eval(input("Digite:")))
+
+  [2] Linha 6: Variável 'soma' com nome muito curto (≤4 chars)
+      Trecho  : soma = ...
+      Contexto:
+               5 | vetor2= array(eval(input("Digite:")))
+        >>>    6 | soma=0
+               7 | cont=zeros(size(vetor1))
+
+  [3] Linha 7: Variável 'cont' com nome muito curto (≤4 chars)
+      Trecho  : cont = ...
+      Contexto:
+               6 | soma=0
+        >>>    7 | cont=zeros(size(vetor1))
+               8 | for i in range(size(vetor1)):
+
+  [4] Linha 10: Variável 't' com nome muito curto (≤4 chars)
+      Trecho  : t = ...
+      Contexto:
+               9 | 	cont[i]= vetor1[i]+vetor2[i]
+        >>>   10 | 	t=p/p-1
+              11 | 	q=abs((cont[i]**t)/t)
+
+  [5] Linha 11: Variável 'q' com nome muito curto (≤4 chars)
+      Trecho  : q = ...
+      Contexto:
+              10 | 	t=p/p-1
+        >>>   11 | 	q=abs((cont[i]**t)/t)
+              12 | print(round(q,5))
+
+======================================================================

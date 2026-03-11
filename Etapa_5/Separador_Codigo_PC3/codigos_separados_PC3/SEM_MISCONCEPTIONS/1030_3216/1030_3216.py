@@ -1,0 +1,5 @@
+minutos_excedentes= float(input())
+valor_de_minutos= float(minutos_excedentes*0.97)
+total= (45+valor_de_minutos)
+conta= float(total+(total*0.42))
+print(round(conta,2))

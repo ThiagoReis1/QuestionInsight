@@ -1,0 +1,89 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1606_3098.py
+Questão  : 1606
+Aluno    : 3098
+Total MCs: 1
+
+⚠️  Misconceptions detectados: G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | #anotaçao 1:vetor que anote os andares
+     2 | #anotaçao 4:preciso de uma equaçao para saber a diferença dos andares(como foi mostrado)
+     3 | #anotaçao 2:vou precisar de um contador para as diferenças
+     4 | #anotaçao 2.1:vou precisar de um contador para percorrer o vetor
+     5 | #anotaçao 3:vai ter que fazer um while pegando o numero do verto e seu antecessor
+     6 | from numpy import*
+     7 | andar=array(eval(input("andares em que o elevador parou:")))
+     8 | dif=0#vai armazenar os andares percorridos
+     9 | i=0#vai percorer o meu vetor para fazer a equaçao funcionar
+    10 | q=1#ele vai andar antes
+    11 | while(i<size(andar) and q<size(andar)):#meu laço para fazer a equaçao
+    12 | 	if((andar[i+1]-andar[i])<0):#para mudar final
+    13 | 		dif = dif + (-1*(andar[q]-andar[i]))
+    14 | 	else:
+    15 | 		dif = dif + (andar[q]-andar[i])
+    16 | 	i=i+1
+    17 | 	q=q+1
+    18 | print(dif)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 7
+
+  [1] Linha 8: Variável 'dif' com nome muito curto (≤4 chars)
+      Trecho  : dif = ...
+      Contexto:
+               7 | andar=array(eval(input("andares em que o elevador parou:")))
+        >>>    8 | dif=0#vai armazenar os andares percorridos
+               9 | i=0#vai percorer o meu vetor para fazer a equaçao funcionar
+
+  [2] Linha 9: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+               8 | dif=0#vai armazenar os andares percorridos
+        >>>    9 | i=0#vai percorer o meu vetor para fazer a equaçao funcionar
+              10 | q=1#ele vai andar antes
+
+  [3] Linha 10: Variável 'q' com nome muito curto (≤4 chars)
+      Trecho  : q = ...
+      Contexto:
+               9 | i=0#vai percorer o meu vetor para fazer a equaçao funcionar
+        >>>   10 | q=1#ele vai andar antes
+              11 | while(i<size(andar) and q<size(andar)):#meu laço para fazer a equaçao
+
+  [4] Linha 16: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+              15 | 		dif = dif + (andar[q]-andar[i])
+        >>>   16 | 	i=i+1
+              17 | 	q=q+1
+
+  [5] Linha 17: Variável 'q' com nome muito curto (≤4 chars)
+      Trecho  : q = ...
+      Contexto:
+              16 | 	i=i+1
+        >>>   17 | 	q=q+1
+              18 | print(dif)
+
+  [6] Linha 13: Variável 'dif' com nome muito curto (≤4 chars)
+      Trecho  : dif = ...
+      Contexto:
+              12 | 	if((andar[i+1]-andar[i])<0):#para mudar final
+        >>>   13 | 		dif = dif + (-1*(andar[q]-andar[i]))
+              14 | 	else:
+
+  [7] Linha 15: Variável 'dif' com nome muito curto (≤4 chars)
+      Trecho  : dif = ...
+      Contexto:
+              14 | 	else:
+        >>>   15 | 		dif = dif + (andar[q]-andar[i])
+              16 | 	i=i+1
+
+======================================================================

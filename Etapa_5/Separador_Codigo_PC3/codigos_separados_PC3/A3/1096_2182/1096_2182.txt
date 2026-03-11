@@ -1,0 +1,67 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1096_2182.py
+Questão  : 1096
+Aluno    : 2182
+Total MCs: 1
+
+⚠️  Misconceptions detectados: A3
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | num = int(input(":"))
+     2 | a = num // 100000
+     3 | rst_a = num % 100000
+     4 | 
+     5 | b = rst_a // 10000
+     6 | rst_b = rst_a % 1000
+     7 | 
+     8 | c = rst_b // 1000
+     9 | rst_c = rst_b % 1000
+    10 | 
+    11 | d = rst_c // 100
+    12 | rst_d = rst_c % 100
+    13 | 
+    14 | e = rst_d // 10
+    15 | rst_e = rst_d % 10
+    16 | 
+    17 | f = rst_d 
+    18 | 
+    19 | x = a + b + c
+    20 | y = d + e + c
+    21 | 
+    22 | if(num == (x - y)**3 ):
+    23 | 	msg = "atende"
+    24 | 	print(num)
+    25 | 
+    26 | else:
+    27 | 	msg = " nao atende "
+    28 | 	print(num)
+    29 | 
+    30 | print(msg)
+    31 |  
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 2
+
+  [1] Linha 15: Variável 'rst_e' declarada mas nunca utilizada
+      Trecho  : rst_e = ...
+      Contexto:
+              14 | e = rst_d // 10
+        >>>   15 | rst_e = rst_d % 10
+              16 | 
+
+  [2] Linha 17: Variável 'f' declarada mas nunca utilizada
+      Trecho  : f = ...
+      Contexto:
+              16 | 
+        >>>   17 | f = rst_d 
+              18 | 
+
+======================================================================

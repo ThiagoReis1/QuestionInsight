@@ -1,0 +1,47 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1653_3778.py
+Questão  : 1653
+Aluno    : 3778
+Total MCs: 1
+
+⚠️  Misconceptions detectados: B8
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | res = zeros(5, dtype=int)
+     3 | pessoas = input()
+     4 | pessoas = pessoas.replace(",", "")
+     5 | pessoas = pessoas.replace(" ", "")
+     6 | for i in range(0, len(pessoas), 2):
+     7 | 	if pessoas[i] == "A" and pessoas[i+1] == "R":
+     8 | 		res[0] = res[0] + 1
+     9 | 	elif pessoas[i] == "B" and pessoas[i+1] == "R":
+    10 | 		res[1] = res[1] + 1
+    11 | 	elif pessoas[i] == "C" and pessoas[i+1] == "L":
+    12 | 		res[2] = res[2] + 1
+    13 | 	elif pessoas[i] == "C" and pessoas[i+1] == "O":
+    14 | 		res[3] = res[3] + 1
+    15 | 	elif pessoas[i] == "U" and pessoas[i+1] == "Y":
+    16 | 		res[4] = res[4] + 1
+    17 | print(max(res))
+    18 | print(res)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 13: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 13) / elif ... sem else
+      Contexto:
+              12 | 		res[2] = res[2] + 1
+        >>>   13 | 	elif pessoas[i] == "C" and pessoas[i+1] == "O":
+              14 | 		res[3] = res[3] + 1
+
+======================================================================

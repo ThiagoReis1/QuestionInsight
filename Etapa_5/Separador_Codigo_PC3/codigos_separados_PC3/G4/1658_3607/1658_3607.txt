@@ -1,0 +1,65 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1658_3607.py
+Questão  : 1658
+Aluno    : 3607
+Total MCs: 1
+
+⚠️  Misconceptions detectados: G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import *
+     2 | 
+     3 | entr = input()
+     4 | vet = entr.split(',')
+     5 | 
+     6 | v = zeros(5, dtype=int)
+     7 | 
+     8 | for i in range(size(vet)):
+     9 | 	if vet[i] == "CHN":
+    10 | 		v[0] = v[0] + 1
+    11 | 	elif vet[i] == "JPN":
+    12 | 		v[1] = v[1] + 1
+    13 | 	elif vet[i] == "MGL":
+    14 | 		v[3] = v[3] + 1
+    15 | 	elif vet[i] == "KOR":
+    16 | 		v[2] = v[2] + 1
+    17 | 	else:
+    18 | 		v[4] = v[4] + 1
+    19 | 
+    20 | print(v[v.argmax()])
+    21 | print(v)
+    22 | 
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 3
+
+  [1] Linha 3: Variável 'entr' com nome muito curto (≤4 chars)
+      Trecho  : entr = ...
+      Contexto:
+               2 | 
+        >>>    3 | entr = input()
+               4 | vet = entr.split(',')
+
+  [2] Linha 4: Variável 'vet' com nome muito curto (≤4 chars)
+      Trecho  : vet = ...
+      Contexto:
+               3 | entr = input()
+        >>>    4 | vet = entr.split(',')
+               5 | 
+
+  [3] Linha 6: Variável 'v' com nome muito curto (≤4 chars)
+      Trecho  : v = ...
+      Contexto:
+               5 | 
+        >>>    6 | v = zeros(5, dtype=int)
+               7 | 
+
+======================================================================

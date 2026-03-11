@@ -1,0 +1,76 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1978_2400.py
+Questão  : 1978
+Aluno    : 2400
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B4, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | G=input()
+     2 | S=input()
+     3 | A= G.lower();
+     4 | B= S.lower();
+     5 | if(A!='vertente' and A!='misturado'):
+     6 | 	print("instrumento nao identificado")
+     7 | else:
+     8 | 	if(A=='vertente' and B=='samba-de-raiz'):
+     9 | 		print("cavaquinho")
+    10 | 	elif(A=='vertente' and B=="partido-alto"):
+    11 | 		print("surdo")
+    12 | 	elif(A=='misturado' and B=='samba-choro'):
+    13 | 		print("violao de seis cordas")
+    14 | 	elif(A=='misturado' and B=='samba-jazz'):
+    15 | 		print("saxofone")
+    16 | 	else:
+    17 | 		print("instrumento nao identificado")
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B4 — Comandos repetidos dentro de blocos if-elif-else
+  Ocorrências: 1
+
+  [1] Linha 14: Bloco idêntico ao da linha 5
+      Trecho  : print('instrumento nao identificado')
+      Contexto:
+              13 | 		print("violao de seis cordas")
+        >>>   14 | 	elif(A=='misturado' and B=='samba-jazz'):
+              15 | 		print("saxofone")
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 4
+
+  [1] Linha 1: Variável 'G' com nome muito curto (≤4 chars)
+      Trecho  : G = ...
+      Contexto:
+        >>>    1 | G=input()
+               2 | S=input()
+
+  [2] Linha 2: Variável 'S' com nome muito curto (≤4 chars)
+      Trecho  : S = ...
+      Contexto:
+               1 | G=input()
+        >>>    2 | S=input()
+               3 | A= G.lower();
+
+  [3] Linha 3: Variável 'A' com nome muito curto (≤4 chars)
+      Trecho  : A = ...
+      Contexto:
+               2 | S=input()
+        >>>    3 | A= G.lower();
+               4 | B= S.lower();
+
+  [4] Linha 4: Variável 'B' com nome muito curto (≤4 chars)
+      Trecho  : B = ...
+      Contexto:
+               3 | A= G.lower();
+        >>>    4 | B= S.lower();
+               5 | if(A!='vertente' and A!='misturado'):
+
+======================================================================

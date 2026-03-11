@@ -1,0 +1,78 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1110_1660.py
+Questão  : 1110
+Aluno    : 1660
+Total MCs: 1
+
+⚠️  Misconceptions detectados: B8
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | prato = int(input("Qual o prato escolhido? "))
+     2 | desert = int(input("Qual a sobremesa escolhida? "))
+     3 | drink = int(input("Qual a bebida escolhida? "))
+     4 | 
+     5 | if ((prato >= 1 and prato <= 4) and (desert >= 1 and desert <= 4) and (drink >= 1 and drink <= 4)):
+     6 | 	if (prato == 1):
+     7 | 		cal_pr = 180
+     8 | 	elif (prato == 2):
+     9 | 		cal_pr = 230
+    10 | 	elif (prato == 3):
+    11 | 		cal_pr = 250
+    12 | 	elif (prato == 4):
+    13 | 		cal_pr = 350
+    14 | 	if (desert == 1):
+    15 | 		cal_de = 75
+    16 | 	elif (desert == 2):
+    17 | 		cal_de = 110
+    18 | 	elif (desert == 3):
+    19 | 		cal_de = 170
+    20 | 	elif (desert == 4):
+    21 | 		cal_de = 200
+    22 | 	if (drink == 1):
+    23 | 		cal_dr = 20
+    24 | 	elif (drink == 2):
+    25 | 		cal_dr = 70
+    26 | 	elif (drink == 3):
+    27 | 		cal_dr = 100
+    28 | 	elif (drink == 4):
+    29 | 		cal_dr = 65
+    30 | 	total = cal_pr + cal_de + cal_dr
+    31 | 	print("Entradas:", prato, ",", desert, ",", drink)
+    32 | 	print("Calorias: ", total, "cal")
+    33 | else:
+    34 | 	print("Entradas:", prato, ",", desert, ",", drink)
+    35 | 	print("Dados invalidos")	
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 3
+
+  [1] Linha 10: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 10) / elif ... sem else
+      Contexto:
+               9 | 		cal_pr = 230
+        >>>   10 | 	elif (prato == 3):
+              11 | 		cal_pr = 250
+
+  [2] Linha 18: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 18) / elif ... sem else
+      Contexto:
+              17 | 		cal_de = 110
+        >>>   18 | 	elif (desert == 3):
+              19 | 		cal_de = 170
+
+  [3] Linha 26: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 26) / elif ... sem else
+      Contexto:
+              25 | 		cal_dr = 70
+        >>>   26 | 	elif (drink == 3):
+              27 | 		cal_dr = 100
+
+======================================================================

@@ -1,0 +1,65 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 2436_3279.py
+Questão  : 2436
+Aluno    : 3279
+Total MCs: 2
+
+⚠️  Misconceptions detectados: A3, A4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | print = int(input("Qual o peso do produto: ?"))
+     2 | print = float(input("Qual a distancia percorrida: ?"))
+     3 | peso = 2       
+     4 | dist1 = 750
+     5 | impos = 140
+     6 | valor1 = input(peso * 25)
+     7 | valor2 = float(input(dist1 * 0.10))
+     8 | valor3 = float(input(valor1 + valor2 % 12))
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 3
+
+  [1] Linha 1: Variável 'print' declarada mas nunca utilizada
+      Trecho  : print = ...
+      Contexto:
+        >>>    1 | print = int(input("Qual o peso do produto: ?"))
+               2 | print = float(input("Qual a distancia percorrida: ?"))
+
+  [2] Linha 5: Variável 'impos' declarada mas nunca utilizada
+      Trecho  : impos = ...
+      Contexto:
+               4 | dist1 = 750
+        >>>    5 | impos = 140
+               6 | valor1 = input(peso * 25)
+
+  [3] Linha 8: Variável 'valor3' declarada mas nunca utilizada
+      Trecho  : valor3 = ...
+      Contexto:
+               7 | valor2 = float(input(dist1 * 0.10))
+        >>>    8 | valor3 = float(input(valor1 + valor2 % 12))
+
+▶ A4 — Redefinição de built-in
+  Ocorrências: 2
+
+  [1] Linha 1: Built-in 'print' redefinido como variável
+      Trecho  : print = int(input('Qual o peso do produto: ?'))
+      Contexto:
+        >>>    1 | print = int(input("Qual o peso do produto: ?"))
+               2 | print = float(input("Qual a distancia percorrida: ?"))
+
+  [2] Linha 2: Built-in 'print' redefinido como variável
+      Trecho  : print = float(input('Qual a distancia percorrida: ?'))
+      Contexto:
+               1 | print = int(input("Qual o peso do produto: ?"))
+        >>>    2 | print = float(input("Qual a distancia percorrida: ?"))
+               3 | peso = 2       
+
+======================================================================

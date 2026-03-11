@@ -1,0 +1,69 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1225_6389.py
+Questão  : 1225
+Aluno    : 6389
+Total MCs: 1
+
+⚠️  Misconceptions detectados: G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import * 
+     2 | 
+     3 | vetor = array(eval(input("Digite numeros reais: ")))
+     4 | i = 0
+     5 | m = sum(vetor) / size(vetor)
+     6 | x = 0
+     7 | for i in range(size(vetor)):
+     8 | 	x = x + (vetor[i] - m)**2
+     9 | 	
+    10 | a = (x / (size(vetor) - 1)) ** (1/2)
+    11 | 
+    12 | print(round(a, 3))
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 5
+
+  [1] Linha 4: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+               3 | vetor = array(eval(input("Digite numeros reais: ")))
+        >>>    4 | i = 0
+               5 | m = sum(vetor) / size(vetor)
+
+  [2] Linha 5: Variável 'm' com nome muito curto (≤4 chars)
+      Trecho  : m = ...
+      Contexto:
+               4 | i = 0
+        >>>    5 | m = sum(vetor) / size(vetor)
+               6 | x = 0
+
+  [3] Linha 6: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+               5 | m = sum(vetor) / size(vetor)
+        >>>    6 | x = 0
+               7 | for i in range(size(vetor)):
+
+  [4] Linha 10: Variável 'a' com nome muito curto (≤4 chars)
+      Trecho  : a = ...
+      Contexto:
+               9 | 	
+        >>>   10 | a = (x / (size(vetor) - 1)) ** (1/2)
+              11 | 
+
+  [5] Linha 8: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+               7 | for i in range(size(vetor)):
+        >>>    8 | 	x = x + (vetor[i] - m)**2
+               9 | 	
+
+======================================================================

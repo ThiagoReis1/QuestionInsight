@@ -1,0 +1,126 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1649_2295.py
+Questão  : 1649
+Aluno    : 2295
+Total MCs: 3
+
+⚠️  Misconceptions detectados: A3, B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import * 
+     2 | vet=input().upper().split(",")
+     3 | cont = zeros(5, dtype=int)
+     4 | C=0
+     5 | P=0
+     6 | V=0
+     7 | A=0
+     8 | for i in arange(size(vet)):
+     9 | 	if( vet[i] == 'P'):
+    10 | 		cont[0]= cont[0] + 1
+    11 | 	elif( vet[i] == 'C'):
+    12 | 		cont[1]= cont[1] + 1
+    13 | 	elif( vet[i] == 'M'):
+    14 | 		cont[2]= cont[2] + 1
+    15 | 	elif( vet[i] == 'V'):
+    16 | 		cont[3]= cont[3] + 1
+    17 | 	elif( vet[i] == 'A'):
+    18 | 		cont[4]= cont[4] + 1
+    19 | print(max(cont))
+    20 | print(cont)
+    21 | 	
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 4
+
+  [1] Linha 4: Variável 'C' declarada mas nunca utilizada
+      Trecho  : C = ...
+      Contexto:
+               3 | cont = zeros(5, dtype=int)
+        >>>    4 | C=0
+               5 | P=0
+
+  [2] Linha 5: Variável 'P' declarada mas nunca utilizada
+      Trecho  : P = ...
+      Contexto:
+               4 | C=0
+        >>>    5 | P=0
+               6 | V=0
+
+  [3] Linha 6: Variável 'V' declarada mas nunca utilizada
+      Trecho  : V = ...
+      Contexto:
+               5 | P=0
+        >>>    6 | V=0
+               7 | A=0
+
+  [4] Linha 7: Variável 'A' declarada mas nunca utilizada
+      Trecho  : A = ...
+      Contexto:
+               6 | V=0
+        >>>    7 | A=0
+               8 | for i in arange(size(vet)):
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 15: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 15) / elif ... sem else
+      Contexto:
+              14 | 		cont[2]= cont[2] + 1
+        >>>   15 | 	elif( vet[i] == 'V'):
+              16 | 		cont[3]= cont[3] + 1
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 6
+
+  [1] Linha 2: Variável 'vet' com nome muito curto (≤4 chars)
+      Trecho  : vet = ...
+      Contexto:
+               1 | from numpy import * 
+        >>>    2 | vet=input().upper().split(",")
+               3 | cont = zeros(5, dtype=int)
+
+  [2] Linha 3: Variável 'cont' com nome muito curto (≤4 chars)
+      Trecho  : cont = ...
+      Contexto:
+               2 | vet=input().upper().split(",")
+        >>>    3 | cont = zeros(5, dtype=int)
+               4 | C=0
+
+  [3] Linha 4: Variável 'C' com nome muito curto (≤4 chars)
+      Trecho  : C = ...
+      Contexto:
+               3 | cont = zeros(5, dtype=int)
+        >>>    4 | C=0
+               5 | P=0
+
+  [4] Linha 5: Variável 'P' com nome muito curto (≤4 chars)
+      Trecho  : P = ...
+      Contexto:
+               4 | C=0
+        >>>    5 | P=0
+               6 | V=0
+
+  [5] Linha 6: Variável 'V' com nome muito curto (≤4 chars)
+      Trecho  : V = ...
+      Contexto:
+               5 | P=0
+        >>>    6 | V=0
+               7 | A=0
+
+  [6] Linha 7: Variável 'A' com nome muito curto (≤4 chars)
+      Trecho  : A = ...
+      Contexto:
+               6 | V=0
+        >>>    7 | A=0
+               8 | for i in arange(size(vet)):
+
+======================================================================

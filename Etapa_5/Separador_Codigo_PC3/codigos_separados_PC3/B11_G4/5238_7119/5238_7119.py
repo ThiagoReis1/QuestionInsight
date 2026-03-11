@@ -1,0 +1,14 @@
+a=int(input())
+b=int(input())
+c=int(input())
+var=0
+if(a>=1000): 
+	var=var+1
+if(b>=1000):
+	var=var+1
+if(c>=1000):
+	var=var+1
+if(var>=2):
+	print("SIM")
+else:
+	print("NAO")

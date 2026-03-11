@@ -1,0 +1,139 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 3590_7615.py
+Questão  : 3590
+Aluno    : 7615
+Total MCs: 3
+
+⚠️  Misconceptions detectados: B4, B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import *
+     2 | v= array(eval(input("digite um vetor: ")))
+     3 | v1= 0
+     4 | i= 0
+     5 | while i < size(v):
+     6 | 	if v[i] == 1:
+     7 | 		v1= v1 + 10
+     8 | 	elif v[i] == 2:
+     9 | 		v1= v1 + 5
+    10 | 	elif v[i] == 3:
+    11 | 		v1= v1 + 0
+    12 | 	elif v[i] == 4:
+    13 | 		v1= v1 + 5
+    14 | 	elif v[i] == 5:
+    15 | 		v1= v1 + 20
+    16 | 	elif v[i] == 6:
+    17 | 		v1= v1 +10
+    18 | 	i+=1
+    19 | 
+    20 | print(v1)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B4 — Comandos repetidos dentro de blocos if-elif-else
+  Ocorrências: 3
+
+  [1] Linha 12: Bloco idêntico ao da linha 8
+      Trecho  : v1 = v1 + 5
+      Contexto:
+              11 | 		v1= v1 + 0
+        >>>   12 | 	elif v[i] == 4:
+              13 | 		v1= v1 + 5
+
+  [2] Linha 16: Bloco idêntico ao da linha 6
+      Trecho  : v1 = v1 + 10
+      Contexto:
+              15 | 		v1= v1 + 20
+        >>>   16 | 	elif v[i] == 6:
+              17 | 		v1= v1 +10
+
+  [3] Linha 12: Bloco idêntico ao da linha 8
+      Trecho  : v1 = v1 + 5
+      Contexto:
+              11 | 		v1= v1 + 0
+        >>>   12 | 	elif v[i] == 4:
+              13 | 		v1= v1 + 5
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 14: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 14) / elif ... sem else
+      Contexto:
+              13 | 		v1= v1 + 5
+        >>>   14 | 	elif v[i] == 5:
+              15 | 		v1= v1 + 20
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 9
+
+  [1] Linha 2: Variável 'v' com nome muito curto (≤4 chars)
+      Trecho  : v = ...
+      Contexto:
+               1 | from numpy import *
+        >>>    2 | v= array(eval(input("digite um vetor: ")))
+               3 | v1= 0
+
+  [2] Linha 3: Variável 'v1' com nome muito curto (≤4 chars)
+      Trecho  : v1 = ...
+      Contexto:
+               2 | v= array(eval(input("digite um vetor: ")))
+        >>>    3 | v1= 0
+               4 | i= 0
+
+  [3] Linha 4: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+               3 | v1= 0
+        >>>    4 | i= 0
+               5 | while i < size(v):
+
+  [4] Linha 7: Variável 'v1' com nome muito curto (≤4 chars)
+      Trecho  : v1 = ...
+      Contexto:
+               6 | 	if v[i] == 1:
+        >>>    7 | 		v1= v1 + 10
+               8 | 	elif v[i] == 2:
+
+  [5] Linha 9: Variável 'v1' com nome muito curto (≤4 chars)
+      Trecho  : v1 = ...
+      Contexto:
+               8 | 	elif v[i] == 2:
+        >>>    9 | 		v1= v1 + 5
+              10 | 	elif v[i] == 3:
+
+  [6] Linha 11: Variável 'v1' com nome muito curto (≤4 chars)
+      Trecho  : v1 = ...
+      Contexto:
+              10 | 	elif v[i] == 3:
+        >>>   11 | 		v1= v1 + 0
+              12 | 	elif v[i] == 4:
+
+  [7] Linha 13: Variável 'v1' com nome muito curto (≤4 chars)
+      Trecho  : v1 = ...
+      Contexto:
+              12 | 	elif v[i] == 4:
+        >>>   13 | 		v1= v1 + 5
+              14 | 	elif v[i] == 5:
+
+  [8] Linha 15: Variável 'v1' com nome muito curto (≤4 chars)
+      Trecho  : v1 = ...
+      Contexto:
+              14 | 	elif v[i] == 5:
+        >>>   15 | 		v1= v1 + 20
+              16 | 	elif v[i] == 6:
+
+  [9] Linha 17: Variável 'v1' com nome muito curto (≤4 chars)
+      Trecho  : v1 = ...
+      Contexto:
+              16 | 	elif v[i] == 6:
+        >>>   17 | 		v1= v1 +10
+              18 | 	i+=1
+
+======================================================================

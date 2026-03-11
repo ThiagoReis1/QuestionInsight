@@ -1,0 +1,12 @@
+x=int(input(""))
+y=int(input(""))
+a=float(input(""))
+b=float(input(""))
+a=(a/100)+1
+b=(b/100)+1
+e=1
+while(x>=y*2):
+	x=x*a
+	y=y*b
+	e=e+1
+print(e)

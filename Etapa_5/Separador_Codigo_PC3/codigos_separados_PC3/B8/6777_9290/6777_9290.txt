@@ -1,0 +1,53 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 6777_9290.py
+Questão  : 6777
+Aluno    : 9290
+Total MCs: 1
+
+⚠️  Misconceptions detectados: B8
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | ano = int(input("ano: "))
+     2 | pais = str(input("pais: ")).upper()
+     3 | ###########################
+     4 | if pais not in ("B","I"):
+     5 | 	print("invalido")
+     6 | if (2023 - ano >= 18) and (pais == "B"):
+     7 | 	print("sim")
+     8 | 	resto = (2023 - ano) - 18
+     9 | 	print(resto)
+    10 | else:
+    11 | 	if (2023 - ano < 18) and pais == "B":
+    12 | 		print("nao")
+    13 | 		resto = 18 - (2023 - ano)
+    14 | 		print(resto)
+    15 | 	else:
+    16 | 		if (2023 - ano >= 17) and pais == "I":
+    17 | 			print("sim")
+    18 | 			resto = (2023 - ano) - 17
+    19 | 			print(resto)
+    20 | 		else:
+    21 | 			if (2023 - ano < 17) and pais == "I":
+    22 | 				print("nao")
+    23 | 				resto = 17 - (2023 - ano)
+    24 | 				print(resto)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 16: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 16) / elif ... sem else
+      Contexto:
+              15 | 	else:
+        >>>   16 | 		if (2023 - ano >= 17) and pais == "I":
+              17 | 			print("sim")
+
+======================================================================

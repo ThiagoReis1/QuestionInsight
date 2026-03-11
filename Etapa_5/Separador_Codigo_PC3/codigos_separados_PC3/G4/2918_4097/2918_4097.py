@@ -1,0 +1,5 @@
+p = float(input("Digite o valor de p: "))
+q = int(input("Digite o valor de q: "))
+pp = (p - (p * (20/100)))
+total = (pp * q)
+print(round(total, 2))

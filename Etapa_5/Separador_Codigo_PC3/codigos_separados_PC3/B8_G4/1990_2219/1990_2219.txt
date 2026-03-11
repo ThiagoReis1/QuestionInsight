@@ -1,0 +1,98 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1990_2219.py
+Questão  : 1990
+Aluno    : 2219
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | aminoacido = input("Informe o aminoacido:").upper()
+     2 | O = 15.9994
+     3 | C = 12.011
+     4 | N = 14.0067
+     5 | H = 1.00794
+     6 | if(aminoacido == "GLUTAMINA" or aminoacido =="SERINA" or aminoacido=="TREONINA" ):
+     7 | 	if (aminoacido =="GLUTAMINA"):
+     8 | 		calc = (C*5)+(H*8)+(N*1)+(O*4)
+     9 | 	elif(aminoacido=="SERINA"):
+    10 | 		calc = C*3+ H*7+ N+ O*3
+    11 | 	elif (aminoacido=="TREONINA"):
+    12 | 		calc = C*4+ H*9+ N+ O*3
+    13 | 		
+    14 | 	print(round(calc,2))
+    15 | else:
+    16 | 	print("Entrada:",aminoacido)
+    17 | 	print("Dado Invalido")
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 9: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 9) / elif ... sem else
+      Contexto:
+               8 | 		calc = (C*5)+(H*8)+(N*1)+(O*4)
+        >>>    9 | 	elif(aminoacido=="SERINA"):
+              10 | 		calc = C*3+ H*7+ N+ O*3
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 7
+
+  [1] Linha 2: Variável 'O' com nome muito curto (≤4 chars)
+      Trecho  : O = ...
+      Contexto:
+               1 | aminoacido = input("Informe o aminoacido:").upper()
+        >>>    2 | O = 15.9994
+               3 | C = 12.011
+
+  [2] Linha 3: Variável 'C' com nome muito curto (≤4 chars)
+      Trecho  : C = ...
+      Contexto:
+               2 | O = 15.9994
+        >>>    3 | C = 12.011
+               4 | N = 14.0067
+
+  [3] Linha 4: Variável 'N' com nome muito curto (≤4 chars)
+      Trecho  : N = ...
+      Contexto:
+               3 | C = 12.011
+        >>>    4 | N = 14.0067
+               5 | H = 1.00794
+
+  [4] Linha 5: Variável 'H' com nome muito curto (≤4 chars)
+      Trecho  : H = ...
+      Contexto:
+               4 | N = 14.0067
+        >>>    5 | H = 1.00794
+               6 | if(aminoacido == "GLUTAMINA" or aminoacido =="SERINA" or aminoacido=="TREONINA" ):
+
+  [5] Linha 8: Variável 'calc' com nome muito curto (≤4 chars)
+      Trecho  : calc = ...
+      Contexto:
+               7 | 	if (aminoacido =="GLUTAMINA"):
+        >>>    8 | 		calc = (C*5)+(H*8)+(N*1)+(O*4)
+               9 | 	elif(aminoacido=="SERINA"):
+
+  [6] Linha 10: Variável 'calc' com nome muito curto (≤4 chars)
+      Trecho  : calc = ...
+      Contexto:
+               9 | 	elif(aminoacido=="SERINA"):
+        >>>   10 | 		calc = C*3+ H*7+ N+ O*3
+              11 | 	elif (aminoacido=="TREONINA"):
+
+  [7] Linha 12: Variável 'calc' com nome muito curto (≤4 chars)
+      Trecho  : calc = ...
+      Contexto:
+              11 | 	elif (aminoacido=="TREONINA"):
+        >>>   12 | 		calc = C*4+ H*9+ N+ O*3
+              13 | 		
+
+======================================================================

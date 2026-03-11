@@ -1,0 +1,7 @@
+a = float(input("Digite a quantidade de porcao: "))
+snowberry = (a * 0.0842)
+sais_de_fogo = (a * 0.1983)
+amanita = (a * 0.7175)
+print(round(snowberry,2))
+print(round(sais_de_fogo,2))
+print(round(amanita,2))

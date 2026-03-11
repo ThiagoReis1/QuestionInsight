@@ -1,0 +1,100 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 6931_9676.py
+Questão  : 6931
+Aluno    : 9676
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | preco = float(input("preco"))
+     2 | opc = input("d para dinheiro, p para pix e c para cartao (D/P/C)")
+     3 | 
+     4 | if opc.upper() == "C":
+     5 | 	c1c2 = int(input("1 para parcelar em 1 vez e 2 para duas"))
+     6 | 	if c1c2 == 1:
+     7 | 		pf = preco
+     8 | 		print(round(pf,2))
+     9 | 	elif c1c2 == 2:
+    10 | 		pf = preco + preco*0.07
+    11 | 		print(round(pf,2))
+    12 | 
+    13 | elif opc.upper() == "D":
+    14 | 	pf = preco - preco*0.18
+    15 | 	print(round(pf,2))
+    16 | 
+    17 | if opc.upper() == "P":
+    18 | 	pf = preco - preco*0.18
+    19 | 	print(round(pf,2))
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 2
+
+  [1] Linha 4: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 4) / elif ... sem else
+      Contexto:
+               3 | 
+        >>>    4 | if opc.upper() == "C":
+               5 | 	c1c2 = int(input("1 para parcelar em 1 vez e 2 para duas"))
+
+  [2] Linha 6: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 6) / elif ... sem else
+      Contexto:
+               5 | 	c1c2 = int(input("1 para parcelar em 1 vez e 2 para duas"))
+        >>>    6 | 	if c1c2 == 1:
+               7 | 		pf = preco
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 6
+
+  [1] Linha 2: Variável 'opc' com nome muito curto (≤4 chars)
+      Trecho  : opc = ...
+      Contexto:
+               1 | preco = float(input("preco"))
+        >>>    2 | opc = input("d para dinheiro, p para pix e c para cartao (D/P/C)")
+               3 | 
+
+  [2] Linha 5: Variável 'c1c2' com nome muito curto (≤4 chars)
+      Trecho  : c1c2 = ...
+      Contexto:
+               4 | if opc.upper() == "C":
+        >>>    5 | 	c1c2 = int(input("1 para parcelar em 1 vez e 2 para duas"))
+               6 | 	if c1c2 == 1:
+
+  [3] Linha 18: Variável 'pf' com nome muito curto (≤4 chars)
+      Trecho  : pf = ...
+      Contexto:
+              17 | if opc.upper() == "P":
+        >>>   18 | 	pf = preco - preco*0.18
+              19 | 	print(round(pf,2))
+
+  [4] Linha 7: Variável 'pf' com nome muito curto (≤4 chars)
+      Trecho  : pf = ...
+      Contexto:
+               6 | 	if c1c2 == 1:
+        >>>    7 | 		pf = preco
+               8 | 		print(round(pf,2))
+
+  [5] Linha 14: Variável 'pf' com nome muito curto (≤4 chars)
+      Trecho  : pf = ...
+      Contexto:
+              13 | elif opc.upper() == "D":
+        >>>   14 | 	pf = preco - preco*0.18
+              15 | 	print(round(pf,2))
+
+  [6] Linha 10: Variável 'pf' com nome muito curto (≤4 chars)
+      Trecho  : pf = ...
+      Contexto:
+               9 | 	elif c1c2 == 2:
+        >>>   10 | 		pf = preco + preco*0.07
+              11 | 		print(round(pf,2))
+
+======================================================================

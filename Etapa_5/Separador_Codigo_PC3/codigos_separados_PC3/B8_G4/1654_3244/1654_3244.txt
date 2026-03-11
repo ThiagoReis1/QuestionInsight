@@ -1,0 +1,113 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1654_3244.py
+Questão  : 1654
+Aluno    : 3244
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import *
+     2 | 
+     3 | a = input("Digite ").upper()
+     4 | v = a.split(',')
+     5 | vet_z = zeros(5, dtype=int)
+     6 | 
+     7 | am = 0
+     8 | pe = 0
+     9 | mg = 0
+    10 | sp = 0
+    11 | rs = 0
+    12 | 
+    13 | for i in range(len(v)):
+    14 | 	if v[i] == "AM":
+    15 | 		am += 1
+    16 | 	elif v[i] == "PE":
+    17 | 		pe += 1
+    18 | 	elif v[i] == "MG":
+    19 | 		mg += 1
+    20 | 	elif v[i] == "SP":
+    21 | 		sp += 1
+    22 | 	elif v[i] == "RS":
+    23 | 		rs += 1
+    24 | 
+    25 | vet_z[0] = am
+    26 | vet_z[1] = pe
+    27 | vet_z[2] = mg
+    28 | vet_z[3] = sp
+    29 | vet_z[4] = rs
+    30 | 
+    31 | print(max(vet_z))
+    32 | print(vet_z)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 20: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 20) / elif ... sem else
+      Contexto:
+              19 | 		mg += 1
+        >>>   20 | 	elif v[i] == "SP":
+              21 | 		sp += 1
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 7
+
+  [1] Linha 3: Variável 'a' com nome muito curto (≤4 chars)
+      Trecho  : a = ...
+      Contexto:
+               2 | 
+        >>>    3 | a = input("Digite ").upper()
+               4 | v = a.split(',')
+
+  [2] Linha 4: Variável 'v' com nome muito curto (≤4 chars)
+      Trecho  : v = ...
+      Contexto:
+               3 | a = input("Digite ").upper()
+        >>>    4 | v = a.split(',')
+               5 | vet_z = zeros(5, dtype=int)
+
+  [3] Linha 7: Variável 'am' com nome muito curto (≤4 chars)
+      Trecho  : am = ...
+      Contexto:
+               6 | 
+        >>>    7 | am = 0
+               8 | pe = 0
+
+  [4] Linha 8: Variável 'pe' com nome muito curto (≤4 chars)
+      Trecho  : pe = ...
+      Contexto:
+               7 | am = 0
+        >>>    8 | pe = 0
+               9 | mg = 0
+
+  [5] Linha 9: Variável 'mg' com nome muito curto (≤4 chars)
+      Trecho  : mg = ...
+      Contexto:
+               8 | pe = 0
+        >>>    9 | mg = 0
+              10 | sp = 0
+
+  [6] Linha 10: Variável 'sp' com nome muito curto (≤4 chars)
+      Trecho  : sp = ...
+      Contexto:
+               9 | mg = 0
+        >>>   10 | sp = 0
+              11 | rs = 0
+
+  [7] Linha 11: Variável 'rs' com nome muito curto (≤4 chars)
+      Trecho  : rs = ...
+      Contexto:
+              10 | sp = 0
+        >>>   11 | rs = 0
+              12 | 
+
+======================================================================

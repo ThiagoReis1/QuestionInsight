@@ -1,0 +1,83 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 5250_7112.py
+Questão  : 5250
+Aluno    : 7112
+Total MCs: 3
+
+⚠️  Misconceptions detectados: B8, B9, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | v = float(input())
+     2 | t = float(input())
+     3 | 
+     4 | if(v <= 0 or t <0):
+     5 | 	print("Entradas:", v,"km/h e", t,"h")
+     6 | 	print("Dados invalidos")
+     7 | else:
+     8 | 	D = v * t
+     9 | 	
+    10 | 	print("Entradas:",v,"km/h e", t,"h")
+    11 | 	
+    12 | 	if( D < 100):
+    13 | 		print("Proxima parada: Bravos")
+    14 | 	elif(D >=100 and D< 200 ):
+    15 | 		print("Proxima parada: Castamere")
+    16 | 	elif(D>=200 and D < 400):
+    17 | 		print("Proxima parada: Doriath")
+    18 | 	elif(D>= 400 and D < 600):
+    19 | 		print("Proxima Parada: Edoras")
+    20 | 	elif(D>= 600 and D< 750):
+    21 | 		print("Proxima parada: Fangorn")
+    22 | 	elif(D>=750 and D <1150):
+    23 | 		print("Proxima parada: Gondor")
+    24 | 	elif(D>=1150):
+    25 | 		print("Proxima parada: Hogsmead")
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 22: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 22) / elif ... sem else
+      Contexto:
+              21 | 		print("Proxima parada: Fangorn")
+        >>>   22 | 	elif(D>=750 and D <1150):
+              23 | 		print("Proxima parada: Gondor")
+
+▶ B9 — elif/else retestando condições já verificadas
+  Ocorrências: 1
+
+  [1] Linha 0: B9 detectado pelo VisitorMC3 (localização exata não mapeada)
+      Trecho  : —
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 3
+
+  [1] Linha 1: Variável 'v' com nome muito curto (≤4 chars)
+      Trecho  : v = ...
+      Contexto:
+        >>>    1 | v = float(input())
+               2 | t = float(input())
+
+  [2] Linha 2: Variável 't' com nome muito curto (≤4 chars)
+      Trecho  : t = ...
+      Contexto:
+               1 | v = float(input())
+        >>>    2 | t = float(input())
+               3 | 
+
+  [3] Linha 8: Variável 'D' com nome muito curto (≤4 chars)
+      Trecho  : D = ...
+      Contexto:
+               7 | else:
+        >>>    8 | 	D = v * t
+               9 | 	
+
+======================================================================

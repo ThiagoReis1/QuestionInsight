@@ -1,0 +1,107 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1648_5008.py
+Questão  : 1648
+Aluno    : 5008
+Total MCs: 2
+
+⚠️  Misconceptions detectados: A3, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import *
+     2 | f = array(eval(input("f: ")))
+     3 | r = 0
+     4 | x = 0
+     5 | n = 0
+     6 | y = 0
+     7 | for i in f:
+     8 | 	if i < 70:
+     9 | 		r += 1
+    10 | 
+    11 | v = zeros(r, dtype = int)
+    12 | i = 0
+    13 | 
+    14 | for j in f:
+    15 | 	if j < 70:
+    16 | 		v[x] = i
+    17 | 		x += 1
+    18 | 	i += 1
+    19 | print(r, v)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 2
+
+  [1] Linha 5: Variável 'n' declarada mas nunca utilizada
+      Trecho  : n = ...
+      Contexto:
+               4 | x = 0
+        >>>    5 | n = 0
+               6 | y = 0
+
+  [2] Linha 6: Variável 'y' declarada mas nunca utilizada
+      Trecho  : y = ...
+      Contexto:
+               5 | n = 0
+        >>>    6 | y = 0
+               7 | for i in f:
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 7
+
+  [1] Linha 2: Variável 'f' com nome muito curto (≤4 chars)
+      Trecho  : f = ...
+      Contexto:
+               1 | from numpy import *
+        >>>    2 | f = array(eval(input("f: ")))
+               3 | r = 0
+
+  [2] Linha 3: Variável 'r' com nome muito curto (≤4 chars)
+      Trecho  : r = ...
+      Contexto:
+               2 | f = array(eval(input("f: ")))
+        >>>    3 | r = 0
+               4 | x = 0
+
+  [3] Linha 4: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+               3 | r = 0
+        >>>    4 | x = 0
+               5 | n = 0
+
+  [4] Linha 5: Variável 'n' com nome muito curto (≤4 chars)
+      Trecho  : n = ...
+      Contexto:
+               4 | x = 0
+        >>>    5 | n = 0
+               6 | y = 0
+
+  [5] Linha 6: Variável 'y' com nome muito curto (≤4 chars)
+      Trecho  : y = ...
+      Contexto:
+               5 | n = 0
+        >>>    6 | y = 0
+               7 | for i in f:
+
+  [6] Linha 11: Variável 'v' com nome muito curto (≤4 chars)
+      Trecho  : v = ...
+      Contexto:
+              10 | 
+        >>>   11 | v = zeros(r, dtype = int)
+              12 | i = 0
+
+  [7] Linha 12: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+              11 | v = zeros(r, dtype = int)
+        >>>   12 | i = 0
+              13 | 
+
+======================================================================

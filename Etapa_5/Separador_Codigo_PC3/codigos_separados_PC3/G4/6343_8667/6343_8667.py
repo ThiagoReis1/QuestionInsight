@@ -1,0 +1,9 @@
+from numpy import*
+
+s = input("Digite o nome: ")
+
+if((s[1] == "a") or (s[1]== "A")):
+	print(s.upper())
+		
+else: 
+	print("nome invalido")

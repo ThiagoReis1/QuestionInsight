@@ -1,0 +1,45 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1392_3722.py
+Questão  : 1392
+Aluno    : 3722
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B9, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | c = float(input())
+     2 | if c < 10:
+     3 | 	print(round(30 + 3*c, 2))
+     4 | elif c >= 10:
+     5 | 	print(round(30 + c * 3.5, 2))
+     6 | else:
+     7 | 	print(round(30, 2))
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B9 — elif/else retestando condições já verificadas
+  Ocorrências: 1
+
+  [1] Linha 4: elif retesta condição inversa do if da linha 2
+      Trecho  : if c < 10 ... elif c >= 10
+      Contexto:
+               3 | 	print(round(30 + 3*c, 2))
+        >>>    4 | elif c >= 10:
+               5 | 	print(round(30 + c * 3.5, 2))
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 1
+
+  [1] Linha 1: Variável 'c' com nome muito curto (≤4 chars)
+      Trecho  : c = ...
+      Contexto:
+        >>>    1 | c = float(input())
+               2 | if c < 10:
+
+======================================================================

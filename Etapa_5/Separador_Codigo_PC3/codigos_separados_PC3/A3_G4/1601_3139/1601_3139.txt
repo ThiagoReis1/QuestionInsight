@@ -1,0 +1,88 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1601_3139.py
+Questão  : 1601
+Aluno    : 3139
+Total MCs: 2
+
+⚠️  Misconceptions detectados: A3, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import* 
+     2 | 
+     3 | vet = array(eval(input("tempo dos competidores: ")))
+     4 | 
+     5 | x = min(vet)
+     6 | cp = 0
+     7 | cont = 0
+     8 | 
+     9 | while(cp < size(vet)):
+    10 | 	if(vet[cp] == min(vet)):
+    11 | 		cont = cont + 1
+    12 | 		print(cp)
+    13 | 	cp = cp + 1
+    14 | 
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 1
+
+  [1] Linha 5: Variável 'x' declarada mas nunca utilizada
+      Trecho  : x = ...
+      Contexto:
+               4 | 
+        >>>    5 | x = min(vet)
+               6 | cp = 0
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 6
+
+  [1] Linha 3: Variável 'vet' com nome muito curto (≤4 chars)
+      Trecho  : vet = ...
+      Contexto:
+               2 | 
+        >>>    3 | vet = array(eval(input("tempo dos competidores: ")))
+               4 | 
+
+  [2] Linha 5: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+               4 | 
+        >>>    5 | x = min(vet)
+               6 | cp = 0
+
+  [3] Linha 6: Variável 'cp' com nome muito curto (≤4 chars)
+      Trecho  : cp = ...
+      Contexto:
+               5 | x = min(vet)
+        >>>    6 | cp = 0
+               7 | cont = 0
+
+  [4] Linha 7: Variável 'cont' com nome muito curto (≤4 chars)
+      Trecho  : cont = ...
+      Contexto:
+               6 | cp = 0
+        >>>    7 | cont = 0
+               8 | 
+
+  [5] Linha 13: Variável 'cp' com nome muito curto (≤4 chars)
+      Trecho  : cp = ...
+      Contexto:
+              12 | 		print(cp)
+        >>>   13 | 	cp = cp + 1
+              14 | 
+
+  [6] Linha 11: Variável 'cont' com nome muito curto (≤4 chars)
+      Trecho  : cont = ...
+      Contexto:
+              10 | 	if(vet[cp] == min(vet)):
+        >>>   11 | 		cont = cont + 1
+              12 | 		print(cp)
+
+======================================================================

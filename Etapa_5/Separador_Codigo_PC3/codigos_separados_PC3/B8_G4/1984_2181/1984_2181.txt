@@ -1,0 +1,59 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1984_2181.py
+Questão  : 1984
+Aluno    : 2181
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | c1 = input("Digite a primeira caracteristica: ")
+     2 | c2 = input("Digite a segunda caracteristica: ")
+     3 | 
+     4 | if(c1.upper() != 'CAMPEAO' and c1.upper() != 'VICE-CAMPEAO' or c2.upper() != '11-VEZES' and c2.upper() != '05-VEZES' and c2.upper() != '01-VEZ' and c2.upper() != '04-VEZES' ):
+     5 | 	print("TIME DE FUTEBOL NAO IDENTIFICADO")
+     6 | else:
+     7 | 	if(c1.upper() == 'CAMPEAO' and c2.upper() == '11-VEZES'):
+     8 | 		print("REAL MADRID")
+     9 | 	elif(c1.upper() == 'CAMPEAO' and c2.upper() == '05-VEZES'):
+    10 | 		print("BARCELONA")
+    11 | 	elif(c1.upper() == 'VICE-CAMPEAO' and c2.upper() == '01-VEZ'):
+    12 | 		print("CHELSEA")
+    13 | 	elif(c1.upper() == 'VICE-CAMPEAO' and c2.upper() == '04-VEZES'):
+    14 | 		print("MILAN")
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 11: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 11) / elif ... sem else
+      Contexto:
+              10 | 		print("BARCELONA")
+        >>>   11 | 	elif(c1.upper() == 'VICE-CAMPEAO' and c2.upper() == '01-VEZ'):
+              12 | 		print("CHELSEA")
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 2
+
+  [1] Linha 1: Variável 'c1' com nome muito curto (≤4 chars)
+      Trecho  : c1 = ...
+      Contexto:
+        >>>    1 | c1 = input("Digite a primeira caracteristica: ")
+               2 | c2 = input("Digite a segunda caracteristica: ")
+
+  [2] Linha 2: Variável 'c2' com nome muito curto (≤4 chars)
+      Trecho  : c2 = ...
+      Contexto:
+               1 | c1 = input("Digite a primeira caracteristica: ")
+        >>>    2 | c2 = input("Digite a segunda caracteristica: ")
+               3 | 
+
+======================================================================

@@ -1,0 +1,197 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 3593_8804.py
+Questão  : 3593
+Aluno    : 8804
+Total MCs: 3
+
+⚠️  Misconceptions detectados: B4, B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import *
+     2 | 
+     3 | n = array(eval(input("")))
+     4 | y = 200
+     5 | i = 0
+     6 | 
+     7 | while(i < size(n)):
+     8 | 	if n[i] == 1:
+     9 | 		y = y/2
+    10 | 	elif n[i] == 2:
+    11 | 		y = y*3
+    12 | 	elif n[i] == 3:
+    13 | 		y = y/2
+    14 | 	elif n[i] == 4:
+    15 | 		y = y* 3
+    16 | 	elif n[i] == 5:
+    17 | 		y = y/2
+    18 | 	elif n[i] == 6:
+    19 | 		y = y*3
+    20 | 	i = i + 1
+    21 | print(round(y,2))
+    22 | 		
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B4 — Comandos repetidos dentro de blocos if-elif-else
+  Ocorrências: 10
+
+  [1] Linha 12: Bloco idêntico ao da linha 8
+      Trecho  : y = y / 2
+      Contexto:
+              11 | 		y = y*3
+        >>>   12 | 	elif n[i] == 3:
+              13 | 		y = y/2
+
+  [2] Linha 14: Bloco idêntico ao da linha 10
+      Trecho  : y = y * 3
+      Contexto:
+              13 | 		y = y/2
+        >>>   14 | 	elif n[i] == 4:
+              15 | 		y = y* 3
+
+  [3] Linha 16: Bloco idêntico ao da linha 8
+      Trecho  : y = y / 2
+      Contexto:
+              15 | 		y = y* 3
+        >>>   16 | 	elif n[i] == 5:
+              17 | 		y = y/2
+
+  [4] Linha 18: Bloco idêntico ao da linha 10
+      Trecho  : y = y * 3
+      Contexto:
+              17 | 		y = y/2
+        >>>   18 | 	elif n[i] == 6:
+              19 | 		y = y*3
+
+  [5] Linha 14: Bloco idêntico ao da linha 10
+      Trecho  : y = y * 3
+      Contexto:
+              13 | 		y = y/2
+        >>>   14 | 	elif n[i] == 4:
+              15 | 		y = y* 3
+
+  [6] Linha 16: Bloco idêntico ao da linha 12
+      Trecho  : y = y / 2
+      Contexto:
+              15 | 		y = y* 3
+        >>>   16 | 	elif n[i] == 5:
+              17 | 		y = y/2
+
+  [7] Linha 18: Bloco idêntico ao da linha 10
+      Trecho  : y = y * 3
+      Contexto:
+              17 | 		y = y/2
+        >>>   18 | 	elif n[i] == 6:
+              19 | 		y = y*3
+
+  [8] Linha 16: Bloco idêntico ao da linha 12
+      Trecho  : y = y / 2
+      Contexto:
+              15 | 		y = y* 3
+        >>>   16 | 	elif n[i] == 5:
+              17 | 		y = y/2
+
+  [9] Linha 18: Bloco idêntico ao da linha 14
+      Trecho  : y = y * 3
+      Contexto:
+              17 | 		y = y/2
+        >>>   18 | 	elif n[i] == 6:
+              19 | 		y = y*3
+
+  [10] Linha 18: Bloco idêntico ao da linha 14
+      Trecho  : y = y * 3
+      Contexto:
+              17 | 		y = y/2
+        >>>   18 | 	elif n[i] == 6:
+              19 | 		y = y*3
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 16: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 16) / elif ... sem else
+      Contexto:
+              15 | 		y = y* 3
+        >>>   16 | 	elif n[i] == 5:
+              17 | 		y = y/2
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 10
+
+  [1] Linha 3: Variável 'n' com nome muito curto (≤4 chars)
+      Trecho  : n = ...
+      Contexto:
+               2 | 
+        >>>    3 | n = array(eval(input("")))
+               4 | y = 200
+
+  [2] Linha 4: Variável 'y' com nome muito curto (≤4 chars)
+      Trecho  : y = ...
+      Contexto:
+               3 | n = array(eval(input("")))
+        >>>    4 | y = 200
+               5 | i = 0
+
+  [3] Linha 5: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+               4 | y = 200
+        >>>    5 | i = 0
+               6 | 
+
+  [4] Linha 20: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+              19 | 		y = y*3
+        >>>   20 | 	i = i + 1
+              21 | print(round(y,2))
+
+  [5] Linha 9: Variável 'y' com nome muito curto (≤4 chars)
+      Trecho  : y = ...
+      Contexto:
+               8 | 	if n[i] == 1:
+        >>>    9 | 		y = y/2
+              10 | 	elif n[i] == 2:
+
+  [6] Linha 11: Variável 'y' com nome muito curto (≤4 chars)
+      Trecho  : y = ...
+      Contexto:
+              10 | 	elif n[i] == 2:
+        >>>   11 | 		y = y*3
+              12 | 	elif n[i] == 3:
+
+  [7] Linha 13: Variável 'y' com nome muito curto (≤4 chars)
+      Trecho  : y = ...
+      Contexto:
+              12 | 	elif n[i] == 3:
+        >>>   13 | 		y = y/2
+              14 | 	elif n[i] == 4:
+
+  [8] Linha 15: Variável 'y' com nome muito curto (≤4 chars)
+      Trecho  : y = ...
+      Contexto:
+              14 | 	elif n[i] == 4:
+        >>>   15 | 		y = y* 3
+              16 | 	elif n[i] == 5:
+
+  [9] Linha 17: Variável 'y' com nome muito curto (≤4 chars)
+      Trecho  : y = ...
+      Contexto:
+              16 | 	elif n[i] == 5:
+        >>>   17 | 		y = y/2
+              18 | 	elif n[i] == 6:
+
+  [10] Linha 19: Variável 'y' com nome muito curto (≤4 chars)
+      Trecho  : y = ...
+      Contexto:
+              18 | 	elif n[i] == 6:
+        >>>   19 | 		y = y*3
+              20 | 	i = i + 1
+
+======================================================================

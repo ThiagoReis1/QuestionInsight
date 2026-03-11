@@ -1,0 +1,44 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 6374_9801.py
+Questão  : 6374
+Aluno    : 9801
+Total MCs: 1
+
+⚠️  Misconceptions detectados: B8
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import *
+     2 | 
+     3 | N = input("Pacientes: ").split(",")
+     4 | vcont = array([0, 0, 0, 0])
+     5 | 
+     6 | for e in range(size(N)):
+     7 | 	if N[e] == "O":
+     8 | 		vcont[0] = vcont[0] + 1
+     9 | 	elif N[e] == "D":
+    10 | 		vcont[1] = vcont[1] + 1
+    11 | 	elif N[e] == "N":
+    12 | 		vcont[2] = vcont[2] + 1
+    13 | 	elif N[e] == "C":
+    14 | 		vcont[3] = vcont[3] + 1
+    15 | print(vcont)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 11: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 11) / elif ... sem else
+      Contexto:
+              10 | 		vcont[1] = vcont[1] + 1
+        >>>   11 | 	elif N[e] == "N":
+              12 | 		vcont[2] = vcont[2] + 1
+
+======================================================================

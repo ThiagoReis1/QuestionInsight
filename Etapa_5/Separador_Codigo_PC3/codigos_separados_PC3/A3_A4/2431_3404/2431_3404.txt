@@ -1,0 +1,54 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 2431_3404.py
+Questão  : 2431
+Aluno    : 3404
+Total MCs: 2
+
+⚠️  Misconceptions detectados: A3, A4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | pa=float(input("cliente?"))
+     2 | pam=float(input("acompanhante?"))
+     3 | valor1=pa
+     4 | valor2=pam*0.35
+     5 | 
+     6 | desconto=pam*0.35
+     7 | 
+     8 | desconto=pa-(pam*35/100)
+     9 | print(valor1)
+    10 | print=(valor2-valor1)
+    11 | print=(desconto)
+    12 | print()
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 1
+
+  [1] Linha 0: A3 detectado pelo VisitorMC3 (localização exata não mapeada)
+      Trecho  : —
+
+▶ A4 — Redefinição de built-in
+  Ocorrências: 2
+
+  [1] Linha 10: Built-in 'print' redefinido como variável
+      Trecho  : print = valor2 - valor1
+      Contexto:
+               9 | print(valor1)
+        >>>   10 | print=(valor2-valor1)
+              11 | print=(desconto)
+
+  [2] Linha 11: Built-in 'print' redefinido como variável
+      Trecho  : print = desconto
+      Contexto:
+              10 | print=(valor2-valor1)
+        >>>   11 | print=(desconto)
+              12 | print()
+
+======================================================================

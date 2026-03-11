@@ -1,0 +1,85 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 6371_8762.py
+Questão  : 6371
+Aluno    : 8762
+Total MCs: 2
+
+⚠️  Misconceptions detectados: A3, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import *
+     2 | vet = array(eval(input()))
+     3 | 
+     4 | cont = 0
+     5 | 
+     6 | for i in range(size(vet)):
+     7 | 	cont = cont+1
+     8 | 	
+     9 | v = zeros(cont, dtype=int)
+    10 | j=0
+    11 | for i in range(size(vet)):
+    12 | 	if(vet[i]==0):
+    13 | 		v[i] = 9**2
+    14 | 	else:
+    15 | 		v[i] = (vet[i]-1)**2
+    16 | 	
+    17 | 	
+    18 | print(v)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 1
+
+  [1] Linha 10: Variável 'j' declarada mas nunca utilizada
+      Trecho  : j = ...
+      Contexto:
+               9 | v = zeros(cont, dtype=int)
+        >>>   10 | j=0
+              11 | for i in range(size(vet)):
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 5
+
+  [1] Linha 2: Variável 'vet' com nome muito curto (≤4 chars)
+      Trecho  : vet = ...
+      Contexto:
+               1 | from numpy import *
+        >>>    2 | vet = array(eval(input()))
+               3 | 
+
+  [2] Linha 4: Variável 'cont' com nome muito curto (≤4 chars)
+      Trecho  : cont = ...
+      Contexto:
+               3 | 
+        >>>    4 | cont = 0
+               5 | 
+
+  [3] Linha 9: Variável 'v' com nome muito curto (≤4 chars)
+      Trecho  : v = ...
+      Contexto:
+               8 | 	
+        >>>    9 | v = zeros(cont, dtype=int)
+              10 | j=0
+
+  [4] Linha 10: Variável 'j' com nome muito curto (≤4 chars)
+      Trecho  : j = ...
+      Contexto:
+               9 | v = zeros(cont, dtype=int)
+        >>>   10 | j=0
+              11 | for i in range(size(vet)):
+
+  [5] Linha 7: Variável 'cont' com nome muito curto (≤4 chars)
+      Trecho  : cont = ...
+      Contexto:
+               6 | for i in range(size(vet)):
+        >>>    7 | 	cont = cont+1
+               8 | 	
+
+======================================================================

@@ -1,0 +1,97 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1599_3698.py
+Questão  : 1599
+Aluno    : 3698
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import * 
+     2 | from numpy.linalg import * 
+     3 | 
+     4 | c = array(eval(input("Compras: ")))
+     5 | t=0
+     6 | d=0
+     7 | k1=0
+     8 | while(t<size(c)):
+     9 | 	if c[t]>80.0:
+    10 | 		d=(c[t]-(c[t]*15)/100)+d
+    11 | 		t+=1
+    12 | 	elif c[t]<80:
+    13 | 		k1=c[t]+k1
+    14 | 		t+=1
+    15 | k=d+k1
+    16 | print(round(k, 2))
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 9: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 9) / elif ... sem else
+      Contexto:
+               8 | while(t<size(c)):
+        >>>    9 | 	if c[t]>80.0:
+              10 | 		d=(c[t]-(c[t]*15)/100)+d
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 7
+
+  [1] Linha 4: Variável 'c' com nome muito curto (≤4 chars)
+      Trecho  : c = ...
+      Contexto:
+               3 | 
+        >>>    4 | c = array(eval(input("Compras: ")))
+               5 | t=0
+
+  [2] Linha 5: Variável 't' com nome muito curto (≤4 chars)
+      Trecho  : t = ...
+      Contexto:
+               4 | c = array(eval(input("Compras: ")))
+        >>>    5 | t=0
+               6 | d=0
+
+  [3] Linha 6: Variável 'd' com nome muito curto (≤4 chars)
+      Trecho  : d = ...
+      Contexto:
+               5 | t=0
+        >>>    6 | d=0
+               7 | k1=0
+
+  [4] Linha 7: Variável 'k1' com nome muito curto (≤4 chars)
+      Trecho  : k1 = ...
+      Contexto:
+               6 | d=0
+        >>>    7 | k1=0
+               8 | while(t<size(c)):
+
+  [5] Linha 15: Variável 'k' com nome muito curto (≤4 chars)
+      Trecho  : k = ...
+      Contexto:
+              14 | 		t+=1
+        >>>   15 | k=d+k1
+              16 | print(round(k, 2))
+
+  [6] Linha 10: Variável 'd' com nome muito curto (≤4 chars)
+      Trecho  : d = ...
+      Contexto:
+               9 | 	if c[t]>80.0:
+        >>>   10 | 		d=(c[t]-(c[t]*15)/100)+d
+              11 | 		t+=1
+
+  [7] Linha 13: Variável 'k1' com nome muito curto (≤4 chars)
+      Trecho  : k1 = ...
+      Contexto:
+              12 | 	elif c[t]<80:
+        >>>   13 | 		k1=c[t]+k1
+              14 | 		t+=1
+
+======================================================================

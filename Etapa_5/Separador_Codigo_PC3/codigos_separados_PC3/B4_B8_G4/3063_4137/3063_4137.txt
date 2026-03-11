@@ -1,0 +1,251 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 3063_4137.py
+Questão  : 3063
+Aluno    : 4137
+Total MCs: 3
+
+⚠️  Misconceptions detectados: B4, B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | po = int(input("QTD OURO:"))
+     2 | a = input("ARMADURA:")
+     3 | d = int(input("destreza:"))
+     4 | b = a.upper()	  
+     5 | if(b != "MALHA"):
+     6 | 	print("Entrada invalida")
+     7 | elif( b != "INTEIRA"):
+     8 | 	print("Entrada invalida")
+     9 | elif(b != "PLACA"):
+    10 | 	print("Entrada invalida")
+    11 | elif( d < 1):
+    12 | 	print("Entrada invalida")
+    13 | elif( d > 8):
+    14 | 	print("Entrada invalida")
+    15 | elif( b == "INTEIRA" and po < 200):
+    16 | 	print("PO insuficiente")
+    17 | elif (b == "MALHA" and po <50):
+    18 | 	print("PO insuficiente")
+    19 | elif( b == "PLACA" and po < 100):
+    20 | 	print("PO insuficiente")
+    21 | elif(b == "PLACA" and po >= 100):
+    22 | 	print(20*d - 18)
+    23 | elif(b == "MALHA" and po >= 50):
+    24 | 	print(15*d - 1)
+    25 | elif(b == "INTEIRA" and po>=200):
+    26 | 	print(30*d -20)		  
+    27 | 		  
+    28 | 		  
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B4 — Comandos repetidos dentro de blocos if-elif-else
+  Ocorrências: 23
+
+  [1] Linha 7: Bloco idêntico ao da linha 5
+      Trecho  : print('Entrada invalida')
+      Contexto:
+               6 | 	print("Entrada invalida")
+        >>>    7 | elif( b != "INTEIRA"):
+               8 | 	print("Entrada invalida")
+
+  [2] Linha 9: Bloco idêntico ao da linha 5
+      Trecho  : print('Entrada invalida')
+      Contexto:
+               8 | 	print("Entrada invalida")
+        >>>    9 | elif(b != "PLACA"):
+              10 | 	print("Entrada invalida")
+
+  [3] Linha 11: Bloco idêntico ao da linha 5
+      Trecho  : print('Entrada invalida')
+      Contexto:
+              10 | 	print("Entrada invalida")
+        >>>   11 | elif( d < 1):
+              12 | 	print("Entrada invalida")
+
+  [4] Linha 13: Bloco idêntico ao da linha 5
+      Trecho  : print('Entrada invalida')
+      Contexto:
+              12 | 	print("Entrada invalida")
+        >>>   13 | elif( d > 8):
+              14 | 	print("Entrada invalida")
+
+  [5] Linha 17: Bloco idêntico ao da linha 15
+      Trecho  : print('PO insuficiente')
+      Contexto:
+              16 | 	print("PO insuficiente")
+        >>>   17 | elif (b == "MALHA" and po <50):
+              18 | 	print("PO insuficiente")
+
+  [6] Linha 19: Bloco idêntico ao da linha 15
+      Trecho  : print('PO insuficiente')
+      Contexto:
+              18 | 	print("PO insuficiente")
+        >>>   19 | elif( b == "PLACA" and po < 100):
+              20 | 	print("PO insuficiente")
+
+  [7] Linha 9: Bloco idêntico ao da linha 7
+      Trecho  : print('Entrada invalida')
+      Contexto:
+               8 | 	print("Entrada invalida")
+        >>>    9 | elif(b != "PLACA"):
+              10 | 	print("Entrada invalida")
+
+  [8] Linha 11: Bloco idêntico ao da linha 7
+      Trecho  : print('Entrada invalida')
+      Contexto:
+              10 | 	print("Entrada invalida")
+        >>>   11 | elif( d < 1):
+              12 | 	print("Entrada invalida")
+
+  [9] Linha 13: Bloco idêntico ao da linha 7
+      Trecho  : print('Entrada invalida')
+      Contexto:
+              12 | 	print("Entrada invalida")
+        >>>   13 | elif( d > 8):
+              14 | 	print("Entrada invalida")
+
+  [10] Linha 17: Bloco idêntico ao da linha 15
+      Trecho  : print('PO insuficiente')
+      Contexto:
+              16 | 	print("PO insuficiente")
+        >>>   17 | elif (b == "MALHA" and po <50):
+              18 | 	print("PO insuficiente")
+
+  [11] Linha 19: Bloco idêntico ao da linha 15
+      Trecho  : print('PO insuficiente')
+      Contexto:
+              18 | 	print("PO insuficiente")
+        >>>   19 | elif( b == "PLACA" and po < 100):
+              20 | 	print("PO insuficiente")
+
+  [12] Linha 11: Bloco idêntico ao da linha 9
+      Trecho  : print('Entrada invalida')
+      Contexto:
+              10 | 	print("Entrada invalida")
+        >>>   11 | elif( d < 1):
+              12 | 	print("Entrada invalida")
+
+  [13] Linha 13: Bloco idêntico ao da linha 9
+      Trecho  : print('Entrada invalida')
+      Contexto:
+              12 | 	print("Entrada invalida")
+        >>>   13 | elif( d > 8):
+              14 | 	print("Entrada invalida")
+
+  [14] Linha 17: Bloco idêntico ao da linha 15
+      Trecho  : print('PO insuficiente')
+      Contexto:
+              16 | 	print("PO insuficiente")
+        >>>   17 | elif (b == "MALHA" and po <50):
+              18 | 	print("PO insuficiente")
+
+  [15] Linha 19: Bloco idêntico ao da linha 15
+      Trecho  : print('PO insuficiente')
+      Contexto:
+              18 | 	print("PO insuficiente")
+        >>>   19 | elif( b == "PLACA" and po < 100):
+              20 | 	print("PO insuficiente")
+
+  [16] Linha 13: Bloco idêntico ao da linha 11
+      Trecho  : print('Entrada invalida')
+      Contexto:
+              12 | 	print("Entrada invalida")
+        >>>   13 | elif( d > 8):
+              14 | 	print("Entrada invalida")
+
+  [17] Linha 17: Bloco idêntico ao da linha 15
+      Trecho  : print('PO insuficiente')
+      Contexto:
+              16 | 	print("PO insuficiente")
+        >>>   17 | elif (b == "MALHA" and po <50):
+              18 | 	print("PO insuficiente")
+
+  [18] Linha 19: Bloco idêntico ao da linha 15
+      Trecho  : print('PO insuficiente')
+      Contexto:
+              18 | 	print("PO insuficiente")
+        >>>   19 | elif( b == "PLACA" and po < 100):
+              20 | 	print("PO insuficiente")
+
+  [19] Linha 17: Bloco idêntico ao da linha 15
+      Trecho  : print('PO insuficiente')
+      Contexto:
+              16 | 	print("PO insuficiente")
+        >>>   17 | elif (b == "MALHA" and po <50):
+              18 | 	print("PO insuficiente")
+
+  [20] Linha 19: Bloco idêntico ao da linha 15
+      Trecho  : print('PO insuficiente')
+      Contexto:
+              18 | 	print("PO insuficiente")
+        >>>   19 | elif( b == "PLACA" and po < 100):
+              20 | 	print("PO insuficiente")
+
+  [21] Linha 17: Bloco idêntico ao da linha 15
+      Trecho  : print('PO insuficiente')
+      Contexto:
+              16 | 	print("PO insuficiente")
+        >>>   17 | elif (b == "MALHA" and po <50):
+              18 | 	print("PO insuficiente")
+
+  [22] Linha 19: Bloco idêntico ao da linha 15
+      Trecho  : print('PO insuficiente')
+      Contexto:
+              18 | 	print("PO insuficiente")
+        >>>   19 | elif( b == "PLACA" and po < 100):
+              20 | 	print("PO insuficiente")
+
+  [23] Linha 19: Bloco idêntico ao da linha 17
+      Trecho  : print('PO insuficiente')
+      Contexto:
+              18 | 	print("PO insuficiente")
+        >>>   19 | elif( b == "PLACA" and po < 100):
+              20 | 	print("PO insuficiente")
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 23: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 23) / elif ... sem else
+      Contexto:
+              22 | 	print(20*d - 18)
+        >>>   23 | elif(b == "MALHA" and po >= 50):
+              24 | 	print(15*d - 1)
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 4
+
+  [1] Linha 1: Variável 'po' com nome muito curto (≤4 chars)
+      Trecho  : po = ...
+      Contexto:
+        >>>    1 | po = int(input("QTD OURO:"))
+               2 | a = input("ARMADURA:")
+
+  [2] Linha 2: Variável 'a' com nome muito curto (≤4 chars)
+      Trecho  : a = ...
+      Contexto:
+               1 | po = int(input("QTD OURO:"))
+        >>>    2 | a = input("ARMADURA:")
+               3 | d = int(input("destreza:"))
+
+  [3] Linha 3: Variável 'd' com nome muito curto (≤4 chars)
+      Trecho  : d = ...
+      Contexto:
+               2 | a = input("ARMADURA:")
+        >>>    3 | d = int(input("destreza:"))
+               4 | b = a.upper()	  
+
+  [4] Linha 4: Variável 'b' com nome muito curto (≤4 chars)
+      Trecho  : b = ...
+      Contexto:
+               3 | d = int(input("destreza:"))
+        >>>    4 | b = a.upper()	  
+               5 | if(b != "MALHA"):
+
+======================================================================

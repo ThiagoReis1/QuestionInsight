@@ -1,0 +1,1 @@
+man n sei fazer nada por isso n sei oq fazer a

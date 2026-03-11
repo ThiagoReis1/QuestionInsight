@@ -1,0 +1,73 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 3590_8830.py
+Questão  : 3590
+Aluno    : 8830
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B4, B8
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import *
+     2 | vet = array(eval(input("v: ")))
+     3 | i = 0
+     4 | pontos = 0
+     5 | while i != size(vet):
+     6 | 	if vet[i] == 1:
+     7 | 		pontos = pontos + 10
+     8 | 	elif vet[i] == 2:
+     9 | 		pontos = pontos + 5
+    10 | 	elif vet[i] == 3:
+    11 | 		pontos = pontos + 0
+    12 | 	elif vet[i] == 4:
+    13 | 		pontos = pontos + 5
+    14 | 	elif vet[i] == 5:
+    15 | 		pontos = pontos + 20
+    16 | 	elif vet[i] == 6:
+    17 | 		pontos = pontos + 10
+    18 | 	i = i + 1
+    19 | 	
+    20 | print(pontos)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B4 — Comandos repetidos dentro de blocos if-elif-else
+  Ocorrências: 3
+
+  [1] Linha 12: Bloco idêntico ao da linha 8
+      Trecho  : pontos = pontos + 5
+      Contexto:
+              11 | 		pontos = pontos + 0
+        >>>   12 | 	elif vet[i] == 4:
+              13 | 		pontos = pontos + 5
+
+  [2] Linha 16: Bloco idêntico ao da linha 6
+      Trecho  : pontos = pontos + 10
+      Contexto:
+              15 | 		pontos = pontos + 20
+        >>>   16 | 	elif vet[i] == 6:
+              17 | 		pontos = pontos + 10
+
+  [3] Linha 12: Bloco idêntico ao da linha 8
+      Trecho  : pontos = pontos + 5
+      Contexto:
+              11 | 		pontos = pontos + 0
+        >>>   12 | 	elif vet[i] == 4:
+              13 | 		pontos = pontos + 5
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 14: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 14) / elif ... sem else
+      Contexto:
+              13 | 		pontos = pontos + 5
+        >>>   14 | 	elif vet[i] == 5:
+              15 | 		pontos = pontos + 20
+
+======================================================================

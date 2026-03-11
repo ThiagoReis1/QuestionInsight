@@ -1,0 +1,9 @@
+x=float(input(""))
+k=int(input(""))
+i=0
+soma=0
+while(i<k):
+	t=(x)**(2*i+1)/(2*i+1)
+	soma=soma+t
+	i=i+1
+print(round(soma,7))

@@ -1,0 +1,6 @@
+pa= float(input("valor: "))
+ap= int(input("valor: "))
+ac= int(input("valor: "))
+ag= int(input("valor: "))
+pt= ((ap+ac+ag)*pa)
+print(round(pt,2))

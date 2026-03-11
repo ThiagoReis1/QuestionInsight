@@ -1,0 +1,52 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 6931_9692.py
+Questão  : 6931
+Aluno    : 9692
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B4, B8
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | vt = float(input("insira o valor total da compra: "))
+     2 | c = input("insira o codigo: ")
+     3 | if c == 'D':
+     4 | 	total = vt- (vt*0.18)
+     5 | elif c == 'P':
+     6 | 	total = vt - (vt*0.18)
+     7 | elif c == 'C':
+     8 | 	vezes = int(input("insira um numero: "))
+     9 | 	if vezes == 1:
+    10 | 		total = vt
+    11 | 	else:
+    12 | 		total = vt + (vt*0.07)
+    13 | print (round(total,2))
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B4 — Comandos repetidos dentro de blocos if-elif-else
+  Ocorrências: 1
+
+  [1] Linha 5: Bloco idêntico ao da linha 3
+      Trecho  : total = vt - vt * 0.18
+      Contexto:
+               4 | 	total = vt- (vt*0.18)
+        >>>    5 | elif c == 'P':
+               6 | 	total = vt - (vt*0.18)
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 5: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 5) / elif ... sem else
+      Contexto:
+               4 | 	total = vt- (vt*0.18)
+        >>>    5 | elif c == 'P':
+               6 | 	total = vt - (vt*0.18)
+
+======================================================================

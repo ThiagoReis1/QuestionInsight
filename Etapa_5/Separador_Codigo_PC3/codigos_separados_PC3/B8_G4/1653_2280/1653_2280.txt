@@ -1,0 +1,63 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1653_2280.py
+Questão  : 1653
+Aluno    : 2280
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | cont = zeros(5, dtype=int)
+     3 | # Leitura do vetor de tipos sanguineos
+     4 | vet = input("estados: ").upper().split(',')
+     5 | for i in range(size(vet)):
+     6 | 	if(vet[i] == 'AR'):
+     7 | 		cont[0] += 1
+     8 | 	elif(vet[i] == 'BR'):
+     9 | 		cont[1] += 1
+    10 | 	elif(vet[i] == 'CL'):
+    11 | 		cont[2] += 1
+    12 | 	elif(vet[i] == 'CO'):
+    13 | 		cont[3] += 1
+    14 | 	elif(vet[i] == 'UY'):
+    15 | 		cont[4] += 1
+    16 | print(max(cont))
+    17 | print(cont)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 12: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 12) / elif ... sem else
+      Contexto:
+              11 | 		cont[2] += 1
+        >>>   12 | 	elif(vet[i] == 'CO'):
+              13 | 		cont[3] += 1
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 2
+
+  [1] Linha 2: Variável 'cont' com nome muito curto (≤4 chars)
+      Trecho  : cont = ...
+      Contexto:
+               1 | from numpy import*
+        >>>    2 | cont = zeros(5, dtype=int)
+               3 | # Leitura do vetor de tipos sanguineos
+
+  [2] Linha 4: Variável 'vet' com nome muito curto (≤4 chars)
+      Trecho  : vet = ...
+      Contexto:
+               3 | # Leitura do vetor de tipos sanguineos
+        >>>    4 | vet = input("estados: ").upper().split(',')
+               5 | for i in range(size(vet)):
+
+======================================================================

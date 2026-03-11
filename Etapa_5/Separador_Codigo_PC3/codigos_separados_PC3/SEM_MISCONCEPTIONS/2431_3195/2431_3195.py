@@ -1,0 +1,6 @@
+cliente=float(input())
+acompanhante=float(input())
+desconto=acompanhante-(acompanhante*0.35)
+print(cliente)
+print(desconto)
+print(cliente+desconto)

@@ -1,0 +1,178 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1114_1383.py
+Questão  : 1114
+Aluno    : 1383
+Total MCs: 3
+
+⚠️  Misconceptions detectados: B4, B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | X = float(input("velocidade"))
+     2 | Y = float(input("hora"))
+     3 | 
+     4 | if (X>0) and (Y>0):
+     5 | 	if (X*Y>100):
+     6 | 	    Z = "Bravos"
+     7 | 	elif (X*Y >= 100):
+     8 | 	    Z="Castamere"
+     9 | 	elif (X*Y >=200):
+    10 | 	    Z="Doriath"
+    11 | 	elif (X*Y >=400):
+    12 | 	    Z="Edoras"
+    13 | 	elif (X*Y >=600):
+    14 | 	    Z="Fangorn"
+    15 | 	elif (X*Y >=750):
+    16 | 	    Z="Gondor"
+    17 | 	elif (X*Y >=1150):	
+    18 | 	 	 Z="Hogsmead"
+    19 | 	elif (X*Y >=1400):
+    20 | 	    Z="Hogsmead"
+    21 | 	print ("Entradas:", round(X, 1), "km/h e", round(Y, 1), "h")
+    22 | 	print ("Proxima parada:", Z)
+    23 | else:
+    24 | 	print ("Entradas:", round(X, 1), "km/h e", round(Y, 1), "h")
+    25 | 	print ("Dados invalidos")
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B4 — Comandos repetidos dentro de blocos if-elif-else
+  Ocorrências: 7
+
+  [1] Linha 19: Bloco idêntico ao da linha 17
+      Trecho  : Z = 'Hogsmead'
+      Contexto:
+              18 | 	 	 Z="Hogsmead"
+        >>>   19 | 	elif (X*Y >=1400):
+              20 | 	    Z="Hogsmead"
+
+  [2] Linha 19: Bloco idêntico ao da linha 17
+      Trecho  : Z = 'Hogsmead'
+      Contexto:
+              18 | 	 	 Z="Hogsmead"
+        >>>   19 | 	elif (X*Y >=1400):
+              20 | 	    Z="Hogsmead"
+
+  [3] Linha 19: Bloco idêntico ao da linha 17
+      Trecho  : Z = 'Hogsmead'
+      Contexto:
+              18 | 	 	 Z="Hogsmead"
+        >>>   19 | 	elif (X*Y >=1400):
+              20 | 	    Z="Hogsmead"
+
+  [4] Linha 19: Bloco idêntico ao da linha 17
+      Trecho  : Z = 'Hogsmead'
+      Contexto:
+              18 | 	 	 Z="Hogsmead"
+        >>>   19 | 	elif (X*Y >=1400):
+              20 | 	    Z="Hogsmead"
+
+  [5] Linha 19: Bloco idêntico ao da linha 17
+      Trecho  : Z = 'Hogsmead'
+      Contexto:
+              18 | 	 	 Z="Hogsmead"
+        >>>   19 | 	elif (X*Y >=1400):
+              20 | 	    Z="Hogsmead"
+
+  [6] Linha 19: Bloco idêntico ao da linha 17
+      Trecho  : Z = 'Hogsmead'
+      Contexto:
+              18 | 	 	 Z="Hogsmead"
+        >>>   19 | 	elif (X*Y >=1400):
+              20 | 	    Z="Hogsmead"
+
+  [7] Linha 19: Bloco idêntico ao da linha 17
+      Trecho  : Z = 'Hogsmead'
+      Contexto:
+              18 | 	 	 Z="Hogsmead"
+        >>>   19 | 	elif (X*Y >=1400):
+              20 | 	    Z="Hogsmead"
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 17: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 17) / elif ... sem else
+      Contexto:
+              16 | 	    Z="Gondor"
+        >>>   17 | 	elif (X*Y >=1150):	
+              18 | 	 	 Z="Hogsmead"
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 10
+
+  [1] Linha 1: Variável 'X' com nome muito curto (≤4 chars)
+      Trecho  : X = ...
+      Contexto:
+        >>>    1 | X = float(input("velocidade"))
+               2 | Y = float(input("hora"))
+
+  [2] Linha 2: Variável 'Y' com nome muito curto (≤4 chars)
+      Trecho  : Y = ...
+      Contexto:
+               1 | X = float(input("velocidade"))
+        >>>    2 | Y = float(input("hora"))
+               3 | 
+
+  [3] Linha 6: Variável 'Z' com nome muito curto (≤4 chars)
+      Trecho  : Z = ...
+      Contexto:
+               5 | 	if (X*Y>100):
+        >>>    6 | 	    Z = "Bravos"
+               7 | 	elif (X*Y >= 100):
+
+  [4] Linha 8: Variável 'Z' com nome muito curto (≤4 chars)
+      Trecho  : Z = ...
+      Contexto:
+               7 | 	elif (X*Y >= 100):
+        >>>    8 | 	    Z="Castamere"
+               9 | 	elif (X*Y >=200):
+
+  [5] Linha 10: Variável 'Z' com nome muito curto (≤4 chars)
+      Trecho  : Z = ...
+      Contexto:
+               9 | 	elif (X*Y >=200):
+        >>>   10 | 	    Z="Doriath"
+              11 | 	elif (X*Y >=400):
+
+  [6] Linha 12: Variável 'Z' com nome muito curto (≤4 chars)
+      Trecho  : Z = ...
+      Contexto:
+              11 | 	elif (X*Y >=400):
+        >>>   12 | 	    Z="Edoras"
+              13 | 	elif (X*Y >=600):
+
+  [7] Linha 14: Variável 'Z' com nome muito curto (≤4 chars)
+      Trecho  : Z = ...
+      Contexto:
+              13 | 	elif (X*Y >=600):
+        >>>   14 | 	    Z="Fangorn"
+              15 | 	elif (X*Y >=750):
+
+  [8] Linha 16: Variável 'Z' com nome muito curto (≤4 chars)
+      Trecho  : Z = ...
+      Contexto:
+              15 | 	elif (X*Y >=750):
+        >>>   16 | 	    Z="Gondor"
+              17 | 	elif (X*Y >=1150):	
+
+  [9] Linha 18: Variável 'Z' com nome muito curto (≤4 chars)
+      Trecho  : Z = ...
+      Contexto:
+              17 | 	elif (X*Y >=1150):	
+        >>>   18 | 	 	 Z="Hogsmead"
+              19 | 	elif (X*Y >=1400):
+
+  [10] Linha 20: Variável 'Z' com nome muito curto (≤4 chars)
+      Trecho  : Z = ...
+      Contexto:
+              19 | 	elif (X*Y >=1400):
+        >>>   20 | 	    Z="Hogsmead"
+              21 | 	print ("Entradas:", round(X, 1), "km/h e", round(Y, 1), "h")
+
+======================================================================

@@ -1,0 +1,75 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 2154_2271.py
+Questão  : 2154
+Aluno    : 2271
+Total MCs: 1
+
+⚠️  Misconceptions detectados: G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import *
+     2 | from math import *
+     3 | p = array(eval(input("p: ")))
+     4 | q = array(eval(input("q: ")))
+     5 | d = 0
+     6 | for x in range(size(p)):
+     7 | 	d = d + ((p[x]-q[x])**2)
+     8 | 	l = sqrt(d)
+     9 | print(round(l, 4))
+    10 | sim = (1/(1+l))
+    11 | print(round(sim, 2))
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 6
+
+  [1] Linha 3: Variável 'p' com nome muito curto (≤4 chars)
+      Trecho  : p = ...
+      Contexto:
+               2 | from math import *
+        >>>    3 | p = array(eval(input("p: ")))
+               4 | q = array(eval(input("q: ")))
+
+  [2] Linha 4: Variável 'q' com nome muito curto (≤4 chars)
+      Trecho  : q = ...
+      Contexto:
+               3 | p = array(eval(input("p: ")))
+        >>>    4 | q = array(eval(input("q: ")))
+               5 | d = 0
+
+  [3] Linha 5: Variável 'd' com nome muito curto (≤4 chars)
+      Trecho  : d = ...
+      Contexto:
+               4 | q = array(eval(input("q: ")))
+        >>>    5 | d = 0
+               6 | for x in range(size(p)):
+
+  [4] Linha 10: Variável 'sim' com nome muito curto (≤4 chars)
+      Trecho  : sim = ...
+      Contexto:
+               9 | print(round(l, 4))
+        >>>   10 | sim = (1/(1+l))
+              11 | print(round(sim, 2))
+
+  [5] Linha 7: Variável 'd' com nome muito curto (≤4 chars)
+      Trecho  : d = ...
+      Contexto:
+               6 | for x in range(size(p)):
+        >>>    7 | 	d = d + ((p[x]-q[x])**2)
+               8 | 	l = sqrt(d)
+
+  [6] Linha 8: Variável 'l' com nome muito curto (≤4 chars)
+      Trecho  : l = ...
+      Contexto:
+               7 | 	d = d + ((p[x]-q[x])**2)
+        >>>    8 | 	l = sqrt(d)
+               9 | print(round(l, 4))
+
+======================================================================

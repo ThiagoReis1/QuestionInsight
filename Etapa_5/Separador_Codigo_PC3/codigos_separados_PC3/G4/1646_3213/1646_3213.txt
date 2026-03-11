@@ -1,0 +1,81 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1646_3213.py
+Questão  : 1646
+Aluno    : 3213
+Total MCs: 1
+
+⚠️  Misconceptions detectados: G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import * 
+     2 | 
+     3 | sa = array(eval(input("Saques: ")))
+     4 | 
+     5 | l = 0
+     6 | for j in sa:
+     7 | 	if (j <= 50):
+     8 | 		l = l + 1
+     9 | 		
+    10 | vs = zeros(l, dtype=int)
+    11 | i = 0
+    12 | for f in range(size(sa)):
+    13 | 	if (sa[f] <= 50):
+    14 | 		vs[i] = vs[i] + f
+    15 | 		i = i + 1
+    16 | print(l)
+    17 | print(vs)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 6
+
+  [1] Linha 3: Variável 'sa' com nome muito curto (≤4 chars)
+      Trecho  : sa = ...
+      Contexto:
+               2 | 
+        >>>    3 | sa = array(eval(input("Saques: ")))
+               4 | 
+
+  [2] Linha 5: Variável 'l' com nome muito curto (≤4 chars)
+      Trecho  : l = ...
+      Contexto:
+               4 | 
+        >>>    5 | l = 0
+               6 | for j in sa:
+
+  [3] Linha 10: Variável 'vs' com nome muito curto (≤4 chars)
+      Trecho  : vs = ...
+      Contexto:
+               9 | 		
+        >>>   10 | vs = zeros(l, dtype=int)
+              11 | i = 0
+
+  [4] Linha 11: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+              10 | vs = zeros(l, dtype=int)
+        >>>   11 | i = 0
+              12 | for f in range(size(sa)):
+
+  [5] Linha 8: Variável 'l' com nome muito curto (≤4 chars)
+      Trecho  : l = ...
+      Contexto:
+               7 | 	if (j <= 50):
+        >>>    8 | 		l = l + 1
+               9 | 		
+
+  [6] Linha 15: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+              14 | 		vs[i] = vs[i] + f
+        >>>   15 | 		i = i + 1
+              16 | print(l)
+
+======================================================================

@@ -1,0 +1,105 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 3588_9237.py
+Questão  : 3588
+Aluno    : 9237
+Total MCs: 2
+
+⚠️  Misconceptions detectados: A2, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | 
+     3 | vet = array(eval(input()))
+     4 | 
+     5 | i = 0
+     6 | pts = 10000
+     7 | while(i < size(vet)):
+     8 | 	if(vet[i] == 1):
+     9 | 		pts = pts * 2
+    10 | 	if(vet[i] == 2):
+    11 | 		pts = pts
+    12 | 	if(vet[i] == 3):
+    13 | 		pts = pts / 2
+    14 | 	if(vet[i] == 4):
+    15 | 		pts = pts / 4
+    16 | 	i = i + 1
+    17 | print(round(pts, 2))
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A2 — Variável atribuída a si mesma
+  Ocorrências: 1
+
+  [1] Linha 11: 'pts' atribuído a si mesmo
+      Trecho  : pts = pts
+      Contexto:
+              10 | 	if(vet[i] == 2):
+        >>>   11 | 		pts = pts
+              12 | 	if(vet[i] == 3):
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 8
+
+  [1] Linha 3: Variável 'vet' com nome muito curto (≤4 chars)
+      Trecho  : vet = ...
+      Contexto:
+               2 | 
+        >>>    3 | vet = array(eval(input()))
+               4 | 
+
+  [2] Linha 5: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+               4 | 
+        >>>    5 | i = 0
+               6 | pts = 10000
+
+  [3] Linha 6: Variável 'pts' com nome muito curto (≤4 chars)
+      Trecho  : pts = ...
+      Contexto:
+               5 | i = 0
+        >>>    6 | pts = 10000
+               7 | while(i < size(vet)):
+
+  [4] Linha 16: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+              15 | 		pts = pts / 4
+        >>>   16 | 	i = i + 1
+              17 | print(round(pts, 2))
+
+  [5] Linha 9: Variável 'pts' com nome muito curto (≤4 chars)
+      Trecho  : pts = ...
+      Contexto:
+               8 | 	if(vet[i] == 1):
+        >>>    9 | 		pts = pts * 2
+              10 | 	if(vet[i] == 2):
+
+  [6] Linha 11: Variável 'pts' com nome muito curto (≤4 chars)
+      Trecho  : pts = ...
+      Contexto:
+              10 | 	if(vet[i] == 2):
+        >>>   11 | 		pts = pts
+              12 | 	if(vet[i] == 3):
+
+  [7] Linha 13: Variável 'pts' com nome muito curto (≤4 chars)
+      Trecho  : pts = ...
+      Contexto:
+              12 | 	if(vet[i] == 3):
+        >>>   13 | 		pts = pts / 2
+              14 | 	if(vet[i] == 4):
+
+  [8] Linha 15: Variável 'pts' com nome muito curto (≤4 chars)
+      Trecho  : pts = ...
+      Contexto:
+              14 | 	if(vet[i] == 4):
+        >>>   15 | 		pts = pts / 4
+              16 | 	i = i + 1
+
+======================================================================

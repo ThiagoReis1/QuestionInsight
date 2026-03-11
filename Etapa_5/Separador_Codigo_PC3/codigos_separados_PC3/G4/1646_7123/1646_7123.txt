@@ -1,0 +1,82 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1646_7123.py
+Questão  : 1646
+Aluno    : 7123
+Total MCs: 1
+
+⚠️  Misconceptions detectados: G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | 
+     3 | v = array(eval(input(": ")))
+     4 | acum = 0
+     5 | a = 0
+     6 | for i in range(size(v)):
+     7 | 	if v[i] <= 50:
+     8 | 		acum = acum + 1
+     9 | 
+    10 | r = zeros(acum, dtype = int)
+    11 | 
+    12 | for i in range(size(v)):
+    13 | 	if v[i] <= 50:
+    14 | 		r[a] = i
+    15 | 		a = a + 1
+    16 | 		
+    17 | print(acum)
+    18 | print(r)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 6
+
+  [1] Linha 3: Variável 'v' com nome muito curto (≤4 chars)
+      Trecho  : v = ...
+      Contexto:
+               2 | 
+        >>>    3 | v = array(eval(input(": ")))
+               4 | acum = 0
+
+  [2] Linha 4: Variável 'acum' com nome muito curto (≤4 chars)
+      Trecho  : acum = ...
+      Contexto:
+               3 | v = array(eval(input(": ")))
+        >>>    4 | acum = 0
+               5 | a = 0
+
+  [3] Linha 5: Variável 'a' com nome muito curto (≤4 chars)
+      Trecho  : a = ...
+      Contexto:
+               4 | acum = 0
+        >>>    5 | a = 0
+               6 | for i in range(size(v)):
+
+  [4] Linha 10: Variável 'r' com nome muito curto (≤4 chars)
+      Trecho  : r = ...
+      Contexto:
+               9 | 
+        >>>   10 | r = zeros(acum, dtype = int)
+              11 | 
+
+  [5] Linha 8: Variável 'acum' com nome muito curto (≤4 chars)
+      Trecho  : acum = ...
+      Contexto:
+               7 | 	if v[i] <= 50:
+        >>>    8 | 		acum = acum + 1
+               9 | 
+
+  [6] Linha 15: Variável 'a' com nome muito curto (≤4 chars)
+      Trecho  : a = ...
+      Contexto:
+              14 | 		r[a] = i
+        >>>   15 | 		a = a + 1
+              16 | 		
+
+======================================================================

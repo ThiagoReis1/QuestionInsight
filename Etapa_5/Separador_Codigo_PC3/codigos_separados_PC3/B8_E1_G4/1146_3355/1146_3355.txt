@@ -1,0 +1,71 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1146_3355.py
+Questão  : 1146
+Aluno    : 3355
+Total MCs: 3
+
+⚠️  Misconceptions detectados: B8, E1, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | a = input("Personagem: ")
+     2 | 
+     3 | if ((a == "Joffey") or (a == "Robert") or (a == "Sandor") or (a == "Theon") or (a == "Cersei") or (a == "Jaime") or (a == "Tyrion") or (a == "Jorah") or (a == "Jon")):
+     4 | 	if (a == "Joffey"):
+     5 | 		print("Jack Gleeson")
+     6 | 	elif (a == "Robert"):
+     7 | 		print("Mark Addy")
+     8 | 	elif (a == "Sandor"):
+     9 | 		print("Rory McCann")
+    10 | 	elif (a == "Theon"):
+    11 | 		print("Alfie Allen")
+    12 | 	elif (a == "Cersei"):
+    13 | 		print("Lena Headey")
+    14 | 	elif (a == "Jaime"):
+    15 | 		print("Nikolaj Coster-Waldau")
+    16 | 	elif (a == "Tyrion"):
+    17 | 		print("Peter Dinklage")
+    18 | 	elif (a == "Jorah"):
+    19 | 		print("Iain Glen")
+    20 | 	elif (a == "Jon"):
+    21 | 		print("Kit Harington")
+    22 | else:
+    23 | 	print("Entrada",a,"invalida")
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 18: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 18) / elif ... sem else
+      Contexto:
+              17 | 		print("Peter Dinklage")
+        >>>   18 | 	elif (a == "Jorah"):
+              19 | 		print("Iain Glen")
+
+▶ E1 — Verificação desnecessária de todas as combinações possíveis
+  Ocorrências: 1
+
+  [1] Linha 3: 9 condições em um único if — verificação excessiva
+      Trecho  : a == 'Joffey' or a == 'Robert' or a == 'Sandor' or (a == 'Theon') or (a == 'Cersei') or (a == 'Jaime') or (a == 'Tyrion') or (a == 'Jorah') or (a == 'Jon')
+      Contexto:
+               2 | 
+        >>>    3 | if ((a == "Joffey") or (a == "Robert") or (a == "Sandor") or (a == "Theon") or (a == "Cersei") or (a == "Jaime") or (a == "Tyrion") or (a == "Jorah") or (a == "Jon")):
+               4 | 	if (a == "Joffey"):
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 1
+
+  [1] Linha 1: Variável 'a' com nome muito curto (≤4 chars)
+      Trecho  : a = ...
+      Contexto:
+        >>>    1 | a = input("Personagem: ")
+               2 | 
+
+======================================================================

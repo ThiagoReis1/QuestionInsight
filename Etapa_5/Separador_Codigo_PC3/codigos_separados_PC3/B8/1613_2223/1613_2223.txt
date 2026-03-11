@@ -1,0 +1,49 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1613_2223.py
+Questão  : 1613
+Aluno    : 2223
+Total MCs: 1
+
+⚠️  Misconceptions detectados: B8
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import *
+     2 | treina = array(eval(input("Informe um vetor com os treinos feitos: ")))
+     3 | tempo = array(eval(input("Informe um vetor com o tempo da duração de cada treinamento: ")))
+     4 | 
+     5 | i = 0
+     6 | total = 0
+     7 | while(i < size(tempo)):
+     8 | 	if(treina[i] == "ALONGAMENTO"):
+     9 | 		treino = 3.0
+    10 | 	elif(treina[i] == "CORRIDA"):
+    11 | 		treino = 10.3
+    12 | 	elif(treina[i] == "DANCA"):
+    13 | 		treino = 6.7
+    14 | 	elif(treina[i] == "ESCALADA"):
+    15 | 		treino = 9.7
+    16 | 	elif(treina[i] == "HIDROGINASTICA"):
+    17 | 		treino = 5.0
+    18 | 	total = total + treino * tempo[i]
+    19 | 	i = i + 1
+    20 | print(total)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 14: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 14) / elif ... sem else
+      Contexto:
+              13 | 		treino = 6.7
+        >>>   14 | 	elif(treina[i] == "ESCALADA"):
+              15 | 		treino = 9.7
+
+======================================================================

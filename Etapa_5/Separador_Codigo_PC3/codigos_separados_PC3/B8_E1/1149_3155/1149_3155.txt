@@ -1,0 +1,102 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1149_3155.py
+Questão  : 1149
+Aluno    : 3155
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B8, E1
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | regiao = input("Mensagem: ")
+     2 | if(regiao == "Ponta Tempestade" or regiao == "Ilha do Dragao" or regiao == "Campina" or regiao == "Winterfell" or regiao == "Rochedo Casterly" or regiao == "Pyke" or regiao == "Correrio" or regiao == "Ninho da Aguia" or regiao == "Dorne"):
+     3 | 	if(regiao =="Ponta Tempestade"):
+     4 | 		print("Baratheon")
+     5 | 	elif(regiao == "Ilha do dragao"):
+     6 | 		print("Targaryen")
+     7 | 	elif(regiao == "Campina"):
+     8 | 		print("Tyrell")
+     9 | 	elif(regiao == "Winterfell"):
+    10 | 		print("Stark")
+    11 | 	elif(regiao == "Rochedo Casterly"):
+    12 | 		print("Lannister")
+    13 | 	elif(regiao == "Pyke"):
+    14 | 		print("Greyjoy")
+    15 | 	elif(regiao == "Correrio"):
+    16 | 		print("Tully")
+    17 | 	elif(regiao == "Ninho da Aguia"):
+    18 | 		print("Arryn")
+    19 | 	elif(regiao == "Dorne"):
+    20 | 		print("Martell")
+    21 | else:
+    22 | 	print("Entrada", regiao, "invalida")
+    23 | 	
+    24 | idade = int(input("Idade: "))
+    25 | peso = float(input("Peso: "))
+    26 | print("Entradas:",idade, "anos e", peso, "kg")
+    27 | if(idade > 0 and idade < 130 and peso > 0.0 and peso < 550.0):
+    28 | 	if(idade <= 20 and peso <= 60):
+    29 | 		z = "9"
+    30 | 		print("Grupo de risco:", z)
+    31 | 	elif(idade <= 20 and (peso > 60 and peso <= 90)):
+    32 | 		z = "8"
+    33 | 		print("Grupo de risco:", z)
+    34 | 	elif(idade <= 20 and peso > 90):
+    35 | 		z = "7"
+    36 | 		print("Grupo de risco:", z)
+    37 | 	elif((idade > 20 and idade <= 50) and peso < 60):
+    38 | 		z = "6"
+    39 | 		print("Grupo de risco:", z)
+    40 | 	elif((idade > 20 and idade <= 50) and (peso > 60 and peso <= 90)):
+    41 | 		z = "5"
+    42 | 		print("Grupo de risco:", z)
+    43 | 	elif((idade > 20 and idade <= 50) and peso > 90):
+    44 | 		z = "4"
+    45 | 		print("Grupo de risco:", z)
+    46 | 	elif(idade > 50 and peso < 60):
+    47 | 		z = "3"
+    48 | 		print("Grupo de risco:", z)
+    49 | 	elif(idade > 50 and peso > 60 and peso <= 90):
+    50 | 		z = "2"
+    51 | 		print("Grupo de risco:", z)
+    52 | 	elif(idade > 50 and peso > 90):
+    53 | 		z = "1"
+    54 | 		print("Grupo de risco:", z)
+    55 | else:
+    56 | 	print("Dados invalidos")
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 2
+
+  [1] Linha 17: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 17) / elif ... sem else
+      Contexto:
+              16 | 		print("Tully")
+        >>>   17 | 	elif(regiao == "Ninho da Aguia"):
+              18 | 		print("Arryn")
+
+  [2] Linha 49: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 49) / elif ... sem else
+      Contexto:
+              48 | 		print("Grupo de risco:", z)
+        >>>   49 | 	elif(idade > 50 and peso > 60 and peso <= 90):
+              50 | 		z = "2"
+
+▶ E1 — Verificação desnecessária de todas as combinações possíveis
+  Ocorrências: 1
+
+  [1] Linha 2: 9 condições em um único if — verificação excessiva
+      Trecho  : regiao == 'Ponta Tempestade' or regiao == 'Ilha do Dragao' or regiao == 'Campina' or (regiao == 'Winterfell') or (regiao == 'Rochedo Casterly') or (regiao == 'Pyke') or (regiao == 'Correrio') or (regiao == 'Ninho da Aguia') or (regiao == 'Dorne')
+      Contexto:
+               1 | regiao = input("Mensagem: ")
+        >>>    2 | if(regiao == "Ponta Tempestade" or regiao == "Ilha do Dragao" or regiao == "Campina" or regiao == "Winterfell" or regiao == "Rochedo Casterly" or regiao == "Pyke" or regiao == "Correrio" or regiao == "Ninho da Aguia" or regiao == "Dorne"):
+               3 | 	if(regiao =="Ponta Tempestade"):
+
+======================================================================

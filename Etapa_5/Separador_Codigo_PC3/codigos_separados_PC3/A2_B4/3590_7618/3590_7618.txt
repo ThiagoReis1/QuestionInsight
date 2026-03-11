@@ -1,0 +1,75 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 3590_7618.py
+Questão  : 3590
+Aluno    : 7618
+Total MCs: 2
+
+⚠️  Misconceptions detectados: A2, B4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import *
+     2 | 
+     3 | face=eval(input("digite a face do dado= "))
+     4 | 
+     5 | i= 0 
+     6 | pontos= 0
+     7 | 
+     8 | while i < size(face):
+     9 | 	if face[i] == 1:
+    10 | 		pontos = pontos + 10 
+    11 | 	elif face[i] == 2:
+    12 | 		pontos= pontos + 5
+    13 | 	elif face[i]== 3:
+    14 | 		pontos= pontos
+    15 | 	elif face[i] == 4:
+    16 | 		pontos= pontos + 5
+    17 | 	elif face[i]== 5:
+    18 | 		pontos=pontos + 20
+    19 | 	else:
+    20 | 		pontos= pontos + 10
+    21 | 	i= i + 1
+    22 | print(pontos)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A2 — Variável atribuída a si mesma
+  Ocorrências: 1
+
+  [1] Linha 14: 'pontos' atribuído a si mesmo
+      Trecho  : pontos = pontos
+      Contexto:
+              13 | 	elif face[i]== 3:
+        >>>   14 | 		pontos= pontos
+              15 | 	elif face[i] == 4:
+
+▶ B4 — Comandos repetidos dentro de blocos if-elif-else
+  Ocorrências: 3
+
+  [1] Linha 15: Bloco idêntico ao da linha 11
+      Trecho  : pontos = pontos + 5
+      Contexto:
+              14 | 		pontos= pontos
+        >>>   15 | 	elif face[i] == 4:
+              16 | 		pontos= pontos + 5
+
+  [2] Linha 17: Bloco idêntico ao da linha 9
+      Trecho  : pontos = pontos + 10
+      Contexto:
+              16 | 		pontos= pontos + 5
+        >>>   17 | 	elif face[i]== 5:
+              18 | 		pontos=pontos + 20
+
+  [3] Linha 15: Bloco idêntico ao da linha 11
+      Trecho  : pontos = pontos + 5
+      Contexto:
+              14 | 		pontos= pontos
+        >>>   15 | 	elif face[i] == 4:
+              16 | 		pontos= pontos + 5
+
+======================================================================

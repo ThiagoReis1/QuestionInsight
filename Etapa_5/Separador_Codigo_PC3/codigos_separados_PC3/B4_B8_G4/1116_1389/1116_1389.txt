@@ -1,0 +1,89 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1116_1389.py
+Questão  : 1116
+Aluno    : 1389
+Total MCs: 3
+
+⚠️  Misconceptions detectados: B4, B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | x = float(input())
+     2 | y = float(input())
+     3 | 
+     4 | if( x == 0 or y == 0):
+     5 | 	print ("o ponto (",x,",",y,") estah num dos eixos")
+     6 | elif(x>0 and y>0):
+     7 | 	print (" o ponto (",x,",",y,")estah no quadrante 1")
+     8 | elif(x<0 and y<0):
+     9 | 	print ("o ponto (",x,",",y,") estah no quadrante 3")
+    10 | elif(x>=0 and y<=0):
+    11 | 	print ("o ponto (",x,",",y,") estah situado sobre um dos eixos")
+    12 | elif (x<=0 and y>=0):
+    13 | 	print ("o ponto (",x,",",y,") estah situado sobre um dos eixos")
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B4 — Comandos repetidos dentro de blocos if-elif-else
+  Ocorrências: 4
+
+  [1] Linha 12: Bloco idêntico ao da linha 10
+      Trecho  : print('o ponto (', x, ',', y, ') estah situado sobre um dos eixos')
+      Contexto:
+              11 | 	print ("o ponto (",x,",",y,") estah situado sobre um dos eixos")
+        >>>   12 | elif (x<=0 and y>=0):
+              13 | 	print ("o ponto (",x,",",y,") estah situado sobre um dos eixos")
+
+  [2] Linha 12: Bloco idêntico ao da linha 10
+      Trecho  : print('o ponto (', x, ',', y, ') estah situado sobre um dos eixos')
+      Contexto:
+              11 | 	print ("o ponto (",x,",",y,") estah situado sobre um dos eixos")
+        >>>   12 | elif (x<=0 and y>=0):
+              13 | 	print ("o ponto (",x,",",y,") estah situado sobre um dos eixos")
+
+  [3] Linha 12: Bloco idêntico ao da linha 10
+      Trecho  : print('o ponto (', x, ',', y, ') estah situado sobre um dos eixos')
+      Contexto:
+              11 | 	print ("o ponto (",x,",",y,") estah situado sobre um dos eixos")
+        >>>   12 | elif (x<=0 and y>=0):
+              13 | 	print ("o ponto (",x,",",y,") estah situado sobre um dos eixos")
+
+  [4] Linha 12: Bloco idêntico ao da linha 10
+      Trecho  : print('o ponto (', x, ',', y, ') estah situado sobre um dos eixos')
+      Contexto:
+              11 | 	print ("o ponto (",x,",",y,") estah situado sobre um dos eixos")
+        >>>   12 | elif (x<=0 and y>=0):
+              13 | 	print ("o ponto (",x,",",y,") estah situado sobre um dos eixos")
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 10: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 10) / elif ... sem else
+      Contexto:
+               9 | 	print ("o ponto (",x,",",y,") estah no quadrante 3")
+        >>>   10 | elif(x>=0 and y<=0):
+              11 | 	print ("o ponto (",x,",",y,") estah situado sobre um dos eixos")
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 2
+
+  [1] Linha 1: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+        >>>    1 | x = float(input())
+               2 | y = float(input())
+
+  [2] Linha 2: Variável 'y' com nome muito curto (≤4 chars)
+      Trecho  : y = ...
+      Contexto:
+               1 | x = float(input())
+        >>>    2 | y = float(input())
+               3 | 
+
+======================================================================

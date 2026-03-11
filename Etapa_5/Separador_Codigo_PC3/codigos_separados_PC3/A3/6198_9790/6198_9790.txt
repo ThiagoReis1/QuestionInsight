@@ -1,0 +1,50 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 6198_9790.py
+Questão  : 6198
+Aluno    : 9790
+Total MCs: 1
+
+⚠️  Misconceptions detectados: A3
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | altura_luna = 1.65
+     2 | taxa_luna = 0.02
+     3 | altura = float(input("altura: "))
+     4 | taxa = float(input("taxa: "))
+     5 | cresA = altura_luna + taxa_luna
+     6 | cresB = altura + taxa
+     7 | ano = 0
+     8 | while altura < altura_luna:
+     9 | 	ano = ano + 1
+    10 | 	altura = altura + taxa
+    11 | 	altura_luna = altura_luna + taxa_luna
+    12 | 	
+    13 | print(ano)
+    14 | 	
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 2
+
+  [1] Linha 5: Variável 'cresA' declarada mas nunca utilizada
+      Trecho  : cresA = ...
+      Contexto:
+               4 | taxa = float(input("taxa: "))
+        >>>    5 | cresA = altura_luna + taxa_luna
+               6 | cresB = altura + taxa
+
+  [2] Linha 6: Variável 'cresB' declarada mas nunca utilizada
+      Trecho  : cresB = ...
+      Contexto:
+               5 | cresA = altura_luna + taxa_luna
+        >>>    6 | cresB = altura + taxa
+               7 | ano = 0
+
+======================================================================

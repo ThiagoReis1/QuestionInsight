@@ -1,0 +1,18 @@
+x=float(input(""))
+if(0<=x<=10):
+	if(x>=9):
+		print("A")
+	elif(x>=8):
+		print("B")
+	elif(x>=7):
+		print("C")
+	elif(x>=6):
+		print("D")
+	elif(x>=5):
+		print("E")
+	elif(x<5):
+		print("F")
+	else:
+		print("ERRO")
+else:
+	print("ERRO")

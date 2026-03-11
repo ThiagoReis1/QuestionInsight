@@ -1,0 +1,83 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1656_6474.py
+Questão  : 1656
+Aluno    : 6474
+Total MCs: 2
+
+⚠️  Misconceptions detectados: A3, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | 
+     3 | vet = str(input("Digite os paises: ")).split(',')
+     4 | 
+     5 | new = ""
+     6 | soma = zeros(5, dtype = int)
+     7 | 
+     8 | for i in range(size(vet)) :
+     9 | 	
+    10 | 	if vet[i] == "BE" :
+    11 | 		
+    12 | 		soma[0] = soma[0] + 1
+    13 | 		
+    14 | 	elif vet[i] == "ES" :
+    15 | 		
+    16 | 		soma[1] = soma[1] + 1
+    17 | 		
+    18 | 	elif vet[i] == "FR" :
+    19 | 		
+    20 | 		soma[2] = soma[2] + 1 
+    21 | 		
+    22 | 	elif vet[i] == "IT" :
+    23 | 		
+    24 | 		soma[3] = soma[3] + 1
+    25 | 		
+    26 | 	else :
+    27 | 		soma[4] = soma[4] + 1
+    28 | 		
+    29 | print(max(soma))
+    30 | print(soma)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 1
+
+  [1] Linha 5: Variável 'new' declarada mas nunca utilizada
+      Trecho  : new = ...
+      Contexto:
+               4 | 
+        >>>    5 | new = ""
+               6 | soma = zeros(5, dtype = int)
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 3
+
+  [1] Linha 3: Variável 'vet' com nome muito curto (≤4 chars)
+      Trecho  : vet = ...
+      Contexto:
+               2 | 
+        >>>    3 | vet = str(input("Digite os paises: ")).split(',')
+               4 | 
+
+  [2] Linha 5: Variável 'new' com nome muito curto (≤4 chars)
+      Trecho  : new = ...
+      Contexto:
+               4 | 
+        >>>    5 | new = ""
+               6 | soma = zeros(5, dtype = int)
+
+  [3] Linha 6: Variável 'soma' com nome muito curto (≤4 chars)
+      Trecho  : soma = ...
+      Contexto:
+               5 | new = ""
+        >>>    6 | soma = zeros(5, dtype = int)
+               7 | 
+
+======================================================================

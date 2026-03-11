@@ -1,0 +1,83 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1643_6461.py
+Questão  : 1643
+Aluno    : 6461
+Total MCs: 1
+
+⚠️  Misconceptions detectados: G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import *
+     2 | apr = array(eval(input("Notas dos alunos: ")))
+     3 | 
+     4 | ap = 0
+     5 | 
+     6 | for i in range(size(apr)):
+     7 | 	if apr[i] >= 5.0:
+     8 | 		ap = ap + 1
+     9 | 
+    10 | vet = zeros(ap, dtype=int)		
+    11 | i = 0
+    12 | 
+    13 | for j in range(size(apr)):
+    14 | 	if apr[j] >= 5.0:
+    15 | 		vet[i] = j 
+    16 | 		i = i + 1
+    17 | 		
+    18 | print(ap)
+    19 | print(vet)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 6
+
+  [1] Linha 2: Variável 'apr' com nome muito curto (≤4 chars)
+      Trecho  : apr = ...
+      Contexto:
+               1 | from numpy import *
+        >>>    2 | apr = array(eval(input("Notas dos alunos: ")))
+               3 | 
+
+  [2] Linha 4: Variável 'ap' com nome muito curto (≤4 chars)
+      Trecho  : ap = ...
+      Contexto:
+               3 | 
+        >>>    4 | ap = 0
+               5 | 
+
+  [3] Linha 10: Variável 'vet' com nome muito curto (≤4 chars)
+      Trecho  : vet = ...
+      Contexto:
+               9 | 
+        >>>   10 | vet = zeros(ap, dtype=int)		
+              11 | i = 0
+
+  [4] Linha 11: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+              10 | vet = zeros(ap, dtype=int)		
+        >>>   11 | i = 0
+              12 | 
+
+  [5] Linha 8: Variável 'ap' com nome muito curto (≤4 chars)
+      Trecho  : ap = ...
+      Contexto:
+               7 | 	if apr[i] >= 5.0:
+        >>>    8 | 		ap = ap + 1
+               9 | 
+
+  [6] Linha 16: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+              15 | 		vet[i] = j 
+        >>>   16 | 		i = i + 1
+              17 | 		
+
+======================================================================

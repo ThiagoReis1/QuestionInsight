@@ -1,0 +1,6 @@
+taxafixa=round(12.00,2)
+reais=float(input("Quantos reais o senhor tem? "))
+dolar=round(3.55,2)
+valortaxa=round(reais-taxafixa,2)
+valorconv=round(valortaxa/dolar,2)
+print(valorconv)

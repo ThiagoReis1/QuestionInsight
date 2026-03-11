@@ -1,0 +1,93 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1110_1510.py
+Questão  : 1110
+Aluno    : 1510
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B8, E1
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | #Universidade Federal do Amazonas
+     2 | #Jorge Trajano da Silva Junior - 21553770
+     3 | #Lab de configuração 03 - Avaliação parcial 3
+     4 | #21/07/2016 - Exercício 1
+     5 | #Solicitar entradas do usuário
+     6 | p = int(input("Informe o número do prato: "))
+     7 | s = int(input("Informe o número da sobremesa: "))
+     8 | b = int(input("Informe o número da bebida: "))
+     9 | #Condição de validade dos dados fornecidos
+    10 | if(p >= 1 and p <= 4 and s >=1 and s <= 4 and b >= 1 and b <= 4):
+    11 | 	if(p == 1):
+    12 | 		prato = 180
+    13 | 	elif(p == 2):
+    14 | 		prato = 230
+    15 | 	elif(p == 3):
+    16 | 		prato = 250
+    17 | 	elif(p == 4):
+    18 | 		prato = 350
+    19 | 	if(s == 1):
+    20 | 		sobremesa = 75
+    21 | 	elif(s == 2):
+    22 | 		sobremesa = 110
+    23 | 	elif(s == 3):
+    24 | 		sobremesa = 170
+    25 | 	elif(s == 4):
+    26 | 		sobremesa = 200
+    27 | 	if(b == 1):
+    28 | 		bebida = 20
+    29 | 	elif(b == 2):
+    30 | 		bebida = 70
+    31 | 	elif(b == 3):
+    32 | 		bebida = 100
+    33 | 	elif(b == 4):
+    34 | 		bebida = 65
+    35 | 	cal = prato + sobremesa + bebida
+    36 | 	print("Entradas: ", p, ",",s,",",b)
+    37 | 	print("Calorias: ", cal, "cal")
+    38 | else:
+    39 | 	print("Entradas: ", p, ",",s,",",b)
+    40 | 	print("Dados invalidos")
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 3
+
+  [1] Linha 15: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 15) / elif ... sem else
+      Contexto:
+              14 | 		prato = 230
+        >>>   15 | 	elif(p == 3):
+              16 | 		prato = 250
+
+  [2] Linha 23: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 23) / elif ... sem else
+      Contexto:
+              22 | 		sobremesa = 110
+        >>>   23 | 	elif(s == 3):
+              24 | 		sobremesa = 170
+
+  [3] Linha 31: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 31) / elif ... sem else
+      Contexto:
+              30 | 		bebida = 70
+        >>>   31 | 	elif(b == 3):
+              32 | 		bebida = 100
+
+▶ E1 — Verificação desnecessária de todas as combinações possíveis
+  Ocorrências: 1
+
+  [1] Linha 10: 6 condições em um único if — verificação excessiva
+      Trecho  : p >= 1 and p <= 4 and (s >= 1) and (s <= 4) and (b >= 1) and (b <= 4)
+      Contexto:
+               9 | #Condição de validade dos dados fornecidos
+        >>>   10 | if(p >= 1 and p <= 4 and s >=1 and s <= 4 and b >= 1 and b <= 4):
+              11 | 	if(p == 1):
+
+======================================================================

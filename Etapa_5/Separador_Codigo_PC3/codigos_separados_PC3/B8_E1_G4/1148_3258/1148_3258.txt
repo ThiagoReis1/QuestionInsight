@@ -1,0 +1,72 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1148_3258.py
+Questão  : 1148
+Aluno    : 3258
+Total MCs: 3
+
+⚠️  Misconceptions detectados: B8, E1, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | x= input("Regiao")
+     2 | if(x!= "Norte") or (x!= 'vale') or (x!= "Terras fluviais") or (x!= "Terras da tempestade") or (x!= "Dorne") or (x!= "Ilhas de Ferro") or (x!= "Flowers") or (x!= "Terras Ocidentais") or (x!= "Terras da Coroa"):
+     3 | 	print("Entrada",x,"Invalida")
+     4 | 
+     5 | elif(x== "Norte"):
+     6 | 	print("Snow")
+     7 | elif(x== "Vale"):
+     8 | 	print("Stone")
+     9 | elif(x== "Terras Fluviais"):
+    10 | 	print("Rivers")
+    11 | elif(x== "Terras da Tempestade"):
+    12 | 	print("Storm")
+    13 | elif(x== "Dorne"):
+    14 | 	print('Sand')
+    15 | elif(x==  "Ilhas de Ferro"):
+    16 | 	print('Pyke')
+    17 | elif(x== "Flowers"):
+    18 | 	print("Campina")
+    19 | elif(x== "Terras Ocidentais"):
+    20 | 	print("Hill")
+    21 | elif(x== "Terras da Coroa"):
+    22 | 	print('Waters')
+    23 | 	
+    24 | #(x!= "Snow") or (x!= 'Stone') or (x!= "Rivers") or (x!= ""Storm) or (x!= "Sand") or (x!= "Pyke") or (x!= "Flower") or (x!= "Hill") or (x!= "Waters"):
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 19: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 19) / elif ... sem else
+      Contexto:
+              18 | 	print("Campina")
+        >>>   19 | elif(x== "Terras Ocidentais"):
+              20 | 	print("Hill")
+
+▶ E1 — Verificação desnecessária de todas as combinações possíveis
+  Ocorrências: 1
+
+  [1] Linha 2: 9 condições em um único if — verificação excessiva
+      Trecho  : x != 'Norte' or x != 'vale' or x != 'Terras fluviais' or (x != 'Terras da tempestade') or (x != 'Dorne') or (x != 'Ilhas de Ferro') or (x != 'Flowers') or (x != 'Terras Ocidentais') or (x != 'Terras da Coroa')
+      Contexto:
+               1 | x= input("Regiao")
+        >>>    2 | if(x!= "Norte") or (x!= 'vale') or (x!= "Terras fluviais") or (x!= "Terras da tempestade") or (x!= "Dorne") or (x!= "Ilhas de Ferro") or (x!= "Flowers") or (x!= "Terras Ocidentais") or (x!= "Terras da Coroa"):
+               3 | 	print("Entrada",x,"Invalida")
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 1
+
+  [1] Linha 1: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+        >>>    1 | x= input("Regiao")
+               2 | if(x!= "Norte") or (x!= 'vale') or (x!= "Terras fluviais") or (x!= "Terras da tempestade") or (x!= "Dorne") or (x!= "Ilhas de Ferro") or (x!= "Flowers") or (x!= "Terras Ocidentais") or (x!= "Terras da Coroa"):
+
+======================================================================

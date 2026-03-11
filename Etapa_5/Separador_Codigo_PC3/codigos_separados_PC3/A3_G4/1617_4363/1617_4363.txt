@@ -1,0 +1,116 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1617_4363.py
+Questão  : 1617
+Aluno    : 4363
+Total MCs: 2
+
+⚠️  Misconceptions detectados: A3, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import *
+     2 | a = array(eval(input("tipo de espada")))
+     3 | a=a.upper()
+     4 | b = array(eval(int(input("nivel do combatente"))))
+     5 | dano= a.b
+     6 | if (a=="CENOURA"):
+     7 | 	a=2
+     8 | if (a=="FERRO"):
+     9 | 	a=4
+    10 | if	(a=="DWARVEN"):
+    11 | 	a=8
+    12 | if(a=="ELVEN"):
+    13 | 	a=11
+    14 | if(a=="DAEDRIC"):
+    15 | 	a=14
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 2
+
+  [1] Linha 4: Variável 'b' declarada mas nunca utilizada
+      Trecho  : b = ...
+      Contexto:
+               3 | a=a.upper()
+        >>>    4 | b = array(eval(int(input("nivel do combatente"))))
+               5 | dano= a.b
+
+  [2] Linha 5: Variável 'dano' declarada mas nunca utilizada
+      Trecho  : dano = ...
+      Contexto:
+               4 | b = array(eval(int(input("nivel do combatente"))))
+        >>>    5 | dano= a.b
+               6 | if (a=="CENOURA"):
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 9
+
+  [1] Linha 2: Variável 'a' com nome muito curto (≤4 chars)
+      Trecho  : a = ...
+      Contexto:
+               1 | from numpy import *
+        >>>    2 | a = array(eval(input("tipo de espada")))
+               3 | a=a.upper()
+
+  [2] Linha 3: Variável 'a' com nome muito curto (≤4 chars)
+      Trecho  : a = ...
+      Contexto:
+               2 | a = array(eval(input("tipo de espada")))
+        >>>    3 | a=a.upper()
+               4 | b = array(eval(int(input("nivel do combatente"))))
+
+  [3] Linha 4: Variável 'b' com nome muito curto (≤4 chars)
+      Trecho  : b = ...
+      Contexto:
+               3 | a=a.upper()
+        >>>    4 | b = array(eval(int(input("nivel do combatente"))))
+               5 | dano= a.b
+
+  [4] Linha 5: Variável 'dano' com nome muito curto (≤4 chars)
+      Trecho  : dano = ...
+      Contexto:
+               4 | b = array(eval(int(input("nivel do combatente"))))
+        >>>    5 | dano= a.b
+               6 | if (a=="CENOURA"):
+
+  [5] Linha 7: Variável 'a' com nome muito curto (≤4 chars)
+      Trecho  : a = ...
+      Contexto:
+               6 | if (a=="CENOURA"):
+        >>>    7 | 	a=2
+               8 | if (a=="FERRO"):
+
+  [6] Linha 9: Variável 'a' com nome muito curto (≤4 chars)
+      Trecho  : a = ...
+      Contexto:
+               8 | if (a=="FERRO"):
+        >>>    9 | 	a=4
+              10 | if	(a=="DWARVEN"):
+
+  [7] Linha 11: Variável 'a' com nome muito curto (≤4 chars)
+      Trecho  : a = ...
+      Contexto:
+              10 | if	(a=="DWARVEN"):
+        >>>   11 | 	a=8
+              12 | if(a=="ELVEN"):
+
+  [8] Linha 13: Variável 'a' com nome muito curto (≤4 chars)
+      Trecho  : a = ...
+      Contexto:
+              12 | if(a=="ELVEN"):
+        >>>   13 | 	a=11
+              14 | if(a=="DAEDRIC"):
+
+  [9] Linha 15: Variável 'a' com nome muito curto (≤4 chars)
+      Trecho  : a = ...
+      Contexto:
+              14 | if(a=="DAEDRIC"):
+        >>>   15 | 	a=14
+
+======================================================================

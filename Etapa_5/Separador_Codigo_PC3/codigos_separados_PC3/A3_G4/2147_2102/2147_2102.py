@@ -1,0 +1,2 @@
+num= int(len(input()))
+

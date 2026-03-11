@@ -1,0 +1,29 @@
+eq=input('equipamento:').upper()
+q=int(input('quantidade:'))
+if((q>0)and(q<1000)and((eq=='FREEZER')or(eq=='COMPUTADOR')or(eq=='FURADEIRA')or(eq=='LIQUIDIFICADOR')or(eq=='MICROONDAS')or(eq=='NOTEBOOK')or(eq=='TELEVISOR')or(eq=='VENTILADOR'))):
+	if(eq=='COMPUTADOR'):
+		x=q*12
+		print(round(x,2))
+	elif(eq=='FREEZER'):
+		x=q*52
+		print(round(x,2))
+	elif(eq=='FURADEIRA'):
+		x=q*1.7
+		print(round(x,2))
+	elif(eq=='LIQUIDIFICADOR'):
+		x=q*1.8
+		print(round(x,2))
+	elif(eq=='MICROONDAS'):
+		x=q*15
+		print(round(x,2))
+	elif(eq=='NOTEBOOK'):
+		x=q*2.5
+		print(round(x,2))
+	elif(eq=='TELEVISOR'):
+		x=q*15
+		print(round(x,2))
+	elif(eq=='VENTILADOR'):
+		x=q*2.4
+		print(round(x,2))
+else:
+	print('Entrada invalida')

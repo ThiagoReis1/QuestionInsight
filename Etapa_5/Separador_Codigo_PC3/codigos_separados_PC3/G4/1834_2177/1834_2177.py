@@ -1,0 +1,6 @@
+mg= float(input("Leia mg: "))
+vg= float(input("Leia vg: "))
+mp= float(input("Leia mp: "))
+vp= float(input("Leia vp: "))
+vf= ((mg*vg)-(mp*vp))/(mg+mp)
+print(vf)

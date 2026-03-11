@@ -1,0 +1,48 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 3587_9147.py
+Questão  : 3587
+Aluno    : 9147
+Total MCs: 1
+
+⚠️  Misconceptions detectados: B8
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import *
+     2 | 
+     3 | acertos = array(eval(input("insira os acertos realizados: ")))
+     4 | pts = 100
+     5 | i = 0 
+     6 | 
+     7 | while	i < size(acertos):
+     8 | 	if	acertos[i] == 1:
+     9 | 		pts *= 5
+    10 | 	elif	acertos[i] == 2:
+    11 | 		pts *= 3
+    12 | 	elif	acertos[i] == 3:
+    13 | 		pts *= 1
+    14 | 	elif	acertos[i] == 4:
+    15 | 		pts /= 2
+    16 | 		
+    17 | 	i += 1
+    18 | 	
+    19 | print(round(pts, 2))
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 12: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 12) / elif ... sem else
+      Contexto:
+              11 | 		pts *= 3
+        >>>   12 | 	elif	acertos[i] == 3:
+              13 | 		pts *= 1
+
+======================================================================

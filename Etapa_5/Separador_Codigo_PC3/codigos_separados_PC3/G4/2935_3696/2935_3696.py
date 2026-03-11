@@ -1,0 +1,5 @@
+ma= float(input("massa de a: "))
+mb= float(input("massa de a: "))
+v0= float(input("vel de b: "))
+vf= v0*(2*ma + mb) /(ma+mb)
+print(vf)

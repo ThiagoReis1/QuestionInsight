@@ -1,0 +1,82 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1650_3164.py
+Questão  : 1650
+Aluno    : 3164
+Total MCs: 3
+
+⚠️  Misconceptions detectados: A3, B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import *
+     2 | cor=input("informe a cor:").split(',')
+     3 | vetP=0
+     4 | vetC=0
+     5 | vetR=0
+     6 | vetL=0
+     7 | vetB=0
+     8 | resposta=zeros(5, dtype=int)
+     9 | for i in cor:
+    10 | 	if (i=="P"):
+    11 | 		vetP=vetP+1
+    12 | 	elif (i=="C"):
+    13 | 		vetC=vetC+1
+    14 | 	elif (i=="R"):
+    15 | 		vetR=vetR+1
+    16 | 	elif (i=="L"):
+    17 | 		vetL=vetL+1
+    18 | 	elif (i=="B"):
+    19 | 		vetB=vetB+1
+    20 | 		
+    21 | for y in range(size(cor)):
+    22 | 	if (cor[y]=="P"):
+    23 | 		resposta=vetP
+    24 | 	elif (y=="C"):
+    25 | 		resposta=vetC
+    26 | 	elif (y=="R"):
+    27 | 		resposta=vetR
+    28 | 	elif (y=="L"):
+    29 | 		resposta=vetL
+    30 | 	elif (y=="B"):
+    31 | 		resposta=vetB
+    32 | l=max(resposta)
+    33 | print(l)
+    34 | print(resposta)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 1
+
+  [1] Linha 0: A3 detectado pelo VisitorMC3 (localização exata não mapeada)
+      Trecho  : —
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 2
+
+  [1] Linha 16: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 16) / elif ... sem else
+      Contexto:
+              15 | 		vetR=vetR+1
+        >>>   16 | 	elif (i=="L"):
+              17 | 		vetL=vetL+1
+
+  [2] Linha 28: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 28) / elif ... sem else
+      Contexto:
+              27 | 		resposta=vetR
+        >>>   28 | 	elif (y=="L"):
+              29 | 		resposta=vetL
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 1
+
+  [1] Linha 0: G4 detectado pelo VisitorMC3 (localização exata não mapeada)
+      Trecho  : —
+
+======================================================================

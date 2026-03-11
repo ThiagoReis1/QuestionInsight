@@ -1,0 +1,83 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1418_3620.py
+Questão  : 1418
+Aluno    : 3620
+Total MCs: 2
+
+⚠️  Misconceptions detectados: A3, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | c1 = int(input('Candidato mais votado: '))
+     2 | c2 = int(input('Segundo lugar: '))
+     3 | c3 = int(input('Menos votado: '))
+     4 | branco = int(input('Brancos: '))
+     5 | nulo = int(input('Nulos: '))
+     6 | soma = c1 + c2 + c3
+     7 | if c1 > soma * 0.5:
+     8 | 	print('NAO')
+     9 | else:
+    10 | 	print('SIM')
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 2
+
+  [1] Linha 4: Variável 'branco' declarada mas nunca utilizada
+      Trecho  : branco = ...
+      Contexto:
+               3 | c3 = int(input('Menos votado: '))
+        >>>    4 | branco = int(input('Brancos: '))
+               5 | nulo = int(input('Nulos: '))
+
+  [2] Linha 5: Variável 'nulo' declarada mas nunca utilizada
+      Trecho  : nulo = ...
+      Contexto:
+               4 | branco = int(input('Brancos: '))
+        >>>    5 | nulo = int(input('Nulos: '))
+               6 | soma = c1 + c2 + c3
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 5
+
+  [1] Linha 1: Variável 'c1' com nome muito curto (≤4 chars)
+      Trecho  : c1 = ...
+      Contexto:
+        >>>    1 | c1 = int(input('Candidato mais votado: '))
+               2 | c2 = int(input('Segundo lugar: '))
+
+  [2] Linha 2: Variável 'c2' com nome muito curto (≤4 chars)
+      Trecho  : c2 = ...
+      Contexto:
+               1 | c1 = int(input('Candidato mais votado: '))
+        >>>    2 | c2 = int(input('Segundo lugar: '))
+               3 | c3 = int(input('Menos votado: '))
+
+  [3] Linha 3: Variável 'c3' com nome muito curto (≤4 chars)
+      Trecho  : c3 = ...
+      Contexto:
+               2 | c2 = int(input('Segundo lugar: '))
+        >>>    3 | c3 = int(input('Menos votado: '))
+               4 | branco = int(input('Brancos: '))
+
+  [4] Linha 5: Variável 'nulo' com nome muito curto (≤4 chars)
+      Trecho  : nulo = ...
+      Contexto:
+               4 | branco = int(input('Brancos: '))
+        >>>    5 | nulo = int(input('Nulos: '))
+               6 | soma = c1 + c2 + c3
+
+  [5] Linha 6: Variável 'soma' com nome muito curto (≤4 chars)
+      Trecho  : soma = ...
+      Contexto:
+               5 | nulo = int(input('Nulos: '))
+        >>>    6 | soma = c1 + c2 + c3
+               7 | if c1 > soma * 0.5:
+
+======================================================================

@@ -1,0 +1,69 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 3065_4175.py
+Questão  : 3065
+Aluno    : 4175
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | x = (input("digite o ataque realizado por cornugon: (cauda,patada,cuspe)")).upper()
+     2 | y = int(input("digite o valor do dado de 1 a 4: "))
+     3 | w = int(input("numero de turnos q o persnagem fica ferido: "))
+     4 | 
+     5 | 
+     6 | if (x.upper() == "CAUDA"  or  x.upper() == "CUSPE"  or  x.upper() == "PATADA"):
+     7 | 	if y > 0  and y <= 4  and w > 0:
+     8 | 		if x.upper() == "CAUDA":
+     9 | 			print(y*w)
+    10 | 		elif x.upper() == "CUSPE":
+    11 | 			print((2*y)*w)
+    12 | 		elif x.upper() == "PATADA":
+    13 | 			print(((2*y)-5)*w)
+    14 | 	else:
+    15 | 		print("Entrada invalida")
+    16 | else: 
+    17 | 	print("Entrada invalida")
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 10: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 10) / elif ... sem else
+      Contexto:
+               9 | 			print(y*w)
+        >>>   10 | 		elif x.upper() == "CUSPE":
+              11 | 			print((2*y)*w)
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 3
+
+  [1] Linha 1: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+        >>>    1 | x = (input("digite o ataque realizado por cornugon: (cauda,patada,cuspe)")).upper()
+               2 | y = int(input("digite o valor do dado de 1 a 4: "))
+
+  [2] Linha 2: Variável 'y' com nome muito curto (≤4 chars)
+      Trecho  : y = ...
+      Contexto:
+               1 | x = (input("digite o ataque realizado por cornugon: (cauda,patada,cuspe)")).upper()
+        >>>    2 | y = int(input("digite o valor do dado de 1 a 4: "))
+               3 | w = int(input("numero de turnos q o persnagem fica ferido: "))
+
+  [3] Linha 3: Variável 'w' com nome muito curto (≤4 chars)
+      Trecho  : w = ...
+      Contexto:
+               2 | y = int(input("digite o valor do dado de 1 a 4: "))
+        >>>    3 | w = int(input("numero de turnos q o persnagem fica ferido: "))
+               4 | 
+
+======================================================================

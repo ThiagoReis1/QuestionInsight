@@ -1,0 +1,131 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1655_2681.py
+Questão  : 1655
+Aluno    : 2681
+Total MCs: 3
+
+⚠️  Misconceptions detectados: A3, B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import *
+     2 | 
+     3 | vet1 = input().split(',')
+     4 | 
+     5 | RR = 0
+     6 | AM = 0
+     7 | RO = 0
+     8 | AC = 0
+     9 | PA = 0
+    10 | errado = 0
+    11 | vet2 = zeros(10)
+    12 | for x in range(len(vet1)):
+    13 | 	if(vet1[x].upper() == 'RR'):
+    14 | 		vet2[x]= x
+    15 | 		RR += 1
+    16 | 	elif(vet1[x].upper() == 'AM'):
+    17 | 		vet2[x] = x
+    18 | 		AM += 1
+    19 | 	elif(vet1[x].upper() == 'RO'):
+    20 | 		vet2[x] =x
+    21 | 		RO += 1
+    22 | 	elif(vet1[x].upper() == 'AC'):
+    23 | 		vet2[x] = x
+    24 | 		AC += 1
+    25 | 	elif(vet1[x].upper() == 'PA'):
+    26 | 		vet2[x] = x
+    27 | 		PA += 1
+    28 | 	else:
+    29 | 		errado=0
+    30 | 
+    31 | if((AM>RR)  and (AM>PA) and(AM>AC) and (AM>RO)):
+    32 | 	print(AM)
+    33 | elif((RR>AM) and (RR>PA) and (RR>AC) and(RR>RO)):
+    34 | 	print(RR)
+    35 | elif((PA > AM) and (PA>RR) and(PA>AC) and (PA>RO)):
+    36 | 	print(PA)
+    37 | elif((AC > AM) and (AC>PA) and(AC>RO) and (AC>RR)):
+    38 | 	p
+    39 | print(vet2)
+    40 | print(AM)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 1
+
+  [1] Linha 10: Variável 'errado' declarada mas nunca utilizada
+      Trecho  : errado = ...
+      Contexto:
+               9 | PA = 0
+        >>>   10 | errado = 0
+              11 | vet2 = zeros(10)
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 35: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 35) / elif ... sem else
+      Contexto:
+              34 | 	print(RR)
+        >>>   35 | elif((PA > AM) and (PA>RR) and(PA>AC) and (PA>RO)):
+              36 | 	print(PA)
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 7
+
+  [1] Linha 3: Variável 'vet1' com nome muito curto (≤4 chars)
+      Trecho  : vet1 = ...
+      Contexto:
+               2 | 
+        >>>    3 | vet1 = input().split(',')
+               4 | 
+
+  [2] Linha 5: Variável 'RR' com nome muito curto (≤4 chars)
+      Trecho  : RR = ...
+      Contexto:
+               4 | 
+        >>>    5 | RR = 0
+               6 | AM = 0
+
+  [3] Linha 6: Variável 'AM' com nome muito curto (≤4 chars)
+      Trecho  : AM = ...
+      Contexto:
+               5 | RR = 0
+        >>>    6 | AM = 0
+               7 | RO = 0
+
+  [4] Linha 7: Variável 'RO' com nome muito curto (≤4 chars)
+      Trecho  : RO = ...
+      Contexto:
+               6 | AM = 0
+        >>>    7 | RO = 0
+               8 | AC = 0
+
+  [5] Linha 8: Variável 'AC' com nome muito curto (≤4 chars)
+      Trecho  : AC = ...
+      Contexto:
+               7 | RO = 0
+        >>>    8 | AC = 0
+               9 | PA = 0
+
+  [6] Linha 9: Variável 'PA' com nome muito curto (≤4 chars)
+      Trecho  : PA = ...
+      Contexto:
+               8 | AC = 0
+        >>>    9 | PA = 0
+              10 | errado = 0
+
+  [7] Linha 11: Variável 'vet2' com nome muito curto (≤4 chars)
+      Trecho  : vet2 = ...
+      Contexto:
+              10 | errado = 0
+        >>>   11 | vet2 = zeros(10)
+              12 | for x in range(len(vet1)):
+
+======================================================================

@@ -1,0 +1,83 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 6111_8727.py
+Questão  : 6111
+Aluno    : 8727
+Total MCs: 3
+
+⚠️  Misconceptions detectados: B8, B9, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | q= int(input("quantidade de combustivel comum:"))
+     2 | 
+     3 | if (q<17.5):
+     4 | 	t= q+10.5
+     5 | elif (q>=17.5) and (q<35.0):
+     6 | 	t= q+14.0	
+     7 | elif (q>=35.0)	and (q<=50.0):
+     8 | 	t= q+18.6
+     9 | elif (q>=50.0):
+    10 | 	t= q+ 24.5
+    11 | print(round(t,1))
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 7: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 7) / elif ... sem else
+      Contexto:
+               6 | 	t= q+14.0	
+        >>>    7 | elif (q>=35.0)	and (q<=50.0):
+               8 | 	t= q+18.6
+
+▶ B9 — elif/else retestando condições já verificadas
+  Ocorrências: 1
+
+  [1] Linha 0: B9 detectado pelo VisitorMC3 (localização exata não mapeada)
+      Trecho  : —
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 5
+
+  [1] Linha 1: Variável 'q' com nome muito curto (≤4 chars)
+      Trecho  : q = ...
+      Contexto:
+        >>>    1 | q= int(input("quantidade de combustivel comum:"))
+               2 | 
+
+  [2] Linha 4: Variável 't' com nome muito curto (≤4 chars)
+      Trecho  : t = ...
+      Contexto:
+               3 | if (q<17.5):
+        >>>    4 | 	t= q+10.5
+               5 | elif (q>=17.5) and (q<35.0):
+
+  [3] Linha 6: Variável 't' com nome muito curto (≤4 chars)
+      Trecho  : t = ...
+      Contexto:
+               5 | elif (q>=17.5) and (q<35.0):
+        >>>    6 | 	t= q+14.0	
+               7 | elif (q>=35.0)	and (q<=50.0):
+
+  [4] Linha 8: Variável 't' com nome muito curto (≤4 chars)
+      Trecho  : t = ...
+      Contexto:
+               7 | elif (q>=35.0)	and (q<=50.0):
+        >>>    8 | 	t= q+18.6
+               9 | elif (q>=50.0):
+
+  [5] Linha 10: Variável 't' com nome muito curto (≤4 chars)
+      Trecho  : t = ...
+      Contexto:
+               9 | elif (q>=50.0):
+        >>>   10 | 	t= q+ 24.5
+              11 | print(round(t,1))
+
+======================================================================

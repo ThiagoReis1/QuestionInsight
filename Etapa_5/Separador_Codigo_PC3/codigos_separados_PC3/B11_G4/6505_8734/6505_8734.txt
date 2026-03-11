@@ -1,0 +1,72 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 6505_8734.py
+Questão  : 6505
+Aluno    : 8734
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B11, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | comb = input('A ou B ou c?')
+     2 | qnt = int(input('quantos?'))
+     3 | 
+     4 | if comb.upper() == 'A' :
+     5 | 	print(round(qnt * 30,2))
+     6 | 	
+     7 | if comb.upper() == 'B' :
+     8 | 	print(round(qnt * 30,2))
+     9 | 	
+    10 | if comb.upper() == 'C' :
+    11 | 	a = (qnt * 30) * 15/100
+    12 | 	b = (qnt * 30) - a
+    13 | 	print(round(b,2))
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B11 — Ifs distintos com blocos idênticos
+  Ocorrências: 1
+
+  [1] Linha 7: Bloco idêntico ao if da linha 4
+      Trecho  : print(round(qnt * 30, 2))
+      Contexto:
+               6 | 	
+        >>>    7 | if comb.upper() == 'B' :
+               8 | 	print(round(qnt * 30,2))
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 4
+
+  [1] Linha 1: Variável 'comb' com nome muito curto (≤4 chars)
+      Trecho  : comb = ...
+      Contexto:
+        >>>    1 | comb = input('A ou B ou c?')
+               2 | qnt = int(input('quantos?'))
+
+  [2] Linha 2: Variável 'qnt' com nome muito curto (≤4 chars)
+      Trecho  : qnt = ...
+      Contexto:
+               1 | comb = input('A ou B ou c?')
+        >>>    2 | qnt = int(input('quantos?'))
+               3 | 
+
+  [3] Linha 11: Variável 'a' com nome muito curto (≤4 chars)
+      Trecho  : a = ...
+      Contexto:
+              10 | if comb.upper() == 'C' :
+        >>>   11 | 	a = (qnt * 30) * 15/100
+              12 | 	b = (qnt * 30) - a
+
+  [4] Linha 12: Variável 'b' com nome muito curto (≤4 chars)
+      Trecho  : b = ...
+      Contexto:
+              11 | 	a = (qnt * 30) * 15/100
+        >>>   12 | 	b = (qnt * 30) - a
+              13 | 	print(round(b,2))
+
+======================================================================

@@ -1,0 +1,82 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 6939_9824.py
+Questão  : 6939
+Aluno    : 9824
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | vtc = float(input('digite o valor da compra: '))
+     2 | 
+     3 | cod = input('digite o codigo: ').upper() 
+     4 | 
+     5 | if cod == "D" or cod == "P":
+     6 | 	vf = vtc - (vtc * 0.19)
+     7 | 	print(round(vf,2))
+     8 | 	
+     9 | elif cod == "C" :
+    10 | 	vezes = int(input('quantidade de vezes: '))
+    11 | 	if vezes == 1:
+    12 | 		vf = vtc 
+    13 | 	else:
+    14 | 		vf = vtc + (vtc * 0.09)
+    15 | 
+    16 | 	print(round(vf, 2))
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 5: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 5) / elif ... sem else
+      Contexto:
+               4 | 
+        >>>    5 | if cod == "D" or cod == "P":
+               6 | 	vf = vtc - (vtc * 0.19)
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 5
+
+  [1] Linha 1: Variável 'vtc' com nome muito curto (≤4 chars)
+      Trecho  : vtc = ...
+      Contexto:
+        >>>    1 | vtc = float(input('digite o valor da compra: '))
+               2 | 
+
+  [2] Linha 3: Variável 'cod' com nome muito curto (≤4 chars)
+      Trecho  : cod = ...
+      Contexto:
+               2 | 
+        >>>    3 | cod = input('digite o codigo: ').upper() 
+               4 | 
+
+  [3] Linha 6: Variável 'vf' com nome muito curto (≤4 chars)
+      Trecho  : vf = ...
+      Contexto:
+               5 | if cod == "D" or cod == "P":
+        >>>    6 | 	vf = vtc - (vtc * 0.19)
+               7 | 	print(round(vf,2))
+
+  [4] Linha 12: Variável 'vf' com nome muito curto (≤4 chars)
+      Trecho  : vf = ...
+      Contexto:
+              11 | 	if vezes == 1:
+        >>>   12 | 		vf = vtc 
+              13 | 	else:
+
+  [5] Linha 14: Variável 'vf' com nome muito curto (≤4 chars)
+      Trecho  : vf = ...
+      Contexto:
+              13 | 	else:
+        >>>   14 | 		vf = vtc + (vtc * 0.09)
+              15 | 
+
+======================================================================

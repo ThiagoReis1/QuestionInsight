@@ -1,0 +1,57 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1593_7166.py
+Questão  : 1593
+Aluno    : 7166
+Total MCs: 1
+
+⚠️  Misconceptions detectados: G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import *
+     2 | notas = array(eval(input("notas: ")))
+     3 | v = arange(size(notas) + 1)
+     4 | a = v[1:]
+     5 | y = notas*a
+     6 | g = sum(y)/sum(a)
+     7 | print(round(g, 2))
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 4
+
+  [1] Linha 3: Variável 'v' com nome muito curto (≤4 chars)
+      Trecho  : v = ...
+      Contexto:
+               2 | notas = array(eval(input("notas: ")))
+        >>>    3 | v = arange(size(notas) + 1)
+               4 | a = v[1:]
+
+  [2] Linha 4: Variável 'a' com nome muito curto (≤4 chars)
+      Trecho  : a = ...
+      Contexto:
+               3 | v = arange(size(notas) + 1)
+        >>>    4 | a = v[1:]
+               5 | y = notas*a
+
+  [3] Linha 5: Variável 'y' com nome muito curto (≤4 chars)
+      Trecho  : y = ...
+      Contexto:
+               4 | a = v[1:]
+        >>>    5 | y = notas*a
+               6 | g = sum(y)/sum(a)
+
+  [4] Linha 6: Variável 'g' com nome muito curto (≤4 chars)
+      Trecho  : g = ...
+      Contexto:
+               5 | y = notas*a
+        >>>    6 | g = sum(y)/sum(a)
+               7 | print(round(g, 2))
+
+======================================================================

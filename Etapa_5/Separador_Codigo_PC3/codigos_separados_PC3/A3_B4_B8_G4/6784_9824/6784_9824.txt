@@ -1,0 +1,131 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 6784_9824.py
+Questão  : 6784
+Aluno    : 9824
+Total MCs: 4
+
+⚠️  Misconceptions detectados: A3, B4, B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | ano = int(input('digite: '))
+     2 | pais = input('pais: ').upper()
+     3 | 
+     4 | idade = 2023 - ano
+     5 | if idade >= 18 and pais == "B":
+     6 | 	print("sim")
+     7 | elif idade >= 21 and pais == "R":
+     8 | 	print("sim")
+     9 | elif idade < 18 and pais == "B":
+    10 | 	print("nao")
+    11 | elif idade < 21 and pais == "R":
+    12 | 	print("nao")
+    13 | 
+    14 | else:
+    15 | 	print("invalido")
+    16 | 	
+    17 | if idade < 18 :
+    18 | 	tr = 18 - idade
+    19 | 	print("tr")
+    20 | elif idade < 21 :
+    21 | 	tr1 = 21 - idade
+    22 | 	print("tr1")
+    23 | 
+    24 | 
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 2
+
+  [1] Linha 18: Variável 'tr' declarada mas nunca utilizada
+      Trecho  : tr = ...
+      Contexto:
+              17 | if idade < 18 :
+        >>>   18 | 	tr = 18 - idade
+              19 | 	print("tr")
+
+  [2] Linha 21: Variável 'tr1' declarada mas nunca utilizada
+      Trecho  : tr1 = ...
+      Contexto:
+              20 | elif idade < 21 :
+        >>>   21 | 	tr1 = 21 - idade
+              22 | 	print("tr1")
+
+▶ B4 — Comandos repetidos dentro de blocos if-elif-else
+  Ocorrências: 4
+
+  [1] Linha 7: Bloco idêntico ao da linha 5
+      Trecho  : print('sim')
+      Contexto:
+               6 | 	print("sim")
+        >>>    7 | elif idade >= 21 and pais == "R":
+               8 | 	print("sim")
+
+  [2] Linha 11: Bloco idêntico ao da linha 9
+      Trecho  : print('nao')
+      Contexto:
+              10 | 	print("nao")
+        >>>   11 | elif idade < 21 and pais == "R":
+              12 | 	print("nao")
+
+  [3] Linha 11: Bloco idêntico ao da linha 9
+      Trecho  : print('nao')
+      Contexto:
+              10 | 	print("nao")
+        >>>   11 | elif idade < 21 and pais == "R":
+              12 | 	print("nao")
+
+  [4] Linha 11: Bloco idêntico ao da linha 9
+      Trecho  : print('nao')
+      Contexto:
+              10 | 	print("nao")
+        >>>   11 | elif idade < 21 and pais == "R":
+              12 | 	print("nao")
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 17: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 17) / elif ... sem else
+      Contexto:
+              16 | 	
+        >>>   17 | if idade < 18 :
+              18 | 	tr = 18 - idade
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 4
+
+  [1] Linha 1: Variável 'ano' com nome muito curto (≤4 chars)
+      Trecho  : ano = ...
+      Contexto:
+        >>>    1 | ano = int(input('digite: '))
+               2 | pais = input('pais: ').upper()
+
+  [2] Linha 2: Variável 'pais' com nome muito curto (≤4 chars)
+      Trecho  : pais = ...
+      Contexto:
+               1 | ano = int(input('digite: '))
+        >>>    2 | pais = input('pais: ').upper()
+               3 | 
+
+  [3] Linha 18: Variável 'tr' com nome muito curto (≤4 chars)
+      Trecho  : tr = ...
+      Contexto:
+              17 | if idade < 18 :
+        >>>   18 | 	tr = 18 - idade
+              19 | 	print("tr")
+
+  [4] Linha 21: Variável 'tr1' com nome muito curto (≤4 chars)
+      Trecho  : tr1 = ...
+      Contexto:
+              20 | elif idade < 21 :
+        >>>   21 | 	tr1 = 21 - idade
+              22 | 	print("tr1")
+
+======================================================================

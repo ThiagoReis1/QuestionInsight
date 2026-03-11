@@ -1,0 +1,73 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1644_4153.py
+Questão  : 1644
+Aluno    : 4153
+Total MCs: 1
+
+⚠️  Misconceptions detectados: G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import *
+     2 | 
+     3 | notas = array(eval(input("Insira as notas: ")))
+     4 | 
+     5 | rep = 0
+     6 | for i in range(size(notas)):
+     7 | 	if(notas[i] < 5.0):
+     8 | 		rep = rep + 1
+     9 | print(rep)
+    10 | ar = zeros(rep, dtype=int)
+    11 | x = 0
+    12 | for r in range(size(notas)):
+    13 | 	if(notas[r] < 5):
+    14 | 		ar[x] = r
+    15 | 		x = x + 1
+    16 | print(ar)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 5
+
+  [1] Linha 5: Variável 'rep' com nome muito curto (≤4 chars)
+      Trecho  : rep = ...
+      Contexto:
+               4 | 
+        >>>    5 | rep = 0
+               6 | for i in range(size(notas)):
+
+  [2] Linha 10: Variável 'ar' com nome muito curto (≤4 chars)
+      Trecho  : ar = ...
+      Contexto:
+               9 | print(rep)
+        >>>   10 | ar = zeros(rep, dtype=int)
+              11 | x = 0
+
+  [3] Linha 11: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+              10 | ar = zeros(rep, dtype=int)
+        >>>   11 | x = 0
+              12 | for r in range(size(notas)):
+
+  [4] Linha 8: Variável 'rep' com nome muito curto (≤4 chars)
+      Trecho  : rep = ...
+      Contexto:
+               7 | 	if(notas[i] < 5.0):
+        >>>    8 | 		rep = rep + 1
+               9 | print(rep)
+
+  [5] Linha 15: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+              14 | 		ar[x] = r
+        >>>   15 | 		x = x + 1
+              16 | print(ar)
+
+======================================================================

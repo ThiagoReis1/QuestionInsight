@@ -1,0 +1,128 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 2149_2107.py
+Questão  : 2149
+Aluno    : 2107
+Total MCs: 2
+
+⚠️  Misconceptions detectados: A3, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | x = array(eval(input))
+     3 | y = array(eval(input))
+     4 | r = zeros(3)
+     5 | a = 0
+     6 | b = 0
+     7 | c = 0
+     8 | for i in range(size(x)):
+     9 | 	a=+1
+    10 | 	r[0]=x[0]+y[0]
+    11 | 	b+=1
+    12 | 	r[1]=x[1]+y[1]
+    13 | 	c+=1
+    14 | 	r[2]=x[2]+y[2]
+    15 | print(r)
+    16 | rep=r[1]<12
+    17 | ap= size(r)-rep
+    18 | print(ap)
+    19 | 	
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 3
+
+  [1] Linha 5: Variável 'a' declarada mas nunca utilizada
+      Trecho  : a = ...
+      Contexto:
+               4 | r = zeros(3)
+        >>>    5 | a = 0
+               6 | b = 0
+
+  [2] Linha 6: Variável 'b' declarada mas nunca utilizada
+      Trecho  : b = ...
+      Contexto:
+               5 | a = 0
+        >>>    6 | b = 0
+               7 | c = 0
+
+  [3] Linha 7: Variável 'c' declarada mas nunca utilizada
+      Trecho  : c = ...
+      Contexto:
+               6 | b = 0
+        >>>    7 | c = 0
+               8 | for i in range(size(x)):
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 9
+
+  [1] Linha 2: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+               1 | from numpy import*
+        >>>    2 | x = array(eval(input))
+               3 | y = array(eval(input))
+
+  [2] Linha 3: Variável 'y' com nome muito curto (≤4 chars)
+      Trecho  : y = ...
+      Contexto:
+               2 | x = array(eval(input))
+        >>>    3 | y = array(eval(input))
+               4 | r = zeros(3)
+
+  [3] Linha 4: Variável 'r' com nome muito curto (≤4 chars)
+      Trecho  : r = ...
+      Contexto:
+               3 | y = array(eval(input))
+        >>>    4 | r = zeros(3)
+               5 | a = 0
+
+  [4] Linha 5: Variável 'a' com nome muito curto (≤4 chars)
+      Trecho  : a = ...
+      Contexto:
+               4 | r = zeros(3)
+        >>>    5 | a = 0
+               6 | b = 0
+
+  [5] Linha 6: Variável 'b' com nome muito curto (≤4 chars)
+      Trecho  : b = ...
+      Contexto:
+               5 | a = 0
+        >>>    6 | b = 0
+               7 | c = 0
+
+  [6] Linha 7: Variável 'c' com nome muito curto (≤4 chars)
+      Trecho  : c = ...
+      Contexto:
+               6 | b = 0
+        >>>    7 | c = 0
+               8 | for i in range(size(x)):
+
+  [7] Linha 16: Variável 'rep' com nome muito curto (≤4 chars)
+      Trecho  : rep = ...
+      Contexto:
+              15 | print(r)
+        >>>   16 | rep=r[1]<12
+              17 | ap= size(r)-rep
+
+  [8] Linha 17: Variável 'ap' com nome muito curto (≤4 chars)
+      Trecho  : ap = ...
+      Contexto:
+              16 | rep=r[1]<12
+        >>>   17 | ap= size(r)-rep
+              18 | print(ap)
+
+  [9] Linha 9: Variável 'a' com nome muito curto (≤4 chars)
+      Trecho  : a = ...
+      Contexto:
+               8 | for i in range(size(x)):
+        >>>    9 | 	a=+1
+              10 | 	r[0]=x[0]+y[0]
+
+======================================================================

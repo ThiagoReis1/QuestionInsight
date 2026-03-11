@@ -1,0 +1,6 @@
+T = float(input("tapioca"))
+S = float(input("salgado"))
+A = float(input("açai"))
+t = int(4.50)
+s = int(5.00)
+a = int(12.00)

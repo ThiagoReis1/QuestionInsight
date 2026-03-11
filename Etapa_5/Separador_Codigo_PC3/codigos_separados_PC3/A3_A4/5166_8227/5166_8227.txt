@@ -1,0 +1,53 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 5166_8227.py
+Questão  : 5166
+Aluno    : 8227
+Total MCs: 2
+
+⚠️  Misconceptions detectados: A3, A4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | print= input("peso=")
+     2 | print= input("quantidada diaria=")
+     3 | print= input("peso*quantidada diaria=")
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 1
+
+  [1] Linha 1: Variável 'print' declarada mas nunca utilizada
+      Trecho  : print = ...
+      Contexto:
+        >>>    1 | print= input("peso=")
+               2 | print= input("quantidada diaria=")
+
+▶ A4 — Redefinição de built-in
+  Ocorrências: 3
+
+  [1] Linha 1: Built-in 'print' redefinido como variável
+      Trecho  : print = input('peso=')
+      Contexto:
+        >>>    1 | print= input("peso=")
+               2 | print= input("quantidada diaria=")
+
+  [2] Linha 2: Built-in 'print' redefinido como variável
+      Trecho  : print = input('quantidada diaria=')
+      Contexto:
+               1 | print= input("peso=")
+        >>>    2 | print= input("quantidada diaria=")
+               3 | print= input("peso*quantidada diaria=")
+
+  [3] Linha 3: Built-in 'print' redefinido como variável
+      Trecho  : print = input('peso*quantidada diaria=')
+      Contexto:
+               2 | print= input("quantidada diaria=")
+        >>>    3 | print= input("peso*quantidada diaria=")
+
+======================================================================

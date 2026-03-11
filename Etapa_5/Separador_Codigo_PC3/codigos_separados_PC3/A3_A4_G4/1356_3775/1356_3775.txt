@@ -1,0 +1,94 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1356_3775.py
+Questão  : 1356
+Aluno    : 3775
+Total MCs: 3
+
+⚠️  Misconceptions detectados: A3, A4, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | a=print("20.0")
+     2 | B=print("50.0")
+     3 | b=print("40.0")
+     4 | h=print("30.0")
+     5 | 
+     6 | print=input(int("30.(50+40)/2= 270"))
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 4
+
+  [1] Linha 1: Variável 'a' declarada mas nunca utilizada
+      Trecho  : a = ...
+      Contexto:
+        >>>    1 | a=print("20.0")
+               2 | B=print("50.0")
+
+  [2] Linha 2: Variável 'B' declarada mas nunca utilizada
+      Trecho  : B = ...
+      Contexto:
+               1 | a=print("20.0")
+        >>>    2 | B=print("50.0")
+               3 | b=print("40.0")
+
+  [3] Linha 3: Variável 'b' declarada mas nunca utilizada
+      Trecho  : b = ...
+      Contexto:
+               2 | B=print("50.0")
+        >>>    3 | b=print("40.0")
+               4 | h=print("30.0")
+
+  [4] Linha 4: Variável 'h' declarada mas nunca utilizada
+      Trecho  : h = ...
+      Contexto:
+               3 | b=print("40.0")
+        >>>    4 | h=print("30.0")
+               5 | 
+
+▶ A4 — Redefinição de built-in
+  Ocorrências: 1
+
+  [1] Linha 6: Built-in 'print' redefinido como variável
+      Trecho  : print = input(int('30.(50+40)/2= 270'))
+      Contexto:
+               5 | 
+        >>>    6 | print=input(int("30.(50+40)/2= 270"))
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 4
+
+  [1] Linha 1: Variável 'a' com nome muito curto (≤4 chars)
+      Trecho  : a = ...
+      Contexto:
+        >>>    1 | a=print("20.0")
+               2 | B=print("50.0")
+
+  [2] Linha 2: Variável 'B' com nome muito curto (≤4 chars)
+      Trecho  : B = ...
+      Contexto:
+               1 | a=print("20.0")
+        >>>    2 | B=print("50.0")
+               3 | b=print("40.0")
+
+  [3] Linha 3: Variável 'b' com nome muito curto (≤4 chars)
+      Trecho  : b = ...
+      Contexto:
+               2 | B=print("50.0")
+        >>>    3 | b=print("40.0")
+               4 | h=print("30.0")
+
+  [4] Linha 4: Variável 'h' com nome muito curto (≤4 chars)
+      Trecho  : h = ...
+      Contexto:
+               3 | b=print("40.0")
+        >>>    4 | h=print("30.0")
+               5 | 
+
+======================================================================

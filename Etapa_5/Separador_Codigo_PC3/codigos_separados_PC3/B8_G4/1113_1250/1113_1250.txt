@@ -1,0 +1,73 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1113_1250.py
+Questão  : 1113
+Aluno    : 1250
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | x = int(input("Digite a idade: "))
+     2 | y = float(input("Digite o peso: "))
+     3 | print("Entradas:",x,"anos","e",y,"kg")
+     4 | if((0<x<=130) and (0<y<=550.0)):
+     5 | 	if(x<=20):
+     6 | 		if(y<=60):
+     7 | 			print("Grupo de risco: 9")
+     8 | 		elif(60<y<=90):
+     9 | 			print("Grupo de risco: 8")
+    10 | 		else:
+    11 | 			print("Grupo de risco: 7")
+    12 | 	elif(20<x<=50):
+    13 | 		if(y<=60):
+    14 | 			print("Grupo de risco: 6")
+    15 | 		elif(60<y<=90):
+    16 | 			print("Grupo de risco: 5")
+    17 | 		else:
+    18 | 			print("Grupo de risco: 4")
+    19 | 	elif(x>50):
+    20 | 		if(y<=60):
+    21 | 			print("Grupo de risco: 3")
+    22 | 		elif(60<y<=90):
+    23 | 			print("Grupo de risco: 2")
+    24 | 		else:
+    25 | 			print("Grupo 1")
+    26 | else:
+    27 | 	print("Dados invalidos")
+    28 | 			
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 12: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 12) / elif ... sem else
+      Contexto:
+              11 | 			print("Grupo de risco: 7")
+        >>>   12 | 	elif(20<x<=50):
+              13 | 		if(y<=60):
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 2
+
+  [1] Linha 1: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+        >>>    1 | x = int(input("Digite a idade: "))
+               2 | y = float(input("Digite o peso: "))
+
+  [2] Linha 2: Variável 'y' com nome muito curto (≤4 chars)
+      Trecho  : y = ...
+      Contexto:
+               1 | x = int(input("Digite a idade: "))
+        >>>    2 | y = float(input("Digite o peso: "))
+               3 | print("Entradas:",x,"anos","e",y,"kg")
+
+======================================================================

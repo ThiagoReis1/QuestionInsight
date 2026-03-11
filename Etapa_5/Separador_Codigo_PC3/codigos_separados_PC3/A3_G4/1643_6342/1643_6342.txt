@@ -1,0 +1,90 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1643_6342.py
+Questão  : 1643
+Aluno    : 6342
+Total MCs: 2
+
+⚠️  Misconceptions detectados: A3, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import *
+     2 | 
+     3 | v = array(eval(input("alunos que passaram: ")))
+     4 | ac = 0
+     5 | for i in range (size(v)):
+     6 | 	if v[i] >= 5:
+     7 | 		ac = ac +1
+     8 | v1 = zeros(ac, dtype=int)
+     9 | cont = 0
+    10 | for i in range (size(v)):
+    11 | 	if v[i] > 5:
+    12 | 		v[cont] = i
+    13 | 		cont = cont + 1
+    14 | 	
+    15 | print(ac)
+    16 | print(v)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 1
+
+  [1] Linha 8: Variável 'v1' declarada mas nunca utilizada
+      Trecho  : v1 = ...
+      Contexto:
+               7 | 		ac = ac +1
+        >>>    8 | v1 = zeros(ac, dtype=int)
+               9 | cont = 0
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 6
+
+  [1] Linha 3: Variável 'v' com nome muito curto (≤4 chars)
+      Trecho  : v = ...
+      Contexto:
+               2 | 
+        >>>    3 | v = array(eval(input("alunos que passaram: ")))
+               4 | ac = 0
+
+  [2] Linha 4: Variável 'ac' com nome muito curto (≤4 chars)
+      Trecho  : ac = ...
+      Contexto:
+               3 | v = array(eval(input("alunos que passaram: ")))
+        >>>    4 | ac = 0
+               5 | for i in range (size(v)):
+
+  [3] Linha 8: Variável 'v1' com nome muito curto (≤4 chars)
+      Trecho  : v1 = ...
+      Contexto:
+               7 | 		ac = ac +1
+        >>>    8 | v1 = zeros(ac, dtype=int)
+               9 | cont = 0
+
+  [4] Linha 9: Variável 'cont' com nome muito curto (≤4 chars)
+      Trecho  : cont = ...
+      Contexto:
+               8 | v1 = zeros(ac, dtype=int)
+        >>>    9 | cont = 0
+              10 | for i in range (size(v)):
+
+  [5] Linha 7: Variável 'ac' com nome muito curto (≤4 chars)
+      Trecho  : ac = ...
+      Contexto:
+               6 | 	if v[i] >= 5:
+        >>>    7 | 		ac = ac +1
+               8 | v1 = zeros(ac, dtype=int)
+
+  [6] Linha 13: Variável 'cont' com nome muito curto (≤4 chars)
+      Trecho  : cont = ...
+      Contexto:
+              12 | 		v[cont] = i
+        >>>   13 | 		cont = cont + 1
+              14 | 	
+
+======================================================================

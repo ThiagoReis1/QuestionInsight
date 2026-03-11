@@ -1,0 +1,61 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1644_5133.py
+Questão  : 1644
+Aluno    : 5133
+Total MCs: 2
+
+⚠️  Misconceptions detectados: A3, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import * 
+     2 | 
+     3 | a = array(eval(input()))
+     4 | 
+     5 | 
+     6 | reprov = 0
+     7 | 
+     8 | for i in range(size(a)):
+     9 | 	if a[i] < 5 :
+    10 | 		reprov = reprov + 1
+    11 | print(reprov)
+    12 | 
+    13 | n = zeros(reprov,dtype=int)
+    14 | b = 0
+    15 | for i in range (size(a)):
+    16 | 	if a[i] < 5:
+    17 | 		c = i
+    18 | 	
+    19 | print(n)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 2
+
+  [1] Linha 14: Variável 'b' declarada mas nunca utilizada
+      Trecho  : b = ...
+      Contexto:
+              13 | n = zeros(reprov,dtype=int)
+        >>>   14 | b = 0
+              15 | for i in range (size(a)):
+
+  [2] Linha 17: Variável 'c' declarada mas nunca utilizada
+      Trecho  : c = ...
+      Contexto:
+              16 | 	if a[i] < 5:
+        >>>   17 | 		c = i
+              18 | 	
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 1
+
+  [1] Linha 0: G4 detectado pelo VisitorMC3 (localização exata não mapeada)
+      Trecho  : —
+
+======================================================================

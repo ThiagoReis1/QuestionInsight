@@ -1,0 +1,53 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 2850_8187.py
+Questão  : 2850
+Aluno    : 8187
+Total MCs: 3
+
+⚠️  Misconceptions detectados: A3, C3, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import *
+     2 | v= array(eval(input("")))
+     3 | lim= 55
+     4 | total=0
+     5 | for i in range(size(v)):
+     6 | 	if(sum(v) < lim):
+     7 | 		cal= sum(v)
+     8 | 	total= total+1
+     9 | 	if(sum(v) > lim):
+    10 | 		cal= sum(v)-lim
+    11 | 	total=total+1
+    12 | print(cal)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 1
+
+  [1] Linha 0: A3 detectado pelo VisitorMC3 (localização exata não mapeada)
+      Trecho  : —
+
+▶ C3 — Operações redundantes dentro do loop
+  Ocorrências: 1
+
+  [1] Linha 11: Operação idêntica à linha 8 repetida no loop
+      Trecho  : total = total + 1
+      Contexto:
+              10 | 		cal= sum(v)-lim
+        >>>   11 | 	total=total+1
+              12 | print(cal)
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 1
+
+  [1] Linha 0: G4 detectado pelo VisitorMC3 (localização exata não mapeada)
+      Trecho  : —
+
+======================================================================

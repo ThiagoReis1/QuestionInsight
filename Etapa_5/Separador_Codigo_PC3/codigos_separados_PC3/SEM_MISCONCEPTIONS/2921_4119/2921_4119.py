@@ -1,0 +1,5 @@
+j1 = float(input("jogo 1:"))
+j2 = float(input("jogo 2"))
+total = j2-(j2*0.25)
+print(total)
+print(j1+total)

@@ -1,0 +1,97 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 3096_4187.py
+Questão  : 3096
+Aluno    : 4187
+Total MCs: 3
+
+⚠️  Misconceptions detectados: A3, B4, B8
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | P1 = int(input("digite a primeira posicao:"))
+     2 | posicao = 0
+     3 | pontos1 = 0
+     4 | while(P1 > 0 and P1 and P1 != 0):
+     5 | 	if(P1 == 1):
+     6 | 		pontos2 = 20
+     7 | 	elif(P1 == 2):
+     8 | 		pontos2 = 15
+     9 | 	elif(P1 == 3):
+    10 | 		pontos2 = 10
+    11 | 	elif(P1 < 0):
+    12 | 		pontos = 0
+    13 | 	elif(P1 > 10):
+    14 | 		pontos = 0
+    15 | 	elif(P1 > 3 and P1 < 11):
+    16 | 		pontos2 = 11 - P1
+    17 | 	total = pontos1 + pontos2
+    18 | 	pontos1 = total
+    19 | 	P1 = int(input("digite as outras colocacoes:"))
+    20 | print(total)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 2
+
+  [1] Linha 2: Variável 'posicao' declarada mas nunca utilizada
+      Trecho  : posicao = ...
+      Contexto:
+               1 | P1 = int(input("digite a primeira posicao:"))
+        >>>    2 | posicao = 0
+               3 | pontos1 = 0
+
+  [2] Linha 12: Variável 'pontos' declarada mas nunca utilizada
+      Trecho  : pontos = ...
+      Contexto:
+              11 | 	elif(P1 < 0):
+        >>>   12 | 		pontos = 0
+              13 | 	elif(P1 > 10):
+
+▶ B4 — Comandos repetidos dentro de blocos if-elif-else
+  Ocorrências: 4
+
+  [1] Linha 13: Bloco idêntico ao da linha 11
+      Trecho  : pontos = 0
+      Contexto:
+              12 | 		pontos = 0
+        >>>   13 | 	elif(P1 > 10):
+              14 | 		pontos = 0
+
+  [2] Linha 13: Bloco idêntico ao da linha 11
+      Trecho  : pontos = 0
+      Contexto:
+              12 | 		pontos = 0
+        >>>   13 | 	elif(P1 > 10):
+              14 | 		pontos = 0
+
+  [3] Linha 13: Bloco idêntico ao da linha 11
+      Trecho  : pontos = 0
+      Contexto:
+              12 | 		pontos = 0
+        >>>   13 | 	elif(P1 > 10):
+              14 | 		pontos = 0
+
+  [4] Linha 13: Bloco idêntico ao da linha 11
+      Trecho  : pontos = 0
+      Contexto:
+              12 | 		pontos = 0
+        >>>   13 | 	elif(P1 > 10):
+              14 | 		pontos = 0
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 13: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 13) / elif ... sem else
+      Contexto:
+              12 | 		pontos = 0
+        >>>   13 | 	elif(P1 > 10):
+              14 | 		pontos = 0
+
+======================================================================

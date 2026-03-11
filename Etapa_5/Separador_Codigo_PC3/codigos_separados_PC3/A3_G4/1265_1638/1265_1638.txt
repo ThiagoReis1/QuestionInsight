@@ -1,0 +1,123 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1265_1638.py
+Questão  : 1265
+Aluno    : 1638
+Total MCs: 2
+
+⚠️  Misconceptions detectados: A3, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import *
+     2 | 
+     3 | p = float(input("valores de p: "))
+     4 | x = array(eval(input("valores de x: ")))
+     5 | y = array(eval(input("valores de y: ")))
+     6 | h=0
+     7 | n=0
+     8 | j=0
+     9 | t = ((p)/(p-1))
+    10 | xy= (2*x + 3*y)
+    11 | for i in xy:
+    12 | 	n = n + (abs(i))**t
+    13 | v = n ** (1/t)
+    14 | print(round(v,3))
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 2
+
+  [1] Linha 6: Variável 'h' declarada mas nunca utilizada
+      Trecho  : h = ...
+      Contexto:
+               5 | y = array(eval(input("valores de y: ")))
+        >>>    6 | h=0
+               7 | n=0
+
+  [2] Linha 8: Variável 'j' declarada mas nunca utilizada
+      Trecho  : j = ...
+      Contexto:
+               7 | n=0
+        >>>    8 | j=0
+               9 | t = ((p)/(p-1))
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 10
+
+  [1] Linha 3: Variável 'p' com nome muito curto (≤4 chars)
+      Trecho  : p = ...
+      Contexto:
+               2 | 
+        >>>    3 | p = float(input("valores de p: "))
+               4 | x = array(eval(input("valores de x: ")))
+
+  [2] Linha 4: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+               3 | p = float(input("valores de p: "))
+        >>>    4 | x = array(eval(input("valores de x: ")))
+               5 | y = array(eval(input("valores de y: ")))
+
+  [3] Linha 5: Variável 'y' com nome muito curto (≤4 chars)
+      Trecho  : y = ...
+      Contexto:
+               4 | x = array(eval(input("valores de x: ")))
+        >>>    5 | y = array(eval(input("valores de y: ")))
+               6 | h=0
+
+  [4] Linha 6: Variável 'h' com nome muito curto (≤4 chars)
+      Trecho  : h = ...
+      Contexto:
+               5 | y = array(eval(input("valores de y: ")))
+        >>>    6 | h=0
+               7 | n=0
+
+  [5] Linha 7: Variável 'n' com nome muito curto (≤4 chars)
+      Trecho  : n = ...
+      Contexto:
+               6 | h=0
+        >>>    7 | n=0
+               8 | j=0
+
+  [6] Linha 8: Variável 'j' com nome muito curto (≤4 chars)
+      Trecho  : j = ...
+      Contexto:
+               7 | n=0
+        >>>    8 | j=0
+               9 | t = ((p)/(p-1))
+
+  [7] Linha 9: Variável 't' com nome muito curto (≤4 chars)
+      Trecho  : t = ...
+      Contexto:
+               8 | j=0
+        >>>    9 | t = ((p)/(p-1))
+              10 | xy= (2*x + 3*y)
+
+  [8] Linha 10: Variável 'xy' com nome muito curto (≤4 chars)
+      Trecho  : xy = ...
+      Contexto:
+               9 | t = ((p)/(p-1))
+        >>>   10 | xy= (2*x + 3*y)
+              11 | for i in xy:
+
+  [9] Linha 13: Variável 'v' com nome muito curto (≤4 chars)
+      Trecho  : v = ...
+      Contexto:
+              12 | 	n = n + (abs(i))**t
+        >>>   13 | v = n ** (1/t)
+              14 | print(round(v,3))
+
+  [10] Linha 12: Variável 'n' com nome muito curto (≤4 chars)
+      Trecho  : n = ...
+      Contexto:
+              11 | for i in xy:
+        >>>   12 | 	n = n + (abs(i))**t
+              13 | v = n ** (1/t)
+
+======================================================================

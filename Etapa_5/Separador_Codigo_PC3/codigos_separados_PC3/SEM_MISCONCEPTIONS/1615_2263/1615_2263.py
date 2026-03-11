@@ -1,0 +1,2 @@
+from numpy import*
+M

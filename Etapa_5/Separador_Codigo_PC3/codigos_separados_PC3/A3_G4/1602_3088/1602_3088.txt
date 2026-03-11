@@ -1,0 +1,77 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1602_3088.py
+Questão  : 1602
+Aluno    : 3088
+Total MCs: 2
+
+⚠️  Misconceptions detectados: A3, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | vt = array(eval(input("Insira o vetor com o tempo de chegada dos corredores:")))
+     3 | me = max(vt)
+     4 | c = size(vt)
+     5 | t = 0
+     6 | while t < c:
+     7 | 	if vt[t] == max(vt):
+     8 | 		print(t)
+     9 | 	t = t + 1
+    10 | 	
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 1
+
+  [1] Linha 3: Variável 'me' declarada mas nunca utilizada
+      Trecho  : me = ...
+      Contexto:
+               2 | vt = array(eval(input("Insira o vetor com o tempo de chegada dos corredores:")))
+        >>>    3 | me = max(vt)
+               4 | c = size(vt)
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 5
+
+  [1] Linha 2: Variável 'vt' com nome muito curto (≤4 chars)
+      Trecho  : vt = ...
+      Contexto:
+               1 | from numpy import*
+        >>>    2 | vt = array(eval(input("Insira o vetor com o tempo de chegada dos corredores:")))
+               3 | me = max(vt)
+
+  [2] Linha 3: Variável 'me' com nome muito curto (≤4 chars)
+      Trecho  : me = ...
+      Contexto:
+               2 | vt = array(eval(input("Insira o vetor com o tempo de chegada dos corredores:")))
+        >>>    3 | me = max(vt)
+               4 | c = size(vt)
+
+  [3] Linha 4: Variável 'c' com nome muito curto (≤4 chars)
+      Trecho  : c = ...
+      Contexto:
+               3 | me = max(vt)
+        >>>    4 | c = size(vt)
+               5 | t = 0
+
+  [4] Linha 5: Variável 't' com nome muito curto (≤4 chars)
+      Trecho  : t = ...
+      Contexto:
+               4 | c = size(vt)
+        >>>    5 | t = 0
+               6 | while t < c:
+
+  [5] Linha 9: Variável 't' com nome muito curto (≤4 chars)
+      Trecho  : t = ...
+      Contexto:
+               8 | 		print(t)
+        >>>    9 | 	t = t + 1
+              10 | 	
+
+======================================================================

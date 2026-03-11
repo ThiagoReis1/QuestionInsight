@@ -1,0 +1,99 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 3066_4424.py
+Questão  : 3066
+Aluno    : 4424
+Total MCs: 3
+
+⚠️  Misconceptions detectados: B8, B9, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | vida=int(input("valor: "))
+     2 | x=float(input("valor: "))
+     3 | y=float(input("valor: "))
+     4 | z=float(input("valor: "))
+     5 | 
+     6 | N=x+y+z
+     7 | q=(vida-(10*N))
+     8 | if(N>=3)and(N<=36):
+     9 | 	if(q>0):
+    10 | 		print(q)
+    11 | 		print("VIVO")
+    12 | 	elif(q<=0):
+    13 | 		print(0)
+    14 | 		print("MORTO")		
+    15 | else:
+    16 | 	print("Entrada invalida")
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 9: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 9) / elif ... sem else
+      Contexto:
+               8 | if(N>=3)and(N<=36):
+        >>>    9 | 	if(q>0):
+              10 | 		print(q)
+
+▶ B9 — elif/else retestando condições já verificadas
+  Ocorrências: 1
+
+  [1] Linha 12: elif retesta condição inversa do if da linha 9
+      Trecho  : if q > 0 ... elif q <= 0
+      Contexto:
+              11 | 		print("VIVO")
+        >>>   12 | 	elif(q<=0):
+              13 | 		print(0)
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 6
+
+  [1] Linha 1: Variável 'vida' com nome muito curto (≤4 chars)
+      Trecho  : vida = ...
+      Contexto:
+        >>>    1 | vida=int(input("valor: "))
+               2 | x=float(input("valor: "))
+
+  [2] Linha 2: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+               1 | vida=int(input("valor: "))
+        >>>    2 | x=float(input("valor: "))
+               3 | y=float(input("valor: "))
+
+  [3] Linha 3: Variável 'y' com nome muito curto (≤4 chars)
+      Trecho  : y = ...
+      Contexto:
+               2 | x=float(input("valor: "))
+        >>>    3 | y=float(input("valor: "))
+               4 | z=float(input("valor: "))
+
+  [4] Linha 4: Variável 'z' com nome muito curto (≤4 chars)
+      Trecho  : z = ...
+      Contexto:
+               3 | y=float(input("valor: "))
+        >>>    4 | z=float(input("valor: "))
+               5 | 
+
+  [5] Linha 6: Variável 'N' com nome muito curto (≤4 chars)
+      Trecho  : N = ...
+      Contexto:
+               5 | 
+        >>>    6 | N=x+y+z
+               7 | q=(vida-(10*N))
+
+  [6] Linha 7: Variável 'q' com nome muito curto (≤4 chars)
+      Trecho  : q = ...
+      Contexto:
+               6 | N=x+y+z
+        >>>    7 | q=(vida-(10*N))
+               8 | if(N>=3)and(N<=36):
+
+======================================================================

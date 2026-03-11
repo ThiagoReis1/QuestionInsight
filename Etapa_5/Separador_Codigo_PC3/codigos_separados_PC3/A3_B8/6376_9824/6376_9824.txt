@@ -1,0 +1,56 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 6376_9824.py
+Questão  : 6376
+Aluno    : 9824
+Total MCs: 2
+
+⚠️  Misconceptions detectados: A3, B8
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | 
+     3 | cestas = input(":").upper().split(",")
+     4 | j = zeros(4, dtype = int)
+     5 | jo = size(cestas)
+     6 | 
+     7 | for i in cestas:
+     8 | 	if i == "A":
+     9 | 		j[0] += 1 
+    10 | 	elif i == "B":
+    11 | 		j[1] += 1
+    12 | 	elif i == "C":
+    13 | 		j[2] += 1
+    14 | 	elif i == "D":
+    15 | 		j[3] += 1
+    16 | 
+    17 | print(j)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 1
+
+  [1] Linha 5: Variável 'jo' declarada mas nunca utilizada
+      Trecho  : jo = ...
+      Contexto:
+               4 | j = zeros(4, dtype = int)
+        >>>    5 | jo = size(cestas)
+               6 | 
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 12: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 12) / elif ... sem else
+      Contexto:
+              11 | 		j[1] += 1
+        >>>   12 | 	elif i == "C":
+              13 | 		j[2] += 1
+
+======================================================================

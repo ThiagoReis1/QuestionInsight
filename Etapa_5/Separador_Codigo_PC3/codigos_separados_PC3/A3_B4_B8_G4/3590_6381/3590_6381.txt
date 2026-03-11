@@ -1,0 +1,166 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 3590_6381.py
+Questão  : 3590
+Aluno    : 6381
+Total MCs: 4
+
+⚠️  Misconceptions detectados: A3, B4, B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import *
+     2 | 
+     3 | n = array(eval(input("vetor de numeros:")))
+     4 | v = ''
+     5 | 
+     6 | i = 0 
+     7 | d = 0
+     8 | 
+     9 | while(i < len(n)):
+    10 | 	if (n[i] == "v"):
+    11 | 		d = d + 10 
+    12 | 	elif(n[i] == "face 2"):
+    13 | 		d = d + 5 
+    14 | 	elif(n[i] == "face 3"):
+    15 | 		d = d + 0
+    16 | 	elif(n[i] == "face 4"):
+    17 | 		d = d + 5
+    18 | 	elif(n[i] == "face 5"):
+    19 | 		d = d + 20 
+    20 | 	elif(n[i] == "face 6"):
+    21 | 		d = d + 10 
+    22 | 	i=i+1
+    23 | print(n)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 1
+
+  [1] Linha 4: Variável 'v' declarada mas nunca utilizada
+      Trecho  : v = ...
+      Contexto:
+               3 | n = array(eval(input("vetor de numeros:")))
+        >>>    4 | v = ''
+               5 | 
+
+▶ B4 — Comandos repetidos dentro de blocos if-elif-else
+  Ocorrências: 3
+
+  [1] Linha 16: Bloco idêntico ao da linha 12
+      Trecho  : d = d + 5
+      Contexto:
+              15 | 		d = d + 0
+        >>>   16 | 	elif(n[i] == "face 4"):
+              17 | 		d = d + 5
+
+  [2] Linha 20: Bloco idêntico ao da linha 10
+      Trecho  : d = d + 10
+      Contexto:
+              19 | 		d = d + 20 
+        >>>   20 | 	elif(n[i] == "face 6"):
+              21 | 		d = d + 10 
+
+  [3] Linha 16: Bloco idêntico ao da linha 12
+      Trecho  : d = d + 5
+      Contexto:
+              15 | 		d = d + 0
+        >>>   16 | 	elif(n[i] == "face 4"):
+              17 | 		d = d + 5
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 18: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 18) / elif ... sem else
+      Contexto:
+              17 | 		d = d + 5
+        >>>   18 | 	elif(n[i] == "face 5"):
+              19 | 		d = d + 20 
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 11
+
+  [1] Linha 3: Variável 'n' com nome muito curto (≤4 chars)
+      Trecho  : n = ...
+      Contexto:
+               2 | 
+        >>>    3 | n = array(eval(input("vetor de numeros:")))
+               4 | v = ''
+
+  [2] Linha 4: Variável 'v' com nome muito curto (≤4 chars)
+      Trecho  : v = ...
+      Contexto:
+               3 | n = array(eval(input("vetor de numeros:")))
+        >>>    4 | v = ''
+               5 | 
+
+  [3] Linha 6: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+               5 | 
+        >>>    6 | i = 0 
+               7 | d = 0
+
+  [4] Linha 7: Variável 'd' com nome muito curto (≤4 chars)
+      Trecho  : d = ...
+      Contexto:
+               6 | i = 0 
+        >>>    7 | d = 0
+               8 | 
+
+  [5] Linha 22: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+              21 | 		d = d + 10 
+        >>>   22 | 	i=i+1
+              23 | print(n)
+
+  [6] Linha 11: Variável 'd' com nome muito curto (≤4 chars)
+      Trecho  : d = ...
+      Contexto:
+              10 | 	if (n[i] == "v"):
+        >>>   11 | 		d = d + 10 
+              12 | 	elif(n[i] == "face 2"):
+
+  [7] Linha 13: Variável 'd' com nome muito curto (≤4 chars)
+      Trecho  : d = ...
+      Contexto:
+              12 | 	elif(n[i] == "face 2"):
+        >>>   13 | 		d = d + 5 
+              14 | 	elif(n[i] == "face 3"):
+
+  [8] Linha 15: Variável 'd' com nome muito curto (≤4 chars)
+      Trecho  : d = ...
+      Contexto:
+              14 | 	elif(n[i] == "face 3"):
+        >>>   15 | 		d = d + 0
+              16 | 	elif(n[i] == "face 4"):
+
+  [9] Linha 17: Variável 'd' com nome muito curto (≤4 chars)
+      Trecho  : d = ...
+      Contexto:
+              16 | 	elif(n[i] == "face 4"):
+        >>>   17 | 		d = d + 5
+              18 | 	elif(n[i] == "face 5"):
+
+  [10] Linha 19: Variável 'd' com nome muito curto (≤4 chars)
+      Trecho  : d = ...
+      Contexto:
+              18 | 	elif(n[i] == "face 5"):
+        >>>   19 | 		d = d + 20 
+              20 | 	elif(n[i] == "face 6"):
+
+  [11] Linha 21: Variável 'd' com nome muito curto (≤4 chars)
+      Trecho  : d = ...
+      Contexto:
+              20 | 	elif(n[i] == "face 6"):
+        >>>   21 | 		d = d + 10 
+              22 | 	i=i+1
+
+======================================================================

@@ -1,0 +1,65 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1649_3489.py
+Questão  : 1649
+Aluno    : 3489
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | 
+     3 | a = input("insira a string: ").split(',')
+     4 | 
+     5 | b = zeros(5, dtype=int)
+     6 | 
+     7 | for i in range(len(a)) :
+     8 | 	if (a[i] == "P") :
+     9 | 		b[0] = b[0] + 1
+    10 | 	elif (a[i] == "C") :
+    11 | 		b[1] = b[1] + 1
+    12 | 	elif (a[i] == "M") :
+    13 | 		b[2] = b[2] + 1
+    14 | 	elif (a[i] == "V") :
+    15 | 		b[3] = b[3] + 1
+    16 | 	elif (a[i] == "A") :
+    17 | 		b[4] = b[4] + 1
+    18 | print(max(b))
+    19 | print(b)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 14: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 14) / elif ... sem else
+      Contexto:
+              13 | 		b[2] = b[2] + 1
+        >>>   14 | 	elif (a[i] == "V") :
+              15 | 		b[3] = b[3] + 1
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 2
+
+  [1] Linha 3: Variável 'a' com nome muito curto (≤4 chars)
+      Trecho  : a = ...
+      Contexto:
+               2 | 
+        >>>    3 | a = input("insira a string: ").split(',')
+               4 | 
+
+  [2] Linha 5: Variável 'b' com nome muito curto (≤4 chars)
+      Trecho  : b = ...
+      Contexto:
+               4 | 
+        >>>    5 | b = zeros(5, dtype=int)
+               6 | 
+
+======================================================================

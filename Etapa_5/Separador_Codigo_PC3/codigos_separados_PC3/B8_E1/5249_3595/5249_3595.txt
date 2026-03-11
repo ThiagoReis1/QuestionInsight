@@ -1,0 +1,84 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 5249_3595.py
+Questão  : 5249
+Aluno    : 3595
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B8, E1
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | prato = int(input())
+     2 | sobremesa = int(input())
+     3 | bebida = int(input())
+     4 | 
+     5 | if prato <1 or prato >4 or sobremesa<1 or sobremesa>4 or bebida<1 or sobremesa>4:
+     6 | 	print('Dados invalidos')
+     7 | else:
+     8 | 	if(prato == 1):
+     9 | 		caloria = 180
+    10 | 	elif(prato == 2):
+    11 | 		caloria = 230
+    12 | 	elif(prato == 3):
+    13 | 		caloria = 250
+    14 | 	elif(prato == 4):
+    15 | 		caloria = 350
+    16 | 
+    17 | 	if(sobremesa == 1):
+    18 | 		caloria = caloria+75
+    19 | 	elif(sobremesa == 2):
+    20 | 		caloria = caloria+110
+    21 | 	elif(sobremesa == 3):
+    22 | 		caloria = caloria+170
+    23 | 	elif(sobremesa == 4):
+    24 | 		caloria = caloria+200
+    25 | 		
+    26 | 	if(bebida == 1):
+    27 | 		caloria = caloria+20
+    28 | 		print('Calorias: ',caloria, 'cal')
+    29 | 	elif(bebida ==2):
+    30 | 		caloria = caloria+70
+    31 | 		print('Calorias: ',caloria, 'cal')
+    32 | 	elif(bebida == 3):
+    33 | 		caloria = caloria+100
+    34 | 		print('Calorias: ',caloria, 'cal')
+    35 | 	else:
+    36 | 		caloria = caloria+65
+    37 | 		print('Calorias: ',caloria, 'cal')
+    38 | 			
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 2
+
+  [1] Linha 12: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 12) / elif ... sem else
+      Contexto:
+              11 | 		caloria = 230
+        >>>   12 | 	elif(prato == 3):
+              13 | 		caloria = 250
+
+  [2] Linha 21: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 21) / elif ... sem else
+      Contexto:
+              20 | 		caloria = caloria+110
+        >>>   21 | 	elif(sobremesa == 3):
+              22 | 		caloria = caloria+170
+
+▶ E1 — Verificação desnecessária de todas as combinações possíveis
+  Ocorrências: 1
+
+  [1] Linha 5: 6 condições em um único if — verificação excessiva
+      Trecho  : prato < 1 or prato > 4 or sobremesa < 1 or (sobremesa > 4) or (bebida < 1) or (sobremesa > 4)
+      Contexto:
+               4 | 
+        >>>    5 | if prato <1 or prato >4 or sobremesa<1 or sobremesa>4 or bebida<1 or sobremesa>4:
+               6 | 	print('Dados invalidos')
+
+======================================================================

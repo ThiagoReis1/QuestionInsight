@@ -1,0 +1,79 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1615_2918.py
+Questão  : 1615
+Aluno    : 2918
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | v1 = array (eval (input ("primeiro jogador: ")))
+     3 | v2 = array (eval (input ("segundo jogador: ")))
+     4 | 
+     5 | i = 0
+     6 | j = 0
+     7 | soma = 0
+     8 | soma2 = 0
+     9 | 
+    10 | while (i < size(v1)):
+    11 | 	if (v1[i] == 1):
+    12 | 		soma = soma + 40
+    13 | 	elif (v1[i] == 2):
+    14 | 		soma = soma + 20
+    15 | 	elif (v1[i] == 3):
+    16 | 		soma = soma + 10
+    17 | 	elif (v1[i] >= 4):
+    18 | 		soma = soma + 0
+    19 | 	i = i + 1
+    20 | 	
+    21 | while (j < size(v2)):
+    22 | 	if (v2[j] == 1):
+    23 | 		soma2 = soma2 + 40
+    24 | 	elif (v2[j] == 2):
+    25 | 		soma2 = soma2 + 20
+    26 | 	elif (v2[j] == 3):
+    27 | 		soma2 = soma2 + 10
+    28 | 	elif (v2[j] >= 4):
+    29 | 		soma2 = soma2 + 0
+    30 | 	j = j + 1
+    31 | 	
+    32 | if (soma > soma2):
+    33 | 	print ("JOGADOR UM")
+    34 | elif (soma2 > soma):
+    35 | 	print ("JOGADOR DOIS")
+    36 | else:
+    37 | 	print ("EMPATE")
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 2
+
+  [1] Linha 15: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 15) / elif ... sem else
+      Contexto:
+              14 | 		soma = soma + 20
+        >>>   15 | 	elif (v1[i] == 3):
+              16 | 		soma = soma + 10
+
+  [2] Linha 26: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 26) / elif ... sem else
+      Contexto:
+              25 | 		soma2 = soma2 + 20
+        >>>   26 | 	elif (v2[j] == 3):
+              27 | 		soma2 = soma2 + 10
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 1
+
+  [1] Linha 0: G4 detectado pelo VisitorMC3 (localização exata não mapeada)
+      Trecho  : —
+
+======================================================================

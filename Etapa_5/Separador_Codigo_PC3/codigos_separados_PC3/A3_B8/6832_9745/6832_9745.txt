@@ -1,0 +1,71 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 6832_9745.py
+Questão  : 6832
+Aluno    : 9745
+Total MCs: 2
+
+⚠️  Misconceptions detectados: A3, B8
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | fruta = 5.40
+     2 | cereal = 8.95
+     3 | lata = 4.50
+     4 | 
+     5 | com = input("compras:").upper()
+     6 | 
+     7 | acu = 0
+     8 | i = 0
+     9 | 
+    10 | while i < len(com):
+    11 | 	if com[i] == 'H':
+    12 | 		acu = acu + 5.40
+    13 | 	elif com[i] == 'C':
+    14 | 		acu = acu + 8.95
+    15 | 	elif com[i] == 'L':
+    16 | 		acu = acu + 4.50
+    17 | 	
+    18 | 	i = i + 1
+    19 | print(round(acu,2))
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 3
+
+  [1] Linha 1: Variável 'fruta' declarada mas nunca utilizada
+      Trecho  : fruta = ...
+      Contexto:
+        >>>    1 | fruta = 5.40
+               2 | cereal = 8.95
+
+  [2] Linha 2: Variável 'cereal' declarada mas nunca utilizada
+      Trecho  : cereal = ...
+      Contexto:
+               1 | fruta = 5.40
+        >>>    2 | cereal = 8.95
+               3 | lata = 4.50
+
+  [3] Linha 3: Variável 'lata' declarada mas nunca utilizada
+      Trecho  : lata = ...
+      Contexto:
+               2 | cereal = 8.95
+        >>>    3 | lata = 4.50
+               4 | 
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 13: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 13) / elif ... sem else
+      Contexto:
+              12 | 		acu = acu + 5.40
+        >>>   13 | 	elif com[i] == 'C':
+              14 | 		acu = acu + 8.95
+
+======================================================================

@@ -1,0 +1,149 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1597_4163.py
+Questão  : 1597
+Aluno    : 4163
+Total MCs: 2
+
+⚠️  Misconceptions detectados: A3, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | x = array(eval(input("custo de itens: ")))
+     3 | 
+     4 | i = 0
+     5 | 
+     6 | 
+     7 | while (i<size(x)):
+     8 | 	i = i + 1
+     9 | b = 0 #entrada
+    10 | a = 0 #saida
+    11 | lis = zeros(i , dtype=float)
+    12 | 
+    13 | while(a<size(lis)):
+    14 | 	if x[a] < 80:
+    15 | 		d = x[a]-5
+    16 | 		d = lis[b]
+    17 | 		a = a + 1
+    18 | 		b = b + 1
+    19 | 	else:
+    20 | 		lis[b] = x[a]
+    21 | 		a = a +1
+    22 | 		b = b +1
+    23 | comp = sum(lis)
+    24 | print(comp)		
+    25 | print(lis)
+    26 | 	
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 1
+
+  [1] Linha 15: Variável 'd' declarada mas nunca utilizada
+      Trecho  : d = ...
+      Contexto:
+              14 | 	if x[a] < 80:
+        >>>   15 | 		d = x[a]-5
+              16 | 		d = lis[b]
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 13
+
+  [1] Linha 2: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+               1 | from numpy import*
+        >>>    2 | x = array(eval(input("custo de itens: ")))
+               3 | 
+
+  [2] Linha 4: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+               3 | 
+        >>>    4 | i = 0
+               5 | 
+
+  [3] Linha 9: Variável 'b' com nome muito curto (≤4 chars)
+      Trecho  : b = ...
+      Contexto:
+               8 | 	i = i + 1
+        >>>    9 | b = 0 #entrada
+              10 | a = 0 #saida
+
+  [4] Linha 10: Variável 'a' com nome muito curto (≤4 chars)
+      Trecho  : a = ...
+      Contexto:
+               9 | b = 0 #entrada
+        >>>   10 | a = 0 #saida
+              11 | lis = zeros(i , dtype=float)
+
+  [5] Linha 11: Variável 'lis' com nome muito curto (≤4 chars)
+      Trecho  : lis = ...
+      Contexto:
+              10 | a = 0 #saida
+        >>>   11 | lis = zeros(i , dtype=float)
+              12 | 
+
+  [6] Linha 23: Variável 'comp' com nome muito curto (≤4 chars)
+      Trecho  : comp = ...
+      Contexto:
+              22 | 		b = b +1
+        >>>   23 | comp = sum(lis)
+              24 | print(comp)		
+
+  [7] Linha 8: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+               7 | while (i<size(x)):
+        >>>    8 | 	i = i + 1
+               9 | b = 0 #entrada
+
+  [8] Linha 15: Variável 'd' com nome muito curto (≤4 chars)
+      Trecho  : d = ...
+      Contexto:
+              14 | 	if x[a] < 80:
+        >>>   15 | 		d = x[a]-5
+              16 | 		d = lis[b]
+
+  [9] Linha 16: Variável 'd' com nome muito curto (≤4 chars)
+      Trecho  : d = ...
+      Contexto:
+              15 | 		d = x[a]-5
+        >>>   16 | 		d = lis[b]
+              17 | 		a = a + 1
+
+  [10] Linha 17: Variável 'a' com nome muito curto (≤4 chars)
+      Trecho  : a = ...
+      Contexto:
+              16 | 		d = lis[b]
+        >>>   17 | 		a = a + 1
+              18 | 		b = b + 1
+
+  [11] Linha 18: Variável 'b' com nome muito curto (≤4 chars)
+      Trecho  : b = ...
+      Contexto:
+              17 | 		a = a + 1
+        >>>   18 | 		b = b + 1
+              19 | 	else:
+
+  [12] Linha 21: Variável 'a' com nome muito curto (≤4 chars)
+      Trecho  : a = ...
+      Contexto:
+              20 | 		lis[b] = x[a]
+        >>>   21 | 		a = a +1
+              22 | 		b = b +1
+
+  [13] Linha 22: Variável 'b' com nome muito curto (≤4 chars)
+      Trecho  : b = ...
+      Contexto:
+              21 | 		a = a +1
+        >>>   22 | 		b = b +1
+              23 | comp = sum(lis)
+
+======================================================================

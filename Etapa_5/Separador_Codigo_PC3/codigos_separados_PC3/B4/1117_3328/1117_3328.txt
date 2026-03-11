@@ -1,0 +1,563 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1117_3328.py
+Questão  : 1117
+Aluno    : 3328
+Total MCs: 1
+
+⚠️  Misconceptions detectados: B4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | preco= float(input("valor: "))
+     2 | dia= int(input("dia da semana: "))
+     3 | musicaaovivo=input("entre com S ou N: ")
+     4 | print("Entradas: ",preco,",",dia,",",musicaaovivo)
+     5 | if((preco<0)and(dia!=1 or dia!=2 or dia!=3 or dia!=4 or dia!=5 or dia!=6 or dia!=7 )and (musicaaovivo!="S" or musicaaovivo!="N")):
+     6 | 	print("Dados invalidos")
+     7 | else:
+     8 | 	if((preco>=0)and(dia==1)and(musicaaovivo=="S")):
+     9 | 		print("Valor a pagar: R$",preco+20)
+    10 | 	elif((preco>=0)and(dia==2)and(musicaaovivo=="S")):
+    11 | 		print("Valor a pagar: R$",preco+20)
+    12 | 	elif((preco>=0)and(dia==3)and(musicaaovivo=="S")):
+    13 | 		print("Valor a pagar: R$",preco+20)
+    14 | 	elif((preco>=0)and(dia==4)and(musicaaovivo=="S")):
+    15 | 		print("Valor a pagar: R$",preco+20)
+    16 | 	elif((preco>=0)and(dia==5)and(musicaaovivo=="S")):
+    17 | 		print("Valor a pagar: R$",preco+20)
+    18 | 	elif((preco>=0)and(dia==6)and(musicaaovivo=="S")):
+    19 | 		print("Valor a pagar: R$",preco+20)
+    20 | 	elif((preco>=0)and(dia==1)and(musicaaovivo=="N")):
+    21 | 		print("Valor a pagar: R$",preco)
+    22 | 	elif((preco>=0)and(dia==2)and(musicaaovivo=="N")):
+    23 | 		print("Valor a pagar: R$",preco-preco*0.25)
+    24 | 	elif((preco>=0)and(dia==3)and(musicaaovivo=="N")):
+    25 | 		print("Valor a pagar: R$",preco-preco*0.25)
+    26 | 	elif((preco>=0)and(dia==4)and(musicaaovivo=="N")):
+    27 | 		print("Valor a pagar: R$",preco)
+    28 | 	elif((preco>=0)and(dia==5)and(musicaaovivo=="N")):
+    29 | 		print("Valor a pagar: R$",preco-preco*0.25)
+    30 | 	elif((preco>=0)and(dia==6)and(musicaaovivo=="N")):
+    31 | 		print("Valor a pagar: R$",preco)
+    32 | 	elif((preco>=0)and(dia==7)and(musicaaovivo=="N")):
+    33 | 		print("Valor a pagar: R$",preco)
+    34 | 	else:
+    35 | 		print("Dados invalidos")
+    36 | 		
+    37 | 		
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B4 — Comandos repetidos dentro de blocos if-elif-else
+  Ocorrências: 72
+
+  [1] Linha 10: Bloco idêntico ao da linha 8
+      Trecho  : print('Valor a pagar: R$', preco + 20)
+      Contexto:
+               9 | 		print("Valor a pagar: R$",preco+20)
+        >>>   10 | 	elif((preco>=0)and(dia==2)and(musicaaovivo=="S")):
+              11 | 		print("Valor a pagar: R$",preco+20)
+
+  [2] Linha 12: Bloco idêntico ao da linha 8
+      Trecho  : print('Valor a pagar: R$', preco + 20)
+      Contexto:
+              11 | 		print("Valor a pagar: R$",preco+20)
+        >>>   12 | 	elif((preco>=0)and(dia==3)and(musicaaovivo=="S")):
+              13 | 		print("Valor a pagar: R$",preco+20)
+
+  [3] Linha 14: Bloco idêntico ao da linha 8
+      Trecho  : print('Valor a pagar: R$', preco + 20)
+      Contexto:
+              13 | 		print("Valor a pagar: R$",preco+20)
+        >>>   14 | 	elif((preco>=0)and(dia==4)and(musicaaovivo=="S")):
+              15 | 		print("Valor a pagar: R$",preco+20)
+
+  [4] Linha 16: Bloco idêntico ao da linha 8
+      Trecho  : print('Valor a pagar: R$', preco + 20)
+      Contexto:
+              15 | 		print("Valor a pagar: R$",preco+20)
+        >>>   16 | 	elif((preco>=0)and(dia==5)and(musicaaovivo=="S")):
+              17 | 		print("Valor a pagar: R$",preco+20)
+
+  [5] Linha 18: Bloco idêntico ao da linha 8
+      Trecho  : print('Valor a pagar: R$', preco + 20)
+      Contexto:
+              17 | 		print("Valor a pagar: R$",preco+20)
+        >>>   18 | 	elif((preco>=0)and(dia==6)and(musicaaovivo=="S")):
+              19 | 		print("Valor a pagar: R$",preco+20)
+
+  [6] Linha 24: Bloco idêntico ao da linha 22
+      Trecho  : print('Valor a pagar: R$', preco - preco * 0.25)
+      Contexto:
+              23 | 		print("Valor a pagar: R$",preco-preco*0.25)
+        >>>   24 | 	elif((preco>=0)and(dia==3)and(musicaaovivo=="N")):
+              25 | 		print("Valor a pagar: R$",preco-preco*0.25)
+
+  [7] Linha 26: Bloco idêntico ao da linha 20
+      Trecho  : print('Valor a pagar: R$', preco)
+      Contexto:
+              25 | 		print("Valor a pagar: R$",preco-preco*0.25)
+        >>>   26 | 	elif((preco>=0)and(dia==4)and(musicaaovivo=="N")):
+              27 | 		print("Valor a pagar: R$",preco)
+
+  [8] Linha 28: Bloco idêntico ao da linha 22
+      Trecho  : print('Valor a pagar: R$', preco - preco * 0.25)
+      Contexto:
+              27 | 		print("Valor a pagar: R$",preco)
+        >>>   28 | 	elif((preco>=0)and(dia==5)and(musicaaovivo=="N")):
+              29 | 		print("Valor a pagar: R$",preco-preco*0.25)
+
+  [9] Linha 30: Bloco idêntico ao da linha 20
+      Trecho  : print('Valor a pagar: R$', preco)
+      Contexto:
+              29 | 		print("Valor a pagar: R$",preco-preco*0.25)
+        >>>   30 | 	elif((preco>=0)and(dia==6)and(musicaaovivo=="N")):
+              31 | 		print("Valor a pagar: R$",preco)
+
+  [10] Linha 32: Bloco idêntico ao da linha 20
+      Trecho  : print('Valor a pagar: R$', preco)
+      Contexto:
+              31 | 		print("Valor a pagar: R$",preco)
+        >>>   32 | 	elif((preco>=0)and(dia==7)and(musicaaovivo=="N")):
+              33 | 		print("Valor a pagar: R$",preco)
+
+  [11] Linha 32: Bloco idêntico ao da linha 5
+      Trecho  : print('Dados invalidos')
+      Contexto:
+              31 | 		print("Valor a pagar: R$",preco)
+        >>>   32 | 	elif((preco>=0)and(dia==7)and(musicaaovivo=="N")):
+              33 | 		print("Valor a pagar: R$",preco)
+
+  [12] Linha 10: Bloco idêntico ao da linha 8
+      Trecho  : print('Valor a pagar: R$', preco + 20)
+      Contexto:
+               9 | 		print("Valor a pagar: R$",preco+20)
+        >>>   10 | 	elif((preco>=0)and(dia==2)and(musicaaovivo=="S")):
+              11 | 		print("Valor a pagar: R$",preco+20)
+
+  [13] Linha 12: Bloco idêntico ao da linha 8
+      Trecho  : print('Valor a pagar: R$', preco + 20)
+      Contexto:
+              11 | 		print("Valor a pagar: R$",preco+20)
+        >>>   12 | 	elif((preco>=0)and(dia==3)and(musicaaovivo=="S")):
+              13 | 		print("Valor a pagar: R$",preco+20)
+
+  [14] Linha 14: Bloco idêntico ao da linha 8
+      Trecho  : print('Valor a pagar: R$', preco + 20)
+      Contexto:
+              13 | 		print("Valor a pagar: R$",preco+20)
+        >>>   14 | 	elif((preco>=0)and(dia==4)and(musicaaovivo=="S")):
+              15 | 		print("Valor a pagar: R$",preco+20)
+
+  [15] Linha 16: Bloco idêntico ao da linha 8
+      Trecho  : print('Valor a pagar: R$', preco + 20)
+      Contexto:
+              15 | 		print("Valor a pagar: R$",preco+20)
+        >>>   16 | 	elif((preco>=0)and(dia==5)and(musicaaovivo=="S")):
+              17 | 		print("Valor a pagar: R$",preco+20)
+
+  [16] Linha 18: Bloco idêntico ao da linha 8
+      Trecho  : print('Valor a pagar: R$', preco + 20)
+      Contexto:
+              17 | 		print("Valor a pagar: R$",preco+20)
+        >>>   18 | 	elif((preco>=0)and(dia==6)and(musicaaovivo=="S")):
+              19 | 		print("Valor a pagar: R$",preco+20)
+
+  [17] Linha 24: Bloco idêntico ao da linha 22
+      Trecho  : print('Valor a pagar: R$', preco - preco * 0.25)
+      Contexto:
+              23 | 		print("Valor a pagar: R$",preco-preco*0.25)
+        >>>   24 | 	elif((preco>=0)and(dia==3)and(musicaaovivo=="N")):
+              25 | 		print("Valor a pagar: R$",preco-preco*0.25)
+
+  [18] Linha 26: Bloco idêntico ao da linha 20
+      Trecho  : print('Valor a pagar: R$', preco)
+      Contexto:
+              25 | 		print("Valor a pagar: R$",preco-preco*0.25)
+        >>>   26 | 	elif((preco>=0)and(dia==4)and(musicaaovivo=="N")):
+              27 | 		print("Valor a pagar: R$",preco)
+
+  [19] Linha 28: Bloco idêntico ao da linha 22
+      Trecho  : print('Valor a pagar: R$', preco - preco * 0.25)
+      Contexto:
+              27 | 		print("Valor a pagar: R$",preco)
+        >>>   28 | 	elif((preco>=0)and(dia==5)and(musicaaovivo=="N")):
+              29 | 		print("Valor a pagar: R$",preco-preco*0.25)
+
+  [20] Linha 30: Bloco idêntico ao da linha 20
+      Trecho  : print('Valor a pagar: R$', preco)
+      Contexto:
+              29 | 		print("Valor a pagar: R$",preco-preco*0.25)
+        >>>   30 | 	elif((preco>=0)and(dia==6)and(musicaaovivo=="N")):
+              31 | 		print("Valor a pagar: R$",preco)
+
+  [21] Linha 32: Bloco idêntico ao da linha 20
+      Trecho  : print('Valor a pagar: R$', preco)
+      Contexto:
+              31 | 		print("Valor a pagar: R$",preco)
+        >>>   32 | 	elif((preco>=0)and(dia==7)and(musicaaovivo=="N")):
+              33 | 		print("Valor a pagar: R$",preco)
+
+  [22] Linha 12: Bloco idêntico ao da linha 10
+      Trecho  : print('Valor a pagar: R$', preco + 20)
+      Contexto:
+              11 | 		print("Valor a pagar: R$",preco+20)
+        >>>   12 | 	elif((preco>=0)and(dia==3)and(musicaaovivo=="S")):
+              13 | 		print("Valor a pagar: R$",preco+20)
+
+  [23] Linha 14: Bloco idêntico ao da linha 10
+      Trecho  : print('Valor a pagar: R$', preco + 20)
+      Contexto:
+              13 | 		print("Valor a pagar: R$",preco+20)
+        >>>   14 | 	elif((preco>=0)and(dia==4)and(musicaaovivo=="S")):
+              15 | 		print("Valor a pagar: R$",preco+20)
+
+  [24] Linha 16: Bloco idêntico ao da linha 10
+      Trecho  : print('Valor a pagar: R$', preco + 20)
+      Contexto:
+              15 | 		print("Valor a pagar: R$",preco+20)
+        >>>   16 | 	elif((preco>=0)and(dia==5)and(musicaaovivo=="S")):
+              17 | 		print("Valor a pagar: R$",preco+20)
+
+  [25] Linha 18: Bloco idêntico ao da linha 10
+      Trecho  : print('Valor a pagar: R$', preco + 20)
+      Contexto:
+              17 | 		print("Valor a pagar: R$",preco+20)
+        >>>   18 | 	elif((preco>=0)and(dia==6)and(musicaaovivo=="S")):
+              19 | 		print("Valor a pagar: R$",preco+20)
+
+  [26] Linha 24: Bloco idêntico ao da linha 22
+      Trecho  : print('Valor a pagar: R$', preco - preco * 0.25)
+      Contexto:
+              23 | 		print("Valor a pagar: R$",preco-preco*0.25)
+        >>>   24 | 	elif((preco>=0)and(dia==3)and(musicaaovivo=="N")):
+              25 | 		print("Valor a pagar: R$",preco-preco*0.25)
+
+  [27] Linha 26: Bloco idêntico ao da linha 20
+      Trecho  : print('Valor a pagar: R$', preco)
+      Contexto:
+              25 | 		print("Valor a pagar: R$",preco-preco*0.25)
+        >>>   26 | 	elif((preco>=0)and(dia==4)and(musicaaovivo=="N")):
+              27 | 		print("Valor a pagar: R$",preco)
+
+  [28] Linha 28: Bloco idêntico ao da linha 22
+      Trecho  : print('Valor a pagar: R$', preco - preco * 0.25)
+      Contexto:
+              27 | 		print("Valor a pagar: R$",preco)
+        >>>   28 | 	elif((preco>=0)and(dia==5)and(musicaaovivo=="N")):
+              29 | 		print("Valor a pagar: R$",preco-preco*0.25)
+
+  [29] Linha 30: Bloco idêntico ao da linha 20
+      Trecho  : print('Valor a pagar: R$', preco)
+      Contexto:
+              29 | 		print("Valor a pagar: R$",preco-preco*0.25)
+        >>>   30 | 	elif((preco>=0)and(dia==6)and(musicaaovivo=="N")):
+              31 | 		print("Valor a pagar: R$",preco)
+
+  [30] Linha 32: Bloco idêntico ao da linha 20
+      Trecho  : print('Valor a pagar: R$', preco)
+      Contexto:
+              31 | 		print("Valor a pagar: R$",preco)
+        >>>   32 | 	elif((preco>=0)and(dia==7)and(musicaaovivo=="N")):
+              33 | 		print("Valor a pagar: R$",preco)
+
+  [31] Linha 14: Bloco idêntico ao da linha 12
+      Trecho  : print('Valor a pagar: R$', preco + 20)
+      Contexto:
+              13 | 		print("Valor a pagar: R$",preco+20)
+        >>>   14 | 	elif((preco>=0)and(dia==4)and(musicaaovivo=="S")):
+              15 | 		print("Valor a pagar: R$",preco+20)
+
+  [32] Linha 16: Bloco idêntico ao da linha 12
+      Trecho  : print('Valor a pagar: R$', preco + 20)
+      Contexto:
+              15 | 		print("Valor a pagar: R$",preco+20)
+        >>>   16 | 	elif((preco>=0)and(dia==5)and(musicaaovivo=="S")):
+              17 | 		print("Valor a pagar: R$",preco+20)
+
+  [33] Linha 18: Bloco idêntico ao da linha 12
+      Trecho  : print('Valor a pagar: R$', preco + 20)
+      Contexto:
+              17 | 		print("Valor a pagar: R$",preco+20)
+        >>>   18 | 	elif((preco>=0)and(dia==6)and(musicaaovivo=="S")):
+              19 | 		print("Valor a pagar: R$",preco+20)
+
+  [34] Linha 24: Bloco idêntico ao da linha 22
+      Trecho  : print('Valor a pagar: R$', preco - preco * 0.25)
+      Contexto:
+              23 | 		print("Valor a pagar: R$",preco-preco*0.25)
+        >>>   24 | 	elif((preco>=0)and(dia==3)and(musicaaovivo=="N")):
+              25 | 		print("Valor a pagar: R$",preco-preco*0.25)
+
+  [35] Linha 26: Bloco idêntico ao da linha 20
+      Trecho  : print('Valor a pagar: R$', preco)
+      Contexto:
+              25 | 		print("Valor a pagar: R$",preco-preco*0.25)
+        >>>   26 | 	elif((preco>=0)and(dia==4)and(musicaaovivo=="N")):
+              27 | 		print("Valor a pagar: R$",preco)
+
+  [36] Linha 28: Bloco idêntico ao da linha 22
+      Trecho  : print('Valor a pagar: R$', preco - preco * 0.25)
+      Contexto:
+              27 | 		print("Valor a pagar: R$",preco)
+        >>>   28 | 	elif((preco>=0)and(dia==5)and(musicaaovivo=="N")):
+              29 | 		print("Valor a pagar: R$",preco-preco*0.25)
+
+  [37] Linha 30: Bloco idêntico ao da linha 20
+      Trecho  : print('Valor a pagar: R$', preco)
+      Contexto:
+              29 | 		print("Valor a pagar: R$",preco-preco*0.25)
+        >>>   30 | 	elif((preco>=0)and(dia==6)and(musicaaovivo=="N")):
+              31 | 		print("Valor a pagar: R$",preco)
+
+  [38] Linha 32: Bloco idêntico ao da linha 20
+      Trecho  : print('Valor a pagar: R$', preco)
+      Contexto:
+              31 | 		print("Valor a pagar: R$",preco)
+        >>>   32 | 	elif((preco>=0)and(dia==7)and(musicaaovivo=="N")):
+              33 | 		print("Valor a pagar: R$",preco)
+
+  [39] Linha 16: Bloco idêntico ao da linha 14
+      Trecho  : print('Valor a pagar: R$', preco + 20)
+      Contexto:
+              15 | 		print("Valor a pagar: R$",preco+20)
+        >>>   16 | 	elif((preco>=0)and(dia==5)and(musicaaovivo=="S")):
+              17 | 		print("Valor a pagar: R$",preco+20)
+
+  [40] Linha 18: Bloco idêntico ao da linha 14
+      Trecho  : print('Valor a pagar: R$', preco + 20)
+      Contexto:
+              17 | 		print("Valor a pagar: R$",preco+20)
+        >>>   18 | 	elif((preco>=0)and(dia==6)and(musicaaovivo=="S")):
+              19 | 		print("Valor a pagar: R$",preco+20)
+
+  [41] Linha 24: Bloco idêntico ao da linha 22
+      Trecho  : print('Valor a pagar: R$', preco - preco * 0.25)
+      Contexto:
+              23 | 		print("Valor a pagar: R$",preco-preco*0.25)
+        >>>   24 | 	elif((preco>=0)and(dia==3)and(musicaaovivo=="N")):
+              25 | 		print("Valor a pagar: R$",preco-preco*0.25)
+
+  [42] Linha 26: Bloco idêntico ao da linha 20
+      Trecho  : print('Valor a pagar: R$', preco)
+      Contexto:
+              25 | 		print("Valor a pagar: R$",preco-preco*0.25)
+        >>>   26 | 	elif((preco>=0)and(dia==4)and(musicaaovivo=="N")):
+              27 | 		print("Valor a pagar: R$",preco)
+
+  [43] Linha 28: Bloco idêntico ao da linha 22
+      Trecho  : print('Valor a pagar: R$', preco - preco * 0.25)
+      Contexto:
+              27 | 		print("Valor a pagar: R$",preco)
+        >>>   28 | 	elif((preco>=0)and(dia==5)and(musicaaovivo=="N")):
+              29 | 		print("Valor a pagar: R$",preco-preco*0.25)
+
+  [44] Linha 30: Bloco idêntico ao da linha 20
+      Trecho  : print('Valor a pagar: R$', preco)
+      Contexto:
+              29 | 		print("Valor a pagar: R$",preco-preco*0.25)
+        >>>   30 | 	elif((preco>=0)and(dia==6)and(musicaaovivo=="N")):
+              31 | 		print("Valor a pagar: R$",preco)
+
+  [45] Linha 32: Bloco idêntico ao da linha 20
+      Trecho  : print('Valor a pagar: R$', preco)
+      Contexto:
+              31 | 		print("Valor a pagar: R$",preco)
+        >>>   32 | 	elif((preco>=0)and(dia==7)and(musicaaovivo=="N")):
+              33 | 		print("Valor a pagar: R$",preco)
+
+  [46] Linha 18: Bloco idêntico ao da linha 16
+      Trecho  : print('Valor a pagar: R$', preco + 20)
+      Contexto:
+              17 | 		print("Valor a pagar: R$",preco+20)
+        >>>   18 | 	elif((preco>=0)and(dia==6)and(musicaaovivo=="S")):
+              19 | 		print("Valor a pagar: R$",preco+20)
+
+  [47] Linha 24: Bloco idêntico ao da linha 22
+      Trecho  : print('Valor a pagar: R$', preco - preco * 0.25)
+      Contexto:
+              23 | 		print("Valor a pagar: R$",preco-preco*0.25)
+        >>>   24 | 	elif((preco>=0)and(dia==3)and(musicaaovivo=="N")):
+              25 | 		print("Valor a pagar: R$",preco-preco*0.25)
+
+  [48] Linha 26: Bloco idêntico ao da linha 20
+      Trecho  : print('Valor a pagar: R$', preco)
+      Contexto:
+              25 | 		print("Valor a pagar: R$",preco-preco*0.25)
+        >>>   26 | 	elif((preco>=0)and(dia==4)and(musicaaovivo=="N")):
+              27 | 		print("Valor a pagar: R$",preco)
+
+  [49] Linha 28: Bloco idêntico ao da linha 22
+      Trecho  : print('Valor a pagar: R$', preco - preco * 0.25)
+      Contexto:
+              27 | 		print("Valor a pagar: R$",preco)
+        >>>   28 | 	elif((preco>=0)and(dia==5)and(musicaaovivo=="N")):
+              29 | 		print("Valor a pagar: R$",preco-preco*0.25)
+
+  [50] Linha 30: Bloco idêntico ao da linha 20
+      Trecho  : print('Valor a pagar: R$', preco)
+      Contexto:
+              29 | 		print("Valor a pagar: R$",preco-preco*0.25)
+        >>>   30 | 	elif((preco>=0)and(dia==6)and(musicaaovivo=="N")):
+              31 | 		print("Valor a pagar: R$",preco)
+
+  [51] Linha 32: Bloco idêntico ao da linha 20
+      Trecho  : print('Valor a pagar: R$', preco)
+      Contexto:
+              31 | 		print("Valor a pagar: R$",preco)
+        >>>   32 | 	elif((preco>=0)and(dia==7)and(musicaaovivo=="N")):
+              33 | 		print("Valor a pagar: R$",preco)
+
+  [52] Linha 24: Bloco idêntico ao da linha 22
+      Trecho  : print('Valor a pagar: R$', preco - preco * 0.25)
+      Contexto:
+              23 | 		print("Valor a pagar: R$",preco-preco*0.25)
+        >>>   24 | 	elif((preco>=0)and(dia==3)and(musicaaovivo=="N")):
+              25 | 		print("Valor a pagar: R$",preco-preco*0.25)
+
+  [53] Linha 26: Bloco idêntico ao da linha 20
+      Trecho  : print('Valor a pagar: R$', preco)
+      Contexto:
+              25 | 		print("Valor a pagar: R$",preco-preco*0.25)
+        >>>   26 | 	elif((preco>=0)and(dia==4)and(musicaaovivo=="N")):
+              27 | 		print("Valor a pagar: R$",preco)
+
+  [54] Linha 28: Bloco idêntico ao da linha 22
+      Trecho  : print('Valor a pagar: R$', preco - preco * 0.25)
+      Contexto:
+              27 | 		print("Valor a pagar: R$",preco)
+        >>>   28 | 	elif((preco>=0)and(dia==5)and(musicaaovivo=="N")):
+              29 | 		print("Valor a pagar: R$",preco-preco*0.25)
+
+  [55] Linha 30: Bloco idêntico ao da linha 20
+      Trecho  : print('Valor a pagar: R$', preco)
+      Contexto:
+              29 | 		print("Valor a pagar: R$",preco-preco*0.25)
+        >>>   30 | 	elif((preco>=0)and(dia==6)and(musicaaovivo=="N")):
+              31 | 		print("Valor a pagar: R$",preco)
+
+  [56] Linha 32: Bloco idêntico ao da linha 20
+      Trecho  : print('Valor a pagar: R$', preco)
+      Contexto:
+              31 | 		print("Valor a pagar: R$",preco)
+        >>>   32 | 	elif((preco>=0)and(dia==7)and(musicaaovivo=="N")):
+              33 | 		print("Valor a pagar: R$",preco)
+
+  [57] Linha 24: Bloco idêntico ao da linha 22
+      Trecho  : print('Valor a pagar: R$', preco - preco * 0.25)
+      Contexto:
+              23 | 		print("Valor a pagar: R$",preco-preco*0.25)
+        >>>   24 | 	elif((preco>=0)and(dia==3)and(musicaaovivo=="N")):
+              25 | 		print("Valor a pagar: R$",preco-preco*0.25)
+
+  [58] Linha 26: Bloco idêntico ao da linha 20
+      Trecho  : print('Valor a pagar: R$', preco)
+      Contexto:
+              25 | 		print("Valor a pagar: R$",preco-preco*0.25)
+        >>>   26 | 	elif((preco>=0)and(dia==4)and(musicaaovivo=="N")):
+              27 | 		print("Valor a pagar: R$",preco)
+
+  [59] Linha 28: Bloco idêntico ao da linha 22
+      Trecho  : print('Valor a pagar: R$', preco - preco * 0.25)
+      Contexto:
+              27 | 		print("Valor a pagar: R$",preco)
+        >>>   28 | 	elif((preco>=0)and(dia==5)and(musicaaovivo=="N")):
+              29 | 		print("Valor a pagar: R$",preco-preco*0.25)
+
+  [60] Linha 30: Bloco idêntico ao da linha 20
+      Trecho  : print('Valor a pagar: R$', preco)
+      Contexto:
+              29 | 		print("Valor a pagar: R$",preco-preco*0.25)
+        >>>   30 | 	elif((preco>=0)and(dia==6)and(musicaaovivo=="N")):
+              31 | 		print("Valor a pagar: R$",preco)
+
+  [61] Linha 32: Bloco idêntico ao da linha 20
+      Trecho  : print('Valor a pagar: R$', preco)
+      Contexto:
+              31 | 		print("Valor a pagar: R$",preco)
+        >>>   32 | 	elif((preco>=0)and(dia==7)and(musicaaovivo=="N")):
+              33 | 		print("Valor a pagar: R$",preco)
+
+  [62] Linha 24: Bloco idêntico ao da linha 22
+      Trecho  : print('Valor a pagar: R$', preco - preco * 0.25)
+      Contexto:
+              23 | 		print("Valor a pagar: R$",preco-preco*0.25)
+        >>>   24 | 	elif((preco>=0)and(dia==3)and(musicaaovivo=="N")):
+              25 | 		print("Valor a pagar: R$",preco-preco*0.25)
+
+  [63] Linha 28: Bloco idêntico ao da linha 22
+      Trecho  : print('Valor a pagar: R$', preco - preco * 0.25)
+      Contexto:
+              27 | 		print("Valor a pagar: R$",preco)
+        >>>   28 | 	elif((preco>=0)and(dia==5)and(musicaaovivo=="N")):
+              29 | 		print("Valor a pagar: R$",preco-preco*0.25)
+
+  [64] Linha 30: Bloco idêntico ao da linha 26
+      Trecho  : print('Valor a pagar: R$', preco)
+      Contexto:
+              29 | 		print("Valor a pagar: R$",preco-preco*0.25)
+        >>>   30 | 	elif((preco>=0)and(dia==6)and(musicaaovivo=="N")):
+              31 | 		print("Valor a pagar: R$",preco)
+
+  [65] Linha 32: Bloco idêntico ao da linha 26
+      Trecho  : print('Valor a pagar: R$', preco)
+      Contexto:
+              31 | 		print("Valor a pagar: R$",preco)
+        >>>   32 | 	elif((preco>=0)and(dia==7)and(musicaaovivo=="N")):
+              33 | 		print("Valor a pagar: R$",preco)
+
+  [66] Linha 28: Bloco idêntico ao da linha 24
+      Trecho  : print('Valor a pagar: R$', preco - preco * 0.25)
+      Contexto:
+              27 | 		print("Valor a pagar: R$",preco)
+        >>>   28 | 	elif((preco>=0)and(dia==5)and(musicaaovivo=="N")):
+              29 | 		print("Valor a pagar: R$",preco-preco*0.25)
+
+  [67] Linha 30: Bloco idêntico ao da linha 26
+      Trecho  : print('Valor a pagar: R$', preco)
+      Contexto:
+              29 | 		print("Valor a pagar: R$",preco-preco*0.25)
+        >>>   30 | 	elif((preco>=0)and(dia==6)and(musicaaovivo=="N")):
+              31 | 		print("Valor a pagar: R$",preco)
+
+  [68] Linha 32: Bloco idêntico ao da linha 26
+      Trecho  : print('Valor a pagar: R$', preco)
+      Contexto:
+              31 | 		print("Valor a pagar: R$",preco)
+        >>>   32 | 	elif((preco>=0)and(dia==7)and(musicaaovivo=="N")):
+              33 | 		print("Valor a pagar: R$",preco)
+
+  [69] Linha 30: Bloco idêntico ao da linha 26
+      Trecho  : print('Valor a pagar: R$', preco)
+      Contexto:
+              29 | 		print("Valor a pagar: R$",preco-preco*0.25)
+        >>>   30 | 	elif((preco>=0)and(dia==6)and(musicaaovivo=="N")):
+              31 | 		print("Valor a pagar: R$",preco)
+
+  [70] Linha 32: Bloco idêntico ao da linha 26
+      Trecho  : print('Valor a pagar: R$', preco)
+      Contexto:
+              31 | 		print("Valor a pagar: R$",preco)
+        >>>   32 | 	elif((preco>=0)and(dia==7)and(musicaaovivo=="N")):
+              33 | 		print("Valor a pagar: R$",preco)
+
+  [71] Linha 32: Bloco idêntico ao da linha 30
+      Trecho  : print('Valor a pagar: R$', preco)
+      Contexto:
+              31 | 		print("Valor a pagar: R$",preco)
+        >>>   32 | 	elif((preco>=0)and(dia==7)and(musicaaovivo=="N")):
+              33 | 		print("Valor a pagar: R$",preco)
+
+  [72] Linha 32: Bloco idêntico ao da linha 30
+      Trecho  : print('Valor a pagar: R$', preco)
+      Contexto:
+              31 | 		print("Valor a pagar: R$",preco)
+        >>>   32 | 	elif((preco>=0)and(dia==7)and(musicaaovivo=="N")):
+              33 | 		print("Valor a pagar: R$",preco)
+
+======================================================================

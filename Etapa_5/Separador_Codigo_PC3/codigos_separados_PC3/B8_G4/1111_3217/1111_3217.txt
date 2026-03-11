@@ -1,0 +1,110 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1111_3217.py
+Questão  : 1111
+Aluno    : 3217
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from math import *
+     2 | e = float(input())
+     3 | f = float(input())
+     4 | print("Entradas:", e, "horas extras e", f, "horas de falta")
+     5 | H = round((e - ((2/3)*f)), 2)
+     6 | if (e<0) or (f<0):
+     7 | 	print("Dados invalidos")
+     8 | elif H > (2400):
+     9 | 	G = 500
+    10 | 	print("Gratificacao: R$", G)
+    11 | elif 1800< H <= (2400):
+    12 | 	G1 = 400
+    13 | 	print("Gratificacao: R$", G1)
+    14 | elif 1200 < H <= (1800):
+    15 | 	G2 = 300
+    16 | 	print("Gratificacao: R$", G2)
+    17 | elif 600< H <= (1200):
+    18 | 	G3 = 200
+    19 | 	print("Gratificacao: R$", G3)
+    20 | elif H <= (600):
+    21 | 	G4 = 100
+    22 | 	print("Gratificacao: R$", G4)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 17: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 17) / elif ... sem else
+      Contexto:
+              16 | 	print("Gratificacao: R$", G2)
+        >>>   17 | elif 600< H <= (1200):
+              18 | 	G3 = 200
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 8
+
+  [1] Linha 2: Variável 'e' com nome muito curto (≤4 chars)
+      Trecho  : e = ...
+      Contexto:
+               1 | from math import *
+        >>>    2 | e = float(input())
+               3 | f = float(input())
+
+  [2] Linha 3: Variável 'f' com nome muito curto (≤4 chars)
+      Trecho  : f = ...
+      Contexto:
+               2 | e = float(input())
+        >>>    3 | f = float(input())
+               4 | print("Entradas:", e, "horas extras e", f, "horas de falta")
+
+  [3] Linha 5: Variável 'H' com nome muito curto (≤4 chars)
+      Trecho  : H = ...
+      Contexto:
+               4 | print("Entradas:", e, "horas extras e", f, "horas de falta")
+        >>>    5 | H = round((e - ((2/3)*f)), 2)
+               6 | if (e<0) or (f<0):
+
+  [4] Linha 9: Variável 'G' com nome muito curto (≤4 chars)
+      Trecho  : G = ...
+      Contexto:
+               8 | elif H > (2400):
+        >>>    9 | 	G = 500
+              10 | 	print("Gratificacao: R$", G)
+
+  [5] Linha 12: Variável 'G1' com nome muito curto (≤4 chars)
+      Trecho  : G1 = ...
+      Contexto:
+              11 | elif 1800< H <= (2400):
+        >>>   12 | 	G1 = 400
+              13 | 	print("Gratificacao: R$", G1)
+
+  [6] Linha 15: Variável 'G2' com nome muito curto (≤4 chars)
+      Trecho  : G2 = ...
+      Contexto:
+              14 | elif 1200 < H <= (1800):
+        >>>   15 | 	G2 = 300
+              16 | 	print("Gratificacao: R$", G2)
+
+  [7] Linha 18: Variável 'G3' com nome muito curto (≤4 chars)
+      Trecho  : G3 = ...
+      Contexto:
+              17 | elif 600< H <= (1200):
+        >>>   18 | 	G3 = 200
+              19 | 	print("Gratificacao: R$", G3)
+
+  [8] Linha 21: Variável 'G4' com nome muito curto (≤4 chars)
+      Trecho  : G4 = ...
+      Contexto:
+              20 | elif H <= (600):
+        >>>   21 | 	G4 = 100
+              22 | 	print("Gratificacao: R$", G4)
+
+======================================================================

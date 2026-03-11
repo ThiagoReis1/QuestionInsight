@@ -1,0 +1,73 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1653_3331.py
+Questão  : 1653
+Aluno    : 3331
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | x=input()
+     3 | 
+     4 | ve = x.split(',')
+     5 | v2= zeros(5, dtype=int)
+     6 | 
+     7 | for c in ve:
+     8 | 	if c.upper() == "AR":
+     9 | 		v2[0]=v2[0]+1
+    10 | 	elif c.upper() == "BR":
+    11 | 		v2[1]=v2[1]+1
+    12 | 	elif c.upper() == "CL":
+    13 | 		v2[2]=v2[2]+1
+    14 | 	elif c.upper() == "CO":
+    15 | 		v2[3]=v2[3]+1
+    16 | 	elif c.upper()== "UY":
+    17 | 		v2[4]=v2[4]+1
+    18 | 		
+    19 | print(max(v2))
+    20 | print(v2)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 14: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 14) / elif ... sem else
+      Contexto:
+              13 | 		v2[2]=v2[2]+1
+        >>>   14 | 	elif c.upper() == "CO":
+              15 | 		v2[3]=v2[3]+1
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 3
+
+  [1] Linha 2: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+               1 | from numpy import*
+        >>>    2 | x=input()
+               3 | 
+
+  [2] Linha 4: Variável 've' com nome muito curto (≤4 chars)
+      Trecho  : ve = ...
+      Contexto:
+               3 | 
+        >>>    4 | ve = x.split(',')
+               5 | v2= zeros(5, dtype=int)
+
+  [3] Linha 5: Variável 'v2' com nome muito curto (≤4 chars)
+      Trecho  : v2 = ...
+      Contexto:
+               4 | ve = x.split(',')
+        >>>    5 | v2= zeros(5, dtype=int)
+               6 | 
+
+======================================================================

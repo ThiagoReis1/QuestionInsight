@@ -1,0 +1,95 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 6832_9741.py
+Questão  : 6832
+Aluno    : 9741
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | a = input().upper()
+     3 | 
+     4 | i = 0 
+     5 | soma = 0
+     6 | while i < len(a):
+     7 | 	if a[i] == "H":
+     8 | 		soma = soma + 5.40
+     9 | 	elif a[i] == "C":
+    10 | 		soma = soma + 8.95
+    11 | 	elif a[i] == "L":
+    12 | 		soma = soma + 4.50
+    13 | 	i = i + 1
+    14 | print(round(soma,2))
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 9: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 9) / elif ... sem else
+      Contexto:
+               8 | 		soma = soma + 5.40
+        >>>    9 | 	elif a[i] == "C":
+              10 | 		soma = soma + 8.95
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 7
+
+  [1] Linha 2: Variável 'a' com nome muito curto (≤4 chars)
+      Trecho  : a = ...
+      Contexto:
+               1 | from numpy import*
+        >>>    2 | a = input().upper()
+               3 | 
+
+  [2] Linha 4: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+               3 | 
+        >>>    4 | i = 0 
+               5 | soma = 0
+
+  [3] Linha 5: Variável 'soma' com nome muito curto (≤4 chars)
+      Trecho  : soma = ...
+      Contexto:
+               4 | i = 0 
+        >>>    5 | soma = 0
+               6 | while i < len(a):
+
+  [4] Linha 13: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+              12 | 		soma = soma + 4.50
+        >>>   13 | 	i = i + 1
+              14 | print(round(soma,2))
+
+  [5] Linha 8: Variável 'soma' com nome muito curto (≤4 chars)
+      Trecho  : soma = ...
+      Contexto:
+               7 | 	if a[i] == "H":
+        >>>    8 | 		soma = soma + 5.40
+               9 | 	elif a[i] == "C":
+
+  [6] Linha 10: Variável 'soma' com nome muito curto (≤4 chars)
+      Trecho  : soma = ...
+      Contexto:
+               9 | 	elif a[i] == "C":
+        >>>   10 | 		soma = soma + 8.95
+              11 | 	elif a[i] == "L":
+
+  [7] Linha 12: Variável 'soma' com nome muito curto (≤4 chars)
+      Trecho  : soma = ...
+      Contexto:
+              11 | 	elif a[i] == "L":
+        >>>   12 | 		soma = soma + 4.50
+              13 | 	i = i + 1
+
+======================================================================

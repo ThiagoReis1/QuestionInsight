@@ -1,0 +1,75 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 2966_4001.py
+Questão  : 2966
+Aluno    : 4001
+Total MCs: 1
+
+⚠️  Misconceptions detectados: G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | opcao = input("S/N? ")
+     2 | ing = float(input("Valor do ingresso: "))
+     3 | n = int(input("Qtd de ingressos? "))
+     4 | # Desconto
+     5 | n2 = (ing - (ing * 20/100)) * n
+     6 | n3 = ing * n
+     7 | if(opcao == "S"):
+     8 | 	msg = n2
+     9 | else:
+    10 | 	msg =  n3
+    11 | print(round(msg, 2))
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 6
+
+  [1] Linha 2: Variável 'ing' com nome muito curto (≤4 chars)
+      Trecho  : ing = ...
+      Contexto:
+               1 | opcao = input("S/N? ")
+        >>>    2 | ing = float(input("Valor do ingresso: "))
+               3 | n = int(input("Qtd de ingressos? "))
+
+  [2] Linha 3: Variável 'n' com nome muito curto (≤4 chars)
+      Trecho  : n = ...
+      Contexto:
+               2 | ing = float(input("Valor do ingresso: "))
+        >>>    3 | n = int(input("Qtd de ingressos? "))
+               4 | # Desconto
+
+  [3] Linha 5: Variável 'n2' com nome muito curto (≤4 chars)
+      Trecho  : n2 = ...
+      Contexto:
+               4 | # Desconto
+        >>>    5 | n2 = (ing - (ing * 20/100)) * n
+               6 | n3 = ing * n
+
+  [4] Linha 6: Variável 'n3' com nome muito curto (≤4 chars)
+      Trecho  : n3 = ...
+      Contexto:
+               5 | n2 = (ing - (ing * 20/100)) * n
+        >>>    6 | n3 = ing * n
+               7 | if(opcao == "S"):
+
+  [5] Linha 8: Variável 'msg' com nome muito curto (≤4 chars)
+      Trecho  : msg = ...
+      Contexto:
+               7 | if(opcao == "S"):
+        >>>    8 | 	msg = n2
+               9 | else:
+
+  [6] Linha 10: Variável 'msg' com nome muito curto (≤4 chars)
+      Trecho  : msg = ...
+      Contexto:
+               9 | else:
+        >>>   10 | 	msg =  n3
+              11 | print(round(msg, 2))
+
+======================================================================

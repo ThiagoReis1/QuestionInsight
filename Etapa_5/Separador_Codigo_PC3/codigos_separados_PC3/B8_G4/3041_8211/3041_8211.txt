@@ -1,0 +1,61 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 3041_8211.py
+Questão  : 3041
+Aluno    : 8211
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | x = float(input("numero: "))
+     2 | if(-1000 <= x) and (x < -2):
+     3 | 	t = -1/(x + 2)
+     4 | 	print(round(t, 4))
+     5 | elif(2 < x) and (x <= 1000):
+     6 | 	t2 = 1/(x-2)
+     7 | 	print(round(t2, 4))
+     8 | if(x >= -2) and (x <= 2):
+     9 | 	print("entrada invalida")
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 2: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 2) / elif ... sem else
+      Contexto:
+               1 | x = float(input("numero: "))
+        >>>    2 | if(-1000 <= x) and (x < -2):
+               3 | 	t = -1/(x + 2)
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 3
+
+  [1] Linha 1: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+        >>>    1 | x = float(input("numero: "))
+               2 | if(-1000 <= x) and (x < -2):
+
+  [2] Linha 3: Variável 't' com nome muito curto (≤4 chars)
+      Trecho  : t = ...
+      Contexto:
+               2 | if(-1000 <= x) and (x < -2):
+        >>>    3 | 	t = -1/(x + 2)
+               4 | 	print(round(t, 4))
+
+  [3] Linha 6: Variável 't2' com nome muito curto (≤4 chars)
+      Trecho  : t2 = ...
+      Contexto:
+               5 | elif(2 < x) and (x <= 1000):
+        >>>    6 | 	t2 = 1/(x-2)
+               7 | 	print(round(t2, 4))
+
+======================================================================

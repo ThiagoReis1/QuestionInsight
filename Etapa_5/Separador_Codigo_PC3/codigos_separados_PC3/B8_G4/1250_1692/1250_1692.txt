@@ -1,0 +1,97 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1250_1692.py
+Questão  : 1250
+Aluno    : 1692
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | # Wagner William Amorim - 21552149
+     2 | # Av 6 
+     3 | # Questão 01
+     4 | # 25/08/2016
+     5 | 
+     6 | from numpy import *
+     7 | from math import *
+     8 | 
+     9 | v = array(eval(input("Digite aqui o vetor: ")))
+    10 | vet = zeros (2, dtype = int)
+    11 | 
+    12 | a = min(v)
+    13 | b = max(v)
+    14 | c = 0.7 * a + 0.3 * b
+    15 | d = 0.4 * a + 0.6 * b
+    16 | 
+    17 | for i in range (size(v)):
+    18 | 	if((v[i] > a or v[i] == a) and v[i] < c):
+    19 | 		vet[0] = vet[0] + 1
+    20 | 	elif((v[i] > d or v[i] == d) and v[i] < b):
+    21 | 		vet[1] = vet[1] + 1
+    22 |       
+    23 | print(vet)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 18: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 18) / elif ... sem else
+      Contexto:
+              17 | for i in range (size(v)):
+        >>>   18 | 	if((v[i] > a or v[i] == a) and v[i] < c):
+              19 | 		vet[0] = vet[0] + 1
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 6
+
+  [1] Linha 9: Variável 'v' com nome muito curto (≤4 chars)
+      Trecho  : v = ...
+      Contexto:
+               8 | 
+        >>>    9 | v = array(eval(input("Digite aqui o vetor: ")))
+              10 | vet = zeros (2, dtype = int)
+
+  [2] Linha 10: Variável 'vet' com nome muito curto (≤4 chars)
+      Trecho  : vet = ...
+      Contexto:
+               9 | v = array(eval(input("Digite aqui o vetor: ")))
+        >>>   10 | vet = zeros (2, dtype = int)
+              11 | 
+
+  [3] Linha 12: Variável 'a' com nome muito curto (≤4 chars)
+      Trecho  : a = ...
+      Contexto:
+              11 | 
+        >>>   12 | a = min(v)
+              13 | b = max(v)
+
+  [4] Linha 13: Variável 'b' com nome muito curto (≤4 chars)
+      Trecho  : b = ...
+      Contexto:
+              12 | a = min(v)
+        >>>   13 | b = max(v)
+              14 | c = 0.7 * a + 0.3 * b
+
+  [5] Linha 14: Variável 'c' com nome muito curto (≤4 chars)
+      Trecho  : c = ...
+      Contexto:
+              13 | b = max(v)
+        >>>   14 | c = 0.7 * a + 0.3 * b
+              15 | d = 0.4 * a + 0.6 * b
+
+  [6] Linha 15: Variável 'd' com nome muito curto (≤4 chars)
+      Trecho  : d = ...
+      Contexto:
+              14 | c = 0.7 * a + 0.3 * b
+        >>>   15 | d = 0.4 * a + 0.6 * b
+              16 | 
+
+======================================================================

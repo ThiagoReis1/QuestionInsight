@@ -1,0 +1,11 @@
+N1=float(input())
+N2=float(input())
+N3=float(input())
+N4=float(input())
+Ma=(N1+N2+N3+N4)/4
+if(Ma>=5):
+	print(round(Ma,2))
+	print("Aprovacao",)
+else:
+	print(round(Ma,2))
+	print("Reprovacao")

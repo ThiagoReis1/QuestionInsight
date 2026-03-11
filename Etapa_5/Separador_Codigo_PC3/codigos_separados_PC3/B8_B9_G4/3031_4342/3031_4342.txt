@@ -1,0 +1,85 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 3031_4342.py
+Questão  : 3031
+Aluno    : 4342
+Total MCs: 3
+
+⚠️  Misconceptions detectados: B8, B9, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | var=float(input("valor:"))
+     2 | z=1
+     3 | x=2
+     4 | c=(var**2)
+     5 | d=(var**3)
+     6 | if(var<=1):
+     7 | 	print(round(z, 2))
+     8 | elif((var>1) and (var<=2)):
+     9 | 	print(round(x,2))
+    10 | elif((var>2) and (var<=3)):
+    11 | 	print(round(c, 2))
+    12 | elif(var>3):
+    13 | 	print(round(d, 2))
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 10: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 10) / elif ... sem else
+      Contexto:
+               9 | 	print(round(x,2))
+        >>>   10 | elif((var>2) and (var<=3)):
+              11 | 	print(round(c, 2))
+
+▶ B9 — elif/else retestando condições já verificadas
+  Ocorrências: 1
+
+  [1] Linha 0: B9 detectado pelo VisitorMC3 (localização exata não mapeada)
+      Trecho  : —
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 5
+
+  [1] Linha 1: Variável 'var' com nome muito curto (≤4 chars)
+      Trecho  : var = ...
+      Contexto:
+        >>>    1 | var=float(input("valor:"))
+               2 | z=1
+
+  [2] Linha 2: Variável 'z' com nome muito curto (≤4 chars)
+      Trecho  : z = ...
+      Contexto:
+               1 | var=float(input("valor:"))
+        >>>    2 | z=1
+               3 | x=2
+
+  [3] Linha 3: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+               2 | z=1
+        >>>    3 | x=2
+               4 | c=(var**2)
+
+  [4] Linha 4: Variável 'c' com nome muito curto (≤4 chars)
+      Trecho  : c = ...
+      Contexto:
+               3 | x=2
+        >>>    4 | c=(var**2)
+               5 | d=(var**3)
+
+  [5] Linha 5: Variável 'd' com nome muito curto (≤4 chars)
+      Trecho  : d = ...
+      Contexto:
+               4 | c=(var**2)
+        >>>    5 | d=(var**3)
+               6 | if(var<=1):
+
+======================================================================

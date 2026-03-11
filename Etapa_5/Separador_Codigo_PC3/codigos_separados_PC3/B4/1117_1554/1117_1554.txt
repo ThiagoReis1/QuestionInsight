@@ -1,0 +1,77 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1117_1554.py
+Questão  : 1117
+Aluno    : 1554
+Total MCs: 1
+
+⚠️  Misconceptions detectados: B4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | preco=float(input("Preco da entrada: "))
+     2 | dia=int(input("Dia da semana: "))
+     3 | musica=input("Musica ao vivo (S/N): ")
+     4 | print("Entradas:", preco, ",", dia, ",", musica)
+     5 | 
+     6 | if(preco<=0 and ((dia<1)or(dia>7))):
+     7 | 	print("Dados invalidos")
+     8 | elif((dia==2) or (dia==3) or (dia==5)):
+     9 | 	total= preco - (preco*0.25)
+    10 | 	print("Valor a pagar: R$", round(total,2))
+    11 | elif((dia==2) and (musica=="S")):
+    12 | 	total= (preco - (preco*0.25)) + 20
+    13 | elif((dia==3) and (musica=="S")):
+    14 | 	total= (preco - (preco*0.25)) + 20
+    15 | 	print("Valor a pagar: R$", round(total,2))
+    16 | elif((dia==5) and (musica=="S")):
+    17 | 	total= (preco - (preco*0.25)) + 20
+    18 | 	print("Valor a pagar: R$", round(total,2))
+    19 | else:
+    20 | 	print("Dados invalidos")
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B4 — Comandos repetidos dentro de blocos if-elif-else
+  Ocorrências: 5
+
+  [1] Linha 16: Bloco idêntico ao da linha 13
+      Trecho  : total = preco - preco * 0.25 + 20
+      Contexto:
+              15 | 	print("Valor a pagar: R$", round(total,2))
+        >>>   16 | elif((dia==5) and (musica=="S")):
+              17 | 	total= (preco - (preco*0.25)) + 20
+
+  [2] Linha 16: Bloco idêntico ao da linha 6
+      Trecho  : print('Dados invalidos')
+      Contexto:
+              15 | 	print("Valor a pagar: R$", round(total,2))
+        >>>   16 | elif((dia==5) and (musica=="S")):
+              17 | 	total= (preco - (preco*0.25)) + 20
+
+  [3] Linha 16: Bloco idêntico ao da linha 13
+      Trecho  : total = preco - preco * 0.25 + 20
+      Contexto:
+              15 | 	print("Valor a pagar: R$", round(total,2))
+        >>>   16 | elif((dia==5) and (musica=="S")):
+              17 | 	total= (preco - (preco*0.25)) + 20
+
+  [4] Linha 16: Bloco idêntico ao da linha 13
+      Trecho  : total = preco - preco * 0.25 + 20
+      Contexto:
+              15 | 	print("Valor a pagar: R$", round(total,2))
+        >>>   16 | elif((dia==5) and (musica=="S")):
+              17 | 	total= (preco - (preco*0.25)) + 20
+
+  [5] Linha 16: Bloco idêntico ao da linha 13
+      Trecho  : total = preco - preco * 0.25 + 20
+      Contexto:
+              15 | 	print("Valor a pagar: R$", round(total,2))
+        >>>   16 | elif((dia==5) and (musica=="S")):
+              17 | 	total= (preco - (preco*0.25)) + 20
+
+======================================================================

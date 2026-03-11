@@ -1,0 +1,81 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1113_1202.py
+Questão  : 1113
+Aluno    : 1202
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | x=float(input("Determine sua idade:"))
+     2 | y=float(input("Determine seu peso:"))
+     3 | 
+     4 | print("Entradas:",x,"anos e",y,"kg")
+     5 | 
+     6 | #condiçao para as entradas serem validas
+     7 | if((x>=0 or x<=130) and (y>=0 or y<=550.0)):
+     8 | 	if(x>50 and y>90):
+     9 | 		print("Grupo de risco: 1")
+    10 | 	elif(x>50 and y>60 or y<=90):
+    11 | 		print("grupo de risco: 2")
+    12 | 	elif(x>50 and y<=60):
+    13 | 		print("Grupo de risco: 3")
+    14 | 	elif((x>20 or x<=50) and y>90):
+    15 | 		print("Grupo de risco: 4")
+    16 | 	elif((x>20 or x<=50) and (y>60 or y<=90)):
+    17 | 		print("Grupo de risco: 5")
+    18 | 	elif(x>20 or (x<=50 and y<=60)):
+    19 | 		print("Grupo de risco: 6")
+    20 | 	elif(x<=20 and y>90):
+    21 | 		print("Grupo de risco: 7")
+    22 | 	elif(x<=20 and (y>60 or y<=90)):
+    23 | 		print("Grupo de risco: 8")
+    24 | 	elif(x<=20 and y<=60):
+    25 | 		print("Grupo de risco: 9")
+    26 | else:
+    27 | 	print("Dados: invalidos")
+    28 | 		
+    29 | 		
+    30 | 		
+    31 | 		
+    32 | 		
+    33 | 		
+    34 | 		
+    35 | 		
+    36 | 	
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 22: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 22) / elif ... sem else
+      Contexto:
+              21 | 		print("Grupo de risco: 7")
+        >>>   22 | 	elif(x<=20 and (y>60 or y<=90)):
+              23 | 		print("Grupo de risco: 8")
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 2
+
+  [1] Linha 1: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+        >>>    1 | x=float(input("Determine sua idade:"))
+               2 | y=float(input("Determine seu peso:"))
+
+  [2] Linha 2: Variável 'y' com nome muito curto (≤4 chars)
+      Trecho  : y = ...
+      Contexto:
+               1 | x=float(input("Determine sua idade:"))
+        >>>    2 | y=float(input("Determine seu peso:"))
+               3 | 
+
+======================================================================

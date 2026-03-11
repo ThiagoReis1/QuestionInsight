@@ -1,0 +1,246 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1615_4431.py
+Questão  : 1615
+Aluno    : 4431
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | x=array(eval(input("Digite o primeiro jogador: ")))
+     3 | y=array(eval(input("Digite o segundo jogador: ")))
+     4 | t=0
+     5 | h=0
+     6 | while(size(x)>h):
+     7 | 	if(x[h]==1):
+     8 | 		t=t+40
+     9 | 		h=h+1
+    10 | 	elif(x[h]==2):
+    11 | 		t=t+20
+    12 | 		h=h+1
+    13 | 	elif(x[h]==3):
+    14 | 		t=t+10
+    15 | 		h=h+1
+    16 | 	elif(x[h]>=4):
+    17 | 		t=t+0
+    18 | 		h=h+1
+    19 | r=0
+    20 | h=0
+    21 | while(size(x)>h):
+    22 | 	if(y[h]==1):
+    23 | 		r=r+40
+    24 | 		h=h+1
+    25 | 	elif(y[h]==2):
+    26 | 		r=r+20
+    27 | 		h=h+1
+    28 | 	elif(y[h]==3):
+    29 | 		r=r+10
+    30 | 		h=h+1
+    31 | 	elif(y[h]>=4):
+    32 | 		r=r+0
+    33 | 		h=h+1
+    34 | 
+    35 | 
+    36 | if(t>r):
+    37 | 	print("JOGADOR UM")
+    38 | elif(r>t):
+    39 | 	print("JOGADOR DOIS")
+    40 | else:
+    41 | 	print("EMPATE")
+    42 | 	
+    43 | "leel"
+    44 | 	
+    45 | 
+    46 | 	
+    47 | 	
+    48 | 		
+    49 | 	
+    50 | 	
+    51 | 		
+    52 | 		
+    53 | 		
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 2
+
+  [1] Linha 13: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 13) / elif ... sem else
+      Contexto:
+              12 | 		h=h+1
+        >>>   13 | 	elif(x[h]==3):
+              14 | 		t=t+10
+
+  [2] Linha 28: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 28) / elif ... sem else
+      Contexto:
+              27 | 		h=h+1
+        >>>   28 | 	elif(y[h]==3):
+              29 | 		r=r+10
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 22
+
+  [1] Linha 2: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+               1 | from numpy import*
+        >>>    2 | x=array(eval(input("Digite o primeiro jogador: ")))
+               3 | y=array(eval(input("Digite o segundo jogador: ")))
+
+  [2] Linha 3: Variável 'y' com nome muito curto (≤4 chars)
+      Trecho  : y = ...
+      Contexto:
+               2 | x=array(eval(input("Digite o primeiro jogador: ")))
+        >>>    3 | y=array(eval(input("Digite o segundo jogador: ")))
+               4 | t=0
+
+  [3] Linha 4: Variável 't' com nome muito curto (≤4 chars)
+      Trecho  : t = ...
+      Contexto:
+               3 | y=array(eval(input("Digite o segundo jogador: ")))
+        >>>    4 | t=0
+               5 | h=0
+
+  [4] Linha 5: Variável 'h' com nome muito curto (≤4 chars)
+      Trecho  : h = ...
+      Contexto:
+               4 | t=0
+        >>>    5 | h=0
+               6 | while(size(x)>h):
+
+  [5] Linha 19: Variável 'r' com nome muito curto (≤4 chars)
+      Trecho  : r = ...
+      Contexto:
+              18 | 		h=h+1
+        >>>   19 | r=0
+              20 | h=0
+
+  [6] Linha 20: Variável 'h' com nome muito curto (≤4 chars)
+      Trecho  : h = ...
+      Contexto:
+              19 | r=0
+        >>>   20 | h=0
+              21 | while(size(x)>h):
+
+  [7] Linha 8: Variável 't' com nome muito curto (≤4 chars)
+      Trecho  : t = ...
+      Contexto:
+               7 | 	if(x[h]==1):
+        >>>    8 | 		t=t+40
+               9 | 		h=h+1
+
+  [8] Linha 9: Variável 'h' com nome muito curto (≤4 chars)
+      Trecho  : h = ...
+      Contexto:
+               8 | 		t=t+40
+        >>>    9 | 		h=h+1
+              10 | 	elif(x[h]==2):
+
+  [9] Linha 23: Variável 'r' com nome muito curto (≤4 chars)
+      Trecho  : r = ...
+      Contexto:
+              22 | 	if(y[h]==1):
+        >>>   23 | 		r=r+40
+              24 | 		h=h+1
+
+  [10] Linha 24: Variável 'h' com nome muito curto (≤4 chars)
+      Trecho  : h = ...
+      Contexto:
+              23 | 		r=r+40
+        >>>   24 | 		h=h+1
+              25 | 	elif(y[h]==2):
+
+  [11] Linha 11: Variável 't' com nome muito curto (≤4 chars)
+      Trecho  : t = ...
+      Contexto:
+              10 | 	elif(x[h]==2):
+        >>>   11 | 		t=t+20
+              12 | 		h=h+1
+
+  [12] Linha 12: Variável 'h' com nome muito curto (≤4 chars)
+      Trecho  : h = ...
+      Contexto:
+              11 | 		t=t+20
+        >>>   12 | 		h=h+1
+              13 | 	elif(x[h]==3):
+
+  [13] Linha 26: Variável 'r' com nome muito curto (≤4 chars)
+      Trecho  : r = ...
+      Contexto:
+              25 | 	elif(y[h]==2):
+        >>>   26 | 		r=r+20
+              27 | 		h=h+1
+
+  [14] Linha 27: Variável 'h' com nome muito curto (≤4 chars)
+      Trecho  : h = ...
+      Contexto:
+              26 | 		r=r+20
+        >>>   27 | 		h=h+1
+              28 | 	elif(y[h]==3):
+
+  [15] Linha 14: Variável 't' com nome muito curto (≤4 chars)
+      Trecho  : t = ...
+      Contexto:
+              13 | 	elif(x[h]==3):
+        >>>   14 | 		t=t+10
+              15 | 		h=h+1
+
+  [16] Linha 15: Variável 'h' com nome muito curto (≤4 chars)
+      Trecho  : h = ...
+      Contexto:
+              14 | 		t=t+10
+        >>>   15 | 		h=h+1
+              16 | 	elif(x[h]>=4):
+
+  [17] Linha 29: Variável 'r' com nome muito curto (≤4 chars)
+      Trecho  : r = ...
+      Contexto:
+              28 | 	elif(y[h]==3):
+        >>>   29 | 		r=r+10
+              30 | 		h=h+1
+
+  [18] Linha 30: Variável 'h' com nome muito curto (≤4 chars)
+      Trecho  : h = ...
+      Contexto:
+              29 | 		r=r+10
+        >>>   30 | 		h=h+1
+              31 | 	elif(y[h]>=4):
+
+  [19] Linha 17: Variável 't' com nome muito curto (≤4 chars)
+      Trecho  : t = ...
+      Contexto:
+              16 | 	elif(x[h]>=4):
+        >>>   17 | 		t=t+0
+              18 | 		h=h+1
+
+  [20] Linha 18: Variável 'h' com nome muito curto (≤4 chars)
+      Trecho  : h = ...
+      Contexto:
+              17 | 		t=t+0
+        >>>   18 | 		h=h+1
+              19 | r=0
+
+  [21] Linha 32: Variável 'r' com nome muito curto (≤4 chars)
+      Trecho  : r = ...
+      Contexto:
+              31 | 	elif(y[h]>=4):
+        >>>   32 | 		r=r+0
+              33 | 		h=h+1
+
+  [22] Linha 33: Variável 'h' com nome muito curto (≤4 chars)
+      Trecho  : h = ...
+      Contexto:
+              32 | 		r=r+0
+        >>>   33 | 		h=h+1
+              34 | 
+
+======================================================================

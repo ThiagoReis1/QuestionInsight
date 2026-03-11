@@ -1,0 +1,60 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 2150_2423.py
+Questão  : 2150
+Aluno    : 2423
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | s = array(eval(input(": ")))
+     3 | cont = zeros(4,dtype=int)
+     4 | 
+     5 | for i in range(size(s)):
+     6 | 	if(s[i] == "BOTAFOGO"):
+     7 | 		cont[0] = cont[0] + 1
+     8 | 	elif(s[i] == "FLAMENGO"):
+     9 | 		cont[1] = cont[1] + 1
+    10 | 	elif(s[i] == "FLUMINENSE"):
+    11 | 		cont[2] = cont[2] + 1
+    12 | 	elif(s[i] == "VASCO"):
+    13 | 		cont[3] = cont[3] + 1
+    14 | print(cont)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 10: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 10) / elif ... sem else
+      Contexto:
+               9 | 		cont[1] = cont[1] + 1
+        >>>   10 | 	elif(s[i] == "FLUMINENSE"):
+              11 | 		cont[2] = cont[2] + 1
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 2
+
+  [1] Linha 2: Variável 's' com nome muito curto (≤4 chars)
+      Trecho  : s = ...
+      Contexto:
+               1 | from numpy import*
+        >>>    2 | s = array(eval(input(": ")))
+               3 | cont = zeros(4,dtype=int)
+
+  [2] Linha 3: Variável 'cont' com nome muito curto (≤4 chars)
+      Trecho  : cont = ...
+      Contexto:
+               2 | s = array(eval(input(": ")))
+        >>>    3 | cont = zeros(4,dtype=int)
+               4 | 
+
+======================================================================

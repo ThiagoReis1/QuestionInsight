@@ -1,0 +1,47 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1619_2029.py
+Questão  : 1619
+Aluno    : 2029
+Total MCs: 1
+
+⚠️  Misconceptions detectados: B8
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import *
+     2 | tempo = array(float(input("tempo de banho: "))) 
+     3 | modo = array(input("modo de banho: ").upper())
+     4 | conta = 0
+     5 | 
+     6 | quente = 90 * 0.005
+     7 | morno = 45 * 0.005
+     8 | frio = 0 * 0.005
+     9 | 
+    10 | while(modo != "FRIO"):
+    11 | 	if(modo == "QUENTE" ):
+    12 | 		conta = conta + quente * tempo
+    13 | 	elif(modo == "MORNO"):
+    14 | 		conta = conta + morno * tempo
+    15 | 	conta = conta + frio * tempo
+    16 | print(round(conta, 2))
+    17 | 	
+    18 | 	
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 11: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 11) / elif ... sem else
+      Contexto:
+              10 | while(modo != "FRIO"):
+        >>>   11 | 	if(modo == "QUENTE" ):
+              12 | 		conta = conta + quente * tempo
+
+======================================================================

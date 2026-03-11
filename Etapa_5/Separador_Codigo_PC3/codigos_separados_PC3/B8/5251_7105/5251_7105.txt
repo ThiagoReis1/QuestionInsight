@@ -1,0 +1,101 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 5251_7105.py
+Questão  : 5251
+Aluno    : 7105
+Total MCs: 1
+
+⚠️  Misconceptions detectados: B8
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | cidade = input()
+     2 | idade = int(input())
+     3 | 
+     4 | pV= 500
+     5 | santarem = 370
+     6 | belem = 600
+     7 | tefe = 360
+     8 | tBt = 550
+     9 | 
+    10 | print("Entradas:", cidade, ",", idade)
+    11 | 
+    12 | if(idade>-1 and idade<=2):
+    13 | 	preco = 0
+    14 | elif(idade>2 and idade <=12):
+    15 | 	if(cidade == "Porto Velho"):
+    16 | 		preco = pV/2
+    17 | 	elif(cidade == "Santarem"):
+    18 | 		preco = santarem/2
+    19 | 	elif(cidade == "Belem"):
+    20 | 		preco = belem/2
+    21 | 	elif(cidade == "Tefe"):
+    22 | 		preco = tefe/2
+    23 | 	elif(cidade == "Tabatinga"):
+    24 | 		preco = tBt/2
+    25 | elif(idade>12 and idade<=64):
+    26 | 	if(cidade == "Porto Velho"):
+    27 | 		preco = pV
+    28 | 	elif(cidade == "Santarem"):
+    29 | 		preco = santarem
+    30 | 	elif(cidade == "Belem"):
+    31 | 		preco = belem
+    32 | 	elif(cidade == "Tefe"):
+    33 | 		preco = tefe
+    34 | 	elif(cidade == "Tabatinga"):
+    35 | 		preco = tBt
+    36 | elif(idade>64 and idade <=150):
+    37 | 	if(cidade =="Porto Velho"):
+    38 | 		preco = pV - pV*0.3
+    39 | 	elif(cidade == "Santarem"):
+    40 | 		preco = santarem - santerem*0.3
+    41 | 	elif(cidade == "Belem"):
+    42 | 		preco = belem - belem*0.3
+    43 | 	elif(cidade == "Tefe"):
+    44 | 		preco = tefe - tefe*0.3
+    45 | 	elif(cidade == "Tabatinga"):
+    46 | 		preco = tBt - tBt*0.3
+    47 | 
+    48 | if((idade<0 or idade >150) or (cidade != "Santarem" and cidade != "Belem" and cidade != "Tefe" and cidade !="Tabatinga" and cidade != "Porto Velho")):
+    49 | 	print("entradas invalidas")
+    50 | if((cidade=="Porto Velho" or cidade== "Santarem" or cidade == "Belem" or cidade =="Tefe" or cidade == "Tabatinga") and (idade>-1 and idade<=150)):
+    51 | 	print("Passagem: R$", round(preco,2))
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 4
+
+  [1] Linha 25: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 25) / elif ... sem else
+      Contexto:
+              24 | 		preco = tBt/2
+        >>>   25 | elif(idade>12 and idade<=64):
+              26 | 	if(cidade == "Porto Velho"):
+
+  [2] Linha 21: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 21) / elif ... sem else
+      Contexto:
+              20 | 		preco = belem/2
+        >>>   21 | 	elif(cidade == "Tefe"):
+              22 | 		preco = tefe/2
+
+  [3] Linha 32: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 32) / elif ... sem else
+      Contexto:
+              31 | 		preco = belem
+        >>>   32 | 	elif(cidade == "Tefe"):
+              33 | 		preco = tefe
+
+  [4] Linha 43: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 43) / elif ... sem else
+      Contexto:
+              42 | 		preco = belem - belem*0.3
+        >>>   43 | 	elif(cidade == "Tefe"):
+              44 | 		preco = tefe - tefe*0.3
+
+======================================================================

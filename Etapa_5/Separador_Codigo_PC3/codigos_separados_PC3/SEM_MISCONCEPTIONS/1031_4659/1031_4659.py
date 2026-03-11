@@ -1,0 +1,5 @@
+qtd_litros = float(input("quantidade de litros: "))
+t = ((qtd_litros*2.86)+50.00)
+icms = (t*0.34)
+total = (t + icms)
+print(round(total,2))

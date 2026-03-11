@@ -1,0 +1,144 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1652_2245.py
+Questão  : 1652
+Aluno    : 2245
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | v = input(": ").split(',')
+     3 | vetor = zeros(5, dtype = int)
+     4 | b = 0
+     5 | pa = 0
+     6 | pr = 0
+     7 | a = 0
+     8 | ind = 0
+     9 | for i in v:
+    10 | 	if(i.upper() == "B"):
+    11 | 		b = b + 1
+    12 | 	elif(i.upper() == "PA"):
+    13 | 		pa = pa + 1
+    14 | 	elif(i.upper() == "PR"):
+    15 | 		pr = pr + 1
+    16 | 	elif(i.upper() == "A"):
+    17 | 		a = a + 1
+    18 | 	elif(i.upper() == "I"):
+    19 | 		ind = ind + 1
+    20 | vetor[0] = vetor[0] + b
+    21 | vetor[1] = vetor[1] + pa
+    22 | vetor[2] = vetor[2] + pr
+    23 | vetor[3] = vetor[3] + a
+    24 | vetor[4] = vetor[4] + ind
+    25 | if(b > pa) and ( b > pr) and ( b > a) and (b > ind):
+    26 | 	print(b)
+    27 | elif(pa > b) and ( pa > pr) and ( pa > a) and (pa > ind):
+    28 | 	print(pa)
+    29 | elif(pr > pa) and (pr > b ) and ( pr > a) and (pr > ind):
+    30 | 	print(pr)
+    31 | elif(a > pa) and (a  > pr) and (a  > b ) and (a > ind):
+    32 | 	print(a)
+    33 | else:
+    34 | 	print(ind)
+    35 | print(vetor)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 16: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 16) / elif ... sem else
+      Contexto:
+              15 | 		pr = pr + 1
+        >>>   16 | 	elif(i.upper() == "A"):
+              17 | 		a = a + 1
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 11
+
+  [1] Linha 2: Variável 'v' com nome muito curto (≤4 chars)
+      Trecho  : v = ...
+      Contexto:
+               1 | from numpy import*
+        >>>    2 | v = input(": ").split(',')
+               3 | vetor = zeros(5, dtype = int)
+
+  [2] Linha 4: Variável 'b' com nome muito curto (≤4 chars)
+      Trecho  : b = ...
+      Contexto:
+               3 | vetor = zeros(5, dtype = int)
+        >>>    4 | b = 0
+               5 | pa = 0
+
+  [3] Linha 5: Variável 'pa' com nome muito curto (≤4 chars)
+      Trecho  : pa = ...
+      Contexto:
+               4 | b = 0
+        >>>    5 | pa = 0
+               6 | pr = 0
+
+  [4] Linha 6: Variável 'pr' com nome muito curto (≤4 chars)
+      Trecho  : pr = ...
+      Contexto:
+               5 | pa = 0
+        >>>    6 | pr = 0
+               7 | a = 0
+
+  [5] Linha 7: Variável 'a' com nome muito curto (≤4 chars)
+      Trecho  : a = ...
+      Contexto:
+               6 | pr = 0
+        >>>    7 | a = 0
+               8 | ind = 0
+
+  [6] Linha 8: Variável 'ind' com nome muito curto (≤4 chars)
+      Trecho  : ind = ...
+      Contexto:
+               7 | a = 0
+        >>>    8 | ind = 0
+               9 | for i in v:
+
+  [7] Linha 11: Variável 'b' com nome muito curto (≤4 chars)
+      Trecho  : b = ...
+      Contexto:
+              10 | 	if(i.upper() == "B"):
+        >>>   11 | 		b = b + 1
+              12 | 	elif(i.upper() == "PA"):
+
+  [8] Linha 13: Variável 'pa' com nome muito curto (≤4 chars)
+      Trecho  : pa = ...
+      Contexto:
+              12 | 	elif(i.upper() == "PA"):
+        >>>   13 | 		pa = pa + 1
+              14 | 	elif(i.upper() == "PR"):
+
+  [9] Linha 15: Variável 'pr' com nome muito curto (≤4 chars)
+      Trecho  : pr = ...
+      Contexto:
+              14 | 	elif(i.upper() == "PR"):
+        >>>   15 | 		pr = pr + 1
+              16 | 	elif(i.upper() == "A"):
+
+  [10] Linha 17: Variável 'a' com nome muito curto (≤4 chars)
+      Trecho  : a = ...
+      Contexto:
+              16 | 	elif(i.upper() == "A"):
+        >>>   17 | 		a = a + 1
+              18 | 	elif(i.upper() == "I"):
+
+  [11] Linha 19: Variável 'ind' com nome muito curto (≤4 chars)
+      Trecho  : ind = ...
+      Contexto:
+              18 | 	elif(i.upper() == "I"):
+        >>>   19 | 		ind = ind + 1
+              20 | vetor[0] = vetor[0] + b
+
+======================================================================

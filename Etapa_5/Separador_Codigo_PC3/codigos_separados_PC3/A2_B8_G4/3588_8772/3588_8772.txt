@@ -1,0 +1,108 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 3588_8772.py
+Questão  : 3588
+Aluno    : 8772
+Total MCs: 3
+
+⚠️  Misconceptions detectados: A2, B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import *
+     2 | v = array(eval(input()))
+     3 | cont = 10000
+     4 | i = 0
+     5 | 
+     6 | while i < size(v):
+     7 | 	if v[i] == 1:
+     8 | 		cont = cont * 2
+     9 | 	elif v[i] == 2:
+    10 | 		cont = cont
+    11 | 	elif v[i] == 3:
+    12 | 		cont = cont / 2
+    13 | 	elif v[i] == 4:
+    14 | 		cont = cont / 4
+    15 | 	i += 1 
+    16 | 	
+    17 | print(round(cont,2))
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A2 — Variável atribuída a si mesma
+  Ocorrências: 1
+
+  [1] Linha 10: 'cont' atribuído a si mesmo
+      Trecho  : cont = cont
+      Contexto:
+               9 | 	elif v[i] == 2:
+        >>>   10 | 		cont = cont
+              11 | 	elif v[i] == 3:
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 11: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 11) / elif ... sem else
+      Contexto:
+              10 | 		cont = cont
+        >>>   11 | 	elif v[i] == 3:
+              12 | 		cont = cont / 2
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 7
+
+  [1] Linha 2: Variável 'v' com nome muito curto (≤4 chars)
+      Trecho  : v = ...
+      Contexto:
+               1 | from numpy import *
+        >>>    2 | v = array(eval(input()))
+               3 | cont = 10000
+
+  [2] Linha 3: Variável 'cont' com nome muito curto (≤4 chars)
+      Trecho  : cont = ...
+      Contexto:
+               2 | v = array(eval(input()))
+        >>>    3 | cont = 10000
+               4 | i = 0
+
+  [3] Linha 4: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+               3 | cont = 10000
+        >>>    4 | i = 0
+               5 | 
+
+  [4] Linha 8: Variável 'cont' com nome muito curto (≤4 chars)
+      Trecho  : cont = ...
+      Contexto:
+               7 | 	if v[i] == 1:
+        >>>    8 | 		cont = cont * 2
+               9 | 	elif v[i] == 2:
+
+  [5] Linha 10: Variável 'cont' com nome muito curto (≤4 chars)
+      Trecho  : cont = ...
+      Contexto:
+               9 | 	elif v[i] == 2:
+        >>>   10 | 		cont = cont
+              11 | 	elif v[i] == 3:
+
+  [6] Linha 12: Variável 'cont' com nome muito curto (≤4 chars)
+      Trecho  : cont = ...
+      Contexto:
+              11 | 	elif v[i] == 3:
+        >>>   12 | 		cont = cont / 2
+              13 | 	elif v[i] == 4:
+
+  [7] Linha 14: Variável 'cont' com nome muito curto (≤4 chars)
+      Trecho  : cont = ...
+      Contexto:
+              13 | 	elif v[i] == 4:
+        >>>   14 | 		cont = cont / 4
+              15 | 	i += 1 
+
+======================================================================

@@ -1,0 +1,164 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1147_3449.py
+Questão  : 1147
+Aluno    : 3449
+Total MCs: 4
+
+⚠️  Misconceptions detectados: B4, B8, E1, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | x=input("nome: ")
+     2 | a="Daenerys"
+     3 | b="Cersei"
+     4 | c="Brienne"
+     5 | d="Arya"
+     6 | e="Sansa"
+     7 | f="Margaery"
+     8 | g="Catelyn"
+     9 | h="Meera"
+    10 | 
+    11 | if	(x==a) or (x==b) or (x==c) or (x==d) or(x==e) or (x==f) or (x==g) or (x==h):
+    12 | 	if	(x==a):
+    13 | 		print("Aegon IV Targaryen")
+    14 | 	elif	(x==b):
+    15 | 		print("Tywin Lannister")
+    16 | 	elif	(x==c):
+    17 | 		print("Selwyn Tarth")
+    18 | 	elif	(x==d):
+    19 | 		print("Eddard Stark")
+    20 | 	elif	(x==e):
+    21 | 		print("Eddard Stark")
+    22 | 	elif	(x==f):
+    23 | 		print("Garth Tyrell")
+    24 | 	elif	(x==g):
+    25 | 		print("Hoster Tully")
+    26 | 	elif	(x==h):
+    27 | 		print("Howland Reed")
+    28 | else:
+    29 | 	print("Entrada",x,"invalida")
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B4 — Comandos repetidos dentro de blocos if-elif-else
+  Ocorrências: 4
+
+  [1] Linha 20: Bloco idêntico ao da linha 18
+      Trecho  : print('Eddard Stark')
+      Contexto:
+              19 | 		print("Eddard Stark")
+        >>>   20 | 	elif	(x==e):
+              21 | 		print("Eddard Stark")
+
+  [2] Linha 20: Bloco idêntico ao da linha 18
+      Trecho  : print('Eddard Stark')
+      Contexto:
+              19 | 		print("Eddard Stark")
+        >>>   20 | 	elif	(x==e):
+              21 | 		print("Eddard Stark")
+
+  [3] Linha 20: Bloco idêntico ao da linha 18
+      Trecho  : print('Eddard Stark')
+      Contexto:
+              19 | 		print("Eddard Stark")
+        >>>   20 | 	elif	(x==e):
+              21 | 		print("Eddard Stark")
+
+  [4] Linha 20: Bloco idêntico ao da linha 18
+      Trecho  : print('Eddard Stark')
+      Contexto:
+              19 | 		print("Eddard Stark")
+        >>>   20 | 	elif	(x==e):
+              21 | 		print("Eddard Stark")
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 24: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 24) / elif ... sem else
+      Contexto:
+              23 | 		print("Garth Tyrell")
+        >>>   24 | 	elif	(x==g):
+              25 | 		print("Hoster Tully")
+
+▶ E1 — Verificação desnecessária de todas as combinações possíveis
+  Ocorrências: 1
+
+  [1] Linha 11: 8 condições em um único if — verificação excessiva
+      Trecho  : x == a or x == b or x == c or (x == d) or (x == e) or (x == f) or (x == g) or (x == h)
+      Contexto:
+              10 | 
+        >>>   11 | if	(x==a) or (x==b) or (x==c) or (x==d) or(x==e) or (x==f) or (x==g) or (x==h):
+              12 | 	if	(x==a):
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 9
+
+  [1] Linha 1: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+        >>>    1 | x=input("nome: ")
+               2 | a="Daenerys"
+
+  [2] Linha 2: Variável 'a' com nome muito curto (≤4 chars)
+      Trecho  : a = ...
+      Contexto:
+               1 | x=input("nome: ")
+        >>>    2 | a="Daenerys"
+               3 | b="Cersei"
+
+  [3] Linha 3: Variável 'b' com nome muito curto (≤4 chars)
+      Trecho  : b = ...
+      Contexto:
+               2 | a="Daenerys"
+        >>>    3 | b="Cersei"
+               4 | c="Brienne"
+
+  [4] Linha 4: Variável 'c' com nome muito curto (≤4 chars)
+      Trecho  : c = ...
+      Contexto:
+               3 | b="Cersei"
+        >>>    4 | c="Brienne"
+               5 | d="Arya"
+
+  [5] Linha 5: Variável 'd' com nome muito curto (≤4 chars)
+      Trecho  : d = ...
+      Contexto:
+               4 | c="Brienne"
+        >>>    5 | d="Arya"
+               6 | e="Sansa"
+
+  [6] Linha 6: Variável 'e' com nome muito curto (≤4 chars)
+      Trecho  : e = ...
+      Contexto:
+               5 | d="Arya"
+        >>>    6 | e="Sansa"
+               7 | f="Margaery"
+
+  [7] Linha 7: Variável 'f' com nome muito curto (≤4 chars)
+      Trecho  : f = ...
+      Contexto:
+               6 | e="Sansa"
+        >>>    7 | f="Margaery"
+               8 | g="Catelyn"
+
+  [8] Linha 8: Variável 'g' com nome muito curto (≤4 chars)
+      Trecho  : g = ...
+      Contexto:
+               7 | f="Margaery"
+        >>>    8 | g="Catelyn"
+               9 | h="Meera"
+
+  [9] Linha 9: Variável 'h' com nome muito curto (≤4 chars)
+      Trecho  : h = ...
+      Contexto:
+               8 | g="Catelyn"
+        >>>    9 | h="Meera"
+              10 | 
+
+======================================================================

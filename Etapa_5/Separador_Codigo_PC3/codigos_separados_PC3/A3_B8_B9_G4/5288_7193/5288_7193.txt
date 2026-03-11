@@ -1,0 +1,127 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 5288_7193.py
+Questão  : 5288
+Aluno    : 7193
+Total MCs: 4
+
+⚠️  Misconceptions detectados: A3, B8, B9, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | i = int(input("informe a idade: "))
+     2 | cont = 0
+     3 | mi = 0
+     4 | f = 0
+     5 | while (i!= -1):
+     6 | 	if (i<18):
+     7 | 		cont = cont + 1 
+     8 | 	elif (i>=18):
+     9 | 		mi = mi + 1 
+    10 | 		
+    11 | 	i = int(input("informe a proxima idade: "))
+    12 | 		
+    13 | t = cont + mi	
+    14 | f = (cont*100)/(t)
+    15 | 	 
+    16 | print (t)
+    17 | print(round(f,2))
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 1
+
+  [1] Linha 0: A3 detectado pelo VisitorMC3 (localização exata não mapeada)
+      Trecho  : —
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 6: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 6) / elif ... sem else
+      Contexto:
+               5 | while (i!= -1):
+        >>>    6 | 	if (i<18):
+               7 | 		cont = cont + 1 
+
+▶ B9 — elif/else retestando condições já verificadas
+  Ocorrências: 1
+
+  [1] Linha 8: elif retesta condição inversa do if da linha 6
+      Trecho  : if i < 18 ... elif i >= 18
+      Contexto:
+               7 | 		cont = cont + 1 
+        >>>    8 | 	elif (i>=18):
+               9 | 		mi = mi + 1 
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 9
+
+  [1] Linha 1: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+        >>>    1 | i = int(input("informe a idade: "))
+               2 | cont = 0
+
+  [2] Linha 2: Variável 'cont' com nome muito curto (≤4 chars)
+      Trecho  : cont = ...
+      Contexto:
+               1 | i = int(input("informe a idade: "))
+        >>>    2 | cont = 0
+               3 | mi = 0
+
+  [3] Linha 3: Variável 'mi' com nome muito curto (≤4 chars)
+      Trecho  : mi = ...
+      Contexto:
+               2 | cont = 0
+        >>>    3 | mi = 0
+               4 | f = 0
+
+  [4] Linha 4: Variável 'f' com nome muito curto (≤4 chars)
+      Trecho  : f = ...
+      Contexto:
+               3 | mi = 0
+        >>>    4 | f = 0
+               5 | while (i!= -1):
+
+  [5] Linha 13: Variável 't' com nome muito curto (≤4 chars)
+      Trecho  : t = ...
+      Contexto:
+              12 | 		
+        >>>   13 | t = cont + mi	
+              14 | f = (cont*100)/(t)
+
+  [6] Linha 14: Variável 'f' com nome muito curto (≤4 chars)
+      Trecho  : f = ...
+      Contexto:
+              13 | t = cont + mi	
+        >>>   14 | f = (cont*100)/(t)
+              15 | 	 
+
+  [7] Linha 11: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+              10 | 		
+        >>>   11 | 	i = int(input("informe a proxima idade: "))
+              12 | 		
+
+  [8] Linha 7: Variável 'cont' com nome muito curto (≤4 chars)
+      Trecho  : cont = ...
+      Contexto:
+               6 | 	if (i<18):
+        >>>    7 | 		cont = cont + 1 
+               8 | 	elif (i>=18):
+
+  [9] Linha 9: Variável 'mi' com nome muito curto (≤4 chars)
+      Trecho  : mi = ...
+      Contexto:
+               8 | 	elif (i>=18):
+        >>>    9 | 		mi = mi + 1 
+              10 | 		
+
+======================================================================

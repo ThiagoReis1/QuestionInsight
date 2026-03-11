@@ -1,0 +1,45 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1600_3381.py
+Questão  : 1600
+Aluno    : 3381
+Total MCs: 1
+
+⚠️  Misconceptions detectados: A3
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import *
+     2 | vetor = array(eval(input()))
+     3 | n=size(vetor)
+     4 | i=0
+     5 | while n>i:
+     6 | 	if vetor[i] > 80.00:
+     7 | 		descont=[i]*0.15
+     8 | 		vetor[i]=vetor[i]-desconto
+     9 | 		vetor[i]=round(vetor[i],2)
+    10 | 	else:
+    11 | 		vetor[i]=vetor[i]
+    12 | 		vetor[i]=round(vetor[i],2)
+    13 | 	i=i+1
+    14 | vetor1=sum(vetor)
+    15 | vetor1=round(vetor1,2)
+    16 | print(vetor1)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 1
+
+  [1] Linha 7: Variável 'descont' declarada mas nunca utilizada
+      Trecho  : descont = ...
+      Contexto:
+               6 | 	if vetor[i] > 80.00:
+        >>>    7 | 		descont=[i]*0.15
+               8 | 		vetor[i]=vetor[i]-desconto
+
+======================================================================

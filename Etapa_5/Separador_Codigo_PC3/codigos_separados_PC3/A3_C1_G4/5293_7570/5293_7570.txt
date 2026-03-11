@@ -1,0 +1,73 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 5293_7570.py
+Questão  : 5293
+Aluno    : 7570
+Total MCs: 3
+
+⚠️  Misconceptions detectados: A3, C1, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | num = float(input(""))
+     2 | soma = 0
+     3 | while(num!=0):
+     4 | 		soma = num + 0
+     5 | 		num = t(input(""))
+     6 | 		if(num==0):
+     7 | 			print(soma)
+     8 | 			print(round(num, 2))
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 1
+
+  [1] Linha 0: A3 detectado pelo VisitorMC3 (localização exata não mapeada)
+      Trecho  : —
+
+▶ C1 — Condição while testada novamente dentro do seu bloco
+  Ocorrências: 1
+
+  [1] Linha 6: If retesta condição inversa do while da linha 3
+      Trecho  : while num != 0 → if num == 0
+      Contexto:
+               5 | 		num = t(input(""))
+        >>>    6 | 		if(num==0):
+               7 | 			print(soma)
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 4
+
+  [1] Linha 1: Variável 'num' com nome muito curto (≤4 chars)
+      Trecho  : num = ...
+      Contexto:
+        >>>    1 | num = float(input(""))
+               2 | soma = 0
+
+  [2] Linha 2: Variável 'soma' com nome muito curto (≤4 chars)
+      Trecho  : soma = ...
+      Contexto:
+               1 | num = float(input(""))
+        >>>    2 | soma = 0
+               3 | while(num!=0):
+
+  [3] Linha 4: Variável 'soma' com nome muito curto (≤4 chars)
+      Trecho  : soma = ...
+      Contexto:
+               3 | while(num!=0):
+        >>>    4 | 		soma = num + 0
+               5 | 		num = t(input(""))
+
+  [4] Linha 5: Variável 'num' com nome muito curto (≤4 chars)
+      Trecho  : num = ...
+      Contexto:
+               4 | 		soma = num + 0
+        >>>    5 | 		num = t(input(""))
+               6 | 		if(num==0):
+
+======================================================================

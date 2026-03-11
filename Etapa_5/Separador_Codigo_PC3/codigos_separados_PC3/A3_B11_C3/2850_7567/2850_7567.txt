@@ -1,0 +1,53 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 2850_7567.py
+Questão  : 2850
+Aluno    : 7567
+Total MCs: 3
+
+⚠️  Misconceptions detectados: A3, B11, C3
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | v = array(eval(input("")))
+     3 | soma = zeros(size(v) , dtype = int)
+     4 | for i in range(size(v)):
+     5 | 	if(v[i] >= 55):
+     6 | 		soma = zeros(size(v) , dtype = int)
+     7 | 	soma[i] = soma[i] + v[i]
+     8 | 	total = sum(soma)
+     9 | 	if(total >= 55):
+    10 | 		soma = zeros(size(v) , dtype = int)
+    11 | 	total = sum(soma)
+    12 | print(total)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 1
+
+  [1] Linha 0: A3 detectado pelo VisitorMC3 (localização exata não mapeada)
+      Trecho  : —
+
+▶ B11 — Ifs distintos com blocos idênticos
+  Ocorrências: 1
+
+  [1] Linha 0: B11 detectado pelo VisitorMC3 (localização exata não mapeada)
+      Trecho  : —
+
+▶ C3 — Operações redundantes dentro do loop
+  Ocorrências: 1
+
+  [1] Linha 11: Operação idêntica à linha 8 repetida no loop
+      Trecho  : total = sum(soma)
+      Contexto:
+              10 | 		soma = zeros(size(v) , dtype = int)
+        >>>   11 | 	total = sum(soma)
+              12 | print(total)
+
+======================================================================

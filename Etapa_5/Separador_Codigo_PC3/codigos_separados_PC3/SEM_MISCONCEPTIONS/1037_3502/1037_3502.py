@@ -1,0 +1,5 @@
+t = float(input(9))
+p = float(input(0.26))
+print (round(p, 2))
+x = (valor - 9)
+y = float(input(valor-9% * 0))

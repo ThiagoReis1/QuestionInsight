@@ -1,0 +1,81 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1114_1691.py
+Questão  : 1114
+Aluno    : 1691
+Total MCs: 2
+
+⚠️  Misconceptions detectados: A5, B8
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | ###################################
+     2 | #
+     3 | # Paulo Sergio da Silva Freitas
+     4 | #
+     5 | # Determinar o proximo destinop do trem
+     6 | #
+     7 | ###################################
+     8 | 
+     9 | import math
+    10 | velocidade = float(input("Qual a velocidade do trem km/h : "))
+    11 | tempo = float(input("Qual o tempo de viagem : "))
+    12 | 
+    13 | if(velocidade <= 0.0 or tempo <= 0.0):
+    14 | 	print("Entradas:",velocidade,"km/h e",tempo," h")
+    15 | 	print("Dados invalidos")
+    16 | else:
+    17 | 	distancia = velocidade*tempo
+    18 | 	if(0 < distancia < 100 ):
+    19 | 		proxima = "Bravos"
+    20 | 	elif (100 <= distancia < 200):
+    21 | 			proxima = "Castamere"
+    22 | 	elif (200 <= distancia < 400):
+    23 | 			proxima = "Doriath"
+    24 | 	elif (400 < distancia < 600):
+    25 | 			proxima = "Edoras"
+    26 | 	elif (600 < distancia < 750):
+    27 | 			proxima = "Fangorn"
+    28 | 	elif (750 < distancia < 1150):
+    29 | 			proxima = "Gondor"
+    30 | 	elif (1150 < distancia < 1400):
+    31 | 			proxima = "hogsmead"		
+    32 | 
+    33 | print("Entradas:",velocidade,"km/h e",tempo," h")
+    34 | print("Proxima parada:",proxima)
+    35 | print("distancia",distancia)
+    36 | 			
+    37 | 		
+    38 | 
+    39 | 
+    40 | 
+    41 | 
+    42 | 
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A5 — Importação não utilizada
+  Ocorrências: 1
+
+  [1] Linha 9: 'math' importado mas nunca utilizado
+      Trecho  : import math
+      Contexto:
+               8 | 
+        >>>    9 | import math
+              10 | velocidade = float(input("Qual a velocidade do trem km/h : "))
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 28: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 28) / elif ... sem else
+      Contexto:
+              27 | 			proxima = "Fangorn"
+        >>>   28 | 	elif (750 < distancia < 1150):
+              29 | 			proxima = "Gondor"
+
+======================================================================

@@ -1,0 +1,67 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1619_2573.py
+Questão  : 1619
+Aluno    : 2573
+Total MCs: 2
+
+⚠️  Misconceptions detectados: A3, B4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import *
+     2 | 
+     3 | vetor1 = array(eval(input("Entre com o vetor: ")))
+     4 | vetor2 = array(eval(input("Entre com o vetor: ")))	
+     5 | 
+     6 | i = 0
+     7 | a = 60
+     8 | QUENTE = 90
+     9 | MORNO = 45
+    10 | FRIO = 0
+    11 | 
+    12 | while (i < size(vetor1)):
+    13 | 	if (vetor[i] == QUENTE):
+    14 | 		custototal = a + 0.005
+    15 | 	elif (vetor[i] == MORNO):
+    16 | 		custototal = a + 0.005
+    17 | 		i = i + 1
+    18 | 	else:
+    19 | 		custototal = a + 0.005
+    20 | 		
+    21 | print(round(custototal, 2))
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 2
+
+  [1] Linha 4: Variável 'vetor2' declarada mas nunca utilizada
+      Trecho  : vetor2 = ...
+      Contexto:
+               3 | vetor1 = array(eval(input("Entre com o vetor: ")))
+        >>>    4 | vetor2 = array(eval(input("Entre com o vetor: ")))	
+               5 | 
+
+  [2] Linha 10: Variável 'FRIO' declarada mas nunca utilizada
+      Trecho  : FRIO = ...
+      Contexto:
+               9 | MORNO = 45
+        >>>   10 | FRIO = 0
+              11 | 
+
+▶ B4 — Comandos repetidos dentro de blocos if-elif-else
+  Ocorrências: 1
+
+  [1] Linha 15: Bloco idêntico ao da linha 13
+      Trecho  : custototal = a + 0.005
+      Contexto:
+              14 | 		custototal = a + 0.005
+        >>>   15 | 	elif (vetor[i] == MORNO):
+              16 | 		custototal = a + 0.005
+
+======================================================================

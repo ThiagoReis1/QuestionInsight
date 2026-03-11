@@ -1,0 +1,51 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 2535_3106.py
+Questão  : 2535
+Aluno    : 3106
+Total MCs: 1
+
+⚠️  Misconceptions detectados: E1
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | valor_a = float(input("Valor depositado no Banco A: "))
+     2 | valor_b = float(input("Valor depositado no Banco B: "))
+     3 | 
+     4 | taxa_a = float(input("Taxa de juros no Banco A: "))
+     5 | taxa_b = float(input("Taxa de juros no Banco B: "))
+     6 | 
+     7 | porc_a = taxa_a / 100
+     8 | porc_b = taxa_b / 100
+     9 | 
+    10 | i = 0
+    11 | 
+    12 | if((valor_a > 0) and (valor_b > 0) and (taxa_a > 0) and (taxa_b > 0) and (valor_a > valor_b) and (taxa_a < taxa_b)):
+    13 | 	while(valor_b < valor_a):
+    14 | 		valor_a = round ( (valor_a + (valor_a * porc_a)), 2 )
+    15 | 		valor_b = round ( (valor_b + (valor_b * porc_b)), 2 )
+    16 | 		i = i + 1
+    17 | 	
+    18 | 	print(i)
+    19 | 		
+    20 | else:
+    21 | 	print("Dados incorretos")
+    22 | 	
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ E1 — Verificação desnecessária de todas as combinações possíveis
+  Ocorrências: 1
+
+  [1] Linha 12: 6 condições em um único if — verificação excessiva
+      Trecho  : valor_a > 0 and valor_b > 0 and (taxa_a > 0) and (taxa_b > 0) and (valor_a > valor_b) and (taxa_a < taxa_b)
+      Contexto:
+              11 | 
+        >>>   12 | if((valor_a > 0) and (valor_b > 0) and (taxa_a > 0) and (taxa_b > 0) and (valor_a > valor_b) and (taxa_a < taxa_b)):
+              13 | 	while(valor_b < valor_a):
+
+======================================================================

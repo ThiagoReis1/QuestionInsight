@@ -1,0 +1,58 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1985_2340.py
+Questão  : 1985
+Aluno    : 2340
+Total MCs: 1
+
+⚠️  Misconceptions detectados: G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | #leia duas características que definem uma universidade apenas das regiões Norte e Sul
+     2 | #como saída, o programa deve identificar e imprimir o nome da universidade
+     3 | 
+     4 | reg = input("Região Norte ou Sul: ").upper()
+     5 | uf = input("Estado: ").upper()
+     6 | 
+     7 | if (reg == "norte") or (reg == "NORTE"):
+     8 | 	if (uf == "amazonas") or (uf == "AMAZONAS"):
+     9 | 		print("UNIVERSIDADE FEDERAL DO AMAZONAS")
+    10 | 	elif (uf == "roraima") or (uf == "RORAIMA"):
+    11 | 		print("UNIVERSIDADE FEDERAL DE RORAIMA")
+    12 | 	else:
+    13 | 		print("UNIVERSIDADE NAO IDENTIFICADA")
+    14 | elif (reg == "sul") or (reg == "SUL"):
+    15 | 	if(uf == "parana") or (uf == "PARANA"):
+    16 | 		print("UNIVERSIDADE FEDERAL DO PARANA")
+    17 | 	elif(uf == "santa catarina") or ("SANTA CATARINA"):
+    18 | 		print("UNIVERSIDADE FEDERAL DE SANTA CARARINA")
+    19 | 	else:
+    20 | 		print("UNIVERSIDADE NAO IDENTIFICADA")
+    21 | else:
+    22 | 	print("UNIVERSIDADE NAO IDENTIFICADA")
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 2
+
+  [1] Linha 4: Variável 'reg' com nome muito curto (≤4 chars)
+      Trecho  : reg = ...
+      Contexto:
+               3 | 
+        >>>    4 | reg = input("Região Norte ou Sul: ").upper()
+               5 | uf = input("Estado: ").upper()
+
+  [2] Linha 5: Variável 'uf' com nome muito curto (≤4 chars)
+      Trecho  : uf = ...
+      Contexto:
+               4 | reg = input("Região Norte ou Sul: ").upper()
+        >>>    5 | uf = input("Estado: ").upper()
+               6 | 
+
+======================================================================

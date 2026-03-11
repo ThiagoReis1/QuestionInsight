@@ -1,0 +1,77 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 2967_4431.py
+Questão  : 2967
+Aluno    : 4431
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B4, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | x=float(input("Digite a sua altura:"))
+     2 | y=float(input("Digite a altura do seu amigo: "))
+     3 | if(x>1.37 and y>1.37):
+     4 | 	print("Sim")
+     5 | else:
+     6 | 	if(x>1.37 and y<1.37):
+     7 | 		print("Sim")
+     8 | 	else:
+     9 | 		if(x<1.37 and y>1.37):
+    10 | 			print("Sim")
+    11 | 		else:
+    12 | 			print("Nao")
+    13 | 
+    14 | if(x>y):
+    15 | 	print(x)
+    16 | else:
+    17 | 	print(y)
+    18 | 	
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B4 — Comandos repetidos dentro de blocos if-elif-else
+  Ocorrências: 3
+
+  [1] Linha 6: Bloco idêntico ao da linha 3
+      Trecho  : print('Sim')
+      Contexto:
+               5 | else:
+        >>>    6 | 	if(x>1.37 and y<1.37):
+               7 | 		print("Sim")
+
+  [2] Linha 9: Bloco idêntico ao da linha 3
+      Trecho  : print('Sim')
+      Contexto:
+               8 | 	else:
+        >>>    9 | 		if(x<1.37 and y>1.37):
+              10 | 			print("Sim")
+
+  [3] Linha 9: Bloco idêntico ao da linha 6
+      Trecho  : print('Sim')
+      Contexto:
+               8 | 	else:
+        >>>    9 | 		if(x<1.37 and y>1.37):
+              10 | 			print("Sim")
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 2
+
+  [1] Linha 1: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+        >>>    1 | x=float(input("Digite a sua altura:"))
+               2 | y=float(input("Digite a altura do seu amigo: "))
+
+  [2] Linha 2: Variável 'y' com nome muito curto (≤4 chars)
+      Trecho  : y = ...
+      Contexto:
+               1 | x=float(input("Digite a sua altura:"))
+        >>>    2 | y=float(input("Digite a altura do seu amigo: "))
+               3 | if(x>1.37 and y>1.37):
+
+======================================================================

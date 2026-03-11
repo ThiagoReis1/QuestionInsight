@@ -1,0 +1,137 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1640_3198.py
+Questão  : 1640
+Aluno    : 3198
+Total MCs: 3
+
+⚠️  Misconceptions detectados: A2, A3, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | 
+     3 | qam = array(eval(input()))
+     4 | 
+     5 | c = 0
+     6 | f = 0
+     7 | g = 0
+     8 | 
+     9 | for i in range(size(qam)):
+    10 | 	if(qam[i]%2 != 0):
+    11 | 		c = c + 1
+    12 | print(c)
+    13 | z = zeros(c, dtype=int)
+    14 | 
+    15 | for j in range(size(z)):
+    16 | 	f = 0
+    17 | 	g = 0
+    18 | 	if(qam[j]%2 != 0):
+    19 | 		j = j 
+    20 | z[0] = z[0] + j[j]
+    21 | z[1] = z[1] + j[j]
+    22 | z[2] = z[2] + j[j]
+    23 | 
+    24 | print(z)
+    25 | 	
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A2 — Variável atribuída a si mesma
+  Ocorrências: 1
+
+  [1] Linha 19: 'j' atribuído a si mesmo
+      Trecho  : j = j
+      Contexto:
+              18 | 	if(qam[j]%2 != 0):
+        >>>   19 | 		j = j 
+              20 | z[0] = z[0] + j[j]
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 2
+
+  [1] Linha 6: Variável 'f' declarada mas nunca utilizada
+      Trecho  : f = ...
+      Contexto:
+               5 | c = 0
+        >>>    6 | f = 0
+               7 | g = 0
+
+  [2] Linha 7: Variável 'g' declarada mas nunca utilizada
+      Trecho  : g = ...
+      Contexto:
+               6 | f = 0
+        >>>    7 | g = 0
+               8 | 
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 9
+
+  [1] Linha 3: Variável 'qam' com nome muito curto (≤4 chars)
+      Trecho  : qam = ...
+      Contexto:
+               2 | 
+        >>>    3 | qam = array(eval(input()))
+               4 | 
+
+  [2] Linha 5: Variável 'c' com nome muito curto (≤4 chars)
+      Trecho  : c = ...
+      Contexto:
+               4 | 
+        >>>    5 | c = 0
+               6 | f = 0
+
+  [3] Linha 6: Variável 'f' com nome muito curto (≤4 chars)
+      Trecho  : f = ...
+      Contexto:
+               5 | c = 0
+        >>>    6 | f = 0
+               7 | g = 0
+
+  [4] Linha 7: Variável 'g' com nome muito curto (≤4 chars)
+      Trecho  : g = ...
+      Contexto:
+               6 | f = 0
+        >>>    7 | g = 0
+               8 | 
+
+  [5] Linha 13: Variável 'z' com nome muito curto (≤4 chars)
+      Trecho  : z = ...
+      Contexto:
+              12 | print(c)
+        >>>   13 | z = zeros(c, dtype=int)
+              14 | 
+
+  [6] Linha 16: Variável 'f' com nome muito curto (≤4 chars)
+      Trecho  : f = ...
+      Contexto:
+              15 | for j in range(size(z)):
+        >>>   16 | 	f = 0
+              17 | 	g = 0
+
+  [7] Linha 17: Variável 'g' com nome muito curto (≤4 chars)
+      Trecho  : g = ...
+      Contexto:
+              16 | 	f = 0
+        >>>   17 | 	g = 0
+              18 | 	if(qam[j]%2 != 0):
+
+  [8] Linha 11: Variável 'c' com nome muito curto (≤4 chars)
+      Trecho  : c = ...
+      Contexto:
+              10 | 	if(qam[i]%2 != 0):
+        >>>   11 | 		c = c + 1
+              12 | print(c)
+
+  [9] Linha 19: Variável 'j' com nome muito curto (≤4 chars)
+      Trecho  : j = ...
+      Contexto:
+              18 | 	if(qam[j]%2 != 0):
+        >>>   19 | 		j = j 
+              20 | z[0] = z[0] + j[j]
+
+======================================================================

@@ -1,0 +1,154 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1649_3749.py
+Questão  : 1649
+Aluno    : 3749
+Total MCs: 4
+
+⚠️  Misconceptions detectados: A3, B4, B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import *
+     2 | 
+     3 | vet = input("vetor: ").split(',')
+     4 | 
+     5 | i = 0
+     6 | vet_0 = zeros(size(vet), dtype = int)
+     7 | 
+     8 | 
+     9 | p = 0
+    10 | c = 0
+    11 | m = 0
+    12 | v = 0
+    13 | a = 0
+    14 | 
+    15 | 
+    16 | while i < size(vet):
+    17 | 	i = i + 1
+    18 | 	if vet[i] == "P":
+    19 | 		vet_0[0] = p + 1
+    20 | 	elif vet[i] == "C":
+    21 | 		vet_0[1] = c + 1
+    22 | 	elif vet[i] == "M":
+    23 | 		vet_0[1] = c + 1
+    24 | 	
+    25 | 		
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 3
+
+  [1] Linha 11: Variável 'm' declarada mas nunca utilizada
+      Trecho  : m = ...
+      Contexto:
+              10 | c = 0
+        >>>   11 | m = 0
+              12 | v = 0
+
+  [2] Linha 12: Variável 'v' declarada mas nunca utilizada
+      Trecho  : v = ...
+      Contexto:
+              11 | m = 0
+        >>>   12 | v = 0
+              13 | a = 0
+
+  [3] Linha 13: Variável 'a' declarada mas nunca utilizada
+      Trecho  : a = ...
+      Contexto:
+              12 | v = 0
+        >>>   13 | a = 0
+              14 | 
+
+▶ B4 — Comandos repetidos dentro de blocos if-elif-else
+  Ocorrências: 2
+
+  [1] Linha 22: Bloco idêntico ao da linha 20
+      Trecho  : vet_0[1] = c + 1
+      Contexto:
+              21 | 		vet_0[1] = c + 1
+        >>>   22 | 	elif vet[i] == "M":
+              23 | 		vet_0[1] = c + 1
+
+  [2] Linha 22: Bloco idêntico ao da linha 20
+      Trecho  : vet_0[1] = c + 1
+      Contexto:
+              21 | 		vet_0[1] = c + 1
+        >>>   22 | 	elif vet[i] == "M":
+              23 | 		vet_0[1] = c + 1
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 20: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 20) / elif ... sem else
+      Contexto:
+              19 | 		vet_0[0] = p + 1
+        >>>   20 | 	elif vet[i] == "C":
+              21 | 		vet_0[1] = c + 1
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 8
+
+  [1] Linha 3: Variável 'vet' com nome muito curto (≤4 chars)
+      Trecho  : vet = ...
+      Contexto:
+               2 | 
+        >>>    3 | vet = input("vetor: ").split(',')
+               4 | 
+
+  [2] Linha 5: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+               4 | 
+        >>>    5 | i = 0
+               6 | vet_0 = zeros(size(vet), dtype = int)
+
+  [3] Linha 9: Variável 'p' com nome muito curto (≤4 chars)
+      Trecho  : p = ...
+      Contexto:
+               8 | 
+        >>>    9 | p = 0
+              10 | c = 0
+
+  [4] Linha 10: Variável 'c' com nome muito curto (≤4 chars)
+      Trecho  : c = ...
+      Contexto:
+               9 | p = 0
+        >>>   10 | c = 0
+              11 | m = 0
+
+  [5] Linha 11: Variável 'm' com nome muito curto (≤4 chars)
+      Trecho  : m = ...
+      Contexto:
+              10 | c = 0
+        >>>   11 | m = 0
+              12 | v = 0
+
+  [6] Linha 12: Variável 'v' com nome muito curto (≤4 chars)
+      Trecho  : v = ...
+      Contexto:
+              11 | m = 0
+        >>>   12 | v = 0
+              13 | a = 0
+
+  [7] Linha 13: Variável 'a' com nome muito curto (≤4 chars)
+      Trecho  : a = ...
+      Contexto:
+              12 | v = 0
+        >>>   13 | a = 0
+              14 | 
+
+  [8] Linha 17: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+              16 | while i < size(vet):
+        >>>   17 | 	i = i + 1
+              18 | 	if vet[i] == "P":
+
+======================================================================

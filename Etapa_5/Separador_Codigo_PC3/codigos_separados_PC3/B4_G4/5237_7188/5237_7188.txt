@@ -1,0 +1,77 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 5237_7188.py
+Questão  : 5237
+Aluno    : 7188
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B4, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | n1= int(input())
+     2 | n2= int(input())
+     3 | n3= int(input())
+     4 | if (n1%2)==0 and (n2%2)==0 and not (n3%2)==0:
+     5 | 	print("SIM")
+     6 | elif (n3%2)==0 and (n2%2)==0 and not (n1%2)==0:
+     7 | 	print("SIM")
+     8 | elif (n1%2)==0 and (n2%2)==0 and (n3%2)==0:
+     9 | 	print("SIM")
+    10 | else:
+    11 | 	print("NAO")
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B4 — Comandos repetidos dentro de blocos if-elif-else
+  Ocorrências: 3
+
+  [1] Linha 6: Bloco idêntico ao da linha 4
+      Trecho  : print('SIM')
+      Contexto:
+               5 | 	print("SIM")
+        >>>    6 | elif (n3%2)==0 and (n2%2)==0 and not (n1%2)==0:
+               7 | 	print("SIM")
+
+  [2] Linha 8: Bloco idêntico ao da linha 4
+      Trecho  : print('SIM')
+      Contexto:
+               7 | 	print("SIM")
+        >>>    8 | elif (n1%2)==0 and (n2%2)==0 and (n3%2)==0:
+               9 | 	print("SIM")
+
+  [3] Linha 8: Bloco idêntico ao da linha 6
+      Trecho  : print('SIM')
+      Contexto:
+               7 | 	print("SIM")
+        >>>    8 | elif (n1%2)==0 and (n2%2)==0 and (n3%2)==0:
+               9 | 	print("SIM")
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 3
+
+  [1] Linha 1: Variável 'n1' com nome muito curto (≤4 chars)
+      Trecho  : n1 = ...
+      Contexto:
+        >>>    1 | n1= int(input())
+               2 | n2= int(input())
+
+  [2] Linha 2: Variável 'n2' com nome muito curto (≤4 chars)
+      Trecho  : n2 = ...
+      Contexto:
+               1 | n1= int(input())
+        >>>    2 | n2= int(input())
+               3 | n3= int(input())
+
+  [3] Linha 3: Variável 'n3' com nome muito curto (≤4 chars)
+      Trecho  : n3 = ...
+      Contexto:
+               2 | n2= int(input())
+        >>>    3 | n3= int(input())
+               4 | if (n1%2)==0 and (n2%2)==0 and not (n3%2)==0:
+
+======================================================================

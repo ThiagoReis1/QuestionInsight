@@ -1,0 +1,108 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 3588_6670.py
+Questão  : 3588
+Aluno    : 6670
+Total MCs: 3
+
+⚠️  Misconceptions detectados: A2, B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import *
+     2 | 
+     3 | tiro= array(eval(input()))
+     4 | 
+     5 | i=0
+     6 | acum=10000
+     7 | while i < size(tiro):
+     8 | 	if tiro[i]==1:
+     9 | 		acum=acum*2
+    10 | 	elif tiro[i]==2:
+    11 | 		acum=acum
+    12 | 	elif tiro[i]==3:
+    13 | 		acum=acum/2
+    14 | 	elif tiro[i]==4:
+    15 | 		acum=acum/4
+    16 | 	i+=1
+    17 | print(round(acum,2))
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A2 — Variável atribuída a si mesma
+  Ocorrências: 1
+
+  [1] Linha 11: 'acum' atribuído a si mesmo
+      Trecho  : acum = acum
+      Contexto:
+              10 | 	elif tiro[i]==2:
+        >>>   11 | 		acum=acum
+              12 | 	elif tiro[i]==3:
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 12: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 12) / elif ... sem else
+      Contexto:
+              11 | 		acum=acum
+        >>>   12 | 	elif tiro[i]==3:
+              13 | 		acum=acum/2
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 7
+
+  [1] Linha 3: Variável 'tiro' com nome muito curto (≤4 chars)
+      Trecho  : tiro = ...
+      Contexto:
+               2 | 
+        >>>    3 | tiro= array(eval(input()))
+               4 | 
+
+  [2] Linha 5: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+               4 | 
+        >>>    5 | i=0
+               6 | acum=10000
+
+  [3] Linha 6: Variável 'acum' com nome muito curto (≤4 chars)
+      Trecho  : acum = ...
+      Contexto:
+               5 | i=0
+        >>>    6 | acum=10000
+               7 | while i < size(tiro):
+
+  [4] Linha 9: Variável 'acum' com nome muito curto (≤4 chars)
+      Trecho  : acum = ...
+      Contexto:
+               8 | 	if tiro[i]==1:
+        >>>    9 | 		acum=acum*2
+              10 | 	elif tiro[i]==2:
+
+  [5] Linha 11: Variável 'acum' com nome muito curto (≤4 chars)
+      Trecho  : acum = ...
+      Contexto:
+              10 | 	elif tiro[i]==2:
+        >>>   11 | 		acum=acum
+              12 | 	elif tiro[i]==3:
+
+  [6] Linha 13: Variável 'acum' com nome muito curto (≤4 chars)
+      Trecho  : acum = ...
+      Contexto:
+              12 | 	elif tiro[i]==3:
+        >>>   13 | 		acum=acum/2
+              14 | 	elif tiro[i]==4:
+
+  [7] Linha 15: Variável 'acum' com nome muito curto (≤4 chars)
+      Trecho  : acum = ...
+      Contexto:
+              14 | 	elif tiro[i]==4:
+        >>>   15 | 		acum=acum/4
+              16 | 	i+=1
+
+======================================================================

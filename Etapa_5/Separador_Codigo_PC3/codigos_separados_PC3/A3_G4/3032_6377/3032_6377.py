@@ -1,0 +1,1 @@
+x =int(input("valor de x"))

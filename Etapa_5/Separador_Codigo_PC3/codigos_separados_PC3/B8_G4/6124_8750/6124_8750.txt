@@ -1,0 +1,80 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 6124_8750.py
+Questão  : 6124
+Aluno    : 8750
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | p = float(input("peso do tripulante: "))
+     2 | 
+     3 | if (p >= 3000.0) and (p < 3400.0):
+     4 | 	z = 0.8*p
+     5 | 	print(round(z, 1))
+     6 | elif (p >= 3400.0) and (p < 3900.0):
+     7 | 	z = 1.3*p
+     8 | 	print(round(z, 1))
+     9 | elif (p >= 3900.0) and (p < 4100.0):
+    10 | 	z = 2.1*p
+    11 | 	print(round(z, 1))
+    12 | elif (p >= 4100.0):
+    13 | 	z = 3.0*p
+    14 | 	print(round(z, 1))
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 9: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 9) / elif ... sem else
+      Contexto:
+               8 | 	print(round(z, 1))
+        >>>    9 | elif (p >= 3900.0) and (p < 4100.0):
+              10 | 	z = 2.1*p
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 5
+
+  [1] Linha 1: Variável 'p' com nome muito curto (≤4 chars)
+      Trecho  : p = ...
+      Contexto:
+        >>>    1 | p = float(input("peso do tripulante: "))
+               2 | 
+
+  [2] Linha 4: Variável 'z' com nome muito curto (≤4 chars)
+      Trecho  : z = ...
+      Contexto:
+               3 | if (p >= 3000.0) and (p < 3400.0):
+        >>>    4 | 	z = 0.8*p
+               5 | 	print(round(z, 1))
+
+  [3] Linha 7: Variável 'z' com nome muito curto (≤4 chars)
+      Trecho  : z = ...
+      Contexto:
+               6 | elif (p >= 3400.0) and (p < 3900.0):
+        >>>    7 | 	z = 1.3*p
+               8 | 	print(round(z, 1))
+
+  [4] Linha 10: Variável 'z' com nome muito curto (≤4 chars)
+      Trecho  : z = ...
+      Contexto:
+               9 | elif (p >= 3900.0) and (p < 4100.0):
+        >>>   10 | 	z = 2.1*p
+              11 | 	print(round(z, 1))
+
+  [5] Linha 13: Variável 'z' com nome muito curto (≤4 chars)
+      Trecho  : z = ...
+      Contexto:
+              12 | elif (p >= 4100.0):
+        >>>   13 | 	z = 3.0*p
+              14 | 	print(round(z, 1))
+
+======================================================================

@@ -1,0 +1,76 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 5246_7657.py
+Questão  : 5246
+Aluno    : 7657
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B8, B9
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | idade = int(input("qual sua idade:"))
+     2 | peso = float(input("qual sua massa corporal:"))
+     3 | 
+     4 | if (idade > 0) and (peso > 0):
+     5 | 	if (idade <= 20):
+     6 | 		if (peso <= 60):
+     7 | 			print("Grupo de risco: 9")
+     8 | 		elif (peso > 60) and (peso <= 90):
+     9 | 			print("Grupo de risco: 8")
+    10 | 		elif (peso > 90):
+    11 | 			print("Grupo de risco 7")
+    12 | 	if (idade > 20) and (idade <= 50):
+    13 | 		if (peso <= 60):
+    14 | 			print("Grupo de risco: 6")
+    15 | 		elif (peso > 60) and (peso <= 90):
+    16 | 			print("Grupo de risco: 5")
+    17 | 		elif (peso > 90):
+    18 | 			print("grupo de risco: 4")
+    19 | 	if (idade > 50):
+    20 | 		if (peso <= 60):
+    21 | 			print("Grupo de risco: 3")
+    22 | 		elif (peso > 60) and (peso <= 90):
+    23 | 			print("Grupo de risco: 2")
+    24 | 		elif (peso >90):
+    25 | 			print("Grupo de risco: 1")
+    26 | else:
+    27 | 	print("Dados invalidos")
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 3
+
+  [1] Linha 8: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 8) / elif ... sem else
+      Contexto:
+               7 | 			print("Grupo de risco: 9")
+        >>>    8 | 		elif (peso > 60) and (peso <= 90):
+               9 | 			print("Grupo de risco: 8")
+
+  [2] Linha 15: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 15) / elif ... sem else
+      Contexto:
+              14 | 			print("Grupo de risco: 6")
+        >>>   15 | 		elif (peso > 60) and (peso <= 90):
+              16 | 			print("Grupo de risco: 5")
+
+  [3] Linha 22: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 22) / elif ... sem else
+      Contexto:
+              21 | 			print("Grupo de risco: 3")
+        >>>   22 | 		elif (peso > 60) and (peso <= 90):
+              23 | 			print("Grupo de risco: 2")
+
+▶ B9 — elif/else retestando condições já verificadas
+  Ocorrências: 1
+
+  [1] Linha 0: B9 detectado pelo VisitorMC3 (localização exata não mapeada)
+      Trecho  : —
+
+======================================================================

@@ -1,0 +1,117 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1616_1941.py
+Questão  : 1616
+Aluno    : 1941
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | #dano do mago = dano da magia * nivel do magico
+     3 | 
+     4 | vstr = array(eval(input("")))
+     5 | vint = array(eval(input("")))
+     6 | 
+     7 | i=0
+     8 | dano = 0
+     9 | 
+    10 | while(i<size(vstr)):
+    11 | 	if(vstr[i]=="GELO"):
+    12 | 		dano  = dano + 2*vint[i]
+    13 | 	elif(vstr[i]=="FOGO"):
+    14 | 		dano  = dano + 3*vint[i]
+    15 | 	elif(vstr[i]=="CHOQUE"):
+    16 | 		dano  = dano + 4*vint[i]
+    17 | 	elif(vstr[i]=="CONJURACAO"):
+    18 | 		dano  = dano + 8*vint[i]
+    19 | 	elif(vstr[i]=="ILUSAO"):
+    20 | 		dano  = dano + 10*vint[i]
+    21 | 		
+    22 | 	print (dano)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 17: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 17) / elif ... sem else
+      Contexto:
+              16 | 		dano  = dano + 4*vint[i]
+        >>>   17 | 	elif(vstr[i]=="CONJURACAO"):
+              18 | 		dano  = dano + 8*vint[i]
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 9
+
+  [1] Linha 4: Variável 'vstr' com nome muito curto (≤4 chars)
+      Trecho  : vstr = ...
+      Contexto:
+               3 | 
+        >>>    4 | vstr = array(eval(input("")))
+               5 | vint = array(eval(input("")))
+
+  [2] Linha 5: Variável 'vint' com nome muito curto (≤4 chars)
+      Trecho  : vint = ...
+      Contexto:
+               4 | vstr = array(eval(input("")))
+        >>>    5 | vint = array(eval(input("")))
+               6 | 
+
+  [3] Linha 7: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+               6 | 
+        >>>    7 | i=0
+               8 | dano = 0
+
+  [4] Linha 8: Variável 'dano' com nome muito curto (≤4 chars)
+      Trecho  : dano = ...
+      Contexto:
+               7 | i=0
+        >>>    8 | dano = 0
+               9 | 
+
+  [5] Linha 12: Variável 'dano' com nome muito curto (≤4 chars)
+      Trecho  : dano = ...
+      Contexto:
+              11 | 	if(vstr[i]=="GELO"):
+        >>>   12 | 		dano  = dano + 2*vint[i]
+              13 | 	elif(vstr[i]=="FOGO"):
+
+  [6] Linha 14: Variável 'dano' com nome muito curto (≤4 chars)
+      Trecho  : dano = ...
+      Contexto:
+              13 | 	elif(vstr[i]=="FOGO"):
+        >>>   14 | 		dano  = dano + 3*vint[i]
+              15 | 	elif(vstr[i]=="CHOQUE"):
+
+  [7] Linha 16: Variável 'dano' com nome muito curto (≤4 chars)
+      Trecho  : dano = ...
+      Contexto:
+              15 | 	elif(vstr[i]=="CHOQUE"):
+        >>>   16 | 		dano  = dano + 4*vint[i]
+              17 | 	elif(vstr[i]=="CONJURACAO"):
+
+  [8] Linha 18: Variável 'dano' com nome muito curto (≤4 chars)
+      Trecho  : dano = ...
+      Contexto:
+              17 | 	elif(vstr[i]=="CONJURACAO"):
+        >>>   18 | 		dano  = dano + 8*vint[i]
+              19 | 	elif(vstr[i]=="ILUSAO"):
+
+  [9] Linha 20: Variável 'dano' com nome muito curto (≤4 chars)
+      Trecho  : dano = ...
+      Contexto:
+              19 | 	elif(vstr[i]=="ILUSAO"):
+        >>>   20 | 		dano  = dano + 10*vint[i]
+              21 | 		
+
+======================================================================

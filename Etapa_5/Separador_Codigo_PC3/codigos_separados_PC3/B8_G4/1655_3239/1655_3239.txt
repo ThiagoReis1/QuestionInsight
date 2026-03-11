@@ -1,0 +1,113 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1655_3239.py
+Questão  : 1655
+Aluno    : 3239
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import *
+     2 | 
+     3 | a = input().upper()
+     4 | v = a.split(',')
+     5 | vet_z = zeros(5,dtype = int)
+     6 | 
+     7 | AC = 0
+     8 | AM = 0
+     9 | PA = 0
+    10 | RO = 0
+    11 | RR = 0
+    12 | 
+    13 | for i in range(len(v)):
+    14 | 	if v[i] == "AC":
+    15 | 		AC += 1
+    16 | 	elif v[i] == "AM":
+    17 | 		AM += 1
+    18 | 	elif v[i] == "PA":
+    19 | 		PA += 1
+    20 | 	elif v[i] == "RO":
+    21 | 		RO += 1
+    22 | 	elif v[i] == "RR":
+    23 | 		RR += 1
+    24 | 
+    25 | vet_z[0] = AC
+    26 | vet_z[1] = AM
+    27 | vet_z[2] = PA
+    28 | vet_z[3] = RO
+    29 | vet_z[4] = RR
+    30 | 
+    31 | print(max(vet_z))
+    32 | print(vet_z)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 20: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 20) / elif ... sem else
+      Contexto:
+              19 | 		PA += 1
+        >>>   20 | 	elif v[i] == "RO":
+              21 | 		RO += 1
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 7
+
+  [1] Linha 3: Variável 'a' com nome muito curto (≤4 chars)
+      Trecho  : a = ...
+      Contexto:
+               2 | 
+        >>>    3 | a = input().upper()
+               4 | v = a.split(',')
+
+  [2] Linha 4: Variável 'v' com nome muito curto (≤4 chars)
+      Trecho  : v = ...
+      Contexto:
+               3 | a = input().upper()
+        >>>    4 | v = a.split(',')
+               5 | vet_z = zeros(5,dtype = int)
+
+  [3] Linha 7: Variável 'AC' com nome muito curto (≤4 chars)
+      Trecho  : AC = ...
+      Contexto:
+               6 | 
+        >>>    7 | AC = 0
+               8 | AM = 0
+
+  [4] Linha 8: Variável 'AM' com nome muito curto (≤4 chars)
+      Trecho  : AM = ...
+      Contexto:
+               7 | AC = 0
+        >>>    8 | AM = 0
+               9 | PA = 0
+
+  [5] Linha 9: Variável 'PA' com nome muito curto (≤4 chars)
+      Trecho  : PA = ...
+      Contexto:
+               8 | AM = 0
+        >>>    9 | PA = 0
+              10 | RO = 0
+
+  [6] Linha 10: Variável 'RO' com nome muito curto (≤4 chars)
+      Trecho  : RO = ...
+      Contexto:
+               9 | PA = 0
+        >>>   10 | RO = 0
+              11 | RR = 0
+
+  [7] Linha 11: Variável 'RR' com nome muito curto (≤4 chars)
+      Trecho  : RR = ...
+      Contexto:
+              10 | RO = 0
+        >>>   11 | RR = 0
+              12 | 
+
+======================================================================

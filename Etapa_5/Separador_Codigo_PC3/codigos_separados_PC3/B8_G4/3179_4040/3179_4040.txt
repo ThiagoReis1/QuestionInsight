@@ -1,0 +1,92 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 3179_4040.py
+Questão  : 3179
+Aluno    : 4040
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import *
+     2 | 
+     3 | # Entries
+     4 | 
+     5 | vec = array(eval(input("Insert desired vector: ")))
+     6 | 
+     7 | # Definitions
+     8 | 
+     9 | s = size(vec)
+    10 | r = size(vec)
+    11 | t = 0
+    12 | defi = zeros(s, dtype=int)
+    13 | 
+    14 | # Processing
+    15 | 
+    16 | 
+    17 | for i in range(s):
+    18 | 	if(vec[i] == 1):
+    19 | 		defi[r-1] += 1
+    20 | 		r += -1
+    21 | 	elif(vec[i] != 1):
+    22 | 		defi[t] += vec[i]
+    23 | 		t += 1
+    24 | 		
+    25 | print(defi)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 18: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 18) / elif ... sem else
+      Contexto:
+              17 | for i in range(s):
+        >>>   18 | 	if(vec[i] == 1):
+              19 | 		defi[r-1] += 1
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 5
+
+  [1] Linha 5: Variável 'vec' com nome muito curto (≤4 chars)
+      Trecho  : vec = ...
+      Contexto:
+               4 | 
+        >>>    5 | vec = array(eval(input("Insert desired vector: ")))
+               6 | 
+
+  [2] Linha 9: Variável 's' com nome muito curto (≤4 chars)
+      Trecho  : s = ...
+      Contexto:
+               8 | 
+        >>>    9 | s = size(vec)
+              10 | r = size(vec)
+
+  [3] Linha 10: Variável 'r' com nome muito curto (≤4 chars)
+      Trecho  : r = ...
+      Contexto:
+               9 | s = size(vec)
+        >>>   10 | r = size(vec)
+              11 | t = 0
+
+  [4] Linha 11: Variável 't' com nome muito curto (≤4 chars)
+      Trecho  : t = ...
+      Contexto:
+              10 | r = size(vec)
+        >>>   11 | t = 0
+              12 | defi = zeros(s, dtype=int)
+
+  [5] Linha 12: Variável 'defi' com nome muito curto (≤4 chars)
+      Trecho  : defi = ...
+      Contexto:
+              11 | t = 0
+        >>>   12 | defi = zeros(s, dtype=int)
+              13 | 
+
+======================================================================

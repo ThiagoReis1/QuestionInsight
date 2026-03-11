@@ -1,0 +1,107 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1652_3796.py
+Questão  : 1652
+Aluno    : 3796
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | s = input("string").split(",")
+     3 | B = 0
+     4 | PA = 0
+     5 | PR = 0
+     6 | A = 0
+     7 | I = 0
+     8 | vet = zeros(5, dtype = int)
+     9 | for i in s:
+    10 | 	if i == "B":
+    11 | 		B += 1
+    12 | 	elif i == "PA":
+    13 | 		PA += 1
+    14 | 	elif i == "PR":
+    15 | 		PR += 1
+    16 | 	elif i == "A":
+    17 | 		A += 1
+    18 | 	elif i == "I":
+    19 | 		I += 1
+    20 | vet[0]= B
+    21 | vet[1] = PA
+    22 | vet[2] = PR
+    23 | vet[3] = A
+    24 | vet[4] = I
+    25 | print(max(vet))
+    26 | print(vet)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 16: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 16) / elif ... sem else
+      Contexto:
+              15 | 		PR += 1
+        >>>   16 | 	elif i == "A":
+              17 | 		A += 1
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 7
+
+  [1] Linha 2: Variável 's' com nome muito curto (≤4 chars)
+      Trecho  : s = ...
+      Contexto:
+               1 | from numpy import*
+        >>>    2 | s = input("string").split(",")
+               3 | B = 0
+
+  [2] Linha 3: Variável 'B' com nome muito curto (≤4 chars)
+      Trecho  : B = ...
+      Contexto:
+               2 | s = input("string").split(",")
+        >>>    3 | B = 0
+               4 | PA = 0
+
+  [3] Linha 4: Variável 'PA' com nome muito curto (≤4 chars)
+      Trecho  : PA = ...
+      Contexto:
+               3 | B = 0
+        >>>    4 | PA = 0
+               5 | PR = 0
+
+  [4] Linha 5: Variável 'PR' com nome muito curto (≤4 chars)
+      Trecho  : PR = ...
+      Contexto:
+               4 | PA = 0
+        >>>    5 | PR = 0
+               6 | A = 0
+
+  [5] Linha 6: Variável 'A' com nome muito curto (≤4 chars)
+      Trecho  : A = ...
+      Contexto:
+               5 | PR = 0
+        >>>    6 | A = 0
+               7 | I = 0
+
+  [6] Linha 7: Variável 'I' com nome muito curto (≤4 chars)
+      Trecho  : I = ...
+      Contexto:
+               6 | A = 0
+        >>>    7 | I = 0
+               8 | vet = zeros(5, dtype = int)
+
+  [7] Linha 8: Variável 'vet' com nome muito curto (≤4 chars)
+      Trecho  : vet = ...
+      Contexto:
+               7 | I = 0
+        >>>    8 | vet = zeros(5, dtype = int)
+               9 | for i in s:
+
+======================================================================

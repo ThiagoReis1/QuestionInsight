@@ -1,0 +1,56 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1114_1451.py
+Questão  : 1114
+Aluno    : 1451
+Total MCs: 1
+
+⚠️  Misconceptions detectados: A3
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | vt = float(input("Qual a velocidade do trem: "))
+     2 | tempo = float(input("Qual o tempo de viagem: "))
+     3 | distancia_total = 1400
+     4 | tempo_total = distancia_total / vt
+     5 | distancia = vt * tempo
+     6 | print("Entradas:", vt,"km/h e", tempo, "h")
+     7 | if(vt <= 0 or tempo <= 0):
+     8 | 	x = "invalido"
+     9 | elif(distancia < 100 and distancia >= 0):
+    10 | 	x = "Bravos"
+    11 | elif(distancia < 200 and distancia >= 100):
+    12 | 	x = "Castamare"
+    13 | elif(distancia < 400 and distancia >= 200):
+    14 | 	x = "Doriath"
+    15 | elif(distancia < 500 and distancia >= 200):
+    16 | 	x= "Edoras"
+    17 | elif(distancia < 750 and distancia >= 600):
+    18 | 	x = "Fangorn"
+    19 | elif(distancia < 1150 and distancia >= 750):
+    20 |    x = "Gondor"
+    21 | else:
+    22 | 	x= "Hogsmead"
+    23 | 
+    24 | if( x == "invalido" ):
+    25 | 	print("Dados invalidos")
+    26 | else:
+    27 | 	print("Proxima parada:", x)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 1
+
+  [1] Linha 4: Variável 'tempo_total' declarada mas nunca utilizada
+      Trecho  : tempo_total = ...
+      Contexto:
+               3 | distancia_total = 1400
+        >>>    4 | tempo_total = distancia_total / vt
+               5 | distancia = vt * tempo
+
+======================================================================

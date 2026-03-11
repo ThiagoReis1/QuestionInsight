@@ -1,0 +1,103 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 5259_7644.py
+Questão  : 5259
+Aluno    : 7644
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | p = float(input("Valor da mensalidade: "))
+     2 | n = int(input("Numero de criancas: "))
+     3 | p1 = 0.10 * p
+     4 | p2 = 0.30 * p
+     5 | p3 = 0.40 * p
+     6 | if(n == 1):
+     7 | 	vt = (p1 - p)
+     8 | elif(n == 2):
+     9 | 	vt = (p2 - p)
+    10 | elif(n >= 3):
+    11 | 	vt = (p3 - p)
+    12 | print(round(vt * n * (-1), 2))
+    13 | # p = 100
+    14 | # x = 10%
+    15 | #100x = p*10
+    16 | #100/p*10
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 8: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 8) / elif ... sem else
+      Contexto:
+               7 | 	vt = (p1 - p)
+        >>>    8 | elif(n == 2):
+               9 | 	vt = (p2 - p)
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 8
+
+  [1] Linha 1: Variável 'p' com nome muito curto (≤4 chars)
+      Trecho  : p = ...
+      Contexto:
+        >>>    1 | p = float(input("Valor da mensalidade: "))
+               2 | n = int(input("Numero de criancas: "))
+
+  [2] Linha 2: Variável 'n' com nome muito curto (≤4 chars)
+      Trecho  : n = ...
+      Contexto:
+               1 | p = float(input("Valor da mensalidade: "))
+        >>>    2 | n = int(input("Numero de criancas: "))
+               3 | p1 = 0.10 * p
+
+  [3] Linha 3: Variável 'p1' com nome muito curto (≤4 chars)
+      Trecho  : p1 = ...
+      Contexto:
+               2 | n = int(input("Numero de criancas: "))
+        >>>    3 | p1 = 0.10 * p
+               4 | p2 = 0.30 * p
+
+  [4] Linha 4: Variável 'p2' com nome muito curto (≤4 chars)
+      Trecho  : p2 = ...
+      Contexto:
+               3 | p1 = 0.10 * p
+        >>>    4 | p2 = 0.30 * p
+               5 | p3 = 0.40 * p
+
+  [5] Linha 5: Variável 'p3' com nome muito curto (≤4 chars)
+      Trecho  : p3 = ...
+      Contexto:
+               4 | p2 = 0.30 * p
+        >>>    5 | p3 = 0.40 * p
+               6 | if(n == 1):
+
+  [6] Linha 7: Variável 'vt' com nome muito curto (≤4 chars)
+      Trecho  : vt = ...
+      Contexto:
+               6 | if(n == 1):
+        >>>    7 | 	vt = (p1 - p)
+               8 | elif(n == 2):
+
+  [7] Linha 9: Variável 'vt' com nome muito curto (≤4 chars)
+      Trecho  : vt = ...
+      Contexto:
+               8 | elif(n == 2):
+        >>>    9 | 	vt = (p2 - p)
+              10 | elif(n >= 3):
+
+  [8] Linha 11: Variável 'vt' com nome muito curto (≤4 chars)
+      Trecho  : vt = ...
+      Contexto:
+              10 | elif(n >= 3):
+        >>>   11 | 	vt = (p3 - p)
+              12 | print(round(vt * n * (-1), 2))
+
+======================================================================

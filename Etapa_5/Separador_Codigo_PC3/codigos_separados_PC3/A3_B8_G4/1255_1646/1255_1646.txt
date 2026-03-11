@@ -1,0 +1,115 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1255_1646.py
+Questão  : 1255
+Aluno    : 1646
+Total MCs: 3
+
+⚠️  Misconceptions detectados: A3, B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from math import*
+     2 | from numpy import*
+     3 | v=array(eval(input()))
+     4 | v1=array(2, dtype=int)
+     5 | cont= 0
+     6 | cont1= 0
+     7 | for i in range (0 , size(v)):
+     8 | 	a= min("v")
+     9 | 	b= max("v")
+    10 | c = (0.65 * a + 0.35 * b)
+    11 | d = (0.45 * a + 0.55 * b)
+    12 | for i in range (0 , size(v)):
+    13 | 	if(v[i]>= c and v[i] < d):
+    14 | 		v1[0]= v1[0]+1
+    15 | 	elif(v[i]>=d and v[i]< c) :
+    16 | 		v1[1]= v1[1]+1
+    17 | print(v1)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 2
+
+  [1] Linha 5: Variável 'cont' declarada mas nunca utilizada
+      Trecho  : cont = ...
+      Contexto:
+               4 | v1=array(2, dtype=int)
+        >>>    5 | cont= 0
+               6 | cont1= 0
+
+  [2] Linha 6: Variável 'cont1' declarada mas nunca utilizada
+      Trecho  : cont1 = ...
+      Contexto:
+               5 | cont= 0
+        >>>    6 | cont1= 0
+               7 | for i in range (0 , size(v)):
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 13: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 13) / elif ... sem else
+      Contexto:
+              12 | for i in range (0 , size(v)):
+        >>>   13 | 	if(v[i]>= c and v[i] < d):
+              14 | 		v1[0]= v1[0]+1
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 7
+
+  [1] Linha 3: Variável 'v' com nome muito curto (≤4 chars)
+      Trecho  : v = ...
+      Contexto:
+               2 | from numpy import*
+        >>>    3 | v=array(eval(input()))
+               4 | v1=array(2, dtype=int)
+
+  [2] Linha 4: Variável 'v1' com nome muito curto (≤4 chars)
+      Trecho  : v1 = ...
+      Contexto:
+               3 | v=array(eval(input()))
+        >>>    4 | v1=array(2, dtype=int)
+               5 | cont= 0
+
+  [3] Linha 5: Variável 'cont' com nome muito curto (≤4 chars)
+      Trecho  : cont = ...
+      Contexto:
+               4 | v1=array(2, dtype=int)
+        >>>    5 | cont= 0
+               6 | cont1= 0
+
+  [4] Linha 10: Variável 'c' com nome muito curto (≤4 chars)
+      Trecho  : c = ...
+      Contexto:
+               9 | 	b= max("v")
+        >>>   10 | c = (0.65 * a + 0.35 * b)
+              11 | d = (0.45 * a + 0.55 * b)
+
+  [5] Linha 11: Variável 'd' com nome muito curto (≤4 chars)
+      Trecho  : d = ...
+      Contexto:
+              10 | c = (0.65 * a + 0.35 * b)
+        >>>   11 | d = (0.45 * a + 0.55 * b)
+              12 | for i in range (0 , size(v)):
+
+  [6] Linha 8: Variável 'a' com nome muito curto (≤4 chars)
+      Trecho  : a = ...
+      Contexto:
+               7 | for i in range (0 , size(v)):
+        >>>    8 | 	a= min("v")
+               9 | 	b= max("v")
+
+  [7] Linha 9: Variável 'b' com nome muito curto (≤4 chars)
+      Trecho  : b = ...
+      Contexto:
+               8 | 	a= min("v")
+        >>>    9 | 	b= max("v")
+              10 | c = (0.65 * a + 0.35 * b)
+
+======================================================================

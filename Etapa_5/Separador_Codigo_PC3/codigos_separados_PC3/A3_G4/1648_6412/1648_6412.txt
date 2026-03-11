@@ -1,0 +1,112 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1648_6412.py
+Questão  : 1648
+Aluno    : 6412
+Total MCs: 2
+
+⚠️  Misconceptions detectados: A3, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import *
+     2 | p = array(eval(input('Frequencia: ')))
+     3 | r = 0
+     4 | n = 0
+     5 | m = 0
+     6 | k = 0
+     7 | for i in range(size(p)):
+     8 | 	if p[i] < 70:
+     9 | 		r = r + 1
+    10 | 		n = n + 1
+    11 | s = zeros(n , dtype=int)
+    12 | for j in range(size(p)):
+    13 | 	if p[j] < 70:
+    14 | 		m = m + 1
+    15 | 		s[m - 1] = j
+    16 | print(r)
+    17 | print(s)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 1
+
+  [1] Linha 6: Variável 'k' declarada mas nunca utilizada
+      Trecho  : k = ...
+      Contexto:
+               5 | m = 0
+        >>>    6 | k = 0
+               7 | for i in range(size(p)):
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 9
+
+  [1] Linha 2: Variável 'p' com nome muito curto (≤4 chars)
+      Trecho  : p = ...
+      Contexto:
+               1 | from numpy import *
+        >>>    2 | p = array(eval(input('Frequencia: ')))
+               3 | r = 0
+
+  [2] Linha 3: Variável 'r' com nome muito curto (≤4 chars)
+      Trecho  : r = ...
+      Contexto:
+               2 | p = array(eval(input('Frequencia: ')))
+        >>>    3 | r = 0
+               4 | n = 0
+
+  [3] Linha 4: Variável 'n' com nome muito curto (≤4 chars)
+      Trecho  : n = ...
+      Contexto:
+               3 | r = 0
+        >>>    4 | n = 0
+               5 | m = 0
+
+  [4] Linha 5: Variável 'm' com nome muito curto (≤4 chars)
+      Trecho  : m = ...
+      Contexto:
+               4 | n = 0
+        >>>    5 | m = 0
+               6 | k = 0
+
+  [5] Linha 6: Variável 'k' com nome muito curto (≤4 chars)
+      Trecho  : k = ...
+      Contexto:
+               5 | m = 0
+        >>>    6 | k = 0
+               7 | for i in range(size(p)):
+
+  [6] Linha 11: Variável 's' com nome muito curto (≤4 chars)
+      Trecho  : s = ...
+      Contexto:
+              10 | 		n = n + 1
+        >>>   11 | s = zeros(n , dtype=int)
+              12 | for j in range(size(p)):
+
+  [7] Linha 9: Variável 'r' com nome muito curto (≤4 chars)
+      Trecho  : r = ...
+      Contexto:
+               8 | 	if p[i] < 70:
+        >>>    9 | 		r = r + 1
+              10 | 		n = n + 1
+
+  [8] Linha 10: Variável 'n' com nome muito curto (≤4 chars)
+      Trecho  : n = ...
+      Contexto:
+               9 | 		r = r + 1
+        >>>   10 | 		n = n + 1
+              11 | s = zeros(n , dtype=int)
+
+  [9] Linha 14: Variável 'm' com nome muito curto (≤4 chars)
+      Trecho  : m = ...
+      Contexto:
+              13 | 	if p[j] < 70:
+        >>>   14 | 		m = m + 1
+              15 | 		s[m - 1] = j
+
+======================================================================

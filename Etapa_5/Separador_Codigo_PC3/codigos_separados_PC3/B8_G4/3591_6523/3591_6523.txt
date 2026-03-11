@@ -1,0 +1,87 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 3591_6523.py
+Questão  : 3591
+Aluno    : 6523
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | 
+     3 | vet = array(eval(input("Faces: ")))
+     4 | 
+     5 | i = 0
+     6 | cont = 0
+     7 | while(i < size(vet)):
+     8 | 	if(vet[i] == 1)or(vet[i] == 3)or(vet[i] == 5):
+     9 | 		cont = cont + 10
+    10 | 	elif(vet[i] == 2)or(vet[i] == 4)or(vet[i] == 6):
+    11 | 		cont = cont + 5
+    12 | 	i = i + 1
+    13 | print(cont)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 8: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 8) / elif ... sem else
+      Contexto:
+               7 | while(i < size(vet)):
+        >>>    8 | 	if(vet[i] == 1)or(vet[i] == 3)or(vet[i] == 5):
+               9 | 		cont = cont + 10
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 6
+
+  [1] Linha 3: Variável 'vet' com nome muito curto (≤4 chars)
+      Trecho  : vet = ...
+      Contexto:
+               2 | 
+        >>>    3 | vet = array(eval(input("Faces: ")))
+               4 | 
+
+  [2] Linha 5: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+               4 | 
+        >>>    5 | i = 0
+               6 | cont = 0
+
+  [3] Linha 6: Variável 'cont' com nome muito curto (≤4 chars)
+      Trecho  : cont = ...
+      Contexto:
+               5 | i = 0
+        >>>    6 | cont = 0
+               7 | while(i < size(vet)):
+
+  [4] Linha 12: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+              11 | 		cont = cont + 5
+        >>>   12 | 	i = i + 1
+              13 | print(cont)
+
+  [5] Linha 9: Variável 'cont' com nome muito curto (≤4 chars)
+      Trecho  : cont = ...
+      Contexto:
+               8 | 	if(vet[i] == 1)or(vet[i] == 3)or(vet[i] == 5):
+        >>>    9 | 		cont = cont + 10
+              10 | 	elif(vet[i] == 2)or(vet[i] == 4)or(vet[i] == 6):
+
+  [6] Linha 11: Variável 'cont' com nome muito curto (≤4 chars)
+      Trecho  : cont = ...
+      Contexto:
+              10 | 	elif(vet[i] == 2)or(vet[i] == 4)or(vet[i] == 6):
+        >>>   11 | 		cont = cont + 5
+              12 | 	i = i + 1
+
+======================================================================

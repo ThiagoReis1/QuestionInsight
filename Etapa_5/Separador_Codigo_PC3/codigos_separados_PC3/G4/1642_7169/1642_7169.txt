@@ -1,0 +1,78 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1642_7169.py
+Questão  : 1642
+Aluno    : 7169
+Total MCs: 1
+
+⚠️  Misconceptions detectados: G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | vet = array(eval(input("quantas turmas ")))
+     3 | i = 0
+     4 | for x in range(size(vet)):
+     5 | 	if vet[x] > 5.0:
+     6 | 		i = i + 1 
+     7 | zero = zeros(i,dtype=int)
+     8 | print(i)
+     9 | j = 0
+    10 | for x in range(len(vet)):
+    11 | 	if vet[x] < 5.0:
+    12 | 		zero[j] = x
+    13 | 		j = j +1 
+    14 | print(zero)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 6
+
+  [1] Linha 2: Variável 'vet' com nome muito curto (≤4 chars)
+      Trecho  : vet = ...
+      Contexto:
+               1 | from numpy import*
+        >>>    2 | vet = array(eval(input("quantas turmas ")))
+               3 | i = 0
+
+  [2] Linha 3: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+               2 | vet = array(eval(input("quantas turmas ")))
+        >>>    3 | i = 0
+               4 | for x in range(size(vet)):
+
+  [3] Linha 7: Variável 'zero' com nome muito curto (≤4 chars)
+      Trecho  : zero = ...
+      Contexto:
+               6 | 		i = i + 1 
+        >>>    7 | zero = zeros(i,dtype=int)
+               8 | print(i)
+
+  [4] Linha 9: Variável 'j' com nome muito curto (≤4 chars)
+      Trecho  : j = ...
+      Contexto:
+               8 | print(i)
+        >>>    9 | j = 0
+              10 | for x in range(len(vet)):
+
+  [5] Linha 6: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+               5 | 	if vet[x] > 5.0:
+        >>>    6 | 		i = i + 1 
+               7 | zero = zeros(i,dtype=int)
+
+  [6] Linha 13: Variável 'j' com nome muito curto (≤4 chars)
+      Trecho  : j = ...
+      Contexto:
+              12 | 		zero[j] = x
+        >>>   13 | 		j = j +1 
+              14 | print(zero)
+
+======================================================================

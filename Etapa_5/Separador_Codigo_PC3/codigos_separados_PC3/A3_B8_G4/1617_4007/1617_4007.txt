@@ -1,0 +1,330 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1617_4007.py
+Questão  : 1617
+Aluno    : 4007
+Total MCs: 3
+
+⚠️  Misconceptions detectados: A3, B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | t = input("tipo de espada: ").upper()
+     3 | n = array(eval(input("nivel/dano: ")))
+     4 | 
+     5 | i = 0
+     6 | s = 0
+     7 | while (i < size(n)):
+     8 | 	if (t[i] == "CENOURA"):
+     9 | 		a = 2
+    10 | 		b = 0
+    11 | 		c = 0
+    12 | 		d = 0
+    13 | 		e = 0
+    14 | 	elif(t[i] == "DWARVEN"):
+    15 | 		b = 8
+    16 | 		a = 0
+    17 | 		c = 0
+    18 | 		e = 0
+    19 | 		
+    20 | 	elif (t[i] == "FERRO"):
+    21 | 		c = 4
+    22 | 		a = 0
+    23 | 		b = 0
+    24 | 		d = 0 
+    25 | 		e = 0
+    26 | 
+    27 | 	elif (t[i] == "ELVEN"):
+    28 | 		a = 0
+    29 | 		b = 0
+    30 | 		c = 0
+    31 | 		d = 11
+    32 | 		e = 0
+    33 | 	elif(t[i] == "DAEDRIC"):
+    34 | 		a = 0 
+    35 | 		b = 0
+    36 | 		c = 0
+    37 | 		d = 0
+    38 | 		e = 14
+    39 | 	i = i + 1
+    40 | dano = t[i] * n
+    41 | print(dano)
+    42 | 		
+    43 | 
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 6
+
+  [1] Linha 6: Variável 's' declarada mas nunca utilizada
+      Trecho  : s = ...
+      Contexto:
+               5 | i = 0
+        >>>    6 | s = 0
+               7 | while (i < size(n)):
+
+  [2] Linha 9: Variável 'a' declarada mas nunca utilizada
+      Trecho  : a = ...
+      Contexto:
+               8 | 	if (t[i] == "CENOURA"):
+        >>>    9 | 		a = 2
+              10 | 		b = 0
+
+  [3] Linha 10: Variável 'b' declarada mas nunca utilizada
+      Trecho  : b = ...
+      Contexto:
+               9 | 		a = 2
+        >>>   10 | 		b = 0
+              11 | 		c = 0
+
+  [4] Linha 11: Variável 'c' declarada mas nunca utilizada
+      Trecho  : c = ...
+      Contexto:
+              10 | 		b = 0
+        >>>   11 | 		c = 0
+              12 | 		d = 0
+
+  [5] Linha 12: Variável 'd' declarada mas nunca utilizada
+      Trecho  : d = ...
+      Contexto:
+              11 | 		c = 0
+        >>>   12 | 		d = 0
+              13 | 		e = 0
+
+  [6] Linha 13: Variável 'e' declarada mas nunca utilizada
+      Trecho  : e = ...
+      Contexto:
+              12 | 		d = 0
+        >>>   13 | 		e = 0
+              14 | 	elif(t[i] == "DWARVEN"):
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 27: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 27) / elif ... sem else
+      Contexto:
+              26 | 
+        >>>   27 | 	elif (t[i] == "ELVEN"):
+              28 | 		a = 0
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 30
+
+  [1] Linha 2: Variável 't' com nome muito curto (≤4 chars)
+      Trecho  : t = ...
+      Contexto:
+               1 | from numpy import*
+        >>>    2 | t = input("tipo de espada: ").upper()
+               3 | n = array(eval(input("nivel/dano: ")))
+
+  [2] Linha 3: Variável 'n' com nome muito curto (≤4 chars)
+      Trecho  : n = ...
+      Contexto:
+               2 | t = input("tipo de espada: ").upper()
+        >>>    3 | n = array(eval(input("nivel/dano: ")))
+               4 | 
+
+  [3] Linha 5: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+               4 | 
+        >>>    5 | i = 0
+               6 | s = 0
+
+  [4] Linha 6: Variável 's' com nome muito curto (≤4 chars)
+      Trecho  : s = ...
+      Contexto:
+               5 | i = 0
+        >>>    6 | s = 0
+               7 | while (i < size(n)):
+
+  [5] Linha 40: Variável 'dano' com nome muito curto (≤4 chars)
+      Trecho  : dano = ...
+      Contexto:
+              39 | 	i = i + 1
+        >>>   40 | dano = t[i] * n
+              41 | print(dano)
+
+  [6] Linha 39: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+              38 | 		e = 14
+        >>>   39 | 	i = i + 1
+              40 | dano = t[i] * n
+
+  [7] Linha 9: Variável 'a' com nome muito curto (≤4 chars)
+      Trecho  : a = ...
+      Contexto:
+               8 | 	if (t[i] == "CENOURA"):
+        >>>    9 | 		a = 2
+              10 | 		b = 0
+
+  [8] Linha 10: Variável 'b' com nome muito curto (≤4 chars)
+      Trecho  : b = ...
+      Contexto:
+               9 | 		a = 2
+        >>>   10 | 		b = 0
+              11 | 		c = 0
+
+  [9] Linha 11: Variável 'c' com nome muito curto (≤4 chars)
+      Trecho  : c = ...
+      Contexto:
+              10 | 		b = 0
+        >>>   11 | 		c = 0
+              12 | 		d = 0
+
+  [10] Linha 12: Variável 'd' com nome muito curto (≤4 chars)
+      Trecho  : d = ...
+      Contexto:
+              11 | 		c = 0
+        >>>   12 | 		d = 0
+              13 | 		e = 0
+
+  [11] Linha 13: Variável 'e' com nome muito curto (≤4 chars)
+      Trecho  : e = ...
+      Contexto:
+              12 | 		d = 0
+        >>>   13 | 		e = 0
+              14 | 	elif(t[i] == "DWARVEN"):
+
+  [12] Linha 15: Variável 'b' com nome muito curto (≤4 chars)
+      Trecho  : b = ...
+      Contexto:
+              14 | 	elif(t[i] == "DWARVEN"):
+        >>>   15 | 		b = 8
+              16 | 		a = 0
+
+  [13] Linha 16: Variável 'a' com nome muito curto (≤4 chars)
+      Trecho  : a = ...
+      Contexto:
+              15 | 		b = 8
+        >>>   16 | 		a = 0
+              17 | 		c = 0
+
+  [14] Linha 17: Variável 'c' com nome muito curto (≤4 chars)
+      Trecho  : c = ...
+      Contexto:
+              16 | 		a = 0
+        >>>   17 | 		c = 0
+              18 | 		e = 0
+
+  [15] Linha 18: Variável 'e' com nome muito curto (≤4 chars)
+      Trecho  : e = ...
+      Contexto:
+              17 | 		c = 0
+        >>>   18 | 		e = 0
+              19 | 		
+
+  [16] Linha 21: Variável 'c' com nome muito curto (≤4 chars)
+      Trecho  : c = ...
+      Contexto:
+              20 | 	elif (t[i] == "FERRO"):
+        >>>   21 | 		c = 4
+              22 | 		a = 0
+
+  [17] Linha 22: Variável 'a' com nome muito curto (≤4 chars)
+      Trecho  : a = ...
+      Contexto:
+              21 | 		c = 4
+        >>>   22 | 		a = 0
+              23 | 		b = 0
+
+  [18] Linha 23: Variável 'b' com nome muito curto (≤4 chars)
+      Trecho  : b = ...
+      Contexto:
+              22 | 		a = 0
+        >>>   23 | 		b = 0
+              24 | 		d = 0 
+
+  [19] Linha 24: Variável 'd' com nome muito curto (≤4 chars)
+      Trecho  : d = ...
+      Contexto:
+              23 | 		b = 0
+        >>>   24 | 		d = 0 
+              25 | 		e = 0
+
+  [20] Linha 25: Variável 'e' com nome muito curto (≤4 chars)
+      Trecho  : e = ...
+      Contexto:
+              24 | 		d = 0 
+        >>>   25 | 		e = 0
+              26 | 
+
+  [21] Linha 28: Variável 'a' com nome muito curto (≤4 chars)
+      Trecho  : a = ...
+      Contexto:
+              27 | 	elif (t[i] == "ELVEN"):
+        >>>   28 | 		a = 0
+              29 | 		b = 0
+
+  [22] Linha 29: Variável 'b' com nome muito curto (≤4 chars)
+      Trecho  : b = ...
+      Contexto:
+              28 | 		a = 0
+        >>>   29 | 		b = 0
+              30 | 		c = 0
+
+  [23] Linha 30: Variável 'c' com nome muito curto (≤4 chars)
+      Trecho  : c = ...
+      Contexto:
+              29 | 		b = 0
+        >>>   30 | 		c = 0
+              31 | 		d = 11
+
+  [24] Linha 31: Variável 'd' com nome muito curto (≤4 chars)
+      Trecho  : d = ...
+      Contexto:
+              30 | 		c = 0
+        >>>   31 | 		d = 11
+              32 | 		e = 0
+
+  [25] Linha 32: Variável 'e' com nome muito curto (≤4 chars)
+      Trecho  : e = ...
+      Contexto:
+              31 | 		d = 11
+        >>>   32 | 		e = 0
+              33 | 	elif(t[i] == "DAEDRIC"):
+
+  [26] Linha 34: Variável 'a' com nome muito curto (≤4 chars)
+      Trecho  : a = ...
+      Contexto:
+              33 | 	elif(t[i] == "DAEDRIC"):
+        >>>   34 | 		a = 0 
+              35 | 		b = 0
+
+  [27] Linha 35: Variável 'b' com nome muito curto (≤4 chars)
+      Trecho  : b = ...
+      Contexto:
+              34 | 		a = 0 
+        >>>   35 | 		b = 0
+              36 | 		c = 0
+
+  [28] Linha 36: Variável 'c' com nome muito curto (≤4 chars)
+      Trecho  : c = ...
+      Contexto:
+              35 | 		b = 0
+        >>>   36 | 		c = 0
+              37 | 		d = 0
+
+  [29] Linha 37: Variável 'd' com nome muito curto (≤4 chars)
+      Trecho  : d = ...
+      Contexto:
+              36 | 		c = 0
+        >>>   37 | 		d = 0
+              38 | 		e = 14
+
+  [30] Linha 38: Variável 'e' com nome muito curto (≤4 chars)
+      Trecho  : e = ...
+      Contexto:
+              37 | 		d = 0
+        >>>   38 | 		e = 14
+              39 | 	i = i + 1
+
+======================================================================

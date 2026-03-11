@@ -1,0 +1,107 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 3588_9828.py
+Questão  : 3588
+Aluno    : 9828
+Total MCs: 3
+
+⚠️  Misconceptions detectados: A2, B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import *
+     2 | r = array(eval(input("R: ")), dtype=int)
+     3 | c = 0
+     4 | t = 10000
+     5 | while c < len(r):
+     6 | 	if r[c] == 1:
+     7 | 		t = t*2
+     8 | 	elif r[c] == 2:
+     9 | 		t = t
+    10 | 	elif r[c] == 3:
+    11 | 		t = t/2
+    12 | 	elif r[c] == 4:
+    13 | 		t = t/4
+    14 | 	c += 1
+    15 | 
+    16 | print(round(t,2))
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A2 — Variável atribuída a si mesma
+  Ocorrências: 1
+
+  [1] Linha 9: 't' atribuído a si mesmo
+      Trecho  : t = t
+      Contexto:
+               8 | 	elif r[c] == 2:
+        >>>    9 | 		t = t
+              10 | 	elif r[c] == 3:
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 10: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 10) / elif ... sem else
+      Contexto:
+               9 | 		t = t
+        >>>   10 | 	elif r[c] == 3:
+              11 | 		t = t/2
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 7
+
+  [1] Linha 2: Variável 'r' com nome muito curto (≤4 chars)
+      Trecho  : r = ...
+      Contexto:
+               1 | from numpy import *
+        >>>    2 | r = array(eval(input("R: ")), dtype=int)
+               3 | c = 0
+
+  [2] Linha 3: Variável 'c' com nome muito curto (≤4 chars)
+      Trecho  : c = ...
+      Contexto:
+               2 | r = array(eval(input("R: ")), dtype=int)
+        >>>    3 | c = 0
+               4 | t = 10000
+
+  [3] Linha 4: Variável 't' com nome muito curto (≤4 chars)
+      Trecho  : t = ...
+      Contexto:
+               3 | c = 0
+        >>>    4 | t = 10000
+               5 | while c < len(r):
+
+  [4] Linha 7: Variável 't' com nome muito curto (≤4 chars)
+      Trecho  : t = ...
+      Contexto:
+               6 | 	if r[c] == 1:
+        >>>    7 | 		t = t*2
+               8 | 	elif r[c] == 2:
+
+  [5] Linha 9: Variável 't' com nome muito curto (≤4 chars)
+      Trecho  : t = ...
+      Contexto:
+               8 | 	elif r[c] == 2:
+        >>>    9 | 		t = t
+              10 | 	elif r[c] == 3:
+
+  [6] Linha 11: Variável 't' com nome muito curto (≤4 chars)
+      Trecho  : t = ...
+      Contexto:
+              10 | 	elif r[c] == 3:
+        >>>   11 | 		t = t/2
+              12 | 	elif r[c] == 4:
+
+  [7] Linha 13: Variável 't' com nome muito curto (≤4 chars)
+      Trecho  : t = ...
+      Contexto:
+              12 | 	elif r[c] == 4:
+        >>>   13 | 		t = t/4
+              14 | 	c += 1
+
+======================================================================

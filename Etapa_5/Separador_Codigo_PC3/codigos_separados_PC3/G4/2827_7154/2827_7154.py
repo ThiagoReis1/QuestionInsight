@@ -1,0 +1,18 @@
+from numpy import *
+
+n = array(eval(input("vetor de notas: ")))
+
+i = 0 
+
+
+while(i < size(n)):
+	
+	if(n[i] > 4 and n[i] < 5):
+		n[i]= 4
+	if(n[i] > 9 and n[i] <= 10):
+		n[i] = 10
+	i = i + 1
+	
+	
+print(n)
+

@@ -1,0 +1,66 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 6931_9763.py
+Questão  : 6931
+Aluno    : 9763
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B4, B8
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | valor = float(input("informe o valor da compra: "))
+     2 | cod = input("informe a opcao de pagamento: ").upper()
+     3 | 
+     4 | if cod == "C":
+     5 | 	v = int(input("informe em quantas parcelas: "))
+     6 | 	if v == 1:
+     7 | 		desc = 0
+     8 | 		total = valor - (valor * desc)
+     9 | 		print(round(valor, 2))
+    10 | 	else:
+    11 | 		total = valor + (valor * 0.07)
+    12 | 		print(round(total, 2))
+    13 | elif cod == "D":
+    14 | 	desc = 0.18
+    15 | 	total = valor - (valor * desc)
+    16 | 	print(round(total, 2))
+    17 | elif cod == "P":
+    18 | 	desc = 0.18
+    19 | 	total = valor - (valor * desc)
+    20 | 	print(round(total, 2))
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B4 — Comandos repetidos dentro de blocos if-elif-else
+  Ocorrências: 2
+
+  [1] Linha 17: Bloco idêntico ao da linha 13
+      Trecho  : desc = 0.18
+      Contexto:
+              16 | 	print(round(total, 2))
+        >>>   17 | elif cod == "P":
+              18 | 	desc = 0.18
+
+  [2] Linha 17: Bloco idêntico ao da linha 13
+      Trecho  : desc = 0.18
+      Contexto:
+              16 | 	print(round(total, 2))
+        >>>   17 | elif cod == "P":
+              18 | 	desc = 0.18
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 13: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 13) / elif ... sem else
+      Contexto:
+              12 | 		print(round(total, 2))
+        >>>   13 | elif cod == "D":
+              14 | 	desc = 0.18
+
+======================================================================

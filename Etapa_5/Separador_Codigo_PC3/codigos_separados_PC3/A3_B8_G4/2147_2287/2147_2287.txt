@@ -1,0 +1,84 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 2147_2287.py
+Questão  : 2147
+Aluno    : 2287
+Total MCs: 3
+
+⚠️  Misconceptions detectados: A3, B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | s = input("")
+     2 | a = 0
+     3 | b = 0
+     4 | for i in range(len(s)):
+     5 | 	if s [i]. islower() == True:
+     6 | 		a = 1
+     7 | 	elif s [i].isupper() == True:
+     8 | 		b = 1
+     9 | if a == 1 and b == 1 and len(s) == 11:
+    10 | 	print("SENHA VALIDA")
+    11 | else:
+    12 | 	print("SENHA INVALIDA")
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 1
+
+  [1] Linha 0: A3 detectado pelo VisitorMC3 (localização exata não mapeada)
+      Trecho  : —
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 5: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 5) / elif ... sem else
+      Contexto:
+               4 | for i in range(len(s)):
+        >>>    5 | 	if s [i]. islower() == True:
+               6 | 		a = 1
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 5
+
+  [1] Linha 1: Variável 's' com nome muito curto (≤4 chars)
+      Trecho  : s = ...
+      Contexto:
+        >>>    1 | s = input("")
+               2 | a = 0
+
+  [2] Linha 2: Variável 'a' com nome muito curto (≤4 chars)
+      Trecho  : a = ...
+      Contexto:
+               1 | s = input("")
+        >>>    2 | a = 0
+               3 | b = 0
+
+  [3] Linha 3: Variável 'b' com nome muito curto (≤4 chars)
+      Trecho  : b = ...
+      Contexto:
+               2 | a = 0
+        >>>    3 | b = 0
+               4 | for i in range(len(s)):
+
+  [4] Linha 6: Variável 'a' com nome muito curto (≤4 chars)
+      Trecho  : a = ...
+      Contexto:
+               5 | 	if s [i]. islower() == True:
+        >>>    6 | 		a = 1
+               7 | 	elif s [i].isupper() == True:
+
+  [5] Linha 8: Variável 'b' com nome muito curto (≤4 chars)
+      Trecho  : b = ...
+      Contexto:
+               7 | 	elif s [i].isupper() == True:
+        >>>    8 | 		b = 1
+               9 | if a == 1 and b == 1 and len(s) == 11:
+
+======================================================================

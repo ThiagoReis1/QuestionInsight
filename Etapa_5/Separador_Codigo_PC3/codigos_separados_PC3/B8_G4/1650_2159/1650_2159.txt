@@ -1,0 +1,157 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1650_2159.py
+Questão  : 1650
+Aluno    : 2159
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | 
+     3 | # Entrada
+     4 | cor = (input("Digite as cores: ").upper()).split(',')
+     5 | 
+     6 | p = 0		# Preto
+     7 | c = 0		# Castanho
+     8 | r = 0 	# Ruivo
+     9 | l = 0		# Loiro
+    10 | b = 0		# Branco
+    11 | 
+    12 | i = 0
+    13 | while i < len(cor):
+    14 | 	if cor[i] == "P":
+    15 | 		p = p + 1
+    16 | 	elif cor[i] == "C":
+    17 | 		c = c + 1
+    18 | 	elif cor[i] == "R":
+    19 | 		r = r + 1
+    20 | 	elif cor[i] == "L":
+    21 | 		l = l + 1
+    22 | 	elif cor[i] == "B":
+    23 | 		b = b + 1
+    24 | 	i = i + 1
+    25 | 	
+    26 | saida = zeros(5, dtype = int)
+    27 | saida[0] = p
+    28 | saida[1] = c
+    29 | saida[2] = r
+    30 | saida[3] = l
+    31 | saida[4] = b
+    32 | 
+    33 | print(max(saida))
+    34 | print(saida)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 20: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 20) / elif ... sem else
+      Contexto:
+              19 | 		r = r + 1
+        >>>   20 | 	elif cor[i] == "L":
+              21 | 		l = l + 1
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 13
+
+  [1] Linha 4: Variável 'cor' com nome muito curto (≤4 chars)
+      Trecho  : cor = ...
+      Contexto:
+               3 | # Entrada
+        >>>    4 | cor = (input("Digite as cores: ").upper()).split(',')
+               5 | 
+
+  [2] Linha 6: Variável 'p' com nome muito curto (≤4 chars)
+      Trecho  : p = ...
+      Contexto:
+               5 | 
+        >>>    6 | p = 0		# Preto
+               7 | c = 0		# Castanho
+
+  [3] Linha 7: Variável 'c' com nome muito curto (≤4 chars)
+      Trecho  : c = ...
+      Contexto:
+               6 | p = 0		# Preto
+        >>>    7 | c = 0		# Castanho
+               8 | r = 0 	# Ruivo
+
+  [4] Linha 8: Variável 'r' com nome muito curto (≤4 chars)
+      Trecho  : r = ...
+      Contexto:
+               7 | c = 0		# Castanho
+        >>>    8 | r = 0 	# Ruivo
+               9 | l = 0		# Loiro
+
+  [5] Linha 9: Variável 'l' com nome muito curto (≤4 chars)
+      Trecho  : l = ...
+      Contexto:
+               8 | r = 0 	# Ruivo
+        >>>    9 | l = 0		# Loiro
+              10 | b = 0		# Branco
+
+  [6] Linha 10: Variável 'b' com nome muito curto (≤4 chars)
+      Trecho  : b = ...
+      Contexto:
+               9 | l = 0		# Loiro
+        >>>   10 | b = 0		# Branco
+              11 | 
+
+  [7] Linha 12: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+              11 | 
+        >>>   12 | i = 0
+              13 | while i < len(cor):
+
+  [8] Linha 24: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+              23 | 		b = b + 1
+        >>>   24 | 	i = i + 1
+              25 | 	
+
+  [9] Linha 15: Variável 'p' com nome muito curto (≤4 chars)
+      Trecho  : p = ...
+      Contexto:
+              14 | 	if cor[i] == "P":
+        >>>   15 | 		p = p + 1
+              16 | 	elif cor[i] == "C":
+
+  [10] Linha 17: Variável 'c' com nome muito curto (≤4 chars)
+      Trecho  : c = ...
+      Contexto:
+              16 | 	elif cor[i] == "C":
+        >>>   17 | 		c = c + 1
+              18 | 	elif cor[i] == "R":
+
+  [11] Linha 19: Variável 'r' com nome muito curto (≤4 chars)
+      Trecho  : r = ...
+      Contexto:
+              18 | 	elif cor[i] == "R":
+        >>>   19 | 		r = r + 1
+              20 | 	elif cor[i] == "L":
+
+  [12] Linha 21: Variável 'l' com nome muito curto (≤4 chars)
+      Trecho  : l = ...
+      Contexto:
+              20 | 	elif cor[i] == "L":
+        >>>   21 | 		l = l + 1
+              22 | 	elif cor[i] == "B":
+
+  [13] Linha 23: Variável 'b' com nome muito curto (≤4 chars)
+      Trecho  : b = ...
+      Contexto:
+              22 | 	elif cor[i] == "B":
+        >>>   23 | 		b = b + 1
+              24 | 	i = i + 1
+
+======================================================================

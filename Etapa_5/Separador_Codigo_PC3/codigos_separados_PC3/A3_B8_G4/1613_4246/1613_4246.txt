@@ -1,0 +1,114 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1613_4246.py
+Questão  : 1613
+Aluno    : 4246
+Total MCs: 3
+
+⚠️  Misconceptions detectados: A3, B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | 
+     3 | a = input('nomes das atividades fisicas: ').upper()
+     4 | tempo = array(eval(input('duracao das atividades, respectivamente: ')))
+     5 | 
+     6 | if(a == 'ALONGAMENTO'):
+     7 | 	g1 = 3 * tempo
+     8 | 	print(g1)
+     9 | elif(a == 'CORRIDA'):
+    10 | 	g2 = 10.3 * tempo
+    11 | 	print(g2)
+    12 | elif(a == 'DANCA'):
+    13 | 	g3 = 9.7 * tempo
+    14 | 	print(g3)
+    15 | elif(a == 'ESCALADA'):
+    16 | 	g4 = 9.7 * tempo
+    17 | 	print(g4)
+    18 | elif(a == 'HIDROGINASTICA'):
+    19 | 	g5 = 5.0 * tempo
+    20 | 	print(g5)
+    21 | 	
+    22 | cal = sum(tempo)
+    23 | print
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 1
+
+  [1] Linha 22: Variável 'cal' declarada mas nunca utilizada
+      Trecho  : cal = ...
+      Contexto:
+              21 | 	
+        >>>   22 | cal = sum(tempo)
+              23 | print
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 15: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 15) / elif ... sem else
+      Contexto:
+              14 | 	print(g3)
+        >>>   15 | elif(a == 'ESCALADA'):
+              16 | 	g4 = 9.7 * tempo
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 7
+
+  [1] Linha 3: Variável 'a' com nome muito curto (≤4 chars)
+      Trecho  : a = ...
+      Contexto:
+               2 | 
+        >>>    3 | a = input('nomes das atividades fisicas: ').upper()
+               4 | tempo = array(eval(input('duracao das atividades, respectivamente: ')))
+
+  [2] Linha 22: Variável 'cal' com nome muito curto (≤4 chars)
+      Trecho  : cal = ...
+      Contexto:
+              21 | 	
+        >>>   22 | cal = sum(tempo)
+              23 | print
+
+  [3] Linha 7: Variável 'g1' com nome muito curto (≤4 chars)
+      Trecho  : g1 = ...
+      Contexto:
+               6 | if(a == 'ALONGAMENTO'):
+        >>>    7 | 	g1 = 3 * tempo
+               8 | 	print(g1)
+
+  [4] Linha 10: Variável 'g2' com nome muito curto (≤4 chars)
+      Trecho  : g2 = ...
+      Contexto:
+               9 | elif(a == 'CORRIDA'):
+        >>>   10 | 	g2 = 10.3 * tempo
+              11 | 	print(g2)
+
+  [5] Linha 13: Variável 'g3' com nome muito curto (≤4 chars)
+      Trecho  : g3 = ...
+      Contexto:
+              12 | elif(a == 'DANCA'):
+        >>>   13 | 	g3 = 9.7 * tempo
+              14 | 	print(g3)
+
+  [6] Linha 16: Variável 'g4' com nome muito curto (≤4 chars)
+      Trecho  : g4 = ...
+      Contexto:
+              15 | elif(a == 'ESCALADA'):
+        >>>   16 | 	g4 = 9.7 * tempo
+              17 | 	print(g4)
+
+  [7] Linha 19: Variável 'g5' com nome muito curto (≤4 chars)
+      Trecho  : g5 = ...
+      Contexto:
+              18 | elif(a == 'HIDROGINASTICA'):
+        >>>   19 | 	g5 = 5.0 * tempo
+              20 | 	print(g5)
+
+======================================================================

@@ -1,0 +1,39 @@
+from numpy import*
+from math import*
+st=input()
+v=st.split(',')
+i=0
+B=0
+PA=0
+PR=0
+A=0
+I=0
+while(i<size(v)):
+	if(v[i]=='B'):
+		B=B+1
+	elif(v[i]=='PA'):
+		PA=PA+1
+	elif(v[i]=='PR'):
+		PR=PR+1
+	elif(v[i]=='A'):
+		A=A+1
+	elif(v[i]=='I'):
+		I=I+1
+	i=i+1
+
+vr=zeros(5,dtype=int)
+j=0
+while(j<size(vr)):
+	if(j==0):
+		vr[j]=B
+	elif(j==1):
+		vr[j]=PA
+	elif(j==2):
+		vr[j]=PR
+	elif(j==3):
+		vr[j]=A
+	elif(j==4):
+		vr[j]=I
+	j=j+1
+print(max(vr))
+print(vr)

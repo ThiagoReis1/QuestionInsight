@@ -1,0 +1,63 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1125_1152.py
+Questão  : 1125
+Aluno    : 1152
+Total MCs: 3
+
+⚠️  Misconceptions detectados: B8, E1, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | lobo = str(input("Qual o lobo:"))
+     2 | if((lobo!="Lady") and (lobo!="Vento Cinzento") and (lobo!="Cao Felpudo") and (lobo!="Fantasma") and (lobo!="Verao") and (lobo!="Nymeria")):
+     3 | 	print("Entrada ",lobo," invalida")
+     4 | elif(lobo=="Lady"):
+     5 | 	print("Sansa")
+     6 | elif(lobo=="Vento Cinzento"):
+     7 | 	print("Robb")
+     8 | elif(lobo=="Cao Felpudo"):
+     9 | 	print("Rickon")
+    10 | elif(lobo=="Fantasma"):
+    11 | 	print("Jon Snow")
+    12 | elif(lobo=="Verao"):
+    13 | 	print("Bran")
+    14 | elif(lobo=="Nymeria"):
+    15 | 	print("Arya")
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 12: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 12) / elif ... sem else
+      Contexto:
+              11 | 	print("Jon Snow")
+        >>>   12 | elif(lobo=="Verao"):
+              13 | 	print("Bran")
+
+▶ E1 — Verificação desnecessária de todas as combinações possíveis
+  Ocorrências: 1
+
+  [1] Linha 2: 6 condições em um único if — verificação excessiva
+      Trecho  : lobo != 'Lady' and lobo != 'Vento Cinzento' and (lobo != 'Cao Felpudo') and (lobo != 'Fantasma') and (lobo != 'Verao') and (lobo != 'Nymeria')
+      Contexto:
+               1 | lobo = str(input("Qual o lobo:"))
+        >>>    2 | if((lobo!="Lady") and (lobo!="Vento Cinzento") and (lobo!="Cao Felpudo") and (lobo!="Fantasma") and (lobo!="Verao") and (lobo!="Nymeria")):
+               3 | 	print("Entrada ",lobo," invalida")
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 1
+
+  [1] Linha 1: Variável 'lobo' com nome muito curto (≤4 chars)
+      Trecho  : lobo = ...
+      Contexto:
+        >>>    1 | lobo = str(input("Qual o lobo:"))
+               2 | if((lobo!="Lady") and (lobo!="Vento Cinzento") and (lobo!="Cao Felpudo") and (lobo!="Fantasma") and (lobo!="Verao") and (lobo!="Nymeria")):
+
+======================================================================

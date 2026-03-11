@@ -1,0 +1,70 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 6784_9167.py
+Questão  : 6784
+Aluno    : 9167
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | a = int(input("data de nascimento: "))
+     2 | b = input("em q pais nasceu; ").upper()
+     3 | 
+     4 | c = 2023-a
+     5 | if b=="B" and c>=21:
+     6 | 	print("sim")
+     7 | 	print(c-21)
+     8 | elif b=="B" and c<21:
+     9 | 	print("nao")
+    10 | 	print(a-2023+21)
+    11 | elif b=="R" and c>=18:
+    12 | 	print("sim")
+    13 | 	print(c-18)
+    14 | elif b=="R" and c<18:
+    15 | 	print("nao")
+    16 | 	print(a-2023+18)
+    17 | elif not b=="B" or b=="R":
+    18 | 	print("invalido")
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 14: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 14) / elif ... sem else
+      Contexto:
+              13 | 	print(c-18)
+        >>>   14 | elif b=="R" and c<18:
+              15 | 	print("nao")
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 3
+
+  [1] Linha 1: Variável 'a' com nome muito curto (≤4 chars)
+      Trecho  : a = ...
+      Contexto:
+        >>>    1 | a = int(input("data de nascimento: "))
+               2 | b = input("em q pais nasceu; ").upper()
+
+  [2] Linha 2: Variável 'b' com nome muito curto (≤4 chars)
+      Trecho  : b = ...
+      Contexto:
+               1 | a = int(input("data de nascimento: "))
+        >>>    2 | b = input("em q pais nasceu; ").upper()
+               3 | 
+
+  [3] Linha 4: Variável 'c' com nome muito curto (≤4 chars)
+      Trecho  : c = ...
+      Contexto:
+               3 | 
+        >>>    4 | c = 2023-a
+               5 | if b=="B" and c>=21:
+
+======================================================================

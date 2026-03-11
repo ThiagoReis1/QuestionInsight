@@ -1,0 +1,78 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1653_3093.py
+Questão  : 1653
+Aluno    : 3093
+Total MCs: 2
+
+⚠️  Misconceptions detectados: A3, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | x = input()
+     3 | v = x.split(',')
+     4 | y = zeros (5,dtype=int)
+     5 | a = 0
+     6 | for i in v:
+     7 | 	if (i == "AR"):
+     8 | 		y[0] = y[0] + 1
+     9 | 	if (i == "BR"):
+    10 | 		y[1] = y[1] + 1
+    11 | 	if (i == "CL"):
+    12 | 		y[2] = y[2] + 1
+    13 | 	if (i == "CO"):
+    14 | 		y[3] = y[3] + 1
+    15 | 	if (i == "UY"):
+    16 | 		y[4] = y[4] + 1
+    17 | print(max(y))		
+    18 | print(y)		
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 1
+
+  [1] Linha 5: Variável 'a' declarada mas nunca utilizada
+      Trecho  : a = ...
+      Contexto:
+               4 | y = zeros (5,dtype=int)
+        >>>    5 | a = 0
+               6 | for i in v:
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 4
+
+  [1] Linha 2: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+               1 | from numpy import*
+        >>>    2 | x = input()
+               3 | v = x.split(',')
+
+  [2] Linha 3: Variável 'v' com nome muito curto (≤4 chars)
+      Trecho  : v = ...
+      Contexto:
+               2 | x = input()
+        >>>    3 | v = x.split(',')
+               4 | y = zeros (5,dtype=int)
+
+  [3] Linha 4: Variável 'y' com nome muito curto (≤4 chars)
+      Trecho  : y = ...
+      Contexto:
+               3 | v = x.split(',')
+        >>>    4 | y = zeros (5,dtype=int)
+               5 | a = 0
+
+  [4] Linha 5: Variável 'a' com nome muito curto (≤4 chars)
+      Trecho  : a = ...
+      Contexto:
+               4 | y = zeros (5,dtype=int)
+        >>>    5 | a = 0
+               6 | for i in v:
+
+======================================================================

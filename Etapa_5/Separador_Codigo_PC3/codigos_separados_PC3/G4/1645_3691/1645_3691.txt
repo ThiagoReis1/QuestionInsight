@@ -1,0 +1,71 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1645_3691.py
+Questão  : 1645
+Aluno    : 3691
+Total MCs: 1
+
+⚠️  Misconceptions detectados: G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | import numpy as np
+     2 | vet = np.array(eval(input()))
+     3 | z = x = 0
+     4 | for i in vet:
+     5 | 	if i >= 2000:
+     6 | 		z = z+ 1
+     7 | saida = np.zeros(z, dtype=int)
+     8 | for p in range(0,len(vet),1):
+     9 | 	if vet[p] >= 2000:
+    10 | 		saida[x] = p
+    11 | 		x = x+1
+    12 | print(z)
+    13 | print(saida)
+    14 | 	
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 5
+
+  [1] Linha 2: Variável 'vet' com nome muito curto (≤4 chars)
+      Trecho  : vet = ...
+      Contexto:
+               1 | import numpy as np
+        >>>    2 | vet = np.array(eval(input()))
+               3 | z = x = 0
+
+  [2] Linha 3: Variável 'z' com nome muito curto (≤4 chars)
+      Trecho  : z = ...
+      Contexto:
+               2 | vet = np.array(eval(input()))
+        >>>    3 | z = x = 0
+               4 | for i in vet:
+
+  [3] Linha 3: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+               2 | vet = np.array(eval(input()))
+        >>>    3 | z = x = 0
+               4 | for i in vet:
+
+  [4] Linha 6: Variável 'z' com nome muito curto (≤4 chars)
+      Trecho  : z = ...
+      Contexto:
+               5 | 	if i >= 2000:
+        >>>    6 | 		z = z+ 1
+               7 | saida = np.zeros(z, dtype=int)
+
+  [5] Linha 11: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+              10 | 		saida[x] = p
+        >>>   11 | 		x = x+1
+              12 | print(z)
+
+======================================================================

@@ -1,0 +1,184 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1114_1116.py
+Questão  : 1114
+Aluno    : 1116
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | v = float(input("Velocidade: "))
+     2 | h = float(input("Tempo: "))
+     3 | s = v * h
+     4 | dac = 100
+     5 | dce = 200
+     6 | dEf = 150
+     7 | dfg = 400
+     8 | dgh = 250
+     9 | dt = dac + dce + dEf + dfg + dgh
+    10 | ho = dt / v
+    11 | if(ho < h):
+    12 | 	ho = "Hogsmead"
+    13 | 	print("Entradas: ", v,"km/h e", h,"h")
+    14 | 	print("Proxima parada:", ho)
+    15 | elif(v <= 0 or h <= 0):
+    16 | 	print("Entradas: ", v,"km/h e", h,"h")
+    17 | 	print("Dados Invalidos")
+    18 | else:
+    19 | 	if(s <= dac):
+    20 | 		c = "Castamere"
+    21 | 		print("Entradas: ", v,"km/h e", h,"h")
+    22 | 		print("Proxima parada: ",c)
+    23 | 	elif(s >= dac and s <= dce):
+    24 | 		e = "Edoras"
+    25 | 		print("Entradas: ", v,"km/h e", h,"h")
+    26 | 		print("Proxima parada: ",e)
+    27 | 	elif(s >= dEf and s <= dfg):
+    28 | 		f = "Farnagon"
+    29 | 		print("Entradas: ", v,"km/h e", h,"h")
+    30 | 		print("Proxima parada: ",f)
+    31 | 	elif(s >= dfg and s <= dgh):
+    32 | 		g = "Gondor"
+    33 | 		print("Entradas: ", v,"km/h e", h,"h")
+    34 | 		print("Proxima parada: ",g)
+    35 | 	elif(s >= 0 and s == dt or s <= dfg and s >= dgh):
+    36 | 		ho = "Hogsmead"
+    37 | 		print("Entradas: ", v,"km/h e", h,"h")
+    38 | 		print("Proxima parada: ",ho)
+    39 | 
+    40 | 
+    41 | 
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 31: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 31) / elif ... sem else
+      Contexto:
+              30 | 		print("Proxima parada: ",f)
+        >>>   31 | 	elif(s >= dfg and s <= dgh):
+              32 | 		g = "Gondor"
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 16
+
+  [1] Linha 1: Variável 'v' com nome muito curto (≤4 chars)
+      Trecho  : v = ...
+      Contexto:
+        >>>    1 | v = float(input("Velocidade: "))
+               2 | h = float(input("Tempo: "))
+
+  [2] Linha 2: Variável 'h' com nome muito curto (≤4 chars)
+      Trecho  : h = ...
+      Contexto:
+               1 | v = float(input("Velocidade: "))
+        >>>    2 | h = float(input("Tempo: "))
+               3 | s = v * h
+
+  [3] Linha 3: Variável 's' com nome muito curto (≤4 chars)
+      Trecho  : s = ...
+      Contexto:
+               2 | h = float(input("Tempo: "))
+        >>>    3 | s = v * h
+               4 | dac = 100
+
+  [4] Linha 4: Variável 'dac' com nome muito curto (≤4 chars)
+      Trecho  : dac = ...
+      Contexto:
+               3 | s = v * h
+        >>>    4 | dac = 100
+               5 | dce = 200
+
+  [5] Linha 5: Variável 'dce' com nome muito curto (≤4 chars)
+      Trecho  : dce = ...
+      Contexto:
+               4 | dac = 100
+        >>>    5 | dce = 200
+               6 | dEf = 150
+
+  [6] Linha 6: Variável 'dEf' com nome muito curto (≤4 chars)
+      Trecho  : dEf = ...
+      Contexto:
+               5 | dce = 200
+        >>>    6 | dEf = 150
+               7 | dfg = 400
+
+  [7] Linha 7: Variável 'dfg' com nome muito curto (≤4 chars)
+      Trecho  : dfg = ...
+      Contexto:
+               6 | dEf = 150
+        >>>    7 | dfg = 400
+               8 | dgh = 250
+
+  [8] Linha 8: Variável 'dgh' com nome muito curto (≤4 chars)
+      Trecho  : dgh = ...
+      Contexto:
+               7 | dfg = 400
+        >>>    8 | dgh = 250
+               9 | dt = dac + dce + dEf + dfg + dgh
+
+  [9] Linha 9: Variável 'dt' com nome muito curto (≤4 chars)
+      Trecho  : dt = ...
+      Contexto:
+               8 | dgh = 250
+        >>>    9 | dt = dac + dce + dEf + dfg + dgh
+              10 | ho = dt / v
+
+  [10] Linha 10: Variável 'ho' com nome muito curto (≤4 chars)
+      Trecho  : ho = ...
+      Contexto:
+               9 | dt = dac + dce + dEf + dfg + dgh
+        >>>   10 | ho = dt / v
+              11 | if(ho < h):
+
+  [11] Linha 12: Variável 'ho' com nome muito curto (≤4 chars)
+      Trecho  : ho = ...
+      Contexto:
+              11 | if(ho < h):
+        >>>   12 | 	ho = "Hogsmead"
+              13 | 	print("Entradas: ", v,"km/h e", h,"h")
+
+  [12] Linha 20: Variável 'c' com nome muito curto (≤4 chars)
+      Trecho  : c = ...
+      Contexto:
+              19 | 	if(s <= dac):
+        >>>   20 | 		c = "Castamere"
+              21 | 		print("Entradas: ", v,"km/h e", h,"h")
+
+  [13] Linha 24: Variável 'e' com nome muito curto (≤4 chars)
+      Trecho  : e = ...
+      Contexto:
+              23 | 	elif(s >= dac and s <= dce):
+        >>>   24 | 		e = "Edoras"
+              25 | 		print("Entradas: ", v,"km/h e", h,"h")
+
+  [14] Linha 28: Variável 'f' com nome muito curto (≤4 chars)
+      Trecho  : f = ...
+      Contexto:
+              27 | 	elif(s >= dEf and s <= dfg):
+        >>>   28 | 		f = "Farnagon"
+              29 | 		print("Entradas: ", v,"km/h e", h,"h")
+
+  [15] Linha 32: Variável 'g' com nome muito curto (≤4 chars)
+      Trecho  : g = ...
+      Contexto:
+              31 | 	elif(s >= dfg and s <= dgh):
+        >>>   32 | 		g = "Gondor"
+              33 | 		print("Entradas: ", v,"km/h e", h,"h")
+
+  [16] Linha 36: Variável 'ho' com nome muito curto (≤4 chars)
+      Trecho  : ho = ...
+      Contexto:
+              35 | 	elif(s >= 0 and s == dt or s <= dfg and s >= dgh):
+        >>>   36 | 		ho = "Hogsmead"
+              37 | 		print("Entradas: ", v,"km/h e", h,"h")
+
+======================================================================

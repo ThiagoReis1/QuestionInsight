@@ -1,0 +1,94 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1642_4011.py
+Questão  : 1642
+Aluno    : 4011
+Total MCs: 1
+
+⚠️  Misconceptions detectados: G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | 
+     3 | qt = array(eval(input("Alunos por sala: ")))
+     4 | tp = 0 
+     5 | 
+     6 | #Primeira parte - ok
+     7 | for x in qt:
+     8 | 	if(x%5 == 0):
+     9 | 		tp = tp + 1
+    10 | print(tp)
+    11 | 	
+    12 | #Segunda parte
+    13 | u = zeros(tp, dtype=int)
+    14 | i = 0
+    15 | t = 0
+    16 | 
+    17 | while(i < size(qt)):
+    18 | 	if(qt[i]%5 == 0):
+    19 | 		u[t] = u[t] + i
+    20 | 	i = i + 1
+    21 | 		
+    22 | print(u)
+    23 | 	
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 7
+
+  [1] Linha 3: Variável 'qt' com nome muito curto (≤4 chars)
+      Trecho  : qt = ...
+      Contexto:
+               2 | 
+        >>>    3 | qt = array(eval(input("Alunos por sala: ")))
+               4 | tp = 0 
+
+  [2] Linha 4: Variável 'tp' com nome muito curto (≤4 chars)
+      Trecho  : tp = ...
+      Contexto:
+               3 | qt = array(eval(input("Alunos por sala: ")))
+        >>>    4 | tp = 0 
+               5 | 
+
+  [3] Linha 13: Variável 'u' com nome muito curto (≤4 chars)
+      Trecho  : u = ...
+      Contexto:
+              12 | #Segunda parte
+        >>>   13 | u = zeros(tp, dtype=int)
+              14 | i = 0
+
+  [4] Linha 14: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+              13 | u = zeros(tp, dtype=int)
+        >>>   14 | i = 0
+              15 | t = 0
+
+  [5] Linha 15: Variável 't' com nome muito curto (≤4 chars)
+      Trecho  : t = ...
+      Contexto:
+              14 | i = 0
+        >>>   15 | t = 0
+              16 | 
+
+  [6] Linha 20: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+              19 | 		u[t] = u[t] + i
+        >>>   20 | 	i = i + 1
+              21 | 		
+
+  [7] Linha 9: Variável 'tp' com nome muito curto (≤4 chars)
+      Trecho  : tp = ...
+      Contexto:
+               8 | 	if(x%5 == 0):
+        >>>    9 | 		tp = tp + 1
+              10 | print(tp)
+
+======================================================================

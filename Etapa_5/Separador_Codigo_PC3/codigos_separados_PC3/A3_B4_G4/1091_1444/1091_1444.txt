@@ -1,0 +1,87 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1091_1444.py
+Questão  : 1091
+Aluno    : 1444
+Total MCs: 3
+
+⚠️  Misconceptions detectados: A3, B4, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | #osenildo
+     2 | n = int(input("Entre: "))
+     3 | n1 = n // 100
+     4 | n2 = n % (n1 * 100)
+     5 | M = n1 + n2
+     6 | N = (n1 + n2) ** 2
+     7 | if n == N:
+     8 | 	print(N)
+     9 | else:
+    10 | 	print(N)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 1
+
+  [1] Linha 5: Variável 'M' declarada mas nunca utilizada
+      Trecho  : M = ...
+      Contexto:
+               4 | n2 = n % (n1 * 100)
+        >>>    5 | M = n1 + n2
+               6 | N = (n1 + n2) ** 2
+
+▶ B4 — Comandos repetidos dentro de blocos if-elif-else
+  Ocorrências: 1
+
+  [1] Linha 7: Bloco idêntico ao da linha 7
+      Trecho  : print(N)
+      Contexto:
+               6 | N = (n1 + n2) ** 2
+        >>>    7 | if n == N:
+               8 | 	print(N)
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 5
+
+  [1] Linha 2: Variável 'n' com nome muito curto (≤4 chars)
+      Trecho  : n = ...
+      Contexto:
+               1 | #osenildo
+        >>>    2 | n = int(input("Entre: "))
+               3 | n1 = n // 100
+
+  [2] Linha 3: Variável 'n1' com nome muito curto (≤4 chars)
+      Trecho  : n1 = ...
+      Contexto:
+               2 | n = int(input("Entre: "))
+        >>>    3 | n1 = n // 100
+               4 | n2 = n % (n1 * 100)
+
+  [3] Linha 4: Variável 'n2' com nome muito curto (≤4 chars)
+      Trecho  : n2 = ...
+      Contexto:
+               3 | n1 = n // 100
+        >>>    4 | n2 = n % (n1 * 100)
+               5 | M = n1 + n2
+
+  [4] Linha 5: Variável 'M' com nome muito curto (≤4 chars)
+      Trecho  : M = ...
+      Contexto:
+               4 | n2 = n % (n1 * 100)
+        >>>    5 | M = n1 + n2
+               6 | N = (n1 + n2) ** 2
+
+  [5] Linha 6: Variável 'N' com nome muito curto (≤4 chars)
+      Trecho  : N = ...
+      Contexto:
+               5 | M = n1 + n2
+        >>>    6 | N = (n1 + n2) ** 2
+               7 | if n == N:
+
+======================================================================

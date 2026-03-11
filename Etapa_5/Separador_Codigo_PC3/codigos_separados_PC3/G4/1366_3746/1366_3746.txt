@@ -1,0 +1,55 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1366_3746.py
+Questão  : 1366
+Aluno    : 3746
+Total MCs: 1
+
+⚠️  Misconceptions detectados: G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | import math
+     2 | 
+     3 | 
+     4 | def arco_flecha(ang, v0):
+     5 | 	G = 9.8
+     6 | 	return pow(v0,2)* (math.sin(2*ang)) / G
+     7 | 
+     8 | 
+     9 | if __name__ == '__main__':
+    10 | 	ang = math.radians(float(input("Digite o angulo: ")))
+    11 | 	v0 = float(input("Digite a vel. inicial: "))
+    12 | 	print(round(arco_flecha(ang, v0),2))
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 3
+
+  [1] Linha 5: Variável 'G' com nome muito curto (≤4 chars)
+      Trecho  : G = ...
+      Contexto:
+               4 | def arco_flecha(ang, v0):
+        >>>    5 | 	G = 9.8
+               6 | 	return pow(v0,2)* (math.sin(2*ang)) / G
+
+  [2] Linha 10: Variável 'ang' com nome muito curto (≤4 chars)
+      Trecho  : ang = ...
+      Contexto:
+               9 | if __name__ == '__main__':
+        >>>   10 | 	ang = math.radians(float(input("Digite o angulo: ")))
+              11 | 	v0 = float(input("Digite a vel. inicial: "))
+
+  [3] Linha 11: Variável 'v0' com nome muito curto (≤4 chars)
+      Trecho  : v0 = ...
+      Contexto:
+              10 | 	ang = math.radians(float(input("Digite o angulo: ")))
+        >>>   11 | 	v0 = float(input("Digite a vel. inicial: "))
+              12 | 	print(round(arco_flecha(ang, v0),2))
+
+======================================================================

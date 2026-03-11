@@ -1,0 +1,62 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 2130_2255.py
+Questão  : 2130
+Aluno    : 2255
+Total MCs: 2
+
+⚠️  Misconceptions detectados: A3, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import *
+     2 | nota = array(eval(input("Notas: ")))
+     3 | i = 0 
+     4 | mf = (nota[0] * 3.0 + nota[1] * 2.0 + nota[2] * 2.0 + nota[3] * 3.0) / 10.0
+     5 | print(round(mf, 2))
+     6 | if(mf >= 5.0):
+     7 | 	print("APROVADO")
+     8 | else:
+     9 | 	print("REPROVADO")
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 1
+
+  [1] Linha 3: Variável 'i' declarada mas nunca utilizada
+      Trecho  : i = ...
+      Contexto:
+               2 | nota = array(eval(input("Notas: ")))
+        >>>    3 | i = 0 
+               4 | mf = (nota[0] * 3.0 + nota[1] * 2.0 + nota[2] * 2.0 + nota[3] * 3.0) / 10.0
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 3
+
+  [1] Linha 2: Variável 'nota' com nome muito curto (≤4 chars)
+      Trecho  : nota = ...
+      Contexto:
+               1 | from numpy import *
+        >>>    2 | nota = array(eval(input("Notas: ")))
+               3 | i = 0 
+
+  [2] Linha 3: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+               2 | nota = array(eval(input("Notas: ")))
+        >>>    3 | i = 0 
+               4 | mf = (nota[0] * 3.0 + nota[1] * 2.0 + nota[2] * 2.0 + nota[3] * 3.0) / 10.0
+
+  [3] Linha 4: Variável 'mf' com nome muito curto (≤4 chars)
+      Trecho  : mf = ...
+      Contexto:
+               3 | i = 0 
+        >>>    4 | mf = (nota[0] * 3.0 + nota[1] * 2.0 + nota[2] * 2.0 + nota[3] * 3.0) / 10.0
+               5 | print(round(mf, 2))
+
+======================================================================

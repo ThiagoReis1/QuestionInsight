@@ -1,0 +1,6 @@
+C = float(input())
+D = float(input())
+M = float(input())
+J = float(input())
+conta=(D + )
+while(C!=conta)

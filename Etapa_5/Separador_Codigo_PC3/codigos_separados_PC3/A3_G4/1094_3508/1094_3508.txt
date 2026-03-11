@@ -1,0 +1,79 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1094_3508.py
+Questão  : 1094
+Aluno    : 3508
+Total MCs: 2
+
+⚠️  Misconceptions detectados: A3, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | sla = float(input("numero: "))
+     2 | 
+     3 | d1 = sla // 1000
+     4 | s1 = sla % 1000
+     5 | d2 = sla // 10
+     6 | d3 = sla // 1
+     7 | 
+     8 | if (((d1 + s1)**2) == d3):
+     9 | 	print("atende")
+    10 | 	print(round(sla, ))
+    11 | else:
+    12 | 	print("nao atende")
+    13 | 	print(round(sla, ))
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 1
+
+  [1] Linha 5: Variável 'd2' declarada mas nunca utilizada
+      Trecho  : d2 = ...
+      Contexto:
+               4 | s1 = sla % 1000
+        >>>    5 | d2 = sla // 10
+               6 | d3 = sla // 1
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 5
+
+  [1] Linha 1: Variável 'sla' com nome muito curto (≤4 chars)
+      Trecho  : sla = ...
+      Contexto:
+        >>>    1 | sla = float(input("numero: "))
+               2 | 
+
+  [2] Linha 3: Variável 'd1' com nome muito curto (≤4 chars)
+      Trecho  : d1 = ...
+      Contexto:
+               2 | 
+        >>>    3 | d1 = sla // 1000
+               4 | s1 = sla % 1000
+
+  [3] Linha 4: Variável 's1' com nome muito curto (≤4 chars)
+      Trecho  : s1 = ...
+      Contexto:
+               3 | d1 = sla // 1000
+        >>>    4 | s1 = sla % 1000
+               5 | d2 = sla // 10
+
+  [4] Linha 5: Variável 'd2' com nome muito curto (≤4 chars)
+      Trecho  : d2 = ...
+      Contexto:
+               4 | s1 = sla % 1000
+        >>>    5 | d2 = sla // 10
+               6 | d3 = sla // 1
+
+  [5] Linha 6: Variável 'd3' com nome muito curto (≤4 chars)
+      Trecho  : d3 = ...
+      Contexto:
+               5 | d2 = sla // 10
+        >>>    6 | d3 = sla // 1
+               7 | 
+
+======================================================================

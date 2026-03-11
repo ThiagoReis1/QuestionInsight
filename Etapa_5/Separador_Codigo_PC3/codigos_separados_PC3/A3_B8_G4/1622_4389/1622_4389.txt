@@ -1,0 +1,121 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1622_4389.py
+Questão  : 1622
+Aluno    : 4389
+Total MCs: 3
+
+⚠️  Misconceptions detectados: A3, B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | e = array(eval(input("Informe o vetor entrada: \n")))
+     3 | s = array(eval(input("Informe o vetor saida: \n")))
+     4 | i = 0
+     5 | aux = 0
+     6 | soma = 0
+     7 | soma2 = 0
+     8 | 
+     9 | while(i<size(e)):
+    10 | 	aux = aux + e[i]
+    11 | 	if(aux<=75):
+    12 | 		soma = soma - s[i] + aux
+    13 | 	elif(soma>75):
+    14 | 		aux = 75 - s[i]
+    15 | 	i = i + 1
+    16 | print(soma)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 1
+
+  [1] Linha 7: Variável 'soma2' declarada mas nunca utilizada
+      Trecho  : soma2 = ...
+      Contexto:
+               6 | soma = 0
+        >>>    7 | soma2 = 0
+               8 | 
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 11: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 11) / elif ... sem else
+      Contexto:
+              10 | 	aux = aux + e[i]
+        >>>   11 | 	if(aux<=75):
+              12 | 		soma = soma - s[i] + aux
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 9
+
+  [1] Linha 2: Variável 'e' com nome muito curto (≤4 chars)
+      Trecho  : e = ...
+      Contexto:
+               1 | from numpy import*
+        >>>    2 | e = array(eval(input("Informe o vetor entrada: \n")))
+               3 | s = array(eval(input("Informe o vetor saida: \n")))
+
+  [2] Linha 3: Variável 's' com nome muito curto (≤4 chars)
+      Trecho  : s = ...
+      Contexto:
+               2 | e = array(eval(input("Informe o vetor entrada: \n")))
+        >>>    3 | s = array(eval(input("Informe o vetor saida: \n")))
+               4 | i = 0
+
+  [3] Linha 4: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+               3 | s = array(eval(input("Informe o vetor saida: \n")))
+        >>>    4 | i = 0
+               5 | aux = 0
+
+  [4] Linha 5: Variável 'aux' com nome muito curto (≤4 chars)
+      Trecho  : aux = ...
+      Contexto:
+               4 | i = 0
+        >>>    5 | aux = 0
+               6 | soma = 0
+
+  [5] Linha 6: Variável 'soma' com nome muito curto (≤4 chars)
+      Trecho  : soma = ...
+      Contexto:
+               5 | aux = 0
+        >>>    6 | soma = 0
+               7 | soma2 = 0
+
+  [6] Linha 10: Variável 'aux' com nome muito curto (≤4 chars)
+      Trecho  : aux = ...
+      Contexto:
+               9 | while(i<size(e)):
+        >>>   10 | 	aux = aux + e[i]
+              11 | 	if(aux<=75):
+
+  [7] Linha 15: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+              14 | 		aux = 75 - s[i]
+        >>>   15 | 	i = i + 1
+              16 | print(soma)
+
+  [8] Linha 12: Variável 'soma' com nome muito curto (≤4 chars)
+      Trecho  : soma = ...
+      Contexto:
+              11 | 	if(aux<=75):
+        >>>   12 | 		soma = soma - s[i] + aux
+              13 | 	elif(soma>75):
+
+  [9] Linha 14: Variável 'aux' com nome muito curto (≤4 chars)
+      Trecho  : aux = ...
+      Contexto:
+              13 | 	elif(soma>75):
+        >>>   14 | 		aux = 75 - s[i]
+              15 | 	i = i + 1
+
+======================================================================

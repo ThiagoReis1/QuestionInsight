@@ -1,0 +1,50 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1647_5998.py
+Questão  : 1647
+Aluno    : 5998
+Total MCs: 1
+
+⚠️  Misconceptions detectados: A2
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import *
+     2 | v = array(eval(input()))
+     3 | 
+     4 | aprov = 0
+     5 | reprov = 0
+     6 | for i in range(0,size(v)):
+     7 | 	if v[i]<70:
+     8 | 		reprov = reprov + 1
+     9 | 	else:
+    10 | 		aprov = aprov + 1
+    11 | print(aprov)
+    12 | 
+    13 | c = 0
+    14 | z = zeros(aprov, dtype=int)
+    15 | for i in range(0,size(v)):
+    16 | 	if v[i]>=70:
+    17 | 		z[c]=i
+    18 | 		c = c + 1
+    19 | 	else:
+    20 | 		c = c
+    21 | print(z)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A2 — Variável atribuída a si mesma
+  Ocorrências: 1
+
+  [1] Linha 20: 'c' atribuído a si mesmo
+      Trecho  : c = c
+      Contexto:
+              19 | 	else:
+        >>>   20 | 		c = c
+              21 | print(z)
+
+======================================================================

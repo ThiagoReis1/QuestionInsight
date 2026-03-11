@@ -1,0 +1,76 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1992_2131.py
+Questão  : 1992
+Aluno    : 2131
+Total MCs: 2
+
+⚠️  Misconceptions detectados: A3, B8
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | a = input().lower()
+     2 | if(a!="glutamina" and a!="histidina" and a!="prolina"):
+     3 | 	print("Entrada:",a)
+     4 | 	print("Dado Invalido")
+     5 | 
+     6 | glutamina = (5*12.011+8*1.00794+1*14.00674+4*15.999)
+     7 | histidina = (6*12.011+10*1.00794+3*14.00674+2*15.999)
+     8 | prolina = (5*12.011+10*1.00794+14.00674+2*15.999)
+     9 | 
+    10 | if(a=="glutamina"):
+    11 | 	print(round(5*12.011+8*1.00794+1*14.00674+4*15.999,2))
+    12 | elif(a=="histidina"):
+    13 | 	print(round(6*12.011+10*1.00794+3*14.00674+2*15.999,2))
+    14 | elif(a=="prolina"):
+    15 | 	print(round(5*12.011+10*1.00794+14.00674+2*15.999,2))
+    16 | 
+    17 | 
+    18 | 	
+    19 | 	
+    20 | 
+    21 | 
+    22 | 
+    23 | 
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 3
+
+  [1] Linha 6: Variável 'glutamina' declarada mas nunca utilizada
+      Trecho  : glutamina = ...
+      Contexto:
+               5 | 
+        >>>    6 | glutamina = (5*12.011+8*1.00794+1*14.00674+4*15.999)
+               7 | histidina = (6*12.011+10*1.00794+3*14.00674+2*15.999)
+
+  [2] Linha 7: Variável 'histidina' declarada mas nunca utilizada
+      Trecho  : histidina = ...
+      Contexto:
+               6 | glutamina = (5*12.011+8*1.00794+1*14.00674+4*15.999)
+        >>>    7 | histidina = (6*12.011+10*1.00794+3*14.00674+2*15.999)
+               8 | prolina = (5*12.011+10*1.00794+14.00674+2*15.999)
+
+  [3] Linha 8: Variável 'prolina' declarada mas nunca utilizada
+      Trecho  : prolina = ...
+      Contexto:
+               7 | histidina = (6*12.011+10*1.00794+3*14.00674+2*15.999)
+        >>>    8 | prolina = (5*12.011+10*1.00794+14.00674+2*15.999)
+               9 | 
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 12: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 12) / elif ... sem else
+      Contexto:
+              11 | 	print(round(5*12.011+8*1.00794+1*14.00674+4*15.999,2))
+        >>>   12 | elif(a=="histidina"):
+              13 | 	print(round(6*12.011+10*1.00794+3*14.00674+2*15.999,2))
+
+======================================================================

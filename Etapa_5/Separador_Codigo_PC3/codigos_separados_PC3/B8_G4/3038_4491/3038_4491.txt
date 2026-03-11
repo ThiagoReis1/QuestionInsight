@@ -1,0 +1,73 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 3038_4491.py
+Questão  : 3038
+Aluno    : 4491
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from math import *
+     2 | 
+     3 | # entrada valor de x
+     4 | 
+     5 | x = float(input("valor de x: "))
+     6 | 
+     7 | if (x <= -1) or (x >= 1):
+     8 | 	form = abs(x) ** (1/2)
+     9 | elif (x > -1 and x > 0) or (x < 0 and x < 1):
+    10 | 	form = abs(x)
+    11 | elif (x == 0):
+    12 | 	form = 0
+    13 | print(round(form, 2))
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 9: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 9) / elif ... sem else
+      Contexto:
+               8 | 	form = abs(x) ** (1/2)
+        >>>    9 | elif (x > -1 and x > 0) or (x < 0 and x < 1):
+              10 | 	form = abs(x)
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 4
+
+  [1] Linha 5: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+               4 | 
+        >>>    5 | x = float(input("valor de x: "))
+               6 | 
+
+  [2] Linha 8: Variável 'form' com nome muito curto (≤4 chars)
+      Trecho  : form = ...
+      Contexto:
+               7 | if (x <= -1) or (x >= 1):
+        >>>    8 | 	form = abs(x) ** (1/2)
+               9 | elif (x > -1 and x > 0) or (x < 0 and x < 1):
+
+  [3] Linha 10: Variável 'form' com nome muito curto (≤4 chars)
+      Trecho  : form = ...
+      Contexto:
+               9 | elif (x > -1 and x > 0) or (x < 0 and x < 1):
+        >>>   10 | 	form = abs(x)
+              11 | elif (x == 0):
+
+  [4] Linha 12: Variável 'form' com nome muito curto (≤4 chars)
+      Trecho  : form = ...
+      Contexto:
+              11 | elif (x == 0):
+        >>>   12 | 	form = 0
+              13 | print(round(form, 2))
+
+======================================================================

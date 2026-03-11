@@ -1,0 +1,142 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 3591_9199.py
+Questão  : 3591
+Aluno    : 9199
+Total MCs: 3
+
+⚠️  Misconceptions detectados: B4, B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import *
+     2 | 
+     3 | v = array(eval(input("digite:")))
+     4 | i = 0
+     5 | acum = 0
+     6 | 
+     7 | while i < size(v):
+     8 | 	if v[i] == 1:
+     9 | 		ponto = 10
+    10 | 		acum += ponto
+    11 | 	elif v[i] == 2:
+    12 | 		acum += 5
+    13 | 	elif v[i] == 3:
+    14 | 		acum += 10
+    15 | 	elif v[i] == 4:
+    16 | 		acum += 5
+    17 | 	elif v[i] == 5:
+    18 | 		acum += 10
+    19 | 	elif v[i] == 6:
+    20 | 		acum += 5
+    21 | 	i += 1
+    22 | 	
+    23 | print(acum)	
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B4 — Comandos repetidos dentro de blocos if-elif-else
+  Ocorrências: 9
+
+  [1] Linha 15: Bloco idêntico ao da linha 11
+      Trecho  : acum += 5
+      Contexto:
+              14 | 		acum += 10
+        >>>   15 | 	elif v[i] == 4:
+              16 | 		acum += 5
+
+  [2] Linha 17: Bloco idêntico ao da linha 13
+      Trecho  : acum += 10
+      Contexto:
+              16 | 		acum += 5
+        >>>   17 | 	elif v[i] == 5:
+              18 | 		acum += 10
+
+  [3] Linha 19: Bloco idêntico ao da linha 11
+      Trecho  : acum += 5
+      Contexto:
+              18 | 		acum += 10
+        >>>   19 | 	elif v[i] == 6:
+              20 | 		acum += 5
+
+  [4] Linha 15: Bloco idêntico ao da linha 11
+      Trecho  : acum += 5
+      Contexto:
+              14 | 		acum += 10
+        >>>   15 | 	elif v[i] == 4:
+              16 | 		acum += 5
+
+  [5] Linha 17: Bloco idêntico ao da linha 13
+      Trecho  : acum += 10
+      Contexto:
+              16 | 		acum += 5
+        >>>   17 | 	elif v[i] == 5:
+              18 | 		acum += 10
+
+  [6] Linha 19: Bloco idêntico ao da linha 11
+      Trecho  : acum += 5
+      Contexto:
+              18 | 		acum += 10
+        >>>   19 | 	elif v[i] == 6:
+              20 | 		acum += 5
+
+  [7] Linha 17: Bloco idêntico ao da linha 13
+      Trecho  : acum += 10
+      Contexto:
+              16 | 		acum += 5
+        >>>   17 | 	elif v[i] == 5:
+              18 | 		acum += 10
+
+  [8] Linha 19: Bloco idêntico ao da linha 15
+      Trecho  : acum += 5
+      Contexto:
+              18 | 		acum += 10
+        >>>   19 | 	elif v[i] == 6:
+              20 | 		acum += 5
+
+  [9] Linha 19: Bloco idêntico ao da linha 15
+      Trecho  : acum += 5
+      Contexto:
+              18 | 		acum += 10
+        >>>   19 | 	elif v[i] == 6:
+              20 | 		acum += 5
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 17: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 17) / elif ... sem else
+      Contexto:
+              16 | 		acum += 5
+        >>>   17 | 	elif v[i] == 5:
+              18 | 		acum += 10
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 3
+
+  [1] Linha 3: Variável 'v' com nome muito curto (≤4 chars)
+      Trecho  : v = ...
+      Contexto:
+               2 | 
+        >>>    3 | v = array(eval(input("digite:")))
+               4 | i = 0
+
+  [2] Linha 4: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+               3 | v = array(eval(input("digite:")))
+        >>>    4 | i = 0
+               5 | acum = 0
+
+  [3] Linha 5: Variável 'acum' com nome muito curto (≤4 chars)
+      Trecho  : acum = ...
+      Contexto:
+               4 | i = 0
+        >>>    5 | acum = 0
+               6 | 
+
+======================================================================

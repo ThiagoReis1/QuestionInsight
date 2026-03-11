@@ -1,0 +1,206 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 3593_8749.py
+Questão  : 3593
+Aluno    : 8749
+Total MCs: 3
+
+⚠️  Misconceptions detectados: B4, B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import *
+     2 | num = array(eval(input("dados lançados: ")))
+     3 | 
+     4 | i = 0
+     5 | cont = 200
+     6 | 
+     7 | while i < size(num):
+     8 | 	if num[i] == 1:
+     9 | 		cont = cont / 2
+    10 | 	elif num[i] == 2:
+    11 | 		cont = cont * 3
+    12 | 	elif num [i] == 3:
+    13 | 		cont =cont / 2
+    14 | 	elif num [i] == 4:
+    15 | 		cont = cont * 3
+    16 | 	elif num [i] == 5:
+    17 | 		cont = cont / 2
+    18 | 	elif num [i] == 6:
+    19 | 		cont = cont * 3
+    20 | 	i = i + 1
+    21 | print(round(cont, 2))
+    22 | 
+    23 | 
+    24 | 
+    25 | 
+    26 | 
+    27 | 
+    28 | 
+    29 | 
+    30 | 
+    31 | 
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B4 — Comandos repetidos dentro de blocos if-elif-else
+  Ocorrências: 10
+
+  [1] Linha 12: Bloco idêntico ao da linha 8
+      Trecho  : cont = cont / 2
+      Contexto:
+              11 | 		cont = cont * 3
+        >>>   12 | 	elif num [i] == 3:
+              13 | 		cont =cont / 2
+
+  [2] Linha 14: Bloco idêntico ao da linha 10
+      Trecho  : cont = cont * 3
+      Contexto:
+              13 | 		cont =cont / 2
+        >>>   14 | 	elif num [i] == 4:
+              15 | 		cont = cont * 3
+
+  [3] Linha 16: Bloco idêntico ao da linha 8
+      Trecho  : cont = cont / 2
+      Contexto:
+              15 | 		cont = cont * 3
+        >>>   16 | 	elif num [i] == 5:
+              17 | 		cont = cont / 2
+
+  [4] Linha 18: Bloco idêntico ao da linha 10
+      Trecho  : cont = cont * 3
+      Contexto:
+              17 | 		cont = cont / 2
+        >>>   18 | 	elif num [i] == 6:
+              19 | 		cont = cont * 3
+
+  [5] Linha 14: Bloco idêntico ao da linha 10
+      Trecho  : cont = cont * 3
+      Contexto:
+              13 | 		cont =cont / 2
+        >>>   14 | 	elif num [i] == 4:
+              15 | 		cont = cont * 3
+
+  [6] Linha 16: Bloco idêntico ao da linha 12
+      Trecho  : cont = cont / 2
+      Contexto:
+              15 | 		cont = cont * 3
+        >>>   16 | 	elif num [i] == 5:
+              17 | 		cont = cont / 2
+
+  [7] Linha 18: Bloco idêntico ao da linha 10
+      Trecho  : cont = cont * 3
+      Contexto:
+              17 | 		cont = cont / 2
+        >>>   18 | 	elif num [i] == 6:
+              19 | 		cont = cont * 3
+
+  [8] Linha 16: Bloco idêntico ao da linha 12
+      Trecho  : cont = cont / 2
+      Contexto:
+              15 | 		cont = cont * 3
+        >>>   16 | 	elif num [i] == 5:
+              17 | 		cont = cont / 2
+
+  [9] Linha 18: Bloco idêntico ao da linha 14
+      Trecho  : cont = cont * 3
+      Contexto:
+              17 | 		cont = cont / 2
+        >>>   18 | 	elif num [i] == 6:
+              19 | 		cont = cont * 3
+
+  [10] Linha 18: Bloco idêntico ao da linha 14
+      Trecho  : cont = cont * 3
+      Contexto:
+              17 | 		cont = cont / 2
+        >>>   18 | 	elif num [i] == 6:
+              19 | 		cont = cont * 3
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 16: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 16) / elif ... sem else
+      Contexto:
+              15 | 		cont = cont * 3
+        >>>   16 | 	elif num [i] == 5:
+              17 | 		cont = cont / 2
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 10
+
+  [1] Linha 2: Variável 'num' com nome muito curto (≤4 chars)
+      Trecho  : num = ...
+      Contexto:
+               1 | from numpy import *
+        >>>    2 | num = array(eval(input("dados lançados: ")))
+               3 | 
+
+  [2] Linha 4: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+               3 | 
+        >>>    4 | i = 0
+               5 | cont = 200
+
+  [3] Linha 5: Variável 'cont' com nome muito curto (≤4 chars)
+      Trecho  : cont = ...
+      Contexto:
+               4 | i = 0
+        >>>    5 | cont = 200
+               6 | 
+
+  [4] Linha 20: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+              19 | 		cont = cont * 3
+        >>>   20 | 	i = i + 1
+              21 | print(round(cont, 2))
+
+  [5] Linha 9: Variável 'cont' com nome muito curto (≤4 chars)
+      Trecho  : cont = ...
+      Contexto:
+               8 | 	if num[i] == 1:
+        >>>    9 | 		cont = cont / 2
+              10 | 	elif num[i] == 2:
+
+  [6] Linha 11: Variável 'cont' com nome muito curto (≤4 chars)
+      Trecho  : cont = ...
+      Contexto:
+              10 | 	elif num[i] == 2:
+        >>>   11 | 		cont = cont * 3
+              12 | 	elif num [i] == 3:
+
+  [7] Linha 13: Variável 'cont' com nome muito curto (≤4 chars)
+      Trecho  : cont = ...
+      Contexto:
+              12 | 	elif num [i] == 3:
+        >>>   13 | 		cont =cont / 2
+              14 | 	elif num [i] == 4:
+
+  [8] Linha 15: Variável 'cont' com nome muito curto (≤4 chars)
+      Trecho  : cont = ...
+      Contexto:
+              14 | 	elif num [i] == 4:
+        >>>   15 | 		cont = cont * 3
+              16 | 	elif num [i] == 5:
+
+  [9] Linha 17: Variável 'cont' com nome muito curto (≤4 chars)
+      Trecho  : cont = ...
+      Contexto:
+              16 | 	elif num [i] == 5:
+        >>>   17 | 		cont = cont / 2
+              18 | 	elif num [i] == 6:
+
+  [10] Linha 19: Variável 'cont' com nome muito curto (≤4 chars)
+      Trecho  : cont = ...
+      Contexto:
+              18 | 	elif num [i] == 6:
+        >>>   19 | 		cont = cont * 3
+              20 | 	i = i + 1
+
+======================================================================

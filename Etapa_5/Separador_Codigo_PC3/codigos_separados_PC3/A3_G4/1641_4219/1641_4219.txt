@@ -1,0 +1,100 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1641_4219.py
+Questão  : 1641
+Aluno    : 4219
+Total MCs: 2
+
+⚠️  Misconceptions detectados: A3, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | alu = array(eval(input("alunos: ")))
+     3 | tur = 0
+     4 | for i in range(size(alu)) :
+     5 | 	if alu[i] % 3 == 0 :
+     6 | 		tur = tur + 1
+     7 | print(tur)
+     8 | cont = 0
+     9 | a = 0
+    10 | vet = zeros(tur, dtype=int)
+    11 | for i in range(size(alu)) :
+    12 | 	if alu[i] %3 == 0 :
+    13 | 		vet[cont] = i
+    14 | 		cont = cont + 1
+    15 | print(vet)
+    16 | 		
+    17 | 
+    18 | 
+    19 | 
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 1
+
+  [1] Linha 9: Variável 'a' declarada mas nunca utilizada
+      Trecho  : a = ...
+      Contexto:
+               8 | cont = 0
+        >>>    9 | a = 0
+              10 | vet = zeros(tur, dtype=int)
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 7
+
+  [1] Linha 2: Variável 'alu' com nome muito curto (≤4 chars)
+      Trecho  : alu = ...
+      Contexto:
+               1 | from numpy import*
+        >>>    2 | alu = array(eval(input("alunos: ")))
+               3 | tur = 0
+
+  [2] Linha 3: Variável 'tur' com nome muito curto (≤4 chars)
+      Trecho  : tur = ...
+      Contexto:
+               2 | alu = array(eval(input("alunos: ")))
+        >>>    3 | tur = 0
+               4 | for i in range(size(alu)) :
+
+  [3] Linha 8: Variável 'cont' com nome muito curto (≤4 chars)
+      Trecho  : cont = ...
+      Contexto:
+               7 | print(tur)
+        >>>    8 | cont = 0
+               9 | a = 0
+
+  [4] Linha 9: Variável 'a' com nome muito curto (≤4 chars)
+      Trecho  : a = ...
+      Contexto:
+               8 | cont = 0
+        >>>    9 | a = 0
+              10 | vet = zeros(tur, dtype=int)
+
+  [5] Linha 10: Variável 'vet' com nome muito curto (≤4 chars)
+      Trecho  : vet = ...
+      Contexto:
+               9 | a = 0
+        >>>   10 | vet = zeros(tur, dtype=int)
+              11 | for i in range(size(alu)) :
+
+  [6] Linha 6: Variável 'tur' com nome muito curto (≤4 chars)
+      Trecho  : tur = ...
+      Contexto:
+               5 | 	if alu[i] % 3 == 0 :
+        >>>    6 | 		tur = tur + 1
+               7 | print(tur)
+
+  [7] Linha 14: Variável 'cont' com nome muito curto (≤4 chars)
+      Trecho  : cont = ...
+      Contexto:
+              13 | 		vet[cont] = i
+        >>>   14 | 		cont = cont + 1
+              15 | print(vet)
+
+======================================================================

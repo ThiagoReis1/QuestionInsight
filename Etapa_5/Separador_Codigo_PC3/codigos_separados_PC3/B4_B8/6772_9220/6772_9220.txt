@@ -1,0 +1,60 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 6772_9220.py
+Questão  : 6772
+Aluno    : 9220
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B4, B8
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | valor = float(input("Indique o valor da compra: "))
+     2 | cod = input(" Indique o codigo do pagamento: (D,P,C1,C2)").upper()
+     3 | 
+     4 | if cod == "D":
+     5 | 	desc = 0.17
+     6 | 	juros = 0
+     7 | 	
+     8 | elif cod == "P":
+     9 | 	desc = 0.17
+    10 | 	juros = 0
+    11 | 	
+    12 | elif cod == "C1":
+    13 | 	desc = 0
+    14 | 	juros = 0
+    15 | 	
+    16 | elif cod == "C2":
+    17 | 	desc = 0
+    18 | 	juros = 0.08
+    19 | 	
+    20 | total = valor - (valor * desc) + (valor * juros)
+    21 | print (round(total,2))
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B4 — Comandos repetidos dentro de blocos if-elif-else
+  Ocorrências: 1
+
+  [1] Linha 8: Bloco idêntico ao da linha 4
+      Trecho  : desc = 0.17
+      Contexto:
+               7 | 	
+        >>>    8 | elif cod == "P":
+               9 | 	desc = 0.17
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 12: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 12) / elif ... sem else
+      Contexto:
+              11 | 	
+        >>>   12 | elif cod == "C1":
+              13 | 	desc = 0
+
+======================================================================

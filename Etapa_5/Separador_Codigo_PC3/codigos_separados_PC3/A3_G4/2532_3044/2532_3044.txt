@@ -1,0 +1,108 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 2532_3044.py
+Questão  : 2532
+Aluno    : 3044
+Total MCs: 2
+
+⚠️  Misconceptions detectados: A3, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | x=float(input("carro: "))
+     2 | y=float(input("valor inicial: "))
+     3 | z=float(input("valor fixo: "))
+     4 | w=float(input("juros: "))
+     5 | qi=y
+     6 | a=0
+     7 | if(x>0 and y>0 and z>0 and w>0):
+     8 | 	while(qi<x):
+     9 | 		qi=qi+(qi*(w/100))+z
+    10 | 		a=a+1		
+    11 | 		s=round(qi,2)
+    12 | 	print(a)
+    13 | else:
+    14 | 	print("Dados incorretos")
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 1
+
+  [1] Linha 11: Variável 's' declarada mas nunca utilizada
+      Trecho  : s = ...
+      Contexto:
+              10 | 		a=a+1		
+        >>>   11 | 		s=round(qi,2)
+              12 | 	print(a)
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 9
+
+  [1] Linha 1: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+        >>>    1 | x=float(input("carro: "))
+               2 | y=float(input("valor inicial: "))
+
+  [2] Linha 2: Variável 'y' com nome muito curto (≤4 chars)
+      Trecho  : y = ...
+      Contexto:
+               1 | x=float(input("carro: "))
+        >>>    2 | y=float(input("valor inicial: "))
+               3 | z=float(input("valor fixo: "))
+
+  [3] Linha 3: Variável 'z' com nome muito curto (≤4 chars)
+      Trecho  : z = ...
+      Contexto:
+               2 | y=float(input("valor inicial: "))
+        >>>    3 | z=float(input("valor fixo: "))
+               4 | w=float(input("juros: "))
+
+  [4] Linha 4: Variável 'w' com nome muito curto (≤4 chars)
+      Trecho  : w = ...
+      Contexto:
+               3 | z=float(input("valor fixo: "))
+        >>>    4 | w=float(input("juros: "))
+               5 | qi=y
+
+  [5] Linha 5: Variável 'qi' com nome muito curto (≤4 chars)
+      Trecho  : qi = ...
+      Contexto:
+               4 | w=float(input("juros: "))
+        >>>    5 | qi=y
+               6 | a=0
+
+  [6] Linha 6: Variável 'a' com nome muito curto (≤4 chars)
+      Trecho  : a = ...
+      Contexto:
+               5 | qi=y
+        >>>    6 | a=0
+               7 | if(x>0 and y>0 and z>0 and w>0):
+
+  [7] Linha 9: Variável 'qi' com nome muito curto (≤4 chars)
+      Trecho  : qi = ...
+      Contexto:
+               8 | 	while(qi<x):
+        >>>    9 | 		qi=qi+(qi*(w/100))+z
+              10 | 		a=a+1		
+
+  [8] Linha 10: Variável 'a' com nome muito curto (≤4 chars)
+      Trecho  : a = ...
+      Contexto:
+               9 | 		qi=qi+(qi*(w/100))+z
+        >>>   10 | 		a=a+1		
+              11 | 		s=round(qi,2)
+
+  [9] Linha 11: Variável 's' com nome muito curto (≤4 chars)
+      Trecho  : s = ...
+      Contexto:
+              10 | 		a=a+1		
+        >>>   11 | 		s=round(qi,2)
+              12 | 	print(a)
+
+======================================================================

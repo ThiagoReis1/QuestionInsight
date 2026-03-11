@@ -1,0 +1,80 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1648_4183.py
+Questão  : 1648
+Aluno    : 4183
+Total MCs: 2
+
+⚠️  Misconceptions detectados: A3, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import *
+     2 | v = array(eval(input("Digite: ")))
+     3 | d = 0
+     4 | for i in range(size(v)):
+     5 | 	if (v[i] < (size(v)*70)//100):
+     6 | 		d = d + 1
+     7 | print(d)
+     8 | do = 0
+     9 | for i in range(size(v)):
+    10 | 	if(v[i] < (size(v)*70)//100):
+    11 | 		d = v[i]
+    12 | 	
+    13 | print(v)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 1
+
+  [1] Linha 8: Variável 'do' declarada mas nunca utilizada
+      Trecho  : do = ...
+      Contexto:
+               7 | print(d)
+        >>>    8 | do = 0
+               9 | for i in range(size(v)):
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 5
+
+  [1] Linha 2: Variável 'v' com nome muito curto (≤4 chars)
+      Trecho  : v = ...
+      Contexto:
+               1 | from numpy import *
+        >>>    2 | v = array(eval(input("Digite: ")))
+               3 | d = 0
+
+  [2] Linha 3: Variável 'd' com nome muito curto (≤4 chars)
+      Trecho  : d = ...
+      Contexto:
+               2 | v = array(eval(input("Digite: ")))
+        >>>    3 | d = 0
+               4 | for i in range(size(v)):
+
+  [3] Linha 8: Variável 'do' com nome muito curto (≤4 chars)
+      Trecho  : do = ...
+      Contexto:
+               7 | print(d)
+        >>>    8 | do = 0
+               9 | for i in range(size(v)):
+
+  [4] Linha 6: Variável 'd' com nome muito curto (≤4 chars)
+      Trecho  : d = ...
+      Contexto:
+               5 | 	if (v[i] < (size(v)*70)//100):
+        >>>    6 | 		d = d + 1
+               7 | print(d)
+
+  [5] Linha 11: Variável 'd' com nome muito curto (≤4 chars)
+      Trecho  : d = ...
+      Contexto:
+              10 | 	if(v[i] < (size(v)*70)//100):
+        >>>   11 | 		d = v[i]
+              12 | 	
+
+======================================================================

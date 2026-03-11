@@ -1,0 +1,60 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 6778_9219.py
+Questão  : 6778
+Aluno    : 9219
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | n = int(input("Ano de nascimento: "))
+     2 | p = input("(P/J)")
+     3 | 
+     4 | if (2023 - n >= 21) and ((p == "B") or (p == "b")):
+     5 | 	print("sim")
+     6 | 	print((2023 - n) - 21)
+     7 | elif (2023 - n < 21) and ((p == "B") or (p == "b")):
+     8 | 	print("nao")
+     9 | 	print(21 -(2023-n))
+    10 | elif (2023 - n >= 20) and ((p == "J") or (p == "j")):
+    11 | 	print("sim")
+    12 | 	print((2023 - n) - 20)
+    13 | elif (2023 - n< 20) and ((p == "J") or (p== "j")):
+    14 | 	print("nao")
+    15 | 	print(20 - (2023-n))
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 10: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 10) / elif ... sem else
+      Contexto:
+               9 | 	print(21 -(2023-n))
+        >>>   10 | elif (2023 - n >= 20) and ((p == "J") or (p == "j")):
+              11 | 	print("sim")
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 2
+
+  [1] Linha 1: Variável 'n' com nome muito curto (≤4 chars)
+      Trecho  : n = ...
+      Contexto:
+        >>>    1 | n = int(input("Ano de nascimento: "))
+               2 | p = input("(P/J)")
+
+  [2] Linha 2: Variável 'p' com nome muito curto (≤4 chars)
+      Trecho  : p = ...
+      Contexto:
+               1 | n = int(input("Ano de nascimento: "))
+        >>>    2 | p = input("(P/J)")
+               3 | 
+
+======================================================================

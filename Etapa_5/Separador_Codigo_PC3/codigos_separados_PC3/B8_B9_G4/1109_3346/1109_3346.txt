@@ -1,0 +1,79 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1109_3346.py
+Questão  : 1109
+Aluno    : 3346
+Total MCs: 3
+
+⚠️  Misconceptions detectados: B8, B9, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | a=int(input("Age:"))
+     2 | p=float(input("peso:"))
+     3 | print("Entradas:",a,"anos e",p,"kg")
+     4 | if((a>=0 and a<=130) and (p>0.0 and p<=550.0)):
+     5 | 	if(a>=12): 
+     6 | 		if(p>=60):
+     7 | 			print("Dosagem: 1000 mg")
+     8 | 		else:
+     9 | 			print("Dosagem: 875 mg")
+    10 | 	elif(a<12):
+    11 | 		if(p<=5):
+    12 | 			print("Dosagem: 75 mg")
+    13 | 		elif(p>5 and p<=9):
+    14 | 			print("Dosagem: 125 mg ")
+    15 | 		elif(p>9 and p<=16):
+    16 | 			print("Dosagem: 250 mg ")
+    17 | 		elif(p>16 and p<=24):
+    18 | 			print("Dosagem: 375 mg")
+    19 | 		elif(p>24 and p<=30):
+    20 | 			print("Dosagem: 500 mg")
+    21 | 		else:
+    22 | 			print("Dosagem: 750 mg ")
+    23 | else:
+    24 | 	print("Dados invalidos")
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 5: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 5) / elif ... sem else
+      Contexto:
+               4 | if((a>=0 and a<=130) and (p>0.0 and p<=550.0)):
+        >>>    5 | 	if(a>=12): 
+               6 | 		if(p>=60):
+
+▶ B9 — elif/else retestando condições já verificadas
+  Ocorrências: 1
+
+  [1] Linha 10: elif retesta condição inversa do if da linha 5
+      Trecho  : if a >= 12 ... elif a < 12
+      Contexto:
+               9 | 			print("Dosagem: 875 mg")
+        >>>   10 | 	elif(a<12):
+              11 | 		if(p<=5):
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 2
+
+  [1] Linha 1: Variável 'a' com nome muito curto (≤4 chars)
+      Trecho  : a = ...
+      Contexto:
+        >>>    1 | a=int(input("Age:"))
+               2 | p=float(input("peso:"))
+
+  [2] Linha 2: Variável 'p' com nome muito curto (≤4 chars)
+      Trecho  : p = ...
+      Contexto:
+               1 | a=int(input("Age:"))
+        >>>    2 | p=float(input("peso:"))
+               3 | print("Entradas:",a,"anos e",p,"kg")
+
+======================================================================

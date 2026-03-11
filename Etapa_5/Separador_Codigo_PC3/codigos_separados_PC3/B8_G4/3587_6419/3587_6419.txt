@@ -1,0 +1,105 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 3587_6419.py
+Questão  : 3587
+Aluno    : 6419
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | x = array(eval(input("aneis: ")))
+     3 | 
+     4 | p = 100
+     5 | i = 0
+     6 | 
+     7 | while i<size(x):
+     8 | 	if x[i] == 1:
+     9 | 		p = p * 5
+    10 | 	elif x[i] == 2:
+    11 | 		p = p * 3
+    12 | 	elif x[i] == 3:
+    13 | 		p = p + 0
+    14 | 	elif x[i] == 4:
+    15 | 		p = p / 2
+    16 | 	i = i + 1
+    17 | print(round(p, 2))
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 12: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 12) / elif ... sem else
+      Contexto:
+              11 | 		p = p * 3
+        >>>   12 | 	elif x[i] == 3:
+              13 | 		p = p + 0
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 8
+
+  [1] Linha 2: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+               1 | from numpy import*
+        >>>    2 | x = array(eval(input("aneis: ")))
+               3 | 
+
+  [2] Linha 4: Variável 'p' com nome muito curto (≤4 chars)
+      Trecho  : p = ...
+      Contexto:
+               3 | 
+        >>>    4 | p = 100
+               5 | i = 0
+
+  [3] Linha 5: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+               4 | p = 100
+        >>>    5 | i = 0
+               6 | 
+
+  [4] Linha 16: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+              15 | 		p = p / 2
+        >>>   16 | 	i = i + 1
+              17 | print(round(p, 2))
+
+  [5] Linha 9: Variável 'p' com nome muito curto (≤4 chars)
+      Trecho  : p = ...
+      Contexto:
+               8 | 	if x[i] == 1:
+        >>>    9 | 		p = p * 5
+              10 | 	elif x[i] == 2:
+
+  [6] Linha 11: Variável 'p' com nome muito curto (≤4 chars)
+      Trecho  : p = ...
+      Contexto:
+              10 | 	elif x[i] == 2:
+        >>>   11 | 		p = p * 3
+              12 | 	elif x[i] == 3:
+
+  [7] Linha 13: Variável 'p' com nome muito curto (≤4 chars)
+      Trecho  : p = ...
+      Contexto:
+              12 | 	elif x[i] == 3:
+        >>>   13 | 		p = p + 0
+              14 | 	elif x[i] == 4:
+
+  [8] Linha 15: Variável 'p' com nome muito curto (≤4 chars)
+      Trecho  : p = ...
+      Contexto:
+              14 | 	elif x[i] == 4:
+        >>>   15 | 		p = p / 2
+              16 | 	i = i + 1
+
+======================================================================

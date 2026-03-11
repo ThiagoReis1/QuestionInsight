@@ -1,0 +1,104 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 5237_6613.py
+Questão  : 5237
+Aluno    : 6613
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B4, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | a = int(input("n1: "))
+     2 | b = int(input("n2: "))
+     3 | c = int(input("n3: "))
+     4 | 
+     5 | x= a%2
+     6 | y= b%2
+     7 | z= c%2
+     8 | 
+     9 | if (x==0) and (y==0) and (z==0):
+    10 | 	print("SIM")
+    11 | elif(x==0) and (y==0):
+    12 | 	print("SIM")
+    13 | elif(y==0) and (z==0):
+    14 | 	print("SIM")
+    15 | else:
+    16 | 	print("NAO")
+    17 | 	
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B4 — Comandos repetidos dentro de blocos if-elif-else
+  Ocorrências: 3
+
+  [1] Linha 11: Bloco idêntico ao da linha 9
+      Trecho  : print('SIM')
+      Contexto:
+              10 | 	print("SIM")
+        >>>   11 | elif(x==0) and (y==0):
+              12 | 	print("SIM")
+
+  [2] Linha 13: Bloco idêntico ao da linha 9
+      Trecho  : print('SIM')
+      Contexto:
+              12 | 	print("SIM")
+        >>>   13 | elif(y==0) and (z==0):
+              14 | 	print("SIM")
+
+  [3] Linha 13: Bloco idêntico ao da linha 11
+      Trecho  : print('SIM')
+      Contexto:
+              12 | 	print("SIM")
+        >>>   13 | elif(y==0) and (z==0):
+              14 | 	print("SIM")
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 6
+
+  [1] Linha 1: Variável 'a' com nome muito curto (≤4 chars)
+      Trecho  : a = ...
+      Contexto:
+        >>>    1 | a = int(input("n1: "))
+               2 | b = int(input("n2: "))
+
+  [2] Linha 2: Variável 'b' com nome muito curto (≤4 chars)
+      Trecho  : b = ...
+      Contexto:
+               1 | a = int(input("n1: "))
+        >>>    2 | b = int(input("n2: "))
+               3 | c = int(input("n3: "))
+
+  [3] Linha 3: Variável 'c' com nome muito curto (≤4 chars)
+      Trecho  : c = ...
+      Contexto:
+               2 | b = int(input("n2: "))
+        >>>    3 | c = int(input("n3: "))
+               4 | 
+
+  [4] Linha 5: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+               4 | 
+        >>>    5 | x= a%2
+               6 | y= b%2
+
+  [5] Linha 6: Variável 'y' com nome muito curto (≤4 chars)
+      Trecho  : y = ...
+      Contexto:
+               5 | x= a%2
+        >>>    6 | y= b%2
+               7 | z= c%2
+
+  [6] Linha 7: Variável 'z' com nome muito curto (≤4 chars)
+      Trecho  : z = ...
+      Contexto:
+               6 | y= b%2
+        >>>    7 | z= c%2
+               8 | 
+
+======================================================================

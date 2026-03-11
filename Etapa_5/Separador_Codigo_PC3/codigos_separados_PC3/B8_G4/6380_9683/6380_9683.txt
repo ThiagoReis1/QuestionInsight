@@ -1,0 +1,62 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 6380_9683.py
+Questão  : 6380
+Aluno    : 9683
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import *
+     2 | 
+     3 | a = zeros(4, dtype=int)
+     4 | 
+     5 | v = input("Insira o caractere:slaxd").upper().split(",")
+     6 | 
+     7 | for x in v:
+     8 | 	if x == "E":
+     9 | 		a[0] += 1
+    10 | 	elif x == "V":
+    11 | 		a[1] += 1
+    12 | 	elif x == "A":
+    13 | 		a[2] += 1 
+    14 | 	elif x == "D":
+    15 | 		a[3] += 1
+    16 | print(a)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 12: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 12) / elif ... sem else
+      Contexto:
+              11 | 		a[1] += 1
+        >>>   12 | 	elif x == "A":
+              13 | 		a[2] += 1 
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 2
+
+  [1] Linha 3: Variável 'a' com nome muito curto (≤4 chars)
+      Trecho  : a = ...
+      Contexto:
+               2 | 
+        >>>    3 | a = zeros(4, dtype=int)
+               4 | 
+
+  [2] Linha 5: Variável 'v' com nome muito curto (≤4 chars)
+      Trecho  : v = ...
+      Contexto:
+               4 | 
+        >>>    5 | v = input("Insira o caractere:slaxd").upper().split(",")
+               6 | 
+
+======================================================================

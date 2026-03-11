@@ -1,0 +1,102 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 2536_3443.py
+Questão  : 2536
+Aluno    : 3443
+Total MCs: 2
+
+⚠️  Misconceptions detectados: A3, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | c = float(input("Valor Inicial: "))
+     2 | d = float(input("Valor Depositado: "))
+     3 | m = float(input("Valor mensal fixo:"))
+     4 | tx = float(input("juros: "))
+     5 | mes = 0
+     6 | cont = 0
+     7 | if(c > 0 and d > 0 and m > 0 and tx > 0):
+     8 | 	while(d < c):
+     9 | 		d = d + (d* (tx / 100)) + m
+    10 | 		d = round(d,2) 
+    11 | 		mes += 1
+    12 | 	print(mes)	
+    13 | else:
+    14 | 	print("Dados incorretos")
+    15 | 	
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 1
+
+  [1] Linha 6: Variável 'cont' declarada mas nunca utilizada
+      Trecho  : cont = ...
+      Contexto:
+               5 | mes = 0
+        >>>    6 | cont = 0
+               7 | if(c > 0 and d > 0 and m > 0 and tx > 0):
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 8
+
+  [1] Linha 1: Variável 'c' com nome muito curto (≤4 chars)
+      Trecho  : c = ...
+      Contexto:
+        >>>    1 | c = float(input("Valor Inicial: "))
+               2 | d = float(input("Valor Depositado: "))
+
+  [2] Linha 2: Variável 'd' com nome muito curto (≤4 chars)
+      Trecho  : d = ...
+      Contexto:
+               1 | c = float(input("Valor Inicial: "))
+        >>>    2 | d = float(input("Valor Depositado: "))
+               3 | m = float(input("Valor mensal fixo:"))
+
+  [3] Linha 3: Variável 'm' com nome muito curto (≤4 chars)
+      Trecho  : m = ...
+      Contexto:
+               2 | d = float(input("Valor Depositado: "))
+        >>>    3 | m = float(input("Valor mensal fixo:"))
+               4 | tx = float(input("juros: "))
+
+  [4] Linha 4: Variável 'tx' com nome muito curto (≤4 chars)
+      Trecho  : tx = ...
+      Contexto:
+               3 | m = float(input("Valor mensal fixo:"))
+        >>>    4 | tx = float(input("juros: "))
+               5 | mes = 0
+
+  [5] Linha 5: Variável 'mes' com nome muito curto (≤4 chars)
+      Trecho  : mes = ...
+      Contexto:
+               4 | tx = float(input("juros: "))
+        >>>    5 | mes = 0
+               6 | cont = 0
+
+  [6] Linha 6: Variável 'cont' com nome muito curto (≤4 chars)
+      Trecho  : cont = ...
+      Contexto:
+               5 | mes = 0
+        >>>    6 | cont = 0
+               7 | if(c > 0 and d > 0 and m > 0 and tx > 0):
+
+  [7] Linha 9: Variável 'd' com nome muito curto (≤4 chars)
+      Trecho  : d = ...
+      Contexto:
+               8 | 	while(d < c):
+        >>>    9 | 		d = d + (d* (tx / 100)) + m
+              10 | 		d = round(d,2) 
+
+  [8] Linha 10: Variável 'd' com nome muito curto (≤4 chars)
+      Trecho  : d = ...
+      Contexto:
+               9 | 		d = d + (d* (tx / 100)) + m
+        >>>   10 | 		d = round(d,2) 
+              11 | 		mes += 1
+
+======================================================================

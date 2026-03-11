@@ -1,0 +1,66 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 6374_9889.py
+Questão  : 6374
+Aluno    : 9889
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import *
+     2 | 
+     3 | p = input("Digite 'O' para oftalmo, 'D' para dermato, 'N' para neuro e 'C' para cardio: ").upper().split(',')
+     4 | 
+     5 | qpa = zeros(4, dtype = int)
+     6 | 
+     7 | for i in p:
+     8 | 	if (i == 'O'):
+     9 | 		qpa[0] = qpa[0] + 1
+    10 | 		
+    11 | 	elif (i == 'D'):
+    12 | 		qpa[1] = qpa[1] + 1
+    13 | 		
+    14 | 	elif (i == 'N'):
+    15 | 		qpa[2] = qpa[2] + 1
+    16 | 		
+    17 | 	elif (i == 'C'):
+    18 | 		qpa[3] = qpa[3] + 1
+    19 | 		
+    20 | print(qpa)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 14: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 14) / elif ... sem else
+      Contexto:
+              13 | 		
+        >>>   14 | 	elif (i == 'N'):
+              15 | 		qpa[2] = qpa[2] + 1
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 2
+
+  [1] Linha 3: Variável 'p' com nome muito curto (≤4 chars)
+      Trecho  : p = ...
+      Contexto:
+               2 | 
+        >>>    3 | p = input("Digite 'O' para oftalmo, 'D' para dermato, 'N' para neuro e 'C' para cardio: ").upper().split(',')
+               4 | 
+
+  [2] Linha 5: Variável 'qpa' com nome muito curto (≤4 chars)
+      Trecho  : qpa = ...
+      Contexto:
+               4 | 
+        >>>    5 | qpa = zeros(4, dtype = int)
+               6 | 
+
+======================================================================

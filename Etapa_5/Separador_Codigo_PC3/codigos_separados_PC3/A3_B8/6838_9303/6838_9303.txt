@@ -1,0 +1,75 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 6838_9303.py
+Questão  : 6838
+Aluno    : 9303
+Total MCs: 2
+
+⚠️  Misconceptions detectados: A3, B8
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | produtos = input("produtos: ")
+     2 | total = 0
+     3 | doces = 0
+     4 | salgados = 0
+     5 | integrais = 0
+     6 | 
+     7 | i = 0
+     8 | while i < len(produtos):
+     9 | 	produto = produtos[i]
+    10 | 	if produto == 'D':
+    11 | 		doces +=1
+    12 | 		total += 2.25
+    13 | 	elif produto == 'S':
+    14 | 		salgados += 1
+    15 | 		total += 4.00
+    16 | 	elif produto == 'I':
+    17 | 		integrais += 1
+    18 | 		total += 6.90
+    19 | 	i += 1
+    20 | 
+    21 | total = round(total,2)
+    22 | print(total)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 3
+
+  [1] Linha 3: Variável 'doces' declarada mas nunca utilizada
+      Trecho  : doces = ...
+      Contexto:
+               2 | total = 0
+        >>>    3 | doces = 0
+               4 | salgados = 0
+
+  [2] Linha 4: Variável 'salgados' declarada mas nunca utilizada
+      Trecho  : salgados = ...
+      Contexto:
+               3 | doces = 0
+        >>>    4 | salgados = 0
+               5 | integrais = 0
+
+  [3] Linha 5: Variável 'integrais' declarada mas nunca utilizada
+      Trecho  : integrais = ...
+      Contexto:
+               4 | salgados = 0
+        >>>    5 | integrais = 0
+               6 | 
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 13: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 13) / elif ... sem else
+      Contexto:
+              12 | 		total += 2.25
+        >>>   13 | 	elif produto == 'S':
+              14 | 		salgados += 1
+
+======================================================================

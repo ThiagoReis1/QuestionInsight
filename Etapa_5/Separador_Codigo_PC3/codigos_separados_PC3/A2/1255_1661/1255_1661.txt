@@ -1,0 +1,56 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1255_1661.py
+Questão  : 1255
+Aluno    : 1661
+Total MCs: 1
+
+⚠️  Misconceptions detectados: A2
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import *
+     2 | vetor = array(eval(input("digite o vetor: ")))
+     3 | vetor1 = array(zeros(2, dtype = int))
+     4 | for i in range (0, size(vetor)):
+     5 | 	a = min(vetor)
+     6 | 	b = max(vetor)
+     7 | c = (0.65 * a) + (0.35 * b)
+     8 | d = (0.45 * a) + (0.55 * b)
+     9 | cont = 0
+    10 | for i in range (size(vetor)):
+    11 | 	if(vetor[i] >= a and vetor[i] < c):
+    12 | 		cont = cont + 1
+    13 | 	else:
+    14 | 		cont = cont
+    15 | i = 0
+    16 | cont1 = 0
+    17 | while (i < size(vetor)):
+    18 | 		if (vetor[i] >= c and vetor[i] < d):
+    19 | 			cont1 = cont1 +1
+    20 | 			i = i + 1
+    21 | 		else:
+    22 | 			i = i + 1
+    23 | 			
+    24 | vetor1[0] = cont
+    25 | vetor1[1] = cont1
+    26 | print(vetor1)
+    27 | 	
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A2 — Variável atribuída a si mesma
+  Ocorrências: 1
+
+  [1] Linha 14: 'cont' atribuído a si mesmo
+      Trecho  : cont = cont
+      Contexto:
+              13 | 	else:
+        >>>   14 | 		cont = cont
+              15 | i = 0
+
+======================================================================

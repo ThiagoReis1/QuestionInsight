@@ -1,0 +1,67 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1369_2408.py
+Questão  : 1369
+Aluno    : 2408
+Total MCs: 2
+
+⚠️  Misconceptions detectados: A3, A4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | flawless=float(input())
+     2 | soul=float(input())
+     3 | oleo=float(input())
+     4 | 
+     5 | flawless=4.0
+     6 | soul=3.14
+     7 | oleo=10.0
+     8 | 
+     9 | r=min(x,y,z)
+    10 | print=(r)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 4
+
+  [1] Linha 1: Variável 'flawless' declarada mas nunca utilizada
+      Trecho  : flawless = ...
+      Contexto:
+        >>>    1 | flawless=float(input())
+               2 | soul=float(input())
+
+  [2] Linha 2: Variável 'soul' declarada mas nunca utilizada
+      Trecho  : soul = ...
+      Contexto:
+               1 | flawless=float(input())
+        >>>    2 | soul=float(input())
+               3 | oleo=float(input())
+
+  [3] Linha 3: Variável 'oleo' declarada mas nunca utilizada
+      Trecho  : oleo = ...
+      Contexto:
+               2 | soul=float(input())
+        >>>    3 | oleo=float(input())
+               4 | 
+
+  [4] Linha 10: Variável 'print' declarada mas nunca utilizada
+      Trecho  : print = ...
+      Contexto:
+               9 | r=min(x,y,z)
+        >>>   10 | print=(r)
+
+▶ A4 — Redefinição de built-in
+  Ocorrências: 1
+
+  [1] Linha 10: Built-in 'print' redefinido como variável
+      Trecho  : print = r
+      Contexto:
+               9 | r=min(x,y,z)
+        >>>   10 | print=(r)
+
+======================================================================

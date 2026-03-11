@@ -1,0 +1,64 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 6776_9687.py
+Questão  : 6776
+Aluno    : 9687
+Total MCs: 3
+
+⚠️  Misconceptions detectados: A3, B9, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | ano = int(input("ano de nascimento: "))
+     2 | pais = input("pais: ").upper
+     3 | if ano >= 18:
+     4 | 	print("B")
+     5 | elif ano < 18:
+     6 | 	print("R")
+     7 | 
+     8 | else: 
+     9 | 	print("invalido")
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 1
+
+  [1] Linha 2: Variável 'pais' declarada mas nunca utilizada
+      Trecho  : pais = ...
+      Contexto:
+               1 | ano = int(input("ano de nascimento: "))
+        >>>    2 | pais = input("pais: ").upper
+               3 | if ano >= 18:
+
+▶ B9 — elif/else retestando condições já verificadas
+  Ocorrências: 1
+
+  [1] Linha 5: elif retesta condição inversa do if da linha 3
+      Trecho  : if ano >= 18 ... elif ano < 18
+      Contexto:
+               4 | 	print("B")
+        >>>    5 | elif ano < 18:
+               6 | 	print("R")
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 2
+
+  [1] Linha 1: Variável 'ano' com nome muito curto (≤4 chars)
+      Trecho  : ano = ...
+      Contexto:
+        >>>    1 | ano = int(input("ano de nascimento: "))
+               2 | pais = input("pais: ").upper
+
+  [2] Linha 2: Variável 'pais' com nome muito curto (≤4 chars)
+      Trecho  : pais = ...
+      Contexto:
+               1 | ano = int(input("ano de nascimento: "))
+        >>>    2 | pais = input("pais: ").upper
+               3 | if ano >= 18:
+
+======================================================================

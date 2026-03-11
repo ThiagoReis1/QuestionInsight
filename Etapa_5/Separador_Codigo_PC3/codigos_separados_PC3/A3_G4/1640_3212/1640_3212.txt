@@ -1,0 +1,110 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1640_3212.py
+Questão  : 1640
+Aluno    : 3212
+Total MCs: 2
+
+⚠️  Misconceptions detectados: A3, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | v=array(eval(input("vetor:")))
+     3 | 
+     4 | npar=0
+     5 | for i in range(size(v)):
+     6 | 	if(v[i] % 2 != 0):
+     7 | 		npar=npar+1
+     8 | 		
+     9 | 
+    10 | k=0
+    11 | f=0
+    12 | d=zeros(npar, dtype=int)
+    13 | for i in range(size(v)):
+    14 | 	if(v[i] % 2 != 0):
+    15 | 		k=k+1
+    16 | 		d=d+i
+    17 | 	
+    18 | 	
+    19 | print(npar)
+    20 | print(d)
+    21 | 		
+    22 | 	
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 1
+
+  [1] Linha 11: Variável 'f' declarada mas nunca utilizada
+      Trecho  : f = ...
+      Contexto:
+              10 | k=0
+        >>>   11 | f=0
+              12 | d=zeros(npar, dtype=int)
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 8
+
+  [1] Linha 2: Variável 'v' com nome muito curto (≤4 chars)
+      Trecho  : v = ...
+      Contexto:
+               1 | from numpy import*
+        >>>    2 | v=array(eval(input("vetor:")))
+               3 | 
+
+  [2] Linha 4: Variável 'npar' com nome muito curto (≤4 chars)
+      Trecho  : npar = ...
+      Contexto:
+               3 | 
+        >>>    4 | npar=0
+               5 | for i in range(size(v)):
+
+  [3] Linha 10: Variável 'k' com nome muito curto (≤4 chars)
+      Trecho  : k = ...
+      Contexto:
+               9 | 
+        >>>   10 | k=0
+              11 | f=0
+
+  [4] Linha 11: Variável 'f' com nome muito curto (≤4 chars)
+      Trecho  : f = ...
+      Contexto:
+              10 | k=0
+        >>>   11 | f=0
+              12 | d=zeros(npar, dtype=int)
+
+  [5] Linha 12: Variável 'd' com nome muito curto (≤4 chars)
+      Trecho  : d = ...
+      Contexto:
+              11 | f=0
+        >>>   12 | d=zeros(npar, dtype=int)
+              13 | for i in range(size(v)):
+
+  [6] Linha 7: Variável 'npar' com nome muito curto (≤4 chars)
+      Trecho  : npar = ...
+      Contexto:
+               6 | 	if(v[i] % 2 != 0):
+        >>>    7 | 		npar=npar+1
+               8 | 		
+
+  [7] Linha 15: Variável 'k' com nome muito curto (≤4 chars)
+      Trecho  : k = ...
+      Contexto:
+              14 | 	if(v[i] % 2 != 0):
+        >>>   15 | 		k=k+1
+              16 | 		d=d+i
+
+  [8] Linha 16: Variável 'd' com nome muito curto (≤4 chars)
+      Trecho  : d = ...
+      Contexto:
+              15 | 		k=k+1
+        >>>   16 | 		d=d+i
+              17 | 	
+
+======================================================================

@@ -1,0 +1,81 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1658_3181.py
+Questão  : 1658
+Aluno    : 3181
+Total MCs: 2
+
+⚠️  Misconceptions detectados: A3, B8
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | x = input("").upper().split(',')
+     3 | quantidade = 0
+     4 | quant_chn = 0
+     5 | quant_jpn = 0
+     6 | quant_kor = 0
+     7 | quant_mgl = 0
+     8 | quant_tha = 0
+     9 | res = zeros(5, dtype=int)
+    10 | for i in range(size(x)):
+    11 | 	if(x[i] == 'JPN'):
+    12 | 		quant_jpn+=1
+    13 | 	elif(x[i] == 'CHN'):
+    14 | 		quant_chn+=1
+    15 | 	elif(x[i] == 'KOR'):
+    16 | 		quant_kor+=1
+    17 | 	elif(x[i] == 'MGL'):
+    18 | 		quant_mgl+=1
+    19 | 	elif(x[i] == 'THA'):
+    20 | 		quant_tha+=1
+    21 | 
+    22 | for k in range(size(x)):
+    23 | 	if(k == 0):
+    24 | 		res[0] = quant_chn
+    25 | 	elif(k == 1):
+    26 | 		res[1] = quant_jpn
+    27 | 	elif(k == 2):
+    28 | 		res[2] = quant_kor
+    29 | 	elif(k == 3):
+    30 | 		res[3] = quant_mgl
+    31 | 	elif(k == 4):
+    32 | 		res[4] = quant_tha
+    33 | r = max(res)
+    34 | print(r)
+    35 | print(res)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 1
+
+  [1] Linha 3: Variável 'quantidade' declarada mas nunca utilizada
+      Trecho  : quantidade = ...
+      Contexto:
+               2 | x = input("").upper().split(',')
+        >>>    3 | quantidade = 0
+               4 | quant_chn = 0
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 2
+
+  [1] Linha 17: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 17) / elif ... sem else
+      Contexto:
+              16 | 		quant_kor+=1
+        >>>   17 | 	elif(x[i] == 'MGL'):
+              18 | 		quant_mgl+=1
+
+  [2] Linha 29: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 29) / elif ... sem else
+      Contexto:
+              28 | 		res[2] = quant_kor
+        >>>   29 | 	elif(k == 3):
+              30 | 		res[3] = quant_mgl
+
+======================================================================

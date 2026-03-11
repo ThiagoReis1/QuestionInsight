@@ -1,0 +1,152 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 3590_9663.py
+Questão  : 3590
+Aluno    : 9663
+Total MCs: 4
+
+⚠️  Misconceptions detectados: A2, B4, B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | 
+     3 | a = array(eval(input("Digite o valor para a variavel do vetor : ")))
+     4 | i = 0
+     5 | soma = 0
+     6 | 
+     7 | while i < size(a):
+     8 | 	if a[i] == 1:
+     9 | 		soma = soma + 10
+    10 | 	elif a[i] == 2:
+    11 | 		soma = soma + 5
+    12 | 	elif a[i] == 3:
+    13 | 		soma = soma
+    14 | 	elif a[i] == 4:
+    15 | 		soma = soma + 5 
+    16 | 	elif a[i] == 5:
+    17 | 		soma = soma + 20
+    18 | 	elif a[i] == 6:
+    19 | 		soma = soma + 10
+    20 | 	i+= 1
+    21 | print(soma)
+    22 | 		
+    23 | 	
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A2 — Variável atribuída a si mesma
+  Ocorrências: 1
+
+  [1] Linha 13: 'soma' atribuído a si mesmo
+      Trecho  : soma = soma
+      Contexto:
+              12 | 	elif a[i] == 3:
+        >>>   13 | 		soma = soma
+              14 | 	elif a[i] == 4:
+
+▶ B4 — Comandos repetidos dentro de blocos if-elif-else
+  Ocorrências: 3
+
+  [1] Linha 14: Bloco idêntico ao da linha 10
+      Trecho  : soma = soma + 5
+      Contexto:
+              13 | 		soma = soma
+        >>>   14 | 	elif a[i] == 4:
+              15 | 		soma = soma + 5 
+
+  [2] Linha 18: Bloco idêntico ao da linha 8
+      Trecho  : soma = soma + 10
+      Contexto:
+              17 | 		soma = soma + 20
+        >>>   18 | 	elif a[i] == 6:
+              19 | 		soma = soma + 10
+
+  [3] Linha 14: Bloco idêntico ao da linha 10
+      Trecho  : soma = soma + 5
+      Contexto:
+              13 | 		soma = soma
+        >>>   14 | 	elif a[i] == 4:
+              15 | 		soma = soma + 5 
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 16: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 16) / elif ... sem else
+      Contexto:
+              15 | 		soma = soma + 5 
+        >>>   16 | 	elif a[i] == 5:
+              17 | 		soma = soma + 20
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 9
+
+  [1] Linha 3: Variável 'a' com nome muito curto (≤4 chars)
+      Trecho  : a = ...
+      Contexto:
+               2 | 
+        >>>    3 | a = array(eval(input("Digite o valor para a variavel do vetor : ")))
+               4 | i = 0
+
+  [2] Linha 4: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+               3 | a = array(eval(input("Digite o valor para a variavel do vetor : ")))
+        >>>    4 | i = 0
+               5 | soma = 0
+
+  [3] Linha 5: Variável 'soma' com nome muito curto (≤4 chars)
+      Trecho  : soma = ...
+      Contexto:
+               4 | i = 0
+        >>>    5 | soma = 0
+               6 | 
+
+  [4] Linha 9: Variável 'soma' com nome muito curto (≤4 chars)
+      Trecho  : soma = ...
+      Contexto:
+               8 | 	if a[i] == 1:
+        >>>    9 | 		soma = soma + 10
+              10 | 	elif a[i] == 2:
+
+  [5] Linha 11: Variável 'soma' com nome muito curto (≤4 chars)
+      Trecho  : soma = ...
+      Contexto:
+              10 | 	elif a[i] == 2:
+        >>>   11 | 		soma = soma + 5
+              12 | 	elif a[i] == 3:
+
+  [6] Linha 13: Variável 'soma' com nome muito curto (≤4 chars)
+      Trecho  : soma = ...
+      Contexto:
+              12 | 	elif a[i] == 3:
+        >>>   13 | 		soma = soma
+              14 | 	elif a[i] == 4:
+
+  [7] Linha 15: Variável 'soma' com nome muito curto (≤4 chars)
+      Trecho  : soma = ...
+      Contexto:
+              14 | 	elif a[i] == 4:
+        >>>   15 | 		soma = soma + 5 
+              16 | 	elif a[i] == 5:
+
+  [8] Linha 17: Variável 'soma' com nome muito curto (≤4 chars)
+      Trecho  : soma = ...
+      Contexto:
+              16 | 	elif a[i] == 5:
+        >>>   17 | 		soma = soma + 20
+              18 | 	elif a[i] == 6:
+
+  [9] Linha 19: Variável 'soma' com nome muito curto (≤4 chars)
+      Trecho  : soma = ...
+      Contexto:
+              18 | 	elif a[i] == 6:
+        >>>   19 | 		soma = soma + 10
+              20 | 	i+= 1
+
+======================================================================

@@ -1,0 +1,93 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1248_1518.py
+Questão  : 1248
+Aluno    : 1518
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | 
+     3 | v = array(eval(input("digite vetor:")))
+     4 | 	
+     5 | A = min(v)
+     6 | B = max(v)
+     7 | 
+     8 | C = (0.75 * A) + (0.25 * B)
+     9 | D = (0.25 * A) + (0.75 * B)
+    10 | 
+    11 | x = array(zeros(2,dtype = int))
+    12 | 
+    13 | for i in range(size(v)):
+    14 | 	if v[i] >= C and v[i] < D:
+    15 | 		x[0] = x[0] + 1
+    16 | 	elif v[i] >=D and v[i] < B:
+    17 | 		x[1] = x[1] + 1
+    18 | print(x)
+    19 | 
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 14: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 14) / elif ... sem else
+      Contexto:
+              13 | for i in range(size(v)):
+        >>>   14 | 	if v[i] >= C and v[i] < D:
+              15 | 		x[0] = x[0] + 1
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 6
+
+  [1] Linha 3: Variável 'v' com nome muito curto (≤4 chars)
+      Trecho  : v = ...
+      Contexto:
+               2 | 
+        >>>    3 | v = array(eval(input("digite vetor:")))
+               4 | 	
+
+  [2] Linha 5: Variável 'A' com nome muito curto (≤4 chars)
+      Trecho  : A = ...
+      Contexto:
+               4 | 	
+        >>>    5 | A = min(v)
+               6 | B = max(v)
+
+  [3] Linha 6: Variável 'B' com nome muito curto (≤4 chars)
+      Trecho  : B = ...
+      Contexto:
+               5 | A = min(v)
+        >>>    6 | B = max(v)
+               7 | 
+
+  [4] Linha 8: Variável 'C' com nome muito curto (≤4 chars)
+      Trecho  : C = ...
+      Contexto:
+               7 | 
+        >>>    8 | C = (0.75 * A) + (0.25 * B)
+               9 | D = (0.25 * A) + (0.75 * B)
+
+  [5] Linha 9: Variável 'D' com nome muito curto (≤4 chars)
+      Trecho  : D = ...
+      Contexto:
+               8 | C = (0.75 * A) + (0.25 * B)
+        >>>    9 | D = (0.25 * A) + (0.75 * B)
+              10 | 
+
+  [6] Linha 11: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+              10 | 
+        >>>   11 | x = array(zeros(2,dtype = int))
+              12 | 
+
+======================================================================

@@ -1,0 +1,75 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1650_3750.py
+Questão  : 1650
+Aluno    : 3750
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | v = array(input("").split(','))
+     3 | f = zeros(5,dtype=int)
+     4 | m = zeros(5,dtype=int)
+     5 | for n in v:
+     6 | 		if(n == "P" ):
+     7 | 			f[0] = f[0] + 1 
+     8 | 			m[0] = m[0] + 1
+     9 | 		elif(n == "C"):
+    10 | 			f[1] = f[1] + 1
+    11 | 			m[1] = m[1] + 1
+    12 | 		elif(n == "R"):
+    13 | 			f[2] = f[2] + 1
+    14 | 			m[2] = m[2] + 1
+    15 | 		elif(n == "L"):
+    16 | 			f[3] = f[3] + 1
+    17 | 			m[3] = m[3] + 1
+    18 | 		elif(n == "B"):
+    19 | 			f[4] = f[4] + 1
+    20 | 			m[4] = m[4] + 1
+    21 | print(max(m))
+    22 | print(f)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 15: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 15) / elif ... sem else
+      Contexto:
+              14 | 			m[2] = m[2] + 1
+        >>>   15 | 		elif(n == "L"):
+              16 | 			f[3] = f[3] + 1
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 3
+
+  [1] Linha 2: Variável 'v' com nome muito curto (≤4 chars)
+      Trecho  : v = ...
+      Contexto:
+               1 | from numpy import*
+        >>>    2 | v = array(input("").split(','))
+               3 | f = zeros(5,dtype=int)
+
+  [2] Linha 3: Variável 'f' com nome muito curto (≤4 chars)
+      Trecho  : f = ...
+      Contexto:
+               2 | v = array(input("").split(','))
+        >>>    3 | f = zeros(5,dtype=int)
+               4 | m = zeros(5,dtype=int)
+
+  [3] Linha 4: Variável 'm' com nome muito curto (≤4 chars)
+      Trecho  : m = ...
+      Contexto:
+               3 | f = zeros(5,dtype=int)
+        >>>    4 | m = zeros(5,dtype=int)
+               5 | for n in v:
+
+======================================================================

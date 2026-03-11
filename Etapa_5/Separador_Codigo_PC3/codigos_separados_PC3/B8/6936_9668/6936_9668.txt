@@ -1,0 +1,48 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 6936_9668.py
+Questão  : 6936
+Aluno    : 9668
+Total MCs: 1
+
+⚠️  Misconceptions detectados: B8
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | valor_comp = float(input("valor da compra: "))
+     2 | 
+     3 | pagam = input("D para dinheiro, P para pix e C para cartao: ").upper()
+     4 | 
+     5 | if pagam == "D" or pagam == "P":
+     6 | 	desc= valor_comp * (13/100)
+     7 | 	valor_tot= valor_comp - desc
+     8 | 	print(round(valor_tot, 2))
+     9 | 	
+    10 | elif pagam == "C":
+    11 | 	vezezz= int(input("quantas vezes? "))
+    12 | 	if vezezz == 1:
+    13 | 		valor_tot = valor_comp
+    14 | 		print(round(valor_tot, 2))
+    15 | 		
+    16 | 	else:
+    17 | 		jur= valor_comp * (8/100)
+    18 | 		valor_tot = valor_comp + jur
+    19 | 		print(round(valor_tot,2))
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 5: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 5) / elif ... sem else
+      Contexto:
+               4 | 
+        >>>    5 | if pagam == "D" or pagam == "P":
+               6 | 	desc= valor_comp * (13/100)
+
+======================================================================

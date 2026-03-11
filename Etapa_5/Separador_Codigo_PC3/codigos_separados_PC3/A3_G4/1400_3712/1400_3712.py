@@ -1,0 +1,1 @@
+atk = string(input("qual o atk?"))

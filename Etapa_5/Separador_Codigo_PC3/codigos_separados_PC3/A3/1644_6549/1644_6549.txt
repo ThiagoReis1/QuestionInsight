@@ -1,0 +1,53 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1644_6549.py
+Questão  : 1644
+Aluno    : 6549
+Total MCs: 1
+
+⚠️  Misconceptions detectados: A3
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | 
+     3 | nf = array(eval(input("")))
+     4 | 
+     5 | aprov = 0
+     6 | reprov = 0
+     7 | 
+     8 | for i in range(0, size(nf)):
+     9 | 	if nf[i] >= 5.0:
+    10 | 		aprov += 1
+    11 | 	else:
+    12 | 		reprov += 1
+    13 | n_reprov = zeros(reprov, dtype=int)
+    14 | 
+    15 | acum = 0
+    16 | 
+    17 | for x in range(0, size(nf)):
+    18 | 	if nf[x] < 5.0:
+    19 | 		n_reprov[acum] = x
+    20 | 		acum += 1
+    21 | 		
+    22 | print(reprov)
+    23 | print(n_reprov)
+    24 | 
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 1
+
+  [1] Linha 5: Variável 'aprov' declarada mas nunca utilizada
+      Trecho  : aprov = ...
+      Contexto:
+               4 | 
+        >>>    5 | aprov = 0
+               6 | reprov = 0
+
+======================================================================

@@ -1,0 +1,73 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 3590_9164.py
+Questão  : 3590
+Aluno    : 9164
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B4, B8
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import *
+     2 | 
+     3 | face = array(eval(input("face do dado: ")))
+     4 | i = 0
+     5 | total = 0
+     6 | 
+     7 | while i < size(face):
+     8 | 	if face[i] == 1:
+     9 | 		total += 10.00
+    10 | 	elif face[i] == 2:
+    11 | 		total += 5.00
+    12 | 	elif face[i] == 4:
+    13 | 		total += 5.00
+    14 | 	elif face[i] == 5:
+    15 | 		total+= 20.00
+    16 | 	elif face[i] == 6:
+    17 | 		total += 10.00
+    18 | 	i += 1
+    19 | 
+    20 | print(round(total,2))
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B4 — Comandos repetidos dentro de blocos if-elif-else
+  Ocorrências: 3
+
+  [1] Linha 12: Bloco idêntico ao da linha 10
+      Trecho  : total += 5.0
+      Contexto:
+              11 | 		total += 5.00
+        >>>   12 | 	elif face[i] == 4:
+              13 | 		total += 5.00
+
+  [2] Linha 16: Bloco idêntico ao da linha 8
+      Trecho  : total += 10.0
+      Contexto:
+              15 | 		total+= 20.00
+        >>>   16 | 	elif face[i] == 6:
+              17 | 		total += 10.00
+
+  [3] Linha 12: Bloco idêntico ao da linha 10
+      Trecho  : total += 5.0
+      Contexto:
+              11 | 		total += 5.00
+        >>>   12 | 	elif face[i] == 4:
+              13 | 		total += 5.00
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 14: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 14) / elif ... sem else
+      Contexto:
+              13 | 		total += 5.00
+        >>>   14 | 	elif face[i] == 5:
+              15 | 		total+= 20.00
+
+======================================================================

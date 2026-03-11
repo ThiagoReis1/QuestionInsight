@@ -1,0 +1,6 @@
+cm= float(input('carros por metro:'))
+B= float(input('B:'))
+b= float(input('b:'))
+h= float(input('h:'))
+c= int(cm*(h*(B+b)/2))
+print(c)

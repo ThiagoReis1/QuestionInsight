@@ -1,0 +1,82 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1640_6354.py
+Questão  : 1640
+Aluno    : 6354
+Total MCs: 1
+
+⚠️  Misconceptions detectados: G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import *
+     2 | 
+     3 | vet = array(eval(input("Digite as notas: ")))
+     4 | acum = 0
+     5 | 
+     6 | for i in range (size(vet)):
+     7 | 	if vet[i] % 2 != 0:
+     8 | 		acum = acum + 1
+     9 | vet1 = zeros(acum, dtype=int)
+    10 | 
+    11 | j = 0
+    12 | for i in range (size(vet)):
+    13 | 	if vet[i] % 2 != 0:
+    14 | 		vet1[j] = i
+    15 | 		j = j+1
+    16 | 
+    17 | print(acum)
+    18 | print(vet1)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 6
+
+  [1] Linha 3: Variável 'vet' com nome muito curto (≤4 chars)
+      Trecho  : vet = ...
+      Contexto:
+               2 | 
+        >>>    3 | vet = array(eval(input("Digite as notas: ")))
+               4 | acum = 0
+
+  [2] Linha 4: Variável 'acum' com nome muito curto (≤4 chars)
+      Trecho  : acum = ...
+      Contexto:
+               3 | vet = array(eval(input("Digite as notas: ")))
+        >>>    4 | acum = 0
+               5 | 
+
+  [3] Linha 9: Variável 'vet1' com nome muito curto (≤4 chars)
+      Trecho  : vet1 = ...
+      Contexto:
+               8 | 		acum = acum + 1
+        >>>    9 | vet1 = zeros(acum, dtype=int)
+              10 | 
+
+  [4] Linha 11: Variável 'j' com nome muito curto (≤4 chars)
+      Trecho  : j = ...
+      Contexto:
+              10 | 
+        >>>   11 | j = 0
+              12 | for i in range (size(vet)):
+
+  [5] Linha 8: Variável 'acum' com nome muito curto (≤4 chars)
+      Trecho  : acum = ...
+      Contexto:
+               7 | 	if vet[i] % 2 != 0:
+        >>>    8 | 		acum = acum + 1
+               9 | vet1 = zeros(acum, dtype=int)
+
+  [6] Linha 15: Variável 'j' com nome muito curto (≤4 chars)
+      Trecho  : j = ...
+      Contexto:
+              14 | 		vet1[j] = i
+        >>>   15 | 		j = j+1
+              16 | 
+
+======================================================================

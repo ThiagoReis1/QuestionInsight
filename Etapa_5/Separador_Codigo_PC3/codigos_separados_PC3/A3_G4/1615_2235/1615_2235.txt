@@ -1,0 +1,166 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1615_2235.py
+Questão  : 1615
+Aluno    : 2235
+Total MCs: 2
+
+⚠️  Misconceptions detectados: A3, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import *
+     2 | 
+     3 | jo1 = array(eval(input("Digite o valor de jogadas 1: ")))
+     4 | jo2 = array(eval(input("Digite o valor de jogadas 2: ")))
+     5 | i = 0
+     6 | while( i < size(jo1)):
+     7 | 	if(jo1[i] == 1):
+     8 | 		j1 = j1 + 40
+     9 | 	elif(jo1[i] == 2):
+    10 | 		j1 = j1 + 20
+    11 | 	elif(jo1[i] == 3):
+    12 | 		j1 = j1 + 10
+    13 | 	else:
+    14 | 		j1 = j1 + 0
+    15 | 	i = i + 1
+    16 | 	
+    17 | i = 0
+    18 | while(i < size(jo2)):
+    19 | 	if(jo2[i] == 1):
+    20 | 		j2 = j2 + 40
+    21 | 	elif(jo2[i] == 2):
+    22 | 		j2 = j2 + 20
+    23 | 	elif(jo2[i] == 3):
+    24 | 		j2 = j2 + 10
+    25 | 	else:
+    26 | 		j2 = j2 + 0
+    27 | 	i = i + 1
+    28 | 	
+    29 | if(j1 > j2):
+    30 | 	mensagem = "Jogador 1"
+    31 | elif(j1 < j2):
+    32 | 	mensagem = "Jogador 2"
+    33 | else:
+    34 | 	mensagem = "Empate"
+    35 | 	
+    36 | print(j1,j2)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 1
+
+  [1] Linha 30: Variável 'mensagem' declarada mas nunca utilizada
+      Trecho  : mensagem = ...
+      Contexto:
+              29 | if(j1 > j2):
+        >>>   30 | 	mensagem = "Jogador 1"
+              31 | elif(j1 < j2):
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 14
+
+  [1] Linha 3: Variável 'jo1' com nome muito curto (≤4 chars)
+      Trecho  : jo1 = ...
+      Contexto:
+               2 | 
+        >>>    3 | jo1 = array(eval(input("Digite o valor de jogadas 1: ")))
+               4 | jo2 = array(eval(input("Digite o valor de jogadas 2: ")))
+
+  [2] Linha 4: Variável 'jo2' com nome muito curto (≤4 chars)
+      Trecho  : jo2 = ...
+      Contexto:
+               3 | jo1 = array(eval(input("Digite o valor de jogadas 1: ")))
+        >>>    4 | jo2 = array(eval(input("Digite o valor de jogadas 2: ")))
+               5 | i = 0
+
+  [3] Linha 5: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+               4 | jo2 = array(eval(input("Digite o valor de jogadas 2: ")))
+        >>>    5 | i = 0
+               6 | while( i < size(jo1)):
+
+  [4] Linha 17: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+              16 | 	
+        >>>   17 | i = 0
+              18 | while(i < size(jo2)):
+
+  [5] Linha 15: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+              14 | 		j1 = j1 + 0
+        >>>   15 | 	i = i + 1
+              16 | 	
+
+  [6] Linha 27: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+              26 | 		j2 = j2 + 0
+        >>>   27 | 	i = i + 1
+              28 | 	
+
+  [7] Linha 8: Variável 'j1' com nome muito curto (≤4 chars)
+      Trecho  : j1 = ...
+      Contexto:
+               7 | 	if(jo1[i] == 1):
+        >>>    8 | 		j1 = j1 + 40
+               9 | 	elif(jo1[i] == 2):
+
+  [8] Linha 20: Variável 'j2' com nome muito curto (≤4 chars)
+      Trecho  : j2 = ...
+      Contexto:
+              19 | 	if(jo2[i] == 1):
+        >>>   20 | 		j2 = j2 + 40
+              21 | 	elif(jo2[i] == 2):
+
+  [9] Linha 10: Variável 'j1' com nome muito curto (≤4 chars)
+      Trecho  : j1 = ...
+      Contexto:
+               9 | 	elif(jo1[i] == 2):
+        >>>   10 | 		j1 = j1 + 20
+              11 | 	elif(jo1[i] == 3):
+
+  [10] Linha 22: Variável 'j2' com nome muito curto (≤4 chars)
+      Trecho  : j2 = ...
+      Contexto:
+              21 | 	elif(jo2[i] == 2):
+        >>>   22 | 		j2 = j2 + 20
+              23 | 	elif(jo2[i] == 3):
+
+  [11] Linha 12: Variável 'j1' com nome muito curto (≤4 chars)
+      Trecho  : j1 = ...
+      Contexto:
+              11 | 	elif(jo1[i] == 3):
+        >>>   12 | 		j1 = j1 + 10
+              13 | 	else:
+
+  [12] Linha 14: Variável 'j1' com nome muito curto (≤4 chars)
+      Trecho  : j1 = ...
+      Contexto:
+              13 | 	else:
+        >>>   14 | 		j1 = j1 + 0
+              15 | 	i = i + 1
+
+  [13] Linha 24: Variável 'j2' com nome muito curto (≤4 chars)
+      Trecho  : j2 = ...
+      Contexto:
+              23 | 	elif(jo2[i] == 3):
+        >>>   24 | 		j2 = j2 + 10
+              25 | 	else:
+
+  [14] Linha 26: Variável 'j2' com nome muito curto (≤4 chars)
+      Trecho  : j2 = ...
+      Contexto:
+              25 | 	else:
+        >>>   26 | 		j2 = j2 + 0
+              27 | 	i = i + 1
+
+======================================================================

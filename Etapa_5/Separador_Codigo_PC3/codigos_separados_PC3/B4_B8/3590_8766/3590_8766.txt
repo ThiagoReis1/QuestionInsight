@@ -1,0 +1,75 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 3590_8766.py
+Questão  : 3590
+Aluno    : 8766
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B4, B8
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import *   
+     2 | vet = array(eval(input("Digite a face de dados:")))
+     3 | 
+     4 | i = 0
+     5 | total = 0
+     6 | 
+     7 | while i < size(vet):
+     8 | 	if vet[i] == 1:
+     9 | 		total = total + 10
+    10 | 	elif vet[i] == 2:
+    11 | 		total = total +  5
+    12 | 	#elif vet[i] == 3:
+    13 | 		#total =  0
+    14 | 	elif vet[i] == 4:
+    15 | 		total = total +  5
+    16 | 	elif vet[i] == 5:
+    17 | 		total = total +  20
+    18 | 	elif vet[i] == 6:
+    19 | 		total = total +  10
+    20 | 	i = i + 1
+    21 | 	#total = total + 1
+    22 | print(total)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B4 — Comandos repetidos dentro de blocos if-elif-else
+  Ocorrências: 3
+
+  [1] Linha 14: Bloco idêntico ao da linha 10
+      Trecho  : total = total + 5
+      Contexto:
+              13 | 		#total =  0
+        >>>   14 | 	elif vet[i] == 4:
+              15 | 		total = total +  5
+
+  [2] Linha 18: Bloco idêntico ao da linha 8
+      Trecho  : total = total + 10
+      Contexto:
+              17 | 		total = total +  20
+        >>>   18 | 	elif vet[i] == 6:
+              19 | 		total = total +  10
+
+  [3] Linha 14: Bloco idêntico ao da linha 10
+      Trecho  : total = total + 5
+      Contexto:
+              13 | 		#total =  0
+        >>>   14 | 	elif vet[i] == 4:
+              15 | 		total = total +  5
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 16: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 16) / elif ... sem else
+      Contexto:
+              15 | 		total = total +  5
+        >>>   16 | 	elif vet[i] == 5:
+              17 | 		total = total +  20
+
+======================================================================

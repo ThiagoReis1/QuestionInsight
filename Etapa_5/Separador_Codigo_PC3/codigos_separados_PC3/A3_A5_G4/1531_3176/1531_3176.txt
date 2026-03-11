@@ -1,0 +1,72 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1531_3176.py
+Questão  : 1531
+Aluno    : 3176
+Total MCs: 3
+
+⚠️  Misconceptions detectados: A3, A5, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from math import factorial
+     2 | from math import pi
+     3 | 
+     4 | a = eval(input('angulo:'))
+     5 | x = int(input('numero:'))
+     6 | 
+     7 | cos = 1 - (x**2/factorial(2)) + (x**4/factorial(4)) - (x**6/factorial(6)) + (x**8/factorial(8))
+     8 | 
+     9 | print (cos)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 1
+
+  [1] Linha 4: Variável 'a' declarada mas nunca utilizada
+      Trecho  : a = ...
+      Contexto:
+               3 | 
+        >>>    4 | a = eval(input('angulo:'))
+               5 | x = int(input('numero:'))
+
+▶ A5 — Importação não utilizada
+  Ocorrências: 1
+
+  [1] Linha 2: 'pi' importado mas nunca utilizado
+      Trecho  : from math import pi
+      Contexto:
+               1 | from math import factorial
+        >>>    2 | from math import pi
+               3 | 
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 3
+
+  [1] Linha 4: Variável 'a' com nome muito curto (≤4 chars)
+      Trecho  : a = ...
+      Contexto:
+               3 | 
+        >>>    4 | a = eval(input('angulo:'))
+               5 | x = int(input('numero:'))
+
+  [2] Linha 5: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+               4 | a = eval(input('angulo:'))
+        >>>    5 | x = int(input('numero:'))
+               6 | 
+
+  [3] Linha 7: Variável 'cos' com nome muito curto (≤4 chars)
+      Trecho  : cos = ...
+      Contexto:
+               6 | 
+        >>>    7 | cos = 1 - (x**2/factorial(2)) + (x**4/factorial(4)) - (x**6/factorial(6)) + (x**8/factorial(8))
+               8 | 
+
+======================================================================

@@ -1,0 +1,74 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1995_2181.py
+Questão  : 1995
+Aluno    : 2181
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | nome = input("Digite o nome do aminoacido: ")
+     2 | 
+     3 | if(nome.lower() != 'aspartato' and nome.lower() != 'cisteina' and nome.lower() != 'metionina'):
+     4 | 	print("Entrada: ",nome)
+     5 | 	print("Dado Invalido")
+     6 | else:
+     7 | 	if(nome.lower() == 'aspartato'):
+     8 | 		x = ((12.011*4) + (1.00794*6) + 14.0067 + (15.9994*4))
+     9 | 		print(round(x, 2))
+    10 | 	elif(nome.lower() == 'cisteina'):
+    11 | 		x = ((12.011*3) + (1.00794*7) + 14.0067 + (15.9994*2) + 32.066)
+    12 | 		print(round(x, 2))
+    13 | 	elif(nome.lower() == 'metionina'):
+    14 | 		x = ((12.011*5) + (1.00794*11) + 14.0067 + (15.9994*2) + 32.066)
+    15 | 		print(round(x, 2))		
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 10: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 10) / elif ... sem else
+      Contexto:
+               9 | 		print(round(x, 2))
+        >>>   10 | 	elif(nome.lower() == 'cisteina'):
+              11 | 		x = ((12.011*3) + (1.00794*7) + 14.0067 + (15.9994*2) + 32.066)
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 4
+
+  [1] Linha 1: Variável 'nome' com nome muito curto (≤4 chars)
+      Trecho  : nome = ...
+      Contexto:
+        >>>    1 | nome = input("Digite o nome do aminoacido: ")
+               2 | 
+
+  [2] Linha 8: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+               7 | 	if(nome.lower() == 'aspartato'):
+        >>>    8 | 		x = ((12.011*4) + (1.00794*6) + 14.0067 + (15.9994*4))
+               9 | 		print(round(x, 2))
+
+  [3] Linha 11: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+              10 | 	elif(nome.lower() == 'cisteina'):
+        >>>   11 | 		x = ((12.011*3) + (1.00794*7) + 14.0067 + (15.9994*2) + 32.066)
+              12 | 		print(round(x, 2))
+
+  [4] Linha 14: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+              13 | 	elif(nome.lower() == 'metionina'):
+        >>>   14 | 		x = ((12.011*5) + (1.00794*11) + 14.0067 + (15.9994*2) + 32.066)
+              15 | 		print(round(x, 2))		
+
+======================================================================

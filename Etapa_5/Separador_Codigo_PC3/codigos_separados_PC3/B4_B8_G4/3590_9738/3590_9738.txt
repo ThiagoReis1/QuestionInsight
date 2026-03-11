@@ -1,0 +1,149 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 3590_9738.py
+Questão  : 3590
+Aluno    : 9738
+Total MCs: 3
+
+⚠️  Misconceptions detectados: B4, B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | 
+     3 | d= array(eval( input()))
+     4 | 
+     5 | i= 0
+     6 | s=0
+     7 | 
+     8 | while i < size(d):
+     9 | 	if d[i] == 1:
+    10 | 		s= s + 10
+    11 | 	elif d[i] == 2:
+    12 | 		s= s + 5
+    13 | 	elif d[i] == 3:
+    14 | 		s= s + 0
+    15 | 	elif d[i] == 4:
+    16 | 		s= s + 5
+    17 | 	elif d[i] == 5:
+    18 | 		s= s + 20
+    19 | 	elif d[i] == 6:
+    20 | 		s= s+ 10
+    21 | 	i= i + 1
+    22 | print(s)
+    23 | 
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B4 — Comandos repetidos dentro de blocos if-elif-else
+  Ocorrências: 3
+
+  [1] Linha 15: Bloco idêntico ao da linha 11
+      Trecho  : s = s + 5
+      Contexto:
+              14 | 		s= s + 0
+        >>>   15 | 	elif d[i] == 4:
+              16 | 		s= s + 5
+
+  [2] Linha 19: Bloco idêntico ao da linha 9
+      Trecho  : s = s + 10
+      Contexto:
+              18 | 		s= s + 20
+        >>>   19 | 	elif d[i] == 6:
+              20 | 		s= s+ 10
+
+  [3] Linha 15: Bloco idêntico ao da linha 11
+      Trecho  : s = s + 5
+      Contexto:
+              14 | 		s= s + 0
+        >>>   15 | 	elif d[i] == 4:
+              16 | 		s= s + 5
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 17: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 17) / elif ... sem else
+      Contexto:
+              16 | 		s= s + 5
+        >>>   17 | 	elif d[i] == 5:
+              18 | 		s= s + 20
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 10
+
+  [1] Linha 3: Variável 'd' com nome muito curto (≤4 chars)
+      Trecho  : d = ...
+      Contexto:
+               2 | 
+        >>>    3 | d= array(eval( input()))
+               4 | 
+
+  [2] Linha 5: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+               4 | 
+        >>>    5 | i= 0
+               6 | s=0
+
+  [3] Linha 6: Variável 's' com nome muito curto (≤4 chars)
+      Trecho  : s = ...
+      Contexto:
+               5 | i= 0
+        >>>    6 | s=0
+               7 | 
+
+  [4] Linha 21: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+              20 | 		s= s+ 10
+        >>>   21 | 	i= i + 1
+              22 | print(s)
+
+  [5] Linha 10: Variável 's' com nome muito curto (≤4 chars)
+      Trecho  : s = ...
+      Contexto:
+               9 | 	if d[i] == 1:
+        >>>   10 | 		s= s + 10
+              11 | 	elif d[i] == 2:
+
+  [6] Linha 12: Variável 's' com nome muito curto (≤4 chars)
+      Trecho  : s = ...
+      Contexto:
+              11 | 	elif d[i] == 2:
+        >>>   12 | 		s= s + 5
+              13 | 	elif d[i] == 3:
+
+  [7] Linha 14: Variável 's' com nome muito curto (≤4 chars)
+      Trecho  : s = ...
+      Contexto:
+              13 | 	elif d[i] == 3:
+        >>>   14 | 		s= s + 0
+              15 | 	elif d[i] == 4:
+
+  [8] Linha 16: Variável 's' com nome muito curto (≤4 chars)
+      Trecho  : s = ...
+      Contexto:
+              15 | 	elif d[i] == 4:
+        >>>   16 | 		s= s + 5
+              17 | 	elif d[i] == 5:
+
+  [9] Linha 18: Variável 's' com nome muito curto (≤4 chars)
+      Trecho  : s = ...
+      Contexto:
+              17 | 	elif d[i] == 5:
+        >>>   18 | 		s= s + 20
+              19 | 	elif d[i] == 6:
+
+  [10] Linha 20: Variável 's' com nome muito curto (≤4 chars)
+      Trecho  : s = ...
+      Contexto:
+              19 | 	elif d[i] == 6:
+        >>>   20 | 		s= s+ 10
+              21 | 	i= i + 1
+
+======================================================================

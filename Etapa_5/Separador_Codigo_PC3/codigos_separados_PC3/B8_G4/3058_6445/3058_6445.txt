@@ -1,0 +1,78 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 3058_6445.py
+Questão  : 3058
+Aluno    : 6445
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | area = float(input())
+     2 | if area >= 0:
+     3 | 	if (area>=0) and (area<100):
+     4 | 		v = (area*2)+100
+     5 | 	elif (area>=100) and (area<2500):
+     6 | 		v = (area*1.80)+150
+     7 | 	elif (area>=2500) and (area<10000):
+     8 | 		v = area*1.50+200
+     9 | 	elif (area>10000):
+    10 | 		v = (area*1.20)+250
+    11 | 		
+    12 | print(round(v,2))
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 7: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 7) / elif ... sem else
+      Contexto:
+               6 | 		v = (area*1.80)+150
+        >>>    7 | 	elif (area>=2500) and (area<10000):
+               8 | 		v = area*1.50+200
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 5
+
+  [1] Linha 1: Variável 'area' com nome muito curto (≤4 chars)
+      Trecho  : area = ...
+      Contexto:
+        >>>    1 | area = float(input())
+               2 | if area >= 0:
+
+  [2] Linha 4: Variável 'v' com nome muito curto (≤4 chars)
+      Trecho  : v = ...
+      Contexto:
+               3 | 	if (area>=0) and (area<100):
+        >>>    4 | 		v = (area*2)+100
+               5 | 	elif (area>=100) and (area<2500):
+
+  [3] Linha 6: Variável 'v' com nome muito curto (≤4 chars)
+      Trecho  : v = ...
+      Contexto:
+               5 | 	elif (area>=100) and (area<2500):
+        >>>    6 | 		v = (area*1.80)+150
+               7 | 	elif (area>=2500) and (area<10000):
+
+  [4] Linha 8: Variável 'v' com nome muito curto (≤4 chars)
+      Trecho  : v = ...
+      Contexto:
+               7 | 	elif (area>=2500) and (area<10000):
+        >>>    8 | 		v = area*1.50+200
+               9 | 	elif (area>10000):
+
+  [5] Linha 10: Variável 'v' com nome muito curto (≤4 chars)
+      Trecho  : v = ...
+      Contexto:
+               9 | 	elif (area>10000):
+        >>>   10 | 		v = (area*1.20)+250
+              11 | 		
+
+======================================================================

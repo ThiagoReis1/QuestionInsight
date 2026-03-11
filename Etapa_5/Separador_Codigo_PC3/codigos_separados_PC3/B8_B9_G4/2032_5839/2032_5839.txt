@@ -1,0 +1,88 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 2032_5839.py
+Questão  : 2032
+Aluno    : 5839
+Total MCs: 3
+
+⚠️  Misconceptions detectados: B8, B9, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | num = int(input("Digite um numero: "))
+     2 | x = 0
+     3 | 
+     4 | while (num != -1):
+     5 | 	if (num == 5):
+     6 | 		x = x + 1
+     7 | 		num = int(input("Digite um numero: "))
+     8 | 	else:
+     9 | 		if (num != 5):
+    10 | 			num = int(input("Digite um numero: "))
+    11 | 			
+    12 | print(x)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 5: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 5) / elif ... sem else
+      Contexto:
+               4 | while (num != -1):
+        >>>    5 | 	if (num == 5):
+               6 | 		x = x + 1
+
+▶ B9 — elif/else retestando condições já verificadas
+  Ocorrências: 1
+
+  [1] Linha 9: elif retesta condição inversa do if da linha 5
+      Trecho  : if num == 5 ... elif num != 5
+      Contexto:
+               8 | 	else:
+        >>>    9 | 		if (num != 5):
+              10 | 			num = int(input("Digite um numero: "))
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 5
+
+  [1] Linha 1: Variável 'num' com nome muito curto (≤4 chars)
+      Trecho  : num = ...
+      Contexto:
+        >>>    1 | num = int(input("Digite um numero: "))
+               2 | x = 0
+
+  [2] Linha 2: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+               1 | num = int(input("Digite um numero: "))
+        >>>    2 | x = 0
+               3 | 
+
+  [3] Linha 6: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+               5 | 	if (num == 5):
+        >>>    6 | 		x = x + 1
+               7 | 		num = int(input("Digite um numero: "))
+
+  [4] Linha 7: Variável 'num' com nome muito curto (≤4 chars)
+      Trecho  : num = ...
+      Contexto:
+               6 | 		x = x + 1
+        >>>    7 | 		num = int(input("Digite um numero: "))
+               8 | 	else:
+
+  [5] Linha 10: Variável 'num' com nome muito curto (≤4 chars)
+      Trecho  : num = ...
+      Contexto:
+               9 | 		if (num != 5):
+        >>>   10 | 			num = int(input("Digite um numero: "))
+              11 | 			
+
+======================================================================

@@ -1,0 +1,72 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1651_3476.py
+Questão  : 1651
+Aluno    : 3476
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | v = input("Digite: ")
+     3 | vet2 = v.split(',')
+     4 | vetr = zeros(6,dtype=int)
+     5 | for cont in vet2:
+     6 | 	if cont.upper() == "MC":
+     7 | 		vetr[0] = vetr[0] + 1 
+     8 | 	elif cont.upper() == "C":
+     9 | 		vetr[1] = vetr[1] + 1
+    10 | 	elif cont.upper() == "CM":
+    11 | 		vetr[2] = vetr[2] + 1
+    12 | 	elif cont.upper() == "EM":
+    13 | 		vetr[3] = vetr[3] + 1
+    14 | 	elif cont.upper() == "E":
+    15 | 		vetr[4] = vetr[4] + 1
+    16 | 	elif cont.upper() == "ME":
+    17 | 		vetr[5] = vetr[5] + 1
+    18 | print(max(vetr))
+    19 | print(vetr)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 14: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 14) / elif ... sem else
+      Contexto:
+              13 | 		vetr[3] = vetr[3] + 1
+        >>>   14 | 	elif cont.upper() == "E":
+              15 | 		vetr[4] = vetr[4] + 1
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 3
+
+  [1] Linha 2: Variável 'v' com nome muito curto (≤4 chars)
+      Trecho  : v = ...
+      Contexto:
+               1 | from numpy import*
+        >>>    2 | v = input("Digite: ")
+               3 | vet2 = v.split(',')
+
+  [2] Linha 3: Variável 'vet2' com nome muito curto (≤4 chars)
+      Trecho  : vet2 = ...
+      Contexto:
+               2 | v = input("Digite: ")
+        >>>    3 | vet2 = v.split(',')
+               4 | vetr = zeros(6,dtype=int)
+
+  [3] Linha 4: Variável 'vetr' com nome muito curto (≤4 chars)
+      Trecho  : vetr = ...
+      Contexto:
+               3 | vet2 = v.split(',')
+        >>>    4 | vetr = zeros(6,dtype=int)
+               5 | for cont in vet2:
+
+======================================================================

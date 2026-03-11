@@ -1,0 +1,79 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 3051_4101.py
+Questão  : 3051
+Aluno    : 4101
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | e = float(input("Consumo de energia: "))
+     2 | 
+     3 | if(0<=e<=150):
+     4 | 	v = e*0.60 + 5.00
+     5 | 	print(round(v, 2))
+     6 | elif(150<e<=250):
+     7 | 	v = e*0.65 + 8.00
+     8 | 	print(round(v, 2))
+     9 | elif(250<e<=350):
+    10 | 	v = e*0.70 + 12.00
+    11 | elif(e>350):
+    12 | 	v = e*0.75 + 16.00
+    13 | 	print(round(v, 2))
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 9: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 9) / elif ... sem else
+      Contexto:
+               8 | 	print(round(v, 2))
+        >>>    9 | elif(250<e<=350):
+              10 | 	v = e*0.70 + 12.00
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 5
+
+  [1] Linha 1: Variável 'e' com nome muito curto (≤4 chars)
+      Trecho  : e = ...
+      Contexto:
+        >>>    1 | e = float(input("Consumo de energia: "))
+               2 | 
+
+  [2] Linha 4: Variável 'v' com nome muito curto (≤4 chars)
+      Trecho  : v = ...
+      Contexto:
+               3 | if(0<=e<=150):
+        >>>    4 | 	v = e*0.60 + 5.00
+               5 | 	print(round(v, 2))
+
+  [3] Linha 7: Variável 'v' com nome muito curto (≤4 chars)
+      Trecho  : v = ...
+      Contexto:
+               6 | elif(150<e<=250):
+        >>>    7 | 	v = e*0.65 + 8.00
+               8 | 	print(round(v, 2))
+
+  [4] Linha 10: Variável 'v' com nome muito curto (≤4 chars)
+      Trecho  : v = ...
+      Contexto:
+               9 | elif(250<e<=350):
+        >>>   10 | 	v = e*0.70 + 12.00
+              11 | elif(e>350):
+
+  [5] Linha 12: Variável 'v' com nome muito curto (≤4 chars)
+      Trecho  : v = ...
+      Contexto:
+              11 | elif(e>350):
+        >>>   12 | 	v = e*0.75 + 16.00
+              13 | 	print(round(v, 2))
+
+======================================================================

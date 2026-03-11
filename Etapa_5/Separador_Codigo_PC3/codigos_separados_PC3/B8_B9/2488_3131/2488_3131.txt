@@ -1,0 +1,75 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 2488_3131.py
+Questão  : 2488
+Aluno    : 3131
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B8, B9
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | salario = float(input("Salario atual: "))
+     2 | 
+     3 | if(salario > 0):
+     4 | 	if (salario <= 800.00):
+     5 | 		aumento = 50/100
+     6 | 		aum = salario * aumento + (salario)
+     7 | 		print("Entrada: R$", salario)
+     8 | 		print("Novo salario: R$", round(aum,2))
+     9 | 	elif (salario <= 1000.00):
+    10 | 		aumento = 40/100
+    11 | 		aum = salario * aumento + (salario)
+    12 | 		print("Entrada: R$", salario)
+    13 | 		print("Novo salario: R$", round(aum,2))
+    14 | 	elif (salario <= 1200.00):
+    15 | 		aumento = 30/100
+    16 | 		aum = salario * aumento + (salario)
+    17 | 		print("Entrada: R$", salario)
+    18 | 		print("Novo salario: R$", round(aum,2))
+    19 | 	elif (salario <= 1400.00):
+    20 | 		aumento = 20/100
+    21 | 		aum = salario * aumento + (salario)
+    22 | 		print("Entrada: R$", salario)
+    23 | 		print("Novo salario: R$", round(aum,2))
+    24 | 	elif (salario <= 1600.00):
+    25 | 		aumento = 10/100
+    26 | 		aum = salario * aumento + (salario)
+    27 | 		print("Entrada: R$", salario)
+    28 | 		print("Novo salario: R$", round(aum,2))
+    29 | 	elif (salario > 1600.00):
+    30 | 		aumento = 5/100
+    31 | 		aum = salario * aumento + (salario)
+    32 | 		print("Entrada: R$", salario)
+    33 | 		print("Novo salario: R$", round(aum,2))
+    34 | else:
+    35 | 	print("Entrada: R$", salario)
+    36 | 	print("Dado invalido")
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 24: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 24) / elif ... sem else
+      Contexto:
+              23 | 		print("Novo salario: R$", round(aum,2))
+        >>>   24 | 	elif (salario <= 1600.00):
+              25 | 		aumento = 10/100
+
+▶ B9 — elif/else retestando condições já verificadas
+  Ocorrências: 1
+
+  [1] Linha 29: elif retesta condição inversa do if da linha 24
+      Trecho  : if salario <= 1600.0 ... elif salario > 1600.0
+      Contexto:
+              28 | 		print("Novo salario: R$", round(aum,2))
+        >>>   29 | 	elif (salario > 1600.00):
+              30 | 		aumento = 5/100
+
+======================================================================

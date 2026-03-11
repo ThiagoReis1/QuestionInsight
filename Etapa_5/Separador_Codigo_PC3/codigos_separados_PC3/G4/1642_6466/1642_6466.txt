@@ -1,0 +1,72 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1642_6466.py
+Questão  : 1642
+Aluno    : 6466
+Total MCs: 1
+
+⚠️  Misconceptions detectados: G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | alunos= array(eval(input("Quantos alunos? ")))
+     3 | cont= 0
+     4 | 
+     5 | for i in range(size(alunos)):
+     6 | 	if alunos[i]%5==0:
+     7 | 		cont=cont+1
+     8 | nv=zeros(cont, dtype=int)
+     9 | c=0
+    10 | for j in range(size(alunos)):
+    11 | 	if alunos[j]%5==0:
+    12 | 		nv[c]=j
+    13 | 		c=c+1
+    14 | print(cont)
+    15 | print(nv)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 5
+
+  [1] Linha 3: Variável 'cont' com nome muito curto (≤4 chars)
+      Trecho  : cont = ...
+      Contexto:
+               2 | alunos= array(eval(input("Quantos alunos? ")))
+        >>>    3 | cont= 0
+               4 | 
+
+  [2] Linha 8: Variável 'nv' com nome muito curto (≤4 chars)
+      Trecho  : nv = ...
+      Contexto:
+               7 | 		cont=cont+1
+        >>>    8 | nv=zeros(cont, dtype=int)
+               9 | c=0
+
+  [3] Linha 9: Variável 'c' com nome muito curto (≤4 chars)
+      Trecho  : c = ...
+      Contexto:
+               8 | nv=zeros(cont, dtype=int)
+        >>>    9 | c=0
+              10 | for j in range(size(alunos)):
+
+  [4] Linha 7: Variável 'cont' com nome muito curto (≤4 chars)
+      Trecho  : cont = ...
+      Contexto:
+               6 | 	if alunos[i]%5==0:
+        >>>    7 | 		cont=cont+1
+               8 | nv=zeros(cont, dtype=int)
+
+  [5] Linha 13: Variável 'c' com nome muito curto (≤4 chars)
+      Trecho  : c = ...
+      Contexto:
+              12 | 		nv[c]=j
+        >>>   13 | 		c=c+1
+              14 | print(cont)
+
+======================================================================

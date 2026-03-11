@@ -1,0 +1,507 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 2487_3211.py
+Questão  : 2487
+Aluno    : 3211
+Total MCs: 4
+
+⚠️  Misconceptions detectados: A3, B4, B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | p=int(input())
+     2 | s=int(input())
+     3 | b=int(input())
+     4 | 
+     5 | p1=180
+     6 | p2=230
+     7 | p3=250
+     8 | p4=350
+     9 | s1=75
+    10 | s2=110
+    11 | s3=170
+    12 | s4=200
+    13 | b1=20
+    14 | b2=70
+    15 | b3=100
+    16 | b4=65
+    17 | 
+    18 | print("Entradas: ",p," , ",s," , ",b)
+    19 | 
+    20 | if(1>p>4)or(1>s>4)or(1>b>4):
+    21 | 	print("Dados invalidos")
+    22 | elif(p==1)and(s==1)and(b==1):
+    23 | 	x=p1+s1+b1
+    24 | 	print("Calorias: ",x," cal")
+    25 | elif(p==1)and(s==1)and(b==2):
+    26 | 	x=p1+s1+b2
+    27 | 	print("Calorias: ",x," cal")
+    28 | elif(p==1)and(s==1)and(b==3):
+    29 | 	x=p1+s1+b3
+    30 | 	print("Calorias: ",x," cal")
+    31 | elif(p==1)and(s==1)and(b==4):
+    32 | 	x=p1+s1+b4
+    33 | 	print("Calorias: ",x," cal")
+    34 | elif(p==1)and(s==2)and(b==1):
+    35 | 	x=p1+s2+b1
+    36 | 	print("Calorias: ",x," cal")
+    37 | elif(p==1)and(s==2)and(b==2):
+    38 | 	x=p1+s2+b2
+    39 | 	print("Calorias: ",x," cal")
+    40 | elif(p==1)and(s==2)and(b==3):
+    41 | 	x=p1+s2+b3
+    42 | 	print("Calorias: ",x," cal")
+    43 | elif(p==1)and(s==2)and(b==4):
+    44 | 	x=p1+s1+b1
+    45 | 	print("Calorias: ",x," cal")
+    46 | elif(p==1)and(s==3)and(b==1):
+    47 | 	x=p1+s3+b1
+    48 | 	print("Calorias: ",x," cal")
+    49 | elif(p==1)and(s==3)and(b==2):
+    50 | 	x=p1+s3+b2
+    51 | 	print("Calorias: ",x," cal")
+    52 | elif(p==1)and(s==3)and(b==3):
+    53 | 	x=p1+s3+b3
+    54 | 	print("Calorias: ",x," cal")
+    55 | elif(p==1)and(s==3)and(b==4):
+    56 | 	x=p1+s3+b4
+    57 | 	print("Calorias: ",x," cal")
+    58 | elif(p==1)and(s==4)and(b==1):
+    59 | 	x=p1+s4+b1
+    60 | 	print("Calorias: ",x," cal")
+    61 | elif(p==1)and(s==4)and(b==2):
+    62 | 	x=p1+s4+b2
+    63 | 	print("Calorias: ",x," cal")
+    64 | elif(p==1)and(s==4)and(b==3):
+    65 | 	x=p1+s4+b3
+    66 | 	print("Calorias: ",x," cal")
+    67 | elif(p==1)and(s==4)and(b==4):
+    68 | 	x=p1+s4+b4
+    69 | 	print("Calorias: ",x," cal")
+    70 | elif(p==2)and(s==1)and(b==1):
+    71 | 	x=p2+s1+b1
+    72 | 	print("Calorias: ",x," cal")
+    73 | elif(p==2)and(s==1)and(b==2):
+    74 | 	x=p2+s1+b2
+    75 | 	print("Calorias: ",x," cal")
+    76 | elif(p==2)and(s==3)and(b==3):
+    77 | 	x=p2+s1+b1
+    78 | 	print("Calorias: ",x," cal")
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 2
+
+  [1] Linha 7: Variável 'p3' declarada mas nunca utilizada
+      Trecho  : p3 = ...
+      Contexto:
+               6 | p2=230
+        >>>    7 | p3=250
+               8 | p4=350
+
+  [2] Linha 8: Variável 'p4' declarada mas nunca utilizada
+      Trecho  : p4 = ...
+      Contexto:
+               7 | p3=250
+        >>>    8 | p4=350
+               9 | s1=75
+
+▶ B4 — Comandos repetidos dentro de blocos if-elif-else
+  Ocorrências: 20
+
+  [1] Linha 43: Bloco idêntico ao da linha 22
+      Trecho  : x = p1 + s1 + b1
+      Contexto:
+              42 | 	print("Calorias: ",x," cal")
+        >>>   43 | elif(p==1)and(s==2)and(b==4):
+              44 | 	x=p1+s1+b1
+
+  [2] Linha 76: Bloco idêntico ao da linha 70
+      Trecho  : x = p2 + s1 + b1
+      Contexto:
+              75 | 	print("Calorias: ",x," cal")
+        >>>   76 | elif(p==2)and(s==3)and(b==3):
+              77 | 	x=p2+s1+b1
+
+  [3] Linha 43: Bloco idêntico ao da linha 22
+      Trecho  : x = p1 + s1 + b1
+      Contexto:
+              42 | 	print("Calorias: ",x," cal")
+        >>>   43 | elif(p==1)and(s==2)and(b==4):
+              44 | 	x=p1+s1+b1
+
+  [4] Linha 76: Bloco idêntico ao da linha 70
+      Trecho  : x = p2 + s1 + b1
+      Contexto:
+              75 | 	print("Calorias: ",x," cal")
+        >>>   76 | elif(p==2)and(s==3)and(b==3):
+              77 | 	x=p2+s1+b1
+
+  [5] Linha 76: Bloco idêntico ao da linha 70
+      Trecho  : x = p2 + s1 + b1
+      Contexto:
+              75 | 	print("Calorias: ",x," cal")
+        >>>   76 | elif(p==2)and(s==3)and(b==3):
+              77 | 	x=p2+s1+b1
+
+  [6] Linha 76: Bloco idêntico ao da linha 70
+      Trecho  : x = p2 + s1 + b1
+      Contexto:
+              75 | 	print("Calorias: ",x," cal")
+        >>>   76 | elif(p==2)and(s==3)and(b==3):
+              77 | 	x=p2+s1+b1
+
+  [7] Linha 76: Bloco idêntico ao da linha 70
+      Trecho  : x = p2 + s1 + b1
+      Contexto:
+              75 | 	print("Calorias: ",x," cal")
+        >>>   76 | elif(p==2)and(s==3)and(b==3):
+              77 | 	x=p2+s1+b1
+
+  [8] Linha 76: Bloco idêntico ao da linha 70
+      Trecho  : x = p2 + s1 + b1
+      Contexto:
+              75 | 	print("Calorias: ",x," cal")
+        >>>   76 | elif(p==2)and(s==3)and(b==3):
+              77 | 	x=p2+s1+b1
+
+  [9] Linha 76: Bloco idêntico ao da linha 70
+      Trecho  : x = p2 + s1 + b1
+      Contexto:
+              75 | 	print("Calorias: ",x," cal")
+        >>>   76 | elif(p==2)and(s==3)and(b==3):
+              77 | 	x=p2+s1+b1
+
+  [10] Linha 76: Bloco idêntico ao da linha 70
+      Trecho  : x = p2 + s1 + b1
+      Contexto:
+              75 | 	print("Calorias: ",x," cal")
+        >>>   76 | elif(p==2)and(s==3)and(b==3):
+              77 | 	x=p2+s1+b1
+
+  [11] Linha 76: Bloco idêntico ao da linha 70
+      Trecho  : x = p2 + s1 + b1
+      Contexto:
+              75 | 	print("Calorias: ",x," cal")
+        >>>   76 | elif(p==2)and(s==3)and(b==3):
+              77 | 	x=p2+s1+b1
+
+  [12] Linha 76: Bloco idêntico ao da linha 70
+      Trecho  : x = p2 + s1 + b1
+      Contexto:
+              75 | 	print("Calorias: ",x," cal")
+        >>>   76 | elif(p==2)and(s==3)and(b==3):
+              77 | 	x=p2+s1+b1
+
+  [13] Linha 76: Bloco idêntico ao da linha 70
+      Trecho  : x = p2 + s1 + b1
+      Contexto:
+              75 | 	print("Calorias: ",x," cal")
+        >>>   76 | elif(p==2)and(s==3)and(b==3):
+              77 | 	x=p2+s1+b1
+
+  [14] Linha 76: Bloco idêntico ao da linha 70
+      Trecho  : x = p2 + s1 + b1
+      Contexto:
+              75 | 	print("Calorias: ",x," cal")
+        >>>   76 | elif(p==2)and(s==3)and(b==3):
+              77 | 	x=p2+s1+b1
+
+  [15] Linha 76: Bloco idêntico ao da linha 70
+      Trecho  : x = p2 + s1 + b1
+      Contexto:
+              75 | 	print("Calorias: ",x," cal")
+        >>>   76 | elif(p==2)and(s==3)and(b==3):
+              77 | 	x=p2+s1+b1
+
+  [16] Linha 76: Bloco idêntico ao da linha 70
+      Trecho  : x = p2 + s1 + b1
+      Contexto:
+              75 | 	print("Calorias: ",x," cal")
+        >>>   76 | elif(p==2)and(s==3)and(b==3):
+              77 | 	x=p2+s1+b1
+
+  [17] Linha 76: Bloco idêntico ao da linha 70
+      Trecho  : x = p2 + s1 + b1
+      Contexto:
+              75 | 	print("Calorias: ",x," cal")
+        >>>   76 | elif(p==2)and(s==3)and(b==3):
+              77 | 	x=p2+s1+b1
+
+  [18] Linha 76: Bloco idêntico ao da linha 70
+      Trecho  : x = p2 + s1 + b1
+      Contexto:
+              75 | 	print("Calorias: ",x," cal")
+        >>>   76 | elif(p==2)and(s==3)and(b==3):
+              77 | 	x=p2+s1+b1
+
+  [19] Linha 76: Bloco idêntico ao da linha 70
+      Trecho  : x = p2 + s1 + b1
+      Contexto:
+              75 | 	print("Calorias: ",x," cal")
+        >>>   76 | elif(p==2)and(s==3)and(b==3):
+              77 | 	x=p2+s1+b1
+
+  [20] Linha 76: Bloco idêntico ao da linha 70
+      Trecho  : x = p2 + s1 + b1
+      Contexto:
+              75 | 	print("Calorias: ",x," cal")
+        >>>   76 | elif(p==2)and(s==3)and(b==3):
+              77 | 	x=p2+s1+b1
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 73: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 73) / elif ... sem else
+      Contexto:
+              72 | 	print("Calorias: ",x," cal")
+        >>>   73 | elif(p==2)and(s==1)and(b==2):
+              74 | 	x=p2+s1+b2
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 34
+
+  [1] Linha 1: Variável 'p' com nome muito curto (≤4 chars)
+      Trecho  : p = ...
+      Contexto:
+        >>>    1 | p=int(input())
+               2 | s=int(input())
+
+  [2] Linha 2: Variável 's' com nome muito curto (≤4 chars)
+      Trecho  : s = ...
+      Contexto:
+               1 | p=int(input())
+        >>>    2 | s=int(input())
+               3 | b=int(input())
+
+  [3] Linha 3: Variável 'b' com nome muito curto (≤4 chars)
+      Trecho  : b = ...
+      Contexto:
+               2 | s=int(input())
+        >>>    3 | b=int(input())
+               4 | 
+
+  [4] Linha 5: Variável 'p1' com nome muito curto (≤4 chars)
+      Trecho  : p1 = ...
+      Contexto:
+               4 | 
+        >>>    5 | p1=180
+               6 | p2=230
+
+  [5] Linha 6: Variável 'p2' com nome muito curto (≤4 chars)
+      Trecho  : p2 = ...
+      Contexto:
+               5 | p1=180
+        >>>    6 | p2=230
+               7 | p3=250
+
+  [6] Linha 7: Variável 'p3' com nome muito curto (≤4 chars)
+      Trecho  : p3 = ...
+      Contexto:
+               6 | p2=230
+        >>>    7 | p3=250
+               8 | p4=350
+
+  [7] Linha 8: Variável 'p4' com nome muito curto (≤4 chars)
+      Trecho  : p4 = ...
+      Contexto:
+               7 | p3=250
+        >>>    8 | p4=350
+               9 | s1=75
+
+  [8] Linha 9: Variável 's1' com nome muito curto (≤4 chars)
+      Trecho  : s1 = ...
+      Contexto:
+               8 | p4=350
+        >>>    9 | s1=75
+              10 | s2=110
+
+  [9] Linha 10: Variável 's2' com nome muito curto (≤4 chars)
+      Trecho  : s2 = ...
+      Contexto:
+               9 | s1=75
+        >>>   10 | s2=110
+              11 | s3=170
+
+  [10] Linha 11: Variável 's3' com nome muito curto (≤4 chars)
+      Trecho  : s3 = ...
+      Contexto:
+              10 | s2=110
+        >>>   11 | s3=170
+              12 | s4=200
+
+  [11] Linha 12: Variável 's4' com nome muito curto (≤4 chars)
+      Trecho  : s4 = ...
+      Contexto:
+              11 | s3=170
+        >>>   12 | s4=200
+              13 | b1=20
+
+  [12] Linha 13: Variável 'b1' com nome muito curto (≤4 chars)
+      Trecho  : b1 = ...
+      Contexto:
+              12 | s4=200
+        >>>   13 | b1=20
+              14 | b2=70
+
+  [13] Linha 14: Variável 'b2' com nome muito curto (≤4 chars)
+      Trecho  : b2 = ...
+      Contexto:
+              13 | b1=20
+        >>>   14 | b2=70
+              15 | b3=100
+
+  [14] Linha 15: Variável 'b3' com nome muito curto (≤4 chars)
+      Trecho  : b3 = ...
+      Contexto:
+              14 | b2=70
+        >>>   15 | b3=100
+              16 | b4=65
+
+  [15] Linha 16: Variável 'b4' com nome muito curto (≤4 chars)
+      Trecho  : b4 = ...
+      Contexto:
+              15 | b3=100
+        >>>   16 | b4=65
+              17 | 
+
+  [16] Linha 23: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+              22 | elif(p==1)and(s==1)and(b==1):
+        >>>   23 | 	x=p1+s1+b1
+              24 | 	print("Calorias: ",x," cal")
+
+  [17] Linha 26: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+              25 | elif(p==1)and(s==1)and(b==2):
+        >>>   26 | 	x=p1+s1+b2
+              27 | 	print("Calorias: ",x," cal")
+
+  [18] Linha 29: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+              28 | elif(p==1)and(s==1)and(b==3):
+        >>>   29 | 	x=p1+s1+b3
+              30 | 	print("Calorias: ",x," cal")
+
+  [19] Linha 32: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+              31 | elif(p==1)and(s==1)and(b==4):
+        >>>   32 | 	x=p1+s1+b4
+              33 | 	print("Calorias: ",x," cal")
+
+  [20] Linha 35: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+              34 | elif(p==1)and(s==2)and(b==1):
+        >>>   35 | 	x=p1+s2+b1
+              36 | 	print("Calorias: ",x," cal")
+
+  [21] Linha 38: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+              37 | elif(p==1)and(s==2)and(b==2):
+        >>>   38 | 	x=p1+s2+b2
+              39 | 	print("Calorias: ",x," cal")
+
+  [22] Linha 41: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+              40 | elif(p==1)and(s==2)and(b==3):
+        >>>   41 | 	x=p1+s2+b3
+              42 | 	print("Calorias: ",x," cal")
+
+  [23] Linha 44: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+              43 | elif(p==1)and(s==2)and(b==4):
+        >>>   44 | 	x=p1+s1+b1
+              45 | 	print("Calorias: ",x," cal")
+
+  [24] Linha 47: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+              46 | elif(p==1)and(s==3)and(b==1):
+        >>>   47 | 	x=p1+s3+b1
+              48 | 	print("Calorias: ",x," cal")
+
+  [25] Linha 50: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+              49 | elif(p==1)and(s==3)and(b==2):
+        >>>   50 | 	x=p1+s3+b2
+              51 | 	print("Calorias: ",x," cal")
+
+  [26] Linha 53: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+              52 | elif(p==1)and(s==3)and(b==3):
+        >>>   53 | 	x=p1+s3+b3
+              54 | 	print("Calorias: ",x," cal")
+
+  [27] Linha 56: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+              55 | elif(p==1)and(s==3)and(b==4):
+        >>>   56 | 	x=p1+s3+b4
+              57 | 	print("Calorias: ",x," cal")
+
+  [28] Linha 59: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+              58 | elif(p==1)and(s==4)and(b==1):
+        >>>   59 | 	x=p1+s4+b1
+              60 | 	print("Calorias: ",x," cal")
+
+  [29] Linha 62: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+              61 | elif(p==1)and(s==4)and(b==2):
+        >>>   62 | 	x=p1+s4+b2
+              63 | 	print("Calorias: ",x," cal")
+
+  [30] Linha 65: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+              64 | elif(p==1)and(s==4)and(b==3):
+        >>>   65 | 	x=p1+s4+b3
+              66 | 	print("Calorias: ",x," cal")
+
+  [31] Linha 68: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+              67 | elif(p==1)and(s==4)and(b==4):
+        >>>   68 | 	x=p1+s4+b4
+              69 | 	print("Calorias: ",x," cal")
+
+  [32] Linha 71: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+              70 | elif(p==2)and(s==1)and(b==1):
+        >>>   71 | 	x=p2+s1+b1
+              72 | 	print("Calorias: ",x," cal")
+
+  [33] Linha 74: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+              73 | elif(p==2)and(s==1)and(b==2):
+        >>>   74 | 	x=p2+s1+b2
+              75 | 	print("Calorias: ",x," cal")
+
+  [34] Linha 77: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+              76 | elif(p==2)and(s==3)and(b==3):
+        >>>   77 | 	x=p2+s1+b1
+              78 | 	print("Calorias: ",x," cal")
+
+======================================================================

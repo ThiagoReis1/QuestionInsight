@@ -1,0 +1,59 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1613_2874.py
+Questão  : 1613
+Aluno    : 2874
+Total MCs: 2
+
+⚠️  Misconceptions detectados: A3, B8
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import *
+     2 | 
+     3 | atividade = array(eval(input("atividade: ")))
+     4 | tempo = array(eval(input("Duração: ")))
+     5 | 
+     6 | calorias = zeros(size(atividade), )
+     7 | i = 0
+     8 | gasto = 0
+     9 | 
+    10 | while(i < size(atividade)):
+    11 | 	if(atividade[i] == "ALONGAMENTO"):
+    12 | 		gasto = 3.0
+    13 | 	elif(atividade[i] == "CORRIDA"):
+    14 | 		gasto = 10.3
+    15 | 	elif(atividade[i] == "DANCA"):
+    16 | 		gasto = 6.7
+    17 | 	elif(atividade[i] == "ESCALADA"):
+    18 | 		gasto = 9.7
+    19 | 	elif(atividade[i] == "HIDROGINASTICA"):
+    20 | 		gasto = 5.0
+    21 | 	
+    22 | 	calorias[i] = tempo[i] * gasto
+    23 | 	i += 1
+    24 | print(round(sum(calorias),2))
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 1
+
+  [1] Linha 0: A3 detectado pelo VisitorMC3 (localização exata não mapeada)
+      Trecho  : —
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 17: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 17) / elif ... sem else
+      Contexto:
+              16 | 		gasto = 6.7
+        >>>   17 | 	elif(atividade[i] == "ESCALADA"):
+              18 | 		gasto = 9.7
+
+======================================================================

@@ -1,0 +1,106 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1254_1220.py
+Questão  : 1254
+Aluno    : 1220
+Total MCs: 3
+
+⚠️  Misconceptions detectados: A3, B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import *
+     2 | v=array(eval(input("Informe o vetor: ")))
+     3 | A= min (v)
+     4 | B= max (v)
+     5 | C=0.6*A + 0.4*B
+     6 | D=0.3*A+0.7*B
+     7 | x=0
+     8 | cont= zeros(2, dtype(int))
+     9 | for i in (range(size(v))):
+    10 | 	if(v[i]>=C) and (v[i]<=D):
+    11 | 			 cont[0]=cont[0]+1
+    12 | 	elif (v[i]>=D) and (v[i]<B):
+    13 | 			 cont[1]=cont[1]+1
+    14 | print(cont)
+    15 | 		
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 1
+
+  [1] Linha 7: Variável 'x' declarada mas nunca utilizada
+      Trecho  : x = ...
+      Contexto:
+               6 | D=0.3*A+0.7*B
+        >>>    7 | x=0
+               8 | cont= zeros(2, dtype(int))
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 10: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 10) / elif ... sem else
+      Contexto:
+               9 | for i in (range(size(v))):
+        >>>   10 | 	if(v[i]>=C) and (v[i]<=D):
+              11 | 			 cont[0]=cont[0]+1
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 7
+
+  [1] Linha 2: Variável 'v' com nome muito curto (≤4 chars)
+      Trecho  : v = ...
+      Contexto:
+               1 | from numpy import *
+        >>>    2 | v=array(eval(input("Informe o vetor: ")))
+               3 | A= min (v)
+
+  [2] Linha 3: Variável 'A' com nome muito curto (≤4 chars)
+      Trecho  : A = ...
+      Contexto:
+               2 | v=array(eval(input("Informe o vetor: ")))
+        >>>    3 | A= min (v)
+               4 | B= max (v)
+
+  [3] Linha 4: Variável 'B' com nome muito curto (≤4 chars)
+      Trecho  : B = ...
+      Contexto:
+               3 | A= min (v)
+        >>>    4 | B= max (v)
+               5 | C=0.6*A + 0.4*B
+
+  [4] Linha 5: Variável 'C' com nome muito curto (≤4 chars)
+      Trecho  : C = ...
+      Contexto:
+               4 | B= max (v)
+        >>>    5 | C=0.6*A + 0.4*B
+               6 | D=0.3*A+0.7*B
+
+  [5] Linha 6: Variável 'D' com nome muito curto (≤4 chars)
+      Trecho  : D = ...
+      Contexto:
+               5 | C=0.6*A + 0.4*B
+        >>>    6 | D=0.3*A+0.7*B
+               7 | x=0
+
+  [6] Linha 7: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+               6 | D=0.3*A+0.7*B
+        >>>    7 | x=0
+               8 | cont= zeros(2, dtype(int))
+
+  [7] Linha 8: Variável 'cont' com nome muito curto (≤4 chars)
+      Trecho  : cont = ...
+      Contexto:
+               7 | x=0
+        >>>    8 | cont= zeros(2, dtype(int))
+               9 | for i in (range(size(v))):
+
+======================================================================

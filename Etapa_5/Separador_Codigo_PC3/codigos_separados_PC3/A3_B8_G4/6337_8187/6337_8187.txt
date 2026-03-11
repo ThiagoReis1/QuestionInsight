@@ -1,0 +1,87 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 6337_8187.py
+Questão  : 6337
+Aluno    : 8187
+Total MCs: 3
+
+⚠️  Misconceptions detectados: A3, B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import *
+     2 | var= int(input("n: "))
+     3 | var2= int(input("n: "))
+     4 | cont=0
+     5 | while(var > 6):
+     6 | 	if(var == 2):
+     7 | 		print(var[i])
+     8 | 		cont=cont+1
+     9 | 	elif(var < 2):
+    10 | 		print(v[i])
+    11 | 		cont=cont+1
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 1
+
+  [1] Linha 3: Variável 'var2' declarada mas nunca utilizada
+      Trecho  : var2 = ...
+      Contexto:
+               2 | var= int(input("n: "))
+        >>>    3 | var2= int(input("n: "))
+               4 | cont=0
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 6: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 6) / elif ... sem else
+      Contexto:
+               5 | while(var > 6):
+        >>>    6 | 	if(var == 2):
+               7 | 		print(var[i])
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 5
+
+  [1] Linha 2: Variável 'var' com nome muito curto (≤4 chars)
+      Trecho  : var = ...
+      Contexto:
+               1 | from numpy import *
+        >>>    2 | var= int(input("n: "))
+               3 | var2= int(input("n: "))
+
+  [2] Linha 3: Variável 'var2' com nome muito curto (≤4 chars)
+      Trecho  : var2 = ...
+      Contexto:
+               2 | var= int(input("n: "))
+        >>>    3 | var2= int(input("n: "))
+               4 | cont=0
+
+  [3] Linha 4: Variável 'cont' com nome muito curto (≤4 chars)
+      Trecho  : cont = ...
+      Contexto:
+               3 | var2= int(input("n: "))
+        >>>    4 | cont=0
+               5 | while(var > 6):
+
+  [4] Linha 8: Variável 'cont' com nome muito curto (≤4 chars)
+      Trecho  : cont = ...
+      Contexto:
+               7 | 		print(var[i])
+        >>>    8 | 		cont=cont+1
+               9 | 	elif(var < 2):
+
+  [5] Linha 11: Variável 'cont' com nome muito curto (≤4 chars)
+      Trecho  : cont = ...
+      Contexto:
+              10 | 		print(v[i])
+        >>>   11 | 		cont=cont+1
+
+======================================================================

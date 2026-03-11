@@ -1,0 +1,104 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1617_2034.py
+Questão  : 1617
+Aluno    : 2034
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | vet=array(eval(input('Digite o tipo de espada:'))).split(",")
+     3 | vet2= array(eval(input('Digite numeros inteiros:')))
+     4 | dano=0
+     5 | for i in range(size(vet)):
+     6 | 	if(vet[i]=="CENOURA"):
+     7 | 		dano= dano + 2*vet2[i]
+     8 | 	elif(vet[i]=="FERRO"):
+     9 | 		dano= dano + 4*vet2[i]
+    10 | 	elif(vet[i]=="DWARVEN"):
+    11 | 		dano=dano +8*vet2[i]
+    12 | 	elif(vet[i]=="ELVEN"):
+    13 | 		dano=dano+ 11*vet2[i]
+    14 | 	elif(v[i]=="DAEDRIC"):
+    15 | 		dano=dano+ 14*vet2[i]
+    16 | print(int(dano))		
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 12: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 12) / elif ... sem else
+      Contexto:
+              11 | 		dano=dano +8*vet2[i]
+        >>>   12 | 	elif(vet[i]=="ELVEN"):
+              13 | 		dano=dano+ 11*vet2[i]
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 8
+
+  [1] Linha 2: Variável 'vet' com nome muito curto (≤4 chars)
+      Trecho  : vet = ...
+      Contexto:
+               1 | from numpy import*
+        >>>    2 | vet=array(eval(input('Digite o tipo de espada:'))).split(",")
+               3 | vet2= array(eval(input('Digite numeros inteiros:')))
+
+  [2] Linha 3: Variável 'vet2' com nome muito curto (≤4 chars)
+      Trecho  : vet2 = ...
+      Contexto:
+               2 | vet=array(eval(input('Digite o tipo de espada:'))).split(",")
+        >>>    3 | vet2= array(eval(input('Digite numeros inteiros:')))
+               4 | dano=0
+
+  [3] Linha 4: Variável 'dano' com nome muito curto (≤4 chars)
+      Trecho  : dano = ...
+      Contexto:
+               3 | vet2= array(eval(input('Digite numeros inteiros:')))
+        >>>    4 | dano=0
+               5 | for i in range(size(vet)):
+
+  [4] Linha 7: Variável 'dano' com nome muito curto (≤4 chars)
+      Trecho  : dano = ...
+      Contexto:
+               6 | 	if(vet[i]=="CENOURA"):
+        >>>    7 | 		dano= dano + 2*vet2[i]
+               8 | 	elif(vet[i]=="FERRO"):
+
+  [5] Linha 9: Variável 'dano' com nome muito curto (≤4 chars)
+      Trecho  : dano = ...
+      Contexto:
+               8 | 	elif(vet[i]=="FERRO"):
+        >>>    9 | 		dano= dano + 4*vet2[i]
+              10 | 	elif(vet[i]=="DWARVEN"):
+
+  [6] Linha 11: Variável 'dano' com nome muito curto (≤4 chars)
+      Trecho  : dano = ...
+      Contexto:
+              10 | 	elif(vet[i]=="DWARVEN"):
+        >>>   11 | 		dano=dano +8*vet2[i]
+              12 | 	elif(vet[i]=="ELVEN"):
+
+  [7] Linha 13: Variável 'dano' com nome muito curto (≤4 chars)
+      Trecho  : dano = ...
+      Contexto:
+              12 | 	elif(vet[i]=="ELVEN"):
+        >>>   13 | 		dano=dano+ 11*vet2[i]
+              14 | 	elif(v[i]=="DAEDRIC"):
+
+  [8] Linha 15: Variável 'dano' com nome muito curto (≤4 chars)
+      Trecho  : dano = ...
+      Contexto:
+              14 | 	elif(v[i]=="DAEDRIC"):
+        >>>   15 | 		dano=dano+ 14*vet2[i]
+              16 | print(int(dano))		
+
+======================================================================

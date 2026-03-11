@@ -1,0 +1,63 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 2595_6424.py
+Questão  : 2595
+Aluno    : 6424
+Total MCs: 2
+
+⚠️  Misconceptions detectados: C8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import *
+     2 | v = array(eval(input()))
+     3 | i = 0
+     4 | q = 0
+     5 | for i in range(size(v)-1):
+     6 | 	i += 1
+     7 | 	if v[i] <= -v[0]:
+     8 | 		q += 1
+     9 | 		print(i)
+    10 | print(q)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ C8 — Loop for com sua variável de iteração sobrescrita
+  Ocorrências: 1
+
+  [1] Linha 6: Variável de iteração 'i' modificada no loop
+      Trecho  : i += 1
+      Contexto:
+               5 | for i in range(size(v)-1):
+        >>>    6 | 	i += 1
+               7 | 	if v[i] <= -v[0]:
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 3
+
+  [1] Linha 2: Variável 'v' com nome muito curto (≤4 chars)
+      Trecho  : v = ...
+      Contexto:
+               1 | from numpy import *
+        >>>    2 | v = array(eval(input()))
+               3 | i = 0
+
+  [2] Linha 3: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+               2 | v = array(eval(input()))
+        >>>    3 | i = 0
+               4 | q = 0
+
+  [3] Linha 4: Variável 'q' com nome muito curto (≤4 chars)
+      Trecho  : q = ...
+      Contexto:
+               3 | i = 0
+        >>>    4 | q = 0
+               5 | for i in range(size(v)-1):
+
+======================================================================

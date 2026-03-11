@@ -1,0 +1,9 @@
+x=float(input("x:"))
+k=int(input("k:"))
+d=1
+e=1
+y=(x**e)/d
+c=1
+while(c==k):
+	y=y+(x**(e+2))/d+2
+print(y)

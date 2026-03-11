@@ -1,0 +1,6 @@
+PrecodaArea=float(input("preco:"))
+ap=float(input("area privativa:"))
+ac=float(input("area comum:"))
+ag=float(input("area da garagem:"))
+PrecoTotal=float((ap+ac+ag)*PrecodaArea)
+print(round(PrecoTotal,2))

@@ -1,0 +1,6 @@
+mg= float(input("mg: "))
+vg= float(input("vg: "))
+mp= float(input("mp: "))
+vp= float(input("vp: "))
+vf= ((mg*vg)-(mp*vp))/(mg+mp)
+print(vf)

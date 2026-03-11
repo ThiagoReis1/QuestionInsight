@@ -1,0 +1,107 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1981_2426.py
+Questão  : 1981
+Aluno    : 2426
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | c = (input().upper())
+     2 | vezes = input().upper()
+     3 | if(c == "CAMPEAO"):
+     4 | 	x = "06-VEZES"
+     5 | 	y = "01-VEZES"
+     6 | 	z = "03-VEZES"
+     7 | 	if(vezes == x):
+     8 | 		print("CORINTHIANS")
+     9 | 	elif(vezes == z):
+    10 | 		z = "3-VEZES"
+    11 | 		print("SANTOS")
+    12 | elif(c == "VICE CAMPEAO"):
+    13 | 	if(vezes == x):
+    14 | 		x ="6-VEZES"
+    15 | 		print("INTERNACIONAL")
+    16 | 	elif(vezes == y):
+    17 | 		y = "1-VEZ"
+    18 | 		print("FLAMENGO")
+    19 | else:
+    20 | 	print("TIME DE FUTEBOL NAO IDENTIFICADO")
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 2
+
+  [1] Linha 7: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 7) / elif ... sem else
+      Contexto:
+               6 | 	z = "03-VEZES"
+        >>>    7 | 	if(vezes == x):
+               8 | 		print("CORINTHIANS")
+
+  [2] Linha 13: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 13) / elif ... sem else
+      Contexto:
+              12 | elif(c == "VICE CAMPEAO"):
+        >>>   13 | 	if(vezes == x):
+              14 | 		x ="6-VEZES"
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 7
+
+  [1] Linha 1: Variável 'c' com nome muito curto (≤4 chars)
+      Trecho  : c = ...
+      Contexto:
+        >>>    1 | c = (input().upper())
+               2 | vezes = input().upper()
+
+  [2] Linha 4: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+               3 | if(c == "CAMPEAO"):
+        >>>    4 | 	x = "06-VEZES"
+               5 | 	y = "01-VEZES"
+
+  [3] Linha 5: Variável 'y' com nome muito curto (≤4 chars)
+      Trecho  : y = ...
+      Contexto:
+               4 | 	x = "06-VEZES"
+        >>>    5 | 	y = "01-VEZES"
+               6 | 	z = "03-VEZES"
+
+  [4] Linha 6: Variável 'z' com nome muito curto (≤4 chars)
+      Trecho  : z = ...
+      Contexto:
+               5 | 	y = "01-VEZES"
+        >>>    6 | 	z = "03-VEZES"
+               7 | 	if(vezes == x):
+
+  [5] Linha 10: Variável 'z' com nome muito curto (≤4 chars)
+      Trecho  : z = ...
+      Contexto:
+               9 | 	elif(vezes == z):
+        >>>   10 | 		z = "3-VEZES"
+              11 | 		print("SANTOS")
+
+  [6] Linha 14: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+              13 | 	if(vezes == x):
+        >>>   14 | 		x ="6-VEZES"
+              15 | 		print("INTERNACIONAL")
+
+  [7] Linha 17: Variável 'y' com nome muito curto (≤4 chars)
+      Trecho  : y = ...
+      Contexto:
+              16 | 	elif(vezes == y):
+        >>>   17 | 		y = "1-VEZ"
+              18 | 		print("FLAMENGO")
+
+======================================================================

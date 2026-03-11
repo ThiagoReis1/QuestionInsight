@@ -1,0 +1,89 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 3062_4373.py
+Questão  : 3062
+Aluno    : 4373
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | q=float(input("Quantidade de peca de ouro:"))
+     2 | n=input(" Nome da arma ( ESPADA, MACHADO ou MARRETA)")
+     3 | d=float(input(" Fator do sucesso ( Entre 1 a 10):"))
+     4 | if(q < 30):
+     5 | 	print("PO insuficiente")
+     6 | elif(d<1 or d>10):
+     7 | 	print("Entrada invalida")
+     8 | elif(q>=100):
+     9 | 	f=d*10
+    10 | elif(q>=30):
+    11 | 	f=d+3
+    12 | elif(q>=50):
+    13 | 	f=d+5
+    14 | print(f)	
+    15 | print(n)
+    16 | print(d)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 10: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 10) / elif ... sem else
+      Contexto:
+               9 | 	f=d*10
+        >>>   10 | elif(q>=30):
+              11 | 	f=d+3
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 6
+
+  [1] Linha 1: Variável 'q' com nome muito curto (≤4 chars)
+      Trecho  : q = ...
+      Contexto:
+        >>>    1 | q=float(input("Quantidade de peca de ouro:"))
+               2 | n=input(" Nome da arma ( ESPADA, MACHADO ou MARRETA)")
+
+  [2] Linha 2: Variável 'n' com nome muito curto (≤4 chars)
+      Trecho  : n = ...
+      Contexto:
+               1 | q=float(input("Quantidade de peca de ouro:"))
+        >>>    2 | n=input(" Nome da arma ( ESPADA, MACHADO ou MARRETA)")
+               3 | d=float(input(" Fator do sucesso ( Entre 1 a 10):"))
+
+  [3] Linha 3: Variável 'd' com nome muito curto (≤4 chars)
+      Trecho  : d = ...
+      Contexto:
+               2 | n=input(" Nome da arma ( ESPADA, MACHADO ou MARRETA)")
+        >>>    3 | d=float(input(" Fator do sucesso ( Entre 1 a 10):"))
+               4 | if(q < 30):
+
+  [4] Linha 9: Variável 'f' com nome muito curto (≤4 chars)
+      Trecho  : f = ...
+      Contexto:
+               8 | elif(q>=100):
+        >>>    9 | 	f=d*10
+              10 | elif(q>=30):
+
+  [5] Linha 11: Variável 'f' com nome muito curto (≤4 chars)
+      Trecho  : f = ...
+      Contexto:
+              10 | elif(q>=30):
+        >>>   11 | 	f=d+3
+              12 | elif(q>=50):
+
+  [6] Linha 13: Variável 'f' com nome muito curto (≤4 chars)
+      Trecho  : f = ...
+      Contexto:
+              12 | elif(q>=50):
+        >>>   13 | 	f=d+5
+              14 | print(f)	
+
+======================================================================

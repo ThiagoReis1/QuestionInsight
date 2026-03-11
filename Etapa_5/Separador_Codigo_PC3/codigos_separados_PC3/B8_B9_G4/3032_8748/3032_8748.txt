@@ -1,0 +1,86 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 3032_8748.py
+Questão  : 3032
+Aluno    : 8748
+Total MCs: 3
+
+⚠️  Misconceptions detectados: B8, B9, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | x = float(input("valor de de: "))
+     2 | 
+     3 | if x <= 0:
+     4 | 	fx = 0
+     5 | 	print(round(fx,4))
+     6 | elif x > 0 and x <= 1:
+     7 | 	fx = 1
+     8 | 	print(round(fx,4))
+     9 | elif x > 1 and x <= 2:
+    10 | 	fx = x**(1/2)
+    11 | 	print(round(fx,4))
+    12 | elif x > 2:
+    13 | 	fx = x**(1/3)
+    14 | 	print(round(fx,4))
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 9: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 9) / elif ... sem else
+      Contexto:
+               8 | 	print(round(fx,4))
+        >>>    9 | elif x > 1 and x <= 2:
+              10 | 	fx = x**(1/2)
+
+▶ B9 — elif/else retestando condições já verificadas
+  Ocorrências: 1
+
+  [1] Linha 0: B9 detectado pelo VisitorMC3 (localização exata não mapeada)
+      Trecho  : —
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 5
+
+  [1] Linha 1: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+        >>>    1 | x = float(input("valor de de: "))
+               2 | 
+
+  [2] Linha 4: Variável 'fx' com nome muito curto (≤4 chars)
+      Trecho  : fx = ...
+      Contexto:
+               3 | if x <= 0:
+        >>>    4 | 	fx = 0
+               5 | 	print(round(fx,4))
+
+  [3] Linha 7: Variável 'fx' com nome muito curto (≤4 chars)
+      Trecho  : fx = ...
+      Contexto:
+               6 | elif x > 0 and x <= 1:
+        >>>    7 | 	fx = 1
+               8 | 	print(round(fx,4))
+
+  [4] Linha 10: Variável 'fx' com nome muito curto (≤4 chars)
+      Trecho  : fx = ...
+      Contexto:
+               9 | elif x > 1 and x <= 2:
+        >>>   10 | 	fx = x**(1/2)
+              11 | 	print(round(fx,4))
+
+  [5] Linha 13: Variável 'fx' com nome muito curto (≤4 chars)
+      Trecho  : fx = ...
+      Contexto:
+              12 | elif x > 2:
+        >>>   13 | 	fx = x**(1/3)
+              14 | 	print(round(fx,4))
+
+======================================================================

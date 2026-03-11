@@ -1,0 +1,80 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1537_1894.py
+Questão  : 1537
+Aluno    : 1894
+Total MCs: 2
+
+⚠️  Misconceptions detectados: A3, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from math import *
+     2 | 
+     3 | x = float(input("valor de x: "))
+     4 | k = int(input("valor de k: "))
+     5 | 
+     6 | cont = 1
+     7 | acm = k
+     8 | valor = e ** x
+     9 | 
+    10 | while (cont < k):
+    11 | 	valor = cont + x + ((x) ** (cont) / factorial(cont))
+    12 | 	cont = cont + 1
+    13 | print(round(valor,9))
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 1
+
+  [1] Linha 7: Variável 'acm' declarada mas nunca utilizada
+      Trecho  : acm = ...
+      Contexto:
+               6 | cont = 1
+        >>>    7 | acm = k
+               8 | valor = e ** x
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 5
+
+  [1] Linha 3: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+               2 | 
+        >>>    3 | x = float(input("valor de x: "))
+               4 | k = int(input("valor de k: "))
+
+  [2] Linha 4: Variável 'k' com nome muito curto (≤4 chars)
+      Trecho  : k = ...
+      Contexto:
+               3 | x = float(input("valor de x: "))
+        >>>    4 | k = int(input("valor de k: "))
+               5 | 
+
+  [3] Linha 6: Variável 'cont' com nome muito curto (≤4 chars)
+      Trecho  : cont = ...
+      Contexto:
+               5 | 
+        >>>    6 | cont = 1
+               7 | acm = k
+
+  [4] Linha 7: Variável 'acm' com nome muito curto (≤4 chars)
+      Trecho  : acm = ...
+      Contexto:
+               6 | cont = 1
+        >>>    7 | acm = k
+               8 | valor = e ** x
+
+  [5] Linha 12: Variável 'cont' com nome muito curto (≤4 chars)
+      Trecho  : cont = ...
+      Contexto:
+              11 | 	valor = cont + x + ((x) ** (cont) / factorial(cont))
+        >>>   12 | 	cont = cont + 1
+              13 | print(round(valor,9))
+
+======================================================================

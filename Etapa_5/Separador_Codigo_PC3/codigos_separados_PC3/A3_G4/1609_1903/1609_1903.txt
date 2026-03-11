@@ -1,0 +1,83 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1609_1903.py
+Questão  : 1609
+Aluno    : 1903
+Total MCs: 2
+
+⚠️  Misconceptions detectados: A3, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | 
+     3 | vp = array(eval(input("ceboles: ")))
+     4 | pa = input("palavra: ").upper()
+     5 | 
+     6 | i = 0
+     7 | j = 0
+     8 | c = pa.replace("R","L")
+     9 | 
+    10 | while(i < size(vp) and c != vp[i]):
+    11 | 	i += 1
+    12 | 
+    13 | if(i < size(vp)):
+    14 | 	print(i)
+    15 | else:
+    16 | 	print("NAO ENCONTRADA")
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 1
+
+  [1] Linha 7: Variável 'j' declarada mas nunca utilizada
+      Trecho  : j = ...
+      Contexto:
+               6 | i = 0
+        >>>    7 | j = 0
+               8 | c = pa.replace("R","L")
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 5
+
+  [1] Linha 3: Variável 'vp' com nome muito curto (≤4 chars)
+      Trecho  : vp = ...
+      Contexto:
+               2 | 
+        >>>    3 | vp = array(eval(input("ceboles: ")))
+               4 | pa = input("palavra: ").upper()
+
+  [2] Linha 4: Variável 'pa' com nome muito curto (≤4 chars)
+      Trecho  : pa = ...
+      Contexto:
+               3 | vp = array(eval(input("ceboles: ")))
+        >>>    4 | pa = input("palavra: ").upper()
+               5 | 
+
+  [3] Linha 6: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+               5 | 
+        >>>    6 | i = 0
+               7 | j = 0
+
+  [4] Linha 7: Variável 'j' com nome muito curto (≤4 chars)
+      Trecho  : j = ...
+      Contexto:
+               6 | i = 0
+        >>>    7 | j = 0
+               8 | c = pa.replace("R","L")
+
+  [5] Linha 8: Variável 'c' com nome muito curto (≤4 chars)
+      Trecho  : c = ...
+      Contexto:
+               7 | j = 0
+        >>>    8 | c = pa.replace("R","L")
+               9 | 
+
+======================================================================

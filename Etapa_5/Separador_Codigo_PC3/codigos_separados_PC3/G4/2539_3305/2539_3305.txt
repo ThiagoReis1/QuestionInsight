@@ -1,0 +1,69 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 2539_3305.py
+Questão  : 2539
+Aluno    : 3305
+Total MCs: 1
+
+⚠️  Misconceptions detectados: G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | V = float(input("entre com o valor do premio:"))  #valor do premio
+     2 | M = float(input("entre com o saque mensal:"))     #saque mensal
+     3 | j = float(input("entre com a taxa de juros:"))  # taxa de juros
+     4 | t = 0
+     5 | saldo = V
+     6 | if(V>0 and M>0 and j>0):
+     7 | 	while(saldo<2*V):
+     8 | 		saldo += saldo + (saldo*j/100)
+     9 | 		saldo += round(saldo,2)
+    10 | 		t = t + 1
+    11 | 		print(t)
+    12 | else:
+    13 | 	print("Dados incorretos")
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 5
+
+  [1] Linha 1: Variável 'V' com nome muito curto (≤4 chars)
+      Trecho  : V = ...
+      Contexto:
+        >>>    1 | V = float(input("entre com o valor do premio:"))  #valor do premio
+               2 | M = float(input("entre com o saque mensal:"))     #saque mensal
+
+  [2] Linha 2: Variável 'M' com nome muito curto (≤4 chars)
+      Trecho  : M = ...
+      Contexto:
+               1 | V = float(input("entre com o valor do premio:"))  #valor do premio
+        >>>    2 | M = float(input("entre com o saque mensal:"))     #saque mensal
+               3 | j = float(input("entre com a taxa de juros:"))  # taxa de juros
+
+  [3] Linha 3: Variável 'j' com nome muito curto (≤4 chars)
+      Trecho  : j = ...
+      Contexto:
+               2 | M = float(input("entre com o saque mensal:"))     #saque mensal
+        >>>    3 | j = float(input("entre com a taxa de juros:"))  # taxa de juros
+               4 | t = 0
+
+  [4] Linha 4: Variável 't' com nome muito curto (≤4 chars)
+      Trecho  : t = ...
+      Contexto:
+               3 | j = float(input("entre com a taxa de juros:"))  # taxa de juros
+        >>>    4 | t = 0
+               5 | saldo = V
+
+  [5] Linha 10: Variável 't' com nome muito curto (≤4 chars)
+      Trecho  : t = ...
+      Contexto:
+               9 | 		saldo += round(saldo,2)
+        >>>   10 | 		t = t + 1
+              11 | 		print(t)
+
+======================================================================

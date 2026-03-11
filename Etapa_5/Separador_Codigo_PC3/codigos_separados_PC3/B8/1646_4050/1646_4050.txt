@@ -1,0 +1,49 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1646_4050.py
+Questão  : 1646
+Aluno    : 4050
+Total MCs: 1
+
+⚠️  Misconceptions detectados: B8
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | saques = array(eval(input("Insira os saques: ")))
+     3 | 
+     4 | num = 0
+     5 | for i in range(size(saques)):
+     6 | 	if(saques[i] <= 50):
+     7 | 		num += 1
+     8 | print(num)
+     9 | 
+    10 | saida = zeros(num, dtype=int)
+    11 | a = 0
+    12 | b = 0
+    13 | for i in range(size(saques)):
+    14 | 	if(saques[i]<50):
+    15 | 		a += 1
+    16 | 	elif(saques[i]<=50):
+    17 | 		saida[b] = saida[b] + a
+    18 | 		a += 1
+    19 | 		b += 1
+    20 | print(saida)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 14: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 14) / elif ... sem else
+      Contexto:
+              13 | for i in range(size(saques)):
+        >>>   14 | 	if(saques[i]<50):
+              15 | 		a += 1
+
+======================================================================

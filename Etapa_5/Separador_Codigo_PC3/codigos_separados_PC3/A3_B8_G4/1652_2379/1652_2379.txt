@@ -1,0 +1,143 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1652_2379.py
+Questão  : 1652
+Aluno    : 2379
+Total MCs: 3
+
+⚠️  Misconceptions detectados: A3, B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | 
+     3 | cont = zeros(5, dtype=int)
+     4 | B = 0
+     5 | PA = 0 
+     6 | PR = 0
+     7 | A = 0
+     8 | I = 0
+     9 | 
+    10 | vet = input("etnia: ").upper().split(',')
+    11 | 
+    12 | for i in range (size(vet)):
+    13 | 	if (vet[i] == 'B'):
+    14 | 		cont[0] = cont[0] + 1
+    15 | 	elif(vet[i] == 'PA'):
+    16 | 		cont[1] = cont[1] + 1
+    17 | 	elif(vet[i] == 'PR'):
+    18 | 		cont[2] = cont[2] + 1
+    19 | 	elif(vet[i] == 'A'): 
+    20 | 		cont[3] = cont[3] + 1
+    21 | 	elif(vet[i] ==	'I'):
+    22 | 		cont[4] = cont[4] + 1 
+    23 | print(max(cont))
+    24 | print(cont)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 5
+
+  [1] Linha 4: Variável 'B' declarada mas nunca utilizada
+      Trecho  : B = ...
+      Contexto:
+               3 | cont = zeros(5, dtype=int)
+        >>>    4 | B = 0
+               5 | PA = 0 
+
+  [2] Linha 5: Variável 'PA' declarada mas nunca utilizada
+      Trecho  : PA = ...
+      Contexto:
+               4 | B = 0
+        >>>    5 | PA = 0 
+               6 | PR = 0
+
+  [3] Linha 6: Variável 'PR' declarada mas nunca utilizada
+      Trecho  : PR = ...
+      Contexto:
+               5 | PA = 0 
+        >>>    6 | PR = 0
+               7 | A = 0
+
+  [4] Linha 7: Variável 'A' declarada mas nunca utilizada
+      Trecho  : A = ...
+      Contexto:
+               6 | PR = 0
+        >>>    7 | A = 0
+               8 | I = 0
+
+  [5] Linha 8: Variável 'I' declarada mas nunca utilizada
+      Trecho  : I = ...
+      Contexto:
+               7 | A = 0
+        >>>    8 | I = 0
+               9 | 
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 19: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 19) / elif ... sem else
+      Contexto:
+              18 | 		cont[2] = cont[2] + 1
+        >>>   19 | 	elif(vet[i] == 'A'): 
+              20 | 		cont[3] = cont[3] + 1
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 7
+
+  [1] Linha 3: Variável 'cont' com nome muito curto (≤4 chars)
+      Trecho  : cont = ...
+      Contexto:
+               2 | 
+        >>>    3 | cont = zeros(5, dtype=int)
+               4 | B = 0
+
+  [2] Linha 4: Variável 'B' com nome muito curto (≤4 chars)
+      Trecho  : B = ...
+      Contexto:
+               3 | cont = zeros(5, dtype=int)
+        >>>    4 | B = 0
+               5 | PA = 0 
+
+  [3] Linha 5: Variável 'PA' com nome muito curto (≤4 chars)
+      Trecho  : PA = ...
+      Contexto:
+               4 | B = 0
+        >>>    5 | PA = 0 
+               6 | PR = 0
+
+  [4] Linha 6: Variável 'PR' com nome muito curto (≤4 chars)
+      Trecho  : PR = ...
+      Contexto:
+               5 | PA = 0 
+        >>>    6 | PR = 0
+               7 | A = 0
+
+  [5] Linha 7: Variável 'A' com nome muito curto (≤4 chars)
+      Trecho  : A = ...
+      Contexto:
+               6 | PR = 0
+        >>>    7 | A = 0
+               8 | I = 0
+
+  [6] Linha 8: Variável 'I' com nome muito curto (≤4 chars)
+      Trecho  : I = ...
+      Contexto:
+               7 | A = 0
+        >>>    8 | I = 0
+               9 | 
+
+  [7] Linha 10: Variável 'vet' com nome muito curto (≤4 chars)
+      Trecho  : vet = ...
+      Contexto:
+               9 | 
+        >>>   10 | vet = input("etnia: ").upper().split(',')
+              11 | 
+
+======================================================================

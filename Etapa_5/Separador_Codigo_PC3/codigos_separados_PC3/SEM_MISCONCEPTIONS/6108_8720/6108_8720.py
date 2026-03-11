@@ -1,0 +1,10 @@
+qcc=float(input())
+if(0<qcc<17.5):
+	total=qcc+1.5
+elif(17.5<=qcc<35):
+	total=qcc+2.3
+elif(35<=qcc<50):
+	total=qcc+3.3
+else:
+	total=qcc+4.7
+print(round(total,1))

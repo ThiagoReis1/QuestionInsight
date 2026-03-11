@@ -1,0 +1,101 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1642_4163.py
+Questão  : 1642
+Aluno    : 4163
+Total MCs: 2
+
+⚠️  Misconceptions detectados: A3, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | 
+     3 | a = array(eval(input("digite: ")))
+     4 | n = 0
+     5 | for i in range(size(a)):
+     6 | 	if a[i] % 5 == 0:
+     7 | 		n = n + 1
+     8 | 	
+     9 | new = zeros(n, dtype=int)
+    10 | 
+    11 | x = 0
+    12 | y = 0
+    13 | 
+    14 | for i in range(size(a)):
+    15 | 	if a[i] % 5 == 0:
+    16 | 		new[x] = new[x] + i
+    17 | 		x = x +1
+    18 | print(n)	
+    19 | print(new)
+    20 | 	
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 1
+
+  [1] Linha 12: Variável 'y' declarada mas nunca utilizada
+      Trecho  : y = ...
+      Contexto:
+              11 | x = 0
+        >>>   12 | y = 0
+              13 | 
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 7
+
+  [1] Linha 3: Variável 'a' com nome muito curto (≤4 chars)
+      Trecho  : a = ...
+      Contexto:
+               2 | 
+        >>>    3 | a = array(eval(input("digite: ")))
+               4 | n = 0
+
+  [2] Linha 4: Variável 'n' com nome muito curto (≤4 chars)
+      Trecho  : n = ...
+      Contexto:
+               3 | a = array(eval(input("digite: ")))
+        >>>    4 | n = 0
+               5 | for i in range(size(a)):
+
+  [3] Linha 9: Variável 'new' com nome muito curto (≤4 chars)
+      Trecho  : new = ...
+      Contexto:
+               8 | 	
+        >>>    9 | new = zeros(n, dtype=int)
+              10 | 
+
+  [4] Linha 11: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+              10 | 
+        >>>   11 | x = 0
+              12 | y = 0
+
+  [5] Linha 12: Variável 'y' com nome muito curto (≤4 chars)
+      Trecho  : y = ...
+      Contexto:
+              11 | x = 0
+        >>>   12 | y = 0
+              13 | 
+
+  [6] Linha 7: Variável 'n' com nome muito curto (≤4 chars)
+      Trecho  : n = ...
+      Contexto:
+               6 | 	if a[i] % 5 == 0:
+        >>>    7 | 		n = n + 1
+               8 | 	
+
+  [7] Linha 17: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+              16 | 		new[x] = new[x] + i
+        >>>   17 | 		x = x +1
+              18 | print(n)	
+
+======================================================================

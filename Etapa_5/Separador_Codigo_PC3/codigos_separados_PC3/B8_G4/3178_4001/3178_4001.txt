@@ -1,0 +1,90 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 3178_4001.py
+Questão  : 3178
+Aluno    : 4001
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | N = array(eval(input("Vetor: ")))
+     3 | 
+     4 | v = zeros(size(N), dtype=int)
+     5 | a = 0 #indice
+     6 | b = 0
+     7 | for i in range(size(N)):
+     8 | 	if (N[i] != 0):
+     9 | 		v[a] = N[i]
+    10 | 		a = a + 1
+    11 | 	elif (N[i] == 0):
+    12 | 		v[b] = v[b] + N[i]
+    13 | 		b = b + 1
+    14 | print(v)
+    15 | 		
+    16 | 		
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 8: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 8) / elif ... sem else
+      Contexto:
+               7 | for i in range(size(N)):
+        >>>    8 | 	if (N[i] != 0):
+               9 | 		v[a] = N[i]
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 6
+
+  [1] Linha 2: Variável 'N' com nome muito curto (≤4 chars)
+      Trecho  : N = ...
+      Contexto:
+               1 | from numpy import*
+        >>>    2 | N = array(eval(input("Vetor: ")))
+               3 | 
+
+  [2] Linha 4: Variável 'v' com nome muito curto (≤4 chars)
+      Trecho  : v = ...
+      Contexto:
+               3 | 
+        >>>    4 | v = zeros(size(N), dtype=int)
+               5 | a = 0 #indice
+
+  [3] Linha 5: Variável 'a' com nome muito curto (≤4 chars)
+      Trecho  : a = ...
+      Contexto:
+               4 | v = zeros(size(N), dtype=int)
+        >>>    5 | a = 0 #indice
+               6 | b = 0
+
+  [4] Linha 6: Variável 'b' com nome muito curto (≤4 chars)
+      Trecho  : b = ...
+      Contexto:
+               5 | a = 0 #indice
+        >>>    6 | b = 0
+               7 | for i in range(size(N)):
+
+  [5] Linha 10: Variável 'a' com nome muito curto (≤4 chars)
+      Trecho  : a = ...
+      Contexto:
+               9 | 		v[a] = N[i]
+        >>>   10 | 		a = a + 1
+              11 | 	elif (N[i] == 0):
+
+  [6] Linha 13: Variável 'b' com nome muito curto (≤4 chars)
+      Trecho  : b = ...
+      Contexto:
+              12 | 		v[b] = v[b] + N[i]
+        >>>   13 | 		b = b + 1
+              14 | print(v)
+
+======================================================================

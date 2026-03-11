@@ -1,0 +1,119 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 5283_5299.py
+Questão  : 5283
+Aluno    : 5299
+Total MCs: 3
+
+⚠️  Misconceptions detectados: B8, C1, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | n = int(input(""))
+     2 | c = 0
+     3 | s = 0
+     4 | while (n != 0):
+     5 | 	if (n > 0):
+     6 | 		c = c + 1
+     7 | 		n = int(input(":"))
+     8 | 	elif (n < 0):
+     9 | 		s = s +1
+    10 | 		n = int(input("/"))
+    11 | 	if (n == 0):
+    12 | 		a = c + s
+    13 | 		x = c*100/a
+    14 | print(a)
+    15 | print(round(x, 2))
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 5: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 5) / elif ... sem else
+      Contexto:
+               4 | while (n != 0):
+        >>>    5 | 	if (n > 0):
+               6 | 		c = c + 1
+
+▶ C1 — Condição while testada novamente dentro do seu bloco
+  Ocorrências: 1
+
+  [1] Linha 11: If retesta condição inversa do while da linha 4
+      Trecho  : while n != 0 → if n == 0
+      Contexto:
+              10 | 		n = int(input("/"))
+        >>>   11 | 	if (n == 0):
+              12 | 		a = c + s
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 9
+
+  [1] Linha 1: Variável 'n' com nome muito curto (≤4 chars)
+      Trecho  : n = ...
+      Contexto:
+        >>>    1 | n = int(input(""))
+               2 | c = 0
+
+  [2] Linha 2: Variável 'c' com nome muito curto (≤4 chars)
+      Trecho  : c = ...
+      Contexto:
+               1 | n = int(input(""))
+        >>>    2 | c = 0
+               3 | s = 0
+
+  [3] Linha 3: Variável 's' com nome muito curto (≤4 chars)
+      Trecho  : s = ...
+      Contexto:
+               2 | c = 0
+        >>>    3 | s = 0
+               4 | while (n != 0):
+
+  [4] Linha 6: Variável 'c' com nome muito curto (≤4 chars)
+      Trecho  : c = ...
+      Contexto:
+               5 | 	if (n > 0):
+        >>>    6 | 		c = c + 1
+               7 | 		n = int(input(":"))
+
+  [5] Linha 7: Variável 'n' com nome muito curto (≤4 chars)
+      Trecho  : n = ...
+      Contexto:
+               6 | 		c = c + 1
+        >>>    7 | 		n = int(input(":"))
+               8 | 	elif (n < 0):
+
+  [6] Linha 12: Variável 'a' com nome muito curto (≤4 chars)
+      Trecho  : a = ...
+      Contexto:
+              11 | 	if (n == 0):
+        >>>   12 | 		a = c + s
+              13 | 		x = c*100/a
+
+  [7] Linha 13: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+              12 | 		a = c + s
+        >>>   13 | 		x = c*100/a
+              14 | print(a)
+
+  [8] Linha 9: Variável 's' com nome muito curto (≤4 chars)
+      Trecho  : s = ...
+      Contexto:
+               8 | 	elif (n < 0):
+        >>>    9 | 		s = s +1
+              10 | 		n = int(input("/"))
+
+  [9] Linha 10: Variável 'n' com nome muito curto (≤4 chars)
+      Trecho  : n = ...
+      Contexto:
+               9 | 		s = s +1
+        >>>   10 | 		n = int(input("/"))
+              11 | 	if (n == 0):
+
+======================================================================

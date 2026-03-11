@@ -1,0 +1,105 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1530_2295.py
+Questão  : 1530
+Aluno    : 2295
+Total MCs: 2
+
+⚠️  Misconceptions detectados: A3, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | qp=int(input())
+     2 | qv=int(input())
+     3 | pp=float(input())/100
+     4 | pv=float(input())/100
+     5 | t = 0
+     6 | while(qp + qv < 80000):
+     7 | 	qp = qp + (qp * pp)
+     8 | 	qv = qv + (qv * pv)
+     9 | 	qt = qp + qv 
+    10 | 	t = t + 1
+    11 | print(t)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 1
+
+  [1] Linha 9: Variável 'qt' declarada mas nunca utilizada
+      Trecho  : qt = ...
+      Contexto:
+               8 | 	qv = qv + (qv * pv)
+        >>>    9 | 	qt = qp + qv 
+              10 | 	t = t + 1
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 9
+
+  [1] Linha 1: Variável 'qp' com nome muito curto (≤4 chars)
+      Trecho  : qp = ...
+      Contexto:
+        >>>    1 | qp=int(input())
+               2 | qv=int(input())
+
+  [2] Linha 2: Variável 'qv' com nome muito curto (≤4 chars)
+      Trecho  : qv = ...
+      Contexto:
+               1 | qp=int(input())
+        >>>    2 | qv=int(input())
+               3 | pp=float(input())/100
+
+  [3] Linha 3: Variável 'pp' com nome muito curto (≤4 chars)
+      Trecho  : pp = ...
+      Contexto:
+               2 | qv=int(input())
+        >>>    3 | pp=float(input())/100
+               4 | pv=float(input())/100
+
+  [4] Linha 4: Variável 'pv' com nome muito curto (≤4 chars)
+      Trecho  : pv = ...
+      Contexto:
+               3 | pp=float(input())/100
+        >>>    4 | pv=float(input())/100
+               5 | t = 0
+
+  [5] Linha 5: Variável 't' com nome muito curto (≤4 chars)
+      Trecho  : t = ...
+      Contexto:
+               4 | pv=float(input())/100
+        >>>    5 | t = 0
+               6 | while(qp + qv < 80000):
+
+  [6] Linha 7: Variável 'qp' com nome muito curto (≤4 chars)
+      Trecho  : qp = ...
+      Contexto:
+               6 | while(qp + qv < 80000):
+        >>>    7 | 	qp = qp + (qp * pp)
+               8 | 	qv = qv + (qv * pv)
+
+  [7] Linha 8: Variável 'qv' com nome muito curto (≤4 chars)
+      Trecho  : qv = ...
+      Contexto:
+               7 | 	qp = qp + (qp * pp)
+        >>>    8 | 	qv = qv + (qv * pv)
+               9 | 	qt = qp + qv 
+
+  [8] Linha 9: Variável 'qt' com nome muito curto (≤4 chars)
+      Trecho  : qt = ...
+      Contexto:
+               8 | 	qv = qv + (qv * pv)
+        >>>    9 | 	qt = qp + qv 
+              10 | 	t = t + 1
+
+  [9] Linha 10: Variável 't' com nome muito curto (≤4 chars)
+      Trecho  : t = ...
+      Contexto:
+               9 | 	qt = qp + qv 
+        >>>   10 | 	t = t + 1
+              11 | print(t)
+
+======================================================================

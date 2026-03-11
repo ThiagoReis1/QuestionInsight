@@ -1,0 +1,115 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1603_3046.py
+Questão  : 1603
+Aluno    : 3046
+Total MCs: 3
+
+⚠️  Misconceptions detectados: A2, B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import *
+     2 | v = array(eval(input("v: ")))
+     3 | 
+     4 | i = 0
+     5 | acum = 0
+     6 | 
+     7 | while(i < size(v)):
+     8 | 	if(v[i] == 1):
+     9 | 		acum = acum + 80
+    10 | 	elif(v[i] == 2):
+    11 | 		acum = acum + 40
+    12 | 	elif(v[i] == 3):
+    13 | 		acum = acum + 20
+    14 | 	elif(v[i] >= 4):
+    15 | 		acum = acum
+    16 | 	i = i + 1
+    17 | print(acum)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A2 — Variável atribuída a si mesma
+  Ocorrências: 1
+
+  [1] Linha 15: 'acum' atribuído a si mesmo
+      Trecho  : acum = acum
+      Contexto:
+              14 | 	elif(v[i] >= 4):
+        >>>   15 | 		acum = acum
+              16 | 	i = i + 1
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 12: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 12) / elif ... sem else
+      Contexto:
+              11 | 		acum = acum + 40
+        >>>   12 | 	elif(v[i] == 3):
+              13 | 		acum = acum + 20
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 8
+
+  [1] Linha 2: Variável 'v' com nome muito curto (≤4 chars)
+      Trecho  : v = ...
+      Contexto:
+               1 | from numpy import *
+        >>>    2 | v = array(eval(input("v: ")))
+               3 | 
+
+  [2] Linha 4: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+               3 | 
+        >>>    4 | i = 0
+               5 | acum = 0
+
+  [3] Linha 5: Variável 'acum' com nome muito curto (≤4 chars)
+      Trecho  : acum = ...
+      Contexto:
+               4 | i = 0
+        >>>    5 | acum = 0
+               6 | 
+
+  [4] Linha 16: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+              15 | 		acum = acum
+        >>>   16 | 	i = i + 1
+              17 | print(acum)
+
+  [5] Linha 9: Variável 'acum' com nome muito curto (≤4 chars)
+      Trecho  : acum = ...
+      Contexto:
+               8 | 	if(v[i] == 1):
+        >>>    9 | 		acum = acum + 80
+              10 | 	elif(v[i] == 2):
+
+  [6] Linha 11: Variável 'acum' com nome muito curto (≤4 chars)
+      Trecho  : acum = ...
+      Contexto:
+              10 | 	elif(v[i] == 2):
+        >>>   11 | 		acum = acum + 40
+              12 | 	elif(v[i] == 3):
+
+  [7] Linha 13: Variável 'acum' com nome muito curto (≤4 chars)
+      Trecho  : acum = ...
+      Contexto:
+              12 | 	elif(v[i] == 3):
+        >>>   13 | 		acum = acum + 20
+              14 | 	elif(v[i] >= 4):
+
+  [8] Linha 15: Variável 'acum' com nome muito curto (≤4 chars)
+      Trecho  : acum = ...
+      Contexto:
+              14 | 	elif(v[i] >= 4):
+        >>>   15 | 		acum = acum
+              16 | 	i = i + 1
+
+======================================================================

@@ -1,0 +1,11 @@
+# faça seu código aqui!
+
+dias = int(input())
+
+if dias < 15:
+	total = 175*dias+20
+elif dias == 15:
+	total = 175*dias+16
+elif dias > 15:
+	total = 175*dias+10
+print("total=",round(total,2))

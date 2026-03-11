@@ -1,0 +1,163 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1652_3112.py
+Questão  : 1652
+Aluno    : 3112
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | 
+     3 | vetor = array(input("String: "))
+     4 | 
+     5 | i = 0
+     6 | 
+     7 | B = 0
+     8 | PA = 0
+     9 | PR = 0
+    10 | A = 0
+    11 | I = 0
+    12 | 
+    13 | while(i > size(vetor)):
+    14 | 	if(vetor[i] == 'B'):
+    15 | 		B = B + 1
+    16 | 	elif(vetor[i] == 'PA'):
+    17 | 		PA = PA + 1
+    18 | 	elif(vetor[i] == 'PR'):
+    19 | 		PR = PR + 1
+    20 | 	elif(vetor[i] == 'A'):
+    21 | 		A = A + 1
+    22 | 	elif(vetor[i] == 'I'):
+    23 | 		I = I + 1
+    24 | 	i = i + 1
+    25 | 
+    26 | if(B > PA or B > PR or B > A or B > I):
+    27 | 	print(B)
+    28 | elif(PA > B or B > PR or B > A or B > I):
+    29 | 	print(PA)
+    30 | elif (PR > PA or PR > B or PR > A or PR > I):
+    31 | 	print(PR)
+    32 | elif(A > PA or A > PR or A > B or A > I):
+    33 | 	print(A)
+    34 | elif(I > PA or I > PR or I > A or I > B):
+    35 | 	print(I)
+    36 | 	
+    37 | 
+    38 | 
+    39 | 
+    40 | 
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 2
+
+  [1] Linha 32: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 32) / elif ... sem else
+      Contexto:
+              31 | 	print(PR)
+        >>>   32 | elif(A > PA or A > PR or A > B or A > I):
+              33 | 	print(A)
+
+  [2] Linha 20: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 20) / elif ... sem else
+      Contexto:
+              19 | 		PR = PR + 1
+        >>>   20 | 	elif(vetor[i] == 'A'):
+              21 | 		A = A + 1
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 12
+
+  [1] Linha 5: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+               4 | 
+        >>>    5 | i = 0
+               6 | 
+
+  [2] Linha 7: Variável 'B' com nome muito curto (≤4 chars)
+      Trecho  : B = ...
+      Contexto:
+               6 | 
+        >>>    7 | B = 0
+               8 | PA = 0
+
+  [3] Linha 8: Variável 'PA' com nome muito curto (≤4 chars)
+      Trecho  : PA = ...
+      Contexto:
+               7 | B = 0
+        >>>    8 | PA = 0
+               9 | PR = 0
+
+  [4] Linha 9: Variável 'PR' com nome muito curto (≤4 chars)
+      Trecho  : PR = ...
+      Contexto:
+               8 | PA = 0
+        >>>    9 | PR = 0
+              10 | A = 0
+
+  [5] Linha 10: Variável 'A' com nome muito curto (≤4 chars)
+      Trecho  : A = ...
+      Contexto:
+               9 | PR = 0
+        >>>   10 | A = 0
+              11 | I = 0
+
+  [6] Linha 11: Variável 'I' com nome muito curto (≤4 chars)
+      Trecho  : I = ...
+      Contexto:
+              10 | A = 0
+        >>>   11 | I = 0
+              12 | 
+
+  [7] Linha 24: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+              23 | 		I = I + 1
+        >>>   24 | 	i = i + 1
+              25 | 
+
+  [8] Linha 15: Variável 'B' com nome muito curto (≤4 chars)
+      Trecho  : B = ...
+      Contexto:
+              14 | 	if(vetor[i] == 'B'):
+        >>>   15 | 		B = B + 1
+              16 | 	elif(vetor[i] == 'PA'):
+
+  [9] Linha 17: Variável 'PA' com nome muito curto (≤4 chars)
+      Trecho  : PA = ...
+      Contexto:
+              16 | 	elif(vetor[i] == 'PA'):
+        >>>   17 | 		PA = PA + 1
+              18 | 	elif(vetor[i] == 'PR'):
+
+  [10] Linha 19: Variável 'PR' com nome muito curto (≤4 chars)
+      Trecho  : PR = ...
+      Contexto:
+              18 | 	elif(vetor[i] == 'PR'):
+        >>>   19 | 		PR = PR + 1
+              20 | 	elif(vetor[i] == 'A'):
+
+  [11] Linha 21: Variável 'A' com nome muito curto (≤4 chars)
+      Trecho  : A = ...
+      Contexto:
+              20 | 	elif(vetor[i] == 'A'):
+        >>>   21 | 		A = A + 1
+              22 | 	elif(vetor[i] == 'I'):
+
+  [12] Linha 23: Variável 'I' com nome muito curto (≤4 chars)
+      Trecho  : I = ...
+      Contexto:
+              22 | 	elif(vetor[i] == 'I'):
+        >>>   23 | 		I = I + 1
+              24 | 	i = i + 1
+
+======================================================================

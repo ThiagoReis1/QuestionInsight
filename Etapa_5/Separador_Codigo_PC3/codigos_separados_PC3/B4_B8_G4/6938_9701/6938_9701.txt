@@ -1,0 +1,74 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 6938_9701.py
+Questão  : 6938
+Aluno    : 9701
+Total MCs: 3
+
+⚠️  Misconceptions detectados: B4, B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | val = float(input("qual o valor da sua compra? "))
+     2 | pag = input("qual sua forma de pagamento? ").upper()
+     3 | if pag == "C":
+     4 | 	card = int(input("deseja pagar em 1 ou 2 vezes? "))
+     5 | 	if card == 1:
+     6 | 		print(round(val, 2))
+     7 | 	elif card == 2:
+     8 | 		total = val + (val*0.06)
+     9 | 		print(round(total, 2))
+    10 | elif pag == "D":
+    11 | 	total = val - (val*0.11)
+    12 | 	print(round(total, 2))
+    13 | elif pag == "P":
+    14 | 	total = val - (val*0.11)
+    15 | 	print(round(total, 2))
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B4 — Comandos repetidos dentro de blocos if-elif-else
+  Ocorrências: 2
+
+  [1] Linha 13: Bloco idêntico ao da linha 10
+      Trecho  : total = val - val * 0.11
+      Contexto:
+              12 | 	print(round(total, 2))
+        >>>   13 | elif pag == "P":
+              14 | 	total = val - (val*0.11)
+
+  [2] Linha 13: Bloco idêntico ao da linha 10
+      Trecho  : total = val - val * 0.11
+      Contexto:
+              12 | 	print(round(total, 2))
+        >>>   13 | elif pag == "P":
+              14 | 	total = val - (val*0.11)
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 2
+
+  [1] Linha 5: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 5) / elif ... sem else
+      Contexto:
+               4 | 	card = int(input("deseja pagar em 1 ou 2 vezes? "))
+        >>>    5 | 	if card == 1:
+               6 | 		print(round(val, 2))
+
+  [2] Linha 10: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 10) / elif ... sem else
+      Contexto:
+               9 | 		print(round(total, 2))
+        >>>   10 | elif pag == "D":
+              11 | 	total = val - (val*0.11)
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 1
+
+  [1] Linha 0: G4 detectado pelo VisitorMC3 (localização exata não mapeada)
+      Trecho  : —
+
+======================================================================

@@ -1,0 +1,72 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1655_1923.py
+Questão  : 1655
+Aluno    : 1923
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | v=(input())
+     3 | 
+     4 | v3=v.split(",")
+     5 | 
+     6 | v2=zeros(5, dtype=int)
+     7 | for x in v3:
+     8 | 	if x=='AC':
+     9 | 		v2[0]=v2[0]+1
+    10 | 	elif x=='AM':
+    11 | 		v2[1]=v2[1]+1
+    12 | 	elif x=='PA':
+    13 | 		v2[2]=v2[2]+1
+    14 | 	elif x=='RO':
+    15 | 		v2[3]=v2[3]+1
+    16 | 	elif x=='RR':
+    17 | 		v2[4]=v2[4]+1
+    18 | print(max(v2))
+    19 | print(v2)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 14: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 14) / elif ... sem else
+      Contexto:
+              13 | 		v2[2]=v2[2]+1
+        >>>   14 | 	elif x=='RO':
+              15 | 		v2[3]=v2[3]+1
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 3
+
+  [1] Linha 2: Variável 'v' com nome muito curto (≤4 chars)
+      Trecho  : v = ...
+      Contexto:
+               1 | from numpy import*
+        >>>    2 | v=(input())
+               3 | 
+
+  [2] Linha 4: Variável 'v3' com nome muito curto (≤4 chars)
+      Trecho  : v3 = ...
+      Contexto:
+               3 | 
+        >>>    4 | v3=v.split(",")
+               5 | 
+
+  [3] Linha 6: Variável 'v2' com nome muito curto (≤4 chars)
+      Trecho  : v2 = ...
+      Contexto:
+               5 | 
+        >>>    6 | v2=zeros(5, dtype=int)
+               7 | for x in v3:
+
+======================================================================

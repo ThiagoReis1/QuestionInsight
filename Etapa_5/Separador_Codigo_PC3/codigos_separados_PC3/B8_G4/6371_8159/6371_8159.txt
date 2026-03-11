@@ -1,0 +1,47 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 6371_8159.py
+Questão  : 6371
+Aluno    : 8159
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import *
+     2 | msg = array(eval(input("Digite: ")))
+     3 | for i in range(size(msg)):
+     4 | 	if 0 < msg[i] <= 9:
+     5 | 		msg[i] = (msg[i]-1)**2
+     6 | 	elif msg[i] == 0:
+     7 | 		msg[i] = (9)**2
+     8 | print(msg)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 4: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 4) / elif ... sem else
+      Contexto:
+               3 | for i in range(size(msg)):
+        >>>    4 | 	if 0 < msg[i] <= 9:
+               5 | 		msg[i] = (msg[i]-1)**2
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 1
+
+  [1] Linha 2: Variável 'msg' com nome muito curto (≤4 chars)
+      Trecho  : msg = ...
+      Contexto:
+               1 | from numpy import *
+        >>>    2 | msg = array(eval(input("Digite: ")))
+               3 | for i in range(size(msg)):
+
+======================================================================

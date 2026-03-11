@@ -1,0 +1,116 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1995_2511.py
+Questão  : 1995
+Aluno    : 2511
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | #Peso molecular
+     2 | 
+     3 | aminoacido = input("aspartato, cisteina ou metionina? ").lower()
+     4 | 
+     5 | O= 15.9994
+     6 | C = 12.011
+     7 | N = 14.0067
+     8 | S=32.066
+     9 | H = 1.00794
+    10 | 
+    11 | if(aminoacido!="aspartato") and (aminoacido!="cisteina") and(aminoacido!="metionina"):
+    12 | 	print("Entrada:",aminoacido)
+    13 | 	print("Dado Invalido")
+    14 | 	
+    15 | elif(aminoacido=="aspartato"):
+    16 | 	peso= (C*4)+(H*6)+(N*1)+(O*4)
+    17 | 	print(round(peso,2))
+    18 | elif(aminoacido=="cisteina"):
+    19 | 	peso= (C*3)+(H*7)+(N*1)+(O*2) + (S*1)
+    20 | 	print(round(peso,2))
+    21 | elif(aminoacido=="metionina"):
+    22 | 	peso= (C*5)+(H*11) +(N*1)+(O*2) + (S*1)
+    23 | 	print(round(peso,2)) 
+    24 | 
+    25 | 
+    26 | 
+    27 | 
+    28 | 	
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 18: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 18) / elif ... sem else
+      Contexto:
+              17 | 	print(round(peso,2))
+        >>>   18 | elif(aminoacido=="cisteina"):
+              19 | 	peso= (C*3)+(H*7)+(N*1)+(O*2) + (S*1)
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 8
+
+  [1] Linha 5: Variável 'O' com nome muito curto (≤4 chars)
+      Trecho  : O = ...
+      Contexto:
+               4 | 
+        >>>    5 | O= 15.9994
+               6 | C = 12.011
+
+  [2] Linha 6: Variável 'C' com nome muito curto (≤4 chars)
+      Trecho  : C = ...
+      Contexto:
+               5 | O= 15.9994
+        >>>    6 | C = 12.011
+               7 | N = 14.0067
+
+  [3] Linha 7: Variável 'N' com nome muito curto (≤4 chars)
+      Trecho  : N = ...
+      Contexto:
+               6 | C = 12.011
+        >>>    7 | N = 14.0067
+               8 | S=32.066
+
+  [4] Linha 8: Variável 'S' com nome muito curto (≤4 chars)
+      Trecho  : S = ...
+      Contexto:
+               7 | N = 14.0067
+        >>>    8 | S=32.066
+               9 | H = 1.00794
+
+  [5] Linha 9: Variável 'H' com nome muito curto (≤4 chars)
+      Trecho  : H = ...
+      Contexto:
+               8 | S=32.066
+        >>>    9 | H = 1.00794
+              10 | 
+
+  [6] Linha 16: Variável 'peso' com nome muito curto (≤4 chars)
+      Trecho  : peso = ...
+      Contexto:
+              15 | elif(aminoacido=="aspartato"):
+        >>>   16 | 	peso= (C*4)+(H*6)+(N*1)+(O*4)
+              17 | 	print(round(peso,2))
+
+  [7] Linha 19: Variável 'peso' com nome muito curto (≤4 chars)
+      Trecho  : peso = ...
+      Contexto:
+              18 | elif(aminoacido=="cisteina"):
+        >>>   19 | 	peso= (C*3)+(H*7)+(N*1)+(O*2) + (S*1)
+              20 | 	print(round(peso,2))
+
+  [8] Linha 22: Variável 'peso' com nome muito curto (≤4 chars)
+      Trecho  : peso = ...
+      Contexto:
+              21 | elif(aminoacido=="metionina"):
+        >>>   22 | 	peso= (C*5)+(H*11) +(N*1)+(O*2) + (S*1)
+              23 | 	print(round(peso,2)) 
+
+======================================================================

@@ -1,0 +1,65 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1126_1660.py
+Questão  : 1126
+Aluno    : 1660
+Total MCs: 3
+
+⚠️  Misconceptions detectados: B8, E1, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | nome = input("Qual o nome do Stark? ")
+     2 | 
+     3 | if (nome == "Sansa" or nome == "Robb" or nome == "Rickon" or nome == "Jon Snow" or   nome == "Bran" or nome == "Arya"):
+     4 | 	if (nome == "Sansa"):
+     5 | 		print("Lady")
+     6 | 	elif (nome == "Robb"):
+     7 | 		print("Vento Cinzento")
+     8 | 	elif (nome == "Rickon"):
+     9 | 		print("Cao Felpudo")
+    10 | 	elif (nome == "Jon Snow"):
+    11 | 		print("Fantasma")
+    12 | 	elif (nome == "Bran"):
+    13 | 		print("Verao")
+    14 | 	elif (nome == "Arya"):
+    15 | 		print("Nymeria")
+    16 | else:
+    17 | 	print("Entrada", nome, "invalida")
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 12: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 12) / elif ... sem else
+      Contexto:
+              11 | 		print("Fantasma")
+        >>>   12 | 	elif (nome == "Bran"):
+              13 | 		print("Verao")
+
+▶ E1 — Verificação desnecessária de todas as combinações possíveis
+  Ocorrências: 1
+
+  [1] Linha 3: 6 condições em um único if — verificação excessiva
+      Trecho  : nome == 'Sansa' or nome == 'Robb' or nome == 'Rickon' or (nome == 'Jon Snow') or (nome == 'Bran') or (nome == 'Arya')
+      Contexto:
+               2 | 
+        >>>    3 | if (nome == "Sansa" or nome == "Robb" or nome == "Rickon" or nome == "Jon Snow" or   nome == "Bran" or nome == "Arya"):
+               4 | 	if (nome == "Sansa"):
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 1
+
+  [1] Linha 1: Variável 'nome' com nome muito curto (≤4 chars)
+      Trecho  : nome = ...
+      Contexto:
+        >>>    1 | nome = input("Qual o nome do Stark? ")
+               2 | 
+
+======================================================================

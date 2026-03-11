@@ -1,0 +1,65 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1649_2423.py
+Questão  : 1649
+Aluno    : 2423
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | s = input(":").upper().split(',')
+     3 | cont = zeros(5,dtype=int)
+     4 | 
+     5 | for i in range(size(s)):
+     6 | 	if(s[i] == "P"):
+     7 | 		cont[0] = cont[0] + 1
+     8 | 	elif(s[i] == "C"):
+     9 | 		cont[1] = cont[1] + 1
+    10 | 	elif(s[i] == "M"):
+    11 | 		cont[2] = cont[2] + 1
+    12 | 	elif(s[i] == "V"):
+    13 | 		cont[3] = cont[3] + 1
+    14 | 	elif(s[i] == "A"):
+    15 | 		cont[4] = cont[4] + 1
+    16 | print(max(cont))
+    17 | print(cont)
+    18 | 		
+    19 | 
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 12: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 12) / elif ... sem else
+      Contexto:
+              11 | 		cont[2] = cont[2] + 1
+        >>>   12 | 	elif(s[i] == "V"):
+              13 | 		cont[3] = cont[3] + 1
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 2
+
+  [1] Linha 2: Variável 's' com nome muito curto (≤4 chars)
+      Trecho  : s = ...
+      Contexto:
+               1 | from numpy import*
+        >>>    2 | s = input(":").upper().split(',')
+               3 | cont = zeros(5,dtype=int)
+
+  [2] Linha 3: Variável 'cont' com nome muito curto (≤4 chars)
+      Trecho  : cont = ...
+      Contexto:
+               2 | s = input(":").upper().split(',')
+        >>>    3 | cont = zeros(5,dtype=int)
+               4 | 
+
+======================================================================

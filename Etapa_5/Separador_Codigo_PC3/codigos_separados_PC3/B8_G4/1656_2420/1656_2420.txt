@@ -1,0 +1,74 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1656_2420.py
+Questão  : 1656
+Aluno    : 2420
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | s = input("").upper()
+     3 | vet = s.split(',')
+     4 | m = zeros(5, dtype=int)
+     5 | 
+     6 | for i in vet:
+     7 | 	if i == 'BE':
+     8 | 		m[0] += 1
+     9 | 	elif i == 'ES':
+    10 | 		m[1] += 1
+    11 | 	elif i == 'FR':
+    12 | 		m[2] += 1
+    13 | 	elif i == 'IT':
+    14 | 		m[3] += 1
+    15 | 	elif i == 'PT':
+    16 | 		m[4] += 1
+    17 | 
+    18 | print(max(m))
+    19 | print(m)
+    20 | 
+    21 | 
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 13: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 13) / elif ... sem else
+      Contexto:
+              12 | 		m[2] += 1
+        >>>   13 | 	elif i == 'IT':
+              14 | 		m[3] += 1
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 3
+
+  [1] Linha 2: Variável 's' com nome muito curto (≤4 chars)
+      Trecho  : s = ...
+      Contexto:
+               1 | from numpy import*
+        >>>    2 | s = input("").upper()
+               3 | vet = s.split(',')
+
+  [2] Linha 3: Variável 'vet' com nome muito curto (≤4 chars)
+      Trecho  : vet = ...
+      Contexto:
+               2 | s = input("").upper()
+        >>>    3 | vet = s.split(',')
+               4 | m = zeros(5, dtype=int)
+
+  [3] Linha 4: Variável 'm' com nome muito curto (≤4 chars)
+      Trecho  : m = ...
+      Contexto:
+               3 | vet = s.split(',')
+        >>>    4 | m = zeros(5, dtype=int)
+               5 | 
+
+======================================================================

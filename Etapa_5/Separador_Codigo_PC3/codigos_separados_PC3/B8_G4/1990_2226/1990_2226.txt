@@ -1,0 +1,75 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1990_2226.py
+Questão  : 1990
+Aluno    : 2226
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | am=input("nome do aminoacido").upper()
+     2 | 
+     3 | if((am=="GLUTAMINA") or (am=="SERINA") or (am=="TREONINA")):
+     4 | 	if(am=="GLUTAMINA"):
+     5 | 		x=((12.011*5)+(1.00794*8)+(14.0067*1)+(15.9994*4))
+     6 | 		print(round(x,2))
+     7 | 	elif(am=="SERINA"):
+     8 | 		y=((12.011*3)+(1.00794*7)+14.0067+(15.9994*3))
+     9 | 		print(round(y,2))
+    10 | 	elif(am=="TREONINA"):
+    11 | 		z=((12.011*4)+(1.00794*9)+14.0067+(15.9994*3))	
+    12 | 		print(round(z,2))
+    13 | 		
+    14 | else:
+    15 | 	print("Entrada:", am)
+    16 | 	print("Dado Invalido")
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 7: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 7) / elif ... sem else
+      Contexto:
+               6 | 		print(round(x,2))
+        >>>    7 | 	elif(am=="SERINA"):
+               8 | 		y=((12.011*3)+(1.00794*7)+14.0067+(15.9994*3))
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 4
+
+  [1] Linha 1: Variável 'am' com nome muito curto (≤4 chars)
+      Trecho  : am = ...
+      Contexto:
+        >>>    1 | am=input("nome do aminoacido").upper()
+               2 | 
+
+  [2] Linha 5: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+               4 | 	if(am=="GLUTAMINA"):
+        >>>    5 | 		x=((12.011*5)+(1.00794*8)+(14.0067*1)+(15.9994*4))
+               6 | 		print(round(x,2))
+
+  [3] Linha 8: Variável 'y' com nome muito curto (≤4 chars)
+      Trecho  : y = ...
+      Contexto:
+               7 | 	elif(am=="SERINA"):
+        >>>    8 | 		y=((12.011*3)+(1.00794*7)+14.0067+(15.9994*3))
+               9 | 		print(round(y,2))
+
+  [4] Linha 11: Variável 'z' com nome muito curto (≤4 chars)
+      Trecho  : z = ...
+      Contexto:
+              10 | 	elif(am=="TREONINA"):
+        >>>   11 | 		z=((12.011*4)+(1.00794*9)+14.0067+(15.9994*3))	
+              12 | 		print(round(z,2))
+
+======================================================================

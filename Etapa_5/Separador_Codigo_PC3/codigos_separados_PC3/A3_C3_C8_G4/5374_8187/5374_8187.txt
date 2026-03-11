@@ -1,0 +1,116 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 5374_8187.py
+Questão  : 5374
+Aluno    : 8187
+Total MCs: 4
+
+⚠️  Misconceptions detectados: A3, C3, C8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import *
+     2 | s= array(eval(input(''))).split('').upper()
+     3 | v= 'A','E','I','O','U'
+     4 | i=0
+     5 | for i in range(size(s)):
+     6 | 	if(i == v):
+     7 | 		cal= s[i]*0.15
+     8 | 	i=i+1
+     9 | 	if(i != v):
+    10 | 		cal=s*0.17
+    11 | 	i=i+1
+    12 | print(round(cal,2))
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 1
+
+  [1] Linha 0: A3 detectado pelo VisitorMC3 (localização exata não mapeada)
+      Trecho  : —
+
+▶ C3 — Operações redundantes dentro do loop
+  Ocorrências: 1
+
+  [1] Linha 11: Operação idêntica à linha 8 repetida no loop
+      Trecho  : i = i + 1
+      Contexto:
+              10 | 		cal=s*0.17
+        >>>   11 | 	i=i+1
+              12 | print(round(cal,2))
+
+▶ C8 — Loop for com sua variável de iteração sobrescrita
+  Ocorrências: 2
+
+  [1] Linha 8: Variável de iteração 'i' sobrescrita no loop
+      Trecho  : i = i + 1
+      Contexto:
+               7 | 		cal= s[i]*0.15
+        >>>    8 | 	i=i+1
+               9 | 	if(i != v):
+
+  [2] Linha 11: Variável de iteração 'i' sobrescrita no loop
+      Trecho  : i = i + 1
+      Contexto:
+              10 | 		cal=s*0.17
+        >>>   11 | 	i=i+1
+              12 | print(round(cal,2))
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 7
+
+  [1] Linha 2: Variável 's' com nome muito curto (≤4 chars)
+      Trecho  : s = ...
+      Contexto:
+               1 | from numpy import *
+        >>>    2 | s= array(eval(input(''))).split('').upper()
+               3 | v= 'A','E','I','O','U'
+
+  [2] Linha 3: Variável 'v' com nome muito curto (≤4 chars)
+      Trecho  : v = ...
+      Contexto:
+               2 | s= array(eval(input(''))).split('').upper()
+        >>>    3 | v= 'A','E','I','O','U'
+               4 | i=0
+
+  [3] Linha 4: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+               3 | v= 'A','E','I','O','U'
+        >>>    4 | i=0
+               5 | for i in range(size(s)):
+
+  [4] Linha 8: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+               7 | 		cal= s[i]*0.15
+        >>>    8 | 	i=i+1
+               9 | 	if(i != v):
+
+  [5] Linha 11: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+              10 | 		cal=s*0.17
+        >>>   11 | 	i=i+1
+              12 | print(round(cal,2))
+
+  [6] Linha 7: Variável 'cal' com nome muito curto (≤4 chars)
+      Trecho  : cal = ...
+      Contexto:
+               6 | 	if(i == v):
+        >>>    7 | 		cal= s[i]*0.15
+               8 | 	i=i+1
+
+  [7] Linha 10: Variável 'cal' com nome muito curto (≤4 chars)
+      Trecho  : cal = ...
+      Contexto:
+               9 | 	if(i != v):
+        >>>   10 | 		cal=s*0.17
+              11 | 	i=i+1
+
+======================================================================

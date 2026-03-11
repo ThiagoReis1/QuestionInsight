@@ -1,0 +1,46 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 3592_6407.py
+Questão  : 3592
+Aluno    : 6407
+Total MCs: 1
+
+⚠️  Misconceptions detectados: B8
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import *
+     2 | total = 100
+     3 | dice = array(eval(input("insert the dices: ")),dtype=int)
+     4 | 
+     5 | for h in range(size(dice)):
+     6 | 	if(dice[h] == 6):
+     7 | 		total = total * 6
+     8 | 	elif(dice[h] == 5):
+     9 | 		total = total / 5
+    10 | 	elif(dice[h] == 4):
+    11 | 		total = total * 4
+    12 | 	elif(dice[h] == 3):
+    13 | 		total = total / 3
+    14 | 	elif(dice[h] == 2):
+    15 | 		total = total * 2
+    16 | 		
+    17 | print(round(total,2))
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 12: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 12) / elif ... sem else
+      Contexto:
+              11 | 		total = total * 4
+        >>>   12 | 	elif(dice[h] == 3):
+              13 | 		total = total / 3
+
+======================================================================

@@ -1,0 +1,128 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 6784_9810.py
+Questão  : 6784
+Aluno    : 9810
+Total MCs: 3
+
+⚠️  Misconceptions detectados: B8, B9, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | a= int(input())
+     2 | p= input().upper()
+     3 | i= 2023-a
+     4 | if (p=="B"):
+     5 | 	if (i>=21):
+     6 | 		apt= i-21
+     7 | 		print ("sim")
+     8 | 		print (apt)
+     9 | 	elif (i<21):
+    10 | 		napt= 21-i
+    11 | 		print ("nao")
+    12 | 		print (napt)
+    13 | elif(p=="R"):
+    14 | 	if (i>=18):
+    15 | 		apt= i-18
+    16 | 		print("sim")
+    17 | 		print(apt)
+    18 | 	elif (i<18):
+    19 | 		napt= 18-i
+    20 | 		print ("nao")
+    21 | 		print (napt)
+    22 | else:
+    23 | 	print("invalido")
+    24 | 		
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 2
+
+  [1] Linha 5: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 5) / elif ... sem else
+      Contexto:
+               4 | if (p=="B"):
+        >>>    5 | 	if (i>=21):
+               6 | 		apt= i-21
+
+  [2] Linha 14: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 14) / elif ... sem else
+      Contexto:
+              13 | elif(p=="R"):
+        >>>   14 | 	if (i>=18):
+              15 | 		apt= i-18
+
+▶ B9 — elif/else retestando condições já verificadas
+  Ocorrências: 2
+
+  [1] Linha 9: elif retesta condição inversa do if da linha 5
+      Trecho  : if i >= 21 ... elif i < 21
+      Contexto:
+               8 | 		print (apt)
+        >>>    9 | 	elif (i<21):
+              10 | 		napt= 21-i
+
+  [2] Linha 18: elif retesta condição inversa do if da linha 14
+      Trecho  : if i >= 18 ... elif i < 18
+      Contexto:
+              17 | 		print(apt)
+        >>>   18 | 	elif (i<18):
+              19 | 		napt= 18-i
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 7
+
+  [1] Linha 1: Variável 'a' com nome muito curto (≤4 chars)
+      Trecho  : a = ...
+      Contexto:
+        >>>    1 | a= int(input())
+               2 | p= input().upper()
+
+  [2] Linha 2: Variável 'p' com nome muito curto (≤4 chars)
+      Trecho  : p = ...
+      Contexto:
+               1 | a= int(input())
+        >>>    2 | p= input().upper()
+               3 | i= 2023-a
+
+  [3] Linha 3: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+               2 | p= input().upper()
+        >>>    3 | i= 2023-a
+               4 | if (p=="B"):
+
+  [4] Linha 6: Variável 'apt' com nome muito curto (≤4 chars)
+      Trecho  : apt = ...
+      Contexto:
+               5 | 	if (i>=21):
+        >>>    6 | 		apt= i-21
+               7 | 		print ("sim")
+
+  [5] Linha 10: Variável 'napt' com nome muito curto (≤4 chars)
+      Trecho  : napt = ...
+      Contexto:
+               9 | 	elif (i<21):
+        >>>   10 | 		napt= 21-i
+              11 | 		print ("nao")
+
+  [6] Linha 15: Variável 'apt' com nome muito curto (≤4 chars)
+      Trecho  : apt = ...
+      Contexto:
+              14 | 	if (i>=18):
+        >>>   15 | 		apt= i-18
+              16 | 		print("sim")
+
+  [7] Linha 19: Variável 'napt' com nome muito curto (≤4 chars)
+      Trecho  : napt = ...
+      Contexto:
+              18 | 	elif (i<18):
+        >>>   19 | 		napt= 18-i
+              20 | 		print ("nao")
+
+======================================================================

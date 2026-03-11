@@ -1,0 +1,45 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1535_3650.py
+Questão  : 1535
+Aluno    : 3650
+Total MCs: 1
+
+⚠️  Misconceptions detectados: B12
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | x= float(input(' insira um numero inteiro '))
+     2 | termo = int(input(' insira o numero de termos '))
+     3 | y = 1
+     4 | arctg = 0
+     5 | while termo>0 and (x>=-1 or x<=1):
+     6 | 	if termo>0:
+     7 | 		arctg = arctg + (x**y/y) 
+     8 | 		termo = termo-1
+     9 | 		y = y+2
+    10 | 	if termo>0:
+    11 | 		arctg = arctg - (x**y/y)
+    12 | 		termo = termo-1
+    13 | 		y = y+2
+    14 | print(round(arctg,6))
+    15 | 		
+    16 | 	
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B12 — Declarações if consecutivas iguais com operações distintas
+  Ocorrências: 1
+
+  [1] Linha 10: If consecutivo com mesma condição do if da linha 6
+      Trecho  : if termo > 0 ...
+      Contexto:
+               9 | 		y = y+2
+        >>>   10 | 	if termo>0:
+              11 | 		arctg = arctg - (x**y/y)
+
+======================================================================

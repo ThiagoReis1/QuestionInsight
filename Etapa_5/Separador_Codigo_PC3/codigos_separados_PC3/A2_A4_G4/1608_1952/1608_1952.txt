@@ -1,0 +1,100 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1608_1952.py
+Questão  : 1608
+Aluno    : 1952
+Total MCs: 3
+
+⚠️  Misconceptions detectados: A2, A4, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | #Lucas Nascimento Estevam da Silva		21602757
+     2 | #Prova Final
+     3 | #Exercicio 01
+     4 | 
+     5 | from numpy import*
+     6 | 
+     7 | vet = array(eval(input("Numeros :")))
+     8 | max = 75
+     9 | s = 0
+    10 | for i in range(size(vet)):
+    11 | 	s = s + vet[i]
+    12 | if(s > max):
+    13 | 	s = 75
+    14 | else:
+    15 | 	s = s
+    16 | print(s)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A2 — Variável atribuída a si mesma
+  Ocorrências: 1
+
+  [1] Linha 15: 's' atribuído a si mesmo
+      Trecho  : s = s
+      Contexto:
+              14 | else:
+        >>>   15 | 	s = s
+              16 | print(s)
+
+▶ A4 — Redefinição de built-in
+  Ocorrências: 1
+
+  [1] Linha 8: Built-in 'max' redefinido como variável
+      Trecho  : max = 75
+      Contexto:
+               7 | vet = array(eval(input("Numeros :")))
+        >>>    8 | max = 75
+               9 | s = 0
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 6
+
+  [1] Linha 7: Variável 'vet' com nome muito curto (≤4 chars)
+      Trecho  : vet = ...
+      Contexto:
+               6 | 
+        >>>    7 | vet = array(eval(input("Numeros :")))
+               8 | max = 75
+
+  [2] Linha 8: Variável 'max' com nome muito curto (≤4 chars)
+      Trecho  : max = ...
+      Contexto:
+               7 | vet = array(eval(input("Numeros :")))
+        >>>    8 | max = 75
+               9 | s = 0
+
+  [3] Linha 9: Variável 's' com nome muito curto (≤4 chars)
+      Trecho  : s = ...
+      Contexto:
+               8 | max = 75
+        >>>    9 | s = 0
+              10 | for i in range(size(vet)):
+
+  [4] Linha 11: Variável 's' com nome muito curto (≤4 chars)
+      Trecho  : s = ...
+      Contexto:
+              10 | for i in range(size(vet)):
+        >>>   11 | 	s = s + vet[i]
+              12 | if(s > max):
+
+  [5] Linha 13: Variável 's' com nome muito curto (≤4 chars)
+      Trecho  : s = ...
+      Contexto:
+              12 | if(s > max):
+        >>>   13 | 	s = 75
+              14 | else:
+
+  [6] Linha 15: Variável 's' com nome muito curto (≤4 chars)
+      Trecho  : s = ...
+      Contexto:
+              14 | else:
+        >>>   15 | 	s = s
+              16 | print(s)
+
+======================================================================

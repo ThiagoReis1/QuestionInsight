@@ -1,0 +1,5 @@
+g=float(input("Digite o peso da mercadoria: "))
+ca=float(g*43.21+25)
+cp=float(ca*62/100)
+cf=float(ca+cp)
+print(round(cf,2))

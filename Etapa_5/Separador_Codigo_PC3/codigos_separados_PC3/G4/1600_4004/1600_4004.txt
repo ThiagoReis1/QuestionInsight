@@ -1,0 +1,97 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1600_4004.py
+Questão  : 1600
+Aluno    : 4004
+Total MCs: 1
+
+⚠️  Misconceptions detectados: G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | 
+     3 | v = array(eval(input("vetor de custo dos itens: ")))
+     4 | 
+     5 | i = 0         #contador/indice
+     6 | d = 15/100    #desconto
+     7 | s = size(v)   #tamanho
+     8 | r = zeros(s, dtype = float) #vetor reflexo
+     9 | 
+    10 | while i < s:
+    11 | 	if v[i] <= 80:
+    12 | 		r[i] = v[i]
+    13 | 		i = i + 1
+    14 | 	else:
+    15 | 		r[i] = v[i] * (1 - d)
+    16 | 		i = i + 1
+    17 | t = sum(r)
+    18 | print(round(t, 2))
+    19 | 	
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 8
+
+  [1] Linha 3: Variável 'v' com nome muito curto (≤4 chars)
+      Trecho  : v = ...
+      Contexto:
+               2 | 
+        >>>    3 | v = array(eval(input("vetor de custo dos itens: ")))
+               4 | 
+
+  [2] Linha 5: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+               4 | 
+        >>>    5 | i = 0         #contador/indice
+               6 | d = 15/100    #desconto
+
+  [3] Linha 6: Variável 'd' com nome muito curto (≤4 chars)
+      Trecho  : d = ...
+      Contexto:
+               5 | i = 0         #contador/indice
+        >>>    6 | d = 15/100    #desconto
+               7 | s = size(v)   #tamanho
+
+  [4] Linha 7: Variável 's' com nome muito curto (≤4 chars)
+      Trecho  : s = ...
+      Contexto:
+               6 | d = 15/100    #desconto
+        >>>    7 | s = size(v)   #tamanho
+               8 | r = zeros(s, dtype = float) #vetor reflexo
+
+  [5] Linha 8: Variável 'r' com nome muito curto (≤4 chars)
+      Trecho  : r = ...
+      Contexto:
+               7 | s = size(v)   #tamanho
+        >>>    8 | r = zeros(s, dtype = float) #vetor reflexo
+               9 | 
+
+  [6] Linha 17: Variável 't' com nome muito curto (≤4 chars)
+      Trecho  : t = ...
+      Contexto:
+              16 | 		i = i + 1
+        >>>   17 | t = sum(r)
+              18 | print(round(t, 2))
+
+  [7] Linha 13: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+              12 | 		r[i] = v[i]
+        >>>   13 | 		i = i + 1
+              14 | 	else:
+
+  [8] Linha 16: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+              15 | 		r[i] = v[i] * (1 - d)
+        >>>   16 | 		i = i + 1
+              17 | t = sum(r)
+
+======================================================================

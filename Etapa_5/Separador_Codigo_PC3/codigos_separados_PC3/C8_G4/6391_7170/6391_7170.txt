@@ -1,0 +1,78 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 6391_7170.py
+Questão  : 6391
+Aluno    : 7170
+Total MCs: 2
+
+⚠️  Misconceptions detectados: C8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import *
+     2 | 
+     3 | n = eval(str(input("Numero: ")))
+     4 | 
+     5 | for n in [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]:
+     6 | 	n = n - 1
+     7 | 	if n == 0:
+     8 | 		n = 9
+     9 | 	n =+ 1
+    10 | # provisorio 
+    11 | 	print(n**3)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ C8 — Loop for com sua variável de iteração sobrescrita
+  Ocorrências: 2
+
+  [1] Linha 6: Variável de iteração 'n' sobrescrita no loop
+      Trecho  : n = n - 1
+      Contexto:
+               5 | for n in [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]:
+        >>>    6 | 	n = n - 1
+               7 | 	if n == 0:
+
+  [2] Linha 9: Variável de iteração 'n' sobrescrita no loop
+      Trecho  : n = +1
+      Contexto:
+               8 | 		n = 9
+        >>>    9 | 	n =+ 1
+              10 | # provisorio 
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 4
+
+  [1] Linha 3: Variável 'n' com nome muito curto (≤4 chars)
+      Trecho  : n = ...
+      Contexto:
+               2 | 
+        >>>    3 | n = eval(str(input("Numero: ")))
+               4 | 
+
+  [2] Linha 6: Variável 'n' com nome muito curto (≤4 chars)
+      Trecho  : n = ...
+      Contexto:
+               5 | for n in [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]:
+        >>>    6 | 	n = n - 1
+               7 | 	if n == 0:
+
+  [3] Linha 9: Variável 'n' com nome muito curto (≤4 chars)
+      Trecho  : n = ...
+      Contexto:
+               8 | 		n = 9
+        >>>    9 | 	n =+ 1
+              10 | # provisorio 
+
+  [4] Linha 8: Variável 'n' com nome muito curto (≤4 chars)
+      Trecho  : n = ...
+      Contexto:
+               7 | 	if n == 0:
+        >>>    8 | 		n = 9
+               9 | 	n =+ 1
+
+======================================================================

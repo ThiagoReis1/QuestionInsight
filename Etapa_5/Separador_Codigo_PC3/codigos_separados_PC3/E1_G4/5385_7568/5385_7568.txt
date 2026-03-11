@@ -1,0 +1,87 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 5385_7568.py
+Questão  : 5385
+Aluno    : 7568
+Total MCs: 2
+
+⚠️  Misconceptions detectados: E1, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | a = input(" ")
+     3 | i = 0
+     4 | s = 0
+     5 | 
+     6 | while(i<len(a)):
+     7 | 	if(a[i] == "A" or a[i]=="E" or a[i]=="I" or a[i]== "O" or a[i]== "U" or a[i]== "a" or a[i] == "e" or a[i] == "i" or  a[i] == "o" or a[i] == "u"):
+     8 | 		s = s + 35.15
+     9 | 	else:
+    10 | 		s = s + 42.17
+    11 | 	i = i + 1
+    12 | 
+    13 | print(round(s,2))
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ E1 — Verificação desnecessária de todas as combinações possíveis
+  Ocorrências: 1
+
+  [1] Linha 7: 10 condições em um único if — verificação excessiva
+      Trecho  : a[i] == 'A' or a[i] == 'E' or a[i] == 'I' or (a[i] == 'O') or (a[i] == 'U') or (a[i] == 'a') or (a[i] == 'e') or (a[i] == 'i') or (a[i] == 'o') or (a[i] == 'u')
+      Contexto:
+               6 | while(i<len(a)):
+        >>>    7 | 	if(a[i] == "A" or a[i]=="E" or a[i]=="I" or a[i]== "O" or a[i]== "U" or a[i]== "a" or a[i] == "e" or a[i] == "i" or  a[i] == "o" or a[i] == "u"):
+               8 | 		s = s + 35.15
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 6
+
+  [1] Linha 2: Variável 'a' com nome muito curto (≤4 chars)
+      Trecho  : a = ...
+      Contexto:
+               1 | from numpy import*
+        >>>    2 | a = input(" ")
+               3 | i = 0
+
+  [2] Linha 3: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+               2 | a = input(" ")
+        >>>    3 | i = 0
+               4 | s = 0
+
+  [3] Linha 4: Variável 's' com nome muito curto (≤4 chars)
+      Trecho  : s = ...
+      Contexto:
+               3 | i = 0
+        >>>    4 | s = 0
+               5 | 
+
+  [4] Linha 11: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+              10 | 		s = s + 42.17
+        >>>   11 | 	i = i + 1
+              12 | 
+
+  [5] Linha 8: Variável 's' com nome muito curto (≤4 chars)
+      Trecho  : s = ...
+      Contexto:
+               7 | 	if(a[i] == "A" or a[i]=="E" or a[i]=="I" or a[i]== "O" or a[i]== "U" or a[i]== "a" or a[i] == "e" or a[i] == "i" or  a[i] == "o" or a[i] == "u"):
+        >>>    8 | 		s = s + 35.15
+               9 | 	else:
+
+  [6] Linha 10: Variável 's' com nome muito curto (≤4 chars)
+      Trecho  : s = ...
+      Contexto:
+               9 | 	else:
+        >>>   10 | 		s = s + 42.17
+              11 | 	i = i + 1
+
+======================================================================

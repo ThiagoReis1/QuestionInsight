@@ -1,0 +1,140 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1658_3230.py
+Questão  : 1658
+Aluno    : 3230
+Total MCs: 3
+
+⚠️  Misconceptions detectados: A3, B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import *
+     2 | cont =  zeros(5, dtype=int)
+     3 | vet = input("pais: ").upper().split(',')
+     4 | CHN = 0
+     5 | JPN = 0
+     6 | KOR = 0
+     7 | MGL = 0
+     8 | THA = 0
+     9 | for i in range(size(vet)):
+    10 | 	if (vet[i] == 'CHN'):
+    11 | 		cont[0] = cont[0] + 1
+    12 | 	elif (vet[i] == 'JPN'):
+    13 | 		cont[1] = cont[1] + 1
+    14 | 	elif (vet[i] == 'KOR'):
+    15 | 		cont[2] = cont[2] + 1
+    16 | 	elif (vet[i] == 'MGL'):
+    17 | 		cont[3] = cont[3] + 1
+    18 | 	elif (vet[i] == 'THA'):
+    19 | 		cont[4] = cont[4] + 1
+    20 | print(max(cont))
+    21 | print(cont)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 5
+
+  [1] Linha 4: Variável 'CHN' declarada mas nunca utilizada
+      Trecho  : CHN = ...
+      Contexto:
+               3 | vet = input("pais: ").upper().split(',')
+        >>>    4 | CHN = 0
+               5 | JPN = 0
+
+  [2] Linha 5: Variável 'JPN' declarada mas nunca utilizada
+      Trecho  : JPN = ...
+      Contexto:
+               4 | CHN = 0
+        >>>    5 | JPN = 0
+               6 | KOR = 0
+
+  [3] Linha 6: Variável 'KOR' declarada mas nunca utilizada
+      Trecho  : KOR = ...
+      Contexto:
+               5 | JPN = 0
+        >>>    6 | KOR = 0
+               7 | MGL = 0
+
+  [4] Linha 7: Variável 'MGL' declarada mas nunca utilizada
+      Trecho  : MGL = ...
+      Contexto:
+               6 | KOR = 0
+        >>>    7 | MGL = 0
+               8 | THA = 0
+
+  [5] Linha 8: Variável 'THA' declarada mas nunca utilizada
+      Trecho  : THA = ...
+      Contexto:
+               7 | MGL = 0
+        >>>    8 | THA = 0
+               9 | for i in range(size(vet)):
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 16: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 16) / elif ... sem else
+      Contexto:
+              15 | 		cont[2] = cont[2] + 1
+        >>>   16 | 	elif (vet[i] == 'MGL'):
+              17 | 		cont[3] = cont[3] + 1
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 7
+
+  [1] Linha 2: Variável 'cont' com nome muito curto (≤4 chars)
+      Trecho  : cont = ...
+      Contexto:
+               1 | from numpy import *
+        >>>    2 | cont =  zeros(5, dtype=int)
+               3 | vet = input("pais: ").upper().split(',')
+
+  [2] Linha 3: Variável 'vet' com nome muito curto (≤4 chars)
+      Trecho  : vet = ...
+      Contexto:
+               2 | cont =  zeros(5, dtype=int)
+        >>>    3 | vet = input("pais: ").upper().split(',')
+               4 | CHN = 0
+
+  [3] Linha 4: Variável 'CHN' com nome muito curto (≤4 chars)
+      Trecho  : CHN = ...
+      Contexto:
+               3 | vet = input("pais: ").upper().split(',')
+        >>>    4 | CHN = 0
+               5 | JPN = 0
+
+  [4] Linha 5: Variável 'JPN' com nome muito curto (≤4 chars)
+      Trecho  : JPN = ...
+      Contexto:
+               4 | CHN = 0
+        >>>    5 | JPN = 0
+               6 | KOR = 0
+
+  [5] Linha 6: Variável 'KOR' com nome muito curto (≤4 chars)
+      Trecho  : KOR = ...
+      Contexto:
+               5 | JPN = 0
+        >>>    6 | KOR = 0
+               7 | MGL = 0
+
+  [6] Linha 7: Variável 'MGL' com nome muito curto (≤4 chars)
+      Trecho  : MGL = ...
+      Contexto:
+               6 | KOR = 0
+        >>>    7 | MGL = 0
+               8 | THA = 0
+
+  [7] Linha 8: Variável 'THA' com nome muito curto (≤4 chars)
+      Trecho  : THA = ...
+      Contexto:
+               7 | MGL = 0
+        >>>    8 | THA = 0
+               9 | for i in range(size(vet)):
+
+======================================================================

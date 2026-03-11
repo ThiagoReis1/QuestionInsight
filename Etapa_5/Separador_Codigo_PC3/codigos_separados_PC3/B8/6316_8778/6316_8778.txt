@@ -1,0 +1,50 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 6316_8778.py
+Questão  : 6316
+Aluno    : 8778
+Total MCs: 1
+
+⚠️  Misconceptions detectados: B8
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | N = input("Entrada: ").upper()
+     3 | i=0
+     4 | contL = 0
+     5 | contU = 0
+     6 | contK = 0
+     7 | contA = 0
+     8 | while i < len(N):
+     9 | 	if N[i] == "D":
+    10 | 		contL = contL + 2.25
+    11 | 		contU = contU + 1
+    12 | 	elif N[i] == "S":
+    13 | 		contL = contL + 4.00
+    14 | 		contK = contK + 1
+    15 | 	elif N[i] == "I":
+    16 | 		contL = contL + 6.90
+    17 | 		contA = contA + 1
+    18 | 	i = i + 1
+    19 | 
+    20 | contL = (round(contL, 2) )
+    21 | print(contL, contU, contK, contA)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 12: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 12) / elif ... sem else
+      Contexto:
+              11 | 		contU = contU + 1
+        >>>   12 | 	elif N[i] == "S":
+              13 | 		contL = contL + 4.00
+
+======================================================================

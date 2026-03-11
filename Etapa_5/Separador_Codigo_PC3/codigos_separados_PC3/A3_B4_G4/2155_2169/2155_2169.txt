@@ -1,0 +1,99 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 2155_2169.py
+Questão  : 2155
+Aluno    : 2169
+Total MCs: 3
+
+⚠️  Misconceptions detectados: A3, B4, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import *
+     2 | p = array(eval(input("peso dos alunos: ")))
+     3 | a= array(eval(input("altura dos alunos: ")))
+     4 | imc= ones(size(p))
+     5 | situacao= ""
+     6 | for i in range(size(p)):
+     7 | 	imc[i]= round(p[i]/(a[i]**2),2)
+     8 | print(imc)
+     9 | if(max(imc) < 17):
+    10 | 	situacao= "MUITO ABAIXO DO PESO"
+    11 | elif(17 <= max(imc) <= 18.49):
+    12 | 	situacao="ABAIXO DO PESO"
+    13 | elif(18.5 <= max(imc) <= 24.99):
+    14 | 	situacao= "PESO NORMAL"
+    15 | elif(25 <= max(imc) <= 29.99):
+    16 | 	situacao= "ACIMA DO PESO"
+    17 | elif(30 <= max(imc) <= 34.99):
+    18 | 	situacao= "OBESIDADE"
+    19 | elif(35 <= max(imc) <= 39.99):
+    20 | 	situacao= "OBESIDADE SEVERA"
+    21 | else:
+    22 | 	situacao= "OBESIDADE SEVERA"
+    23 | print("O MAIOR IMC DA TURMA EH:",max(imc),situacao)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 1
+
+  [1] Linha 0: A3 detectado pelo VisitorMC3 (localização exata não mapeada)
+      Trecho  : —
+
+▶ B4 — Comandos repetidos dentro de blocos if-elif-else
+  Ocorrências: 6
+
+  [1] Linha 19: Bloco idêntico ao da linha 19
+      Trecho  : situacao = 'OBESIDADE SEVERA'
+      Contexto:
+              18 | 	situacao= "OBESIDADE"
+        >>>   19 | elif(35 <= max(imc) <= 39.99):
+              20 | 	situacao= "OBESIDADE SEVERA"
+
+  [2] Linha 19: Bloco idêntico ao da linha 19
+      Trecho  : situacao = 'OBESIDADE SEVERA'
+      Contexto:
+              18 | 	situacao= "OBESIDADE"
+        >>>   19 | elif(35 <= max(imc) <= 39.99):
+              20 | 	situacao= "OBESIDADE SEVERA"
+
+  [3] Linha 19: Bloco idêntico ao da linha 19
+      Trecho  : situacao = 'OBESIDADE SEVERA'
+      Contexto:
+              18 | 	situacao= "OBESIDADE"
+        >>>   19 | elif(35 <= max(imc) <= 39.99):
+              20 | 	situacao= "OBESIDADE SEVERA"
+
+  [4] Linha 19: Bloco idêntico ao da linha 19
+      Trecho  : situacao = 'OBESIDADE SEVERA'
+      Contexto:
+              18 | 	situacao= "OBESIDADE"
+        >>>   19 | elif(35 <= max(imc) <= 39.99):
+              20 | 	situacao= "OBESIDADE SEVERA"
+
+  [5] Linha 19: Bloco idêntico ao da linha 19
+      Trecho  : situacao = 'OBESIDADE SEVERA'
+      Contexto:
+              18 | 	situacao= "OBESIDADE"
+        >>>   19 | elif(35 <= max(imc) <= 39.99):
+              20 | 	situacao= "OBESIDADE SEVERA"
+
+  [6] Linha 19: Bloco idêntico ao da linha 19
+      Trecho  : situacao = 'OBESIDADE SEVERA'
+      Contexto:
+              18 | 	situacao= "OBESIDADE"
+        >>>   19 | elif(35 <= max(imc) <= 39.99):
+              20 | 	situacao= "OBESIDADE SEVERA"
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 1
+
+  [1] Linha 0: G4 detectado pelo VisitorMC3 (localização exata não mapeada)
+      Trecho  : —
+
+======================================================================

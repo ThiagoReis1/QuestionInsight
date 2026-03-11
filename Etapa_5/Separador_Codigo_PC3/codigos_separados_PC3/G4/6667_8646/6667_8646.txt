@@ -1,0 +1,82 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 6667_8646.py
+Questão  : 6667
+Aluno    : 8646
+Total MCs: 1
+
+⚠️  Misconceptions detectados: G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import *
+     2 | 
+     3 | sec = zeros(10, dtype=float)
+     4 | cont = 0
+     5 | 
+     6 | for i in range(size(sec)):
+     7 | 	a = float(input())
+     8 | 	sec[i] += a
+     9 | 	
+    10 | M_Not = float(input())
+    11 | 
+    12 | for i in range(size(sec)):
+    13 | 	if sec[i] >= M_Not:
+    14 | 		cont += 1
+    15 | 		
+    16 | secc = zeros(cont, dtype=float)
+    17 | cc = 0
+    18 | 
+    19 | for i in rande(size(sec)):
+    20 | 	if sec[i] >= M_Not:
+    21 | 		secc[cc] = sec[i]
+    22 | 		cc += 1
+    23 | 
+    24 | print(cont)
+    25 | print(secc)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 5
+
+  [1] Linha 3: Variável 'sec' com nome muito curto (≤4 chars)
+      Trecho  : sec = ...
+      Contexto:
+               2 | 
+        >>>    3 | sec = zeros(10, dtype=float)
+               4 | cont = 0
+
+  [2] Linha 4: Variável 'cont' com nome muito curto (≤4 chars)
+      Trecho  : cont = ...
+      Contexto:
+               3 | sec = zeros(10, dtype=float)
+        >>>    4 | cont = 0
+               5 | 
+
+  [3] Linha 16: Variável 'secc' com nome muito curto (≤4 chars)
+      Trecho  : secc = ...
+      Contexto:
+              15 | 		
+        >>>   16 | secc = zeros(cont, dtype=float)
+              17 | cc = 0
+
+  [4] Linha 17: Variável 'cc' com nome muito curto (≤4 chars)
+      Trecho  : cc = ...
+      Contexto:
+              16 | secc = zeros(cont, dtype=float)
+        >>>   17 | cc = 0
+              18 | 
+
+  [5] Linha 7: Variável 'a' com nome muito curto (≤4 chars)
+      Trecho  : a = ...
+      Contexto:
+               6 | for i in range(size(sec)):
+        >>>    7 | 	a = float(input())
+               8 | 	sec[i] += a
+
+======================================================================

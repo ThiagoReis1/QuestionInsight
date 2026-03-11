@@ -1,0 +1,22 @@
+nb=int(input(""))
+np=int(input(""))
+npr=int(input(""))
+taxab=float(input(""))
+taxap=float(input(""))
+taxapr=float(input(""))
+ano=int(input(""))
+soma=0
+i=0
+taxa1=taxab/100
+taxa2=taxap/100
+taxa3=taxapr/100
+t11=nb+(nb*taxa1)
+t22=np+(np*taxa2)
+t33=npr+(npr*taxa3)
+while(soma <= ano ):
+	soma=t11 + t22 + t33
+	t11= t11+(t11 * taxa1 )
+	t22=t22+(t22*taxa2)
+	t33=t33+(t33*taxa3)
+	i=i+1
+print(i)

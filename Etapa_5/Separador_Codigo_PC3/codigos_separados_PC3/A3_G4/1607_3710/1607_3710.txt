@@ -1,0 +1,86 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1607_3710.py
+Questão  : 1607
+Aluno    : 3710
+Total MCs: 2
+
+⚠️  Misconceptions detectados: A3, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import *
+     2 | 
+     3 | x = array(eval(input("Andares:")))
+     4 | 
+     5 | a = 1;
+     6 | t = 1;
+     7 | m = 0;
+     8 | 
+     9 | while t<size(x):
+    10 | 	m = m + abs(x[t] - x[t-1])*3
+    11 | 	t = t+1
+    12 | print(m)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 1
+
+  [1] Linha 5: Variável 'a' declarada mas nunca utilizada
+      Trecho  : a = ...
+      Contexto:
+               4 | 
+        >>>    5 | a = 1;
+               6 | t = 1;
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 6
+
+  [1] Linha 3: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+               2 | 
+        >>>    3 | x = array(eval(input("Andares:")))
+               4 | 
+
+  [2] Linha 5: Variável 'a' com nome muito curto (≤4 chars)
+      Trecho  : a = ...
+      Contexto:
+               4 | 
+        >>>    5 | a = 1;
+               6 | t = 1;
+
+  [3] Linha 6: Variável 't' com nome muito curto (≤4 chars)
+      Trecho  : t = ...
+      Contexto:
+               5 | a = 1;
+        >>>    6 | t = 1;
+               7 | m = 0;
+
+  [4] Linha 7: Variável 'm' com nome muito curto (≤4 chars)
+      Trecho  : m = ...
+      Contexto:
+               6 | t = 1;
+        >>>    7 | m = 0;
+               8 | 
+
+  [5] Linha 10: Variável 'm' com nome muito curto (≤4 chars)
+      Trecho  : m = ...
+      Contexto:
+               9 | while t<size(x):
+        >>>   10 | 	m = m + abs(x[t] - x[t-1])*3
+              11 | 	t = t+1
+
+  [6] Linha 11: Variável 't' com nome muito curto (≤4 chars)
+      Trecho  : t = ...
+      Contexto:
+              10 | 	m = m + abs(x[t] - x[t-1])*3
+        >>>   11 | 	t = t+1
+              12 | print(m)
+
+======================================================================

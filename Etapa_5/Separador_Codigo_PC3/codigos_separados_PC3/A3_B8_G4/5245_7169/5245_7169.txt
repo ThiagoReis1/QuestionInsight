@@ -1,0 +1,112 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 5245_7169.py
+Questão  : 5245
+Aluno    : 7169
+Total MCs: 3
+
+⚠️  Misconceptions detectados: A3, B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | a = float(input("salario atual de um funcionario"))
+     2 | print("Entrada: R$", a)
+     3 | if(a <= 1600) or (a <= 1600):
+     4 | 	l = (a*0.50+a)
+     5 | 	print(round(l,2))	
+     6 | 	if(a>=800) or (a<=1000):
+     7 | 		b = (a*0.40+a)
+     8 | 		print(round(a*0.40+a, 2))
+     9 | 	elif(a >= 1000) or (a <= 1200):
+    10 | 		h = (a*0.30+a)
+    11 | 		print(round(h, 2))	
+    12 | 	elif(a >= 1200) or (a <= 1400):
+    13 | 		p = (a*0.20+a)
+    14 | 		print(round(p, 2))		
+    15 | 	elif(a>=1400) or (a>=1600):
+    16 | 		u = (a*0.10+a)
+    17 | 		print(round(u, 2))
+    18 | if(a >= 800 and a > 0):
+    19 | 	y = (a*0.50+a)
+    20 | 	print(round(y, 2))
+    21 | else:
+    22 | 	print("Dado invalido")
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 1
+
+  [1] Linha 7: Variável 'b' declarada mas nunca utilizada
+      Trecho  : b = ...
+      Contexto:
+               6 | 	if(a>=800) or (a<=1000):
+        >>>    7 | 		b = (a*0.40+a)
+               8 | 		print(round(a*0.40+a, 2))
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 12: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 12) / elif ... sem else
+      Contexto:
+              11 | 		print(round(h, 2))	
+        >>>   12 | 	elif(a >= 1200) or (a <= 1400):
+              13 | 		p = (a*0.20+a)
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 7
+
+  [1] Linha 1: Variável 'a' com nome muito curto (≤4 chars)
+      Trecho  : a = ...
+      Contexto:
+        >>>    1 | a = float(input("salario atual de um funcionario"))
+               2 | print("Entrada: R$", a)
+
+  [2] Linha 4: Variável 'l' com nome muito curto (≤4 chars)
+      Trecho  : l = ...
+      Contexto:
+               3 | if(a <= 1600) or (a <= 1600):
+        >>>    4 | 	l = (a*0.50+a)
+               5 | 	print(round(l,2))	
+
+  [3] Linha 19: Variável 'y' com nome muito curto (≤4 chars)
+      Trecho  : y = ...
+      Contexto:
+              18 | if(a >= 800 and a > 0):
+        >>>   19 | 	y = (a*0.50+a)
+              20 | 	print(round(y, 2))
+
+  [4] Linha 7: Variável 'b' com nome muito curto (≤4 chars)
+      Trecho  : b = ...
+      Contexto:
+               6 | 	if(a>=800) or (a<=1000):
+        >>>    7 | 		b = (a*0.40+a)
+               8 | 		print(round(a*0.40+a, 2))
+
+  [5] Linha 10: Variável 'h' com nome muito curto (≤4 chars)
+      Trecho  : h = ...
+      Contexto:
+               9 | 	elif(a >= 1000) or (a <= 1200):
+        >>>   10 | 		h = (a*0.30+a)
+              11 | 		print(round(h, 2))	
+
+  [6] Linha 13: Variável 'p' com nome muito curto (≤4 chars)
+      Trecho  : p = ...
+      Contexto:
+              12 | 	elif(a >= 1200) or (a <= 1400):
+        >>>   13 | 		p = (a*0.20+a)
+              14 | 		print(round(p, 2))		
+
+  [7] Linha 16: Variável 'u' com nome muito curto (≤4 chars)
+      Trecho  : u = ...
+      Contexto:
+              15 | 	elif(a>=1400) or (a>=1600):
+        >>>   16 | 		u = (a*0.10+a)
+              17 | 		print(round(u, 2))
+
+======================================================================

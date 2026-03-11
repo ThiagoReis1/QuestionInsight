@@ -1,0 +1,48 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1653_7622.py
+Questão  : 1653
+Aluno    : 7622
+Total MCs: 1
+
+⚠️  Misconceptions detectados: B8
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import *
+     2 | 
+     3 | pais = input("nacionalidade das pessoas: ").upper().split(',')
+     4 | 
+     5 | vet_cont = zeros(5, dtype = int)
+     6 | 
+     7 | for i in range(size(pais)):
+     8 | 	if pais[i] == "AR":
+     9 | 		vet_cont[0] += 1
+    10 | 	elif pais[i] == "BR":
+    11 | 		vet_cont[1] += 1
+    12 | 	elif pais[i] == "CL":
+    13 | 		vet_cont[2] += 1
+    14 | 	elif pais[i] == "CO":
+    15 | 		vet_cont[3] += 1
+    16 | 	elif pais[i] == "UY":
+    17 | 		vet_cont[4] += 1
+    18 | print(max(vet_cont))
+    19 | print(vet_cont)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 14: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 14) / elif ... sem else
+      Contexto:
+              13 | 		vet_cont[2] += 1
+        >>>   14 | 	elif pais[i] == "CO":
+              15 | 		vet_cont[3] += 1
+
+======================================================================

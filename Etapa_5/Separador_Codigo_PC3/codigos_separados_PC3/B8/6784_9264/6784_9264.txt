@@ -1,0 +1,66 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 6784_9264.py
+Questão  : 6784
+Aluno    : 9264
+Total MCs: 1
+
+⚠️  Misconceptions detectados: B8
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | nascimento = int(input("Digite o ano de nascimento: "))
+     2 | pais = input("Qual o pais que deseja verificar(B/R): ")
+     3 | ano = 2023
+     4 | if pais == "B" and nascimento <= 2002:
+     5 | 	apto = "sim"
+     6 | 	print(apto)
+     7 | 	passou = (ano - nascimento) - 21
+     8 | 	print(passou)
+     9 | 
+    10 | elif pais == "B" and nascimento > 2002:
+    11 | 	apto = "nao"
+    12 | 	print(apto)
+    13 | 	falta = 21 - (ano - nascimento)
+    14 | 	print(falta)
+    15 | 	
+    16 | if pais == "R" and nascimento <= 2005:
+    17 | 	apto = "sim" 
+    18 | 	print(apto)
+    19 | 	passou = (ano - nascimento) - 18
+    20 | 	print(passou)
+    21 | 
+    22 | elif pais == "R" and nascimento > 2005:
+    23 | 	apto = "nao"
+    24 | 	print(apto)
+    25 | 	falta = 18 - (ano - nascimento)
+    26 | 	print(falta)
+    27 | 	
+    28 | if pais != "B" and pais != "R":
+    29 | 	a = "invalido"
+    30 | 	print(a)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 2
+
+  [1] Linha 4: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 4) / elif ... sem else
+      Contexto:
+               3 | ano = 2023
+        >>>    4 | if pais == "B" and nascimento <= 2002:
+               5 | 	apto = "sim"
+
+  [2] Linha 16: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 16) / elif ... sem else
+      Contexto:
+              15 | 	
+        >>>   16 | if pais == "R" and nascimento <= 2005:
+              17 | 	apto = "sim" 
+
+======================================================================

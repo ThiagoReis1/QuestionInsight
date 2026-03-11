@@ -1,0 +1,54 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1265_1703.py
+Questão  : 1265
+Aluno    : 1703
+Total MCs: 1
+
+⚠️  Misconceptions detectados: C8
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | # Hanna Soares Rodrigues - 21650885
+     2 | 
+     3 | from numpy import*
+     4 | from math import*
+     5 | 
+     6 | numero = float(input("Digite um numero: "))
+     7 | x = array(eval(input("Vetor x: ")))
+     8 | y = array(eval(input("Vetor y: ")))
+     9 | 
+    10 | expoente = numero/(numero-1)
+    11 | 
+    12 | for i in range(size(x)):
+    13 | 	vetor1 = x[i]*2
+    14 | for j in range(size(y)):
+    15 | 	vetor2 = y[j]*3
+    16 | 
+    17 | vetor3 = vetor1 + vetor2
+    18 | k = 0
+    19 | v = zeros(size(x), dtype=float)
+    20 | for k in range (size(vetor3)):
+    21 | 	v = v + (((vetor3[k])**expoente)**(1/expoente))
+    22 | 	k = k + 1
+    23 | 
+    24 | print(v)
+    25 | 
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ C8 — Loop for com sua variável de iteração sobrescrita
+  Ocorrências: 1
+
+  [1] Linha 22: Variável de iteração 'k' sobrescrita no loop
+      Trecho  : k = k + 1
+      Contexto:
+              21 | 	v = v + (((vetor3[k])**expoente)**(1/expoente))
+        >>>   22 | 	k = k + 1
+              23 | 
+
+======================================================================

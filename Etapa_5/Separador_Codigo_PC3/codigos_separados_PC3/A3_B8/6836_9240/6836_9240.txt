@@ -1,0 +1,75 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 6836_9240.py
+Questão  : 6836
+Aluno    : 9240
+Total MCs: 2
+
+⚠️  Misconceptions detectados: A3, B8
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | insumos = input("insumos: ")
+     2 | total = 0
+     3 | bebidas = 0
+     4 | congelados = 0
+     5 | mercearia = 0
+     6 | 
+     7 | i = 0
+     8 | while i < len(insumos):
+     9 | 	insumo = insumos[i]
+    10 | 	if insumo == 'B':
+    11 | 		bebidas +=1
+    12 | 		total += 6.80
+    13 | 	elif insumo == 'C':
+    14 | 		congelados +=1
+    15 | 		total += 11.75
+    16 | 	elif insumo == 'M':
+    17 | 		mercearia +=1
+    18 | 		total += 5.90
+    19 | 	i += 1
+    20 | 	
+    21 | total = round(total ,2)
+    22 | print(total)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 3
+
+  [1] Linha 3: Variável 'bebidas' declarada mas nunca utilizada
+      Trecho  : bebidas = ...
+      Contexto:
+               2 | total = 0
+        >>>    3 | bebidas = 0
+               4 | congelados = 0
+
+  [2] Linha 4: Variável 'congelados' declarada mas nunca utilizada
+      Trecho  : congelados = ...
+      Contexto:
+               3 | bebidas = 0
+        >>>    4 | congelados = 0
+               5 | mercearia = 0
+
+  [3] Linha 5: Variável 'mercearia' declarada mas nunca utilizada
+      Trecho  : mercearia = ...
+      Contexto:
+               4 | congelados = 0
+        >>>    5 | mercearia = 0
+               6 | 
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 13: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 13) / elif ... sem else
+      Contexto:
+              12 | 		total += 6.80
+        >>>   13 | 	elif insumo == 'C':
+              14 | 		congelados +=1
+
+======================================================================

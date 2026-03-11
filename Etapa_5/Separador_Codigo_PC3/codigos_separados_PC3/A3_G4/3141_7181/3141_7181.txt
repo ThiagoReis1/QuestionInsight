@@ -1,0 +1,89 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 3141_7181.py
+Questão  : 3141
+Aluno    : 7181
+Total MCs: 2
+
+⚠️  Misconceptions detectados: A3, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import *
+     2 | 
+     3 | v=array(eval(input("numeros:  ")))
+     4 | m=0.0
+     5 | sv=0
+     6 | ps=0
+     7 | for i in range(0, size(v)):
+     8 | 	m=m+(v[i-1]**(1/6))
+     9 | 	
+    10 | sv=m/(size(v))
+    11 | ps=sv**6
+    12 | print(round(ps, 2))
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 1
+
+  [1] Linha 0: A3 detectado pelo VisitorMC3 (localização exata não mapeada)
+      Trecho  : —
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 7
+
+  [1] Linha 3: Variável 'v' com nome muito curto (≤4 chars)
+      Trecho  : v = ...
+      Contexto:
+               2 | 
+        >>>    3 | v=array(eval(input("numeros:  ")))
+               4 | m=0.0
+
+  [2] Linha 4: Variável 'm' com nome muito curto (≤4 chars)
+      Trecho  : m = ...
+      Contexto:
+               3 | v=array(eval(input("numeros:  ")))
+        >>>    4 | m=0.0
+               5 | sv=0
+
+  [3] Linha 5: Variável 'sv' com nome muito curto (≤4 chars)
+      Trecho  : sv = ...
+      Contexto:
+               4 | m=0.0
+        >>>    5 | sv=0
+               6 | ps=0
+
+  [4] Linha 6: Variável 'ps' com nome muito curto (≤4 chars)
+      Trecho  : ps = ...
+      Contexto:
+               5 | sv=0
+        >>>    6 | ps=0
+               7 | for i in range(0, size(v)):
+
+  [5] Linha 10: Variável 'sv' com nome muito curto (≤4 chars)
+      Trecho  : sv = ...
+      Contexto:
+               9 | 	
+        >>>   10 | sv=m/(size(v))
+              11 | ps=sv**6
+
+  [6] Linha 11: Variável 'ps' com nome muito curto (≤4 chars)
+      Trecho  : ps = ...
+      Contexto:
+              10 | sv=m/(size(v))
+        >>>   11 | ps=sv**6
+              12 | print(round(ps, 2))
+
+  [7] Linha 8: Variável 'm' com nome muito curto (≤4 chars)
+      Trecho  : m = ...
+      Contexto:
+               7 | for i in range(0, size(v)):
+        >>>    8 | 	m=m+(v[i-1]**(1/6))
+               9 | 	
+
+======================================================================

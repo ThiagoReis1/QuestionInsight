@@ -1,0 +1,92 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 3587_9201.py
+Questão  : 3587
+Aluno    : 9201
+Total MCs: 3
+
+⚠️  Misconceptions detectados: A2, B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import* 
+     2 | 
+     3 | n = array(eval(input("digite")))
+     4 | p = 100
+     5 | i = 0 
+     6 | while(i<size(n)):
+     7 | 	if (n[i]== 1):
+     8 | 		p += p*5
+     9 | 		i+=1
+    10 | 	elif (n[i]== 2):
+    11 | 		p += p*3
+    12 | 	
+    13 | 		i+=1
+    14 | 	elif (n[i]== 3):
+    15 | 		p = p
+    16 | 
+    17 | 		i+=1
+    18 | 	elif (n[i]== 4):
+    19 | 		p += p/2
+    20 | 		
+    21 | 	i+=1
+    22 | print(round(s,2))
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A2 — Variável atribuída a si mesma
+  Ocorrências: 1
+
+  [1] Linha 15: 'p' atribuído a si mesmo
+      Trecho  : p = p
+      Contexto:
+              14 | 	elif (n[i]== 3):
+        >>>   15 | 		p = p
+              16 | 
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 14: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 14) / elif ... sem else
+      Contexto:
+              13 | 		i+=1
+        >>>   14 | 	elif (n[i]== 3):
+              15 | 		p = p
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 4
+
+  [1] Linha 3: Variável 'n' com nome muito curto (≤4 chars)
+      Trecho  : n = ...
+      Contexto:
+               2 | 
+        >>>    3 | n = array(eval(input("digite")))
+               4 | p = 100
+
+  [2] Linha 4: Variável 'p' com nome muito curto (≤4 chars)
+      Trecho  : p = ...
+      Contexto:
+               3 | n = array(eval(input("digite")))
+        >>>    4 | p = 100
+               5 | i = 0 
+
+  [3] Linha 5: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+               4 | p = 100
+        >>>    5 | i = 0 
+               6 | while(i<size(n)):
+
+  [4] Linha 15: Variável 'p' com nome muito curto (≤4 chars)
+      Trecho  : p = ...
+      Contexto:
+              14 | 	elif (n[i]== 3):
+        >>>   15 | 		p = p
+              16 | 
+
+======================================================================

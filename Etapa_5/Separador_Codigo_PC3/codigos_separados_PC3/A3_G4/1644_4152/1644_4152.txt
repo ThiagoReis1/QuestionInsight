@@ -1,0 +1,76 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1644_4152.py
+Questão  : 1644
+Aluno    : 4152
+Total MCs: 2
+
+⚠️  Misconceptions detectados: A3, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import *
+     2 | vet = array(eval(input("Vet: ")))
+     3 | soma = 0
+     4 | vet1 = zeros(soma, dtype=int)
+     5 | for i in range(size(vet)):
+     6 | 	if (vet[i] < 5.0):
+     7 | 		soma = soma + 1
+     8 | vet1 = zeros(soma, dtype=int)
+     9 | for j in range(size(vet)):
+    10 | 	if (vet[j] < 5.0):
+    11 | 		vet1[j] = j
+    12 | print(soma)
+    13 | print(vet1)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 1
+
+  [1] Linha 0: A3 detectado pelo VisitorMC3 (localização exata não mapeada)
+      Trecho  : —
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 5
+
+  [1] Linha 2: Variável 'vet' com nome muito curto (≤4 chars)
+      Trecho  : vet = ...
+      Contexto:
+               1 | from numpy import *
+        >>>    2 | vet = array(eval(input("Vet: ")))
+               3 | soma = 0
+
+  [2] Linha 3: Variável 'soma' com nome muito curto (≤4 chars)
+      Trecho  : soma = ...
+      Contexto:
+               2 | vet = array(eval(input("Vet: ")))
+        >>>    3 | soma = 0
+               4 | vet1 = zeros(soma, dtype=int)
+
+  [3] Linha 4: Variável 'vet1' com nome muito curto (≤4 chars)
+      Trecho  : vet1 = ...
+      Contexto:
+               3 | soma = 0
+        >>>    4 | vet1 = zeros(soma, dtype=int)
+               5 | for i in range(size(vet)):
+
+  [4] Linha 8: Variável 'vet1' com nome muito curto (≤4 chars)
+      Trecho  : vet1 = ...
+      Contexto:
+               7 | 		soma = soma + 1
+        >>>    8 | vet1 = zeros(soma, dtype=int)
+               9 | for j in range(size(vet)):
+
+  [5] Linha 7: Variável 'soma' com nome muito curto (≤4 chars)
+      Trecho  : soma = ...
+      Contexto:
+               6 | 	if (vet[i] < 5.0):
+        >>>    7 | 		soma = soma + 1
+               8 | vet1 = zeros(soma, dtype=int)
+
+======================================================================

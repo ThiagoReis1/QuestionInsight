@@ -1,0 +1,90 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1198_1694.py
+Questão  : 1198
+Aluno    : 1694
+Total MCs: 2
+
+⚠️  Misconceptions detectados: A3, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | 
+     3 | temp=array(eval(input("Temperatura da agua:")))
+     4 | saida=array(zeros(size(temp),dtype=int))
+     5 | i=0
+     6 | c=0
+     7 | while i<size(temp):
+     8 | 	j=0
+     9 | 	while j<size(saida):
+    10 | 		if temp[i]<10:
+    11 | 			saida[j]=temp[i]
+    12 | 			j=j+1
+    13 | 	i=i+1
+    14 | print (saida)
+    15 | 
+    16 | 
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 1
+
+  [1] Linha 6: Variável 'c' declarada mas nunca utilizada
+      Trecho  : c = ...
+      Contexto:
+               5 | i=0
+        >>>    6 | c=0
+               7 | while i<size(temp):
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 6
+
+  [1] Linha 3: Variável 'temp' com nome muito curto (≤4 chars)
+      Trecho  : temp = ...
+      Contexto:
+               2 | 
+        >>>    3 | temp=array(eval(input("Temperatura da agua:")))
+               4 | saida=array(zeros(size(temp),dtype=int))
+
+  [2] Linha 5: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+               4 | saida=array(zeros(size(temp),dtype=int))
+        >>>    5 | i=0
+               6 | c=0
+
+  [3] Linha 6: Variável 'c' com nome muito curto (≤4 chars)
+      Trecho  : c = ...
+      Contexto:
+               5 | i=0
+        >>>    6 | c=0
+               7 | while i<size(temp):
+
+  [4] Linha 8: Variável 'j' com nome muito curto (≤4 chars)
+      Trecho  : j = ...
+      Contexto:
+               7 | while i<size(temp):
+        >>>    8 | 	j=0
+               9 | 	while j<size(saida):
+
+  [5] Linha 13: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+              12 | 			j=j+1
+        >>>   13 | 	i=i+1
+              14 | print (saida)
+
+  [6] Linha 12: Variável 'j' com nome muito curto (≤4 chars)
+      Trecho  : j = ...
+      Contexto:
+              11 | 			saida[j]=temp[i]
+        >>>   12 | 			j=j+1
+              13 | 	i=i+1
+
+======================================================================

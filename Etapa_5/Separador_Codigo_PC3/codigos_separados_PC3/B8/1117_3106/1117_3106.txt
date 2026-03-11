@@ -1,0 +1,52 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1117_3106.py
+Questão  : 1117
+Aluno    : 3106
+Total MCs: 1
+
+⚠️  Misconceptions detectados: B8
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | preco = float(input("Preco normal da entrada : "))
+     2 | dia = int(input("Dia da semana: "))
+     3 | aovivo = input("Eh dia de musica ao vivo: ")
+     4 | 
+     5 | ao_vivo = aovivo.upper()
+     6 | 
+     7 | print("Entradas: ", preco, ",", dia, ",", aovivo)
+     8 | 
+     9 | if ((preco >= 0) and (1 <= dia <= 7) and ((ao_vivo == "S") or (ao_vivo == "N"))):
+    10 | 	if (((dia == 2)or(dia == 3)or(dia == 5)) and (ao_vivo == "N")):
+    11 | 		final = preco * 0.75
+    12 | 	elif (((dia == 2)or(dia == 3)or(dia == 5)) and (ao_vivo == "S")):
+    13 | 		final = (preco * 0.75) + 20
+    14 | 	elif (((dia == 1) or (dia == 4) or (dia == 6) or (dia == 7)) and (ao_vivo == "N")):
+    15 | 		final = preco
+    16 | 	elif (((dia == 1) or (dia == 4) or (dia == 6) or (dia == 7)) and (ao_vivo == "S")):
+    17 | 		final = preco + 20
+    18 | 	
+    19 | 	print("Valor a pagar: R$ ", round(final,2))
+    20 | 
+    21 | else:
+    22 | 	print("Dados invalidos")
+    23 | 		
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 14: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 14) / elif ... sem else
+      Contexto:
+              13 | 		final = (preco * 0.75) + 20
+        >>>   14 | 	elif (((dia == 1) or (dia == 4) or (dia == 6) or (dia == 7)) and (ao_vivo == "N")):
+              15 | 		final = preco
+
+======================================================================

@@ -1,0 +1,7 @@
+alunos_m2=float(input("num de alunos por m2:"))
+B=float(input("compr. da Base maior:"))
+b=float(input("compr. da base menor:"))
+h=float(input("compr. da altura:"))
+A=h*((B+b)/2)
+quant_alunos=(alunos_m2*A)
+print(int(round(quant_alunos,2)))

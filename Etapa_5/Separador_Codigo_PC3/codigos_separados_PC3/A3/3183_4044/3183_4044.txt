@@ -1,0 +1,78 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 3183_4044.py
+Questão  : 3183
+Aluno    : 4044
+Total MCs: 1
+
+⚠️  Misconceptions detectados: A3
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | '''
+     2 |   TP 6: Repetição por contagem(for)
+     3 |   
+     4 |   |-----------|
+     5 |   | Questão 2 |
+     6 |   |-----------|
+     7 | 
+     8 |   Universidade Federal do Amazonas
+     9 |   Instituto de Ciências Exatas
+    10 |   Departamento de Física
+    11 |   
+    12 |   Micael Davi Lima de Oliveira - 28151626
+    13 |   Turma: FB01
+    14 | '''
+    15 | 
+    16 | from numpy import*
+    17 | # importou-se uma biblioteca para cálculos computacionais. Isto porque, será
+    18 | # necessário utilizar funções específicas para o trabalho com arrays(matrizes). 
+    19 | 
+    20 | # O vetor 'vec_d' armazena os elementos organizados da mesma forma que o usuário inseriu. E portanto,
+    21 | # os números inteiros deverão estar dispostos em ordem decrescente.
+    22 | vec_d = array(eval(input("Vetor de numeros inteiros decrescentes: ")))
+    23 | # O vetor 'vec_c' inicialmente será composto apenas por '0', mas numa quantidade equivalente ao 
+    24 | # tamanho do vetor 'vec_d'. Isto porque, o vetor de saída é na verdade, apenas o vetor digitado lido
+    25 | # de forma contrária, ou seja, do Último ---> Primeiro.
+    26 | vec_c = zeros(size(vec_d), dtype = int)
+    27 | 
+    28 | # Um laço de repetição precisa ser criado para que o computador faça o vetor 'vec_c' de um índice [i], 
+    29 | # receber exatamente o índice que está na outra extremidade, ou seja, [-1-i]. Isto porque, na computação
+    30 | # por algum motivo, o '-1' simboliza o índice do último elemento, e conforme for decrementando o [-1], 
+    31 | # estarei curiosamente percorrendo o vetor a partir do último elemento até o primeiro vetor.
+    32 | 
+    33 | # Uma observação importante é que seguindo a lógica mencionada acima, é possível encontrar uma equação
+    34 | # matemática que represente o índice do primeiro elemento.
+    35 | #   [-1 - i]        (1)
+    36 | #   [-1 - (n - 1)]  (2)
+    37 | #   [-1 + 1 - n]    (3)
+    38 | #   [-n] = [0]      (4)
+    39 | 
+    40 | for i in range(size(vec_d)):
+    41 | 	# Criou-se uma restrição dentro do algoritmo. Isto porque, caso o usuário insira um vetor contendo 
+    42 | 	# apenas um único elemento, o compilador do Python3 indicou uma falha de sintaxe. Isto porque, seria
+    43 | 	# acessado um índice inexistente. E por isso, chegou-se à conclusão de que o Python3 não interpreta
+    44 | 	# um array de um só elemento como vetor, cujo elemento, seria vec[0], mas apenas como 'vec'.
+    45 | 	if (size(vec_d) > 1):
+    46 | 		vec_c[i] = vec_d[-1-i]
+    47 | 	else:
+    48 | 		vec_c = vec_d
+    49 | # No fim, após o laço de repetição ter sido finalizado e sendo assim, todos os elementos do vetor saída
+    50 | # receberam exatamente o vetor inicial lido de trás para frente, logo, é preciso apenas imprimir o vetor
+    51 | # 'vec_c', cuja ordenação dos números é de forma crescente. Isto apenas será válido, se todos os elementos
+    52 | # do vetor inicial foram necessariamente inseridos em ordem decrescente.
+    53 | print(vec_c)	
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 1
+
+  [1] Linha 0: A3 detectado pelo VisitorMC3 (localização exata não mapeada)
+      Trecho  : —
+
+======================================================================

@@ -1,0 +1,60 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1654_8213.py
+Questão  : 1654
+Aluno    : 8213
+Total MCs: 2
+
+⚠️  Misconceptions detectados: A3, B8
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | vetor=input("Digite: ").upper().split(",")
+     3 | vz=zeros(5,dtype=int)
+     4 | cont=0
+     5 | for i in range(size(vetor)):
+     6 | 	if vetor[i]=="AM":
+     7 | 		vz[0]=vz[0]+1
+     8 | 		
+     9 | 	elif vetor[i]=="PE":
+    10 | 		vz[1]=vz[1]+1
+    11 | 		
+    12 | 	elif vetor[i]=="MG":
+    13 | 		vz[2]=vz[2]+1
+    14 | 		
+    15 | 	elif vetor[i]=="SP":
+    16 | 		vz[3]=vz[3]+1
+    17 | 		
+    18 | 	elif vetor[i]=="RS":
+    19 | 		vz[4]=vz[4]+1
+    20 | print(max(vz))
+    21 | print(vz)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 1
+
+  [1] Linha 4: Variável 'cont' declarada mas nunca utilizada
+      Trecho  : cont = ...
+      Contexto:
+               3 | vz=zeros(5,dtype=int)
+        >>>    4 | cont=0
+               5 | for i in range(size(vetor)):
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 15: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 15) / elif ... sem else
+      Contexto:
+              14 | 		
+        >>>   15 | 	elif vetor[i]=="SP":
+              16 | 		vz[3]=vz[3]+1
+
+======================================================================

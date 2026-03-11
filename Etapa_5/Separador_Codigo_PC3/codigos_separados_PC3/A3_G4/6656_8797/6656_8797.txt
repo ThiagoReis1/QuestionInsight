@@ -1,0 +1,60 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 6656_8797.py
+Questão  : 6656
+Aluno    : 8797
+Total MCs: 2
+
+⚠️  Misconceptions detectados: A3, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | notas = array(eval(input("inf nota:")))
+     3 | i = 0
+     4 | peso = [3,4,2,1,4,5]
+     5 | 
+     6 | mp = sum(notas*peso)/(3+4+2+1+4+5)
+     7 | print(round(mp , 2))
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 1
+
+  [1] Linha 3: Variável 'i' declarada mas nunca utilizada
+      Trecho  : i = ...
+      Contexto:
+               2 | notas = array(eval(input("inf nota:")))
+        >>>    3 | i = 0
+               4 | peso = [3,4,2,1,4,5]
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 3
+
+  [1] Linha 3: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+               2 | notas = array(eval(input("inf nota:")))
+        >>>    3 | i = 0
+               4 | peso = [3,4,2,1,4,5]
+
+  [2] Linha 4: Variável 'peso' com nome muito curto (≤4 chars)
+      Trecho  : peso = ...
+      Contexto:
+               3 | i = 0
+        >>>    4 | peso = [3,4,2,1,4,5]
+               5 | 
+
+  [3] Linha 6: Variável 'mp' com nome muito curto (≤4 chars)
+      Trecho  : mp = ...
+      Contexto:
+               5 | 
+        >>>    6 | mp = sum(notas*peso)/(3+4+2+1+4+5)
+               7 | print(round(mp , 2))
+
+======================================================================

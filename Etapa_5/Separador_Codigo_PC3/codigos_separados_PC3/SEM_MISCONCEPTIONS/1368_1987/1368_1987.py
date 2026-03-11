@@ -1,0 +1,5 @@
+qcascolm = int(input("Quantidade de casca de colmeia"))
+qal = int(input("Quantidade de alho"))
+qot = int(input("Quantidade de óleo de troll"))
+minimo = int(min(qcascolm//0.2, qal//0.32, qot//1.29))	
+print (minimo)

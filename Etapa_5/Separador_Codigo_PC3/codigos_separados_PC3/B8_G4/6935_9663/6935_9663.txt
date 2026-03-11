@@ -1,0 +1,92 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 6935_9663.py
+Questão  : 6935
+Aluno    : 9663
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | total = float(input("Informe o valor da compra: "))
+     2 | cod = input("informe a opcao de pagemento: ").upper()
+     3 | 
+     4 | if cod == "C":
+     5 | 	p= int(input("quantas vezes?"))
+     6 | 	if p == 2:
+     7 | 		t = total + (total * 0.07)
+     8 | 		print(round(t,2))
+     9 | 	else:
+    10 | 		t = total
+    11 | 		print(t)
+    12 | elif cod == "P":
+    13 | 	F = total - (total * 0.12)
+    14 | elif cod == "D":
+    15 | 	F = total - (total * 0.12)
+    16 | 	
+    17 | 	print(round(F,2))
+    18 | 	
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 12: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 12) / elif ... sem else
+      Contexto:
+              11 | 		print(t)
+        >>>   12 | elif cod == "P":
+              13 | 	F = total - (total * 0.12)
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 6
+
+  [1] Linha 2: Variável 'cod' com nome muito curto (≤4 chars)
+      Trecho  : cod = ...
+      Contexto:
+               1 | total = float(input("Informe o valor da compra: "))
+        >>>    2 | cod = input("informe a opcao de pagemento: ").upper()
+               3 | 
+
+  [2] Linha 5: Variável 'p' com nome muito curto (≤4 chars)
+      Trecho  : p = ...
+      Contexto:
+               4 | if cod == "C":
+        >>>    5 | 	p= int(input("quantas vezes?"))
+               6 | 	if p == 2:
+
+  [3] Linha 7: Variável 't' com nome muito curto (≤4 chars)
+      Trecho  : t = ...
+      Contexto:
+               6 | 	if p == 2:
+        >>>    7 | 		t = total + (total * 0.07)
+               8 | 		print(round(t,2))
+
+  [4] Linha 10: Variável 't' com nome muito curto (≤4 chars)
+      Trecho  : t = ...
+      Contexto:
+               9 | 	else:
+        >>>   10 | 		t = total
+              11 | 		print(t)
+
+  [5] Linha 13: Variável 'F' com nome muito curto (≤4 chars)
+      Trecho  : F = ...
+      Contexto:
+              12 | elif cod == "P":
+        >>>   13 | 	F = total - (total * 0.12)
+              14 | elif cod == "D":
+
+  [6] Linha 15: Variável 'F' com nome muito curto (≤4 chars)
+      Trecho  : F = ...
+      Contexto:
+              14 | elif cod == "D":
+        >>>   15 | 	F = total - (total * 0.12)
+              16 | 	
+
+======================================================================

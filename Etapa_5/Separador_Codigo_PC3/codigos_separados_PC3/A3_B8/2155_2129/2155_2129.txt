@@ -1,0 +1,75 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 2155_2129.py
+Questão  : 2155
+Aluno    : 2129
+Total MCs: 2
+
+⚠️  Misconceptions detectados: A3, B8
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import *
+     2 | 
+     3 | peso= array (eval(input("Informe o peso:")))
+     4 | altura= array (eval(input("Informe a altura:")))
+     5 | d= array(zeros(3,dtype=float))
+     6 | 
+     7 | muitoabp = 0
+     8 | abp = 0
+     9 | pn = 0
+    10 | acimap = 0
+    11 | obes = 0
+    12 | obess = 0
+    13 | obesm = 0
+    14 | imc = (peso/altura**2)
+    15 | 
+    16 | for i in range(size(imc)):
+    17 | 	if (imc[i] < 17):
+    18 | 		muitoabp = muitoabp +1
+    19 | 	elif (imc[i] >= 17 and imc[i] < 49):
+    20 | 		abp = abp +1
+    21 | 	elif (imc[i] >= 18.5 and imc[i] < 24.9):
+    22 | 		pn = pn +1
+    23 | 	elif (imc[i] >=  25 and imc[i] < 29.99):
+    24 | 		acimap = acimap +1
+    25 | 	elif (imc[i] >= 30 and imc[i] < 34.99):
+    26 | 		obes = obes +1
+    27 | 	elif (imc[i] >= 35 and imc [i] < 39.99):
+    28 | 		obess = obess +1
+    29 | 	elif (imc[i] > 40):
+    30 | 		obesm = obesm +1	
+    31 | v= array ([muitoabp,abp,pn, acimap, obes, obess, obesm])
+    32 | 
+    33 | for i in range(size(d)):		
+    34 | 	d[i] = round(d[i]/size(imc))
+    35 | x = max(v)
+    36 | print (round(imc))
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 1
+
+  [1] Linha 35: Variável 'x' declarada mas nunca utilizada
+      Trecho  : x = ...
+      Contexto:
+              34 | 	d[i] = round(d[i]/size(imc))
+        >>>   35 | x = max(v)
+              36 | print (round(imc))
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 27: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 27) / elif ... sem else
+      Contexto:
+              26 | 		obes = obes +1
+        >>>   27 | 	elif (imc[i] >= 35 and imc [i] < 39.99):
+              28 | 		obess = obess +1
+
+======================================================================

@@ -1,0 +1,45 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 2588_3397.py
+Questão  : 2588
+Aluno    : 3397
+Total MCs: 1
+
+⚠️  Misconceptions detectados: C8
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | veloc = array(eval(input("Digite a velocidade: ")))
+     3 | 
+     4 | limvel = veloc[0]
+     5 | limin = limvel + (limvel *0.20)
+     6 | limmax = limvel + (limvel * 0.50)
+     7 | 
+     8 | 
+     9 | i = 1
+    10 | for x in veloc[1:]:
+    11 | 	if(x > limin) and (x < limmax):
+    12 | 		print(i)
+    13 | 	i += 1
+    14 | 
+    15 | for u in veloc[1:2]:
+    16 | 	print(u)
+    17 | 	u += 0
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ C8 — Loop for com sua variável de iteração sobrescrita
+  Ocorrências: 1
+
+  [1] Linha 17: Variável de iteração 'u' modificada no loop
+      Trecho  : u += 0
+      Contexto:
+              16 | 	print(u)
+        >>>   17 | 	u += 0
+
+======================================================================

@@ -1,0 +1,7 @@
+o=float(6.90)
+g=float(2.50)
+be=float(3.00)
+a=int(input())
+b=int(input())
+y=float(o+(g*a)+(be*b))
+print(float(round(y,2)))

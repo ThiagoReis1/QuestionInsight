@@ -1,0 +1,83 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 2623_3489.py
+Questão  : 2623
+Aluno    : 3489
+Total MCs: 2
+
+⚠️  Misconceptions detectados: A3, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | from numpy.linalg import*
+     3 | 
+     4 | mat = array(eval(input("digite a matriz : ")))
+     5 | 
+     6 | a = zeros(shape(mat)[0], dtype = float)
+     7 | b = 0
+     8 | soma = 0
+     9 | for i in range(shape(mat)[0]) :
+    10 | 	for j in range(shape(mat)[1]) :
+    11 | 		a[i] = min(mat[i,:])
+    12 | for i in range(size(a)) :
+    13 | 	if a[i] == min(a) :
+    14 | 		print(i)
+    15 | 
+    16 | 
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 2
+
+  [1] Linha 7: Variável 'b' declarada mas nunca utilizada
+      Trecho  : b = ...
+      Contexto:
+               6 | a = zeros(shape(mat)[0], dtype = float)
+        >>>    7 | b = 0
+               8 | soma = 0
+
+  [2] Linha 8: Variável 'soma' declarada mas nunca utilizada
+      Trecho  : soma = ...
+      Contexto:
+               7 | b = 0
+        >>>    8 | soma = 0
+               9 | for i in range(shape(mat)[0]) :
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 4
+
+  [1] Linha 4: Variável 'mat' com nome muito curto (≤4 chars)
+      Trecho  : mat = ...
+      Contexto:
+               3 | 
+        >>>    4 | mat = array(eval(input("digite a matriz : ")))
+               5 | 
+
+  [2] Linha 6: Variável 'a' com nome muito curto (≤4 chars)
+      Trecho  : a = ...
+      Contexto:
+               5 | 
+        >>>    6 | a = zeros(shape(mat)[0], dtype = float)
+               7 | b = 0
+
+  [3] Linha 7: Variável 'b' com nome muito curto (≤4 chars)
+      Trecho  : b = ...
+      Contexto:
+               6 | a = zeros(shape(mat)[0], dtype = float)
+        >>>    7 | b = 0
+               8 | soma = 0
+
+  [4] Linha 8: Variável 'soma' com nome muito curto (≤4 chars)
+      Trecho  : soma = ...
+      Contexto:
+               7 | b = 0
+        >>>    8 | soma = 0
+               9 | for i in range(shape(mat)[0]) :
+
+======================================================================

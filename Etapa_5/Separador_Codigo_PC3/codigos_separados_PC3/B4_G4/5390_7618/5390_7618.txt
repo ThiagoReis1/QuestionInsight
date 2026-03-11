@@ -1,0 +1,187 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 5390_7618.py
+Questão  : 5390
+Aluno    : 7618
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B4, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import *
+     2 | 
+     3 | nome=input("apenas letras: ").upper()
+     4 | 
+     5 | i = 0
+     6 | soma = 0
+     7 | while i < len(nome):
+     8 | 	if nome[i] == "A":
+     9 | 		soma = soma + 0.19
+    10 | 	elif nome[i] == "E":
+    11 | 	 	soma = soma + 0.19
+    12 | 	elif nome[i]=="I":
+    13 | 		soma= soma + 0.19
+    14 | 	elif nome[i] == "O":
+    15 | 		soma = soma +0.19
+    16 | 	elif nome[i] == "U":
+    17 | 		soma = soma + 0.19
+    18 | 	else:
+    19 | 		soma = soma + 0.23
+    20 | 	i = i + 1
+    21 | print(round(soma,2))
+    22 | 		
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B4 — Comandos repetidos dentro de blocos if-elif-else
+  Ocorrências: 10
+
+  [1] Linha 10: Bloco idêntico ao da linha 8
+      Trecho  : soma = soma + 0.19
+      Contexto:
+               9 | 		soma = soma + 0.19
+        >>>   10 | 	elif nome[i] == "E":
+              11 | 	 	soma = soma + 0.19
+
+  [2] Linha 12: Bloco idêntico ao da linha 8
+      Trecho  : soma = soma + 0.19
+      Contexto:
+              11 | 	 	soma = soma + 0.19
+        >>>   12 | 	elif nome[i]=="I":
+              13 | 		soma= soma + 0.19
+
+  [3] Linha 14: Bloco idêntico ao da linha 8
+      Trecho  : soma = soma + 0.19
+      Contexto:
+              13 | 		soma= soma + 0.19
+        >>>   14 | 	elif nome[i] == "O":
+              15 | 		soma = soma +0.19
+
+  [4] Linha 16: Bloco idêntico ao da linha 8
+      Trecho  : soma = soma + 0.19
+      Contexto:
+              15 | 		soma = soma +0.19
+        >>>   16 | 	elif nome[i] == "U":
+              17 | 		soma = soma + 0.19
+
+  [5] Linha 12: Bloco idêntico ao da linha 10
+      Trecho  : soma = soma + 0.19
+      Contexto:
+              11 | 	 	soma = soma + 0.19
+        >>>   12 | 	elif nome[i]=="I":
+              13 | 		soma= soma + 0.19
+
+  [6] Linha 14: Bloco idêntico ao da linha 10
+      Trecho  : soma = soma + 0.19
+      Contexto:
+              13 | 		soma= soma + 0.19
+        >>>   14 | 	elif nome[i] == "O":
+              15 | 		soma = soma +0.19
+
+  [7] Linha 16: Bloco idêntico ao da linha 10
+      Trecho  : soma = soma + 0.19
+      Contexto:
+              15 | 		soma = soma +0.19
+        >>>   16 | 	elif nome[i] == "U":
+              17 | 		soma = soma + 0.19
+
+  [8] Linha 14: Bloco idêntico ao da linha 12
+      Trecho  : soma = soma + 0.19
+      Contexto:
+              13 | 		soma= soma + 0.19
+        >>>   14 | 	elif nome[i] == "O":
+              15 | 		soma = soma +0.19
+
+  [9] Linha 16: Bloco idêntico ao da linha 12
+      Trecho  : soma = soma + 0.19
+      Contexto:
+              15 | 		soma = soma +0.19
+        >>>   16 | 	elif nome[i] == "U":
+              17 | 		soma = soma + 0.19
+
+  [10] Linha 16: Bloco idêntico ao da linha 14
+      Trecho  : soma = soma + 0.19
+      Contexto:
+              15 | 		soma = soma +0.19
+        >>>   16 | 	elif nome[i] == "U":
+              17 | 		soma = soma + 0.19
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 10
+
+  [1] Linha 3: Variável 'nome' com nome muito curto (≤4 chars)
+      Trecho  : nome = ...
+      Contexto:
+               2 | 
+        >>>    3 | nome=input("apenas letras: ").upper()
+               4 | 
+
+  [2] Linha 5: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+               4 | 
+        >>>    5 | i = 0
+               6 | soma = 0
+
+  [3] Linha 6: Variável 'soma' com nome muito curto (≤4 chars)
+      Trecho  : soma = ...
+      Contexto:
+               5 | i = 0
+        >>>    6 | soma = 0
+               7 | while i < len(nome):
+
+  [4] Linha 20: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+              19 | 		soma = soma + 0.23
+        >>>   20 | 	i = i + 1
+              21 | print(round(soma,2))
+
+  [5] Linha 9: Variável 'soma' com nome muito curto (≤4 chars)
+      Trecho  : soma = ...
+      Contexto:
+               8 | 	if nome[i] == "A":
+        >>>    9 | 		soma = soma + 0.19
+              10 | 	elif nome[i] == "E":
+
+  [6] Linha 11: Variável 'soma' com nome muito curto (≤4 chars)
+      Trecho  : soma = ...
+      Contexto:
+              10 | 	elif nome[i] == "E":
+        >>>   11 | 	 	soma = soma + 0.19
+              12 | 	elif nome[i]=="I":
+
+  [7] Linha 13: Variável 'soma' com nome muito curto (≤4 chars)
+      Trecho  : soma = ...
+      Contexto:
+              12 | 	elif nome[i]=="I":
+        >>>   13 | 		soma= soma + 0.19
+              14 | 	elif nome[i] == "O":
+
+  [8] Linha 15: Variável 'soma' com nome muito curto (≤4 chars)
+      Trecho  : soma = ...
+      Contexto:
+              14 | 	elif nome[i] == "O":
+        >>>   15 | 		soma = soma +0.19
+              16 | 	elif nome[i] == "U":
+
+  [9] Linha 17: Variável 'soma' com nome muito curto (≤4 chars)
+      Trecho  : soma = ...
+      Contexto:
+              16 | 	elif nome[i] == "U":
+        >>>   17 | 		soma = soma + 0.19
+              18 | 	else:
+
+  [10] Linha 19: Variável 'soma' com nome muito curto (≤4 chars)
+      Trecho  : soma = ...
+      Contexto:
+              18 | 	else:
+        >>>   19 | 		soma = soma + 0.23
+              20 | 	i = i + 1
+
+======================================================================

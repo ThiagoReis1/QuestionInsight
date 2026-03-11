@@ -1,0 +1,131 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1199_1259.py
+Questão  : 1199
+Aluno    : 1259
+Total MCs: 2
+
+⚠️  Misconceptions detectados: A3, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | #Julia Caroline
+     2 | #11 de Agosto de 2016
+     3 | #Avaliacao 05 Ex2
+     4 | 
+     5 | from numpy import*
+     6 | #le o vetor
+     7 | vet = array(eval(input("temperaturas: ")), dtype = float)
+     8 | #variaveis de controle
+     9 | i = 0
+    10 | j = 0
+    11 | k = 0
+    12 | cont = 0
+    13 | achou = False
+    14 | #encontra os elementos
+    15 | while(i < size(vet)):
+    16 | 	if((vet[i] > 10.0) or (vet[i]) < 40.0 ):
+    17 | 		cont = cont + 1
+    18 | 	i = i + 1
+    19 | #vetor resultante
+    20 | vet2 = array(cont, dtype = float)
+    21 | 
+    22 | #elementos do vetor resultante
+    23 | while(j < size(vet)):
+    24 | 	if((vet[j] > 10.0) or (vet[j]) < 40.0 ):
+    25 | 		achou = True
+    26 | 	if(achou == True and k < size(vet2)):
+    27 | 		vet2[k] = vet[j]
+    28 | 		k = k + 1
+    29 | 	j = j + 1
+    30 | print(round(vet2, 1))
+    31 | 		
+    32 | 		
+    33 | 
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 1
+
+  [1] Linha 0: A3 detectado pelo VisitorMC3 (localização exata não mapeada)
+      Trecho  : —
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 10
+
+  [1] Linha 7: Variável 'vet' com nome muito curto (≤4 chars)
+      Trecho  : vet = ...
+      Contexto:
+               6 | #le o vetor
+        >>>    7 | vet = array(eval(input("temperaturas: ")), dtype = float)
+               8 | #variaveis de controle
+
+  [2] Linha 9: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+               8 | #variaveis de controle
+        >>>    9 | i = 0
+              10 | j = 0
+
+  [3] Linha 10: Variável 'j' com nome muito curto (≤4 chars)
+      Trecho  : j = ...
+      Contexto:
+               9 | i = 0
+        >>>   10 | j = 0
+              11 | k = 0
+
+  [4] Linha 11: Variável 'k' com nome muito curto (≤4 chars)
+      Trecho  : k = ...
+      Contexto:
+              10 | j = 0
+        >>>   11 | k = 0
+              12 | cont = 0
+
+  [5] Linha 12: Variável 'cont' com nome muito curto (≤4 chars)
+      Trecho  : cont = ...
+      Contexto:
+              11 | k = 0
+        >>>   12 | cont = 0
+              13 | achou = False
+
+  [6] Linha 20: Variável 'vet2' com nome muito curto (≤4 chars)
+      Trecho  : vet2 = ...
+      Contexto:
+              19 | #vetor resultante
+        >>>   20 | vet2 = array(cont, dtype = float)
+              21 | 
+
+  [7] Linha 18: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+              17 | 		cont = cont + 1
+        >>>   18 | 	i = i + 1
+              19 | #vetor resultante
+
+  [8] Linha 29: Variável 'j' com nome muito curto (≤4 chars)
+      Trecho  : j = ...
+      Contexto:
+              28 | 		k = k + 1
+        >>>   29 | 	j = j + 1
+              30 | print(round(vet2, 1))
+
+  [9] Linha 17: Variável 'cont' com nome muito curto (≤4 chars)
+      Trecho  : cont = ...
+      Contexto:
+              16 | 	if((vet[i] > 10.0) or (vet[i]) < 40.0 ):
+        >>>   17 | 		cont = cont + 1
+              18 | 	i = i + 1
+
+  [10] Linha 28: Variável 'k' com nome muito curto (≤4 chars)
+      Trecho  : k = ...
+      Contexto:
+              27 | 		vet2[k] = vet[j]
+        >>>   28 | 		k = k + 1
+              29 | 	j = j + 1
+
+======================================================================

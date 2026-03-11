@@ -1,0 +1,53 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1621_1921.py
+Questão  : 1621
+Aluno    : 1921
+Total MCs: 1
+
+⚠️  Misconceptions detectados: B8
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | nomes = array(eval(input("nomes do produto: ")))
+     3 | qtd = array(eval(input("quantidade de cada produto: ")))
+     4 | elem = size(nomes)
+     5 | i = 0
+     6 | preco = 0
+     7 | while(i < elem):
+     8 | 	if(nomes[i].upper() == "ARROZ"):
+     9 | 		a = qtd[i]
+    10 | 		preco = preco + a*1.25
+    11 | 	elif(nomes[i].upper() == "FEIJAO"):
+    12 | 		a = qtd[i]
+    13 | 		preco = preco + a*2.60
+    14 | 	elif(nomes[i].upper() == "BIS"):
+    15 | 		a = qtd[i]
+    16 | 		preco = preco + a*1.80
+    17 | 	elif(nomes[i].upper() == "MIOJO"):
+    18 | 		a = qtd[i]
+    19 | 		preco = preco + a*0.85
+    20 | 	elif(nomes[i].upper() == "FANTA"):
+    21 | 		a = qtd[i]
+    22 | 		preco = preco + a*3.20
+    23 | 	i = i + 1
+    24 | print(round(preco,2))
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 17: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 17) / elif ... sem else
+      Contexto:
+              16 | 		preco = preco + a*1.80
+        >>>   17 | 	elif(nomes[i].upper() == "MIOJO"):
+              18 | 		a = qtd[i]
+
+======================================================================

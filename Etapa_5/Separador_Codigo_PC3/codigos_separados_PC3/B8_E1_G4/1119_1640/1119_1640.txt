@@ -1,0 +1,147 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1119_1640.py
+Questão  : 1119
+Aluno    : 1640
+Total MCs: 3
+
+⚠️  Misconceptions detectados: B8, E1, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | casa = str(input("Informe a casa: "))
+     2 | 
+     3 | if(casa == "Baratheon" or casa == "Targaryen" or casa == "Tyrell" or casa == "Stark" or  casa == "Lannister" or casa == "Greyjoy" or casa == "Tully" or casa == "Arryn" or casa == "Martell"):
+     4 | 	if(casa == "Baratheon"):
+     5 | 		lema = "Nossa eh a furia"
+     6 | 	elif(casa == "Targaryen"):
+     7 | 		lema = "Fogo e sangue"
+     8 | 	elif(casa == "Tyrell"):
+     9 | 		lema = "Crescendo fortes"
+    10 | 	elif(casa == "Stark"):
+    11 | 		lema = "O inverno esta chegando"
+    12 | 	elif(casa == "Lannister"):
+    13 | 		lema = "Oucam-me rugir"
+    14 | 	elif(casa == "Greyjoy"):
+    15 | 		lema = "Nos nao semeamos"
+    16 | 	elif(casa == "Tully"):
+    17 | 		lema = "Familia, dever, honra"
+    18 | 	elif(casa == "Arryn"):
+    19 | 		lema = "Tao alto como a honra"
+    20 | 	elif(casa == "Martell"):
+    21 | 		lema = "Insubmissos, nao curvados, nao quebrados"
+    22 | else:
+    23 | 	lema = -1
+    24 | 	
+    25 | if(lema == -1):
+    26 | 	print("Entrada", casa, "invalida")
+    27 | else:
+    28 | 	print(lema)
+    29 | 	
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 18: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 18) / elif ... sem else
+      Contexto:
+              17 | 		lema = "Familia, dever, honra"
+        >>>   18 | 	elif(casa == "Arryn"):
+              19 | 		lema = "Tao alto como a honra"
+
+▶ E1 — Verificação desnecessária de todas as combinações possíveis
+  Ocorrências: 1
+
+  [1] Linha 3: 9 condições em um único if — verificação excessiva
+      Trecho  : casa == 'Baratheon' or casa == 'Targaryen' or casa == 'Tyrell' or (casa == 'Stark') or (casa == 'Lannister') or (casa == 'Greyjoy') or (casa == 'Tully') or (casa == 'Arryn') or (casa == 'Martell')
+      Contexto:
+               2 | 
+        >>>    3 | if(casa == "Baratheon" or casa == "Targaryen" or casa == "Tyrell" or casa == "Stark" or  casa == "Lannister" or casa == "Greyjoy" or casa == "Tully" or casa == "Arryn" or casa == "Martell"):
+               4 | 	if(casa == "Baratheon"):
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 11
+
+  [1] Linha 1: Variável 'casa' com nome muito curto (≤4 chars)
+      Trecho  : casa = ...
+      Contexto:
+        >>>    1 | casa = str(input("Informe a casa: "))
+               2 | 
+
+  [2] Linha 23: Variável 'lema' com nome muito curto (≤4 chars)
+      Trecho  : lema = ...
+      Contexto:
+              22 | else:
+        >>>   23 | 	lema = -1
+              24 | 	
+
+  [3] Linha 5: Variável 'lema' com nome muito curto (≤4 chars)
+      Trecho  : lema = ...
+      Contexto:
+               4 | 	if(casa == "Baratheon"):
+        >>>    5 | 		lema = "Nossa eh a furia"
+               6 | 	elif(casa == "Targaryen"):
+
+  [4] Linha 7: Variável 'lema' com nome muito curto (≤4 chars)
+      Trecho  : lema = ...
+      Contexto:
+               6 | 	elif(casa == "Targaryen"):
+        >>>    7 | 		lema = "Fogo e sangue"
+               8 | 	elif(casa == "Tyrell"):
+
+  [5] Linha 9: Variável 'lema' com nome muito curto (≤4 chars)
+      Trecho  : lema = ...
+      Contexto:
+               8 | 	elif(casa == "Tyrell"):
+        >>>    9 | 		lema = "Crescendo fortes"
+              10 | 	elif(casa == "Stark"):
+
+  [6] Linha 11: Variável 'lema' com nome muito curto (≤4 chars)
+      Trecho  : lema = ...
+      Contexto:
+              10 | 	elif(casa == "Stark"):
+        >>>   11 | 		lema = "O inverno esta chegando"
+              12 | 	elif(casa == "Lannister"):
+
+  [7] Linha 13: Variável 'lema' com nome muito curto (≤4 chars)
+      Trecho  : lema = ...
+      Contexto:
+              12 | 	elif(casa == "Lannister"):
+        >>>   13 | 		lema = "Oucam-me rugir"
+              14 | 	elif(casa == "Greyjoy"):
+
+  [8] Linha 15: Variável 'lema' com nome muito curto (≤4 chars)
+      Trecho  : lema = ...
+      Contexto:
+              14 | 	elif(casa == "Greyjoy"):
+        >>>   15 | 		lema = "Nos nao semeamos"
+              16 | 	elif(casa == "Tully"):
+
+  [9] Linha 17: Variável 'lema' com nome muito curto (≤4 chars)
+      Trecho  : lema = ...
+      Contexto:
+              16 | 	elif(casa == "Tully"):
+        >>>   17 | 		lema = "Familia, dever, honra"
+              18 | 	elif(casa == "Arryn"):
+
+  [10] Linha 19: Variável 'lema' com nome muito curto (≤4 chars)
+      Trecho  : lema = ...
+      Contexto:
+              18 | 	elif(casa == "Arryn"):
+        >>>   19 | 		lema = "Tao alto como a honra"
+              20 | 	elif(casa == "Martell"):
+
+  [11] Linha 21: Variável 'lema' com nome muito curto (≤4 chars)
+      Trecho  : lema = ...
+      Contexto:
+              20 | 	elif(casa == "Martell"):
+        >>>   21 | 		lema = "Insubmissos, nao curvados, nao quebrados"
+              22 | else:
+
+======================================================================

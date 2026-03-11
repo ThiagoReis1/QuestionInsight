@@ -1,0 +1,81 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1642_8210.py
+Questão  : 1642
+Aluno    : 8210
+Total MCs: 1
+
+⚠️  Misconceptions detectados: G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | v = array(eval(input("v: ")))
+     3 | x = 0
+     4 | 
+     5 | for i in range(size(v)):
+     6 | 	if v[i]%5 == 0:
+     7 | 		x = x + 1
+     8 | print(x)
+     9 | 
+    10 | z = zeros(x, dtype=int)
+    11 | j = 0
+    12 | for i in range(size(v)):
+    13 | 	if v[i]%5 == 0:
+    14 | 		z[j] = i
+    15 | 		j=j+1
+    16 | 
+    17 | print(z)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 6
+
+  [1] Linha 2: Variável 'v' com nome muito curto (≤4 chars)
+      Trecho  : v = ...
+      Contexto:
+               1 | from numpy import*
+        >>>    2 | v = array(eval(input("v: ")))
+               3 | x = 0
+
+  [2] Linha 3: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+               2 | v = array(eval(input("v: ")))
+        >>>    3 | x = 0
+               4 | 
+
+  [3] Linha 10: Variável 'z' com nome muito curto (≤4 chars)
+      Trecho  : z = ...
+      Contexto:
+               9 | 
+        >>>   10 | z = zeros(x, dtype=int)
+              11 | j = 0
+
+  [4] Linha 11: Variável 'j' com nome muito curto (≤4 chars)
+      Trecho  : j = ...
+      Contexto:
+              10 | z = zeros(x, dtype=int)
+        >>>   11 | j = 0
+              12 | for i in range(size(v)):
+
+  [5] Linha 7: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+               6 | 	if v[i]%5 == 0:
+        >>>    7 | 		x = x + 1
+               8 | print(x)
+
+  [6] Linha 15: Variável 'j' com nome muito curto (≤4 chars)
+      Trecho  : j = ...
+      Contexto:
+              14 | 		z[j] = i
+        >>>   15 | 		j=j+1
+              16 | 
+
+======================================================================

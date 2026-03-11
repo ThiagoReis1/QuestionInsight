@@ -1,0 +1,78 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 6757_9706.py
+Questão  : 6757
+Aluno    : 9706
+Total MCs: 3
+
+⚠️  Misconceptions detectados: A3, A4, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | # faça seu código aqui!
+     2 | n = int(input("numeros de pizzas encomendadas: "))
+     3 | e = 5.00
+     4 | if n <3:
+     5 | 	t = 3.00
+     6 | elif n == 3:
+     7 | 	t >3.25
+     8 | else:
+     9 | 	t = 4.50
+    10 | print = n*e+t
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 1
+
+  [1] Linha 10: Variável 'print' declarada mas nunca utilizada
+      Trecho  : print = ...
+      Contexto:
+               9 | 	t = 4.50
+        >>>   10 | print = n*e+t
+
+▶ A4 — Redefinição de built-in
+  Ocorrências: 1
+
+  [1] Linha 10: Built-in 'print' redefinido como variável
+      Trecho  : print = n * e + t
+      Contexto:
+               9 | 	t = 4.50
+        >>>   10 | print = n*e+t
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 4
+
+  [1] Linha 2: Variável 'n' com nome muito curto (≤4 chars)
+      Trecho  : n = ...
+      Contexto:
+               1 | # faça seu código aqui!
+        >>>    2 | n = int(input("numeros de pizzas encomendadas: "))
+               3 | e = 5.00
+
+  [2] Linha 3: Variável 'e' com nome muito curto (≤4 chars)
+      Trecho  : e = ...
+      Contexto:
+               2 | n = int(input("numeros de pizzas encomendadas: "))
+        >>>    3 | e = 5.00
+               4 | if n <3:
+
+  [3] Linha 5: Variável 't' com nome muito curto (≤4 chars)
+      Trecho  : t = ...
+      Contexto:
+               4 | if n <3:
+        >>>    5 | 	t = 3.00
+               6 | elif n == 3:
+
+  [4] Linha 9: Variável 't' com nome muito curto (≤4 chars)
+      Trecho  : t = ...
+      Contexto:
+               8 | else:
+        >>>    9 | 	t = 4.50
+              10 | print = n*e+t
+
+======================================================================

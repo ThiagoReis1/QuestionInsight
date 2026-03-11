@@ -1,0 +1,96 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 6837_9254.py
+Questão  : 6837
+Aluno    : 9254
+Total MCs: 3
+
+⚠️  Misconceptions detectados: A3, B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | prod = input("insira os produtos: ").upper()
+     3 | 
+     4 | i = 0  #contadora
+     5 | total = 0   #total da compra
+     6 | k = 0
+     7 | k2 = 0
+     8 | k3 = 0
+     9 | 
+    10 | while i < len(prod):
+    11 | 	if prod[i] == "I":
+    12 | 		k += 1
+    13 | 	elif prod[i] == "M":
+    14 | 		k2 += 1
+    15 | 	elif prod[i] == "S":
+    16 | 		k3 += 1
+    17 | 	i += 1
+    18 | total = (k * 3.75) + (k2 * 4.50) + (k3 * 2.90)
+    19 | print(round(total, 2))
+    20 | 	
+    21 | 		
+    22 | 		
+    23 | 	
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 1
+
+  [1] Linha 0: A3 detectado pelo VisitorMC3 (localização exata não mapeada)
+      Trecho  : —
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 13: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 13) / elif ... sem else
+      Contexto:
+              12 | 		k += 1
+        >>>   13 | 	elif prod[i] == "M":
+              14 | 		k2 += 1
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 5
+
+  [1] Linha 2: Variável 'prod' com nome muito curto (≤4 chars)
+      Trecho  : prod = ...
+      Contexto:
+               1 | from numpy import*
+        >>>    2 | prod = input("insira os produtos: ").upper()
+               3 | 
+
+  [2] Linha 4: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+               3 | 
+        >>>    4 | i = 0  #contadora
+               5 | total = 0   #total da compra
+
+  [3] Linha 6: Variável 'k' com nome muito curto (≤4 chars)
+      Trecho  : k = ...
+      Contexto:
+               5 | total = 0   #total da compra
+        >>>    6 | k = 0
+               7 | k2 = 0
+
+  [4] Linha 7: Variável 'k2' com nome muito curto (≤4 chars)
+      Trecho  : k2 = ...
+      Contexto:
+               6 | k = 0
+        >>>    7 | k2 = 0
+               8 | k3 = 0
+
+  [5] Linha 8: Variável 'k3' com nome muito curto (≤4 chars)
+      Trecho  : k3 = ...
+      Contexto:
+               7 | k2 = 0
+        >>>    8 | k3 = 0
+               9 | 
+
+======================================================================

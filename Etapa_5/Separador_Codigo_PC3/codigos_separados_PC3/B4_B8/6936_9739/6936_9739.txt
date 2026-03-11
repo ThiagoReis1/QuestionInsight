@@ -1,0 +1,57 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 6936_9739.py
+Questão  : 6936
+Aluno    : 9739
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B4, B8
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | valor_da_compra = float(input("Informe o valor da compra: "))
+     2 | cod = input("Informe o codigo: ").upper()
+     3 | 
+     4 | if cod == "D":
+     5 | 	total = valor_da_compra - valor_da_compra * (13/100)
+     6 | 	print(round(total, 2))
+     7 | elif cod == "P":
+     8 | 	total = valor_da_compra - valor_da_compra * (13/100)
+     9 | 	print(round(total, 2))
+    10 | 
+    11 | elif cod == "C":
+    12 | 	par = input("Informe se voce quantas parcelas vc quer: ")
+    13 | 	if par == 1:
+    14 | 		total = valor_da_compra
+    15 | 		print(round(total, 2))
+    16 | 	else:
+    17 | 		total = valor_da_compra + valor_da_compra * (8/100)
+    18 | 		print(round(total, 2))
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B4 — Comandos repetidos dentro de blocos if-elif-else
+  Ocorrências: 1
+
+  [1] Linha 7: Bloco idêntico ao da linha 4
+      Trecho  : total = valor_da_compra - valor_da_compra * (13 / 100)
+      Contexto:
+               6 | 	print(round(total, 2))
+        >>>    7 | elif cod == "P":
+               8 | 	total = valor_da_compra - valor_da_compra * (13/100)
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 7: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 7) / elif ... sem else
+      Contexto:
+               6 | 	print(round(total, 2))
+        >>>    7 | elif cod == "P":
+               8 | 	total = valor_da_compra - valor_da_compra * (13/100)
+
+======================================================================

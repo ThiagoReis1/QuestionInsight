@@ -1,0 +1,55 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1645_9236.py
+Questão  : 1645
+Aluno    : 9236
+Total MCs: 1
+
+⚠️  Misconceptions detectados: A3
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | v = array(eval(input(" ")))
+     3 | 
+     4 | saque_igual = 0
+     5 | saque_maior = 0
+     6 | 
+     7 | for i in range(size(v)):
+     8 | 	if(v[i] <=2000 == 0):
+     9 | 		saque_igual = 2000
+    10 | 		
+    11 | for i in range(size(v)):
+    12 | 	if(v[i] >=2000 == 0):
+    13 | 		saque_maior += 2000
+    14 | 		
+    15 | aux = zeros(saque_igual, saque_maior, dtype = int)
+    16 | 
+    17 | x = 0
+    18 | 
+    19 | for i in range(size(v)):
+    20 | 	if i == 0 and v[0] >2000 == 0:
+    21 | 		aux[0] = 0
+    22 | 		x+= 1
+    23 | 		
+    24 | print(saque_maior)
+    25 | print(saque_igual)
+    26 | print(aux)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 1
+
+  [1] Linha 17: Variável 'x' declarada mas nunca utilizada
+      Trecho  : x = ...
+      Contexto:
+              16 | 
+        >>>   17 | x = 0
+              18 | 
+
+======================================================================

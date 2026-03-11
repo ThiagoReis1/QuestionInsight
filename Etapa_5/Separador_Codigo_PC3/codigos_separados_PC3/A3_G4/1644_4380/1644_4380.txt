@@ -1,0 +1,97 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1644_4380.py
+Questão  : 1644
+Aluno    : 4380
+Total MCs: 2
+
+⚠️  Misconceptions detectados: A3, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import *
+     2 | v=array(eval(input("Notas: ")))
+     3 | p1=0
+     4 | p2=0
+     5 | soma=0
+     6 | for p1 in v:
+     7 | 	if(p1<5.0):
+     8 | 		soma=soma+1
+     9 | indrp=zeros(soma,dtype=int)
+    10 | k=0
+    11 | for i in range(size(v)):
+    12 | 	if (v[i]<5.0):
+    13 | 		indrp[k]=i
+    14 | 		k=k+1
+    15 | print(soma)
+    16 | print(indrp)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 1
+
+  [1] Linha 4: Variável 'p2' declarada mas nunca utilizada
+      Trecho  : p2 = ...
+      Contexto:
+               3 | p1=0
+        >>>    4 | p2=0
+               5 | soma=0
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 7
+
+  [1] Linha 2: Variável 'v' com nome muito curto (≤4 chars)
+      Trecho  : v = ...
+      Contexto:
+               1 | from numpy import *
+        >>>    2 | v=array(eval(input("Notas: ")))
+               3 | p1=0
+
+  [2] Linha 3: Variável 'p1' com nome muito curto (≤4 chars)
+      Trecho  : p1 = ...
+      Contexto:
+               2 | v=array(eval(input("Notas: ")))
+        >>>    3 | p1=0
+               4 | p2=0
+
+  [3] Linha 4: Variável 'p2' com nome muito curto (≤4 chars)
+      Trecho  : p2 = ...
+      Contexto:
+               3 | p1=0
+        >>>    4 | p2=0
+               5 | soma=0
+
+  [4] Linha 5: Variável 'soma' com nome muito curto (≤4 chars)
+      Trecho  : soma = ...
+      Contexto:
+               4 | p2=0
+        >>>    5 | soma=0
+               6 | for p1 in v:
+
+  [5] Linha 10: Variável 'k' com nome muito curto (≤4 chars)
+      Trecho  : k = ...
+      Contexto:
+               9 | indrp=zeros(soma,dtype=int)
+        >>>   10 | k=0
+              11 | for i in range(size(v)):
+
+  [6] Linha 8: Variável 'soma' com nome muito curto (≤4 chars)
+      Trecho  : soma = ...
+      Contexto:
+               7 | 	if(p1<5.0):
+        >>>    8 | 		soma=soma+1
+               9 | indrp=zeros(soma,dtype=int)
+
+  [7] Linha 14: Variável 'k' com nome muito curto (≤4 chars)
+      Trecho  : k = ...
+      Contexto:
+              13 | 		indrp[k]=i
+        >>>   14 | 		k=k+1
+              15 | print(soma)
+
+======================================================================

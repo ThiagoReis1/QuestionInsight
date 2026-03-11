@@ -1,0 +1,6 @@
+var = float(input())
+var1 = float(var*43.21)
+var2 = float(var1+25)
+var3 = float(var2*0.62)
+var4 = float(var3+var2)
+print(round(var4,2))

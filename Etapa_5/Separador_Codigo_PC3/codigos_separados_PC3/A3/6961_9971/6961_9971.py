@@ -1,0 +1,1 @@
+valorxouy = input()

@@ -1,0 +1,80 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1648_7146.py
+Questão  : 1648
+Aluno    : 7146
+Total MCs: 1
+
+⚠️  Misconceptions detectados: G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | v = array(eval(input()))
+     3 | s = 0
+     4 | t = 0
+     5 | for i in range(size(v)):
+     6 | 	if(v[i] < 70):
+     7 | 		s = s + 1
+     8 | print(s)
+     9 | 
+    10 | x = zeros(s, dtype = int)
+    11 | 
+    12 | for j in range(size(v)):
+    13 | 	if(v[j] < 70):
+    14 | 		x[t] = j
+    15 | 		t = t + 1
+    16 | print(x)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 6
+
+  [1] Linha 2: Variável 'v' com nome muito curto (≤4 chars)
+      Trecho  : v = ...
+      Contexto:
+               1 | from numpy import*
+        >>>    2 | v = array(eval(input()))
+               3 | s = 0
+
+  [2] Linha 3: Variável 's' com nome muito curto (≤4 chars)
+      Trecho  : s = ...
+      Contexto:
+               2 | v = array(eval(input()))
+        >>>    3 | s = 0
+               4 | t = 0
+
+  [3] Linha 4: Variável 't' com nome muito curto (≤4 chars)
+      Trecho  : t = ...
+      Contexto:
+               3 | s = 0
+        >>>    4 | t = 0
+               5 | for i in range(size(v)):
+
+  [4] Linha 10: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+               9 | 
+        >>>   10 | x = zeros(s, dtype = int)
+              11 | 
+
+  [5] Linha 7: Variável 's' com nome muito curto (≤4 chars)
+      Trecho  : s = ...
+      Contexto:
+               6 | 	if(v[i] < 70):
+        >>>    7 | 		s = s + 1
+               8 | print(s)
+
+  [6] Linha 15: Variável 't' com nome muito curto (≤4 chars)
+      Trecho  : t = ...
+      Contexto:
+              14 | 		x[t] = j
+        >>>   15 | 		t = t + 1
+              16 | print(x)
+
+======================================================================

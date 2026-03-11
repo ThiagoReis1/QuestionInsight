@@ -1,0 +1,88 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 2149_2181.py
+Questão  : 2149
+Aluno    : 2181
+Total MCs: 1
+
+⚠️  Misconceptions detectados: G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import *
+     2 | vet = array(eval(input("Digite um vetor de notas: ")))
+     3 | vet1 = array(eval(input("Digite um segundo vetor de notas: ")))
+     4 | 
+     5 | v = zeros(size(vet), dtype = float)
+     6 | 
+     7 | soma = 0
+     8 | for i in range(size(vet)):
+     9 | 	v[soma] = vet[i] + vet1[i]
+    10 | 	soma = soma + 1
+    11 | print(v)
+    12 | 
+    13 | cont = 0
+    14 | for j in range(size(vet1)):
+    15 | 		if(vet[j] + vet1[j] >= 12):
+    16 | 			cont = cont + 1
+    17 | print(cont)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 7
+
+  [1] Linha 2: Variável 'vet' com nome muito curto (≤4 chars)
+      Trecho  : vet = ...
+      Contexto:
+               1 | from numpy import *
+        >>>    2 | vet = array(eval(input("Digite um vetor de notas: ")))
+               3 | vet1 = array(eval(input("Digite um segundo vetor de notas: ")))
+
+  [2] Linha 3: Variável 'vet1' com nome muito curto (≤4 chars)
+      Trecho  : vet1 = ...
+      Contexto:
+               2 | vet = array(eval(input("Digite um vetor de notas: ")))
+        >>>    3 | vet1 = array(eval(input("Digite um segundo vetor de notas: ")))
+               4 | 
+
+  [3] Linha 5: Variável 'v' com nome muito curto (≤4 chars)
+      Trecho  : v = ...
+      Contexto:
+               4 | 
+        >>>    5 | v = zeros(size(vet), dtype = float)
+               6 | 
+
+  [4] Linha 7: Variável 'soma' com nome muito curto (≤4 chars)
+      Trecho  : soma = ...
+      Contexto:
+               6 | 
+        >>>    7 | soma = 0
+               8 | for i in range(size(vet)):
+
+  [5] Linha 13: Variável 'cont' com nome muito curto (≤4 chars)
+      Trecho  : cont = ...
+      Contexto:
+              12 | 
+        >>>   13 | cont = 0
+              14 | for j in range(size(vet1)):
+
+  [6] Linha 10: Variável 'soma' com nome muito curto (≤4 chars)
+      Trecho  : soma = ...
+      Contexto:
+               9 | 	v[soma] = vet[i] + vet1[i]
+        >>>   10 | 	soma = soma + 1
+              11 | print(v)
+
+  [7] Linha 16: Variável 'cont' com nome muito curto (≤4 chars)
+      Trecho  : cont = ...
+      Contexto:
+              15 | 		if(vet[j] + vet1[j] >= 12):
+        >>>   16 | 			cont = cont + 1
+              17 | print(cont)
+
+======================================================================

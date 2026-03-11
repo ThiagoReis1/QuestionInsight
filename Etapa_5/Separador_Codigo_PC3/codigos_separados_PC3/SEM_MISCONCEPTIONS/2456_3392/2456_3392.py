@@ -1,0 +1,11 @@
+v=float(input("Valor:"))
+n=int(input("Numero:")	
+if(n==1):		
+	p=v*n*-(0.10*v*n)
+	print(round(p,2))
+elif(n==2):
+	p=v*n*-(0.30*v*n)
+	print(round(p,2))
+elif(n>=3):
+	p=v*n*-(0.40*v*n)
+	print(round(p,2))				

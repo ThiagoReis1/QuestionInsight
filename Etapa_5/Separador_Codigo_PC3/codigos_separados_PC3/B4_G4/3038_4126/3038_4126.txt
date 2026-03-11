@@ -1,0 +1,65 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 3038_4126.py
+Questão  : 3038
+Aluno    : 4126
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B4, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from math import*
+     2 | x = float(input("x:"))
+     3 | if(x<=-1)or (x>=1):
+     4 | 	print(abs(round(x**(1/2))))
+     5 | elif(-1<x<0)or (0<x<1):
+     6 | 	print(abs(round(x**(1/2))))
+     7 | elif(x==0):
+     8 | 	print(abs(round(x**(1/2))))
+     9 | else:
+    10 | 	print(invalido)
+    11 | 
+    12 | 
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B4 — Comandos repetidos dentro de blocos if-elif-else
+  Ocorrências: 3
+
+  [1] Linha 5: Bloco idêntico ao da linha 3
+      Trecho  : print(abs(round(x ** (1 / 2))))
+      Contexto:
+               4 | 	print(abs(round(x**(1/2))))
+        >>>    5 | elif(-1<x<0)or (0<x<1):
+               6 | 	print(abs(round(x**(1/2))))
+
+  [2] Linha 7: Bloco idêntico ao da linha 3
+      Trecho  : print(abs(round(x ** (1 / 2))))
+      Contexto:
+               6 | 	print(abs(round(x**(1/2))))
+        >>>    7 | elif(x==0):
+               8 | 	print(abs(round(x**(1/2))))
+
+  [3] Linha 7: Bloco idêntico ao da linha 5
+      Trecho  : print(abs(round(x ** (1 / 2))))
+      Contexto:
+               6 | 	print(abs(round(x**(1/2))))
+        >>>    7 | elif(x==0):
+               8 | 	print(abs(round(x**(1/2))))
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 1
+
+  [1] Linha 2: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+               1 | from math import*
+        >>>    2 | x = float(input("x:"))
+               3 | if(x<=-1)or (x>=1):
+
+======================================================================

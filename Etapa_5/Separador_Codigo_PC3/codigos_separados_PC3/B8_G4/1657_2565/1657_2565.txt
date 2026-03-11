@@ -1,0 +1,80 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1657_2565.py
+Questão  : 1657
+Aluno    : 2565
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | 
+     3 | vet = input("estado: ").split(',')
+     4 | e = array(["AZ", "CA", "FL", "PA", "WI"])
+     5 | 
+     6 | b = array([0,0,0,0,0])
+     7 | 
+     8 | 
+     9 | for i in (vet):
+    10 | 	if(i == e[0]):
+    11 | 		b[0]  += 1
+    12 | 	elif(i ==e[1]):
+    13 | 		b[1] += 1
+    14 | 	elif(i == e[2]):
+    15 | 		b[2] += 1
+    16 | 	elif(i == e[3]):
+    17 | 		b[3] += 1
+    18 | 	elif(i == e[4]):
+    19 | 		b[4] += 1
+    20 | 	
+    21 | print(max(b))
+    22 | print(b)
+    23 | 
+    24 | 		
+    25 | 	
+    26 | 	
+    27 | 
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 16: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 16) / elif ... sem else
+      Contexto:
+              15 | 		b[2] += 1
+        >>>   16 | 	elif(i == e[3]):
+              17 | 		b[3] += 1
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 3
+
+  [1] Linha 3: Variável 'vet' com nome muito curto (≤4 chars)
+      Trecho  : vet = ...
+      Contexto:
+               2 | 
+        >>>    3 | vet = input("estado: ").split(',')
+               4 | e = array(["AZ", "CA", "FL", "PA", "WI"])
+
+  [2] Linha 4: Variável 'e' com nome muito curto (≤4 chars)
+      Trecho  : e = ...
+      Contexto:
+               3 | vet = input("estado: ").split(',')
+        >>>    4 | e = array(["AZ", "CA", "FL", "PA", "WI"])
+               5 | 
+
+  [3] Linha 6: Variável 'b' com nome muito curto (≤4 chars)
+      Trecho  : b = ...
+      Contexto:
+               5 | 
+        >>>    6 | b = array([0,0,0,0,0])
+               7 | 
+
+======================================================================

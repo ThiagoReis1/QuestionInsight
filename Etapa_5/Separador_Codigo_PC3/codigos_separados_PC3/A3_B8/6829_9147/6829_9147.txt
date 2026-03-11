@@ -1,0 +1,75 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 6829_9147.py
+Questão  : 6829
+Aluno    : 9147
+Total MCs: 2
+
+⚠️  Misconceptions detectados: A3, B8
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | vetors = input("insira o produto (A) para acougue, (L) para laticinios e (P) para padaria: ").upper()
+     2 | 
+     3 | i = 0
+     4 | preco = 0
+     5 | qtdA = 0
+     6 | qtdL = 0
+     7 | qtdP = 0
+     8 | 
+     9 | while	i < len(vetors):
+    10 | 	if	vetors[i] == "A":
+    11 | 		preco += 19.90
+    12 | 		qtdA += 1
+    13 | 	elif	vetors[i] == "L":
+    14 | 		preco += 3.50
+    15 | 		qtdL += 1
+    16 | 	elif	vetors[i] == "P":
+    17 | 		preco += 4.25
+    18 | 		qtdP += 1
+    19 | 		
+    20 | 	i += 1
+    21 | 	
+    22 | print(round(preco, 2))
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 3
+
+  [1] Linha 5: Variável 'qtdA' declarada mas nunca utilizada
+      Trecho  : qtdA = ...
+      Contexto:
+               4 | preco = 0
+        >>>    5 | qtdA = 0
+               6 | qtdL = 0
+
+  [2] Linha 6: Variável 'qtdL' declarada mas nunca utilizada
+      Trecho  : qtdL = ...
+      Contexto:
+               5 | qtdA = 0
+        >>>    6 | qtdL = 0
+               7 | qtdP = 0
+
+  [3] Linha 7: Variável 'qtdP' declarada mas nunca utilizada
+      Trecho  : qtdP = ...
+      Contexto:
+               6 | qtdL = 0
+        >>>    7 | qtdP = 0
+               8 | 
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 13: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 13) / elif ... sem else
+      Contexto:
+              12 | 		qtdA += 1
+        >>>   13 | 	elif	vetors[i] == "L":
+              14 | 		preco += 3.50
+
+======================================================================

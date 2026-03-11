@@ -1,0 +1,80 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1113_3116.py
+Questão  : 1113
+Aluno    : 3116
+Total MCs: 1
+
+⚠️  Misconceptions detectados: E1
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | idade = int(input("Digite sua idade:"))
+     2 | peso = float(input("Digite seu peso:"))
+     3 | 
+     4 | if((idade>=0) and (idade<=20) and (peso>=0) and (peso<=60)):
+     5 | 	grupo = "9"
+     6 | 	print("Entradas:",idade,"anos e",peso,"kg")
+     7 | 	print("Grupo de risco:",grupo)
+     8 | elif((idade>=0) and (idade<=20) and (peso>=0) and (peso>60 and peso<=90)):
+     9 | 	grupo = "8"
+    10 | 	print("Entradas:",idade,"anos e",peso,"kg")
+    11 | 	print("Grupo de risco:",grupo)
+    12 | elif((idade>=0) and (idade<=20) and (peso>=0) and (peso>90)):
+    13 | 	grupo = "7"
+    14 | 	print("Entradas:",idade,"anos e ",peso,"kg")
+    15 | 	print("Grupo de risco:",grupo)
+    16 | elif((idade>=0) and (idade>20) and (idade<=50) and (peso>=0) and (peso<=60)):
+    17 | 	grupo = "6"
+    18 | 	print("Entradas:",idade,"anos e",peso,"kg")
+    19 | 	print("Grupo de risco:",grupo)
+    20 | elif((idade>=0) and (idade>20) and (idade<=50) and (peso>=0) and (peso>60) and (peso<=90)):
+    21 | 	grupo = "5"
+    22 | 	print("Entradas:",idade,"anos e",peso,"kg")
+    23 | 	print("Grupo de risco:",grupo)
+    24 | elif((idade>=0) and (idade>20) and (idade<=50) and (peso>=0) and (peso>90)):
+    25 | 	grupo = "4"
+    26 | 	print("Entradas:",idade,"anos e",peso,"kg")
+    27 | 	print("Grupo de risco:",grupo)
+    28 | elif((idade>=0) and (idade>50) and (peso>=0) and (peso<=60)):
+    29 | 	grupo = "3"
+    30 | 	print("Entradas:",idade,"anos e",peso,"kg")
+    31 | 	print("Grupo de risco:",grupo)
+    32 | elif((idade>=0) and (idade>50) and (peso>=0) and(peso>60) and (peso<=90)):
+    33 | 	grupo = "2"
+    34 | 	print("Entradas:",idade,"anos e",peso,"kg")
+    35 | 	print("Grupo de risco:",grupo)
+    36 | elif((idade>=0) and (idade>50) and (idade<=130) and (peso>=0) and (peso>90) and (peso<=550)):
+    37 | 	grupo = "1"
+    38 | 	print("Entradas:",idade,"anos e",peso,"kg")
+    39 | 	print("Grupo de risco:",grupo)
+    40 | else:
+    41 | 	print("Entradas:",idade,"anos e",peso,"kg")
+    42 | 	print("Dados invalidos")
+    43 | 	
+    44 | 	
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ E1 — Verificação desnecessária de todas as combinações possíveis
+  Ocorrências: 2
+
+  [1] Linha 20: 6 condições em um único if — verificação excessiva
+      Trecho  : idade >= 0 and idade > 20 and (idade <= 50) and (peso >= 0) and (peso > 60) and (peso <= 90)
+      Contexto:
+              19 | 	print("Grupo de risco:",grupo)
+        >>>   20 | elif((idade>=0) and (idade>20) and (idade<=50) and (peso>=0) and (peso>60) and (peso<=90)):
+              21 | 	grupo = "5"
+
+  [2] Linha 36: 6 condições em um único if — verificação excessiva
+      Trecho  : idade >= 0 and idade > 50 and (idade <= 130) and (peso >= 0) and (peso > 90) and (peso <= 550)
+      Contexto:
+              35 | 	print("Grupo de risco:",grupo)
+        >>>   36 | elif((idade>=0) and (idade>50) and (idade<=130) and (peso>=0) and (peso>90) and (peso<=550)):
+              37 | 	grupo = "1"
+
+======================================================================

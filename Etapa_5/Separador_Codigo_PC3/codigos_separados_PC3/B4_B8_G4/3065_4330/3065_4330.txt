@@ -1,0 +1,269 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 3065_4330.py
+Questão  : 3065
+Aluno    : 4330
+Total MCs: 3
+
+⚠️  Misconceptions detectados: B4, B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | ta=input("tipo de ataque (CAUDA/CUSPE/PATADA): ").upper()
+     2 | valor=int(input("valor sorteado: "))
+     3 | nt=int(input("numero de turnos:"))
+     4 | 		  
+     5 | if ((valor != 1 ) and ( valor != 2 ) and ( valor != 3 ) and ( valor != 4 )):
+     6 | 	x="Entrada invalida"
+     7 | 	print(x)
+     8 | elif ( valor == 1):
+     9 | 	if ( ta == "CAUDA"):
+    10 | 		x = valor
+    11 | 	elif ( ta == "PATADA"):
+    12 | 		x = 2*valor-5
+    13 | 	elif ( ta == "CUSPE"):
+    14 | 		x = 2*valor*nt
+    15 | elif ( valor == 2):
+    16 | 	if ( ta == "CAUDA"):
+    17 | 		x = valor
+    18 | 	elif ( ta == "PATADA"):
+    19 | 		x = 2*valor-5
+    20 | 	elif ( ta == "CUSPE"):
+    21 | 		x = 2*valor*nt
+    22 | elif ( valor == 3):
+    23 | 	if ( ta == "CAUDA"):
+    24 | 		x = valor
+    25 | 	elif ( ta == "PATADA"):
+    26 | 		x = 2*valor-5
+    27 | 	elif ( ta == "CUSPE"):
+    28 | 		x=2*valor*nt
+    29 | elif ( valor == 4):
+    30 | 	if ( ta == "CAUDA"):
+    31 | 		x = valor
+    32 | 	elif ( ta == "PATADA"):
+    33 | 		x = 2*valor-5
+    34 | 	elif( ta == "CUSPE"):
+    35 | 		x = 2*valor*nt
+    36 | 	print(x)
+    37 | 	
+    38 | 
+    39 | 	
+    40 | 	
+    41 | 	
+    42 | 	
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B4 — Comandos repetidos dentro de blocos if-elif-else
+  Ocorrências: 5
+
+  [1] Linha 15: Bloco idêntico ao da linha 8
+      Trecho  : if ta == 'CAUDA':
+    x = valor
+elif ta == 'PATADA':
+    x = 2 * valor - 5
+elif ta == 'CUSPE':
+    x = 2 * valor * nt
+      Contexto:
+              14 | 		x = 2*valor*nt
+        >>>   15 | elif ( valor == 2):
+              16 | 	if ( ta == "CAUDA"):
+
+  [2] Linha 22: Bloco idêntico ao da linha 8
+      Trecho  : if ta == 'CAUDA':
+    x = valor
+elif ta == 'PATADA':
+    x = 2 * valor - 5
+elif ta == 'CUSPE':
+    x = 2 * valor * nt
+      Contexto:
+              21 | 		x = 2*valor*nt
+        >>>   22 | elif ( valor == 3):
+              23 | 	if ( ta == "CAUDA"):
+
+  [3] Linha 15: Bloco idêntico ao da linha 8
+      Trecho  : if ta == 'CAUDA':
+    x = valor
+elif ta == 'PATADA':
+    x = 2 * valor - 5
+elif ta == 'CUSPE':
+    x = 2 * valor * nt
+      Contexto:
+              14 | 		x = 2*valor*nt
+        >>>   15 | elif ( valor == 2):
+              16 | 	if ( ta == "CAUDA"):
+
+  [4] Linha 22: Bloco idêntico ao da linha 8
+      Trecho  : if ta == 'CAUDA':
+    x = valor
+elif ta == 'PATADA':
+    x = 2 * valor - 5
+elif ta == 'CUSPE':
+    x = 2 * valor * nt
+      Contexto:
+              21 | 		x = 2*valor*nt
+        >>>   22 | elif ( valor == 3):
+              23 | 	if ( ta == "CAUDA"):
+
+  [5] Linha 22: Bloco idêntico ao da linha 15
+      Trecho  : if ta == 'CAUDA':
+    x = valor
+elif ta == 'PATADA':
+    x = 2 * valor - 5
+elif ta == 'CUSPE':
+    x = 2 * valor * nt
+      Contexto:
+              21 | 		x = 2*valor*nt
+        >>>   22 | elif ( valor == 3):
+              23 | 	if ( ta == "CAUDA"):
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 5
+
+  [1] Linha 11: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 11) / elif ... sem else
+      Contexto:
+              10 | 		x = valor
+        >>>   11 | 	elif ( ta == "PATADA"):
+              12 | 		x = 2*valor-5
+
+  [2] Linha 22: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 22) / elif ... sem else
+      Contexto:
+              21 | 		x = 2*valor*nt
+        >>>   22 | elif ( valor == 3):
+              23 | 	if ( ta == "CAUDA"):
+
+  [3] Linha 18: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 18) / elif ... sem else
+      Contexto:
+              17 | 		x = valor
+        >>>   18 | 	elif ( ta == "PATADA"):
+              19 | 		x = 2*valor-5
+
+  [4] Linha 25: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 25) / elif ... sem else
+      Contexto:
+              24 | 		x = valor
+        >>>   25 | 	elif ( ta == "PATADA"):
+              26 | 		x = 2*valor-5
+
+  [5] Linha 32: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 32) / elif ... sem else
+      Contexto:
+              31 | 		x = valor
+        >>>   32 | 	elif ( ta == "PATADA"):
+              33 | 		x = 2*valor-5
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 15
+
+  [1] Linha 1: Variável 'ta' com nome muito curto (≤4 chars)
+      Trecho  : ta = ...
+      Contexto:
+        >>>    1 | ta=input("tipo de ataque (CAUDA/CUSPE/PATADA): ").upper()
+               2 | valor=int(input("valor sorteado: "))
+
+  [2] Linha 3: Variável 'nt' com nome muito curto (≤4 chars)
+      Trecho  : nt = ...
+      Contexto:
+               2 | valor=int(input("valor sorteado: "))
+        >>>    3 | nt=int(input("numero de turnos:"))
+               4 | 		  
+
+  [3] Linha 6: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+               5 | if ((valor != 1 ) and ( valor != 2 ) and ( valor != 3 ) and ( valor != 4 )):
+        >>>    6 | 	x="Entrada invalida"
+               7 | 	print(x)
+
+  [4] Linha 10: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+               9 | 	if ( ta == "CAUDA"):
+        >>>   10 | 		x = valor
+              11 | 	elif ( ta == "PATADA"):
+
+  [5] Linha 12: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+              11 | 	elif ( ta == "PATADA"):
+        >>>   12 | 		x = 2*valor-5
+              13 | 	elif ( ta == "CUSPE"):
+
+  [6] Linha 17: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+              16 | 	if ( ta == "CAUDA"):
+        >>>   17 | 		x = valor
+              18 | 	elif ( ta == "PATADA"):
+
+  [7] Linha 14: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+              13 | 	elif ( ta == "CUSPE"):
+        >>>   14 | 		x = 2*valor*nt
+              15 | elif ( valor == 2):
+
+  [8] Linha 19: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+              18 | 	elif ( ta == "PATADA"):
+        >>>   19 | 		x = 2*valor-5
+              20 | 	elif ( ta == "CUSPE"):
+
+  [9] Linha 24: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+              23 | 	if ( ta == "CAUDA"):
+        >>>   24 | 		x = valor
+              25 | 	elif ( ta == "PATADA"):
+
+  [10] Linha 21: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+              20 | 	elif ( ta == "CUSPE"):
+        >>>   21 | 		x = 2*valor*nt
+              22 | elif ( valor == 3):
+
+  [11] Linha 26: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+              25 | 	elif ( ta == "PATADA"):
+        >>>   26 | 		x = 2*valor-5
+              27 | 	elif ( ta == "CUSPE"):
+
+  [12] Linha 31: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+              30 | 	if ( ta == "CAUDA"):
+        >>>   31 | 		x = valor
+              32 | 	elif ( ta == "PATADA"):
+
+  [13] Linha 28: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+              27 | 	elif ( ta == "CUSPE"):
+        >>>   28 | 		x=2*valor*nt
+              29 | elif ( valor == 4):
+
+  [14] Linha 33: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+              32 | 	elif ( ta == "PATADA"):
+        >>>   33 | 		x = 2*valor-5
+              34 | 	elif( ta == "CUSPE"):
+
+  [15] Linha 35: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+              34 | 	elif( ta == "CUSPE"):
+        >>>   35 | 		x = 2*valor*nt
+              36 | 	print(x)
+
+======================================================================

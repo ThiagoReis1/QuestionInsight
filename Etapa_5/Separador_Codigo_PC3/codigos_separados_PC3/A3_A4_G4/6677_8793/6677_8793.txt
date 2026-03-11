@@ -1,0 +1,79 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 6677_8793.py
+Questão  : 6677
+Aluno    : 8793
+Total MCs: 3
+
+⚠️  Misconceptions detectados: A3, A4, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | 
+     3 | vet = array(eval(input("Insira os valores inteiros: ")))
+     4 | 
+     5 | vet = zeros(10,20)
+     6 | 
+     7 | for i in range(10):
+     8 | 	n = input("")
+     9 | 	if a <= n <= b:
+    10 | 		vet[i] = n
+    11 | 		
+    12 | min = input("")
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 1
+
+  [1] Linha 12: Variável 'min' declarada mas nunca utilizada
+      Trecho  : min = ...
+      Contexto:
+              11 | 		
+        >>>   12 | min = input("")
+
+▶ A4 — Redefinição de built-in
+  Ocorrências: 1
+
+  [1] Linha 12: Built-in 'min' redefinido como variável
+      Trecho  : min = input('')
+      Contexto:
+              11 | 		
+        >>>   12 | min = input("")
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 4
+
+  [1] Linha 3: Variável 'vet' com nome muito curto (≤4 chars)
+      Trecho  : vet = ...
+      Contexto:
+               2 | 
+        >>>    3 | vet = array(eval(input("Insira os valores inteiros: ")))
+               4 | 
+
+  [2] Linha 5: Variável 'vet' com nome muito curto (≤4 chars)
+      Trecho  : vet = ...
+      Contexto:
+               4 | 
+        >>>    5 | vet = zeros(10,20)
+               6 | 
+
+  [3] Linha 12: Variável 'min' com nome muito curto (≤4 chars)
+      Trecho  : min = ...
+      Contexto:
+              11 | 		
+        >>>   12 | min = input("")
+
+  [4] Linha 8: Variável 'n' com nome muito curto (≤4 chars)
+      Trecho  : n = ...
+      Contexto:
+               7 | for i in range(10):
+        >>>    8 | 	n = input("")
+               9 | 	if a <= n <= b:
+
+======================================================================

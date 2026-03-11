@@ -1,0 +1,136 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1113_3188.py
+Questão  : 1113
+Aluno    : 3188
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | #Idade (ida)
+     2 | ida=int(input("Idade:"))
+     3 | #Peso(ps)
+     4 | ps=float(input("Peso"))
+     5 | print("Entrada: ", ida, "anos e" , ps, "kg")
+     6 | if(ida>0 or ida<=130)and(ps>0 or ps<=550):
+     7 | 	if(ida<=20) and (ps<=60):
+     8 | 		gr="9"
+     9 | 	elif(ida<=20 and ps>60 or ps<=90):
+    10 | 		gr="8"
+    11 | 	elif((ida<=20) and (ps>90)):
+    12 | 		gr="7"
+    13 | 	elif((ida>20 or ida<=50) and ps<=60):
+    14 | 		gr="6"
+    15 | 	elif((ida>20 or ida<=50)and (ps>60 or ps<= 90)):
+    16 | 		gr="5"
+    17 | 	elif((ida>20) or (ida<=50 and ps>90)):
+    18 | 		gr="4"
+    19 | 	elif((ida>50)) and (ps<=60):
+    20 | 		gr="3"
+    21 | 	elif((ida>50) and (ps>60) or (ps<=90)):
+    22 | 		gr="2"
+    23 | 	elif((ida>50) and (ps>90)):
+    24 | 		gr="1"
+    25 | 	print("Grupo de Risco: ", gr)
+    26 | else:
+    27 | 	print("Dados invalidos")
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 21: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 21) / elif ... sem else
+      Contexto:
+              20 | 		gr="3"
+        >>>   21 | 	elif((ida>50) and (ps>60) or (ps<=90)):
+              22 | 		gr="2"
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 11
+
+  [1] Linha 2: Variável 'ida' com nome muito curto (≤4 chars)
+      Trecho  : ida = ...
+      Contexto:
+               1 | #Idade (ida)
+        >>>    2 | ida=int(input("Idade:"))
+               3 | #Peso(ps)
+
+  [2] Linha 4: Variável 'ps' com nome muito curto (≤4 chars)
+      Trecho  : ps = ...
+      Contexto:
+               3 | #Peso(ps)
+        >>>    4 | ps=float(input("Peso"))
+               5 | print("Entrada: ", ida, "anos e" , ps, "kg")
+
+  [3] Linha 8: Variável 'gr' com nome muito curto (≤4 chars)
+      Trecho  : gr = ...
+      Contexto:
+               7 | 	if(ida<=20) and (ps<=60):
+        >>>    8 | 		gr="9"
+               9 | 	elif(ida<=20 and ps>60 or ps<=90):
+
+  [4] Linha 10: Variável 'gr' com nome muito curto (≤4 chars)
+      Trecho  : gr = ...
+      Contexto:
+               9 | 	elif(ida<=20 and ps>60 or ps<=90):
+        >>>   10 | 		gr="8"
+              11 | 	elif((ida<=20) and (ps>90)):
+
+  [5] Linha 12: Variável 'gr' com nome muito curto (≤4 chars)
+      Trecho  : gr = ...
+      Contexto:
+              11 | 	elif((ida<=20) and (ps>90)):
+        >>>   12 | 		gr="7"
+              13 | 	elif((ida>20 or ida<=50) and ps<=60):
+
+  [6] Linha 14: Variável 'gr' com nome muito curto (≤4 chars)
+      Trecho  : gr = ...
+      Contexto:
+              13 | 	elif((ida>20 or ida<=50) and ps<=60):
+        >>>   14 | 		gr="6"
+              15 | 	elif((ida>20 or ida<=50)and (ps>60 or ps<= 90)):
+
+  [7] Linha 16: Variável 'gr' com nome muito curto (≤4 chars)
+      Trecho  : gr = ...
+      Contexto:
+              15 | 	elif((ida>20 or ida<=50)and (ps>60 or ps<= 90)):
+        >>>   16 | 		gr="5"
+              17 | 	elif((ida>20) or (ida<=50 and ps>90)):
+
+  [8] Linha 18: Variável 'gr' com nome muito curto (≤4 chars)
+      Trecho  : gr = ...
+      Contexto:
+              17 | 	elif((ida>20) or (ida<=50 and ps>90)):
+        >>>   18 | 		gr="4"
+              19 | 	elif((ida>50)) and (ps<=60):
+
+  [9] Linha 20: Variável 'gr' com nome muito curto (≤4 chars)
+      Trecho  : gr = ...
+      Contexto:
+              19 | 	elif((ida>50)) and (ps<=60):
+        >>>   20 | 		gr="3"
+              21 | 	elif((ida>50) and (ps>60) or (ps<=90)):
+
+  [10] Linha 22: Variável 'gr' com nome muito curto (≤4 chars)
+      Trecho  : gr = ...
+      Contexto:
+              21 | 	elif((ida>50) and (ps>60) or (ps<=90)):
+        >>>   22 | 		gr="2"
+              23 | 	elif((ida>50) and (ps>90)):
+
+  [11] Linha 24: Variável 'gr' com nome muito curto (≤4 chars)
+      Trecho  : gr = ...
+      Contexto:
+              23 | 	elif((ida>50) and (ps>90)):
+        >>>   24 | 		gr="1"
+              25 | 	print("Grupo de Risco: ", gr)
+
+======================================================================

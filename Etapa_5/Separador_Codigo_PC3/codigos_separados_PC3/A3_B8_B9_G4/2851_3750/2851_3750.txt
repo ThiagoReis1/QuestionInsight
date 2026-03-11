@@ -1,0 +1,105 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 2851_3750.py
+Questão  : 2851
+Aluno    : 3750
+Total MCs: 4
+
+⚠️  Misconceptions detectados: A3, B8, B9, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import * 
+     2 | v = array(eval(input("")))
+     3 | soma = 0
+     4 | i = 0
+     5 | n = 0
+     6 | for n in v :
+     7 | 		if(n != 99):
+     8 | 			soma = soma + n
+     9 | 		elif(n == 99):
+    10 | 			soma = soma * 2
+    11 | print(soma)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 1
+
+  [1] Linha 4: Variável 'i' declarada mas nunca utilizada
+      Trecho  : i = ...
+      Contexto:
+               3 | soma = 0
+        >>>    4 | i = 0
+               5 | n = 0
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 7: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 7) / elif ... sem else
+      Contexto:
+               6 | for n in v :
+        >>>    7 | 		if(n != 99):
+               8 | 			soma = soma + n
+
+▶ B9 — elif/else retestando condições já verificadas
+  Ocorrências: 1
+
+  [1] Linha 9: elif retesta condição inversa do if da linha 7
+      Trecho  : if n != 99 ... elif n == 99
+      Contexto:
+               8 | 			soma = soma + n
+        >>>    9 | 		elif(n == 99):
+              10 | 			soma = soma * 2
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 6
+
+  [1] Linha 2: Variável 'v' com nome muito curto (≤4 chars)
+      Trecho  : v = ...
+      Contexto:
+               1 | from numpy import * 
+        >>>    2 | v = array(eval(input("")))
+               3 | soma = 0
+
+  [2] Linha 3: Variável 'soma' com nome muito curto (≤4 chars)
+      Trecho  : soma = ...
+      Contexto:
+               2 | v = array(eval(input("")))
+        >>>    3 | soma = 0
+               4 | i = 0
+
+  [3] Linha 4: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+               3 | soma = 0
+        >>>    4 | i = 0
+               5 | n = 0
+
+  [4] Linha 5: Variável 'n' com nome muito curto (≤4 chars)
+      Trecho  : n = ...
+      Contexto:
+               4 | i = 0
+        >>>    5 | n = 0
+               6 | for n in v :
+
+  [5] Linha 8: Variável 'soma' com nome muito curto (≤4 chars)
+      Trecho  : soma = ...
+      Contexto:
+               7 | 		if(n != 99):
+        >>>    8 | 			soma = soma + n
+               9 | 		elif(n == 99):
+
+  [6] Linha 10: Variável 'soma' com nome muito curto (≤4 chars)
+      Trecho  : soma = ...
+      Contexto:
+               9 | 		elif(n == 99):
+        >>>   10 | 			soma = soma * 2
+              11 | print(soma)
+
+======================================================================

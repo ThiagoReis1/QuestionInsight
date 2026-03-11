@@ -1,0 +1,119 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 2128_2314.py
+Questão  : 2128
+Aluno    : 2314
+Total MCs: 2
+
+⚠️  Misconceptions detectados: A3, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import *
+     2 | 
+     3 | aux = array(eval(input()))
+     4 | m = max(aux)
+     5 | 
+     6 | aux2 = arange(3)
+     7 | 
+     8 | i = 0
+     9 | j = 0
+    10 | soma = 0
+    11 | 
+    12 | while i < size(aux):
+    13 | 	if aux[i] != m:
+    14 | 		soma = soma + aux[i]
+    15 | 	i = i + 1
+    16 | 
+    17 | media = soma/3.0
+    18 | 
+    19 | if (media >= 50.0):
+    20 | 	print(round(media,2))
+    21 | 	print("APROVADO")
+    22 | else:
+    23 | 	print(round(media,2))
+    24 | 	print("REPROVADO")
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 2
+
+  [1] Linha 6: Variável 'aux2' declarada mas nunca utilizada
+      Trecho  : aux2 = ...
+      Contexto:
+               5 | 
+        >>>    6 | aux2 = arange(3)
+               7 | 
+
+  [2] Linha 9: Variável 'j' declarada mas nunca utilizada
+      Trecho  : j = ...
+      Contexto:
+               8 | i = 0
+        >>>    9 | j = 0
+              10 | soma = 0
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 8
+
+  [1] Linha 3: Variável 'aux' com nome muito curto (≤4 chars)
+      Trecho  : aux = ...
+      Contexto:
+               2 | 
+        >>>    3 | aux = array(eval(input()))
+               4 | m = max(aux)
+
+  [2] Linha 4: Variável 'm' com nome muito curto (≤4 chars)
+      Trecho  : m = ...
+      Contexto:
+               3 | aux = array(eval(input()))
+        >>>    4 | m = max(aux)
+               5 | 
+
+  [3] Linha 6: Variável 'aux2' com nome muito curto (≤4 chars)
+      Trecho  : aux2 = ...
+      Contexto:
+               5 | 
+        >>>    6 | aux2 = arange(3)
+               7 | 
+
+  [4] Linha 8: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+               7 | 
+        >>>    8 | i = 0
+               9 | j = 0
+
+  [5] Linha 9: Variável 'j' com nome muito curto (≤4 chars)
+      Trecho  : j = ...
+      Contexto:
+               8 | i = 0
+        >>>    9 | j = 0
+              10 | soma = 0
+
+  [6] Linha 10: Variável 'soma' com nome muito curto (≤4 chars)
+      Trecho  : soma = ...
+      Contexto:
+               9 | j = 0
+        >>>   10 | soma = 0
+              11 | 
+
+  [7] Linha 15: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+              14 | 		soma = soma + aux[i]
+        >>>   15 | 	i = i + 1
+              16 | 
+
+  [8] Linha 14: Variável 'soma' com nome muito curto (≤4 chars)
+      Trecho  : soma = ...
+      Contexto:
+              13 | 	if aux[i] != m:
+        >>>   14 | 		soma = soma + aux[i]
+              15 | 	i = i + 1
+
+======================================================================

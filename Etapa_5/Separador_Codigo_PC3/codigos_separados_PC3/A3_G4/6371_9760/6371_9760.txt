@@ -1,0 +1,56 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 6371_9760.py
+Questão  : 6371
+Aluno    : 9760
+Total MCs: 2
+
+⚠️  Misconceptions detectados: A3, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | a = array(eval(input()))
+     3 | b = zeros(size(a), dtype=int)
+     4 | for i in range (size(a)):
+     5 | 	if a[i]== 0:
+     6 | 		a[i]=9**2
+     7 | 	else:
+     8 | 		a[i] = (a[i]-1)**2
+     9 | print(a)
+    10 | 	
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 1
+
+  [1] Linha 3: Variável 'b' declarada mas nunca utilizada
+      Trecho  : b = ...
+      Contexto:
+               2 | a = array(eval(input()))
+        >>>    3 | b = zeros(size(a), dtype=int)
+               4 | for i in range (size(a)):
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 2
+
+  [1] Linha 2: Variável 'a' com nome muito curto (≤4 chars)
+      Trecho  : a = ...
+      Contexto:
+               1 | from numpy import*
+        >>>    2 | a = array(eval(input()))
+               3 | b = zeros(size(a), dtype=int)
+
+  [2] Linha 3: Variável 'b' com nome muito curto (≤4 chars)
+      Trecho  : b = ...
+      Contexto:
+               2 | a = array(eval(input()))
+        >>>    3 | b = zeros(size(a), dtype=int)
+               4 | for i in range (size(a)):
+
+======================================================================

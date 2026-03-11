@@ -1,0 +1,77 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1095_2372.py
+Questão  : 1095
+Aluno    : 2372
+Total MCs: 2
+
+⚠️  Misconceptions detectados: A3, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | num = int(input())
+     2 | 
+     3 | d = num // 10000000
+     4 | a = num // 10000
+     5 | b = num % 10000
+     6 | c = (a + b) * (a + b)
+     7 | print(num)
+     8 | if(d >= 1):
+     9 | 	print("atende")
+    10 | else:
+    11 | 	print("nao atende")
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 1
+
+  [1] Linha 6: Variável 'c' declarada mas nunca utilizada
+      Trecho  : c = ...
+      Contexto:
+               5 | b = num % 10000
+        >>>    6 | c = (a + b) * (a + b)
+               7 | print(num)
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 5
+
+  [1] Linha 1: Variável 'num' com nome muito curto (≤4 chars)
+      Trecho  : num = ...
+      Contexto:
+        >>>    1 | num = int(input())
+               2 | 
+
+  [2] Linha 3: Variável 'd' com nome muito curto (≤4 chars)
+      Trecho  : d = ...
+      Contexto:
+               2 | 
+        >>>    3 | d = num // 10000000
+               4 | a = num // 10000
+
+  [3] Linha 4: Variável 'a' com nome muito curto (≤4 chars)
+      Trecho  : a = ...
+      Contexto:
+               3 | d = num // 10000000
+        >>>    4 | a = num // 10000
+               5 | b = num % 10000
+
+  [4] Linha 5: Variável 'b' com nome muito curto (≤4 chars)
+      Trecho  : b = ...
+      Contexto:
+               4 | a = num // 10000
+        >>>    5 | b = num % 10000
+               6 | c = (a + b) * (a + b)
+
+  [5] Linha 6: Variável 'c' com nome muito curto (≤4 chars)
+      Trecho  : c = ...
+      Contexto:
+               5 | b = num % 10000
+        >>>    6 | c = (a + b) * (a + b)
+               7 | print(num)
+
+======================================================================

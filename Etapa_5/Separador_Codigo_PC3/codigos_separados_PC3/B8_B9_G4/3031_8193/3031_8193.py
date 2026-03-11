@@ -1,0 +1,10 @@
+x = float(input(""))
+
+if (x<=1):
+	print(1)
+elif (x>1 and x<=2):
+	print(2)
+elif (x>2 and x<=3):
+	print(round(x**2, 2))
+elif (x>3):
+	print(round(x**3, 2))

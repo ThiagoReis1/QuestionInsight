@@ -1,0 +1,79 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 3123_4172.py
+Questão  : 3123
+Aluno    : 4172
+Total MCs: 2
+
+⚠️  Misconceptions detectados: A3, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | 
+     3 | x=array(eval(input("")))
+     4 | i=0
+     5 | co=0
+     6 | m=x[0]**(-1)
+     7 | while(i<size(x)):
+     8 | 	m+=m+x[i]**(-1)
+     9 | 	a=m/size(x)
+    10 | 	i+=1
+    11 | 	co+=1
+    12 | print(round(a,2))
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 1
+
+  [1] Linha 5: Variável 'co' declarada mas nunca utilizada
+      Trecho  : co = ...
+      Contexto:
+               4 | i=0
+        >>>    5 | co=0
+               6 | m=x[0]**(-1)
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 5
+
+  [1] Linha 3: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+               2 | 
+        >>>    3 | x=array(eval(input("")))
+               4 | i=0
+
+  [2] Linha 4: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+               3 | x=array(eval(input("")))
+        >>>    4 | i=0
+               5 | co=0
+
+  [3] Linha 5: Variável 'co' com nome muito curto (≤4 chars)
+      Trecho  : co = ...
+      Contexto:
+               4 | i=0
+        >>>    5 | co=0
+               6 | m=x[0]**(-1)
+
+  [4] Linha 6: Variável 'm' com nome muito curto (≤4 chars)
+      Trecho  : m = ...
+      Contexto:
+               5 | co=0
+        >>>    6 | m=x[0]**(-1)
+               7 | while(i<size(x)):
+
+  [5] Linha 9: Variável 'a' com nome muito curto (≤4 chars)
+      Trecho  : a = ...
+      Contexto:
+               8 | 	m+=m+x[i]**(-1)
+        >>>    9 | 	a=m/size(x)
+              10 | 	i+=1
+
+======================================================================

@@ -1,0 +1,181 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1656_2407.py
+Questão  : 1656
+Aluno    : 2407
+Total MCs: 3
+
+⚠️  Misconceptions detectados: A3, B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import *
+     2 | o = input("Origem: ")
+     3 | v0 = zeros(5, dtype=int)
+     4 | 
+     5 | be = 0
+     6 | es = 0 
+     7 | fr = 0
+     8 | it = 0
+     9 | pt = 0
+    10 | v1 = 0
+    11 | o = o.split(",")
+    12 | for i in o:
+    13 | 	if i == "BE":
+    14 | 		be = be + 1
+    15 | 	elif i == "ES":
+    16 | 		es = es + 1
+    17 | 	elif i == "FR":
+    18 | 		fr = fr + 1
+    19 | 	elif i == "IT":
+    20 | 		it = it + 1
+    21 | 	elif i == "PT":
+    22 | 		pt = pt + 1
+    23 | 
+    24 | 		
+    25 | v2 = array([be, es, fr, it, pt])
+    26 | print(max(v2))
+    27 | print(v2)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 2
+
+  [1] Linha 3: Variável 'v0' declarada mas nunca utilizada
+      Trecho  : v0 = ...
+      Contexto:
+               2 | o = input("Origem: ")
+        >>>    3 | v0 = zeros(5, dtype=int)
+               4 | 
+
+  [2] Linha 10: Variável 'v1' declarada mas nunca utilizada
+      Trecho  : v1 = ...
+      Contexto:
+               9 | pt = 0
+        >>>   10 | v1 = 0
+              11 | o = o.split(",")
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 19: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 19) / elif ... sem else
+      Contexto:
+              18 | 		fr = fr + 1
+        >>>   19 | 	elif i == "IT":
+              20 | 		it = it + 1
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 15
+
+  [1] Linha 2: Variável 'o' com nome muito curto (≤4 chars)
+      Trecho  : o = ...
+      Contexto:
+               1 | from numpy import *
+        >>>    2 | o = input("Origem: ")
+               3 | v0 = zeros(5, dtype=int)
+
+  [2] Linha 3: Variável 'v0' com nome muito curto (≤4 chars)
+      Trecho  : v0 = ...
+      Contexto:
+               2 | o = input("Origem: ")
+        >>>    3 | v0 = zeros(5, dtype=int)
+               4 | 
+
+  [3] Linha 5: Variável 'be' com nome muito curto (≤4 chars)
+      Trecho  : be = ...
+      Contexto:
+               4 | 
+        >>>    5 | be = 0
+               6 | es = 0 
+
+  [4] Linha 6: Variável 'es' com nome muito curto (≤4 chars)
+      Trecho  : es = ...
+      Contexto:
+               5 | be = 0
+        >>>    6 | es = 0 
+               7 | fr = 0
+
+  [5] Linha 7: Variável 'fr' com nome muito curto (≤4 chars)
+      Trecho  : fr = ...
+      Contexto:
+               6 | es = 0 
+        >>>    7 | fr = 0
+               8 | it = 0
+
+  [6] Linha 8: Variável 'it' com nome muito curto (≤4 chars)
+      Trecho  : it = ...
+      Contexto:
+               7 | fr = 0
+        >>>    8 | it = 0
+               9 | pt = 0
+
+  [7] Linha 9: Variável 'pt' com nome muito curto (≤4 chars)
+      Trecho  : pt = ...
+      Contexto:
+               8 | it = 0
+        >>>    9 | pt = 0
+              10 | v1 = 0
+
+  [8] Linha 10: Variável 'v1' com nome muito curto (≤4 chars)
+      Trecho  : v1 = ...
+      Contexto:
+               9 | pt = 0
+        >>>   10 | v1 = 0
+              11 | o = o.split(",")
+
+  [9] Linha 11: Variável 'o' com nome muito curto (≤4 chars)
+      Trecho  : o = ...
+      Contexto:
+              10 | v1 = 0
+        >>>   11 | o = o.split(",")
+              12 | for i in o:
+
+  [10] Linha 25: Variável 'v2' com nome muito curto (≤4 chars)
+      Trecho  : v2 = ...
+      Contexto:
+              24 | 		
+        >>>   25 | v2 = array([be, es, fr, it, pt])
+              26 | print(max(v2))
+
+  [11] Linha 14: Variável 'be' com nome muito curto (≤4 chars)
+      Trecho  : be = ...
+      Contexto:
+              13 | 	if i == "BE":
+        >>>   14 | 		be = be + 1
+              15 | 	elif i == "ES":
+
+  [12] Linha 16: Variável 'es' com nome muito curto (≤4 chars)
+      Trecho  : es = ...
+      Contexto:
+              15 | 	elif i == "ES":
+        >>>   16 | 		es = es + 1
+              17 | 	elif i == "FR":
+
+  [13] Linha 18: Variável 'fr' com nome muito curto (≤4 chars)
+      Trecho  : fr = ...
+      Contexto:
+              17 | 	elif i == "FR":
+        >>>   18 | 		fr = fr + 1
+              19 | 	elif i == "IT":
+
+  [14] Linha 20: Variável 'it' com nome muito curto (≤4 chars)
+      Trecho  : it = ...
+      Contexto:
+              19 | 	elif i == "IT":
+        >>>   20 | 		it = it + 1
+              21 | 	elif i == "PT":
+
+  [15] Linha 22: Variável 'pt' com nome muito curto (≤4 chars)
+      Trecho  : pt = ...
+      Contexto:
+              21 | 	elif i == "PT":
+        >>>   22 | 		pt = pt + 1
+              23 | 
+
+======================================================================

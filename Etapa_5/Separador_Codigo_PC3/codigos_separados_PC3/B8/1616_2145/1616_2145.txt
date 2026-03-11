@@ -1,0 +1,48 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1616_2145.py
+Questão  : 1616
+Aluno    : 2145
+Total MCs: 1
+
+⚠️  Misconceptions detectados: B8
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | magia = array(eval(input("Digite o tipo de magia: ")))
+     3 | mago = array(eval(input("Digite o nivel do mago: ")))
+     4 | i = 0
+     5 | total = 0
+     6 | while(i < size(magia)):
+     7 | 	if (magia[i].upper() == "GELO"):
+     8 | 		dmago = 2 * mago[i]
+     9 | 	elif (magia[i].upper() == "FOGO"):
+    10 | 		dmago = 3 * mago[i]
+    11 | 	elif (magia[i].upper() == "CHOQUE"):
+    12 | 		dmago = 4 * mago[i]
+    13 | 	elif (magia[i].upper() == "CONJURACAO"):
+    14 | 		dmago = 8 * mago[i]
+    15 | 	elif (magia[i].upper() == "ILUSAO"):
+    16 | 		dmago = 10 * mago[i]
+    17 | 	total = total + dmago
+    18 | 	i = i + 1
+    19 | print(total)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 13: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 13) / elif ... sem else
+      Contexto:
+              12 | 		dmago = 4 * mago[i]
+        >>>   13 | 	elif (magia[i].upper() == "CONJURACAO"):
+              14 | 		dmago = 8 * mago[i]
+
+======================================================================

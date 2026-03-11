@@ -1,0 +1,87 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 6784_9301.py
+Questão  : 6784
+Aluno    : 9301
+Total MCs: 1
+
+⚠️  Misconceptions detectados: G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | nasc = int(input("digite o ano de nascimento: "))
+     2 | pais = input("digite B ou R: ")
+     3 | 	
+     4 | if (2023 - nasc >= 18) and pais == "R":
+     5 | 	print("sim")
+     6 | 	apto = (2023 - nasc) - 18
+     7 | 	print(apto)
+     8 | 		
+     9 | elif (2023 - nasc < 21) and pais.upper() == "B":
+    10 | 	print("nao")
+    11 | 	apto = 21 - (2023 - nasc)
+    12 | 	print(apto)
+    13 | 		
+    14 | elif (2023 - nasc < 18) and pais == "R":
+    15 | 	print("nao")
+    16 | 	apto = 18 - (2023 - nasc)
+    17 | 	print(apto)
+    18 | 
+    19 | elif (2023 - nasc >= 21) and pais.upper() == "B":
+    20 | 	print("sim")
+    21 | 	apto = (2023 - nasc) - 21
+    22 | 	print(apto)
+    23 | else:
+    24 | 	print("invalido")
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 6
+
+  [1] Linha 1: Variável 'nasc' com nome muito curto (≤4 chars)
+      Trecho  : nasc = ...
+      Contexto:
+        >>>    1 | nasc = int(input("digite o ano de nascimento: "))
+               2 | pais = input("digite B ou R: ")
+
+  [2] Linha 2: Variável 'pais' com nome muito curto (≤4 chars)
+      Trecho  : pais = ...
+      Contexto:
+               1 | nasc = int(input("digite o ano de nascimento: "))
+        >>>    2 | pais = input("digite B ou R: ")
+               3 | 	
+
+  [3] Linha 6: Variável 'apto' com nome muito curto (≤4 chars)
+      Trecho  : apto = ...
+      Contexto:
+               5 | 	print("sim")
+        >>>    6 | 	apto = (2023 - nasc) - 18
+               7 | 	print(apto)
+
+  [4] Linha 11: Variável 'apto' com nome muito curto (≤4 chars)
+      Trecho  : apto = ...
+      Contexto:
+              10 | 	print("nao")
+        >>>   11 | 	apto = 21 - (2023 - nasc)
+              12 | 	print(apto)
+
+  [5] Linha 16: Variável 'apto' com nome muito curto (≤4 chars)
+      Trecho  : apto = ...
+      Contexto:
+              15 | 	print("nao")
+        >>>   16 | 	apto = 18 - (2023 - nasc)
+              17 | 	print(apto)
+
+  [6] Linha 21: Variável 'apto' com nome muito curto (≤4 chars)
+      Trecho  : apto = ...
+      Contexto:
+              20 | 	print("sim")
+        >>>   21 | 	apto = (2023 - nasc) - 21
+              22 | 	print(apto)
+
+======================================================================

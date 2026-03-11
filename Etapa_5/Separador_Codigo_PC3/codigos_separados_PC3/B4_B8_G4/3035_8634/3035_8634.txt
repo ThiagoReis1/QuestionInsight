@@ -1,0 +1,106 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 3035_8634.py
+Questão  : 3035
+Aluno    : 8634
+Total MCs: 3
+
+⚠️  Misconceptions detectados: B4, B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from math import radians, sin, cos
+     2 | x = float(input("Valor de x (graus): "))
+     3 | senx = sin(radians(x))
+     4 | cosx = cos(radians(x))
+     5 | if x < 0 or x >= 360:
+     6 | 	print("entrada invalida")
+     7 | else:
+     8 | 	if 0 <= x < 90:
+     9 | 		print(round(senx, 4))
+    10 | 	elif 90 <= x < 180:
+    11 | 		print(round(cosx, 4))
+    12 | 	elif 180 <= x < 270:
+    13 | 		print(round(senx, 4))
+    14 | 	elif 270 <= x < 360:
+    15 | 		print(round(cosx, 4))
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B4 — Comandos repetidos dentro de blocos if-elif-else
+  Ocorrências: 5
+
+  [1] Linha 12: Bloco idêntico ao da linha 8
+      Trecho  : print(round(senx, 4))
+      Contexto:
+              11 | 		print(round(cosx, 4))
+        >>>   12 | 	elif 180 <= x < 270:
+              13 | 		print(round(senx, 4))
+
+  [2] Linha 14: Bloco idêntico ao da linha 10
+      Trecho  : print(round(cosx, 4))
+      Contexto:
+              13 | 		print(round(senx, 4))
+        >>>   14 | 	elif 270 <= x < 360:
+              15 | 		print(round(cosx, 4))
+
+  [3] Linha 12: Bloco idêntico ao da linha 8
+      Trecho  : print(round(senx, 4))
+      Contexto:
+              11 | 		print(round(cosx, 4))
+        >>>   12 | 	elif 180 <= x < 270:
+              13 | 		print(round(senx, 4))
+
+  [4] Linha 14: Bloco idêntico ao da linha 10
+      Trecho  : print(round(cosx, 4))
+      Contexto:
+              13 | 		print(round(senx, 4))
+        >>>   14 | 	elif 270 <= x < 360:
+              15 | 		print(round(cosx, 4))
+
+  [5] Linha 14: Bloco idêntico ao da linha 10
+      Trecho  : print(round(cosx, 4))
+      Contexto:
+              13 | 		print(round(senx, 4))
+        >>>   14 | 	elif 270 <= x < 360:
+              15 | 		print(round(cosx, 4))
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 12: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 12) / elif ... sem else
+      Contexto:
+              11 | 		print(round(cosx, 4))
+        >>>   12 | 	elif 180 <= x < 270:
+              13 | 		print(round(senx, 4))
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 3
+
+  [1] Linha 2: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+               1 | from math import radians, sin, cos
+        >>>    2 | x = float(input("Valor de x (graus): "))
+               3 | senx = sin(radians(x))
+
+  [2] Linha 3: Variável 'senx' com nome muito curto (≤4 chars)
+      Trecho  : senx = ...
+      Contexto:
+               2 | x = float(input("Valor de x (graus): "))
+        >>>    3 | senx = sin(radians(x))
+               4 | cosx = cos(radians(x))
+
+  [3] Linha 4: Variável 'cosx' com nome muito curto (≤4 chars)
+      Trecho  : cosx = ...
+      Contexto:
+               3 | senx = sin(radians(x))
+        >>>    4 | cosx = cos(radians(x))
+               5 | if x < 0 or x >= 360:
+
+======================================================================

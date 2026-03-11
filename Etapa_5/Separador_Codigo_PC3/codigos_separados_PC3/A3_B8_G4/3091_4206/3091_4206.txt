@@ -1,0 +1,248 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 3091_4206.py
+Questão  : 3091
+Aluno    : 4206
+Total MCs: 3
+
+⚠️  Misconceptions detectados: A3, B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | a = input()
+     2 | x = 0
+     3 | y = 0
+     4 | z = 0
+     5 | d = 0
+     6 | s = 0
+     7 | a1 = 0
+     8 | x1 = 0
+     9 | x2 = 0
+    10 | x3 = 0
+    11 | x4 = 0
+    12 | while((a.upper())!="X"):
+    13 | 	if((a.upper())=="V"):
+    14 | 		x = x+3
+    15 | 		x1 = x1+3
+    16 | 		a = input()
+    17 | 	elif((a.upper())=="E"):
+    18 | 		y = y+1
+    19 | 		x2 = x2+3
+    20 | 		a = input()
+    21 | 	elif((a.upper())=="D"):
+    22 | 		z = z+0
+    23 | 		x3 = x3+3
+    24 | 		a = input()
+    25 | 	elif((a.upper())!="X" and (a.upper())!="V" and (a.upper())!="E" and (a.upper())!="D"):
+    26 | 		a1 = a1+0
+    27 | 		x4 = x4+0
+    28 | 		a = input()
+    29 | if((a.upper())=="X"):
+    30 | 	s = x+y+z+a1
+    31 | 	d = x1+x2+x3+x4
+    32 | 	print(round((s/d)*100,2))
+    33 | 	
+    34 | 	
+    35 | 		
+    36 | 		
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 1
+
+  [1] Linha 0: A3 detectado pelo VisitorMC3 (localização exata não mapeada)
+      Trecho  : —
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 21: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 21) / elif ... sem else
+      Contexto:
+              20 | 		a = input()
+        >>>   21 | 	elif((a.upper())=="D"):
+              22 | 		z = z+0
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 25
+
+  [1] Linha 1: Variável 'a' com nome muito curto (≤4 chars)
+      Trecho  : a = ...
+      Contexto:
+        >>>    1 | a = input()
+               2 | x = 0
+
+  [2] Linha 2: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+               1 | a = input()
+        >>>    2 | x = 0
+               3 | y = 0
+
+  [3] Linha 3: Variável 'y' com nome muito curto (≤4 chars)
+      Trecho  : y = ...
+      Contexto:
+               2 | x = 0
+        >>>    3 | y = 0
+               4 | z = 0
+
+  [4] Linha 4: Variável 'z' com nome muito curto (≤4 chars)
+      Trecho  : z = ...
+      Contexto:
+               3 | y = 0
+        >>>    4 | z = 0
+               5 | d = 0
+
+  [5] Linha 5: Variável 'd' com nome muito curto (≤4 chars)
+      Trecho  : d = ...
+      Contexto:
+               4 | z = 0
+        >>>    5 | d = 0
+               6 | s = 0
+
+  [6] Linha 6: Variável 's' com nome muito curto (≤4 chars)
+      Trecho  : s = ...
+      Contexto:
+               5 | d = 0
+        >>>    6 | s = 0
+               7 | a1 = 0
+
+  [7] Linha 7: Variável 'a1' com nome muito curto (≤4 chars)
+      Trecho  : a1 = ...
+      Contexto:
+               6 | s = 0
+        >>>    7 | a1 = 0
+               8 | x1 = 0
+
+  [8] Linha 8: Variável 'x1' com nome muito curto (≤4 chars)
+      Trecho  : x1 = ...
+      Contexto:
+               7 | a1 = 0
+        >>>    8 | x1 = 0
+               9 | x2 = 0
+
+  [9] Linha 9: Variável 'x2' com nome muito curto (≤4 chars)
+      Trecho  : x2 = ...
+      Contexto:
+               8 | x1 = 0
+        >>>    9 | x2 = 0
+              10 | x3 = 0
+
+  [10] Linha 10: Variável 'x3' com nome muito curto (≤4 chars)
+      Trecho  : x3 = ...
+      Contexto:
+               9 | x2 = 0
+        >>>   10 | x3 = 0
+              11 | x4 = 0
+
+  [11] Linha 11: Variável 'x4' com nome muito curto (≤4 chars)
+      Trecho  : x4 = ...
+      Contexto:
+              10 | x3 = 0
+        >>>   11 | x4 = 0
+              12 | while((a.upper())!="X"):
+
+  [12] Linha 30: Variável 's' com nome muito curto (≤4 chars)
+      Trecho  : s = ...
+      Contexto:
+              29 | if((a.upper())=="X"):
+        >>>   30 | 	s = x+y+z+a1
+              31 | 	d = x1+x2+x3+x4
+
+  [13] Linha 31: Variável 'd' com nome muito curto (≤4 chars)
+      Trecho  : d = ...
+      Contexto:
+              30 | 	s = x+y+z+a1
+        >>>   31 | 	d = x1+x2+x3+x4
+              32 | 	print(round((s/d)*100,2))
+
+  [14] Linha 14: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+              13 | 	if((a.upper())=="V"):
+        >>>   14 | 		x = x+3
+              15 | 		x1 = x1+3
+
+  [15] Linha 15: Variável 'x1' com nome muito curto (≤4 chars)
+      Trecho  : x1 = ...
+      Contexto:
+              14 | 		x = x+3
+        >>>   15 | 		x1 = x1+3
+              16 | 		a = input()
+
+  [16] Linha 16: Variável 'a' com nome muito curto (≤4 chars)
+      Trecho  : a = ...
+      Contexto:
+              15 | 		x1 = x1+3
+        >>>   16 | 		a = input()
+              17 | 	elif((a.upper())=="E"):
+
+  [17] Linha 18: Variável 'y' com nome muito curto (≤4 chars)
+      Trecho  : y = ...
+      Contexto:
+              17 | 	elif((a.upper())=="E"):
+        >>>   18 | 		y = y+1
+              19 | 		x2 = x2+3
+
+  [18] Linha 19: Variável 'x2' com nome muito curto (≤4 chars)
+      Trecho  : x2 = ...
+      Contexto:
+              18 | 		y = y+1
+        >>>   19 | 		x2 = x2+3
+              20 | 		a = input()
+
+  [19] Linha 20: Variável 'a' com nome muito curto (≤4 chars)
+      Trecho  : a = ...
+      Contexto:
+              19 | 		x2 = x2+3
+        >>>   20 | 		a = input()
+              21 | 	elif((a.upper())=="D"):
+
+  [20] Linha 22: Variável 'z' com nome muito curto (≤4 chars)
+      Trecho  : z = ...
+      Contexto:
+              21 | 	elif((a.upper())=="D"):
+        >>>   22 | 		z = z+0
+              23 | 		x3 = x3+3
+
+  [21] Linha 23: Variável 'x3' com nome muito curto (≤4 chars)
+      Trecho  : x3 = ...
+      Contexto:
+              22 | 		z = z+0
+        >>>   23 | 		x3 = x3+3
+              24 | 		a = input()
+
+  [22] Linha 24: Variável 'a' com nome muito curto (≤4 chars)
+      Trecho  : a = ...
+      Contexto:
+              23 | 		x3 = x3+3
+        >>>   24 | 		a = input()
+              25 | 	elif((a.upper())!="X" and (a.upper())!="V" and (a.upper())!="E" and (a.upper())!="D"):
+
+  [23] Linha 26: Variável 'a1' com nome muito curto (≤4 chars)
+      Trecho  : a1 = ...
+      Contexto:
+              25 | 	elif((a.upper())!="X" and (a.upper())!="V" and (a.upper())!="E" and (a.upper())!="D"):
+        >>>   26 | 		a1 = a1+0
+              27 | 		x4 = x4+0
+
+  [24] Linha 27: Variável 'x4' com nome muito curto (≤4 chars)
+      Trecho  : x4 = ...
+      Contexto:
+              26 | 		a1 = a1+0
+        >>>   27 | 		x4 = x4+0
+              28 | 		a = input()
+
+  [25] Linha 28: Variável 'a' com nome muito curto (≤4 chars)
+      Trecho  : a = ...
+      Contexto:
+              27 | 		x4 = x4+0
+        >>>   28 | 		a = input()
+              29 | if((a.upper())=="X"):
+
+======================================================================

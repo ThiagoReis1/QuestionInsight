@@ -1,0 +1,45 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1977_2858.py
+Questão  : 1977
+Aluno    : 2858
+Total MCs: 1
+
+⚠️  Misconceptions detectados: B4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from math import*
+     2 | genero = input("Digite o genero da serie: ")
+     3 | sub_g = input("Digite o subgenero da serie: ")
+     4 | 
+     5 | if(((genero.upper() != "INVESTIGATIVA") and (genero.upper() != "DRAMATICA")) or ((sub_g.upper() != "SUSPENSE") and (sub_g.upper() != "DRAMA") and (sub_g.upper() != "COM FICCAO") and (sub_g.upper() != "AVENTURA"))):
+     6 | 	print("SERIE NAO IDENTIFICADA")
+     7 | elif((genero.upper() == "INVESTIGATIVA") and (sub_g.upper() == "SUSPENSE")):
+     8 | 	print("DEXTER")
+     9 | elif((genero.upper() == "INVESTIGATIVA") and (sub_g.upper() == "DRAMA")):
+    10 | 	print("NARCOS")
+    11 | elif((genero.upper() == "DRAMATICA") and (sub_g.upper() == "COM FICCAO")):
+    12 | 	print("LOST")
+    13 | elif((genero.upper() == "DRAMATICA") and (sub_g.upper() == "AVENTURA")):
+    14 | 	print("SHERLOCK")
+    15 | else:
+    16 | 	print("SERIE NAO IDENTIFICADA")
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B4 — Comandos repetidos dentro de blocos if-elif-else
+  Ocorrências: 1
+
+  [1] Linha 13: Bloco idêntico ao da linha 5
+      Trecho  : print('SERIE NAO IDENTIFICADA')
+      Contexto:
+              12 | 	print("LOST")
+        >>>   13 | elif((genero.upper() == "DRAMATICA") and (sub_g.upper() == "AVENTURA")):
+              14 | 	print("SHERLOCK")
+
+======================================================================

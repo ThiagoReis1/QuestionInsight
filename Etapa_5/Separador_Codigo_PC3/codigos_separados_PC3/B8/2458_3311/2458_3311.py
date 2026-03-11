@@ -1,0 +1,12 @@
+preco=float(input("Digite:"))
+cod=int(input("Digite:"))
+if(cod==1):
+	frete=preco*0.10
+elif(cod==2):
+	frete=preco*0.08
+elif(cod==3):
+	frete=preco*0
+elif(cod==4):
+	frete=preco*0.02
+venda=(preco-preco*0.40)+frete
+print(round(venda,2))

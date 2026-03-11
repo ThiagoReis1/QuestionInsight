@@ -1,0 +1,60 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 6777_9220.py
+Questão  : 6777
+Aluno    : 9220
+Total MCs: 1
+
+⚠️  Misconceptions detectados: B8
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | ano_nasc = int(input("Digite o ano de nascimento: "))
+     2 | pais = input("Pais em analise (B/I)? ").upper()
+     3 | 
+     4 | idade_minimaB = 18
+     5 | idade_minimaI = 17
+     6 | idade = 2023 - ano_nasc
+     7 | 
+     8 | #Aptidao 
+     9 | aptB = idade - idade_minimaB 
+    10 | aptI = idade - idade_minimaI
+    11 | inpB = idade_minimaB - idade
+    12 | inpI = idade_minimaI - idade 
+    13 | 
+    14 | if ((pais == "B") and (idade >= 18)):
+    15 | 	print ("sim")
+    16 | 	print (aptB)
+    17 | 
+    18 | elif ((pais == "I") and (idade >= 17)):
+    19 | 	print("sim")
+    20 | 	print(aptI)
+    21 | 
+    22 | elif ((pais == "I") and (idade < 17)):
+    23 | 	print ("nao")
+    24 | 	print (inpI)
+    25 | 	
+    26 | elif (pais == "B" and idade < 18):
+    27 | 	print("nao")
+    28 | 	print(inpB)
+    29 | 
+    30 | elif (pais != "B" or pais != "I"):
+    31 | 	print("invalido")
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 26: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 26) / elif ... sem else
+      Contexto:
+              25 | 	
+        >>>   26 | elif (pais == "B" and idade < 18):
+              27 | 	print("nao")
+
+======================================================================

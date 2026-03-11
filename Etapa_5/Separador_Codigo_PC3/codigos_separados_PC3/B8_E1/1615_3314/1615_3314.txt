@@ -1,0 +1,66 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1615_3314.py
+Questão  : 1615
+Aluno    : 3314
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B8, E1
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import *
+     2 | j1 = array(eval(input("Fale a pontuacao do jogador um: ")))
+     3 | j2 = array(eval(input("Fale a pontuacao do jogador dois: ")))
+     4 | i = 0 
+     5 | cont1 = 0
+     6 | cont2 = 0
+     7 | while (i<size(j1)):
+     8 | 	if (j1[i] != j2[i]):
+     9 | 		if (j1[i]==4 and j2[i]==1) or (j1[i]==4 and j2[i]==2) or (j1[i]==4 and j2[i]==3) or (j1[i]==3 and j2[i]==1) or (j1[i]==3 and j2[i]==2) or (j1[i]==2 and j2[i]==1):
+    10 | 			cont1 = cont1 + 1
+    11 | 		elif (j2[i]==4 and j1[i]==1) or (j2[i]==4 and j1[i]==2) or (j2[i]==4 and j1[i]==3) or (j2[i]==3 and j1[i]==1) or (j2[i]==3 and j1[i]==2) or (j2[i]==2 and j1[i]==1):
+    12 | 			cont2 = cont2 + 1
+    13 | 	i = i + 1
+    14 | 
+    15 | if (cont1 > cont2):
+    16 | 	print("JOGADOR UM")
+    17 | elif (cont2 > cont1):
+    18 | 	print("JOGADOR DOIS")
+    19 | else:
+    20 | 	print("EMPATE")
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 9: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 9) / elif ... sem else
+      Contexto:
+               8 | 	if (j1[i] != j2[i]):
+        >>>    9 | 		if (j1[i]==4 and j2[i]==1) or (j1[i]==4 and j2[i]==2) or (j1[i]==4 and j2[i]==3) or (j1[i]==3 and j2[i]==1) or (j1[i]==3 and j2[i]==2) or (j1[i]==2 and j2[i]==1):
+              10 | 			cont1 = cont1 + 1
+
+▶ E1 — Verificação desnecessária de todas as combinações possíveis
+  Ocorrências: 2
+
+  [1] Linha 9: 6 condições em um único if — verificação excessiva
+      Trecho  : j1[i] == 4 and j2[i] == 1 or (j1[i] == 4 and j2[i] == 2) or (j1[i] == 4 and j2[i] == 3) or (j1[i] == 3 and j2[i] == 1) or (j1[i] == 3 and j2[i] == 2) or (j1[i] == 2 and j2[i] == 1)
+      Contexto:
+               8 | 	if (j1[i] != j2[i]):
+        >>>    9 | 		if (j1[i]==4 and j2[i]==1) or (j1[i]==4 and j2[i]==2) or (j1[i]==4 and j2[i]==3) or (j1[i]==3 and j2[i]==1) or (j1[i]==3 and j2[i]==2) or (j1[i]==2 and j2[i]==1):
+              10 | 			cont1 = cont1 + 1
+
+  [2] Linha 11: 6 condições em um único if — verificação excessiva
+      Trecho  : j2[i] == 4 and j1[i] == 1 or (j2[i] == 4 and j1[i] == 2) or (j2[i] == 4 and j1[i] == 3) or (j2[i] == 3 and j1[i] == 1) or (j2[i] == 3 and j1[i] == 2) or (j2[i] == 2 and j1[i] == 1)
+      Contexto:
+              10 | 			cont1 = cont1 + 1
+        >>>   11 | 		elif (j2[i]==4 and j1[i]==1) or (j2[i]==4 and j1[i]==2) or (j2[i]==4 and j1[i]==3) or (j2[i]==3 and j1[i]==1) or (j2[i]==3 and j1[i]==2) or (j2[i]==2 and j1[i]==1):
+              12 | 			cont2 = cont2 + 1
+
+======================================================================

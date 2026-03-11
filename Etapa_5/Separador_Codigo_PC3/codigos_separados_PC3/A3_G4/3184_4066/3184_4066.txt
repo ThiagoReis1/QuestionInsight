@@ -1,0 +1,77 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 3184_4066.py
+Questão  : 3184
+Aluno    : 4066
+Total MCs: 2
+
+⚠️  Misconceptions detectados: A3, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | 
+     3 | v = array(eval(input("V: ")), dtype=str)
+     4 | s = size(v) - 1
+     5 | x = size(v)//2
+     6 | 
+     7 | 
+     8 | for i in range(x):
+     9 | 	aux = 0
+    10 | 	aux = v[i]
+    11 | 	v[i] = v[s-i]
+    12 | 	v[s-i] = aux	
+    13 | 
+    14 | print(v)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 1
+
+  [1] Linha 0: A3 detectado pelo VisitorMC3 (localização exata não mapeada)
+      Trecho  : —
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 5
+
+  [1] Linha 3: Variável 'v' com nome muito curto (≤4 chars)
+      Trecho  : v = ...
+      Contexto:
+               2 | 
+        >>>    3 | v = array(eval(input("V: ")), dtype=str)
+               4 | s = size(v) - 1
+
+  [2] Linha 4: Variável 's' com nome muito curto (≤4 chars)
+      Trecho  : s = ...
+      Contexto:
+               3 | v = array(eval(input("V: ")), dtype=str)
+        >>>    4 | s = size(v) - 1
+               5 | x = size(v)//2
+
+  [3] Linha 5: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+               4 | s = size(v) - 1
+        >>>    5 | x = size(v)//2
+               6 | 
+
+  [4] Linha 9: Variável 'aux' com nome muito curto (≤4 chars)
+      Trecho  : aux = ...
+      Contexto:
+               8 | for i in range(x):
+        >>>    9 | 	aux = 0
+              10 | 	aux = v[i]
+
+  [5] Linha 10: Variável 'aux' com nome muito curto (≤4 chars)
+      Trecho  : aux = ...
+      Contexto:
+               9 | 	aux = 0
+        >>>   10 | 	aux = v[i]
+              11 | 	v[i] = v[s-i]
+
+======================================================================

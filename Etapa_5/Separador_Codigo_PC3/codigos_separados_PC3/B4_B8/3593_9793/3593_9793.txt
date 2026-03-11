@@ -1,0 +1,124 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 3593_9793.py
+Questão  : 3593
+Aluno    : 9793
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B4, B8
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import *
+     2 | 
+     3 | dice = array(eval(input('SAQUI> ')))
+     4 | point = 200
+     5 | i = 0
+     6 | 
+     7 | while i < size(dice):
+     8 | 	if dice[i] == 1:
+     9 | 		point = point / 2
+    10 | 	elif dice[i] == 2:
+    11 | 		point = point * 3
+    12 | 	elif dice[i] == 3:
+    13 | 		point = point / 2
+    14 | 	elif dice[i] == 4:
+    15 | 		point = point * 3
+    16 | 	elif dice[i] == 5:
+    17 | 		point = point / 2
+    18 | 	elif dice [i] == 6:
+    19 | 		point = point * 3
+    20 | 	i = i + 1
+    21 | 		
+    22 | print(round(point, 2))
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B4 — Comandos repetidos dentro de blocos if-elif-else
+  Ocorrências: 10
+
+  [1] Linha 12: Bloco idêntico ao da linha 8
+      Trecho  : point = point / 2
+      Contexto:
+              11 | 		point = point * 3
+        >>>   12 | 	elif dice[i] == 3:
+              13 | 		point = point / 2
+
+  [2] Linha 14: Bloco idêntico ao da linha 10
+      Trecho  : point = point * 3
+      Contexto:
+              13 | 		point = point / 2
+        >>>   14 | 	elif dice[i] == 4:
+              15 | 		point = point * 3
+
+  [3] Linha 16: Bloco idêntico ao da linha 8
+      Trecho  : point = point / 2
+      Contexto:
+              15 | 		point = point * 3
+        >>>   16 | 	elif dice[i] == 5:
+              17 | 		point = point / 2
+
+  [4] Linha 18: Bloco idêntico ao da linha 10
+      Trecho  : point = point * 3
+      Contexto:
+              17 | 		point = point / 2
+        >>>   18 | 	elif dice [i] == 6:
+              19 | 		point = point * 3
+
+  [5] Linha 14: Bloco idêntico ao da linha 10
+      Trecho  : point = point * 3
+      Contexto:
+              13 | 		point = point / 2
+        >>>   14 | 	elif dice[i] == 4:
+              15 | 		point = point * 3
+
+  [6] Linha 16: Bloco idêntico ao da linha 12
+      Trecho  : point = point / 2
+      Contexto:
+              15 | 		point = point * 3
+        >>>   16 | 	elif dice[i] == 5:
+              17 | 		point = point / 2
+
+  [7] Linha 18: Bloco idêntico ao da linha 10
+      Trecho  : point = point * 3
+      Contexto:
+              17 | 		point = point / 2
+        >>>   18 | 	elif dice [i] == 6:
+              19 | 		point = point * 3
+
+  [8] Linha 16: Bloco idêntico ao da linha 12
+      Trecho  : point = point / 2
+      Contexto:
+              15 | 		point = point * 3
+        >>>   16 | 	elif dice[i] == 5:
+              17 | 		point = point / 2
+
+  [9] Linha 18: Bloco idêntico ao da linha 14
+      Trecho  : point = point * 3
+      Contexto:
+              17 | 		point = point / 2
+        >>>   18 | 	elif dice [i] == 6:
+              19 | 		point = point * 3
+
+  [10] Linha 18: Bloco idêntico ao da linha 14
+      Trecho  : point = point * 3
+      Contexto:
+              17 | 		point = point / 2
+        >>>   18 | 	elif dice [i] == 6:
+              19 | 		point = point * 3
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 16: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 16) / elif ... sem else
+      Contexto:
+              15 | 		point = point * 3
+        >>>   16 | 	elif dice[i] == 5:
+              17 | 		point = point / 2
+
+======================================================================

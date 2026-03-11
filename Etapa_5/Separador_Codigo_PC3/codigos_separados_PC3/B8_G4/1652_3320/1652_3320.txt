@@ -1,0 +1,63 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1652_3320.py
+Questão  : 1652
+Aluno    : 3320
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | vet=input("").split(',')
+     3 | 
+     4 | vet2=zeros(5,dtype=int)
+     5 | for i in range(len(vet)):
+     6 | 	if vet[i]=="B":
+     7 | 		vet2[0]=vet2[0]+1
+     8 | 	elif vet[i]=="PA":
+     9 | 		vet2[1]=vet2[1]+1
+    10 | 	elif vet[i]=="PR":
+    11 | 		vet2[2]=vet2[2]+1
+    12 | 	elif vet[i]=="A":
+    13 | 		vet2[3]=vet2[3]+1
+    14 | 	elif vet[i]=="I":
+    15 | 		vet2[4]=vet2[4]+1
+    16 | print(max(vet2))
+    17 | print(vet2)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 12: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 12) / elif ... sem else
+      Contexto:
+              11 | 		vet2[2]=vet2[2]+1
+        >>>   12 | 	elif vet[i]=="A":
+              13 | 		vet2[3]=vet2[3]+1
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 2
+
+  [1] Linha 2: Variável 'vet' com nome muito curto (≤4 chars)
+      Trecho  : vet = ...
+      Contexto:
+               1 | from numpy import*
+        >>>    2 | vet=input("").split(',')
+               3 | 
+
+  [2] Linha 4: Variável 'vet2' com nome muito curto (≤4 chars)
+      Trecho  : vet2 = ...
+      Contexto:
+               3 | 
+        >>>    4 | vet2=zeros(5,dtype=int)
+               5 | for i in range(len(vet)):
+
+======================================================================

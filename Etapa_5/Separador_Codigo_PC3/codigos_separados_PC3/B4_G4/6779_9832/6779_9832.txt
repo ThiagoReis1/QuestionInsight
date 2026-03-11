@@ -1,0 +1,141 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 6779_9832.py
+Questão  : 6779
+Aluno    : 9832
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B4, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | b = 18
+     2 | j = 16
+     3 | d = 2023
+     4 | 
+     5 | i = input("Digite o ano de nascimento: ")
+     6 | p = input("Digite o pais escolhido (J ou B): ").upper()
+     7 | 
+     8 | try :
+     9 | 	i = int(i)
+    10 | 	
+    11 | except ValueError :
+    12 | 	print("invalido")
+    13 | 	
+    14 | else :
+    15 | 	if ( i < 1900 ) :
+    16 | 		print("invalido")
+    17 | 		
+    18 | 	elif ( p != "B" and p != "J" ) :
+    19 | 		print("invalido")
+    20 | 		
+    21 | 	elif ( p == "B" ) :
+    22 | 		if ( d - i < b ) :
+    23 | 			print("nao")
+    24 | 			b = b - (d - i)
+    25 | 			print(b)
+    26 | 			
+    27 | 		else :
+    28 | 			print("sim")
+    29 | 			b = ( d - i ) - b
+    30 | 			print(b)
+    31 | 	else :
+    32 | 		if ( d - i < j ) :
+    33 | 			print("nao")
+    34 | 			j = j - ( d -i )
+    35 | 			print(j)
+    36 | 			
+    37 | 		else :
+    38 | 			print("sim")
+    39 | 			j = ( d - i ) - j
+    40 | 			print(j)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B4 — Comandos repetidos dentro de blocos if-elif-else
+  Ocorrências: 1
+
+  [1] Linha 18: Bloco idêntico ao da linha 15
+      Trecho  : print('invalido')
+      Contexto:
+              17 | 		
+        >>>   18 | 	elif ( p != "B" and p != "J" ) :
+              19 | 		print("invalido")
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 10
+
+  [1] Linha 1: Variável 'b' com nome muito curto (≤4 chars)
+      Trecho  : b = ...
+      Contexto:
+        >>>    1 | b = 18
+               2 | j = 16
+
+  [2] Linha 2: Variável 'j' com nome muito curto (≤4 chars)
+      Trecho  : j = ...
+      Contexto:
+               1 | b = 18
+        >>>    2 | j = 16
+               3 | d = 2023
+
+  [3] Linha 3: Variável 'd' com nome muito curto (≤4 chars)
+      Trecho  : d = ...
+      Contexto:
+               2 | j = 16
+        >>>    3 | d = 2023
+               4 | 
+
+  [4] Linha 5: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+               4 | 
+        >>>    5 | i = input("Digite o ano de nascimento: ")
+               6 | p = input("Digite o pais escolhido (J ou B): ").upper()
+
+  [5] Linha 6: Variável 'p' com nome muito curto (≤4 chars)
+      Trecho  : p = ...
+      Contexto:
+               5 | i = input("Digite o ano de nascimento: ")
+        >>>    6 | p = input("Digite o pais escolhido (J ou B): ").upper()
+               7 | 
+
+  [6] Linha 9: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+               8 | try :
+        >>>    9 | 	i = int(i)
+              10 | 	
+
+  [7] Linha 24: Variável 'b' com nome muito curto (≤4 chars)
+      Trecho  : b = ...
+      Contexto:
+              23 | 			print("nao")
+        >>>   24 | 			b = b - (d - i)
+              25 | 			print(b)
+
+  [8] Linha 29: Variável 'b' com nome muito curto (≤4 chars)
+      Trecho  : b = ...
+      Contexto:
+              28 | 			print("sim")
+        >>>   29 | 			b = ( d - i ) - b
+              30 | 			print(b)
+
+  [9] Linha 34: Variável 'j' com nome muito curto (≤4 chars)
+      Trecho  : j = ...
+      Contexto:
+              33 | 			print("nao")
+        >>>   34 | 			j = j - ( d -i )
+              35 | 			print(j)
+
+  [10] Linha 39: Variável 'j' com nome muito curto (≤4 chars)
+      Trecho  : j = ...
+      Contexto:
+              38 | 			print("sim")
+        >>>   39 | 			j = ( d - i ) - j
+              40 | 			print(j)
+
+======================================================================

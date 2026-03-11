@@ -1,0 +1,94 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 6198_9764.py
+Questão  : 6198
+Aluno    : 9764
+Total MCs: 2
+
+⚠️  Misconceptions detectados: C1, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | #luna e a maior ate alguem passar ela entao enquanto a luna for maior repita a altura mais a 
+     2 | #taxa tanto da pessoa aleatoria tanto dela
+     3 | alta = 1.65
+     4 | taxaa = 0.02
+     5 | cont = 0
+     6 | alt = float(input("altura: "))
+     7 | taxa = float(input("taxa: "))
+     8 | while alta > alt:
+     9 | 	alt = alt + taxa
+    10 | 	cont = cont + 1
+    11 | 	alta = alta + taxaa
+    12 | 	if alta <= alt:
+    13 | 		print(cont)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ C1 — Condição while testada novamente dentro do seu bloco
+  Ocorrências: 1
+
+  [1] Linha 12: If retesta condição inversa do while da linha 8
+      Trecho  : while alta > alt → if alta <= alt
+      Contexto:
+              11 | 	alta = alta + taxaa
+        >>>   12 | 	if alta <= alt:
+              13 | 		print(cont)
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 7
+
+  [1] Linha 3: Variável 'alta' com nome muito curto (≤4 chars)
+      Trecho  : alta = ...
+      Contexto:
+               2 | #taxa tanto da pessoa aleatoria tanto dela
+        >>>    3 | alta = 1.65
+               4 | taxaa = 0.02
+
+  [2] Linha 5: Variável 'cont' com nome muito curto (≤4 chars)
+      Trecho  : cont = ...
+      Contexto:
+               4 | taxaa = 0.02
+        >>>    5 | cont = 0
+               6 | alt = float(input("altura: "))
+
+  [3] Linha 6: Variável 'alt' com nome muito curto (≤4 chars)
+      Trecho  : alt = ...
+      Contexto:
+               5 | cont = 0
+        >>>    6 | alt = float(input("altura: "))
+               7 | taxa = float(input("taxa: "))
+
+  [4] Linha 7: Variável 'taxa' com nome muito curto (≤4 chars)
+      Trecho  : taxa = ...
+      Contexto:
+               6 | alt = float(input("altura: "))
+        >>>    7 | taxa = float(input("taxa: "))
+               8 | while alta > alt:
+
+  [5] Linha 9: Variável 'alt' com nome muito curto (≤4 chars)
+      Trecho  : alt = ...
+      Contexto:
+               8 | while alta > alt:
+        >>>    9 | 	alt = alt + taxa
+              10 | 	cont = cont + 1
+
+  [6] Linha 10: Variável 'cont' com nome muito curto (≤4 chars)
+      Trecho  : cont = ...
+      Contexto:
+               9 | 	alt = alt + taxa
+        >>>   10 | 	cont = cont + 1
+              11 | 	alta = alta + taxaa
+
+  [7] Linha 11: Variável 'alta' com nome muito curto (≤4 chars)
+      Trecho  : alta = ...
+      Contexto:
+              10 | 	cont = cont + 1
+        >>>   11 | 	alta = alta + taxaa
+              12 | 	if alta <= alt:
+
+======================================================================

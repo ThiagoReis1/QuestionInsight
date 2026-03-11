@@ -1,0 +1,52 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1657_6340.py
+Questão  : 1657
+Aluno    : 6340
+Total MCs: 1
+
+⚠️  Misconceptions detectados: B8
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | estado = input("Informe o estado: ").upper().split(',')
+     3 | qtd = zeros(5, dtype = int)
+     4 | aux = 0
+     5 | 
+     6 | for i in range(len(estado)):
+     7 | 	if(estado[i] == 'AZ'):
+     8 | 		qtd[0] += 1
+     9 | 	elif(estado[i] == 'CA'):
+    10 | 		qtd[1] += 1
+    11 | 	elif(estado[i] == 'FL'):
+    12 | 		qtd[2] += 1
+    13 | 	elif(estado[i] == 'PA'):
+    14 | 		qtd[3] += 1
+    15 | 	elif(estado[i] == 'WI'):
+    16 | 		qtd[4] += 1
+    17 | 		
+    18 | for i in range(size(qtd)):
+    19 | 	if(qtd[i]>aux):
+    20 | 		aux = qtd[i]
+    21 | 	
+    22 | print(aux)
+    23 | print(qtd)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 13: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 13) / elif ... sem else
+      Contexto:
+              12 | 		qtd[2] += 1
+        >>>   13 | 	elif(estado[i] == 'PA'):
+              14 | 		qtd[3] += 1
+
+======================================================================

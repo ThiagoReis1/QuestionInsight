@@ -1,0 +1,110 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1645_4138.py
+Questão  : 1645
+Aluno    : 4138
+Total MCs: 3
+
+⚠️  Misconceptions detectados: A3, C8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import *
+     2 | 
+     3 | vet = array(eval(input("insira:")))
+     4 | x = 0
+     5 | for i in range(size(vet)):
+     6 | 	if(vet[i] >= 2000):
+     7 | 		x = x + 1
+     8 | 
+     9 | 
+    10 | a = zeros(x,dtype = int)
+    11 | k = 0
+    12 | aux = 0
+    13 | for j in range(size(vet)):
+    14 | 	vet[j] = aux[j]
+    15 | 	j = j + 1
+    16 | 	
+    17 | print(x)
+    18 | print(a)
+    19 | 		
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 1
+
+  [1] Linha 11: Variável 'k' declarada mas nunca utilizada
+      Trecho  : k = ...
+      Contexto:
+              10 | a = zeros(x,dtype = int)
+        >>>   11 | k = 0
+              12 | aux = 0
+
+▶ C8 — Loop for com sua variável de iteração sobrescrita
+  Ocorrências: 1
+
+  [1] Linha 15: Variável de iteração 'j' sobrescrita no loop
+      Trecho  : j = j + 1
+      Contexto:
+              14 | 	vet[j] = aux[j]
+        >>>   15 | 	j = j + 1
+              16 | 	
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 7
+
+  [1] Linha 3: Variável 'vet' com nome muito curto (≤4 chars)
+      Trecho  : vet = ...
+      Contexto:
+               2 | 
+        >>>    3 | vet = array(eval(input("insira:")))
+               4 | x = 0
+
+  [2] Linha 4: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+               3 | vet = array(eval(input("insira:")))
+        >>>    4 | x = 0
+               5 | for i in range(size(vet)):
+
+  [3] Linha 10: Variável 'a' com nome muito curto (≤4 chars)
+      Trecho  : a = ...
+      Contexto:
+               9 | 
+        >>>   10 | a = zeros(x,dtype = int)
+              11 | k = 0
+
+  [4] Linha 11: Variável 'k' com nome muito curto (≤4 chars)
+      Trecho  : k = ...
+      Contexto:
+              10 | a = zeros(x,dtype = int)
+        >>>   11 | k = 0
+              12 | aux = 0
+
+  [5] Linha 12: Variável 'aux' com nome muito curto (≤4 chars)
+      Trecho  : aux = ...
+      Contexto:
+              11 | k = 0
+        >>>   12 | aux = 0
+              13 | for j in range(size(vet)):
+
+  [6] Linha 15: Variável 'j' com nome muito curto (≤4 chars)
+      Trecho  : j = ...
+      Contexto:
+              14 | 	vet[j] = aux[j]
+        >>>   15 | 	j = j + 1
+              16 | 	
+
+  [7] Linha 7: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+               6 | 	if(vet[i] >= 2000):
+        >>>    7 | 		x = x + 1
+               8 | 
+
+======================================================================

@@ -1,0 +1,111 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 2488_3265.py
+Questão  : 2488
+Aluno    : 3265
+Total MCs: 3
+
+⚠️  Misconceptions detectados: B8, B9, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | fs = float(input())
+     2 | 
+     3 | print("Entrada: R$", fs)
+     4 | if (fs > 0):
+     5 | 	if (fs <= 800):
+     6 | 		ns = fs + (fs/100)*50
+     7 | 		print(round("Novo salario: R$", ns), 2)
+     8 | 	elif(fs > 800 and fs <= 1000):
+     9 | 		ns = fs + (fs/100)*40
+    10 | 		print("Novo salario: R$",round(ns, 2))
+    11 | 	elif(fs > 1000 and fs <= 1200):
+    12 | 		ns = fs + (fs/100)*30
+    13 | 		print("Novo salario: R$",round(ns, 2))
+    14 | 	elif(fs > 1200 and fs <= 1400):
+    15 | 		ns = fs + (fs/100)*20
+    16 | 		print("Novo salario: R$",round(ns, 2))
+    17 | 	elif(fs > 1400 and fs <= 1600):
+    18 | 		ns = fs + (fs/100)*10
+    19 | 		print("Novo salario: R$",round(ns, 2))
+    20 | 	elif(fs > 1600):
+    21 | 		ns = fs + (fs/100)*5
+    22 | 		print("Novo salario: R$",round(ns, 2))
+    23 | else: 
+    24 | 	print("Dado invalido")
+    25 | 	
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 17: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 17) / elif ... sem else
+      Contexto:
+              16 | 		print("Novo salario: R$",round(ns, 2))
+        >>>   17 | 	elif(fs > 1400 and fs <= 1600):
+              18 | 		ns = fs + (fs/100)*10
+
+▶ B9 — elif/else retestando condições já verificadas
+  Ocorrências: 1
+
+  [1] Linha 0: B9 detectado pelo VisitorMC3 (localização exata não mapeada)
+      Trecho  : —
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 7
+
+  [1] Linha 1: Variável 'fs' com nome muito curto (≤4 chars)
+      Trecho  : fs = ...
+      Contexto:
+        >>>    1 | fs = float(input())
+               2 | 
+
+  [2] Linha 6: Variável 'ns' com nome muito curto (≤4 chars)
+      Trecho  : ns = ...
+      Contexto:
+               5 | 	if (fs <= 800):
+        >>>    6 | 		ns = fs + (fs/100)*50
+               7 | 		print(round("Novo salario: R$", ns), 2)
+
+  [3] Linha 9: Variável 'ns' com nome muito curto (≤4 chars)
+      Trecho  : ns = ...
+      Contexto:
+               8 | 	elif(fs > 800 and fs <= 1000):
+        >>>    9 | 		ns = fs + (fs/100)*40
+              10 | 		print("Novo salario: R$",round(ns, 2))
+
+  [4] Linha 12: Variável 'ns' com nome muito curto (≤4 chars)
+      Trecho  : ns = ...
+      Contexto:
+              11 | 	elif(fs > 1000 and fs <= 1200):
+        >>>   12 | 		ns = fs + (fs/100)*30
+              13 | 		print("Novo salario: R$",round(ns, 2))
+
+  [5] Linha 15: Variável 'ns' com nome muito curto (≤4 chars)
+      Trecho  : ns = ...
+      Contexto:
+              14 | 	elif(fs > 1200 and fs <= 1400):
+        >>>   15 | 		ns = fs + (fs/100)*20
+              16 | 		print("Novo salario: R$",round(ns, 2))
+
+  [6] Linha 18: Variável 'ns' com nome muito curto (≤4 chars)
+      Trecho  : ns = ...
+      Contexto:
+              17 | 	elif(fs > 1400 and fs <= 1600):
+        >>>   18 | 		ns = fs + (fs/100)*10
+              19 | 		print("Novo salario: R$",round(ns, 2))
+
+  [7] Linha 21: Variável 'ns' com nome muito curto (≤4 chars)
+      Trecho  : ns = ...
+      Contexto:
+              20 | 	elif(fs > 1600):
+        >>>   21 | 		ns = fs + (fs/100)*5
+              22 | 		print("Novo salario: R$",round(ns, 2))
+
+======================================================================

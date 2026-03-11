@@ -1,0 +1,57 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 5287_7098.py
+Questão  : 5287
+Aluno    : 7098
+Total MCs: 2
+
+⚠️  Misconceptions detectados: A3, B8
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | moeda = input("moeda: ").upper()
+     2 | faces = moeda
+     3 | soma = 0
+     4 | i = 0
+     5 | 
+     6 | while moeda != "S":
+     7 | 	if moeda == "CARA":
+     8 | 		soma = soma + 1
+     9 | 		i = i + 1 
+    10 | 	elif moeda == "COROA":
+    11 | 		soma = soma + 1
+    12 | 	moeda = input("moeda: ").upper()
+    13 | 	
+    14 | pct = (i * 100) / soma
+    15 | print(soma)
+    16 | print(round(pct, 2))
+    17 | 
+    18 | 
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 1
+
+  [1] Linha 2: Variável 'faces' declarada mas nunca utilizada
+      Trecho  : faces = ...
+      Contexto:
+               1 | moeda = input("moeda: ").upper()
+        >>>    2 | faces = moeda
+               3 | soma = 0
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 7: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 7) / elif ... sem else
+      Contexto:
+               6 | while moeda != "S":
+        >>>    7 | 	if moeda == "CARA":
+               8 | 		soma = soma + 1
+
+======================================================================

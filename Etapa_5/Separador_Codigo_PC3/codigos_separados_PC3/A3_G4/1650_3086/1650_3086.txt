@@ -1,0 +1,70 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1650_3086.py
+Questão  : 1650
+Aluno    : 3086
+Total MCs: 2
+
+⚠️  Misconceptions detectados: A3, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | x = input().split(',')
+     3 | a = 0
+     4 | y = zeros(5,dtype=int)
+     5 | for i in x:
+     6 | 	if(i == "P"):
+     7 | 		y[0]= y[0] + 1
+     8 | 	if(i== "C"):
+     9 | 		y[1]=y[1] + 1
+    10 | 	if(i== "R"):
+    11 | 		y[2]= y[2] + 1
+    12 | 	if(i== "L"):
+    13 | 		y[3]=y[3] + 1
+    14 | 	if(i== "B"):
+    15 | 		y[4]= y[4] + 1
+    16 | print(max(y))
+    17 | print(y)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 1
+
+  [1] Linha 3: Variável 'a' declarada mas nunca utilizada
+      Trecho  : a = ...
+      Contexto:
+               2 | x = input().split(',')
+        >>>    3 | a = 0
+               4 | y = zeros(5,dtype=int)
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 3
+
+  [1] Linha 2: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+               1 | from numpy import*
+        >>>    2 | x = input().split(',')
+               3 | a = 0
+
+  [2] Linha 3: Variável 'a' com nome muito curto (≤4 chars)
+      Trecho  : a = ...
+      Contexto:
+               2 | x = input().split(',')
+        >>>    3 | a = 0
+               4 | y = zeros(5,dtype=int)
+
+  [3] Linha 4: Variável 'y' com nome muito curto (≤4 chars)
+      Trecho  : y = ...
+      Contexto:
+               3 | a = 0
+        >>>    4 | y = zeros(5,dtype=int)
+               5 | for i in x:
+
+======================================================================

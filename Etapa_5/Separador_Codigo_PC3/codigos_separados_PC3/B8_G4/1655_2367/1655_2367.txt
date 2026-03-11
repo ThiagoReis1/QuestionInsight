@@ -1,0 +1,64 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1655_2367.py
+Questão  : 1655
+Aluno    : 2367
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | cont = zeros(5, dtype=int)
+     3 | # Leitura do vetor de tipos sanguineos
+     4 | vet = input("estados: ").upper().split(',')
+     5 | # Contagem de ocorrencias
+     6 | for i in range(size(vet)):
+     7 |     if (vet[i] == 'AC'):
+     8 |         cont[0] = cont[0] + 1
+     9 |     elif(vet[i] == 'AM'):
+    10 |         cont[1] = cont[1] + 1
+    11 |     elif(vet[i] == 'PA'):
+    12 |         cont[2] = cont[2] + 1
+    13 |     elif(vet[i] == 'RO'):
+    14 |         cont[3] = cont[3] + 1
+    15 |     elif(vet[i] == 'RR'):
+    16 |         cont[4] = cont[4] + 1
+    17 | print(max(cont))
+    18 | print(cont)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 13: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 13) / elif ... sem else
+      Contexto:
+              12 |         cont[2] = cont[2] + 1
+        >>>   13 |     elif(vet[i] == 'RO'):
+              14 |         cont[3] = cont[3] + 1
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 2
+
+  [1] Linha 2: Variável 'cont' com nome muito curto (≤4 chars)
+      Trecho  : cont = ...
+      Contexto:
+               1 | from numpy import*
+        >>>    2 | cont = zeros(5, dtype=int)
+               3 | # Leitura do vetor de tipos sanguineos
+
+  [2] Linha 4: Variável 'vet' com nome muito curto (≤4 chars)
+      Trecho  : vet = ...
+      Contexto:
+               3 | # Leitura do vetor de tipos sanguineos
+        >>>    4 | vet = input("estados: ").upper().split(',')
+               5 | # Contagem de ocorrencias
+
+======================================================================

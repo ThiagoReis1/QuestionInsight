@@ -1,0 +1,6 @@
+mg=float(input(5.0))
+vg=float(input(4.0))
+mp=float(input(3.0))
+vp=float(input(2.0))
+vf=((mg * vg) - (mp * vp) / (mg + mp))
+print(vf)

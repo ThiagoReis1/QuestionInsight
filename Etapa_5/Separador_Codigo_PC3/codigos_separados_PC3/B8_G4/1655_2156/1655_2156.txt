@@ -1,0 +1,152 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1655_2156.py
+Questão  : 1655
+Aluno    : 2156
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | 
+     3 | estados = input("Digite as siglas dos estados: ").split(',')
+     4 | 
+     5 | AC = 0
+     6 | AM = 0
+     7 | PA = 0
+     8 | RO = 0
+     9 | RR = 0
+    10 | 
+    11 | i = 0
+    12 | 
+    13 | while i < len(estados):
+    14 | 
+    15 | 	if (estados[i] == "AC"):
+    16 | 		AC = AC+1
+    17 | 	elif (estados[i] == "AM"):
+    18 | 		AM = AM+1
+    19 | 	elif (estados[i] == "PA"):
+    20 | 		PA = PA+1
+    21 | 	elif (estados[i] == "RO"):
+    22 | 		RO = RO+1
+    23 | 	elif (estados[i] == "RR"):
+    24 | 		RR = RR+1
+    25 | 	i = i+1
+    26 | 
+    27 | saida = zeros(5, dtype = int)
+    28 | 
+    29 | saida[0] = AC
+    30 | saida[1] = AM
+    31 | saida[2] = PA
+    32 | saida[3] = RO
+    33 | saida[4] = RR
+    34 | 
+    35 | print(max(saida))
+    36 | print(saida)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 21: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 21) / elif ... sem else
+      Contexto:
+              20 | 		PA = PA+1
+        >>>   21 | 	elif (estados[i] == "RO"):
+              22 | 		RO = RO+1
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 12
+
+  [1] Linha 5: Variável 'AC' com nome muito curto (≤4 chars)
+      Trecho  : AC = ...
+      Contexto:
+               4 | 
+        >>>    5 | AC = 0
+               6 | AM = 0
+
+  [2] Linha 6: Variável 'AM' com nome muito curto (≤4 chars)
+      Trecho  : AM = ...
+      Contexto:
+               5 | AC = 0
+        >>>    6 | AM = 0
+               7 | PA = 0
+
+  [3] Linha 7: Variável 'PA' com nome muito curto (≤4 chars)
+      Trecho  : PA = ...
+      Contexto:
+               6 | AM = 0
+        >>>    7 | PA = 0
+               8 | RO = 0
+
+  [4] Linha 8: Variável 'RO' com nome muito curto (≤4 chars)
+      Trecho  : RO = ...
+      Contexto:
+               7 | PA = 0
+        >>>    8 | RO = 0
+               9 | RR = 0
+
+  [5] Linha 9: Variável 'RR' com nome muito curto (≤4 chars)
+      Trecho  : RR = ...
+      Contexto:
+               8 | RO = 0
+        >>>    9 | RR = 0
+              10 | 
+
+  [6] Linha 11: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+              10 | 
+        >>>   11 | i = 0
+              12 | 
+
+  [7] Linha 25: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+              24 | 		RR = RR+1
+        >>>   25 | 	i = i+1
+              26 | 
+
+  [8] Linha 16: Variável 'AC' com nome muito curto (≤4 chars)
+      Trecho  : AC = ...
+      Contexto:
+              15 | 	if (estados[i] == "AC"):
+        >>>   16 | 		AC = AC+1
+              17 | 	elif (estados[i] == "AM"):
+
+  [9] Linha 18: Variável 'AM' com nome muito curto (≤4 chars)
+      Trecho  : AM = ...
+      Contexto:
+              17 | 	elif (estados[i] == "AM"):
+        >>>   18 | 		AM = AM+1
+              19 | 	elif (estados[i] == "PA"):
+
+  [10] Linha 20: Variável 'PA' com nome muito curto (≤4 chars)
+      Trecho  : PA = ...
+      Contexto:
+              19 | 	elif (estados[i] == "PA"):
+        >>>   20 | 		PA = PA+1
+              21 | 	elif (estados[i] == "RO"):
+
+  [11] Linha 22: Variável 'RO' com nome muito curto (≤4 chars)
+      Trecho  : RO = ...
+      Contexto:
+              21 | 	elif (estados[i] == "RO"):
+        >>>   22 | 		RO = RO+1
+              23 | 	elif (estados[i] == "RR"):
+
+  [12] Linha 24: Variável 'RR' com nome muito curto (≤4 chars)
+      Trecho  : RR = ...
+      Contexto:
+              23 | 	elif (estados[i] == "RR"):
+        >>>   24 | 		RR = RR+1
+              25 | 	i = i+1
+
+======================================================================

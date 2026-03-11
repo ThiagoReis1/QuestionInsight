@@ -1,0 +1,202 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 2487_3233.py
+Questão  : 2487
+Aluno    : 3233
+Total MCs: 3
+
+⚠️  Misconceptions detectados: B8, E1, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | p = int(input("numero do prato: "))
+     2 | s = int(input("numero da sobremesa: "))
+     3 | b = int(input("numero da bebida: "))
+     4 | 
+     5 | if (p<1 or p>4 or s<1 or s>4 or b<1 or b>4):
+     6 | 	print("Entradas: ", p, ", ", s, ", ", b)
+     7 | 	print("Dados invalidos")
+     8 | elif(p==1):
+     9 |    cp = 180
+    10 | elif(p==2):
+    11 |    cp = 230
+    12 | elif(p==3):
+    13 |    cp = 250
+    14 | elif(p==4):
+    15 |    cp = 350
+    16 | if(s==1):
+    17 |    cs = 75
+    18 | elif(s==2):
+    19 |    cs = 110
+    20 | elif(s==3):
+    21 |    cs = 170
+    22 | elif(s==4):
+    23 |    cs = 200
+    24 | if(b==1):
+    25 |    cb = 20
+    26 | elif(b==2):
+    27 |    cb = 70
+    28 | elif(b==3):
+    29 |    cb = 100
+    30 | elif(b==4):
+    31 |    cb = 65
+    32 | c = cp + cs + cb
+    33 | print("Entradas: ", p, ", ", s, ", ", b)
+    34 | print("Calorias: ", c, "cal")
+    35 | 	
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 3
+
+  [1] Linha 20: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 20) / elif ... sem else
+      Contexto:
+              19 |    cs = 110
+        >>>   20 | elif(s==3):
+              21 |    cs = 170
+
+  [2] Linha 28: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 28) / elif ... sem else
+      Contexto:
+              27 |    cb = 70
+        >>>   28 | elif(b==3):
+              29 |    cb = 100
+
+  [3] Linha 12: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 12) / elif ... sem else
+      Contexto:
+              11 |    cp = 230
+        >>>   12 | elif(p==3):
+              13 |    cp = 250
+
+▶ E1 — Verificação desnecessária de todas as combinações possíveis
+  Ocorrências: 1
+
+  [1] Linha 5: 6 condições em um único if — verificação excessiva
+      Trecho  : p < 1 or p > 4 or s < 1 or (s > 4) or (b < 1) or (b > 4)
+      Contexto:
+               4 | 
+        >>>    5 | if (p<1 or p>4 or s<1 or s>4 or b<1 or b>4):
+               6 | 	print("Entradas: ", p, ", ", s, ", ", b)
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 16
+
+  [1] Linha 1: Variável 'p' com nome muito curto (≤4 chars)
+      Trecho  : p = ...
+      Contexto:
+        >>>    1 | p = int(input("numero do prato: "))
+               2 | s = int(input("numero da sobremesa: "))
+
+  [2] Linha 2: Variável 's' com nome muito curto (≤4 chars)
+      Trecho  : s = ...
+      Contexto:
+               1 | p = int(input("numero do prato: "))
+        >>>    2 | s = int(input("numero da sobremesa: "))
+               3 | b = int(input("numero da bebida: "))
+
+  [3] Linha 3: Variável 'b' com nome muito curto (≤4 chars)
+      Trecho  : b = ...
+      Contexto:
+               2 | s = int(input("numero da sobremesa: "))
+        >>>    3 | b = int(input("numero da bebida: "))
+               4 | 
+
+  [4] Linha 32: Variável 'c' com nome muito curto (≤4 chars)
+      Trecho  : c = ...
+      Contexto:
+              31 |    cb = 65
+        >>>   32 | c = cp + cs + cb
+              33 | print("Entradas: ", p, ", ", s, ", ", b)
+
+  [5] Linha 17: Variável 'cs' com nome muito curto (≤4 chars)
+      Trecho  : cs = ...
+      Contexto:
+              16 | if(s==1):
+        >>>   17 |    cs = 75
+              18 | elif(s==2):
+
+  [6] Linha 25: Variável 'cb' com nome muito curto (≤4 chars)
+      Trecho  : cb = ...
+      Contexto:
+              24 | if(b==1):
+        >>>   25 |    cb = 20
+              26 | elif(b==2):
+
+  [7] Linha 9: Variável 'cp' com nome muito curto (≤4 chars)
+      Trecho  : cp = ...
+      Contexto:
+               8 | elif(p==1):
+        >>>    9 |    cp = 180
+              10 | elif(p==2):
+
+  [8] Linha 19: Variável 'cs' com nome muito curto (≤4 chars)
+      Trecho  : cs = ...
+      Contexto:
+              18 | elif(s==2):
+        >>>   19 |    cs = 110
+              20 | elif(s==3):
+
+  [9] Linha 27: Variável 'cb' com nome muito curto (≤4 chars)
+      Trecho  : cb = ...
+      Contexto:
+              26 | elif(b==2):
+        >>>   27 |    cb = 70
+              28 | elif(b==3):
+
+  [10] Linha 11: Variável 'cp' com nome muito curto (≤4 chars)
+      Trecho  : cp = ...
+      Contexto:
+              10 | elif(p==2):
+        >>>   11 |    cp = 230
+              12 | elif(p==3):
+
+  [11] Linha 21: Variável 'cs' com nome muito curto (≤4 chars)
+      Trecho  : cs = ...
+      Contexto:
+              20 | elif(s==3):
+        >>>   21 |    cs = 170
+              22 | elif(s==4):
+
+  [12] Linha 29: Variável 'cb' com nome muito curto (≤4 chars)
+      Trecho  : cb = ...
+      Contexto:
+              28 | elif(b==3):
+        >>>   29 |    cb = 100
+              30 | elif(b==4):
+
+  [13] Linha 13: Variável 'cp' com nome muito curto (≤4 chars)
+      Trecho  : cp = ...
+      Contexto:
+              12 | elif(p==3):
+        >>>   13 |    cp = 250
+              14 | elif(p==4):
+
+  [14] Linha 23: Variável 'cs' com nome muito curto (≤4 chars)
+      Trecho  : cs = ...
+      Contexto:
+              22 | elif(s==4):
+        >>>   23 |    cs = 200
+              24 | if(b==1):
+
+  [15] Linha 31: Variável 'cb' com nome muito curto (≤4 chars)
+      Trecho  : cb = ...
+      Contexto:
+              30 | elif(b==4):
+        >>>   31 |    cb = 65
+              32 | c = cp + cs + cb
+
+  [16] Linha 15: Variável 'cp' com nome muito curto (≤4 chars)
+      Trecho  : cp = ...
+      Contexto:
+              14 | elif(p==4):
+        >>>   15 |    cp = 350
+              16 | if(s==1):
+
+======================================================================

@@ -1,0 +1,97 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1619_2807.py
+Questão  : 1619
+Aluno    : 2807
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import *
+     2 | 
+     3 | y= array(eval(input()))
+     4 | x= array(eval(input()))
+     5 | 
+     6 | z = arange(size(x))
+     7 | 
+     8 | i = 0
+     9 | 
+    10 | while(i < size(x)):
+    11 | 	if(x[i] == "QUENTE"):
+    12 | 		z[i] = y[i] * 90
+    13 | 	elif(x[i] == "MORNO"):
+    14 | 		z[i] = y[i] * 45
+    15 | 	elif(x[i] == "FRIO"):
+    16 | 		z[i] = y[i] * 0
+    17 | 	i += 1
+    18 | 	
+    19 | p = sum(z)
+    20 | 
+    21 | p = p * 0.005
+    22 | 
+    23 | print(round(p, 2))
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 13: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 13) / elif ... sem else
+      Contexto:
+              12 | 		z[i] = y[i] * 90
+        >>>   13 | 	elif(x[i] == "MORNO"):
+              14 | 		z[i] = y[i] * 45
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 6
+
+  [1] Linha 3: Variável 'y' com nome muito curto (≤4 chars)
+      Trecho  : y = ...
+      Contexto:
+               2 | 
+        >>>    3 | y= array(eval(input()))
+               4 | x= array(eval(input()))
+
+  [2] Linha 4: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+               3 | y= array(eval(input()))
+        >>>    4 | x= array(eval(input()))
+               5 | 
+
+  [3] Linha 6: Variável 'z' com nome muito curto (≤4 chars)
+      Trecho  : z = ...
+      Contexto:
+               5 | 
+        >>>    6 | z = arange(size(x))
+               7 | 
+
+  [4] Linha 8: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+               7 | 
+        >>>    8 | i = 0
+               9 | 
+
+  [5] Linha 19: Variável 'p' com nome muito curto (≤4 chars)
+      Trecho  : p = ...
+      Contexto:
+              18 | 	
+        >>>   19 | p = sum(z)
+              20 | 
+
+  [6] Linha 21: Variável 'p' com nome muito curto (≤4 chars)
+      Trecho  : p = ...
+      Contexto:
+              20 | 
+        >>>   21 | p = p * 0.005
+              22 | 
+
+======================================================================

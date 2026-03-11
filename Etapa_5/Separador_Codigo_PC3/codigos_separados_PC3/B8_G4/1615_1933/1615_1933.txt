@@ -1,0 +1,106 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1615_1933.py
+Questão  : 1615
+Aluno    : 1933
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | vet1 = (array(eval(input("primeiro jogador:"))))
+     3 | vet2 = (array(eval(input("segundo jogador:"))))
+     4 | i = 0
+     5 | 
+     6 | while(size(vet1) > i):
+     7 | 	if(vet1[i] == 1):
+     8 | 		vet1[i] = 40
+     9 | 	elif(vet1[i] == 2):
+    10 | 		vet1[i] = 20
+    11 | 	elif(vet1[i] == 3):
+    12 | 		vet1[i] = 10
+    13 | 	elif(vet1[i] == 4):
+    14 | 		vet1[i] = 0
+    15 | 	if(vet2[i] == 1):
+    16 | 		vet2[i] = 40
+    17 | 	elif(vet2[i] == 2):
+    18 | 		vet2[i] = 20
+    19 | 	elif(vet2[i] == 3):
+    20 | 		vet2[i] = 10
+    21 | 	elif(vet2[i] == 4):
+    22 | 		vet2[i] = 0
+    23 | 	
+    24 | 	i = i + 1
+    25 | if(sum(vet1) > sum(vet2)):
+    26 | 	print("JOGADOR UM")
+    27 | elif(sum(vet2) > sum(vet1)):
+    28 | 	print("JOGADOR DOIS")
+    29 | elif(sum(vet1) == sum(vet2)):
+    30 | 	print("EMPATE")
+    31 | 
+    32 | 	
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 3
+
+  [1] Linha 27: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 27) / elif ... sem else
+      Contexto:
+              26 | 	print("JOGADOR UM")
+        >>>   27 | elif(sum(vet2) > sum(vet1)):
+              28 | 	print("JOGADOR DOIS")
+
+  [2] Linha 11: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 11) / elif ... sem else
+      Contexto:
+              10 | 		vet1[i] = 20
+        >>>   11 | 	elif(vet1[i] == 3):
+              12 | 		vet1[i] = 10
+
+  [3] Linha 19: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 19) / elif ... sem else
+      Contexto:
+              18 | 		vet2[i] = 20
+        >>>   19 | 	elif(vet2[i] == 3):
+              20 | 		vet2[i] = 10
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 4
+
+  [1] Linha 2: Variável 'vet1' com nome muito curto (≤4 chars)
+      Trecho  : vet1 = ...
+      Contexto:
+               1 | from numpy import*
+        >>>    2 | vet1 = (array(eval(input("primeiro jogador:"))))
+               3 | vet2 = (array(eval(input("segundo jogador:"))))
+
+  [2] Linha 3: Variável 'vet2' com nome muito curto (≤4 chars)
+      Trecho  : vet2 = ...
+      Contexto:
+               2 | vet1 = (array(eval(input("primeiro jogador:"))))
+        >>>    3 | vet2 = (array(eval(input("segundo jogador:"))))
+               4 | i = 0
+
+  [3] Linha 4: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+               3 | vet2 = (array(eval(input("segundo jogador:"))))
+        >>>    4 | i = 0
+               5 | 
+
+  [4] Linha 24: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+              23 | 	
+        >>>   24 | 	i = i + 1
+              25 | if(sum(vet1) > sum(vet2)):
+
+======================================================================

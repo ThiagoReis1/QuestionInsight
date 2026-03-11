@@ -1,0 +1,46 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1727_3499.py
+Questão  : 1727
+Aluno    : 3499
+Total MCs: 1
+
+⚠️  Misconceptions detectados: A3
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | from numpy.linalg import*
+     3 | m = array(eval(input('Matriz: ')))
+     4 | lin = shape(m)[0]
+     5 | col = shape(m)[1]
+     6 | maior = 0
+     7 | indice = 0
+     8 | for i in range(lin):
+     9 |     for j in range(col):
+    10 |       if m[i][j] > maior:
+    11 |             indice = i
+    12 |             maior = m[i][j]
+    13 |       else:
+    14 |             j += 1
+    15 | print(maior)    			
+    16 |        
+    17 | 		 
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 1
+
+  [1] Linha 7: Variável 'indice' declarada mas nunca utilizada
+      Trecho  : indice = ...
+      Contexto:
+               6 | maior = 0
+        >>>    7 | indice = 0
+               8 | for i in range(lin):
+
+======================================================================

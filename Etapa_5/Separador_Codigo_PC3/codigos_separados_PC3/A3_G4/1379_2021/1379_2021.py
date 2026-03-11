@@ -1,0 +1,5 @@
+a=float(input("estimativa de carros"))
+b=float(input("comprimento do primeiro cateto"))
+c=float(input("comprimento do segundo cateto"))
+area=(0.5*40.0*30.0/2)
+print(area)

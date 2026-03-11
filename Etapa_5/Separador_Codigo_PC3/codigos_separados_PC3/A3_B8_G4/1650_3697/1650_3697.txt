@@ -1,0 +1,184 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1650_3697.py
+Questão  : 1650
+Aluno    : 3697
+Total MCs: 3
+
+⚠️  Misconceptions detectados: A3, B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | 
+     3 | n=input().split(",")
+     4 | k=zeros(5,dtype=int)
+     5 | p=0
+     6 | c=0
+     7 | r=0
+     8 | l=0
+     9 | b=0
+    10 | i=0
+    11 | for elemento in n:
+    12 | 	if(elemento=='P'):
+    13 | 		p=p+1
+    14 | 	elif(elemento=='C'):
+    15 | 		c=c+1
+    16 | 	elif(elemento=='R'):
+    17 | 		r=r+1
+    18 | 	elif(elemento=='L'):
+    19 | 		l=l+1
+    20 | 	elif(elemento=='B'):
+    21 | 		b=b+1	
+    22 | m1=max(p,c,r)
+    23 | m2=max(r,l,b)
+    24 | if(m1>m2):
+    25 | 	print(m1)
+    26 | else:
+    27 | 	print(m2)
+    28 | k=array([p,c,r,l,b])
+    29 | print(k)
+    30 | 	
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 1
+
+  [1] Linha 10: Variável 'i' declarada mas nunca utilizada
+      Trecho  : i = ...
+      Contexto:
+               9 | b=0
+        >>>   10 | i=0
+              11 | for elemento in n:
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 18: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 18) / elif ... sem else
+      Contexto:
+              17 | 		r=r+1
+        >>>   18 | 	elif(elemento=='L'):
+              19 | 		l=l+1
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 16
+
+  [1] Linha 3: Variável 'n' com nome muito curto (≤4 chars)
+      Trecho  : n = ...
+      Contexto:
+               2 | 
+        >>>    3 | n=input().split(",")
+               4 | k=zeros(5,dtype=int)
+
+  [2] Linha 4: Variável 'k' com nome muito curto (≤4 chars)
+      Trecho  : k = ...
+      Contexto:
+               3 | n=input().split(",")
+        >>>    4 | k=zeros(5,dtype=int)
+               5 | p=0
+
+  [3] Linha 5: Variável 'p' com nome muito curto (≤4 chars)
+      Trecho  : p = ...
+      Contexto:
+               4 | k=zeros(5,dtype=int)
+        >>>    5 | p=0
+               6 | c=0
+
+  [4] Linha 6: Variável 'c' com nome muito curto (≤4 chars)
+      Trecho  : c = ...
+      Contexto:
+               5 | p=0
+        >>>    6 | c=0
+               7 | r=0
+
+  [5] Linha 7: Variável 'r' com nome muito curto (≤4 chars)
+      Trecho  : r = ...
+      Contexto:
+               6 | c=0
+        >>>    7 | r=0
+               8 | l=0
+
+  [6] Linha 8: Variável 'l' com nome muito curto (≤4 chars)
+      Trecho  : l = ...
+      Contexto:
+               7 | r=0
+        >>>    8 | l=0
+               9 | b=0
+
+  [7] Linha 9: Variável 'b' com nome muito curto (≤4 chars)
+      Trecho  : b = ...
+      Contexto:
+               8 | l=0
+        >>>    9 | b=0
+              10 | i=0
+
+  [8] Linha 10: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+               9 | b=0
+        >>>   10 | i=0
+              11 | for elemento in n:
+
+  [9] Linha 22: Variável 'm1' com nome muito curto (≤4 chars)
+      Trecho  : m1 = ...
+      Contexto:
+              21 | 		b=b+1	
+        >>>   22 | m1=max(p,c,r)
+              23 | m2=max(r,l,b)
+
+  [10] Linha 23: Variável 'm2' com nome muito curto (≤4 chars)
+      Trecho  : m2 = ...
+      Contexto:
+              22 | m1=max(p,c,r)
+        >>>   23 | m2=max(r,l,b)
+              24 | if(m1>m2):
+
+  [11] Linha 28: Variável 'k' com nome muito curto (≤4 chars)
+      Trecho  : k = ...
+      Contexto:
+              27 | 	print(m2)
+        >>>   28 | k=array([p,c,r,l,b])
+              29 | print(k)
+
+  [12] Linha 13: Variável 'p' com nome muito curto (≤4 chars)
+      Trecho  : p = ...
+      Contexto:
+              12 | 	if(elemento=='P'):
+        >>>   13 | 		p=p+1
+              14 | 	elif(elemento=='C'):
+
+  [13] Linha 15: Variável 'c' com nome muito curto (≤4 chars)
+      Trecho  : c = ...
+      Contexto:
+              14 | 	elif(elemento=='C'):
+        >>>   15 | 		c=c+1
+              16 | 	elif(elemento=='R'):
+
+  [14] Linha 17: Variável 'r' com nome muito curto (≤4 chars)
+      Trecho  : r = ...
+      Contexto:
+              16 | 	elif(elemento=='R'):
+        >>>   17 | 		r=r+1
+              18 | 	elif(elemento=='L'):
+
+  [15] Linha 19: Variável 'l' com nome muito curto (≤4 chars)
+      Trecho  : l = ...
+      Contexto:
+              18 | 	elif(elemento=='L'):
+        >>>   19 | 		l=l+1
+              20 | 	elif(elemento=='B'):
+
+  [16] Linha 21: Variável 'b' com nome muito curto (≤4 chars)
+      Trecho  : b = ...
+      Contexto:
+              20 | 	elif(elemento=='B'):
+        >>>   21 | 		b=b+1	
+              22 | m1=max(p,c,r)
+
+======================================================================

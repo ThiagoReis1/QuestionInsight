@@ -1,0 +1,107 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1619_4188.py
+Questão  : 1619
+Aluno    : 4188
+Total MCs: 2
+
+⚠️  Misconceptions detectados: A3, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import *
+     2 | a = array(eval(input("tempo: ")))
+     3 | b=zeros(size(a), dtype=int)
+     4 | c=0
+     5 | for i in a:
+     6 | 	if ( i != 1):
+     7 | 		c = c + 1
+     8 | d = zeros(c, dtype = int)
+     9 | e =0
+    10 | for i in a:
+    11 | 	if (i!= 1):
+    12 | 		b[e] = a[i]
+    13 | 		e = e + 1
+    14 | 	else:
+    15 | 		b[c] = 1
+    16 | 		c = c + 1
+    17 | 
+    18 | 
+    19 | 	
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 1
+
+  [1] Linha 8: Variável 'd' declarada mas nunca utilizada
+      Trecho  : d = ...
+      Contexto:
+               7 | 		c = c + 1
+        >>>    8 | d = zeros(c, dtype = int)
+               9 | e =0
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 8
+
+  [1] Linha 2: Variável 'a' com nome muito curto (≤4 chars)
+      Trecho  : a = ...
+      Contexto:
+               1 | from numpy import *
+        >>>    2 | a = array(eval(input("tempo: ")))
+               3 | b=zeros(size(a), dtype=int)
+
+  [2] Linha 3: Variável 'b' com nome muito curto (≤4 chars)
+      Trecho  : b = ...
+      Contexto:
+               2 | a = array(eval(input("tempo: ")))
+        >>>    3 | b=zeros(size(a), dtype=int)
+               4 | c=0
+
+  [3] Linha 4: Variável 'c' com nome muito curto (≤4 chars)
+      Trecho  : c = ...
+      Contexto:
+               3 | b=zeros(size(a), dtype=int)
+        >>>    4 | c=0
+               5 | for i in a:
+
+  [4] Linha 8: Variável 'd' com nome muito curto (≤4 chars)
+      Trecho  : d = ...
+      Contexto:
+               7 | 		c = c + 1
+        >>>    8 | d = zeros(c, dtype = int)
+               9 | e =0
+
+  [5] Linha 9: Variável 'e' com nome muito curto (≤4 chars)
+      Trecho  : e = ...
+      Contexto:
+               8 | d = zeros(c, dtype = int)
+        >>>    9 | e =0
+              10 | for i in a:
+
+  [6] Linha 7: Variável 'c' com nome muito curto (≤4 chars)
+      Trecho  : c = ...
+      Contexto:
+               6 | 	if ( i != 1):
+        >>>    7 | 		c = c + 1
+               8 | d = zeros(c, dtype = int)
+
+  [7] Linha 13: Variável 'e' com nome muito curto (≤4 chars)
+      Trecho  : e = ...
+      Contexto:
+              12 | 		b[e] = a[i]
+        >>>   13 | 		e = e + 1
+              14 | 	else:
+
+  [8] Linha 16: Variável 'c' com nome muito curto (≤4 chars)
+      Trecho  : c = ...
+      Contexto:
+              15 | 		b[c] = 1
+        >>>   16 | 		c = c + 1
+              17 | 
+
+======================================================================

@@ -1,0 +1,94 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1115_1242.py
+Questão  : 1115
+Aluno    : 1242
+Total MCs: 2
+
+⚠️  Misconceptions detectados: A3, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | sa = float(input("Digite o salario:")) 
+     2 | co = int(input("Digite o codigo:"))
+     3 | print("Entradas: R$", sa ,"e codigo", co)
+     4 | r = ((sa+0.80+10.20) or (sa+0.65+10.20) or (sa+17.80+17.20) or (sa+0.55+14.20))
+     5 | if co == "101":
+     6 | 	r = sa+0.80+10.120
+     7 | 	print("Novo salario: R$", r)
+     8 | elif co == "102":
+     9 | 	r = sa+0.65+10.20
+    10 | 	print("Novo salario: R$", r)
+    11 | elif co == "103":
+    12 | 	r = sa+17.80+17.20
+    13 | 	print("Novo salario: R$", r)
+    14 | elif co == "104":
+    15 | 	r = sa+0.55+10.20
+    16 | 	print("Novo salario: R$", r)
+    17 | else:
+    18 | 	print("Entradas: R$", r,"e codigo", co)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 1
+
+  [1] Linha 0: A3 detectado pelo VisitorMC3 (localização exata não mapeada)
+      Trecho  : —
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 7
+
+  [1] Linha 1: Variável 'sa' com nome muito curto (≤4 chars)
+      Trecho  : sa = ...
+      Contexto:
+        >>>    1 | sa = float(input("Digite o salario:")) 
+               2 | co = int(input("Digite o codigo:"))
+
+  [2] Linha 2: Variável 'co' com nome muito curto (≤4 chars)
+      Trecho  : co = ...
+      Contexto:
+               1 | sa = float(input("Digite o salario:")) 
+        >>>    2 | co = int(input("Digite o codigo:"))
+               3 | print("Entradas: R$", sa ,"e codigo", co)
+
+  [3] Linha 4: Variável 'r' com nome muito curto (≤4 chars)
+      Trecho  : r = ...
+      Contexto:
+               3 | print("Entradas: R$", sa ,"e codigo", co)
+        >>>    4 | r = ((sa+0.80+10.20) or (sa+0.65+10.20) or (sa+17.80+17.20) or (sa+0.55+14.20))
+               5 | if co == "101":
+
+  [4] Linha 6: Variável 'r' com nome muito curto (≤4 chars)
+      Trecho  : r = ...
+      Contexto:
+               5 | if co == "101":
+        >>>    6 | 	r = sa+0.80+10.120
+               7 | 	print("Novo salario: R$", r)
+
+  [5] Linha 9: Variável 'r' com nome muito curto (≤4 chars)
+      Trecho  : r = ...
+      Contexto:
+               8 | elif co == "102":
+        >>>    9 | 	r = sa+0.65+10.20
+              10 | 	print("Novo salario: R$", r)
+
+  [6] Linha 12: Variável 'r' com nome muito curto (≤4 chars)
+      Trecho  : r = ...
+      Contexto:
+              11 | elif co == "103":
+        >>>   12 | 	r = sa+17.80+17.20
+              13 | 	print("Novo salario: R$", r)
+
+  [7] Linha 15: Variável 'r' com nome muito curto (≤4 chars)
+      Trecho  : r = ...
+      Contexto:
+              14 | elif co == "104":
+        >>>   15 | 	r = sa+0.55+10.20
+              16 | 	print("Novo salario: R$", r)
+
+======================================================================

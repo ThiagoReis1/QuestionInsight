@@ -1,0 +1,82 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1110_1387.py
+Questão  : 1110
+Aluno    : 1387
+Total MCs: 3
+
+⚠️  Misconceptions detectados: A3, B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | X=float(input("qual o prato?"))
+     2 | Y=float(input("qual a sobremesa?"))
+     3 | Z=float(input("qual a bebida?"))
+     4 | if(x == "1 Vegetariano" and y == "1 Abacaxi" and z == "1 Cha"):
+     5 |  print("")
+     6 | elif(x == "2 Peixe" and y == " 2 Sorvete diet" and z == "2 Suco de Laranja"):
+     7 |   print("Ilha do Dragão")
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 3
+
+  [1] Linha 1: Variável 'X' declarada mas nunca utilizada
+      Trecho  : X = ...
+      Contexto:
+        >>>    1 | X=float(input("qual o prato?"))
+               2 | Y=float(input("qual a sobremesa?"))
+
+  [2] Linha 2: Variável 'Y' declarada mas nunca utilizada
+      Trecho  : Y = ...
+      Contexto:
+               1 | X=float(input("qual o prato?"))
+        >>>    2 | Y=float(input("qual a sobremesa?"))
+               3 | Z=float(input("qual a bebida?"))
+
+  [3] Linha 3: Variável 'Z' declarada mas nunca utilizada
+      Trecho  : Z = ...
+      Contexto:
+               2 | Y=float(input("qual a sobremesa?"))
+        >>>    3 | Z=float(input("qual a bebida?"))
+               4 | if(x == "1 Vegetariano" and y == "1 Abacaxi" and z == "1 Cha"):
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 4: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 4) / elif ... sem else
+      Contexto:
+               3 | Z=float(input("qual a bebida?"))
+        >>>    4 | if(x == "1 Vegetariano" and y == "1 Abacaxi" and z == "1 Cha"):
+               5 |  print("")
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 3
+
+  [1] Linha 1: Variável 'X' com nome muito curto (≤4 chars)
+      Trecho  : X = ...
+      Contexto:
+        >>>    1 | X=float(input("qual o prato?"))
+               2 | Y=float(input("qual a sobremesa?"))
+
+  [2] Linha 2: Variável 'Y' com nome muito curto (≤4 chars)
+      Trecho  : Y = ...
+      Contexto:
+               1 | X=float(input("qual o prato?"))
+        >>>    2 | Y=float(input("qual a sobremesa?"))
+               3 | Z=float(input("qual a bebida?"))
+
+  [3] Linha 3: Variável 'Z' com nome muito curto (≤4 chars)
+      Trecho  : Z = ...
+      Contexto:
+               2 | Y=float(input("qual a sobremesa?"))
+        >>>    3 | Z=float(input("qual a bebida?"))
+               4 | if(x == "1 Vegetariano" and y == "1 Abacaxi" and z == "1 Cha"):
+
+======================================================================

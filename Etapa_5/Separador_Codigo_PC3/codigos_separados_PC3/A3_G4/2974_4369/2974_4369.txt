@@ -1,0 +1,108 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 2974_4369.py
+Questão  : 2974
+Aluno    : 4369
+Total MCs: 2
+
+⚠️  Misconceptions detectados: A3, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | qac = float(input("Digite a quantidade de acai em gramas: "))
+     2 | qs = int(input("Digite a quantidade de salgados: "))
+     3 | vd = float(input("Digite o valor em dinheiro: "))
+     4 | ps = 3.0 #preço do salgado
+     5 | aKG = 24.0  #preço do kg do açaí
+     6 | t = vd - (((24.0*qac) / 1000)) + (qs*3.0)
+     7 | if(t > 0):
+     8 | 	m = "Sim"
+     9 | 	print(round(t, 2))
+    10 | 	print(m)
+    11 | else:
+    12 | 	m = "Nao"
+    13 | 	print(m)
+    14 | 	
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 2
+
+  [1] Linha 4: Variável 'ps' declarada mas nunca utilizada
+      Trecho  : ps = ...
+      Contexto:
+               3 | vd = float(input("Digite o valor em dinheiro: "))
+        >>>    4 | ps = 3.0 #preço do salgado
+               5 | aKG = 24.0  #preço do kg do açaí
+
+  [2] Linha 5: Variável 'aKG' declarada mas nunca utilizada
+      Trecho  : aKG = ...
+      Contexto:
+               4 | ps = 3.0 #preço do salgado
+        >>>    5 | aKG = 24.0  #preço do kg do açaí
+               6 | t = vd - (((24.0*qac) / 1000)) + (qs*3.0)
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 8
+
+  [1] Linha 1: Variável 'qac' com nome muito curto (≤4 chars)
+      Trecho  : qac = ...
+      Contexto:
+        >>>    1 | qac = float(input("Digite a quantidade de acai em gramas: "))
+               2 | qs = int(input("Digite a quantidade de salgados: "))
+
+  [2] Linha 2: Variável 'qs' com nome muito curto (≤4 chars)
+      Trecho  : qs = ...
+      Contexto:
+               1 | qac = float(input("Digite a quantidade de acai em gramas: "))
+        >>>    2 | qs = int(input("Digite a quantidade de salgados: "))
+               3 | vd = float(input("Digite o valor em dinheiro: "))
+
+  [3] Linha 3: Variável 'vd' com nome muito curto (≤4 chars)
+      Trecho  : vd = ...
+      Contexto:
+               2 | qs = int(input("Digite a quantidade de salgados: "))
+        >>>    3 | vd = float(input("Digite o valor em dinheiro: "))
+               4 | ps = 3.0 #preço do salgado
+
+  [4] Linha 4: Variável 'ps' com nome muito curto (≤4 chars)
+      Trecho  : ps = ...
+      Contexto:
+               3 | vd = float(input("Digite o valor em dinheiro: "))
+        >>>    4 | ps = 3.0 #preço do salgado
+               5 | aKG = 24.0  #preço do kg do açaí
+
+  [5] Linha 5: Variável 'aKG' com nome muito curto (≤4 chars)
+      Trecho  : aKG = ...
+      Contexto:
+               4 | ps = 3.0 #preço do salgado
+        >>>    5 | aKG = 24.0  #preço do kg do açaí
+               6 | t = vd - (((24.0*qac) / 1000)) + (qs*3.0)
+
+  [6] Linha 6: Variável 't' com nome muito curto (≤4 chars)
+      Trecho  : t = ...
+      Contexto:
+               5 | aKG = 24.0  #preço do kg do açaí
+        >>>    6 | t = vd - (((24.0*qac) / 1000)) + (qs*3.0)
+               7 | if(t > 0):
+
+  [7] Linha 8: Variável 'm' com nome muito curto (≤4 chars)
+      Trecho  : m = ...
+      Contexto:
+               7 | if(t > 0):
+        >>>    8 | 	m = "Sim"
+               9 | 	print(round(t, 2))
+
+  [8] Linha 12: Variável 'm' com nome muito curto (≤4 chars)
+      Trecho  : m = ...
+      Contexto:
+              11 | else:
+        >>>   12 | 	m = "Nao"
+              13 | 	print(m)
+
+======================================================================

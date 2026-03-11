@@ -1,0 +1,81 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1619_2426.py
+Questão  : 1619
+Aluno    : 2426
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import *
+     2 | t = array(eval(input("tempo: ")))
+     3 | modo = array(eval(input("modo: ")))
+     4 | i = 0
+     5 | v = 0
+     6 | while((i != size(t)) and (i != size(modo))):
+     7 | 	if(modo[i] == 'QUENTE'):
+     8 | 		v += t[i] * 90 * 0.005
+     9 | 	elif(modo[i] == 'MORNO'):
+    10 | 		v += t[i] * 45 * 0.005
+    11 | 	elif(modo[i] == 'FRIO'):
+    12 | 		v += t[i] * 0 * 0.005
+    13 | 	i = i + 1
+    14 | print(round(v, 2))
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 9: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 9) / elif ... sem else
+      Contexto:
+               8 | 		v += t[i] * 90 * 0.005
+        >>>    9 | 	elif(modo[i] == 'MORNO'):
+              10 | 		v += t[i] * 45 * 0.005
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 5
+
+  [1] Linha 2: Variável 't' com nome muito curto (≤4 chars)
+      Trecho  : t = ...
+      Contexto:
+               1 | from numpy import *
+        >>>    2 | t = array(eval(input("tempo: ")))
+               3 | modo = array(eval(input("modo: ")))
+
+  [2] Linha 3: Variável 'modo' com nome muito curto (≤4 chars)
+      Trecho  : modo = ...
+      Contexto:
+               2 | t = array(eval(input("tempo: ")))
+        >>>    3 | modo = array(eval(input("modo: ")))
+               4 | i = 0
+
+  [3] Linha 4: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+               3 | modo = array(eval(input("modo: ")))
+        >>>    4 | i = 0
+               5 | v = 0
+
+  [4] Linha 5: Variável 'v' com nome muito curto (≤4 chars)
+      Trecho  : v = ...
+      Contexto:
+               4 | i = 0
+        >>>    5 | v = 0
+               6 | while((i != size(t)) and (i != size(modo))):
+
+  [5] Linha 13: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+              12 | 		v += t[i] * 0 * 0.005
+        >>>   13 | 	i = i + 1
+              14 | print(round(v, 2))
+
+======================================================================

@@ -1,0 +1,182 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1117_1482.py
+Questão  : 1117
+Aluno    : 1482
+Total MCs: 3
+
+⚠️  Misconceptions detectados: A3, B4, B8
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | ent = float(input("preço normal da entrada:"))
+     2 | dds = int(input("dia da semana:"))
+     3 | mav = input("Eh dia de música ao vivo? (S/N):")
+     4 | print("Entradas:", round(ent,2),",",dds,",",mav)
+     5 | ent_desc =(ent*0.25)
+     6 | if (dds>=1) and (dds<=7):
+     7 | 	if(mav == "S"):
+     8 | 		if (dds ==1):
+     9 | 			precoent = ent
+    10 | 		elif (dds ==2):
+    11 | 			precoent = ent - ent_desc
+    12 | 		elif (dds ==3):
+    13 | 			precoent = ent - ent_desc
+    14 | 		elif (dds ==4):
+    15 | 			precoent = ent
+    16 | 		elif (dds ==5):
+    17 | 			precoent = ent - ent_desc
+    18 | 		elif (dds ==6):
+    19 | 			precoent = ent
+    20 | 		elif (dds ==7):
+    21 | 			precoent = ent
+    22 | 		print("Valor a pagar: R$",round(ent_desc,2)+20)
+    23 | 	else:
+    24 | 		print("Valor a pagar: R$",round(ent_desc,2))
+    25 | else:
+    26 | 	print("Dados invalidos")
+    27 | 
+    28 | 	
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 1
+
+  [1] Linha 9: Variável 'precoent' declarada mas nunca utilizada
+      Trecho  : precoent = ...
+      Contexto:
+               8 | 		if (dds ==1):
+        >>>    9 | 			precoent = ent
+              10 | 		elif (dds ==2):
+
+▶ B4 — Comandos repetidos dentro de blocos if-elif-else
+  Ocorrências: 16
+
+  [1] Linha 12: Bloco idêntico ao da linha 10
+      Trecho  : precoent = ent - ent_desc
+      Contexto:
+              11 | 			precoent = ent - ent_desc
+        >>>   12 | 		elif (dds ==3):
+              13 | 			precoent = ent - ent_desc
+
+  [2] Linha 14: Bloco idêntico ao da linha 8
+      Trecho  : precoent = ent
+      Contexto:
+              13 | 			precoent = ent - ent_desc
+        >>>   14 | 		elif (dds ==4):
+              15 | 			precoent = ent
+
+  [3] Linha 16: Bloco idêntico ao da linha 10
+      Trecho  : precoent = ent - ent_desc
+      Contexto:
+              15 | 			precoent = ent
+        >>>   16 | 		elif (dds ==5):
+              17 | 			precoent = ent - ent_desc
+
+  [4] Linha 18: Bloco idêntico ao da linha 8
+      Trecho  : precoent = ent
+      Contexto:
+              17 | 			precoent = ent - ent_desc
+        >>>   18 | 		elif (dds ==6):
+              19 | 			precoent = ent
+
+  [5] Linha 20: Bloco idêntico ao da linha 8
+      Trecho  : precoent = ent
+      Contexto:
+              19 | 			precoent = ent
+        >>>   20 | 		elif (dds ==7):
+              21 | 			precoent = ent
+
+  [6] Linha 12: Bloco idêntico ao da linha 10
+      Trecho  : precoent = ent - ent_desc
+      Contexto:
+              11 | 			precoent = ent - ent_desc
+        >>>   12 | 		elif (dds ==3):
+              13 | 			precoent = ent - ent_desc
+
+  [7] Linha 16: Bloco idêntico ao da linha 10
+      Trecho  : precoent = ent - ent_desc
+      Contexto:
+              15 | 			precoent = ent
+        >>>   16 | 		elif (dds ==5):
+              17 | 			precoent = ent - ent_desc
+
+  [8] Linha 18: Bloco idêntico ao da linha 14
+      Trecho  : precoent = ent
+      Contexto:
+              17 | 			precoent = ent - ent_desc
+        >>>   18 | 		elif (dds ==6):
+              19 | 			precoent = ent
+
+  [9] Linha 20: Bloco idêntico ao da linha 14
+      Trecho  : precoent = ent
+      Contexto:
+              19 | 			precoent = ent
+        >>>   20 | 		elif (dds ==7):
+              21 | 			precoent = ent
+
+  [10] Linha 16: Bloco idêntico ao da linha 12
+      Trecho  : precoent = ent - ent_desc
+      Contexto:
+              15 | 			precoent = ent
+        >>>   16 | 		elif (dds ==5):
+              17 | 			precoent = ent - ent_desc
+
+  [11] Linha 18: Bloco idêntico ao da linha 14
+      Trecho  : precoent = ent
+      Contexto:
+              17 | 			precoent = ent - ent_desc
+        >>>   18 | 		elif (dds ==6):
+              19 | 			precoent = ent
+
+  [12] Linha 20: Bloco idêntico ao da linha 14
+      Trecho  : precoent = ent
+      Contexto:
+              19 | 			precoent = ent
+        >>>   20 | 		elif (dds ==7):
+              21 | 			precoent = ent
+
+  [13] Linha 18: Bloco idêntico ao da linha 14
+      Trecho  : precoent = ent
+      Contexto:
+              17 | 			precoent = ent - ent_desc
+        >>>   18 | 		elif (dds ==6):
+              19 | 			precoent = ent
+
+  [14] Linha 20: Bloco idêntico ao da linha 14
+      Trecho  : precoent = ent
+      Contexto:
+              19 | 			precoent = ent
+        >>>   20 | 		elif (dds ==7):
+              21 | 			precoent = ent
+
+  [15] Linha 20: Bloco idêntico ao da linha 18
+      Trecho  : precoent = ent
+      Contexto:
+              19 | 			precoent = ent
+        >>>   20 | 		elif (dds ==7):
+              21 | 			precoent = ent
+
+  [16] Linha 20: Bloco idêntico ao da linha 18
+      Trecho  : precoent = ent
+      Contexto:
+              19 | 			precoent = ent
+        >>>   20 | 		elif (dds ==7):
+              21 | 			precoent = ent
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 18: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 18) / elif ... sem else
+      Contexto:
+              17 | 			precoent = ent - ent_desc
+        >>>   18 | 		elif (dds ==6):
+              19 | 			precoent = ent
+
+======================================================================

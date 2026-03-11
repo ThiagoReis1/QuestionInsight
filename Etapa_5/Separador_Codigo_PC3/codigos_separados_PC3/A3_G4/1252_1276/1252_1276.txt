@@ -1,0 +1,135 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1252_1276.py
+Questão  : 1252
+Aluno    : 1276
+Total MCs: 2
+
+⚠️  Misconceptions detectados: A3, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | from math import*
+     3 | v = array(eval(input("Digite o vetor: ")))
+     4 | res = array(zeros(2, dtype=int))
+     5 | A = 0
+     6 | B = 0
+     7 | for x in v:
+     8 | 	if(x==min(v)):
+     9 | 		A = x
+    10 | 	if(x==max(v)):
+    11 | 		B = x
+    12 | C = (0.6*A)+(0.4*B)
+    13 | D = (0.3*A)+(0.7*B)
+    14 | x1 = 0
+    15 | x2 = 0
+    16 | for x in v :
+    17 | 	if(x>=A and x<C):
+    18 | 		x1 = x1 + 1
+    19 | 	if(x>=C and x<D):
+    20 | 		x2 = x2 + 1
+    21 | res[0] = x1
+    22 | res[1] = x2
+    23 | print(res)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 1
+
+  [1] Linha 0: A3 detectado pelo VisitorMC3 (localização exata não mapeada)
+      Trecho  : —
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 12
+
+  [1] Linha 3: Variável 'v' com nome muito curto (≤4 chars)
+      Trecho  : v = ...
+      Contexto:
+               2 | from math import*
+        >>>    3 | v = array(eval(input("Digite o vetor: ")))
+               4 | res = array(zeros(2, dtype=int))
+
+  [2] Linha 4: Variável 'res' com nome muito curto (≤4 chars)
+      Trecho  : res = ...
+      Contexto:
+               3 | v = array(eval(input("Digite o vetor: ")))
+        >>>    4 | res = array(zeros(2, dtype=int))
+               5 | A = 0
+
+  [3] Linha 5: Variável 'A' com nome muito curto (≤4 chars)
+      Trecho  : A = ...
+      Contexto:
+               4 | res = array(zeros(2, dtype=int))
+        >>>    5 | A = 0
+               6 | B = 0
+
+  [4] Linha 6: Variável 'B' com nome muito curto (≤4 chars)
+      Trecho  : B = ...
+      Contexto:
+               5 | A = 0
+        >>>    6 | B = 0
+               7 | for x in v:
+
+  [5] Linha 12: Variável 'C' com nome muito curto (≤4 chars)
+      Trecho  : C = ...
+      Contexto:
+              11 | 		B = x
+        >>>   12 | C = (0.6*A)+(0.4*B)
+              13 | D = (0.3*A)+(0.7*B)
+
+  [6] Linha 13: Variável 'D' com nome muito curto (≤4 chars)
+      Trecho  : D = ...
+      Contexto:
+              12 | C = (0.6*A)+(0.4*B)
+        >>>   13 | D = (0.3*A)+(0.7*B)
+              14 | x1 = 0
+
+  [7] Linha 14: Variável 'x1' com nome muito curto (≤4 chars)
+      Trecho  : x1 = ...
+      Contexto:
+              13 | D = (0.3*A)+(0.7*B)
+        >>>   14 | x1 = 0
+              15 | x2 = 0
+
+  [8] Linha 15: Variável 'x2' com nome muito curto (≤4 chars)
+      Trecho  : x2 = ...
+      Contexto:
+              14 | x1 = 0
+        >>>   15 | x2 = 0
+              16 | for x in v :
+
+  [9] Linha 9: Variável 'A' com nome muito curto (≤4 chars)
+      Trecho  : A = ...
+      Contexto:
+               8 | 	if(x==min(v)):
+        >>>    9 | 		A = x
+              10 | 	if(x==max(v)):
+
+  [10] Linha 11: Variável 'B' com nome muito curto (≤4 chars)
+      Trecho  : B = ...
+      Contexto:
+              10 | 	if(x==max(v)):
+        >>>   11 | 		B = x
+              12 | C = (0.6*A)+(0.4*B)
+
+  [11] Linha 18: Variável 'x1' com nome muito curto (≤4 chars)
+      Trecho  : x1 = ...
+      Contexto:
+              17 | 	if(x>=A and x<C):
+        >>>   18 | 		x1 = x1 + 1
+              19 | 	if(x>=C and x<D):
+
+  [12] Linha 20: Variável 'x2' com nome muito curto (≤4 chars)
+      Trecho  : x2 = ...
+      Contexto:
+              19 | 	if(x>=C and x<D):
+        >>>   20 | 		x2 = x2 + 1
+              21 | res[0] = x1
+
+======================================================================

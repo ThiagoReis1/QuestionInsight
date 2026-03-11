@@ -1,0 +1,95 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 5292_6481.py
+Questão  : 5292
+Aluno    : 6481
+Total MCs: 2
+
+⚠️  Misconceptions detectados: A3, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | pvs = input().upper()
+     2 | c = 0
+     3 | i = 0
+     4 | 
+     5 | while (pvs == 'PRETA' or pvs == 'VERMELHA' or pvs == 'S'):
+     6 | 	i = i + 1
+     7 | 	if pvs == 'PRETA':
+     8 | 		c = c + 1
+     9 | 	p = (c / i) * 100
+    10 | 	if pvs == 'S':
+    11 | 		print(i - 1)
+    12 | 		print(round((( c / (i - 1)) * 100), 2))
+    13 | 		break
+    14 | 	pvs = input('').upper()
+    15 | 	
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 1
+
+  [1] Linha 9: Variável 'p' declarada mas nunca utilizada
+      Trecho  : p = ...
+      Contexto:
+               8 | 		c = c + 1
+        >>>    9 | 	p = (c / i) * 100
+              10 | 	if pvs == 'S':
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 7
+
+  [1] Linha 1: Variável 'pvs' com nome muito curto (≤4 chars)
+      Trecho  : pvs = ...
+      Contexto:
+        >>>    1 | pvs = input().upper()
+               2 | c = 0
+
+  [2] Linha 2: Variável 'c' com nome muito curto (≤4 chars)
+      Trecho  : c = ...
+      Contexto:
+               1 | pvs = input().upper()
+        >>>    2 | c = 0
+               3 | i = 0
+
+  [3] Linha 3: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+               2 | c = 0
+        >>>    3 | i = 0
+               4 | 
+
+  [4] Linha 6: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+               5 | while (pvs == 'PRETA' or pvs == 'VERMELHA' or pvs == 'S'):
+        >>>    6 | 	i = i + 1
+               7 | 	if pvs == 'PRETA':
+
+  [5] Linha 9: Variável 'p' com nome muito curto (≤4 chars)
+      Trecho  : p = ...
+      Contexto:
+               8 | 		c = c + 1
+        >>>    9 | 	p = (c / i) * 100
+              10 | 	if pvs == 'S':
+
+  [6] Linha 14: Variável 'pvs' com nome muito curto (≤4 chars)
+      Trecho  : pvs = ...
+      Contexto:
+              13 | 		break
+        >>>   14 | 	pvs = input('').upper()
+              15 | 	
+
+  [7] Linha 8: Variável 'c' com nome muito curto (≤4 chars)
+      Trecho  : c = ...
+      Contexto:
+               7 | 	if pvs == 'PRETA':
+        >>>    8 | 		c = c + 1
+               9 | 	p = (c / i) * 100
+
+======================================================================

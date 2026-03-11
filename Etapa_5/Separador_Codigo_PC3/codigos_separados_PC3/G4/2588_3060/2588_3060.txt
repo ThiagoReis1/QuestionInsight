@@ -1,0 +1,67 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 2588_3060.py
+Questão  : 2588
+Aluno    : 3060
+Total MCs: 1
+
+⚠️  Misconceptions detectados: G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import *
+     2 | v = array(eval(input("Vetor registro: ")))
+     3 | al = 0
+     4 | ilim = v[0] + (v[0] * (20/100))
+     5 | flim = v[0] + (v[0] * (50/100))
+     6 | for i in range(size(v)):
+     7 | 	if (v[i] > ilim) and (v[i] < flim):
+     8 | 		al = al + 1
+     9 | 		print(i)
+    10 | print(al)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 5
+
+  [1] Linha 2: Variável 'v' com nome muito curto (≤4 chars)
+      Trecho  : v = ...
+      Contexto:
+               1 | from numpy import *
+        >>>    2 | v = array(eval(input("Vetor registro: ")))
+               3 | al = 0
+
+  [2] Linha 3: Variável 'al' com nome muito curto (≤4 chars)
+      Trecho  : al = ...
+      Contexto:
+               2 | v = array(eval(input("Vetor registro: ")))
+        >>>    3 | al = 0
+               4 | ilim = v[0] + (v[0] * (20/100))
+
+  [3] Linha 4: Variável 'ilim' com nome muito curto (≤4 chars)
+      Trecho  : ilim = ...
+      Contexto:
+               3 | al = 0
+        >>>    4 | ilim = v[0] + (v[0] * (20/100))
+               5 | flim = v[0] + (v[0] * (50/100))
+
+  [4] Linha 5: Variável 'flim' com nome muito curto (≤4 chars)
+      Trecho  : flim = ...
+      Contexto:
+               4 | ilim = v[0] + (v[0] * (20/100))
+        >>>    5 | flim = v[0] + (v[0] * (50/100))
+               6 | for i in range(size(v)):
+
+  [5] Linha 8: Variável 'al' com nome muito curto (≤4 chars)
+      Trecho  : al = ...
+      Contexto:
+               7 | 	if (v[i] > ilim) and (v[i] < flim):
+        >>>    8 | 		al = al + 1
+               9 | 		print(i)
+
+======================================================================

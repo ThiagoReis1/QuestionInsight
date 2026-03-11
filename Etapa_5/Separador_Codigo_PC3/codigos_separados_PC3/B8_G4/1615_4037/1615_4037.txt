@@ -1,0 +1,112 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1615_4037.py
+Questão  : 1615
+Aluno    : 4037
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | v1=array(eval(input("numeros do primeiro jogador: ")))
+     3 | v2=array(eval(input("numeros do segundo jogador: ")))
+     4 | i=0
+     5 | p1=0
+     6 | p2=0
+     7 | while(i == 0):
+     8 | 	if(v1[i]==1):
+     9 | 		p1 += 40
+    10 | 	elif(v1[i]==2):
+    11 | 		p1 += 20
+    12 | 	elif(v1[i]==3):
+    13 | 		p1 += 10
+    14 | 	elif(v1[i]==4):
+    15 | 		p1 += 0
+    16 | 	if(v2[i]==1):
+    17 | 		p2 += 40
+    18 | 	elif(v2[i]==2):
+    19 | 		p2 += 20
+    20 | 	elif(v2[i]==3):
+    21 | 		p2 += 10
+    22 | 	elif(v2[i]==4):
+    23 | 		p2 += 0
+    24 | 	i += 1
+    25 | if(p1 > p2):
+    26 | 	print("JOGADOR UM")
+    27 | elif(p1 < p2):
+    28 | 	print("JOGADOR DOIS")
+    29 | elif(p1 == p2):
+    30 | 	print("EMPATE")
+    31 | 		
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 3
+
+  [1] Linha 27: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 27) / elif ... sem else
+      Contexto:
+              26 | 	print("JOGADOR UM")
+        >>>   27 | elif(p1 < p2):
+              28 | 	print("JOGADOR DOIS")
+
+  [2] Linha 12: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 12) / elif ... sem else
+      Contexto:
+              11 | 		p1 += 20
+        >>>   12 | 	elif(v1[i]==3):
+              13 | 		p1 += 10
+
+  [3] Linha 20: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 20) / elif ... sem else
+      Contexto:
+              19 | 		p2 += 20
+        >>>   20 | 	elif(v2[i]==3):
+              21 | 		p2 += 10
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 5
+
+  [1] Linha 2: Variável 'v1' com nome muito curto (≤4 chars)
+      Trecho  : v1 = ...
+      Contexto:
+               1 | from numpy import*
+        >>>    2 | v1=array(eval(input("numeros do primeiro jogador: ")))
+               3 | v2=array(eval(input("numeros do segundo jogador: ")))
+
+  [2] Linha 3: Variável 'v2' com nome muito curto (≤4 chars)
+      Trecho  : v2 = ...
+      Contexto:
+               2 | v1=array(eval(input("numeros do primeiro jogador: ")))
+        >>>    3 | v2=array(eval(input("numeros do segundo jogador: ")))
+               4 | i=0
+
+  [3] Linha 4: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+               3 | v2=array(eval(input("numeros do segundo jogador: ")))
+        >>>    4 | i=0
+               5 | p1=0
+
+  [4] Linha 5: Variável 'p1' com nome muito curto (≤4 chars)
+      Trecho  : p1 = ...
+      Contexto:
+               4 | i=0
+        >>>    5 | p1=0
+               6 | p2=0
+
+  [5] Linha 6: Variável 'p2' com nome muito curto (≤4 chars)
+      Trecho  : p2 = ...
+      Contexto:
+               5 | p1=0
+        >>>    6 | p2=0
+               7 | while(i == 0):
+
+======================================================================

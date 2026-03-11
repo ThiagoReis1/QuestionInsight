@@ -1,0 +1,109 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1600_4122.py
+Questão  : 1600
+Aluno    : 4122
+Total MCs: 2
+
+⚠️  Misconceptions detectados: A3, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | N=array(eval(input("valor das compras")))
+     3 | n=0#para acumular o total
+     4 | p=0#para acumular a posicao do valor
+     5 | l=0#acumular sem desconto
+     6 | s=size(N)
+     7 | while(p<s):
+     8 | 	if(N[p]>80):
+     9 | 		x=(N[p]-((N[p])*15)/100)
+    10 | 		n=n+x
+    11 | 	else:
+    12 | 		n=n+N[p]
+    13 | 	p=p+1
+    14 | print(round(n,2))
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 1
+
+  [1] Linha 5: Variável 'l' declarada mas nunca utilizada
+      Trecho  : l = ...
+      Contexto:
+               4 | p=0#para acumular a posicao do valor
+        >>>    5 | l=0#acumular sem desconto
+               6 | s=size(N)
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 9
+
+  [1] Linha 2: Variável 'N' com nome muito curto (≤4 chars)
+      Trecho  : N = ...
+      Contexto:
+               1 | from numpy import*
+        >>>    2 | N=array(eval(input("valor das compras")))
+               3 | n=0#para acumular o total
+
+  [2] Linha 3: Variável 'n' com nome muito curto (≤4 chars)
+      Trecho  : n = ...
+      Contexto:
+               2 | N=array(eval(input("valor das compras")))
+        >>>    3 | n=0#para acumular o total
+               4 | p=0#para acumular a posicao do valor
+
+  [3] Linha 4: Variável 'p' com nome muito curto (≤4 chars)
+      Trecho  : p = ...
+      Contexto:
+               3 | n=0#para acumular o total
+        >>>    4 | p=0#para acumular a posicao do valor
+               5 | l=0#acumular sem desconto
+
+  [4] Linha 5: Variável 'l' com nome muito curto (≤4 chars)
+      Trecho  : l = ...
+      Contexto:
+               4 | p=0#para acumular a posicao do valor
+        >>>    5 | l=0#acumular sem desconto
+               6 | s=size(N)
+
+  [5] Linha 6: Variável 's' com nome muito curto (≤4 chars)
+      Trecho  : s = ...
+      Contexto:
+               5 | l=0#acumular sem desconto
+        >>>    6 | s=size(N)
+               7 | while(p<s):
+
+  [6] Linha 13: Variável 'p' com nome muito curto (≤4 chars)
+      Trecho  : p = ...
+      Contexto:
+              12 | 		n=n+N[p]
+        >>>   13 | 	p=p+1
+              14 | print(round(n,2))
+
+  [7] Linha 9: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+               8 | 	if(N[p]>80):
+        >>>    9 | 		x=(N[p]-((N[p])*15)/100)
+              10 | 		n=n+x
+
+  [8] Linha 10: Variável 'n' com nome muito curto (≤4 chars)
+      Trecho  : n = ...
+      Contexto:
+               9 | 		x=(N[p]-((N[p])*15)/100)
+        >>>   10 | 		n=n+x
+              11 | 	else:
+
+  [9] Linha 12: Variável 'n' com nome muito curto (≤4 chars)
+      Trecho  : n = ...
+      Contexto:
+              11 | 	else:
+        >>>   12 | 		n=n+N[p]
+              13 | 	p=p+1
+
+======================================================================

@@ -1,0 +1,88 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 3590_8644.py
+Questão  : 3590
+Aluno    : 8644
+Total MCs: 3
+
+⚠️  Misconceptions detectados: B4, B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import *
+     2 | 
+     3 | v = array(eval(input("")))
+     4 | c = 0
+     5 | for i in range(size(v)):
+     6 | 	if(v[i] == 1):
+     7 | 		c += 10
+     8 | 	elif(v[i] == 2):
+     9 | 		c += 5
+    10 | 	elif(v[i] == 3):
+    11 | 		c += 0
+    12 | 	elif(v[i] == 4):
+    13 | 		c += 5
+    14 | 	elif(v[i] == 5):
+    15 | 		c += 20
+    16 | 	elif(v[i] == 6):
+    17 | 		c += 10
+    18 | print(sum(c))
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B4 — Comandos repetidos dentro de blocos if-elif-else
+  Ocorrências: 3
+
+  [1] Linha 12: Bloco idêntico ao da linha 8
+      Trecho  : c += 5
+      Contexto:
+              11 | 		c += 0
+        >>>   12 | 	elif(v[i] == 4):
+              13 | 		c += 5
+
+  [2] Linha 16: Bloco idêntico ao da linha 6
+      Trecho  : c += 10
+      Contexto:
+              15 | 		c += 20
+        >>>   16 | 	elif(v[i] == 6):
+              17 | 		c += 10
+
+  [3] Linha 12: Bloco idêntico ao da linha 8
+      Trecho  : c += 5
+      Contexto:
+              11 | 		c += 0
+        >>>   12 | 	elif(v[i] == 4):
+              13 | 		c += 5
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 14: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 14) / elif ... sem else
+      Contexto:
+              13 | 		c += 5
+        >>>   14 | 	elif(v[i] == 5):
+              15 | 		c += 20
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 2
+
+  [1] Linha 3: Variável 'v' com nome muito curto (≤4 chars)
+      Trecho  : v = ...
+      Contexto:
+               2 | 
+        >>>    3 | v = array(eval(input("")))
+               4 | c = 0
+
+  [2] Linha 4: Variável 'c' com nome muito curto (≤4 chars)
+      Trecho  : c = ...
+      Contexto:
+               3 | v = array(eval(input("")))
+        >>>    4 | c = 0
+               5 | for i in range(size(v)):
+
+======================================================================

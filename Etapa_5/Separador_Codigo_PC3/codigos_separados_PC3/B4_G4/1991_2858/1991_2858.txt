@@ -1,0 +1,78 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1991_2858.py
+Questão  : 1991
+Aluno    : 2858
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B4, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from math import*
+     2 | nome = input("Digite o nome do aminoacido: ")
+     3 | 
+     4 | if ((nome.upper() != "GLICINA") and (nome.upper() != "PROLINA") and (nome.upper() != "SERINA")):
+     5 | 	print("Entrada:",nome)
+     6 | 	print("Dado Invalido")
+     7 | elif(nome.upper() == "GLICINA"):
+     8 | 	var = (12.011)*2+(1.0079)*5+(14.00674)+(15.9994)*2
+     9 | 	print(round(var, 2))
+    10 | elif(nome.upper() == "PROLINA"):
+    11 | 	var = (12.011)*5+(1.0079)*10+(14.00674)+(15.9994)*2
+    12 | 	print(round(var, 2))
+    13 | elif(nome.upper() == "SERINA"):
+    14 | 	var = (12.011)*3+(1.0079)*7+(14.00674)+(15.9994)*3
+    15 | 	print(round(var, 2))
+    16 | else:
+    17 | 	print("Entrada:",nome)
+    18 | 	print("Dado Invalido")
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B4 — Comandos repetidos dentro de blocos if-elif-else
+  Ocorrências: 1
+
+  [1] Linha 13: Bloco idêntico ao da linha 4
+      Trecho  : print('Entrada:', nome)
+      Contexto:
+              12 | 	print(round(var, 2))
+        >>>   13 | elif(nome.upper() == "SERINA"):
+              14 | 	var = (12.011)*3+(1.0079)*7+(14.00674)+(15.9994)*3
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 4
+
+  [1] Linha 2: Variável 'nome' com nome muito curto (≤4 chars)
+      Trecho  : nome = ...
+      Contexto:
+               1 | from math import*
+        >>>    2 | nome = input("Digite o nome do aminoacido: ")
+               3 | 
+
+  [2] Linha 8: Variável 'var' com nome muito curto (≤4 chars)
+      Trecho  : var = ...
+      Contexto:
+               7 | elif(nome.upper() == "GLICINA"):
+        >>>    8 | 	var = (12.011)*2+(1.0079)*5+(14.00674)+(15.9994)*2
+               9 | 	print(round(var, 2))
+
+  [3] Linha 11: Variável 'var' com nome muito curto (≤4 chars)
+      Trecho  : var = ...
+      Contexto:
+              10 | elif(nome.upper() == "PROLINA"):
+        >>>   11 | 	var = (12.011)*5+(1.0079)*10+(14.00674)+(15.9994)*2
+              12 | 	print(round(var, 2))
+
+  [4] Linha 14: Variável 'var' com nome muito curto (≤4 chars)
+      Trecho  : var = ...
+      Contexto:
+              13 | elif(nome.upper() == "SERINA"):
+        >>>   14 | 	var = (12.011)*3+(1.0079)*7+(14.00674)+(15.9994)*3
+              15 | 	print(round(var, 2))
+
+======================================================================

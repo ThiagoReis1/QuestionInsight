@@ -1,0 +1,78 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 5259_7109.py
+Questão  : 5259
+Aluno    : 7109
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | vm = float(input("Valor da mensalidade: "))
+     2 | nc = int(input("Numero de criancas da familia: "))
+     3 | c1 = (vm-(vm*0.1))
+     4 | c2 = (vm-(vm*0.3))*2
+     5 | c3 = (vm-(vm*0.4))*3
+     6 | if nc == 1:
+     7 | 	print(round(c1,2))
+     8 | elif nc == 2:
+     9 | 	print(round(c2,2))
+    10 | elif nc >=3:
+    11 | 	print(round(c3,2))
+    12 | 	
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 8: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 8) / elif ... sem else
+      Contexto:
+               7 | 	print(round(c1,2))
+        >>>    8 | elif nc == 2:
+               9 | 	print(round(c2,2))
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 5
+
+  [1] Linha 1: Variável 'vm' com nome muito curto (≤4 chars)
+      Trecho  : vm = ...
+      Contexto:
+        >>>    1 | vm = float(input("Valor da mensalidade: "))
+               2 | nc = int(input("Numero de criancas da familia: "))
+
+  [2] Linha 2: Variável 'nc' com nome muito curto (≤4 chars)
+      Trecho  : nc = ...
+      Contexto:
+               1 | vm = float(input("Valor da mensalidade: "))
+        >>>    2 | nc = int(input("Numero de criancas da familia: "))
+               3 | c1 = (vm-(vm*0.1))
+
+  [3] Linha 3: Variável 'c1' com nome muito curto (≤4 chars)
+      Trecho  : c1 = ...
+      Contexto:
+               2 | nc = int(input("Numero de criancas da familia: "))
+        >>>    3 | c1 = (vm-(vm*0.1))
+               4 | c2 = (vm-(vm*0.3))*2
+
+  [4] Linha 4: Variável 'c2' com nome muito curto (≤4 chars)
+      Trecho  : c2 = ...
+      Contexto:
+               3 | c1 = (vm-(vm*0.1))
+        >>>    4 | c2 = (vm-(vm*0.3))*2
+               5 | c3 = (vm-(vm*0.4))*3
+
+  [5] Linha 5: Variável 'c3' com nome muito curto (≤4 chars)
+      Trecho  : c3 = ...
+      Contexto:
+               4 | c2 = (vm-(vm*0.3))*2
+        >>>    5 | c3 = (vm-(vm*0.4))*3
+               6 | if nc == 1:
+
+======================================================================

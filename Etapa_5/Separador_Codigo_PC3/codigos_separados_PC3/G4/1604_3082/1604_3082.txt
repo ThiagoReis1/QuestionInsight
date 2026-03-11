@@ -1,0 +1,59 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1604_3082.py
+Questão  : 1604
+Aluno    : 3082
+Total MCs: 1
+
+⚠️  Misconceptions detectados: G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import *
+     2 | j = array(eval(input("jogadas do arrombado: ")))
+     3 | i = 0
+     4 | while(i < size(j)):
+     5 | 	if(j[i] == [1]):
+     6 | 		j[i] = j[i] * 80
+     7 | 	elif(j[i] == [2]):
+     8 | 		j[i] = j[i] * 20
+     9 | 	elif(j[i] == [3]):
+    10 | 		j[i] = j[i] * 20 / 3
+    11 | 	elif(j[i] == [4]):
+    12 | 		j[i] = j[i] * 10 / 4
+    13 | 	else:
+    14 | 		j[i] = 0
+    15 | 	i = i + 1
+    16 | print(sum(j))
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 3
+
+  [1] Linha 2: Variável 'j' com nome muito curto (≤4 chars)
+      Trecho  : j = ...
+      Contexto:
+               1 | from numpy import *
+        >>>    2 | j = array(eval(input("jogadas do arrombado: ")))
+               3 | i = 0
+
+  [2] Linha 3: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+               2 | j = array(eval(input("jogadas do arrombado: ")))
+        >>>    3 | i = 0
+               4 | while(i < size(j)):
+
+  [3] Linha 15: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+              14 | 		j[i] = 0
+        >>>   15 | 	i = i + 1
+              16 | print(sum(j))
+
+======================================================================

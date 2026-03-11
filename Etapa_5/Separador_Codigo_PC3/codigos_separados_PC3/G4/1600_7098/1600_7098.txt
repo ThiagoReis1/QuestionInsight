@@ -1,0 +1,71 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1600_7098.py
+Questão  : 1600
+Aluno    : 7098
+Total MCs: 1
+
+⚠️  Misconceptions detectados: G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import *
+     2 | 
+     3 | v = array(eval(input("valor das compras: ")))
+     4 | desconto = 15/100
+     5 | 
+     6 | i = 0
+     7 | 
+     8 | while i < size(v):
+     9 | 	if v[i] > 80.00:
+    10 | 		d = v[i] * desconto
+    11 | 		v[i] = v[i] - d
+    12 | 	i = i + 1
+    13 | h = sum(v)
+    14 | print(round(h, 2))
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 5
+
+  [1] Linha 3: Variável 'v' com nome muito curto (≤4 chars)
+      Trecho  : v = ...
+      Contexto:
+               2 | 
+        >>>    3 | v = array(eval(input("valor das compras: ")))
+               4 | desconto = 15/100
+
+  [2] Linha 6: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+               5 | 
+        >>>    6 | i = 0
+               7 | 
+
+  [3] Linha 13: Variável 'h' com nome muito curto (≤4 chars)
+      Trecho  : h = ...
+      Contexto:
+              12 | 	i = i + 1
+        >>>   13 | h = sum(v)
+              14 | print(round(h, 2))
+
+  [4] Linha 12: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+              11 | 		v[i] = v[i] - d
+        >>>   12 | 	i = i + 1
+              13 | h = sum(v)
+
+  [5] Linha 10: Variável 'd' com nome muito curto (≤4 chars)
+      Trecho  : d = ...
+      Contexto:
+               9 | 	if v[i] > 80.00:
+        >>>   10 | 		d = v[i] * desconto
+              11 | 		v[i] = v[i] - d
+
+======================================================================

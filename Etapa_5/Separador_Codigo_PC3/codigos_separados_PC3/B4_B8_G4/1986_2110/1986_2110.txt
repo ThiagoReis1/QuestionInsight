@@ -1,0 +1,75 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1986_2110.py
+Questão  : 1986
+Aluno    : 2110
+Total MCs: 3
+
+⚠️  Misconceptions detectados: B4, B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | m = input("Modalidade: ").upper()
+     2 | t = input("turno: ").upper()
+     3 | 
+     4 | if(m!="BACHARELADO" and m!="LICENCIATURA"):
+     5 | 	print("CURSO DE GRADUACAO NAO IDENTIFICADO")
+     6 | elif(t!="DIURNO" and t!="VESPERTINO" and t!="NOTURNO"):
+     7 | 	print("CURSO DE GRADUACAO NAO IDENTIFICADO")
+     8 | 	
+     9 | if(m=="BACHARELADO" and t=="DIURNO"):
+    10 | 	print("DIREITO")
+    11 | elif(m=="BACHARELADO" and t=="NOTURNO"):
+    12 | 	print("ADMINISTRACAO")
+    13 | elif(m=="LICENCIATURA" and t=="VESPERTINO"):
+    14 | 	print("FILOSOFIA")
+    15 | elif(m=="LICENCIATURA" and t=="NOTURNO"):
+    16 | 	print("GEOGRAFIA")
+    17 | else:
+    18 | 	print("CURSO DE GRADUACAO NAO IDENTIFICADO")
+    19 | 	
+    20 | 
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B4 — Comandos repetidos dentro de blocos if-elif-else
+  Ocorrências: 1
+
+  [1] Linha 6: Bloco idêntico ao da linha 4
+      Trecho  : print('CURSO DE GRADUACAO NAO IDENTIFICADO')
+      Contexto:
+               5 | 	print("CURSO DE GRADUACAO NAO IDENTIFICADO")
+        >>>    6 | elif(t!="DIURNO" and t!="VESPERTINO" and t!="NOTURNO"):
+               7 | 	print("CURSO DE GRADUACAO NAO IDENTIFICADO")
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 4: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 4) / elif ... sem else
+      Contexto:
+               3 | 
+        >>>    4 | if(m!="BACHARELADO" and m!="LICENCIATURA"):
+               5 | 	print("CURSO DE GRADUACAO NAO IDENTIFICADO")
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 2
+
+  [1] Linha 1: Variável 'm' com nome muito curto (≤4 chars)
+      Trecho  : m = ...
+      Contexto:
+        >>>    1 | m = input("Modalidade: ").upper()
+               2 | t = input("turno: ").upper()
+
+  [2] Linha 2: Variável 't' com nome muito curto (≤4 chars)
+      Trecho  : t = ...
+      Contexto:
+               1 | m = input("Modalidade: ").upper()
+        >>>    2 | t = input("turno: ").upper()
+               3 | 
+
+======================================================================

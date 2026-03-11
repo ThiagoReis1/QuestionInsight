@@ -1,0 +1,54 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1656_7567.py
+Questão  : 1656
+Aluno    : 7567
+Total MCs: 1
+
+⚠️  Misconceptions detectados: B8
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | paises = input("").upper().split(',')
+     3 | quant = zeros(5,dtype = int)
+     4 | for i in range(size(paises)):
+     5 | 	if(paises[i] == "BE"):
+     6 | 		quant[0] = quant[0] + 1
+     7 | 	elif(paises[i] == "ES"):
+     8 | 		quant[1] = quant[1] + 1
+     9 | 	elif(paises[i] == "FR"):
+    10 | 		quant[2] = quant[2] + 1
+    11 | 	elif(paises[i] == "IT"):
+    12 | 		quant[3] = quant[3] + 1
+    13 | 	elif(paises[i] == "PT"):
+    14 | 		quant[4] = quant[4] + 1
+    15 | if(quant[0] > quant[1] and quant[0] > quant[2] and quant[0] > quant[3] and quant[0] > quant[4]):
+    16 | 	print(quant[0])
+    17 | elif(quant[1] > quant[2] and quant[1] > quant[3] and quant[1] > quant[4]):
+    18 | 	print(quant[1])
+    19 | elif(quant[2] > quant[3] and quant[2] > quant[4]):
+    20 | 	print(quant[2])
+    21 | elif(quant[3] > quant[4]):
+    22 | 	print(quant[3])
+    23 | else:
+    24 | 	print(quant[4])
+    25 | print(quant)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 11: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 11) / elif ... sem else
+      Contexto:
+              10 | 		quant[2] = quant[2] + 1
+        >>>   11 | 	elif(paises[i] == "IT"):
+              12 | 		quant[3] = quant[3] + 1
+
+======================================================================

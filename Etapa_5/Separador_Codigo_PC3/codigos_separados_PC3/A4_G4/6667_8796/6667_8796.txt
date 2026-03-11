@@ -1,0 +1,100 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 6667_8796.py
+Questão  : 6667
+Aluno    : 8796
+Total MCs: 2
+
+⚠️  Misconceptions detectados: A4, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import *
+     2 | 
+     3 | vet = zeros(10, dtype=float)
+     4 | 
+     5 | for i in range(10):
+     6 | 	n = float(input(''))
+     7 | 	if 0 <=n<= 10:
+     8 | 		vet[i] = n
+     9 | min = float(input(''))
+    10 | 
+    11 | cont = 0
+    12 | 
+    13 | for i in vet:
+    14 | 	if i > min:
+    15 | 		cont += 1
+    16 | print(cont)
+    17 | 
+    18 | vet2 = zeros(cont, dtype=float)
+    19 | 
+    20 | j = 0
+    21 | 
+    22 | for i in range(size(vet)):
+    23 | 	if vet[i] >= min:
+    24 | 		vet2[j] += vet[i]
+    25 | 		j += 1
+    26 | print(vet2)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A4 — Redefinição de built-in
+  Ocorrências: 1
+
+  [1] Linha 9: Built-in 'min' redefinido como variável
+      Trecho  : min = float(input(''))
+      Contexto:
+               8 | 		vet[i] = n
+        >>>    9 | min = float(input(''))
+              10 | 
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 6
+
+  [1] Linha 3: Variável 'vet' com nome muito curto (≤4 chars)
+      Trecho  : vet = ...
+      Contexto:
+               2 | 
+        >>>    3 | vet = zeros(10, dtype=float)
+               4 | 
+
+  [2] Linha 9: Variável 'min' com nome muito curto (≤4 chars)
+      Trecho  : min = ...
+      Contexto:
+               8 | 		vet[i] = n
+        >>>    9 | min = float(input(''))
+              10 | 
+
+  [3] Linha 11: Variável 'cont' com nome muito curto (≤4 chars)
+      Trecho  : cont = ...
+      Contexto:
+              10 | 
+        >>>   11 | cont = 0
+              12 | 
+
+  [4] Linha 18: Variável 'vet2' com nome muito curto (≤4 chars)
+      Trecho  : vet2 = ...
+      Contexto:
+              17 | 
+        >>>   18 | vet2 = zeros(cont, dtype=float)
+              19 | 
+
+  [5] Linha 20: Variável 'j' com nome muito curto (≤4 chars)
+      Trecho  : j = ...
+      Contexto:
+              19 | 
+        >>>   20 | j = 0
+              21 | 
+
+  [6] Linha 6: Variável 'n' com nome muito curto (≤4 chars)
+      Trecho  : n = ...
+      Contexto:
+               5 | for i in range(10):
+        >>>    6 | 	n = float(input(''))
+               7 | 	if 0 <=n<= 10:
+
+======================================================================

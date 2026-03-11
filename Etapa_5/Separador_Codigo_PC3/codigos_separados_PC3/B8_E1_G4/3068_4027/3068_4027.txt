@@ -1,0 +1,105 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 3068_4027.py
+Questão  : 3068
+Aluno    : 4027
+Total MCs: 3
+
+⚠️  Misconceptions detectados: B8, E1, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | nome=input("Nome da arma:")
+     2 | d=int(input("Destreza: "))
+     3 | v1=int(input("Primeiro valor sorteado:"))
+     4 | v2=int(input("Segundo valor sorteado: "))
+     5 | s = v1 + v2
+     6 | if((nome == "CIMITARRA" or nome == "KATANA" or nome == "SABRE") and d >= 0 and v1 > 0 and v1 <= 10 and v2 > 0 and v1 <= 10):
+     7 | 	if(nome == "CIMITARRA"):
+     8 | 		dano = 2*s + 2*d
+     9 | 	elif(nome == "KATANA"):
+    10 | 		dano == 2*s + d
+    11 | 	elif(nome == "SABRE"):
+    12 | 		dano = s + 2*d
+    13 | 	print(dano)
+    14 | else:
+    15 | 	print("Entrada invalida")
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 9: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 9) / elif ... sem else
+      Contexto:
+               8 | 		dano = 2*s + 2*d
+        >>>    9 | 	elif(nome == "KATANA"):
+              10 | 		dano == 2*s + d
+
+▶ E1 — Verificação desnecessária de todas as combinações possíveis
+  Ocorrências: 1
+
+  [1] Linha 6: 6 condições em um único if — verificação excessiva
+      Trecho  : (nome == 'CIMITARRA' or nome == 'KATANA' or nome == 'SABRE') and d >= 0 and (v1 > 0) and (v1 <= 10) and (v2 > 0) and (v1 <= 10)
+      Contexto:
+               5 | s = v1 + v2
+        >>>    6 | if((nome == "CIMITARRA" or nome == "KATANA" or nome == "SABRE") and d >= 0 and v1 > 0 and v1 <= 10 and v2 > 0 and v1 <= 10):
+               7 | 	if(nome == "CIMITARRA"):
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 7
+
+  [1] Linha 1: Variável 'nome' com nome muito curto (≤4 chars)
+      Trecho  : nome = ...
+      Contexto:
+        >>>    1 | nome=input("Nome da arma:")
+               2 | d=int(input("Destreza: "))
+
+  [2] Linha 2: Variável 'd' com nome muito curto (≤4 chars)
+      Trecho  : d = ...
+      Contexto:
+               1 | nome=input("Nome da arma:")
+        >>>    2 | d=int(input("Destreza: "))
+               3 | v1=int(input("Primeiro valor sorteado:"))
+
+  [3] Linha 3: Variável 'v1' com nome muito curto (≤4 chars)
+      Trecho  : v1 = ...
+      Contexto:
+               2 | d=int(input("Destreza: "))
+        >>>    3 | v1=int(input("Primeiro valor sorteado:"))
+               4 | v2=int(input("Segundo valor sorteado: "))
+
+  [4] Linha 4: Variável 'v2' com nome muito curto (≤4 chars)
+      Trecho  : v2 = ...
+      Contexto:
+               3 | v1=int(input("Primeiro valor sorteado:"))
+        >>>    4 | v2=int(input("Segundo valor sorteado: "))
+               5 | s = v1 + v2
+
+  [5] Linha 5: Variável 's' com nome muito curto (≤4 chars)
+      Trecho  : s = ...
+      Contexto:
+               4 | v2=int(input("Segundo valor sorteado: "))
+        >>>    5 | s = v1 + v2
+               6 | if((nome == "CIMITARRA" or nome == "KATANA" or nome == "SABRE") and d >= 0 and v1 > 0 and v1 <= 10 and v2 > 0 and v1 <= 10):
+
+  [6] Linha 8: Variável 'dano' com nome muito curto (≤4 chars)
+      Trecho  : dano = ...
+      Contexto:
+               7 | 	if(nome == "CIMITARRA"):
+        >>>    8 | 		dano = 2*s + 2*d
+               9 | 	elif(nome == "KATANA"):
+
+  [7] Linha 12: Variável 'dano' com nome muito curto (≤4 chars)
+      Trecho  : dano = ...
+      Contexto:
+              11 | 	elif(nome == "SABRE"):
+        >>>   12 | 		dano = s + 2*d
+              13 | 	print(dano)
+
+======================================================================

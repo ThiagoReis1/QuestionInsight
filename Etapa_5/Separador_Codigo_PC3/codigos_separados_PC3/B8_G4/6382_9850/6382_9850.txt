@@ -1,0 +1,49 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 6382_9850.py
+Questão  : 6382
+Aluno    : 9850
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | 
+     3 | cod = array(eval(input("Codigo: ")))
+     4 | 
+     5 | for i in range(size(cod)):
+     6 | 	if cod[i] < 9:
+     7 | 		cod[i] = (cod[i] + 1) ** 2
+     8 | 	elif cod[i] == 9:
+     9 | 		cod[i] = 0
+    10 | print(cod)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 6: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 6) / elif ... sem else
+      Contexto:
+               5 | for i in range(size(cod)):
+        >>>    6 | 	if cod[i] < 9:
+               7 | 		cod[i] = (cod[i] + 1) ** 2
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 1
+
+  [1] Linha 3: Variável 'cod' com nome muito curto (≤4 chars)
+      Trecho  : cod = ...
+      Contexto:
+               2 | 
+        >>>    3 | cod = array(eval(input("Codigo: ")))
+               4 | 
+
+======================================================================

@@ -1,0 +1,67 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 5251_7139.py
+Questão  : 5251
+Aluno    : 7139
+Total MCs: 1
+
+⚠️  Misconceptions detectados: B8
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | # Entrada 
+     2 | 
+     3 | destino = (input("Destino:"))
+     4 | idade = int(input("Idade:"))
+     5 | 
+     6 | print("Entradas:", destino, ",", idade)
+     7 | 
+     8 | #Condicao 1
+     9 | 
+    10 | if destino.upper() == "PORTO VELHO":
+    11 | 	valor = 500
+    12 | elif destino.upper() == "SANTAREM":
+    13 | 	valor = 370
+    14 | elif destino.upper() == "BELEM":
+    15 | 	valor = 600
+    16 | elif destino.upper() == "TEFE":
+    17 | 	valor = 360
+    18 | elif destino.upper() == "TABATINGA":
+    19 | 	valor = 550
+    20 | else:
+    21 | 	print("entradas invalidas")
+    22 | 	
+    23 | # Condicao 2
+    24 | 
+    25 | if (idade > 0) and (idade < 150):
+    26 | 	if (idade <= 2):
+    27 | 		total = (valor * 0)
+    28 | 		print("Passagem: R$ ",total)
+    29 | 	elif (idade >= 3) and (idade <= 12):
+    30 | 		total = round(valor / 2,2)
+    31 | 		print("Passagem: R$ ",total)
+    32 | 	elif (idade >= 65):
+    33 | 		total = round(valor - (valor * 30/100),2)
+    34 | 		print("Passagem: R$ ",total)
+    35 | else:
+    36 | 	print("entradas invalidas")
+    37 | 		
+    38 | 		
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 29: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 29) / elif ... sem else
+      Contexto:
+              28 | 		print("Passagem: R$ ",total)
+        >>>   29 | 	elif (idade >= 3) and (idade <= 12):
+              30 | 		total = round(valor / 2,2)
+
+======================================================================

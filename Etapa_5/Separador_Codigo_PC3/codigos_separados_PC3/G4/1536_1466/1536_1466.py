@@ -1,0 +1,11 @@
+x=float(input())
+n=int(input())
+i=0
+soma=1
+while(i<n-1):
+	if(i%2==0):
+		soma-=(x**(i+2))/(i+2)
+	else:
+		soma+=(x**(i+2))/(i+2)
+	i+=1
+print(round(soma,10))

@@ -1,0 +1,59 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 6373_9775.py
+Questão  : 6373
+Aluno    : 9775
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import *
+     2 | work = input().upper().split(',')
+     3 | end = zeros(4, dtype = int)
+     4 | for i in range(len(work)):
+     5 | 	if work[i] == 'A':
+     6 | 		end[0] += 1
+     7 | 	elif work[i] == 'P':
+     8 | 		end[1] += 1
+     9 | 	elif work[i] == 'D':
+    10 | 		end[2] += 1
+    11 | 	elif work[i] == 'M':
+    12 | 		end[3] += 1
+    13 | print(end)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 9: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 9) / elif ... sem else
+      Contexto:
+               8 | 		end[1] += 1
+        >>>    9 | 	elif work[i] == 'D':
+              10 | 		end[2] += 1
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 2
+
+  [1] Linha 2: Variável 'work' com nome muito curto (≤4 chars)
+      Trecho  : work = ...
+      Contexto:
+               1 | from numpy import *
+        >>>    2 | work = input().upper().split(',')
+               3 | end = zeros(4, dtype = int)
+
+  [2] Linha 3: Variável 'end' com nome muito curto (≤4 chars)
+      Trecho  : end = ...
+      Contexto:
+               2 | work = input().upper().split(',')
+        >>>    3 | end = zeros(4, dtype = int)
+               4 | for i in range(len(work)):
+
+======================================================================

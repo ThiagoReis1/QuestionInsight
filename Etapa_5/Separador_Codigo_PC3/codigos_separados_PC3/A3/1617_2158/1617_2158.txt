@@ -1,0 +1,73 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1617_2158.py
+Questão  : 1617
+Aluno    : 2158
+Total MCs: 1
+
+⚠️  Misconceptions detectados: A3
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | 
+     3 | de = array(eval(input("Golpe de espada: ").upper()))
+     4 | nc = array(eval(input("Nível dos combatentes: ")))
+     5 | CENOURA = 2
+     6 | FERRO = 4
+     7 | DWARVEN = 8
+     8 | ELVEN = 11
+     9 | DAEDRIC = 14
+    10 | x = 0
+    11 | i = 0
+    12 | while(i < size(nc)):
+    13 | 	x = x + de[i]*nc[i]
+    14 | 	i = i + 1
+    15 | print(x)
+    16 | 	
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 5
+
+  [1] Linha 5: Variável 'CENOURA' declarada mas nunca utilizada
+      Trecho  : CENOURA = ...
+      Contexto:
+               4 | nc = array(eval(input("Nível dos combatentes: ")))
+        >>>    5 | CENOURA = 2
+               6 | FERRO = 4
+
+  [2] Linha 6: Variável 'FERRO' declarada mas nunca utilizada
+      Trecho  : FERRO = ...
+      Contexto:
+               5 | CENOURA = 2
+        >>>    6 | FERRO = 4
+               7 | DWARVEN = 8
+
+  [3] Linha 7: Variável 'DWARVEN' declarada mas nunca utilizada
+      Trecho  : DWARVEN = ...
+      Contexto:
+               6 | FERRO = 4
+        >>>    7 | DWARVEN = 8
+               8 | ELVEN = 11
+
+  [4] Linha 8: Variável 'ELVEN' declarada mas nunca utilizada
+      Trecho  : ELVEN = ...
+      Contexto:
+               7 | DWARVEN = 8
+        >>>    8 | ELVEN = 11
+               9 | DAEDRIC = 14
+
+  [5] Linha 9: Variável 'DAEDRIC' declarada mas nunca utilizada
+      Trecho  : DAEDRIC = ...
+      Contexto:
+               8 | ELVEN = 11
+        >>>    9 | DAEDRIC = 14
+              10 | x = 0
+
+======================================================================

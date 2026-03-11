@@ -1,0 +1,90 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 2826_3713.py
+Questão  : 2826
+Aluno    : 3713
+Total MCs: 3
+
+⚠️  Misconceptions detectados: A3, B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | n =array(eval(input()))
+     3 | 
+     4 | i=0
+     5 | l=0
+     6 | while (i<size(n)):
+     7 | 	if (n[i]>8):
+     8 | 		n[i]= 10
+     9 | 		i = i+1
+    10 | 	elif(n[i]<2):
+    11 | 		n[i]=0
+    12 | 		i = i+1
+    13 | print(n)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 1
+
+  [1] Linha 5: Variável 'l' declarada mas nunca utilizada
+      Trecho  : l = ...
+      Contexto:
+               4 | i=0
+        >>>    5 | l=0
+               6 | while (i<size(n)):
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 7: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 7) / elif ... sem else
+      Contexto:
+               6 | while (i<size(n)):
+        >>>    7 | 	if (n[i]>8):
+               8 | 		n[i]= 10
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 5
+
+  [1] Linha 2: Variável 'n' com nome muito curto (≤4 chars)
+      Trecho  : n = ...
+      Contexto:
+               1 | from numpy import*
+        >>>    2 | n =array(eval(input()))
+               3 | 
+
+  [2] Linha 4: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+               3 | 
+        >>>    4 | i=0
+               5 | l=0
+
+  [3] Linha 5: Variável 'l' com nome muito curto (≤4 chars)
+      Trecho  : l = ...
+      Contexto:
+               4 | i=0
+        >>>    5 | l=0
+               6 | while (i<size(n)):
+
+  [4] Linha 9: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+               8 | 		n[i]= 10
+        >>>    9 | 		i = i+1
+              10 | 	elif(n[i]<2):
+
+  [5] Linha 12: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+              11 | 		n[i]=0
+        >>>   12 | 		i = i+1
+              13 | print(n)
+
+======================================================================

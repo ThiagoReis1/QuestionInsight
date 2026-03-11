@@ -1,0 +1,58 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 6310_6216.py
+Questão  : 6310
+Aluno    : 6216
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import * 
+     2 | s = input("Ler a string: ") 
+     3 | 
+     4 | i = 0
+     5 | total = 0
+     6 | 
+     7 | M = 0
+     8 | P = 0
+     9 | R = 0
+    10 | 
+    11 | while i < len(s):
+    12 | 	if s[i] == "M":
+    13 | 		total = total + 7.25
+    14 | 		M = M+1	
+    15 | 	elif s[i] == "P":
+    16 | 		total = total + 4.75
+    17 | 		P = P + 1
+    18 | 	elif s[i] == "R":
+    19 | 		R = R + 1
+    20 | 		total = total + 3.50
+    21 | 	i = i + 1
+    22 | 	
+    23 | print(round(total, 2), M, P, R)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 15: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 15) / elif ... sem else
+      Contexto:
+              14 | 		M = M+1	
+        >>>   15 | 	elif s[i] == "P":
+              16 | 		total = total + 4.75
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 1
+
+  [1] Linha 0: G4 detectado pelo VisitorMC3 (localização exata não mapeada)
+      Trecho  : —
+
+======================================================================

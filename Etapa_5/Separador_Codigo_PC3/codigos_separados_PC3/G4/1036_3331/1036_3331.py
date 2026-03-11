@@ -1,0 +1,12 @@
+#UNIVERSIDADE FEDERAL DO AMAZONAS
+#INTRODUÇAO A PROGRAMAÇÃO DE COMPUTADORES
+#YAGO PEREIRA DE SOUZA - 21850592
+#ENGENHARIA DE MATERIAIS
+#SEG E QUA: 14H AS 16H
+
+Q= float(input("Digite o valor: "))
+Taxa= 21.00
+cota= 5.19
+S= (Q - Taxa) / cota
+
+print(round(S, 2))

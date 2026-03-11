@@ -1,0 +1,9 @@
+a=int(input())
+b=int(input())
+c=int(input())
+vida=b
+i=0
+while(vida>0):
+	vida=vida-5*a+c
+	i+=1
+print(i)

@@ -1,0 +1,84 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1640_6499.py
+Questão  : 1640
+Aluno    : 6499
+Total MCs: 3
+
+⚠️  Misconceptions detectados: A3, C8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import *
+     2 | vet = array(eval(input("Notas: ")))
+     3 | i = 0
+     4 | v = 0
+     5 | for i in range(i):
+     6 | 	i = i/2
+     7 | print(i)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 2
+
+  [1] Linha 2: Variável 'vet' declarada mas nunca utilizada
+      Trecho  : vet = ...
+      Contexto:
+               1 | from numpy import *
+        >>>    2 | vet = array(eval(input("Notas: ")))
+               3 | i = 0
+
+  [2] Linha 4: Variável 'v' declarada mas nunca utilizada
+      Trecho  : v = ...
+      Contexto:
+               3 | i = 0
+        >>>    4 | v = 0
+               5 | for i in range(i):
+
+▶ C8 — Loop for com sua variável de iteração sobrescrita
+  Ocorrências: 1
+
+  [1] Linha 6: Variável de iteração 'i' sobrescrita no loop
+      Trecho  : i = i / 2
+      Contexto:
+               5 | for i in range(i):
+        >>>    6 | 	i = i/2
+               7 | print(i)
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 4
+
+  [1] Linha 2: Variável 'vet' com nome muito curto (≤4 chars)
+      Trecho  : vet = ...
+      Contexto:
+               1 | from numpy import *
+        >>>    2 | vet = array(eval(input("Notas: ")))
+               3 | i = 0
+
+  [2] Linha 3: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+               2 | vet = array(eval(input("Notas: ")))
+        >>>    3 | i = 0
+               4 | v = 0
+
+  [3] Linha 4: Variável 'v' com nome muito curto (≤4 chars)
+      Trecho  : v = ...
+      Contexto:
+               3 | i = 0
+        >>>    4 | v = 0
+               5 | for i in range(i):
+
+  [4] Linha 6: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+               5 | for i in range(i):
+        >>>    6 | 	i = i/2
+               7 | print(i)
+
+======================================================================

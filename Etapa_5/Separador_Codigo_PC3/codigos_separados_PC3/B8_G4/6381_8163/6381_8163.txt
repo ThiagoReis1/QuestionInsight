@@ -1,0 +1,69 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 6381_8163.py
+Questão  : 6381
+Aluno    : 8163
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | 
+     3 | b= input("digite o nipe da carta: ").upper().split(",")
+     4 | i=0
+     5 | cont = zeros(4,dtype=int)
+     6 | for i in range(len(b)):
+     7 | 	if b[i]=="C":
+     8 | 		cont[0]=cont[0]+1
+     9 | 	elif b[i]=="O":
+    10 | 		cont[1]=cont[1]+1
+    11 | 	elif b[i]=="P":
+    12 | 		cont[2]=cont[2]+1
+    13 | 	elif b[i]=="E":
+    14 | 		cont[3]=cont[3]+1
+    15 | print(cont)
+    16 | 		
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 11: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 11) / elif ... sem else
+      Contexto:
+              10 | 		cont[1]=cont[1]+1
+        >>>   11 | 	elif b[i]=="P":
+              12 | 		cont[2]=cont[2]+1
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 3
+
+  [1] Linha 3: Variável 'b' com nome muito curto (≤4 chars)
+      Trecho  : b = ...
+      Contexto:
+               2 | 
+        >>>    3 | b= input("digite o nipe da carta: ").upper().split(",")
+               4 | i=0
+
+  [2] Linha 4: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+               3 | b= input("digite o nipe da carta: ").upper().split(",")
+        >>>    4 | i=0
+               5 | cont = zeros(4,dtype=int)
+
+  [3] Linha 5: Variável 'cont' com nome muito curto (≤4 chars)
+      Trecho  : cont = ...
+      Contexto:
+               4 | i=0
+        >>>    5 | cont = zeros(4,dtype=int)
+               6 | for i in range(len(b)):
+
+======================================================================

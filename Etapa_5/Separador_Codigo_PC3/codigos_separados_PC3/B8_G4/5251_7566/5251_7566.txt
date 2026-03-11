@@ -1,0 +1,223 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 5251_7566.py
+Questão  : 5251
+Aluno    : 7566
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | x = input("insira a cidade de destino: ")
+     2 | y = int(input("insira a idade: "))
+     3 | if(x == "porto velho") or (x == "tefe") or (x == "santarem") or (x == "belem") or (x == "tabatinga"):
+     4 | 	if(0<y<=150):
+     5 | 		if(y<=2):
+     6 | 			z = 0.0
+     7 | 		elif(3<=y<=12):
+     8 | 			if (x == "belem"):
+     9 | 				z = 600/2
+    10 | 			elif(x == "porto velho"):
+    11 | 				z = 500/2
+    12 | 			elif(x == "santarem"):
+    13 | 				z = 370/2
+    14 | 			elif(x == "tefe"):
+    15 | 				z = 360/2
+    16 | 			elif(x == "tabatinga"):
+    17 | 				z = 550/2
+    18 | 		elif(65<=y<=150):
+    19 | 			if(x == "belem"):
+    20 | 				z = 600 - 600*0.3
+    21 | 			elif(x == "porto velho"):
+    22 | 				z = 500 - 500*0.3
+    23 | 			elif(x == "santarem"):
+    24 | 				z = 370 - 370*0.3
+    25 | 			elif(x == "tefe"):
+    26 | 				z = 360 - 360*0.3
+    27 | 			elif(x == "tabatinga"):
+    28 | 				z = 550 - 550*0.3
+    29 | 		elif(12<y<65):
+    30 | 			if(x == "porto velho"):
+    31 | 				z = 500.0
+    32 | 			elif(x == "santarem"):
+    33 | 				z = 370.0
+    34 | 			elif(x == "belem"):
+    35 | 				z = 600.0
+    36 | 			elif(x ==  "tefe"):
+    37 | 				z = 360.0
+    38 | 			elif(x == "tabatinga"):
+    39 | 				z = 550.0
+    40 | 		print("Passagem: R$", round(z, 2))
+    41 | 	else:
+    42 | 		print("Entradas invalidas")
+    43 | else:
+    44 | 	print("Entradas invalidas")
+    45 | 	
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 4
+
+  [1] Linha 18: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 18) / elif ... sem else
+      Contexto:
+              17 | 				z = 550/2
+        >>>   18 | 		elif(65<=y<=150):
+              19 | 			if(x == "belem"):
+
+  [2] Linha 14: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 14) / elif ... sem else
+      Contexto:
+              13 | 				z = 370/2
+        >>>   14 | 			elif(x == "tefe"):
+              15 | 				z = 360/2
+
+  [3] Linha 25: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 25) / elif ... sem else
+      Contexto:
+              24 | 				z = 370 - 370*0.3
+        >>>   25 | 			elif(x == "tefe"):
+              26 | 				z = 360 - 360*0.3
+
+  [4] Linha 36: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 36) / elif ... sem else
+      Contexto:
+              35 | 				z = 600.0
+        >>>   36 | 			elif(x ==  "tefe"):
+              37 | 				z = 360.0
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 18
+
+  [1] Linha 1: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+        >>>    1 | x = input("insira a cidade de destino: ")
+               2 | y = int(input("insira a idade: "))
+
+  [2] Linha 2: Variável 'y' com nome muito curto (≤4 chars)
+      Trecho  : y = ...
+      Contexto:
+               1 | x = input("insira a cidade de destino: ")
+        >>>    2 | y = int(input("insira a idade: "))
+               3 | if(x == "porto velho") or (x == "tefe") or (x == "santarem") or (x == "belem") or (x == "tabatinga"):
+
+  [3] Linha 6: Variável 'z' com nome muito curto (≤4 chars)
+      Trecho  : z = ...
+      Contexto:
+               5 | 		if(y<=2):
+        >>>    6 | 			z = 0.0
+               7 | 		elif(3<=y<=12):
+
+  [4] Linha 9: Variável 'z' com nome muito curto (≤4 chars)
+      Trecho  : z = ...
+      Contexto:
+               8 | 			if (x == "belem"):
+        >>>    9 | 				z = 600/2
+              10 | 			elif(x == "porto velho"):
+
+  [5] Linha 11: Variável 'z' com nome muito curto (≤4 chars)
+      Trecho  : z = ...
+      Contexto:
+              10 | 			elif(x == "porto velho"):
+        >>>   11 | 				z = 500/2
+              12 | 			elif(x == "santarem"):
+
+  [6] Linha 20: Variável 'z' com nome muito curto (≤4 chars)
+      Trecho  : z = ...
+      Contexto:
+              19 | 			if(x == "belem"):
+        >>>   20 | 				z = 600 - 600*0.3
+              21 | 			elif(x == "porto velho"):
+
+  [7] Linha 13: Variável 'z' com nome muito curto (≤4 chars)
+      Trecho  : z = ...
+      Contexto:
+              12 | 			elif(x == "santarem"):
+        >>>   13 | 				z = 370/2
+              14 | 			elif(x == "tefe"):
+
+  [8] Linha 22: Variável 'z' com nome muito curto (≤4 chars)
+      Trecho  : z = ...
+      Contexto:
+              21 | 			elif(x == "porto velho"):
+        >>>   22 | 				z = 500 - 500*0.3
+              23 | 			elif(x == "santarem"):
+
+  [9] Linha 31: Variável 'z' com nome muito curto (≤4 chars)
+      Trecho  : z = ...
+      Contexto:
+              30 | 			if(x == "porto velho"):
+        >>>   31 | 				z = 500.0
+              32 | 			elif(x == "santarem"):
+
+  [10] Linha 15: Variável 'z' com nome muito curto (≤4 chars)
+      Trecho  : z = ...
+      Contexto:
+              14 | 			elif(x == "tefe"):
+        >>>   15 | 				z = 360/2
+              16 | 			elif(x == "tabatinga"):
+
+  [11] Linha 24: Variável 'z' com nome muito curto (≤4 chars)
+      Trecho  : z = ...
+      Contexto:
+              23 | 			elif(x == "santarem"):
+        >>>   24 | 				z = 370 - 370*0.3
+              25 | 			elif(x == "tefe"):
+
+  [12] Linha 33: Variável 'z' com nome muito curto (≤4 chars)
+      Trecho  : z = ...
+      Contexto:
+              32 | 			elif(x == "santarem"):
+        >>>   33 | 				z = 370.0
+              34 | 			elif(x == "belem"):
+
+  [13] Linha 17: Variável 'z' com nome muito curto (≤4 chars)
+      Trecho  : z = ...
+      Contexto:
+              16 | 			elif(x == "tabatinga"):
+        >>>   17 | 				z = 550/2
+              18 | 		elif(65<=y<=150):
+
+  [14] Linha 26: Variável 'z' com nome muito curto (≤4 chars)
+      Trecho  : z = ...
+      Contexto:
+              25 | 			elif(x == "tefe"):
+        >>>   26 | 				z = 360 - 360*0.3
+              27 | 			elif(x == "tabatinga"):
+
+  [15] Linha 35: Variável 'z' com nome muito curto (≤4 chars)
+      Trecho  : z = ...
+      Contexto:
+              34 | 			elif(x == "belem"):
+        >>>   35 | 				z = 600.0
+              36 | 			elif(x ==  "tefe"):
+
+  [16] Linha 28: Variável 'z' com nome muito curto (≤4 chars)
+      Trecho  : z = ...
+      Contexto:
+              27 | 			elif(x == "tabatinga"):
+        >>>   28 | 				z = 550 - 550*0.3
+              29 | 		elif(12<y<65):
+
+  [17] Linha 37: Variável 'z' com nome muito curto (≤4 chars)
+      Trecho  : z = ...
+      Contexto:
+              36 | 			elif(x ==  "tefe"):
+        >>>   37 | 				z = 360.0
+              38 | 			elif(x == "tabatinga"):
+
+  [18] Linha 39: Variável 'z' com nome muito curto (≤4 chars)
+      Trecho  : z = ...
+      Contexto:
+              38 | 			elif(x == "tabatinga"):
+        >>>   39 | 				z = 550.0
+              40 | 		print("Passagem: R$", round(z, 2))
+
+======================================================================

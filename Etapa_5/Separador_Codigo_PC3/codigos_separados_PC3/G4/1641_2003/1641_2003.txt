@@ -1,0 +1,93 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1641_2003.py
+Questão  : 1641
+Aluno    : 2003
+Total MCs: 1
+
+⚠️  Misconceptions detectados: G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | 
+     3 | turmas = array(eval(input("Insira o número de alunos de cada turma: ")))
+     4 | n = 0 #variável acumuladora de trios
+     5 |  
+     6 | for x in turmas:
+     7 | 	if x % 3 == 0:
+     8 | 		n = n + 1
+     9 | 
+    10 | 
+    11 | new = zeros(n, dtype=int)
+    12 | i = 0
+    13 | k = 0
+    14 | for x in turmas:
+    15 | 	if x % 3 == 0:
+    16 | 		new[i] = k
+    17 | 		i = i + 1
+    18 | 	k = k + 1
+    19 | 
+    20 | print(n)	
+    21 | print(new)
+    22 | 		
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 7
+
+  [1] Linha 4: Variável 'n' com nome muito curto (≤4 chars)
+      Trecho  : n = ...
+      Contexto:
+               3 | turmas = array(eval(input("Insira o número de alunos de cada turma: ")))
+        >>>    4 | n = 0 #variável acumuladora de trios
+               5 |  
+
+  [2] Linha 11: Variável 'new' com nome muito curto (≤4 chars)
+      Trecho  : new = ...
+      Contexto:
+              10 | 
+        >>>   11 | new = zeros(n, dtype=int)
+              12 | i = 0
+
+  [3] Linha 12: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+              11 | new = zeros(n, dtype=int)
+        >>>   12 | i = 0
+              13 | k = 0
+
+  [4] Linha 13: Variável 'k' com nome muito curto (≤4 chars)
+      Trecho  : k = ...
+      Contexto:
+              12 | i = 0
+        >>>   13 | k = 0
+              14 | for x in turmas:
+
+  [5] Linha 18: Variável 'k' com nome muito curto (≤4 chars)
+      Trecho  : k = ...
+      Contexto:
+              17 | 		i = i + 1
+        >>>   18 | 	k = k + 1
+              19 | 
+
+  [6] Linha 8: Variável 'n' com nome muito curto (≤4 chars)
+      Trecho  : n = ...
+      Contexto:
+               7 | 	if x % 3 == 0:
+        >>>    8 | 		n = n + 1
+               9 | 
+
+  [7] Linha 17: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+              16 | 		new[i] = k
+        >>>   17 | 		i = i + 1
+              18 | 	k = k + 1
+
+======================================================================

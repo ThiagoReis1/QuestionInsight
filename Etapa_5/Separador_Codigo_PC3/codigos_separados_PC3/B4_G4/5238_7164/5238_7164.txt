@@ -1,0 +1,100 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 5238_7164.py
+Questão  : 5238
+Aluno    : 7164
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B4, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | a = int(input("a: "))
+     2 | b = int(input("b: "))
+     3 | c = int(input("c: "))
+     4 | if a<1000 and b<1000 and c<1000:
+     5 | 	print("NAO")
+     6 | elif a>=1000 and (b<1000 and c<1000):
+     7 | 	print("NAO")
+     8 | elif b>=1000 and (a<1000 and c<1000):
+     9 | 	print("NAO")
+    10 | elif c>=1000 and (a<1000 and b<1000):
+    11 | 	print("NAO")
+    12 | else:
+    13 | 	print("SIM")
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B4 — Comandos repetidos dentro de blocos if-elif-else
+  Ocorrências: 6
+
+  [1] Linha 6: Bloco idêntico ao da linha 4
+      Trecho  : print('NAO')
+      Contexto:
+               5 | 	print("NAO")
+        >>>    6 | elif a>=1000 and (b<1000 and c<1000):
+               7 | 	print("NAO")
+
+  [2] Linha 8: Bloco idêntico ao da linha 4
+      Trecho  : print('NAO')
+      Contexto:
+               7 | 	print("NAO")
+        >>>    8 | elif b>=1000 and (a<1000 and c<1000):
+               9 | 	print("NAO")
+
+  [3] Linha 10: Bloco idêntico ao da linha 4
+      Trecho  : print('NAO')
+      Contexto:
+               9 | 	print("NAO")
+        >>>   10 | elif c>=1000 and (a<1000 and b<1000):
+              11 | 	print("NAO")
+
+  [4] Linha 8: Bloco idêntico ao da linha 6
+      Trecho  : print('NAO')
+      Contexto:
+               7 | 	print("NAO")
+        >>>    8 | elif b>=1000 and (a<1000 and c<1000):
+               9 | 	print("NAO")
+
+  [5] Linha 10: Bloco idêntico ao da linha 6
+      Trecho  : print('NAO')
+      Contexto:
+               9 | 	print("NAO")
+        >>>   10 | elif c>=1000 and (a<1000 and b<1000):
+              11 | 	print("NAO")
+
+  [6] Linha 10: Bloco idêntico ao da linha 8
+      Trecho  : print('NAO')
+      Contexto:
+               9 | 	print("NAO")
+        >>>   10 | elif c>=1000 and (a<1000 and b<1000):
+              11 | 	print("NAO")
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 3
+
+  [1] Linha 1: Variável 'a' com nome muito curto (≤4 chars)
+      Trecho  : a = ...
+      Contexto:
+        >>>    1 | a = int(input("a: "))
+               2 | b = int(input("b: "))
+
+  [2] Linha 2: Variável 'b' com nome muito curto (≤4 chars)
+      Trecho  : b = ...
+      Contexto:
+               1 | a = int(input("a: "))
+        >>>    2 | b = int(input("b: "))
+               3 | c = int(input("c: "))
+
+  [3] Linha 3: Variável 'c' com nome muito curto (≤4 chars)
+      Trecho  : c = ...
+      Contexto:
+               2 | b = int(input("b: "))
+        >>>    3 | c = int(input("c: "))
+               4 | if a<1000 and b<1000 and c<1000:
+
+======================================================================

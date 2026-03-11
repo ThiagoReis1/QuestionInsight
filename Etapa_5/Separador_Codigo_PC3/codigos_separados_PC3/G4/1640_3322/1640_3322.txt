@@ -1,0 +1,71 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1640_3322.py
+Questão  : 1640
+Aluno    : 3322
+Total MCs: 1
+
+⚠️  Misconceptions detectados: G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import *
+     2 | al = array(eval(input()))
+     3 | imp = 0
+     4 | for i in al:
+     5 | 	if i % 2 != 0:
+     6 | 		imp = imp + 1
+     7 | print(imp)
+     8 | vet_impar = zeros(imp, dtype=int)
+     9 | i=0
+    10 | for cont in range(0, size(al)):
+    11 | 	if al[cont] % 2 != 0:
+    12 | 		vet_impar[i]=cont
+    13 | 		i=i+1
+    14 | print(vet_impar)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 5
+
+  [1] Linha 2: Variável 'al' com nome muito curto (≤4 chars)
+      Trecho  : al = ...
+      Contexto:
+               1 | from numpy import *
+        >>>    2 | al = array(eval(input()))
+               3 | imp = 0
+
+  [2] Linha 3: Variável 'imp' com nome muito curto (≤4 chars)
+      Trecho  : imp = ...
+      Contexto:
+               2 | al = array(eval(input()))
+        >>>    3 | imp = 0
+               4 | for i in al:
+
+  [3] Linha 9: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+               8 | vet_impar = zeros(imp, dtype=int)
+        >>>    9 | i=0
+              10 | for cont in range(0, size(al)):
+
+  [4] Linha 6: Variável 'imp' com nome muito curto (≤4 chars)
+      Trecho  : imp = ...
+      Contexto:
+               5 | 	if i % 2 != 0:
+        >>>    6 | 		imp = imp + 1
+               7 | print(imp)
+
+  [5] Linha 13: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+              12 | 		vet_impar[i]=cont
+        >>>   13 | 		i=i+1
+              14 | print(vet_impar)
+
+======================================================================

@@ -1,0 +1,63 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 6381_9745.py
+Questão  : 6381
+Aluno    : 9745
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | 
+     3 | ent = input("string:").upper().split(",")
+     4 | 
+     5 | aux = zeros(4,dtype=int)
+     6 | 
+     7 | for i in ent:
+     8 | 	if i == 'C':
+     9 | 		aux[0] = aux[0] + 1
+    10 | 	elif i == 'O':
+    11 | 		aux[1] = aux[1] + 1
+    12 | 	elif i == 'P':
+    13 | 		aux[2] = aux[2] + 1
+    14 | 	elif i =='E':
+    15 | 		aux[3] = aux[3] + 1
+    16 | 		
+    17 | print(aux)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 12: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 12) / elif ... sem else
+      Contexto:
+              11 | 		aux[1] = aux[1] + 1
+        >>>   12 | 	elif i == 'P':
+              13 | 		aux[2] = aux[2] + 1
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 2
+
+  [1] Linha 3: Variável 'ent' com nome muito curto (≤4 chars)
+      Trecho  : ent = ...
+      Contexto:
+               2 | 
+        >>>    3 | ent = input("string:").upper().split(",")
+               4 | 
+
+  [2] Linha 5: Variável 'aux' com nome muito curto (≤4 chars)
+      Trecho  : aux = ...
+      Contexto:
+               4 | 
+        >>>    5 | aux = zeros(4,dtype=int)
+               6 | 
+
+======================================================================

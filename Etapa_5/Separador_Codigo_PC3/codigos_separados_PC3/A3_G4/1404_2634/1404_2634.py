@@ -1,0 +1,2 @@
+cab=input("digite nome:")
+

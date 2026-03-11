@@ -1,0 +1,139 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 3590_8755.py
+Questão  : 3590
+Aluno    : 8755
+Total MCs: 3
+
+⚠️  Misconceptions detectados: B4, B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import *
+     2 | n = array(eval(input("digite aqui: ")))
+     3 | v = 0
+     4 | d =  0
+     5 | 
+     6 | while d < size(n):
+     7 | 	if n[d] == 1:
+     8 | 		v = v + 10 
+     9 | 	elif n[d] == 2:
+    10 | 		v = v + 5
+    11 | 	elif n[d] == 3:
+    12 | 		v = v + 0
+    13 | 	elif n[d] == 4:
+    14 | 		v = v + 5
+    15 | 	elif n[d] == 5:
+    16 | 		v = v + 20
+    17 | 	elif n[d] == 6:
+    18 | 		v = v + 10
+    19 | 	d+=1
+    20 | print(v)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B4 — Comandos repetidos dentro de blocos if-elif-else
+  Ocorrências: 3
+
+  [1] Linha 13: Bloco idêntico ao da linha 9
+      Trecho  : v = v + 5
+      Contexto:
+              12 | 		v = v + 0
+        >>>   13 | 	elif n[d] == 4:
+              14 | 		v = v + 5
+
+  [2] Linha 17: Bloco idêntico ao da linha 7
+      Trecho  : v = v + 10
+      Contexto:
+              16 | 		v = v + 20
+        >>>   17 | 	elif n[d] == 6:
+              18 | 		v = v + 10
+
+  [3] Linha 13: Bloco idêntico ao da linha 9
+      Trecho  : v = v + 5
+      Contexto:
+              12 | 		v = v + 0
+        >>>   13 | 	elif n[d] == 4:
+              14 | 		v = v + 5
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 15: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 15) / elif ... sem else
+      Contexto:
+              14 | 		v = v + 5
+        >>>   15 | 	elif n[d] == 5:
+              16 | 		v = v + 20
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 9
+
+  [1] Linha 2: Variável 'n' com nome muito curto (≤4 chars)
+      Trecho  : n = ...
+      Contexto:
+               1 | from numpy import *
+        >>>    2 | n = array(eval(input("digite aqui: ")))
+               3 | v = 0
+
+  [2] Linha 3: Variável 'v' com nome muito curto (≤4 chars)
+      Trecho  : v = ...
+      Contexto:
+               2 | n = array(eval(input("digite aqui: ")))
+        >>>    3 | v = 0
+               4 | d =  0
+
+  [3] Linha 4: Variável 'd' com nome muito curto (≤4 chars)
+      Trecho  : d = ...
+      Contexto:
+               3 | v = 0
+        >>>    4 | d =  0
+               5 | 
+
+  [4] Linha 8: Variável 'v' com nome muito curto (≤4 chars)
+      Trecho  : v = ...
+      Contexto:
+               7 | 	if n[d] == 1:
+        >>>    8 | 		v = v + 10 
+               9 | 	elif n[d] == 2:
+
+  [5] Linha 10: Variável 'v' com nome muito curto (≤4 chars)
+      Trecho  : v = ...
+      Contexto:
+               9 | 	elif n[d] == 2:
+        >>>   10 | 		v = v + 5
+              11 | 	elif n[d] == 3:
+
+  [6] Linha 12: Variável 'v' com nome muito curto (≤4 chars)
+      Trecho  : v = ...
+      Contexto:
+              11 | 	elif n[d] == 3:
+        >>>   12 | 		v = v + 0
+              13 | 	elif n[d] == 4:
+
+  [7] Linha 14: Variável 'v' com nome muito curto (≤4 chars)
+      Trecho  : v = ...
+      Contexto:
+              13 | 	elif n[d] == 4:
+        >>>   14 | 		v = v + 5
+              15 | 	elif n[d] == 5:
+
+  [8] Linha 16: Variável 'v' com nome muito curto (≤4 chars)
+      Trecho  : v = ...
+      Contexto:
+              15 | 	elif n[d] == 5:
+        >>>   16 | 		v = v + 20
+              17 | 	elif n[d] == 6:
+
+  [9] Linha 18: Variável 'v' com nome muito curto (≤4 chars)
+      Trecho  : v = ...
+      Contexto:
+              17 | 	elif n[d] == 6:
+        >>>   18 | 		v = v + 10
+              19 | 	d+=1
+
+======================================================================

@@ -1,0 +1,59 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1656_4219.py
+Questão  : 1656
+Aluno    : 4219
+Total MCs: 2
+
+⚠️  Misconceptions detectados: A3, B8
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | string = input("paises: ")
+     3 | vet = zeros(5, dtype=int)
+     4 | 
+     5 | pt = 0 
+     6 | for i in string.split(",") :
+     7 | 	if i == "BE" :
+     8 | 		vet [0] = vet[0] + 1
+     9 | 		
+    10 | 	elif i == "ES" :
+    11 | 		vet[1] = vet[1] + 1
+    12 | 		
+    13 | 	elif i == "FR" :
+    14 | 		vet [2] = vet[2] + 1
+    15 | 	elif i == "IT":
+    16 | 		vet[3] = vet[3] + 1
+    17 | 	elif i == "PT" :
+    18 | 		vet[4] = vet[4] + 1
+    19 | print(max(vet))
+    20 | print(vet)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 1
+
+  [1] Linha 5: Variável 'pt' declarada mas nunca utilizada
+      Trecho  : pt = ...
+      Contexto:
+               4 | 
+        >>>    5 | pt = 0 
+               6 | for i in string.split(",") :
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 15: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 15) / elif ... sem else
+      Contexto:
+              14 | 		vet [2] = vet[2] + 1
+        >>>   15 | 	elif i == "IT":
+              16 | 		vet[3] = vet[3] + 1
+
+======================================================================

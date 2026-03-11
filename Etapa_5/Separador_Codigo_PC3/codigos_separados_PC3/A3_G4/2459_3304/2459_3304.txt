@@ -1,0 +1,132 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 2459_3304.py
+Questão  : 2459
+Aluno    : 3304
+Total MCs: 2
+
+⚠️  Misconceptions detectados: A3, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | p = int(input("Peso: "))
+     2 | d = int(input("Distancia: ")) 
+     3 | c = int(input("Codigo: "))
+     4 | 
+     5 | kilo = 25
+     6 | km = 0.10
+     7 | 
+     8 | if(c==1):
+     9 | 	icms = 17.0
+    10 | if(c==2):
+    11 | 	icms = 17.5
+    12 | if(c==3):
+    13 | 	icms = 18
+    14 | if(c==4):
+    15 | 	icms = 20
+    16 | 	
+    17 | preco = ((p*kilo)+(d*km))
+    18 | 
+    19 | picms = preco * icms/100
+    20 | pt = preco + picms
+    21 | 
+    22 | s = ((p*25)+(d*0.10))*(1+icms/100)
+    23 | 
+    24 | print(round(s,2))
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 1
+
+  [1] Linha 20: Variável 'pt' declarada mas nunca utilizada
+      Trecho  : pt = ...
+      Contexto:
+              19 | picms = preco * icms/100
+        >>>   20 | pt = preco + picms
+              21 | 
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 11
+
+  [1] Linha 1: Variável 'p' com nome muito curto (≤4 chars)
+      Trecho  : p = ...
+      Contexto:
+        >>>    1 | p = int(input("Peso: "))
+               2 | d = int(input("Distancia: ")) 
+
+  [2] Linha 2: Variável 'd' com nome muito curto (≤4 chars)
+      Trecho  : d = ...
+      Contexto:
+               1 | p = int(input("Peso: "))
+        >>>    2 | d = int(input("Distancia: ")) 
+               3 | c = int(input("Codigo: "))
+
+  [3] Linha 3: Variável 'c' com nome muito curto (≤4 chars)
+      Trecho  : c = ...
+      Contexto:
+               2 | d = int(input("Distancia: ")) 
+        >>>    3 | c = int(input("Codigo: "))
+               4 | 
+
+  [4] Linha 5: Variável 'kilo' com nome muito curto (≤4 chars)
+      Trecho  : kilo = ...
+      Contexto:
+               4 | 
+        >>>    5 | kilo = 25
+               6 | km = 0.10
+
+  [5] Linha 6: Variável 'km' com nome muito curto (≤4 chars)
+      Trecho  : km = ...
+      Contexto:
+               5 | kilo = 25
+        >>>    6 | km = 0.10
+               7 | 
+
+  [6] Linha 20: Variável 'pt' com nome muito curto (≤4 chars)
+      Trecho  : pt = ...
+      Contexto:
+              19 | picms = preco * icms/100
+        >>>   20 | pt = preco + picms
+              21 | 
+
+  [7] Linha 22: Variável 's' com nome muito curto (≤4 chars)
+      Trecho  : s = ...
+      Contexto:
+              21 | 
+        >>>   22 | s = ((p*25)+(d*0.10))*(1+icms/100)
+              23 | 
+
+  [8] Linha 9: Variável 'icms' com nome muito curto (≤4 chars)
+      Trecho  : icms = ...
+      Contexto:
+               8 | if(c==1):
+        >>>    9 | 	icms = 17.0
+              10 | if(c==2):
+
+  [9] Linha 11: Variável 'icms' com nome muito curto (≤4 chars)
+      Trecho  : icms = ...
+      Contexto:
+              10 | if(c==2):
+        >>>   11 | 	icms = 17.5
+              12 | if(c==3):
+
+  [10] Linha 13: Variável 'icms' com nome muito curto (≤4 chars)
+      Trecho  : icms = ...
+      Contexto:
+              12 | if(c==3):
+        >>>   13 | 	icms = 18
+              14 | if(c==4):
+
+  [11] Linha 15: Variável 'icms' com nome muito curto (≤4 chars)
+      Trecho  : icms = ...
+      Contexto:
+              14 | if(c==4):
+        >>>   15 | 	icms = 20
+              16 | 	
+
+======================================================================

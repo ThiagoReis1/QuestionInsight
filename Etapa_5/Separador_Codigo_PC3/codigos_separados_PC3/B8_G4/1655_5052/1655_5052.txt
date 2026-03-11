@@ -1,0 +1,72 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1655_5052.py
+Questão  : 1655
+Aluno    : 5052
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | 
+     3 | s=input("Estados: ")
+     4 | v=zeros(5, dtype=int)
+     5 | w=s.split(',')
+     6 | 
+     7 | for i in range(size(w)):
+     8 | 	if w[i].upper()=="AC":
+     9 | 		v[0]=v[0]+1
+    10 | 	elif w[i].upper()=="AM":
+    11 | 		v[1]=v[1]+1
+    12 | 	elif w[i].upper()=="PA":
+    13 | 		v[2]=v[2]+1
+    14 | 	elif w[i].upper()=="RO":
+    15 | 		v[3]=v[3]+1
+    16 | 	elif w[i].upper()=="RR":
+    17 | 		v[4]=v[4]+1
+    18 | print(max(v))
+    19 | print(v)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 14: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 14) / elif ... sem else
+      Contexto:
+              13 | 		v[2]=v[2]+1
+        >>>   14 | 	elif w[i].upper()=="RO":
+              15 | 		v[3]=v[3]+1
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 3
+
+  [1] Linha 3: Variável 's' com nome muito curto (≤4 chars)
+      Trecho  : s = ...
+      Contexto:
+               2 | 
+        >>>    3 | s=input("Estados: ")
+               4 | v=zeros(5, dtype=int)
+
+  [2] Linha 4: Variável 'v' com nome muito curto (≤4 chars)
+      Trecho  : v = ...
+      Contexto:
+               3 | s=input("Estados: ")
+        >>>    4 | v=zeros(5, dtype=int)
+               5 | w=s.split(',')
+
+  [3] Linha 5: Variável 'w' com nome muito curto (≤4 chars)
+      Trecho  : w = ...
+      Contexto:
+               4 | v=zeros(5, dtype=int)
+        >>>    5 | w=s.split(',')
+               6 | 
+
+======================================================================

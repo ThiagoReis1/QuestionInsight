@@ -1,0 +1,53 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 6832_9671.py
+Questão  : 6832
+Aluno    : 9671
+Total MCs: 1
+
+⚠️  Misconceptions detectados: B8
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import *
+     2 | 
+     3 | secao = input("insira 'H' para hortifruti, 'C' para cereais ou 'L' para laticinios: ").upper()
+     4 | 
+     5 | hortifruti = 5.40
+     6 | cereal = 8.95
+     7 | laticinios = 4.50
+     8 | 
+     9 | i = 0
+    10 | h = 0
+    11 | c = 0
+    12 | l = 0
+    13 | 
+    14 | while i < len(secao):
+    15 | 	if secao[i] == 'H':
+    16 | 		h = h + 1
+    17 | 	elif secao[i] == 'C':
+    18 | 		c = c + 1
+    19 | 	elif secao[i] == 'L':
+    20 | 		l = l + 1
+    21 | 	i = i + 1
+    22 | 	total = (h * hortifruti) + (c * cereal) + (l * laticinios)
+    23 | 	
+    24 | print(round(total, 2))
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 17: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 17) / elif ... sem else
+      Contexto:
+              16 | 		h = h + 1
+        >>>   17 | 	elif secao[i] == 'C':
+              18 | 		c = c + 1
+
+======================================================================

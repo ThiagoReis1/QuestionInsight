@@ -1,0 +1,74 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1650_3323.py
+Questão  : 1650
+Aluno    : 3323
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | from numpy.linalg import*
+     3 | a=input("Entrada: ").split(',')
+     4 | i=0
+     5 | cont=zeros(5,dtype=int)
+     6 | 
+     7 | for i in range (size(a)):
+     8 | 	if(a[i]=="P"):
+     9 | 		cont[0]=cont[0]+1
+    10 | 	elif(a[i]=="C"):
+    11 | 		cont[1]=cont[1]+1
+    12 | 	elif(a[i]=="R"):
+    13 | 		cont[2]=cont[2]+1
+    14 | 	elif(a[i]=="L"):
+    15 | 		cont[3]=cont[3]+1
+    16 | 	elif(a[i]=="B"):
+    17 | 		cont[4]=cont[4]+1	
+    18 | print(max(cont))
+    19 | print(cont)
+    20 | 
+    21 | 
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 14: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 14) / elif ... sem else
+      Contexto:
+              13 | 		cont[2]=cont[2]+1
+        >>>   14 | 	elif(a[i]=="L"):
+              15 | 		cont[3]=cont[3]+1
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 3
+
+  [1] Linha 3: Variável 'a' com nome muito curto (≤4 chars)
+      Trecho  : a = ...
+      Contexto:
+               2 | from numpy.linalg import*
+        >>>    3 | a=input("Entrada: ").split(',')
+               4 | i=0
+
+  [2] Linha 4: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+               3 | a=input("Entrada: ").split(',')
+        >>>    4 | i=0
+               5 | cont=zeros(5,dtype=int)
+
+  [3] Linha 5: Variável 'cont' com nome muito curto (≤4 chars)
+      Trecho  : cont = ...
+      Contexto:
+               4 | i=0
+        >>>    5 | cont=zeros(5,dtype=int)
+               6 | 
+
+======================================================================

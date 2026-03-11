@@ -1,0 +1,50 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 3370_7203.py
+Questão  : 3370
+Aluno    : 7203
+Total MCs: 1
+
+⚠️  Misconceptions detectados: A3
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | unidade = input("Unidade: C ou P ?")
+     2 | unidade = unidade.upper()
+     3 | medida = float(input("Medida: "))
+     4 | 
+     5 | p = 0.393701*medida
+     6 | c = medida/0.393701
+     7 | 
+     8 | if(unidade == "P"):
+     9 | 	conversao = medida/0.393701
+    10 | else:
+    11 | 	conversao = 0.393701*medida
+    12 | 	
+    13 | print(round(conversao,2))
+    14 | 	
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 2
+
+  [1] Linha 5: Variável 'p' declarada mas nunca utilizada
+      Trecho  : p = ...
+      Contexto:
+               4 | 
+        >>>    5 | p = 0.393701*medida
+               6 | c = medida/0.393701
+
+  [2] Linha 6: Variável 'c' declarada mas nunca utilizada
+      Trecho  : c = ...
+      Contexto:
+               5 | p = 0.393701*medida
+        >>>    6 | c = medida/0.393701
+               7 | 
+
+======================================================================

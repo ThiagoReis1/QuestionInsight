@@ -1,0 +1,52 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 6838_9675.py
+Questão  : 6838
+Aluno    : 9675
+Total MCs: 1
+
+⚠️  Misconceptions detectados: B8
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import *
+     2 | 
+     3 | prod_comprado = input().upper()
+     4 | valor_doce = 2.25
+     5 | valor_salgado = 4.00
+     6 | valor_integrais = 6.90
+     7 | 
+     8 | total_doce = 0
+     9 | total_salgado = 0
+    10 | total_integrais = 0
+    11 | 
+    12 | i = 0
+    13 | while i < len(prod_comprado):
+    14 | 	#produto = prod_comprado[i]
+    15 | 		if prod_comprado[i] == "D":
+    16 | 			total_doce += 1
+    17 | 		elif prod_comprado[i] == "S":
+    18 | 			total_salgado += 1
+    19 | 		elif prod_comprado[i] == "I":
+    20 | 			total_integrais += 1
+    21 | 		i += 1
+    22 | total = sum([valor_doce*total_doce, valor_salgado*total_salgado, valor_integrais*total_integrais])
+    23 | print(round(total,2))
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 17: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 17) / elif ... sem else
+      Contexto:
+              16 | 			total_doce += 1
+        >>>   17 | 		elif prod_comprado[i] == "S":
+              18 | 			total_salgado += 1
+
+======================================================================

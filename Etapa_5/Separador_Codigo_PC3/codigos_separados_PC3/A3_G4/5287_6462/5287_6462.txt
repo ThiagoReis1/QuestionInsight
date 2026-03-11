@@ -1,0 +1,92 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 5287_6462.py
+Questão  : 5287
+Aluno    : 6462
+Total MCs: 2
+
+⚠️  Misconceptions detectados: A3, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | k = input("").upper()
+     2 | c = 0 
+     3 | i = 0
+     4 | while (k == "COROA" or k == "CARA" or k== "S"):
+     5 | 	i = i + 1
+     6 | 	if k == "CARA":
+     7 | 		c = c + 1
+     8 | 	perc = (c/i)*100
+     9 | 	if k == "S":
+    10 | 		print(i-1)
+    11 | 		print(round(((c/(i-1))*100) , 2))
+    12 | 		break
+    13 | 	k = input("").upper()
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 1
+
+  [1] Linha 8: Variável 'perc' declarada mas nunca utilizada
+      Trecho  : perc = ...
+      Contexto:
+               7 | 		c = c + 1
+        >>>    8 | 	perc = (c/i)*100
+               9 | 	if k == "S":
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 7
+
+  [1] Linha 1: Variável 'k' com nome muito curto (≤4 chars)
+      Trecho  : k = ...
+      Contexto:
+        >>>    1 | k = input("").upper()
+               2 | c = 0 
+
+  [2] Linha 2: Variável 'c' com nome muito curto (≤4 chars)
+      Trecho  : c = ...
+      Contexto:
+               1 | k = input("").upper()
+        >>>    2 | c = 0 
+               3 | i = 0
+
+  [3] Linha 3: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+               2 | c = 0 
+        >>>    3 | i = 0
+               4 | while (k == "COROA" or k == "CARA" or k== "S"):
+
+  [4] Linha 5: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+               4 | while (k == "COROA" or k == "CARA" or k== "S"):
+        >>>    5 | 	i = i + 1
+               6 | 	if k == "CARA":
+
+  [5] Linha 8: Variável 'perc' com nome muito curto (≤4 chars)
+      Trecho  : perc = ...
+      Contexto:
+               7 | 		c = c + 1
+        >>>    8 | 	perc = (c/i)*100
+               9 | 	if k == "S":
+
+  [6] Linha 13: Variável 'k' com nome muito curto (≤4 chars)
+      Trecho  : k = ...
+      Contexto:
+              12 | 		break
+        >>>   13 | 	k = input("").upper()
+
+  [7] Linha 7: Variável 'c' com nome muito curto (≤4 chars)
+      Trecho  : c = ...
+      Contexto:
+               6 | 	if k == "CARA":
+        >>>    7 | 		c = c + 1
+               8 | 	perc = (c/i)*100
+
+======================================================================

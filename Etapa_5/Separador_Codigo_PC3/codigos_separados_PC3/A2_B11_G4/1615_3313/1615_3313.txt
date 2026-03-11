@@ -1,0 +1,173 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1615_3313.py
+Questão  : 1615
+Aluno    : 3313
+Total MCs: 3
+
+⚠️  Misconceptions detectados: A2, B11, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | v1 = array(eval(input("insira os acertos: ")))
+     3 | v2 = array(eval(input("insira os acertos: ")))
+     4 | i = 0
+     5 | jog1 = 0
+     6 | jog2 = 0
+     7 | while(i<size(v1)):
+     8 | 	if(v1[i]==1):
+     9 | 		jog1 = jog1 + 40
+    10 | 	if(v1[i]==2):
+    11 | 		jog1 = jog1 + 20
+    12 | 	if(v1[i]==3):
+    13 | 		jog1 = jog1 + 10
+    14 | 	if(v1[i]==4):
+    15 | 		jog1 = jog1 
+    16 | 	if(v2[i]==1):
+    17 | 		jog2 = jog2 + 40
+    18 | 	if(v2[i]==2):
+    19 | 		jog2 = jog2 + 20
+    20 | 	if(v2[i]==3):
+    21 | 		jog2 = jog2 + 20
+    22 | 	if(v2[i]==4):
+    23 | 		jog2 = jog2 
+    24 | 	i = i+1
+    25 | if(jog1>jog2):
+    26 | 	print("JOGADOR UM")
+    27 | if(jog2>jog1):
+    28 | 	print("JOGADOR DOIS")
+    29 | if(jog1 == jog2):
+    30 | 	print("EMPATE")
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A2 — Variável atribuída a si mesma
+  Ocorrências: 2
+
+  [1] Linha 15: 'jog1' atribuído a si mesmo
+      Trecho  : jog1 = jog1
+      Contexto:
+              14 | 	if(v1[i]==4):
+        >>>   15 | 		jog1 = jog1 
+              16 | 	if(v2[i]==1):
+
+  [2] Linha 23: 'jog2' atribuído a si mesmo
+      Trecho  : jog2 = jog2
+      Contexto:
+              22 | 	if(v2[i]==4):
+        >>>   23 | 		jog2 = jog2 
+              24 | 	i = i+1
+
+▶ B11 — Ifs distintos com blocos idênticos
+  Ocorrências: 1
+
+  [1] Linha 0: B11 detectado pelo VisitorMC3 (localização exata não mapeada)
+      Trecho  : —
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 14
+
+  [1] Linha 2: Variável 'v1' com nome muito curto (≤4 chars)
+      Trecho  : v1 = ...
+      Contexto:
+               1 | from numpy import*
+        >>>    2 | v1 = array(eval(input("insira os acertos: ")))
+               3 | v2 = array(eval(input("insira os acertos: ")))
+
+  [2] Linha 3: Variável 'v2' com nome muito curto (≤4 chars)
+      Trecho  : v2 = ...
+      Contexto:
+               2 | v1 = array(eval(input("insira os acertos: ")))
+        >>>    3 | v2 = array(eval(input("insira os acertos: ")))
+               4 | i = 0
+
+  [3] Linha 4: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+               3 | v2 = array(eval(input("insira os acertos: ")))
+        >>>    4 | i = 0
+               5 | jog1 = 0
+
+  [4] Linha 5: Variável 'jog1' com nome muito curto (≤4 chars)
+      Trecho  : jog1 = ...
+      Contexto:
+               4 | i = 0
+        >>>    5 | jog1 = 0
+               6 | jog2 = 0
+
+  [5] Linha 6: Variável 'jog2' com nome muito curto (≤4 chars)
+      Trecho  : jog2 = ...
+      Contexto:
+               5 | jog1 = 0
+        >>>    6 | jog2 = 0
+               7 | while(i<size(v1)):
+
+  [6] Linha 24: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+              23 | 		jog2 = jog2 
+        >>>   24 | 	i = i+1
+              25 | if(jog1>jog2):
+
+  [7] Linha 9: Variável 'jog1' com nome muito curto (≤4 chars)
+      Trecho  : jog1 = ...
+      Contexto:
+               8 | 	if(v1[i]==1):
+        >>>    9 | 		jog1 = jog1 + 40
+              10 | 	if(v1[i]==2):
+
+  [8] Linha 11: Variável 'jog1' com nome muito curto (≤4 chars)
+      Trecho  : jog1 = ...
+      Contexto:
+              10 | 	if(v1[i]==2):
+        >>>   11 | 		jog1 = jog1 + 20
+              12 | 	if(v1[i]==3):
+
+  [9] Linha 13: Variável 'jog1' com nome muito curto (≤4 chars)
+      Trecho  : jog1 = ...
+      Contexto:
+              12 | 	if(v1[i]==3):
+        >>>   13 | 		jog1 = jog1 + 10
+              14 | 	if(v1[i]==4):
+
+  [10] Linha 15: Variável 'jog1' com nome muito curto (≤4 chars)
+      Trecho  : jog1 = ...
+      Contexto:
+              14 | 	if(v1[i]==4):
+        >>>   15 | 		jog1 = jog1 
+              16 | 	if(v2[i]==1):
+
+  [11] Linha 17: Variável 'jog2' com nome muito curto (≤4 chars)
+      Trecho  : jog2 = ...
+      Contexto:
+              16 | 	if(v2[i]==1):
+        >>>   17 | 		jog2 = jog2 + 40
+              18 | 	if(v2[i]==2):
+
+  [12] Linha 19: Variável 'jog2' com nome muito curto (≤4 chars)
+      Trecho  : jog2 = ...
+      Contexto:
+              18 | 	if(v2[i]==2):
+        >>>   19 | 		jog2 = jog2 + 20
+              20 | 	if(v2[i]==3):
+
+  [13] Linha 21: Variável 'jog2' com nome muito curto (≤4 chars)
+      Trecho  : jog2 = ...
+      Contexto:
+              20 | 	if(v2[i]==3):
+        >>>   21 | 		jog2 = jog2 + 20
+              22 | 	if(v2[i]==4):
+
+  [14] Linha 23: Variável 'jog2' com nome muito curto (≤4 chars)
+      Trecho  : jog2 = ...
+      Contexto:
+              22 | 	if(v2[i]==4):
+        >>>   23 | 		jog2 = jog2 
+              24 | 	i = i+1
+
+======================================================================

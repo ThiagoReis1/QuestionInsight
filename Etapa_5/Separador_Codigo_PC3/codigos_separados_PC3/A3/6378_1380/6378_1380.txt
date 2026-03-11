@@ -1,0 +1,40 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 6378_1380.py
+Questão  : 6378
+Aluno    : 1380
+Total MCs: 1
+
+⚠️  Misconceptions detectados: A3
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | s = input("Informe a sequencia de ids de notas: ")
+     2 | vet = s.split(",")
+     3 | 
+     4 | ids = "CDVU"
+     5 | notas = [100, 50, 20, 10]
+     6 | cont_notas = [0, 0, 0, 0]
+     7 | 
+     8 | for i in range(len(vet)):
+     9 | 	cont_notas[ids.find(vet[i])] += 1
+    10 | 	
+    11 | print(str(cont_notas).replace(",", ""))
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 1
+
+  [1] Linha 5: Variável 'notas' declarada mas nunca utilizada
+      Trecho  : notas = ...
+      Contexto:
+               4 | ids = "CDVU"
+        >>>    5 | notas = [100, 50, 20, 10]
+               6 | cont_notas = [0, 0, 0, 0]
+
+======================================================================

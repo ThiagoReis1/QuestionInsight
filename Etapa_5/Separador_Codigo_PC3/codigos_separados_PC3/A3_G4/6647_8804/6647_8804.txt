@@ -1,0 +1,86 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 6647_8804.py
+Questão  : 6647
+Aluno    : 8804
+Total MCs: 2
+
+⚠️  Misconceptions detectados: A3, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | 
+     3 | n = array(eval(input("")))
+     4 | p = [2,1,5]
+     5 | i = 0
+     6 | while(i < size(n)):
+     7 | 	if n[i] != 0:
+     8 | 		n1 = (n * p)
+     9 | 		total = n
+    10 | 	i = i + 1
+    11 | print(n)
+    12 | 	
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 2
+
+  [1] Linha 8: Variável 'n1' declarada mas nunca utilizada
+      Trecho  : n1 = ...
+      Contexto:
+               7 | 	if n[i] != 0:
+        >>>    8 | 		n1 = (n * p)
+               9 | 		total = n
+
+  [2] Linha 9: Variável 'total' declarada mas nunca utilizada
+      Trecho  : total = ...
+      Contexto:
+               8 | 		n1 = (n * p)
+        >>>    9 | 		total = n
+              10 | 	i = i + 1
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 5
+
+  [1] Linha 3: Variável 'n' com nome muito curto (≤4 chars)
+      Trecho  : n = ...
+      Contexto:
+               2 | 
+        >>>    3 | n = array(eval(input("")))
+               4 | p = [2,1,5]
+
+  [2] Linha 4: Variável 'p' com nome muito curto (≤4 chars)
+      Trecho  : p = ...
+      Contexto:
+               3 | n = array(eval(input("")))
+        >>>    4 | p = [2,1,5]
+               5 | i = 0
+
+  [3] Linha 5: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+               4 | p = [2,1,5]
+        >>>    5 | i = 0
+               6 | while(i < size(n)):
+
+  [4] Linha 10: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+               9 | 		total = n
+        >>>   10 | 	i = i + 1
+              11 | print(n)
+
+  [5] Linha 8: Variável 'n1' com nome muito curto (≤4 chars)
+      Trecho  : n1 = ...
+      Contexto:
+               7 | 	if n[i] != 0:
+        >>>    8 | 		n1 = (n * p)
+               9 | 		total = n
+
+======================================================================

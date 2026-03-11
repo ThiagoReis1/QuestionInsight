@@ -1,0 +1,48 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 3588_9807.py
+Questão  : 3588
+Aluno    : 9807
+Total MCs: 1
+
+⚠️  Misconceptions detectados: B8
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import *
+     2 | 
+     3 | pontos = array(eval(input("digite a pontuacao: ")))
+     4 | 
+     5 | ponto_inicial = 10000
+     6 | 
+     7 | 
+     8 | i = 0
+     9 | 
+    10 | while i < len(pontos):
+    11 | 	if pontos[i] == 1:
+    12 | 		ponto_inicial *= 2
+    13 | 	elif pontos[i] == 3:
+    14 | 		ponto_inicial /= 2
+    15 | 	elif pontos[i] == 4:
+    16 | 		ponto_inicial /= 4
+    17 | 	i += 1 
+    18 | 	
+    19 | print(round(ponto_inicial, 2))
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 13: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 13) / elif ... sem else
+      Contexto:
+              12 | 		ponto_inicial *= 2
+        >>>   13 | 	elif pontos[i] == 3:
+              14 | 		ponto_inicial /= 2
+
+======================================================================

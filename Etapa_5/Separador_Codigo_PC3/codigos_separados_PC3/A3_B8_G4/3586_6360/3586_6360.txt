@@ -1,0 +1,134 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 3586_6360.py
+Questão  : 3586
+Aluno    : 6360
+Total MCs: 3
+
+⚠️  Misconceptions detectados: A3, B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import *
+     2 | v = array(eval(input()))
+     3 | 
+     4 | e = 0
+     5 | i = 0
+     6 | cont = 0
+     7 | while i < size(v):
+     8 | 	if v[i] == 1:
+     9 | 		e = 100
+    10 | 	elif v[i] == 2:
+    11 | 		e = 60
+    12 | 	elif v[i] == 3:
+    13 | 		e = 20
+    14 | 	elif v[i] == 4:
+    15 | 		e = 0
+    16 | 	cont = cont + e
+    17 | 	e = 0
+    18 | 	i = i + 1
+    19 | print(cont)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 1
+
+  [1] Linha 0: A3 detectado pelo VisitorMC3 (localização exata não mapeada)
+      Trecho  : —
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 12: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 12) / elif ... sem else
+      Contexto:
+              11 | 		e = 60
+        >>>   12 | 	elif v[i] == 3:
+              13 | 		e = 20
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 11
+
+  [1] Linha 2: Variável 'v' com nome muito curto (≤4 chars)
+      Trecho  : v = ...
+      Contexto:
+               1 | from numpy import *
+        >>>    2 | v = array(eval(input()))
+               3 | 
+
+  [2] Linha 4: Variável 'e' com nome muito curto (≤4 chars)
+      Trecho  : e = ...
+      Contexto:
+               3 | 
+        >>>    4 | e = 0
+               5 | i = 0
+
+  [3] Linha 5: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+               4 | e = 0
+        >>>    5 | i = 0
+               6 | cont = 0
+
+  [4] Linha 6: Variável 'cont' com nome muito curto (≤4 chars)
+      Trecho  : cont = ...
+      Contexto:
+               5 | i = 0
+        >>>    6 | cont = 0
+               7 | while i < size(v):
+
+  [5] Linha 16: Variável 'cont' com nome muito curto (≤4 chars)
+      Trecho  : cont = ...
+      Contexto:
+              15 | 		e = 0
+        >>>   16 | 	cont = cont + e
+              17 | 	e = 0
+
+  [6] Linha 17: Variável 'e' com nome muito curto (≤4 chars)
+      Trecho  : e = ...
+      Contexto:
+              16 | 	cont = cont + e
+        >>>   17 | 	e = 0
+              18 | 	i = i + 1
+
+  [7] Linha 18: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+              17 | 	e = 0
+        >>>   18 | 	i = i + 1
+              19 | print(cont)
+
+  [8] Linha 9: Variável 'e' com nome muito curto (≤4 chars)
+      Trecho  : e = ...
+      Contexto:
+               8 | 	if v[i] == 1:
+        >>>    9 | 		e = 100
+              10 | 	elif v[i] == 2:
+
+  [9] Linha 11: Variável 'e' com nome muito curto (≤4 chars)
+      Trecho  : e = ...
+      Contexto:
+              10 | 	elif v[i] == 2:
+        >>>   11 | 		e = 60
+              12 | 	elif v[i] == 3:
+
+  [10] Linha 13: Variável 'e' com nome muito curto (≤4 chars)
+      Trecho  : e = ...
+      Contexto:
+              12 | 	elif v[i] == 3:
+        >>>   13 | 		e = 20
+              14 | 	elif v[i] == 4:
+
+  [11] Linha 15: Variável 'e' com nome muito curto (≤4 chars)
+      Trecho  : e = ...
+      Contexto:
+              14 | 	elif v[i] == 4:
+        >>>   15 | 		e = 0
+              16 | 	cont = cont + e
+
+======================================================================

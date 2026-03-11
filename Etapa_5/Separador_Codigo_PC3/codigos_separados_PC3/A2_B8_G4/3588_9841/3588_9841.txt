@@ -1,0 +1,97 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 3588_9841.py
+Questão  : 3588
+Aluno    : 9841
+Total MCs: 3
+
+⚠️  Misconceptions detectados: A2, B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import array
+     2 | n = array(eval(input()))
+     3 | soma = 10000
+     4 | for c in range(0,len(n)):
+     5 | 	if n[c] == 1:
+     6 | 		soma = soma*2
+     7 | 	elif n[c] == 2:
+     8 | 		soma = soma 
+     9 | 	elif n[c] == 3:
+    10 | 		soma = soma/2
+    11 | 	elif n[c] == 4:
+    12 | 		soma = soma/4
+    13 | print(round(soma,2))
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A2 — Variável atribuída a si mesma
+  Ocorrências: 1
+
+  [1] Linha 8: 'soma' atribuído a si mesmo
+      Trecho  : soma = soma
+      Contexto:
+               7 | 	elif n[c] == 2:
+        >>>    8 | 		soma = soma 
+               9 | 	elif n[c] == 3:
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 9: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 9) / elif ... sem else
+      Contexto:
+               8 | 		soma = soma 
+        >>>    9 | 	elif n[c] == 3:
+              10 | 		soma = soma/2
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 6
+
+  [1] Linha 2: Variável 'n' com nome muito curto (≤4 chars)
+      Trecho  : n = ...
+      Contexto:
+               1 | from numpy import array
+        >>>    2 | n = array(eval(input()))
+               3 | soma = 10000
+
+  [2] Linha 3: Variável 'soma' com nome muito curto (≤4 chars)
+      Trecho  : soma = ...
+      Contexto:
+               2 | n = array(eval(input()))
+        >>>    3 | soma = 10000
+               4 | for c in range(0,len(n)):
+
+  [3] Linha 6: Variável 'soma' com nome muito curto (≤4 chars)
+      Trecho  : soma = ...
+      Contexto:
+               5 | 	if n[c] == 1:
+        >>>    6 | 		soma = soma*2
+               7 | 	elif n[c] == 2:
+
+  [4] Linha 8: Variável 'soma' com nome muito curto (≤4 chars)
+      Trecho  : soma = ...
+      Contexto:
+               7 | 	elif n[c] == 2:
+        >>>    8 | 		soma = soma 
+               9 | 	elif n[c] == 3:
+
+  [5] Linha 10: Variável 'soma' com nome muito curto (≤4 chars)
+      Trecho  : soma = ...
+      Contexto:
+               9 | 	elif n[c] == 3:
+        >>>   10 | 		soma = soma/2
+              11 | 	elif n[c] == 4:
+
+  [6] Linha 12: Variável 'soma' com nome muito curto (≤4 chars)
+      Trecho  : soma = ...
+      Contexto:
+              11 | 	elif n[c] == 4:
+        >>>   12 | 		soma = soma/4
+              13 | print(round(soma,2))
+
+======================================================================

@@ -1,0 +1,98 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1365_2851.py
+Questão  : 1365
+Aluno    : 2851
+Total MCs: 4
+
+⚠️  Misconceptions detectados: A3, A4, A5, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from math import sqrt
+     2 | 
+     3 | from math import sin
+     4 | 
+     5 | from math import radians
+     6 | 
+     7 | d = distancia 
+     8 | g = 9.8 
+     9 | a = angulo
+    10 | 
+    11 | vo = sqrt(d*g/sin(2*a))
+    12 | 
+    13 | print= input("Qual o valor de a:")
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 2
+
+  [1] Linha 11: Variável 'vo' declarada mas nunca utilizada
+      Trecho  : vo = ...
+      Contexto:
+              10 | 
+        >>>   11 | vo = sqrt(d*g/sin(2*a))
+              12 | 
+
+  [2] Linha 13: Variável 'print' declarada mas nunca utilizada
+      Trecho  : print = ...
+      Contexto:
+              12 | 
+        >>>   13 | print= input("Qual o valor de a:")
+
+▶ A4 — Redefinição de built-in
+  Ocorrências: 1
+
+  [1] Linha 13: Built-in 'print' redefinido como variável
+      Trecho  : print = input('Qual o valor de a:')
+      Contexto:
+              12 | 
+        >>>   13 | print= input("Qual o valor de a:")
+
+▶ A5 — Importação não utilizada
+  Ocorrências: 1
+
+  [1] Linha 5: 'radians' importado mas nunca utilizado
+      Trecho  : from math import radians
+      Contexto:
+               4 | 
+        >>>    5 | from math import radians
+               6 | 
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 4
+
+  [1] Linha 7: Variável 'd' com nome muito curto (≤4 chars)
+      Trecho  : d = ...
+      Contexto:
+               6 | 
+        >>>    7 | d = distancia 
+               8 | g = 9.8 
+
+  [2] Linha 8: Variável 'g' com nome muito curto (≤4 chars)
+      Trecho  : g = ...
+      Contexto:
+               7 | d = distancia 
+        >>>    8 | g = 9.8 
+               9 | a = angulo
+
+  [3] Linha 9: Variável 'a' com nome muito curto (≤4 chars)
+      Trecho  : a = ...
+      Contexto:
+               8 | g = 9.8 
+        >>>    9 | a = angulo
+              10 | 
+
+  [4] Linha 11: Variável 'vo' com nome muito curto (≤4 chars)
+      Trecho  : vo = ...
+      Contexto:
+              10 | 
+        >>>   11 | vo = sqrt(d*g/sin(2*a))
+              12 | 
+
+======================================================================

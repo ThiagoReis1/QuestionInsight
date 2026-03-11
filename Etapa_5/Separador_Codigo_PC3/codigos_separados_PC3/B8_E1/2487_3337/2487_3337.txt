@@ -1,0 +1,98 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 2487_3337.py
+Questão  : 2487
+Aluno    : 3337
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B8, E1
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | numeroprato = int(input())
+     2 | numerosob = int(input())
+     3 | numerobeb = int(input())
+     4 | 
+     5 | if numeroprato > 4 or numeroprato < 1 or numerosob > 4 or numerosob < 1 or numerobeb < 1 or numerobeb > 4:
+     6 | 	print("Entradas:" ,numeroprato, "," ,numerosob,",", numerobeb)
+     7 | 	print("Dados invalidos")
+     8 | else:
+     9 | 	if numeroprato == 1:
+    10 | 		cal = 180
+    11 | 	elif numeroprato == 2:
+    12 | 		cal = 230
+    13 | 	elif numeroprato == 3:
+    14 | 		cal = 250	
+    15 | 	elif numeroprato == 4:
+    16 | 		cal = 350
+    17 | 	if numerosob == 1:
+    18 | 		calsob = 75
+    19 | 	elif numerosob == 2:
+    20 | 		calsob = 110
+    21 | 	elif numerosob == 3:
+    22 | 		calsob = 170	
+    23 | 	elif numerosob == 4:
+    24 | 		calsob = 200	
+    25 | 	if numerobeb == 1: 
+    26 | 		cal3 = 20
+    27 | 		print("Entradas:" ,numeroprato, "," ,numerosob,",", numerobeb)
+    28 | 		print("Calorias:", cal+calsob+cal3 , "cal")
+    29 | 	elif numerobeb == 2: 
+    30 | 		cal3 = 70
+    31 | 		print("Entradas:" ,numeroprato, "," ,numerosob,",", numerobeb)
+    32 | 		print("Calorias:", cal+calsob+cal3 , "cal")
+    33 | 	elif numerobeb == 3: 
+    34 | 		cal3 = 100
+    35 | 		print("Entradas:" ,numeroprato, "," ,numerosob,",", numerobeb)
+    36 | 		print("Calorias:", cal+calsob+cal3 , "cal")
+    37 | 	elif numerobeb == 4: 
+    38 | 		cal3 = 65
+    39 | 		print("Entradas:" ,numeroprato, "," ,numerosob,",", numerobeb)
+    40 | 		print("Calorias:", cal+calsob+cal3 , "cal")
+    41 | 
+    42 | 
+    43 | 
+    44 | 
+    45 | 	
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 3
+
+  [1] Linha 13: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 13) / elif ... sem else
+      Contexto:
+              12 | 		cal = 230
+        >>>   13 | 	elif numeroprato == 3:
+              14 | 		cal = 250	
+
+  [2] Linha 21: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 21) / elif ... sem else
+      Contexto:
+              20 | 		calsob = 110
+        >>>   21 | 	elif numerosob == 3:
+              22 | 		calsob = 170	
+
+  [3] Linha 33: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 33) / elif ... sem else
+      Contexto:
+              32 | 		print("Calorias:", cal+calsob+cal3 , "cal")
+        >>>   33 | 	elif numerobeb == 3: 
+              34 | 		cal3 = 100
+
+▶ E1 — Verificação desnecessária de todas as combinações possíveis
+  Ocorrências: 1
+
+  [1] Linha 5: 6 condições em um único if — verificação excessiva
+      Trecho  : numeroprato > 4 or numeroprato < 1 or numerosob > 4 or (numerosob < 1) or (numerobeb < 1) or (numerobeb > 4)
+      Contexto:
+               4 | 
+        >>>    5 | if numeroprato > 4 or numeroprato < 1 or numerosob > 4 or numerosob < 1 or numerobeb < 1 or numerobeb > 4:
+               6 | 	print("Entradas:" ,numeroprato, "," ,numerosob,",", numerobeb)
+
+======================================================================

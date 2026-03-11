@@ -1,0 +1,28 @@
+N= round(float(input("Qual o numero inteiro? ")), 1)
+
+if((N%3 == 0) and (N%5 ==0)):
+	print("Zuumu")
+elif((N%3 == 0)):
+	print("Plunct")
+elif((N%5 == 0)):
+	print("Plact")
+else:
+	print(N)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

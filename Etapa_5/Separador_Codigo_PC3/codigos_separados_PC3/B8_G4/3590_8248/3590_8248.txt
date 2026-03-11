@@ -1,0 +1,69 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 3590_8248.py
+Questão  : 3590
+Aluno    : 8248
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import* 
+     2 | 
+     3 | k = array(eval(input("digite")))
+     4 | 
+     5 | i = 0
+     6 | p = 0
+     7 | 
+     8 | while i < size(k):
+     9 | 	if k[i] == 1 or k[i]== 0 :
+    10 | 		p += 10 
+    11 | 	elif k[i] == 2 or k[i] == 4:
+    12 | 	   p+=5
+    13 | 	elif k[i] == 5:
+    14 | 		p+=20
+    15 | 	i+= 1 
+    16 | print(p)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 11: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 11) / elif ... sem else
+      Contexto:
+              10 | 		p += 10 
+        >>>   11 | 	elif k[i] == 2 or k[i] == 4:
+              12 | 	   p+=5
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 3
+
+  [1] Linha 3: Variável 'k' com nome muito curto (≤4 chars)
+      Trecho  : k = ...
+      Contexto:
+               2 | 
+        >>>    3 | k = array(eval(input("digite")))
+               4 | 
+
+  [2] Linha 5: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+               4 | 
+        >>>    5 | i = 0
+               6 | p = 0
+
+  [3] Linha 6: Variável 'p' com nome muito curto (≤4 chars)
+      Trecho  : p = ...
+      Contexto:
+               5 | i = 0
+        >>>    6 | p = 0
+               7 | 
+
+======================================================================

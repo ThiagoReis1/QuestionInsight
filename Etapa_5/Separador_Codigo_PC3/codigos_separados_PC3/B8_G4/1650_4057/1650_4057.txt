@@ -1,0 +1,87 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1650_4057.py
+Questão  : 1650
+Aluno    : 4057
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | 
+     3 | var = input("cor: ").split(',')
+     4 | vet = array(var)
+     5 | a = 0
+     6 | c = zeros(5, dtype=int)
+     7 | for i in (vet):
+     8 | 	if vet[i] == "P":
+     9 | 		c[0] = c[0] + 1
+    10 | 	elif vet[i] == "C":
+    11 | 		c[1] = c[1] + 1
+    12 | 	elif vet[i] == "R":
+    13 | 		c[2] = c[2] + 1
+    14 | 	elif vet[i] == "L":
+    15 | 		c[3] = c[3] + 1
+    16 | 	elif vet[i] == "B":
+    17 | 		c[4] = c[4] + 1
+    18 | 	a = a + 1
+    19 | 	print(a)
+    20 | 	
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 14: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 14) / elif ... sem else
+      Contexto:
+              13 | 		c[2] = c[2] + 1
+        >>>   14 | 	elif vet[i] == "L":
+              15 | 		c[3] = c[3] + 1
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 5
+
+  [1] Linha 3: Variável 'var' com nome muito curto (≤4 chars)
+      Trecho  : var = ...
+      Contexto:
+               2 | 
+        >>>    3 | var = input("cor: ").split(',')
+               4 | vet = array(var)
+
+  [2] Linha 4: Variável 'vet' com nome muito curto (≤4 chars)
+      Trecho  : vet = ...
+      Contexto:
+               3 | var = input("cor: ").split(',')
+        >>>    4 | vet = array(var)
+               5 | a = 0
+
+  [3] Linha 5: Variável 'a' com nome muito curto (≤4 chars)
+      Trecho  : a = ...
+      Contexto:
+               4 | vet = array(var)
+        >>>    5 | a = 0
+               6 | c = zeros(5, dtype=int)
+
+  [4] Linha 6: Variável 'c' com nome muito curto (≤4 chars)
+      Trecho  : c = ...
+      Contexto:
+               5 | a = 0
+        >>>    6 | c = zeros(5, dtype=int)
+               7 | for i in (vet):
+
+  [5] Linha 18: Variável 'a' com nome muito curto (≤4 chars)
+      Trecho  : a = ...
+      Contexto:
+              17 | 		c[4] = c[4] + 1
+        >>>   18 | 	a = a + 1
+              19 | 	print(a)
+
+======================================================================

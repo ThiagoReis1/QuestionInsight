@@ -1,0 +1,98 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1621_2238.py
+Questão  : 1621
+Aluno    : 2238
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | vnp = array(eval(input("Nomes dos produtos:")))
+     3 | vqp = array(eval(input("Quantidade de produtos:")))
+     4 | 
+     5 | v = ("ARROZ", "FEIJAO", "BIS", "MIOJO", "FANTA")
+     6 | u = (1.25,2.60,1.80,0.85,3.20)
+     7 | 
+     8 | c = 0
+     9 | soma = 0
+    10 | 
+    11 | while(c<size(vnp)):
+    12 | 	if(vnp[c]==v[0]):
+    13 | 		soma += u[0]*vqp[c]
+    14 | 	elif(vnp[c]==v[1]):
+    15 | 		soma += u[1]*vqp[c]
+    16 | 	elif(vnp[c]==v[2]):
+    17 | 		soma += u[2]*vqp[c]
+    18 | 	elif(vnp[c]==v[3]):
+    19 | 		soma += u[3]*vqp[c]
+    20 | 	elif(vnp[c]==v[4]):
+    21 | 		soma += u[4]*vqp[c]
+    22 | 	c += 1
+    23 | print(round(soma,2))
+    24 | 
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 18: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 18) / elif ... sem else
+      Contexto:
+              17 | 		soma += u[2]*vqp[c]
+        >>>   18 | 	elif(vnp[c]==v[3]):
+              19 | 		soma += u[3]*vqp[c]
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 6
+
+  [1] Linha 2: Variável 'vnp' com nome muito curto (≤4 chars)
+      Trecho  : vnp = ...
+      Contexto:
+               1 | from numpy import*
+        >>>    2 | vnp = array(eval(input("Nomes dos produtos:")))
+               3 | vqp = array(eval(input("Quantidade de produtos:")))
+
+  [2] Linha 3: Variável 'vqp' com nome muito curto (≤4 chars)
+      Trecho  : vqp = ...
+      Contexto:
+               2 | vnp = array(eval(input("Nomes dos produtos:")))
+        >>>    3 | vqp = array(eval(input("Quantidade de produtos:")))
+               4 | 
+
+  [3] Linha 5: Variável 'v' com nome muito curto (≤4 chars)
+      Trecho  : v = ...
+      Contexto:
+               4 | 
+        >>>    5 | v = ("ARROZ", "FEIJAO", "BIS", "MIOJO", "FANTA")
+               6 | u = (1.25,2.60,1.80,0.85,3.20)
+
+  [4] Linha 6: Variável 'u' com nome muito curto (≤4 chars)
+      Trecho  : u = ...
+      Contexto:
+               5 | v = ("ARROZ", "FEIJAO", "BIS", "MIOJO", "FANTA")
+        >>>    6 | u = (1.25,2.60,1.80,0.85,3.20)
+               7 | 
+
+  [5] Linha 8: Variável 'c' com nome muito curto (≤4 chars)
+      Trecho  : c = ...
+      Contexto:
+               7 | 
+        >>>    8 | c = 0
+               9 | soma = 0
+
+  [6] Linha 9: Variável 'soma' com nome muito curto (≤4 chars)
+      Trecho  : soma = ...
+      Contexto:
+               8 | c = 0
+        >>>    9 | soma = 0
+              10 | 
+
+======================================================================

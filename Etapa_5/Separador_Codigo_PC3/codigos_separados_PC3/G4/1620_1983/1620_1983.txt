@@ -1,0 +1,61 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1620_1983.py
+Questão  : 1620
+Aluno    : 1983
+Total MCs: 1
+
+⚠️  Misconceptions detectados: G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | from math import*
+     3 | v1 = array(eval(input("")))
+     4 | v2 = array(eval(input("")))
+     5 | 
+     6 | #v = (v1[0]*v2[0]+ v1[1]*v2[1] + v1[2]*v2[2] + v1[3]*v2[3])/60
+     7 | #vv = (v1[0]*v2[0]+ v1[1]*v2[1] + v1[2]*v2[2] + v1[3]*v2[3])/100
+     8 | v = v1 * 5*v2/100
+     9 | t = sum([v])
+    10 | #vvv = print(round(v+vv,2))
+    11 | print(round(t,2))
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 4
+
+  [1] Linha 3: Variável 'v1' com nome muito curto (≤4 chars)
+      Trecho  : v1 = ...
+      Contexto:
+               2 | from math import*
+        >>>    3 | v1 = array(eval(input("")))
+               4 | v2 = array(eval(input("")))
+
+  [2] Linha 4: Variável 'v2' com nome muito curto (≤4 chars)
+      Trecho  : v2 = ...
+      Contexto:
+               3 | v1 = array(eval(input("")))
+        >>>    4 | v2 = array(eval(input("")))
+               5 | 
+
+  [3] Linha 8: Variável 'v' com nome muito curto (≤4 chars)
+      Trecho  : v = ...
+      Contexto:
+               7 | #vv = (v1[0]*v2[0]+ v1[1]*v2[1] + v1[2]*v2[2] + v1[3]*v2[3])/100
+        >>>    8 | v = v1 * 5*v2/100
+               9 | t = sum([v])
+
+  [4] Linha 9: Variável 't' com nome muito curto (≤4 chars)
+      Trecho  : t = ...
+      Contexto:
+               8 | v = v1 * 5*v2/100
+        >>>    9 | t = sum([v])
+              10 | #vvv = print(round(v+vv,2))
+
+======================================================================

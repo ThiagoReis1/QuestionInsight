@@ -1,0 +1,62 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1642_6417.py
+Questão  : 1642
+Aluno    : 6417
+Total MCs: 1
+
+⚠️  Misconceptions detectados: A3
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import *
+     2 | 
+     3 | vet = array(eval(input("Alunos matriculados em cada disciplina: ")))
+     4 | cond = 0
+     5 | pum = 0
+     6 | pdois = 1
+     7 | ptres = 2
+     8 | 
+     9 | for i in vet:
+    10 | 	if vet[i] % 5 == 0:
+    11 | 		cond = cond + 1
+    12 | 		veti = zeros(cond, dtype=int)
+    13 | 		if vet[i] % 5 == 0:
+    14 | 			veti[i] = veti[i] + vet[i]
+    15 | 		
+    16 | 	
+    17 | 	
+    18 | print(cond)
+    19 | print(veti)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 3
+
+  [1] Linha 5: Variável 'pum' declarada mas nunca utilizada
+      Trecho  : pum = ...
+      Contexto:
+               4 | cond = 0
+        >>>    5 | pum = 0
+               6 | pdois = 1
+
+  [2] Linha 6: Variável 'pdois' declarada mas nunca utilizada
+      Trecho  : pdois = ...
+      Contexto:
+               5 | pum = 0
+        >>>    6 | pdois = 1
+               7 | ptres = 2
+
+  [3] Linha 7: Variável 'ptres' declarada mas nunca utilizada
+      Trecho  : ptres = ...
+      Contexto:
+               6 | pdois = 1
+        >>>    7 | ptres = 2
+               8 | 
+
+======================================================================

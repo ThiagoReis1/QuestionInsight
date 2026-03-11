@@ -1,0 +1,98 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1645_3083.py
+Questão  : 1645
+Aluno    : 3083
+Total MCs: 2
+
+⚠️  Misconceptions detectados: A3, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | saque = array(eval(input('')))
+     3 | cont = zeros(3, dtype=int)#saques acima do limite
+     4 | sl = 0
+     5 | 
+     6 | for i in range(size(saque)):
+     7 | 	if(saque[i] >= 2000):
+     8 | 		sl = sl + 1
+     9 | 		
+    10 | print(sl)
+    11 | 
+    12 | ps = 0
+    13 | 
+    14 | for i in range(size(saque)):
+    15 | 	p = -1
+    16 | 	if(saque[i] >= 2000):
+    17 | 		print(i)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 3
+
+  [1] Linha 3: Variável 'cont' declarada mas nunca utilizada
+      Trecho  : cont = ...
+      Contexto:
+               2 | saque = array(eval(input('')))
+        >>>    3 | cont = zeros(3, dtype=int)#saques acima do limite
+               4 | sl = 0
+
+  [2] Linha 12: Variável 'ps' declarada mas nunca utilizada
+      Trecho  : ps = ...
+      Contexto:
+              11 | 
+        >>>   12 | ps = 0
+              13 | 
+
+  [3] Linha 15: Variável 'p' declarada mas nunca utilizada
+      Trecho  : p = ...
+      Contexto:
+              14 | for i in range(size(saque)):
+        >>>   15 | 	p = -1
+              16 | 	if(saque[i] >= 2000):
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 5
+
+  [1] Linha 3: Variável 'cont' com nome muito curto (≤4 chars)
+      Trecho  : cont = ...
+      Contexto:
+               2 | saque = array(eval(input('')))
+        >>>    3 | cont = zeros(3, dtype=int)#saques acima do limite
+               4 | sl = 0
+
+  [2] Linha 4: Variável 'sl' com nome muito curto (≤4 chars)
+      Trecho  : sl = ...
+      Contexto:
+               3 | cont = zeros(3, dtype=int)#saques acima do limite
+        >>>    4 | sl = 0
+               5 | 
+
+  [3] Linha 12: Variável 'ps' com nome muito curto (≤4 chars)
+      Trecho  : ps = ...
+      Contexto:
+              11 | 
+        >>>   12 | ps = 0
+              13 | 
+
+  [4] Linha 15: Variável 'p' com nome muito curto (≤4 chars)
+      Trecho  : p = ...
+      Contexto:
+              14 | for i in range(size(saque)):
+        >>>   15 | 	p = -1
+              16 | 	if(saque[i] >= 2000):
+
+  [5] Linha 8: Variável 'sl' com nome muito curto (≤4 chars)
+      Trecho  : sl = ...
+      Contexto:
+               7 | 	if(saque[i] >= 2000):
+        >>>    8 | 		sl = sl + 1
+               9 | 		
+
+======================================================================

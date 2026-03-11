@@ -1,0 +1,96 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 6777_9811.py
+Questão  : 6777
+Aluno    : 9811
+Total MCs: 3
+
+⚠️  Misconceptions detectados: A3, B8, B9
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | br = 18
+     2 | uk = 17
+     3 | ano = int(input("ano:"))
+     4 | pais = input("brasil (B) ou inglaterra (I)?").upper()
+     5 | calculo = 2023 - ano
+     6 | 
+     7 | if pais == "B":
+     8 | 	if calculo >= 18:
+     9 | 		conta = 18 - calculo
+    10 | 		print("sim")
+    11 | 		print(conta)
+    12 | 	elif calculo < 18:
+    13 | 		conta = 18 - calculo
+    14 | 		print("nao")
+    15 | 		print(conta)
+    16 | 		
+    17 | elif pais == "I":
+    18 | 	if calculo >= 17:
+    19 | 		conta = 17 - calculo
+    20 | 		print("sim")
+    21 | 		print(conta)
+    22 | 	elif calculo < 17:
+    23 | 		conta = 17 - calculo
+    24 | 		print("nao")
+    25 | 		print(conta)
+    26 | else:
+    27 | 	print("invalido")
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 2
+
+  [1] Linha 1: Variável 'br' declarada mas nunca utilizada
+      Trecho  : br = ...
+      Contexto:
+        >>>    1 | br = 18
+               2 | uk = 17
+
+  [2] Linha 2: Variável 'uk' declarada mas nunca utilizada
+      Trecho  : uk = ...
+      Contexto:
+               1 | br = 18
+        >>>    2 | uk = 17
+               3 | ano = int(input("ano:"))
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 2
+
+  [1] Linha 8: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 8) / elif ... sem else
+      Contexto:
+               7 | if pais == "B":
+        >>>    8 | 	if calculo >= 18:
+               9 | 		conta = 18 - calculo
+
+  [2] Linha 18: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 18) / elif ... sem else
+      Contexto:
+              17 | elif pais == "I":
+        >>>   18 | 	if calculo >= 17:
+              19 | 		conta = 17 - calculo
+
+▶ B9 — elif/else retestando condições já verificadas
+  Ocorrências: 2
+
+  [1] Linha 12: elif retesta condição inversa do if da linha 8
+      Trecho  : if calculo >= 18 ... elif calculo < 18
+      Contexto:
+              11 | 		print(conta)
+        >>>   12 | 	elif calculo < 18:
+              13 | 		conta = 18 - calculo
+
+  [2] Linha 22: elif retesta condição inversa do if da linha 18
+      Trecho  : if calculo >= 17 ... elif calculo < 17
+      Contexto:
+              21 | 		print(conta)
+        >>>   22 | 	elif calculo < 17:
+              23 | 		conta = 17 - calculo
+
+======================================================================

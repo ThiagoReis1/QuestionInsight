@@ -1,0 +1,77 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 6765_9842.py
+Questão  : 6765
+Aluno    : 9842
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B8, B9
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | idade = int(input("informe ano de nascimento: "))
+     2 | pais = str(input("B ou R: "))
+     3 | 
+     4 | if(pais.upper() == 'B'):
+     5 | 	total = (2023 - idade)
+     6 | 
+     7 | 	if(total >= 18):
+     8 | 		print("sim")
+     9 | 		print(total - 18)
+    10 | 	else:
+    11 | 		if(total < 18):
+    12 | 			print("nao")
+    13 | 			print(18 - total)
+    14 | else:
+    15 | 	print("invalido")
+    16 | 
+    17 | 	if(pais.upper() == 'R'):
+    18 | 		total = (2023 - idade)
+    19 | 
+    20 | 		if(total >= 21):
+    21 | 			print("sim")
+    22 | 			print(total - 21)
+    23 | 		else:
+    24 | 			if(total < 21):
+    25 | 				print("nao")
+    26 | 				print(total)
+    27 | 			else:
+    28 | 				print("invalido")
+    29 | 					
+    30 | 			
+    31 | 
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 7: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 7) / elif ... sem else
+      Contexto:
+               6 | 
+        >>>    7 | 	if(total >= 18):
+               8 | 		print("sim")
+
+▶ B9 — elif/else retestando condições já verificadas
+  Ocorrências: 2
+
+  [1] Linha 11: elif retesta condição inversa do if da linha 7
+      Trecho  : if total >= 18 ... elif total < 18
+      Contexto:
+              10 | 	else:
+        >>>   11 | 		if(total < 18):
+              12 | 			print("nao")
+
+  [2] Linha 24: elif retesta condição inversa do if da linha 20
+      Trecho  : if total >= 21 ... elif total < 21
+      Contexto:
+              23 | 		else:
+        >>>   24 | 			if(total < 21):
+              25 | 				print("nao")
+
+======================================================================

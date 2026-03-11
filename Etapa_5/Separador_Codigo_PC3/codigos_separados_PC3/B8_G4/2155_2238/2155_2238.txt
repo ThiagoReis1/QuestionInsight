@@ -1,0 +1,88 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 2155_2238.py
+Questão  : 2155
+Aluno    : 2238
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | v = array(eval(input("Peso(Kg):")))
+     3 | u = array(eval(input("Altura(m):")))
+     4 | 
+     5 | imc = zeros(size(v), dtype=float)
+     6 | 
+     7 | c = 0 
+     8 | for i in v:
+     9 | 	imc[c] = round(i/(u[c]**2),2)
+    10 | 	c += 1 
+    11 | print(imc)
+    12 | print("O MAIOR IMC DA TURMA EH:",max(imc))
+    13 | 
+    14 | if (max(imc)<17):
+    15 | 	print(("muito abaixo do peso").upper())
+    16 | elif (max(imc)>17)and(max(imc)<18.49):
+    17 | 	print(("abaixo do peso").upper())
+    18 | elif (max(imc)>18.5)and(max(imc)<24.99):
+    19 | 	print(("peso normal").upper())
+    20 | elif (max(imc)>25)and (max(imc)<29.99):
+    21 | 	print(("acima do peso").upper())
+    22 | elif (max(imc)>30)and (max(imc)<34.99):
+    23 | 	print(("obesidade").upper())
+    24 | elif (max(imc)>35)and (max(imc)<39.99):
+    25 | 	print(("obesidade severa").upper())
+    26 | elif (max(imc)>40):
+    27 | 	print(("obesidade morbida").upper())
+    28 | 	
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 24: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 24) / elif ... sem else
+      Contexto:
+              23 | 	print(("obesidade").upper())
+        >>>   24 | elif (max(imc)>35)and (max(imc)<39.99):
+              25 | 	print(("obesidade severa").upper())
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 4
+
+  [1] Linha 2: Variável 'v' com nome muito curto (≤4 chars)
+      Trecho  : v = ...
+      Contexto:
+               1 | from numpy import*
+        >>>    2 | v = array(eval(input("Peso(Kg):")))
+               3 | u = array(eval(input("Altura(m):")))
+
+  [2] Linha 3: Variável 'u' com nome muito curto (≤4 chars)
+      Trecho  : u = ...
+      Contexto:
+               2 | v = array(eval(input("Peso(Kg):")))
+        >>>    3 | u = array(eval(input("Altura(m):")))
+               4 | 
+
+  [3] Linha 5: Variável 'imc' com nome muito curto (≤4 chars)
+      Trecho  : imc = ...
+      Contexto:
+               4 | 
+        >>>    5 | imc = zeros(size(v), dtype=float)
+               6 | 
+
+  [4] Linha 7: Variável 'c' com nome muito curto (≤4 chars)
+      Trecho  : c = ...
+      Contexto:
+               6 | 
+        >>>    7 | c = 0 
+               8 | for i in v:
+
+======================================================================

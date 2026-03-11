@@ -1,0 +1,91 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1525_4312.py
+Questão  : 1525
+Aluno    : 4312
+Total MCs: 2
+
+⚠️  Misconceptions detectados: A4, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | vi = int(input("Volume inicial: "))
+     2 | va = int(input("Volume que bombea para dentro: "))
+     3 | vd = int(input("Volume de agua retirada: "))
+     4 | 
+     5 | min = 0
+     6 | 
+     7 | while(vi > 1000):
+     8 | 	vi = vi + va - vd
+     9 | 	min = min + 1
+    10 | 
+    11 | print(min)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A4 — Redefinição de built-in
+  Ocorrências: 2
+
+  [1] Linha 5: Built-in 'min' redefinido como variável
+      Trecho  : min = 0
+      Contexto:
+               4 | 
+        >>>    5 | min = 0
+               6 | 
+
+  [2] Linha 9: Built-in 'min' redefinido como variável
+      Trecho  : min = min + 1
+      Contexto:
+               8 | 	vi = vi + va - vd
+        >>>    9 | 	min = min + 1
+              10 | 
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 6
+
+  [1] Linha 1: Variável 'vi' com nome muito curto (≤4 chars)
+      Trecho  : vi = ...
+      Contexto:
+        >>>    1 | vi = int(input("Volume inicial: "))
+               2 | va = int(input("Volume que bombea para dentro: "))
+
+  [2] Linha 2: Variável 'va' com nome muito curto (≤4 chars)
+      Trecho  : va = ...
+      Contexto:
+               1 | vi = int(input("Volume inicial: "))
+        >>>    2 | va = int(input("Volume que bombea para dentro: "))
+               3 | vd = int(input("Volume de agua retirada: "))
+
+  [3] Linha 3: Variável 'vd' com nome muito curto (≤4 chars)
+      Trecho  : vd = ...
+      Contexto:
+               2 | va = int(input("Volume que bombea para dentro: "))
+        >>>    3 | vd = int(input("Volume de agua retirada: "))
+               4 | 
+
+  [4] Linha 5: Variável 'min' com nome muito curto (≤4 chars)
+      Trecho  : min = ...
+      Contexto:
+               4 | 
+        >>>    5 | min = 0
+               6 | 
+
+  [5] Linha 8: Variável 'vi' com nome muito curto (≤4 chars)
+      Trecho  : vi = ...
+      Contexto:
+               7 | while(vi > 1000):
+        >>>    8 | 	vi = vi + va - vd
+               9 | 	min = min + 1
+
+  [6] Linha 9: Variável 'min' com nome muito curto (≤4 chars)
+      Trecho  : min = ...
+      Contexto:
+               8 | 	vi = vi + va - vd
+        >>>    9 | 	min = min + 1
+              10 | 
+
+======================================================================

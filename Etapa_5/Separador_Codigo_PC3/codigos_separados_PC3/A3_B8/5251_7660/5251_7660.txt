@@ -1,0 +1,88 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 5251_7660.py
+Questão  : 5251
+Aluno    : 7660
+Total MCs: 2
+
+⚠️  Misconceptions detectados: A3, B8
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | #-------------------------------------------------------------
+     2 | # Nome: Ivan Lucas de Oliveira Pacheco
+     3 | # Data: 21/12/2022
+     4 | # Objetivo: Determinar o preço a ser pago em uma passagem de barco
+     5 | #-------------------------------------------------------------
+     6 | 
+     7 | # Definição do desconto
+     8 | desconto = 0
+     9 | 
+    10 | # Ler cidade de destino e idade do passageiro
+    11 | cidade = input("Qual a cidade de destino? ")
+    12 | idade_passageiro = int(input("Informe a idade do passageiro(a): "))
+    13 | 
+    14 | cidade = cidade.lower()
+    15 | 
+    16 | # Alteração do desconto de acordo com a idade
+    17 | if (idade_passageiro > 0) and (idade_passageiro < 151):
+    18 | 	if idade_passageiro < 3:
+    19 | 		desconto = 1
+    20 | 	elif idade_passageiro < 13:
+    21 | 		desconto = 0.5
+    22 | 	elif idade_passageiro > 64:
+    23 | 		desconto = 0.3
+    24 | 	if cidade == "porto velho":
+    25 | 		valor = 500
+    26 | 		valor = round(valor * (1 - desconto),2)
+    27 | 		print ("Passagem: R$", valor)
+    28 | 	elif cidade == "santarem":
+    29 | 		valor = 370
+    30 | 		valor = round(valor * (1 - desconto),2)
+    31 | 		print ("Passagem: R$", valor)
+    32 | 	elif cidade == "belem":
+    33 | 		valor = 600
+    34 | 		valor = round(valor * (1 - desconto),2)
+    35 | 		print("Passagem: R$", valor)
+    36 | 	elif cidade == "tefe":
+    37 | 		valor = 360
+    38 | 		valor = round(valor * (1 - desconto),2)
+    39 | 		print("Passagem: R$", valor)
+    40 | 	elif cidade == "tabatinga":
+    41 | 		valor = 550
+    42 | 		valor = round(valor * (1 - desconto),2)
+    43 | 		print("Passagem: R$", valor)
+    44 | 	else:
+    45 | 		valor = "Entradas invalidas"
+    46 | 		print (valor)
+    47 | else:
+    48 | 	valor = "Entradas invalidas"
+    49 | 	print (valor)
+    50 | 
+    51 | 
+    52 | 
+    53 | 	
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 1
+
+  [1] Linha 0: A3 detectado pelo VisitorMC3 (localização exata não mapeada)
+      Trecho  : —
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 20: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 20) / elif ... sem else
+      Contexto:
+              19 | 		desconto = 1
+        >>>   20 | 	elif idade_passageiro < 13:
+              21 | 		desconto = 0.5
+
+======================================================================

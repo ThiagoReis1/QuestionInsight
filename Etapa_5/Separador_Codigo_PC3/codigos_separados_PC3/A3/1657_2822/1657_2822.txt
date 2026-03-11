@@ -1,0 +1,48 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1657_2822.py
+Questão  : 1657
+Aluno    : 2822
+Total MCs: 1
+
+⚠️  Misconceptions detectados: A3
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | entry = input("Estado: ").split(',')
+     3 | estados = ["AZ","CA","FL","PA","WI"]
+     4 | result = zeros(5,dtype=int)
+     5 | 
+     6 | for i in entry:
+     7 | 	if i == "AZ":
+     8 | 		result[0] = result[0] + 1
+     9 | 	if i == "CA":
+    10 | 		result[1] = result[1] + 1
+    11 | 	if i == "FL":
+    12 | 		result[2] = result[2] + 1
+    13 | 	if i == "PA":
+    14 | 		result[3] = result[3] + 1
+    15 | 	if i == "WI":
+    16 | 		result[4] = result[4] + 1
+    17 | 
+    18 | print(max(result))
+    19 | print(result)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 1
+
+  [1] Linha 3: Variável 'estados' declarada mas nunca utilizada
+      Trecho  : estados = ...
+      Contexto:
+               2 | entry = input("Estado: ").split(',')
+        >>>    3 | estados = ["AZ","CA","FL","PA","WI"]
+               4 | result = zeros(5,dtype=int)
+
+======================================================================

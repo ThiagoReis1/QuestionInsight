@@ -1,0 +1,6 @@
+a = float(input("valor de a:"))
+b = float(input("valor de b:"))
+c = float(input("valor de c:"))
+metro = float(input("valor de m2:"))
+total = ((a + b + c) * metro)
+print (round(total, 2))

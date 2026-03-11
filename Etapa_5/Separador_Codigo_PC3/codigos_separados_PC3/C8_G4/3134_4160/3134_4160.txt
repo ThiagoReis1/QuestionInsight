@@ -1,0 +1,79 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 3134_4160.py
+Questão  : 3134
+Aluno    : 4160
+Total MCs: 2
+
+⚠️  Misconceptions detectados: C8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | 
+     3 | v= array(eval(input("Vetor: ")))
+     4 | n = size(v)
+     5 | 
+     6 | for i in range(size(v)):
+     7 | 	m = ((sum(v[i])**2) /n)**1/2
+     8 | 	i = i +1
+     9 | x = round(m,n)		  
+    10 | print(x)
+    11 | 
+    12 | 
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ C8 — Loop for com sua variável de iteração sobrescrita
+  Ocorrências: 1
+
+  [1] Linha 8: Variável de iteração 'i' sobrescrita no loop
+      Trecho  : i = i + 1
+      Contexto:
+               7 | 	m = ((sum(v[i])**2) /n)**1/2
+        >>>    8 | 	i = i +1
+               9 | x = round(m,n)		  
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 5
+
+  [1] Linha 3: Variável 'v' com nome muito curto (≤4 chars)
+      Trecho  : v = ...
+      Contexto:
+               2 | 
+        >>>    3 | v= array(eval(input("Vetor: ")))
+               4 | n = size(v)
+
+  [2] Linha 4: Variável 'n' com nome muito curto (≤4 chars)
+      Trecho  : n = ...
+      Contexto:
+               3 | v= array(eval(input("Vetor: ")))
+        >>>    4 | n = size(v)
+               5 | 
+
+  [3] Linha 9: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+               8 | 	i = i +1
+        >>>    9 | x = round(m,n)		  
+              10 | print(x)
+
+  [4] Linha 7: Variável 'm' com nome muito curto (≤4 chars)
+      Trecho  : m = ...
+      Contexto:
+               6 | for i in range(size(v)):
+        >>>    7 | 	m = ((sum(v[i])**2) /n)**1/2
+               8 | 	i = i +1
+
+  [5] Linha 8: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+               7 | 	m = ((sum(v[i])**2) /n)**1/2
+        >>>    8 | 	i = i +1
+               9 | x = round(m,n)		  
+
+======================================================================

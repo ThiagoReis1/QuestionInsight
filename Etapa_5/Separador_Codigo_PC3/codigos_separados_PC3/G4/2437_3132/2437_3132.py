@@ -1,0 +1,5 @@
+nA = float(input("abertura: "))
+nB = float(input("fechamento: "))
+nC = (nB-nA)
+nD = (nC/nA)
+print(round(nD*100, 2))

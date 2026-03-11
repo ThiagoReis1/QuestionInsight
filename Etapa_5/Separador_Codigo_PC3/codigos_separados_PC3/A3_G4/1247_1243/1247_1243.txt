@@ -1,0 +1,86 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1247_1243.py
+Questão  : 1247
+Aluno    : 1243
+Total MCs: 2
+
+⚠️  Misconceptions detectados: A3, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | from math import*
+     3 | 
+     4 | vetor = array(eval(input("digite o vetor: ")))
+     5 | saida = array(zeros(2, dtype = int))
+     6 | 
+     7 | A = min(vetor)
+     8 | B = max(vetor)
+     9 | C = 0.75* A + 0.25* B
+    10 | D = 0.25* A + 0.75* B
+    11 | con = 0
+    12 | for i in range(size(vetor)):
+    13 | 	if((vetor[i]>= A) and (vetor[i] < C)):
+    14 | 		saida[0] = saida[0] + 1
+    15 | for i in range(size(vetor)):		
+    16 | 	if((vetor[i] >= D) and (vetor[i] < B)):
+    17 | 		saida[1] = saida[1] + 1
+    18 | 		
+    19 | print(saida)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 1
+
+  [1] Linha 11: Variável 'con' declarada mas nunca utilizada
+      Trecho  : con = ...
+      Contexto:
+              10 | D = 0.25* A + 0.75* B
+        >>>   11 | con = 0
+              12 | for i in range(size(vetor)):
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 5
+
+  [1] Linha 7: Variável 'A' com nome muito curto (≤4 chars)
+      Trecho  : A = ...
+      Contexto:
+               6 | 
+        >>>    7 | A = min(vetor)
+               8 | B = max(vetor)
+
+  [2] Linha 8: Variável 'B' com nome muito curto (≤4 chars)
+      Trecho  : B = ...
+      Contexto:
+               7 | A = min(vetor)
+        >>>    8 | B = max(vetor)
+               9 | C = 0.75* A + 0.25* B
+
+  [3] Linha 9: Variável 'C' com nome muito curto (≤4 chars)
+      Trecho  : C = ...
+      Contexto:
+               8 | B = max(vetor)
+        >>>    9 | C = 0.75* A + 0.25* B
+              10 | D = 0.25* A + 0.75* B
+
+  [4] Linha 10: Variável 'D' com nome muito curto (≤4 chars)
+      Trecho  : D = ...
+      Contexto:
+               9 | C = 0.75* A + 0.25* B
+        >>>   10 | D = 0.25* A + 0.75* B
+              11 | con = 0
+
+  [5] Linha 11: Variável 'con' com nome muito curto (≤4 chars)
+      Trecho  : con = ...
+      Contexto:
+              10 | D = 0.25* A + 0.75* B
+        >>>   11 | con = 0
+              12 | for i in range(size(vetor)):
+
+======================================================================

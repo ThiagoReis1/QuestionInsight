@@ -1,0 +1,71 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1652_8918.py
+Questão  : 1652
+Aluno    : 8918
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | e = input("etnia: ").upper()
+     3 | e = e.split(",")
+     4 | c = zeros(5, dtype = int)
+     5 | 
+     6 | for i in e:
+     7 | 	if i == "B":
+     8 | 		c[0] += 1
+     9 | 	elif i == "PA":
+    10 | 		c[1] += 1
+    11 | 	elif i == "PR":
+    12 | 		c[2] += 1
+    13 | 	elif i == "A":
+    14 | 		c[3] += 1
+    15 | 	elif i == "I":
+    16 | 		c[4] += 1
+    17 | print(max(c))
+    18 | print(c)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 13: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 13) / elif ... sem else
+      Contexto:
+              12 | 		c[2] += 1
+        >>>   13 | 	elif i == "A":
+              14 | 		c[3] += 1
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 3
+
+  [1] Linha 2: Variável 'e' com nome muito curto (≤4 chars)
+      Trecho  : e = ...
+      Contexto:
+               1 | from numpy import*
+        >>>    2 | e = input("etnia: ").upper()
+               3 | e = e.split(",")
+
+  [2] Linha 3: Variável 'e' com nome muito curto (≤4 chars)
+      Trecho  : e = ...
+      Contexto:
+               2 | e = input("etnia: ").upper()
+        >>>    3 | e = e.split(",")
+               4 | c = zeros(5, dtype = int)
+
+  [3] Linha 4: Variável 'c' com nome muito curto (≤4 chars)
+      Trecho  : c = ...
+      Contexto:
+               3 | e = e.split(",")
+        >>>    4 | c = zeros(5, dtype = int)
+               5 | 
+
+======================================================================

@@ -1,0 +1,68 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1642_6418.py
+Questão  : 1642
+Aluno    : 6418
+Total MCs: 1
+
+⚠️  Misconceptions detectados: G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import * 
+     2 | 
+     3 | A = array(eval(input()))
+     4 | 
+     5 | grupos = 0
+     6 | for i in A:
+     7 | 	if i % 5 == 0:
+     8 | 		grupos += 1
+     9 | print(grupos)
+    10 | 
+    11 | vet = zeros(grupos, dtype=int)
+    12 | k=0
+    13 | for i in range(size(A)):
+    14 | 	if A[i] % 5 == 0:
+    15 | 		vet[k] = i
+    16 | 		k = k + 1
+    17 | print(vet)
+    18 | 		
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 4
+
+  [1] Linha 3: Variável 'A' com nome muito curto (≤4 chars)
+      Trecho  : A = ...
+      Contexto:
+               2 | 
+        >>>    3 | A = array(eval(input()))
+               4 | 
+
+  [2] Linha 11: Variável 'vet' com nome muito curto (≤4 chars)
+      Trecho  : vet = ...
+      Contexto:
+              10 | 
+        >>>   11 | vet = zeros(grupos, dtype=int)
+              12 | k=0
+
+  [3] Linha 12: Variável 'k' com nome muito curto (≤4 chars)
+      Trecho  : k = ...
+      Contexto:
+              11 | vet = zeros(grupos, dtype=int)
+        >>>   12 | k=0
+              13 | for i in range(size(A)):
+
+  [4] Linha 16: Variável 'k' com nome muito curto (≤4 chars)
+      Trecho  : k = ...
+      Contexto:
+              15 | 		vet[k] = i
+        >>>   16 | 		k = k + 1
+              17 | print(vet)
+
+======================================================================

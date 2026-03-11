@@ -1,0 +1,66 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 6838_9889.py
+Questão  : 6838
+Aluno    : 9889
+Total MCs: 2
+
+⚠️  Misconceptions detectados: A3, B8
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import *
+     2 | 
+     3 | ss = input("Digite 'D' para doces, 'S' para salgados e 'I' para integrais: ").upper()
+     4 | 
+     5 | doces = 2.25
+     6 | salgados = 4.0
+     7 | integrais = 6.90
+     8 | 
+     9 | i = 0 # indice
+    10 | qd = 0 # quantidade de doce
+    11 | qs = 0 # quantidade de salgado
+    12 | qi = 0 # quantidade de integrais
+    13 | total = 0 # variavel acumuladora do total de compras
+    14 | 
+    15 | while (i < len(ss)):
+    16 | 	p = ss[i]
+    17 | 	
+    18 | 	if (p == 'D'):
+    19 | 		qd = qd +1
+    20 | 		
+    21 | 	elif (p == 'S'):
+    22 | 		qs = qs + 1
+    23 | 		
+    24 | 	elif (p == 'I'):
+    25 | 		qi = qi + 1
+    26 | 		
+    27 | 	i = i + 1
+    28 | 	
+    29 | total = (qd * doces) + (qs * salgados) + (qi * integrais)
+    30 | 
+    31 | print(round(total, 2))
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 1
+
+  [1] Linha 0: A3 detectado pelo VisitorMC3 (localização exata não mapeada)
+      Trecho  : —
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 21: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 21) / elif ... sem else
+      Contexto:
+              20 | 		
+        >>>   21 | 	elif (p == 'S'):
+              22 | 		qs = qs + 1
+
+======================================================================

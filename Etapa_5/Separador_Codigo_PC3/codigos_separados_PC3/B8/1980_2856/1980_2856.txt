@@ -1,0 +1,41 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1980_2856.py
+Questão  : 1980
+Aluno    : 2856
+Total MCs: 1
+
+⚠️  Misconceptions detectados: B8
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | estado = input("nome: ")
+     2 | cidade = input("nome: ")
+     3 | if ((estado != "Amazonas" and estado != "Para") or (cidade != "Manaus" and cidade != "Parintins" and cidade != "Belem" and cidade != "Santarem")):
+     4 | 	print("bairro nao identificado".upper())
+     5 | elif((estado == "Amazonas") and (cidade == "Manaus")):
+     6 | 	print("coroado".upper())
+     7 | elif((estado == "Amazonas") and (cidade == "Parintins")):
+     8 | 	print("Palmares".upper())
+     9 | elif((estado == "Para") and (cidade == "Belem")):
+    10 | 	print("cidade velha".upper())
+    11 | elif((estado == "Para") and (cidade == "Santarem")):
+    12 | 	print("centro".upper())
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 9: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 9) / elif ... sem else
+      Contexto:
+               8 | 	print("Palmares".upper())
+        >>>    9 | elif((estado == "Para") and (cidade == "Belem")):
+              10 | 	print("cidade velha".upper())
+
+======================================================================

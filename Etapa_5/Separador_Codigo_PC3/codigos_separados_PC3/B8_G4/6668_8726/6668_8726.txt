@@ -1,0 +1,71 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 6668_8726.py
+Questão  : 6668
+Aluno    : 8726
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import *
+     2 | vet = array(eval(input("vet? ")))
+     3 | soma =  zeros(size(vet), dtype = float)
+     4 | n = 0
+     5 | for i in range(size(vet)):
+     6 | 	if vet[i] > 170:
+     7 | 		soma[i] = vet[i]
+     8 | 		n += 1
+     9 | 	elif vet[i] < 170:
+    10 | 		soma[i] = 0
+    11 | 
+    12 | if sum(soma) == 0:
+    13 | 	print(0.0)
+    14 | else:
+    15 | 	somaf = sum(soma) / n
+    16 | 	print(round(somaf, 2))
+    17 | 
+    18 | 	
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 6: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 6) / elif ... sem else
+      Contexto:
+               5 | for i in range(size(vet)):
+        >>>    6 | 	if vet[i] > 170:
+               7 | 		soma[i] = vet[i]
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 3
+
+  [1] Linha 2: Variável 'vet' com nome muito curto (≤4 chars)
+      Trecho  : vet = ...
+      Contexto:
+               1 | from numpy import *
+        >>>    2 | vet = array(eval(input("vet? ")))
+               3 | soma =  zeros(size(vet), dtype = float)
+
+  [2] Linha 3: Variável 'soma' com nome muito curto (≤4 chars)
+      Trecho  : soma = ...
+      Contexto:
+               2 | vet = array(eval(input("vet? ")))
+        >>>    3 | soma =  zeros(size(vet), dtype = float)
+               4 | n = 0
+
+  [3] Linha 4: Variável 'n' com nome muito curto (≤4 chars)
+      Trecho  : n = ...
+      Contexto:
+               3 | soma =  zeros(size(vet), dtype = float)
+        >>>    4 | n = 0
+               5 | for i in range(size(vet)):
+
+======================================================================

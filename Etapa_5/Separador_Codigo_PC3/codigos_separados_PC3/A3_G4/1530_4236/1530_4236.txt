@@ -1,0 +1,105 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1530_4236.py
+Questão  : 1530
+Aluno    : 4236
+Total MCs: 2
+
+⚠️  Misconceptions detectados: A3, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | qp = int(input("Qp: "))
+     2 | qv = int(input("Qv: "))
+     3 | pp = float(input("Pp: "))
+     4 | pv = float(input("Pv: "))
+     5 | Max = 80000
+     6 | ano = 0
+     7 | while ((qp + qv) <= 80000):
+     8 | 	qp = qp + qp*(pp/100)
+     9 | 	qv = qv + qv*(pv/100)
+    10 | 	ano = ano + 1
+    11 | print(ano)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 1
+
+  [1] Linha 5: Variável 'Max' declarada mas nunca utilizada
+      Trecho  : Max = ...
+      Contexto:
+               4 | pv = float(input("Pv: "))
+        >>>    5 | Max = 80000
+               6 | ano = 0
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 9
+
+  [1] Linha 1: Variável 'qp' com nome muito curto (≤4 chars)
+      Trecho  : qp = ...
+      Contexto:
+        >>>    1 | qp = int(input("Qp: "))
+               2 | qv = int(input("Qv: "))
+
+  [2] Linha 2: Variável 'qv' com nome muito curto (≤4 chars)
+      Trecho  : qv = ...
+      Contexto:
+               1 | qp = int(input("Qp: "))
+        >>>    2 | qv = int(input("Qv: "))
+               3 | pp = float(input("Pp: "))
+
+  [3] Linha 3: Variável 'pp' com nome muito curto (≤4 chars)
+      Trecho  : pp = ...
+      Contexto:
+               2 | qv = int(input("Qv: "))
+        >>>    3 | pp = float(input("Pp: "))
+               4 | pv = float(input("Pv: "))
+
+  [4] Linha 4: Variável 'pv' com nome muito curto (≤4 chars)
+      Trecho  : pv = ...
+      Contexto:
+               3 | pp = float(input("Pp: "))
+        >>>    4 | pv = float(input("Pv: "))
+               5 | Max = 80000
+
+  [5] Linha 5: Variável 'Max' com nome muito curto (≤4 chars)
+      Trecho  : Max = ...
+      Contexto:
+               4 | pv = float(input("Pv: "))
+        >>>    5 | Max = 80000
+               6 | ano = 0
+
+  [6] Linha 6: Variável 'ano' com nome muito curto (≤4 chars)
+      Trecho  : ano = ...
+      Contexto:
+               5 | Max = 80000
+        >>>    6 | ano = 0
+               7 | while ((qp + qv) <= 80000):
+
+  [7] Linha 8: Variável 'qp' com nome muito curto (≤4 chars)
+      Trecho  : qp = ...
+      Contexto:
+               7 | while ((qp + qv) <= 80000):
+        >>>    8 | 	qp = qp + qp*(pp/100)
+               9 | 	qv = qv + qv*(pv/100)
+
+  [8] Linha 9: Variável 'qv' com nome muito curto (≤4 chars)
+      Trecho  : qv = ...
+      Contexto:
+               8 | 	qp = qp + qp*(pp/100)
+        >>>    9 | 	qv = qv + qv*(pv/100)
+              10 | 	ano = ano + 1
+
+  [9] Linha 10: Variável 'ano' com nome muito curto (≤4 chars)
+      Trecho  : ano = ...
+      Contexto:
+               9 | 	qv = qv + qv*(pv/100)
+        >>>   10 | 	ano = ano + 1
+              11 | print(ano)
+
+======================================================================

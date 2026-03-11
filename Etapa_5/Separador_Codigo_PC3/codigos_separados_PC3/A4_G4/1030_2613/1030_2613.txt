@@ -1,0 +1,65 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1030_2613.py
+Questão  : 1030
+Aluno    : 2613
+Total MCs: 2
+
+⚠️  Misconceptions detectados: A4, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | min = float(input())
+     2 | taxa = 45.00
+     3 | ppm = min * 0.97
+     4 | t1 = (taxa + ppm)
+     5 | total = t1 + (t1 * 0.42)
+     6 | 
+     7 | print(round(total, 2))
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A4 — Redefinição de built-in
+  Ocorrências: 1
+
+  [1] Linha 1: Built-in 'min' redefinido como variável
+      Trecho  : min = float(input())
+      Contexto:
+        >>>    1 | min = float(input())
+               2 | taxa = 45.00
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 4
+
+  [1] Linha 1: Variável 'min' com nome muito curto (≤4 chars)
+      Trecho  : min = ...
+      Contexto:
+        >>>    1 | min = float(input())
+               2 | taxa = 45.00
+
+  [2] Linha 2: Variável 'taxa' com nome muito curto (≤4 chars)
+      Trecho  : taxa = ...
+      Contexto:
+               1 | min = float(input())
+        >>>    2 | taxa = 45.00
+               3 | ppm = min * 0.97
+
+  [3] Linha 3: Variável 'ppm' com nome muito curto (≤4 chars)
+      Trecho  : ppm = ...
+      Contexto:
+               2 | taxa = 45.00
+        >>>    3 | ppm = min * 0.97
+               4 | t1 = (taxa + ppm)
+
+  [4] Linha 4: Variável 't1' com nome muito curto (≤4 chars)
+      Trecho  : t1 = ...
+      Contexto:
+               3 | ppm = min * 0.97
+        >>>    4 | t1 = (taxa + ppm)
+               5 | total = t1 + (t1 * 0.42)
+
+======================================================================

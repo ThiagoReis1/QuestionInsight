@@ -1,0 +1,7 @@
+x=float(input())
+n1=float(x*8.42/100)
+n2=float(x*19.83/100)
+n3=float(x*71.75/100)
+print(round(n1,2))
+print(round(n2,2))
+print(round(n3,2))

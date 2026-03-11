@@ -1,0 +1,98 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1652_2814.py
+Questão  : 1652
+Aluno    : 2814
+Total MCs: 2
+
+⚠️  Misconceptions detectados: A3, B8
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | from math import*
+     3 | 
+     4 | etnia = input("digite sua etnia:").split(',')
+     5 | 
+     6 | vet_final = zeros(5,dtype = int)
+     7 | 
+     8 | cont_Branco = 0;
+     9 | cont_Pardo = 0;
+    10 | cont_Preto = 0;
+    11 | cont_Amarelo = 0;
+    12 | cont_Indigena = 0;
+    13 | j= 0;
+    14 | for i in etnia:
+    15 | 	if(i == "B"):
+    16 | 		cont_Branco += 1;
+    17 | 		vet_final[j] += 1;
+    18 | 	elif(i == "PA"):
+    19 | 		cont_Pardo += 1;
+    20 | 		vet_final[j] += 1;
+    21 | 	elif(i == "A"):
+    22 | 		cont_Amarelo += 1;
+    23 | 		vet_final[j] += 1;
+    24 | 	elif(i == "PR"):
+    25 | 		cont_Preto += 1;
+    26 | 		vet_final[j] += 1;
+    27 | 	elif(i == "I"):
+    28 | 		cont_Indigena += 1;
+    29 | 		vet_final[j] += 1;
+    30 | 	j += 1;	
+    31 | print(vet_final)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 5
+
+  [1] Linha 8: Variável 'cont_Branco' declarada mas nunca utilizada
+      Trecho  : cont_Branco = ...
+      Contexto:
+               7 | 
+        >>>    8 | cont_Branco = 0;
+               9 | cont_Pardo = 0;
+
+  [2] Linha 9: Variável 'cont_Pardo' declarada mas nunca utilizada
+      Trecho  : cont_Pardo = ...
+      Contexto:
+               8 | cont_Branco = 0;
+        >>>    9 | cont_Pardo = 0;
+              10 | cont_Preto = 0;
+
+  [3] Linha 10: Variável 'cont_Preto' declarada mas nunca utilizada
+      Trecho  : cont_Preto = ...
+      Contexto:
+               9 | cont_Pardo = 0;
+        >>>   10 | cont_Preto = 0;
+              11 | cont_Amarelo = 0;
+
+  [4] Linha 11: Variável 'cont_Amarelo' declarada mas nunca utilizada
+      Trecho  : cont_Amarelo = ...
+      Contexto:
+              10 | cont_Preto = 0;
+        >>>   11 | cont_Amarelo = 0;
+              12 | cont_Indigena = 0;
+
+  [5] Linha 12: Variável 'cont_Indigena' declarada mas nunca utilizada
+      Trecho  : cont_Indigena = ...
+      Contexto:
+              11 | cont_Amarelo = 0;
+        >>>   12 | cont_Indigena = 0;
+              13 | j= 0;
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 24: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 24) / elif ... sem else
+      Contexto:
+              23 | 		vet_final[j] += 1;
+        >>>   24 | 	elif(i == "PR"):
+              25 | 		cont_Preto += 1;
+
+======================================================================

@@ -1,0 +1,108 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 5245_6130.py
+Questão  : 5245
+Aluno    : 6130
+Total MCs: 3
+
+⚠️  Misconceptions detectados: B8, B9, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | s =  float(input("salario: "))
+     2 | 
+     3 | if (s < 0):
+     4 | 	print("Dado invalido")
+     5 | elif (s <= 800):
+     6 | 	t = s * 0.50 + s
+     7 | 	print("Novo salario: R$",round(t, 2))
+     8 | elif (s > 800) and (s <= 1000):
+     9 | 	t = s * 0.40 + s
+    10 | 	print("Novo salario: R$",round(t, 2))
+    11 | elif (s > 1000) and (s <= 1200):
+    12 | 	t = s * 0.30 + s
+    13 | 	print("Novo salario: R$",round(t, 2))
+    14 | elif (s > 1200) and (s <= 1400):
+    15 | 	t = s * 0.20 + s
+    16 | 	print("Novo salario: R$",round(t, 2))
+    17 | elif (s > 1400) and (s <= 1600):
+    18 | 	t = s * 0.10 + s
+    19 | 	print("Novo salario: R$",round(t, 2))
+    20 | elif (s > 1600):
+    21 | 	t = s * 0.05 + s
+    22 | 	print("Novo salario: R$", round(t, 2))
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 17: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 17) / elif ... sem else
+      Contexto:
+              16 | 	print("Novo salario: R$",round(t, 2))
+        >>>   17 | elif (s > 1400) and (s <= 1600):
+              18 | 	t = s * 0.10 + s
+
+▶ B9 — elif/else retestando condições já verificadas
+  Ocorrências: 1
+
+  [1] Linha 0: B9 detectado pelo VisitorMC3 (localização exata não mapeada)
+      Trecho  : —
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 7
+
+  [1] Linha 1: Variável 's' com nome muito curto (≤4 chars)
+      Trecho  : s = ...
+      Contexto:
+        >>>    1 | s =  float(input("salario: "))
+               2 | 
+
+  [2] Linha 6: Variável 't' com nome muito curto (≤4 chars)
+      Trecho  : t = ...
+      Contexto:
+               5 | elif (s <= 800):
+        >>>    6 | 	t = s * 0.50 + s
+               7 | 	print("Novo salario: R$",round(t, 2))
+
+  [3] Linha 9: Variável 't' com nome muito curto (≤4 chars)
+      Trecho  : t = ...
+      Contexto:
+               8 | elif (s > 800) and (s <= 1000):
+        >>>    9 | 	t = s * 0.40 + s
+              10 | 	print("Novo salario: R$",round(t, 2))
+
+  [4] Linha 12: Variável 't' com nome muito curto (≤4 chars)
+      Trecho  : t = ...
+      Contexto:
+              11 | elif (s > 1000) and (s <= 1200):
+        >>>   12 | 	t = s * 0.30 + s
+              13 | 	print("Novo salario: R$",round(t, 2))
+
+  [5] Linha 15: Variável 't' com nome muito curto (≤4 chars)
+      Trecho  : t = ...
+      Contexto:
+              14 | elif (s > 1200) and (s <= 1400):
+        >>>   15 | 	t = s * 0.20 + s
+              16 | 	print("Novo salario: R$",round(t, 2))
+
+  [6] Linha 18: Variável 't' com nome muito curto (≤4 chars)
+      Trecho  : t = ...
+      Contexto:
+              17 | elif (s > 1400) and (s <= 1600):
+        >>>   18 | 	t = s * 0.10 + s
+              19 | 	print("Novo salario: R$",round(t, 2))
+
+  [7] Linha 21: Variável 't' com nome muito curto (≤4 chars)
+      Trecho  : t = ...
+      Contexto:
+              20 | elif (s > 1600):
+        >>>   21 | 	t = s * 0.05 + s
+              22 | 	print("Novo salario: R$", round(t, 2))
+
+======================================================================

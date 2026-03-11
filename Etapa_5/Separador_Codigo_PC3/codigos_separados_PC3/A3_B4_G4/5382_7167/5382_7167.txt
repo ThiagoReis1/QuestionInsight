@@ -1,0 +1,176 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 5382_7167.py
+Questão  : 5382
+Aluno    : 7167
+Total MCs: 3
+
+⚠️  Misconceptions detectados: A3, B4, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | x=input().upper()
+     3 | i=0
+     4 | t=0
+     5 | while i<len(x):
+     6 | 	if x[i]=="A":
+     7 | 		t=t+0.25
+     8 | 	elif x[i]=="E":
+     9 | 		t=t+0.25
+    10 | 	elif x[i]=="I":
+    11 | 		t=t=0.25
+    12 | 	elif x[i]=="O":
+    13 | 		t=t+0.25
+    14 | 	elif x[i]=="U":
+    15 | 		t=t+0.25
+    16 | 	else:
+    17 | 		t=t+0.27
+    18 | 	i=i+1
+    19 | print(round(t, 2))	
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 1
+
+  [1] Linha 0: A3 detectado pelo VisitorMC3 (localização exata não mapeada)
+      Trecho  : —
+
+▶ B4 — Comandos repetidos dentro de blocos if-elif-else
+  Ocorrências: 7
+
+  [1] Linha 8: Bloco idêntico ao da linha 6
+      Trecho  : t = t + 0.25
+      Contexto:
+               7 | 		t=t+0.25
+        >>>    8 | 	elif x[i]=="E":
+               9 | 		t=t+0.25
+
+  [2] Linha 12: Bloco idêntico ao da linha 6
+      Trecho  : t = t + 0.25
+      Contexto:
+              11 | 		t=t=0.25
+        >>>   12 | 	elif x[i]=="O":
+              13 | 		t=t+0.25
+
+  [3] Linha 14: Bloco idêntico ao da linha 6
+      Trecho  : t = t + 0.25
+      Contexto:
+              13 | 		t=t+0.25
+        >>>   14 | 	elif x[i]=="U":
+              15 | 		t=t+0.25
+
+  [4] Linha 12: Bloco idêntico ao da linha 8
+      Trecho  : t = t + 0.25
+      Contexto:
+              11 | 		t=t=0.25
+        >>>   12 | 	elif x[i]=="O":
+              13 | 		t=t+0.25
+
+  [5] Linha 14: Bloco idêntico ao da linha 8
+      Trecho  : t = t + 0.25
+      Contexto:
+              13 | 		t=t+0.25
+        >>>   14 | 	elif x[i]=="U":
+              15 | 		t=t+0.25
+
+  [6] Linha 14: Bloco idêntico ao da linha 12
+      Trecho  : t = t + 0.25
+      Contexto:
+              13 | 		t=t+0.25
+        >>>   14 | 	elif x[i]=="U":
+              15 | 		t=t+0.25
+
+  [7] Linha 14: Bloco idêntico ao da linha 12
+      Trecho  : t = t + 0.25
+      Contexto:
+              13 | 		t=t+0.25
+        >>>   14 | 	elif x[i]=="U":
+              15 | 		t=t+0.25
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 11
+
+  [1] Linha 2: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+               1 | from numpy import*
+        >>>    2 | x=input().upper()
+               3 | i=0
+
+  [2] Linha 3: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+               2 | x=input().upper()
+        >>>    3 | i=0
+               4 | t=0
+
+  [3] Linha 4: Variável 't' com nome muito curto (≤4 chars)
+      Trecho  : t = ...
+      Contexto:
+               3 | i=0
+        >>>    4 | t=0
+               5 | while i<len(x):
+
+  [4] Linha 18: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+              17 | 		t=t+0.27
+        >>>   18 | 	i=i+1
+              19 | print(round(t, 2))	
+
+  [5] Linha 7: Variável 't' com nome muito curto (≤4 chars)
+      Trecho  : t = ...
+      Contexto:
+               6 | 	if x[i]=="A":
+        >>>    7 | 		t=t+0.25
+               8 | 	elif x[i]=="E":
+
+  [6] Linha 9: Variável 't' com nome muito curto (≤4 chars)
+      Trecho  : t = ...
+      Contexto:
+               8 | 	elif x[i]=="E":
+        >>>    9 | 		t=t+0.25
+              10 | 	elif x[i]=="I":
+
+  [7] Linha 11: Variável 't' com nome muito curto (≤4 chars)
+      Trecho  : t = ...
+      Contexto:
+              10 | 	elif x[i]=="I":
+        >>>   11 | 		t=t=0.25
+              12 | 	elif x[i]=="O":
+
+  [8] Linha 11: Variável 't' com nome muito curto (≤4 chars)
+      Trecho  : t = ...
+      Contexto:
+              10 | 	elif x[i]=="I":
+        >>>   11 | 		t=t=0.25
+              12 | 	elif x[i]=="O":
+
+  [9] Linha 13: Variável 't' com nome muito curto (≤4 chars)
+      Trecho  : t = ...
+      Contexto:
+              12 | 	elif x[i]=="O":
+        >>>   13 | 		t=t+0.25
+              14 | 	elif x[i]=="U":
+
+  [10] Linha 15: Variável 't' com nome muito curto (≤4 chars)
+      Trecho  : t = ...
+      Contexto:
+              14 | 	elif x[i]=="U":
+        >>>   15 | 		t=t+0.25
+              16 | 	else:
+
+  [11] Linha 17: Variável 't' com nome muito curto (≤4 chars)
+      Trecho  : t = ...
+      Contexto:
+              16 | 	else:
+        >>>   17 | 		t=t+0.27
+              18 | 	i=i+1
+
+======================================================================

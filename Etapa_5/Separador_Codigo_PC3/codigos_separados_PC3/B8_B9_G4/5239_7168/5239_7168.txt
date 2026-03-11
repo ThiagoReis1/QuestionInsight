@@ -1,0 +1,66 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 5239_7168.py
+Questão  : 5239
+Aluno    : 7168
+Total MCs: 3
+
+⚠️  Misconceptions detectados: B8, B9, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | nota = float(input("Qual a nota: "))
+     2 | if(nota > 10) or (nota < 0):
+     3 | 	print("ERRO")
+     4 | 	
+     5 | else:
+     6 | 	if(nota >= 10):
+     7 | 		print("A")
+     8 | 	elif(nota >= 8):
+     9 | 		print("B")
+    10 | 	elif(nota >= 7):
+    11 | 		print("C")
+    12 | 	elif(nota >= 6):
+    13 | 		print("D")
+    14 | 	elif(nota >= 4):
+    15 | 		print("E")
+    16 | 	elif(nota < 4):
+    17 | 		print("F")
+    18 | 
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 14: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 14) / elif ... sem else
+      Contexto:
+              13 | 		print("D")
+        >>>   14 | 	elif(nota >= 4):
+              15 | 		print("E")
+
+▶ B9 — elif/else retestando condições já verificadas
+  Ocorrências: 1
+
+  [1] Linha 16: elif retesta condição inversa do if da linha 14
+      Trecho  : if nota >= 4 ... elif nota < 4
+      Contexto:
+              15 | 		print("E")
+        >>>   16 | 	elif(nota < 4):
+              17 | 		print("F")
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 1
+
+  [1] Linha 1: Variável 'nota' com nome muito curto (≤4 chars)
+      Trecho  : nota = ...
+      Contexto:
+        >>>    1 | nota = float(input("Qual a nota: "))
+               2 | if(nota > 10) or (nota < 0):
+
+======================================================================

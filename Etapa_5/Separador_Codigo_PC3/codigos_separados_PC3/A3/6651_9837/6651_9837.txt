@@ -1,0 +1,55 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 6651_9837.py
+Questão  : 6651
+Aluno    : 9837
+Total MCs: 1
+
+⚠️  Misconceptions detectados: A3
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | import numpy as np
+     2 | def calcular_media_ponderada():
+     3 |   peso = np.array([5,4, 3, 2])
+     4 | notas_input = input("digite o vetor:")
+     5 | notas = np.array(eval(notas_input))
+     6 | print("o vetor deve ser do mesmo tamanho")
+     7 | return
+     8 | soma_peso = np.sum(pesos)
+     9 | soma_ponderada = np.sum(notas * pesos)
+    10 | media_ponderada = soma_ponderda / soma_pesos
+    11 | print(round(media_ponderada, 2))
+    12 | calcular_media_ponderada
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 3
+
+  [1] Linha 8: Variável 'soma_peso' declarada mas nunca utilizada
+      Trecho  : soma_peso = ...
+      Contexto:
+               7 | return
+        >>>    8 | soma_peso = np.sum(pesos)
+               9 | soma_ponderada = np.sum(notas * pesos)
+
+  [2] Linha 9: Variável 'soma_ponderada' declarada mas nunca utilizada
+      Trecho  : soma_ponderada = ...
+      Contexto:
+               8 | soma_peso = np.sum(pesos)
+        >>>    9 | soma_ponderada = np.sum(notas * pesos)
+              10 | media_ponderada = soma_ponderda / soma_pesos
+
+  [3] Linha 3: Variável 'peso' declarada mas nunca utilizada
+      Trecho  : peso = ...
+      Contexto:
+               2 | def calcular_media_ponderada():
+        >>>    3 |   peso = np.array([5,4, 3, 2])
+               4 | notas_input = input("digite o vetor:")
+
+======================================================================

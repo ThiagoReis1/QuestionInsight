@@ -1,0 +1,6 @@
+mg = float (input("Escreva a massa mg: "))
+vg = float (input("Escreva a velocidade vg: "))
+mp = float (input("Escreva a massa mp: "))
+vp = float (input("Escreva a velocidade vp: "))
+vf = (mg*vg - mp*vp)/(mg + mp)
+print (vf)

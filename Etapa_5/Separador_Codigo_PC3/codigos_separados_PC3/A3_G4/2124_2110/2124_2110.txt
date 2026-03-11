@@ -1,0 +1,72 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 2124_2110.py
+Questão  : 2124
+Aluno    : 2110
+Total MCs: 2
+
+⚠️  Misconceptions detectados: A3, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | 
+     3 | n = array(eval(input()))
+     4 | m = max(n)
+     5 | s =n[0]+n[1]+n[2]+n[3]-max(n)
+     6 | st = (s/3)
+     7 | print(round(st,2))
+     8 | 
+     9 | if(st>=5.0):
+    10 | 	print("APROVOU")
+    11 | else:
+    12 | 	print("REPROVOU")
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 1
+
+  [1] Linha 4: Variável 'm' declarada mas nunca utilizada
+      Trecho  : m = ...
+      Contexto:
+               3 | n = array(eval(input()))
+        >>>    4 | m = max(n)
+               5 | s =n[0]+n[1]+n[2]+n[3]-max(n)
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 4
+
+  [1] Linha 3: Variável 'n' com nome muito curto (≤4 chars)
+      Trecho  : n = ...
+      Contexto:
+               2 | 
+        >>>    3 | n = array(eval(input()))
+               4 | m = max(n)
+
+  [2] Linha 4: Variável 'm' com nome muito curto (≤4 chars)
+      Trecho  : m = ...
+      Contexto:
+               3 | n = array(eval(input()))
+        >>>    4 | m = max(n)
+               5 | s =n[0]+n[1]+n[2]+n[3]-max(n)
+
+  [3] Linha 5: Variável 's' com nome muito curto (≤4 chars)
+      Trecho  : s = ...
+      Contexto:
+               4 | m = max(n)
+        >>>    5 | s =n[0]+n[1]+n[2]+n[3]-max(n)
+               6 | st = (s/3)
+
+  [4] Linha 6: Variável 'st' com nome muito curto (≤4 chars)
+      Trecho  : st = ...
+      Contexto:
+               5 | s =n[0]+n[1]+n[2]+n[3]-max(n)
+        >>>    6 | st = (s/3)
+               7 | print(round(st,2))
+
+======================================================================

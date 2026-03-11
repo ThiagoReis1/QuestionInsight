@@ -1,0 +1,57 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 6305_8164.py
+Questão  : 6305
+Aluno    : 8164
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | st = input("produtos comprados: ").upper()
+     3 | 
+     4 | i = 0
+     5 | ach = 0
+     6 | acl = 0
+     7 | ace = 0
+     8 | total = 0
+     9 | 
+    10 | while i < len(st):
+    11 | 	
+    12 | 	if st[i] == "H":
+    13 | 		ach = ach + 1
+    14 | 		total = total + 3.85
+    15 | 	elif st[i] == "L":
+    16 | 		acl = acl + 1
+    17 | 		total = total + 2.95
+    18 | 	elif st[i] == "E":
+    19 | 		ace = ace + 1
+    20 | 		total = total + 7.90
+    21 | 	i = i + 1
+    22 | print(round(total,2),ach,acl,ace)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 15: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 15) / elif ... sem else
+      Contexto:
+              14 | 		total = total + 3.85
+        >>>   15 | 	elif st[i] == "L":
+              16 | 		acl = acl + 1
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 1
+
+  [1] Linha 0: G4 detectado pelo VisitorMC3 (localização exata não mapeada)
+      Trecho  : —
+
+======================================================================

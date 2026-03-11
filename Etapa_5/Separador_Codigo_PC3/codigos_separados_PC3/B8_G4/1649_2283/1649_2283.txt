@@ -1,0 +1,64 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1649_2283.py
+Questão  : 1649
+Aluno    : 2283
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | st = input("STRING: ")
+     3 | vet = zeros(5, dtype=int)
+     4 | for i in st:
+     5 | 	if(i == "P"):
+     6 | 		vet[0] += 1
+     7 | 	elif(i == "C"):
+     8 | 		vet[1] += 1
+     9 | 	elif(i == "M"):
+    10 | 		vet[2] += 1
+    11 | 	elif(i == "V"):
+    12 | 		vet[3] += 1
+    13 | 	elif(i == "A"):
+    14 | 		vet[4] += 1
+    15 | print(max(vet))
+    16 | print(vet)
+    17 | 	
+    18 | 		
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 11: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 11) / elif ... sem else
+      Contexto:
+              10 | 		vet[2] += 1
+        >>>   11 | 	elif(i == "V"):
+              12 | 		vet[3] += 1
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 2
+
+  [1] Linha 2: Variável 'st' com nome muito curto (≤4 chars)
+      Trecho  : st = ...
+      Contexto:
+               1 | from numpy import*
+        >>>    2 | st = input("STRING: ")
+               3 | vet = zeros(5, dtype=int)
+
+  [2] Linha 3: Variável 'vet' com nome muito curto (≤4 chars)
+      Trecho  : vet = ...
+      Contexto:
+               2 | st = input("STRING: ")
+        >>>    3 | vet = zeros(5, dtype=int)
+               4 | for i in st:
+
+======================================================================

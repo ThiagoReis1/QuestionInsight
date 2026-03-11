@@ -1,0 +1,5 @@
+a=float(input("a"))
+b=float(input("b"))
+c=float(input("c"))
+valor total=(a*b+c)
+print(round(a,2),(b,2),(c,2))

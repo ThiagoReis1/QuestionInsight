@@ -1,0 +1,182 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1649_2401.py
+Questão  : 1649
+Aluno    : 2401
+Total MCs: 3
+
+⚠️  Misconceptions detectados: A3, B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | string=input(" ")
+     3 | string1=string.split(',')
+     4 | i=0
+     5 | a=0
+     6 | b=0
+     7 | c=0
+     8 | d=0
+     9 | e=0
+    10 | z=0
+    11 | v=zeros(5,dtype=int)
+    12 | while(i<len(string)):
+    13 | 	if(string[i]=="P"):
+    14 | 		a=a+1
+    15 | 		
+    16 | 	elif(string[i]=="C"):
+    17 | 		b=b+1
+    18 | 		
+    19 | 	elif(string[i]=="M"):
+    20 | 		c=c+1
+    21 | 		
+    22 | 	elif(string[i]=="V"):
+    23 | 		d=d+1
+    24 | 		
+    25 | 	elif(string[i]=="A"):
+    26 | 		e=e+1
+    27 | 	i=i+1
+    28 | v[0]=a
+    29 | v[1]=b
+    30 | v[2]=c
+    31 | v[3]=d
+    32 | v[4]=e
+    33 | print(max(v))
+    34 | print(v)
+    35 | 			
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 2
+
+  [1] Linha 3: Variável 'string1' declarada mas nunca utilizada
+      Trecho  : string1 = ...
+      Contexto:
+               2 | string=input(" ")
+        >>>    3 | string1=string.split(',')
+               4 | i=0
+
+  [2] Linha 10: Variável 'z' declarada mas nunca utilizada
+      Trecho  : z = ...
+      Contexto:
+               9 | e=0
+        >>>   10 | z=0
+              11 | v=zeros(5,dtype=int)
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 22: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 22) / elif ... sem else
+      Contexto:
+              21 | 		
+        >>>   22 | 	elif(string[i]=="V"):
+              23 | 		d=d+1
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 14
+
+  [1] Linha 4: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+               3 | string1=string.split(',')
+        >>>    4 | i=0
+               5 | a=0
+
+  [2] Linha 5: Variável 'a' com nome muito curto (≤4 chars)
+      Trecho  : a = ...
+      Contexto:
+               4 | i=0
+        >>>    5 | a=0
+               6 | b=0
+
+  [3] Linha 6: Variável 'b' com nome muito curto (≤4 chars)
+      Trecho  : b = ...
+      Contexto:
+               5 | a=0
+        >>>    6 | b=0
+               7 | c=0
+
+  [4] Linha 7: Variável 'c' com nome muito curto (≤4 chars)
+      Trecho  : c = ...
+      Contexto:
+               6 | b=0
+        >>>    7 | c=0
+               8 | d=0
+
+  [5] Linha 8: Variável 'd' com nome muito curto (≤4 chars)
+      Trecho  : d = ...
+      Contexto:
+               7 | c=0
+        >>>    8 | d=0
+               9 | e=0
+
+  [6] Linha 9: Variável 'e' com nome muito curto (≤4 chars)
+      Trecho  : e = ...
+      Contexto:
+               8 | d=0
+        >>>    9 | e=0
+              10 | z=0
+
+  [7] Linha 10: Variável 'z' com nome muito curto (≤4 chars)
+      Trecho  : z = ...
+      Contexto:
+               9 | e=0
+        >>>   10 | z=0
+              11 | v=zeros(5,dtype=int)
+
+  [8] Linha 11: Variável 'v' com nome muito curto (≤4 chars)
+      Trecho  : v = ...
+      Contexto:
+              10 | z=0
+        >>>   11 | v=zeros(5,dtype=int)
+              12 | while(i<len(string)):
+
+  [9] Linha 27: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+              26 | 		e=e+1
+        >>>   27 | 	i=i+1
+              28 | v[0]=a
+
+  [10] Linha 14: Variável 'a' com nome muito curto (≤4 chars)
+      Trecho  : a = ...
+      Contexto:
+              13 | 	if(string[i]=="P"):
+        >>>   14 | 		a=a+1
+              15 | 		
+
+  [11] Linha 17: Variável 'b' com nome muito curto (≤4 chars)
+      Trecho  : b = ...
+      Contexto:
+              16 | 	elif(string[i]=="C"):
+        >>>   17 | 		b=b+1
+              18 | 		
+
+  [12] Linha 20: Variável 'c' com nome muito curto (≤4 chars)
+      Trecho  : c = ...
+      Contexto:
+              19 | 	elif(string[i]=="M"):
+        >>>   20 | 		c=c+1
+              21 | 		
+
+  [13] Linha 23: Variável 'd' com nome muito curto (≤4 chars)
+      Trecho  : d = ...
+      Contexto:
+              22 | 	elif(string[i]=="V"):
+        >>>   23 | 		d=d+1
+              24 | 		
+
+  [14] Linha 26: Variável 'e' com nome muito curto (≤4 chars)
+      Trecho  : e = ...
+      Contexto:
+              25 | 	elif(string[i]=="A"):
+        >>>   26 | 		e=e+1
+              27 | 	i=i+1
+
+======================================================================

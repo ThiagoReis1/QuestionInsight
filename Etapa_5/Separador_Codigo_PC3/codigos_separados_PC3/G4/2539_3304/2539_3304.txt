@@ -1,0 +1,96 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 2539_3304.py
+Questão  : 2539
+Aluno    : 3304
+Total MCs: 1
+
+⚠️  Misconceptions detectados: G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | v = float(input("Valor do premio: "))
+     2 | m = float(input("Saque mensal fixo: "))
+     3 | i = float(input("Taxa de juros: "))
+     4 | 
+     5 | j = i/100
+     6 | s = v
+     7 | 
+     8 | meses = 0
+     9 | 
+    10 | if((v>0)and(m>0)and(j>0)):
+    11 | 	while(s<(1.20*v)):
+    12 | 		s = s + (s * j)
+    13 | 		s = s  - m
+    14 | 		s = round(s,2)
+    15 | 		meses = meses + 1
+    16 | 	print(meses)	
+    17 | 	
+    18 | else:	
+    19 | 	print("Dados incorretos")
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 8
+
+  [1] Linha 1: Variável 'v' com nome muito curto (≤4 chars)
+      Trecho  : v = ...
+      Contexto:
+        >>>    1 | v = float(input("Valor do premio: "))
+               2 | m = float(input("Saque mensal fixo: "))
+
+  [2] Linha 2: Variável 'm' com nome muito curto (≤4 chars)
+      Trecho  : m = ...
+      Contexto:
+               1 | v = float(input("Valor do premio: "))
+        >>>    2 | m = float(input("Saque mensal fixo: "))
+               3 | i = float(input("Taxa de juros: "))
+
+  [3] Linha 3: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+               2 | m = float(input("Saque mensal fixo: "))
+        >>>    3 | i = float(input("Taxa de juros: "))
+               4 | 
+
+  [4] Linha 5: Variável 'j' com nome muito curto (≤4 chars)
+      Trecho  : j = ...
+      Contexto:
+               4 | 
+        >>>    5 | j = i/100
+               6 | s = v
+
+  [5] Linha 6: Variável 's' com nome muito curto (≤4 chars)
+      Trecho  : s = ...
+      Contexto:
+               5 | j = i/100
+        >>>    6 | s = v
+               7 | 
+
+  [6] Linha 12: Variável 's' com nome muito curto (≤4 chars)
+      Trecho  : s = ...
+      Contexto:
+              11 | 	while(s<(1.20*v)):
+        >>>   12 | 		s = s + (s * j)
+              13 | 		s = s  - m
+
+  [7] Linha 13: Variável 's' com nome muito curto (≤4 chars)
+      Trecho  : s = ...
+      Contexto:
+              12 | 		s = s + (s * j)
+        >>>   13 | 		s = s  - m
+              14 | 		s = round(s,2)
+
+  [8] Linha 14: Variável 's' com nome muito curto (≤4 chars)
+      Trecho  : s = ...
+      Contexto:
+              13 | 		s = s  - m
+        >>>   14 | 		s = round(s,2)
+              15 | 		meses = meses + 1
+
+======================================================================

@@ -1,0 +1,99 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 3587_6432.py
+Questão  : 3587
+Aluno    : 6432
+Total MCs: 2
+
+⚠️  Misconceptions detectados: A2, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import *
+     2 | 
+     3 | pont = array(eval(input("")))
+     4 | 
+     5 | cont = 0
+     6 | som = 100
+     7 | 
+     8 | while size(pont) > cont:
+     9 | 	if pont[cont] == 1:
+    10 | 		som = som * 5
+    11 | 	elif pont[cont] == 2: 
+    12 | 		som = som * 3
+    13 | 	elif pont[cont] == 4:
+    14 | 		som = som / 2
+    15 | 	else:
+    16 | 		som = som
+    17 | 	cont += 1
+    18 | print(round(som,2))
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A2 — Variável atribuída a si mesma
+  Ocorrências: 1
+
+  [1] Linha 16: 'som' atribuído a si mesmo
+      Trecho  : som = som
+      Contexto:
+              15 | 	else:
+        >>>   16 | 		som = som
+              17 | 	cont += 1
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 7
+
+  [1] Linha 3: Variável 'pont' com nome muito curto (≤4 chars)
+      Trecho  : pont = ...
+      Contexto:
+               2 | 
+        >>>    3 | pont = array(eval(input("")))
+               4 | 
+
+  [2] Linha 5: Variável 'cont' com nome muito curto (≤4 chars)
+      Trecho  : cont = ...
+      Contexto:
+               4 | 
+        >>>    5 | cont = 0
+               6 | som = 100
+
+  [3] Linha 6: Variável 'som' com nome muito curto (≤4 chars)
+      Trecho  : som = ...
+      Contexto:
+               5 | cont = 0
+        >>>    6 | som = 100
+               7 | 
+
+  [4] Linha 10: Variável 'som' com nome muito curto (≤4 chars)
+      Trecho  : som = ...
+      Contexto:
+               9 | 	if pont[cont] == 1:
+        >>>   10 | 		som = som * 5
+              11 | 	elif pont[cont] == 2: 
+
+  [5] Linha 12: Variável 'som' com nome muito curto (≤4 chars)
+      Trecho  : som = ...
+      Contexto:
+              11 | 	elif pont[cont] == 2: 
+        >>>   12 | 		som = som * 3
+              13 | 	elif pont[cont] == 4:
+
+  [6] Linha 14: Variável 'som' com nome muito curto (≤4 chars)
+      Trecho  : som = ...
+      Contexto:
+              13 | 	elif pont[cont] == 4:
+        >>>   14 | 		som = som / 2
+              15 | 	else:
+
+  [7] Linha 16: Variável 'som' com nome muito curto (≤4 chars)
+      Trecho  : som = ...
+      Contexto:
+              15 | 	else:
+        >>>   16 | 		som = som
+              17 | 	cont += 1
+
+======================================================================

@@ -1,0 +1,90 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1642_3104.py
+Questão  : 1642
+Aluno    : 3104
+Total MCs: 2
+
+⚠️  Misconceptions detectados: A3, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | turmas=array(eval(input()))
+     3 | v5 = 0
+     4 | i=0
+     5 | j = 0
+     6 | v = ""
+     7 | for i in range(size(turmas)):
+     8 | 	if(turmas[i]%5 == 0):
+     9 | 		v5 = v5 +1
+    10 | for i in range(size(turmas)):
+    11 | 	if(turmas[i]%5 == 0):
+    12 | 		v[i] = i
+    13 | i = i +1
+    14 | 		
+    15 | print(v5)
+    16 | print(v)	
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 1
+
+  [1] Linha 5: Variável 'j' declarada mas nunca utilizada
+      Trecho  : j = ...
+      Contexto:
+               4 | i=0
+        >>>    5 | j = 0
+               6 | v = ""
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 6
+
+  [1] Linha 3: Variável 'v5' com nome muito curto (≤4 chars)
+      Trecho  : v5 = ...
+      Contexto:
+               2 | turmas=array(eval(input()))
+        >>>    3 | v5 = 0
+               4 | i=0
+
+  [2] Linha 4: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+               3 | v5 = 0
+        >>>    4 | i=0
+               5 | j = 0
+
+  [3] Linha 5: Variável 'j' com nome muito curto (≤4 chars)
+      Trecho  : j = ...
+      Contexto:
+               4 | i=0
+        >>>    5 | j = 0
+               6 | v = ""
+
+  [4] Linha 6: Variável 'v' com nome muito curto (≤4 chars)
+      Trecho  : v = ...
+      Contexto:
+               5 | j = 0
+        >>>    6 | v = ""
+               7 | for i in range(size(turmas)):
+
+  [5] Linha 13: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+              12 | 		v[i] = i
+        >>>   13 | i = i +1
+              14 | 		
+
+  [6] Linha 9: Variável 'v5' com nome muito curto (≤4 chars)
+      Trecho  : v5 = ...
+      Contexto:
+               8 | 	if(turmas[i]%5 == 0):
+        >>>    9 | 		v5 = v5 +1
+              10 | for i in range(size(turmas)):
+
+======================================================================

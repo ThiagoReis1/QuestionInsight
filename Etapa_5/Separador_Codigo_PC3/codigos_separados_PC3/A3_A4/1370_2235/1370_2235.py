@@ -1,0 +1,5 @@
+porcao=float(input("digite a quantidade da porcao: "))
+ptot=float(input(p1+p2+p3))
+print=float(round(p1,2))
+print=float(round(p2,2))
+print=float(round(p3,2))

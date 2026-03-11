@@ -1,0 +1,60 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 6374_9779.py
+Questão  : 6374
+Aluno    : 9779
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | v=input("").upper().split(",")
+     3 | z=zeros(4, dtype=int)
+     4 | 
+     5 | for i in range(size(v)):
+     6 | 	if v[i]=="O":
+     7 | 		z[0]+=1
+     8 | 	elif v[i]=="D":
+     9 | 		z[1]+=1
+    10 | 	elif v[i]=="N":
+    11 | 		z[2]+=1
+    12 | 	elif v[i]=="C":
+    13 | 		z[3]+=1
+    14 | print(z)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 10: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 10) / elif ... sem else
+      Contexto:
+               9 | 		z[1]+=1
+        >>>   10 | 	elif v[i]=="N":
+              11 | 		z[2]+=1
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 2
+
+  [1] Linha 2: Variável 'v' com nome muito curto (≤4 chars)
+      Trecho  : v = ...
+      Contexto:
+               1 | from numpy import*
+        >>>    2 | v=input("").upper().split(",")
+               3 | z=zeros(4, dtype=int)
+
+  [2] Linha 3: Variável 'z' com nome muito curto (≤4 chars)
+      Trecho  : z = ...
+      Contexto:
+               2 | v=input("").upper().split(",")
+        >>>    3 | z=zeros(4, dtype=int)
+               4 | 
+
+======================================================================

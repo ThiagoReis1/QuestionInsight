@@ -1,0 +1,88 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1114_3247.py
+Questão  : 1114
+Aluno    : 3247
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | v = float (input())
+     2 | t = float (input())
+     3 | s = v * t
+     4 | print("Entradas:", v, "km/h e", t, "h")
+     5 | if (v > 0 and t > 0):
+     6 | 	if(s < 100):
+     7 | 		x = "Avalon"
+     8 | 	elif(s >= 400 and s < 600): 
+     9 | 		x = "Doriath"
+    10 | 	elif(s >= 200 and s < 400):
+    11 | 		x = "Castamare"
+    12 | 	
+    13 | 	print("Proxima parada:", x)
+    14 | else:
+    15 | 	print("Dados invalidos")
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 8: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 8) / elif ... sem else
+      Contexto:
+               7 | 		x = "Avalon"
+        >>>    8 | 	elif(s >= 400 and s < 600): 
+               9 | 		x = "Doriath"
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 6
+
+  [1] Linha 1: Variável 'v' com nome muito curto (≤4 chars)
+      Trecho  : v = ...
+      Contexto:
+        >>>    1 | v = float (input())
+               2 | t = float (input())
+
+  [2] Linha 2: Variável 't' com nome muito curto (≤4 chars)
+      Trecho  : t = ...
+      Contexto:
+               1 | v = float (input())
+        >>>    2 | t = float (input())
+               3 | s = v * t
+
+  [3] Linha 3: Variável 's' com nome muito curto (≤4 chars)
+      Trecho  : s = ...
+      Contexto:
+               2 | t = float (input())
+        >>>    3 | s = v * t
+               4 | print("Entradas:", v, "km/h e", t, "h")
+
+  [4] Linha 7: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+               6 | 	if(s < 100):
+        >>>    7 | 		x = "Avalon"
+               8 | 	elif(s >= 400 and s < 600): 
+
+  [5] Linha 9: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+               8 | 	elif(s >= 400 and s < 600): 
+        >>>    9 | 		x = "Doriath"
+              10 | 	elif(s >= 200 and s < 400):
+
+  [6] Linha 11: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+              10 | 	elif(s >= 200 and s < 400):
+        >>>   11 | 		x = "Castamare"
+              12 | 	
+
+======================================================================

@@ -1,0 +1,82 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1117_3239.py
+Questão  : 1117
+Aluno    : 3239
+Total MCs: 1
+
+⚠️  Misconceptions detectados: G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | p = float(input())
+     2 | d = int(input())
+     3 | m = input("s ou n").upper()
+     4 | 
+     5 | ds = (p * 0.25)
+     6 | print("Entradas: ", p, ",", d, ",", m)
+     7 | 
+     8 | if ((p >= 0) and (1 <= d <= 7) and ((m == "S") or (m == "N"))):
+     9 | 	if ((d == 2) or (d == 3) or (d == 5) and (m == "N")):
+    10 | 		pt = p - ds
+    11 | 	print("Valor a pagar: R$", round(pt, 2))
+    12 | 	if (m == "S"):
+    13 | 		pt = p + 20.00
+    14 | 		print("Valor a pagar: R$", round(pt, 2))
+    15 | 	else:
+    16 | 		print("Dados invalidos")
+    17 | else:
+    18 | 	print("Dados invalidos")
+    19 | 	
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 6
+
+  [1] Linha 1: Variável 'p' com nome muito curto (≤4 chars)
+      Trecho  : p = ...
+      Contexto:
+        >>>    1 | p = float(input())
+               2 | d = int(input())
+
+  [2] Linha 2: Variável 'd' com nome muito curto (≤4 chars)
+      Trecho  : d = ...
+      Contexto:
+               1 | p = float(input())
+        >>>    2 | d = int(input())
+               3 | m = input("s ou n").upper()
+
+  [3] Linha 3: Variável 'm' com nome muito curto (≤4 chars)
+      Trecho  : m = ...
+      Contexto:
+               2 | d = int(input())
+        >>>    3 | m = input("s ou n").upper()
+               4 | 
+
+  [4] Linha 5: Variável 'ds' com nome muito curto (≤4 chars)
+      Trecho  : ds = ...
+      Contexto:
+               4 | 
+        >>>    5 | ds = (p * 0.25)
+               6 | print("Entradas: ", p, ",", d, ",", m)
+
+  [5] Linha 10: Variável 'pt' com nome muito curto (≤4 chars)
+      Trecho  : pt = ...
+      Contexto:
+               9 | 	if ((d == 2) or (d == 3) or (d == 5) and (m == "N")):
+        >>>   10 | 		pt = p - ds
+              11 | 	print("Valor a pagar: R$", round(pt, 2))
+
+  [6] Linha 13: Variável 'pt' com nome muito curto (≤4 chars)
+      Trecho  : pt = ...
+      Contexto:
+              12 | 	if (m == "S"):
+        >>>   13 | 		pt = p + 20.00
+              14 | 		print("Valor a pagar: R$", round(pt, 2))
+
+======================================================================

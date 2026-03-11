@@ -1,0 +1,97 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1252_1258.py
+Questão  : 1252
+Aluno    : 1258
+Total MCs: 2
+
+⚠️  Misconceptions detectados: A3, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | from math import*
+     3 | vet = array(eval(input("digite o vetor")))
+     4 | x = array(zeros(2,dtype = int))
+     5 | cont = 0
+     6 | A = min(vet)
+     7 | B = max(vet)
+     8 | C = 0.6 * A + 0.4 * B
+     9 | D = 0.3 * A + 0.7 * B
+    10 | for i in range(size(vet)):
+    11 | 	if((vet[i]>= A) and (vet[i]<=C)):
+    12 | 		x[0] = x[0] + 1
+    13 | for i in range(size(vet)):
+    14 | 	if(vet[i]>= C and vet[i]<=D):
+    15 | 		x[1] = x[1] + 1
+    16 | print(x)		
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 1
+
+  [1] Linha 5: Variável 'cont' declarada mas nunca utilizada
+      Trecho  : cont = ...
+      Contexto:
+               4 | x = array(zeros(2,dtype = int))
+        >>>    5 | cont = 0
+               6 | A = min(vet)
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 7
+
+  [1] Linha 3: Variável 'vet' com nome muito curto (≤4 chars)
+      Trecho  : vet = ...
+      Contexto:
+               2 | from math import*
+        >>>    3 | vet = array(eval(input("digite o vetor")))
+               4 | x = array(zeros(2,dtype = int))
+
+  [2] Linha 4: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+               3 | vet = array(eval(input("digite o vetor")))
+        >>>    4 | x = array(zeros(2,dtype = int))
+               5 | cont = 0
+
+  [3] Linha 5: Variável 'cont' com nome muito curto (≤4 chars)
+      Trecho  : cont = ...
+      Contexto:
+               4 | x = array(zeros(2,dtype = int))
+        >>>    5 | cont = 0
+               6 | A = min(vet)
+
+  [4] Linha 6: Variável 'A' com nome muito curto (≤4 chars)
+      Trecho  : A = ...
+      Contexto:
+               5 | cont = 0
+        >>>    6 | A = min(vet)
+               7 | B = max(vet)
+
+  [5] Linha 7: Variável 'B' com nome muito curto (≤4 chars)
+      Trecho  : B = ...
+      Contexto:
+               6 | A = min(vet)
+        >>>    7 | B = max(vet)
+               8 | C = 0.6 * A + 0.4 * B
+
+  [6] Linha 8: Variável 'C' com nome muito curto (≤4 chars)
+      Trecho  : C = ...
+      Contexto:
+               7 | B = max(vet)
+        >>>    8 | C = 0.6 * A + 0.4 * B
+               9 | D = 0.3 * A + 0.7 * B
+
+  [7] Linha 9: Variável 'D' com nome muito curto (≤4 chars)
+      Trecho  : D = ...
+      Contexto:
+               8 | C = 0.6 * A + 0.4 * B
+        >>>    9 | D = 0.3 * A + 0.7 * B
+              10 | for i in range(size(vet)):
+
+======================================================================

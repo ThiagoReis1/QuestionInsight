@@ -1,0 +1,83 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 2155_2316.py
+Questão  : 2155
+Aluno    : 2316
+Total MCs: 1
+
+⚠️  Misconceptions detectados: G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | vet = array(eval(input()))
+     3 | vet2 = array(eval(input()))
+     4 | vet3 = zeros(size(vet),dtype=float)
+     5 | 
+     6 | j = 0
+     7 | for i in vet:
+     8 | 	vet3[j] = round(i/(vet2[j]*vet2[j]),2)
+     9 | 	j = j + 1
+    10 | print(vet3)
+    11 | print("O MAIOR IMC DA TURMA EH: ",round(max(vet3),2))
+    12 | 
+    13 | if (max(vet3) <17):
+    14 | 	print("MUITO ABAIXO DO PESO")
+    15 | if (max(vet3) >= 17 and max(vet3) <= 18.49):
+    16 | 	print("ABAIXO DO PESO")
+    17 | if (max(vet3) >=18.5 and max(vet3) <= 24.99):
+    18 | 	print("PESO NORMAL")
+    19 | if (max(vet3) >=25 and max(vet3) <= 29.99):
+    20 | 	print("ACIMA DO PESO")
+    21 | if (max(vet3) >=30 and max(vet3) <= 34.99):
+    22 | 	print("OBESIDADE")
+    23 | if (max(vet3) >=35 and max(vet3) <= 39.99):
+    24 | 	print("OBESIDADE SEVERA")
+    25 | if (max(vet3) >=40):
+    26 | 	print("OBESIDADE MORBIDA")
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 5
+
+  [1] Linha 2: Variável 'vet' com nome muito curto (≤4 chars)
+      Trecho  : vet = ...
+      Contexto:
+               1 | from numpy import*
+        >>>    2 | vet = array(eval(input()))
+               3 | vet2 = array(eval(input()))
+
+  [2] Linha 3: Variável 'vet2' com nome muito curto (≤4 chars)
+      Trecho  : vet2 = ...
+      Contexto:
+               2 | vet = array(eval(input()))
+        >>>    3 | vet2 = array(eval(input()))
+               4 | vet3 = zeros(size(vet),dtype=float)
+
+  [3] Linha 4: Variável 'vet3' com nome muito curto (≤4 chars)
+      Trecho  : vet3 = ...
+      Contexto:
+               3 | vet2 = array(eval(input()))
+        >>>    4 | vet3 = zeros(size(vet),dtype=float)
+               5 | 
+
+  [4] Linha 6: Variável 'j' com nome muito curto (≤4 chars)
+      Trecho  : j = ...
+      Contexto:
+               5 | 
+        >>>    6 | j = 0
+               7 | for i in vet:
+
+  [5] Linha 9: Variável 'j' com nome muito curto (≤4 chars)
+      Trecho  : j = ...
+      Contexto:
+               8 | 	vet3[j] = round(i/(vet2[j]*vet2[j]),2)
+        >>>    9 | 	j = j + 1
+              10 | print(vet3)
+
+======================================================================

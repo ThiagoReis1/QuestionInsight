@@ -1,0 +1,88 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 5312_6080.py
+Questão  : 5312
+Aluno    : 6080
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | bac = float(input("Digite o numero inicial de bacterias:"))
+     2 | hrs = float(input("Digite a quantidade de horas:"))
+     3 | if(bac <= 0): 
+     4 | 	print("quantidade invalida")
+     5 | else:
+     6 | 	if (hrs<=0):
+     7 | 		print("Hora invalida")
+     8 | 	cont=bac
+     9 | 	temp=0
+    10 | 	while(temp < hrs):
+    11 | 	  # cont = cont + 2 / 100 * cont
+    12 | 		cont = int( cont + 2 /100 * cont)
+    13 | 		temp = temp + 1	
+    14 | print(cont)
+    15 | 	
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 3: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 3) / elif ... sem else
+      Contexto:
+               2 | hrs = float(input("Digite a quantidade de horas:"))
+        >>>    3 | if(bac <= 0): 
+               4 | 	print("quantidade invalida")
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 6
+
+  [1] Linha 1: Variável 'bac' com nome muito curto (≤4 chars)
+      Trecho  : bac = ...
+      Contexto:
+        >>>    1 | bac = float(input("Digite o numero inicial de bacterias:"))
+               2 | hrs = float(input("Digite a quantidade de horas:"))
+
+  [2] Linha 2: Variável 'hrs' com nome muito curto (≤4 chars)
+      Trecho  : hrs = ...
+      Contexto:
+               1 | bac = float(input("Digite o numero inicial de bacterias:"))
+        >>>    2 | hrs = float(input("Digite a quantidade de horas:"))
+               3 | if(bac <= 0): 
+
+  [3] Linha 8: Variável 'cont' com nome muito curto (≤4 chars)
+      Trecho  : cont = ...
+      Contexto:
+               7 | 		print("Hora invalida")
+        >>>    8 | 	cont=bac
+               9 | 	temp=0
+
+  [4] Linha 9: Variável 'temp' com nome muito curto (≤4 chars)
+      Trecho  : temp = ...
+      Contexto:
+               8 | 	cont=bac
+        >>>    9 | 	temp=0
+              10 | 	while(temp < hrs):
+
+  [5] Linha 12: Variável 'cont' com nome muito curto (≤4 chars)
+      Trecho  : cont = ...
+      Contexto:
+              11 | 	  # cont = cont + 2 / 100 * cont
+        >>>   12 | 		cont = int( cont + 2 /100 * cont)
+              13 | 		temp = temp + 1	
+
+  [6] Linha 13: Variável 'temp' com nome muito curto (≤4 chars)
+      Trecho  : temp = ...
+      Contexto:
+              12 | 		cont = int( cont + 2 /100 * cont)
+        >>>   13 | 		temp = temp + 1	
+              14 | print(cont)
+
+======================================================================

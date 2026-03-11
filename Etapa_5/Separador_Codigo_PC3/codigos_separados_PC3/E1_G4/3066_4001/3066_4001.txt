@@ -1,0 +1,81 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 3066_4001.py
+Questão  : 3066
+Aluno    : 4001
+Total MCs: 2
+
+⚠️  Misconceptions detectados: E1, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | V = int(input("Qtd inicial de vida: "))
+     2 | var1 = int(input("var1: "))
+     3 | var2 = int(input("var2: "))
+     4 | var3 = int(input("var3: "))
+     5 | N = var1 + var2 + var3
+     6 | if (V < 0) or (var1 < 1) or (var1 > 12) or (var2 < 1) or (var2 > 12) or (var3 < 1) or (var3 > 12):
+     7 | 	print("Entrada invalida")
+     8 | else:
+     9 | 	if(V - 10 * N <= 0):
+    10 | 		print(0)
+    11 | 		print("MORTO")
+    12 | 	else:
+    13 | 		print(V - 10 * N)
+    14 | 		print("VIVO")
+    15 | 	
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ E1 — Verificação desnecessária de todas as combinações possíveis
+  Ocorrências: 1
+
+  [1] Linha 6: 7 condições em um único if — verificação excessiva
+      Trecho  : V < 0 or var1 < 1 or var1 > 12 or (var2 < 1) or (var2 > 12) or (var3 < 1) or (var3 > 12)
+      Contexto:
+               5 | N = var1 + var2 + var3
+        >>>    6 | if (V < 0) or (var1 < 1) or (var1 > 12) or (var2 < 1) or (var2 > 12) or (var3 < 1) or (var3 > 12):
+               7 | 	print("Entrada invalida")
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 5
+
+  [1] Linha 1: Variável 'V' com nome muito curto (≤4 chars)
+      Trecho  : V = ...
+      Contexto:
+        >>>    1 | V = int(input("Qtd inicial de vida: "))
+               2 | var1 = int(input("var1: "))
+
+  [2] Linha 2: Variável 'var1' com nome muito curto (≤4 chars)
+      Trecho  : var1 = ...
+      Contexto:
+               1 | V = int(input("Qtd inicial de vida: "))
+        >>>    2 | var1 = int(input("var1: "))
+               3 | var2 = int(input("var2: "))
+
+  [3] Linha 3: Variável 'var2' com nome muito curto (≤4 chars)
+      Trecho  : var2 = ...
+      Contexto:
+               2 | var1 = int(input("var1: "))
+        >>>    3 | var2 = int(input("var2: "))
+               4 | var3 = int(input("var3: "))
+
+  [4] Linha 4: Variável 'var3' com nome muito curto (≤4 chars)
+      Trecho  : var3 = ...
+      Contexto:
+               3 | var2 = int(input("var2: "))
+        >>>    4 | var3 = int(input("var3: "))
+               5 | N = var1 + var2 + var3
+
+  [5] Linha 5: Variável 'N' com nome muito curto (≤4 chars)
+      Trecho  : N = ...
+      Contexto:
+               4 | var3 = int(input("var3: "))
+        >>>    5 | N = var1 + var2 + var3
+               6 | if (V < 0) or (var1 < 1) or (var1 > 12) or (var2 < 1) or (var2 > 12) or (var3 < 1) or (var3 > 12):
+
+======================================================================

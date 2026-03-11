@@ -1,0 +1,101 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1639_6165.py
+Questão  : 1639
+Aluno    : 6165
+Total MCs: 2
+
+⚠️  Misconceptions detectados: A3, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import *
+     2 | 
+     3 | qnt = array(eval(input("")))
+     4 | 
+     5 | h = 0
+     6 | y = 0
+     7 | s = 0
+     8 | 
+     9 | for i in range(size(qnt)):
+    10 | 	if(qnt[i] % 2 == 0):
+    11 | 		h = h + 1
+    12 | print(h)
+    13 | 	
+    14 | nv = zeros(h, dtype = int)
+    15 | for j in range(size(qnt)):
+    16 | 	if(qnt[j] % 2 == 0):
+    17 | 		nv[s] = j
+    18 | 		s = s + 1
+    19 | print(nv)
+    20 | 	
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 1
+
+  [1] Linha 6: Variável 'y' declarada mas nunca utilizada
+      Trecho  : y = ...
+      Contexto:
+               5 | h = 0
+        >>>    6 | y = 0
+               7 | s = 0
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 7
+
+  [1] Linha 3: Variável 'qnt' com nome muito curto (≤4 chars)
+      Trecho  : qnt = ...
+      Contexto:
+               2 | 
+        >>>    3 | qnt = array(eval(input("")))
+               4 | 
+
+  [2] Linha 5: Variável 'h' com nome muito curto (≤4 chars)
+      Trecho  : h = ...
+      Contexto:
+               4 | 
+        >>>    5 | h = 0
+               6 | y = 0
+
+  [3] Linha 6: Variável 'y' com nome muito curto (≤4 chars)
+      Trecho  : y = ...
+      Contexto:
+               5 | h = 0
+        >>>    6 | y = 0
+               7 | s = 0
+
+  [4] Linha 7: Variável 's' com nome muito curto (≤4 chars)
+      Trecho  : s = ...
+      Contexto:
+               6 | y = 0
+        >>>    7 | s = 0
+               8 | 
+
+  [5] Linha 14: Variável 'nv' com nome muito curto (≤4 chars)
+      Trecho  : nv = ...
+      Contexto:
+              13 | 	
+        >>>   14 | nv = zeros(h, dtype = int)
+              15 | for j in range(size(qnt)):
+
+  [6] Linha 11: Variável 'h' com nome muito curto (≤4 chars)
+      Trecho  : h = ...
+      Contexto:
+              10 | 	if(qnt[i] % 2 == 0):
+        >>>   11 | 		h = h + 1
+              12 | print(h)
+
+  [7] Linha 18: Variável 's' com nome muito curto (≤4 chars)
+      Trecho  : s = ...
+      Contexto:
+              17 | 		nv[s] = j
+        >>>   18 | 		s = s + 1
+              19 | print(nv)
+
+======================================================================

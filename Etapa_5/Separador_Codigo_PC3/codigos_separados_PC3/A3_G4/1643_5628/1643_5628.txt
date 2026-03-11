@@ -1,0 +1,102 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1643_5628.py
+Questão  : 1643
+Aluno    : 5628
+Total MCs: 2
+
+⚠️  Misconceptions detectados: A3, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import *
+     2 | 
+     3 | n = array(eval(input('Digite as notas: ')))
+     4 | 
+     5 | 
+     6 | 
+     7 | acum = 0
+     8 | for i in range(size(n)):
+     9 | 	if n[i] >= 5.0:
+    10 | 		acum = acum + 1
+    11 | 
+    12 | v1 = zeros(acum, dtype=int)
+    13 | 
+    14 | j = 0
+    15 | l = 0
+    16 | for i in range(size(n)):
+    17 | 	if n[i] >= 5.0:
+    18 | 		v1[j] = i
+    19 | 		j = j +1	
+    20 | print(acum)
+    21 | print(v1)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 1
+
+  [1] Linha 15: Variável 'l' declarada mas nunca utilizada
+      Trecho  : l = ...
+      Contexto:
+              14 | j = 0
+        >>>   15 | l = 0
+              16 | for i in range(size(n)):
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 7
+
+  [1] Linha 3: Variável 'n' com nome muito curto (≤4 chars)
+      Trecho  : n = ...
+      Contexto:
+               2 | 
+        >>>    3 | n = array(eval(input('Digite as notas: ')))
+               4 | 
+
+  [2] Linha 7: Variável 'acum' com nome muito curto (≤4 chars)
+      Trecho  : acum = ...
+      Contexto:
+               6 | 
+        >>>    7 | acum = 0
+               8 | for i in range(size(n)):
+
+  [3] Linha 12: Variável 'v1' com nome muito curto (≤4 chars)
+      Trecho  : v1 = ...
+      Contexto:
+              11 | 
+        >>>   12 | v1 = zeros(acum, dtype=int)
+              13 | 
+
+  [4] Linha 14: Variável 'j' com nome muito curto (≤4 chars)
+      Trecho  : j = ...
+      Contexto:
+              13 | 
+        >>>   14 | j = 0
+              15 | l = 0
+
+  [5] Linha 15: Variável 'l' com nome muito curto (≤4 chars)
+      Trecho  : l = ...
+      Contexto:
+              14 | j = 0
+        >>>   15 | l = 0
+              16 | for i in range(size(n)):
+
+  [6] Linha 10: Variável 'acum' com nome muito curto (≤4 chars)
+      Trecho  : acum = ...
+      Contexto:
+               9 | 	if n[i] >= 5.0:
+        >>>   10 | 		acum = acum + 1
+              11 | 
+
+  [7] Linha 19: Variável 'j' com nome muito curto (≤4 chars)
+      Trecho  : j = ...
+      Contexto:
+              18 | 		v1[j] = i
+        >>>   19 | 		j = j +1	
+              20 | print(acum)
+
+======================================================================

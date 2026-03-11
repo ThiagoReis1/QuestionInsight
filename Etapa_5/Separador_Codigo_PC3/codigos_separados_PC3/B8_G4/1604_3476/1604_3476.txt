@@ -1,0 +1,104 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1604_3476.py
+Questão  : 1604
+Aluno    : 3476
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | v = array(eval(input("Digite: ")))
+     3 | cont = 0
+     4 | soma = 0
+     5 | while(cont<size(v) and soma != 4):
+     6 | 	if(v[cont]==1):
+     7 | 		soma=soma+80
+     8 | 	elif(v[cont]==2):
+     9 | 		soma = soma + 40
+    10 | 	elif(v[cont]==3):
+    11 | 		soma = soma + 20
+    12 | 	elif(v[cont]==4):
+    13 | 		soma = soma + 10
+    14 | 	cont = cont + 1
+    15 | print(soma)
+    16 | 		
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 10: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 10) / elif ... sem else
+      Contexto:
+               9 | 		soma = soma + 40
+        >>>   10 | 	elif(v[cont]==3):
+              11 | 		soma = soma + 20
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 8
+
+  [1] Linha 2: Variável 'v' com nome muito curto (≤4 chars)
+      Trecho  : v = ...
+      Contexto:
+               1 | from numpy import*
+        >>>    2 | v = array(eval(input("Digite: ")))
+               3 | cont = 0
+
+  [2] Linha 3: Variável 'cont' com nome muito curto (≤4 chars)
+      Trecho  : cont = ...
+      Contexto:
+               2 | v = array(eval(input("Digite: ")))
+        >>>    3 | cont = 0
+               4 | soma = 0
+
+  [3] Linha 4: Variável 'soma' com nome muito curto (≤4 chars)
+      Trecho  : soma = ...
+      Contexto:
+               3 | cont = 0
+        >>>    4 | soma = 0
+               5 | while(cont<size(v) and soma != 4):
+
+  [4] Linha 14: Variável 'cont' com nome muito curto (≤4 chars)
+      Trecho  : cont = ...
+      Contexto:
+              13 | 		soma = soma + 10
+        >>>   14 | 	cont = cont + 1
+              15 | print(soma)
+
+  [5] Linha 7: Variável 'soma' com nome muito curto (≤4 chars)
+      Trecho  : soma = ...
+      Contexto:
+               6 | 	if(v[cont]==1):
+        >>>    7 | 		soma=soma+80
+               8 | 	elif(v[cont]==2):
+
+  [6] Linha 9: Variável 'soma' com nome muito curto (≤4 chars)
+      Trecho  : soma = ...
+      Contexto:
+               8 | 	elif(v[cont]==2):
+        >>>    9 | 		soma = soma + 40
+              10 | 	elif(v[cont]==3):
+
+  [7] Linha 11: Variável 'soma' com nome muito curto (≤4 chars)
+      Trecho  : soma = ...
+      Contexto:
+              10 | 	elif(v[cont]==3):
+        >>>   11 | 		soma = soma + 20
+              12 | 	elif(v[cont]==4):
+
+  [8] Linha 13: Variável 'soma' com nome muito curto (≤4 chars)
+      Trecho  : soma = ...
+      Contexto:
+              12 | 	elif(v[cont]==4):
+        >>>   13 | 		soma = soma + 10
+              14 | 	cont = cont + 1
+
+======================================================================

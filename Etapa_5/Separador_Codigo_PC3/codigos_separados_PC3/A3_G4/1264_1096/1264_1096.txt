@@ -1,0 +1,83 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1264_1096.py
+Questão  : 1264
+Aluno    : 1096
+Total MCs: 2
+
+⚠️  Misconceptions detectados: A3, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import *
+     2 | p = float(input("numero real"))
+     3 | x = eval(input("valores x: "))
+     4 | y = eval(input("valores y: "))
+     5 | z = zeros(size(x))
+     6 | for i in range(x) and range(y):
+     7 | 	t = p / (p + 1)
+     8 | 	diferenca = x - 2 * y
+     9 | 	print(diferenca)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 2
+
+  [1] Linha 5: Variável 'z' declarada mas nunca utilizada
+      Trecho  : z = ...
+      Contexto:
+               4 | y = eval(input("valores y: "))
+        >>>    5 | z = zeros(size(x))
+               6 | for i in range(x) and range(y):
+
+  [2] Linha 7: Variável 't' declarada mas nunca utilizada
+      Trecho  : t = ...
+      Contexto:
+               6 | for i in range(x) and range(y):
+        >>>    7 | 	t = p / (p + 1)
+               8 | 	diferenca = x - 2 * y
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 5
+
+  [1] Linha 2: Variável 'p' com nome muito curto (≤4 chars)
+      Trecho  : p = ...
+      Contexto:
+               1 | from numpy import *
+        >>>    2 | p = float(input("numero real"))
+               3 | x = eval(input("valores x: "))
+
+  [2] Linha 3: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+               2 | p = float(input("numero real"))
+        >>>    3 | x = eval(input("valores x: "))
+               4 | y = eval(input("valores y: "))
+
+  [3] Linha 4: Variável 'y' com nome muito curto (≤4 chars)
+      Trecho  : y = ...
+      Contexto:
+               3 | x = eval(input("valores x: "))
+        >>>    4 | y = eval(input("valores y: "))
+               5 | z = zeros(size(x))
+
+  [4] Linha 5: Variável 'z' com nome muito curto (≤4 chars)
+      Trecho  : z = ...
+      Contexto:
+               4 | y = eval(input("valores y: "))
+        >>>    5 | z = zeros(size(x))
+               6 | for i in range(x) and range(y):
+
+  [5] Linha 7: Variável 't' com nome muito curto (≤4 chars)
+      Trecho  : t = ...
+      Contexto:
+               6 | for i in range(x) and range(y):
+        >>>    7 | 	t = p / (p + 1)
+               8 | 	diferenca = x - 2 * y
+
+======================================================================

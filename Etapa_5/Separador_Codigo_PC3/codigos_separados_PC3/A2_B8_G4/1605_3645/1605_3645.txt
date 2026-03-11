@@ -1,0 +1,113 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1605_3645.py
+Questão  : 1605
+Aluno    : 3645
+Total MCs: 3
+
+⚠️  Misconceptions detectados: A2, B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | x = array(eval(input("numeros dos aneis: ")))
+     3 | i = 0
+     4 | j = 200
+     5 | while i<size(x):
+     6 | 	if(x[i]==1):
+     7 | 		j= j*4
+     8 | 	elif(x[i]==2):
+     9 | 		j= j*2
+    10 | 	elif(x[i]==3):
+    11 | 		j=j 
+    12 | 	elif(x[i]==4):
+    13 | 		j=(j/2)
+    14 | 	i=i+1
+    15 | print(j)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A2 — Variável atribuída a si mesma
+  Ocorrências: 1
+
+  [1] Linha 11: 'j' atribuído a si mesmo
+      Trecho  : j = j
+      Contexto:
+              10 | 	elif(x[i]==3):
+        >>>   11 | 		j=j 
+              12 | 	elif(x[i]==4):
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 10: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 10) / elif ... sem else
+      Contexto:
+               9 | 		j= j*2
+        >>>   10 | 	elif(x[i]==3):
+              11 | 		j=j 
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 8
+
+  [1] Linha 2: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+               1 | from numpy import*
+        >>>    2 | x = array(eval(input("numeros dos aneis: ")))
+               3 | i = 0
+
+  [2] Linha 3: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+               2 | x = array(eval(input("numeros dos aneis: ")))
+        >>>    3 | i = 0
+               4 | j = 200
+
+  [3] Linha 4: Variável 'j' com nome muito curto (≤4 chars)
+      Trecho  : j = ...
+      Contexto:
+               3 | i = 0
+        >>>    4 | j = 200
+               5 | while i<size(x):
+
+  [4] Linha 14: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+              13 | 		j=(j/2)
+        >>>   14 | 	i=i+1
+              15 | print(j)
+
+  [5] Linha 7: Variável 'j' com nome muito curto (≤4 chars)
+      Trecho  : j = ...
+      Contexto:
+               6 | 	if(x[i]==1):
+        >>>    7 | 		j= j*4
+               8 | 	elif(x[i]==2):
+
+  [6] Linha 9: Variável 'j' com nome muito curto (≤4 chars)
+      Trecho  : j = ...
+      Contexto:
+               8 | 	elif(x[i]==2):
+        >>>    9 | 		j= j*2
+              10 | 	elif(x[i]==3):
+
+  [7] Linha 11: Variável 'j' com nome muito curto (≤4 chars)
+      Trecho  : j = ...
+      Contexto:
+              10 | 	elif(x[i]==3):
+        >>>   11 | 		j=j 
+              12 | 	elif(x[i]==4):
+
+  [8] Linha 13: Variável 'j' com nome muito curto (≤4 chars)
+      Trecho  : j = ...
+      Contexto:
+              12 | 	elif(x[i]==4):
+        >>>   13 | 		j=(j/2)
+              14 | 	i=i+1
+
+======================================================================

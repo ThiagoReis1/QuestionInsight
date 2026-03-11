@@ -1,0 +1,49 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1649_7588.py
+Questão  : 1649
+Aluno    : 7588
+Total MCs: 1
+
+⚠️  Misconceptions detectados: B8
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import *
+     2 | 
+     3 | s = input().split(',')
+     4 | 
+     5 | vCont = zeros(5, dtype = int)
+     6 | 
+     7 | for i in range(len(s)):
+     8 | 	if(s[i] == 'P'):
+     9 | 		vCont[0] += 1
+    10 | 	elif(s[i] == 'C'):
+    11 | 		vCont[1] += 1
+    12 | 	elif(s[i] == 'M'):
+    13 | 		vCont[2] += 1
+    14 | 	elif(s[i] == 'V'):
+    15 | 		vCont[3] += 1
+    16 | 	elif(s[i] == 'A'):
+    17 | 		vCont[4] += 1
+    18 | 
+    19 | print(max(vCont))
+    20 | print(vCont)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 14: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 14) / elif ... sem else
+      Contexto:
+              13 | 		vCont[2] += 1
+        >>>   14 | 	elif(s[i] == 'V'):
+              15 | 		vCont[3] += 1
+
+======================================================================

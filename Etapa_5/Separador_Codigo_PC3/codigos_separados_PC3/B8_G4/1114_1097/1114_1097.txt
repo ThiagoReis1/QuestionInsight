@@ -1,0 +1,65 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1114_1097.py
+Questão  : 1114
+Aluno    : 1097
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | v=float(input())
+     2 | t=float(input())
+     3 | print("Entradas:", v,"km/h e", t,"h")
+     4 | if(t>0 and v>0):
+     5 | 	if(v*t<100):
+     6 | 		print("Proxima parada: Bravos")
+     7 | 	elif(v*t>=100 and v*t<200):
+     8 | 		print("Proxima parada: Castemere")
+     9 | 	elif(v*t>=200 and v*t<400):
+    10 | 		print("Proxima parada: Doriath")
+    11 | 	elif(v*t>=400 and v*t<600):
+    12 | 		print("Proxima parada: Edoras")
+    13 | 	elif(v*t>=600 and v*t<750):
+    14 | 		print("Proxima parada: Fangorn")
+    15 | 	elif(v*t>=750 and v*t<1150):
+    16 | 		print("Proxima parada: Gondor")
+    17 | 	elif(v*t>=1150 and v*t<1400):
+    18 | 		print("Proxima parada: Hogsmead")
+    19 | else:
+    20 | 	print("Dados invalidos")
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 15: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 15) / elif ... sem else
+      Contexto:
+              14 | 		print("Proxima parada: Fangorn")
+        >>>   15 | 	elif(v*t>=750 and v*t<1150):
+              16 | 		print("Proxima parada: Gondor")
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 2
+
+  [1] Linha 1: Variável 'v' com nome muito curto (≤4 chars)
+      Trecho  : v = ...
+      Contexto:
+        >>>    1 | v=float(input())
+               2 | t=float(input())
+
+  [2] Linha 2: Variável 't' com nome muito curto (≤4 chars)
+      Trecho  : t = ...
+      Contexto:
+               1 | v=float(input())
+        >>>    2 | t=float(input())
+               3 | print("Entradas:", v,"km/h e", t,"h")
+
+======================================================================

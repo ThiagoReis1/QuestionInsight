@@ -1,0 +1,71 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1653_7605.py
+Questão  : 1653
+Aluno    : 7605
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import *
+     2 | s = input("Nacionalidade: ").upper()
+     3 | a = s.split(',')
+     4 | qtd = zeros(5,dtype=int)
+     5 | 
+     6 | for i in range(size(a)):
+     7 | 	if a[i] == "AR":
+     8 | 		qtd[0] = qtd[0] + 1
+     9 | 	elif a[i] == "BR":
+    10 | 		qtd[1] = qtd[1] + 1
+    11 | 	elif a[i] == "CL":
+    12 | 		qtd[2] = qtd[2] + 1
+    13 | 	elif a[i] == "CO":
+    14 | 		qtd[3] = qtd[3] + 1
+    15 | 	elif a[i] == "UY":
+    16 | 		qtd[4] = qtd[4] + 1
+    17 | print(max(qtd))
+    18 | print(qtd)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 13: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 13) / elif ... sem else
+      Contexto:
+              12 | 		qtd[2] = qtd[2] + 1
+        >>>   13 | 	elif a[i] == "CO":
+              14 | 		qtd[3] = qtd[3] + 1
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 3
+
+  [1] Linha 2: Variável 's' com nome muito curto (≤4 chars)
+      Trecho  : s = ...
+      Contexto:
+               1 | from numpy import *
+        >>>    2 | s = input("Nacionalidade: ").upper()
+               3 | a = s.split(',')
+
+  [2] Linha 3: Variável 'a' com nome muito curto (≤4 chars)
+      Trecho  : a = ...
+      Contexto:
+               2 | s = input("Nacionalidade: ").upper()
+        >>>    3 | a = s.split(',')
+               4 | qtd = zeros(5,dtype=int)
+
+  [3] Linha 4: Variável 'qtd' com nome muito curto (≤4 chars)
+      Trecho  : qtd = ...
+      Contexto:
+               3 | a = s.split(',')
+        >>>    4 | qtd = zeros(5,dtype=int)
+               5 | 
+
+======================================================================

@@ -1,0 +1,1 @@
+popin=int(input(" ))

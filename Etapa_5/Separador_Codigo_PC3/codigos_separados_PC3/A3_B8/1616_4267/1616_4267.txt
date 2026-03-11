@@ -1,0 +1,95 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1616_4267.py
+Questão  : 1616
+Aluno    : 4267
+Total MCs: 2
+
+⚠️  Misconceptions detectados: A3, B8
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import *
+     2 | GELO = "GELO"
+     3 | FOGO = "FOGO"
+     4 | CHOQUE = "CHOQUE"
+     5 | CONJURACAO = "CONJURACAO"
+     6 | ILUSAO = "ILUSAO"
+     7 | tipo = array(eval(input("Tipo de magia: ")))
+     8 | nivel = array(eval(input("Nivel do mago: ")))
+     9 | i = 0
+    10 | soma = 0
+    11 | if(size(tipo) == size(nivel)):
+    12 | 	while(i<size(nivel)):
+    13 | 		if(tipo[i] == "GELO"):
+    14 | 			soma = soma + 2*nivel[i]
+    15 | 			i = i + 1
+    16 | 		elif(tipo[i] == "FOGO"):
+    17 | 			soma = soma + 3*nivel[i]
+    18 | 			i = i + 1
+    19 | 		elif(tipo[i] == "CHOQUE"):
+    20 | 			soma = soma + 4*nivel[i]
+    21 | 			i = i + 1
+    22 | 		elif(tipo[i] == "CONJURACAO"):
+    23 | 			soma = soma + 8*nivel[i]
+    24 | 			i = i + 1
+    25 | 		elif(tipo[i] == "ILUSAO"):
+    26 | 			soma = soma + 10*nivel[i]	
+    27 | 			i = i + 1
+    28 | print(soma)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 5
+
+  [1] Linha 2: Variável 'GELO' declarada mas nunca utilizada
+      Trecho  : GELO = ...
+      Contexto:
+               1 | from numpy import *
+        >>>    2 | GELO = "GELO"
+               3 | FOGO = "FOGO"
+
+  [2] Linha 3: Variável 'FOGO' declarada mas nunca utilizada
+      Trecho  : FOGO = ...
+      Contexto:
+               2 | GELO = "GELO"
+        >>>    3 | FOGO = "FOGO"
+               4 | CHOQUE = "CHOQUE"
+
+  [3] Linha 4: Variável 'CHOQUE' declarada mas nunca utilizada
+      Trecho  : CHOQUE = ...
+      Contexto:
+               3 | FOGO = "FOGO"
+        >>>    4 | CHOQUE = "CHOQUE"
+               5 | CONJURACAO = "CONJURACAO"
+
+  [4] Linha 5: Variável 'CONJURACAO' declarada mas nunca utilizada
+      Trecho  : CONJURACAO = ...
+      Contexto:
+               4 | CHOQUE = "CHOQUE"
+        >>>    5 | CONJURACAO = "CONJURACAO"
+               6 | ILUSAO = "ILUSAO"
+
+  [5] Linha 6: Variável 'ILUSAO' declarada mas nunca utilizada
+      Trecho  : ILUSAO = ...
+      Contexto:
+               5 | CONJURACAO = "CONJURACAO"
+        >>>    6 | ILUSAO = "ILUSAO"
+               7 | tipo = array(eval(input("Tipo de magia: ")))
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 22: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 22) / elif ... sem else
+      Contexto:
+              21 | 			i = i + 1
+        >>>   22 | 		elif(tipo[i] == "CONJURACAO"):
+              23 | 			soma = soma + 8*nivel[i]
+
+======================================================================

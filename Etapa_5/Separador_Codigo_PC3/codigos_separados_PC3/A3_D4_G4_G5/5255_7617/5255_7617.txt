@@ -1,0 +1,108 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 5255_7617.py
+Questão  : 5255
+Aluno    : 7617
+Total MCs: 4
+
+⚠️  Misconceptions detectados: A3, D4, G4, G5
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | peso = float(input('Digite o peso do produto (kg): '))
+     2 | distancia = float(input('Digite a distancia (km): '))
+     3 | codigo = int(input('Digite o codigo: '))
+     4 | 
+     5 | # Formula
+     6 | # total = (peso * custoPeso + distancia * custoDistancia) * (1.0 + icms/100 )
+     7 | 
+     8 | custo_peso = 25 * peso
+     9 | custo_distancia = 0.10 * distancia
+    10 | icms = 0
+    11 | 
+    12 | resultado = 0
+    13 | 
+    14 | def calcular(icms):
+    15 | 	return round((custo_peso +custo_distancia) * ((1.0 + icms)),2)
+    16 | 
+    17 | if(codigo == 1):
+    18 | 	icms = 17/100
+    19 | 	print(calcular(icms))
+    20 | elif (codigo == 2):
+    21 | 	icms = 17.5 / 100
+    22 | 	print(calcular(icms))
+    23 | elif (codigo == 3):
+    24 | 	icms = 18 / 100
+    25 | 	print(calcular(icms))
+    26 | else:
+    27 | 	icms = 20 / 100
+    28 | 	print(calcular(icms))
+    29 | 	
+    30 | #print(round(total, 2))
+    31 | 	
+    32 | 	
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 3
+
+  [1] Linha 8: Variável 'custo_peso' declarada mas nunca utilizada
+      Trecho  : custo_peso = ...
+      Contexto:
+               7 | 
+        >>>    8 | custo_peso = 25 * peso
+               9 | custo_distancia = 0.10 * distancia
+
+  [2] Linha 9: Variável 'custo_distancia' declarada mas nunca utilizada
+      Trecho  : custo_distancia = ...
+      Contexto:
+               8 | custo_peso = 25 * peso
+        >>>    9 | custo_distancia = 0.10 * distancia
+              10 | icms = 0
+
+  [3] Linha 12: Variável 'resultado' declarada mas nunca utilizada
+      Trecho  : resultado = ...
+      Contexto:
+              11 | 
+        >>>   12 | resultado = 0
+              13 | 
+
+▶ D4 — Variável fora do escopo da função
+  Ocorrências: 2
+
+  [1] Linha 15: Global 'custo_peso' usada em 'calcular' sem ser parâmetro
+      Trecho  : custo_peso
+      Contexto:
+              14 | def calcular(icms):
+        >>>   15 | 	return round((custo_peso +custo_distancia) * ((1.0 + icms)),2)
+              16 | 
+
+  [2] Linha 15: Global 'custo_distancia' usada em 'calcular' sem ser parâmetro
+      Trecho  : custo_distancia
+      Contexto:
+              14 | def calcular(icms):
+        >>>   15 | 	return round((custo_peso +custo_distancia) * ((1.0 + icms)),2)
+              16 | 
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 1
+
+  [1] Linha 14: Função 'calcular' com nome muito curto (≤8 chars)
+      Trecho  : def calcular(...)
+      Contexto:
+              13 | 
+        >>>   14 | def calcular(icms):
+              15 | 	return round((custo_peso +custo_distancia) * ((1.0 + icms)),2)
+
+▶ G5 — Organização arbitrária de declarações
+  Ocorrências: 1
+
+  [1] Linha 0: G5 detectado pelo VisitorMC3 (localização exata não mapeada)
+      Trecho  : —
+
+======================================================================

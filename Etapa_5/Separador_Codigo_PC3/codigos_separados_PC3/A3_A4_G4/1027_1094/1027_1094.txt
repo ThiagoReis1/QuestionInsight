@@ -1,0 +1,58 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1027_1094.py
+Questão  : 1027
+Aluno    : 1094
+Total MCs: 3
+
+⚠️  Misconceptions detectados: A3, A4, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from math import*
+     2 | k= float(input())
+     3 | c= float(k*0.43 + 10)
+     4 | t=float(c*0.25)
+     5 | b=c+t
+     6 | print=float(b)
+     7 | print=round(b,2)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 1
+
+  [1] Linha 6: Variável 'print' declarada mas nunca utilizada
+      Trecho  : print = ...
+      Contexto:
+               5 | b=c+t
+        >>>    6 | print=float(b)
+               7 | print=round(b,2)
+
+▶ A4 — Redefinição de built-in
+  Ocorrências: 2
+
+  [1] Linha 6: Built-in 'print' redefinido como variável
+      Trecho  : print = float(b)
+      Contexto:
+               5 | b=c+t
+        >>>    6 | print=float(b)
+               7 | print=round(b,2)
+
+  [2] Linha 7: Built-in 'print' redefinido como variável
+      Trecho  : print = round(b, 2)
+      Contexto:
+               6 | print=float(b)
+        >>>    7 | print=round(b,2)
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 1
+
+  [1] Linha 0: G4 detectado pelo VisitorMC3 (localização exata não mapeada)
+      Trecho  : —
+
+======================================================================

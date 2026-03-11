@@ -1,0 +1,48 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1094_1219.py
+Questão  : 1094
+Aluno    : 1219
+Total MCs: 1
+
+⚠️  Misconceptions detectados: A3
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | x= int(input("digite o valor:"))
+     2 | x1= x//1000000
+     3 | rest_x1= x % 1000000
+     4 | x2= rest_x1//100000
+     5 | rest_x2 = rest_x1 %100000
+     6 | x3= rest_x2 // 10000
+     7 | rest_x3 = rest_x2 % 10000
+     8 | x4= rest_x3 // 1000
+     9 | rest_x4 = rest_x3 % 1000
+    10 | x5= rest_x4 // 100
+    11 | rest_x5 = rest_x4 % 100
+    12 | x6= rest_x5 // 10
+    13 | rest_x6 = rest_x5 % 10
+    14 | e= ((x1*100)+(x2*10)+(x3*1));
+    15 | z= ((x4*100)+(x5*10)+(x6*1));
+    16 | if((e + z)**2 >=x):
+    17 | 	print("X atende a propriedade")
+    18 | else:
+    19 | 	print(z)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 1
+
+  [1] Linha 13: Variável 'rest_x6' declarada mas nunca utilizada
+      Trecho  : rest_x6 = ...
+      Contexto:
+              12 | x6= rest_x5 // 10
+        >>>   13 | rest_x6 = rest_x5 % 10
+              14 | e= ((x1*100)+(x2*10)+(x3*1));
+
+======================================================================

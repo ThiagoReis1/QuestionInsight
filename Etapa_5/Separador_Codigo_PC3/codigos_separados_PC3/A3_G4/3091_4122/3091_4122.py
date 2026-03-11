@@ -1,0 +1,12 @@
+j=input("v/d/e/x")
+n=0
+while((j=="v")and(j=="e")and(j=="d")):
+	j=input("v/d/e/x")
+	if(j=="v"):
+		n=3
+	elif(j=="e"):
+		n=1
+	else:
+		n=0
+	j=n+j
+print(n)

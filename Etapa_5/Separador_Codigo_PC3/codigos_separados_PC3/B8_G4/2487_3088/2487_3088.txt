@@ -1,0 +1,190 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 2487_3088.py
+Questão  : 2487
+Aluno    : 3088
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | np = int(input("Insira o numero do prato: "))
+     2 | ns = int(input("Insira o numero da sobremesa: "))
+     3 | nb = int(input("Insira o numero da bebida: "))
+     4 | if (1<=np<=4):
+     5 | 	if np==1:
+     6 | 		x= 180
+     7 | 	elif np==2:
+     8 | 		x = 230
+     9 | 	elif np==3:
+    10 | 		x = 250
+    11 | 	elif np==4: 
+    12 | 		x = 350
+    13 | 		
+    14 | if (1<=ns<=4):
+    15 | 	if ns==1:
+    16 | 		y = 75
+    17 | 	elif ns==2:
+    18 | 		y = 110
+    19 | 	elif ns==3:
+    20 | 		y = 170
+    21 | 	elif ns==4: 
+    22 | 		y = 200
+    23 | 
+    24 | if (1<=nb<=4):
+    25 | 	if nb==1:
+    26 | 		z = 20
+    27 | 	elif nb==2:
+    28 | 		z = 70
+    29 | 	elif nb==3:
+    30 | 		z = 100
+    31 | 	elif nb==4: 
+    32 | 		z = 65
+    33 | if not ((1<=np<=4) and (1<=ns<=4) and (1<=nb<=4)):
+    34 | 	print("Entradas:",np,",",ns,",",nb)
+    35 | 	print("Dados invalidos")
+    36 | else:
+    37 | 	print("Entradas:",np,",",ns,",",nb)
+    38 | 	print("Calorias:",x+y+z,"cal")
+    39 | 
+    40 | 		
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 3
+
+  [1] Linha 9: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 9) / elif ... sem else
+      Contexto:
+               8 | 		x = 230
+        >>>    9 | 	elif np==3:
+              10 | 		x = 250
+
+  [2] Linha 19: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 19) / elif ... sem else
+      Contexto:
+              18 | 		y = 110
+        >>>   19 | 	elif ns==3:
+              20 | 		y = 170
+
+  [3] Linha 29: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 29) / elif ... sem else
+      Contexto:
+              28 | 		z = 70
+        >>>   29 | 	elif nb==3:
+              30 | 		z = 100
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 15
+
+  [1] Linha 1: Variável 'np' com nome muito curto (≤4 chars)
+      Trecho  : np = ...
+      Contexto:
+        >>>    1 | np = int(input("Insira o numero do prato: "))
+               2 | ns = int(input("Insira o numero da sobremesa: "))
+
+  [2] Linha 2: Variável 'ns' com nome muito curto (≤4 chars)
+      Trecho  : ns = ...
+      Contexto:
+               1 | np = int(input("Insira o numero do prato: "))
+        >>>    2 | ns = int(input("Insira o numero da sobremesa: "))
+               3 | nb = int(input("Insira o numero da bebida: "))
+
+  [3] Linha 3: Variável 'nb' com nome muito curto (≤4 chars)
+      Trecho  : nb = ...
+      Contexto:
+               2 | ns = int(input("Insira o numero da sobremesa: "))
+        >>>    3 | nb = int(input("Insira o numero da bebida: "))
+               4 | if (1<=np<=4):
+
+  [4] Linha 6: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+               5 | 	if np==1:
+        >>>    6 | 		x= 180
+               7 | 	elif np==2:
+
+  [5] Linha 16: Variável 'y' com nome muito curto (≤4 chars)
+      Trecho  : y = ...
+      Contexto:
+              15 | 	if ns==1:
+        >>>   16 | 		y = 75
+              17 | 	elif ns==2:
+
+  [6] Linha 26: Variável 'z' com nome muito curto (≤4 chars)
+      Trecho  : z = ...
+      Contexto:
+              25 | 	if nb==1:
+        >>>   26 | 		z = 20
+              27 | 	elif nb==2:
+
+  [7] Linha 8: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+               7 | 	elif np==2:
+        >>>    8 | 		x = 230
+               9 | 	elif np==3:
+
+  [8] Linha 18: Variável 'y' com nome muito curto (≤4 chars)
+      Trecho  : y = ...
+      Contexto:
+              17 | 	elif ns==2:
+        >>>   18 | 		y = 110
+              19 | 	elif ns==3:
+
+  [9] Linha 28: Variável 'z' com nome muito curto (≤4 chars)
+      Trecho  : z = ...
+      Contexto:
+              27 | 	elif nb==2:
+        >>>   28 | 		z = 70
+              29 | 	elif nb==3:
+
+  [10] Linha 10: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+               9 | 	elif np==3:
+        >>>   10 | 		x = 250
+              11 | 	elif np==4: 
+
+  [11] Linha 20: Variável 'y' com nome muito curto (≤4 chars)
+      Trecho  : y = ...
+      Contexto:
+              19 | 	elif ns==3:
+        >>>   20 | 		y = 170
+              21 | 	elif ns==4: 
+
+  [12] Linha 30: Variável 'z' com nome muito curto (≤4 chars)
+      Trecho  : z = ...
+      Contexto:
+              29 | 	elif nb==3:
+        >>>   30 | 		z = 100
+              31 | 	elif nb==4: 
+
+  [13] Linha 12: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+              11 | 	elif np==4: 
+        >>>   12 | 		x = 350
+              13 | 		
+
+  [14] Linha 22: Variável 'y' com nome muito curto (≤4 chars)
+      Trecho  : y = ...
+      Contexto:
+              21 | 	elif ns==4: 
+        >>>   22 | 		y = 200
+              23 | 
+
+  [15] Linha 32: Variável 'z' com nome muito curto (≤4 chars)
+      Trecho  : z = ...
+      Contexto:
+              31 | 	elif nb==4: 
+        >>>   32 | 		z = 65
+              33 | if not ((1<=np<=4) and (1<=ns<=4) and (1<=nb<=4)):
+
+======================================================================

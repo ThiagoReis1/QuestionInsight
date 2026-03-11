@@ -1,0 +1,58 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 6765_9303.py
+Questão  : 6765
+Aluno    : 9303
+Total MCs: 1
+
+⚠️  Misconceptions detectados: A3
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | ano_nasc = int(input("ano: "))
+     2 | pais = input("B ou R: ")
+     3 | 
+     4 | brasil = 18
+     5 | russia = 21
+     6 | 
+     7 | 
+     8 | ano_pesquisa = 2023
+     9 | 
+    10 | idade = ano_pesquisa - ano_nasc
+    11 | anos_apta = idade - 18
+    12 | anos_2apta = idade - 21
+    13 | anos_3apta = 18 - idade
+    14 | anos_4apta = 21 - idade
+    15 | 
+    16 | if(pais == "B" and idade >= brasil) or (pais == "R" and idade >= russia):
+    17 | 	print("sim")
+    18 | 	print(anos_apta)
+    19 | 	
+    20 | else:
+    21 | 	print("nao")
+    22 | 	print(anos_2apta)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 2
+
+  [1] Linha 13: Variável 'anos_3apta' declarada mas nunca utilizada
+      Trecho  : anos_3apta = ...
+      Contexto:
+              12 | anos_2apta = idade - 21
+        >>>   13 | anos_3apta = 18 - idade
+              14 | anos_4apta = 21 - idade
+
+  [2] Linha 14: Variável 'anos_4apta' declarada mas nunca utilizada
+      Trecho  : anos_4apta = ...
+      Contexto:
+              13 | anos_3apta = 18 - idade
+        >>>   14 | anos_4apta = 21 - idade
+              15 | 
+
+======================================================================

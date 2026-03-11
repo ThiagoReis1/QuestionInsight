@@ -1,0 +1,52 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 6380_4399.py
+Questão  : 6380
+Aluno    : 4399
+Total MCs: 1
+
+⚠️  Misconceptions detectados: B8
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import *
+     2 | lista = str(input())
+     3 | lista = lista.split(',')
+     4 | produtos = ones(4, dtype=int)
+     5 | e = 0
+     6 | v = 0
+     7 | a = 0
+     8 | d = 0
+     9 | for i in range(len(lista)):
+    10 | 	if lista[i].upper() == 'E':
+    11 | 		e+=1
+    12 | 	elif lista[i].upper() == 'V':
+    13 | 		v+=1
+    14 | 	elif lista[i].upper() == 'A':
+    15 | 		a+=1
+    16 | 	elif lista[i].upper() == 'D':
+    17 | 		d+=1
+    18 | 
+    19 | produtos[0] = e
+    20 | produtos[1] = v
+    21 | produtos[2] = a
+    22 | produtos[3] = d
+    23 | print(produtos)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 14: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 14) / elif ... sem else
+      Contexto:
+              13 | 		v+=1
+        >>>   14 | 	elif lista[i].upper() == 'A':
+              15 | 		a+=1
+
+======================================================================

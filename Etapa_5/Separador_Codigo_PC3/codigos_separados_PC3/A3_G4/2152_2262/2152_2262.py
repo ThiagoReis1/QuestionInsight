@@ -1,0 +1,1 @@
+vet= input("matricula de alunos: ")

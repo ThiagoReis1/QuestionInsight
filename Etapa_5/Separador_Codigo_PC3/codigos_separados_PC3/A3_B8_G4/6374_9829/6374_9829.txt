@@ -1,0 +1,81 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 6374_9829.py
+Questão  : 6374
+Aluno    : 9829
+Total MCs: 3
+
+⚠️  Misconceptions detectados: A3, B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import *
+     2 | 
+     3 | string = input("Digite a string: ").split(",")
+     4 | 
+     5 | zero = zeros(4, dtype=int)
+     6 | tam = len(string)
+     7 | u = 0
+     8 | for i in range(tam):
+     9 | 	if string[i] == 'O':
+    10 | 		zero[0] += 1
+    11 | 	elif string[i] == 'D':
+    12 | 		zero[1] += 1
+    13 | 	elif string[i] == 'N':
+    14 | 		zero[2] += 1
+    15 | 	elif string[i] == 'C':
+    16 | 		zero[3] += 1
+    17 | 	
+    18 | print(zero)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 1
+
+  [1] Linha 7: Variável 'u' declarada mas nunca utilizada
+      Trecho  : u = ...
+      Contexto:
+               6 | tam = len(string)
+        >>>    7 | u = 0
+               8 | for i in range(tam):
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 13: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 13) / elif ... sem else
+      Contexto:
+              12 | 		zero[1] += 1
+        >>>   13 | 	elif string[i] == 'N':
+              14 | 		zero[2] += 1
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 3
+
+  [1] Linha 5: Variável 'zero' com nome muito curto (≤4 chars)
+      Trecho  : zero = ...
+      Contexto:
+               4 | 
+        >>>    5 | zero = zeros(4, dtype=int)
+               6 | tam = len(string)
+
+  [2] Linha 6: Variável 'tam' com nome muito curto (≤4 chars)
+      Trecho  : tam = ...
+      Contexto:
+               5 | zero = zeros(4, dtype=int)
+        >>>    6 | tam = len(string)
+               7 | u = 0
+
+  [3] Linha 7: Variável 'u' com nome muito curto (≤4 chars)
+      Trecho  : u = ...
+      Contexto:
+               6 | tam = len(string)
+        >>>    7 | u = 0
+               8 | for i in range(tam):
+
+======================================================================

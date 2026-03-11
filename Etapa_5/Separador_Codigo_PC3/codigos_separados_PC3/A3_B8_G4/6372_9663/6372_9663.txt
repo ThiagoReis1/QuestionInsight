@@ -1,0 +1,80 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 6372_9663.py
+Questão  : 6372
+Aluno    : 9663
+Total MCs: 3
+
+⚠️  Misconceptions detectados: A3, B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | 
+     3 | v = input("Digite qual deseja: ").upper().split(',')
+     4 | cont = 0
+     5 | vz = zeros(4, dtype = int)
+     6 | 
+     7 | for i in range(size(v)):
+     8 | 	if v[i] == "A":
+     9 | 		vz[0] = vz[0] + 1
+    10 | 	elif v[i] == "B":
+    11 | 		vz[1] = vz[1] + 1
+    12 | 	elif v[i] == "L":
+    13 | 		vz[2] = vz[2] + 1
+    14 | 	elif v[i] == "H":
+    15 | 		vz[3] = vz[3] + 1
+    16 | 
+    17 | print(vz)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 1
+
+  [1] Linha 4: Variável 'cont' declarada mas nunca utilizada
+      Trecho  : cont = ...
+      Contexto:
+               3 | v = input("Digite qual deseja: ").upper().split(',')
+        >>>    4 | cont = 0
+               5 | vz = zeros(4, dtype = int)
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 12: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 12) / elif ... sem else
+      Contexto:
+              11 | 		vz[1] = vz[1] + 1
+        >>>   12 | 	elif v[i] == "L":
+              13 | 		vz[2] = vz[2] + 1
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 3
+
+  [1] Linha 3: Variável 'v' com nome muito curto (≤4 chars)
+      Trecho  : v = ...
+      Contexto:
+               2 | 
+        >>>    3 | v = input("Digite qual deseja: ").upper().split(',')
+               4 | cont = 0
+
+  [2] Linha 4: Variável 'cont' com nome muito curto (≤4 chars)
+      Trecho  : cont = ...
+      Contexto:
+               3 | v = input("Digite qual deseja: ").upper().split(',')
+        >>>    4 | cont = 0
+               5 | vz = zeros(4, dtype = int)
+
+  [3] Linha 5: Variável 'vz' com nome muito curto (≤4 chars)
+      Trecho  : vz = ...
+      Contexto:
+               4 | cont = 0
+        >>>    5 | vz = zeros(4, dtype = int)
+               6 | 
+
+======================================================================

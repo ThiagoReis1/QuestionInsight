@@ -1,0 +1,109 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1225_6424.py
+Questão  : 1225
+Aluno    : 6424
+Total MCs: 2
+
+⚠️  Misconceptions detectados: A5, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import * 
+     2 | from math import sqrt
+     3 | from math import pow
+     4 | v = array(eval(input()))
+     5 | k = 0
+     6 | soma = 0
+     7 | cima = 0
+     8 | for c in range(size(v)):
+     9 | 	soma = soma + v[c]
+    10 | 	k += 1
+    11 | m = soma/k
+    12 | for x in range(size(v)):
+    13 | 	cima = (v[x] - m)**2 + cima
+    14 | d = sqrt(cima/(size(v)-1))
+    15 | print(round(d,3))
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A5 — Importação não utilizada
+  Ocorrências: 2
+
+  [1] Linha 1: '* (de numpy)' importado mas nunca utilizado
+      Trecho  : from numpy import *
+      Contexto:
+        >>>    1 | from numpy import * 
+               2 | from math import sqrt
+
+  [2] Linha 3: 'pow' importado mas nunca utilizado
+      Trecho  : from math import pow
+      Contexto:
+               2 | from math import sqrt
+        >>>    3 | from math import pow
+               4 | v = array(eval(input()))
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 8
+
+  [1] Linha 4: Variável 'v' com nome muito curto (≤4 chars)
+      Trecho  : v = ...
+      Contexto:
+               3 | from math import pow
+        >>>    4 | v = array(eval(input()))
+               5 | k = 0
+
+  [2] Linha 5: Variável 'k' com nome muito curto (≤4 chars)
+      Trecho  : k = ...
+      Contexto:
+               4 | v = array(eval(input()))
+        >>>    5 | k = 0
+               6 | soma = 0
+
+  [3] Linha 6: Variável 'soma' com nome muito curto (≤4 chars)
+      Trecho  : soma = ...
+      Contexto:
+               5 | k = 0
+        >>>    6 | soma = 0
+               7 | cima = 0
+
+  [4] Linha 7: Variável 'cima' com nome muito curto (≤4 chars)
+      Trecho  : cima = ...
+      Contexto:
+               6 | soma = 0
+        >>>    7 | cima = 0
+               8 | for c in range(size(v)):
+
+  [5] Linha 11: Variável 'm' com nome muito curto (≤4 chars)
+      Trecho  : m = ...
+      Contexto:
+              10 | 	k += 1
+        >>>   11 | m = soma/k
+              12 | for x in range(size(v)):
+
+  [6] Linha 14: Variável 'd' com nome muito curto (≤4 chars)
+      Trecho  : d = ...
+      Contexto:
+              13 | 	cima = (v[x] - m)**2 + cima
+        >>>   14 | d = sqrt(cima/(size(v)-1))
+              15 | print(round(d,3))
+
+  [7] Linha 9: Variável 'soma' com nome muito curto (≤4 chars)
+      Trecho  : soma = ...
+      Contexto:
+               8 | for c in range(size(v)):
+        >>>    9 | 	soma = soma + v[c]
+              10 | 	k += 1
+
+  [8] Linha 13: Variável 'cima' com nome muito curto (≤4 chars)
+      Trecho  : cima = ...
+      Contexto:
+              12 | for x in range(size(v)):
+        >>>   13 | 	cima = (v[x] - m)**2 + cima
+              14 | d = sqrt(cima/(size(v)-1))
+
+======================================================================

@@ -1,0 +1,70 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1654_3645.py
+Questão  : 1654
+Aluno    : 3645
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import *
+     2 | s= input('insira a string:')
+     3 | y=s.split(',')
+     4 | x=zeros(5,dtype=int)
+     5 | for i in y:
+     6 | 	if i=='AM':
+     7 | 		x[0]+=1
+     8 | 	elif i=='PE':
+     9 | 		x[1]+=1
+    10 | 	elif i=='MG':
+    11 | 		x[2]+=1
+    12 | 	elif i=='SP':
+    13 | 		x[3]+=1
+    14 | 	elif i=='RS':
+    15 | 		x[4]+=1
+    16 | print(max(x))
+    17 | print(x)		
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 12: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 12) / elif ... sem else
+      Contexto:
+              11 | 		x[2]+=1
+        >>>   12 | 	elif i=='SP':
+              13 | 		x[3]+=1
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 3
+
+  [1] Linha 2: Variável 's' com nome muito curto (≤4 chars)
+      Trecho  : s = ...
+      Contexto:
+               1 | from numpy import *
+        >>>    2 | s= input('insira a string:')
+               3 | y=s.split(',')
+
+  [2] Linha 3: Variável 'y' com nome muito curto (≤4 chars)
+      Trecho  : y = ...
+      Contexto:
+               2 | s= input('insira a string:')
+        >>>    3 | y=s.split(',')
+               4 | x=zeros(5,dtype=int)
+
+  [3] Linha 4: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+               3 | y=s.split(',')
+        >>>    4 | x=zeros(5,dtype=int)
+               5 | for i in y:
+
+======================================================================

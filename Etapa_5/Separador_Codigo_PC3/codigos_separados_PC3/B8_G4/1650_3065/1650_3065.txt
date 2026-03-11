@@ -1,0 +1,94 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1650_3065.py
+Questão  : 1650
+Aluno    : 3065
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | cor =  input("cor do cabelo: ")
+     3 | 
+     4 | cor = cor.split(',')
+     5 | 
+     6 | v = zeros(5,dtype=int)
+     7 | s=0
+     8 | 
+     9 | for i in range(size(cor)):
+    10 | 	if(cor[i]=="P"):
+    11 | 		v[0]=v[0]+1
+    12 | 	elif(cor[i]=="C"):
+    13 | 		v[1]=v[1]+1
+    14 | 	elif(cor[i]=="R"):
+    15 | 		v[2]=v[2]+1
+    16 | 	elif(cor[i]=="L"):
+    17 | 		v[3]=v[3]+1
+    18 | 	elif(cor[i]=="B"):
+    19 | 		v[4]=v[4]+1
+    20 | 
+    21 | for i in range(size(v)):
+    22 | 	if(cor[i]==cor[i]):
+    23 | 		s=s+1
+    24 | 		
+    25 | print(max(v))
+    26 | 
+    27 | print(v)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 16: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 16) / elif ... sem else
+      Contexto:
+              15 | 		v[2]=v[2]+1
+        >>>   16 | 	elif(cor[i]=="L"):
+              17 | 		v[3]=v[3]+1
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 5
+
+  [1] Linha 2: Variável 'cor' com nome muito curto (≤4 chars)
+      Trecho  : cor = ...
+      Contexto:
+               1 | from numpy import*
+        >>>    2 | cor =  input("cor do cabelo: ")
+               3 | 
+
+  [2] Linha 4: Variável 'cor' com nome muito curto (≤4 chars)
+      Trecho  : cor = ...
+      Contexto:
+               3 | 
+        >>>    4 | cor = cor.split(',')
+               5 | 
+
+  [3] Linha 6: Variável 'v' com nome muito curto (≤4 chars)
+      Trecho  : v = ...
+      Contexto:
+               5 | 
+        >>>    6 | v = zeros(5,dtype=int)
+               7 | s=0
+
+  [4] Linha 7: Variável 's' com nome muito curto (≤4 chars)
+      Trecho  : s = ...
+      Contexto:
+               6 | v = zeros(5,dtype=int)
+        >>>    7 | s=0
+               8 | 
+
+  [5] Linha 23: Variável 's' com nome muito curto (≤4 chars)
+      Trecho  : s = ...
+      Contexto:
+              22 | 	if(cor[i]==cor[i]):
+        >>>   23 | 		s=s+1
+              24 | 		
+
+======================================================================

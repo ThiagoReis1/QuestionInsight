@@ -1,0 +1,58 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1109_1640.py
+Questão  : 1109
+Aluno    : 1640
+Total MCs: 1
+
+⚠️  Misconceptions detectados: B8
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | idade = int(input("Digite sua idade: "))
+     2 | peso = float(input("Digite sua massa:"))
+     3 | 
+     4 | print("Entradas:", idade, "anos e", peso, "kg")
+     5 | 
+     6 | if(idade >= 12):
+     7 | 	if(peso >= 60):
+     8 | 		dosagem = "1000"
+     9 | 	else:
+    10 | 		dosagem = "875"
+    11 | 
+    12 | else:
+    13 | 	if(peso >= 0 or peso <= 5):
+    14 | 		dosagem = "75"
+    15 | 	elif(peso > 5 or peso <= 9):
+    16 | 		dosagem = "125"
+    17 | 	elif(peso > 9 or peso <= 16):
+    18 | 		dosagem = "250"
+    19 | 	elif(peso > 16 or peso <=24):
+    20 | 		dosagem = "375"
+    21 | 	elif(peso >24 or peso <= 30):
+    22 | 		dosagem = "500"
+    23 | 	elif(peso >30 or peso <= 550):
+    24 | 		dosagem = "750"
+    25 | 
+    26 | if(idade < 12 or idade > 130 or peso > 550):
+    27 | 	print("Dados invalidos")
+    28 | else:
+    29 | 	print("Dosagem:", dosagem, "mg")
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 21: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 21) / elif ... sem else
+      Contexto:
+              20 | 		dosagem = "375"
+        >>>   21 | 	elif(peso >24 or peso <= 30):
+              22 | 		dosagem = "500"
+
+======================================================================

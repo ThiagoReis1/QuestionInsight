@@ -1,0 +1,61 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1596_4146.py
+Questão  : 1596
+Aluno    : 4146
+Total MCs: 1
+
+⚠️  Misconceptions detectados: G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import *
+     2 | notas = array(eval(input("Notas: ")))
+     3 | i = 0
+     4 | 
+     5 | while(notas[i] != min(notas)):
+     6 | 	i = i + 1
+     7 | 	
+     8 | soma = sum(notas) - notas[i]	
+     9 | med = soma/(size(notas) - 1)
+    10 | 
+    11 | print(round(med, 2))
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 4
+
+  [1] Linha 3: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+               2 | notas = array(eval(input("Notas: ")))
+        >>>    3 | i = 0
+               4 | 
+
+  [2] Linha 8: Variável 'soma' com nome muito curto (≤4 chars)
+      Trecho  : soma = ...
+      Contexto:
+               7 | 	
+        >>>    8 | soma = sum(notas) - notas[i]	
+               9 | med = soma/(size(notas) - 1)
+
+  [3] Linha 9: Variável 'med' com nome muito curto (≤4 chars)
+      Trecho  : med = ...
+      Contexto:
+               8 | soma = sum(notas) - notas[i]	
+        >>>    9 | med = soma/(size(notas) - 1)
+              10 | 
+
+  [4] Linha 6: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+               5 | while(notas[i] != min(notas)):
+        >>>    6 | 	i = i + 1
+               7 | 	
+
+======================================================================

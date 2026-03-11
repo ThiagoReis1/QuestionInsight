@@ -1,0 +1,167 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 6308_8188.py
+Questão  : 6308
+Aluno    : 8188
+Total MCs: 3
+
+⚠️  Misconceptions detectados: A3, B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | s=input("digite ").upper()
+     3 | A=16.75
+     4 | L=4.65
+     5 | P=2.85
+     6 | i=0
+     7 | var=0
+     8 | cont=0
+     9 | cont1=0
+    10 | cont2=0
+    11 | 
+    12 | 
+    13 | while(i<len(s)):
+    14 | 	if(s[i]=="A"):
+    15 | 		cont=cont+1
+    16 | 		var=var+16.75
+    17 | 	elif(s[i]=="L"):
+    18 | 		cont1=cont1+1
+    19 | 		var=var+4.60
+    20 | 	elif(s[i]=="P"):
+    21 | 		cont2=cont2+1
+    22 | 		var=var+2.85
+    23 | 	i=i+1
+    24 | print(round(var,2))
+    25 | print(cont,cont1,cont2)
+    26 | 
+    27 | 		
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 3
+
+  [1] Linha 3: Variável 'A' declarada mas nunca utilizada
+      Trecho  : A = ...
+      Contexto:
+               2 | s=input("digite ").upper()
+        >>>    3 | A=16.75
+               4 | L=4.65
+
+  [2] Linha 4: Variável 'L' declarada mas nunca utilizada
+      Trecho  : L = ...
+      Contexto:
+               3 | A=16.75
+        >>>    4 | L=4.65
+               5 | P=2.85
+
+  [3] Linha 5: Variável 'P' declarada mas nunca utilizada
+      Trecho  : P = ...
+      Contexto:
+               4 | L=4.65
+        >>>    5 | P=2.85
+               6 | i=0
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 17: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 17) / elif ... sem else
+      Contexto:
+              16 | 		var=var+16.75
+        >>>   17 | 	elif(s[i]=="L"):
+              18 | 		cont1=cont1+1
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 12
+
+  [1] Linha 2: Variável 's' com nome muito curto (≤4 chars)
+      Trecho  : s = ...
+      Contexto:
+               1 | from numpy import*
+        >>>    2 | s=input("digite ").upper()
+               3 | A=16.75
+
+  [2] Linha 3: Variável 'A' com nome muito curto (≤4 chars)
+      Trecho  : A = ...
+      Contexto:
+               2 | s=input("digite ").upper()
+        >>>    3 | A=16.75
+               4 | L=4.65
+
+  [3] Linha 4: Variável 'L' com nome muito curto (≤4 chars)
+      Trecho  : L = ...
+      Contexto:
+               3 | A=16.75
+        >>>    4 | L=4.65
+               5 | P=2.85
+
+  [4] Linha 5: Variável 'P' com nome muito curto (≤4 chars)
+      Trecho  : P = ...
+      Contexto:
+               4 | L=4.65
+        >>>    5 | P=2.85
+               6 | i=0
+
+  [5] Linha 6: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+               5 | P=2.85
+        >>>    6 | i=0
+               7 | var=0
+
+  [6] Linha 7: Variável 'var' com nome muito curto (≤4 chars)
+      Trecho  : var = ...
+      Contexto:
+               6 | i=0
+        >>>    7 | var=0
+               8 | cont=0
+
+  [7] Linha 8: Variável 'cont' com nome muito curto (≤4 chars)
+      Trecho  : cont = ...
+      Contexto:
+               7 | var=0
+        >>>    8 | cont=0
+               9 | cont1=0
+
+  [8] Linha 23: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+              22 | 		var=var+2.85
+        >>>   23 | 	i=i+1
+              24 | print(round(var,2))
+
+  [9] Linha 15: Variável 'cont' com nome muito curto (≤4 chars)
+      Trecho  : cont = ...
+      Contexto:
+              14 | 	if(s[i]=="A"):
+        >>>   15 | 		cont=cont+1
+              16 | 		var=var+16.75
+
+  [10] Linha 16: Variável 'var' com nome muito curto (≤4 chars)
+      Trecho  : var = ...
+      Contexto:
+              15 | 		cont=cont+1
+        >>>   16 | 		var=var+16.75
+              17 | 	elif(s[i]=="L"):
+
+  [11] Linha 19: Variável 'var' com nome muito curto (≤4 chars)
+      Trecho  : var = ...
+      Contexto:
+              18 | 		cont1=cont1+1
+        >>>   19 | 		var=var+4.60
+              20 | 	elif(s[i]=="P"):
+
+  [12] Linha 22: Variável 'var' com nome muito curto (≤4 chars)
+      Trecho  : var = ...
+      Contexto:
+              21 | 		cont2=cont2+1
+        >>>   22 | 		var=var+2.85
+              23 | 	i=i+1
+
+======================================================================

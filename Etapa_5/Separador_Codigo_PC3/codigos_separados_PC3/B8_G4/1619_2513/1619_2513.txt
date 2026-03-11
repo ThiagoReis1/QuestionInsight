@@ -1,0 +1,56 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1619_2513.py
+Questão  : 1619
+Aluno    : 2513
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | 
+     3 | vet1 = array(eval(input()))
+     4 | vet2 = array(eval(input()))
+     5 | 
+     6 | i = 0
+     7 | t = size(vet1)
+     8 | custo = 0
+     9 | 
+    10 | while (i < t):
+    11 | 	if (vet2[i] == "MORNO"):
+    12 | 		custo = custo + (vet1[i] * 45)
+    13 | 	elif (vet2[i] == "QUENTE"):
+    14 | 		custo = custo + (vet1[i] * 90)
+    15 | 	elif (vet2[i] == "FRIO"):
+    16 | 		custo = custo + (vet1[i] * 0)
+    17 | 	i = i + 1
+    18 | custo = custo * 0.005
+    19 | 
+    20 | print(round(custo,2))
+    21 | 
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 13: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 13) / elif ... sem else
+      Contexto:
+              12 | 		custo = custo + (vet1[i] * 45)
+        >>>   13 | 	elif (vet2[i] == "QUENTE"):
+              14 | 		custo = custo + (vet1[i] * 90)
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 1
+
+  [1] Linha 0: G4 detectado pelo VisitorMC3 (localização exata não mapeada)
+      Trecho  : —
+
+======================================================================

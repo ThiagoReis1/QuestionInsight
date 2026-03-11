@@ -1,0 +1,82 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 6779_9830.py
+Questão  : 6779
+Aluno    : 9830
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B8, B9
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | a = int(input("digite o ano do seu nascimento: "))
+     2 | b = input("Digite (B) para brasil e (J) para japao: ").upper()
+     3 | 
+     4 | if b == 'B':
+     5 | 	total = 2023 - a
+     6 | 	if total < 18:
+     7 | 		total_2 = 18 - total
+     8 | 		print("nao")
+     9 | 		print(total_2)
+    10 | 	elif total >= 18:
+    11 | 		total_2 = total - 18
+    12 | 		print("sim")
+    13 | 		print(total_2)
+    14 | 
+    15 | 		
+    16 | elif b == 'J':
+    17 | 	total = 2023 - a
+    18 | 	if total < 16:
+    19 | 		total_2 = 16 - total
+    20 | 		print("nao")
+    21 | 		print(total_2)
+    22 | 	elif total >= 16:
+    23 | 		total_2 = total - 16
+    24 | 		print("sim")
+    25 | 		print(total_2)
+    26 | 		
+    27 | 		
+    28 | else:
+    29 | 	print("invalido")
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 2
+
+  [1] Linha 6: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 6) / elif ... sem else
+      Contexto:
+               5 | 	total = 2023 - a
+        >>>    6 | 	if total < 18:
+               7 | 		total_2 = 18 - total
+
+  [2] Linha 18: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 18) / elif ... sem else
+      Contexto:
+              17 | 	total = 2023 - a
+        >>>   18 | 	if total < 16:
+              19 | 		total_2 = 16 - total
+
+▶ B9 — elif/else retestando condições já verificadas
+  Ocorrências: 2
+
+  [1] Linha 10: elif retesta condição inversa do if da linha 6
+      Trecho  : if total < 18 ... elif total >= 18
+      Contexto:
+               9 | 		print(total_2)
+        >>>   10 | 	elif total >= 18:
+              11 | 		total_2 = total - 18
+
+  [2] Linha 22: elif retesta condição inversa do if da linha 18
+      Trecho  : if total < 16 ... elif total >= 16
+      Contexto:
+              21 | 		print(total_2)
+        >>>   22 | 	elif total >= 16:
+              23 | 		total_2 = total - 16
+
+======================================================================

@@ -1,0 +1,68 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1621_2185.py
+Questão  : 1621
+Aluno    : 2185
+Total MCs: 2
+
+⚠️  Misconceptions detectados: A3, B8
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import *
+     2 | 
+     3 | produtos = array(eval(input("produtos:")))
+     4 | quantidade = array(eval(input("quantidades: ")))
+     5 | i = 0
+     6 | cont0 = 0
+     7 | cont1 = 0
+     8 | cont2 = 0
+     9 | cont3 = 0
+    10 | cont4 = 0
+    11 | cont5 = 0
+    12 | 
+    13 | while i < size(quantidade):
+    14 | 	if(produtos[i] == "ARROZ"):
+    15 | 		cont0 = cont0 + (quantidade[i] * 1.25)
+    16 | 	elif(produtos[i] == "FEIJAO"):
+    17 | 		cont1 = cont1 + (quantidade[i] * 2.60)
+    18 | 	elif(produtos[i] == "BIS"):
+    19 | 		cont2 = cont2 + (quantidade[i] * 1.80)
+    20 | 	elif(produtos[i] == "MIOJO"):
+    21 | 		cont3 = cont3 + (quantidade[i] * 0.85)
+    22 | 	elif(produtos[i] == "FANTA"):
+    23 | 		cont4 = cont4 + (quantidade[i] * 3.20)
+    24 | 	i = i + 1
+    25 | 		
+    26 | total = (cont0 + cont1 + cont2 +cont3 + cont4)
+    27 | print(round(total, 2))
+    28 | 			
+    29 | 	
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 1
+
+  [1] Linha 11: Variável 'cont5' declarada mas nunca utilizada
+      Trecho  : cont5 = ...
+      Contexto:
+              10 | cont4 = 0
+        >>>   11 | cont5 = 0
+              12 | 
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 20: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 20) / elif ... sem else
+      Contexto:
+              19 | 		cont2 = cont2 + (quantidade[i] * 1.80)
+        >>>   20 | 	elif(produtos[i] == "MIOJO"):
+              21 | 		cont3 = cont3 + (quantidade[i] * 0.85)
+
+======================================================================

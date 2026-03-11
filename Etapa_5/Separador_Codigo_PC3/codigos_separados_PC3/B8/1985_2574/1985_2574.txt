@@ -1,0 +1,43 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1985_2574.py
+Questão  : 1985
+Aluno    : 2574
+Total MCs: 1
+
+⚠️  Misconceptions detectados: B8
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | r_pais = input("Insira a Regiao do pais: ").upper()
+     2 | estado = input("Insira o estado: ").upper()
+     3 | 
+     4 | if(r_pais == "NORTE") or (r_pais == "SUL"):
+     5 | 	if(r_pais == "NORTE") and (estado == "AMAZONAS"):
+     6 | 		print("UNIVERSIDADE FEDERAL DO AMAZONAS")
+     7 | 	elif(estado == "RORAIMA") and (r_pais == "SUL"):
+     8 | 		print("UNIVERSIDADE FEDERAL DE RORAIMA")
+     9 | 	elif(r_pais == "SUL") and (estado == "PARANA"):
+    10 | 		print("UNIVERSIDADE FEDERAL DO PARANA")
+    11 | 	elif(r_pais == "SUL") and (estado == "SANTA CATARINA"):
+    12 | 		print("UNIVERSIDADE FEDERAL DE SANTA CATARINA")
+    13 | else:
+    14 | 	print("UNIVERSIDADE NAO IDENTIFICADA")
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 9: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 9) / elif ... sem else
+      Contexto:
+               8 | 		print("UNIVERSIDADE FEDERAL DE RORAIMA")
+        >>>    9 | 	elif(r_pais == "SUL") and (estado == "PARANA"):
+              10 | 		print("UNIVERSIDADE FEDERAL DO PARANA")
+
+======================================================================

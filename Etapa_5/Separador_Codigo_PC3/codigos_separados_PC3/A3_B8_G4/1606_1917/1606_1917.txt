@@ -1,0 +1,87 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1606_1917.py
+Questão  : 1606
+Aluno    : 1917
+Total MCs: 3
+
+⚠️  Misconceptions detectados: A3, B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | x = array(eval(input()))
+     3 | i = 0
+     4 | while(size(x)>i):
+     5 | 	if(x[i]<x[i+1]):
+     6 | 		y = x[i+1]-x[i]
+     7 | 	elif(x[i]>x[i+1]):
+     8 | 		y = x[i]-x[i+1]
+     9 | 	i = i + 1
+    10 | print(int(sum(x)))
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 1
+
+  [1] Linha 6: Variável 'y' declarada mas nunca utilizada
+      Trecho  : y = ...
+      Contexto:
+               5 | 	if(x[i]<x[i+1]):
+        >>>    6 | 		y = x[i+1]-x[i]
+               7 | 	elif(x[i]>x[i+1]):
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 5: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 5) / elif ... sem else
+      Contexto:
+               4 | while(size(x)>i):
+        >>>    5 | 	if(x[i]<x[i+1]):
+               6 | 		y = x[i+1]-x[i]
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 5
+
+  [1] Linha 2: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+               1 | from numpy import*
+        >>>    2 | x = array(eval(input()))
+               3 | i = 0
+
+  [2] Linha 3: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+               2 | x = array(eval(input()))
+        >>>    3 | i = 0
+               4 | while(size(x)>i):
+
+  [3] Linha 9: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+               8 | 		y = x[i]-x[i+1]
+        >>>    9 | 	i = i + 1
+              10 | print(int(sum(x)))
+
+  [4] Linha 6: Variável 'y' com nome muito curto (≤4 chars)
+      Trecho  : y = ...
+      Contexto:
+               5 | 	if(x[i]<x[i+1]):
+        >>>    6 | 		y = x[i+1]-x[i]
+               7 | 	elif(x[i]>x[i+1]):
+
+  [5] Linha 8: Variável 'y' com nome muito curto (≤4 chars)
+      Trecho  : y = ...
+      Contexto:
+               7 | 	elif(x[i]>x[i+1]):
+        >>>    8 | 		y = x[i]-x[i+1]
+               9 | 	i = i + 1
+
+======================================================================

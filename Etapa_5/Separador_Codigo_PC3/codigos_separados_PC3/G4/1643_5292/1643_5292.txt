@@ -1,0 +1,68 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1643_5292.py
+Questão  : 1643
+Aluno    : 5292
+Total MCs: 1
+
+⚠️  Misconceptions detectados: G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | 
+     3 | notas = array(eval(input("insira as notas dos alunos:  ")))
+     4 | cont = 0
+     5 | a = 5.0
+     6 | for i in range(size(notas)):
+     7 | 	if notas[i] >= a:
+     8 | 		cont += 1
+     9 | print(cont)
+    10 | 
+    11 | apro = zeros(cont, dtype = int)
+    12 | j = 0
+    13 | for i in range(size(notas)):
+    14 | 	if notas[i] >= a:
+    15 | 		apro[j] = i
+    16 | 		j += 1
+    17 | print(apro)
+    18 | 		
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 4
+
+  [1] Linha 4: Variável 'cont' com nome muito curto (≤4 chars)
+      Trecho  : cont = ...
+      Contexto:
+               3 | notas = array(eval(input("insira as notas dos alunos:  ")))
+        >>>    4 | cont = 0
+               5 | a = 5.0
+
+  [2] Linha 5: Variável 'a' com nome muito curto (≤4 chars)
+      Trecho  : a = ...
+      Contexto:
+               4 | cont = 0
+        >>>    5 | a = 5.0
+               6 | for i in range(size(notas)):
+
+  [3] Linha 11: Variável 'apro' com nome muito curto (≤4 chars)
+      Trecho  : apro = ...
+      Contexto:
+              10 | 
+        >>>   11 | apro = zeros(cont, dtype = int)
+              12 | j = 0
+
+  [4] Linha 12: Variável 'j' com nome muito curto (≤4 chars)
+      Trecho  : j = ...
+      Contexto:
+              11 | apro = zeros(cont, dtype = int)
+        >>>   12 | j = 0
+              13 | for i in range(size(notas)):
+
+======================================================================

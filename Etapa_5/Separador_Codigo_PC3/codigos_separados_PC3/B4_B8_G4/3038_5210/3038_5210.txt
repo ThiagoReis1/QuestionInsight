@@ -1,0 +1,103 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 3038_5210.py
+Questão  : 3038
+Aluno    : 5210
+Total MCs: 3
+
+⚠️  Misconceptions detectados: B4, B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from math import * 
+     2 | x = float(input(""))
+     3 | 
+     4 | 
+     5 | 
+     6 | if ((x <= -1) or (x >= 1)):
+     7 | 	a = abs(x) ** (1/2)
+     8 | 	print(round(a, 2))
+     9 | elif ((x > -1) and (x < 0)):
+    10 | 	a = abs(x)
+    11 | 	print(round(a, 2))
+    12 | elif ((x > 0) and (x < 1)):
+    13 | 	a = abs(x)
+    14 | 	print(round(a, 2))
+    15 | elif (x == 0):
+    16 | 	a = 0
+    17 | 	print(round(a, 2))
+    18 | 
+    19 | 	
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B4 — Comandos repetidos dentro de blocos if-elif-else
+  Ocorrências: 2
+
+  [1] Linha 12: Bloco idêntico ao da linha 9
+      Trecho  : a = abs(x)
+      Contexto:
+              11 | 	print(round(a, 2))
+        >>>   12 | elif ((x > 0) and (x < 1)):
+              13 | 	a = abs(x)
+
+  [2] Linha 12: Bloco idêntico ao da linha 9
+      Trecho  : a = abs(x)
+      Contexto:
+              11 | 	print(round(a, 2))
+        >>>   12 | elif ((x > 0) and (x < 1)):
+              13 | 	a = abs(x)
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 12: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 12) / elif ... sem else
+      Contexto:
+              11 | 	print(round(a, 2))
+        >>>   12 | elif ((x > 0) and (x < 1)):
+              13 | 	a = abs(x)
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 5
+
+  [1] Linha 2: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+               1 | from math import * 
+        >>>    2 | x = float(input(""))
+               3 | 
+
+  [2] Linha 7: Variável 'a' com nome muito curto (≤4 chars)
+      Trecho  : a = ...
+      Contexto:
+               6 | if ((x <= -1) or (x >= 1)):
+        >>>    7 | 	a = abs(x) ** (1/2)
+               8 | 	print(round(a, 2))
+
+  [3] Linha 10: Variável 'a' com nome muito curto (≤4 chars)
+      Trecho  : a = ...
+      Contexto:
+               9 | elif ((x > -1) and (x < 0)):
+        >>>   10 | 	a = abs(x)
+              11 | 	print(round(a, 2))
+
+  [4] Linha 13: Variável 'a' com nome muito curto (≤4 chars)
+      Trecho  : a = ...
+      Contexto:
+              12 | elif ((x > 0) and (x < 1)):
+        >>>   13 | 	a = abs(x)
+              14 | 	print(round(a, 2))
+
+  [5] Linha 16: Variável 'a' com nome muito curto (≤4 chars)
+      Trecho  : a = ...
+      Contexto:
+              15 | elif (x == 0):
+        >>>   16 | 	a = 0
+              17 | 	print(round(a, 2))
+
+======================================================================

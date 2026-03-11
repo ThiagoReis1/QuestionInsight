@@ -1,0 +1,75 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 2530_2013.py
+Questão  : 2530
+Aluno    : 2013
+Total MCs: 1
+
+⚠️  Misconceptions detectados: G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | #variaveis
+     2 | D=float(input("deposito:"))
+     3 | TF=float(input("tarifa mensal:"))
+     4 | J=float(input("juros mensal:"))
+     5 | k=(D+(D*15/100))
+     6 | 
+     7 | #variavel contadora
+     8 | tempo=0
+     9 | 
+    10 | #
+    11 | if (D>0 and TF>0and J>0):
+    12 | 	while (D<=k):
+    13 | 		D=round(D+(D*J/100)-TF,2)
+    14 | 		tempo=tempo+1	
+    15 | 	print(tempo)
+    16 | else:
+    17 | 	print("Dados incorretos")
+    18 | 		
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 5
+
+  [1] Linha 2: Variável 'D' com nome muito curto (≤4 chars)
+      Trecho  : D = ...
+      Contexto:
+               1 | #variaveis
+        >>>    2 | D=float(input("deposito:"))
+               3 | TF=float(input("tarifa mensal:"))
+
+  [2] Linha 3: Variável 'TF' com nome muito curto (≤4 chars)
+      Trecho  : TF = ...
+      Contexto:
+               2 | D=float(input("deposito:"))
+        >>>    3 | TF=float(input("tarifa mensal:"))
+               4 | J=float(input("juros mensal:"))
+
+  [3] Linha 4: Variável 'J' com nome muito curto (≤4 chars)
+      Trecho  : J = ...
+      Contexto:
+               3 | TF=float(input("tarifa mensal:"))
+        >>>    4 | J=float(input("juros mensal:"))
+               5 | k=(D+(D*15/100))
+
+  [4] Linha 5: Variável 'k' com nome muito curto (≤4 chars)
+      Trecho  : k = ...
+      Contexto:
+               4 | J=float(input("juros mensal:"))
+        >>>    5 | k=(D+(D*15/100))
+               6 | 
+
+  [5] Linha 13: Variável 'D' com nome muito curto (≤4 chars)
+      Trecho  : D = ...
+      Contexto:
+              12 | 	while (D<=k):
+        >>>   13 | 		D=round(D+(D*J/100)-TF,2)
+              14 | 		tempo=tempo+1	
+
+======================================================================

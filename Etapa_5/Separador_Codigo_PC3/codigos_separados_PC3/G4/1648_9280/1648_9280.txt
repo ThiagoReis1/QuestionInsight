@@ -1,0 +1,58 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1648_9280.py
+Questão  : 1648
+Aluno    : 9280
+Total MCs: 1
+
+⚠️  Misconceptions detectados: G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import *
+     2 | v = array(eval(input("v: ")))
+     3 | cont = 0 
+     4 | for x in v:
+     5 | 	if x >= 70:
+     6 | 		cont += 2
+     7 | print(cont)
+     8 | 
+     9 | contador = zeros(cont, dtype=int)
+    10 | ind = 2
+    11 | for indice, x in enumerate(v):
+    12 | 	if x >= 70:
+    13 | 		contador[ind] = indice
+    14 | 		ind += 0
+    15 | print(contador)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 3
+
+  [1] Linha 2: Variável 'v' com nome muito curto (≤4 chars)
+      Trecho  : v = ...
+      Contexto:
+               1 | from numpy import *
+        >>>    2 | v = array(eval(input("v: ")))
+               3 | cont = 0 
+
+  [2] Linha 3: Variável 'cont' com nome muito curto (≤4 chars)
+      Trecho  : cont = ...
+      Contexto:
+               2 | v = array(eval(input("v: ")))
+        >>>    3 | cont = 0 
+               4 | for x in v:
+
+  [3] Linha 10: Variável 'ind' com nome muito curto (≤4 chars)
+      Trecho  : ind = ...
+      Contexto:
+               9 | contador = zeros(cont, dtype=int)
+        >>>   10 | ind = 2
+              11 | for indice, x in enumerate(v):
+
+======================================================================

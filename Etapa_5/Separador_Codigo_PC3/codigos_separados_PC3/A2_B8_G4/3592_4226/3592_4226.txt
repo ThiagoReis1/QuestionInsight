@@ -1,0 +1,142 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 3592_4226.py
+Questão  : 3592
+Aluno    : 4226
+Total MCs: 3
+
+⚠️  Misconceptions detectados: A2, B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import *
+     2 | v = array(eval(input(" > ")))
+     3 | L = len(v)
+     4 | a = array([0]*L)
+     5 | for i in range(L):
+     6 | 	a[i] = v[i]
+     7 | pts = 100
+     8 | for i in range(L):
+     9 | 	if a[i] == 1:
+    10 | 		pts = pts
+    11 | 	elif a[i] == 2:
+    12 | 		pts = pts*2
+    13 | 	elif a[i] == 3:
+    14 | 		pts = pts/3
+    15 | 	elif a[i] == 4:
+    16 | 		pts = pts*4
+    17 | 	elif a[i] == 5:
+    18 | 		pts = pts/5
+    19 | 	elif a[i] == 6:
+    20 | 		pts = pts*6
+    21 | 
+    22 | pts = round(pts,2)
+    23 | print(pts)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A2 — Variável atribuída a si mesma
+  Ocorrências: 1
+
+  [1] Linha 10: 'pts' atribuído a si mesmo
+      Trecho  : pts = pts
+      Contexto:
+               9 | 	if a[i] == 1:
+        >>>   10 | 		pts = pts
+              11 | 	elif a[i] == 2:
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 17: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 17) / elif ... sem else
+      Contexto:
+              16 | 		pts = pts*4
+        >>>   17 | 	elif a[i] == 5:
+              18 | 		pts = pts/5
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 11
+
+  [1] Linha 2: Variável 'v' com nome muito curto (≤4 chars)
+      Trecho  : v = ...
+      Contexto:
+               1 | from numpy import *
+        >>>    2 | v = array(eval(input(" > ")))
+               3 | L = len(v)
+
+  [2] Linha 3: Variável 'L' com nome muito curto (≤4 chars)
+      Trecho  : L = ...
+      Contexto:
+               2 | v = array(eval(input(" > ")))
+        >>>    3 | L = len(v)
+               4 | a = array([0]*L)
+
+  [3] Linha 4: Variável 'a' com nome muito curto (≤4 chars)
+      Trecho  : a = ...
+      Contexto:
+               3 | L = len(v)
+        >>>    4 | a = array([0]*L)
+               5 | for i in range(L):
+
+  [4] Linha 7: Variável 'pts' com nome muito curto (≤4 chars)
+      Trecho  : pts = ...
+      Contexto:
+               6 | 	a[i] = v[i]
+        >>>    7 | pts = 100
+               8 | for i in range(L):
+
+  [5] Linha 22: Variável 'pts' com nome muito curto (≤4 chars)
+      Trecho  : pts = ...
+      Contexto:
+              21 | 
+        >>>   22 | pts = round(pts,2)
+              23 | print(pts)
+
+  [6] Linha 10: Variável 'pts' com nome muito curto (≤4 chars)
+      Trecho  : pts = ...
+      Contexto:
+               9 | 	if a[i] == 1:
+        >>>   10 | 		pts = pts
+              11 | 	elif a[i] == 2:
+
+  [7] Linha 12: Variável 'pts' com nome muito curto (≤4 chars)
+      Trecho  : pts = ...
+      Contexto:
+              11 | 	elif a[i] == 2:
+        >>>   12 | 		pts = pts*2
+              13 | 	elif a[i] == 3:
+
+  [8] Linha 14: Variável 'pts' com nome muito curto (≤4 chars)
+      Trecho  : pts = ...
+      Contexto:
+              13 | 	elif a[i] == 3:
+        >>>   14 | 		pts = pts/3
+              15 | 	elif a[i] == 4:
+
+  [9] Linha 16: Variável 'pts' com nome muito curto (≤4 chars)
+      Trecho  : pts = ...
+      Contexto:
+              15 | 	elif a[i] == 4:
+        >>>   16 | 		pts = pts*4
+              17 | 	elif a[i] == 5:
+
+  [10] Linha 18: Variável 'pts' com nome muito curto (≤4 chars)
+      Trecho  : pts = ...
+      Contexto:
+              17 | 	elif a[i] == 5:
+        >>>   18 | 		pts = pts/5
+              19 | 	elif a[i] == 6:
+
+  [11] Linha 20: Variável 'pts' com nome muito curto (≤4 chars)
+      Trecho  : pts = ...
+      Contexto:
+              19 | 	elif a[i] == 6:
+        >>>   20 | 		pts = pts*6
+              21 | 
+
+======================================================================

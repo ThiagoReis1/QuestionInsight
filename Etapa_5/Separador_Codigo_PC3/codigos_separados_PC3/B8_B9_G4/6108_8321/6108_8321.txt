@@ -1,0 +1,83 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 6108_8321.py
+Questão  : 6108
+Aluno    : 8321
+Total MCs: 3
+
+⚠️  Misconceptions detectados: B8, B9, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | m = float(input("quantidade de combustivel"))
+     2 | 
+     3 | if (m < 17.5):
+     4 | 	k = (m + 1.5)
+     5 | elif ( m >= 17.5 and m < 35):
+     6 | 	k = (m + 2.3)
+     7 | elif ( m >= 35 and m < 50):
+     8 | 	k = (m + 3.3)
+     9 | elif (m >= 50):
+    10 | 	k = m + 4.7
+    11 | print(round(k,1))
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 7: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 7) / elif ... sem else
+      Contexto:
+               6 | 	k = (m + 2.3)
+        >>>    7 | elif ( m >= 35 and m < 50):
+               8 | 	k = (m + 3.3)
+
+▶ B9 — elif/else retestando condições já verificadas
+  Ocorrências: 1
+
+  [1] Linha 0: B9 detectado pelo VisitorMC3 (localização exata não mapeada)
+      Trecho  : —
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 5
+
+  [1] Linha 1: Variável 'm' com nome muito curto (≤4 chars)
+      Trecho  : m = ...
+      Contexto:
+        >>>    1 | m = float(input("quantidade de combustivel"))
+               2 | 
+
+  [2] Linha 4: Variável 'k' com nome muito curto (≤4 chars)
+      Trecho  : k = ...
+      Contexto:
+               3 | if (m < 17.5):
+        >>>    4 | 	k = (m + 1.5)
+               5 | elif ( m >= 17.5 and m < 35):
+
+  [3] Linha 6: Variável 'k' com nome muito curto (≤4 chars)
+      Trecho  : k = ...
+      Contexto:
+               5 | elif ( m >= 17.5 and m < 35):
+        >>>    6 | 	k = (m + 2.3)
+               7 | elif ( m >= 35 and m < 50):
+
+  [4] Linha 8: Variável 'k' com nome muito curto (≤4 chars)
+      Trecho  : k = ...
+      Contexto:
+               7 | elif ( m >= 35 and m < 50):
+        >>>    8 | 	k = (m + 3.3)
+               9 | elif (m >= 50):
+
+  [5] Linha 10: Variável 'k' com nome muito curto (≤4 chars)
+      Trecho  : k = ...
+      Contexto:
+               9 | elif (m >= 50):
+        >>>   10 | 	k = m + 4.7
+              11 | print(round(k,1))
+
+======================================================================

@@ -1,0 +1,95 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 2967_4330.py
+Questão  : 2967
+Aluno    : 4330
+Total MCs: 3
+
+⚠️  Misconceptions detectados: A2, A3, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | Ma=float(input("primeiro: "))
+     2 | Mb=float(input("segundo: "))
+     3 | var=input("SIM/NAO: ")
+     4 | 
+     5 | if Ma >= 1.37:
+     6 | 	M = Ma
+     7 | 	Ma = Ma
+     8 | 	print(M)
+     9 | 	print(Ma)
+    10 | else:
+    11 | 	Ma < 1.37 
+    12 | 	print(M)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A2 — Variável atribuída a si mesma
+  Ocorrências: 1
+
+  [1] Linha 7: 'Ma' atribuído a si mesmo
+      Trecho  : Ma = Ma
+      Contexto:
+               6 | 	M = Ma
+        >>>    7 | 	Ma = Ma
+               8 | 	print(M)
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 2
+
+  [1] Linha 2: Variável 'Mb' declarada mas nunca utilizada
+      Trecho  : Mb = ...
+      Contexto:
+               1 | Ma=float(input("primeiro: "))
+        >>>    2 | Mb=float(input("segundo: "))
+               3 | var=input("SIM/NAO: ")
+
+  [2] Linha 3: Variável 'var' declarada mas nunca utilizada
+      Trecho  : var = ...
+      Contexto:
+               2 | Mb=float(input("segundo: "))
+        >>>    3 | var=input("SIM/NAO: ")
+               4 | 
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 5
+
+  [1] Linha 1: Variável 'Ma' com nome muito curto (≤4 chars)
+      Trecho  : Ma = ...
+      Contexto:
+        >>>    1 | Ma=float(input("primeiro: "))
+               2 | Mb=float(input("segundo: "))
+
+  [2] Linha 2: Variável 'Mb' com nome muito curto (≤4 chars)
+      Trecho  : Mb = ...
+      Contexto:
+               1 | Ma=float(input("primeiro: "))
+        >>>    2 | Mb=float(input("segundo: "))
+               3 | var=input("SIM/NAO: ")
+
+  [3] Linha 3: Variável 'var' com nome muito curto (≤4 chars)
+      Trecho  : var = ...
+      Contexto:
+               2 | Mb=float(input("segundo: "))
+        >>>    3 | var=input("SIM/NAO: ")
+               4 | 
+
+  [4] Linha 6: Variável 'M' com nome muito curto (≤4 chars)
+      Trecho  : M = ...
+      Contexto:
+               5 | if Ma >= 1.37:
+        >>>    6 | 	M = Ma
+               7 | 	Ma = Ma
+
+  [5] Linha 7: Variável 'Ma' com nome muito curto (≤4 chars)
+      Trecho  : Ma = ...
+      Contexto:
+               6 | 	M = Ma
+        >>>    7 | 	Ma = Ma
+               8 | 	print(M)
+
+======================================================================

@@ -1,0 +1,67 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 2458_3269.py
+Questão  : 2458
+Aluno    : 3269
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | psd = float(input("Informe o preco sem desconto:"))
+     2 | cre = int(input("Informe o codigo da regiao:"))
+     3 | vt = (psd - psd * 40//100)
+     4 | 
+     5 | if(cre == 1):
+     6 | 	print(psd * 10//100 + vt)
+     7 | elif(cre == 2):
+     8 | 	print(psd * 8//100 + vt)
+     9 | elif(cre == 3):
+    10 | 	print(vt)
+    11 | elif(cre == 4):
+    12 | 	print(psd * 2//100 + vt)
+    13 | 	
+    14 | 
+    15 | 	
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 9: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 9) / elif ... sem else
+      Contexto:
+               8 | 	print(psd * 8//100 + vt)
+        >>>    9 | elif(cre == 3):
+              10 | 	print(vt)
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 3
+
+  [1] Linha 1: Variável 'psd' com nome muito curto (≤4 chars)
+      Trecho  : psd = ...
+      Contexto:
+        >>>    1 | psd = float(input("Informe o preco sem desconto:"))
+               2 | cre = int(input("Informe o codigo da regiao:"))
+
+  [2] Linha 2: Variável 'cre' com nome muito curto (≤4 chars)
+      Trecho  : cre = ...
+      Contexto:
+               1 | psd = float(input("Informe o preco sem desconto:"))
+        >>>    2 | cre = int(input("Informe o codigo da regiao:"))
+               3 | vt = (psd - psd * 40//100)
+
+  [3] Linha 3: Variável 'vt' com nome muito curto (≤4 chars)
+      Trecho  : vt = ...
+      Contexto:
+               2 | cre = int(input("Informe o codigo da regiao:"))
+        >>>    3 | vt = (psd - psd * 40//100)
+               4 | 
+
+======================================================================

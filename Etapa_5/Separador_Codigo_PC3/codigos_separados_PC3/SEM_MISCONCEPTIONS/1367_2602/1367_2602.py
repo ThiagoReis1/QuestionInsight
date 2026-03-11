@@ -1,0 +1,5 @@
+snowberry = float(input("Digite a quantidade de snowberry: "))
+sais = float(input("Digite a quantidade de sais de fogo: "))
+anamita = float(input("Digite a quantidade de anamita: "))
+Qm = (snowberry//0.31, sais//0.73, anamita//2.64)
+print (int(min(Qm)))

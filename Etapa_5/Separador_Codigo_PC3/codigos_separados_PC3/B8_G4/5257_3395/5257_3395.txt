@@ -1,0 +1,76 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 5257_3395.py
+Questão  : 5257
+Aluno    : 3395
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | v=float(input(""))
+     2 | if v>0.00 and v<=50.00:
+     3 | 	l=v+v*1.0
+     4 | elif v>50.01 and v<=100.00:
+     5 | 	l=v+v*0.5
+     6 | elif v>100.01 and v<=500.00:
+     7 | 	l=v+v*0.4
+     8 | elif v>500.01:
+     9 | 	l=v+v*0.3
+    10 | print(round(l,2))
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 6: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 6) / elif ... sem else
+      Contexto:
+               5 | 	l=v+v*0.5
+        >>>    6 | elif v>100.01 and v<=500.00:
+               7 | 	l=v+v*0.4
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 5
+
+  [1] Linha 1: Variável 'v' com nome muito curto (≤4 chars)
+      Trecho  : v = ...
+      Contexto:
+        >>>    1 | v=float(input(""))
+               2 | if v>0.00 and v<=50.00:
+
+  [2] Linha 3: Variável 'l' com nome muito curto (≤4 chars)
+      Trecho  : l = ...
+      Contexto:
+               2 | if v>0.00 and v<=50.00:
+        >>>    3 | 	l=v+v*1.0
+               4 | elif v>50.01 and v<=100.00:
+
+  [3] Linha 5: Variável 'l' com nome muito curto (≤4 chars)
+      Trecho  : l = ...
+      Contexto:
+               4 | elif v>50.01 and v<=100.00:
+        >>>    5 | 	l=v+v*0.5
+               6 | elif v>100.01 and v<=500.00:
+
+  [4] Linha 7: Variável 'l' com nome muito curto (≤4 chars)
+      Trecho  : l = ...
+      Contexto:
+               6 | elif v>100.01 and v<=500.00:
+        >>>    7 | 	l=v+v*0.4
+               8 | elif v>500.01:
+
+  [5] Linha 9: Variável 'l' com nome muito curto (≤4 chars)
+      Trecho  : l = ...
+      Contexto:
+               8 | elif v>500.01:
+        >>>    9 | 	l=v+v*0.3
+              10 | print(round(l,2))
+
+======================================================================

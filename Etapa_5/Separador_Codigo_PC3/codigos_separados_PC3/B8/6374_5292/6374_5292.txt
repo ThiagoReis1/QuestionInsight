@@ -1,0 +1,43 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 6374_5292.py
+Questão  : 6374
+Aluno    : 5292
+Total MCs: 1
+
+⚠️  Misconceptions detectados: B8
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | 
+     3 | pacientes = input("digite os pacientes (O)oftamologia,(D)dermatologia,(N)neurologia ,(C)cardiologia:" ).upper().split(",")
+     4 | qtd = zeros(4, dtype = int)
+     5 | for i  in range(size(pacientes)):
+     6 | 	if pacientes[i] == "O":
+     7 | 		qtd[0] += 1
+     8 | 	elif pacientes[i] == "D":
+     9 | 		qtd[1] += 1
+    10 | 	elif pacientes[i] == "N":
+    11 | 		qtd[2] += 1
+    12 | 	elif pacientes[i] == "C":
+    13 | 		qtd[3] += 1
+    14 | print(qtd)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 10: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 10) / elif ... sem else
+      Contexto:
+               9 | 		qtd[1] += 1
+        >>>   10 | 	elif pacientes[i] == "N":
+              11 | 		qtd[2] += 1
+
+======================================================================

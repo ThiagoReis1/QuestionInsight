@@ -1,0 +1,60 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1653_7617.py
+Questão  : 1653
+Aluno    : 7617
+Total MCs: 1
+
+⚠️  Misconceptions detectados: A3
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | # Nelson Geraldo A. de Carvalho
+     2 | 
+     3 | import numpy as np
+     4 | 
+     5 | nacionalidades = input('Digite uma string contendo as nacionalidades: ').upper()
+     6 | vet_nacion = nacionalidades.split(',')
+     7 | 
+     8 | contagem = np.zeros(5, dtype=int)
+     9 | 
+    10 | for i in vet_nacion:
+    11 | 	if i == 'AR':
+    12 | 		contagem[0] += 1
+    13 | 	elif i == 'BR':
+    14 | 		contagem[1] += 1
+    15 | 	elif i == 'CL':
+    16 | 		contagem[2] += 1
+    17 | 	elif i == 'CO':
+    18 | 		contagem[3] += 1
+    19 | 	else:
+    20 | 		contagem[4] += 1
+    21 | 		
+    22 | indice = 0
+    23 | # a = max(contagem)
+    24 | 
+    25 | for i in range(np.size(contagem)-1):
+    26 | 	if contagem[i] > contagem[i + 1]:
+    27 | 		indice = contagem[i]
+    28 | 		
+    29 | # Outputs
+    30 | print(max(contagem))
+    31 | print(contagem)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 1
+
+  [1] Linha 22: Variável 'indice' declarada mas nunca utilizada
+      Trecho  : indice = ...
+      Contexto:
+              21 | 		
+        >>>   22 | indice = 0
+              23 | # a = max(contagem)
+
+======================================================================

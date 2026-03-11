@@ -1,0 +1,2 @@
+consumo = float(input)
+

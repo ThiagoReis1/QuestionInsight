@@ -1,0 +1,1 @@
+x = input("Digite as duas caracteriticas ") 

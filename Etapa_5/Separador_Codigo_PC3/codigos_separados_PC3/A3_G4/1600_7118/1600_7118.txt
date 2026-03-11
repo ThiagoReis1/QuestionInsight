@@ -1,0 +1,75 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1600_7118.py
+Questão  : 1600
+Aluno    : 7118
+Total MCs: 2
+
+⚠️  Misconceptions detectados: A3, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | 
+     3 | custo = array(eval(input()))
+     4 | 
+     5 | c = 80
+     6 | i = 0
+     7 | cont = 0
+     8 | 
+     9 | while i < size(custo):
+    10 | 	if custo[i] > c:
+    11 | 		custo[i] = custo[i] - (custo[i] * 15/100)
+    12 | 	
+    13 | 	i = i + 1
+    14 | 
+    15 | print(round(sum(custo), 2))
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 1
+
+  [1] Linha 7: Variável 'cont' declarada mas nunca utilizada
+      Trecho  : cont = ...
+      Contexto:
+               6 | i = 0
+        >>>    7 | cont = 0
+               8 | 
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 4
+
+  [1] Linha 5: Variável 'c' com nome muito curto (≤4 chars)
+      Trecho  : c = ...
+      Contexto:
+               4 | 
+        >>>    5 | c = 80
+               6 | i = 0
+
+  [2] Linha 6: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+               5 | c = 80
+        >>>    6 | i = 0
+               7 | cont = 0
+
+  [3] Linha 7: Variável 'cont' com nome muito curto (≤4 chars)
+      Trecho  : cont = ...
+      Contexto:
+               6 | i = 0
+        >>>    7 | cont = 0
+               8 | 
+
+  [4] Linha 13: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+              12 | 	
+        >>>   13 | 	i = i + 1
+              14 | 
+
+======================================================================

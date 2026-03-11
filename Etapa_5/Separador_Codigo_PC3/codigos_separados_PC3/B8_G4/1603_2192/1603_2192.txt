@@ -1,0 +1,99 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1603_2192.py
+Questão  : 1603
+Aluno    : 2192
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | 
+     3 | a = array(eval(input()))
+     4 | 
+     5 | i = 0
+     6 | p = 0
+     7 | 
+     8 | while(i < size(a) and i != 4):
+     9 | 	if(a[i] == 1):
+    10 | 		p = p + 80
+    11 | 	elif(a[i] == 2):
+    12 | 		p = p + 40
+    13 | 	elif(a[i] == 3):
+    14 | 		p = p + 20
+    15 | 	
+    16 | 	i = i + 1
+    17 | 
+    18 | print(int(p))
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 11: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 11) / elif ... sem else
+      Contexto:
+              10 | 		p = p + 80
+        >>>   11 | 	elif(a[i] == 2):
+              12 | 		p = p + 40
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 7
+
+  [1] Linha 3: Variável 'a' com nome muito curto (≤4 chars)
+      Trecho  : a = ...
+      Contexto:
+               2 | 
+        >>>    3 | a = array(eval(input()))
+               4 | 
+
+  [2] Linha 5: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+               4 | 
+        >>>    5 | i = 0
+               6 | p = 0
+
+  [3] Linha 6: Variável 'p' com nome muito curto (≤4 chars)
+      Trecho  : p = ...
+      Contexto:
+               5 | i = 0
+        >>>    6 | p = 0
+               7 | 
+
+  [4] Linha 16: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+              15 | 	
+        >>>   16 | 	i = i + 1
+              17 | 
+
+  [5] Linha 10: Variável 'p' com nome muito curto (≤4 chars)
+      Trecho  : p = ...
+      Contexto:
+               9 | 	if(a[i] == 1):
+        >>>   10 | 		p = p + 80
+              11 | 	elif(a[i] == 2):
+
+  [6] Linha 12: Variável 'p' com nome muito curto (≤4 chars)
+      Trecho  : p = ...
+      Contexto:
+              11 | 	elif(a[i] == 2):
+        >>>   12 | 		p = p + 40
+              13 | 	elif(a[i] == 3):
+
+  [7] Linha 14: Variável 'p' com nome muito curto (≤4 chars)
+      Trecho  : p = ...
+      Contexto:
+              13 | 	elif(a[i] == 3):
+        >>>   14 | 		p = p + 20
+              15 | 	
+
+======================================================================

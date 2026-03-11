@@ -1,0 +1,90 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 3063_4145.py
+Questão  : 3063
+Aluno    : 4145
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | po = int(input("quantidade de pecas de ouro: "))
+     2 | na = input("nome da armadura: ").upper()
+     3 | d = int(input("destreza sorteada no dado: "))
+     4 | if((d<=8)and(d>=1)or(na!="INTEIRA")or(na!="PLACA")or(na!="MALHA")):
+     5 | 	if((po<50)or(po<100)and(na=="PLACA")or(po<200)and(na=="INTEIRA")):
+     6 | 		print("PO insuficiente")
+     7 | 	elif(na=="INTEIRA"):
+     8 | 		  da=30*d -20
+     9 | 		  print(da)
+    10 | 	elif(na=="MALHA"):	
+    11 | 		  da=15*d -1
+    12 | 		  print(da)
+    13 | 	elif(na=="PLACA"):
+    14 | 		  da= 20*d-18
+    15 | 		  print(da)
+    16 | else:
+    17 | 	print("Entrada invalida")
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 10: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 10) / elif ... sem else
+      Contexto:
+               9 | 		  print(da)
+        >>>   10 | 	elif(na=="MALHA"):	
+              11 | 		  da=15*d -1
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 6
+
+  [1] Linha 1: Variável 'po' com nome muito curto (≤4 chars)
+      Trecho  : po = ...
+      Contexto:
+        >>>    1 | po = int(input("quantidade de pecas de ouro: "))
+               2 | na = input("nome da armadura: ").upper()
+
+  [2] Linha 2: Variável 'na' com nome muito curto (≤4 chars)
+      Trecho  : na = ...
+      Contexto:
+               1 | po = int(input("quantidade de pecas de ouro: "))
+        >>>    2 | na = input("nome da armadura: ").upper()
+               3 | d = int(input("destreza sorteada no dado: "))
+
+  [3] Linha 3: Variável 'd' com nome muito curto (≤4 chars)
+      Trecho  : d = ...
+      Contexto:
+               2 | na = input("nome da armadura: ").upper()
+        >>>    3 | d = int(input("destreza sorteada no dado: "))
+               4 | if((d<=8)and(d>=1)or(na!="INTEIRA")or(na!="PLACA")or(na!="MALHA")):
+
+  [4] Linha 8: Variável 'da' com nome muito curto (≤4 chars)
+      Trecho  : da = ...
+      Contexto:
+               7 | 	elif(na=="INTEIRA"):
+        >>>    8 | 		  da=30*d -20
+               9 | 		  print(da)
+
+  [5] Linha 11: Variável 'da' com nome muito curto (≤4 chars)
+      Trecho  : da = ...
+      Contexto:
+              10 | 	elif(na=="MALHA"):	
+        >>>   11 | 		  da=15*d -1
+              12 | 		  print(da)
+
+  [6] Linha 14: Variável 'da' com nome muito curto (≤4 chars)
+      Trecho  : da = ...
+      Contexto:
+              13 | 	elif(na=="PLACA"):
+        >>>   14 | 		  da= 20*d-18
+              15 | 		  print(da)
+
+======================================================================

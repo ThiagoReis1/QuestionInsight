@@ -1,0 +1,68 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 5246_7606.py
+Questão  : 5246
+Aluno    : 7606
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | i = int(input())
+     2 | p = float(input())
+     3 | if (i > 0) and (i < 130) and (p > 0) and (p < 550.0):
+     4 | 	if (i <= 20) and (p <= 60):
+     5 | 		print("Grupo de risco: 9")
+     6 | 	elif (i <= 20) and (p > 60) and (p <= 90):
+     7 | 		print("Grupo de risco: 8")
+     8 | 	elif (i <= 20) and (p > 90):
+     9 | 		print("Grupo de risco: 7")
+    10 | 	elif (i > 20) and (i <= 50) and (p <= 60):
+    11 | 		print("Grupo de risco: 6")
+    12 | 	elif (i > 20) and (i <= 50) and (p > 60) and (p <= 90):
+    13 | 		print("Grupo de risco: 5")
+    14 | 	elif (i > 20) and (i <= 50) and (p > 90):
+    15 | 		print("Grupo de risco: 4")
+    16 | 	elif (i > 50) and (p <= 60):
+    17 | 		print("Grupo de risco: 3")
+    18 | 	elif (i > 50) and (p > 60) and (p <=90):
+    19 | 		print("Grupo de risco: 2")
+    20 | 	elif (i > 50) and (p > 90):
+    21 | 		print("Grupo de risco: 1")
+    22 | else:
+    23 | 	print("Dados invalidos")
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 18: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 18) / elif ... sem else
+      Contexto:
+              17 | 		print("Grupo de risco: 3")
+        >>>   18 | 	elif (i > 50) and (p > 60) and (p <=90):
+              19 | 		print("Grupo de risco: 2")
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 2
+
+  [1] Linha 1: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+        >>>    1 | i = int(input())
+               2 | p = float(input())
+
+  [2] Linha 2: Variável 'p' com nome muito curto (≤4 chars)
+      Trecho  : p = ...
+      Contexto:
+               1 | i = int(input())
+        >>>    2 | p = float(input())
+               3 | if (i > 0) and (i < 130) and (p > 0) and (p < 550.0):
+
+======================================================================

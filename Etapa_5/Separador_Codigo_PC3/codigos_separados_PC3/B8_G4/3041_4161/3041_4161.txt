@@ -1,0 +1,62 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 3041_4161.py
+Questão  : 3041
+Aluno    : 4161
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | x = float(input("valor de x: "))
+     2 | 
+     3 | if not(-1000<=x<-2) and not(2<x<=1000):
+     4 | 	print("entrada invalida")
+     5 | elif (-1000<=x<2):
+     6 | 	fx = -(1/(x+2))
+     7 | 	print(round(fx,4))
+     8 | elif (2<x<=1000):
+     9 | 	fx = 1/(x-2)
+    10 | 	print(round(fx, 4))
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 5: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 5) / elif ... sem else
+      Contexto:
+               4 | 	print("entrada invalida")
+        >>>    5 | elif (-1000<=x<2):
+               6 | 	fx = -(1/(x+2))
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 3
+
+  [1] Linha 1: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+        >>>    1 | x = float(input("valor de x: "))
+               2 | 
+
+  [2] Linha 6: Variável 'fx' com nome muito curto (≤4 chars)
+      Trecho  : fx = ...
+      Contexto:
+               5 | elif (-1000<=x<2):
+        >>>    6 | 	fx = -(1/(x+2))
+               7 | 	print(round(fx,4))
+
+  [3] Linha 9: Variável 'fx' com nome muito curto (≤4 chars)
+      Trecho  : fx = ...
+      Contexto:
+               8 | elif (2<x<=1000):
+        >>>    9 | 	fx = 1/(x-2)
+              10 | 	print(round(fx, 4))
+
+======================================================================

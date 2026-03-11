@@ -1,0 +1,49 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 2535_3111.py
+Questão  : 2535
+Aluno    : 3111
+Total MCs: 1
+
+⚠️  Misconceptions detectados: E1
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from math import*
+     2 | DA = float(input("Valor depositado no banco A"))
+     3 | DB = float(input("Valor depositado no banco B"))
+     4 | jA = float(input("Valor depositado no banco A"))/100
+     5 | jB = float(input("Valor depositado no banco A"))/100
+     6 | 
+     7 | if(DA <= 0 or DB <= 0 or jA <= 0 or jB <= 0 or DA <= DB or jA >= jB):
+     8 | 	print("Dados incorretos")
+     9 | else:
+    10 | 	Meses = 0
+    11 | 	SaldoA = DA
+    12 | 	SaldoB = DB
+    13 | 
+    14 | 	while(SaldoB <= SaldoA):
+    15 | 		SaldoA += SaldoA*jA
+    16 | 		SaldoB += SaldoB*jB
+    17 | 		SaldoA = round(SaldoA,2)
+    18 | 		SaldoB = round(SaldoB,2)
+    19 | 		Meses += 1
+    20 | 	print(Meses)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ E1 — Verificação desnecessária de todas as combinações possíveis
+  Ocorrências: 1
+
+  [1] Linha 7: 6 condições em um único if — verificação excessiva
+      Trecho  : DA <= 0 or DB <= 0 or jA <= 0 or (jB <= 0) or (DA <= DB) or (jA >= jB)
+      Contexto:
+               6 | 
+        >>>    7 | if(DA <= 0 or DB <= 0 or jA <= 0 or jB <= 0 or DA <= DB or jA >= jB):
+               8 | 	print("Dados incorretos")
+
+======================================================================

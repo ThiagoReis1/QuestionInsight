@@ -1,0 +1,70 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1370_2235.py
+Questão  : 1370
+Aluno    : 2235
+Total MCs: 2
+
+⚠️  Misconceptions detectados: A3, A4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | porcao=float(input("digite a quantidade da porcao: "))
+     2 | ptot=float(input(p1+p2+p3))
+     3 | print=float(round(p1,2))
+     4 | print=float(round(p2,2))
+     5 | print=float(round(p3,2))
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 3
+
+  [1] Linha 1: Variável 'porcao' declarada mas nunca utilizada
+      Trecho  : porcao = ...
+      Contexto:
+        >>>    1 | porcao=float(input("digite a quantidade da porcao: "))
+               2 | ptot=float(input(p1+p2+p3))
+
+  [2] Linha 2: Variável 'ptot' declarada mas nunca utilizada
+      Trecho  : ptot = ...
+      Contexto:
+               1 | porcao=float(input("digite a quantidade da porcao: "))
+        >>>    2 | ptot=float(input(p1+p2+p3))
+               3 | print=float(round(p1,2))
+
+  [3] Linha 3: Variável 'print' declarada mas nunca utilizada
+      Trecho  : print = ...
+      Contexto:
+               2 | ptot=float(input(p1+p2+p3))
+        >>>    3 | print=float(round(p1,2))
+               4 | print=float(round(p2,2))
+
+▶ A4 — Redefinição de built-in
+  Ocorrências: 3
+
+  [1] Linha 3: Built-in 'print' redefinido como variável
+      Trecho  : print = float(round(p1, 2))
+      Contexto:
+               2 | ptot=float(input(p1+p2+p3))
+        >>>    3 | print=float(round(p1,2))
+               4 | print=float(round(p2,2))
+
+  [2] Linha 4: Built-in 'print' redefinido como variável
+      Trecho  : print = float(round(p2, 2))
+      Contexto:
+               3 | print=float(round(p1,2))
+        >>>    4 | print=float(round(p2,2))
+               5 | print=float(round(p3,2))
+
+  [3] Linha 5: Built-in 'print' redefinido como variável
+      Trecho  : print = float(round(p3, 2))
+      Contexto:
+               4 | print=float(round(p2,2))
+        >>>    5 | print=float(round(p3,2))
+
+======================================================================

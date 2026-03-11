@@ -1,0 +1,61 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 3181_4206.py
+Questão  : 3181
+Aluno    : 4206
+Total MCs: 2
+
+⚠️  Misconceptions detectados: A3, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import *
+     2 | a = array(eval(input()))
+     3 | b = array(zeros(37,dtype = int))
+     4 | t = 0
+     5 | for i in range(0,size(a)):
+     6 | 	b[a[i]] = b[a[i]]+1
+     7 | 	
+     8 | print(b)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 1
+
+  [1] Linha 4: Variável 't' declarada mas nunca utilizada
+      Trecho  : t = ...
+      Contexto:
+               3 | b = array(zeros(37,dtype = int))
+        >>>    4 | t = 0
+               5 | for i in range(0,size(a)):
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 3
+
+  [1] Linha 2: Variável 'a' com nome muito curto (≤4 chars)
+      Trecho  : a = ...
+      Contexto:
+               1 | from numpy import *
+        >>>    2 | a = array(eval(input()))
+               3 | b = array(zeros(37,dtype = int))
+
+  [2] Linha 3: Variável 'b' com nome muito curto (≤4 chars)
+      Trecho  : b = ...
+      Contexto:
+               2 | a = array(eval(input()))
+        >>>    3 | b = array(zeros(37,dtype = int))
+               4 | t = 0
+
+  [3] Linha 4: Variável 't' com nome muito curto (≤4 chars)
+      Trecho  : t = ...
+      Contexto:
+               3 | b = array(zeros(37,dtype = int))
+        >>>    4 | t = 0
+               5 | for i in range(0,size(a)):
+
+======================================================================

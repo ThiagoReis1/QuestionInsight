@@ -1,0 +1,74 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1269_1558.py
+Questão  : 1269
+Aluno    : 1558
+Total MCs: 1
+
+⚠️  Misconceptions detectados: G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import *
+     2 | from math import *
+     3 | p = float(input("Digite um numero real maior que um: "))
+     4 | x = array(eval(input("informe um vetor: ")))
+     5 | y = array(eval(input("informe um vetor: ")))
+     6 | t = p / (p+1)
+     7 | for i in range(0,size(x)):
+     8 | 	a = (abs((x[i] + y[i])) ** t) ** (1/t)
+     9 | 	b = (abs((x[i] - y[i])) ** t) ** (1/t)
+    10 | print(round(abs((abs(a) - abs(b)), 7)))	
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 6
+
+  [1] Linha 3: Variável 'p' com nome muito curto (≤4 chars)
+      Trecho  : p = ...
+      Contexto:
+               2 | from math import *
+        >>>    3 | p = float(input("Digite um numero real maior que um: "))
+               4 | x = array(eval(input("informe um vetor: ")))
+
+  [2] Linha 4: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+               3 | p = float(input("Digite um numero real maior que um: "))
+        >>>    4 | x = array(eval(input("informe um vetor: ")))
+               5 | y = array(eval(input("informe um vetor: ")))
+
+  [3] Linha 5: Variável 'y' com nome muito curto (≤4 chars)
+      Trecho  : y = ...
+      Contexto:
+               4 | x = array(eval(input("informe um vetor: ")))
+        >>>    5 | y = array(eval(input("informe um vetor: ")))
+               6 | t = p / (p+1)
+
+  [4] Linha 6: Variável 't' com nome muito curto (≤4 chars)
+      Trecho  : t = ...
+      Contexto:
+               5 | y = array(eval(input("informe um vetor: ")))
+        >>>    6 | t = p / (p+1)
+               7 | for i in range(0,size(x)):
+
+  [5] Linha 8: Variável 'a' com nome muito curto (≤4 chars)
+      Trecho  : a = ...
+      Contexto:
+               7 | for i in range(0,size(x)):
+        >>>    8 | 	a = (abs((x[i] + y[i])) ** t) ** (1/t)
+               9 | 	b = (abs((x[i] - y[i])) ** t) ** (1/t)
+
+  [6] Linha 9: Variável 'b' com nome muito curto (≤4 chars)
+      Trecho  : b = ...
+      Contexto:
+               8 | 	a = (abs((x[i] + y[i])) ** t) ** (1/t)
+        >>>    9 | 	b = (abs((x[i] - y[i])) ** t) ** (1/t)
+              10 | print(round(abs((abs(a) - abs(b)), 7)))	
+
+======================================================================

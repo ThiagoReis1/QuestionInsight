@@ -1,0 +1,122 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1621_2152.py
+Questão  : 1621
+Aluno    : 2152
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import *
+     2 | x = array(input("produtos: "))
+     3 | y = array(eval(input("quantidades: ")))
+     4 | 
+     5 | i = 0
+     6 | 
+     7 | while(i<size(x)):
+     8 | 	if(x[i].upper() ==  "ARROZ"):
+     9 | 		A = y[i]*1.25
+    10 | 	elif(x[i].upper() ==  "FEIJAO"):
+    11 | 		F = y[i]*2.60
+    12 | 	elif(x[i].upper() ==  "BIS"):
+    13 | 		B = y[i]*1.80
+    14 | 	elif(x[i].upper() ==  "MIOJO"):
+    15 | 		M = y[i]*0.85
+    16 | 	elif(x[i].upper() ==  "FANTA"):
+    17 | 		T = y[i]*3.20
+    18 | 	i = i + 1
+    19 | d = A+F+B+M+T
+    20 | print(d)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 14: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 14) / elif ... sem else
+      Contexto:
+              13 | 		B = y[i]*1.80
+        >>>   14 | 	elif(x[i].upper() ==  "MIOJO"):
+              15 | 		M = y[i]*0.85
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 10
+
+  [1] Linha 2: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+               1 | from numpy import *
+        >>>    2 | x = array(input("produtos: "))
+               3 | y = array(eval(input("quantidades: ")))
+
+  [2] Linha 3: Variável 'y' com nome muito curto (≤4 chars)
+      Trecho  : y = ...
+      Contexto:
+               2 | x = array(input("produtos: "))
+        >>>    3 | y = array(eval(input("quantidades: ")))
+               4 | 
+
+  [3] Linha 5: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+               4 | 
+        >>>    5 | i = 0
+               6 | 
+
+  [4] Linha 19: Variável 'd' com nome muito curto (≤4 chars)
+      Trecho  : d = ...
+      Contexto:
+              18 | 	i = i + 1
+        >>>   19 | d = A+F+B+M+T
+              20 | print(d)
+
+  [5] Linha 18: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+              17 | 		T = y[i]*3.20
+        >>>   18 | 	i = i + 1
+              19 | d = A+F+B+M+T
+
+  [6] Linha 9: Variável 'A' com nome muito curto (≤4 chars)
+      Trecho  : A = ...
+      Contexto:
+               8 | 	if(x[i].upper() ==  "ARROZ"):
+        >>>    9 | 		A = y[i]*1.25
+              10 | 	elif(x[i].upper() ==  "FEIJAO"):
+
+  [7] Linha 11: Variável 'F' com nome muito curto (≤4 chars)
+      Trecho  : F = ...
+      Contexto:
+              10 | 	elif(x[i].upper() ==  "FEIJAO"):
+        >>>   11 | 		F = y[i]*2.60
+              12 | 	elif(x[i].upper() ==  "BIS"):
+
+  [8] Linha 13: Variável 'B' com nome muito curto (≤4 chars)
+      Trecho  : B = ...
+      Contexto:
+              12 | 	elif(x[i].upper() ==  "BIS"):
+        >>>   13 | 		B = y[i]*1.80
+              14 | 	elif(x[i].upper() ==  "MIOJO"):
+
+  [9] Linha 15: Variável 'M' com nome muito curto (≤4 chars)
+      Trecho  : M = ...
+      Contexto:
+              14 | 	elif(x[i].upper() ==  "MIOJO"):
+        >>>   15 | 		M = y[i]*0.85
+              16 | 	elif(x[i].upper() ==  "FANTA"):
+
+  [10] Linha 17: Variável 'T' com nome muito curto (≤4 chars)
+      Trecho  : T = ...
+      Contexto:
+              16 | 	elif(x[i].upper() ==  "FANTA"):
+        >>>   17 | 		T = y[i]*3.20
+              18 | 	i = i + 1
+
+======================================================================

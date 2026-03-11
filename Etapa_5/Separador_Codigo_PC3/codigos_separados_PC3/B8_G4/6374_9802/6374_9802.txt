@@ -1,0 +1,62 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 6374_9802.py
+Questão  : 6374
+Aluno    : 9802
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | 
+     3 | s = input("pacientes: ").upper().split(",")
+     4 | 
+     5 | ab = array([0,0,0,0])
+     6 | 
+     7 | for i in s:
+     8 | 	if i == "O":
+     9 | 		ab[0] = ab[0] + 1
+    10 | 	elif i == "D":
+    11 | 		ab[1] = ab[1] + 1
+    12 | 	elif i == "N":
+    13 | 		ab[2] = ab[2] + 1
+    14 | 	elif i == "C":
+    15 | 		ab[3] = ab[3] + 1
+    16 | print(ab)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 12: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 12) / elif ... sem else
+      Contexto:
+              11 | 		ab[1] = ab[1] + 1
+        >>>   12 | 	elif i == "N":
+              13 | 		ab[2] = ab[2] + 1
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 2
+
+  [1] Linha 3: Variável 's' com nome muito curto (≤4 chars)
+      Trecho  : s = ...
+      Contexto:
+               2 | 
+        >>>    3 | s = input("pacientes: ").upper().split(",")
+               4 | 
+
+  [2] Linha 5: Variável 'ab' com nome muito curto (≤4 chars)
+      Trecho  : ab = ...
+      Contexto:
+               4 | 
+        >>>    5 | ab = array([0,0,0,0])
+               6 | 
+
+======================================================================

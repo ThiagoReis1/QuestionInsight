@@ -1,0 +1,109 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1248_1307.py
+Questão  : 1248
+Aluno    : 1307
+Total MCs: 1
+
+⚠️  Misconceptions detectados: G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | x = array(eval(input("Digite um vetor: ")))
+     3 | 
+     4 | A = min(x)
+     5 | B = max(x)
+     6 | C = 0.75 * A + 0.25 * B
+     7 | D = 0.25 * A + 0.75 * B
+     8 | 
+     9 | j = 0
+    10 | k = 0
+    11 | for i in x:
+    12 | 	if(i >= C and i < D):
+    13 | 		j = j + 1
+    14 | 	if(i >= D and i < B):
+    15 | 		k = k + 1
+    16 | z = array([j,k])
+    17 | print(z)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 10
+
+  [1] Linha 2: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+               1 | from numpy import*
+        >>>    2 | x = array(eval(input("Digite um vetor: ")))
+               3 | 
+
+  [2] Linha 4: Variável 'A' com nome muito curto (≤4 chars)
+      Trecho  : A = ...
+      Contexto:
+               3 | 
+        >>>    4 | A = min(x)
+               5 | B = max(x)
+
+  [3] Linha 5: Variável 'B' com nome muito curto (≤4 chars)
+      Trecho  : B = ...
+      Contexto:
+               4 | A = min(x)
+        >>>    5 | B = max(x)
+               6 | C = 0.75 * A + 0.25 * B
+
+  [4] Linha 6: Variável 'C' com nome muito curto (≤4 chars)
+      Trecho  : C = ...
+      Contexto:
+               5 | B = max(x)
+        >>>    6 | C = 0.75 * A + 0.25 * B
+               7 | D = 0.25 * A + 0.75 * B
+
+  [5] Linha 7: Variável 'D' com nome muito curto (≤4 chars)
+      Trecho  : D = ...
+      Contexto:
+               6 | C = 0.75 * A + 0.25 * B
+        >>>    7 | D = 0.25 * A + 0.75 * B
+               8 | 
+
+  [6] Linha 9: Variável 'j' com nome muito curto (≤4 chars)
+      Trecho  : j = ...
+      Contexto:
+               8 | 
+        >>>    9 | j = 0
+              10 | k = 0
+
+  [7] Linha 10: Variável 'k' com nome muito curto (≤4 chars)
+      Trecho  : k = ...
+      Contexto:
+               9 | j = 0
+        >>>   10 | k = 0
+              11 | for i in x:
+
+  [8] Linha 16: Variável 'z' com nome muito curto (≤4 chars)
+      Trecho  : z = ...
+      Contexto:
+              15 | 		k = k + 1
+        >>>   16 | z = array([j,k])
+              17 | print(z)
+
+  [9] Linha 13: Variável 'j' com nome muito curto (≤4 chars)
+      Trecho  : j = ...
+      Contexto:
+              12 | 	if(i >= C and i < D):
+        >>>   13 | 		j = j + 1
+              14 | 	if(i >= D and i < B):
+
+  [10] Linha 15: Variável 'k' com nome muito curto (≤4 chars)
+      Trecho  : k = ...
+      Contexto:
+              14 | 	if(i >= D and i < B):
+        >>>   15 | 		k = k + 1
+              16 | z = array([j,k])
+
+======================================================================

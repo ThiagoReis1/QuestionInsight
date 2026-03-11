@@ -1,0 +1,206 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 3591_5737.py
+Questão  : 3591
+Aluno    : 5737
+Total MCs: 3
+
+⚠️  Misconceptions detectados: B4, B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | v = array(eval(input("Faces: ")))
+     3 | 
+     4 | i = 0
+     5 | t = 0
+     6 | while(i < size(v)):
+     7 | 	if(v[i] == 1):
+     8 | 		p = 10
+     9 | 	elif(v[i] == 2):
+    10 | 		p = 5
+    11 | 	elif(v[i] == 3):
+    12 | 		p = 10
+    13 | 	elif(v[i] == 4):
+    14 | 		p = 5
+    15 | 	elif(v[i] == 5):
+    16 | 		p = 10
+    17 | 	elif(v[i] == 6):
+    18 | 		p = 5
+    19 | 	t = t + p
+    20 | 	i = i + 1
+    21 | print(t)
+    22 | 	
+    23 | 		
+    24 | 	
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B4 — Comandos repetidos dentro de blocos if-elif-else
+  Ocorrências: 10
+
+  [1] Linha 11: Bloco idêntico ao da linha 7
+      Trecho  : p = 10
+      Contexto:
+              10 | 		p = 5
+        >>>   11 | 	elif(v[i] == 3):
+              12 | 		p = 10
+
+  [2] Linha 13: Bloco idêntico ao da linha 9
+      Trecho  : p = 5
+      Contexto:
+              12 | 		p = 10
+        >>>   13 | 	elif(v[i] == 4):
+              14 | 		p = 5
+
+  [3] Linha 15: Bloco idêntico ao da linha 7
+      Trecho  : p = 10
+      Contexto:
+              14 | 		p = 5
+        >>>   15 | 	elif(v[i] == 5):
+              16 | 		p = 10
+
+  [4] Linha 17: Bloco idêntico ao da linha 9
+      Trecho  : p = 5
+      Contexto:
+              16 | 		p = 10
+        >>>   17 | 	elif(v[i] == 6):
+              18 | 		p = 5
+
+  [5] Linha 13: Bloco idêntico ao da linha 9
+      Trecho  : p = 5
+      Contexto:
+              12 | 		p = 10
+        >>>   13 | 	elif(v[i] == 4):
+              14 | 		p = 5
+
+  [6] Linha 15: Bloco idêntico ao da linha 11
+      Trecho  : p = 10
+      Contexto:
+              14 | 		p = 5
+        >>>   15 | 	elif(v[i] == 5):
+              16 | 		p = 10
+
+  [7] Linha 17: Bloco idêntico ao da linha 9
+      Trecho  : p = 5
+      Contexto:
+              16 | 		p = 10
+        >>>   17 | 	elif(v[i] == 6):
+              18 | 		p = 5
+
+  [8] Linha 15: Bloco idêntico ao da linha 11
+      Trecho  : p = 10
+      Contexto:
+              14 | 		p = 5
+        >>>   15 | 	elif(v[i] == 5):
+              16 | 		p = 10
+
+  [9] Linha 17: Bloco idêntico ao da linha 13
+      Trecho  : p = 5
+      Contexto:
+              16 | 		p = 10
+        >>>   17 | 	elif(v[i] == 6):
+              18 | 		p = 5
+
+  [10] Linha 17: Bloco idêntico ao da linha 13
+      Trecho  : p = 5
+      Contexto:
+              16 | 		p = 10
+        >>>   17 | 	elif(v[i] == 6):
+              18 | 		p = 5
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 15: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 15) / elif ... sem else
+      Contexto:
+              14 | 		p = 5
+        >>>   15 | 	elif(v[i] == 5):
+              16 | 		p = 10
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 11
+
+  [1] Linha 2: Variável 'v' com nome muito curto (≤4 chars)
+      Trecho  : v = ...
+      Contexto:
+               1 | from numpy import*
+        >>>    2 | v = array(eval(input("Faces: ")))
+               3 | 
+
+  [2] Linha 4: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+               3 | 
+        >>>    4 | i = 0
+               5 | t = 0
+
+  [3] Linha 5: Variável 't' com nome muito curto (≤4 chars)
+      Trecho  : t = ...
+      Contexto:
+               4 | i = 0
+        >>>    5 | t = 0
+               6 | while(i < size(v)):
+
+  [4] Linha 19: Variável 't' com nome muito curto (≤4 chars)
+      Trecho  : t = ...
+      Contexto:
+              18 | 		p = 5
+        >>>   19 | 	t = t + p
+              20 | 	i = i + 1
+
+  [5] Linha 20: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+              19 | 	t = t + p
+        >>>   20 | 	i = i + 1
+              21 | print(t)
+
+  [6] Linha 8: Variável 'p' com nome muito curto (≤4 chars)
+      Trecho  : p = ...
+      Contexto:
+               7 | 	if(v[i] == 1):
+        >>>    8 | 		p = 10
+               9 | 	elif(v[i] == 2):
+
+  [7] Linha 10: Variável 'p' com nome muito curto (≤4 chars)
+      Trecho  : p = ...
+      Contexto:
+               9 | 	elif(v[i] == 2):
+        >>>   10 | 		p = 5
+              11 | 	elif(v[i] == 3):
+
+  [8] Linha 12: Variável 'p' com nome muito curto (≤4 chars)
+      Trecho  : p = ...
+      Contexto:
+              11 | 	elif(v[i] == 3):
+        >>>   12 | 		p = 10
+              13 | 	elif(v[i] == 4):
+
+  [9] Linha 14: Variável 'p' com nome muito curto (≤4 chars)
+      Trecho  : p = ...
+      Contexto:
+              13 | 	elif(v[i] == 4):
+        >>>   14 | 		p = 5
+              15 | 	elif(v[i] == 5):
+
+  [10] Linha 16: Variável 'p' com nome muito curto (≤4 chars)
+      Trecho  : p = ...
+      Contexto:
+              15 | 	elif(v[i] == 5):
+        >>>   16 | 		p = 10
+              17 | 	elif(v[i] == 6):
+
+  [11] Linha 18: Variável 'p' com nome muito curto (≤4 chars)
+      Trecho  : p = ...
+      Contexto:
+              17 | 	elif(v[i] == 6):
+        >>>   18 | 		p = 5
+              19 | 	t = t + p
+
+======================================================================

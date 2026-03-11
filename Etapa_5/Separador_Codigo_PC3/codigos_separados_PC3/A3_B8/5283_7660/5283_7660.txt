@@ -1,0 +1,67 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 5283_7660.py
+Questão  : 5283
+Aluno    : 7660
+Total MCs: 2
+
+⚠️  Misconceptions detectados: A3, B8
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | #-----------------------------------------------------------------------
+     2 | # Nome: Ivan  Lucas de Oliveira Pacheco
+     3 | # Data: 11/01/2023
+     4 | # Objetivo: Calcular o percetual de numeros negativos e numeros positivos digitados
+     5 | #-----------------------------------------------------------------------
+     6 | 
+     7 | # Definição de variaveis contadoras (quantidade de numeros digitados)
+     8 | positivos = 0
+     9 | negativos = 0
+    10 | total = 0
+    11 | 
+    12 | # Set de variável para entrada em loop
+    13 | num = 1
+    14 | 
+    15 | while (num != 0):
+    16 | 	num = int(input("Digite um numero inteiro: "))
+    17 | 	if num > 0:
+    18 | 		positivos = positivos + 1
+    19 | 		total = total + 1
+    20 | 	elif num < 0:
+    21 | #		negativos = negativos + 1
+    22 | 		total = total +1
+    23 | 		
+    24 | # perc_neg = negativos / total
+    25 | perc_positivos = (positivos / total) * 100
+    26 | 
+    27 | print (total)
+    28 | print (round(perc_positivos,2))
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 1
+
+  [1] Linha 9: Variável 'negativos' declarada mas nunca utilizada
+      Trecho  : negativos = ...
+      Contexto:
+               8 | positivos = 0
+        >>>    9 | negativos = 0
+              10 | total = 0
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 17: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 17) / elif ... sem else
+      Contexto:
+              16 | 	num = int(input("Digite um numero inteiro: "))
+        >>>   17 | 	if num > 0:
+              18 | 		positivos = positivos + 1
+
+======================================================================

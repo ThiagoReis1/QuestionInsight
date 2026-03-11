@@ -1,0 +1,159 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1109_1286.py
+Questão  : 1109
+Aluno    : 1286
+Total MCs: 3
+
+⚠️  Misconceptions detectados: B8, B9, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | i = int(input())
+     2 | p = float(input())
+     3 | 
+     4 | print("Entradas:", i, "anos e", p,"kg")
+     5 | 
+     6 | if((i>=0 and i<=130) and (p>=0.0 and p<=550.0)):
+     7 |  if(i>=12):
+     8 |   if(p>=60):
+     9 |    d = 1000
+    10 |   elif(p<60):
+    11 |    d = 875
+    12 |  elif(i<12):
+    13 |   if(p<=5):
+    14 |    d = 75
+    15 |   elif(p>5 and p<=9):
+    16 |    d = 125
+    17 |   elif(p>9 and p<=16):
+    18 |    d = 250	
+    19 |   elif(p>16 and p<=24):
+    20 |    d = 375	
+    21 |   elif(p>24 and p<=30):
+    22 |    d = 500	
+    23 |   elif(p>30):	
+    24 |    d = 750
+    25 |  print("Dosagem:", d, "mg")	
+    26 | else:
+    27 |  print("Dados invalidos")
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 3
+
+  [1] Linha 7: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 7) / elif ... sem else
+      Contexto:
+               6 | if((i>=0 and i<=130) and (p>=0.0 and p<=550.0)):
+        >>>    7 |  if(i>=12):
+               8 |   if(p>=60):
+
+  [2] Linha 8: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 8) / elif ... sem else
+      Contexto:
+               7 |  if(i>=12):
+        >>>    8 |   if(p>=60):
+               9 |    d = 1000
+
+  [3] Linha 21: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 21) / elif ... sem else
+      Contexto:
+              20 |    d = 375	
+        >>>   21 |   elif(p>24 and p<=30):
+              22 |    d = 500	
+
+▶ B9 — elif/else retestando condições já verificadas
+  Ocorrências: 2
+
+  [1] Linha 12: elif retesta condição inversa do if da linha 7
+      Trecho  : if i >= 12 ... elif i < 12
+      Contexto:
+              11 |    d = 875
+        >>>   12 |  elif(i<12):
+              13 |   if(p<=5):
+
+  [2] Linha 10: elif retesta condição inversa do if da linha 8
+      Trecho  : if p >= 60 ... elif p < 60
+      Contexto:
+               9 |    d = 1000
+        >>>   10 |   elif(p<60):
+              11 |    d = 875
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 10
+
+  [1] Linha 1: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+        >>>    1 | i = int(input())
+               2 | p = float(input())
+
+  [2] Linha 2: Variável 'p' com nome muito curto (≤4 chars)
+      Trecho  : p = ...
+      Contexto:
+               1 | i = int(input())
+        >>>    2 | p = float(input())
+               3 | 
+
+  [3] Linha 9: Variável 'd' com nome muito curto (≤4 chars)
+      Trecho  : d = ...
+      Contexto:
+               8 |   if(p>=60):
+        >>>    9 |    d = 1000
+              10 |   elif(p<60):
+
+  [4] Linha 11: Variável 'd' com nome muito curto (≤4 chars)
+      Trecho  : d = ...
+      Contexto:
+              10 |   elif(p<60):
+        >>>   11 |    d = 875
+              12 |  elif(i<12):
+
+  [5] Linha 14: Variável 'd' com nome muito curto (≤4 chars)
+      Trecho  : d = ...
+      Contexto:
+              13 |   if(p<=5):
+        >>>   14 |    d = 75
+              15 |   elif(p>5 and p<=9):
+
+  [6] Linha 16: Variável 'd' com nome muito curto (≤4 chars)
+      Trecho  : d = ...
+      Contexto:
+              15 |   elif(p>5 and p<=9):
+        >>>   16 |    d = 125
+              17 |   elif(p>9 and p<=16):
+
+  [7] Linha 18: Variável 'd' com nome muito curto (≤4 chars)
+      Trecho  : d = ...
+      Contexto:
+              17 |   elif(p>9 and p<=16):
+        >>>   18 |    d = 250	
+              19 |   elif(p>16 and p<=24):
+
+  [8] Linha 20: Variável 'd' com nome muito curto (≤4 chars)
+      Trecho  : d = ...
+      Contexto:
+              19 |   elif(p>16 and p<=24):
+        >>>   20 |    d = 375	
+              21 |   elif(p>24 and p<=30):
+
+  [9] Linha 22: Variável 'd' com nome muito curto (≤4 chars)
+      Trecho  : d = ...
+      Contexto:
+              21 |   elif(p>24 and p<=30):
+        >>>   22 |    d = 500	
+              23 |   elif(p>30):	
+
+  [10] Linha 24: Variável 'd' com nome muito curto (≤4 chars)
+      Trecho  : d = ...
+      Contexto:
+              23 |   elif(p>30):	
+        >>>   24 |    d = 750
+              25 |  print("Dosagem:", d, "mg")	
+
+======================================================================

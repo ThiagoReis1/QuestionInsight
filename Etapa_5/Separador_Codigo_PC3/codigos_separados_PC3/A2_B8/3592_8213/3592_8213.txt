@@ -1,0 +1,56 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 3592_8213.py
+Questão  : 3592
+Aluno    : 8213
+Total MCs: 2
+
+⚠️  Misconceptions detectados: A2, B8
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | vetor=array(eval(int(input("Digite as faces: ")))).split(",")
+     3 | pontos=100
+     4 | for i in range(vetor):
+     5 | 	if vetor[i]==1:
+     6 | 		pontos=pontos
+     7 | 	elif vetor[i]==2:
+     8 | 		pontos=pontos*2
+     9 | 	elif vetor[i]==3:
+    10 | 		pontos=pontos/3
+    11 | 	elif vetor[i]==4:
+    12 | 		pontos=pontos*4
+    13 | 	elif vetor[i]==5:
+    14 | 		pontos=pontos*5
+    15 | 	elif vetor[i]==6:
+    16 | 		pontos=pontos*6
+    17 | print(round(pontos,2))
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A2 — Variável atribuída a si mesma
+  Ocorrências: 1
+
+  [1] Linha 6: 'pontos' atribuído a si mesmo
+      Trecho  : pontos = pontos
+      Contexto:
+               5 | 	if vetor[i]==1:
+        >>>    6 | 		pontos=pontos
+               7 | 	elif vetor[i]==2:
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 13: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 13) / elif ... sem else
+      Contexto:
+              12 | 		pontos=pontos*4
+        >>>   13 | 	elif vetor[i]==5:
+              14 | 		pontos=pontos*5
+
+======================================================================

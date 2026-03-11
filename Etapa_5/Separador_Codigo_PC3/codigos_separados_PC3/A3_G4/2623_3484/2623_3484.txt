@@ -1,0 +1,51 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 2623_3484.py
+Questão  : 2623
+Aluno    : 3484
+Total MCs: 2
+
+⚠️  Misconceptions detectados: A3, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | from numpy.linalg import*
+     3 | n=array(eval(input("")))
+     4 | lin=shape(n)[0]
+     5 | col=shape(n)[1]
+     6 | menor=9999999999
+     7 | indice=0
+     8 | v=zeros(lin)
+     9 | for i in range(lin):
+    10 | 	for j in range(col):
+    11 | 		if n[i,j]<menor:
+    12 | 			indice=i
+    13 | 			menor=n[i,j]
+    14 | 		else:
+    15 | 			j=j-1
+    16 | print(indice)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 1
+
+  [1] Linha 8: Variável 'v' declarada mas nunca utilizada
+      Trecho  : v = ...
+      Contexto:
+               7 | indice=0
+        >>>    8 | v=zeros(lin)
+               9 | for i in range(lin):
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 1
+
+  [1] Linha 0: G4 detectado pelo VisitorMC3 (localização exata não mapeada)
+      Trecho  : —
+
+======================================================================

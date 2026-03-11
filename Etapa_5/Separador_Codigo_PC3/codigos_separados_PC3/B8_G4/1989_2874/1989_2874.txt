@@ -1,0 +1,104 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1989_2874.py
+Questão  : 1989
+Aluno    : 2874
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | #Le as entradas:
+     2 | amino = input("Aminoacido:").upper()
+     3 | o = 15.999
+     4 | c = 12.011
+     5 | n = 14.00674
+     6 | h = 1.00794
+     7 | 
+     8 | #Algoritmo:
+     9 | if(amino == "ASPARAGINA" or amino == "GLUTAMINA" or amino == "TRIPTOFANO"):
+    10 | 	if(amino == "ASPARAGINA"):
+    11 | 		peso = 4 * c + 8 * h + 2 * n + 3 * o 
+    12 | 		print(round(peso,2))
+    13 | 	elif(amino == "GLUTAMINA"):
+    14 | 		peso = 5 * c + 8 * h + 1 * n + 4 * o 
+    15 | 		print(round(peso,2))
+    16 | 	elif(amino == "TRIPTOFANO"):
+    17 | 		peso = 11 * c + 11 * h + 2 * n + 2 * o 
+    18 | 		print(round(peso,2))
+    19 | 		
+    20 | 	
+    21 | else:
+    22 | 	print("Entrada:",amino)
+    23 | 	print("Dado Invalido")
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 13: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 13) / elif ... sem else
+      Contexto:
+              12 | 		print(round(peso,2))
+        >>>   13 | 	elif(amino == "GLUTAMINA"):
+              14 | 		peso = 5 * c + 8 * h + 1 * n + 4 * o 
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 7
+
+  [1] Linha 3: Variável 'o' com nome muito curto (≤4 chars)
+      Trecho  : o = ...
+      Contexto:
+               2 | amino = input("Aminoacido:").upper()
+        >>>    3 | o = 15.999
+               4 | c = 12.011
+
+  [2] Linha 4: Variável 'c' com nome muito curto (≤4 chars)
+      Trecho  : c = ...
+      Contexto:
+               3 | o = 15.999
+        >>>    4 | c = 12.011
+               5 | n = 14.00674
+
+  [3] Linha 5: Variável 'n' com nome muito curto (≤4 chars)
+      Trecho  : n = ...
+      Contexto:
+               4 | c = 12.011
+        >>>    5 | n = 14.00674
+               6 | h = 1.00794
+
+  [4] Linha 6: Variável 'h' com nome muito curto (≤4 chars)
+      Trecho  : h = ...
+      Contexto:
+               5 | n = 14.00674
+        >>>    6 | h = 1.00794
+               7 | 
+
+  [5] Linha 11: Variável 'peso' com nome muito curto (≤4 chars)
+      Trecho  : peso = ...
+      Contexto:
+              10 | 	if(amino == "ASPARAGINA"):
+        >>>   11 | 		peso = 4 * c + 8 * h + 2 * n + 3 * o 
+              12 | 		print(round(peso,2))
+
+  [6] Linha 14: Variável 'peso' com nome muito curto (≤4 chars)
+      Trecho  : peso = ...
+      Contexto:
+              13 | 	elif(amino == "GLUTAMINA"):
+        >>>   14 | 		peso = 5 * c + 8 * h + 1 * n + 4 * o 
+              15 | 		print(round(peso,2))
+
+  [7] Linha 17: Variável 'peso' com nome muito curto (≤4 chars)
+      Trecho  : peso = ...
+      Contexto:
+              16 | 	elif(amino == "TRIPTOFANO"):
+        >>>   17 | 		peso = 11 * c + 11 * h + 2 * n + 2 * o 
+              18 | 		print(round(peso,2))
+
+======================================================================

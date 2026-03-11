@@ -1,0 +1,136 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 3590_8721.py
+Questão  : 3590
+Aluno    : 8721
+Total MCs: 3
+
+⚠️  Misconceptions detectados: B4, B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | j = array(eval(input("Digite as jogadas: ")))
+     3 | i = 0
+     4 | s = 0
+     5 | while i < size(j):
+     6 | 	if j[i] == 1:
+     7 | 		s = s + 10
+     8 | 	elif j[i] == 2:
+     9 | 		s = s + 5
+    10 | 	elif j[i] == 4:
+    11 | 		s = s + 5
+    12 | 	elif j[i] == 5:
+    13 | 		s = s + 20
+    14 | 	elif j[i] == 6:
+    15 | 		s = s + 10
+    16 | 	i = i + 1
+    17 | print(s)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B4 — Comandos repetidos dentro de blocos if-elif-else
+  Ocorrências: 3
+
+  [1] Linha 10: Bloco idêntico ao da linha 8
+      Trecho  : s = s + 5
+      Contexto:
+               9 | 		s = s + 5
+        >>>   10 | 	elif j[i] == 4:
+              11 | 		s = s + 5
+
+  [2] Linha 14: Bloco idêntico ao da linha 6
+      Trecho  : s = s + 10
+      Contexto:
+              13 | 		s = s + 20
+        >>>   14 | 	elif j[i] == 6:
+              15 | 		s = s + 10
+
+  [3] Linha 10: Bloco idêntico ao da linha 8
+      Trecho  : s = s + 5
+      Contexto:
+               9 | 		s = s + 5
+        >>>   10 | 	elif j[i] == 4:
+              11 | 		s = s + 5
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 12: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 12) / elif ... sem else
+      Contexto:
+              11 | 		s = s + 5
+        >>>   12 | 	elif j[i] == 5:
+              13 | 		s = s + 20
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 9
+
+  [1] Linha 2: Variável 'j' com nome muito curto (≤4 chars)
+      Trecho  : j = ...
+      Contexto:
+               1 | from numpy import*
+        >>>    2 | j = array(eval(input("Digite as jogadas: ")))
+               3 | i = 0
+
+  [2] Linha 3: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+               2 | j = array(eval(input("Digite as jogadas: ")))
+        >>>    3 | i = 0
+               4 | s = 0
+
+  [3] Linha 4: Variável 's' com nome muito curto (≤4 chars)
+      Trecho  : s = ...
+      Contexto:
+               3 | i = 0
+        >>>    4 | s = 0
+               5 | while i < size(j):
+
+  [4] Linha 16: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+              15 | 		s = s + 10
+        >>>   16 | 	i = i + 1
+              17 | print(s)
+
+  [5] Linha 7: Variável 's' com nome muito curto (≤4 chars)
+      Trecho  : s = ...
+      Contexto:
+               6 | 	if j[i] == 1:
+        >>>    7 | 		s = s + 10
+               8 | 	elif j[i] == 2:
+
+  [6] Linha 9: Variável 's' com nome muito curto (≤4 chars)
+      Trecho  : s = ...
+      Contexto:
+               8 | 	elif j[i] == 2:
+        >>>    9 | 		s = s + 5
+              10 | 	elif j[i] == 4:
+
+  [7] Linha 11: Variável 's' com nome muito curto (≤4 chars)
+      Trecho  : s = ...
+      Contexto:
+              10 | 	elif j[i] == 4:
+        >>>   11 | 		s = s + 5
+              12 | 	elif j[i] == 5:
+
+  [8] Linha 13: Variável 's' com nome muito curto (≤4 chars)
+      Trecho  : s = ...
+      Contexto:
+              12 | 	elif j[i] == 5:
+        >>>   13 | 		s = s + 20
+              14 | 	elif j[i] == 6:
+
+  [9] Linha 15: Variável 's' com nome muito curto (≤4 chars)
+      Trecho  : s = ...
+      Contexto:
+              14 | 	elif j[i] == 6:
+        >>>   15 | 		s = s + 10
+              16 | 	i = i + 1
+
+======================================================================

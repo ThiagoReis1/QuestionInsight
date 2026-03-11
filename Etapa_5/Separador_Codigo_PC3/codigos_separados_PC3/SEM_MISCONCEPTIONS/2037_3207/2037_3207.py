@@ -1,0 +1,10 @@
+idade = int(input())
+n = 0
+if(idade >= -1):
+	while(idade!=-1):
+		if(idade<18):
+			n=n+1
+		else:
+			n=n+0
+		idade= int(input())
+	print(n)

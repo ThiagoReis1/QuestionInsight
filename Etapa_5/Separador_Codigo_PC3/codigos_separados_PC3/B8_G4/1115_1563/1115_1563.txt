@@ -1,0 +1,124 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1115_1563.py
+Questão  : 1115
+Aluno    : 1563
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | X = float(input("Salario atual: "))
+     2 | Y = int(input("Codigo do cargo: "))
+     3 | if ((X >= 0) and ((Y == 101) or (Y == 102) or (Y == 103) or (Y == 104))):
+     4 | 	if (Y == 101):
+     5 | 		Z = (X + X*(0.0080))
+     6 | 		Z = round(Z,2)
+     7 | 	else:
+     8 | 		if (Y == 102):
+     9 | 			Z = (X+X*(0.0065))
+    10 | 			Z = round(Z,2)
+    11 | 		else:
+    12 | 			if (Y == 103):
+    13 | 				Z = (X+X*( 0.0060))
+    14 | 				Z = round(Z,2)
+    15 | 			else: 
+    16 | 				if (Y == 104):
+    17 | 					Z = (X+X*(0.0055))
+    18 | 					Z = round(Z,2)
+    19 | 	print ("Entradas: R$ ", X, " e codigo ", Y)
+    20 | 	print ("Novo salario: R$ ", Z)
+    21 | else:
+    22 | 	print ("Entradas: R$ ", X, " e codigo ", Y)
+    23 | 	print ("Dado invalido")
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 12: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 12) / elif ... sem else
+      Contexto:
+              11 | 		else:
+        >>>   12 | 			if (Y == 103):
+              13 | 				Z = (X+X*( 0.0060))
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 10
+
+  [1] Linha 1: Variável 'X' com nome muito curto (≤4 chars)
+      Trecho  : X = ...
+      Contexto:
+        >>>    1 | X = float(input("Salario atual: "))
+               2 | Y = int(input("Codigo do cargo: "))
+
+  [2] Linha 2: Variável 'Y' com nome muito curto (≤4 chars)
+      Trecho  : Y = ...
+      Contexto:
+               1 | X = float(input("Salario atual: "))
+        >>>    2 | Y = int(input("Codigo do cargo: "))
+               3 | if ((X >= 0) and ((Y == 101) or (Y == 102) or (Y == 103) or (Y == 104))):
+
+  [3] Linha 5: Variável 'Z' com nome muito curto (≤4 chars)
+      Trecho  : Z = ...
+      Contexto:
+               4 | 	if (Y == 101):
+        >>>    5 | 		Z = (X + X*(0.0080))
+               6 | 		Z = round(Z,2)
+
+  [4] Linha 6: Variável 'Z' com nome muito curto (≤4 chars)
+      Trecho  : Z = ...
+      Contexto:
+               5 | 		Z = (X + X*(0.0080))
+        >>>    6 | 		Z = round(Z,2)
+               7 | 	else:
+
+  [5] Linha 9: Variável 'Z' com nome muito curto (≤4 chars)
+      Trecho  : Z = ...
+      Contexto:
+               8 | 		if (Y == 102):
+        >>>    9 | 			Z = (X+X*(0.0065))
+              10 | 			Z = round(Z,2)
+
+  [6] Linha 10: Variável 'Z' com nome muito curto (≤4 chars)
+      Trecho  : Z = ...
+      Contexto:
+               9 | 			Z = (X+X*(0.0065))
+        >>>   10 | 			Z = round(Z,2)
+              11 | 		else:
+
+  [7] Linha 13: Variável 'Z' com nome muito curto (≤4 chars)
+      Trecho  : Z = ...
+      Contexto:
+              12 | 			if (Y == 103):
+        >>>   13 | 				Z = (X+X*( 0.0060))
+              14 | 				Z = round(Z,2)
+
+  [8] Linha 14: Variável 'Z' com nome muito curto (≤4 chars)
+      Trecho  : Z = ...
+      Contexto:
+              13 | 				Z = (X+X*( 0.0060))
+        >>>   14 | 				Z = round(Z,2)
+              15 | 			else: 
+
+  [9] Linha 17: Variável 'Z' com nome muito curto (≤4 chars)
+      Trecho  : Z = ...
+      Contexto:
+              16 | 				if (Y == 104):
+        >>>   17 | 					Z = (X+X*(0.0055))
+              18 | 					Z = round(Z,2)
+
+  [10] Linha 18: Variável 'Z' com nome muito curto (≤4 chars)
+      Trecho  : Z = ...
+      Contexto:
+              17 | 					Z = (X+X*(0.0055))
+        >>>   18 | 					Z = round(Z,2)
+              19 | 	print ("Entradas: R$ ", X, " e codigo ", Y)
+
+======================================================================

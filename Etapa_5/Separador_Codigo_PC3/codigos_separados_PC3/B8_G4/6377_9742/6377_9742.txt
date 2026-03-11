@@ -1,0 +1,62 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 6377_9742.py
+Questão  : 6377
+Aluno    : 9742
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import *
+     2 | 
+     3 | n = input("N: ").upper().split(",")
+     4 | x = zeros(4, dtype=int)
+     5 | 
+     6 | for i in n:
+     7 | 	if i=="A":
+     8 | 		x[0]+=1
+     9 | 	elif i=="B":
+    10 | 		x[1]+=1
+    11 | 	elif i=="C":
+    12 | 		x[2]+=1
+    13 | 	elif i=="D":
+    14 | 		x[3]+=1
+    15 | 		
+    16 | print(x)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 11: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 11) / elif ... sem else
+      Contexto:
+              10 | 		x[1]+=1
+        >>>   11 | 	elif i=="C":
+              12 | 		x[2]+=1
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 2
+
+  [1] Linha 3: Variável 'n' com nome muito curto (≤4 chars)
+      Trecho  : n = ...
+      Contexto:
+               2 | 
+        >>>    3 | n = input("N: ").upper().split(",")
+               4 | x = zeros(4, dtype=int)
+
+  [2] Linha 4: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+               3 | n = input("N: ").upper().split(",")
+        >>>    4 | x = zeros(4, dtype=int)
+               5 | 
+
+======================================================================

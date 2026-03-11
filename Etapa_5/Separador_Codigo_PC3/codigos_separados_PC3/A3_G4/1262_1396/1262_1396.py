@@ -1,0 +1,16 @@
+from numpy import *
+from numpy import *
+
+p = float(input("Valor de p: "))
+x = array(eval(input("Valor de x: ")))
+y = array (eval(input("Valor de y: ")))
+h = 0 
+n = 0
+j = 0
+
+t = ((p) / (p - 1))
+xy = (1 * x - 1 * y)
+for i in xy :
+	n = n+ (abs(i)) ** t
+v = n ** (1 / t)
+print(round(v,6))

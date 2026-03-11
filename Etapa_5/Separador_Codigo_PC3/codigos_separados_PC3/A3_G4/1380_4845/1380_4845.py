@@ -1,0 +1,5 @@
+e = float(input("estimativas de carro: "))
+c = float(input("comprimento da base maior: "))
+s = float(input("comprimento da base menor: "))
+d = float(input("comprimento da altura: "))
+print(e*(c+s)/2)

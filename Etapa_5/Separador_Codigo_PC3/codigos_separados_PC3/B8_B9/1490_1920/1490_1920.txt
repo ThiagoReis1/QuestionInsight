@@ -1,0 +1,51 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1490_1920.py
+Questão  : 1490
+Aluno    : 1920
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B8, B9
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | #volume gasto
+     2 | volume = float(input("Volume(cm3):"))
+     3 | if(volume<=10.0):
+     4 | 	tarifa = 3.0
+     5 | 	taxa = 15.0
+     6 | elif(volume<=15.0 and volume >10.0):
+     7 | 	tarifa = 3.5
+     8 | 	taxa = 20.0	
+     9 | elif(volume<=20.0 and volume >15.0):
+    10 | 	tarifa = 4.0
+    11 | 	taxa = 25.0
+    12 | elif(volume>20):
+    13 | 	tarifa = 4.5
+    14 | 	taxa = 30.0	
+    15 | valor = volume * tarifa + taxa
+    16 | print(round(valor,2))
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 9: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 9) / elif ... sem else
+      Contexto:
+               8 | 	taxa = 20.0	
+        >>>    9 | elif(volume<=20.0 and volume >15.0):
+              10 | 	tarifa = 4.0
+
+▶ B9 — elif/else retestando condições já verificadas
+  Ocorrências: 1
+
+  [1] Linha 0: B9 detectado pelo VisitorMC3 (localização exata não mapeada)
+      Trecho  : —
+
+======================================================================

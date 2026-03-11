@@ -1,0 +1,62 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 6380_6458.py
+Questão  : 6380
+Aluno    : 6458
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | 
+     3 | c = input("qual a sequencia: ").upper().split(",")
+     4 | 
+     5 | v = zeros(4,dtype=int)
+     6 | 
+     7 | for i in range(size(c)):
+     8 | 	if c[i] =="E":
+     9 | 		v[0]+=1
+    10 | 	elif c[i] =="V":
+    11 | 		v[1]+=1
+    12 | 	elif c[i] == "A":
+    13 | 		v[2]+=1
+    14 | 	elif c[i] == "D":
+    15 | 		v[3]+=1
+    16 | print(v)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 12: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 12) / elif ... sem else
+      Contexto:
+              11 | 		v[1]+=1
+        >>>   12 | 	elif c[i] == "A":
+              13 | 		v[2]+=1
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 2
+
+  [1] Linha 3: Variável 'c' com nome muito curto (≤4 chars)
+      Trecho  : c = ...
+      Contexto:
+               2 | 
+        >>>    3 | c = input("qual a sequencia: ").upper().split(",")
+               4 | 
+
+  [2] Linha 5: Variável 'v' com nome muito curto (≤4 chars)
+      Trecho  : v = ...
+      Contexto:
+               4 | 
+        >>>    5 | v = zeros(4,dtype=int)
+               6 | 
+
+======================================================================

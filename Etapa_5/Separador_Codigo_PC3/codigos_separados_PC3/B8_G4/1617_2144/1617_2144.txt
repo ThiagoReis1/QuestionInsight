@@ -1,0 +1,181 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1617_2144.py
+Questão  : 1617
+Aluno    : 2144
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | 
+     3 | e = array(eval(input("Tipos de espada: ")))
+     4 | l = array(eval(input("Nível dos combatentes: ")))
+     5 | 
+     6 | n = size(e)
+     7 | Te = zeros( n , dtype = int)
+     8 | 
+     9 | t = 0
+    10 | k = 0
+    11 | 
+    12 | while (t < size(e)):
+    13 | 	if (e[t] == "CENOURA"):
+    14 | 		Te[k] = 2
+    15 | 		k = k + 1
+    16 | 	elif (e[t] == "FERRO"):
+    17 | 		Te[k] = 4
+    18 | 		k = k + 1
+    19 | 	elif(e[t] == "DWARVEN"):
+    20 | 		Te[k] = 8
+    21 | 		k = k + 1
+    22 | 	elif(e[t] == "ELVEN"):
+    23 | 		Te[k] = 11
+    24 | 		k = k + 1
+    25 | 	elif(e[t] == "DAEDRIC"):
+    26 | 		Te[k] = 14
+    27 | 		k = k + 1
+    28 | 	t = t + 1
+    29 | 
+    30 | i = 0
+    31 | dc = 0
+    32 | 
+    33 | while( i < size(Te)):
+    34 | 	dc = dc + (Te[i] * l[i])
+    35 | 	i = i + 1
+    36 | 	
+    37 | print(dc)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 22: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 22) / elif ... sem else
+      Contexto:
+              21 | 		k = k + 1
+        >>>   22 | 	elif(e[t] == "ELVEN"):
+              23 | 		Te[k] = 11
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 16
+
+  [1] Linha 3: Variável 'e' com nome muito curto (≤4 chars)
+      Trecho  : e = ...
+      Contexto:
+               2 | 
+        >>>    3 | e = array(eval(input("Tipos de espada: ")))
+               4 | l = array(eval(input("Nível dos combatentes: ")))
+
+  [2] Linha 4: Variável 'l' com nome muito curto (≤4 chars)
+      Trecho  : l = ...
+      Contexto:
+               3 | e = array(eval(input("Tipos de espada: ")))
+        >>>    4 | l = array(eval(input("Nível dos combatentes: ")))
+               5 | 
+
+  [3] Linha 6: Variável 'n' com nome muito curto (≤4 chars)
+      Trecho  : n = ...
+      Contexto:
+               5 | 
+        >>>    6 | n = size(e)
+               7 | Te = zeros( n , dtype = int)
+
+  [4] Linha 7: Variável 'Te' com nome muito curto (≤4 chars)
+      Trecho  : Te = ...
+      Contexto:
+               6 | n = size(e)
+        >>>    7 | Te = zeros( n , dtype = int)
+               8 | 
+
+  [5] Linha 9: Variável 't' com nome muito curto (≤4 chars)
+      Trecho  : t = ...
+      Contexto:
+               8 | 
+        >>>    9 | t = 0
+              10 | k = 0
+
+  [6] Linha 10: Variável 'k' com nome muito curto (≤4 chars)
+      Trecho  : k = ...
+      Contexto:
+               9 | t = 0
+        >>>   10 | k = 0
+              11 | 
+
+  [7] Linha 30: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+              29 | 
+        >>>   30 | i = 0
+              31 | dc = 0
+
+  [8] Linha 31: Variável 'dc' com nome muito curto (≤4 chars)
+      Trecho  : dc = ...
+      Contexto:
+              30 | i = 0
+        >>>   31 | dc = 0
+              32 | 
+
+  [9] Linha 28: Variável 't' com nome muito curto (≤4 chars)
+      Trecho  : t = ...
+      Contexto:
+              27 | 		k = k + 1
+        >>>   28 | 	t = t + 1
+              29 | 
+
+  [10] Linha 34: Variável 'dc' com nome muito curto (≤4 chars)
+      Trecho  : dc = ...
+      Contexto:
+              33 | while( i < size(Te)):
+        >>>   34 | 	dc = dc + (Te[i] * l[i])
+              35 | 	i = i + 1
+
+  [11] Linha 35: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+              34 | 	dc = dc + (Te[i] * l[i])
+        >>>   35 | 	i = i + 1
+              36 | 	
+
+  [12] Linha 15: Variável 'k' com nome muito curto (≤4 chars)
+      Trecho  : k = ...
+      Contexto:
+              14 | 		Te[k] = 2
+        >>>   15 | 		k = k + 1
+              16 | 	elif (e[t] == "FERRO"):
+
+  [13] Linha 18: Variável 'k' com nome muito curto (≤4 chars)
+      Trecho  : k = ...
+      Contexto:
+              17 | 		Te[k] = 4
+        >>>   18 | 		k = k + 1
+              19 | 	elif(e[t] == "DWARVEN"):
+
+  [14] Linha 21: Variável 'k' com nome muito curto (≤4 chars)
+      Trecho  : k = ...
+      Contexto:
+              20 | 		Te[k] = 8
+        >>>   21 | 		k = k + 1
+              22 | 	elif(e[t] == "ELVEN"):
+
+  [15] Linha 24: Variável 'k' com nome muito curto (≤4 chars)
+      Trecho  : k = ...
+      Contexto:
+              23 | 		Te[k] = 11
+        >>>   24 | 		k = k + 1
+              25 | 	elif(e[t] == "DAEDRIC"):
+
+  [16] Linha 27: Variável 'k' com nome muito curto (≤4 chars)
+      Trecho  : k = ...
+      Contexto:
+              26 | 		Te[k] = 14
+        >>>   27 | 		k = k + 1
+              28 | 	t = t + 1
+
+======================================================================

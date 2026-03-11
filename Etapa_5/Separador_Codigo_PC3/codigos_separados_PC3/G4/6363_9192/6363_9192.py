@@ -1,0 +1,7 @@
+from numpy import*
+
+N = int(input("Informe um numero: "))
+
+for i in range(N, 3, -1):
+	print(i)
+print("Fim da contagem regressiva!")

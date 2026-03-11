@@ -1,0 +1,5 @@
+preco=float(input("qual o preco do ingresso?"))
+quantidade=int(input("qual a quantidade de ingressos?"))
+desconto=float((preco)-((20/100)*preco))
+valortotal=(desconto * quantidade)
+print(round(valortotal,2))

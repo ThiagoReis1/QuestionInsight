@@ -1,0 +1,60 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 3180_4181.py
+Questão  : 3180
+Aluno    : 4181
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | tipo = array(eval(input("Sorotipo: ")))
+     3 | vt = zeros(4, dtype=int)
+     4 | 
+     5 | for i in tipo:
+     6 | 	if(i == 1):
+     7 | 		vt[0] = vt[0] + 1
+     8 | 	elif(i == 2):
+     9 | 		vt[1] = vt[1] + 1
+    10 | 	elif(i == 3):
+    11 | 		vt[2] = vt[2] + 1
+    12 | 	elif(i == 4):
+    13 | 		vt[3] = vt[3] + 1
+    14 | print(vt)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 10: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 10) / elif ... sem else
+      Contexto:
+               9 | 		vt[1] = vt[1] + 1
+        >>>   10 | 	elif(i == 3):
+              11 | 		vt[2] = vt[2] + 1
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 2
+
+  [1] Linha 2: Variável 'tipo' com nome muito curto (≤4 chars)
+      Trecho  : tipo = ...
+      Contexto:
+               1 | from numpy import*
+        >>>    2 | tipo = array(eval(input("Sorotipo: ")))
+               3 | vt = zeros(4, dtype=int)
+
+  [2] Linha 3: Variável 'vt' com nome muito curto (≤4 chars)
+      Trecho  : vt = ...
+      Contexto:
+               2 | tipo = array(eval(input("Sorotipo: ")))
+        >>>    3 | vt = zeros(4, dtype=int)
+               4 | 
+
+======================================================================

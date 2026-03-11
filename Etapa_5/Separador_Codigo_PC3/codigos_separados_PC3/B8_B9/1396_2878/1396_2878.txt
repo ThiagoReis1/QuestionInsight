@@ -1,0 +1,52 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1396_2878.py
+Questão  : 1396
+Aluno    : 2878
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B8, B9
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | valor_consumido = float(input("Digite o valor consumido: "))
+     2 | if(valor_consumido <= 300):
+     3 | 	
+     4 | 	gorjeta = ((10/100)* valor_consumido)
+     5 | 	vt = gorjeta + valor_consumido
+     6 | 	print(round(vt,2))
+     7 | 	
+     8 | elif(valor_consumido > 300):
+     9 | 	
+    10 | 	gorjeta_2 = ((6/100)*valor_consumido)
+    11 | 	vt2 = gorjeta_2 + valor_consumido
+    12 | 	print(round(vt2,2))
+    13 | 	
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 2: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 2) / elif ... sem else
+      Contexto:
+               1 | valor_consumido = float(input("Digite o valor consumido: "))
+        >>>    2 | if(valor_consumido <= 300):
+               3 | 	
+
+▶ B9 — elif/else retestando condições já verificadas
+  Ocorrências: 1
+
+  [1] Linha 8: elif retesta condição inversa do if da linha 2
+      Trecho  : if valor_consumido <= 300 ... elif valor_consumido > 300
+      Contexto:
+               7 | 	
+        >>>    8 | elif(valor_consumido > 300):
+               9 | 	
+
+======================================================================

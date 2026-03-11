@@ -1,0 +1,70 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1120_2372.py
+Questão  : 1120
+Aluno    : 2372
+Total MCs: 3
+
+⚠️  Misconceptions detectados: B8, E1, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | casa = input("Qual e a casa?")
+     2 | #print("Entradas:, vel, "km/h e", time, "h")
+     3 | if(casa != "Baratheon" and casa != "Targaryen" and casa != "Tyrell" and casa != "Stark" and casa != "Lannister" and casa != "Greyjoy" and casa != "Tully" and casa != "Arryn" and casa!= "Martell"):
+     4 | 	print("Entrada", casa, "invalida")
+     5 | elif(casa == "Baratheon"):
+     6 | 	print("Ponta Tempestade")
+     7 | elif(casa == "Targaryen"):
+     8 | 	print("Ilha do Dragao")
+     9 | elif(casa == "Tyrell"):
+    10 | 	print("Campina")
+    11 | elif(casa == "Stark"):
+    12 | 	print("Winterfell")
+    13 | elif(casa == "Lannister"):
+    14 | 	print("Rochedo Casterly")
+    15 | elif(casa == "Greyjoy"):
+    16 | 	print("Pyke")
+    17 | elif(casa == "Tully"):
+    18 | 	print("Correrio")
+    19 | elif(casa == "Arryn"):
+    20 | 	print("Ninho da Aguia")
+    21 | elif(casa == "Martell"):
+    22 | 	print("Dorne")
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 19: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 19) / elif ... sem else
+      Contexto:
+              18 | 	print("Correrio")
+        >>>   19 | elif(casa == "Arryn"):
+              20 | 	print("Ninho da Aguia")
+
+▶ E1 — Verificação desnecessária de todas as combinações possíveis
+  Ocorrências: 1
+
+  [1] Linha 3: 9 condições em um único if — verificação excessiva
+      Trecho  : casa != 'Baratheon' and casa != 'Targaryen' and (casa != 'Tyrell') and (casa != 'Stark') and (casa != 'Lannister') and (casa != 'Greyjoy') and (casa != 'Tully') and (casa != 'Arryn') and (casa != 'Martell')
+      Contexto:
+               2 | #print("Entradas:, vel, "km/h e", time, "h")
+        >>>    3 | if(casa != "Baratheon" and casa != "Targaryen" and casa != "Tyrell" and casa != "Stark" and casa != "Lannister" and casa != "Greyjoy" and casa != "Tully" and casa != "Arryn" and casa!= "Martell"):
+               4 | 	print("Entrada", casa, "invalida")
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 1
+
+  [1] Linha 1: Variável 'casa' com nome muito curto (≤4 chars)
+      Trecho  : casa = ...
+      Contexto:
+        >>>    1 | casa = input("Qual e a casa?")
+               2 | #print("Entradas:, vel, "km/h e", time, "h")
+
+======================================================================

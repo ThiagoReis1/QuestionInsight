@@ -1,0 +1,181 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1615_2813.py
+Questão  : 1615
+Aluno    : 2813
+Total MCs: 2
+
+⚠️  Misconceptions detectados: A3, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | v1 = array(eval(input("primeiro: ")))
+     3 | v2 = array(eval(input("segundo: ")))
+     4 | 
+     5 | i = 0
+     6 | c = 0
+     7 | t = 0
+     8 | b = 0
+     9 | 
+    10 | while(i <size(v1)):
+    11 | 	if(v1[i]== 1):
+    12 | 		t = t + 40
+    13 | 	if(v1[i] == 2):
+    14 | 		t = t + 20
+    15 | 	if(v1[i] == 3):
+    16 | 		t = t + 10
+    17 | 	if(v1[i] >= 4):
+    18 | 		t = t + 0
+    19 | 	i = i+1
+    20 | print(t)		
+    21 | while(c <size(v2)):
+    22 | 	if(v2[c]== 1):
+    23 | 		t = t + 40
+    24 | 	if(v2[c] == 2):
+    25 | 		t = t + 20
+    26 | 	if(v2[c] == 3):
+    27 | 		t = t + 10
+    28 | 	if(v2[c] >= 4):
+    29 | 		t = t + 0
+    30 | 	c = c+1
+    31 | 
+    32 | if(v1<v2):
+    33 | 	print("JOGADOR UM")
+    34 | if(v2>v1):
+    35 | 	print("JOGADOR DOIS")
+    36 | if(v2 == v1):
+    37 | 	print("EMPATE")
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 1
+
+  [1] Linha 8: Variável 'b' declarada mas nunca utilizada
+      Trecho  : b = ...
+      Contexto:
+               7 | t = 0
+        >>>    8 | b = 0
+               9 | 
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 16
+
+  [1] Linha 2: Variável 'v1' com nome muito curto (≤4 chars)
+      Trecho  : v1 = ...
+      Contexto:
+               1 | from numpy import*
+        >>>    2 | v1 = array(eval(input("primeiro: ")))
+               3 | v2 = array(eval(input("segundo: ")))
+
+  [2] Linha 3: Variável 'v2' com nome muito curto (≤4 chars)
+      Trecho  : v2 = ...
+      Contexto:
+               2 | v1 = array(eval(input("primeiro: ")))
+        >>>    3 | v2 = array(eval(input("segundo: ")))
+               4 | 
+
+  [3] Linha 5: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+               4 | 
+        >>>    5 | i = 0
+               6 | c = 0
+
+  [4] Linha 6: Variável 'c' com nome muito curto (≤4 chars)
+      Trecho  : c = ...
+      Contexto:
+               5 | i = 0
+        >>>    6 | c = 0
+               7 | t = 0
+
+  [5] Linha 7: Variável 't' com nome muito curto (≤4 chars)
+      Trecho  : t = ...
+      Contexto:
+               6 | c = 0
+        >>>    7 | t = 0
+               8 | b = 0
+
+  [6] Linha 8: Variável 'b' com nome muito curto (≤4 chars)
+      Trecho  : b = ...
+      Contexto:
+               7 | t = 0
+        >>>    8 | b = 0
+               9 | 
+
+  [7] Linha 19: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+              18 | 		t = t + 0
+        >>>   19 | 	i = i+1
+              20 | print(t)		
+
+  [8] Linha 30: Variável 'c' com nome muito curto (≤4 chars)
+      Trecho  : c = ...
+      Contexto:
+              29 | 		t = t + 0
+        >>>   30 | 	c = c+1
+              31 | 
+
+  [9] Linha 12: Variável 't' com nome muito curto (≤4 chars)
+      Trecho  : t = ...
+      Contexto:
+              11 | 	if(v1[i]== 1):
+        >>>   12 | 		t = t + 40
+              13 | 	if(v1[i] == 2):
+
+  [10] Linha 14: Variável 't' com nome muito curto (≤4 chars)
+      Trecho  : t = ...
+      Contexto:
+              13 | 	if(v1[i] == 2):
+        >>>   14 | 		t = t + 20
+              15 | 	if(v1[i] == 3):
+
+  [11] Linha 16: Variável 't' com nome muito curto (≤4 chars)
+      Trecho  : t = ...
+      Contexto:
+              15 | 	if(v1[i] == 3):
+        >>>   16 | 		t = t + 10
+              17 | 	if(v1[i] >= 4):
+
+  [12] Linha 18: Variável 't' com nome muito curto (≤4 chars)
+      Trecho  : t = ...
+      Contexto:
+              17 | 	if(v1[i] >= 4):
+        >>>   18 | 		t = t + 0
+              19 | 	i = i+1
+
+  [13] Linha 23: Variável 't' com nome muito curto (≤4 chars)
+      Trecho  : t = ...
+      Contexto:
+              22 | 	if(v2[c]== 1):
+        >>>   23 | 		t = t + 40
+              24 | 	if(v2[c] == 2):
+
+  [14] Linha 25: Variável 't' com nome muito curto (≤4 chars)
+      Trecho  : t = ...
+      Contexto:
+              24 | 	if(v2[c] == 2):
+        >>>   25 | 		t = t + 20
+              26 | 	if(v2[c] == 3):
+
+  [15] Linha 27: Variável 't' com nome muito curto (≤4 chars)
+      Trecho  : t = ...
+      Contexto:
+              26 | 	if(v2[c] == 3):
+        >>>   27 | 		t = t + 10
+              28 | 	if(v2[c] >= 4):
+
+  [16] Linha 29: Variável 't' com nome muito curto (≤4 chars)
+      Trecho  : t = ...
+      Contexto:
+              28 | 	if(v2[c] >= 4):
+        >>>   29 | 		t = t + 0
+              30 | 	c = c+1
+
+======================================================================

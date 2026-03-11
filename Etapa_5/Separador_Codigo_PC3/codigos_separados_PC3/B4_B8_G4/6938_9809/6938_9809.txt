@@ -1,0 +1,97 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 6938_9809.py
+Questão  : 6938
+Aluno    : 9809
+Total MCs: 3
+
+⚠️  Misconceptions detectados: B4, B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | v = float(input())
+     2 | c = input().upper()
+     3 | if (c=="D"):
+     4 | 	d = v*0.11
+     5 | 	v -= d
+     6 | elif (c=="P"):
+     7 | 	d = v*0.11
+     8 | 	v -= d
+     9 | elif (c=="C"):
+    10 | 	q = int(input())
+    11 | 	if (q==2):
+    12 | 		j = v*0.06
+    13 | 		v += j
+    14 | print(round(v,2))
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B4 — Comandos repetidos dentro de blocos if-elif-else
+  Ocorrências: 1
+
+  [1] Linha 6: Bloco idêntico ao da linha 3
+      Trecho  : d = v * 0.11
+      Contexto:
+               5 | 	v -= d
+        >>>    6 | elif (c=="P"):
+               7 | 	d = v*0.11
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 6: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 6) / elif ... sem else
+      Contexto:
+               5 | 	v -= d
+        >>>    6 | elif (c=="P"):
+               7 | 	d = v*0.11
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 6
+
+  [1] Linha 1: Variável 'v' com nome muito curto (≤4 chars)
+      Trecho  : v = ...
+      Contexto:
+        >>>    1 | v = float(input())
+               2 | c = input().upper()
+
+  [2] Linha 2: Variável 'c' com nome muito curto (≤4 chars)
+      Trecho  : c = ...
+      Contexto:
+               1 | v = float(input())
+        >>>    2 | c = input().upper()
+               3 | if (c=="D"):
+
+  [3] Linha 4: Variável 'd' com nome muito curto (≤4 chars)
+      Trecho  : d = ...
+      Contexto:
+               3 | if (c=="D"):
+        >>>    4 | 	d = v*0.11
+               5 | 	v -= d
+
+  [4] Linha 7: Variável 'd' com nome muito curto (≤4 chars)
+      Trecho  : d = ...
+      Contexto:
+               6 | elif (c=="P"):
+        >>>    7 | 	d = v*0.11
+               8 | 	v -= d
+
+  [5] Linha 10: Variável 'q' com nome muito curto (≤4 chars)
+      Trecho  : q = ...
+      Contexto:
+               9 | elif (c=="C"):
+        >>>   10 | 	q = int(input())
+              11 | 	if (q==2):
+
+  [6] Linha 12: Variável 'j' com nome muito curto (≤4 chars)
+      Trecho  : j = ...
+      Contexto:
+              11 | 	if (q==2):
+        >>>   12 | 		j = v*0.06
+              13 | 		v += j
+
+======================================================================

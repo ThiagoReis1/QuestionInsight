@@ -1,0 +1,123 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 3593_8756.py
+Questão  : 3593
+Aluno    : 8756
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B4, B8
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import *
+     2 | 
+     3 | dado = array(eval(input()))
+     4 | pontos = 200
+     5 | i = 0
+     6 | 
+     7 | while i < size(dado):
+     8 | 	if dado[i] == 1:
+     9 | 		pontos = pontos / 2
+    10 | 	elif dado[i] == 2:
+    11 | 		pontos = pontos * 3
+    12 | 	elif dado[i] == 3:
+    13 | 		pontos = pontos / 2
+    14 | 	elif dado[i] == 4:
+    15 | 		pontos = pontos * 3
+    16 | 	elif dado[i] == 5:
+    17 | 		pontos = pontos / 2
+    18 | 	elif dado[i] == 6:
+    19 | 		pontos = pontos * 3
+    20 | 	i = i + 1
+    21 | print(round(pontos,2))
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B4 — Comandos repetidos dentro de blocos if-elif-else
+  Ocorrências: 10
+
+  [1] Linha 12: Bloco idêntico ao da linha 8
+      Trecho  : pontos = pontos / 2
+      Contexto:
+              11 | 		pontos = pontos * 3
+        >>>   12 | 	elif dado[i] == 3:
+              13 | 		pontos = pontos / 2
+
+  [2] Linha 14: Bloco idêntico ao da linha 10
+      Trecho  : pontos = pontos * 3
+      Contexto:
+              13 | 		pontos = pontos / 2
+        >>>   14 | 	elif dado[i] == 4:
+              15 | 		pontos = pontos * 3
+
+  [3] Linha 16: Bloco idêntico ao da linha 8
+      Trecho  : pontos = pontos / 2
+      Contexto:
+              15 | 		pontos = pontos * 3
+        >>>   16 | 	elif dado[i] == 5:
+              17 | 		pontos = pontos / 2
+
+  [4] Linha 18: Bloco idêntico ao da linha 10
+      Trecho  : pontos = pontos * 3
+      Contexto:
+              17 | 		pontos = pontos / 2
+        >>>   18 | 	elif dado[i] == 6:
+              19 | 		pontos = pontos * 3
+
+  [5] Linha 14: Bloco idêntico ao da linha 10
+      Trecho  : pontos = pontos * 3
+      Contexto:
+              13 | 		pontos = pontos / 2
+        >>>   14 | 	elif dado[i] == 4:
+              15 | 		pontos = pontos * 3
+
+  [6] Linha 16: Bloco idêntico ao da linha 12
+      Trecho  : pontos = pontos / 2
+      Contexto:
+              15 | 		pontos = pontos * 3
+        >>>   16 | 	elif dado[i] == 5:
+              17 | 		pontos = pontos / 2
+
+  [7] Linha 18: Bloco idêntico ao da linha 10
+      Trecho  : pontos = pontos * 3
+      Contexto:
+              17 | 		pontos = pontos / 2
+        >>>   18 | 	elif dado[i] == 6:
+              19 | 		pontos = pontos * 3
+
+  [8] Linha 16: Bloco idêntico ao da linha 12
+      Trecho  : pontos = pontos / 2
+      Contexto:
+              15 | 		pontos = pontos * 3
+        >>>   16 | 	elif dado[i] == 5:
+              17 | 		pontos = pontos / 2
+
+  [9] Linha 18: Bloco idêntico ao da linha 14
+      Trecho  : pontos = pontos * 3
+      Contexto:
+              17 | 		pontos = pontos / 2
+        >>>   18 | 	elif dado[i] == 6:
+              19 | 		pontos = pontos * 3
+
+  [10] Linha 18: Bloco idêntico ao da linha 14
+      Trecho  : pontos = pontos * 3
+      Contexto:
+              17 | 		pontos = pontos / 2
+        >>>   18 | 	elif dado[i] == 6:
+              19 | 		pontos = pontos * 3
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 16: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 16) / elif ... sem else
+      Contexto:
+              15 | 		pontos = pontos * 3
+        >>>   16 | 	elif dado[i] == 5:
+              17 | 		pontos = pontos / 2
+
+======================================================================

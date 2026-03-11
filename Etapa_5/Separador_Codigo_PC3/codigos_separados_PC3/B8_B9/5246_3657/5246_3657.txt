@@ -1,0 +1,98 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 5246_3657.py
+Questão  : 5246
+Aluno    : 3657
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B8, B9
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | idade=int(input(" "))
+     2 | peso=float(input(" "))
+     3 | if((idade>130 or idade<0) or (peso<0 or peso>550.0)):
+     4 | 	print("Entradas:",idade,"anos","e",round(peso,1),"kg")
+     5 | 	print("Dados invalidos")
+     6 | elif(peso<=60):
+     7 | 	if(idade<=20):
+     8 | 		print("Entradas:", idade, "anos", "e", round(peso,1), "kg")
+     9 | 		print("Grupo de risco:", 9)
+    10 | 	elif(idade>20 and idade<=50):
+    11 | 		print("Entradas:", idade, "anos","e", round(peso,1), "kg")
+    12 | 		print("Grupo de risco:",6)
+    13 | 	elif(idade>50):
+    14 | 		print("Entradas:",idade,"anos","e",round(peso,1),"kg")
+    15 | 		print("Grupo de risco:",3)
+    16 | elif(peso>60 and peso<=90 ):
+    17 | 	if(idade<=20):
+    18 | 		print("Entradas:", idade, "anos","e", round(peso,1), "kg")
+    19 | 		print("Grupo de risco:", 8)
+    20 | 	elif(idade>20 and idade<=50):
+    21 | 		print("Entradas:",idade,"anos","e",round(peso,1),"kg")
+    22 | 		print("Grupo de risco:",5)
+    23 | 	elif(idade>50):
+    24 | 		print("Entradas:",idade,"anos","e",round(peso,1),"kg")
+    25 | 		print("Grupo de risco:",2)
+    26 | elif(peso>90):
+    27 | 	if(idade<=20):
+    28 | 		print("Entradas:",idade,"anos","e",round(peso,1),"kg")
+    29 | 		print("Grupo de risco:",7)
+    30 | 	elif(idade>20 and idade<=50):
+    31 | 		print("Entradas:",idade,"anos","e",round(peso,1),"kg")
+    32 | 		print("Grupo de risco",4)
+    33 | 	elif(idade>50):
+    34 | 		print("Entradas:",idade,"anos","e",round(peso,1),"kg")
+    35 | 		print("Grupo de risco",1)
+    36 | 	
+    37 | 		
+    38 | 		
+    39 | 		
+    40 | 	
+    41 | 		
+    42 | 	
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 4
+
+  [1] Linha 16: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 16) / elif ... sem else
+      Contexto:
+              15 | 		print("Grupo de risco:",3)
+        >>>   16 | elif(peso>60 and peso<=90 ):
+              17 | 	if(idade<=20):
+
+  [2] Linha 10: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 10) / elif ... sem else
+      Contexto:
+               9 | 		print("Grupo de risco:", 9)
+        >>>   10 | 	elif(idade>20 and idade<=50):
+              11 | 		print("Entradas:", idade, "anos","e", round(peso,1), "kg")
+
+  [3] Linha 20: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 20) / elif ... sem else
+      Contexto:
+              19 | 		print("Grupo de risco:", 8)
+        >>>   20 | 	elif(idade>20 and idade<=50):
+              21 | 		print("Entradas:",idade,"anos","e",round(peso,1),"kg")
+
+  [4] Linha 30: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 30) / elif ... sem else
+      Contexto:
+              29 | 		print("Grupo de risco:",7)
+        >>>   30 | 	elif(idade>20 and idade<=50):
+              31 | 		print("Entradas:",idade,"anos","e",round(peso,1),"kg")
+
+▶ B9 — elif/else retestando condições já verificadas
+  Ocorrências: 1
+
+  [1] Linha 0: B9 detectado pelo VisitorMC3 (localização exata não mapeada)
+      Trecho  : —
+
+======================================================================

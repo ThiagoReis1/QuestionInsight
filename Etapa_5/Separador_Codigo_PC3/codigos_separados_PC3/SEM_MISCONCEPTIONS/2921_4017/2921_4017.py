@@ -1,0 +1,5 @@
+m1=float(input("preco do primeiro jogo: "))
+m2=float(input("preco do segundo jogo: "))
+desconto=(25)
+total=m2-(m2*(desconto25)
+print(round(m1,total,2))

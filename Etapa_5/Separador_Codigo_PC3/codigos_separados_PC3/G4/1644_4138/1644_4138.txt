@@ -1,0 +1,85 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1644_4138.py
+Questão  : 1644
+Aluno    : 4138
+Total MCs: 1
+
+⚠️  Misconceptions detectados: G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import *
+     2 | 
+     3 | v = array(eval(input("insira as notas:")))
+     4 | 
+     5 | reprov = 0
+     6 | for i in range(size(v)):
+     7 | 	if(v[i] < 5):
+     8 | 		reprov = reprov + 1
+     9 | print(reprov)		
+    10 | cont = zeros(reprov,dtype = int)
+    11 | j = 0
+    12 | y = 0
+    13 | for i in range(size(v)):
+    14 | 	if(v[i] < 5):
+    15 | 		cont[j] = y
+    16 | 		j = j + 1
+    17 | 	y = y + 1
+    18 | 
+    19 | print(cont)
+    20 | 		
+    21 | 	
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 6
+
+  [1] Linha 3: Variável 'v' com nome muito curto (≤4 chars)
+      Trecho  : v = ...
+      Contexto:
+               2 | 
+        >>>    3 | v = array(eval(input("insira as notas:")))
+               4 | 
+
+  [2] Linha 10: Variável 'cont' com nome muito curto (≤4 chars)
+      Trecho  : cont = ...
+      Contexto:
+               9 | print(reprov)		
+        >>>   10 | cont = zeros(reprov,dtype = int)
+              11 | j = 0
+
+  [3] Linha 11: Variável 'j' com nome muito curto (≤4 chars)
+      Trecho  : j = ...
+      Contexto:
+              10 | cont = zeros(reprov,dtype = int)
+        >>>   11 | j = 0
+              12 | y = 0
+
+  [4] Linha 12: Variável 'y' com nome muito curto (≤4 chars)
+      Trecho  : y = ...
+      Contexto:
+              11 | j = 0
+        >>>   12 | y = 0
+              13 | for i in range(size(v)):
+
+  [5] Linha 17: Variável 'y' com nome muito curto (≤4 chars)
+      Trecho  : y = ...
+      Contexto:
+              16 | 		j = j + 1
+        >>>   17 | 	y = y + 1
+              18 | 
+
+  [6] Linha 16: Variável 'j' com nome muito curto (≤4 chars)
+      Trecho  : j = ...
+      Contexto:
+              15 | 		cont[j] = y
+        >>>   16 | 		j = j + 1
+              17 | 	y = y + 1
+
+======================================================================

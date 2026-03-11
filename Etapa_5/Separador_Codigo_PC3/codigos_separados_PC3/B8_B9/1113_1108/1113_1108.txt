@@ -1,0 +1,85 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1113_1108.py
+Questão  : 1113
+Aluno    : 1108
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B8, B9
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | idade = int(input())
+     2 | peso = float(input())
+     3 | cond1 = (idade >= 0 and idade < 130)
+     4 | cond2 = (peso > 0.0 and peso < 550.0)
+     5 | 
+     6 | if (cond1 and cond2):
+     7 | 	if (idade <= 20):
+     8 | 		if (peso <= 60):
+     9 | 			grupo = "9"
+    10 | 		elif (peso > 60 and peso <= 90):
+    11 | 			grupo = "8"
+    12 | 		elif (peso > 90):
+    13 | 			grupo = "7"
+    14 | 	elif (idade > 20 and idade <= 50):
+    15 | 		if (peso <= 60):
+    16 | 			grupo = "6"
+    17 | 		elif (peso > 60 and peso <= 90):
+    18 | 			grupo = "5"
+    19 | 		elif (peso > 90):
+    20 | 			grupo = "4"
+    21 | 	else:
+    22 | 		if (peso <= 60):
+    23 | 			grupo = "3"
+    24 | 		elif (peso > 60 and peso <= 90):
+    25 | 			grupo = "2"
+    26 | 		elif (peso > 90):
+    27 | 			grupo = "1"
+    28 | 	print("Entradas:", idade, "anos e", peso ,"kg")
+    29 | 	print("Grupo de risco:", grupo)
+    30 | 	
+    31 | else:
+    32 | 	print("Entradas:", idade, "anos e", peso ,"kg")
+    33 | 	print("Dados invalidos")
+    34 | 	
+    35 | 
+    36 | 	
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 3
+
+  [1] Linha 10: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 10) / elif ... sem else
+      Contexto:
+               9 | 			grupo = "9"
+        >>>   10 | 		elif (peso > 60 and peso <= 90):
+              11 | 			grupo = "8"
+
+  [2] Linha 17: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 17) / elif ... sem else
+      Contexto:
+              16 | 			grupo = "6"
+        >>>   17 | 		elif (peso > 60 and peso <= 90):
+              18 | 			grupo = "5"
+
+  [3] Linha 24: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 24) / elif ... sem else
+      Contexto:
+              23 | 			grupo = "3"
+        >>>   24 | 		elif (peso > 60 and peso <= 90):
+              25 | 			grupo = "2"
+
+▶ B9 — elif/else retestando condições já verificadas
+  Ocorrências: 1
+
+  [1] Linha 0: B9 detectado pelo VisitorMC3 (localização exata não mapeada)
+      Trecho  : —
+
+======================================================================

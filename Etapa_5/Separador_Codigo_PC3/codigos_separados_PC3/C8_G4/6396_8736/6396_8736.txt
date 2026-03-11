@@ -1,0 +1,71 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 6396_8736.py
+Questão  : 6396
+Aluno    : 8736
+Total MCs: 2
+
+⚠️  Misconceptions detectados: C8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import *
+     2 | 
+     3 | vetor = array(eval(input("Vetor : ")))
+     4 | v = zeros(size(vetor),dtype = int)
+     5 | i = 0
+     6 | 
+     7 | for x in vetor:
+     8 | 	x = x * 2
+     9 | 	v[i] = x
+    10 | 	i = i + 1
+    11 | print(v)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ C8 — Loop for com sua variável de iteração sobrescrita
+  Ocorrências: 1
+
+  [1] Linha 8: Variável de iteração 'x' sobrescrita no loop
+      Trecho  : x = x * 2
+      Contexto:
+               7 | for x in vetor:
+        >>>    8 | 	x = x * 2
+               9 | 	v[i] = x
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 4
+
+  [1] Linha 4: Variável 'v' com nome muito curto (≤4 chars)
+      Trecho  : v = ...
+      Contexto:
+               3 | vetor = array(eval(input("Vetor : ")))
+        >>>    4 | v = zeros(size(vetor),dtype = int)
+               5 | i = 0
+
+  [2] Linha 5: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+               4 | v = zeros(size(vetor),dtype = int)
+        >>>    5 | i = 0
+               6 | 
+
+  [3] Linha 8: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+               7 | for x in vetor:
+        >>>    8 | 	x = x * 2
+               9 | 	v[i] = x
+
+  [4] Linha 10: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+               9 | 	v[i] = x
+        >>>   10 | 	i = i + 1
+              11 | print(v)
+
+======================================================================

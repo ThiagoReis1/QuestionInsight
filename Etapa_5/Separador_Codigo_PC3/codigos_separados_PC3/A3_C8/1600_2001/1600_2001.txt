@@ -1,0 +1,57 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1600_2001.py
+Questão  : 1600
+Aluno    : 2001
+Total MCs: 2
+
+⚠️  Misconceptions detectados: A3, C8
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from math import * 
+     2 | from numpy import *
+     3 | from numpy.linalg import *
+     4 | 
+     5 | vetor = array(eval(input("Digite os custos: ")))
+     6 | 
+     7 | i = 0
+     8 | x = 0 
+     9 | 
+    10 | for i in range(size(vetor)):
+    11 | 	if vetor[i] > 80:
+    12 | 		vetor[i] = vetor[i] * 0,75
+    13 | 	else:
+    14 | 		vetor[i] = vetor[i]
+    15 | 	i = i + 1	
+    16 | 
+    17 | print (sum(vetor))
+    18 | 	
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 1
+
+  [1] Linha 8: Variável 'x' declarada mas nunca utilizada
+      Trecho  : x = ...
+      Contexto:
+               7 | i = 0
+        >>>    8 | x = 0 
+               9 | 
+
+▶ C8 — Loop for com sua variável de iteração sobrescrita
+  Ocorrências: 1
+
+  [1] Linha 15: Variável de iteração 'i' sobrescrita no loop
+      Trecho  : i = i + 1
+      Contexto:
+              14 | 		vetor[i] = vetor[i]
+        >>>   15 | 	i = i + 1	
+              16 | 
+
+======================================================================

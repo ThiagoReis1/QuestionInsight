@@ -1,0 +1,193 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 6312_8414.py
+Questão  : 6312
+Aluno    : 8414
+Total MCs: 2
+
+⚠️  Misconceptions detectados: A3, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | 
+     3 | x = input("").upper()
+     4 | B = 3.75
+     5 | C = 7.90
+     6 | E = 9.85
+     7 | i = 0
+     8 | temp = 0
+     9 | cont = 0
+    10 | b = 0
+    11 | c = 0
+    12 | e = 0
+    13 | acum = 0
+    14 | 
+    15 | while i < len(x): 
+    16 | 	if x[i] == "B": 
+    17 | 		acum = acum + B
+    18 | 		b = b + 1
+    19 | 		
+    20 | 	if x[i] == "C":
+    21 | 		acum = acum + C
+    22 | 		c = c + 1
+    23 | 		
+    24 | 	if x[i] == "E":
+    25 | 		acum = acum + E
+    26 | 		e = e + 1
+    27 | 	i = i + 1
+    28 | print(round(acum, 2), b, c, e)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 2
+
+  [1] Linha 8: Variável 'temp' declarada mas nunca utilizada
+      Trecho  : temp = ...
+      Contexto:
+               7 | i = 0
+        >>>    8 | temp = 0
+               9 | cont = 0
+
+  [2] Linha 9: Variável 'cont' declarada mas nunca utilizada
+      Trecho  : cont = ...
+      Contexto:
+               8 | temp = 0
+        >>>    9 | cont = 0
+              10 | b = 0
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 18
+
+  [1] Linha 3: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+               2 | 
+        >>>    3 | x = input("").upper()
+               4 | B = 3.75
+
+  [2] Linha 4: Variável 'B' com nome muito curto (≤4 chars)
+      Trecho  : B = ...
+      Contexto:
+               3 | x = input("").upper()
+        >>>    4 | B = 3.75
+               5 | C = 7.90
+
+  [3] Linha 5: Variável 'C' com nome muito curto (≤4 chars)
+      Trecho  : C = ...
+      Contexto:
+               4 | B = 3.75
+        >>>    5 | C = 7.90
+               6 | E = 9.85
+
+  [4] Linha 6: Variável 'E' com nome muito curto (≤4 chars)
+      Trecho  : E = ...
+      Contexto:
+               5 | C = 7.90
+        >>>    6 | E = 9.85
+               7 | i = 0
+
+  [5] Linha 7: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+               6 | E = 9.85
+        >>>    7 | i = 0
+               8 | temp = 0
+
+  [6] Linha 8: Variável 'temp' com nome muito curto (≤4 chars)
+      Trecho  : temp = ...
+      Contexto:
+               7 | i = 0
+        >>>    8 | temp = 0
+               9 | cont = 0
+
+  [7] Linha 9: Variável 'cont' com nome muito curto (≤4 chars)
+      Trecho  : cont = ...
+      Contexto:
+               8 | temp = 0
+        >>>    9 | cont = 0
+              10 | b = 0
+
+  [8] Linha 10: Variável 'b' com nome muito curto (≤4 chars)
+      Trecho  : b = ...
+      Contexto:
+               9 | cont = 0
+        >>>   10 | b = 0
+              11 | c = 0
+
+  [9] Linha 11: Variável 'c' com nome muito curto (≤4 chars)
+      Trecho  : c = ...
+      Contexto:
+              10 | b = 0
+        >>>   11 | c = 0
+              12 | e = 0
+
+  [10] Linha 12: Variável 'e' com nome muito curto (≤4 chars)
+      Trecho  : e = ...
+      Contexto:
+              11 | c = 0
+        >>>   12 | e = 0
+              13 | acum = 0
+
+  [11] Linha 13: Variável 'acum' com nome muito curto (≤4 chars)
+      Trecho  : acum = ...
+      Contexto:
+              12 | e = 0
+        >>>   13 | acum = 0
+              14 | 
+
+  [12] Linha 27: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+              26 | 		e = e + 1
+        >>>   27 | 	i = i + 1
+              28 | print(round(acum, 2), b, c, e)
+
+  [13] Linha 17: Variável 'acum' com nome muito curto (≤4 chars)
+      Trecho  : acum = ...
+      Contexto:
+              16 | 	if x[i] == "B": 
+        >>>   17 | 		acum = acum + B
+              18 | 		b = b + 1
+
+  [14] Linha 18: Variável 'b' com nome muito curto (≤4 chars)
+      Trecho  : b = ...
+      Contexto:
+              17 | 		acum = acum + B
+        >>>   18 | 		b = b + 1
+              19 | 		
+
+  [15] Linha 21: Variável 'acum' com nome muito curto (≤4 chars)
+      Trecho  : acum = ...
+      Contexto:
+              20 | 	if x[i] == "C":
+        >>>   21 | 		acum = acum + C
+              22 | 		c = c + 1
+
+  [16] Linha 22: Variável 'c' com nome muito curto (≤4 chars)
+      Trecho  : c = ...
+      Contexto:
+              21 | 		acum = acum + C
+        >>>   22 | 		c = c + 1
+              23 | 		
+
+  [17] Linha 25: Variável 'acum' com nome muito curto (≤4 chars)
+      Trecho  : acum = ...
+      Contexto:
+              24 | 	if x[i] == "E":
+        >>>   25 | 		acum = acum + E
+              26 | 		e = e + 1
+
+  [18] Linha 26: Variável 'e' com nome muito curto (≤4 chars)
+      Trecho  : e = ...
+      Contexto:
+              25 | 		acum = acum + E
+        >>>   26 | 		e = e + 1
+              27 | 	i = i + 1
+
+======================================================================

@@ -1,0 +1,62 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 5237_7204.py
+Questão  : 5237
+Aluno    : 7204
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B4, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | x = int(input("inteiro 1: "))
+     2 | y = int(input("inteiro 2: "))
+     3 | z = int(input("inteiro 3: "))
+     4 | 
+     5 | if x%2 == 0 and y%2 == 0 and z%2 == 0:
+     6 | 	print("SIM")
+     7 | elif (x%2 == 0 and y%2 == 0) or (y%2 == 0 and z%2 == 0) or (x%2 == 0 and z%2 == 0):
+     8 | 	print("SIM")
+     9 | else:
+    10 | 	print("NAO")
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B4 — Comandos repetidos dentro de blocos if-elif-else
+  Ocorrências: 1
+
+  [1] Linha 7: Bloco idêntico ao da linha 5
+      Trecho  : print('SIM')
+      Contexto:
+               6 | 	print("SIM")
+        >>>    7 | elif (x%2 == 0 and y%2 == 0) or (y%2 == 0 and z%2 == 0) or (x%2 == 0 and z%2 == 0):
+               8 | 	print("SIM")
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 3
+
+  [1] Linha 1: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+        >>>    1 | x = int(input("inteiro 1: "))
+               2 | y = int(input("inteiro 2: "))
+
+  [2] Linha 2: Variável 'y' com nome muito curto (≤4 chars)
+      Trecho  : y = ...
+      Contexto:
+               1 | x = int(input("inteiro 1: "))
+        >>>    2 | y = int(input("inteiro 2: "))
+               3 | z = int(input("inteiro 3: "))
+
+  [3] Linha 3: Variável 'z' com nome muito curto (≤4 chars)
+      Trecho  : z = ...
+      Contexto:
+               2 | y = int(input("inteiro 2: "))
+        >>>    3 | z = int(input("inteiro 3: "))
+               4 | 
+
+======================================================================

@@ -1,0 +1,150 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1265_1104.py
+Questão  : 1265
+Aluno    : 1104
+Total MCs: 2
+
+⚠️  Misconceptions detectados: A3, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | from math import*
+     3 | n=float(input())
+     4 | x=array(eval(input()))
+     5 | y=array(eval(input()))
+     6 | t=n/(n-1)
+     7 | i=0
+     8 | sxy=0
+     9 | while (i<size(x)):
+    10 | 	mx=abs(x[i])
+    11 | 	nx=2*(mx**t)
+    12 | 	sx=sx+nx
+    13 | 	my=abs(y[i])
+    14 | 	ny=3*(my**t)
+    15 | 	
+    16 | 	mxy=(sx+sy)**(1/t)
+    17 | 	i=i+1
+    18 | print(round(mxy,3))	
+    19 | 	
+    20 | 	
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 2
+
+  [1] Linha 8: Variável 'sxy' declarada mas nunca utilizada
+      Trecho  : sxy = ...
+      Contexto:
+               7 | i=0
+        >>>    8 | sxy=0
+               9 | while (i<size(x)):
+
+  [2] Linha 14: Variável 'ny' declarada mas nunca utilizada
+      Trecho  : ny = ...
+      Contexto:
+              13 | 	my=abs(y[i])
+        >>>   14 | 	ny=3*(my**t)
+              15 | 	
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 13
+
+  [1] Linha 3: Variável 'n' com nome muito curto (≤4 chars)
+      Trecho  : n = ...
+      Contexto:
+               2 | from math import*
+        >>>    3 | n=float(input())
+               4 | x=array(eval(input()))
+
+  [2] Linha 4: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+               3 | n=float(input())
+        >>>    4 | x=array(eval(input()))
+               5 | y=array(eval(input()))
+
+  [3] Linha 5: Variável 'y' com nome muito curto (≤4 chars)
+      Trecho  : y = ...
+      Contexto:
+               4 | x=array(eval(input()))
+        >>>    5 | y=array(eval(input()))
+               6 | t=n/(n-1)
+
+  [4] Linha 6: Variável 't' com nome muito curto (≤4 chars)
+      Trecho  : t = ...
+      Contexto:
+               5 | y=array(eval(input()))
+        >>>    6 | t=n/(n-1)
+               7 | i=0
+
+  [5] Linha 7: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+               6 | t=n/(n-1)
+        >>>    7 | i=0
+               8 | sxy=0
+
+  [6] Linha 8: Variável 'sxy' com nome muito curto (≤4 chars)
+      Trecho  : sxy = ...
+      Contexto:
+               7 | i=0
+        >>>    8 | sxy=0
+               9 | while (i<size(x)):
+
+  [7] Linha 10: Variável 'mx' com nome muito curto (≤4 chars)
+      Trecho  : mx = ...
+      Contexto:
+               9 | while (i<size(x)):
+        >>>   10 | 	mx=abs(x[i])
+              11 | 	nx=2*(mx**t)
+
+  [8] Linha 11: Variável 'nx' com nome muito curto (≤4 chars)
+      Trecho  : nx = ...
+      Contexto:
+              10 | 	mx=abs(x[i])
+        >>>   11 | 	nx=2*(mx**t)
+              12 | 	sx=sx+nx
+
+  [9] Linha 12: Variável 'sx' com nome muito curto (≤4 chars)
+      Trecho  : sx = ...
+      Contexto:
+              11 | 	nx=2*(mx**t)
+        >>>   12 | 	sx=sx+nx
+              13 | 	my=abs(y[i])
+
+  [10] Linha 13: Variável 'my' com nome muito curto (≤4 chars)
+      Trecho  : my = ...
+      Contexto:
+              12 | 	sx=sx+nx
+        >>>   13 | 	my=abs(y[i])
+              14 | 	ny=3*(my**t)
+
+  [11] Linha 14: Variável 'ny' com nome muito curto (≤4 chars)
+      Trecho  : ny = ...
+      Contexto:
+              13 | 	my=abs(y[i])
+        >>>   14 | 	ny=3*(my**t)
+              15 | 	
+
+  [12] Linha 16: Variável 'mxy' com nome muito curto (≤4 chars)
+      Trecho  : mxy = ...
+      Contexto:
+              15 | 	
+        >>>   16 | 	mxy=(sx+sy)**(1/t)
+              17 | 	i=i+1
+
+  [13] Linha 17: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+              16 | 	mxy=(sx+sy)**(1/t)
+        >>>   17 | 	i=i+1
+              18 | print(round(mxy,3))	
+
+======================================================================

@@ -1,0 +1,9 @@
+qi=int(input())
+c=int(input())
+d=int(input())
+tot=qi
+semana=0
+while(tot<200):
+	tot=tot+c-d
+	semana=semana+1
+print(semana)

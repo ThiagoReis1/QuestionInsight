@@ -1,0 +1,84 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1200_1331.py
+Questão  : 1200
+Aluno    : 1331
+Total MCs: 2
+
+⚠️  Misconceptions detectados: A3, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | v = array(eval(input()))
+     3 | v1 = size(v)
+     4 | i = 0
+     5 | cont = 0
+     6 | while (i < size(v)):
+     7 | 	if (v[i] > 0):
+     8 | 		cont = cont + 1
+     9 | 	i = i + 1
+    10 | print (cont)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 1
+
+  [1] Linha 3: Variável 'v1' declarada mas nunca utilizada
+      Trecho  : v1 = ...
+      Contexto:
+               2 | v = array(eval(input()))
+        >>>    3 | v1 = size(v)
+               4 | i = 0
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 6
+
+  [1] Linha 2: Variável 'v' com nome muito curto (≤4 chars)
+      Trecho  : v = ...
+      Contexto:
+               1 | from numpy import*
+        >>>    2 | v = array(eval(input()))
+               3 | v1 = size(v)
+
+  [2] Linha 3: Variável 'v1' com nome muito curto (≤4 chars)
+      Trecho  : v1 = ...
+      Contexto:
+               2 | v = array(eval(input()))
+        >>>    3 | v1 = size(v)
+               4 | i = 0
+
+  [3] Linha 4: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+               3 | v1 = size(v)
+        >>>    4 | i = 0
+               5 | cont = 0
+
+  [4] Linha 5: Variável 'cont' com nome muito curto (≤4 chars)
+      Trecho  : cont = ...
+      Contexto:
+               4 | i = 0
+        >>>    5 | cont = 0
+               6 | while (i < size(v)):
+
+  [5] Linha 9: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+               8 | 		cont = cont + 1
+        >>>    9 | 	i = i + 1
+              10 | print (cont)
+
+  [6] Linha 8: Variável 'cont' com nome muito curto (≤4 chars)
+      Trecho  : cont = ...
+      Contexto:
+               7 | 	if (v[i] > 0):
+        >>>    8 | 		cont = cont + 1
+               9 | 	i = i + 1
+
+======================================================================

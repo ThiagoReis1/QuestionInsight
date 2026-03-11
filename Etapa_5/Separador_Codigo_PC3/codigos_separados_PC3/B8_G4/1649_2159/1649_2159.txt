@@ -1,0 +1,85 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1649_2159.py
+Questão  : 1649
+Aluno    : 2159
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | 
+     3 | crs = input("Digite as cores: ").upper().split(',')
+     4 | qts = zeros(5, dtype = int)
+     5 | 
+     6 | i = 0
+     7 | 
+     8 | while i < size(crs):
+     9 | 	if crs[i] == "P":
+    10 | 		qts[0] = qts[0] + 1
+    11 | 	elif crs[i] == "C":
+    12 | 		qts[1] = qts[1] + 1
+    13 | 	elif crs[i] == "M":
+    14 | 		qts[2] = qts[2] + 1
+    15 | 	elif crs[i] == "V":
+    16 | 		qts[3] = qts[3] + 1
+    17 | 	elif crs[i] == "A":
+    18 | 		qts[4] = qts[4] + 1
+    19 | 
+    20 | 	i = i + 1
+    21 | 
+    22 | # Cor mais frequente
+    23 | print(max(qts))
+    24 | # Quantidades de cada cor
+    25 | print(qts)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 15: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 15) / elif ... sem else
+      Contexto:
+              14 | 		qts[2] = qts[2] + 1
+        >>>   15 | 	elif crs[i] == "V":
+              16 | 		qts[3] = qts[3] + 1
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 4
+
+  [1] Linha 3: Variável 'crs' com nome muito curto (≤4 chars)
+      Trecho  : crs = ...
+      Contexto:
+               2 | 
+        >>>    3 | crs = input("Digite as cores: ").upper().split(',')
+               4 | qts = zeros(5, dtype = int)
+
+  [2] Linha 4: Variável 'qts' com nome muito curto (≤4 chars)
+      Trecho  : qts = ...
+      Contexto:
+               3 | crs = input("Digite as cores: ").upper().split(',')
+        >>>    4 | qts = zeros(5, dtype = int)
+               5 | 
+
+  [3] Linha 6: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+               5 | 
+        >>>    6 | i = 0
+               7 | 
+
+  [4] Linha 20: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+              19 | 
+        >>>   20 | 	i = i + 1
+              21 | 
+
+======================================================================

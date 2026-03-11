@@ -1,0 +1,11 @@
+nome_arma=input("")
+D=float(input())
+D1=float(input())
+D2=float(input())
+S=D1+D2
+golpe_katana=2*S+D
+golpe_sabre=S+2*D
+if(nome_arma=="katana"):
+	print(golpe_katana)
+else:
+	print(golpe_sabre)

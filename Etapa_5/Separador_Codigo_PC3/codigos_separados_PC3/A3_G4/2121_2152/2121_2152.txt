@@ -1,0 +1,65 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 2121_2152.py
+Questão  : 2121
+Aluno    : 2152
+Total MCs: 2
+
+⚠️  Misconceptions detectados: A3, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import *
+     2 | x = array(eval(input("notas: ")))
+     3 | 
+     4 | i = 0
+     5 | nf = (5*x[0] + 3*x[1] + 2*x[2])/10
+     6 | 
+     7 | print(nf)
+     8 | if(nf<5):
+     9 | 	print("REPROVADO")
+    10 | else:
+    11 | 	print("APROVADO")
+    12 | 	
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 1
+
+  [1] Linha 4: Variável 'i' declarada mas nunca utilizada
+      Trecho  : i = ...
+      Contexto:
+               3 | 
+        >>>    4 | i = 0
+               5 | nf = (5*x[0] + 3*x[1] + 2*x[2])/10
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 3
+
+  [1] Linha 2: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+               1 | from numpy import *
+        >>>    2 | x = array(eval(input("notas: ")))
+               3 | 
+
+  [2] Linha 4: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+               3 | 
+        >>>    4 | i = 0
+               5 | nf = (5*x[0] + 3*x[1] + 2*x[2])/10
+
+  [3] Linha 5: Variável 'nf' com nome muito curto (≤4 chars)
+      Trecho  : nf = ...
+      Contexto:
+               4 | i = 0
+        >>>    5 | nf = (5*x[0] + 3*x[1] + 2*x[2])/10
+               6 | 
+
+======================================================================

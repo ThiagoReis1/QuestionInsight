@@ -1,0 +1,99 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 6830_9665.py
+Questão  : 6830
+Aluno    : 9665
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import *
+     2 | 
+     3 | s = input("digite a secao: ").upper()
+     4 | 
+     5 | Vf = 0
+     6 | i = 0
+     7 | 
+     8 | while i < len(s):
+     9 | 	if s[i] == "H":
+    10 | 		Vf = Vf + 3.85
+    11 | 	elif s[i] == "L":
+    12 | 		Vf = Vf + 2.95
+    13 | 	elif s[i] == "E":
+    14 | 		Vf = Vf + 7.90 
+    15 | 	
+    16 | 	i = i + 1
+    17 | 
+    18 | print(round(Vf,2))
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 11: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 11) / elif ... sem else
+      Contexto:
+              10 | 		Vf = Vf + 3.85
+        >>>   11 | 	elif s[i] == "L":
+              12 | 		Vf = Vf + 2.95
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 7
+
+  [1] Linha 3: Variável 's' com nome muito curto (≤4 chars)
+      Trecho  : s = ...
+      Contexto:
+               2 | 
+        >>>    3 | s = input("digite a secao: ").upper()
+               4 | 
+
+  [2] Linha 5: Variável 'Vf' com nome muito curto (≤4 chars)
+      Trecho  : Vf = ...
+      Contexto:
+               4 | 
+        >>>    5 | Vf = 0
+               6 | i = 0
+
+  [3] Linha 6: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+               5 | Vf = 0
+        >>>    6 | i = 0
+               7 | 
+
+  [4] Linha 16: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+              15 | 	
+        >>>   16 | 	i = i + 1
+              17 | 
+
+  [5] Linha 10: Variável 'Vf' com nome muito curto (≤4 chars)
+      Trecho  : Vf = ...
+      Contexto:
+               9 | 	if s[i] == "H":
+        >>>   10 | 		Vf = Vf + 3.85
+              11 | 	elif s[i] == "L":
+
+  [6] Linha 12: Variável 'Vf' com nome muito curto (≤4 chars)
+      Trecho  : Vf = ...
+      Contexto:
+              11 | 	elif s[i] == "L":
+        >>>   12 | 		Vf = Vf + 2.95
+              13 | 	elif s[i] == "E":
+
+  [7] Linha 14: Variável 'Vf' com nome muito curto (≤4 chars)
+      Trecho  : Vf = ...
+      Contexto:
+              13 | 	elif s[i] == "E":
+        >>>   14 | 		Vf = Vf + 7.90 
+              15 | 	
+
+======================================================================

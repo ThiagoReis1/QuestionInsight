@@ -1,0 +1,73 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 2037_2252.py
+Questão  : 2037
+Aluno    : 2252
+Total MCs: 2
+
+⚠️  Misconceptions detectados: A4, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | id = int(input("idade:"))
+     2 | p = 0
+     3 | while (id != -1):
+     4 | 	if(id < 18):
+     5 | 		p = p + 1
+     6 | 	id = int(input("idade:"))
+     7 | print(p)
+     8 | 
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A4 — Redefinição de built-in
+  Ocorrências: 2
+
+  [1] Linha 1: Built-in 'id' redefinido como variável
+      Trecho  : id = int(input('idade:'))
+      Contexto:
+        >>>    1 | id = int(input("idade:"))
+               2 | p = 0
+
+  [2] Linha 6: Built-in 'id' redefinido como variável
+      Trecho  : id = int(input('idade:'))
+      Contexto:
+               5 | 		p = p + 1
+        >>>    6 | 	id = int(input("idade:"))
+               7 | print(p)
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 4
+
+  [1] Linha 1: Variável 'id' com nome muito curto (≤4 chars)
+      Trecho  : id = ...
+      Contexto:
+        >>>    1 | id = int(input("idade:"))
+               2 | p = 0
+
+  [2] Linha 2: Variável 'p' com nome muito curto (≤4 chars)
+      Trecho  : p = ...
+      Contexto:
+               1 | id = int(input("idade:"))
+        >>>    2 | p = 0
+               3 | while (id != -1):
+
+  [3] Linha 6: Variável 'id' com nome muito curto (≤4 chars)
+      Trecho  : id = ...
+      Contexto:
+               5 | 		p = p + 1
+        >>>    6 | 	id = int(input("idade:"))
+               7 | print(p)
+
+  [4] Linha 5: Variável 'p' com nome muito curto (≤4 chars)
+      Trecho  : p = ...
+      Contexto:
+               4 | 	if(id < 18):
+        >>>    5 | 		p = p + 1
+               6 | 	id = int(input("idade:"))
+
+======================================================================

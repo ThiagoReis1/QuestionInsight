@@ -1,0 +1,99 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 3587_8686.py
+Questão  : 3587
+Aluno    : 8686
+Total MCs: 2
+
+⚠️  Misconceptions detectados: A2, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import *
+     2 | 
+     3 | n = array(eval(input()))
+     4 | 
+     5 | i = 100.0
+     6 | cont = 0
+     7 | 
+     8 | while cont < size(n):
+     9 | 	if n[cont] == 1:
+    10 | 		i = i * 5
+    11 | 	if n[cont] == 2:
+    12 | 		i = i * 3
+    13 | 	if n[cont] == 3:
+    14 | 		i = i
+    15 | 	if n[cont] == 4:
+    16 | 		i = i/2
+    17 | 	cont += 1
+    18 | print(round(i, 2))	
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A2 — Variável atribuída a si mesma
+  Ocorrências: 1
+
+  [1] Linha 14: 'i' atribuído a si mesmo
+      Trecho  : i = i
+      Contexto:
+              13 | 	if n[cont] == 3:
+        >>>   14 | 		i = i
+              15 | 	if n[cont] == 4:
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 7
+
+  [1] Linha 3: Variável 'n' com nome muito curto (≤4 chars)
+      Trecho  : n = ...
+      Contexto:
+               2 | 
+        >>>    3 | n = array(eval(input()))
+               4 | 
+
+  [2] Linha 5: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+               4 | 
+        >>>    5 | i = 100.0
+               6 | cont = 0
+
+  [3] Linha 6: Variável 'cont' com nome muito curto (≤4 chars)
+      Trecho  : cont = ...
+      Contexto:
+               5 | i = 100.0
+        >>>    6 | cont = 0
+               7 | 
+
+  [4] Linha 10: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+               9 | 	if n[cont] == 1:
+        >>>   10 | 		i = i * 5
+              11 | 	if n[cont] == 2:
+
+  [5] Linha 12: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+              11 | 	if n[cont] == 2:
+        >>>   12 | 		i = i * 3
+              13 | 	if n[cont] == 3:
+
+  [6] Linha 14: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+              13 | 	if n[cont] == 3:
+        >>>   14 | 		i = i
+              15 | 	if n[cont] == 4:
+
+  [7] Linha 16: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+              15 | 	if n[cont] == 4:
+        >>>   16 | 		i = i/2
+              17 | 	cont += 1
+
+======================================================================

@@ -1,0 +1,113 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 3590_9232.py
+Questão  : 3590
+Aluno    : 9232
+Total MCs: 4
+
+⚠️  Misconceptions detectados: A2, B4, B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import *
+     2 | pts = 0
+     3 | i = 0
+     4 | dado = array(eval(input('face do dado: ')))
+     5 | while(i < size(dado)):
+     6 | 	if(dado[i] == 1):
+     7 | 		pts += 10
+     8 | 	elif(dado[i] == 2):
+     9 | 		pts += 5
+    10 | 	elif(dado[i] == 3):
+    11 | 		pts = pts
+    12 | 	elif(dado[i] == 4):
+    13 | 		pts += 5
+    14 | 	elif(dado[i] == 5):
+    15 | 		pts += 20
+    16 | 	elif(dado[i] == 6):
+    17 | 		pts += 10
+    18 | 	i += 1
+    19 | print(pts)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A2 — Variável atribuída a si mesma
+  Ocorrências: 1
+
+  [1] Linha 11: 'pts' atribuído a si mesmo
+      Trecho  : pts = pts
+      Contexto:
+              10 | 	elif(dado[i] == 3):
+        >>>   11 | 		pts = pts
+              12 | 	elif(dado[i] == 4):
+
+▶ B4 — Comandos repetidos dentro de blocos if-elif-else
+  Ocorrências: 3
+
+  [1] Linha 12: Bloco idêntico ao da linha 8
+      Trecho  : pts += 5
+      Contexto:
+              11 | 		pts = pts
+        >>>   12 | 	elif(dado[i] == 4):
+              13 | 		pts += 5
+
+  [2] Linha 16: Bloco idêntico ao da linha 6
+      Trecho  : pts += 10
+      Contexto:
+              15 | 		pts += 20
+        >>>   16 | 	elif(dado[i] == 6):
+              17 | 		pts += 10
+
+  [3] Linha 12: Bloco idêntico ao da linha 8
+      Trecho  : pts += 5
+      Contexto:
+              11 | 		pts = pts
+        >>>   12 | 	elif(dado[i] == 4):
+              13 | 		pts += 5
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 14: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 14) / elif ... sem else
+      Contexto:
+              13 | 		pts += 5
+        >>>   14 | 	elif(dado[i] == 5):
+              15 | 		pts += 20
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 4
+
+  [1] Linha 2: Variável 'pts' com nome muito curto (≤4 chars)
+      Trecho  : pts = ...
+      Contexto:
+               1 | from numpy import *
+        >>>    2 | pts = 0
+               3 | i = 0
+
+  [2] Linha 3: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+               2 | pts = 0
+        >>>    3 | i = 0
+               4 | dado = array(eval(input('face do dado: ')))
+
+  [3] Linha 4: Variável 'dado' com nome muito curto (≤4 chars)
+      Trecho  : dado = ...
+      Contexto:
+               3 | i = 0
+        >>>    4 | dado = array(eval(input('face do dado: ')))
+               5 | while(i < size(dado)):
+
+  [4] Linha 11: Variável 'pts' com nome muito curto (≤4 chars)
+      Trecho  : pts = ...
+      Contexto:
+              10 | 	elif(dado[i] == 3):
+        >>>   11 | 		pts = pts
+              12 | 	elif(dado[i] == 4):
+
+======================================================================

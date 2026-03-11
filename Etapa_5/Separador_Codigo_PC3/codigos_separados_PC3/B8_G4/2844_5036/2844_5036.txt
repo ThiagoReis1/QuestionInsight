@@ -1,0 +1,77 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 2844_5036.py
+Questão  : 2844
+Aluno    : 5036
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import *
+     2 | 
+     3 | vet = array(eval(input('codigo: ')))
+     4 | vet1 = zeros(size(vet), dtype=int)
+     5 | vet2 = zeros(size(vet), dtype= int)
+     6 | y = 0
+     7 | for i in range(0, size(vet)):
+     8 | 	if vet[i] == 0:
+     9 | 		vet1[i] = 10
+    10 | 	elif vet[i] != 0:
+    11 | 		vet1[i]= vet[i]
+    12 | 
+    13 | for x in vet1:
+    14 | 	vet2[y] = x - 1
+    15 | 	y += 1
+    16 | 	
+    17 | print(vet2)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 8: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 8) / elif ... sem else
+      Contexto:
+               7 | for i in range(0, size(vet)):
+        >>>    8 | 	if vet[i] == 0:
+               9 | 		vet1[i] = 10
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 4
+
+  [1] Linha 3: Variável 'vet' com nome muito curto (≤4 chars)
+      Trecho  : vet = ...
+      Contexto:
+               2 | 
+        >>>    3 | vet = array(eval(input('codigo: ')))
+               4 | vet1 = zeros(size(vet), dtype=int)
+
+  [2] Linha 4: Variável 'vet1' com nome muito curto (≤4 chars)
+      Trecho  : vet1 = ...
+      Contexto:
+               3 | vet = array(eval(input('codigo: ')))
+        >>>    4 | vet1 = zeros(size(vet), dtype=int)
+               5 | vet2 = zeros(size(vet), dtype= int)
+
+  [3] Linha 5: Variável 'vet2' com nome muito curto (≤4 chars)
+      Trecho  : vet2 = ...
+      Contexto:
+               4 | vet1 = zeros(size(vet), dtype=int)
+        >>>    5 | vet2 = zeros(size(vet), dtype= int)
+               6 | y = 0
+
+  [4] Linha 6: Variável 'y' com nome muito curto (≤4 chars)
+      Trecho  : y = ...
+      Contexto:
+               5 | vet2 = zeros(size(vet), dtype= int)
+        >>>    6 | y = 0
+               7 | for i in range(0, size(vet)):
+
+======================================================================

@@ -1,0 +1,95 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 6377_9832.py
+Questão  : 6377
+Aluno    : 9832
+Total MCs: 2
+
+⚠️  Misconceptions detectados: A3, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | j = input("Digite o jogador que marcou: ").upper().split(",")
+     2 | 
+     3 | i = 0
+     4 | tf = True
+     5 | while ( i < len(j) ) :
+     6 | 	if (not j[i] in ["A","B","C","D"] ) :
+     7 | 		tf = False
+     8 | 		break
+     9 | 		
+    10 | 	i += 1
+    11 | 	
+    12 | 	
+    13 | if ( tf ) :
+    14 | 	from numpy import *
+    15 | 	v0 = zeros(4, dtype = int)
+    16 | 	
+    17 | 	for i in j :
+    18 | 		if ( i == "A" ) :
+    19 | 			v0[0] +=1 
+    20 | 			
+    21 | 		elif ( i == "B" ) :
+    22 | 			v0[1] += 1
+    23 | 			
+    24 | 		elif ( i == "C" ) :
+    25 | 			v0[2] += 1
+    26 | 			
+    27 | 		else :
+    28 | 			v0[3] += 1
+    29 | 			
+    30 | 	print(v0)
+    31 | 	
+    32 | else :
+    33 | 	print("A,B,C,D")
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 1
+
+  [1] Linha 0: A3 detectado pelo VisitorMC3 (localização exata não mapeada)
+      Trecho  : —
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 5
+
+  [1] Linha 1: Variável 'j' com nome muito curto (≤4 chars)
+      Trecho  : j = ...
+      Contexto:
+        >>>    1 | j = input("Digite o jogador que marcou: ").upper().split(",")
+               2 | 
+
+  [2] Linha 3: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+               2 | 
+        >>>    3 | i = 0
+               4 | tf = True
+
+  [3] Linha 4: Variável 'tf' com nome muito curto (≤4 chars)
+      Trecho  : tf = ...
+      Contexto:
+               3 | i = 0
+        >>>    4 | tf = True
+               5 | while ( i < len(j) ) :
+
+  [4] Linha 15: Variável 'v0' com nome muito curto (≤4 chars)
+      Trecho  : v0 = ...
+      Contexto:
+              14 | 	from numpy import *
+        >>>   15 | 	v0 = zeros(4, dtype = int)
+              16 | 	
+
+  [5] Linha 7: Variável 'tf' com nome muito curto (≤4 chars)
+      Trecho  : tf = ...
+      Contexto:
+               6 | 	if (not j[i] in ["A","B","C","D"] ) :
+        >>>    7 | 		tf = False
+               8 | 		break
+
+======================================================================

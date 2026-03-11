@@ -1,0 +1,62 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1656_2201.py
+Questão  : 1656
+Aluno    : 2201
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import *
+     2 | a = input().split(',')
+     3 | n = zeros(5, dtype=int)
+     4 | for i in a:	
+     5 | 	if(i == "BE"):
+     6 | 		n[0] = n [0] + 1
+     7 | 	elif(i == "ES"):
+     8 | 		n[1] = n [1] + 1
+     9 | 	elif(i == "FR"):
+    10 | 		n[2] = n [2] + 1
+    11 | 	elif(i == "IT"):
+    12 | 		n[3] = n [3] + 1
+    13 | 	elif(i == "PT"):
+    14 | 		n[4] = n [4] + 1
+    15 | print(max(n))
+    16 | print(n)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 11: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 11) / elif ... sem else
+      Contexto:
+              10 | 		n[2] = n [2] + 1
+        >>>   11 | 	elif(i == "IT"):
+              12 | 		n[3] = n [3] + 1
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 2
+
+  [1] Linha 2: Variável 'a' com nome muito curto (≤4 chars)
+      Trecho  : a = ...
+      Contexto:
+               1 | from numpy import *
+        >>>    2 | a = input().split(',')
+               3 | n = zeros(5, dtype=int)
+
+  [2] Linha 3: Variável 'n' com nome muito curto (≤4 chars)
+      Trecho  : n = ...
+      Contexto:
+               2 | a = input().split(',')
+        >>>    3 | n = zeros(5, dtype=int)
+               4 | for i in a:	
+
+======================================================================

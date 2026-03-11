@@ -1,0 +1,6 @@
+a = float(input("peso da mercadoria: "))
+var = (43.21 * a)
+var1 = (var + 25.00)
+var2 = (var1 * (62/100))
+valortotal = (var1 + var2)
+print(round(valortotal,2))

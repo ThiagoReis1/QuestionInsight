@@ -1,0 +1,67 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 3370_7143.py
+Questão  : 3370
+Aluno    : 7143
+Total MCs: 2
+
+⚠️  Misconceptions detectados: A3, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | u = input("Digite a unidade da medida: C para centimetro e P para polegada: ")
+     2 | v = float(input("Digite o valor da medida: "))
+     3 | 
+     4 | if(v == "C"):
+     5 |    C = 0.393701 * v
+     6 |    print(round(C, 2))
+     7 | else:
+     8 |    P = v / 0.393701
+     9 |    print(round(P, 2))
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 1
+
+  [1] Linha 1: Variável 'u' declarada mas nunca utilizada
+      Trecho  : u = ...
+      Contexto:
+        >>>    1 | u = input("Digite a unidade da medida: C para centimetro e P para polegada: ")
+               2 | v = float(input("Digite o valor da medida: "))
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 4
+
+  [1] Linha 1: Variável 'u' com nome muito curto (≤4 chars)
+      Trecho  : u = ...
+      Contexto:
+        >>>    1 | u = input("Digite a unidade da medida: C para centimetro e P para polegada: ")
+               2 | v = float(input("Digite o valor da medida: "))
+
+  [2] Linha 2: Variável 'v' com nome muito curto (≤4 chars)
+      Trecho  : v = ...
+      Contexto:
+               1 | u = input("Digite a unidade da medida: C para centimetro e P para polegada: ")
+        >>>    2 | v = float(input("Digite o valor da medida: "))
+               3 | 
+
+  [3] Linha 5: Variável 'C' com nome muito curto (≤4 chars)
+      Trecho  : C = ...
+      Contexto:
+               4 | if(v == "C"):
+        >>>    5 |    C = 0.393701 * v
+               6 |    print(round(C, 2))
+
+  [4] Linha 8: Variável 'P' com nome muito curto (≤4 chars)
+      Trecho  : P = ...
+      Contexto:
+               7 | else:
+        >>>    8 |    P = v / 0.393701
+               9 |    print(round(P, 2))
+
+======================================================================

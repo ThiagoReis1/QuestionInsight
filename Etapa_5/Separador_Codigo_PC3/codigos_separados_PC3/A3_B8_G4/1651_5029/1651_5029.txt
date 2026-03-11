@@ -1,0 +1,85 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1651_5029.py
+Questão  : 1651
+Aluno    : 5029
+Total MCs: 3
+
+⚠️  Misconceptions detectados: A3, B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import *
+     2 | 
+     3 | s = input("").upper().split(',')
+     4 | v = zeros(6, dtype = int)
+     5 | a = 0
+     6 | 
+     7 | for i in range(size(s)) :
+     8 | 	if (s[i] == "MC") :
+     9 | 		v[0] = v[0] + 1
+    10 | 	elif (s[i] == 'C') :
+    11 | 		v[1] = v[1] + 1
+    12 | 	elif (s[i] == 'CM') :
+    13 | 		v[2] = v[2] + 1
+    14 | 	elif (s[i] == 'EM') :
+    15 | 		v[3] = v[3] + 1
+    16 | 	elif (s[i] == 'E') :
+    17 | 		v[4] = v[4] + 1
+    18 | 	elif (s[i] == 'ME') :
+    19 | 		v[5] = v[5] + 1
+    20 | 
+    21 | print(max(v))
+    22 | print(v)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 1
+
+  [1] Linha 5: Variável 'a' declarada mas nunca utilizada
+      Trecho  : a = ...
+      Contexto:
+               4 | v = zeros(6, dtype = int)
+        >>>    5 | a = 0
+               6 | 
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 16: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 16) / elif ... sem else
+      Contexto:
+              15 | 		v[3] = v[3] + 1
+        >>>   16 | 	elif (s[i] == 'E') :
+              17 | 		v[4] = v[4] + 1
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 3
+
+  [1] Linha 3: Variável 's' com nome muito curto (≤4 chars)
+      Trecho  : s = ...
+      Contexto:
+               2 | 
+        >>>    3 | s = input("").upper().split(',')
+               4 | v = zeros(6, dtype = int)
+
+  [2] Linha 4: Variável 'v' com nome muito curto (≤4 chars)
+      Trecho  : v = ...
+      Contexto:
+               3 | s = input("").upper().split(',')
+        >>>    4 | v = zeros(6, dtype = int)
+               5 | a = 0
+
+  [3] Linha 5: Variável 'a' com nome muito curto (≤4 chars)
+      Trecho  : a = ...
+      Contexto:
+               4 | v = zeros(6, dtype = int)
+        >>>    5 | a = 0
+               6 | 
+
+======================================================================

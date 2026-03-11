@@ -1,0 +1,75 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 3590_6434.py
+Questão  : 3590
+Aluno    : 6434
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B4, B8
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | vetor = array(eval(input(":")))
+     3 | 
+     4 | cont=0
+     5 | ponto=0
+     6 | 
+     7 | while(cont<size(vetor)):
+     8 | 	if(vetor[cont]== 1):
+     9 | 		ponto = ponto + 10
+    10 | 	elif(vetor[cont]== 2):
+    11 | 		ponto = ponto + 5
+    12 | 	elif(vetor[cont]== 3):
+    13 | 		ponto = ponto + 0
+    14 | 	elif(vetor[cont]== 4):
+    15 | 		ponto = ponto + 5
+    16 | 	elif(vetor[cont]== 5):
+    17 | 		ponto = ponto + 20
+    18 | 	elif(vetor[cont]== 6):
+    19 | 		ponto = ponto + 10
+    20 | 	cont+=1
+    21 | 
+    22 | print(sum(ponto))
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B4 — Comandos repetidos dentro de blocos if-elif-else
+  Ocorrências: 3
+
+  [1] Linha 14: Bloco idêntico ao da linha 10
+      Trecho  : ponto = ponto + 5
+      Contexto:
+              13 | 		ponto = ponto + 0
+        >>>   14 | 	elif(vetor[cont]== 4):
+              15 | 		ponto = ponto + 5
+
+  [2] Linha 18: Bloco idêntico ao da linha 8
+      Trecho  : ponto = ponto + 10
+      Contexto:
+              17 | 		ponto = ponto + 20
+        >>>   18 | 	elif(vetor[cont]== 6):
+              19 | 		ponto = ponto + 10
+
+  [3] Linha 14: Bloco idêntico ao da linha 10
+      Trecho  : ponto = ponto + 5
+      Contexto:
+              13 | 		ponto = ponto + 0
+        >>>   14 | 	elif(vetor[cont]== 4):
+              15 | 		ponto = ponto + 5
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 16: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 16) / elif ... sem else
+      Contexto:
+              15 | 		ponto = ponto + 5
+        >>>   16 | 	elif(vetor[cont]== 5):
+              17 | 		ponto = ponto + 20
+
+======================================================================

@@ -1,0 +1,49 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 6124_8189.py
+Questão  : 6124
+Aluno    : 8189
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B8, B9
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | peso_tripulante=(float(input("peso do tripulante ")))
+     2 | if (peso_tripulante<3400):
+     3 | 	zylium=(0.8*peso_tripulante)
+     4 | elif (peso_tripulante<3900):
+     5 | 	zylium=(1.3*peso_tripulante)
+     6 | elif (peso_tripulante<4100):
+     7 | 	zylium=(2.1*peso_tripulante)
+     8 | elif (peso_tripulante>=4100):
+     9 | 	zylium=3.0*peso_tripulante
+    10 | print(round(zylium,1))
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 6: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 6) / elif ... sem else
+      Contexto:
+               5 | 	zylium=(1.3*peso_tripulante)
+        >>>    6 | elif (peso_tripulante<4100):
+               7 | 	zylium=(2.1*peso_tripulante)
+
+▶ B9 — elif/else retestando condições já verificadas
+  Ocorrências: 1
+
+  [1] Linha 8: elif retesta condição inversa do if da linha 6
+      Trecho  : if peso_tripulante < 4100 ... elif peso_tripulante >= 4100
+      Contexto:
+               7 | 	zylium=(2.1*peso_tripulante)
+        >>>    8 | elif (peso_tripulante>=4100):
+               9 | 	zylium=3.0*peso_tripulante
+
+======================================================================

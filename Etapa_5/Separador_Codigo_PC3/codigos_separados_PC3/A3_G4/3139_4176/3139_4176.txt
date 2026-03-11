@@ -1,0 +1,87 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 3139_4176.py
+Questão  : 3139
+Aluno    : 4176
+Total MCs: 2
+
+⚠️  Misconceptions detectados: A3, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | 
+     3 | vet = array(eval(input("Digite o Vetor: ")))
+     4 | 
+     5 | n = size(vet)
+     6 | exp = 1/3
+     7 | 
+     8 | for i in vet:
+     9 | 	v= sum(vet[:-1])
+    10 | 	
+    11 | m = ((sum(vet[:-1])**1/3)/n)**3
+    12 | 
+    13 | print(round(m, 2))
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 2
+
+  [1] Linha 6: Variável 'exp' declarada mas nunca utilizada
+      Trecho  : exp = ...
+      Contexto:
+               5 | n = size(vet)
+        >>>    6 | exp = 1/3
+               7 | 
+
+  [2] Linha 9: Variável 'v' declarada mas nunca utilizada
+      Trecho  : v = ...
+      Contexto:
+               8 | for i in vet:
+        >>>    9 | 	v= sum(vet[:-1])
+              10 | 	
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 5
+
+  [1] Linha 3: Variável 'vet' com nome muito curto (≤4 chars)
+      Trecho  : vet = ...
+      Contexto:
+               2 | 
+        >>>    3 | vet = array(eval(input("Digite o Vetor: ")))
+               4 | 
+
+  [2] Linha 5: Variável 'n' com nome muito curto (≤4 chars)
+      Trecho  : n = ...
+      Contexto:
+               4 | 
+        >>>    5 | n = size(vet)
+               6 | exp = 1/3
+
+  [3] Linha 6: Variável 'exp' com nome muito curto (≤4 chars)
+      Trecho  : exp = ...
+      Contexto:
+               5 | n = size(vet)
+        >>>    6 | exp = 1/3
+               7 | 
+
+  [4] Linha 11: Variável 'm' com nome muito curto (≤4 chars)
+      Trecho  : m = ...
+      Contexto:
+              10 | 	
+        >>>   11 | m = ((sum(vet[:-1])**1/3)/n)**3
+              12 | 
+
+  [5] Linha 9: Variável 'v' com nome muito curto (≤4 chars)
+      Trecho  : v = ...
+      Contexto:
+               8 | for i in vet:
+        >>>    9 | 	v= sum(vet[:-1])
+              10 | 	
+
+======================================================================

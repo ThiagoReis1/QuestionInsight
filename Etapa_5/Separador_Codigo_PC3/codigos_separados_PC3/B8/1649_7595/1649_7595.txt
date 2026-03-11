@@ -1,0 +1,49 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1649_7595.py
+Questão  : 1649
+Aluno    : 7595
+Total MCs: 1
+
+⚠️  Misconceptions detectados: B8
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import *
+     2 | 
+     3 | strg = input("Cor: ").split(',')
+     4 | 
+     5 | cores_contagem = zeros(5, dtype = int)
+     6 | 
+     7 | for i in range (len(strg)):
+     8 | 	if(strg[i].upper() == "P"):
+     9 | 		cores_contagem[0] += 1
+    10 | 	elif(strg[i].upper() == "C"):
+    11 | 		cores_contagem[1] += 1
+    12 | 	elif(strg[i].upper() == "M"):
+    13 | 		cores_contagem[2] += 1
+    14 | 	elif(strg[i].upper() == "V"):
+    15 | 		cores_contagem[3] += 1
+    16 | 	elif(strg[i].upper() == "A"):
+    17 | 		cores_contagem[4] += 1
+    18 | 	
+    19 | print(max(cores_contagem))
+    20 | print(cores_contagem)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 14: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 14) / elif ... sem else
+      Contexto:
+              13 | 		cores_contagem[2] += 1
+        >>>   14 | 	elif(strg[i].upper() == "V"):
+              15 | 		cores_contagem[3] += 1
+
+======================================================================

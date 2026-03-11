@@ -1,0 +1,45 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 6006_9841.py
+Questão  : 6006
+Aluno    : 9841
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B8, B9
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | batatas = int(input("Digite o numero de batatas: "))
+     2 | if batatas < 10:
+     3 | 	preco = 0.90 * batatas
+     4 | elif batatas >= 10:
+     5 | 	preco = 0.75 * batatas
+     6 | print(round(preco, 2))
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 2: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 2) / elif ... sem else
+      Contexto:
+               1 | batatas = int(input("Digite o numero de batatas: "))
+        >>>    2 | if batatas < 10:
+               3 | 	preco = 0.90 * batatas
+
+▶ B9 — elif/else retestando condições já verificadas
+  Ocorrências: 1
+
+  [1] Linha 4: elif retesta condição inversa do if da linha 2
+      Trecho  : if batatas < 10 ... elif batatas >= 10
+      Contexto:
+               3 | 	preco = 0.90 * batatas
+        >>>    4 | elif batatas >= 10:
+               5 | 	preco = 0.75 * batatas
+
+======================================================================

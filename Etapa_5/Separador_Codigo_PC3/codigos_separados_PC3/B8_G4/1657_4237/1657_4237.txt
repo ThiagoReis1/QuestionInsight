@@ -1,0 +1,67 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1657_4237.py
+Questão  : 1657
+Aluno    : 4237
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | x = input("estados: ").split(',')
+     3 | 
+     4 | ca = zeros(5, dtype)
+     5 | 
+     6 | for i in x:
+     7 | 	if(i == "AZ"):
+     8 | 		ca[0]= ca[0] + 1
+     9 | 	elif(i=="CA"):
+    10 | 		ca[1] = ca[1] + 1
+    11 | 	elif(i=="FL"):
+    12 | 		ca[2] = ca[2] + 1
+    13 | 	elif(i=="PA"):
+    14 | 		ca[3] = ca[3] + 1
+    15 | 	elif(i=="WI"):
+    16 | 		ca[4] = ca[4] + 1
+    17 | 
+    18 | print(max(ca))
+    19 | print(ca)
+    20 | 		
+    21 | 
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 13: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 13) / elif ... sem else
+      Contexto:
+              12 | 		ca[2] = ca[2] + 1
+        >>>   13 | 	elif(i=="PA"):
+              14 | 		ca[3] = ca[3] + 1
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 2
+
+  [1] Linha 2: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+               1 | from numpy import*
+        >>>    2 | x = input("estados: ").split(',')
+               3 | 
+
+  [2] Linha 4: Variável 'ca' com nome muito curto (≤4 chars)
+      Trecho  : ca = ...
+      Contexto:
+               3 | 
+        >>>    4 | ca = zeros(5, dtype)
+               5 | 
+
+======================================================================

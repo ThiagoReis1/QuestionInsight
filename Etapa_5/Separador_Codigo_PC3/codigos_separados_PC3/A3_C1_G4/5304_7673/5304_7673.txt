@@ -1,0 +1,94 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 5304_7673.py
+Questão  : 5304
+Aluno    : 7673
+Total MCs: 3
+
+⚠️  Misconceptions detectados: A3, C1, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | b = int(input())
+     2 | h = float(input())
+     3 | 
+     4 | bac = 1
+     5 | hora = 1
+     6 | 
+     7 | while(h > 0):
+     8 | 	bac = bac + b
+     9 | 	hora = bac + (15/100) * bac
+    10 | 	
+    11 | 	int(input(hora))
+    12 | 	if(h<=0):
+    13 | 		print(hora)
+    14 | 	
+    15 | 
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 1
+
+  [1] Linha 0: A3 detectado pelo VisitorMC3 (localização exata não mapeada)
+      Trecho  : —
+
+▶ C1 — Condição while testada novamente dentro do seu bloco
+  Ocorrências: 1
+
+  [1] Linha 12: If retesta condição inversa do while da linha 7
+      Trecho  : while h > 0 → if h <= 0
+      Contexto:
+              11 | 	int(input(hora))
+        >>>   12 | 	if(h<=0):
+              13 | 		print(hora)
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 6
+
+  [1] Linha 1: Variável 'b' com nome muito curto (≤4 chars)
+      Trecho  : b = ...
+      Contexto:
+        >>>    1 | b = int(input())
+               2 | h = float(input())
+
+  [2] Linha 2: Variável 'h' com nome muito curto (≤4 chars)
+      Trecho  : h = ...
+      Contexto:
+               1 | b = int(input())
+        >>>    2 | h = float(input())
+               3 | 
+
+  [3] Linha 4: Variável 'bac' com nome muito curto (≤4 chars)
+      Trecho  : bac = ...
+      Contexto:
+               3 | 
+        >>>    4 | bac = 1
+               5 | hora = 1
+
+  [4] Linha 5: Variável 'hora' com nome muito curto (≤4 chars)
+      Trecho  : hora = ...
+      Contexto:
+               4 | bac = 1
+        >>>    5 | hora = 1
+               6 | 
+
+  [5] Linha 8: Variável 'bac' com nome muito curto (≤4 chars)
+      Trecho  : bac = ...
+      Contexto:
+               7 | while(h > 0):
+        >>>    8 | 	bac = bac + b
+               9 | 	hora = bac + (15/100) * bac
+
+  [6] Linha 9: Variável 'hora' com nome muito curto (≤4 chars)
+      Trecho  : hora = ...
+      Contexto:
+               8 | 	bac = bac + b
+        >>>    9 | 	hora = bac + (15/100) * bac
+              10 | 	
+
+======================================================================

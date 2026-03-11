@@ -1,0 +1,78 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1653_3156.py
+Questão  : 1653
+Aluno    : 3156
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | o=input("").split(',')
+     3 | i=0
+     4 | res=zeros(5, dtype=int)
+     5 | for i in range(size(o)):
+     6 | 	if(o[i]=='AR'):
+     7 | 		res[0]+=1
+     8 | 	elif(o[i]=='BR'):
+     9 | 		res[1]+=1
+    10 | 	elif(o[i]=='CL'):
+    11 | 		res[2]+=1
+    12 | 	elif(o[i]=='CO'):
+    13 | 		res[3]+=1
+    14 | 	elif(o[i]=='UY'):
+    15 | 		res[4]+=1
+    16 | nm=max(res)
+    17 | print(nm)
+    18 | print(res)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 12: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 12) / elif ... sem else
+      Contexto:
+              11 | 		res[2]+=1
+        >>>   12 | 	elif(o[i]=='CO'):
+              13 | 		res[3]+=1
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 4
+
+  [1] Linha 2: Variável 'o' com nome muito curto (≤4 chars)
+      Trecho  : o = ...
+      Contexto:
+               1 | from numpy import*
+        >>>    2 | o=input("").split(',')
+               3 | i=0
+
+  [2] Linha 3: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+               2 | o=input("").split(',')
+        >>>    3 | i=0
+               4 | res=zeros(5, dtype=int)
+
+  [3] Linha 4: Variável 'res' com nome muito curto (≤4 chars)
+      Trecho  : res = ...
+      Contexto:
+               3 | i=0
+        >>>    4 | res=zeros(5, dtype=int)
+               5 | for i in range(size(o)):
+
+  [4] Linha 16: Variável 'nm' com nome muito curto (≤4 chars)
+      Trecho  : nm = ...
+      Contexto:
+              15 | 		res[4]+=1
+        >>>   16 | nm=max(res)
+              17 | print(nm)
+
+======================================================================

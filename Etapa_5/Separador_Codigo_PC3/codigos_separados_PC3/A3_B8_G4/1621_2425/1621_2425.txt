@@ -1,0 +1,167 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1621_2425.py
+Questão  : 1621
+Aluno    : 2425
+Total MCs: 3
+
+⚠️  Misconceptions detectados: A3, B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import *
+     2 | vn = array(eval(input("Nomes:")))
+     3 | vq = array(eval(input("Quantidade:")))
+     4 | 
+     5 | i = 0
+     6 | p1=0
+     7 | p2=0
+     8 | p3=0
+     9 | p4=0
+    10 | p5=0
+    11 | while(i<size(vq)):
+    12 | 	if(vn[i]=='ARROZ'):
+    13 | 		p1 = 1.25*vq[i]
+    14 | 	elif(vn[i]=='FEIJAO'):
+    15 | 		p2 = 2.60*vq[i]
+    16 | 	elif(vn[i]=='BIS'):
+    17 | 		p3 = 1.80*vq[i]
+    18 | 	elif(vn[i]=='MIOJO'):
+    19 | 		p4 = 0.85*vq[i]
+    20 | 	elif(vn[i]=='FANTA'):
+    21 | 		p5 = 3.20*vq[i]
+    22 | 	i = i + 1
+    23 | p = p1+p2+p3+p4+p5
+    24 | print(round(p, 2))
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 1
+
+  [1] Linha 0: A3 detectado pelo VisitorMC3 (localização exata não mapeada)
+      Trecho  : —
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 18: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 18) / elif ... sem else
+      Contexto:
+              17 | 		p3 = 1.80*vq[i]
+        >>>   18 | 	elif(vn[i]=='MIOJO'):
+              19 | 		p4 = 0.85*vq[i]
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 15
+
+  [1] Linha 2: Variável 'vn' com nome muito curto (≤4 chars)
+      Trecho  : vn = ...
+      Contexto:
+               1 | from numpy import *
+        >>>    2 | vn = array(eval(input("Nomes:")))
+               3 | vq = array(eval(input("Quantidade:")))
+
+  [2] Linha 3: Variável 'vq' com nome muito curto (≤4 chars)
+      Trecho  : vq = ...
+      Contexto:
+               2 | vn = array(eval(input("Nomes:")))
+        >>>    3 | vq = array(eval(input("Quantidade:")))
+               4 | 
+
+  [3] Linha 5: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+               4 | 
+        >>>    5 | i = 0
+               6 | p1=0
+
+  [4] Linha 6: Variável 'p1' com nome muito curto (≤4 chars)
+      Trecho  : p1 = ...
+      Contexto:
+               5 | i = 0
+        >>>    6 | p1=0
+               7 | p2=0
+
+  [5] Linha 7: Variável 'p2' com nome muito curto (≤4 chars)
+      Trecho  : p2 = ...
+      Contexto:
+               6 | p1=0
+        >>>    7 | p2=0
+               8 | p3=0
+
+  [6] Linha 8: Variável 'p3' com nome muito curto (≤4 chars)
+      Trecho  : p3 = ...
+      Contexto:
+               7 | p2=0
+        >>>    8 | p3=0
+               9 | p4=0
+
+  [7] Linha 9: Variável 'p4' com nome muito curto (≤4 chars)
+      Trecho  : p4 = ...
+      Contexto:
+               8 | p3=0
+        >>>    9 | p4=0
+              10 | p5=0
+
+  [8] Linha 10: Variável 'p5' com nome muito curto (≤4 chars)
+      Trecho  : p5 = ...
+      Contexto:
+               9 | p4=0
+        >>>   10 | p5=0
+              11 | while(i<size(vq)):
+
+  [9] Linha 23: Variável 'p' com nome muito curto (≤4 chars)
+      Trecho  : p = ...
+      Contexto:
+              22 | 	i = i + 1
+        >>>   23 | p = p1+p2+p3+p4+p5
+              24 | print(round(p, 2))
+
+  [10] Linha 22: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+              21 | 		p5 = 3.20*vq[i]
+        >>>   22 | 	i = i + 1
+              23 | p = p1+p2+p3+p4+p5
+
+  [11] Linha 13: Variável 'p1' com nome muito curto (≤4 chars)
+      Trecho  : p1 = ...
+      Contexto:
+              12 | 	if(vn[i]=='ARROZ'):
+        >>>   13 | 		p1 = 1.25*vq[i]
+              14 | 	elif(vn[i]=='FEIJAO'):
+
+  [12] Linha 15: Variável 'p2' com nome muito curto (≤4 chars)
+      Trecho  : p2 = ...
+      Contexto:
+              14 | 	elif(vn[i]=='FEIJAO'):
+        >>>   15 | 		p2 = 2.60*vq[i]
+              16 | 	elif(vn[i]=='BIS'):
+
+  [13] Linha 17: Variável 'p3' com nome muito curto (≤4 chars)
+      Trecho  : p3 = ...
+      Contexto:
+              16 | 	elif(vn[i]=='BIS'):
+        >>>   17 | 		p3 = 1.80*vq[i]
+              18 | 	elif(vn[i]=='MIOJO'):
+
+  [14] Linha 19: Variável 'p4' com nome muito curto (≤4 chars)
+      Trecho  : p4 = ...
+      Contexto:
+              18 | 	elif(vn[i]=='MIOJO'):
+        >>>   19 | 		p4 = 0.85*vq[i]
+              20 | 	elif(vn[i]=='FANTA'):
+
+  [15] Linha 21: Variável 'p5' com nome muito curto (≤4 chars)
+      Trecho  : p5 = ...
+      Contexto:
+              20 | 	elif(vn[i]=='FANTA'):
+        >>>   21 | 		p5 = 3.20*vq[i]
+              22 | 	i = i + 1
+
+======================================================================

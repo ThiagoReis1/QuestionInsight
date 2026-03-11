@@ -1,0 +1,109 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1652_7611.py
+Questão  : 1652
+Aluno    : 7611
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | 
+     3 | b = 0
+     4 | pa = 0
+     5 | pr = 0
+     6 | a = 0
+     7 | I = 0
+     8 | 
+     9 | e = (input('').upper()).split(',')
+    10 | v = zeros(5, dtype = int)
+    11 | for i in range(len(e)):
+    12 | 	if e[i] == 'B':
+    13 | 		b += 1
+    14 | 	elif e[i] == 'PA':
+    15 | 		pa += 1
+    16 | 	elif e[i] == 'PR':
+    17 | 		pr += 1
+    18 | 	elif e[i] == 'A':
+    19 | 		a += 1
+    20 | 	elif e[i] == 'I':
+    21 | 		I += 1
+    22 | v[0] = b
+    23 | v[1] = pa
+    24 | v[2] = pr
+    25 | v[3] = a
+    26 | v[4] = I
+    27 | print(max(v))
+    28 | print(v)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 18: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 18) / elif ... sem else
+      Contexto:
+              17 | 		pr += 1
+        >>>   18 | 	elif e[i] == 'A':
+              19 | 		a += 1
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 7
+
+  [1] Linha 3: Variável 'b' com nome muito curto (≤4 chars)
+      Trecho  : b = ...
+      Contexto:
+               2 | 
+        >>>    3 | b = 0
+               4 | pa = 0
+
+  [2] Linha 4: Variável 'pa' com nome muito curto (≤4 chars)
+      Trecho  : pa = ...
+      Contexto:
+               3 | b = 0
+        >>>    4 | pa = 0
+               5 | pr = 0
+
+  [3] Linha 5: Variável 'pr' com nome muito curto (≤4 chars)
+      Trecho  : pr = ...
+      Contexto:
+               4 | pa = 0
+        >>>    5 | pr = 0
+               6 | a = 0
+
+  [4] Linha 6: Variável 'a' com nome muito curto (≤4 chars)
+      Trecho  : a = ...
+      Contexto:
+               5 | pr = 0
+        >>>    6 | a = 0
+               7 | I = 0
+
+  [5] Linha 7: Variável 'I' com nome muito curto (≤4 chars)
+      Trecho  : I = ...
+      Contexto:
+               6 | a = 0
+        >>>    7 | I = 0
+               8 | 
+
+  [6] Linha 9: Variável 'e' com nome muito curto (≤4 chars)
+      Trecho  : e = ...
+      Contexto:
+               8 | 
+        >>>    9 | e = (input('').upper()).split(',')
+              10 | v = zeros(5, dtype = int)
+
+  [7] Linha 10: Variável 'v' com nome muito curto (≤4 chars)
+      Trecho  : v = ...
+      Contexto:
+               9 | e = (input('').upper()).split(',')
+        >>>   10 | v = zeros(5, dtype = int)
+              11 | for i in range(len(e)):
+
+======================================================================

@@ -1,0 +1,78 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1613_3125.py
+Questão  : 1613
+Aluno    : 3125
+Total MCs: 2
+
+⚠️  Misconceptions detectados: A3, B8
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import *
+     2 | 
+     3 | vet_atividade = (["ALONGAMENTO"], ["CORRIDA"], ["DANCA"], ["ESCALADA"], ["HIDROGINASTICA"])
+     4 | vet_gasto_calorico = ([3.0], [10.3], [6.7], [9.7], [5.0])
+     5 | 
+     6 | veta = input(array(eval("")))
+     7 | vetb = input(array(eval("")))
+     8 | 
+     9 | if(veta == "ALONGAMENTO"):
+    10 | 	qtd = 3.0
+    11 | elif(veta == "CORRIDA"):
+    12 | 	qtd = 10.3
+    13 | elif(veta == "DANCA"):
+    14 | 	qtd = 6.7
+    15 | elif(veta == "ESCALADA"):
+    16 | 	qtd = 9.7
+    17 | elif(veta == "HIDROGINASTICA"):
+    18 | 	qtd = 5.0
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 4
+
+  [1] Linha 3: Variável 'vet_atividade' declarada mas nunca utilizada
+      Trecho  : vet_atividade = ...
+      Contexto:
+               2 | 
+        >>>    3 | vet_atividade = (["ALONGAMENTO"], ["CORRIDA"], ["DANCA"], ["ESCALADA"], ["HIDROGINASTICA"])
+               4 | vet_gasto_calorico = ([3.0], [10.3], [6.7], [9.7], [5.0])
+
+  [2] Linha 4: Variável 'vet_gasto_calorico' declarada mas nunca utilizada
+      Trecho  : vet_gasto_calorico = ...
+      Contexto:
+               3 | vet_atividade = (["ALONGAMENTO"], ["CORRIDA"], ["DANCA"], ["ESCALADA"], ["HIDROGINASTICA"])
+        >>>    4 | vet_gasto_calorico = ([3.0], [10.3], [6.7], [9.7], [5.0])
+               5 | 
+
+  [3] Linha 7: Variável 'vetb' declarada mas nunca utilizada
+      Trecho  : vetb = ...
+      Contexto:
+               6 | veta = input(array(eval("")))
+        >>>    7 | vetb = input(array(eval("")))
+               8 | 
+
+  [4] Linha 10: Variável 'qtd' declarada mas nunca utilizada
+      Trecho  : qtd = ...
+      Contexto:
+               9 | if(veta == "ALONGAMENTO"):
+        >>>   10 | 	qtd = 3.0
+              11 | elif(veta == "CORRIDA"):
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 15: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 15) / elif ... sem else
+      Contexto:
+              14 | 	qtd = 6.7
+        >>>   15 | elif(veta == "ESCALADA"):
+              16 | 	qtd = 9.7
+
+======================================================================

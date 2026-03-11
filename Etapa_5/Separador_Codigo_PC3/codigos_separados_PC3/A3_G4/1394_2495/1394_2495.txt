@@ -1,0 +1,82 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1394_2495.py
+Questão  : 1394
+Aluno    : 2495
+Total MCs: 2
+
+⚠️  Misconceptions detectados: A3, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | h = float(input("h: "))
+     2 | h1 = h%10
+     3 | h2 = h-h1
+     4 | v1 = 50*h
+     5 | v2 = 50*h2 + 70*h1
+     6 | if(h<=20):
+     7 | 	print(round(50*h,2))
+     8 | else:
+     9 | 	print(round(50*h2 + 70*h1,2))
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 2
+
+  [1] Linha 4: Variável 'v1' declarada mas nunca utilizada
+      Trecho  : v1 = ...
+      Contexto:
+               3 | h2 = h-h1
+        >>>    4 | v1 = 50*h
+               5 | v2 = 50*h2 + 70*h1
+
+  [2] Linha 5: Variável 'v2' declarada mas nunca utilizada
+      Trecho  : v2 = ...
+      Contexto:
+               4 | v1 = 50*h
+        >>>    5 | v2 = 50*h2 + 70*h1
+               6 | if(h<=20):
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 5
+
+  [1] Linha 1: Variável 'h' com nome muito curto (≤4 chars)
+      Trecho  : h = ...
+      Contexto:
+        >>>    1 | h = float(input("h: "))
+               2 | h1 = h%10
+
+  [2] Linha 2: Variável 'h1' com nome muito curto (≤4 chars)
+      Trecho  : h1 = ...
+      Contexto:
+               1 | h = float(input("h: "))
+        >>>    2 | h1 = h%10
+               3 | h2 = h-h1
+
+  [3] Linha 3: Variável 'h2' com nome muito curto (≤4 chars)
+      Trecho  : h2 = ...
+      Contexto:
+               2 | h1 = h%10
+        >>>    3 | h2 = h-h1
+               4 | v1 = 50*h
+
+  [4] Linha 4: Variável 'v1' com nome muito curto (≤4 chars)
+      Trecho  : v1 = ...
+      Contexto:
+               3 | h2 = h-h1
+        >>>    4 | v1 = 50*h
+               5 | v2 = 50*h2 + 70*h1
+
+  [5] Linha 5: Variável 'v2' com nome muito curto (≤4 chars)
+      Trecho  : v2 = ...
+      Contexto:
+               4 | v1 = 50*h
+        >>>    5 | v2 = 50*h2 + 70*h1
+               6 | if(h<=20):
+
+======================================================================

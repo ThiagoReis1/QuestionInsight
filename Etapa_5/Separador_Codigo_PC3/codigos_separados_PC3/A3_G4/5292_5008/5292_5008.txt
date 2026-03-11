@@ -1,0 +1,78 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 5292_5008.py
+Questão  : 5292
+Aluno    : 5008
+Total MCs: 2
+
+⚠️  Misconceptions detectados: A3, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | cor = input("cor: ")
+     2 | p = 0
+     3 | v = 0
+     4 | x = 0
+     5 | while (cor.upper()=="PRETA" or cor.upper()=="VERMELHA"):
+     6 | 	if (cor.upper()=="PRETA"):
+     7 | 		p += 1
+     8 | 	if (cor.upper()=="VERMELHA"):
+     9 | 		v += 1
+    10 | 	x += 1
+    11 | 	cor = input("cor: ")
+    12 | print(x, round(100*p/x, 2))
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 1
+
+  [1] Linha 3: Variável 'v' declarada mas nunca utilizada
+      Trecho  : v = ...
+      Contexto:
+               2 | p = 0
+        >>>    3 | v = 0
+               4 | x = 0
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 5
+
+  [1] Linha 1: Variável 'cor' com nome muito curto (≤4 chars)
+      Trecho  : cor = ...
+      Contexto:
+        >>>    1 | cor = input("cor: ")
+               2 | p = 0
+
+  [2] Linha 2: Variável 'p' com nome muito curto (≤4 chars)
+      Trecho  : p = ...
+      Contexto:
+               1 | cor = input("cor: ")
+        >>>    2 | p = 0
+               3 | v = 0
+
+  [3] Linha 3: Variável 'v' com nome muito curto (≤4 chars)
+      Trecho  : v = ...
+      Contexto:
+               2 | p = 0
+        >>>    3 | v = 0
+               4 | x = 0
+
+  [4] Linha 4: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+               3 | v = 0
+        >>>    4 | x = 0
+               5 | while (cor.upper()=="PRETA" or cor.upper()=="VERMELHA"):
+
+  [5] Linha 11: Variável 'cor' com nome muito curto (≤4 chars)
+      Trecho  : cor = ...
+      Contexto:
+              10 | 	x += 1
+        >>>   11 | 	cor = input("cor: ")
+              12 | print(x, round(100*p/x, 2))
+
+======================================================================

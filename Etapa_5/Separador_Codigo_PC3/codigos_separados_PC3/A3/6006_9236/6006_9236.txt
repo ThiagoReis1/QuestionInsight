@@ -1,0 +1,59 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 6006_9236.py
+Questão  : 6006
+Aluno    : 9236
+Total MCs: 1
+
+⚠️  Misconceptions detectados: A3
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | calcular_valor_total_batata(quantidade)
+     2 | preco_unico_sem_desconto = 0.90
+     3 | preco_unico_com_desconto = 0.75
+     4 | desconto_por_dezena = 10
+     5 | 
+     6 | if quantidade < desconto_por_dezena:
+     7 | 	valor_total = quantidade * preco_unico__sem_desconto
+     8 | 	
+     9 | else:
+    10 | 	valor_total = quantidade * preco_unico_com_desconto
+    11 | 
+    12 | quantidade_batatas = int(input("Digite a quantidade de batatas compradas:"))
+    13 | 
+    14 | valor_total_compra = calcular_valor_total_batatas(quantidade)
+    15 | 
+    16 | print(round(valor_total_compra, 2))
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 3
+
+  [1] Linha 2: Variável 'preco_unico_sem_desconto' declarada mas nunca utilizada
+      Trecho  : preco_unico_sem_desconto = ...
+      Contexto:
+               1 | calcular_valor_total_batata(quantidade)
+        >>>    2 | preco_unico_sem_desconto = 0.90
+               3 | preco_unico_com_desconto = 0.75
+
+  [2] Linha 7: Variável 'valor_total' declarada mas nunca utilizada
+      Trecho  : valor_total = ...
+      Contexto:
+               6 | if quantidade < desconto_por_dezena:
+        >>>    7 | 	valor_total = quantidade * preco_unico__sem_desconto
+               8 | 	
+
+  [3] Linha 12: Variável 'quantidade_batatas' declarada mas nunca utilizada
+      Trecho  : quantidade_batatas = ...
+      Contexto:
+              11 | 
+        >>>   12 | quantidade_batatas = int(input("Digite a quantidade de batatas compradas:"))
+              13 | 
+
+======================================================================

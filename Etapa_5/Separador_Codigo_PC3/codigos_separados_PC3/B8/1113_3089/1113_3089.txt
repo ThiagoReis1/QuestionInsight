@@ -1,0 +1,55 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1113_3089.py
+Questão  : 1113
+Aluno    : 3089
+Total MCs: 1
+
+⚠️  Misconceptions detectados: B8
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from math import*
+     2 | idade=int(input("qual a idade: "))
+     3 | peso=float(input("qual o peso: "))
+     4 | print("Entradas:",idade,"anos e",peso,"kg")
+     5 | m="Grupo de risco:"
+     6 | if(((idade>=0)and(idade<=130))and((peso>=0.0)and(peso<=550.0))):
+     7 | 	if((idade<=20)and(peso<=60)):
+     8 | 		print(m,9)
+     9 | 	elif((idade<=20)and(peso>60 and peso<=90)):
+    10 | 		print(m,8)
+    11 | 	elif((idade>=0)and(peso>90)):
+    12 | 		print(m,7)
+    13 | 	elif((idade>20 and idade<=50)and(peso<=60)):
+    14 | 		print(m,6)
+    15 | 	elif((idade>20 and idade<=50)and(peso>60 and peso<=90)):
+    16 | 		print(m,5)
+    17 | 	elif((idade>20 and idade<=50)and (peso>90)):
+    18 | 		print(m,4)
+    19 | 	elif((idade>50)and(peso<=60)):
+    20 | 		print(m,3)
+    21 | 	elif((idade>50)and(peso>60 and peso<=90)):
+    22 | 		print(m,2)
+    23 | 	elif((idade>50)and(peso>90)):
+    24 | 		print(m,1)
+    25 | else:
+    26 | 	print("Dados invalidos")
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 21: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 21) / elif ... sem else
+      Contexto:
+              20 | 		print(m,3)
+        >>>   21 | 	elif((idade>50)and(peso>60 and peso<=90)):
+              22 | 		print(m,2)
+
+======================================================================

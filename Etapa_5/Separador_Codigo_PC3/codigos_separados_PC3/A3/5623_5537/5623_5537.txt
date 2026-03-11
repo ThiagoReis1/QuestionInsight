@@ -1,0 +1,55 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 5623_5537.py
+Questão  : 5623
+Aluno    : 5537
+Total MCs: 1
+
+⚠️  Misconceptions detectados: A3
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | item = input("Voce deseja bolo ou salgado? (B/S) ")
+     2 | qtd = int(input("Digite a quantidade desejada: "))
+     3 | qtdcappuccino = int(input("Digite a quantidade de cappuccinos: "))
+     4 | bolo = 5
+     5 | salgado = 4
+     6 | cappuccino = 7.5
+     7 | if(item.upper() == "B"):
+     8 | 	total = qtd*5 + qtdcappuccino*7.5
+     9 | 	print(round(total,2))
+    10 | else:
+    11 | 	total = qtd*4 + qtdcappuccino*7.5
+    12 | 	print(round(total,2))
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 3
+
+  [1] Linha 4: Variável 'bolo' declarada mas nunca utilizada
+      Trecho  : bolo = ...
+      Contexto:
+               3 | qtdcappuccino = int(input("Digite a quantidade de cappuccinos: "))
+        >>>    4 | bolo = 5
+               5 | salgado = 4
+
+  [2] Linha 5: Variável 'salgado' declarada mas nunca utilizada
+      Trecho  : salgado = ...
+      Contexto:
+               4 | bolo = 5
+        >>>    5 | salgado = 4
+               6 | cappuccino = 7.5
+
+  [3] Linha 6: Variável 'cappuccino' declarada mas nunca utilizada
+      Trecho  : cappuccino = ...
+      Contexto:
+               5 | salgado = 4
+        >>>    6 | cappuccino = 7.5
+               7 | if(item.upper() == "B"):
+
+======================================================================

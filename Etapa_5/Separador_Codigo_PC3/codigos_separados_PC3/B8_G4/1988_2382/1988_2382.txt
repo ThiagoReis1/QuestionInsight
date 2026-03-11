@@ -1,0 +1,78 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1988_2382.py
+Questão  : 1988
+Aluno    : 2382
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | amino=input().upper()
+     2 | 
+     3 | O=15.9994
+     4 | C=12.011
+     5 | N=14.00674
+     6 | H=1.00794
+     7 | if(amino!="ARGININA")and(amino!="TIROSINA")and(amino!="TRIPTOFANO"):
+     8 | 	print("Entrada: "+amino)
+     9 | 	print("Dado Invalido")
+    10 | else:
+    11 | 	if(amino=="ARGININA"):
+    12 | 		print(round(C*6+H*15+N*4+O*2,2))
+    13 | 	else:
+    14 | 		if(amino=="TIROSINA"):
+    15 | 			print(round(C*9+H*11+N+O*3,2))
+    16 | 		else:
+    17 | 			if(amino=="TRIPTOFANO"):
+    18 | 				print(round(C*11+H*11+N*2+O*2,2))
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 14: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 14) / elif ... sem else
+      Contexto:
+              13 | 	else:
+        >>>   14 | 		if(amino=="TIROSINA"):
+              15 | 			print(round(C*9+H*11+N+O*3,2))
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 4
+
+  [1] Linha 3: Variável 'O' com nome muito curto (≤4 chars)
+      Trecho  : O = ...
+      Contexto:
+               2 | 
+        >>>    3 | O=15.9994
+               4 | C=12.011
+
+  [2] Linha 4: Variável 'C' com nome muito curto (≤4 chars)
+      Trecho  : C = ...
+      Contexto:
+               3 | O=15.9994
+        >>>    4 | C=12.011
+               5 | N=14.00674
+
+  [3] Linha 5: Variável 'N' com nome muito curto (≤4 chars)
+      Trecho  : N = ...
+      Contexto:
+               4 | C=12.011
+        >>>    5 | N=14.00674
+               6 | H=1.00794
+
+  [4] Linha 6: Variável 'H' com nome muito curto (≤4 chars)
+      Trecho  : H = ...
+      Contexto:
+               5 | N=14.00674
+        >>>    6 | H=1.00794
+               7 | if(amino!="ARGININA")and(amino!="TIROSINA")and(amino!="TRIPTOFANO"):
+
+======================================================================

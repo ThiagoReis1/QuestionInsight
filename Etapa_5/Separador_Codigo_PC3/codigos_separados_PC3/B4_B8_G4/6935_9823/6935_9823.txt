@@ -1,0 +1,106 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 6935_9823.py
+Questão  : 6935
+Aluno    : 9823
+Total MCs: 3
+
+⚠️  Misconceptions detectados: B4, B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | vc = float(input())
+     2 | cp = input().upper()
+     3 | 
+     4 | if cp == 'C':
+     5 | 	q = int(input())
+     6 | 	if q == 1:
+     7 | 		print(round(vc,2))
+     8 | 	elif q == 2:
+     9 | 		vf = vc + (vc*(7/100))
+    10 | 		print(round(vf,2))
+    11 | elif cp == 'P':
+    12 | 	vf = vc - (vc*(12/100))
+    13 | 	print(round(vf,2))
+    14 | else:
+    15 | 	vf = vc - (vc*(12/100))
+    16 | 	print(round(vf,2))
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B4 — Comandos repetidos dentro de blocos if-elif-else
+  Ocorrências: 2
+
+  [1] Linha 11: Bloco idêntico ao da linha 11
+      Trecho  : vf = vc - vc * (12 / 100)
+      Contexto:
+              10 | 		print(round(vf,2))
+        >>>   11 | elif cp == 'P':
+              12 | 	vf = vc - (vc*(12/100))
+
+  [2] Linha 11: Bloco idêntico ao da linha 11
+      Trecho  : vf = vc - vc * (12 / 100)
+      Contexto:
+              10 | 		print(round(vf,2))
+        >>>   11 | elif cp == 'P':
+              12 | 	vf = vc - (vc*(12/100))
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 6: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 6) / elif ... sem else
+      Contexto:
+               5 | 	q = int(input())
+        >>>    6 | 	if q == 1:
+               7 | 		print(round(vc,2))
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 6
+
+  [1] Linha 1: Variável 'vc' com nome muito curto (≤4 chars)
+      Trecho  : vc = ...
+      Contexto:
+        >>>    1 | vc = float(input())
+               2 | cp = input().upper()
+
+  [2] Linha 2: Variável 'cp' com nome muito curto (≤4 chars)
+      Trecho  : cp = ...
+      Contexto:
+               1 | vc = float(input())
+        >>>    2 | cp = input().upper()
+               3 | 
+
+  [3] Linha 5: Variável 'q' com nome muito curto (≤4 chars)
+      Trecho  : q = ...
+      Contexto:
+               4 | if cp == 'C':
+        >>>    5 | 	q = int(input())
+               6 | 	if q == 1:
+
+  [4] Linha 12: Variável 'vf' com nome muito curto (≤4 chars)
+      Trecho  : vf = ...
+      Contexto:
+              11 | elif cp == 'P':
+        >>>   12 | 	vf = vc - (vc*(12/100))
+              13 | 	print(round(vf,2))
+
+  [5] Linha 15: Variável 'vf' com nome muito curto (≤4 chars)
+      Trecho  : vf = ...
+      Contexto:
+              14 | else:
+        >>>   15 | 	vf = vc - (vc*(12/100))
+              16 | 	print(round(vf,2))
+
+  [6] Linha 9: Variável 'vf' com nome muito curto (≤4 chars)
+      Trecho  : vf = ...
+      Contexto:
+               8 | 	elif q == 2:
+        >>>    9 | 		vf = vc + (vc*(7/100))
+              10 | 		print(round(vf,2))
+
+======================================================================

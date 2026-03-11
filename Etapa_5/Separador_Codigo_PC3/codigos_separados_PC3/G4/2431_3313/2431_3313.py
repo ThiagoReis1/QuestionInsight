@@ -1,0 +1,6 @@
+pc = float(input("passagem do cliente: "))
+pa = float(input("passagem do acompanhante: "))
+desc = pa*(35/100)
+print (round(pc,2))
+print (round(pa-desc,2))
+print (round((pa-desc)+pc,2))

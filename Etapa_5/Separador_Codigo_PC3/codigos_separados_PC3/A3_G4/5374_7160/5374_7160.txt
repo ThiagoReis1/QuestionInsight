@@ -1,0 +1,107 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 5374_7160.py
+Questão  : 5374
+Aluno    : 7160
+Total MCs: 2
+
+⚠️  Misconceptions detectados: A3, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | 
+     3 | s = input().upper()
+     4 | 
+     5 | i = 0
+     6 | v = 0
+     7 | c = 0
+     8 | 
+     9 | for letra in s:
+    10 | 	if letra in "A,E,I,O,U":
+    11 | 		v = v + 1
+    12 | 		tv = v*0.15
+    13 | 	else:
+    14 | 		c = c + 1
+    15 | 		tc = c*0.17
+    16 | total = tv + tc
+    17 | 
+    18 | print(round(total,2))
+    19 | 
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 1
+
+  [1] Linha 5: Variável 'i' declarada mas nunca utilizada
+      Trecho  : i = ...
+      Contexto:
+               4 | 
+        >>>    5 | i = 0
+               6 | v = 0
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 8
+
+  [1] Linha 3: Variável 's' com nome muito curto (≤4 chars)
+      Trecho  : s = ...
+      Contexto:
+               2 | 
+        >>>    3 | s = input().upper()
+               4 | 
+
+  [2] Linha 5: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+               4 | 
+        >>>    5 | i = 0
+               6 | v = 0
+
+  [3] Linha 6: Variável 'v' com nome muito curto (≤4 chars)
+      Trecho  : v = ...
+      Contexto:
+               5 | i = 0
+        >>>    6 | v = 0
+               7 | c = 0
+
+  [4] Linha 7: Variável 'c' com nome muito curto (≤4 chars)
+      Trecho  : c = ...
+      Contexto:
+               6 | v = 0
+        >>>    7 | c = 0
+               8 | 
+
+  [5] Linha 11: Variável 'v' com nome muito curto (≤4 chars)
+      Trecho  : v = ...
+      Contexto:
+              10 | 	if letra in "A,E,I,O,U":
+        >>>   11 | 		v = v + 1
+              12 | 		tv = v*0.15
+
+  [6] Linha 12: Variável 'tv' com nome muito curto (≤4 chars)
+      Trecho  : tv = ...
+      Contexto:
+              11 | 		v = v + 1
+        >>>   12 | 		tv = v*0.15
+              13 | 	else:
+
+  [7] Linha 14: Variável 'c' com nome muito curto (≤4 chars)
+      Trecho  : c = ...
+      Contexto:
+              13 | 	else:
+        >>>   14 | 		c = c + 1
+              15 | 		tc = c*0.17
+
+  [8] Linha 15: Variável 'tc' com nome muito curto (≤4 chars)
+      Trecho  : tc = ...
+      Contexto:
+              14 | 		c = c + 1
+        >>>   15 | 		tc = c*0.17
+              16 | total = tv + tc
+
+======================================================================

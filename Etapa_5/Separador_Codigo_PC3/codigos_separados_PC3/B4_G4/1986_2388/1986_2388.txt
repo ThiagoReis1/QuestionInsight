@@ -1,0 +1,112 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1986_2388.py
+Questão  : 1986
+Aluno    : 2388
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B4, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | mod= input("modalidade:")
+     2 | t= input("turno:")
+     3 | 
+     4 | if  (mod.lower() != "bacharelado") and(mod.lower() != "licenciatura"):
+     5 | 	print("CURSO DE GRADUACAO NAO IDENTIFICADO")
+     6 | elif  (t.lower() != "diurno") and (t.lower() != "noturno") and(t.lower()!= "vespertino"):
+     7 | 	print("CURSO DE GRADUACAO NAO IDENTIFICADO")
+     8 | elif  (mod.lower() == "bacharelado") and (t.lower() == "diurno"):
+     9 | 	c= "Direito"
+    10 | 	print(c.upper())
+    11 | elif  (mod.lower() == "bacharelado") and (t.lower() == "noturno"):
+    12 | 	c= "Administracao"
+    13 | 	print(c.upper())
+    14 | elif  (mod.lower() == "licenciatura") and(t.lower() == "vespertino"):
+    15 | 	c= "filosofia"
+    16 | 	print(c.upper())
+    17 | elif  (mod.lower() == "licenciatura") and(t.lower() == "noturno"):
+    18 | 	c="geografia"
+    19 | 	print(c.upper())
+    20 | else:
+    21 | 	print("CURSO DE GRADUACAO NAO IDENTIFICADO")
+    22 | 
+    23 | 
+    24 | 
+    25 | 	
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B4 — Comandos repetidos dentro de blocos if-elif-else
+  Ocorrências: 3
+
+  [1] Linha 6: Bloco idêntico ao da linha 4
+      Trecho  : print('CURSO DE GRADUACAO NAO IDENTIFICADO')
+      Contexto:
+               5 | 	print("CURSO DE GRADUACAO NAO IDENTIFICADO")
+        >>>    6 | elif  (t.lower() != "diurno") and (t.lower() != "noturno") and(t.lower()!= "vespertino"):
+               7 | 	print("CURSO DE GRADUACAO NAO IDENTIFICADO")
+
+  [2] Linha 17: Bloco idêntico ao da linha 4
+      Trecho  : print('CURSO DE GRADUACAO NAO IDENTIFICADO')
+      Contexto:
+              16 | 	print(c.upper())
+        >>>   17 | elif  (mod.lower() == "licenciatura") and(t.lower() == "noturno"):
+              18 | 	c="geografia"
+
+  [3] Linha 17: Bloco idêntico ao da linha 6
+      Trecho  : print('CURSO DE GRADUACAO NAO IDENTIFICADO')
+      Contexto:
+              16 | 	print(c.upper())
+        >>>   17 | elif  (mod.lower() == "licenciatura") and(t.lower() == "noturno"):
+              18 | 	c="geografia"
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 6
+
+  [1] Linha 1: Variável 'mod' com nome muito curto (≤4 chars)
+      Trecho  : mod = ...
+      Contexto:
+        >>>    1 | mod= input("modalidade:")
+               2 | t= input("turno:")
+
+  [2] Linha 2: Variável 't' com nome muito curto (≤4 chars)
+      Trecho  : t = ...
+      Contexto:
+               1 | mod= input("modalidade:")
+        >>>    2 | t= input("turno:")
+               3 | 
+
+  [3] Linha 9: Variável 'c' com nome muito curto (≤4 chars)
+      Trecho  : c = ...
+      Contexto:
+               8 | elif  (mod.lower() == "bacharelado") and (t.lower() == "diurno"):
+        >>>    9 | 	c= "Direito"
+              10 | 	print(c.upper())
+
+  [4] Linha 12: Variável 'c' com nome muito curto (≤4 chars)
+      Trecho  : c = ...
+      Contexto:
+              11 | elif  (mod.lower() == "bacharelado") and (t.lower() == "noturno"):
+        >>>   12 | 	c= "Administracao"
+              13 | 	print(c.upper())
+
+  [5] Linha 15: Variável 'c' com nome muito curto (≤4 chars)
+      Trecho  : c = ...
+      Contexto:
+              14 | elif  (mod.lower() == "licenciatura") and(t.lower() == "vespertino"):
+        >>>   15 | 	c= "filosofia"
+              16 | 	print(c.upper())
+
+  [6] Linha 18: Variável 'c' com nome muito curto (≤4 chars)
+      Trecho  : c = ...
+      Contexto:
+              17 | elif  (mod.lower() == "licenciatura") and(t.lower() == "noturno"):
+        >>>   18 | 	c="geografia"
+              19 | 	print(c.upper())
+
+======================================================================

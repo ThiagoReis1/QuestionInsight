@@ -1,0 +1,1 @@
+f=int(input("Digite um numero da face"))

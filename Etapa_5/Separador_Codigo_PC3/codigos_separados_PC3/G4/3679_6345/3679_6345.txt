@@ -1,0 +1,68 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 3679_6345.py
+Questão  : 3679
+Aluno    : 6345
+Total MCs: 1
+
+⚠️  Misconceptions detectados: G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import *
+     2 | 
+     3 | dp = 0
+     4 | vet = int(input("n: "))
+     5 | 
+     6 | mat0 = zeros([vet,vet], dtype=int)
+     7 | 
+     8 | for i in range(shape(mat0)[0]):
+     9 | 	for j in range(shape(mat0)[1]):
+    10 | 		if i == j:
+    11 | 			dp = dp + mat0[i,j]
+    12 | 			mat0[i,j] = dp + 1
+    13 | 			
+    14 | 		if i < j:
+    15 | 			mat0[i,j] = dp + 1
+    16 | 		
+    17 | 
+    18 | print(mat0)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 4
+
+  [1] Linha 3: Variável 'dp' com nome muito curto (≤4 chars)
+      Trecho  : dp = ...
+      Contexto:
+               2 | 
+        >>>    3 | dp = 0
+               4 | vet = int(input("n: "))
+
+  [2] Linha 4: Variável 'vet' com nome muito curto (≤4 chars)
+      Trecho  : vet = ...
+      Contexto:
+               3 | dp = 0
+        >>>    4 | vet = int(input("n: "))
+               5 | 
+
+  [3] Linha 6: Variável 'mat0' com nome muito curto (≤4 chars)
+      Trecho  : mat0 = ...
+      Contexto:
+               5 | 
+        >>>    6 | mat0 = zeros([vet,vet], dtype=int)
+               7 | 
+
+  [4] Linha 11: Variável 'dp' com nome muito curto (≤4 chars)
+      Trecho  : dp = ...
+      Contexto:
+              10 | 		if i == j:
+        >>>   11 | 			dp = dp + mat0[i,j]
+              12 | 			mat0[i,j] = dp + 1
+
+======================================================================

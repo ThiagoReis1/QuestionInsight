@@ -1,0 +1,64 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1649_7653.py
+Questão  : 1649
+Aluno    : 7653
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | 
+     3 | o = input("cor dos olhos: ").split(",")
+     4 | v = zeros(5, dtype=int)
+     5 | 
+     6 | for i in range(size(o)):
+     7 | 	if o[i] == "P":
+     8 | 		v[0]+=1
+     9 | 	elif o[i] == "C":
+    10 | 		v[1]+=1
+    11 | 	elif o[i] == "M":
+    12 | 		v[2]+=1
+    13 | 	elif o[i] == "V":
+    14 | 		v[3]+=1
+    15 | 	elif o[i] == "A":
+    16 | 		v[4]+=1
+    17 | print(max(v))
+    18 | print(v)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 13: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 13) / elif ... sem else
+      Contexto:
+              12 | 		v[2]+=1
+        >>>   13 | 	elif o[i] == "V":
+              14 | 		v[3]+=1
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 2
+
+  [1] Linha 3: Variável 'o' com nome muito curto (≤4 chars)
+      Trecho  : o = ...
+      Contexto:
+               2 | 
+        >>>    3 | o = input("cor dos olhos: ").split(",")
+               4 | v = zeros(5, dtype=int)
+
+  [2] Linha 4: Variável 'v' com nome muito curto (≤4 chars)
+      Trecho  : v = ...
+      Contexto:
+               3 | o = input("cor dos olhos: ").split(",")
+        >>>    4 | v = zeros(5, dtype=int)
+               5 | 
+
+======================================================================

@@ -1,0 +1,6 @@
+a = float(input("primeiro integrante: "))
+a1 = float(input("segundo integrante: "))
+a2 = float(input("terceiro integrante: "))
+a3 = float(input("quarto integrante: "))
+a4 = ((a+a1+a2+a3)/4)
+print(round(a4, 2))

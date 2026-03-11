@@ -1,0 +1,66 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1651_3325.py
+Questão  : 1651
+Aluno    : 3325
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | tp = input("dig cor da pele: ").split(",")
+     3 | v = zeros(6,dtype=int)
+     4 | for i in range(0,size(tp)):
+     5 | 	if(tp[i]=="MC"):
+     6 | 		v[0] = v[0]+1
+     7 | 	elif(tp[i]=="C"):
+     8 | 		v[1] = v[1]+1
+     9 | 	elif(tp[i]=="CM"):
+    10 | 		v[2] = v[2]+1
+    11 | 	elif(tp[i]=="EM"):
+    12 | 		v[3] = v[3]+1
+    13 | 	elif(tp[i]=="E"):
+    14 | 		v[4] = v[4]+1
+    15 | 	elif(tp[i]=="ME"):
+    16 | 		v[5] = v[5]+1
+    17 | print(max(v))
+    18 | print(v)
+    19 | 	
+    20 | 	
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 13: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 13) / elif ... sem else
+      Contexto:
+              12 | 		v[3] = v[3]+1
+        >>>   13 | 	elif(tp[i]=="E"):
+              14 | 		v[4] = v[4]+1
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 2
+
+  [1] Linha 2: Variável 'tp' com nome muito curto (≤4 chars)
+      Trecho  : tp = ...
+      Contexto:
+               1 | from numpy import*
+        >>>    2 | tp = input("dig cor da pele: ").split(",")
+               3 | v = zeros(6,dtype=int)
+
+  [2] Linha 3: Variável 'v' com nome muito curto (≤4 chars)
+      Trecho  : v = ...
+      Contexto:
+               2 | tp = input("dig cor da pele: ").split(",")
+        >>>    3 | v = zeros(6,dtype=int)
+               4 | for i in range(0,size(tp)):
+
+======================================================================

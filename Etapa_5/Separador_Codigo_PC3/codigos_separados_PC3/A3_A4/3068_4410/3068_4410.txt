@@ -1,0 +1,57 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 3068_4410.py
+Questão  : 3068
+Aluno    : 4410
+Total MCs: 2
+
+⚠️  Misconceptions detectados: A3, A4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | cimitarra = 2+2-20 + 2-20
+     2 | katana = 2+2-20 + 2-20
+     3 | sabre = 2+2-20 + 2+2-20
+     4 | print = input()
+     5 | print = (cimitarra,katan,sabre)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 2
+
+  [1] Linha 2: Variável 'katana' declarada mas nunca utilizada
+      Trecho  : katana = ...
+      Contexto:
+               1 | cimitarra = 2+2-20 + 2-20
+        >>>    2 | katana = 2+2-20 + 2-20
+               3 | sabre = 2+2-20 + 2+2-20
+
+  [2] Linha 4: Variável 'print' declarada mas nunca utilizada
+      Trecho  : print = ...
+      Contexto:
+               3 | sabre = 2+2-20 + 2+2-20
+        >>>    4 | print = input()
+               5 | print = (cimitarra,katan,sabre)
+
+▶ A4 — Redefinição de built-in
+  Ocorrências: 2
+
+  [1] Linha 4: Built-in 'print' redefinido como variável
+      Trecho  : print = input()
+      Contexto:
+               3 | sabre = 2+2-20 + 2+2-20
+        >>>    4 | print = input()
+               5 | print = (cimitarra,katan,sabre)
+
+  [2] Linha 5: Built-in 'print' redefinido como variável
+      Trecho  : print = (cimitarra, katan, sabre)
+      Contexto:
+               4 | print = input()
+        >>>    5 | print = (cimitarra,katan,sabre)
+
+======================================================================

@@ -1,0 +1,78 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1645_4188.py
+Questão  : 1645
+Aluno    : 4188
+Total MCs: 1
+
+⚠️  Misconceptions detectados: G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import *
+     2 | a = array(eval(input("vetor: ")))
+     3 | b = 0
+     4 | for i in range(size(a)):
+     5 | 	if(a[i] >= 2000):
+     6 | 		b = b + 1
+     7 | c = zeros(b, dtype=int)
+     8 | d = 0
+     9 | for i in range(size(a)):
+    10 | 	if(a[i]>=2000):
+    11 | 		c[d] = i
+    12 | 		d = d + 1
+    13 | print(b)
+    14 | print(c)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 6
+
+  [1] Linha 2: Variável 'a' com nome muito curto (≤4 chars)
+      Trecho  : a = ...
+      Contexto:
+               1 | from numpy import *
+        >>>    2 | a = array(eval(input("vetor: ")))
+               3 | b = 0
+
+  [2] Linha 3: Variável 'b' com nome muito curto (≤4 chars)
+      Trecho  : b = ...
+      Contexto:
+               2 | a = array(eval(input("vetor: ")))
+        >>>    3 | b = 0
+               4 | for i in range(size(a)):
+
+  [3] Linha 7: Variável 'c' com nome muito curto (≤4 chars)
+      Trecho  : c = ...
+      Contexto:
+               6 | 		b = b + 1
+        >>>    7 | c = zeros(b, dtype=int)
+               8 | d = 0
+
+  [4] Linha 8: Variável 'd' com nome muito curto (≤4 chars)
+      Trecho  : d = ...
+      Contexto:
+               7 | c = zeros(b, dtype=int)
+        >>>    8 | d = 0
+               9 | for i in range(size(a)):
+
+  [5] Linha 6: Variável 'b' com nome muito curto (≤4 chars)
+      Trecho  : b = ...
+      Contexto:
+               5 | 	if(a[i] >= 2000):
+        >>>    6 | 		b = b + 1
+               7 | c = zeros(b, dtype=int)
+
+  [6] Linha 12: Variável 'd' com nome muito curto (≤4 chars)
+      Trecho  : d = ...
+      Contexto:
+              11 | 		c[d] = i
+        >>>   12 | 		d = d + 1
+              13 | print(b)
+
+======================================================================

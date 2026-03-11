@@ -1,0 +1,106 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 6931_9680.py
+Questão  : 6931
+Aluno    : 9680
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | vl = float(input("valor da compra: "))
+     2 | cp = input("forma de pagamento: ").upper()
+     3 | 
+     4 | v = vl-(vl*(18/100))
+     5 | px = vl-(vl*(18/100))
+     6 | c1 = vl
+     7 | c2 = vl+(vl*(7/100))
+     8 | 
+     9 | if cp == "C":
+    10 | 	qt = input("quantas vezes: ")
+    11 | 	if qt == "1":
+    12 | 		print(round(c1, 2))
+    13 | 	elif qt == "2":
+    14 | 		print(round(c2, 2))
+    15 | elif cp == "D":
+    16 | 	print(round(v, 2 ))
+    17 | elif cp == "P":
+    18 | 	print(round(px, 2))
+    19 | 	
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 2
+
+  [1] Linha 11: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 11) / elif ... sem else
+      Contexto:
+              10 | 	qt = input("quantas vezes: ")
+        >>>   11 | 	if qt == "1":
+              12 | 		print(round(c1, 2))
+
+  [2] Linha 15: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 15) / elif ... sem else
+      Contexto:
+              14 | 		print(round(c2, 2))
+        >>>   15 | elif cp == "D":
+              16 | 	print(round(v, 2 ))
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 7
+
+  [1] Linha 1: Variável 'vl' com nome muito curto (≤4 chars)
+      Trecho  : vl = ...
+      Contexto:
+        >>>    1 | vl = float(input("valor da compra: "))
+               2 | cp = input("forma de pagamento: ").upper()
+
+  [2] Linha 2: Variável 'cp' com nome muito curto (≤4 chars)
+      Trecho  : cp = ...
+      Contexto:
+               1 | vl = float(input("valor da compra: "))
+        >>>    2 | cp = input("forma de pagamento: ").upper()
+               3 | 
+
+  [3] Linha 4: Variável 'v' com nome muito curto (≤4 chars)
+      Trecho  : v = ...
+      Contexto:
+               3 | 
+        >>>    4 | v = vl-(vl*(18/100))
+               5 | px = vl-(vl*(18/100))
+
+  [4] Linha 5: Variável 'px' com nome muito curto (≤4 chars)
+      Trecho  : px = ...
+      Contexto:
+               4 | v = vl-(vl*(18/100))
+        >>>    5 | px = vl-(vl*(18/100))
+               6 | c1 = vl
+
+  [5] Linha 6: Variável 'c1' com nome muito curto (≤4 chars)
+      Trecho  : c1 = ...
+      Contexto:
+               5 | px = vl-(vl*(18/100))
+        >>>    6 | c1 = vl
+               7 | c2 = vl+(vl*(7/100))
+
+  [6] Linha 7: Variável 'c2' com nome muito curto (≤4 chars)
+      Trecho  : c2 = ...
+      Contexto:
+               6 | c1 = vl
+        >>>    7 | c2 = vl+(vl*(7/100))
+               8 | 
+
+  [7] Linha 10: Variável 'qt' com nome muito curto (≤4 chars)
+      Trecho  : qt = ...
+      Contexto:
+               9 | if cp == "C":
+        >>>   10 | 	qt = input("quantas vezes: ")
+              11 | 	if qt == "1":
+
+======================================================================

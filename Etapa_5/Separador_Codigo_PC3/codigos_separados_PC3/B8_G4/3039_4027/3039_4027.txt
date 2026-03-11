@@ -1,0 +1,79 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 3039_4027.py
+Questão  : 3039
+Aluno    : 4027
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from math import *
+     2 | x = float(input("Valor de x: "))
+     3 | if(x >= -1 and x <= 1):
+     4 | 	if((x >= -1 and  x < -(1/2)) or (x > (1/2) and x <= 1)):
+     5 | 		f = asin(x)
+     6 | 	elif(x >= -(1/2) and x <= (1/2)):
+     7 | 		f = acos(x)
+     8 | 	f = degrees(f)
+     9 | 	f = round(f, 2)
+    10 | 	print(f)
+    11 | else:
+    12 | 	print("entrada invalida")
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 4: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 4) / elif ... sem else
+      Contexto:
+               3 | if(x >= -1 and x <= 1):
+        >>>    4 | 	if((x >= -1 and  x < -(1/2)) or (x > (1/2) and x <= 1)):
+               5 | 		f = asin(x)
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 5
+
+  [1] Linha 2: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+               1 | from math import *
+        >>>    2 | x = float(input("Valor de x: "))
+               3 | if(x >= -1 and x <= 1):
+
+  [2] Linha 8: Variável 'f' com nome muito curto (≤4 chars)
+      Trecho  : f = ...
+      Contexto:
+               7 | 		f = acos(x)
+        >>>    8 | 	f = degrees(f)
+               9 | 	f = round(f, 2)
+
+  [3] Linha 9: Variável 'f' com nome muito curto (≤4 chars)
+      Trecho  : f = ...
+      Contexto:
+               8 | 	f = degrees(f)
+        >>>    9 | 	f = round(f, 2)
+              10 | 	print(f)
+
+  [4] Linha 5: Variável 'f' com nome muito curto (≤4 chars)
+      Trecho  : f = ...
+      Contexto:
+               4 | 	if((x >= -1 and  x < -(1/2)) or (x > (1/2) and x <= 1)):
+        >>>    5 | 		f = asin(x)
+               6 | 	elif(x >= -(1/2) and x <= (1/2)):
+
+  [5] Linha 7: Variável 'f' com nome muito curto (≤4 chars)
+      Trecho  : f = ...
+      Contexto:
+               6 | 	elif(x >= -(1/2) and x <= (1/2)):
+        >>>    7 | 		f = acos(x)
+               8 | 	f = degrees(f)
+
+======================================================================

@@ -1,0 +1,91 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 2128_2625.py
+Questão  : 2128
+Aluno    : 2625
+Total MCs: 3
+
+⚠️  Misconceptions detectados: B8, B9, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | nota = array(eval(input(" ")))
+     3 | 
+     4 | i = 0
+     5 | soma = 0
+     6 | while(i<4):
+     7 | 	soma = soma + nota[i]
+     8 | 	i = i + 1
+     9 | media = (soma - max(nota))/3
+    10 | print(round(media,2))
+    11 | if(media<50):
+    12 | 	print("REPROVADO")
+    13 | elif(media>=50):
+    14 | 	print("APROVADO")
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 11: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 11) / elif ... sem else
+      Contexto:
+              10 | print(round(media,2))
+        >>>   11 | if(media<50):
+              12 | 	print("REPROVADO")
+
+▶ B9 — elif/else retestando condições já verificadas
+  Ocorrências: 1
+
+  [1] Linha 13: elif retesta condição inversa do if da linha 11
+      Trecho  : if media < 50 ... elif media >= 50
+      Contexto:
+              12 | 	print("REPROVADO")
+        >>>   13 | elif(media>=50):
+              14 | 	print("APROVADO")
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 5
+
+  [1] Linha 2: Variável 'nota' com nome muito curto (≤4 chars)
+      Trecho  : nota = ...
+      Contexto:
+               1 | from numpy import*
+        >>>    2 | nota = array(eval(input(" ")))
+               3 | 
+
+  [2] Linha 4: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+               3 | 
+        >>>    4 | i = 0
+               5 | soma = 0
+
+  [3] Linha 5: Variável 'soma' com nome muito curto (≤4 chars)
+      Trecho  : soma = ...
+      Contexto:
+               4 | i = 0
+        >>>    5 | soma = 0
+               6 | while(i<4):
+
+  [4] Linha 7: Variável 'soma' com nome muito curto (≤4 chars)
+      Trecho  : soma = ...
+      Contexto:
+               6 | while(i<4):
+        >>>    7 | 	soma = soma + nota[i]
+               8 | 	i = i + 1
+
+  [5] Linha 8: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+               7 | 	soma = soma + nota[i]
+        >>>    8 | 	i = i + 1
+               9 | media = (soma - max(nota))/3
+
+======================================================================

@@ -1,0 +1,76 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1652_5647.py
+Questão  : 1652
+Aluno    : 5647
+Total MCs: 2
+
+⚠️  Misconceptions detectados: A3, B8
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import *
+     2 | 
+     3 | etnia = input('Insira as etnias: ').split(',')
+     4 | 
+     5 | quant = 0
+     6 | quantB = 0
+     7 | quantPA = 0
+     8 | quantPR = 0
+     9 | quantA = 0
+    10 | quantI = 0
+    11 | 
+    12 | B = 'B'
+    13 | PA = 'PA'
+    14 | PR = 'PR'
+    15 | A = 'A'
+    16 | I = 'I'
+    17 | 
+    18 | v = zeros(5, dtype=int)
+    19 | 
+    20 | for i in range(size(etnia)):
+    21 | 	if etnia[i] == B:
+    22 | 		quantB = quantB + 1
+    23 | 		v[0] = quantB
+    24 | 	elif etnia[i] == PA:
+    25 | 		quantPA = quantPA + 1
+    26 | 		v[1] = quantPA
+    27 | 	elif etnia[i] == PR:
+    28 | 		quantPR = quantPR + 1
+    29 | 		v[2] = quantPR
+    30 | 	elif etnia[i] == A:
+    31 | 		quantA = quantA + 1
+    32 | 		v[3] = quantA
+    33 | 	elif etnia[i] == I:
+    34 | 		quantI = quantI + 1
+    35 | 		v[4] = quantI
+    36 | print(max(v))
+    37 | print(v)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 1
+
+  [1] Linha 5: Variável 'quant' declarada mas nunca utilizada
+      Trecho  : quant = ...
+      Contexto:
+               4 | 
+        >>>    5 | quant = 0
+               6 | quantB = 0
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 30: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 30) / elif ... sem else
+      Contexto:
+              29 | 		v[2] = quantPR
+        >>>   30 | 	elif etnia[i] == A:
+              31 | 		quantA = quantA + 1
+
+======================================================================

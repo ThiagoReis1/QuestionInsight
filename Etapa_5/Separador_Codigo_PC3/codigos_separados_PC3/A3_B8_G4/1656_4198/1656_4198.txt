@@ -1,0 +1,83 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1656_4198.py
+Questão  : 1656
+Aluno    : 4198
+Total MCs: 3
+
+⚠️  Misconceptions detectados: A3, B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | pais= input("Digite o nome do pais: ")
+     3 | cont= zeros(5, dtype=int)
+     4 | vet= 0
+     5 | for i in pais.split(','):
+     6 | 	if(i=="BE"):
+     7 | 		cont[0]= cont[0] + 1
+     8 | 	elif(i=="ES"):
+     9 | 		cont[1]= cont[1] + 1
+    10 | 	elif(i=="FR"):
+    11 | 		cont[2]= cont[2] + 1
+    12 | 	elif(i=="IT"):
+    13 | 		cont[3]= cont[3] + 1
+    14 | 	elif(i=="PT"):
+    15 | 		cont[4]= cont[4] + 1
+    16 | print(max(cont))
+    17 | print(cont)
+    18 | 
+    19 | 
+    20 | 	
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 1
+
+  [1] Linha 4: Variável 'vet' declarada mas nunca utilizada
+      Trecho  : vet = ...
+      Contexto:
+               3 | cont= zeros(5, dtype=int)
+        >>>    4 | vet= 0
+               5 | for i in pais.split(','):
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 12: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 12) / elif ... sem else
+      Contexto:
+              11 | 		cont[2]= cont[2] + 1
+        >>>   12 | 	elif(i=="IT"):
+              13 | 		cont[3]= cont[3] + 1
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 3
+
+  [1] Linha 2: Variável 'pais' com nome muito curto (≤4 chars)
+      Trecho  : pais = ...
+      Contexto:
+               1 | from numpy import*
+        >>>    2 | pais= input("Digite o nome do pais: ")
+               3 | cont= zeros(5, dtype=int)
+
+  [2] Linha 3: Variável 'cont' com nome muito curto (≤4 chars)
+      Trecho  : cont = ...
+      Contexto:
+               2 | pais= input("Digite o nome do pais: ")
+        >>>    3 | cont= zeros(5, dtype=int)
+               4 | vet= 0
+
+  [3] Linha 4: Variável 'vet' com nome muito curto (≤4 chars)
+      Trecho  : vet = ...
+      Contexto:
+               3 | cont= zeros(5, dtype=int)
+        >>>    4 | vet= 0
+               5 | for i in pais.split(','):
+
+======================================================================

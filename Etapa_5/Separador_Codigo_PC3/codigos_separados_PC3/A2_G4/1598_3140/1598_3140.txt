@@ -1,0 +1,72 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1598_3140.py
+Questão  : 1598
+Aluno    : 3140
+Total MCs: 2
+
+⚠️  Misconceptions detectados: A2, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | from numpy.linalg import*
+     3 | 
+     4 | v = array(eval(input("")))
+     5 | s = sum(v)
+     6 | for i in range(size(v)):
+     7 | 	if(v[i]>80):
+     8 | 		s=s-5
+     9 | 	else:
+    10 | 		s=s	
+    11 | print(round(s,2))
+    12 | 	
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A2 — Variável atribuída a si mesma
+  Ocorrências: 1
+
+  [1] Linha 10: 's' atribuído a si mesmo
+      Trecho  : s = s
+      Contexto:
+               9 | 	else:
+        >>>   10 | 		s=s	
+              11 | print(round(s,2))
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 4
+
+  [1] Linha 4: Variável 'v' com nome muito curto (≤4 chars)
+      Trecho  : v = ...
+      Contexto:
+               3 | 
+        >>>    4 | v = array(eval(input("")))
+               5 | s = sum(v)
+
+  [2] Linha 5: Variável 's' com nome muito curto (≤4 chars)
+      Trecho  : s = ...
+      Contexto:
+               4 | v = array(eval(input("")))
+        >>>    5 | s = sum(v)
+               6 | for i in range(size(v)):
+
+  [3] Linha 8: Variável 's' com nome muito curto (≤4 chars)
+      Trecho  : s = ...
+      Contexto:
+               7 | 	if(v[i]>80):
+        >>>    8 | 		s=s-5
+               9 | 	else:
+
+  [4] Linha 10: Variável 's' com nome muito curto (≤4 chars)
+      Trecho  : s = ...
+      Contexto:
+               9 | 	else:
+        >>>   10 | 		s=s	
+              11 | print(round(s,2))
+
+======================================================================

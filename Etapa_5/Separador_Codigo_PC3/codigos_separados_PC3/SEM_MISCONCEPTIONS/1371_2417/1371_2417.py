@@ -1,0 +1,7 @@
+q_antidoto= float(input("inserir quantidade de antídoto em g: "))
+q_casca_colmeia= float(q_antidoto * 11.05 / 100)
+q_alho= float(q_antidoto * 17.68 / 100)
+q_oleo= float(q_antidoto * 71.27 / 100)
+print(round(q_casca_colmeia, 2))
+print(round(q_alho, 2))
+print(round(q_oleo, 2))

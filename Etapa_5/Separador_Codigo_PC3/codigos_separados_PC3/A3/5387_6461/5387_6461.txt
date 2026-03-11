@@ -1,0 +1,51 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 5387_6461.py
+Questão  : 5387
+Aluno    : 6461
+Total MCs: 1
+
+⚠️  Misconceptions detectados: A3
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import *
+     2 | 
+     3 | prog = input("Texto: ").upper()
+     4 | 
+     5 | vog = "aeiou"
+     6 | carac = "bcdfghjklmnpqrstvwxyz"
+     7 | i = 0
+     8 | custo = 0
+     9 | while len(prog) > i:
+    10 | 	if prog[i] == 'A' or prog[i] == "E" or prog[i] == "I" or prog[i] == "O" or prog[i] == "U":
+    11 | 		custo = custo + 45.12
+    12 | 	else:
+    13 | 		custo =custo + 50.18
+    14 | 	i = i + 1	
+    15 | print(custo)		
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 2
+
+  [1] Linha 5: Variável 'vog' declarada mas nunca utilizada
+      Trecho  : vog = ...
+      Contexto:
+               4 | 
+        >>>    5 | vog = "aeiou"
+               6 | carac = "bcdfghjklmnpqrstvwxyz"
+
+  [2] Linha 6: Variável 'carac' declarada mas nunca utilizada
+      Trecho  : carac = ...
+      Contexto:
+               5 | vog = "aeiou"
+        >>>    6 | carac = "bcdfghjklmnpqrstvwxyz"
+               7 | i = 0
+
+======================================================================

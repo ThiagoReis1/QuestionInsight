@@ -1,0 +1,156 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1204_1187.py
+Questão  : 1204
+Aluno    : 1187
+Total MCs: 1
+
+⚠️  Misconceptions detectados: G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | n = int(input("distancia de saltos:"))
+     3 | vet = array(zeros(n,dtype=float))
+     4 | c1 = 0
+     5 | ind = 0
+     6 | while(c1 < n):
+     7 | 	c2 = 0
+     8 | 	while(c2 < 5):
+     9 | 		vet[ind] = float(input("salto"))
+    10 | 		ind = ind + 1
+    11 | 		c2 = c2 + 1
+    12 | 	c1 = c1 + 1
+    13 | c1 = ind = 0
+    14 | while(c1 < n):
+    15 | 	c2 = 0
+    16 | 	soma = 0.0
+    17 | 	while(c2 < 5):
+    18 | 		soma = soma + vet[ind]
+    19 | 		ind = ind + 1
+    20 | 		c2 = c2 + 1
+    21 | 	c1 = c1 + 1
+    22 | 	print(round(soma/5,2))
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 16
+
+  [1] Linha 2: Variável 'n' com nome muito curto (≤4 chars)
+      Trecho  : n = ...
+      Contexto:
+               1 | from numpy import*
+        >>>    2 | n = int(input("distancia de saltos:"))
+               3 | vet = array(zeros(n,dtype=float))
+
+  [2] Linha 3: Variável 'vet' com nome muito curto (≤4 chars)
+      Trecho  : vet = ...
+      Contexto:
+               2 | n = int(input("distancia de saltos:"))
+        >>>    3 | vet = array(zeros(n,dtype=float))
+               4 | c1 = 0
+
+  [3] Linha 4: Variável 'c1' com nome muito curto (≤4 chars)
+      Trecho  : c1 = ...
+      Contexto:
+               3 | vet = array(zeros(n,dtype=float))
+        >>>    4 | c1 = 0
+               5 | ind = 0
+
+  [4] Linha 5: Variável 'ind' com nome muito curto (≤4 chars)
+      Trecho  : ind = ...
+      Contexto:
+               4 | c1 = 0
+        >>>    5 | ind = 0
+               6 | while(c1 < n):
+
+  [5] Linha 13: Variável 'c1' com nome muito curto (≤4 chars)
+      Trecho  : c1 = ...
+      Contexto:
+              12 | 	c1 = c1 + 1
+        >>>   13 | c1 = ind = 0
+              14 | while(c1 < n):
+
+  [6] Linha 13: Variável 'ind' com nome muito curto (≤4 chars)
+      Trecho  : ind = ...
+      Contexto:
+              12 | 	c1 = c1 + 1
+        >>>   13 | c1 = ind = 0
+              14 | while(c1 < n):
+
+  [7] Linha 7: Variável 'c2' com nome muito curto (≤4 chars)
+      Trecho  : c2 = ...
+      Contexto:
+               6 | while(c1 < n):
+        >>>    7 | 	c2 = 0
+               8 | 	while(c2 < 5):
+
+  [8] Linha 12: Variável 'c1' com nome muito curto (≤4 chars)
+      Trecho  : c1 = ...
+      Contexto:
+              11 | 		c2 = c2 + 1
+        >>>   12 | 	c1 = c1 + 1
+              13 | c1 = ind = 0
+
+  [9] Linha 15: Variável 'c2' com nome muito curto (≤4 chars)
+      Trecho  : c2 = ...
+      Contexto:
+              14 | while(c1 < n):
+        >>>   15 | 	c2 = 0
+              16 | 	soma = 0.0
+
+  [10] Linha 16: Variável 'soma' com nome muito curto (≤4 chars)
+      Trecho  : soma = ...
+      Contexto:
+              15 | 	c2 = 0
+        >>>   16 | 	soma = 0.0
+              17 | 	while(c2 < 5):
+
+  [11] Linha 21: Variável 'c1' com nome muito curto (≤4 chars)
+      Trecho  : c1 = ...
+      Contexto:
+              20 | 		c2 = c2 + 1
+        >>>   21 | 	c1 = c1 + 1
+              22 | 	print(round(soma/5,2))
+
+  [12] Linha 10: Variável 'ind' com nome muito curto (≤4 chars)
+      Trecho  : ind = ...
+      Contexto:
+               9 | 		vet[ind] = float(input("salto"))
+        >>>   10 | 		ind = ind + 1
+              11 | 		c2 = c2 + 1
+
+  [13] Linha 11: Variável 'c2' com nome muito curto (≤4 chars)
+      Trecho  : c2 = ...
+      Contexto:
+              10 | 		ind = ind + 1
+        >>>   11 | 		c2 = c2 + 1
+              12 | 	c1 = c1 + 1
+
+  [14] Linha 18: Variável 'soma' com nome muito curto (≤4 chars)
+      Trecho  : soma = ...
+      Contexto:
+              17 | 	while(c2 < 5):
+        >>>   18 | 		soma = soma + vet[ind]
+              19 | 		ind = ind + 1
+
+  [15] Linha 19: Variável 'ind' com nome muito curto (≤4 chars)
+      Trecho  : ind = ...
+      Contexto:
+              18 | 		soma = soma + vet[ind]
+        >>>   19 | 		ind = ind + 1
+              20 | 		c2 = c2 + 1
+
+  [16] Linha 20: Variável 'c2' com nome muito curto (≤4 chars)
+      Trecho  : c2 = ...
+      Contexto:
+              19 | 		ind = ind + 1
+        >>>   20 | 		c2 = c2 + 1
+              21 | 	c1 = c1 + 1
+
+======================================================================

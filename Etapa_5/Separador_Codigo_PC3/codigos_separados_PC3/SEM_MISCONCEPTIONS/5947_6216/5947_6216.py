@@ -1,0 +1,1 @@
+x = float(int("se for coxinha"C" se for esfirra "E":)

@@ -1,0 +1,58 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 3587_9786.py
+Questão  : 3587
+Aluno    : 9786
+Total MCs: 2
+
+⚠️  Misconceptions detectados: A2, B8
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import * 
+     2 | 
+     3 | aneis = array(eval(input('quais foram os acertos?')))
+     4 | 
+     5 | i = 0
+     6 | pontos = 100
+     7 | 
+     8 | while i < size(aneis):
+     9 | 	if aneis[i] == 1:
+    10 | 		pontos *=5
+    11 | 	elif aneis[i] == 2:
+    12 | 		pontos *=3
+    13 | 	elif aneis[i] == 3:
+    14 | 		pontos = pontos
+    15 | 	elif aneis[i] == 4:
+    16 | 		pontos = pontos/2
+    17 | 	i += 1
+    18 | 	
+    19 | print(round(pontos,2))
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A2 — Variável atribuída a si mesma
+  Ocorrências: 1
+
+  [1] Linha 14: 'pontos' atribuído a si mesmo
+      Trecho  : pontos = pontos
+      Contexto:
+              13 | 	elif aneis[i] == 3:
+        >>>   14 | 		pontos = pontos
+              15 | 	elif aneis[i] == 4:
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 13: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 13) / elif ... sem else
+      Contexto:
+              12 | 		pontos *=3
+        >>>   13 | 	elif aneis[i] == 3:
+              14 | 		pontos = pontos
+
+======================================================================

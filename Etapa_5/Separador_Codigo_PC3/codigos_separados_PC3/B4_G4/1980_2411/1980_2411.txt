@@ -1,0 +1,60 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1980_2411.py
+Questão  : 1980
+Aluno    : 2411
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B4, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | es = input()
+     2 | ci = input()
+     3 | 
+     4 | if (es.upper() != "AMAZONAS" and es.upper() != "PARA"):
+     5 | 	print("BAIRRO NAO IDENTIFICADO")
+     6 | elif (es.upper() == "AMAZONAS" and ci.upper() == "MANAUS"):
+     7 | 	print("COROADO")
+     8 | elif(es.upper() == "AMAZONAS" and ci.upper() == "PARINTINS"):
+     9 | 	print("PALMARES")
+    10 | elif (es.upper() == "PARA" and ci.upper() == "BELEM"):
+    11 | 	print("CIDADE VELHA")
+    12 | elif (es.upper() == "PARA" and ci.upper() == "SANTAREM"):
+    13 | 	print("CENTRO")
+    14 | else:
+    15 | 	print("BAIRRO NAO IDENTIFICADO")
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B4 — Comandos repetidos dentro de blocos if-elif-else
+  Ocorrências: 1
+
+  [1] Linha 12: Bloco idêntico ao da linha 4
+      Trecho  : print('BAIRRO NAO IDENTIFICADO')
+      Contexto:
+              11 | 	print("CIDADE VELHA")
+        >>>   12 | elif (es.upper() == "PARA" and ci.upper() == "SANTAREM"):
+              13 | 	print("CENTRO")
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 2
+
+  [1] Linha 1: Variável 'es' com nome muito curto (≤4 chars)
+      Trecho  : es = ...
+      Contexto:
+        >>>    1 | es = input()
+               2 | ci = input()
+
+  [2] Linha 2: Variável 'ci' com nome muito curto (≤4 chars)
+      Trecho  : ci = ...
+      Contexto:
+               1 | es = input()
+        >>>    2 | ci = input()
+               3 | 
+
+======================================================================

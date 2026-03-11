@@ -1,0 +1,94 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1647_9216.py
+Questão  : 1647
+Aluno    : 9216
+Total MCs: 2
+
+⚠️  Misconceptions detectados: A3, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import *
+     2 | 
+     3 | num = array(eval(input("Digite: ")))
+     4 | count = 0
+     5 | b = 0
+     6 | x = 0
+     7 | for i in range(size(num)):
+     8 | 	if (num[i] >= 70):
+     9 | 		count = count + 1
+    10 | print(count)
+    11 | 
+    12 | a = count
+    13 | d = zeros(a,dtype=int)
+    14 | 
+    15 | for i in range(size(num)):
+    16 | 	if (num[i] >= 70):
+    17 | 		d[x] = i
+    18 | 		x = x + 1
+    19 | 		
+    20 | print(d)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 1
+
+  [1] Linha 5: Variável 'b' declarada mas nunca utilizada
+      Trecho  : b = ...
+      Contexto:
+               4 | count = 0
+        >>>    5 | b = 0
+               6 | x = 0
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 6
+
+  [1] Linha 3: Variável 'num' com nome muito curto (≤4 chars)
+      Trecho  : num = ...
+      Contexto:
+               2 | 
+        >>>    3 | num = array(eval(input("Digite: ")))
+               4 | count = 0
+
+  [2] Linha 5: Variável 'b' com nome muito curto (≤4 chars)
+      Trecho  : b = ...
+      Contexto:
+               4 | count = 0
+        >>>    5 | b = 0
+               6 | x = 0
+
+  [3] Linha 6: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+               5 | b = 0
+        >>>    6 | x = 0
+               7 | for i in range(size(num)):
+
+  [4] Linha 12: Variável 'a' com nome muito curto (≤4 chars)
+      Trecho  : a = ...
+      Contexto:
+              11 | 
+        >>>   12 | a = count
+              13 | d = zeros(a,dtype=int)
+
+  [5] Linha 13: Variável 'd' com nome muito curto (≤4 chars)
+      Trecho  : d = ...
+      Contexto:
+              12 | a = count
+        >>>   13 | d = zeros(a,dtype=int)
+              14 | 
+
+  [6] Linha 18: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+              17 | 		d[x] = i
+        >>>   18 | 		x = x + 1
+              19 | 		
+
+======================================================================

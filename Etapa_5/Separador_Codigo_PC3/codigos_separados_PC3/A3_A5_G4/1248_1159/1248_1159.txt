@@ -1,0 +1,132 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1248_1159.py
+Questão  : 1248
+Aluno    : 1159
+Total MCs: 3
+
+⚠️  Misconceptions detectados: A3, A5, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | import numpy
+     2 | n1=float(input("Digite o número:"))
+     3 | n2=float(input("Digite o número:"))
+     4 | numeros=[n1,n2]
+     5 | A=min(n1,n2)
+     6 | B=max(n1,n2)
+     7 | v=[A,B]
+     8 | C = 0.75* A + 0.25* B
+     9 | C=int(C)
+    10 | D = 0.25* A + 0.75* B
+    11 | D=int(D)
+    12 | v2=[C,D]
+    13 | print(v2)
+    14 | print("Eu odeio Python")
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 2
+
+  [1] Linha 4: Variável 'numeros' declarada mas nunca utilizada
+      Trecho  : numeros = ...
+      Contexto:
+               3 | n2=float(input("Digite o número:"))
+        >>>    4 | numeros=[n1,n2]
+               5 | A=min(n1,n2)
+
+  [2] Linha 7: Variável 'v' declarada mas nunca utilizada
+      Trecho  : v = ...
+      Contexto:
+               6 | B=max(n1,n2)
+        >>>    7 | v=[A,B]
+               8 | C = 0.75* A + 0.25* B
+
+▶ A5 — Importação não utilizada
+  Ocorrências: 1
+
+  [1] Linha 1: 'numpy' importado mas nunca utilizado
+      Trecho  : import numpy
+      Contexto:
+        >>>    1 | import numpy
+               2 | n1=float(input("Digite o número:"))
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 10
+
+  [1] Linha 2: Variável 'n1' com nome muito curto (≤4 chars)
+      Trecho  : n1 = ...
+      Contexto:
+               1 | import numpy
+        >>>    2 | n1=float(input("Digite o número:"))
+               3 | n2=float(input("Digite o número:"))
+
+  [2] Linha 3: Variável 'n2' com nome muito curto (≤4 chars)
+      Trecho  : n2 = ...
+      Contexto:
+               2 | n1=float(input("Digite o número:"))
+        >>>    3 | n2=float(input("Digite o número:"))
+               4 | numeros=[n1,n2]
+
+  [3] Linha 5: Variável 'A' com nome muito curto (≤4 chars)
+      Trecho  : A = ...
+      Contexto:
+               4 | numeros=[n1,n2]
+        >>>    5 | A=min(n1,n2)
+               6 | B=max(n1,n2)
+
+  [4] Linha 6: Variável 'B' com nome muito curto (≤4 chars)
+      Trecho  : B = ...
+      Contexto:
+               5 | A=min(n1,n2)
+        >>>    6 | B=max(n1,n2)
+               7 | v=[A,B]
+
+  [5] Linha 7: Variável 'v' com nome muito curto (≤4 chars)
+      Trecho  : v = ...
+      Contexto:
+               6 | B=max(n1,n2)
+        >>>    7 | v=[A,B]
+               8 | C = 0.75* A + 0.25* B
+
+  [6] Linha 8: Variável 'C' com nome muito curto (≤4 chars)
+      Trecho  : C = ...
+      Contexto:
+               7 | v=[A,B]
+        >>>    8 | C = 0.75* A + 0.25* B
+               9 | C=int(C)
+
+  [7] Linha 9: Variável 'C' com nome muito curto (≤4 chars)
+      Trecho  : C = ...
+      Contexto:
+               8 | C = 0.75* A + 0.25* B
+        >>>    9 | C=int(C)
+              10 | D = 0.25* A + 0.75* B
+
+  [8] Linha 10: Variável 'D' com nome muito curto (≤4 chars)
+      Trecho  : D = ...
+      Contexto:
+               9 | C=int(C)
+        >>>   10 | D = 0.25* A + 0.75* B
+              11 | D=int(D)
+
+  [9] Linha 11: Variável 'D' com nome muito curto (≤4 chars)
+      Trecho  : D = ...
+      Contexto:
+              10 | D = 0.25* A + 0.75* B
+        >>>   11 | D=int(D)
+              12 | v2=[C,D]
+
+  [10] Linha 12: Variável 'v2' com nome muito curto (≤4 chars)
+      Trecho  : v2 = ...
+      Contexto:
+              11 | D=int(D)
+        >>>   12 | v2=[C,D]
+              13 | print(v2)
+
+======================================================================

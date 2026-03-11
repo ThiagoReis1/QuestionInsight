@@ -1,0 +1,98 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1085_8403.py
+Questão  : 1085
+Aluno    : 8403
+Total MCs: 3
+
+⚠️  Misconceptions detectados: B8, B9, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | n1 = float(input('nota'))
+     2 | n2 = float(input('nota'))
+     3 | n3 = float(input('nota'))
+     4 | n4 = float(input('nota'))
+     5 | n5 = float(input('nota'))
+     6 | 
+     7 | m = (n1+n2+n3+n4+n5)/5
+     8 | 
+     9 | if m >= 6:
+    10 | 	print(round(m,2))
+    11 | 	print('Aprovacao')
+    12 | elif m < 6:
+    13 | 	print(round(m,2))
+    14 | 	print('Reprovacao')
+    15 | 
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 9: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 9) / elif ... sem else
+      Contexto:
+               8 | 
+        >>>    9 | if m >= 6:
+              10 | 	print(round(m,2))
+
+▶ B9 — elif/else retestando condições já verificadas
+  Ocorrências: 1
+
+  [1] Linha 12: elif retesta condição inversa do if da linha 9
+      Trecho  : if m >= 6 ... elif m < 6
+      Contexto:
+              11 | 	print('Aprovacao')
+        >>>   12 | elif m < 6:
+              13 | 	print(round(m,2))
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 6
+
+  [1] Linha 1: Variável 'n1' com nome muito curto (≤4 chars)
+      Trecho  : n1 = ...
+      Contexto:
+        >>>    1 | n1 = float(input('nota'))
+               2 | n2 = float(input('nota'))
+
+  [2] Linha 2: Variável 'n2' com nome muito curto (≤4 chars)
+      Trecho  : n2 = ...
+      Contexto:
+               1 | n1 = float(input('nota'))
+        >>>    2 | n2 = float(input('nota'))
+               3 | n3 = float(input('nota'))
+
+  [3] Linha 3: Variável 'n3' com nome muito curto (≤4 chars)
+      Trecho  : n3 = ...
+      Contexto:
+               2 | n2 = float(input('nota'))
+        >>>    3 | n3 = float(input('nota'))
+               4 | n4 = float(input('nota'))
+
+  [4] Linha 4: Variável 'n4' com nome muito curto (≤4 chars)
+      Trecho  : n4 = ...
+      Contexto:
+               3 | n3 = float(input('nota'))
+        >>>    4 | n4 = float(input('nota'))
+               5 | n5 = float(input('nota'))
+
+  [5] Linha 5: Variável 'n5' com nome muito curto (≤4 chars)
+      Trecho  : n5 = ...
+      Contexto:
+               4 | n4 = float(input('nota'))
+        >>>    5 | n5 = float(input('nota'))
+               6 | 
+
+  [6] Linha 7: Variável 'm' com nome muito curto (≤4 chars)
+      Trecho  : m = ...
+      Contexto:
+               6 | 
+        >>>    7 | m = (n1+n2+n3+n4+n5)/5
+               8 | 
+
+======================================================================

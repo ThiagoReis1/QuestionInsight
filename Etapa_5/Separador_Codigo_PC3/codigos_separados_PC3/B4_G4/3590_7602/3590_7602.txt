@@ -1,0 +1,89 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 3590_7602.py
+Questão  : 3590
+Aluno    : 7602
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B4, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | 
+     3 | face = array(eval(input()))
+     4 | i = 0
+     5 | cont = 0
+     6 | while i < size(face):
+     7 | 	#face = array(eval(input()))
+     8 | 	if face[i] == 1:
+     9 | 		cont += 10
+    10 | 	elif face[i] == 2:
+    11 | 		cont += 5
+    12 | 	elif face[i] == 3:
+    13 | 		cont += 0
+    14 | 	elif face[i] == 4:
+    15 | 		cont += 5
+    16 | 	elif face[i] == 5:
+    17 | 		cont += 20
+    18 | 	else:
+    19 | 		cont += 10
+    20 | 	i += 1
+    21 | 	
+    22 | print(cont)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B4 — Comandos repetidos dentro de blocos if-elif-else
+  Ocorrências: 3
+
+  [1] Linha 14: Bloco idêntico ao da linha 10
+      Trecho  : cont += 5
+      Contexto:
+              13 | 		cont += 0
+        >>>   14 | 	elif face[i] == 4:
+              15 | 		cont += 5
+
+  [2] Linha 16: Bloco idêntico ao da linha 8
+      Trecho  : cont += 10
+      Contexto:
+              15 | 		cont += 5
+        >>>   16 | 	elif face[i] == 5:
+              17 | 		cont += 20
+
+  [3] Linha 14: Bloco idêntico ao da linha 10
+      Trecho  : cont += 5
+      Contexto:
+              13 | 		cont += 0
+        >>>   14 | 	elif face[i] == 4:
+              15 | 		cont += 5
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 3
+
+  [1] Linha 3: Variável 'face' com nome muito curto (≤4 chars)
+      Trecho  : face = ...
+      Contexto:
+               2 | 
+        >>>    3 | face = array(eval(input()))
+               4 | i = 0
+
+  [2] Linha 4: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+               3 | face = array(eval(input()))
+        >>>    4 | i = 0
+               5 | cont = 0
+
+  [3] Linha 5: Variável 'cont' com nome muito curto (≤4 chars)
+      Trecho  : cont = ...
+      Contexto:
+               4 | i = 0
+        >>>    5 | cont = 0
+               6 | while i < size(face):
+
+======================================================================

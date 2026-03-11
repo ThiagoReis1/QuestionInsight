@@ -1,0 +1,122 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1652_2851.py
+Questão  : 1652
+Aluno    : 2851
+Total MCs: 2
+
+⚠️  Misconceptions detectados: A3, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from math import*
+     2 | from numpy import*
+     3 | 
+     4 | v = array(eval(input("Digite um vetor: ")))
+     5 | v = v.split
+     6 | tam = size(v)
+     7 | 
+     8 | if v[i] == "B" :
+     9 | 	v[i] = Branco
+    10 | elif v[i] == "PA":
+    11 | 	v[i] = Pardo
+    12 | elif v[i] == "PR":
+    13 | 	v[i] = Preto
+    14 | elif v[i] == "A":
+    15 | 	v[i] = Amarelo
+    16 | else:
+    17 | 	v[i] = Indígena
+    18 | 	
+    19 | v_novo = zeros(tam)
+    20 | 
+    21 | for elemento in v:
+    22 | 	if v[i] == Branco:
+    23 | 		B = B + 1
+    24 | 	elif v[i] == Pardo:
+    25 | 		PA = PA + 1
+    26 | 	elif v[i] == Preto:
+    27 | 		P = P + 1
+    28 | 	elif v[i] == Amarelo:
+    29 | 		A = A + 1
+    30 | 	else:
+    31 | 		I = I + 1
+    32 | 	
+    33 | v_novo = (B,PA,P,A,I)
+    34 | 
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 1
+
+  [1] Linha 19: Variável 'v_novo' declarada mas nunca utilizada
+      Trecho  : v_novo = ...
+      Contexto:
+              18 | 	
+        >>>   19 | v_novo = zeros(tam)
+              20 | 
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 8
+
+  [1] Linha 4: Variável 'v' com nome muito curto (≤4 chars)
+      Trecho  : v = ...
+      Contexto:
+               3 | 
+        >>>    4 | v = array(eval(input("Digite um vetor: ")))
+               5 | v = v.split
+
+  [2] Linha 5: Variável 'v' com nome muito curto (≤4 chars)
+      Trecho  : v = ...
+      Contexto:
+               4 | v = array(eval(input("Digite um vetor: ")))
+        >>>    5 | v = v.split
+               6 | tam = size(v)
+
+  [3] Linha 6: Variável 'tam' com nome muito curto (≤4 chars)
+      Trecho  : tam = ...
+      Contexto:
+               5 | v = v.split
+        >>>    6 | tam = size(v)
+               7 | 
+
+  [4] Linha 23: Variável 'B' com nome muito curto (≤4 chars)
+      Trecho  : B = ...
+      Contexto:
+              22 | 	if v[i] == Branco:
+        >>>   23 | 		B = B + 1
+              24 | 	elif v[i] == Pardo:
+
+  [5] Linha 25: Variável 'PA' com nome muito curto (≤4 chars)
+      Trecho  : PA = ...
+      Contexto:
+              24 | 	elif v[i] == Pardo:
+        >>>   25 | 		PA = PA + 1
+              26 | 	elif v[i] == Preto:
+
+  [6] Linha 27: Variável 'P' com nome muito curto (≤4 chars)
+      Trecho  : P = ...
+      Contexto:
+              26 | 	elif v[i] == Preto:
+        >>>   27 | 		P = P + 1
+              28 | 	elif v[i] == Amarelo:
+
+  [7] Linha 29: Variável 'A' com nome muito curto (≤4 chars)
+      Trecho  : A = ...
+      Contexto:
+              28 | 	elif v[i] == Amarelo:
+        >>>   29 | 		A = A + 1
+              30 | 	else:
+
+  [8] Linha 31: Variável 'I' com nome muito curto (≤4 chars)
+      Trecho  : I = ...
+      Contexto:
+              30 | 	else:
+        >>>   31 | 		I = I + 1
+              32 | 	
+
+======================================================================

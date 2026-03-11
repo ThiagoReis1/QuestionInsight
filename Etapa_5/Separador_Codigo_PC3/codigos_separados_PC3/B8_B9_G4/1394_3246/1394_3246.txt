@@ -1,0 +1,77 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1394_3246.py
+Questão  : 1394
+Aluno    : 3246
+Total MCs: 3
+
+⚠️  Misconceptions detectados: B8, B9, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | qh = float(input())
+     2 | 
+     3 | p = 50 * qh
+     4 | p1 = 50 * qh + 70 * (qh-21)
+     5 | 
+     6 | 
+     7 | if(qh <= 20):
+     8 | 	print (round(p, 2))
+     9 | 	
+    10 | elif(qh > 20):
+    11 | 	print (round(p1, 2))
+    12 | 
+    13 | 
+    14 | 
+    15 | 
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 7: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 7) / elif ... sem else
+      Contexto:
+               6 | 
+        >>>    7 | if(qh <= 20):
+               8 | 	print (round(p, 2))
+
+▶ B9 — elif/else retestando condições já verificadas
+  Ocorrências: 1
+
+  [1] Linha 10: elif retesta condição inversa do if da linha 7
+      Trecho  : if qh <= 20 ... elif qh > 20
+      Contexto:
+               9 | 	
+        >>>   10 | elif(qh > 20):
+              11 | 	print (round(p1, 2))
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 3
+
+  [1] Linha 1: Variável 'qh' com nome muito curto (≤4 chars)
+      Trecho  : qh = ...
+      Contexto:
+        >>>    1 | qh = float(input())
+               2 | 
+
+  [2] Linha 3: Variável 'p' com nome muito curto (≤4 chars)
+      Trecho  : p = ...
+      Contexto:
+               2 | 
+        >>>    3 | p = 50 * qh
+               4 | p1 = 50 * qh + 70 * (qh-21)
+
+  [3] Linha 4: Variável 'p1' com nome muito curto (≤4 chars)
+      Trecho  : p1 = ...
+      Contexto:
+               3 | p = 50 * qh
+        >>>    4 | p1 = 50 * qh + 70 * (qh-21)
+               5 | 
+
+======================================================================

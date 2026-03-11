@@ -1,0 +1,84 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1639_4040.py
+Questão  : 1639
+Aluno    : 4040
+Total MCs: 1
+
+⚠️  Misconceptions detectados: G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import *
+     2 | 
+     3 | # Entries
+     4 | 
+     5 | vec = array(eval(input("Insert number of students per class: ")))
+     6 | 
+     7 | # Definitions
+     8 | 
+     9 | np = 0
+    10 | en = 0
+    11 | s = size(vec)
+    12 | 
+    13 | # Processing
+    14 | 
+    15 | for i in range(s):
+    16 | 	if(vec[i]%2 == 0):
+    17 | 		np += 1
+    18 | print(np)
+    19 | 
+    20 | p = zeros(np, dtype=int)  # New Definition
+    21 | 
+    22 | for i in range(s):
+    23 | 	if(vec[i]%2 == 0):
+    24 | 		p[en] += i
+    25 | 		en += 1
+    26 | 
+    27 | print(p)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 5
+
+  [1] Linha 5: Variável 'vec' com nome muito curto (≤4 chars)
+      Trecho  : vec = ...
+      Contexto:
+               4 | 
+        >>>    5 | vec = array(eval(input("Insert number of students per class: ")))
+               6 | 
+
+  [2] Linha 9: Variável 'np' com nome muito curto (≤4 chars)
+      Trecho  : np = ...
+      Contexto:
+               8 | 
+        >>>    9 | np = 0
+              10 | en = 0
+
+  [3] Linha 10: Variável 'en' com nome muito curto (≤4 chars)
+      Trecho  : en = ...
+      Contexto:
+               9 | np = 0
+        >>>   10 | en = 0
+              11 | s = size(vec)
+
+  [4] Linha 11: Variável 's' com nome muito curto (≤4 chars)
+      Trecho  : s = ...
+      Contexto:
+              10 | en = 0
+        >>>   11 | s = size(vec)
+              12 | 
+
+  [5] Linha 20: Variável 'p' com nome muito curto (≤4 chars)
+      Trecho  : p = ...
+      Contexto:
+              19 | 
+        >>>   20 | p = zeros(np, dtype=int)  # New Definition
+              21 | 
+
+======================================================================

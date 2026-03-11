@@ -1,0 +1,78 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 2034_3509.py
+Questão  : 2034
+Aluno    : 3509
+Total MCs: 3
+
+⚠️  Misconceptions detectados: A2, E1, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | m = int(input("lado do dado :"))
+     2 | c = 0
+     3 | while ( m == 6):
+     4 | 	if (m == "1") and (m == "2") and (m == "3") and (m == "4") and (m == "5") and (m == "6") :
+     5 | 	   c = c 
+     6 | 	m = int(input("lado do dado :"))
+     7 | print(m)
+     8 | 
+     9 | 	
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A2 — Variável atribuída a si mesma
+  Ocorrências: 1
+
+  [1] Linha 5: 'c' atribuído a si mesmo
+      Trecho  : c = c
+      Contexto:
+               4 | 	if (m == "1") and (m == "2") and (m == "3") and (m == "4") and (m == "5") and (m == "6") :
+        >>>    5 | 	   c = c 
+               6 | 	m = int(input("lado do dado :"))
+
+▶ E1 — Verificação desnecessária de todas as combinações possíveis
+  Ocorrências: 1
+
+  [1] Linha 4: 6 condições em um único if — verificação excessiva
+      Trecho  : m == '1' and m == '2' and (m == '3') and (m == '4') and (m == '5') and (m == '6')
+      Contexto:
+               3 | while ( m == 6):
+        >>>    4 | 	if (m == "1") and (m == "2") and (m == "3") and (m == "4") and (m == "5") and (m == "6") :
+               5 | 	   c = c 
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 4
+
+  [1] Linha 1: Variável 'm' com nome muito curto (≤4 chars)
+      Trecho  : m = ...
+      Contexto:
+        >>>    1 | m = int(input("lado do dado :"))
+               2 | c = 0
+
+  [2] Linha 2: Variável 'c' com nome muito curto (≤4 chars)
+      Trecho  : c = ...
+      Contexto:
+               1 | m = int(input("lado do dado :"))
+        >>>    2 | c = 0
+               3 | while ( m == 6):
+
+  [3] Linha 6: Variável 'm' com nome muito curto (≤4 chars)
+      Trecho  : m = ...
+      Contexto:
+               5 | 	   c = c 
+        >>>    6 | 	m = int(input("lado do dado :"))
+               7 | print(m)
+
+  [4] Linha 5: Variável 'c' com nome muito curto (≤4 chars)
+      Trecho  : c = ...
+      Contexto:
+               4 | 	if (m == "1") and (m == "2") and (m == "3") and (m == "4") and (m == "5") and (m == "6") :
+        >>>    5 | 	   c = c 
+               6 | 	m = int(input("lado do dado :"))
+
+======================================================================

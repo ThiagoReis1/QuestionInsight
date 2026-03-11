@@ -1,0 +1,69 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1615_3111.py
+Questão  : 1615
+Aluno    : 3111
+Total MCs: 1
+
+⚠️  Misconceptions detectados: B8
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | 
+     3 | v = array(eval(input("Jogador um acertou quais ")))
+     4 | cont = 0
+     5 | Pontuacao = 0;
+     6 | while(cont < size(v)):
+     7 | 	if(v[cont] == 1):
+     8 | 		Pontuacao += 40
+     9 | 	elif(v[cont] == 2):
+    10 | 		Pontuacao += 20
+    11 | 	elif(v[cont] == 3):
+    12 | 		Pontuacao += 10
+    13 | 	cont += 1
+    14 | 	
+    15 | 	
+    16 | v2 = array(eval(input("Jogador dois acertou quais ")))
+    17 | cont = 0
+    18 | Pontuacao2 = 0;
+    19 | while(cont < size(v)):
+    20 | 	if(v2[cont] == 1):
+    21 | 		Pontuacao2 += 40
+    22 | 	elif(v2[cont] == 2):
+    23 | 		Pontuacao2 += 20
+    24 | 	elif(v2[cont] == 3):
+    25 | 		Pontuacao2 += 10
+    26 | 	cont += 1
+    27 | 	
+    28 | if(Pontuacao > Pontuacao2):
+    29 | 	print("JOGADOR UM")
+    30 | elif(Pontuacao == Pontuacao2):
+    31 | 	print("EMPATE")
+    32 | else:
+    33 | 	print("JOGADOR DOIS")
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 2
+
+  [1] Linha 9: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 9) / elif ... sem else
+      Contexto:
+               8 | 		Pontuacao += 40
+        >>>    9 | 	elif(v[cont] == 2):
+              10 | 		Pontuacao += 20
+
+  [2] Linha 22: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 22) / elif ... sem else
+      Contexto:
+              21 | 		Pontuacao2 += 40
+        >>>   22 | 	elif(v2[cont] == 2):
+              23 | 		Pontuacao2 += 20
+
+======================================================================

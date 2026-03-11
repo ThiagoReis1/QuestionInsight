@@ -1,0 +1,64 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 5239_7158.py
+Questão  : 5239
+Aluno    : 7158
+Total MCs: 3
+
+⚠️  Misconceptions detectados: B8, B9, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | nota = float(input())
+     2 | 
+     3 | if (nota > 10 or nota < 0):
+     4 | 	print("ERRO")
+     5 | elif (nota >= 9 and nota <= 10):
+     6 | 	print("A")
+     7 | elif(nota >= 8):
+     8 | 	print("B")
+     9 | elif(nota >= 7):
+    10 | 	print("C")
+    11 | elif(nota >= 6):
+    12 | 	print("D")
+    13 | elif(nota >= 4):
+    14 | 	print("E")
+    15 | elif(nota < 4):
+    16 | 	print("F")
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 13: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 13) / elif ... sem else
+      Contexto:
+              12 | 	print("D")
+        >>>   13 | elif(nota >= 4):
+              14 | 	print("E")
+
+▶ B9 — elif/else retestando condições já verificadas
+  Ocorrências: 1
+
+  [1] Linha 15: elif retesta condição inversa do if da linha 13
+      Trecho  : if nota >= 4 ... elif nota < 4
+      Contexto:
+              14 | 	print("E")
+        >>>   15 | elif(nota < 4):
+              16 | 	print("F")
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 1
+
+  [1] Linha 1: Variável 'nota' com nome muito curto (≤4 chars)
+      Trecho  : nota = ...
+      Contexto:
+        >>>    1 | nota = float(input())
+               2 | 
+
+======================================================================

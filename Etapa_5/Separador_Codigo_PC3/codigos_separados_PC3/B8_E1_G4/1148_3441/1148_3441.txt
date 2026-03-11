@@ -1,0 +1,71 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1148_3441.py
+Questão  : 1148
+Aluno    : 3441
+Total MCs: 3
+
+⚠️  Misconceptions detectados: B8, E1, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | x= input("nome da regiao: ")
+     2 | #regiao
+     3 | if x=="Norte" or x=="Vale" or x=="Terras fluviais" or x=="Terras da tempestade" or x=="Dorne" or x=="Ilhas de ferro" or x=="Campina" or x=="Terras ocidentais" or x=="Terras da coroa":
+     4 | 	if x == "Norte":
+     5 | 		print("Snow")
+     6 | 	elif x == "Vale":
+     7 | 		print("Stone")
+     8 | 	elif x == "Terras fluviais":
+     9 | 		print("Rivers")
+    10 | 	elif x=='Terras da tempestade':
+    11 | 		print('Storm')
+    12 | 	elif x == 'Dorne':
+    13 | 		print("Sand")
+    14 | 	elif x == 'Ilhas de ferro':
+    15 | 		print('Pyke')
+    16 | 	elif x == "Campina":
+    17 | 		print('Flowers')
+    18 | 	elif x == "Terras ocidentais":
+    19 | 		print('Hill')
+    20 | 	elif x == "Terras da coroa":
+    21 | 		print("Waters")
+    22 | else:
+    23 | 	print("Entrada", x, "invalida")
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 18: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 18) / elif ... sem else
+      Contexto:
+              17 | 		print('Flowers')
+        >>>   18 | 	elif x == "Terras ocidentais":
+              19 | 		print('Hill')
+
+▶ E1 — Verificação desnecessária de todas as combinações possíveis
+  Ocorrências: 1
+
+  [1] Linha 3: 9 condições em um único if — verificação excessiva
+      Trecho  : x == 'Norte' or x == 'Vale' or x == 'Terras fluviais' or (x == 'Terras da tempestade') or (x == 'Dorne') or (x == 'Ilhas de ferro') or (x == 'Campina') or (x == 'Terras ocidentais') or (x == 'Terras da coroa')
+      Contexto:
+               2 | #regiao
+        >>>    3 | if x=="Norte" or x=="Vale" or x=="Terras fluviais" or x=="Terras da tempestade" or x=="Dorne" or x=="Ilhas de ferro" or x=="Campina" or x=="Terras ocidentais" or x=="Terras da coroa":
+               4 | 	if x == "Norte":
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 1
+
+  [1] Linha 1: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+        >>>    1 | x= input("nome da regiao: ")
+               2 | #regiao
+
+======================================================================

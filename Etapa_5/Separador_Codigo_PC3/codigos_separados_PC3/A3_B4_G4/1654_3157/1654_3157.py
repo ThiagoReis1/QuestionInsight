@@ -1,0 +1,49 @@
+from numpy import*
+vet=array(input("vet:"))
+cont=0
+soma=1
+while(vet!="MG"):
+	if(vet=="AM"):
+		cont=0
+		soma=1
+		cont=cont+soma
+		print(vet)
+		print(cont)
+		vet=array(input("vet:"))
+	elif(vet=="PE"):
+		cont=0
+		soma=1
+		cont=cont+soma
+		print(vet)
+		print(cont)
+		vet=array(input("vet:"))
+	elif(vet=="SP"):
+		cont=0
+		soma=1
+		cont=cont+soma
+		print(vet)
+		print(cont)
+		vet=array(input("vet:"))
+	elif(vet=="RS"):
+		cont=0
+		soma=1
+		cont=cont+soma
+		print(vet)
+		print(cont)
+		vet=array(input("vet:"))
+	elif(vet=="PE"):
+		cont=0
+		soma=1
+		cont=cont+soma
+		print(vet)
+		print(cont)
+		vet=array(input("vet:"))
+	elif(vet=="MG"):
+		cont=0
+		soma=1
+		cont=cont+soma
+		print(vet)
+		print(cont)
+		vet=array(input("vet:"))
+	else:
+		print("lala")

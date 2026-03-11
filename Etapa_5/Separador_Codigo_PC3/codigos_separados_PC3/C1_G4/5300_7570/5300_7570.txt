@@ -1,0 +1,67 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 5300_7570.py
+Questão  : 5300
+Aluno    : 7570
+Total MCs: 2
+
+⚠️  Misconceptions detectados: C1, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | num = float(input(""))
+     2 | soma=0
+     3 | while(num!=0):
+     4 | 	soma = soma + num
+     5 | 	num = float(input(""))
+     6 | 	if(num==0):
+     7 | 		print(soma)
+     8 | 		print(round(soma,2))
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ C1 — Condição while testada novamente dentro do seu bloco
+  Ocorrências: 1
+
+  [1] Linha 6: If retesta condição inversa do while da linha 3
+      Trecho  : while num != 0 → if num == 0
+      Contexto:
+               5 | 	num = float(input(""))
+        >>>    6 | 	if(num==0):
+               7 | 		print(soma)
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 4
+
+  [1] Linha 1: Variável 'num' com nome muito curto (≤4 chars)
+      Trecho  : num = ...
+      Contexto:
+        >>>    1 | num = float(input(""))
+               2 | soma=0
+
+  [2] Linha 2: Variável 'soma' com nome muito curto (≤4 chars)
+      Trecho  : soma = ...
+      Contexto:
+               1 | num = float(input(""))
+        >>>    2 | soma=0
+               3 | while(num!=0):
+
+  [3] Linha 4: Variável 'soma' com nome muito curto (≤4 chars)
+      Trecho  : soma = ...
+      Contexto:
+               3 | while(num!=0):
+        >>>    4 | 	soma = soma + num
+               5 | 	num = float(input(""))
+
+  [4] Linha 5: Variável 'num' com nome muito curto (≤4 chars)
+      Trecho  : num = ...
+      Contexto:
+               4 | 	soma = soma + num
+        >>>    5 | 	num = float(input(""))
+               6 | 	if(num==0):
+
+======================================================================

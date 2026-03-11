@@ -1,0 +1,110 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1115_1213.py
+Questão  : 1115
+Aluno    : 1213
+Total MCs: 3
+
+⚠️  Misconceptions detectados: A3, B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | sa = float(input("entrada:"))
+     2 | co = int(input("codigo:"))
+     3 | ns = 0
+     4 | if (co != 101 and co != 102 and co != 103 and co != 104) or (sa<0):
+     5 | 	print("Entradas: R$",sa,"e codigo",co)
+     6 | 	print("Dados invalidos")
+     7 | elif(co == 101):
+     8 | 	ns = sa + (sa*0.0080)
+     9 | 	print("Entradas: R$",sa,"e codigo",co)
+    10 | 	print("Novo salario:","R$",round(ns,2))	
+    11 | elif(co == 102):
+    12 | 	ns = sa + (sa*0.0065)
+    13 | 	print("Entradas: R$",sa,"e codigo",co)
+    14 | 	print("Novo salario:","R$",round(ns,2))	
+    15 | elif(co == 103):
+    16 | 	ns = sa + (sa*0.006)
+    17 | 	print("Entradas: R$",sa,"e codigo",co)
+    18 | 	print("Novo salario:","R$",round(ns,2))
+    19 | elif(co == 104):
+    20 | 	ns = sa + (sa*0.0055)
+    21 | 	print("Entradas: R$",sa,"e codigo",co)
+    22 | 	print("Novo salario:","R$",round(ns,2))
+    23 | 
+    24 | 	
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 1
+
+  [1] Linha 0: A3 detectado pelo VisitorMC3 (localização exata não mapeada)
+      Trecho  : —
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 15: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 15) / elif ... sem else
+      Contexto:
+              14 | 	print("Novo salario:","R$",round(ns,2))	
+        >>>   15 | elif(co == 103):
+              16 | 	ns = sa + (sa*0.006)
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 7
+
+  [1] Linha 1: Variável 'sa' com nome muito curto (≤4 chars)
+      Trecho  : sa = ...
+      Contexto:
+        >>>    1 | sa = float(input("entrada:"))
+               2 | co = int(input("codigo:"))
+
+  [2] Linha 2: Variável 'co' com nome muito curto (≤4 chars)
+      Trecho  : co = ...
+      Contexto:
+               1 | sa = float(input("entrada:"))
+        >>>    2 | co = int(input("codigo:"))
+               3 | ns = 0
+
+  [3] Linha 3: Variável 'ns' com nome muito curto (≤4 chars)
+      Trecho  : ns = ...
+      Contexto:
+               2 | co = int(input("codigo:"))
+        >>>    3 | ns = 0
+               4 | if (co != 101 and co != 102 and co != 103 and co != 104) or (sa<0):
+
+  [4] Linha 8: Variável 'ns' com nome muito curto (≤4 chars)
+      Trecho  : ns = ...
+      Contexto:
+               7 | elif(co == 101):
+        >>>    8 | 	ns = sa + (sa*0.0080)
+               9 | 	print("Entradas: R$",sa,"e codigo",co)
+
+  [5] Linha 12: Variável 'ns' com nome muito curto (≤4 chars)
+      Trecho  : ns = ...
+      Contexto:
+              11 | elif(co == 102):
+        >>>   12 | 	ns = sa + (sa*0.0065)
+              13 | 	print("Entradas: R$",sa,"e codigo",co)
+
+  [6] Linha 16: Variável 'ns' com nome muito curto (≤4 chars)
+      Trecho  : ns = ...
+      Contexto:
+              15 | elif(co == 103):
+        >>>   16 | 	ns = sa + (sa*0.006)
+              17 | 	print("Entradas: R$",sa,"e codigo",co)
+
+  [7] Linha 20: Variável 'ns' com nome muito curto (≤4 chars)
+      Trecho  : ns = ...
+      Contexto:
+              19 | elif(co == 104):
+        >>>   20 | 	ns = sa + (sa*0.0055)
+              21 | 	print("Entradas: R$",sa,"e codigo",co)
+
+======================================================================

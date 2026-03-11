@@ -1,0 +1,59 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1617_3322.py
+Questão  : 1617
+Aluno    : 3322
+Total MCs: 2
+
+⚠️  Misconceptions detectados: A3, B8
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import *
+     2 | espada = input().upper()
+     3 | nivel = array(eval(input()))
+     4 | i = 0
+     5 | soma = 0
+     6 | while i <= size(espada):
+     7 | 	if espada[i] == "CENOURA":
+     8 | 		dano_e = 2
+     9 | 	elif espada[i] == "FERRO":
+    10 | 		dano_e = 4
+    11 | 	elif espada[i] == "DWARVEN":
+    12 | 		dano_e = 8
+    13 | 	elif espada[i] == "ELVEN":
+    14 | 		dano_e = 11
+    15 | 	elif espada[i] == "DAEDRIC":
+    16 | 		dano_e = 14
+    17 | 	soma = soma + dano_e
+    18 | 	i = i + 1
+    19 | print(soma)
+    20 | 	
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 1
+
+  [1] Linha 3: Variável 'nivel' declarada mas nunca utilizada
+      Trecho  : nivel = ...
+      Contexto:
+               2 | espada = input().upper()
+        >>>    3 | nivel = array(eval(input()))
+               4 | i = 0
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 13: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 13) / elif ... sem else
+      Contexto:
+              12 | 		dano_e = 8
+        >>>   13 | 	elif espada[i] == "ELVEN":
+              14 | 		dano_e = 11
+
+======================================================================

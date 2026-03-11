@@ -1,0 +1,55 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1617_2417.py
+Questão  : 1617
+Aluno    : 2417
+Total MCs: 2
+
+⚠️  Misconceptions detectados: A3, B8
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import *
+     2 | vetor_s = array(eval(input("")))
+     3 | v = array(eval(input("")))
+     4 | i = 0
+     5 | dano = 0
+     6 | while i < size(vetor_s) and i < size(v):
+     7 | 	if vetor_s[i] == "CENOURA":
+     8 | 		dano = 2
+     9 | 	elif vetor_s[i] == "FERRO":
+    10 | 		dano = dano + 4
+    11 | 	elif vetor_s[i] == "DWARVEN":	
+    12 | 		dano = dano + 8
+    13 | 	elif vetor_s[i] == "ELVEN":
+    14 | 		dano = dano + 11 
+    15 | 	elif vetor_s[i] == "DAEDRIC":
+    16 | 		dano = dano + 14
+    17 | 	
+    18 | 	dano_c = dano[dano] * v[i]
+    19 | 	i = i + 1
+    20 | print(dano_c)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 1
+
+  [1] Linha 0: A3 detectado pelo VisitorMC3 (localização exata não mapeada)
+      Trecho  : —
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 13: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 13) / elif ... sem else
+      Contexto:
+              12 | 		dano = dano + 8
+        >>>   13 | 	elif vetor_s[i] == "ELVEN":
+              14 | 		dano = dano + 11 
+
+======================================================================

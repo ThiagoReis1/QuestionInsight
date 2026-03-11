@@ -1,0 +1,46 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 2846_7103.py
+Questão  : 2846
+Aluno    : 7103
+Total MCs: 2
+
+⚠️  Misconceptions detectados: E1, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | c = array(eval(input()))
+     3 | 
+     4 | for i in range(size(c)):
+     5 | 	if c[i]==0 or c[i]==1 or c[i]==2 or c[i]==3 or c[i]==4 or c[i]==5 or c[i]==6 or c[i]==7 or c[i]==8 or c[i]==9:
+     6 | 		c[i] = c[i] * 2
+     7 | print(c)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ E1 — Verificação desnecessária de todas as combinações possíveis
+  Ocorrências: 1
+
+  [1] Linha 5: 10 condições em um único if — verificação excessiva
+      Trecho  : c[i] == 0 or c[i] == 1 or c[i] == 2 or (c[i] == 3) or (c[i] == 4) or (c[i] == 5) or (c[i] == 6) or (c[i] == 7) or (c[i] == 8) or (c[i] == 9)
+      Contexto:
+               4 | for i in range(size(c)):
+        >>>    5 | 	if c[i]==0 or c[i]==1 or c[i]==2 or c[i]==3 or c[i]==4 or c[i]==5 or c[i]==6 or c[i]==7 or c[i]==8 or c[i]==9:
+               6 | 		c[i] = c[i] * 2
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 1
+
+  [1] Linha 2: Variável 'c' com nome muito curto (≤4 chars)
+      Trecho  : c = ...
+      Contexto:
+               1 | from numpy import*
+        >>>    2 | c = array(eval(input()))
+               3 | 
+
+======================================================================

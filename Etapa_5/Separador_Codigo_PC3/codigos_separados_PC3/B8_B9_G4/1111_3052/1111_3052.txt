@@ -1,0 +1,121 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1111_3052.py
+Questão  : 1111
+Aluno    : 3052
+Total MCs: 3
+
+⚠️  Misconceptions detectados: B8, B9, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | E= float (input ('Numero de horas extras: '))
+     2 | F= float (input ('Numero de horas nao trabalhadas: '))
+     3 | print ('Entradas:',E,'horas extras e',F,'horas de falta')
+     4 | 
+     5 | H= (E - (2 * F)/3)
+     6 | 
+     7 | if (E < 0) or (F < 0):
+     8 | 	print ('Dados invalidos')
+     9 | 	
+    10 | elif (E > 0) and (F > 0):
+    11 | 	if (H > 2400):
+    12 | 		G= 500.00
+    13 | 	elif (H > 1800) and (H <= 2400):
+    14 | 		G= 400.00
+    15 | 	elif (H > 1200) and (H <= 1800):
+    16 | 		G= 300.00
+    17 | 	elif (H > 600) and (H <= 1200):
+    18 | 		G= 200.00
+    19 | 	elif (H <= 600):
+    20 | 		G= 100.00
+    21 | 	print ('Gratificacao: R$',round (G,2))
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 2
+
+  [1] Linha 7: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 7) / elif ... sem else
+      Contexto:
+               6 | 
+        >>>    7 | if (E < 0) or (F < 0):
+               8 | 	print ('Dados invalidos')
+
+  [2] Linha 17: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 17) / elif ... sem else
+      Contexto:
+              16 | 		G= 300.00
+        >>>   17 | 	elif (H > 600) and (H <= 1200):
+              18 | 		G= 200.00
+
+▶ B9 — elif/else retestando condições já verificadas
+  Ocorrências: 1
+
+  [1] Linha 0: B9 detectado pelo VisitorMC3 (localização exata não mapeada)
+      Trecho  : —
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 8
+
+  [1] Linha 1: Variável 'E' com nome muito curto (≤4 chars)
+      Trecho  : E = ...
+      Contexto:
+        >>>    1 | E= float (input ('Numero de horas extras: '))
+               2 | F= float (input ('Numero de horas nao trabalhadas: '))
+
+  [2] Linha 2: Variável 'F' com nome muito curto (≤4 chars)
+      Trecho  : F = ...
+      Contexto:
+               1 | E= float (input ('Numero de horas extras: '))
+        >>>    2 | F= float (input ('Numero de horas nao trabalhadas: '))
+               3 | print ('Entradas:',E,'horas extras e',F,'horas de falta')
+
+  [3] Linha 5: Variável 'H' com nome muito curto (≤4 chars)
+      Trecho  : H = ...
+      Contexto:
+               4 | 
+        >>>    5 | H= (E - (2 * F)/3)
+               6 | 
+
+  [4] Linha 12: Variável 'G' com nome muito curto (≤4 chars)
+      Trecho  : G = ...
+      Contexto:
+              11 | 	if (H > 2400):
+        >>>   12 | 		G= 500.00
+              13 | 	elif (H > 1800) and (H <= 2400):
+
+  [5] Linha 14: Variável 'G' com nome muito curto (≤4 chars)
+      Trecho  : G = ...
+      Contexto:
+              13 | 	elif (H > 1800) and (H <= 2400):
+        >>>   14 | 		G= 400.00
+              15 | 	elif (H > 1200) and (H <= 1800):
+
+  [6] Linha 16: Variável 'G' com nome muito curto (≤4 chars)
+      Trecho  : G = ...
+      Contexto:
+              15 | 	elif (H > 1200) and (H <= 1800):
+        >>>   16 | 		G= 300.00
+              17 | 	elif (H > 600) and (H <= 1200):
+
+  [7] Linha 18: Variável 'G' com nome muito curto (≤4 chars)
+      Trecho  : G = ...
+      Contexto:
+              17 | 	elif (H > 600) and (H <= 1200):
+        >>>   18 | 		G= 200.00
+              19 | 	elif (H <= 600):
+
+  [8] Linha 20: Variável 'G' com nome muito curto (≤4 chars)
+      Trecho  : G = ...
+      Contexto:
+              19 | 	elif (H <= 600):
+        >>>   20 | 		G= 100.00
+              21 | 	print ('Gratificacao: R$',round (G,2))
+
+======================================================================

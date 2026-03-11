@@ -1,0 +1,6 @@
+lado1 = float(input("lado1"))
+lado2 = float(input("lado2"))
+lado3 = float(input("lado3"))
+custo = float(input("custo por metro"))
+custo_total = round(((lado1 + lado2 + lado3) * custo),2)
+print(custo_total)

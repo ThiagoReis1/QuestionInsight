@@ -1,0 +1,74 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1657_7584.py
+Questão  : 1657
+Aluno    : 7584
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import *
+     2 | 
+     3 | pais = input("Estados: ").upper().split(',')
+     4 | 
+     5 | i = 0
+     6 | 
+     7 | vet = zeros(5 , dtype = int)
+     8 | 
+     9 | for i in range(size(pais)):
+    10 | 	if(pais[i] == "AZ"):
+    11 | 		vet[0] += 1 
+    12 | 	elif(pais[i] == "CA"):
+    13 | 		vet[1] += 1 
+    14 | 	elif(pais[i] == "FL"):
+    15 | 		vet[2] += 1
+    16 | 	elif(pais[i] == "PA"):
+    17 | 		vet[3] += 1
+    18 | 	elif(pais[i] == "WI"):
+    19 | 		vet[4] += 1
+    20 | print(max(vet))
+    21 | print(vet)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 16: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 16) / elif ... sem else
+      Contexto:
+              15 | 		vet[2] += 1
+        >>>   16 | 	elif(pais[i] == "PA"):
+              17 | 		vet[3] += 1
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 3
+
+  [1] Linha 3: Variável 'pais' com nome muito curto (≤4 chars)
+      Trecho  : pais = ...
+      Contexto:
+               2 | 
+        >>>    3 | pais = input("Estados: ").upper().split(',')
+               4 | 
+
+  [2] Linha 5: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+               4 | 
+        >>>    5 | i = 0
+               6 | 
+
+  [3] Linha 7: Variável 'vet' com nome muito curto (≤4 chars)
+      Trecho  : vet = ...
+      Contexto:
+               6 | 
+        >>>    7 | vet = zeros(5 , dtype = int)
+               8 | 
+
+======================================================================

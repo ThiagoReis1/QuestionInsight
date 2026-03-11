@@ -1,0 +1,81 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 6672_8806.py
+Questão  : 6672
+Aluno    : 8806
+Total MCs: 3
+
+⚠️  Misconceptions detectados: A3, C8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import *
+     2 | 
+     3 | vet = array(eval(input()), dtype=float)
+     4 | i= 0
+     5 | tam= size(vet)
+     6 | 
+     7 | for i in range(vet):
+     8 | 		i= i + vet
+     9 | 		
+    10 | print(i)
+    11 | 	
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 1
+
+  [1] Linha 5: Variável 'tam' declarada mas nunca utilizada
+      Trecho  : tam = ...
+      Contexto:
+               4 | i= 0
+        >>>    5 | tam= size(vet)
+               6 | 
+
+▶ C8 — Loop for com sua variável de iteração sobrescrita
+  Ocorrências: 1
+
+  [1] Linha 8: Variável de iteração 'i' sobrescrita no loop
+      Trecho  : i = i + vet
+      Contexto:
+               7 | for i in range(vet):
+        >>>    8 | 		i= i + vet
+               9 | 		
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 4
+
+  [1] Linha 3: Variável 'vet' com nome muito curto (≤4 chars)
+      Trecho  : vet = ...
+      Contexto:
+               2 | 
+        >>>    3 | vet = array(eval(input()), dtype=float)
+               4 | i= 0
+
+  [2] Linha 4: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+               3 | vet = array(eval(input()), dtype=float)
+        >>>    4 | i= 0
+               5 | tam= size(vet)
+
+  [3] Linha 5: Variável 'tam' com nome muito curto (≤4 chars)
+      Trecho  : tam = ...
+      Contexto:
+               4 | i= 0
+        >>>    5 | tam= size(vet)
+               6 | 
+
+  [4] Linha 8: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+               7 | for i in range(vet):
+        >>>    8 | 		i= i + vet
+               9 | 		
+
+======================================================================

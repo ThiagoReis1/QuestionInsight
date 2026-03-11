@@ -1,0 +1,82 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 2851_7579.py
+Questão  : 2851
+Aluno    : 7579
+Total MCs: 3
+
+⚠️  Misconceptions detectados: B8, B9, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import *
+     2 | 
+     3 | n = array(eval(input(":")))
+     4 | v = 0
+     5 | for x in n:
+     6 | 	if x != 99:
+     7 | 		v = v + x
+     8 | 		
+     9 | 	elif x == 99:
+    10 | 		v = v * 2
+    11 | 	
+    12 | print(v)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 6: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 6) / elif ... sem else
+      Contexto:
+               5 | for x in n:
+        >>>    6 | 	if x != 99:
+               7 | 		v = v + x
+
+▶ B9 — elif/else retestando condições já verificadas
+  Ocorrências: 1
+
+  [1] Linha 9: elif retesta condição inversa do if da linha 6
+      Trecho  : if x != 99 ... elif x == 99
+      Contexto:
+               8 | 		
+        >>>    9 | 	elif x == 99:
+              10 | 		v = v * 2
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 4
+
+  [1] Linha 3: Variável 'n' com nome muito curto (≤4 chars)
+      Trecho  : n = ...
+      Contexto:
+               2 | 
+        >>>    3 | n = array(eval(input(":")))
+               4 | v = 0
+
+  [2] Linha 4: Variável 'v' com nome muito curto (≤4 chars)
+      Trecho  : v = ...
+      Contexto:
+               3 | n = array(eval(input(":")))
+        >>>    4 | v = 0
+               5 | for x in n:
+
+  [3] Linha 7: Variável 'v' com nome muito curto (≤4 chars)
+      Trecho  : v = ...
+      Contexto:
+               6 | 	if x != 99:
+        >>>    7 | 		v = v + x
+               8 | 		
+
+  [4] Linha 10: Variável 'v' com nome muito curto (≤4 chars)
+      Trecho  : v = ...
+      Contexto:
+               9 | 	elif x == 99:
+        >>>   10 | 		v = v * 2
+              11 | 	
+
+======================================================================

@@ -1,0 +1,49 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 6757_9176.py
+Questão  : 6757
+Aluno    : 9176
+Total MCs: 2
+
+⚠️  Misconceptions detectados: A3, B8
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | entrega = 5
+     2 | pizza = int(input("Digite a quantidade de pizzas: "))
+     3 | if pizza > 0 and pizza < 3:
+     4 |  total = float(pizza * 5 + 3)
+     5 |  print(round(total, 2))
+     6 | elif pizza == 3:
+     7 |  total = pizza * 5 + 3.25
+     8 |  print(round(total, 2))
+     9 | elif pizza > 3:
+    10 |  total = pizza * 5 + 4.5
+    11 |  print(round(total, 2))
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 1
+
+  [1] Linha 1: Variável 'entrega' declarada mas nunca utilizada
+      Trecho  : entrega = ...
+      Contexto:
+        >>>    1 | entrega = 5
+               2 | pizza = int(input("Digite a quantidade de pizzas: "))
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 6: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 6) / elif ... sem else
+      Contexto:
+               5 |  print(round(total, 2))
+        >>>    6 | elif pizza == 3:
+               7 |  total = pizza * 5 + 3.25
+
+======================================================================

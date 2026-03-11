@@ -1,0 +1,125 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 3593_8800.py
+Questão  : 3593
+Aluno    : 8800
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B4, B8
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | 
+     3 | faces = array(eval(input("digite os valores das faces: ")))
+     4 | 
+     5 | i = 0
+     6 | 
+     7 | pontuacao = 200
+     8 | 
+     9 | while i < size(faces):
+    10 | 	if faces[i] == 1:
+    11 | 		pontuacao = pontuacao / 2
+    12 | 	elif faces[i] == 2:
+    13 | 		pontuacao = pontuacao * 3
+    14 | 	elif faces[i] == 3:
+    15 | 		pontuacao = pontuacao / 2
+    16 | 	elif faces[i] == 4:
+    17 | 		pontuacao = pontuacao * 3
+    18 | 	elif faces[i] == 5:
+    19 | 		pontuacao = pontuacao / 2
+    20 | 	elif faces[i] == 6:
+    21 | 		pontuacao = pontuacao * 3
+    22 | 	i = i + 1
+    23 | print(round(pontuacao, 2))
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B4 — Comandos repetidos dentro de blocos if-elif-else
+  Ocorrências: 10
+
+  [1] Linha 14: Bloco idêntico ao da linha 10
+      Trecho  : pontuacao = pontuacao / 2
+      Contexto:
+              13 | 		pontuacao = pontuacao * 3
+        >>>   14 | 	elif faces[i] == 3:
+              15 | 		pontuacao = pontuacao / 2
+
+  [2] Linha 16: Bloco idêntico ao da linha 12
+      Trecho  : pontuacao = pontuacao * 3
+      Contexto:
+              15 | 		pontuacao = pontuacao / 2
+        >>>   16 | 	elif faces[i] == 4:
+              17 | 		pontuacao = pontuacao * 3
+
+  [3] Linha 18: Bloco idêntico ao da linha 10
+      Trecho  : pontuacao = pontuacao / 2
+      Contexto:
+              17 | 		pontuacao = pontuacao * 3
+        >>>   18 | 	elif faces[i] == 5:
+              19 | 		pontuacao = pontuacao / 2
+
+  [4] Linha 20: Bloco idêntico ao da linha 12
+      Trecho  : pontuacao = pontuacao * 3
+      Contexto:
+              19 | 		pontuacao = pontuacao / 2
+        >>>   20 | 	elif faces[i] == 6:
+              21 | 		pontuacao = pontuacao * 3
+
+  [5] Linha 16: Bloco idêntico ao da linha 12
+      Trecho  : pontuacao = pontuacao * 3
+      Contexto:
+              15 | 		pontuacao = pontuacao / 2
+        >>>   16 | 	elif faces[i] == 4:
+              17 | 		pontuacao = pontuacao * 3
+
+  [6] Linha 18: Bloco idêntico ao da linha 14
+      Trecho  : pontuacao = pontuacao / 2
+      Contexto:
+              17 | 		pontuacao = pontuacao * 3
+        >>>   18 | 	elif faces[i] == 5:
+              19 | 		pontuacao = pontuacao / 2
+
+  [7] Linha 20: Bloco idêntico ao da linha 12
+      Trecho  : pontuacao = pontuacao * 3
+      Contexto:
+              19 | 		pontuacao = pontuacao / 2
+        >>>   20 | 	elif faces[i] == 6:
+              21 | 		pontuacao = pontuacao * 3
+
+  [8] Linha 18: Bloco idêntico ao da linha 14
+      Trecho  : pontuacao = pontuacao / 2
+      Contexto:
+              17 | 		pontuacao = pontuacao * 3
+        >>>   18 | 	elif faces[i] == 5:
+              19 | 		pontuacao = pontuacao / 2
+
+  [9] Linha 20: Bloco idêntico ao da linha 16
+      Trecho  : pontuacao = pontuacao * 3
+      Contexto:
+              19 | 		pontuacao = pontuacao / 2
+        >>>   20 | 	elif faces[i] == 6:
+              21 | 		pontuacao = pontuacao * 3
+
+  [10] Linha 20: Bloco idêntico ao da linha 16
+      Trecho  : pontuacao = pontuacao * 3
+      Contexto:
+              19 | 		pontuacao = pontuacao / 2
+        >>>   20 | 	elif faces[i] == 6:
+              21 | 		pontuacao = pontuacao * 3
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 18: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 18) / elif ... sem else
+      Contexto:
+              17 | 		pontuacao = pontuacao * 3
+        >>>   18 | 	elif faces[i] == 5:
+              19 | 		pontuacao = pontuacao / 2
+
+======================================================================

@@ -1,0 +1,1 @@
+a=flo(input())

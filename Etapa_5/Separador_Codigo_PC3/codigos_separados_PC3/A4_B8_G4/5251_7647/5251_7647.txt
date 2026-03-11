@@ -1,0 +1,237 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 5251_7647.py
+Questão  : 5251
+Aluno    : 7647
+Total MCs: 3
+
+⚠️  Misconceptions detectados: A4, B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | cd = input("Insira a Cidade de Destino: ")
+     2 | id = int(input("Insira a Idade do Passageiro: "))
+     3 | 
+     4 | if(cd == "porto velho"):
+     5 | 	if(id<=2 and id>0):
+     6 | 		pp = 0
+     7 | 		print("Passagem: R$", round(pp,2))
+     8 | 	elif(id>=3 and id<=12):
+     9 | 		pp = 500.00 / 2
+    10 | 		print("Passagem: R$", round(pp,2))
+    11 | 	elif(id>=65):
+    12 | 		pp = 500.00 - (500.00 * 0.3)
+    13 | 		print("Passagem: R$", round(pp,2))
+    14 | 		
+    15 | elif(cd == "santarem"):
+    16 | 	if(id<=2 and id>0):
+    17 | 		pp = 0
+    18 | 		print("Passagem: R$", round(pp,2))
+    19 | 	elif(id>=3 and id<=12):
+    20 | 		pp = 370.00 / 2
+    21 | 		print("Passagem: R$", round(pp,2))
+    22 | 	elif(id>=65 and id<150):
+    23 | 		pp = 370.00 - (370.00 * 0.3)
+    24 | 		print("Passagem: R$", round(pp,2))
+    25 | 	else:
+    26 | 		print("Entradas invalidas")
+    27 | 
+    28 | elif(cd == "belem"):
+    29 | 	if(id<=2 and id>0):
+    30 | 		pp = 0
+    31 | 		print("Passagem: R$", round(pp,2))
+    32 | 	elif(id>=3 and id<=12):
+    33 | 		pp = 600.00 / 2
+    34 | 		print("Passagem: R$", round(pp,2))
+    35 | 	elif(id>=65):
+    36 | 		pp = 600.00 - (600.00 * 0.3)
+    37 | 		print("Passagem: R$", round(pp,2))
+    38 | 		
+    39 | elif(cd == "tefe"):
+    40 | 	if(id<=2 and id>0):
+    41 | 		pp = 0
+    42 | 		print("Passagem: R$", round(pp,2))
+    43 | 	elif(id>=3 and id<=12):
+    44 | 		pp = 360.00 / 2
+    45 | 		print("Passagem: R$", round(pp,2))
+    46 | 	elif(id>=65):
+    47 | 		pp = 360.00 - (360.00 * 0.3)
+    48 | 		print("Passagem: R$", round(pp,2))
+    49 | 
+    50 | elif(cd == "tabatinga"):
+    51 | 	if(id<=2 and id>0):
+    52 | 		pp = 0
+    53 | 		print("Passagem: R$", round(pp,2))
+    54 | 	elif(id>=3 and id<=12):
+    55 | 		pp = 550.00 / 2
+    56 | 		print("Passagem: R$", round(pp,2))
+    57 | 	elif(id>=65 and id<150):
+    58 | 		pp = 550.00 - (550.00 * 0.3)
+    59 | 		print("Passagem: R$", round(pp,2))
+    60 | 	else:
+    61 | 		print("Entrada invalida")
+    62 | else:
+    63 | 	print("Entrada invalida")
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A4 — Redefinição de built-in
+  Ocorrências: 1
+
+  [1] Linha 2: Built-in 'id' redefinido como variável
+      Trecho  : id = int(input('Insira a Idade do Passageiro: '))
+      Contexto:
+               1 | cd = input("Insira a Cidade de Destino: ")
+        >>>    2 | id = int(input("Insira a Idade do Passageiro: "))
+               3 | 
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 3
+
+  [1] Linha 8: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 8) / elif ... sem else
+      Contexto:
+               7 | 		print("Passagem: R$", round(pp,2))
+        >>>    8 | 	elif(id>=3 and id<=12):
+               9 | 		pp = 500.00 / 2
+
+  [2] Linha 32: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 32) / elif ... sem else
+      Contexto:
+              31 | 		print("Passagem: R$", round(pp,2))
+        >>>   32 | 	elif(id>=3 and id<=12):
+              33 | 		pp = 600.00 / 2
+
+  [3] Linha 43: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 43) / elif ... sem else
+      Contexto:
+              42 | 		print("Passagem: R$", round(pp,2))
+        >>>   43 | 	elif(id>=3 and id<=12):
+              44 | 		pp = 360.00 / 2
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 17
+
+  [1] Linha 1: Variável 'cd' com nome muito curto (≤4 chars)
+      Trecho  : cd = ...
+      Contexto:
+        >>>    1 | cd = input("Insira a Cidade de Destino: ")
+               2 | id = int(input("Insira a Idade do Passageiro: "))
+
+  [2] Linha 2: Variável 'id' com nome muito curto (≤4 chars)
+      Trecho  : id = ...
+      Contexto:
+               1 | cd = input("Insira a Cidade de Destino: ")
+        >>>    2 | id = int(input("Insira a Idade do Passageiro: "))
+               3 | 
+
+  [3] Linha 6: Variável 'pp' com nome muito curto (≤4 chars)
+      Trecho  : pp = ...
+      Contexto:
+               5 | 	if(id<=2 and id>0):
+        >>>    6 | 		pp = 0
+               7 | 		print("Passagem: R$", round(pp,2))
+
+  [4] Linha 9: Variável 'pp' com nome muito curto (≤4 chars)
+      Trecho  : pp = ...
+      Contexto:
+               8 | 	elif(id>=3 and id<=12):
+        >>>    9 | 		pp = 500.00 / 2
+              10 | 		print("Passagem: R$", round(pp,2))
+
+  [5] Linha 17: Variável 'pp' com nome muito curto (≤4 chars)
+      Trecho  : pp = ...
+      Contexto:
+              16 | 	if(id<=2 and id>0):
+        >>>   17 | 		pp = 0
+              18 | 		print("Passagem: R$", round(pp,2))
+
+  [6] Linha 12: Variável 'pp' com nome muito curto (≤4 chars)
+      Trecho  : pp = ...
+      Contexto:
+              11 | 	elif(id>=65):
+        >>>   12 | 		pp = 500.00 - (500.00 * 0.3)
+              13 | 		print("Passagem: R$", round(pp,2))
+
+  [7] Linha 20: Variável 'pp' com nome muito curto (≤4 chars)
+      Trecho  : pp = ...
+      Contexto:
+              19 | 	elif(id>=3 and id<=12):
+        >>>   20 | 		pp = 370.00 / 2
+              21 | 		print("Passagem: R$", round(pp,2))
+
+  [8] Linha 30: Variável 'pp' com nome muito curto (≤4 chars)
+      Trecho  : pp = ...
+      Contexto:
+              29 | 	if(id<=2 and id>0):
+        >>>   30 | 		pp = 0
+              31 | 		print("Passagem: R$", round(pp,2))
+
+  [9] Linha 23: Variável 'pp' com nome muito curto (≤4 chars)
+      Trecho  : pp = ...
+      Contexto:
+              22 | 	elif(id>=65 and id<150):
+        >>>   23 | 		pp = 370.00 - (370.00 * 0.3)
+              24 | 		print("Passagem: R$", round(pp,2))
+
+  [10] Linha 33: Variável 'pp' com nome muito curto (≤4 chars)
+      Trecho  : pp = ...
+      Contexto:
+              32 | 	elif(id>=3 and id<=12):
+        >>>   33 | 		pp = 600.00 / 2
+              34 | 		print("Passagem: R$", round(pp,2))
+
+  [11] Linha 41: Variável 'pp' com nome muito curto (≤4 chars)
+      Trecho  : pp = ...
+      Contexto:
+              40 | 	if(id<=2 and id>0):
+        >>>   41 | 		pp = 0
+              42 | 		print("Passagem: R$", round(pp,2))
+
+  [12] Linha 36: Variável 'pp' com nome muito curto (≤4 chars)
+      Trecho  : pp = ...
+      Contexto:
+              35 | 	elif(id>=65):
+        >>>   36 | 		pp = 600.00 - (600.00 * 0.3)
+              37 | 		print("Passagem: R$", round(pp,2))
+
+  [13] Linha 44: Variável 'pp' com nome muito curto (≤4 chars)
+      Trecho  : pp = ...
+      Contexto:
+              43 | 	elif(id>=3 and id<=12):
+        >>>   44 | 		pp = 360.00 / 2
+              45 | 		print("Passagem: R$", round(pp,2))
+
+  [14] Linha 52: Variável 'pp' com nome muito curto (≤4 chars)
+      Trecho  : pp = ...
+      Contexto:
+              51 | 	if(id<=2 and id>0):
+        >>>   52 | 		pp = 0
+              53 | 		print("Passagem: R$", round(pp,2))
+
+  [15] Linha 47: Variável 'pp' com nome muito curto (≤4 chars)
+      Trecho  : pp = ...
+      Contexto:
+              46 | 	elif(id>=65):
+        >>>   47 | 		pp = 360.00 - (360.00 * 0.3)
+              48 | 		print("Passagem: R$", round(pp,2))
+
+  [16] Linha 55: Variável 'pp' com nome muito curto (≤4 chars)
+      Trecho  : pp = ...
+      Contexto:
+              54 | 	elif(id>=3 and id<=12):
+        >>>   55 | 		pp = 550.00 / 2
+              56 | 		print("Passagem: R$", round(pp,2))
+
+  [17] Linha 58: Variável 'pp' com nome muito curto (≤4 chars)
+      Trecho  : pp = ...
+      Contexto:
+              57 | 	elif(id>=65 and id<150):
+        >>>   58 | 		pp = 550.00 - (550.00 * 0.3)
+              59 | 		print("Passagem: R$", round(pp,2))
+
+======================================================================

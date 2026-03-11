@@ -1,0 +1,148 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1656_2478.py
+Questão  : 1656
+Aluno    : 2478
+Total MCs: 3
+
+⚠️  Misconceptions detectados: A3, B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import *
+     2 | s = input("Informe os paises: ").split(',')
+     3 | a = size(s)
+     4 | x = zeros(5, dtype=int)
+     5 | be = 0
+     6 | es = 0
+     7 | fr = 0
+     8 | it = 0
+     9 | pt = 0
+    10 | for i in range(a):
+    11 | 	if(s[i] == "BE"):
+    12 | 		x[0] += 1
+    13 | 	elif(s[i] == "ES"):
+    14 | 		x[1] += 1
+    15 | 	elif(s[i] == "FR"):
+    16 | 		x[2] += 1
+    17 | 	elif(s[i] == "IT"):
+    18 | 		x[3] += 1
+    19 | 	elif(s[i] == "PT"):
+    20 | 		x[4] += 1
+    21 | print(max(x))
+    22 | print(x)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 5
+
+  [1] Linha 5: Variável 'be' declarada mas nunca utilizada
+      Trecho  : be = ...
+      Contexto:
+               4 | x = zeros(5, dtype=int)
+        >>>    5 | be = 0
+               6 | es = 0
+
+  [2] Linha 6: Variável 'es' declarada mas nunca utilizada
+      Trecho  : es = ...
+      Contexto:
+               5 | be = 0
+        >>>    6 | es = 0
+               7 | fr = 0
+
+  [3] Linha 7: Variável 'fr' declarada mas nunca utilizada
+      Trecho  : fr = ...
+      Contexto:
+               6 | es = 0
+        >>>    7 | fr = 0
+               8 | it = 0
+
+  [4] Linha 8: Variável 'it' declarada mas nunca utilizada
+      Trecho  : it = ...
+      Contexto:
+               7 | fr = 0
+        >>>    8 | it = 0
+               9 | pt = 0
+
+  [5] Linha 9: Variável 'pt' declarada mas nunca utilizada
+      Trecho  : pt = ...
+      Contexto:
+               8 | it = 0
+        >>>    9 | pt = 0
+              10 | for i in range(a):
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 17: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 17) / elif ... sem else
+      Contexto:
+              16 | 		x[2] += 1
+        >>>   17 | 	elif(s[i] == "IT"):
+              18 | 		x[3] += 1
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 8
+
+  [1] Linha 2: Variável 's' com nome muito curto (≤4 chars)
+      Trecho  : s = ...
+      Contexto:
+               1 | from numpy import *
+        >>>    2 | s = input("Informe os paises: ").split(',')
+               3 | a = size(s)
+
+  [2] Linha 3: Variável 'a' com nome muito curto (≤4 chars)
+      Trecho  : a = ...
+      Contexto:
+               2 | s = input("Informe os paises: ").split(',')
+        >>>    3 | a = size(s)
+               4 | x = zeros(5, dtype=int)
+
+  [3] Linha 4: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+               3 | a = size(s)
+        >>>    4 | x = zeros(5, dtype=int)
+               5 | be = 0
+
+  [4] Linha 5: Variável 'be' com nome muito curto (≤4 chars)
+      Trecho  : be = ...
+      Contexto:
+               4 | x = zeros(5, dtype=int)
+        >>>    5 | be = 0
+               6 | es = 0
+
+  [5] Linha 6: Variável 'es' com nome muito curto (≤4 chars)
+      Trecho  : es = ...
+      Contexto:
+               5 | be = 0
+        >>>    6 | es = 0
+               7 | fr = 0
+
+  [6] Linha 7: Variável 'fr' com nome muito curto (≤4 chars)
+      Trecho  : fr = ...
+      Contexto:
+               6 | es = 0
+        >>>    7 | fr = 0
+               8 | it = 0
+
+  [7] Linha 8: Variável 'it' com nome muito curto (≤4 chars)
+      Trecho  : it = ...
+      Contexto:
+               7 | fr = 0
+        >>>    8 | it = 0
+               9 | pt = 0
+
+  [8] Linha 9: Variável 'pt' com nome muito curto (≤4 chars)
+      Trecho  : pt = ...
+      Contexto:
+               8 | it = 0
+        >>>    9 | pt = 0
+              10 | for i in range(a):
+
+======================================================================

@@ -1,0 +1,62 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1146_3066.py
+Questão  : 1146
+Aluno    : 3066
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B8, E1
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | personagem = input("Digite: ")
+     2 | 
+     3 | if (personagem != "Joffrey") and (personagem != "Robert") and (personagem != "Sandor") and (personagem != "Theon") and (personagem != "Cersei") and (personagem != "Jaime") and (personagem != "Tyrion") and (personagem != "Jorah") and (personagem != "Jon"):
+     4 | 	print("Entrada", personagem, "invalida")
+     5 | else: 
+     6 | 	if (personagem == "Joffrey"):
+     7 | 		print("Jack Gleeson")
+     8 | 	elif (personagem == "Robert"):
+     9 | 		print ("Mark Addy")
+    10 | 	elif (personagem == "Sandor"):
+    11 | 		print("Rory McCann")
+    12 | 	elif (personagem == "Theon"):
+    13 | 		print("Alfie Allen" )
+    14 | 	elif (personagem == "Cersei"):
+    15 | 		print("Lena Headey" )
+    16 | 	elif (personagem == "Jaime"):
+    17 | 		print("Nikolaj Coster-Waldau")
+    18 | 	elif (personagem == "Tyrion"):
+    19 | 		print("Peter Dinklage")
+    20 | 	elif (personagem == "Jorah"):
+    21 | 		print("Iain Glen")
+    22 | 	elif (personagem == "Jon"):
+    23 | 		print("Kit Harington")
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 20: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 20) / elif ... sem else
+      Contexto:
+              19 | 		print("Peter Dinklage")
+        >>>   20 | 	elif (personagem == "Jorah"):
+              21 | 		print("Iain Glen")
+
+▶ E1 — Verificação desnecessária de todas as combinações possíveis
+  Ocorrências: 1
+
+  [1] Linha 3: 9 condições em um único if — verificação excessiva
+      Trecho  : personagem != 'Joffrey' and personagem != 'Robert' and (personagem != 'Sandor') and (personagem != 'Theon') and (personagem != 'Cersei') and (personagem != 'Jaime') and (personagem != 'Tyrion') and (personagem != 'Jorah') and (personagem != 'Jon')
+      Contexto:
+               2 | 
+        >>>    3 | if (personagem != "Joffrey") and (personagem != "Robert") and (personagem != "Sandor") and (personagem != "Theon") and (personagem != "Cersei") and (personagem != "Jaime") and (personagem != "Tyrion") and (personagem != "Jorah") and (personagem != "Jon"):
+               4 | 	print("Entrada", personagem, "invalida")
+
+======================================================================

@@ -1,0 +1,82 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1264_1349.py
+Questão  : 1264
+Aluno    : 1349
+Total MCs: 1
+
+⚠️  Misconceptions detectados: G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import *
+     2 | 
+     3 | p=float(input("Digite o numero real: "))
+     4 | x=eval(input("Qual o vetor x: "))
+     5 | y=eval(input("Qual o vetor y: "))
+     6 | 
+     7 | q=p/(p+1)
+     8 | 
+     9 | v=zeros(size(x),dtype=float)
+    10 | for i in range(size(x)):
+    11 | 	v[i]=x[i]-2*y[i]
+    12 | 
+    13 | soma=0
+    14 | for j in v:
+    15 | 	soma+=abs(j)**q
+    16 | 	
+    17 | print(round(soma**(1/q),8))
+    18 | 
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 6
+
+  [1] Linha 3: Variável 'p' com nome muito curto (≤4 chars)
+      Trecho  : p = ...
+      Contexto:
+               2 | 
+        >>>    3 | p=float(input("Digite o numero real: "))
+               4 | x=eval(input("Qual o vetor x: "))
+
+  [2] Linha 4: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+               3 | p=float(input("Digite o numero real: "))
+        >>>    4 | x=eval(input("Qual o vetor x: "))
+               5 | y=eval(input("Qual o vetor y: "))
+
+  [3] Linha 5: Variável 'y' com nome muito curto (≤4 chars)
+      Trecho  : y = ...
+      Contexto:
+               4 | x=eval(input("Qual o vetor x: "))
+        >>>    5 | y=eval(input("Qual o vetor y: "))
+               6 | 
+
+  [4] Linha 7: Variável 'q' com nome muito curto (≤4 chars)
+      Trecho  : q = ...
+      Contexto:
+               6 | 
+        >>>    7 | q=p/(p+1)
+               8 | 
+
+  [5] Linha 9: Variável 'v' com nome muito curto (≤4 chars)
+      Trecho  : v = ...
+      Contexto:
+               8 | 
+        >>>    9 | v=zeros(size(x),dtype=float)
+              10 | for i in range(size(x)):
+
+  [6] Linha 13: Variável 'soma' com nome muito curto (≤4 chars)
+      Trecho  : soma = ...
+      Contexto:
+              12 | 
+        >>>   13 | soma=0
+              14 | for j in v:
+
+======================================================================

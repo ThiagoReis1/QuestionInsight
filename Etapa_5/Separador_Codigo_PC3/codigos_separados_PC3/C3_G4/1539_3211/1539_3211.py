@@ -1,0 +1,11 @@
+x=float(input())
+k=int(input())
+v=1
+n=1
+if(-1<x<1)and(k>0):
+	while(n<k):
+		v=v-(x**n)
+		n=n+1
+		v=v+(x**n)
+		n=n+1
+	print(round(v,7))

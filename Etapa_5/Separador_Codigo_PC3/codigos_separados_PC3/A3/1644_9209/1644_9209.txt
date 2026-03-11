@@ -1,0 +1,48 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1644_9209.py
+Questão  : 1644
+Aluno    : 9209
+Total MCs: 1
+
+⚠️  Misconceptions detectados: A3
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import *
+     2 | 
+     3 | notas = array(eval(input("Informe os vetores da notas: ")))
+     4 | 
+     5 | reprovados = 0
+     6 | vetor = zeros(size(notas), dtype=int)
+     7 | 
+     8 | for i in range(size(notas)):
+     9 | 	if notas[i] < 5:
+    10 | 		reprovados += 1
+    11 | 		
+    12 | saida = zeros(reprovados, dtype=int)
+    13 | insaida = 0
+    14 | for i in range(size(notas)):
+    15 | 	if notas[i] < 5:
+    16 | 		saida[insaida] =  + i 
+    17 | 		insaida += 1
+    18 | print(reprovados)	
+    19 | print(saida)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 1
+
+  [1] Linha 6: Variável 'vetor' declarada mas nunca utilizada
+      Trecho  : vetor = ...
+      Contexto:
+               5 | reprovados = 0
+        >>>    6 | vetor = zeros(size(notas), dtype=int)
+               7 | 
+
+======================================================================

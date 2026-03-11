@@ -1,0 +1,5 @@
+z = float(input("agua consumida: "))
+y = ((z*0.37)+15)
+w = (y*0.35)
+total = (y+w)
+print(round(total,2))

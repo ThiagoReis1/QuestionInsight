@@ -1,0 +1,62 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1656_6379.py
+Questão  : 1656
+Aluno    : 6379
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import *
+     2 | x = ((input()).upper()).split(",")
+     3 | z=zeros(5,dtype=int)
+     4 | for i in range(size(x)):
+     5 | 	if x[i] == "BE":
+     6 | 		z[0]=z[0]+1
+     7 | 	elif x[i] == "ES":
+     8 | 		z[1]=z[1]+1
+     9 | 	elif x[i] == "FR":
+    10 | 		z[2]=z[2]+1
+    11 | 	elif x[i] == "IT":
+    12 | 		z[3] = z[3] +1
+    13 | 	elif x[i] == "PT":
+    14 | 		z[4]=z[4]+1
+    15 | print(max(z))
+    16 | print(z)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 11: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 11) / elif ... sem else
+      Contexto:
+              10 | 		z[2]=z[2]+1
+        >>>   11 | 	elif x[i] == "IT":
+              12 | 		z[3] = z[3] +1
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 2
+
+  [1] Linha 2: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+               1 | from numpy import *
+        >>>    2 | x = ((input()).upper()).split(",")
+               3 | z=zeros(5,dtype=int)
+
+  [2] Linha 3: Variável 'z' com nome muito curto (≤4 chars)
+      Trecho  : z = ...
+      Contexto:
+               2 | x = ((input()).upper()).split(",")
+        >>>    3 | z=zeros(5,dtype=int)
+               4 | for i in range(size(x)):
+
+======================================================================

@@ -1,0 +1,118 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1097_1698.py
+Questão  : 1097
+Aluno    : 1698
+Total MCs: 2
+
+⚠️  Misconceptions detectados: A3, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | #Marcos Felipe Melo de Lima
+     2 | 
+     3 | x =int(input("Defina o valor de x com 6 numeros: "))
+     4 | x1 = x // 100000 				#primeiro numero
+     5 | x1_1 = x % 100000				#restante do numero
+     6 | x2 = x1_1 // 10000 
+     7 | x2_2 = x1_1 % 10000
+     8 | x3 = x2_2 // 1000
+     9 | x3_3 = x2_2 % 1000			#3 ultimos numeros
+    10 | x4 = x // 1000					#3 primeiros numeros
+    11 | valor = (x4 - x3_3) ** 2 
+    12 | 
+    13 | if (x == valor):
+    14 | 	print(x, "atende a propriedade")
+    15 | else:
+    16 | 	print(valor)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 3
+
+  [1] Linha 4: Variável 'x1' declarada mas nunca utilizada
+      Trecho  : x1 = ...
+      Contexto:
+               3 | x =int(input("Defina o valor de x com 6 numeros: "))
+        >>>    4 | x1 = x // 100000 				#primeiro numero
+               5 | x1_1 = x % 100000				#restante do numero
+
+  [2] Linha 6: Variável 'x2' declarada mas nunca utilizada
+      Trecho  : x2 = ...
+      Contexto:
+               5 | x1_1 = x % 100000				#restante do numero
+        >>>    6 | x2 = x1_1 // 10000 
+               7 | x2_2 = x1_1 % 10000
+
+  [3] Linha 8: Variável 'x3' declarada mas nunca utilizada
+      Trecho  : x3 = ...
+      Contexto:
+               7 | x2_2 = x1_1 % 10000
+        >>>    8 | x3 = x2_2 // 1000
+               9 | x3_3 = x2_2 % 1000			#3 ultimos numeros
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 8
+
+  [1] Linha 3: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+               2 | 
+        >>>    3 | x =int(input("Defina o valor de x com 6 numeros: "))
+               4 | x1 = x // 100000 				#primeiro numero
+
+  [2] Linha 4: Variável 'x1' com nome muito curto (≤4 chars)
+      Trecho  : x1 = ...
+      Contexto:
+               3 | x =int(input("Defina o valor de x com 6 numeros: "))
+        >>>    4 | x1 = x // 100000 				#primeiro numero
+               5 | x1_1 = x % 100000				#restante do numero
+
+  [3] Linha 5: Variável 'x1_1' com nome muito curto (≤4 chars)
+      Trecho  : x1_1 = ...
+      Contexto:
+               4 | x1 = x // 100000 				#primeiro numero
+        >>>    5 | x1_1 = x % 100000				#restante do numero
+               6 | x2 = x1_1 // 10000 
+
+  [4] Linha 6: Variável 'x2' com nome muito curto (≤4 chars)
+      Trecho  : x2 = ...
+      Contexto:
+               5 | x1_1 = x % 100000				#restante do numero
+        >>>    6 | x2 = x1_1 // 10000 
+               7 | x2_2 = x1_1 % 10000
+
+  [5] Linha 7: Variável 'x2_2' com nome muito curto (≤4 chars)
+      Trecho  : x2_2 = ...
+      Contexto:
+               6 | x2 = x1_1 // 10000 
+        >>>    7 | x2_2 = x1_1 % 10000
+               8 | x3 = x2_2 // 1000
+
+  [6] Linha 8: Variável 'x3' com nome muito curto (≤4 chars)
+      Trecho  : x3 = ...
+      Contexto:
+               7 | x2_2 = x1_1 % 10000
+        >>>    8 | x3 = x2_2 // 1000
+               9 | x3_3 = x2_2 % 1000			#3 ultimos numeros
+
+  [7] Linha 9: Variável 'x3_3' com nome muito curto (≤4 chars)
+      Trecho  : x3_3 = ...
+      Contexto:
+               8 | x3 = x2_2 // 1000
+        >>>    9 | x3_3 = x2_2 % 1000			#3 ultimos numeros
+              10 | x4 = x // 1000					#3 primeiros numeros
+
+  [8] Linha 10: Variável 'x4' com nome muito curto (≤4 chars)
+      Trecho  : x4 = ...
+      Contexto:
+               9 | x3_3 = x2_2 % 1000			#3 ultimos numeros
+        >>>   10 | x4 = x // 1000					#3 primeiros numeros
+              11 | valor = (x4 - x3_3) ** 2 
+
+======================================================================

@@ -1,0 +1,19 @@
+pb=int(input("numeros de habitantes de Bravos? "))
+pp=int(input("numeros de habitantes de Pentos? "))
+ppr=int(input("numeros de habitantes de Porto Real? "))
+tcb=int(input("taxa de crescimento da cidade de Bravos? "))
+tcp=int(input("taxa de crescimento da cidade de Pentos? "))
+tcpr=int(input("taxa de crescimento da cidade de Porto Real? "))
+pt=pb+pp
+pta=pb*tcn+pp*tcp
+ptw=ppr*tcpr
+a=0
+while(pta>=ptw):
+	pb=pb*(1+tcb)
+	pp=pp*(1+tcp)
+	ppr=ppr*(1+tcpr)
+	pt=pb+pp
+	pta=pb*tcn+pp*tcp
+	ptw=ppr*tcpr
+	a=a+1
+print(a)

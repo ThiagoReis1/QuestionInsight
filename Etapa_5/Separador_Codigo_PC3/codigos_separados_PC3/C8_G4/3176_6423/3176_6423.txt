@@ -1,0 +1,73 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 3176_6423.py
+Questão  : 3176
+Aluno    : 6423
+Total MCs: 2
+
+⚠️  Misconceptions detectados: C8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | 
+     2 | v = input("").upper()
+     3 | x = 0
+     4 | y = 0
+     5 | i = 0
+     6 | for i in range(len(v)):
+     7 | 	if v[i]=="A" or v[i]=="E" or v[i]=="I" or v[i]=="O" or v[i]=="U":
+     8 | 		x+=1
+     9 | 	else:
+    10 | 		y += 1
+    11 | 	i+=1
+    12 | print(x)
+    13 | print(y)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ C8 — Loop for com sua variável de iteração sobrescrita
+  Ocorrências: 1
+
+  [1] Linha 11: Variável de iteração 'i' modificada no loop
+      Trecho  : i += 1
+      Contexto:
+              10 | 		y += 1
+        >>>   11 | 	i+=1
+              12 | print(x)
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 4
+
+  [1] Linha 2: Variável 'v' com nome muito curto (≤4 chars)
+      Trecho  : v = ...
+      Contexto:
+               1 | 
+        >>>    2 | v = input("").upper()
+               3 | x = 0
+
+  [2] Linha 3: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+               2 | v = input("").upper()
+        >>>    3 | x = 0
+               4 | y = 0
+
+  [3] Linha 4: Variável 'y' com nome muito curto (≤4 chars)
+      Trecho  : y = ...
+      Contexto:
+               3 | x = 0
+        >>>    4 | y = 0
+               5 | i = 0
+
+  [4] Linha 5: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+               4 | y = 0
+        >>>    5 | i = 0
+               6 | for i in range(len(v)):
+
+======================================================================

@@ -1,0 +1,66 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1649_7599.py
+Questão  : 1649
+Aluno    : 7599
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import * 
+     2 | cor = input("cor de olhos:").upper().split(',')
+     3 | v0 = zeros(5,dtype=int)
+     4 | for i in cor:
+     5 | 	if(i=="P"):
+     6 | 		v0[0] = v0[0] + 1
+     7 | 	elif(i=="C"):
+     8 | 		v0[1] = v0[1] + 1
+     9 | 	elif(i=="M"):
+    10 | 		v0[2] = v0[2] + 1
+    11 | 	elif(i=="V"):
+    12 | 		v0[3] = v0[3] + 1
+    13 | 	elif(i=="A"):
+    14 | 		v0[4] = v0[4] + 1
+    15 | print(max(v0))
+    16 | print(v0)
+    17 | 	
+    18 | 	
+    19 | 	
+    20 | 
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 11: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 11) / elif ... sem else
+      Contexto:
+              10 | 		v0[2] = v0[2] + 1
+        >>>   11 | 	elif(i=="V"):
+              12 | 		v0[3] = v0[3] + 1
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 2
+
+  [1] Linha 2: Variável 'cor' com nome muito curto (≤4 chars)
+      Trecho  : cor = ...
+      Contexto:
+               1 | from numpy import * 
+        >>>    2 | cor = input("cor de olhos:").upper().split(',')
+               3 | v0 = zeros(5,dtype=int)
+
+  [2] Linha 3: Variável 'v0' com nome muito curto (≤4 chars)
+      Trecho  : v0 = ...
+      Contexto:
+               2 | cor = input("cor de olhos:").upper().split(',')
+        >>>    3 | v0 = zeros(5,dtype=int)
+               4 | for i in cor:
+
+======================================================================

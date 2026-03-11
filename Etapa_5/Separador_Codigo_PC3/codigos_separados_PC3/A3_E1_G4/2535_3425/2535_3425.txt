@@ -1,0 +1,152 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 2535_3425.py
+Questão  : 2535
+Aluno    : 3425
+Total MCs: 3
+
+⚠️  Misconceptions detectados: A3, E1, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | da = float(input())
+     2 | db = float(input())
+     3 | ja = float(input())
+     4 | jb = float(input())
+     5 | 
+     6 | t = 0
+     7 | sa = da
+     8 | sb = db
+     9 | 
+    10 | if((da>0) and (db>0) and (ja>0) and (jb>0) and (da>db) and (ja<jb)):
+    11 | 	while (sb < sa):
+    12 | 		sa = sa +(sa * (ja / 100))
+    13 | 		sa = round(sa, 2) 
+    14 | 		sb = sb +(sb * (jb / 100))
+    15 | 		sb = round(sb, 2)
+    16 | 		
+    17 | 		t = t + 1
+    18 | 	
+    19 | else:
+    20 | 	t = "Dados incorretos"
+    21 | 
+    22 | print(t)	
+    23 | 
+    24 | 		
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 1
+
+  [1] Linha 0: A3 detectado pelo VisitorMC3 (localização exata não mapeada)
+      Trecho  : —
+
+▶ E1 — Verificação desnecessária de todas as combinações possíveis
+  Ocorrências: 1
+
+  [1] Linha 10: 6 condições em um único if — verificação excessiva
+      Trecho  : da > 0 and db > 0 and (ja > 0) and (jb > 0) and (da > db) and (ja < jb)
+      Contexto:
+               9 | 
+        >>>   10 | if((da>0) and (db>0) and (ja>0) and (jb>0) and (da>db) and (ja<jb)):
+              11 | 	while (sb < sa):
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 13
+
+  [1] Linha 1: Variável 'da' com nome muito curto (≤4 chars)
+      Trecho  : da = ...
+      Contexto:
+        >>>    1 | da = float(input())
+               2 | db = float(input())
+
+  [2] Linha 2: Variável 'db' com nome muito curto (≤4 chars)
+      Trecho  : db = ...
+      Contexto:
+               1 | da = float(input())
+        >>>    2 | db = float(input())
+               3 | ja = float(input())
+
+  [3] Linha 3: Variável 'ja' com nome muito curto (≤4 chars)
+      Trecho  : ja = ...
+      Contexto:
+               2 | db = float(input())
+        >>>    3 | ja = float(input())
+               4 | jb = float(input())
+
+  [4] Linha 4: Variável 'jb' com nome muito curto (≤4 chars)
+      Trecho  : jb = ...
+      Contexto:
+               3 | ja = float(input())
+        >>>    4 | jb = float(input())
+               5 | 
+
+  [5] Linha 6: Variável 't' com nome muito curto (≤4 chars)
+      Trecho  : t = ...
+      Contexto:
+               5 | 
+        >>>    6 | t = 0
+               7 | sa = da
+
+  [6] Linha 7: Variável 'sa' com nome muito curto (≤4 chars)
+      Trecho  : sa = ...
+      Contexto:
+               6 | t = 0
+        >>>    7 | sa = da
+               8 | sb = db
+
+  [7] Linha 8: Variável 'sb' com nome muito curto (≤4 chars)
+      Trecho  : sb = ...
+      Contexto:
+               7 | sa = da
+        >>>    8 | sb = db
+               9 | 
+
+  [8] Linha 20: Variável 't' com nome muito curto (≤4 chars)
+      Trecho  : t = ...
+      Contexto:
+              19 | else:
+        >>>   20 | 	t = "Dados incorretos"
+              21 | 
+
+  [9] Linha 12: Variável 'sa' com nome muito curto (≤4 chars)
+      Trecho  : sa = ...
+      Contexto:
+              11 | 	while (sb < sa):
+        >>>   12 | 		sa = sa +(sa * (ja / 100))
+              13 | 		sa = round(sa, 2) 
+
+  [10] Linha 13: Variável 'sa' com nome muito curto (≤4 chars)
+      Trecho  : sa = ...
+      Contexto:
+              12 | 		sa = sa +(sa * (ja / 100))
+        >>>   13 | 		sa = round(sa, 2) 
+              14 | 		sb = sb +(sb * (jb / 100))
+
+  [11] Linha 14: Variável 'sb' com nome muito curto (≤4 chars)
+      Trecho  : sb = ...
+      Contexto:
+              13 | 		sa = round(sa, 2) 
+        >>>   14 | 		sb = sb +(sb * (jb / 100))
+              15 | 		sb = round(sb, 2)
+
+  [12] Linha 15: Variável 'sb' com nome muito curto (≤4 chars)
+      Trecho  : sb = ...
+      Contexto:
+              14 | 		sb = sb +(sb * (jb / 100))
+        >>>   15 | 		sb = round(sb, 2)
+              16 | 		
+
+  [13] Linha 17: Variável 't' com nome muito curto (≤4 chars)
+      Trecho  : t = ...
+      Contexto:
+              16 | 		
+        >>>   17 | 		t = t + 1
+              18 | 	
+
+======================================================================

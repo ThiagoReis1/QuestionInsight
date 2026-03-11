@@ -1,0 +1,82 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 1114_3060.py
+Questão  : 1114
+Aluno    : 3060
+Total MCs: 2
+
+⚠️  Misconceptions detectados: B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | v = float(input("Velocidade do trem: "))
+     2 | t = float(input("Tempo de viagem: "))
+     3 | 
+     4 | d = (v * t)
+     5 | 
+     6 | if(d <= 0) or (t < 0):
+     7 | 	print("Entradas:", v, "km/h e", t, "h")
+     8 | 	print("Dados invalidos")
+     9 | else:
+    10 | 	if((d > 0) and (d < 100)):
+    11 | 		print("Entradas:", v, "km/h e", t, "h")
+    12 | 		print("Proxima parada: Bravos")
+    13 | 	elif((d >= 100) and (d < 200)):
+    14 | 		print("Entradas:", v, "km/h e", t, "h")
+    15 | 		print("Proxima parada: Castamere")
+    16 | 	elif((d >= 200) and (d < 400)):
+    17 | 		print("Entradas:", v, "km/h e", t, "h")
+    18 | 		print("Proxima parada: Doriath")
+    19 | 	elif((d >= 400) and (d < 600)):
+    20 | 		print("Entradas:", v, "km/h e", t, "h")
+    21 | 		print("Proxima parada: Edoras")
+    22 | 	elif((d >= 600) and (d < 750)):
+    23 | 		print("Entradas:", v, "km/h e", t, "h")
+    24 | 		print("Proxima parada: Fangorn")
+    25 | 	elif((d >= 750) and (d < 1150)):
+    26 | 		print("Entradas:", v, "km/h e", t, "h")
+    27 | 		print("Proxima parada: Gondor")
+    28 | 	elif((d >= 1150) and (d < 1400)):
+    29 | 		print("Entradas:", v, "km/h e", t, "h")
+    30 | 		print("Proxima parada: Hogsmead")
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 25: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 25) / elif ... sem else
+      Contexto:
+              24 | 		print("Proxima parada: Fangorn")
+        >>>   25 | 	elif((d >= 750) and (d < 1150)):
+              26 | 		print("Entradas:", v, "km/h e", t, "h")
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 3
+
+  [1] Linha 1: Variável 'v' com nome muito curto (≤4 chars)
+      Trecho  : v = ...
+      Contexto:
+        >>>    1 | v = float(input("Velocidade do trem: "))
+               2 | t = float(input("Tempo de viagem: "))
+
+  [2] Linha 2: Variável 't' com nome muito curto (≤4 chars)
+      Trecho  : t = ...
+      Contexto:
+               1 | v = float(input("Velocidade do trem: "))
+        >>>    2 | t = float(input("Tempo de viagem: "))
+               3 | 
+
+  [3] Linha 4: Variável 'd' com nome muito curto (≤4 chars)
+      Trecho  : d = ...
+      Contexto:
+               3 | 
+        >>>    4 | d = (v * t)
+               5 | 
+
+======================================================================

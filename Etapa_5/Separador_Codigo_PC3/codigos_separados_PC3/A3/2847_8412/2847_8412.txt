@@ -1,0 +1,39 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo  : 2847_8412.py
+Questão  : 2847
+Aluno    : 8412
+Total MCs: 1
+
+⚠️  Misconceptions detectados: A3
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import *
+     2 | codigo = array(eval(input('insira os numeros inteiros de 0 a 9: ')))
+     3 | segredo = zeros(codigo, dtype = int)
+     4 | 
+     5 | for i in range(0, size(codigo)):
+     6 | 	if codigo[i] == 7:
+     7 | 		codigo[i] = 49
+     8 | 	else:
+     9 | 		codigo[i] = codigo[i] ** 2
+    10 | print(codigo)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 1
+
+  [1] Linha 3: Variável 'segredo' declarada mas nunca utilizada
+      Trecho  : segredo = ...
+      Contexto:
+               2 | codigo = array(eval(input('insira os numeros inteiros de 0 a 9: ')))
+        >>>    3 | segredo = zeros(codigo, dtype = int)
+               4 | 
+
+======================================================================

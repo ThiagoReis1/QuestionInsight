@@ -1,0 +1,15 @@
+n=float(input("Nota:"))
+if(n>10)or(n<0):
+	print('ERRO')
+elif(n>=9.0):
+   print("A")
+elif(n>=8.0):
+	print("B")
+elif(n>=7.0):
+	print("C")
+elif(n>=6.0):
+	print("D")
+elif(n>=5.0):
+	print("E")
+elif(n<5.0):
+	print("F")
