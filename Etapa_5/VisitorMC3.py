@@ -1153,8 +1153,29 @@ class VisitorMC3(ast.NodeVisitor):
                         return
 
     # =========================================================================
+    # ELEGIBILIDADE ESTRUTURAL (não é uma MC³ — usada para filtrar o grupo
+    # de comparação de B4/B8/B9, que só podem ocorrer em código com
+    # if/elif/else)
+    # =========================================================================
+
+    def checkHasConditional(self, root):
+        """
+        Verifica se o código contém algum if/elif/else no nível de
+        statement (ast.If). Usada para determinar, por questão, se
+        B4/B8/B9 eram estruturalmente possíveis para aquela submissão —
+        e não uma misconception em si.
+        """
+        for node in ast.walk(root):
+            if isinstance(node, ast.If):
+                return True
+        return False
+
+    # =========================================================================
     # INTERFACE PÚBLICA — MÉTODOS GET
     # =========================================================================
+
+    def getHasConditional(self, root):
+        return self.checkHasConditional(root)
 
     def getA2(self, root):
         self.selfAssignment = False

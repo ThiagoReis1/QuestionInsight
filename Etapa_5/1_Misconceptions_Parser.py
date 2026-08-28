@@ -22,6 +22,21 @@ G4_MIN_VAR_CHRS = 4
 G4_MIN_FNC_CHRS = 8
 G4_MAX_ALLOWED_NONSIGNIFICANT = 70
 
+# ------------------------------------------------------------------
+# ELEGIBILIDADE ESTRUTURAL PARA B4/B8/B9
+# ------------------------------------------------------------------
+# B4, B8 e B9 só podem ocorrer em código que usa if/elif/else. Não há
+# gabarito/solução de referência disponível — a elegibilidade de cada
+# questão é derivada agregando, sobre as próprias submissões dos alunos
+# daquela questão, a proporção de códigos que usam algum condicional.
+# Se essa proporção for >= ELEGIBILIDADE_MIN_PROPORCAO_IF, a questão é
+# marcada como estruturalmente elegível para B4/B8/B9 — ou seja, o
+# grupo de comparação passa a ser "questões que podiam ter B4 mas não
+# tiveram" em vez de "questões sequenciais". Isso elimina o
+# confundimento B2; o efeito aleatório de questão no modelo estatístico
+# apenas complementa esse filtro, não o substitui.
+ELEGIBILIDADE_MIN_PROPORCAO_IF = 0.5
+
 MAX_WORKERS = 3
 
 MC3_TYPES = [
@@ -95,17 +110,25 @@ def obter_status_threads():
 
 
 def analisar_codigo(filepath):
-    """Analisa um arquivo Python e retorna os MC³ detectados."""
+    """
+    Analisa um arquivo Python e retorna uma tupla:
+        (lista_de_mc3_detectados, tem_condicional)
+
+    tem_condicional indica se ESTE código específico usa if/elif/else.
+    É usado para calcular, por questão, a proporção de alunos que
+    usaram condicional — base para a elegibilidade de B4/B8/B9.
+    """
     try:
         with open(filepath, 'r', encoding="utf-8") as file:
             code = file.read()
         if not code or len(code.strip()) == 0:
-            return []
+            return [], False
         parsed = ast.parse(code)
     except Exception:
-        return []
+        return [], False
 
     visitor = VisitorMC3()
+    tem_condicional = visitor.getHasConditional(parsed)
 
     try:
         res_map = {
@@ -134,11 +157,12 @@ def analisar_codigo(filepath):
         }
 
         # Normaliza tuplas (A4, A5) → bool e filtra os detectados
-        return [mc for mc, res in res_map.items()
-                if (res[0] if isinstance(res, tuple) else res)]
+        detectados = [mc for mc, res in res_map.items()
+                      if (res[0] if isinstance(res, tuple) else res)]
+        return detectados, tem_condicional
 
     except Exception:
-        return []
+        return [], tem_condicional
 
 
 def processar_questao(questao_data):
@@ -158,6 +182,10 @@ def processar_questao(questao_data):
     mc3_counters = defaultdict(int)
     detailed_results = []
 
+    # Contadores para elegibilidade estrutural de B4/B8/B9
+    total_analisados = 0
+    total_com_condicional = 0
+
     atualizar_status_thread(thread_id, questao_id, "analisando_usuarios")
 
     for i, usuario_id in enumerate(usuarios):
@@ -170,14 +198,20 @@ def processar_questao(questao_data):
         if filepath is None:
             continue  # aluno não tem arquivo para essa questão
 
-        misconceptions = set(analisar_codigo(filepath))
+        mc3_lista, tem_condicional = analisar_codigo(filepath)
+        misconceptions = set(mc3_lista)
+
+        total_analisados += 1
+        if tem_condicional:
+            total_com_condicional += 1
 
         detailed_results.append({
             'question': questao_id,
             'usuario': usuario_id,
             'misconceptions_detectados': ','.join(sorted(misconceptions)),
             'total_misconceptions': len(misconceptions),
-            'categorias_afetadas': len(set(mc[0] for mc in misconceptions))
+            'categorias_afetadas': len(set(mc[0] for mc in misconceptions)),
+            'tem_condicional': tem_condicional
         })
 
         for mc3 in misconceptions:
@@ -185,7 +219,21 @@ def processar_questao(questao_data):
 
     atualizar_status_thread(thread_id, questao_id, "finalizando")
 
-    summary_row = {'question': questao_id, 'respostas': len(usuarios)}
+    proporcao_com_condicional = (
+        total_com_condicional / total_analisados if total_analisados > 0 else 0.0
+    )
+    elegivel_condicional = proporcao_com_condicional >= ELEGIBILIDADE_MIN_PROPORCAO_IF
+
+    summary_row = {
+        'question': questao_id,
+        'respostas': len(usuarios),
+        'proporcao_com_condicional': round(proporcao_com_condicional, 4),
+        # Elegibilidade estrutural para B4/B8/B9: True = a questão tem uma
+        # proporção relevante de alunos usando if/elif/else, logo B4/B8/B9
+        # eram estruturalmente possíveis ali. Use esta coluna para filtrar
+        # o grupo de comparação de B4/B8/B9 (não filtrar os outros MC³).
+        'elegivel_condicional': elegivel_condicional,
+    }
     for mc3_type in MC3_TYPES:
         summary_row[mc3_type] = mc3_counters[mc3_type]
 
