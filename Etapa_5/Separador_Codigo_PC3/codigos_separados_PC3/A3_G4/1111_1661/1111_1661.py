@@ -1,2 +1,0 @@
-dwd=float(input(""))
-p

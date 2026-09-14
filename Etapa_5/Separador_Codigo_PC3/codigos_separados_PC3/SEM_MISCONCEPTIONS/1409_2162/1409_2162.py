@@ -1,6 +1,0 @@
-tipo = input("")
-v1 = int(input(""))
-v2 = int(input(""))
-v3 = int(input(""))
-v4 = int(input(""))
-if(v1 or v2 or v3 or v4 >= )

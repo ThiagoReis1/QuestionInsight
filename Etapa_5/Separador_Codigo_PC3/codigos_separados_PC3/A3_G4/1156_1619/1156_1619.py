@@ -1,1 +1,0 @@
-pi = int(input("Digite quantas quinzenas: "))

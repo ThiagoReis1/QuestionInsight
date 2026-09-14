@@ -1,1 +1,0 @@
-rom math import*

@@ -1,1 +1,0 @@
-from numpl import*

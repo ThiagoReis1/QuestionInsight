@@ -1,2 +1,0 @@
-altura = 
-sexo = Feminino

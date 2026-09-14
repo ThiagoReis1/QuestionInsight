@@ -1,6 +1,0 @@
-mG =float(input("qual a massa do peixe G: "))
-vG = float(input("qual a velocidade do peixe G: "))
-mP = float(input("qual a massa do peixe P: "))
-vP = float(input("qual a velocidade do peixe P: "))
-vF =((mG * vG)- (mP * vP))/(mG+mP)
-print(vF)

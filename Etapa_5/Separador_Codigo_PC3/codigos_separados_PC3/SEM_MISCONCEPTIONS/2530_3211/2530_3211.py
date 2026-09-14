@@ -1,9 +1,0 @@
-Di=float(input())
-tf=float(input())
-j=(float(input()))/100
-saldo=(Di*j)-tf
-limite=Di+(Di*j)
-if(D>0)and(tf>0)and(j>0):
-	while(saldo<=limite):
-		y=Di
-		y=y+

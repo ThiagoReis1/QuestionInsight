@@ -17,7 +17,7 @@ class ExecutionCollector(Collector):
 
     def collect(self):
         students_info: Dict[Tuple[int, int], StudentQuestionInfo] = {}
-        with open(self.csv_source, "r", newline="") as csv_file:
+        with open(self.csv_source, "r", newline="", encoding="utf-8") as csv_file:
             logger.info("collecting metrics from '%s'", self.csv_source)
             reader = csv.DictReader(csv_file)
             try:

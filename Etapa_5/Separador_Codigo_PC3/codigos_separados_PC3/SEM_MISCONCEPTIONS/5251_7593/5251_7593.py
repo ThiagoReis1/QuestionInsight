@@ -1,4 +1,0 @@
-preco = input("destino: ")
-preco 
-
-

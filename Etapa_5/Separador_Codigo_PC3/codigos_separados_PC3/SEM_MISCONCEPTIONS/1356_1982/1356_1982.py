@@ -1,4 +1,0 @@
-print 'area*alunos'
-input
-
-

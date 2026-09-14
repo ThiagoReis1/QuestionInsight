@@ -1,1 +1,0 @@
-paises = input("Sigla:").split(',')

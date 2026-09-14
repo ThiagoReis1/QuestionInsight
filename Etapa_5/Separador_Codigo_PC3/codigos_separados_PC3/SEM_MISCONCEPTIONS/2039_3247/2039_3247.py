@@ -1,1 +1,0 @@
-uma vez flamengo, sempre flamengo flamengo sempre eu eis de ser, é meu maior prazer, velo brilhar, seja na terra, seja no mar, vencer vencer vencer... Uma vez flamengo, flamengo ate morrer

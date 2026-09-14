@@ -1,5 +1,0 @@
-pessoas = float(input(" "))
-
-
-
-

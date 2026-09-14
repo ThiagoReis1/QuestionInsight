@@ -1,5 +1,0 @@
-saco = float(input("Peso do saco: "))
-quant = float(input("Racao fornecida pra cada porco: "))
-dia = (quant*7)
-rest = (saco - dia)
-print(round(rest, 3))

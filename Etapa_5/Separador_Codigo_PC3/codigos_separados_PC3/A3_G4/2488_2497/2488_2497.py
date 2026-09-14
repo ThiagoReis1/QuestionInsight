@@ -1,1 +1,0 @@
-x = float(input("Digite seu salario atual: "))

@@ -1,1 +1,0 @@
-from numpy to import*

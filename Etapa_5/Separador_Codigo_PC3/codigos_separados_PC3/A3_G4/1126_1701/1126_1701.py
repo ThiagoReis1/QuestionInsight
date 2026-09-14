@@ -1,1 +1,0 @@
-s = float (input("digite sansa"))

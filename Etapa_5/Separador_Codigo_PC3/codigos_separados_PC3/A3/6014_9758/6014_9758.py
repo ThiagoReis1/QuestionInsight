@@ -1,1 +1,0 @@
-renda = float(input("valor da renda:"))

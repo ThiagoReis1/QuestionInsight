@@ -1,1 +1,0 @@
-n = int(input("Qual o valor de n: "))

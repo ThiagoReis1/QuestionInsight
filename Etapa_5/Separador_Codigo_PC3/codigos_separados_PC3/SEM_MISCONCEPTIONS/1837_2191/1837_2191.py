@@ -1,4 +1,0 @@
-
-float(input("altura"))
-
-v=

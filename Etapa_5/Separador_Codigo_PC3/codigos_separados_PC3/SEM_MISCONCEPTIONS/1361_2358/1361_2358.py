@@ -1,1 +1,0 @@
-snowberry=int(input()

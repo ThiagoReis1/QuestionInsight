@@ -1,2 +1,0 @@
-v = float(input(""))
-c = 

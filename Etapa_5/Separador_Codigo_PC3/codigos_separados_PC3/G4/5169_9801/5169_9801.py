@@ -1,5 +1,0 @@
-PSR = float(input("peso do saco de racao: "))
-QDR = float(input("quantidade diaria de racao: "))
-round(PSR, 2)
-round(QDR, 2)
-print(round(PSR - QDR * 4, 2))

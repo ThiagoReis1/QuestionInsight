@@ -1,2 +1,0 @@
-nome = array(input("nome: "))
-

@@ -1,1 +1,0 @@
-valor_encomenda = input(int())

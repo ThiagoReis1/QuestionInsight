@@ -1,5 +1,0 @@
-quantidade= float(input(" ")
-
-						
-						
-						

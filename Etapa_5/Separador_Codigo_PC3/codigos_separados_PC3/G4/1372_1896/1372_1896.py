@@ -1,7 +1,0 @@
-Q=float(input(" Informe a quantidade de encantamento: "))
-FR=Q*(23.33/100.00)
-SG=Q*(18.32/100.00)
-OD=Q*(58.35/100.00)
-print(round(FR,2))
-print(round(SG,2))
-print(round(OD,2))

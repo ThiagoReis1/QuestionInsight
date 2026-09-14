@@ -1,1 +1,0 @@
-Area do octogono input("2*a**()")

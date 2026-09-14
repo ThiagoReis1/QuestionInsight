@@ -1,1 +1,0 @@
-PrecoSegundoIngresso=PrecoIngresso−(PrecoIngresso∗(Taxadedesconto100))

@@ -1,1 +1,0 @@
-#equacao de clayperon- volume

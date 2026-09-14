@@ -1,6 +1,0 @@
-mg=float(input("digite um valor para massa do peixe grande:"))
-vg=float(input("digite um valor para a velocidade do peixe grande:"))
-mp=float(input("digite um valor para a massa do peixe pequeno:"))
-vp=float(input("digite um valor para a velocidade do peixe pequeno:"))
-vf=((mg*vg)-(mp*vp))/(mg+mp)
-print(vf)

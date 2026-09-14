@@ -1,2 +1,0 @@
-peso = x
-qntd = x

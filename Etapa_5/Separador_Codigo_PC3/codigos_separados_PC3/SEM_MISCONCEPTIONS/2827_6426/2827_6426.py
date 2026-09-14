@@ -1,6 +1,0 @@
-from numpy import*
-
-num=
-
-
-

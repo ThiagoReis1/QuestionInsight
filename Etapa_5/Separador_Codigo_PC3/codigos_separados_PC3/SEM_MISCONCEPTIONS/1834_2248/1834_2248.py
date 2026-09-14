@@ -1,1 +1,0 @@
-input(Qual a velocid)

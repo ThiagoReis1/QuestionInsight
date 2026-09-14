@@ -1,4 +1,0 @@
-n = float(input(""))
-
-
-

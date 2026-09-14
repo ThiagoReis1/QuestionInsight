@@ -1,1 +1,0 @@
-X = float(input()

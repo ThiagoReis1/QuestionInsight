@@ -1,2 +1,0 @@
-x = input(int(7))
-print(x)

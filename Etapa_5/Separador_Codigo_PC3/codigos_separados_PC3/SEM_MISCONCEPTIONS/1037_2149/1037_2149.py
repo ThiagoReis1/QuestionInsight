@@ -1,3 +1,0 @@
-float {(input)}
-
-total = 

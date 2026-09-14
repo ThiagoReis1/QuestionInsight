@@ -1,1 +1,0 @@
-qi = float(input("Numero de habitantes de Bravos"))

@@ -1,1 +1,0 @@
-tipo de ataque = input("digite espada o")

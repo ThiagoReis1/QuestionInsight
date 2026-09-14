@@ -1,1 +1,0 @@
-na=inpu("Nome do ata")

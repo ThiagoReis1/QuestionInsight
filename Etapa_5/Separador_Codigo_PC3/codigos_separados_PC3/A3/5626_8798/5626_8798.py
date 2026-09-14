@@ -1,2 +1,0 @@
-renda = float(input())
- 

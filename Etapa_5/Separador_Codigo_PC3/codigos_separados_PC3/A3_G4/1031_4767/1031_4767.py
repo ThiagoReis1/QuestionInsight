@@ -1,1 +1,0 @@
-var= float(input("quantidade"))

@@ -1,7 +1,0 @@
-A = float(input("nota A: "))
-B = float(input("nota B: "))
-C = float(input("nota C: "))
-D = float(input("nota D: "))
-E = float(input("nota E: "))
-F = float(input("nota F: "))
-print(ABCDEF)

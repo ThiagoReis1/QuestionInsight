@@ -1,1 +1,0 @@
-v = input("escreva o nome: ")

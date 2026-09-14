@@ -1,1 +1,0 @@
-float(vf = mg . vg - mp . vp(mg + mp))

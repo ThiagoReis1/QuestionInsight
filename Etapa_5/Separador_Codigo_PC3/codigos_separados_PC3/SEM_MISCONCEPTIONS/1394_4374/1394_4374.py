@@ -1,1 +1,0 @@
-int(input("horas por semana))

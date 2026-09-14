@@ -1,6 +1,0 @@
-var=input("preco_da_area:")
-var1=input("ap:")
-var2=input("ac:")
-var3=input("ag:")
-var4=(preco_total=(var1+var2+var3)*var)
-print=int("var4:", var4)

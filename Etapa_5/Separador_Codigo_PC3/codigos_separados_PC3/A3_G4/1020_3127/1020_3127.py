@@ -1,5 +1,0 @@
-B=float(input("digite o valor de B:"))
-b=float(input("digite o valor de b:"))
-h=float(input("qual a altura:"))
-ca=float(input("qual o custo:"))
-ct=float(input("qual o custo total"))

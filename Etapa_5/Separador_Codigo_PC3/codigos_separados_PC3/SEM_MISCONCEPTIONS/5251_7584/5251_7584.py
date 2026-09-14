@@ -1,1 +1,0 @@
-cid = input("Qual o nome da cidade de desti

@@ -1,1 +1,0 @@
-area=("raio da fazenda")

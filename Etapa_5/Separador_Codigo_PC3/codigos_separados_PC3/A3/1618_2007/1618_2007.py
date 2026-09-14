@@ -1,1 +1,0 @@
-funcao = int(input("digite funcao: "))

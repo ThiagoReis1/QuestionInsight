@@ -1,5 +1,0 @@
-round(2x=6$)
-round(2y=6$)
-round(10$)
-round(2x+2y=12$)
-round('nao')

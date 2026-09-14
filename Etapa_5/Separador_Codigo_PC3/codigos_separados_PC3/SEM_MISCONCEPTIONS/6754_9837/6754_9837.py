@@ -1,9 +1,0 @@
-# faça seu código aqui!
-numero= int(input("digite um numero:"))
-
-if numero == 175:
-	print("premiado")
-elif numero < 175:
-	print("menor")
-else:
-	print("maior")

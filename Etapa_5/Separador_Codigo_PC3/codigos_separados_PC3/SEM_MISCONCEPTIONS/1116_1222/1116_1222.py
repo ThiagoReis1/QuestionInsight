@@ -1,2 +1,0 @@
-ponto = int(input("qual ")
-		 

@@ -1,1 +1,0 @@
-consumo= int(input(consumo))

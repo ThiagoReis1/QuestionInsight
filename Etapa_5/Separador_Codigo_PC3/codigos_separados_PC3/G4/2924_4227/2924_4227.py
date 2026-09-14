@@ -1,5 +1,0 @@
-a= int(input(""))
-b= float(input(""))
-c= float(input(""))
-S = a+(b*c)
-print(S)

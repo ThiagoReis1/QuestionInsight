@@ -1,2 +1,0 @@
-from munpy import*
-quan=

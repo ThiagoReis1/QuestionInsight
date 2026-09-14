@@ -3,6 +3,7 @@
 import keyword
 import os
 import re
+import tempfile
 import token
 import tokenize
 from collections import Counter, defaultdict
@@ -126,7 +127,7 @@ class Solution:
     @staticmethod
     def extract_from_professor(csv_src: str):
         data: Dict[int, SolutionMetrics] = {}
-        with open(csv_src, "r") as csv_file:
+        with open(csv_src, "r", encoding="utf-8") as csv_file:
             text = "".join(csv_file.readlines())
             solutions = re.split(
                 r"#!#!#", text
@@ -145,9 +146,11 @@ class Solution:
                         1
                     ]  # Pega o código após o separador #;#;#
 
-                    tmp_code_src = "/tmp/code.py"
-                    with open(tmp_code_src, "w+") as tmp_writer:
+                    with tempfile.NamedTemporaryFile(
+                        mode="w", encoding="utf-8", suffix=".py", delete=False
+                    ) as tmp_writer:
                         tmp_writer.write(code)
+                        tmp_code_src = tmp_writer.name
 
                     solution = SolutionMetrics()
 
@@ -164,7 +167,7 @@ class Solution:
     @staticmethod
     def __extract_solution_metrics(code_file_src: str):
         metrics = dict()
-        with open(code_file_src) as f:
+        with open(code_file_src, "r", encoding="utf-8") as f:
             codigo = "".join(f.readlines())
 
             try:

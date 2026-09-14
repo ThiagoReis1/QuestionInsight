@@ -1,6 +1,0 @@
-mg = int(input())
-vg = int(input())
-mp = int(input())
-vp = int(input())
-vf = ((mg*vg)- (mp*vp))/(mg + mp)
-print(vf)

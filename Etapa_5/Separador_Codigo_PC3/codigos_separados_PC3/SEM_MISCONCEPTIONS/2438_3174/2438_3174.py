@@ -1,1 +1,0 @@
-quantidade = 1s 

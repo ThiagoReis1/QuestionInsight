@@ -1,1 +1,0 @@
-pocao = 8,42%round

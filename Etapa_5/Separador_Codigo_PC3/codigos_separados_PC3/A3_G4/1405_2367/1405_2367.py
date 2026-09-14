@@ -1,1 +1,0 @@
-fun = input("nome do ataque")

@@ -1,2 +1,0 @@
-cab=input("digite nome:")
-

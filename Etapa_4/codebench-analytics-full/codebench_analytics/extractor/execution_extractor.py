@@ -71,7 +71,7 @@ class ExecutionExtractor(Extractor):
                 }
 
                 fullpath = path.join(dataset_src, src)
-                with open(fullpath, "r") as log:
+                with open(fullpath, "r", encoding="utf-8") as log:
                     lines = log.readlines()
                     op = QuestionExecution.NONE
                     i = 0

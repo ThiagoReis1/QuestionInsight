@@ -1,6 +1,0 @@
-MG=float(int("qual a massa?"))
-VP=float(int("qual a velocidade?"))
-MP=float(int("qual a massa?"))
-VF=float(int"qual velocidade?")
-vf=(MG*VG)- (MP*VP) /(MG+MP)
-print=(round(4,2)

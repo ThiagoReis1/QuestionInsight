@@ -34,7 +34,7 @@ def save(
     src = path.join(base_src, filename)
     logging.info("generating '%s' file into '%s'", filename, src)
 
-    with open(src, "w+") as csvfile:
+    with open(src, "w+", encoding="utf-8", newline="") as csvfile:
         if isinstance(data, dict):
             save_dict(csvfile, data, fields)
         elif isinstance(data, list):

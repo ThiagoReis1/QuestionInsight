@@ -1,2 +1,0 @@
-base = float(input())
-

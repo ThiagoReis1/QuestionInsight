@@ -1,1 +1,0 @@
-# a cada frase em v = [a,e,i,o,u] frase*1.12 and a cada frase != v *1.18

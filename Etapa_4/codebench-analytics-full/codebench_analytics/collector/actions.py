@@ -19,7 +19,7 @@ class ActionCollector(Collector):
     def collect(self) -> str:
         data: Dict[Tuple[int, int], StudentCodeInfo] = {}
 
-        with open(self.csv_source, "r", newline="") as csv_file:
+        with open(self.csv_source, "r", newline="", encoding="utf-8") as csv_file:
             logger.info("collecting student actions from '%s'", self.csv_source)
             reader = csv.DictReader(csv_file)
 

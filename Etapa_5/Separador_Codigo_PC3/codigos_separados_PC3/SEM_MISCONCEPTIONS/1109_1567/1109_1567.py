@@ -1,7 +1,0 @@
-idade =  (int input("digite a idade do paciente"))
-peso= float (input("digite o peso do paciente"))
-if (idade > 12 and peso > 60 )
-print ("1000 mg")
- elif (idade> 12 and peso < 60)
-	print ("875 mg")
-if (idade < 12)

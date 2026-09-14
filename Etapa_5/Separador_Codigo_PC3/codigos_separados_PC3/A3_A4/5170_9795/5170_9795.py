@@ -1,1 +1,0 @@
-print = ("o peso do raco de raçao em gramas") 

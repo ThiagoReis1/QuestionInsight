@@ -1,5 +1,0 @@
-s0= int(input("posicao inicial do movel: "))
-v= int(input("velocidade do movel: "))
-t= int(input("intervalo de tempo: "))
-s= s0+(v*t)
-print(s)

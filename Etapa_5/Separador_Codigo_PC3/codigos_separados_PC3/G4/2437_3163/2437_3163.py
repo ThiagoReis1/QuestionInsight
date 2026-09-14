@@ -1,7 +1,0 @@
-pa = float(input(10.0))
-po = float(input(8.0))
-print(pa)
-print(po)
-pp = float(input(10.0 - 8.0))
-print(pp)
-print(round(pp, 2))

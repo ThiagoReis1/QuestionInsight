@@ -1,8 +1,0 @@
-m = input("Insira a string: ")
-print(m[0])
-print(m[-1])
-print(len(m))
-print(m.lower())
-print(m.upper())
-print(m*0)
-print(round(m,2))

@@ -1,6 +1,0 @@
-mG = float(input(""))
-vG = float(input(""))
-mP = float(input(""))
-vP = float(input(""))
-velocidadefinal = (mG * vG - mP * vP) / (mG + mP)
-print(velocidadefinal)

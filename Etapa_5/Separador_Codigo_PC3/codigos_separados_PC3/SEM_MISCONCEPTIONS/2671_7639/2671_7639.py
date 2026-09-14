@@ -1,2 +1,0 @@
-r = float(input())
-lados = 

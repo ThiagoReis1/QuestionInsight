@@ -1,1 +1,0 @@
-v = float(input("valor"))

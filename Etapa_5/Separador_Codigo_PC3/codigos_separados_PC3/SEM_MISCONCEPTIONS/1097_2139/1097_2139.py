@@ -1,1 +1,0 @@
-if = int(input("Atende"))

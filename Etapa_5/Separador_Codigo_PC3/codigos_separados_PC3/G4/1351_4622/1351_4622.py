@@ -1,5 +1,0 @@
-m = float(input("estimativa: "))
-a = float(input("aresta: "))
-area = 3 * (((3*a**2)**0.5)/2)
-t = (area * m)
-print(int(t))

@@ -1,1 +1,0 @@
-ado ado ado quem ler eh viado kkkkkkkkkkkk

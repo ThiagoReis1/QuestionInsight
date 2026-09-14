@@ -76,7 +76,7 @@ class ActionsExtractor(Extractor):
                 fullpath = path.join(dataset_src, mirror)
                 # print(f"Reading file: {fullpath}")  # Print do arquivo que está sendo lido
 
-                with open(fullpath, "r") as log:
+                with open(fullpath, "r", encoding="utf-8") as log:
                     for line in log:
                         ln = line.strip()
                         # print(f"Processing line: {ln}")  # Print da linha que está sendo processada

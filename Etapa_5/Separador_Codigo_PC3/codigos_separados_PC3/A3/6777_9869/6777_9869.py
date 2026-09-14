@@ -1,1 +1,0 @@
-idade=float(input("digite a idade"))

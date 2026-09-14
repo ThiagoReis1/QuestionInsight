@@ -28,7 +28,7 @@ class AssessmentFilter:
             filename = path.basename(assessment)
             fullpath = path.join(dataset_src, assessment)
             assessment_id = filename.split(".")[0]
-            with open(fullpath, "r") as file:
+            with open(fullpath, "r", encoding="utf-8") as file:
                 for line in file:
                     # each assessment has a line identifying its type
                     # e.g. `---- type: homework`

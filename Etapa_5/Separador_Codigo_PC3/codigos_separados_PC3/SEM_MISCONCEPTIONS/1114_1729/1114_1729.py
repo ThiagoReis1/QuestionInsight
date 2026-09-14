@@ -1,1 +1,0 @@
-if((x!="Nossa e a furia")and(x!="Fogo e sangue")and(x!="Crescendo fortes")and(x!="O inverno esta chegando")and(x!="Oucam-me rugir")and(x!="Nos nao semeamos")and(x!="Familia,dever,honra")and(x!="Tao alto como honra")and(x!="Insubmisso,nao curvados,nao quebrados")):

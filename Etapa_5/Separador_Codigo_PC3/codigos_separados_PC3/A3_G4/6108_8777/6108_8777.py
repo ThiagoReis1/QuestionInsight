@@ -1,1 +1,0 @@
-c = float(input("Quantidade de combustivel:"))

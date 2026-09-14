@@ -1,1 +1,0 @@
-r1 = int(input("leia a quantidade de ")

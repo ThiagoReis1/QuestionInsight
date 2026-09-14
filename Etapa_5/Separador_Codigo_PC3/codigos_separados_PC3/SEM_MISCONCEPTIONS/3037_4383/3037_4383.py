@@ -1,1 +1,0 @@
-print float f(x) x < -1  or x> 1
