@@ -130,7 +130,7 @@ QuestionInsight/
 ├── Etapa_4/                                 # Visualização e interpretação dos resultados finais
 │   ├── Etapa_4.ipynb
 │   ├── output/                              # Gerado pela execução
-│   └── codebench-analytics-full/            # Sub-projeto (Poetry) que extrai métricas de código das soluções
+│   └── codebench-analytics-full/            # Sub-projeto que extrai métricas de código das soluções (instalado no mesmo venv via pip -e)
 │       ├── codebench_analytics/             # Código-fonte do extrator (collector/, extractor/, model/, utils/)
 │       ├── input/                           # [EXTERNO] colocar aqui o codigo_solucao.csv pedido ao professor
 │       └── output/                          # Gerado pela execução
@@ -161,7 +161,9 @@ Na raiz do projeto, rode:
 python setup_env.py
 ```
 
-Isso cria a pasta `.venv/` e instala tudo o que está em `requirements.txt` (pandas, numpy, scipy, matplotlib, seaborn, plotly, scikit-learn, radon, tqdm).
+Isso cria a pasta `.venv/`, instala tudo o que está em `requirements.txt` (pandas, numpy, scipy, matplotlib, seaborn, plotly, scikit-learn, radon, tqdm) e também instala o sub-projeto `Etapa_4/codebench-analytics-full` **nesse mesmo venv** (via `pip install -e`). Isso significa que **não é preciso instalar Poetry separadamente** — tudo roda com o mesmo `.venv` da raiz, em Linux, macOS ou Windows.
+
+> Existe **apenas um** `setup_env.py` no projeto, o da raiz. O antigo `Etapa_4/codebench-analytics-full/setup_env.py` (que na prática era um Makefile disfarçado de `.py`, usado só pela célula morta do `Etapa_4.ipynb` que chamava `make`) foi removido — não é mais necessário nem referenciado por nada.
 
 O script aceita os seguintes comandos (`python setup_env.py <comando>`):
 
@@ -218,3 +220,4 @@ Execute os notebooks/scripts **nesta sequência**, pois cada etapa consome os ar
 - Cada etapa depende dos arquivos gerados na(s) etapa(s) anterior(es) — não pule etapas nem mude a ordem.
 - As pastas de saída (`Etapa_2/output`, `Etapa_3/output`, `Etapa_4/output`, `Etapa_5/output`) são geradas automaticamente durante a execução, não é preciso criá-las manualmente.
 - Ao terminar, desative o ambiente virtual com `deactivate`.
+- O notebook `Etapa_4.ipynb` chama o `codebench_analytics` diretamente pelo executável instalado no `.venv` da raiz (via `python setup_env.py install`) — não depende de Poetry nem de `make`, então funciona igual em Linux, macOS e Windows.

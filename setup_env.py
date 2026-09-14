@@ -22,6 +22,14 @@ VENV_DIR = Path(".venv")
 REQUIREMENTS = Path("requirements.txt")
 IS_WINDOWS = os.name == "nt"
 
+# Sub-projetos com seu próprio pyproject.toml que precisam ser instalados
+# (em modo editável) dentro do MESMO venv da raiz, para não depender de
+# uma instalação separada do Poetry (nem de `make`, que não existe nativamente
+# no Windows).
+SUBPROJECTS = [
+    Path("Etapa_4") / "codebench-analytics-full",
+]
+
 
 def venv_python() -> Path:
     """Caminho do interpretador Python dentro do venv, correto por SO."""
@@ -80,6 +88,17 @@ def install() -> None:
     print("📦 Instalando/atualizando dependências do requirements.txt...")
     run([str(venv_pip()), "install", "-U", "-r", str(REQUIREMENTS)])
     print("✅ Dependências instaladas.")
+
+    for sub in SUBPROJECTS:
+        if not sub.exists():
+            print(f"⚠️  Sub-projeto '{sub}' não encontrado, pulando.")
+            continue
+        print(f"📦 Instalando sub-projeto '{sub}' no mesmo ambiente virtual...")
+        # pip lê o pyproject.toml (build-backend = poetry-core) e instala o
+        # pacote e suas dependências direto no venv da raiz — não precisa
+        # ter o Poetry instalado separadamente para isso.
+        run([str(venv_pip()), "install", "-e", str(sub)])
+    print("✅ Sub-projetos instalados.")
 
     print()
     print("--- Ambiente Pronto! ---")
