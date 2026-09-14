@@ -101,6 +101,17 @@ Ao final, o script imprime no console um relatório-resumo com tempo total de ex
 
 > `1_Misconceptions_Parser.ipynb` contém exatamente o mesmo código do `.py`, empacotado em uma única célula — útil para execução interativa no Jupyter, enquanto o `.py` é indicado para rodar via linha de comando (ex.: `python 1_Misconceptions_Parser.py progressBar`).
 
+#### `Separador_Codigo_PC3/Separador_Codigo_PC3.ipynb` — Organização para avaliação humana
+
+Notebook auxiliar, **não faz parte do fluxo obrigatório da Etapa 5** — ele existe só para separar fisicamente os códigos dos alunos em pastas por combinação de misconceptions (MC³/PC³), facilitando uma revisão manual/humana desses casos, caso seja necessário validar visualmente se as detecções automáticas do `VisitorMC3` fazem sentido.
+
+**O que ele faz, em duas células:**
+
+1. **Célula 1 — Separação por grupo de MC³**: lê `output/misconceptions_detalhado_por_usuario.csv` (gerado pelo `1_Misconceptions_Parser`) e, para cada resposta de aluno, copia o arquivo `.py` correspondente para uma subpasta cujo nome é a combinação exata de misconceptions detectados naquele código (ex.: `A2_A3_B4/`, ou `SEM_MISCONCEPTIONS/` quando nenhum foi detectado). Isso agrupa visualmente, em pastas, todos os códigos que compartilham o mesmo "perfil" de misconceptions.
+2. **Célula 2 — Relatório detalhado por arquivo**: para cada `.py` já separado, roda novamente a análise (usando o próprio `VisitorMC3.py`) e gera, na mesma subpasta, um relatório `.txt` explicando *onde* no código cada misconception foi encontrada (linha, trecho de código e um pequeno contexto), além de mover o `.py` original para dentro dessa subpasta de relatório.
+
+O resultado final é uma pasta `codigos_separados_PC3/` (ignorada no Git) organizada assim: uma subpasta por combinação de MC³ → dentro dela, uma subpasta por arquivo analisado → contendo o `.py` original + um `.txt` com o relatório detalhado. Isso deixa pronta uma amostra organizada pra alguém revisar manualmente os casos e conferir se as detecções automáticas estão corretas.
+
 ---
 
 ## Estrutura do Projeto
@@ -140,7 +151,7 @@ QuestionInsight/
     ├── 1_Misconceptions_Parser.py / .ipynb  # Roda o VisitorMC3 em escala sobre a base de códigos
     ├── 2_preparacao_analise.ipynb           # Consolida os dados das etapas anteriores
     ├── 3_analise_etapas_1_7.ipynb           # Gráficos e métricas finais
-    ├── Separador_Codigo_PC3/                # Notebook auxiliar de apoio à Etapa 5
+    ├── Separador_Codigo_PC3/                # Separa os códigos em pastas por combinação de MC³, para revisão humana (opcional)
     └── output/                              # Gerado pela execução (misconceptions_resumo_por_questao.csv, etc.)
 ```
 
