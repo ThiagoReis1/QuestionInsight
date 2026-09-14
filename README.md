@@ -5,7 +5,7 @@ Este projeto é uma análise e avaliação de questões de testes, utilizando m�
 ## Etapas do Projeto
 
 ### Etapa 1: Análise Inicial e Coleta de Dados
-Execute o notebook `Etapa_1.ipynb`. Nesta etapa, você realizará a coleta e análise inicial dos dados das questões, preparando o ambiente para as próximas etapas. O objetivo é entender os aspectos básicos das questões a partir das informações fornecidas. 
+Execute o notebook `Etapa_1.ipynb`. Nesta etapa, você realizará a coleta e análise inicial dos dados das questões, preparando o ambiente para as próximas etapas. O objetivo é entender os aspectos básicos das questões a partir das informações fornecidas.
 
 Para mais informações sobre a **Etapa 1**, visite o repositório relacionado: [codebench-mining-tool](https://github.com/marcosmapl/codebench-mining-tool).
 
@@ -22,9 +22,79 @@ Para mais informações sobre a **Etapa 4**, visite o repositório relacionado: 
 
 ### Etapa 5: Identificação e Análise de Misconceptions
 
-Execute os notebooks `1_Misconceptions_Parser.ipynb` e `2_analise_graficos.ipynb`. Esta etapa tem como foco a identificação de **misconceptions** (conceitos incorretos) presentes nas respostas dos estudantes, por meio da análise sintática e semântica de códigos-fonte.
+Esta etapa tem como foco a identificação de **misconceptions** (conceitos incorretos, também chamados de **MC³**) presentes nas respostas dos estudantes, por meio da análise sintática e semântica de códigos-fonte em Python.
 
-A ferramenta realiza parsing dos códigos utilizando técnicas de visita à árvore sintática (via `VisitorMC3.py`), detectando padrões recorrentes de erro. Após isso, são gerados gráficos e métricas que ajudam a visualizar e interpretar esses equívocos, permitindo a construção de estratégias pedagógicas mais eficazes.
+Execute os arquivos na seguinte ordem:
+
+1. `1_Misconceptions_Parser.py` (ou o notebook equivalente `1_Misconceptions_Parser.ipynb`) — analisa os códigos dos estudantes e detecta os tipos de misconceptions (MC³) usando `VisitorMC3.py`, gerando `output/misconceptions_resumo_por_questao.csv` e `output/misconceptions_detalhado_por_usuario.csv`.
+2. `2_preparacao_analise.ipynb` — consolida os dados das etapas anteriores e gera `output/dataset_analise_questoes.csv` e `output/mapeamento_provas_questoes.json`, únicos arquivos consumidos pelo notebook seguinte.
+3. `3_analise_etapas_1_7.ipynb` — gera os gráficos e métricas finais (caracterização da amostra, análise dos MC³, análise de dificuldade, correlações entre misconceptions e métricas de dificuldade/discriminação, e comparação com fatores demográficos), permitindo a construção de estratégias pedagógicas mais eficazes.
+
+> Os notebooks antigos `2_analise_graficos.ipynb` e `3_analise_assuntos.ipynb` foram substituídos por `2_preparacao_analise.ipynb` e não fazem mais parte do fluxo do projeto.
 
 Para mais informações sobre a **Etapa 5**, visite o repositório relacionado: [Misconceptions_Parser](https://github.com/Airtonn/Misconceptions_Parser).
 
+---
+
+#### `VisitorMC3.py` — Motor de detecção de Misconceptions
+
+É o núcleo técnico da Etapa 5: um `ast.NodeVisitor` que percorre a árvore sintática (AST) de cada código-fonte Python submetido pelos alunos e detecta **21 tipos de misconceptions (MC³)**, organizados em 7 categorias (A a H). Cada tipo tem um método `get<Código>()` público, que internamente chama um método `check<Nome>()` responsável pela análise real e retorna um booleano (ou tupla, para casos que também retornam detalhes, como nomes de variáveis problemáticas).
+
+| Código | Categoria | O que detecta |
+|---|---|---|
+| **A2** | Atribuição | Variável atribuída a si mesma |
+| **A3** | Atribuição | Variável inicializada sem necessidade (escrita nunca lida antes de ser sobrescrita) |
+| **A4** | Atribuição | Redefinição de nome *built-in* (ex.: usar `list`, `str` como nome de variável/função) |
+| **A5** | Atribuição | Importação (`import`) não utilizada no código |
+| **B4** | Condicionais | Comandos repetidos dentro de blocos `if`/`elif`/`else` |
+| **B6** | Condicionais | Comparação booleana tentada com `while` (condição solta em vez de expressão booleana) |
+| **B8** | Condicionais | Não utilização de `elif`/`else` quando seria mais apropriado |
+| **B9** | Condicionais | `elif`/`else` retestando condição já verificada anteriormente |
+| **B10** | Condicionais | `elif`/`else` desnecessário |
+| **B11** | Condicionais | `if`s distintos com blocos de código idênticos |
+| **B12** | Condicionais | Declarações `if` consecutivas e iguais realizando operações distintas |
+| **C1** | Laços | Condição do `while` retestada dentro do próprio corpo do laço |
+| **C2** | Laços | Laço redundante ou desnecessário |
+| **C3** | Laços | Operações redundantes repetidas dentro do laço |
+| **C4** | Laços | Número arbitrário/fixo de execuções de `for` no lugar de um `while` (limite configurável, padrão: `range` ≥ 50 iterações) |
+| **C8** | Laços | Laço `for` cuja variável de iteração é sobrescrita dentro do corpo |
+| **D4** | Escopo | Variável usada fora do escopo da função (uso de variável global dentro de função) |
+| **E1** | Estruturas de dados | Verificação desnecessária de todas as combinações possíveis (`if/elif` enumerando exaustivamente) |
+| **E2** | Estruturas de dados | Uso redundante ou desnecessário de listas (limite configurável, padrão: mais de 5 listas declaradas) |
+| **G4** | Boas práticas | Funções/variáveis/parâmetros com nomes não significativos (muito curtos ou pouco descritivos) |
+| **G5** | Boas práticas | Organização arbitrária das declarações no código |
+| **H1** | Boas práticas | Declaração/expressão sem efeito (statement "solto", sem uso) |
+
+**Parâmetros configuráveis** (definidos em `1_Misconceptions_Parser.py` e repassados ao visitor):
+
+- `C4_MAX_ALLOWED_RANGEITER = 50` — número máximo de iterações de um `range()` fixo antes de ser sinalizado como "deveria ser `while`".
+- `E2_MAX_ALLOWED_LISTS = 5` — número máximo de listas declaradas antes de sinalizar uso excessivo.
+- `G4_MIN_VAR_CHRS = 4` / `G4_MIN_FNC_CHRS = 8` — tamanho mínimo de nome considerado significativo para variáveis e funções, respectivamente.
+- `G4_MAX_ALLOWED_NONSIGNIFICANT = 70` — percentual máximo tolerado de nomes não significativos.
+
+**Detalhes técnicos importantes:**
+- Suporta código assíncrono (`async def`, `async for`, `async with`), tratando-os de forma equivalente às versões síncronas em todas as verificações aplicáveis.
+- Usa análise de fluxo (`pending_write`/`used`) para distinguir corretamente atribuições realmente "mortas" de atribuições feitas em ramos diferentes de um `if/else` (evitando falsos positivos quando a variável é usada em pelo menos um caminho de execução).
+- É um projeto em evolução: o cabeçalho do arquivo documenta um changelog detalhado (atualmente na versão **v11**) com correções de falsos positivos/negativos acumuladas ao longo do desenvolvimento.
+
+#### `1_Misconceptions_Parser.py` / `1_Misconceptions_Parser.ipynb` — Orquestração da análise
+
+Script responsável por rodar o `VisitorMC3` em escala sobre toda a base de códigos dos alunos.
+
+**Entradas:**
+- `../Etapa_3/output/questoes_ordenadas.csv` — lista de questões e os IDs dos usuários que a responderam.
+- `../Etapa_3/output/indice_usuarios.json` e `../Etapa_2/output/usuarios_completos/` — base de códigos-fonte dos alunos (`{usuario}/codes/{prova}_{questao}.py`).
+
+**Como funciona:**
+1. Constrói um **índice em memória** `(usuario_id, questao_id) → caminho do arquivo .py`, varrendo o disco uma única vez (evita I/O repetido).
+2. Para cada questão do `questoes_ordenadas.csv`, localiza os arquivos de código de cada aluno que a respondeu via lookup O(1) no índice.
+3. Analisa cada código com `ast.parse()` + `VisitorMC3`, coletando os MC³ detectados (ignora silenciosamente arquivos vazios ou com erro de sintaxe/parsing).
+4. Processa as questões **em paralelo** (`ThreadPoolExecutor`, padrão 3 threads) para acelerar a análise em bases grandes, com monitoramento de status por thread em tempo real (modo texto) ou barra de progresso (`tqdm`, ao rodar com o argumento `progressBar`).
+
+**Saídas:**
+- `output/misconceptions_resumo_por_questao.csv` — por questão: total de respostas e contagem de cada um dos 21 tipos de MC³.
+- `output/misconceptions_detalhado_por_usuario.csv` — por par (questão, usuário): lista de MC³ detectados, total de misconceptions e número de categorias afetadas.
+
+Ao final, o script imprime no console um relatório-resumo com tempo total de execução, velocidade de processamento (usuários/segundo), percentual de usuários com pelo menos uma misconception, top 10 MC³ mais frequentes e totais por categoria (A a H).
+
+> `1_Misconceptions_Parser.ipynb` contém exatamente o mesmo código do `.py`, empacotado em uma única célula — útil para execução interativa no Jupyter, enquanto o `.py` é indicado para rodar via linha de comando (ex.: `python 1_Misconceptions_Parser.py progressBar`).
