@@ -1,5 +1,4 @@
 # Pastas a serem completamente ignoradas
-CSVS_JO/
 Etapa_3/Processamento/
 Etapa_3/UsuariosUnicos/
 Etapa_4/codebench-analytics-full/output/
@@ -11,16 +10,21 @@ Etapa_5/artefatos_preparacao_analise
 Extraidos/
 .venv/
 
-# Arquivos específicos a serem ignorados
-Etapa_3/questoes_ordenadas.csv
-Etapa_4/code_metrics_professor_util.csv
-Etapa_4/assessments.csv
-Etapa_4/question_new_info.csv
-Etapa_4/resultado.csv
-Etapa_5/misconceptions_detailed_por_usuario.csv
-Etapa_5/misconceptions_summary_por_questao.csv
-Etapa_5/questions_D_M.csv
+# Dado externo: precisa existir num clone novo, mas conteúdo não é versionado
+CSVS_JO/*
+!CSVS_JO/.gitkeep
+!CSVS_JO/unified_solutions.csv.example.csv
+
+# Dado externo: código-fonte bruto de soluções de alunos
+Etapa_4/codebench-analytics-full/input/*
+!Etapa_4/codebench-analytics-full/input/.gitkeep
+
+# Outputs gerados pelo pipeline (um por etapa)
 Etapa_2/output
+Etapa_3/output
+Etapa_4/output
+Etapa_5/output
+
 # Manter a pasta DataSets vazia (o .gitkeep será commitado)
 DataSets/*
 !DataSets/.gitkeep
