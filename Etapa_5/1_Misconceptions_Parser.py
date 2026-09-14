@@ -1,5 +1,6 @@
 from VisitorMC3 import *
 import ast
+import json
 import os
 import pandas as pd
 from collections import defaultdict
@@ -10,10 +11,12 @@ import sys
 from tqdm import tqdm
 
 # Caminhos
-csv_questoes = "../Etapa_3/questoes_ordenadas.csv"
-pasta_usuarios = "../Etapa_3/Processamento/UsuariosProcessamento"
-output_summary = "misconceptions_summary_por_questao.csv"
-output_detailed = "misconceptions_detailed_por_usuario.csv"
+csv_questoes = "../Etapa_3/output/questoes_ordenadas.csv"
+indice_usuarios_path = "../Etapa_3/output/indice_usuarios.json"
+base_usuarios_path = "../Etapa_2/output/usuarios_completos"
+output_summary = "output/misconceptions_resumo_por_questao.csv"
+output_detailed = "output/misconceptions_detalhado_por_usuario.csv"
+os.makedirs("output", exist_ok=True)
 
 # Constants for MC³ detection
 C4_MAX_ALLOWED_RANGEITER = 50
@@ -46,7 +49,7 @@ status_lock = threading.Lock()
 
 indice_arquivos = {}  # {(usuario_id, questao_id): filepath}
 
-def construir_indice(pasta_usuarios):
+def construir_indice(indice_usuarios_path, base_usuarios_path):
     """
     Varre todos os usuários UMA única vez e indexa:
     (usuario_id, questao_id) → caminho do .py
@@ -264,7 +267,7 @@ def main():
 
     # ÍNDICE GLOBAL — varre o disco UMA única vez
     print(f"\n🔍 Construindo índice de arquivos...")
-    construir_indice(pasta_usuarios)
+    construir_indice(indice_usuarios_path, base_usuarios_path)
 
     if not show_progress_bar:
         print(f"\nLendo questoes_ordenadas.csv...")
