@@ -12,6 +12,8 @@ Para mais informações sobre a **Etapa 1**, visite o repositório relacionado: 
 ### Etapa 2: Pré-processamento dos Dados
 Execute o notebook `Pre_Processamento.ipynb`. Aqui, os dados serão limpos e transformados. Esta etapa envolve a remoção de dados inválidos, normalização de formatos e preparação dos dados para análises mais avançadas.
 
+O pré-processamento mantém `Extraidos/` como a única base física e gera `Etapa_2/output/referencias_processamento.json`. Esse índice contém os assessments selecionados e os caminhos relativos dos arquivos de usuários que correspondem às questões filtradas. As Etapas 3 e 5 resolvem esses caminhos diretamente e não criam cópias físicas derivadas.
+
 ### Etapa 3: Processamento dos Dados
 Execute o notebook `Processamento.ipynb`. Nessa fase, você aplicará as métricas de análise nas questões, como dificuldade, discriminação e outras estatísticas relacionadas. O objetivo é avaliar como as questões se comportam em relação aos parâmetros definidos.
 
@@ -35,6 +37,10 @@ Execute os arquivos na seguinte ordem:
 > Os notebooks antigos `2_analise_graficos.ipynb` e `3_analise_assuntos.ipynb` foram substituídos por `2_preparacao_analise.ipynb` e não fazem mais parte do fluxo do projeto.
 
 Para mais informações sobre a **Etapa 5**, visite o repositório relacionado: [Misconceptions_Parser](https://github.com/Airtonn/Misconceptions_Parser).
+
+### Complexidade e paralelismo
+
+O relatório [`ANALISE_COMPLEXIDADE_E_OTIMIZACOES.md`](ANALISE_COMPLEXIDADE_E_OTIMIZACOES.md) descreve o custo de melhor caso, caso médio e pior caso de cada etapa, além dos gargalos e das decisões de otimização. A Etapa 5 usa processos por padrão para aproveitar múltiplos núcleos durante a análise MC³. A quantidade de workers pode ser ajustada com `MC3_WORKERS`; a Etapa 4 usa `CODEBENCH_METRICS_WORKERS`. Para ambientes em que o custo dominante seja I/O, o parser MC³ pode usar threads com `MC3_EXECUTOR=thread`.
 
 ---
 
@@ -85,7 +91,7 @@ Script responsável por rodar o `VisitorMC3` em escala sobre toda a base de cód
 
 **Entradas:**
 - `../Etapa_3/output/questoes_ordenadas.csv` — lista de questões e os IDs dos usuários que a responderam.
-- `../Etapa_3/output/indice_usuarios.json` e `../Etapa_2/output/usuarios_completos/` — base de códigos-fonte dos alunos (`{usuario}/codes/{prova}_{questao}.py`).
+- `../Etapa_3/output/indice_usuarios.json` e `../Etapa_2/output/referencias_processamento.json` — base de códigos-fonte dos alunos (`{usuario}/codes/{prova}_{questao}.py`).
 
 **Como funciona:**
 1. Constrói um **índice em memória** `(usuario_id, questao_id) → caminho do arquivo .py`, varrendo o disco uma única vez (evita I/O repetido).
@@ -107,10 +113,10 @@ Notebook auxiliar, **não faz parte do fluxo obrigatório da Etapa 5** — ele e
 
 **O que ele faz, em duas células:**
 
-1. **Célula 1 — Separação por grupo de MC³**: lê `output/misconceptions_detalhado_por_usuario.csv` (gerado pelo `1_Misconceptions_Parser`) e, para cada resposta de aluno, copia o arquivo `.py` correspondente para uma subpasta cujo nome é a combinação exata de misconceptions detectados naquele código (ex.: `A2_A3_B4/`, ou `SEM_MISCONCEPTIONS/` quando nenhum foi detectado). Isso agrupa visualmente, em pastas, todos os códigos que compartilham o mesmo "perfil" de misconceptions.
-2. **Célula 2 — Relatório detalhado por arquivo**: para cada `.py` já separado, roda novamente a análise (usando o próprio `VisitorMC3.py`) e gera, na mesma subpasta, um relatório `.txt` explicando *onde* no código cada misconception foi encontrada (linha, trecho de código e um pequeno contexto), além de mover o `.py` original para dentro dessa subpasta de relatório.
+1. **Célula 1 — Índice por grupo de MC³**: lê `output/misconceptions_detalhado_por_usuario.csv` (gerado pelo `1_Misconceptions_Parser`) e cria `codigos_separados_PC3/referencias_por_misconception.json`. O arquivo agrupa referências aos códigos por combinação exata de misconceptions (ex.: `A2_A3_B4/`, ou `SEM_MISCONCEPTIONS/` quando nenhum foi detectado).
+2. **Célula 2 — Relatório detalhado por arquivo**: para cada referência, roda novamente a análise (usando o próprio `VisitorMC3.py`) e gera um relatório `.txt` na pasta do grupo. O `.py` original permanece em `Extraidos/`; somente o relatório é criado no diretório auxiliar.
 
-O resultado final é uma pasta `codigos_separados_PC3/` (ignorada no Git) organizada assim: uma subpasta por combinação de MC³ → dentro dela, uma subpasta por arquivo analisado → contendo o `.py` original + um `.txt` com o relatório detalhado. Isso deixa pronta uma amostra organizada pra alguém revisar manualmente os casos e conferir se as detecções automáticas estão corretas.
+O resultado final é uma pasta `codigos_separados_PC3/` (ignorada no Git) organizada assim: uma subpasta por combinação de MC³ → dentro dela, uma subpasta por arquivo analisado → contendo o `.txt` com o relatório detalhado. Os caminhos dos códigos continuam centralizados em `Extraidos/`, sem duplicação de conteúdo.
 
 ---
 
@@ -132,7 +138,7 @@ QuestionInsight/
 │
 ├── Etapa_2/                                 # Pré-processamento (limpeza e normalização dos dados)
 │   ├── Pre_Processamento.ipynb
-│   └── output/                              # Gerado pela execução (usuarios_completos/, etc.)
+│   └── output/                              # Gerado pela execução (referencias_processamento.json)
 │
 ├── Etapa_3/                                 # Cálculo das métricas (dificuldade, discriminação, etc.)
 │   ├── Processamento.ipynb
@@ -151,7 +157,7 @@ QuestionInsight/
     ├── 1_Misconceptions_Parser.py / .ipynb  # Roda o VisitorMC3 em escala sobre a base de códigos
     ├── 2_preparacao_analise.ipynb           # Consolida os dados das etapas anteriores
     ├── 3_analise_etapas_1_7.ipynb           # Gráficos e métricas finais
-    ├── Separador_Codigo_PC3/                # Separa os códigos em pastas por combinação de MC³, para revisão humana (opcional)
+    ├── Separador_Codigo_PC3/                # Cria referências e relatórios por combinação de MC³ (opcional)
     └── output/                              # Gerado pela execução (misconceptions_resumo_por_questao.csv, etc.)
 ```
 

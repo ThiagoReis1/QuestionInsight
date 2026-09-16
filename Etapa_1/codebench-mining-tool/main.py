@@ -11,6 +11,7 @@ import os
 import time
 import util
 import tarfile 
+from concurrent.futures import ProcessPoolExecutor
 
 from collections import Counter, defaultdict
 from datetime import datetime
@@ -36,7 +37,15 @@ parser.set_defaults(extract_codemirror=False)
 args = parser.parse_args()
 
 # Function to process directories and extract data based on command-line flags
-def process_directories(dataset_path, data_lists):
+def _extract_solution_task(task):
+    return util.extract_solution(*task).as_list()
+
+
+def _extract_execution_task(task):
+    return [execution.as_list() for execution in util.extract_executions(*task)]
+
+
+def process_directories(dataset_path, data_lists, executor=None):
     """
     Processes directories in the dataset, extracting data for semesters and delegating to specific functions for courses, users, etc.
 
@@ -46,10 +55,10 @@ def process_directories(dataset_path, data_lists):
     for semester_entry in os.scandir(dataset_path):
         util.Logger.info(f'New semester found: {semester_entry.path}')
         new_semester = util.extract_semester(semester_entry.path)
-        process_courses(semester_entry, new_semester, data_lists)
+        process_courses(semester_entry, new_semester, data_lists, executor)
         data_lists[util.CODE_SEMESTER].append(new_semester.as_list())
 
-def process_courses(semester_entry, semester_obj, data_lists):
+def process_courses(semester_entry, semester_obj, data_lists, executor=None):
     """
     Processes courses within a semester, extracting course data and further delegating to assignment and user processing.
 
@@ -62,7 +71,7 @@ def process_courses(semester_entry, semester_obj, data_lists):
         semester_obj.n_courses += 1
         new_course = util.extract_course(semester_obj.desc, course_entry.name, course_entry.path)
         process_assignments(course_entry, semester_obj, new_course, data_lists)
-        process_users(course_entry, semester_obj, new_course, data_lists)
+        process_users(course_entry, semester_obj, new_course, data_lists, executor)
         data_lists[util.CODE_COURSE].append(new_course.as_list())
 
 
@@ -82,7 +91,7 @@ def process_assignments(course_entry, semester_obj, course_obj, data_lists):
         new_assignment = util.extract_assignment(semester_obj.desc, course_obj.code, assignment_entry.path)
         data_lists[util.CODE_ASSIGNMENT].append(new_assignment.as_list())
 
-def process_executions(user_entry, semester_obj, course_obj, data_lists):
+def process_executions(user_entry, semester_obj, course_obj, data_lists, executor=None):
     """
     Processes executions data for a assignment problem.
 
@@ -91,14 +100,17 @@ def process_executions(user_entry, semester_obj, course_obj, data_lists):
         semester_obj (Semester): The semester object.
         course_obj (Course): The course object.
     """
+    tasks = []
     for execution_entry in os.scandir(os.path.join(user_entry.path, 'executions')):
         util.Logger.info(f'New execution file found: {execution_entry.path}')
         semester_obj.n_executions += 1
         assignment, problem = os.path.splitext(execution_entry.name)[0].split('_')
-        new_executions = util.extract_executions(semester_obj.desc, course_obj.code, assignment, user_entry.name, problem, execution_entry.path)
-        data_lists[util.CODE_EXECUTION].extend([execution.as_list() for execution in new_executions])
+        tasks.append((semester_obj.desc, course_obj.code, assignment, user_entry.name, problem, execution_entry.path))
+    results = executor.map(_extract_execution_task, tasks, chunksize=16) if executor else map(_extract_execution_task, tasks)
+    for rows in results:
+        data_lists[util.CODE_EXECUTION].extend(rows)
 
-def process_solutions(user_entry, semester_obj, course_obj, data_lists):
+def process_solutions(user_entry, semester_obj, course_obj, data_lists, executor=None):
     """
     Processes solutions data for a assignment problem.
 
@@ -107,12 +119,14 @@ def process_solutions(user_entry, semester_obj, course_obj, data_lists):
         semester_obj (Semester): The semester object.
         course_obj (Course): The course object.
     """
+    tasks = []
     for solution_entry in os.scandir(os.path.join(user_entry.path, 'codes')):
         util.Logger.info(f'New solution code found: {solution_entry.path}')
         semester_obj.n_codes += 1
         assignment, problem = os.path.splitext(solution_entry.name)[0].split('_')
-        new_solution = util.extract_solution(semester_obj.desc, course_obj.code, assignment, user_entry.name, problem, solution_entry.path)
-        data_lists[util.CODE_SOLUTION].append(new_solution.as_list())
+        tasks.append((semester_obj.desc, course_obj.code, assignment, user_entry.name, problem, solution_entry.path))
+    results = executor.map(_extract_solution_task, tasks, chunksize=32) if executor else map(_extract_solution_task, tasks)
+    data_lists[util.CODE_SOLUTION].extend(results)
 
 def process_logins(user_entry, semester_obj, course_obj, data_lists):
     """
@@ -151,7 +165,7 @@ def process_codemirror(user_entry, semester_obj, course_obj, data_lists):
         )
         data_lists[util.CODE_CODEMIRROR].extend([events.as_list() for events in cdm_logs])
 
-def process_users(course_entry, semester_obj, course_obj, data_lists):
+def process_users(course_entry, semester_obj, course_obj, data_lists, executor=None):
     for user_entry in os.scandir(os.path.join(course_entry.path, 'users')):
         util.Logger.info(f'New user found: {user_entry.path}')
         semester_obj.n_users += 1
@@ -160,10 +174,10 @@ def process_users(course_entry, semester_obj, course_obj, data_lists):
         data_lists[util.CODE_USER].append(new_user.as_list())
 
         if args.extract_executions:
-            process_executions(user_entry, semester_obj, course_obj, data_lists)
+            process_executions(user_entry, semester_obj, course_obj, data_lists, executor)
 
         if args.extract_solutions:
-            process_solutions(user_entry, semester_obj, course_obj, data_lists)
+            process_solutions(user_entry, semester_obj, course_obj, data_lists, executor)
 
         if args.extract_logins:
             process_logins(user_entry, semester_obj, course_obj, data_lists)
@@ -198,7 +212,12 @@ if __name__ == "__main__":
 
         start_time = time.time()
         util.Logger.info(f'Starting Data Collection: {time.ctime(start_time)}')
-        process_directories('data', data_lists)
+        if args.extract_solutions or args.extract_executions:
+            worker_count = max(1, min(int(os.environ.get('CODEBENCH_WORKERS', os.cpu_count() or 1)), 32))
+            with ProcessPoolExecutor(max_workers=worker_count, initializer=util.Logger.configure) as executor:
+                process_directories('data', data_lists, executor)
+        else:
+            process_directories('data', data_lists)
         end_time = time.time()
         util.Logger.info(f'Task Completed: {time.ctime(end_time)}')
         util.Logger.info(f'Duration: {end_time - start_time}s')

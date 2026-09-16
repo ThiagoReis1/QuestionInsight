@@ -1,61 +1,140 @@
-# Pastas a serem completamente ignoradas
-Etapa_3/Processamento/
-Etapa_3/UsuariosUnicos/
-Etapa_4/codebench-analytics-full/output/
-Etapa_5/Provas/
-Etapa_5/Provas_Arrumadas/
-Etapa_5/relacao_assunto_questoes
-Etapa_5/Separador_Codigo_PC3/codigos_separados_PC3
-Etapa_5/artefatos_preparacao_analise
-Extraidos/
-.venv/
+# ============================================================
+# QuestionInsight - arquivos ignorados pelo Git
+# ============================================================
 
-# Dado externo: precisa existir num clone novo, mas conteúdo não é versionado
+# ------------------------------------------------------------
+# Dados grandes e bases físicas geradas
+# ------------------------------------------------------------
+
+Extraidos/
+
+DataSets/*
+!DataSets/.gitkeep
+
+# Dados temporários e resultados brutos da Etapa 1
+Etapa_1/codebench-mining-tool/data/
+Etapa_1/codebench-mining-tool/csv/
+
+# CSVs consolidados gerados pela Etapa 1
 CSVS_JO/*
 !CSVS_JO/.gitkeep
 !CSVS_JO/unified_solutions.csv.example.csv
 
-# Dado externo: código-fonte bruto de soluções de alunos
+
+# ------------------------------------------------------------
+# Dados externos e soluções de referência
+# ------------------------------------------------------------
+
 Etapa_4/codebench-analytics-full/input/*
 !Etapa_4/codebench-analytics-full/input/.gitkeep
 
-# Outputs gerados pelo pipeline (um por etapa)
-Etapa_2/output
-Etapa_3/output
-Etapa_4/output
-Etapa_5/output
 
-# Manter a pasta DataSets vazia (o .gitkeep será commitado)
-DataSets/*
-!DataSets/.gitkeep
+# ------------------------------------------------------------
+# Saídas geradas pelo pipeline
+# ------------------------------------------------------------
 
-# Cache do Python
+Etapa_2/output/
+Etapa_3/output/
+Etapa_4/output/
+Etapa_4/codebench-analytics-full/output/
+Etapa_5/output/
+
+# Artefatos antigos ou auxiliares gerados pela Etapa 5
+Etapa_5/Provas/
+Etapa_5/Provas_Arrumadas/
+Etapa_5/relacao_assunto_questoes/
+Etapa_5/Separador_Codigo_PC3/codigos_separados_PC3/
+Etapa_5/artefatos_preparacao_analise/
+
+
+# ------------------------------------------------------------
+# Logs
+# ------------------------------------------------------------
+
+*.log
+*.logs
+log/
+logs/
+logs/
+
+
+# ------------------------------------------------------------
+# Cache Python e ferramentas de desenvolvimento
+# ------------------------------------------------------------
+
 __pycache__/
 *.py[cod]
 *.pyo
 *.pyd
+*.so
 
-# Logs
-*.log
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+.coverage.*
+htmlcov/
 
-# Configurações locais do VS Code
-.vscode/
-# Se quiser manter apenas settings.json:
-# .vscode/*
-# !.vscode/settings.json
 
-# Ambientes virtuais
-.env/
+# ------------------------------------------------------------
+# Ambientes virtuais e configurações locais
+# ------------------------------------------------------------
+
 .venv/
-env/
 venv/
+env/
+ENV/
+.env/
+.env.*
+!.env.example
 
+.vscode/
+.idea/
+
+
+# ------------------------------------------------------------
 # Arquivos temporários
+# ------------------------------------------------------------
+
 *.tmp
+*.temp
 *.swp
 *.swo
+*.swn
+*.bak
+*.old
+*.orig
+*.rej
+*~
 
-# Arquivos de build Python
+.DS_Store
+Thumbs.db
+
+
+# ------------------------------------------------------------
+# Arquivos de build e distribuição
+# ------------------------------------------------------------
+
 build/
 dist/
 *.egg-info/
+
+
+# ------------------------------------------------------------
+# Checkpoints e arquivos temporários de notebooks
+# ------------------------------------------------------------
+
+.ipynb_checkpoints/
+*/.ipynb_checkpoints/
+
+
+# ------------------------------------------------------------
+# Arquivos compactados e artefatos locais gerados
+# ------------------------------------------------------------
+
+*.zip
+*.tar
+*.tar.gz
+*.tgz
+*.7z
+*.rar

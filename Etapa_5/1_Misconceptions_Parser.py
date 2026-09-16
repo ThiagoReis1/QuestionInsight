@@ -1,22 +1,45 @@
 from VisitorMC3 import *
 import ast
-import json
 import os
 import pandas as pd
 from collections import defaultdict
 import threading
-from concurrent.futures import ThreadPoolExecutor, as_completed
+from concurrent.futures import ProcessPoolExecutor, ThreadPoolExecutor, as_completed
+import multiprocessing
 import time
 import sys
+import json
+from pathlib import Path
 from tqdm import tqdm
 
 # Caminhos
 csv_questoes = "../Etapa_3/output/questoes_ordenadas.csv"
 indice_usuarios_path = "../Etapa_3/output/indice_usuarios.json"
-base_usuarios_path = "../Etapa_2/output/usuarios_completos"
+base_usuarios_path = "../Etapa_2/output/referencias_processamento.json"
 output_summary = "output/misconceptions_resumo_por_questao.csv"
 output_detailed = "output/misconceptions_detalhado_por_usuario.csv"
 os.makedirs("output", exist_ok=True)
+
+def carregar_referencias(path):
+    references_path = Path(path).resolve()
+    data = json.loads(references_path.read_text(encoding='utf-8'))
+    source_root = Path(data['source_root'])
+    if not source_root.is_absolute():
+        source_root = (references_path.parent / source_root).resolve()
+    data['_source_root'] = str(source_root)
+    data['_users_by_id'] = {str(record.get('id')): record for record in data.get('users', [])}
+    return data
+
+
+def iterar_arquivos_usuario(data, user_id, kind, suffix=None):
+    source_root = Path(data['_source_root'])
+    record = data.get('_users_by_id', {}).get(str(user_id))
+    if record is None:
+        return
+    for item in record.get('files', {}).get(kind, []):
+        path = source_root / item['path']
+        if path.is_file() and (suffix is None or path.name.endswith(suffix)):
+            yield path
 
 # Constants for MC³ detection
 C4_MAX_ALLOWED_RANGEITER = 50
@@ -25,7 +48,8 @@ G4_MIN_VAR_CHRS = 4
 G4_MIN_FNC_CHRS = 8
 G4_MAX_ALLOWED_NONSIGNIFICANT = 70
 
-MAX_WORKERS = 3
+MAX_WORKERS = max(1, min(int(os.environ.get('MC3_WORKERS', multiprocessing.cpu_count() or 1)), 8))
+EXECUTOR_KIND = os.environ.get('MC3_EXECUTOR', 'process').strip().lower()
 
 MC3_TYPES = [
     'A2', 'A3', 'A4', 'A5',
@@ -42,42 +66,31 @@ thread_status = {}
 completed_questions = set()
 status_lock = threading.Lock()
 
-# ============================================================
-# ÍNDICE GLOBAL: (usuario, questao) → filepath
-# Construído UMA vez no início, evita varrer disco repetidamente
-# ============================================================
 
 indice_arquivos = {}  # {(usuario_id, questao_id): filepath}
 
-def construir_indice(indice_usuarios_path, base_usuarios_path):
-    """
-    Varre todos os usuários UMA única vez e indexa:
-    (usuario_id, questao_id) → caminho do .py
 
-    Estrutura esperada: {usuario}/codes/{prova}_{questao}.py
-    O questao_id é sempre a SEGUNDA parte do nome do arquivo.
-    """
+def construir_indice(indice_usuarios_path, base_usuarios_path):
+    """Indexa os códigos já filtrados por usuário e questão, sem copiá-los."""
     global indice_arquivos
+    data = carregar_referencias(base_usuarios_path)
     indice = {}
     total = 0
-
-    for usuario_id in os.listdir(pasta_usuarios):
-        codes_path = os.path.join(pasta_usuarios, usuario_id, 'codes')
-        if not os.path.isdir(codes_path):
-            continue
-        for filename in os.listdir(codes_path):
-            if not filename.endswith('.py'):
-                continue
-            partes = os.path.splitext(filename)[0].split('_')
-            if len(partes) != 2:
-                continue  # nome inesperado, ignora
-            questao_id = partes[1]  # ex: '2847'
-            filepath = os.path.join(codes_path, filename)
-            indice[(usuario_id, questao_id)] = filepath
-            total += 1
-
+    for registro in data.get('users', []):
+        usuario_id = str(registro['id'])
+        for filepath in iterar_arquivos_usuario(data, usuario_id, 'codes', '.py'):
+            question_id = filepath.stem.rsplit('_', 1)[-1]
+            if question_id:
+                indice[(usuario_id, question_id)] = str(filepath)
+                total += 1
     indice_arquivos = indice
-    print(f"📑 Índice construído: {total:,} arquivos indexados ({len(os.listdir(pasta_usuarios)):,} usuários)")
+    print(f"Índice construído: {total:,} arquivos referenciados ({len(data.get('users', [])):,} usuários)")
+
+
+def inicializar_worker(indice):
+    """Instala o índice em cada worker; funciona com fork e Windows spawn."""
+    global indice_arquivos
+    indice_arquivos = indice
 
 
 def atualizar_status_thread(thread_id, questao_id, status):
@@ -275,12 +288,13 @@ def main():
     total_questoes = len(df_questoes)
 
     if show_progress_bar:
-        print(f"🎯 Iniciando análise de {total_questoes} questões com {MAX_WORKERS} threads...")
+        print(f"🎯 Iniciando análise de {total_questoes} questões com {MAX_WORKERS} workers...")
     else:
-        print(f"Configuração: {MAX_WORKERS} threads para {total_questoes} questões")
+        print(f"Configuração: {MAX_WORKERS} workers ({EXECUTOR_KIND}) para {total_questoes} questões")
 
-    questoes_para_processar = [(row['id'], row['usuarios_respondidos'])
-                                for _, row in df_questoes.iterrows()]
+    questoes_para_processar = list(
+        df_questoes[['id', 'usuarios_respondidos']].itertuples(index=False, name=None)
+    )
 
     summary_data = []
     detailed_data = []
@@ -302,7 +316,7 @@ def main():
     # ------------------------------------------------------------------
     stop_monitor = threading.Event()
 
-    if not show_progress_bar:
+    if not show_progress_bar and EXECUTOR_KIND == 'thread':
         def status_monitor():
             # Aguarda 5 segundos ou até receber o sinal de parada
             while not stop_monitor.wait(timeout=5):
@@ -312,7 +326,17 @@ def main():
 
     questoes_processadas = 0
 
-    with ThreadPoolExecutor(max_workers=MAX_WORKERS, thread_name_prefix='MC3-Worker') as executor:
+    executor_cls = ThreadPoolExecutor if EXECUTOR_KIND == 'thread' else ProcessPoolExecutor
+    executor_kwargs = {'max_workers': MAX_WORKERS}
+    if executor_cls is ProcessPoolExecutor:
+        executor_kwargs.update({
+            'initializer': inicializar_worker,
+            'initargs': (indice_arquivos,),
+        })
+    else:
+        executor_kwargs['thread_name_prefix'] = 'MC3-Worker'
+
+    with executor_cls(**executor_kwargs) as executor:
         future_to_questao = {
             executor.submit(processar_questao, q): q[0]
             for q in questoes_para_processar
@@ -324,6 +348,7 @@ def main():
                 summary_row, detailed_results, mc3_counters = future.result()
                 summary_data.append(summary_row)
                 detailed_data.extend(detailed_results)
+                completed_questions.add(questao_id)
                 for mc3, count in mc3_counters.items():
                     global_mc3_counts[mc3] += count
                 questoes_processadas += 1
@@ -352,6 +377,8 @@ def main():
             print(f"  {thread_id}: ✅ Finalizada")
         print(f"  📊 Total processado: {len(completed_questions)} questões")
 
+    summary_data.sort(key=lambda row: int(row['question']))
+    detailed_data.sort(key=lambda row: (int(row['question']), str(row['usuario'])))
     salvar_resultados_thread_safe(summary_data, detailed_data)
 
     tempo_total = time.time() - inicio_tempo

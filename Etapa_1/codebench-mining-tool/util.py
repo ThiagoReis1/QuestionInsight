@@ -12,6 +12,7 @@ import re
 import statistics
 import token
 import tokenize
+import io
 
 from collections import Counter, defaultdict
 from datetime import datetime
@@ -69,6 +70,13 @@ CSV_HEADERS = {
     CODE_GRADE: model.Grade.get_attr_names,
     CODE_CODEMIRROR: model.CodeMirror.get_attr_names
 }
+
+# A dataset can contain the same submitted source many times. Cache only the
+# computed metric values; the caller still creates a fresh model object, so
+# rows and ordering remain independent and identical to the original output.
+_METRIC_ATTRIBUTES = model.SolutionMetrics.get_attr_names()[5:]
+_METRICS_CACHE = {}
+_METRICS_CACHE_MAX_SIZE = 8192
 
 # File extension for data files
 DATA_FILE_EXTENSION = '.data'
@@ -540,10 +548,19 @@ def extract_code_metrics(obj, code: str):
         obj: The object to which the extracted metrics will be set as attributes.
         code: The source code from which metrics are extracted.
     """
+    cached = _METRICS_CACHE.get(code)
+    if cached is not None:
+        for attr, value in zip(_METRIC_ATTRIBUTES, cached):
+            setattr(obj, attr, value)
+        return
+
     extract_complexity_metrics(obj, code)
     extract_size_metrics(obj, code)
     extract_halstead_metrics(obj, code)
     extract_token_metrics(obj, code)
+
+    if len(_METRICS_CACHE) < _METRICS_CACHE_MAX_SIZE:
+        _METRICS_CACHE[code] = tuple(getattr(obj, attr, None) for attr in _METRIC_ATTRIBUTES)
 
 def extract_complexity_metrics(obj: Any, code: str) -> None:
     """Extracts and sets complexity-related metrics as attributes of the object."""
@@ -617,19 +634,16 @@ def extract_token_metrics(obj: Any, code: str) -> None:
         token_count = defaultdict(int)
         unique_identifiers, unique_strings, unique_btype, unique_bfunc = set(), set(), set(), set()
         
-        # Temporary code file writing and token extraction
-        temp_file_path = os.path.join(os.getcwd(), 'temp_code.py')
-        with open(temp_file_path, mode='w', encoding=DEFAULT_FILE_ENCODING) as temp_code:
-            temp_code.write(code)
-        with tokenize.open(temp_file_path) as f:
-            try:
-                tokens = tokenize.generate_tokens(f.readline)
-                __analyze_tokens(tokens, token_count, unique_identifiers, unique_strings, unique_btype, unique_bfunc)
-            except BaseException as err:
-                pass
+        # Tokenize directly from memory. The previous implementation wrote every
+        # solution to a shared temp file, causing avoidable disk I/O and races.
+        try:
+            tokens = tokenize.generate_tokens(io.StringIO(code).readline)
+            __analyze_tokens(tokens, token_count, unique_identifiers, unique_strings, unique_btype, unique_bfunc)
+        except BaseException:
+            pass
 
         # Setting token count attributes
-        for k, v in Counter(token_count).items():
+        for k, v in token_count.items():
             setattr(obj, TOKEN_NAMES[k], v)
         __set_token_attributes(obj, unique_identifiers, unique_btype, unique_bfunc)
     except BaseException as err:

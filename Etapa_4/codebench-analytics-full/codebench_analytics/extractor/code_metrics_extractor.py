@@ -6,6 +6,8 @@ import re
 import tempfile
 import token
 import tokenize
+import multiprocessing
+from concurrent.futures import ProcessPoolExecutor
 from collections import Counter, defaultdict
 from typing import Dict, List
 
@@ -112,57 +114,65 @@ class Solution:
 
     @staticmethod
     def extract(base_src: str):
+        """Extract metrics in parallel; output order remains deterministic."""
+        paths = [os.path.join(base_src, name) for name in sorted(os.listdir(base_src))]
+        worker_count = max(1, min(int(os.environ.get('CODEBENCH_METRICS_WORKERS', multiprocessing.cpu_count() or 1)), 8))
+        if len(paths) <= 1 or worker_count == 1:
+            metric_rows = [Solution._Solution__extract_solution_metrics(path) for path in paths]
+        else:
+            with ProcessPoolExecutor(max_workers=worker_count) as executor:
+                metric_rows = list(executor.map(_extract_solution_metrics_task, paths, chunksize=8))
         data: List[SolutionMetrics] = []
-        for code_filename in os.listdir(base_src):
-            src = os.path.join(base_src, code_filename)
+        for metric_row in metric_rows:
             solution = SolutionMetrics()
-
-            metrics = Solution.__extract_solution_metrics(src)
-            for attr, value in metrics.items():
+            for attr, value in metric_row.items():
                 setattr(solution, attr, value)
-
             data.append(solution)
         return data
 
     @staticmethod
     def extract_from_professor(csv_src: str):
         data: Dict[int, SolutionMetrics] = {}
-        with open(csv_src, "r", encoding="utf-8") as csv_file:
-            text = "".join(csv_file.readlines())
-            solutions = re.split(
-                r"#!#!#", text
-            )  # Divide os exercícios pelo separador #!#!#
-
+        temporary_files = []
+        try:
+            with open(csv_src, "r", encoding="utf-8") as csv_file:
+                text = "".join(csv_file.readlines())
+            solutions = re.split(r"#!#!#", text)
+            pending = []
             for sol in solutions:
-                sol = sol.strip()  # Remove espaços em branco no início e no final
-                if len(sol) == 0:
+                sol = sol.strip()
+                if not sol:
                     continue
-
-                # Atualiza a regex para capturar o ID corretamente, mesmo se houver espaços no início
                 match = re.match(r"^\s*(\d+)#;#;#", sol)
-                if match:
-                    solution_id = int(match.group(1))
-                    code = sol.split("#;#;#", 1)[
-                        1
-                    ]  # Pega o código após o separador #;#;#
-
-                    with tempfile.NamedTemporaryFile(
-                        mode="w", encoding="utf-8", suffix=".py", delete=False
-                    ) as tmp_writer:
-                        tmp_writer.write(code)
-                        tmp_code_src = tmp_writer.name
-
-                    solution = SolutionMetrics()
-
-                    metrics = Solution.__extract_solution_metrics(tmp_code_src)
-                    for attr, value in metrics.items():
-                        setattr(solution, attr, value)
-
-                    data[solution_id] = solution
-                else:
+                if not match:
                     raise AssertionError(f"not found id for solution: {sol}")
+                solution_id = int(match.group(1))
+                code = sol.split("#;#;#", 1)[1]
+                with tempfile.NamedTemporaryFile(mode="w", encoding="utf-8", suffix=".py", delete=False) as tmp_writer:
+                    tmp_writer.write(code)
+                    tmp_code_src = tmp_writer.name
+                temporary_files.append(tmp_code_src)
+                pending.append((solution_id, tmp_code_src))
 
-        return data
+            worker_count = max(1, min(int(os.environ.get('CODEBENCH_METRICS_WORKERS', multiprocessing.cpu_count() or 1)), 8))
+            paths = [path for _solution_id, path in pending]
+            if len(paths) <= 1 or worker_count == 1:
+                metric_rows = [Solution._Solution__extract_solution_metrics(path) for path in paths]
+            else:
+                with ProcessPoolExecutor(max_workers=worker_count) as executor:
+                    metric_rows = list(executor.map(_extract_solution_metrics_task, paths, chunksize=8))
+            for (solution_id, _path), metric_row in zip(pending, metric_rows):
+                solution = SolutionMetrics()
+                for attr, value in metric_row.items():
+                    setattr(solution, attr, value)
+                data[solution_id] = solution
+            return data
+        finally:
+            for path in temporary_files:
+                try:
+                    os.unlink(path)
+                except OSError:
+                    pass
 
     @staticmethod
     def __extract_solution_metrics(code_file_src: str):
@@ -270,3 +280,7 @@ class Solution:
                 pass
 
         return metrics
+
+
+def _extract_solution_metrics_task(path: str):
+    return Solution._Solution__extract_solution_metrics(path)
