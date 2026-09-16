@@ -5,22 +5,26 @@ Este projeto é uma análise e avaliação de questões de testes, utilizando m�
 ## Etapas do Projeto
 
 ### Etapa 1: Análise Inicial e Coleta de Dados
+
 Execute o notebook `Etapa_1.ipynb`. Nesta etapa, você realizará a coleta e análise inicial dos dados das questões, preparando o ambiente para as próximas etapas. O objetivo é entender os aspectos básicos das questões a partir das informações fornecidas.
 
 Para mais informações sobre a **Etapa 1**, visite o repositório relacionado: [codebench-mining-tool](https://github.com/marcosmapl/codebench-mining-tool).
 
 ### Etapa 2: Pré-processamento dos Dados
+
 Execute o notebook `Pre_Processamento.ipynb`. Aqui, os dados serão limpos e transformados. Esta etapa envolve a remoção de dados inválidos, normalização de formatos e preparação dos dados para análises mais avançadas.
 
 O pré-processamento mantém `Extraidos/` como a única base física e gera `Etapa_2/output/referencias_processamento.json`. Esse índice contém os assessments selecionados e os caminhos relativos dos arquivos de usuários que correspondem às questões filtradas. As Etapas 3 e 5 resolvem esses caminhos diretamente e não criam cópias físicas derivadas.
 
 ### Etapa 3: Processamento dos Dados
+
 Execute o notebook `Processamento.ipynb`. Nessa fase, você aplicará as métricas de análise nas questões, como dificuldade, discriminação e outras estatísticas relacionadas. O objetivo é avaliar como as questões se comportam em relação aos parâmetros definidos.
 
 ### Etapa 4: Resultados Finais e Avaliação
+
 Execute o notebook `Etapa_4.ipynb`. Nesta última etapa, você visualizará os resultados finais das análises. A etapa foca na interpretação dos resultados das métricas calculadas, fornecendo insights detalhados sobre o desempenho das questões de teste.
 
-Esta etapa depende de um arquivo externo (o gabarito/soluções de referência do professor), que precisa ser colocado manualmente em `Etapa_4/codebench-analytics-full/input/` antes da execução — veja detalhes na seção [Dados Externos Necessários](#dados-externos-necessários) abaixo.
+Esta etapa depende de um arquivo externo (o gabarito/soluções de referência do professor), que precisa ser colocado manualmente em `Etapa_4/codebench-analytics-full/input/` antes da execução — veja detalhes na seção [Dados Externos Necessários](#dados-externos-necess%C3%A1rios) abaixo.
 
 Para mais informações sobre a **Etapa 4**, visite o repositório relacionado: [codebench-analytics](https://github.com/Jacksonfern/codebench-analytics).
 
@@ -31,16 +35,14 @@ Esta etapa tem como foco a identificação de **misconceptions** (conceitos inco
 Execute os arquivos na seguinte ordem:
 
 1. `1_Misconceptions_Parser.py` (ou o notebook equivalente `1_Misconceptions_Parser.ipynb`) — analisa os códigos dos estudantes e detecta os tipos de misconceptions (MC³) usando `VisitorMC3.py`, gerando `output/misconceptions_resumo_por_questao.csv` e `output/misconceptions_detalhado_por_usuario.csv`.
-2. `2_preparacao_analise.ipynb` — consolida os dados das etapas anteriores e gera `output/dataset_analise_questoes.csv` e `output/mapeamento_provas_questoes.json`, únicos arquivos consumidos pelo notebook seguinte.
-3. `3_analise_etapas_1_7.ipynb` — gera os gráficos e métricas finais (caracterização da amostra, análise dos MC³, análise de dificuldade, correlações entre misconceptions e métricas de dificuldade/discriminação, e comparação com fatores demográficos), permitindo a construção de estratégias pedagógicas mais eficazes.
+
+1. `2_preparacao_analise.ipynb` — consolida os dados das etapas anteriores e gera `output/dataset_analise_questoes.csv` e `output/mapeamento_provas_questoes.json`, únicos arquivos consumidos pelo notebook seguinte.
+
+1. `3_analise_etapas_1_7.ipynb` — gera os gráficos e métricas finais (caracterização da amostra, análise dos MC³, análise de dificuldade, correlações entre misconceptions e métricas de dificuldade/discriminação, e comparação com fatores demográficos), permitindo a construção de estratégias pedagógicas mais eficazes.
 
 > Os notebooks antigos `2_analise_graficos.ipynb` e `3_analise_assuntos.ipynb` foram substituídos por `2_preparacao_analise.ipynb` e não fazem mais parte do fluxo do projeto.
 
 Para mais informações sobre a **Etapa 5**, visite o repositório relacionado: [Misconceptions_Parser](https://github.com/Airtonn/Misconceptions_Parser).
-
-### Complexidade e paralelismo
-
-O relatório [`ANALISE_COMPLEXIDADE_E_OTIMIZACOES.md`](ANALISE_COMPLEXIDADE_E_OTIMIZACOES.md) descreve o custo de melhor caso, caso médio e pior caso de cada etapa, além dos gargalos e das decisões de otimização. A Etapa 5 usa processos por padrão para aproveitar múltiplos núcleos durante a análise MC³. A quantidade de workers pode ser ajustada com `MC3_WORKERS`; a Etapa 4 usa `CODEBENCH_METRICS_WORKERS`. Para ambientes em que o custo dominante seja I/O, o parser MC³ pode usar threads com `MC3_EXECUTOR=thread`.
 
 ---
 
@@ -49,7 +51,7 @@ O relatório [`ANALISE_COMPLEXIDADE_E_OTIMIZACOES.md`](ANALISE_COMPLEXIDADE_E_OT
 É o núcleo técnico da Etapa 5: um `ast.NodeVisitor` que percorre a árvore sintática (AST) de cada código-fonte Python submetido pelos alunos e detecta **21 tipos de misconceptions (MC³)**, organizados em 7 categorias (A a H). Cada tipo tem um método `get<Código>()` público, que internamente chama um método `check<Nome>()` responsável pela análise real e retorna um booleano (ou tupla, para casos que também retornam detalhes, como nomes de variáveis problemáticas).
 
 | Código | Categoria | O que detecta |
-|---|---|---|
+| --- | --- | --- |
 | **A2** | Atribuição | Variável atribuída a si mesma |
 | **A3** | Atribuição | Variável inicializada sem necessidade (escrita nunca lida antes de ser sobrescrita) |
 | **A4** | Atribuição | Redefinição de nome *built-in* (ex.: usar `list`, `str` como nome de variável/função) |
@@ -76,13 +78,19 @@ O relatório [`ANALISE_COMPLEXIDADE_E_OTIMIZACOES.md`](ANALISE_COMPLEXIDADE_E_OT
 **Parâmetros configuráveis** (definidos em `1_Misconceptions_Parser.py` e repassados ao visitor):
 
 - `C4_MAX_ALLOWED_RANGEITER = 50` — número máximo de iterações de um `range()` fixo antes de ser sinalizado como "deveria ser `while`".
+
 - `E2_MAX_ALLOWED_LISTS = 5` — número máximo de listas declaradas antes de sinalizar uso excessivo.
+
 - `G4_MIN_VAR_CHRS = 4` / `G4_MIN_FNC_CHRS = 8` — tamanho mínimo de nome considerado significativo para variáveis e funções, respectivamente.
+
 - `G4_MAX_ALLOWED_NONSIGNIFICANT = 70` — percentual máximo tolerado de nomes não significativos.
 
 **Detalhes técnicos importantes:**
+
 - Suporta código assíncrono (`async def`, `async for`, `async with`), tratando-os de forma equivalente às versões síncronas em todas as verificações aplicáveis.
+
 - Usa análise de fluxo (`pending_write`/`used`) para distinguir corretamente atribuições realmente "mortas" de atribuições feitas em ramos diferentes de um `if/else` (evitando falsos positivos quando a variável é usada em pelo menos um caminho de execução).
+
 - É um projeto em evolução: o cabeçalho do arquivo documenta um changelog detalhado (atualmente na versão **v11**) com correções de falsos positivos/negativos acumuladas ao longo do desenvolvimento.
 
 #### `1_Misconceptions_Parser.py` / `1_Misconceptions_Parser.ipynb` — Orquestração da análise
@@ -90,33 +98,42 @@ O relatório [`ANALISE_COMPLEXIDADE_E_OTIMIZACOES.md`](ANALISE_COMPLEXIDADE_E_OT
 Script responsável por rodar o `VisitorMC3` em escala sobre toda a base de códigos dos alunos.
 
 **Entradas:**
+
 - `../Etapa_3/output/questoes_ordenadas.csv` — lista de questões e os IDs dos usuários que a responderam.
+
 - `../Etapa_3/output/indice_usuarios.json` e `../Etapa_2/output/referencias_processamento.json` — base de códigos-fonte dos alunos (`{usuario}/codes/{prova}_{questao}.py`).
 
 **Como funciona:**
+
 1. Constrói um **índice em memória** `(usuario_id, questao_id) → caminho do arquivo .py`, varrendo o disco uma única vez (evita I/O repetido).
-2. Para cada questão do `questoes_ordenadas.csv`, localiza os arquivos de código de cada aluno que a respondeu via lookup O(1) no índice.
-3. Analisa cada código com `ast.parse()` + `VisitorMC3`, coletando os MC³ detectados (ignora silenciosamente arquivos vazios ou com erro de sintaxe/parsing).
-4. Processa as questões **em paralelo** (`ThreadPoolExecutor`, padrão 3 threads) para acelerar a análise em bases grandes, com monitoramento de status por thread em tempo real (modo texto) ou barra de progresso (`tqdm`, ao rodar com o argumento `progressBar`).
+
+1. Para cada questão do `questoes_ordenadas.csv`, localiza os arquivos de código de cada aluno que a respondeu via lookup O(1) no índice.
+
+1. Analisa cada código com `ast.parse()` + `VisitorMC3`, coletando os MC³ detectados (ignora silenciosamente arquivos vazios ou com erro de sintaxe/parsing).
+
+1. Processa as questões **em paralelo** (`ThreadPoolExecutor`, padrão 3 threads) para acelerar a análise em bases grandes, com monitoramento de status por thread em tempo real (modo texto) ou barra de progresso (`tqdm`, ao rodar com o argumento `progressBar`).
 
 **Saídas:**
+
 - `output/misconceptions_resumo_por_questao.csv` — por questão: total de respostas e contagem de cada um dos 21 tipos de MC³.
+
 - `output/misconceptions_detalhado_por_usuario.csv` — por par (questão, usuário): lista de MC³ detectados, total de misconceptions e número de categorias afetadas.
 
 Ao final, o script imprime no console um relatório-resumo com tempo total de execução, velocidade de processamento (usuários/segundo), percentual de usuários com pelo menos uma misconception, top 10 MC³ mais frequentes e totais por categoria (A a H).
 
 > `1_Misconceptions_Parser.ipynb` contém exatamente o mesmo código do `.py`, empacotado em uma única célula — útil para execução interativa no Jupyter, enquanto o `.py` é indicado para rodar via linha de comando (ex.: `python 1_Misconceptions_Parser.py progressBar`).
 
-#### `Separador_Codigo_PC3/Separador_Codigo_PC3.ipynb` — Organização para avaliação humana
+#### `Analise_Detalhada_Misconceptions_PC3/Analise_Detalhada_Misconceptions_PC3.ipynb` — Detalhamento para avaliação humana
 
-Notebook auxiliar, **não faz parte do fluxo obrigatório da Etapa 5** — ele existe só para separar fisicamente os códigos dos alunos em pastas por combinação de misconceptions (MC³/PC³), facilitando uma revisão manual/humana desses casos, caso seja necessário validar visualmente se as detecções automáticas do `VisitorMC3` fazem sentido.
+Notebook auxiliar, **não faz parte do fluxo obrigatório da Etapa 5**. Ele detalha, para revisão manual, onde cada misconception (MC³) aparece nos códigos dos alunos já analisados pelo `VisitorMC3`.
 
 **O que ele faz, em duas células:**
 
-1. **Célula 1 — Índice por grupo de MC³**: lê `output/misconceptions_detalhado_por_usuario.csv` (gerado pelo `1_Misconceptions_Parser`) e cria `codigos_separados_PC3/referencias_por_misconception.json`. O arquivo agrupa referências aos códigos por combinação exata de misconceptions (ex.: `A2_A3_B4/`, ou `SEM_MISCONCEPTIONS/` quando nenhum foi detectado).
-2. **Célula 2 — Relatório detalhado por arquivo**: para cada referência, roda novamente a análise (usando o próprio `VisitorMC3.py`) e gera um relatório `.txt` na pasta do grupo. O `.py` original permanece em `Extraidos/`; somente o relatório é criado no diretório auxiliar.
+1. **Célula 1 — Índice por grupo de MC³**: lê `Etapa_5/output/misconceptions_detalhado_por_usuario.csv` (gerado pelo `1_Misconceptions_Parser`) e cria `Etapa_5/Analise_Detalhada_Misconceptions_PC3/output/referencias_por_misconception.json`. O arquivo agrupa referências aos códigos por combinação exata de misconceptions (ex.: `A2_A3_B4/`, ou `SEM_MISCONCEPTIONS/` quando nenhum foi detectado).
 
-O resultado final é uma pasta `codigos_separados_PC3/` (ignorada no Git) organizada assim: uma subpasta por combinação de MC³ → dentro dela, uma subpasta por arquivo analisado → contendo o `.txt` com o relatório detalhado. Os caminhos dos códigos continuam centralizados em `Extraidos/`, sem duplicação de conteúdo.
+1. **Célula 2 — Relatório detalhado por arquivo**: para cada referência, analisa novamente o código com o `VisitorMC3.py` e gera um relatório `.txt` na pasta da combinação correspondente. O `.py` original permanece em `Extraidos/`; somente os relatórios são criados em `Etapa_5/Analise_Detalhada_Misconceptions_PC3/output/`.
+
+O resultado fica organizado em `Etapa_5/Analise_Detalhada_Misconceptions_PC3/output/`: uma subpasta por combinação de MC³ → uma subpasta por arquivo analisado → o `.txt` com as ocorrências detalhadas. O notebook não copia, move ou altera os códigos originais.
 
 ---
 
@@ -157,18 +174,21 @@ QuestionInsight/
     ├── 1_Misconceptions_Parser.py / .ipynb  # Roda o VisitorMC3 em escala sobre a base de códigos
     ├── 2_preparacao_analise.ipynb           # Consolida os dados das etapas anteriores
     ├── 3_analise_etapas_1_7.ipynb           # Gráficos e métricas finais
-    ├── Separador_Codigo_PC3/                # Cria referências e relatórios por combinação de MC³ (opcional)
+    ├── Analise_Detalhada_Misconceptions_PC3/ # Notebook e relatórios detalhados por combinação de MC³ (opcional)
+    │   ├── Analise_Detalhada_Misconceptions_PC3.ipynb
+    │   └── output/                           # JSON de referências e relatórios .txt
     └── output/                              # Gerado pela execução (misconceptions_resumo_por_questao.csv, etc.)
 ```
 
-> Pastas marcadas com **[EXTERNO]** guardam dados que não vêm no repositório — veja a seção [Dados Externos Necessários](#3-dados-externos-necessários). As pastas `output/` de cada etapa são criadas automaticamente durante a execução, não precisam existir de antemão.
+> Pastas marcadas com **[EXTERNO]** guardam dados que não vêm no repositório — veja a seção [Dados Externos Necessários](#3-dados-externos-necess%C3%A1rios). As pastas `output/` de cada etapa são criadas automaticamente durante a execução, não precisam existir de antemão.
 
 ## Como Rodar o Projeto
 
 ### 1. Pré-requisitos
 
 - Python 3.11 ou 3.12 instalado.
-- Os dados externos do projeto, descritos em detalhes na seção [Dados Externos Necessários](#dados-externos-necessários) abaixo.
+
+- Os dados externos do projeto, descritos em detalhes na seção [Dados Externos Necessários](#dados-externos-necess%C3%A1rios) abaixo.
 
 ### 2. Criar o ambiente virtual e instalar dependências
 
@@ -185,7 +205,7 @@ Isso cria a pasta `.venv/`, instala tudo o que está em `requirements.txt` (pand
 O script aceita os seguintes comandos (`python setup_env.py <comando>`):
 
 | Comando | O que faz |
-|---|---|
+| --- | --- |
 | `install` (padrão, roda mesmo sem argumento) | Cria o venv (se não existir) + instala/atualiza dependências do `requirements.txt` |
 | `clean` | Apaga o venv e todas as pastas `__pycache__` do projeto |
 | `help` | Mostra instruções de uso |
@@ -209,8 +229,9 @@ source .venv/bin/activate
 
 Antes de rodar o projeto, você precisa colocar manualmente dois arquivos que não vêm no repositório:
 
-- **`DataSets/`** → baixe o(s) dataset(s) do Codebench em **https://codebench.icomp.ufam.edu.br/dataset/** e coloque aqui antes de rodar a **Etapa 1**.
-- **`Etapa_4/codebench-analytics-full/input/`** → solicite ao professor o arquivo `codigo_solucao.csv` (o gabarito das questões) e coloque aqui antes de rodar a **Etapa 4**.
+- **`DataSets/`** → baixe o(s) dataset(s) do Codebench em [**https://codebench.icomp.ufam.edu.br/dataset/**](https://codebench.icomp.ufam.edu.br/dataset/) e coloque aqui antes de rodar a **Etapa 1**.
+
+- **`Etapa_4/codebench-analytics-full/input/`** → solicite ao professor o arquivo `codigo_solucao.csv` (o gabarito das questões ) e coloque aqui antes de rodar a **Etapa 4**.
 
 A pasta `CSVS_JO/` não precisa de nada manual: o arquivo `unified_solutions.csv` que fica nela é gerado automaticamente pela Etapa 1, a partir do que você colocou em `DataSets/`.
 
@@ -221,20 +242,28 @@ A pasta `CSVS_JO/` não precisa de nada manual: o arquivo `unified_solutions.csv
 Execute os notebooks/scripts **nesta sequência**, pois cada etapa consome os arquivos de saída (`output/`) gerados pela etapa anterior:
 
 1. **`Etapa_1/Etapa_1.ipynb`** — coleta e análise inicial dos dados (a partir de `DataSets/`).
-2. **`Etapa_2/Pre_Processamento.ipynb`** — limpeza e normalização dos dados.
-3. **`Etapa_3/Processamento.ipynb`** — cálculo das métricas de dificuldade, discriminação, etc.
-4. **`Etapa_4/Etapa_4.ipynb`** — visualização e interpretação dos resultados finais (requer o `codigo_solucao.csv` externo em `Etapa_4/codebench-analytics-full/input/`, ver seção acima).
-5. **Etapa 5** (identificação de misconceptions), nesta ordem interna:
-   1. `Etapa_5/1_Misconceptions_Parser.py` (linha de comando) **ou** `1_Misconceptions_Parser.ipynb` (Jupyter) — detecta os MC³ nos códigos dos alunos.
-      ```bash
-      python Etapa_5/1_Misconceptions_Parser.py progressBar
-      ```
-   2. `Etapa_5/2_preparacao_analise.ipynb` — consolida os dados das etapas anteriores.
-   3. `Etapa_5/3_analise_etapas_1_7.ipynb` — gera os gráficos e métricas finais.
+
+1. **`Etapa_2/Pre_Processamento.ipynb`** — limpeza e normalização dos dados.
+
+1. **`Etapa_3/Processamento.ipynb`** — cálculo das métricas de dificuldade, discriminação, etc.
+
+1. **`Etapa_4/Etapa_4.ipynb`** — visualização e interpretação dos resultados finais (requer o `codigo_solucao.csv` externo em `Etapa_4/codebench-analytics-full/input/`, ver seção acima).
+
+1. **Etapa 5** (identificação de misconceptions), nesta ordem interna:
+    1. `Etapa_5/1_Misconceptions_Parser.py` (linha de comando) **ou** `1_Misconceptions_Parser.ipynb` (Jupyter) — detecta os MC³ nos códigos dos alunos.
+    
+       ```bash
+       python Etapa_5/1_Misconceptions_Parser.py progressBar
+       ```
+    1. `Etapa_5/2_preparacao_analise.ipynb` — consolida os dados das etapas anteriores.
+    1. `Etapa_5/3_analise_etapas_1_7.ipynb` — gera os gráficos e métricas finais.
 
 ### 5. Observações importantes
 
 - Cada etapa depende dos arquivos gerados na(s) etapa(s) anterior(es) — não pule etapas nem mude a ordem.
+
 - As pastas de saída (`Etapa_2/output`, `Etapa_3/output`, `Etapa_4/output`, `Etapa_5/output`) são geradas automaticamente durante a execução, não é preciso criá-las manualmente.
+
 - Ao terminar, desative o ambiente virtual com `deactivate`.
+
 - O notebook `Etapa_4.ipynb` chama o `codebench_analytics` diretamente pelo executável instalado no `.venv` da raiz (via `python setup_env.py install`) — não depende de Poetry nem de `make`, então funciona igual em Linux, macOS e Windows.

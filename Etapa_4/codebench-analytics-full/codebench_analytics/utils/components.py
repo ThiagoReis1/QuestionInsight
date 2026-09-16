@@ -35,7 +35,10 @@ class Components:
         students = {}
 
         for user_path in users:
-            d = user_path.split("/")
+            # relpath usa \ no Windows e / no Unix; normalize ambos para
+            # extrair corretamente turma e usuário em qualquer plataforma.
+            normalized_user_path = path.normpath(user_path).replace("\\", "/")
+            d = normalized_user_path.split("/")
             class_id, user_id = d[0], d[-1]
             key = f"{class_id}-{user_id}"
 
