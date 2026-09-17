@@ -8,7 +8,7 @@ Você pode usar `--input CAMINHO`, apontando para um `.csv` ou `.zip`; se esse a
 
 ## Processamento
 
-O código identifica G4, B8, B4 e B9 a partir de `misconceptions_detectados`, renomeia as variáveis para nomes analíticos, calcula a elegibilidade de B8/B4/B9 por questão e aplica transformação `log1p` seguida de padronização nas seis métricas de esforço. Para cada PC³, ajusta uma regressão logística com interceptos aleatórios cruzados de estudante e questão. Os resultados incluem razões de chances, intervalos de confiança de 95%, valores de *p*, correção de Benjamini–Hochberg, componentes de variância e ICC.
+O código identifica todos os PC³ presentes no mapa global a partir de `misconceptions_detectados`, renomeia as variáveis para nomes analíticos, calcula a elegibilidade de B8/B4/B9 por questão e aplica transformação `log1p` seguida de padronização nas seis métricas de esforço. Para cada PC³, ajusta uma regressão logística com interceptos aleatórios cruzados de estudante e questão. Os resultados incluem razões de chances, intervalos de confiança de 95%, valores de *p*, correção de Benjamini–Hochberg, componentes de variância e ICC.
 
 > Os ICC produzidos são estimativas aproximadas pelo procedimento PQL/Laplace implementado no próprio arquivo. Para publicação, recomenda-se validar os valores em R com `glmmTMB`.
 
