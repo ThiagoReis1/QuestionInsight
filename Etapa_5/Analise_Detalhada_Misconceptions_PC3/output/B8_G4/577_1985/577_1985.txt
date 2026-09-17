@@ -1,0 +1,73 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo     : 577_1985.py
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2017_1_v1.81\2017-1\139\users\2389\codes\577_1985.py
+Assessment  : 577
+Título      : Trabalho Prático 3: Estruturas Condicionais Encadeadas
+Questão     : 1985
+Aluno       : 2389
+Grupo       : TP 03
+Significado : Estrutura Condicional Encadeada
+Total MCs   : 2
+
+⚠️  Misconceptions detectados: B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | x=input("Regiao: ").upper()
+     2 | y=input("Estado: ").upper()
+     3 | 
+     4 | if (x=='Norte'.upper()or x=='Sul'.upper())and((y=='Amazonas'.upper())or(y=='Roraima'.upper())or(y=='Parana'.upper())or(y=='Santa Catarina'.upper())):
+     5 | 	if (x=='Norte'.upper()):
+     6 | 		if (y=='Amazonas'.upper()):
+     7 | 			print('UNIVERSIDADE FEDERAL DO AMAZONAS')
+     8 | 		elif (y=='Roraima'.upper()):
+     9 | 			print('UNIERSIDADE FEDERAL DE RORAIMA')
+    10 | 	if (x=='Sul'.upper()):
+    11 | 		if (y=='Parana'.upper()):
+    12 | 			print('UNIVERSIDADE FEDERAL DO PARANA')
+    13 | 		elif (y=='Santa Catarina'.upper()):
+    14 | 			print('UNIVERSIDADE FEDERAL DE SANTA CATARINA')
+    15 | else:
+    16 | 	print('UNIVERSIDADE NAO IDENTIFICADA')
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 2
+
+  [1] Linha 6: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 6) / elif ... sem else
+      Contexto:
+               5 | 	if (x=='Norte'.upper()):
+        >>>    6 | 		if (y=='Amazonas'.upper()):
+               7 | 			print('UNIVERSIDADE FEDERAL DO AMAZONAS')
+
+  [2] Linha 11: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 11) / elif ... sem else
+      Contexto:
+              10 | 	if (x=='Sul'.upper()):
+        >>>   11 | 		if (y=='Parana'.upper()):
+              12 | 			print('UNIVERSIDADE FEDERAL DO PARANA')
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 2
+
+  [1] Linha 1: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+        >>>    1 | x=input("Regiao: ").upper()
+               2 | y=input("Estado: ").upper()
+
+  [2] Linha 2: Variável 'y' com nome muito curto (≤4 chars)
+      Trecho  : y = ...
+      Contexto:
+               1 | x=input("Regiao: ").upper()
+        >>>    2 | y=input("Estado: ").upper()
+               3 | 
+
+======================================================================

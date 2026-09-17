@@ -1,0 +1,68 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo     : 126_1122.py
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2016_1_v1.81\2016-1\102\users\1295\codes\126_1122.py
+Assessment  : 126
+Título      : Avaliação Parcial 03 – Estruturas Condicionais Encadeadas
+Questão     : 1122
+Aluno       : 1295
+Grupo       : TP 03
+Significado : Estrutura Condicional Encadeada
+Total MCs   : 3
+
+⚠️  Misconceptions detectados: B8, E1, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | b = input("Digite o sobrenome do bastardo: ")
+     2 | 
+     3 | if b=="Snow" or b=="Stone" or b=="Rivers" or b=="Storm" or b =="Sand" or b=="Pyke" or b=="Flowers" or b=="Hill" or b=="Waters":
+     4 | 	if b=="Snow": print("Norte")
+     5 | 	elif b=="Stone": print("Vale")
+     6 | 	elif b=="Rivers": print("Terras Fluviais")
+     7 | 	elif b=="Storm": print("Terras da Tempestade")
+     8 | 	elif b=="Sand": print("Dorne")
+     9 | 	elif b=="Pyke": print("Ilhas de Ferro")
+    10 | 	elif b=="Flowers": print("Campina")
+    11 | 	elif b=="Hill": print("Terras Ocidentais")
+    12 | 	elif b=="Waters": print("Terras da Coroa")
+    13 |  
+    14 | else:
+    15 | 	print("Entrada",  b, "invalida")
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 11: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 11) / elif ... sem else
+      Contexto:
+              10 | 	elif b=="Flowers": print("Campina")
+        >>>   11 | 	elif b=="Hill": print("Terras Ocidentais")
+              12 | 	elif b=="Waters": print("Terras da Coroa")
+
+▶ E1 — Verificação desnecessária de todas as combinações possíveis
+  Ocorrências: 1
+
+  [1] Linha 3: 9 condições em um único if — verificação excessiva
+      Trecho  : b == 'Snow' or b == 'Stone' or b == 'Rivers' or (b == 'Storm') or (b == 'Sand') or (b == 'Pyke') or (b == 'Flowers') or (b == 'Hill') or (b == 'Waters')
+      Contexto:
+               2 | 
+        >>>    3 | if b=="Snow" or b=="Stone" or b=="Rivers" or b=="Storm" or b =="Sand" or b=="Pyke" or b=="Flowers" or b=="Hill" or b=="Waters":
+               4 | 	if b=="Snow": print("Norte")
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 1
+
+  [1] Linha 1: Variável 'b' com nome muito curto (≤4 chars)
+      Trecho  : b = ...
+      Contexto:
+        >>>    1 | b = input("Digite o sobrenome do bastardo: ")
+               2 | 
+
+======================================================================

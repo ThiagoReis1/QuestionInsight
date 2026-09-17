@@ -1,0 +1,87 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo     : 1472_2031.py
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2018_2_v1.81\2018-2\206\users\3784\codes\1472_2031.py
+Assessment  : 1472
+Título      : TP 4: Estrutura de Repetição por Condição (while)
+Questão     : 2031
+Aluno       : 3784
+Grupo       : TP 04
+Significado : Estrutura de Repetição por Condição
+Total MCs   : 3
+
+⚠️  Misconceptions detectados: A3, B8, B9
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | dado = int(input("qual o numero do dado: "))
+     2 | 
+     3 | memo = 0
+     4 | laco = 0
+     5 | acumula = 0
+     6 | 
+     7 | while (dado != -1):
+     8 | 	if (dado == 6):
+     9 | 		acumula = dado
+    10 | 		soma = laco
+    11 | 		#print("acumula: ",soma)
+    12 | 		laco = laco + 1
+    13 | 		#print("laco: ",laco)
+    14 | 		dado = int(input("qual o numero do dado: "))
+    15 | 	elif (dado != -1 and dado != 6):
+    16 | 		memo = dado
+    17 | 		soma2 = memo
+    18 | 		#print("memo: ",soma2)
+    19 | 		dado = int(input("qual o numero do dado: "))
+    20 | 	
+    21 | print(laco)
+    22 | 
+    23 | 	
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 3
+
+  [1] Linha 5: Variável 'acumula' declarada mas nunca utilizada
+      Trecho  : acumula = ...
+      Contexto:
+               4 | laco = 0
+        >>>    5 | acumula = 0
+               6 | 
+
+  [2] Linha 10: Variável 'soma' declarada mas nunca utilizada
+      Trecho  : soma = ...
+      Contexto:
+               9 | 		acumula = dado
+        >>>   10 | 		soma = laco
+              11 | 		#print("acumula: ",soma)
+
+  [3] Linha 17: Variável 'soma2' declarada mas nunca utilizada
+      Trecho  : soma2 = ...
+      Contexto:
+              16 | 		memo = dado
+        >>>   17 | 		soma2 = memo
+              18 | 		#print("memo: ",soma2)
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 8: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 8) / elif ... sem else
+      Contexto:
+               7 | while (dado != -1):
+        >>>    8 | 	if (dado == 6):
+               9 | 		acumula = dado
+
+▶ B9 — elif/else retestando condições já verificadas
+  Ocorrências: 1
+
+  [1] Linha 0: B9 detectado pelo VisitorMC3 (localização exata não mapeada)
+      Trecho  : —
+
+======================================================================

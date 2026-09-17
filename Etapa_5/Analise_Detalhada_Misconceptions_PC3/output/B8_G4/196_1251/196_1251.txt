@@ -1,0 +1,74 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo     : 196_1251.py
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2016_1_v1.81\2016-1\110\users\1557\codes\196_1251.py
+Assessment  : 196
+Título      : Avaliação Parcial 06 – Repetição por contagem
+Questão     : 1251
+Aluno       : 1557
+Grupo       : TP 06
+Significado : Estrutura de Repetição por Contagem
+Total MCs   : 2
+
+⚠️  Misconceptions detectados: B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | v = array(eval(input("Informe o vetor v: ")))
+     3 | x = zeros(2, dtype = int)
+     4 | c = 0.7 * min(v) + 0.3 * max(v)
+     5 | d = 0.4 * min(v) + 0.6 * max(v)
+     6 | for i in range(0, size(v)):
+     7 | 	if(v[i] >= c and v[i] < d):
+     8 | 		x[0] = x[0] + 1
+     9 | 	if(v[i] >= d and v[i] < max(v)):
+    10 | 		x[1] = x[1] + 1
+    11 | print(x)
+    12 | 
+    13 | 			 
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 0: B8 detectado pelo VisitorMC3 (localização exata não mapeada)
+      Trecho  : —
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 4
+
+  [1] Linha 2: Variável 'v' com nome muito curto (≤4 chars)
+      Trecho  : v = ...
+      Contexto:
+               1 | from numpy import*
+        >>>    2 | v = array(eval(input("Informe o vetor v: ")))
+               3 | x = zeros(2, dtype = int)
+
+  [2] Linha 3: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+               2 | v = array(eval(input("Informe o vetor v: ")))
+        >>>    3 | x = zeros(2, dtype = int)
+               4 | c = 0.7 * min(v) + 0.3 * max(v)
+
+  [3] Linha 4: Variável 'c' com nome muito curto (≤4 chars)
+      Trecho  : c = ...
+      Contexto:
+               3 | x = zeros(2, dtype = int)
+        >>>    4 | c = 0.7 * min(v) + 0.3 * max(v)
+               5 | d = 0.4 * min(v) + 0.6 * max(v)
+
+  [4] Linha 5: Variável 'd' com nome muito curto (≤4 chars)
+      Trecho  : d = ...
+      Contexto:
+               4 | c = 0.7 * min(v) + 0.3 * max(v)
+        >>>    5 | d = 0.4 * min(v) + 0.6 * max(v)
+               6 | for i in range(0, size(v)):
+
+======================================================================

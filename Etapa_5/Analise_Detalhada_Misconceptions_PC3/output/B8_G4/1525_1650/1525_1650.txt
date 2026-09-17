@@ -1,0 +1,78 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo     : 1525_1650.py
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2018_2_v1.81\2018-2\205\users\3657\codes\1525_1650.py
+Assessment  : 1525
+Título      : TP 6: Estrutura de Repetição por Contagem (for)
+Questão     : 1650
+Aluno       : 3657
+Grupo       : TP 06
+Significado : Estrutura de Repetição por Contagem
+Total MCs   : 2
+
+⚠️  Misconceptions detectados: B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | cab = input("DER AS CORES: ")
+     3 | cab = cab.split(",")
+     4 | vet = zeros(5,dtype=int)
+     5 | 
+     6 | for x in cab:
+     7 | 	if x == "p".upper():
+     8 | 		vet[0] = vet[0] + 1
+     9 | 	elif x == "c".upper():
+    10 | 		vet[1] = vet[1] + 1
+    11 | 	elif x == "r".upper():
+    12 | 		vet[2] = vet[2] + 1
+    13 | 	elif x == "l".upper():
+    14 | 		vet[3] = vet[3] + 1
+    15 | 	elif x == "b".upper():
+    16 | 		vet[4] = vet[4] + 1
+    17 | print(max(vet))
+    18 | print(vet)
+    19 | 		
+    20 | 		
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 13: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 13) / elif ... sem else
+      Contexto:
+              12 | 		vet[2] = vet[2] + 1
+        >>>   13 | 	elif x == "l".upper():
+              14 | 		vet[3] = vet[3] + 1
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 3
+
+  [1] Linha 2: Variável 'cab' com nome muito curto (≤4 chars)
+      Trecho  : cab = ...
+      Contexto:
+               1 | from numpy import*
+        >>>    2 | cab = input("DER AS CORES: ")
+               3 | cab = cab.split(",")
+
+  [2] Linha 3: Variável 'cab' com nome muito curto (≤4 chars)
+      Trecho  : cab = ...
+      Contexto:
+               2 | cab = input("DER AS CORES: ")
+        >>>    3 | cab = cab.split(",")
+               4 | vet = zeros(5,dtype=int)
+
+  [3] Linha 4: Variável 'vet' com nome muito curto (≤4 chars)
+      Trecho  : vet = ...
+      Contexto:
+               3 | cab = cab.split(",")
+        >>>    4 | vet = zeros(5,dtype=int)
+               5 | 
+
+======================================================================

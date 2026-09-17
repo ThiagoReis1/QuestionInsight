@@ -1,0 +1,202 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo     : 199_1270.py
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2016_1_v1.81\2016-1\102\users\1284\codes\199_1270.py
+Assessment  : 199
+Título      : Avaliação Parcial 06 – Repetição por contagem
+Questão     : 1270
+Aluno       : 1284
+Grupo       : TP 06
+Significado : Estrutura de Repetição por Contagem
+Total MCs   : 3
+
+⚠️  Misconceptions detectados: B8, C8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | #Myrna Silva 21600524
+     2 | from numpy import *
+     3 | p=eval(input("valor"))
+     4 | x=array(eval(input("vetor1 ")))
+     5 | y=array(eval(input("vetor2 ")))
+     6 | t=(p)/(p+1)
+     7 | s=y
+     8 | vx=0
+     9 | vy=0
+    10 | j=0
+    11 | if p>1 and (size(x)==size(y)):
+    12 | 	for i in y:
+    13 | 		i=i+x[j]
+    14 | 		j=j+1
+    15 | 	j=0	
+    16 | 	for i in x:
+    17 | 		i=i-s[j]
+    18 | 		j=j+1	
+    19 | 	for i in x:	
+    20 | 		vx=(vx+(abs(i))**t)
+    21 | 	vx=(vx)**(1/t)	
+    22 | 	for i in y:
+    23 | 		vy=(vy+(abs(i))**t)
+    24 | 	vy=(vy)**(1/t)
+    25 | k=vx-vy
+    26 | print(round(k,8))
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 0: B8 detectado pelo VisitorMC3 (localização exata não mapeada)
+      Trecho  : —
+
+▶ C8 — Loop for com sua variável de iteração sobrescrita
+  Ocorrências: 2
+
+  [1] Linha 13: Variável de iteração 'i' sobrescrita no loop
+      Trecho  : i = i + x[j]
+      Contexto:
+              12 | 	for i in y:
+        >>>   13 | 		i=i+x[j]
+              14 | 		j=j+1
+
+  [2] Linha 17: Variável de iteração 'i' sobrescrita no loop
+      Trecho  : i = i - s[j]
+      Contexto:
+              16 | 	for i in x:
+        >>>   17 | 		i=i-s[j]
+              18 | 		j=j+1	
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 18
+
+  [1] Linha 3: Variável 'p' com nome muito curto (≤4 chars)
+      Trecho  : p = ...
+      Contexto:
+               2 | from numpy import *
+        >>>    3 | p=eval(input("valor"))
+               4 | x=array(eval(input("vetor1 ")))
+
+  [2] Linha 4: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+               3 | p=eval(input("valor"))
+        >>>    4 | x=array(eval(input("vetor1 ")))
+               5 | y=array(eval(input("vetor2 ")))
+
+  [3] Linha 5: Variável 'y' com nome muito curto (≤4 chars)
+      Trecho  : y = ...
+      Contexto:
+               4 | x=array(eval(input("vetor1 ")))
+        >>>    5 | y=array(eval(input("vetor2 ")))
+               6 | t=(p)/(p+1)
+
+  [4] Linha 6: Variável 't' com nome muito curto (≤4 chars)
+      Trecho  : t = ...
+      Contexto:
+               5 | y=array(eval(input("vetor2 ")))
+        >>>    6 | t=(p)/(p+1)
+               7 | s=y
+
+  [5] Linha 7: Variável 's' com nome muito curto (≤4 chars)
+      Trecho  : s = ...
+      Contexto:
+               6 | t=(p)/(p+1)
+        >>>    7 | s=y
+               8 | vx=0
+
+  [6] Linha 8: Variável 'vx' com nome muito curto (≤4 chars)
+      Trecho  : vx = ...
+      Contexto:
+               7 | s=y
+        >>>    8 | vx=0
+               9 | vy=0
+
+  [7] Linha 9: Variável 'vy' com nome muito curto (≤4 chars)
+      Trecho  : vy = ...
+      Contexto:
+               8 | vx=0
+        >>>    9 | vy=0
+              10 | j=0
+
+  [8] Linha 10: Variável 'j' com nome muito curto (≤4 chars)
+      Trecho  : j = ...
+      Contexto:
+               9 | vy=0
+        >>>   10 | j=0
+              11 | if p>1 and (size(x)==size(y)):
+
+  [9] Linha 25: Variável 'k' com nome muito curto (≤4 chars)
+      Trecho  : k = ...
+      Contexto:
+              24 | 	vy=(vy)**(1/t)
+        >>>   25 | k=vx-vy
+              26 | print(round(k,8))
+
+  [10] Linha 15: Variável 'j' com nome muito curto (≤4 chars)
+      Trecho  : j = ...
+      Contexto:
+              14 | 		j=j+1
+        >>>   15 | 	j=0	
+              16 | 	for i in x:
+
+  [11] Linha 21: Variável 'vx' com nome muito curto (≤4 chars)
+      Trecho  : vx = ...
+      Contexto:
+              20 | 		vx=(vx+(abs(i))**t)
+        >>>   21 | 	vx=(vx)**(1/t)	
+              22 | 	for i in y:
+
+  [12] Linha 24: Variável 'vy' com nome muito curto (≤4 chars)
+      Trecho  : vy = ...
+      Contexto:
+              23 | 		vy=(vy+(abs(i))**t)
+        >>>   24 | 	vy=(vy)**(1/t)
+              25 | k=vx-vy
+
+  [13] Linha 13: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+              12 | 	for i in y:
+        >>>   13 | 		i=i+x[j]
+              14 | 		j=j+1
+
+  [14] Linha 14: Variável 'j' com nome muito curto (≤4 chars)
+      Trecho  : j = ...
+      Contexto:
+              13 | 		i=i+x[j]
+        >>>   14 | 		j=j+1
+              15 | 	j=0	
+
+  [15] Linha 17: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+              16 | 	for i in x:
+        >>>   17 | 		i=i-s[j]
+              18 | 		j=j+1	
+
+  [16] Linha 18: Variável 'j' com nome muito curto (≤4 chars)
+      Trecho  : j = ...
+      Contexto:
+              17 | 		i=i-s[j]
+        >>>   18 | 		j=j+1	
+              19 | 	for i in x:	
+
+  [17] Linha 20: Variável 'vx' com nome muito curto (≤4 chars)
+      Trecho  : vx = ...
+      Contexto:
+              19 | 	for i in x:	
+        >>>   20 | 		vx=(vx+(abs(i))**t)
+              21 | 	vx=(vx)**(1/t)	
+
+  [18] Linha 23: Variável 'vy' com nome muito curto (≤4 chars)
+      Trecho  : vy = ...
+      Contexto:
+              22 | 	for i in y:
+        >>>   23 | 		vy=(vy+(abs(i))**t)
+              24 | 	vy=(vy)**(1/t)
+
+======================================================================

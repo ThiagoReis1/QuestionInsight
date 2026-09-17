@@ -1,0 +1,91 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo     : 3778_3141.py
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2021_2_v1.81\2021-2\403\users\7190\codes\3778_3141.py
+Assessment  : 3778
+Título      : TP 6: Estrutura de Repetição por Contagem (for)
+Questão     : 3141
+Aluno       : 7190
+Grupo       : TP 06
+Significado : Estrutura de Repetição por Contagem
+Total MCs   : 2
+
+⚠️  Misconceptions detectados: C8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import *
+     2 | 
+     3 | v = array(eval(input(":")))
+     4 | i = 0
+     5 | x = 1/6
+     6 | for i in range(size(v)):
+     7 | 	v[i]= v[i]**x
+     8 | 	i = i+1
+     9 | 
+    10 | n = sum(v)/size(v)
+    11 | m = n**6
+    12 | print(round(m,2))
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ C8 — Loop for com sua variável de iteração sobrescrita
+  Ocorrências: 1
+
+  [1] Linha 8: Variável de iteração 'i' sobrescrita no loop
+      Trecho  : i = i + 1
+      Contexto:
+               7 | 	v[i]= v[i]**x
+        >>>    8 | 	i = i+1
+               9 | 
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 6
+
+  [1] Linha 3: Variável 'v' com nome muito curto (≤4 chars)
+      Trecho  : v = ...
+      Contexto:
+               2 | 
+        >>>    3 | v = array(eval(input(":")))
+               4 | i = 0
+
+  [2] Linha 4: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+               3 | v = array(eval(input(":")))
+        >>>    4 | i = 0
+               5 | x = 1/6
+
+  [3] Linha 5: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+               4 | i = 0
+        >>>    5 | x = 1/6
+               6 | for i in range(size(v)):
+
+  [4] Linha 10: Variável 'n' com nome muito curto (≤4 chars)
+      Trecho  : n = ...
+      Contexto:
+               9 | 
+        >>>   10 | n = sum(v)/size(v)
+              11 | m = n**6
+
+  [5] Linha 11: Variável 'm' com nome muito curto (≤4 chars)
+      Trecho  : m = ...
+      Contexto:
+              10 | n = sum(v)/size(v)
+        >>>   11 | m = n**6
+              12 | print(round(m,2))
+
+  [6] Linha 8: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+               7 | 	v[i]= v[i]**x
+        >>>    8 | 	i = i+1
+               9 | 
+
+======================================================================

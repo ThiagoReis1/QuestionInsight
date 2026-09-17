@@ -1,0 +1,52 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo     : 861_1394.py
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2017_2_v1.81\2017-2\163\users\2975\codes\861_1394.py
+Assessment  : 861
+Título      : Trabalho Prático 02 - Estrutura Condicional Simples e Composta (sem aninhamento)
+Questão     : 1394
+Aluno       : 2975
+Grupo       : TP 02
+Significado : Estrutura Condicional Simples e Composta
+Total MCs   : 2
+
+⚠️  Misconceptions detectados: B8, B9
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | num = int(input())
+     2 | if (num<=20):
+     3 | 	total = 50 * num
+     4 | 	print(round(total,2))
+     5 | elif (num>20):
+     6 | 	total = (50 * 20) + ((num - 20) * 70)
+     7 | 	print(round(total,2))
+     8 | 	
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 2: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 2) / elif ... sem else
+      Contexto:
+               1 | num = int(input())
+        >>>    2 | if (num<=20):
+               3 | 	total = 50 * num
+
+▶ B9 — elif/else retestando condições já verificadas
+  Ocorrências: 1
+
+  [1] Linha 5: elif retesta condição inversa do if da linha 2
+      Trecho  : if num <= 20 ... elif num > 20
+      Contexto:
+               4 | 	print(round(total,2))
+        >>>    5 | elif (num>20):
+               6 | 	total = (50 * 20) + ((num - 20) * 70)
+
+======================================================================

@@ -1,0 +1,187 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo     : 1435_1484.py
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2018_2_v1.81\2018-2\207\users\3729\codes\1435_1484.py
+Assessment  : 1435
+Título      : TP 3 - Condicionais Encadeadas (if/elif/else)
+Questão     : 1484
+Aluno       : 3729
+Grupo       : TP 03
+Significado : Estrutura Condicional Encadeada
+Total MCs   : 3
+
+⚠️  Misconceptions detectados: B4, B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | p = input("escreva o nome do equipamento: ")
+     2 | d = float(input("escreva a capacidade de carga: "))
+     3 | c = p.upper()
+     4 | if (d < 0) or (d > 1000):
+     5 | 	x = "Entrada invalida"
+     6 | elif (c == "COMPUTADOR"):
+     7 | 	x = int(d // 12)
+     8 | elif (c == "FREEZER"):
+     9 | 	x = int(d // 52)
+    10 | elif (c == "FURADEIRA"):
+    11 | 	x = int(d // 1.7)
+    12 | elif(c == "LIQUIDIFICADOR"):
+    13 | 	x = int(d // 1.8)
+    14 | elif(c == "MICROONDAS"):
+    15 | 	x = int(d // 15)
+    16 | elif(c == "NOTEBOOK"):
+    17 | 	x = int(d // 2.5)
+    18 | elif(c == "TELEVISOR"):
+    19 | 	x = int(d // 15)
+    20 | elif(c == "VENTILADOR"):
+    21 | 	x = int(d // 2.4)
+    22 | print(x)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B4 — Comandos repetidos dentro de blocos if-elif-else
+  Ocorrências: 6
+
+  [1] Linha 18: Bloco idêntico ao da linha 14
+      Trecho  : x = int(d // 15)
+      Contexto:
+              17 | 	x = int(d // 2.5)
+        >>>   18 | elif(c == "TELEVISOR"):
+              19 | 	x = int(d // 15)
+
+  [2] Linha 18: Bloco idêntico ao da linha 14
+      Trecho  : x = int(d // 15)
+      Contexto:
+              17 | 	x = int(d // 2.5)
+        >>>   18 | elif(c == "TELEVISOR"):
+              19 | 	x = int(d // 15)
+
+  [3] Linha 18: Bloco idêntico ao da linha 14
+      Trecho  : x = int(d // 15)
+      Contexto:
+              17 | 	x = int(d // 2.5)
+        >>>   18 | elif(c == "TELEVISOR"):
+              19 | 	x = int(d // 15)
+
+  [4] Linha 18: Bloco idêntico ao da linha 14
+      Trecho  : x = int(d // 15)
+      Contexto:
+              17 | 	x = int(d // 2.5)
+        >>>   18 | elif(c == "TELEVISOR"):
+              19 | 	x = int(d // 15)
+
+  [5] Linha 18: Bloco idêntico ao da linha 14
+      Trecho  : x = int(d // 15)
+      Contexto:
+              17 | 	x = int(d // 2.5)
+        >>>   18 | elif(c == "TELEVISOR"):
+              19 | 	x = int(d // 15)
+
+  [6] Linha 18: Bloco idêntico ao da linha 14
+      Trecho  : x = int(d // 15)
+      Contexto:
+              17 | 	x = int(d // 2.5)
+        >>>   18 | elif(c == "TELEVISOR"):
+              19 | 	x = int(d // 15)
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 18: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 18) / elif ... sem else
+      Contexto:
+              17 | 	x = int(d // 2.5)
+        >>>   18 | elif(c == "TELEVISOR"):
+              19 | 	x = int(d // 15)
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 12
+
+  [1] Linha 1: Variável 'p' com nome muito curto (≤4 chars)
+      Trecho  : p = ...
+      Contexto:
+        >>>    1 | p = input("escreva o nome do equipamento: ")
+               2 | d = float(input("escreva a capacidade de carga: "))
+
+  [2] Linha 2: Variável 'd' com nome muito curto (≤4 chars)
+      Trecho  : d = ...
+      Contexto:
+               1 | p = input("escreva o nome do equipamento: ")
+        >>>    2 | d = float(input("escreva a capacidade de carga: "))
+               3 | c = p.upper()
+
+  [3] Linha 3: Variável 'c' com nome muito curto (≤4 chars)
+      Trecho  : c = ...
+      Contexto:
+               2 | d = float(input("escreva a capacidade de carga: "))
+        >>>    3 | c = p.upper()
+               4 | if (d < 0) or (d > 1000):
+
+  [4] Linha 5: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+               4 | if (d < 0) or (d > 1000):
+        >>>    5 | 	x = "Entrada invalida"
+               6 | elif (c == "COMPUTADOR"):
+
+  [5] Linha 7: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+               6 | elif (c == "COMPUTADOR"):
+        >>>    7 | 	x = int(d // 12)
+               8 | elif (c == "FREEZER"):
+
+  [6] Linha 9: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+               8 | elif (c == "FREEZER"):
+        >>>    9 | 	x = int(d // 52)
+              10 | elif (c == "FURADEIRA"):
+
+  [7] Linha 11: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+              10 | elif (c == "FURADEIRA"):
+        >>>   11 | 	x = int(d // 1.7)
+              12 | elif(c == "LIQUIDIFICADOR"):
+
+  [8] Linha 13: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+              12 | elif(c == "LIQUIDIFICADOR"):
+        >>>   13 | 	x = int(d // 1.8)
+              14 | elif(c == "MICROONDAS"):
+
+  [9] Linha 15: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+              14 | elif(c == "MICROONDAS"):
+        >>>   15 | 	x = int(d // 15)
+              16 | elif(c == "NOTEBOOK"):
+
+  [10] Linha 17: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+              16 | elif(c == "NOTEBOOK"):
+        >>>   17 | 	x = int(d // 2.5)
+              18 | elif(c == "TELEVISOR"):
+
+  [11] Linha 19: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+              18 | elif(c == "TELEVISOR"):
+        >>>   19 | 	x = int(d // 15)
+              20 | elif(c == "VENTILADOR"):
+
+  [12] Linha 21: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+              20 | elif(c == "VENTILADOR"):
+        >>>   21 | 	x = int(d // 2.4)
+              22 | print(x)
+
+======================================================================

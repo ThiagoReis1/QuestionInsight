@@ -1,0 +1,108 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo     : 1718_3063.py
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2019_1_v1.81\2019-1\231\users\4339\codes\1718_3063.py
+Assessment  : 1718
+Título      : TP3 - Estrutura Condicional Encadeada
+Questão     : 3063
+Aluno       : 4339
+Grupo       : TP 03
+Significado : Estrutura Condicional Encadeada
+Total MCs   : 3
+
+⚠️  Misconceptions detectados: B4, B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | po=int(input("quantidade de pecas de ouro:"))
+     2 | no = input("nome da armadura (MALHA/INTEIRA/PLACA):")
+     3 | fd= int(input("valor do dado:"))
+     4 | 
+     5 | if((fd < 1) or(fd > 8)):
+     6 | 	print("Entrada invalida")
+     7 | elif((po != 200)and(po != 50)and(po != 100)):
+     8 | 	print("PO insuficiente")
+     9 | elif((no != "MALHA") or (no != "INTEIRA") or (no !="PLACA")):
+    10 | 	print("Entrada invalida")
+    11 | elif((po==200)and(no == "INTEIRA")):
+    12 | 	resi= 30*fd-20
+    13 | 	print(resi)
+    14 | elif((po==50) and (no=="MALHA") ):
+    15 | 	resi=15*fd-1
+    16 | 	print (resi)
+    17 | elif((po==100) and (no=="PLACA")):
+    18 | 	resi=20*fd-18
+    19 | 	print(resi)
+    20 | 	
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B4 — Comandos repetidos dentro de blocos if-elif-else
+  Ocorrências: 1
+
+  [1] Linha 9: Bloco idêntico ao da linha 5
+      Trecho  : print('Entrada invalida')
+      Contexto:
+               8 | 	print("PO insuficiente")
+        >>>    9 | elif((no != "MALHA") or (no != "INTEIRA") or (no !="PLACA")):
+              10 | 	print("Entrada invalida")
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 14: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 14) / elif ... sem else
+      Contexto:
+              13 | 	print(resi)
+        >>>   14 | elif((po==50) and (no=="MALHA") ):
+              15 | 	resi=15*fd-1
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 6
+
+  [1] Linha 1: Variável 'po' com nome muito curto (≤4 chars)
+      Trecho  : po = ...
+      Contexto:
+        >>>    1 | po=int(input("quantidade de pecas de ouro:"))
+               2 | no = input("nome da armadura (MALHA/INTEIRA/PLACA):")
+
+  [2] Linha 2: Variável 'no' com nome muito curto (≤4 chars)
+      Trecho  : no = ...
+      Contexto:
+               1 | po=int(input("quantidade de pecas de ouro:"))
+        >>>    2 | no = input("nome da armadura (MALHA/INTEIRA/PLACA):")
+               3 | fd= int(input("valor do dado:"))
+
+  [3] Linha 3: Variável 'fd' com nome muito curto (≤4 chars)
+      Trecho  : fd = ...
+      Contexto:
+               2 | no = input("nome da armadura (MALHA/INTEIRA/PLACA):")
+        >>>    3 | fd= int(input("valor do dado:"))
+               4 | 
+
+  [4] Linha 12: Variável 'resi' com nome muito curto (≤4 chars)
+      Trecho  : resi = ...
+      Contexto:
+              11 | elif((po==200)and(no == "INTEIRA")):
+        >>>   12 | 	resi= 30*fd-20
+              13 | 	print(resi)
+
+  [5] Linha 15: Variável 'resi' com nome muito curto (≤4 chars)
+      Trecho  : resi = ...
+      Contexto:
+              14 | elif((po==50) and (no=="MALHA") ):
+        >>>   15 | 	resi=15*fd-1
+              16 | 	print (resi)
+
+  [6] Linha 18: Variável 'resi' com nome muito curto (≤4 chars)
+      Trecho  : resi = ...
+      Contexto:
+              17 | elif((po==100) and (no=="PLACA")):
+        >>>   18 | 	resi=20*fd-18
+              19 | 	print(resi)
+
+======================================================================

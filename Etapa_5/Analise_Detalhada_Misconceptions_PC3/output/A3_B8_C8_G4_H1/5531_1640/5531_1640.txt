@@ -1,0 +1,112 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo     : 5531_1640.py
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2023_2_v1.81\2023-2\562\users\9201\codes\5531_1640.py
+Assessment  : 5531
+Título      : TP 6: Estrutura de Repetição por Contagem (for)
+Questão     : 1640
+Aluno       : 9201
+Grupo       : TP 06
+Significado : Estrutura de Repetição por Contagem
+Total MCs   : 5
+
+⚠️  Misconceptions detectados: A3, B8, C8, G4, H1
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import* 
+     2 | 
+     3 | a = array(eval(input("digite:")))
+     4 | 
+     5 | d = 0
+     6 | for i in range(size(a)):
+     7 | 	if a[i] % 2 != 0 :
+     8 | 		d +=1
+     9 | 	i+=1
+    10 | print(d)
+    11 | 
+    12 | b = zeros(d,dtype=int)
+    13 | c = 0
+    14 | for i in range(size(b)):
+    15 | 	if b[i] % 2 != 0:
+    16 | 		print(b)
+    17 | 	i+=1
+    18 | pri
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 1
+
+  [1] Linha 13: Variável 'c' declarada mas nunca utilizada
+      Trecho  : c = ...
+      Contexto:
+              12 | b = zeros(d,dtype=int)
+        >>>   13 | c = 0
+              14 | for i in range(size(b)):
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 0: B8 detectado pelo VisitorMC3 (localização exata não mapeada)
+      Trecho  : —
+
+▶ C8 — Loop for com sua variável de iteração sobrescrita
+  Ocorrências: 2
+
+  [1] Linha 9: Variável de iteração 'i' modificada no loop
+      Trecho  : i += 1
+      Contexto:
+               8 | 		d +=1
+        >>>    9 | 	i+=1
+              10 | print(d)
+
+  [2] Linha 17: Variável de iteração 'i' modificada no loop
+      Trecho  : i += 1
+      Contexto:
+              16 | 		print(b)
+        >>>   17 | 	i+=1
+              18 | pri
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 4
+
+  [1] Linha 3: Variável 'a' com nome muito curto (≤4 chars)
+      Trecho  : a = ...
+      Contexto:
+               2 | 
+        >>>    3 | a = array(eval(input("digite:")))
+               4 | 
+
+  [2] Linha 5: Variável 'd' com nome muito curto (≤4 chars)
+      Trecho  : d = ...
+      Contexto:
+               4 | 
+        >>>    5 | d = 0
+               6 | for i in range(size(a)):
+
+  [3] Linha 12: Variável 'b' com nome muito curto (≤4 chars)
+      Trecho  : b = ...
+      Contexto:
+              11 | 
+        >>>   12 | b = zeros(d,dtype=int)
+              13 | c = 0
+
+  [4] Linha 13: Variável 'c' com nome muito curto (≤4 chars)
+      Trecho  : c = ...
+      Contexto:
+              12 | b = zeros(d,dtype=int)
+        >>>   13 | c = 0
+              14 | for i in range(size(b)):
+
+▶ H1 — Declaração sem efeito
+  Ocorrências: 1
+
+  [1] Linha 0: H1 detectado pelo VisitorMC3 (localização exata não mapeada)
+      Trecho  : —
+
+======================================================================

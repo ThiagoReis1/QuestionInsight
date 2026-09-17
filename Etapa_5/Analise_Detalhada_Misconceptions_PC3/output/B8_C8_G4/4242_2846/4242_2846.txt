@@ -1,0 +1,71 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo     : 4242_2846.py
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2022_1_v1.81\2022-1\443\users\7584\codes\4242_2846.py
+Assessment  : 4242
+Título      : TP 6: Estrutura de Repetição por Contagem (for)
+Questão     : 2846
+Aluno       : 7584
+Grupo       : TP 06
+Significado : Estrutura de Repetição por Contagem
+Total MCs   : 3
+
+⚠️  Misconceptions detectados: B8, C8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import *
+     2 | 
+     3 | num = array(eval(input("Numeros: ")))
+     4 | 
+     5 | i = 0
+     6 | 
+     7 | #vet = zeros(num,  dtype = int)
+     8 | 
+     9 | for i in range(size(num)):
+    10 | 	if(num[i] < 10):
+    11 | 		num[i] = num[i]*2
+    12 | 	i += 1
+    13 | print(num)
+    14 | 	
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 0: B8 detectado pelo VisitorMC3 (localização exata não mapeada)
+      Trecho  : —
+
+▶ C8 — Loop for com sua variável de iteração sobrescrita
+  Ocorrências: 1
+
+  [1] Linha 12: Variável de iteração 'i' modificada no loop
+      Trecho  : i += 1
+      Contexto:
+              11 | 		num[i] = num[i]*2
+        >>>   12 | 	i += 1
+              13 | print(num)
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 2
+
+  [1] Linha 3: Variável 'num' com nome muito curto (≤4 chars)
+      Trecho  : num = ...
+      Contexto:
+               2 | 
+        >>>    3 | num = array(eval(input("Numeros: ")))
+               4 | 
+
+  [2] Linha 5: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+               4 | 
+        >>>    5 | i = 0
+               6 | 
+
+======================================================================

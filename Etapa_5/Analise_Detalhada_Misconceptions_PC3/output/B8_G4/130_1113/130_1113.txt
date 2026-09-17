@@ -1,0 +1,149 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo     : 130_1113.py
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2016_1_v1.81\2016-1\108\users\1473\codes\130_1113.py
+Assessment  : 130
+Título      : Avaliação Parcial 03 – Estruturas Condicionais Encadeadas
+Questão     : 1113
+Aluno       : 1473
+Grupo       : TP 03
+Significado : Estrutura Condicional Encadeada
+Total MCs   : 2
+
+⚠️  Misconceptions detectados: B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | x=int(input("Qual a idade: "))
+     2 | y=float(input("Qual o peso: "))
+     3 | if((x<0)or(x>130)or(y<0)or(y>550)):
+     4 | 	print("Entradas:",x,"anos e",y,"kg") 
+     5 | 	print("Dados invalidos")
+     6 | elif((x<=20)and(y<=60)):
+     7 | 	print("Entradas:",x,"anos e",y,"kg")
+     8 | 	print("Grupo de risco: 9")
+     9 | elif((x<=20)and(60<y<=90)):
+    10 | 	print("Entradas:",x,"anos e",y,"kg")
+    11 | 	print("Grupo de risco: 8")
+    12 | elif((x<=20)and(90<y)):
+    13 | 	print("Entradas:",x,"anos e",y,"kg")
+    14 | 	print("Grupo de risco: 7")
+    15 | elif((120<x<=50)and(y<=60)):
+    16 | 	print("Entradas:",x,"anos e",y,"kg")
+    17 | 	print("Grupo de risco: 6")
+    18 | elif((120<x<=50)and(60<y<=90)):
+    19 | 	print("Entradas:",x,"anos e",y,"kg")
+    20 | 	print("Grupo de risco: 5")
+    21 | elif((120<x<=50)and(90<y)):
+    22 | 	print("Entradas:",x,"anos e",y,"kg")
+    23 | 	print("Grupo de risco: 4")
+    24 | elif((x>50)and(y<=60)):
+    25 | 	print("Entradas:",x,"anos e",y,"kg")
+    26 | 	print("Grupo de risco: 3")
+    27 | elif((x>50)and(60<y<=90)):
+    28 | 	print("Entradas:",x,"anos e",y,"kg")
+    29 | 	print("Grupo de risco: 2")
+    30 | elif((x>50)and(90<y)):
+    31 | 	print("Entradas:",x,"anos e",y,"kg")
+    32 | 	print("Grupo de risco: 1")
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 27: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 27) / elif ... sem else
+      Contexto:
+              26 | 	print("Grupo de risco: 3")
+        >>>   27 | elif((x>50)and(60<y<=90)):
+              28 | 	print("Entradas:",x,"anos e",y,"kg")
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 2
+
+  [1] Linha 1: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+        >>>    1 | x=int(input("Qual a idade: "))
+               2 | y=float(input("Qual o peso: "))
+
+  [2] Linha 2: Variável 'y' com nome muito curto (≤4 chars)
+      Trecho  : y = ...
+      Contexto:
+               1 | x=int(input("Qual a idade: "))
+        >>>    2 | y=float(input("Qual o peso: "))
+               3 | if((x<0)or(x>130)or(y<0)or(y>550)):
+
+======================================================================
+        >>>    2 | P=float(input("Insira o peso:"))
+               3 | if ((I<=0) or (I>=130) or (P<=0.0) or (P>=550.0)):
+
+  [3] Linha 7: Variável 'k' com nome muito curto (≤4 chars)
+      Trecho  : k = ...
+      Contexto:
+               6 | elif ((0<I<=20) and (0<P<=60)):
+        >>>    7 | 	k=9
+               8 | 	print ("Entradas:",I,"anos e",P,"kg")
+
+  [4] Linha 11: Variável 'k' com nome muito curto (≤4 chars)
+      Trecho  : k = ...
+      Contexto:
+              10 | elif ((0<I<=20) and (60<P<=90)):
+        >>>   11 | 	k=8
+              12 | 	print ("Entradas:",I,"anos e",P,"kg")
+
+  [5] Linha 15: Variável 'k' com nome muito curto (≤4 chars)
+      Trecho  : k = ...
+      Contexto:
+              14 | elif ((0<I<=20) and (P>90)):
+        >>>   15 | 	k=7
+              16 | 	print ("Entradas:",I,"anos e",P,"kg")
+
+  [6] Linha 19: Variável 'k' com nome muito curto (≤4 chars)
+      Trecho  : k = ...
+      Contexto:
+              18 | elif ((20>I>=50) and (0<P<=60)):
+        >>>   19 | 	k=6
+              20 | 	print ("Entradas:",I,"anos e",P,"kg")
+
+  [7] Linha 23: Variável 'k' com nome muito curto (≤4 chars)
+      Trecho  : k = ...
+      Contexto:
+              22 | elif ((20>I>=50) and (60<P<=90)):
+        >>>   23 | 	k=5
+              24 | 	print ("Entradas:",I,"anos e",P,"kg")
+
+  [8] Linha 27: Variável 'k' com nome muito curto (≤4 chars)
+      Trecho  : k = ...
+      Contexto:
+              26 | elif ((20>I>=50) and (P>90)):
+        >>>   27 | 	k=4
+              28 | 	print ("Entradas:",I,"anos e",P,"kg")
+
+  [9] Linha 31: Variável 'k' com nome muito curto (≤4 chars)
+      Trecho  : k = ...
+      Contexto:
+              30 | elif ((I>50) and (0>P>=60)):
+        >>>   31 | 	k=3
+              32 | 	print ("Entradas:",I,"anos e",P,"kg")
+
+  [10] Linha 35: Variável 'k' com nome muito curto (≤4 chars)
+      Trecho  : k = ...
+      Contexto:
+              34 | elif ((I>50) and (60<P<=90)):
+        >>>   35 | 	k=2
+              36 | 	print ("Entradas:",I,"anos e",P,"kg")
+
+  [11] Linha 39: Variável 'k' com nome muito curto (≤4 chars)
+      Trecho  : k = ...
+      Contexto:
+              38 | elif	((I>50) and (P>90)):
+        >>>   39 | 	k=1
+              40 | 	print ("Entradas:",I,"anos e",P,"kg")
+
+======================================================================

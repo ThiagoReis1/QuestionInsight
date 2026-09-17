@@ -1,0 +1,71 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo     : 711_1652.py
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2017_1_v1.81\2017-1\135\users\2134\codes\711_1652.py
+Assessment  : 711
+Título      : Trabalho Prático 6: Repetição por Contagem
+Questão     : 1652
+Aluno       : 2134
+Grupo       : TP 06
+Significado : Estrutura de Repetição por Contagem
+Total MCs   : 2
+
+⚠️  Misconceptions detectados: B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | 
+     3 | a=input("digite:").split(',')
+     4 | 
+     5 | vet2= zeros(5, dtype=int)
+     6 | 
+     7 | for elemento in a:
+     8 | 	if elemento.upper()=="B":
+     9 | 		vet2[0]=vet2[0]+1
+    10 | 	elif elemento.upper()=="PA":
+    11 | 		vet2[1]=vet2[1]+1
+    12 | 	elif elemento.upper()=="PR":
+    13 | 		vet2[2]=vet2[2]+1
+    14 | 	elif elemento.upper()=="A":
+    15 | 		vet2[3]=vet2[3]+1
+    16 | 	elif elemento.upper()=="I":
+    17 | 		vet2[4]=vet2[4]+1
+    18 | 
+    19 | print(max(vet2))
+    20 | print(vet2)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 14: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 14) / elif ... sem else
+      Contexto:
+              13 | 		vet2[2]=vet2[2]+1
+        >>>   14 | 	elif elemento.upper()=="A":
+              15 | 		vet2[3]=vet2[3]+1
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 2
+
+  [1] Linha 3: Variável 'a' com nome muito curto (≤4 chars)
+      Trecho  : a = ...
+      Contexto:
+               2 | 
+        >>>    3 | a=input("digite:").split(',')
+               4 | 
+
+  [2] Linha 5: Variável 'vet2' com nome muito curto (≤4 chars)
+      Trecho  : vet2 = ...
+      Contexto:
+               4 | 
+        >>>    5 | vet2= zeros(5, dtype=int)
+               6 | 
+
+======================================================================

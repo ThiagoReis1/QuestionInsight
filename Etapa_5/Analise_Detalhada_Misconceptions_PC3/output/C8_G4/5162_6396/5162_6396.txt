@@ -1,0 +1,76 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo     : 5162_6396.py
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2023_1_v1.81\2023-1\528\users\8782\codes\5162_6396.py
+Assessment  : 5162
+Título      : TP 6: Estrutura de Repetição por Contagem (for)
+Questão     : 6396
+Aluno       : 8782
+Grupo       : TP 06
+Significado : Estrutura de Repetição por Contagem
+Total MCs   : 2
+
+⚠️  Misconceptions detectados: C8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | r = array (eval ( input ( "numeros: "))) 
+     3 | z = zeros (size(r),dtype=int)
+     4 | e=0
+     5 | for e in range (size(r)):
+     6 | 	  if r[e] ==0:
+     7 | 	  		z[e]=0 
+     8 | 	  else:
+     9 | 	  		z[e]= r[e]*2
+    10 | 	  e=e+1
+    11 | print(z)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ C8 — Loop for com sua variável de iteração sobrescrita
+  Ocorrências: 1
+
+  [1] Linha 10: Variável de iteração 'e' sobrescrita no loop
+      Trecho  : e = e + 1
+      Contexto:
+               9 | 	  		z[e]= r[e]*2
+        >>>   10 | 	  e=e+1
+              11 | print(z)
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 4
+
+  [1] Linha 2: Variável 'r' com nome muito curto (≤4 chars)
+      Trecho  : r = ...
+      Contexto:
+               1 | from numpy import*
+        >>>    2 | r = array (eval ( input ( "numeros: "))) 
+               3 | z = zeros (size(r),dtype=int)
+
+  [2] Linha 3: Variável 'z' com nome muito curto (≤4 chars)
+      Trecho  : z = ...
+      Contexto:
+               2 | r = array (eval ( input ( "numeros: "))) 
+        >>>    3 | z = zeros (size(r),dtype=int)
+               4 | e=0
+
+  [3] Linha 4: Variável 'e' com nome muito curto (≤4 chars)
+      Trecho  : e = ...
+      Contexto:
+               3 | z = zeros (size(r),dtype=int)
+        >>>    4 | e=0
+               5 | for e in range (size(r)):
+
+  [4] Linha 10: Variável 'e' com nome muito curto (≤4 chars)
+      Trecho  : e = ...
+      Contexto:
+               9 | 	  		z[e]= r[e]*2
+        >>>   10 | 	  e=e+1
+              11 | print(z)
+
+======================================================================

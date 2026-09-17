@@ -1,0 +1,126 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo     : 199_1257.py
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2016_1_v1.81\2016-1\102\users\1393\codes\199_1257.py
+Assessment  : 199
+Título      : Avaliação Parcial 06 – Repetição por contagem
+Questão     : 1257
+Aluno       : 1393
+Grupo       : TP 06
+Significado : Estrutura de Repetição por Contagem
+Total MCs   : 2
+
+⚠️  Misconceptions detectados: B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import *
+     2 | x = array(zeros(2,dtype = int))
+     3 | v = array(eval(input(": ")))
+     4 | b = max(v)
+     5 | a = min(v)
+     6 | 
+     7 | c = 0.85*a + 0.15*b
+     8 | d = 0.4*a + 0.6*b
+     9 | s = 0
+    10 | k = 0
+    11 | for i in range(size(v)):
+    12 | 	if v[i] >= a and v[i] < c:
+    13 | 		s = s + 1
+    14 | 		x[0] = s 
+    15 | 	elif v[i] >= d and v[i] < b:
+    16 | 		k = k + 1
+    17 | 		x[1] = k
+    18 | print(x)
+    19 | 
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 12: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 12) / elif ... sem else
+      Contexto:
+              11 | for i in range(size(v)):
+        >>>   12 | 	if v[i] >= a and v[i] < c:
+              13 | 		s = s + 1
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 10
+
+  [1] Linha 2: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+               1 | from numpy import *
+        >>>    2 | x = array(zeros(2,dtype = int))
+               3 | v = array(eval(input(": ")))
+
+  [2] Linha 3: Variável 'v' com nome muito curto (≤4 chars)
+      Trecho  : v = ...
+      Contexto:
+               2 | x = array(zeros(2,dtype = int))
+        >>>    3 | v = array(eval(input(": ")))
+               4 | b = max(v)
+
+  [3] Linha 4: Variável 'b' com nome muito curto (≤4 chars)
+      Trecho  : b = ...
+      Contexto:
+               3 | v = array(eval(input(": ")))
+        >>>    4 | b = max(v)
+               5 | a = min(v)
+
+  [4] Linha 5: Variável 'a' com nome muito curto (≤4 chars)
+      Trecho  : a = ...
+      Contexto:
+               4 | b = max(v)
+        >>>    5 | a = min(v)
+               6 | 
+
+  [5] Linha 7: Variável 'c' com nome muito curto (≤4 chars)
+      Trecho  : c = ...
+      Contexto:
+               6 | 
+        >>>    7 | c = 0.85*a + 0.15*b
+               8 | d = 0.4*a + 0.6*b
+
+  [6] Linha 8: Variável 'd' com nome muito curto (≤4 chars)
+      Trecho  : d = ...
+      Contexto:
+               7 | c = 0.85*a + 0.15*b
+        >>>    8 | d = 0.4*a + 0.6*b
+               9 | s = 0
+
+  [7] Linha 9: Variável 's' com nome muito curto (≤4 chars)
+      Trecho  : s = ...
+      Contexto:
+               8 | d = 0.4*a + 0.6*b
+        >>>    9 | s = 0
+              10 | k = 0
+
+  [8] Linha 10: Variável 'k' com nome muito curto (≤4 chars)
+      Trecho  : k = ...
+      Contexto:
+               9 | s = 0
+        >>>   10 | k = 0
+              11 | for i in range(size(v)):
+
+  [9] Linha 13: Variável 's' com nome muito curto (≤4 chars)
+      Trecho  : s = ...
+      Contexto:
+              12 | 	if v[i] >= a and v[i] < c:
+        >>>   13 | 		s = s + 1
+              14 | 		x[0] = s 
+
+  [10] Linha 16: Variável 'k' com nome muito curto (≤4 chars)
+      Trecho  : k = ...
+      Contexto:
+              15 | 	elif v[i] >= d and v[i] < b:
+        >>>   16 | 		k = k + 1
+              17 | 		x[1] = k
+
+======================================================================

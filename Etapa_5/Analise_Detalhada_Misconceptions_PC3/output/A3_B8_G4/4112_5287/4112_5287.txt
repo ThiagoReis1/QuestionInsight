@@ -1,0 +1,125 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo     : 4112_5287.py
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2022_1_v1.81\2022-1\444\users\7702\codes\4112_5287.py
+Assessment  : 4112
+Título      : TP 04: Estrutura de Repetição por Condição
+Questão     : 5287
+Aluno       : 7702
+Grupo       : TP 04
+Significado : Estrutura de Repetição por Condição
+Total MCs   : 3
+
+⚠️  Misconceptions detectados: A3, B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | m = input("moeda: ").upper()
+     2 | soma = 0
+     3 | cont = 0
+     4 | t = 0
+     5 | p = 0
+     6 | while(m != "S"):
+     7 | 	if(m == "CARA"):
+     8 | 		cont = cont + 1           
+     9 | 	elif( m == "COROA"):
+    10 | 		soma = soma + 1
+    11 | 	t = soma + cont
+    12 | 	m = input("moeda: ").upper()	
+    13 | print(t)
+    14 | print(round((cont/t)*100,2))
+    15 | 
+    16 | 		
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 1
+
+  [1] Linha 5: Variável 'p' declarada mas nunca utilizada
+      Trecho  : p = ...
+      Contexto:
+               4 | t = 0
+        >>>    5 | p = 0
+               6 | while(m != "S"):
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 7: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 7) / elif ... sem else
+      Contexto:
+               6 | while(m != "S"):
+        >>>    7 | 	if(m == "CARA"):
+               8 | 		cont = cont + 1           
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 9
+
+  [1] Linha 1: Variável 'm' com nome muito curto (≤4 chars)
+      Trecho  : m = ...
+      Contexto:
+        >>>    1 | m = input("moeda: ").upper()
+               2 | soma = 0
+
+  [2] Linha 2: Variável 'soma' com nome muito curto (≤4 chars)
+      Trecho  : soma = ...
+      Contexto:
+               1 | m = input("moeda: ").upper()
+        >>>    2 | soma = 0
+               3 | cont = 0
+
+  [3] Linha 3: Variável 'cont' com nome muito curto (≤4 chars)
+      Trecho  : cont = ...
+      Contexto:
+               2 | soma = 0
+        >>>    3 | cont = 0
+               4 | t = 0
+
+  [4] Linha 4: Variável 't' com nome muito curto (≤4 chars)
+      Trecho  : t = ...
+      Contexto:
+               3 | cont = 0
+        >>>    4 | t = 0
+               5 | p = 0
+
+  [5] Linha 5: Variável 'p' com nome muito curto (≤4 chars)
+      Trecho  : p = ...
+      Contexto:
+               4 | t = 0
+        >>>    5 | p = 0
+               6 | while(m != "S"):
+
+  [6] Linha 11: Variável 't' com nome muito curto (≤4 chars)
+      Trecho  : t = ...
+      Contexto:
+              10 | 		soma = soma + 1
+        >>>   11 | 	t = soma + cont
+              12 | 	m = input("moeda: ").upper()	
+
+  [7] Linha 12: Variável 'm' com nome muito curto (≤4 chars)
+      Trecho  : m = ...
+      Contexto:
+              11 | 	t = soma + cont
+        >>>   12 | 	m = input("moeda: ").upper()	
+              13 | print(t)
+
+  [8] Linha 8: Variável 'cont' com nome muito curto (≤4 chars)
+      Trecho  : cont = ...
+      Contexto:
+               7 | 	if(m == "CARA"):
+        >>>    8 | 		cont = cont + 1           
+               9 | 	elif( m == "COROA"):
+
+  [9] Linha 10: Variável 'soma' com nome muito curto (≤4 chars)
+      Trecho  : soma = ...
+      Contexto:
+               9 | 	elif( m == "COROA"):
+        >>>   10 | 		soma = soma + 1
+              11 | 	t = soma + cont
+
+======================================================================

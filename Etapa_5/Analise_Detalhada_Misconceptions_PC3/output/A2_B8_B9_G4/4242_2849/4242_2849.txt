@@ -1,0 +1,89 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo     : 4242_2849.py
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2022_1_v1.81\2022-1\443\users\7635\codes\4242_2849.py
+Assessment  : 4242
+Título      : TP 6: Estrutura de Repetição por Contagem (for)
+Questão     : 2849
+Aluno       : 7635
+Grupo       : TP 06
+Significado : Estrutura de Repetição por Contagem
+Total MCs   : 4
+
+⚠️  Misconceptions detectados: A2, B8, B9, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | 
+     3 | v = array(eval(input("")))
+     4 | a = 0
+     5 | for i in range(size(v)):
+     6 | 	if(v[i] != 0):
+     7 | 		v[i] = v[i]
+     8 | 		a = v[i] + a
+     9 | 		
+    10 | 	elif(v[i] == 0):
+    11 | 		a = a * 0
+    12 | print(a)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A2 — Variável atribuída a si mesma
+  Ocorrências: 1
+
+  [1] Linha 0: A2 detectado pelo VisitorMC3 (localização exata não mapeada)
+      Trecho  : —
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 6: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 6) / elif ... sem else
+      Contexto:
+               5 | for i in range(size(v)):
+        >>>    6 | 	if(v[i] != 0):
+               7 | 		v[i] = v[i]
+
+▶ B9 — elif/else retestando condições já verificadas
+  Ocorrências: 1
+
+  [1] Linha 0: B9 detectado pelo VisitorMC3 (localização exata não mapeada)
+      Trecho  : —
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 4
+
+  [1] Linha 3: Variável 'v' com nome muito curto (≤4 chars)
+      Trecho  : v = ...
+      Contexto:
+               2 | 
+        >>>    3 | v = array(eval(input("")))
+               4 | a = 0
+
+  [2] Linha 4: Variável 'a' com nome muito curto (≤4 chars)
+      Trecho  : a = ...
+      Contexto:
+               3 | v = array(eval(input("")))
+        >>>    4 | a = 0
+               5 | for i in range(size(v)):
+
+  [3] Linha 8: Variável 'a' com nome muito curto (≤4 chars)
+      Trecho  : a = ...
+      Contexto:
+               7 | 		v[i] = v[i]
+        >>>    8 | 		a = v[i] + a
+               9 | 		
+
+  [4] Linha 11: Variável 'a' com nome muito curto (≤4 chars)
+      Trecho  : a = ...
+      Contexto:
+              10 | 	elif(v[i] == 0):
+        >>>   11 | 		a = a * 0
+              12 | print(a)
+
+======================================================================

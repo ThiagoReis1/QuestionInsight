@@ -1,0 +1,89 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo     : 720_2152.py
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2017_1_v1.81\2017-1\137\users\2361\codes\720_2152.py
+Assessment  : 720
+Título      : Trabalho Prático 6: Repetição por Contagem
+Questão     : 2152
+Aluno       : 2361
+Grupo       : TP 06
+Significado : Estrutura de Repetição por Contagem
+Total MCs   : 2
+
+⚠️  Misconceptions detectados: B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import *
+     2 | alu = array(eval(input("Digite Alunos: ")))
+     3 | x = 0
+     4 | 
+     5 | for i in range(size(alu)):
+     6 | 	if (alu[i] % 2 != 0):
+     7 | 		x = x + 1
+     8 | vet = zeros(x, dtype = int)
+     9 | y = 0
+    10 | for j in range(size(alu)):
+    11 | 	if (alu[j] % 2 != 0):
+    12 | 		vet[y] = alu[j]
+    13 | 		y = y + 1
+    14 | print (vet)	
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 0: B8 detectado pelo VisitorMC3 (localização exata não mapeada)
+      Trecho  : —
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 6
+
+  [1] Linha 2: Variável 'alu' com nome muito curto (≤4 chars)
+      Trecho  : alu = ...
+      Contexto:
+               1 | from numpy import *
+        >>>    2 | alu = array(eval(input("Digite Alunos: ")))
+               3 | x = 0
+
+  [2] Linha 3: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+               2 | alu = array(eval(input("Digite Alunos: ")))
+        >>>    3 | x = 0
+               4 | 
+
+  [3] Linha 8: Variável 'vet' com nome muito curto (≤4 chars)
+      Trecho  : vet = ...
+      Contexto:
+               7 | 		x = x + 1
+        >>>    8 | vet = zeros(x, dtype = int)
+               9 | y = 0
+
+  [4] Linha 9: Variável 'y' com nome muito curto (≤4 chars)
+      Trecho  : y = ...
+      Contexto:
+               8 | vet = zeros(x, dtype = int)
+        >>>    9 | y = 0
+              10 | for j in range(size(alu)):
+
+  [5] Linha 7: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+               6 | 	if (alu[i] % 2 != 0):
+        >>>    7 | 		x = x + 1
+               8 | vet = zeros(x, dtype = int)
+
+  [6] Linha 13: Variável 'y' com nome muito curto (≤4 chars)
+      Trecho  : y = ...
+      Contexto:
+              12 | 		vet[y] = alu[j]
+        >>>   13 | 		y = y + 1
+              14 | print (vet)	
+
+======================================================================

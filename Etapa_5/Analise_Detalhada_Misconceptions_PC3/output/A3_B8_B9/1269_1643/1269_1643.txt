@@ -1,0 +1,69 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo     : 1269_1643.py
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2018_1_v1.81\2018-1\187\users\3219\codes\1269_1643.py
+Assessment  : 1269
+Título      : TP 6: Estrutura de Repetição por Contagem (for)
+Questão     : 1643
+Aluno       : 3219
+Grupo       : TP 06
+Significado : Estrutura de Repetição por Contagem
+Total MCs   : 3
+
+⚠️  Misconceptions detectados: A3, B8, B9
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | 
+     3 | vet= array(eval(input()))
+     4 | i=0
+     5 | 
+     6 | 
+     7 | for x in vet:
+     8 | 	if(x >= 5):
+     9 | 		situacao= aprov
+    10 | 		i=i+1
+    11 | 	elif(x < 5):
+    12 | 		situacao= reprov
+    13 | 		i=i+1
+    14 | 		
+    15 | print(x)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 1
+
+  [1] Linha 9: Variável 'situacao' declarada mas nunca utilizada
+      Trecho  : situacao = ...
+      Contexto:
+               8 | 	if(x >= 5):
+        >>>    9 | 		situacao= aprov
+              10 | 		i=i+1
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 8: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 8) / elif ... sem else
+      Contexto:
+               7 | for x in vet:
+        >>>    8 | 	if(x >= 5):
+               9 | 		situacao= aprov
+
+▶ B9 — elif/else retestando condições já verificadas
+  Ocorrências: 1
+
+  [1] Linha 11: elif retesta condição inversa do if da linha 8
+      Trecho  : if x >= 5 ... elif x < 5
+      Contexto:
+              10 | 		i=i+1
+        >>>   11 | 	elif(x < 5):
+              12 | 		situacao= reprov
+
+======================================================================

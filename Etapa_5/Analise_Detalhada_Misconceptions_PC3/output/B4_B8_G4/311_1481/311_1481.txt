@@ -1,0 +1,143 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo     : 311_1481.py
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2016_2_v1.81\2016-2\127\users\1921\codes\311_1481.py
+Assessment  : 311
+Título      : Trabalho Prático 03 - Estrutura Condicional Encadeada
+Questão     : 1481
+Aluno       : 1921
+Grupo       : TP 03
+Significado : Estrutura Condicional Encadeada
+Total MCs   : 3
+
+⚠️  Misconceptions detectados: B4, B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | alimento = input("alimento a ser ingerido: ")
+     2 | caloria_do_dia = int(input("a caloria correspondente do dia: "))
+     3 | if((caloria_do_dia >= 0) and (caloria_do_dia <= 10000)):
+     4 | 	if(alimento == "BANANA"):
+     5 | 		a = caloria_do_dia/0.97
+     6 | 		print(round(a, 2))
+     7 | 	elif(alimento == "BIFE"):
+     8 | 		b = caloria_do_dia/2.95
+     9 | 		print(round(b, 2))
+    10 | 	elif(alimento == "BRIGADEIRO"):
+    11 | 		c = caloria_do_dia/5
+    12 | 		print(round(c, 2))
+    13 | 	elif(alimento == "FEIJOADA"):
+    14 | 		d = caloria_do_dia/1.27
+    15 | 		print(round(d, 2))
+    16 | 	elif(alimento == "GELATINA"):
+    17 | 		e = caloria_do_dia/0.67
+    18 | 		print(round(e, 2))
+    19 | 	elif(alimento == "MAMAO"):
+    20 | 		f = caloria_do_dia/0.68
+    21 | 		print(round(f, 2))
+    22 | 	elif(alimento == "OMELETE"):
+    23 | 		g = caloria_do_dia/1.04
+    24 | 		print(round(g, 2))
+    25 | 	elif(alimento == "TOMATE"):
+    26 | 		h = caloria_do_dia/0.2
+    27 | 		print(round(h, 2))
+    28 | elif((caloria_do_dia <= 0) or (caloria_do_dia >= 10000)):
+    29 | 	print("Entrada invalida")
+    30 | else:
+    31 | 	print("Entrada invalida")
+    32 | 	
+    33 | 	
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B4 — Comandos repetidos dentro de blocos if-elif-else
+  Ocorrências: 2
+
+  [1] Linha 28: Bloco idêntico ao da linha 28
+      Trecho  : print('Entrada invalida')
+      Contexto:
+              27 | 		print(round(h, 2))
+        >>>   28 | elif((caloria_do_dia <= 0) or (caloria_do_dia >= 10000)):
+              29 | 	print("Entrada invalida")
+
+  [2] Linha 28: Bloco idêntico ao da linha 28
+      Trecho  : print('Entrada invalida')
+      Contexto:
+              27 | 		print(round(h, 2))
+        >>>   28 | elif((caloria_do_dia <= 0) or (caloria_do_dia >= 10000)):
+              29 | 	print("Entrada invalida")
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 22: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 22) / elif ... sem else
+      Contexto:
+              21 | 		print(round(f, 2))
+        >>>   22 | 	elif(alimento == "OMELETE"):
+              23 | 		g = caloria_do_dia/1.04
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 8
+
+  [1] Linha 5: Variável 'a' com nome muito curto (≤4 chars)
+      Trecho  : a = ...
+      Contexto:
+               4 | 	if(alimento == "BANANA"):
+        >>>    5 | 		a = caloria_do_dia/0.97
+               6 | 		print(round(a, 2))
+
+  [2] Linha 8: Variável 'b' com nome muito curto (≤4 chars)
+      Trecho  : b = ...
+      Contexto:
+               7 | 	elif(alimento == "BIFE"):
+        >>>    8 | 		b = caloria_do_dia/2.95
+               9 | 		print(round(b, 2))
+
+  [3] Linha 11: Variável 'c' com nome muito curto (≤4 chars)
+      Trecho  : c = ...
+      Contexto:
+              10 | 	elif(alimento == "BRIGADEIRO"):
+        >>>   11 | 		c = caloria_do_dia/5
+              12 | 		print(round(c, 2))
+
+  [4] Linha 14: Variável 'd' com nome muito curto (≤4 chars)
+      Trecho  : d = ...
+      Contexto:
+              13 | 	elif(alimento == "FEIJOADA"):
+        >>>   14 | 		d = caloria_do_dia/1.27
+              15 | 		print(round(d, 2))
+
+  [5] Linha 17: Variável 'e' com nome muito curto (≤4 chars)
+      Trecho  : e = ...
+      Contexto:
+              16 | 	elif(alimento == "GELATINA"):
+        >>>   17 | 		e = caloria_do_dia/0.67
+              18 | 		print(round(e, 2))
+
+  [6] Linha 20: Variável 'f' com nome muito curto (≤4 chars)
+      Trecho  : f = ...
+      Contexto:
+              19 | 	elif(alimento == "MAMAO"):
+        >>>   20 | 		f = caloria_do_dia/0.68
+              21 | 		print(round(f, 2))
+
+  [7] Linha 23: Variável 'g' com nome muito curto (≤4 chars)
+      Trecho  : g = ...
+      Contexto:
+              22 | 	elif(alimento == "OMELETE"):
+        >>>   23 | 		g = caloria_do_dia/1.04
+              24 | 		print(round(g, 2))
+
+  [8] Linha 26: Variável 'h' com nome muito curto (≤4 chars)
+      Trecho  : h = ...
+      Contexto:
+              25 | 	elif(alimento == "TOMATE"):
+        >>>   26 | 		h = caloria_do_dia/0.2
+              27 | 		print(round(h, 2))
+
+======================================================================

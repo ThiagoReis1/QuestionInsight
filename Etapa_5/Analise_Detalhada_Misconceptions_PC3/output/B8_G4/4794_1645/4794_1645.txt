@@ -1,0 +1,72 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo     : 4794_1645.py
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2022_2_v1.81\2022-2\494\users\4552\codes\4794_1645.py
+Assessment  : 4794
+Título      : TP 6: Estrutura de Repetição por Contagem (for)
+Questão     : 1645
+Aluno       : 4552
+Grupo       : TP 06
+Significado : Estrutura de Repetição por Contagem
+Total MCs   : 2
+
+⚠️  Misconceptions detectados: B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import *
+     2 | 
+     3 | entrada = array(eval(input()))
+     4 | 
+     5 | cont = 0
+     6 | for elem in entrada:
+     7 | 	if(elem >= 2000):
+     8 | 		cont += 1
+     9 | 		
+    10 | vet = zeros(cont, dtype=int)
+    11 | j = 0
+    12 | for i in range(len(entrada)):
+    13 | 	if(entrada[i] >= 2000):
+    14 | 		vet[j] = i
+    15 | 		j += 1
+    16 | 		
+    17 | print(cont)
+    18 | print(vet)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 0: B8 detectado pelo VisitorMC3 (localização exata não mapeada)
+      Trecho  : —
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 3
+
+  [1] Linha 5: Variável 'cont' com nome muito curto (≤4 chars)
+      Trecho  : cont = ...
+      Contexto:
+               4 | 
+        >>>    5 | cont = 0
+               6 | for elem in entrada:
+
+  [2] Linha 10: Variável 'vet' com nome muito curto (≤4 chars)
+      Trecho  : vet = ...
+      Contexto:
+               9 | 		
+        >>>   10 | vet = zeros(cont, dtype=int)
+              11 | j = 0
+
+  [3] Linha 11: Variável 'j' com nome muito curto (≤4 chars)
+      Trecho  : j = ...
+      Contexto:
+              10 | vet = zeros(cont, dtype=int)
+        >>>   11 | j = 0
+              12 | for i in range(len(entrada)):
+
+======================================================================

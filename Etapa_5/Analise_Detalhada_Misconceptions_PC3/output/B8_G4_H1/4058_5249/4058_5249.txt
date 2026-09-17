@@ -1,0 +1,198 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo     : 4058_5249.py
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2022_1_v1.81\2022-1\444\users\7702\codes\4058_5249.py
+Assessment  : 4058
+Título      : TP 03 – Condicionais Encadeadas (if/elif)
+Questão     : 5249
+Aluno       : 7702
+Grupo       : TP 03
+Significado : Estrutura Condicional Encadeada
+Total MCs   : 3
+
+⚠️  Misconceptions detectados: B8, G4, H1
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | np = int(input("numero prato: "))
+     2 | ns = int(input("numero sobremesa: "))
+     3 | nb = int(input("numero bebida: "))
+     4 | 
+     5 | if (np >= 1 and np <= 4) and (ns >=1 and ns<=4) and (nb >=1 and nb <= 4):
+     6 | 	if(np == 1):
+     7 | 		cp = 180
+     8 | 	elif(np==2):
+     9 | 		cp = 230
+    10 | 	elif (np == 3):
+    11 | 		cp = 250
+    12 | 	elif (np == 4):
+    13 | 		cp = 350
+    14 | 	if (ns == 1):
+    15 | 		cs = 75
+    16 | 	elif (ns == 2):
+    17 | 		cs = 110
+    18 | 	elif (ns == 3):
+    19 | 		cs = 170
+    20 | 	elif (ns == 4):
+    21 | 		cs = 200
+    22 | 	if (nb == 1):
+    23 | 		cb == 20
+    24 | 	elif (nb == 2):
+    25 | 		cb = 70
+    26 | 	elif (nb == 3):
+    27 | 		cb = 100
+    28 | 	elif (nb == 4):
+    29 | 		cb = 65
+    30 | 	cal = cp + cs + cb
+    31 | 	print("Calorias: ",cal,"cal")
+    32 | else:
+    33 | 	print("Dados invalidos")
+    34 | 		
+    35 | 		
+    36 | 		
+    37 | 		
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 3
+
+  [1] Linha 10: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 10) / elif ... sem else
+      Contexto:
+               9 | 		cp = 230
+        >>>   10 | 	elif (np == 3):
+              11 | 		cp = 250
+
+  [2] Linha 18: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 18) / elif ... sem else
+      Contexto:
+              17 | 		cs = 110
+        >>>   18 | 	elif (ns == 3):
+              19 | 		cs = 170
+
+  [3] Linha 26: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 26) / elif ... sem else
+      Contexto:
+              25 | 		cb = 70
+        >>>   26 | 	elif (nb == 3):
+              27 | 		cb = 100
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 15
+
+  [1] Linha 1: Variável 'np' com nome muito curto (≤4 chars)
+      Trecho  : np = ...
+      Contexto:
+        >>>    1 | np = int(input("numero prato: "))
+               2 | ns = int(input("numero sobremesa: "))
+
+  [2] Linha 2: Variável 'ns' com nome muito curto (≤4 chars)
+      Trecho  : ns = ...
+      Contexto:
+               1 | np = int(input("numero prato: "))
+        >>>    2 | ns = int(input("numero sobremesa: "))
+               3 | nb = int(input("numero bebida: "))
+
+  [3] Linha 3: Variável 'nb' com nome muito curto (≤4 chars)
+      Trecho  : nb = ...
+      Contexto:
+               2 | ns = int(input("numero sobremesa: "))
+        >>>    3 | nb = int(input("numero bebida: "))
+               4 | 
+
+  [4] Linha 30: Variável 'cal' com nome muito curto (≤4 chars)
+      Trecho  : cal = ...
+      Contexto:
+              29 | 		cb = 65
+        >>>   30 | 	cal = cp + cs + cb
+              31 | 	print("Calorias: ",cal,"cal")
+
+  [5] Linha 7: Variável 'cp' com nome muito curto (≤4 chars)
+      Trecho  : cp = ...
+      Contexto:
+               6 | 	if(np == 1):
+        >>>    7 | 		cp = 180
+               8 | 	elif(np==2):
+
+  [6] Linha 15: Variável 'cs' com nome muito curto (≤4 chars)
+      Trecho  : cs = ...
+      Contexto:
+              14 | 	if (ns == 1):
+        >>>   15 | 		cs = 75
+              16 | 	elif (ns == 2):
+
+  [7] Linha 9: Variável 'cp' com nome muito curto (≤4 chars)
+      Trecho  : cp = ...
+      Contexto:
+               8 | 	elif(np==2):
+        >>>    9 | 		cp = 230
+              10 | 	elif (np == 3):
+
+  [8] Linha 17: Variável 'cs' com nome muito curto (≤4 chars)
+      Trecho  : cs = ...
+      Contexto:
+              16 | 	elif (ns == 2):
+        >>>   17 | 		cs = 110
+              18 | 	elif (ns == 3):
+
+  [9] Linha 25: Variável 'cb' com nome muito curto (≤4 chars)
+      Trecho  : cb = ...
+      Contexto:
+              24 | 	elif (nb == 2):
+        >>>   25 | 		cb = 70
+              26 | 	elif (nb == 3):
+
+  [10] Linha 11: Variável 'cp' com nome muito curto (≤4 chars)
+      Trecho  : cp = ...
+      Contexto:
+              10 | 	elif (np == 3):
+        >>>   11 | 		cp = 250
+              12 | 	elif (np == 4):
+
+  [11] Linha 19: Variável 'cs' com nome muito curto (≤4 chars)
+      Trecho  : cs = ...
+      Contexto:
+              18 | 	elif (ns == 3):
+        >>>   19 | 		cs = 170
+              20 | 	elif (ns == 4):
+
+  [12] Linha 27: Variável 'cb' com nome muito curto (≤4 chars)
+      Trecho  : cb = ...
+      Contexto:
+              26 | 	elif (nb == 3):
+        >>>   27 | 		cb = 100
+              28 | 	elif (nb == 4):
+
+  [13] Linha 13: Variável 'cp' com nome muito curto (≤4 chars)
+      Trecho  : cp = ...
+      Contexto:
+              12 | 	elif (np == 4):
+        >>>   13 | 		cp = 350
+              14 | 	if (ns == 1):
+
+  [14] Linha 21: Variável 'cs' com nome muito curto (≤4 chars)
+      Trecho  : cs = ...
+      Contexto:
+              20 | 	elif (ns == 4):
+        >>>   21 | 		cs = 200
+              22 | 	if (nb == 1):
+
+  [15] Linha 29: Variável 'cb' com nome muito curto (≤4 chars)
+      Trecho  : cb = ...
+      Contexto:
+              28 | 	elif (nb == 4):
+        >>>   29 | 		cb = 65
+              30 | 	cal = cp + cs + cb
+
+▶ H1 — Declaração sem efeito
+  Ocorrências: 1
+
+  [1] Linha 0: H1 detectado pelo VisitorMC3 (localização exata não mapeada)
+      Trecho  : —
+
+======================================================================

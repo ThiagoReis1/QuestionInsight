@@ -1,0 +1,101 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo     : 174_1198.py
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2016_1_v1.81\2016-1\103\users\1694\codes\174_1198.py
+Assessment  : 174
+Título      : Avaliação Parcial 05 – Vetores e Strings
+Questão     : 1198
+Aluno       : 1694
+Grupo       : TP 05
+Significado : Vetores e Strings
+Total MCs   : 3
+
+⚠️  Misconceptions detectados: A3, B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | 
+     3 | temp=array(eval(input("Temperatura da agua:")))
+     4 | saida=array(zeros(size(temp),dtype=int))
+     5 | i=0
+     6 | c=0
+     7 | while i<size(temp):
+     8 | 	j=0
+     9 | 	while j<size(saida):
+    10 | 		if temp[i]<10:
+    11 | 			saida[j]=temp[i]
+    12 | 			j=j+1
+    13 | 	i=i+1
+    14 | print (saida)
+    15 | 
+    16 | 
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 1
+
+  [1] Linha 6: Variável 'c' declarada mas nunca utilizada
+      Trecho  : c = ...
+      Contexto:
+               5 | i=0
+        >>>    6 | c=0
+               7 | while i<size(temp):
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 0: B8 detectado pelo VisitorMC3 (localização exata não mapeada)
+      Trecho  : —
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 6
+
+  [1] Linha 3: Variável 'temp' com nome muito curto (≤4 chars)
+      Trecho  : temp = ...
+      Contexto:
+               2 | 
+        >>>    3 | temp=array(eval(input("Temperatura da agua:")))
+               4 | saida=array(zeros(size(temp),dtype=int))
+
+  [2] Linha 5: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+               4 | saida=array(zeros(size(temp),dtype=int))
+        >>>    5 | i=0
+               6 | c=0
+
+  [3] Linha 6: Variável 'c' com nome muito curto (≤4 chars)
+      Trecho  : c = ...
+      Contexto:
+               5 | i=0
+        >>>    6 | c=0
+               7 | while i<size(temp):
+
+  [4] Linha 8: Variável 'j' com nome muito curto (≤4 chars)
+      Trecho  : j = ...
+      Contexto:
+               7 | while i<size(temp):
+        >>>    8 | 	j=0
+               9 | 	while j<size(saida):
+
+  [5] Linha 13: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+              12 | 			j=j+1
+        >>>   13 | 	i=i+1
+              14 | print (saida)
+
+  [6] Linha 12: Variável 'j' com nome muito curto (≤4 chars)
+      Trecho  : j = ...
+      Contexto:
+              11 | 			saida[j]=temp[i]
+        >>>   12 | 			j=j+1
+              13 | 	i=i+1
+
+======================================================================

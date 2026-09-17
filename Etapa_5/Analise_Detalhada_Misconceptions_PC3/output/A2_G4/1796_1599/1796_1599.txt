@@ -1,0 +1,82 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo     : 1796_1599.py
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2019_1_v1.81\2019-1\231\users\4212\codes\1796_1599.py
+Assessment  : 1796
+Título      : TP5: Vetores e Strings
+Questão     : 1599
+Aluno       : 4212
+Grupo       : TP 05
+Significado : Vetores e Strings
+Total MCs   : 2
+
+⚠️  Misconceptions detectados: A2, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import *
+     2 | 
+     3 | ci = array(eval(input("Custo dos itens:  ")))
+     4 | tam = size(ci)
+     5 | po= 0 
+     6 | while(po<tam):
+     7 | 	if(ci[po]>80):
+     8 | 		ci[po] = ci[po] - (ci[po] * 0.15)
+     9 | 	else:
+    10 | 		ci[po] = ci[po]
+    11 | 	po = po + 1
+    12 | 	
+    13 | ct =  sum(ci)
+    14 | print(round(ct,2))
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A2 — Variável atribuída a si mesma
+  Ocorrências: 1
+
+  [1] Linha 0: A2 detectado pelo VisitorMC3 (localização exata não mapeada)
+      Trecho  : —
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 5
+
+  [1] Linha 3: Variável 'ci' com nome muito curto (≤4 chars)
+      Trecho  : ci = ...
+      Contexto:
+               2 | 
+        >>>    3 | ci = array(eval(input("Custo dos itens:  ")))
+               4 | tam = size(ci)
+
+  [2] Linha 4: Variável 'tam' com nome muito curto (≤4 chars)
+      Trecho  : tam = ...
+      Contexto:
+               3 | ci = array(eval(input("Custo dos itens:  ")))
+        >>>    4 | tam = size(ci)
+               5 | po= 0 
+
+  [3] Linha 5: Variável 'po' com nome muito curto (≤4 chars)
+      Trecho  : po = ...
+      Contexto:
+               4 | tam = size(ci)
+        >>>    5 | po= 0 
+               6 | while(po<tam):
+
+  [4] Linha 13: Variável 'ct' com nome muito curto (≤4 chars)
+      Trecho  : ct = ...
+      Contexto:
+              12 | 	
+        >>>   13 | ct =  sum(ci)
+              14 | print(round(ct,2))
+
+  [5] Linha 11: Variável 'po' com nome muito curto (≤4 chars)
+      Trecho  : po = ...
+      Contexto:
+              10 | 		ci[po] = ci[po]
+        >>>   11 | 	po = po + 1
+              12 | 	
+
+======================================================================

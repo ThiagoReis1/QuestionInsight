@@ -1,0 +1,88 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo     : 675_1619.py
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2017_1_v1.81\2017-1\140\users\2531\codes\675_1619.py
+Assessment  : 675
+Título      : Trabalho Prático 5: Vetores e Strings
+Questão     : 1619
+Aluno       : 2531
+Grupo       : TP 05
+Significado : Vetores e Strings
+Total MCs   : 2
+
+⚠️  Misconceptions detectados: B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import *
+     2 | 
+     3 | e = array(eval(input()))
+     4 | s = array(eval(input())).upper()
+     5 | t = zeros(size(e), dtype = float)
+     6 | i = 0
+     7 | 
+     8 | while i < size(e):
+     9 | 	if s[i] == "QUENTE":
+    10 | 		t[i] = 90 * 0.005 * e[i]
+    11 | 	elif s[i] == "MORNO":
+    12 | 		t[i] = 45 * 0.005 * e[i]
+    13 | 	
+    14 | 	i = i + 1
+    15 | print(round(sum(t),2))	
+    16 | 		
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 9: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 9) / elif ... sem else
+      Contexto:
+               8 | while i < size(e):
+        >>>    9 | 	if s[i] == "QUENTE":
+              10 | 		t[i] = 90 * 0.005 * e[i]
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 5
+
+  [1] Linha 3: Variável 'e' com nome muito curto (≤4 chars)
+      Trecho  : e = ...
+      Contexto:
+               2 | 
+        >>>    3 | e = array(eval(input()))
+               4 | s = array(eval(input())).upper()
+
+  [2] Linha 4: Variável 's' com nome muito curto (≤4 chars)
+      Trecho  : s = ...
+      Contexto:
+               3 | e = array(eval(input()))
+        >>>    4 | s = array(eval(input())).upper()
+               5 | t = zeros(size(e), dtype = float)
+
+  [3] Linha 5: Variável 't' com nome muito curto (≤4 chars)
+      Trecho  : t = ...
+      Contexto:
+               4 | s = array(eval(input())).upper()
+        >>>    5 | t = zeros(size(e), dtype = float)
+               6 | i = 0
+
+  [4] Linha 6: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+               5 | t = zeros(size(e), dtype = float)
+        >>>    6 | i = 0
+               7 | 
+
+  [5] Linha 14: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+              13 | 	
+        >>>   14 | 	i = i + 1
+              15 | print(round(sum(t),2))	
+
+======================================================================

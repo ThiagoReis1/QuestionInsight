@@ -1,0 +1,208 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo     : 5874_3593.py
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2024_1_v1.81\2024-1\589\users\9751\codes\5874_3593.py
+Assessment  : 5874
+Título      : TP 5: Vetores e Strings
+Questão     : 3593
+Aluno       : 9751
+Grupo       : TP 05
+Significado : Vetores e Strings
+Total MCs   : 3
+
+⚠️  Misconceptions detectados: B4, B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | v=array(eval(input("")), dtype=int)
+     3 | i=0
+     4 | cont=200
+     5 | while i<size(v):
+     6 | 	face=v[i]
+     7 | 	if face==1:
+     8 | 		cont=cont/2
+     9 | 	elif face==2:
+    10 | 		cont=cont*3
+    11 | 	elif face ==3:
+    12 | 		cont=cont/2
+    13 | 	elif face==4:
+    14 | 		cont=cont*3
+    15 | 	elif face==5:
+    16 | 		cont=cont/2
+    17 | 	elif face==6:
+    18 | 		cont=cont*3
+    19 | 	i=i+1
+    20 | print(round(cont, 2))
+    21 | 		
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B4 — Comandos repetidos dentro de blocos if-elif-else
+  Ocorrências: 10
+
+  [1] Linha 11: Bloco idêntico ao da linha 7
+      Trecho  : cont = cont / 2
+      Contexto:
+              10 | 		cont=cont*3
+        >>>   11 | 	elif face ==3:
+              12 | 		cont=cont/2
+
+  [2] Linha 13: Bloco idêntico ao da linha 9
+      Trecho  : cont = cont * 3
+      Contexto:
+              12 | 		cont=cont/2
+        >>>   13 | 	elif face==4:
+              14 | 		cont=cont*3
+
+  [3] Linha 15: Bloco idêntico ao da linha 7
+      Trecho  : cont = cont / 2
+      Contexto:
+              14 | 		cont=cont*3
+        >>>   15 | 	elif face==5:
+              16 | 		cont=cont/2
+
+  [4] Linha 17: Bloco idêntico ao da linha 9
+      Trecho  : cont = cont * 3
+      Contexto:
+              16 | 		cont=cont/2
+        >>>   17 | 	elif face==6:
+              18 | 		cont=cont*3
+
+  [5] Linha 13: Bloco idêntico ao da linha 9
+      Trecho  : cont = cont * 3
+      Contexto:
+              12 | 		cont=cont/2
+        >>>   13 | 	elif face==4:
+              14 | 		cont=cont*3
+
+  [6] Linha 15: Bloco idêntico ao da linha 11
+      Trecho  : cont = cont / 2
+      Contexto:
+              14 | 		cont=cont*3
+        >>>   15 | 	elif face==5:
+              16 | 		cont=cont/2
+
+  [7] Linha 17: Bloco idêntico ao da linha 9
+      Trecho  : cont = cont * 3
+      Contexto:
+              16 | 		cont=cont/2
+        >>>   17 | 	elif face==6:
+              18 | 		cont=cont*3
+
+  [8] Linha 15: Bloco idêntico ao da linha 11
+      Trecho  : cont = cont / 2
+      Contexto:
+              14 | 		cont=cont*3
+        >>>   15 | 	elif face==5:
+              16 | 		cont=cont/2
+
+  [9] Linha 17: Bloco idêntico ao da linha 13
+      Trecho  : cont = cont * 3
+      Contexto:
+              16 | 		cont=cont/2
+        >>>   17 | 	elif face==6:
+              18 | 		cont=cont*3
+
+  [10] Linha 17: Bloco idêntico ao da linha 13
+      Trecho  : cont = cont * 3
+      Contexto:
+              16 | 		cont=cont/2
+        >>>   17 | 	elif face==6:
+              18 | 		cont=cont*3
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 15: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 15) / elif ... sem else
+      Contexto:
+              14 | 		cont=cont*3
+        >>>   15 | 	elif face==5:
+              16 | 		cont=cont/2
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 11
+
+  [1] Linha 2: Variável 'v' com nome muito curto (≤4 chars)
+      Trecho  : v = ...
+      Contexto:
+               1 | from numpy import*
+        >>>    2 | v=array(eval(input("")), dtype=int)
+               3 | i=0
+
+  [2] Linha 3: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+               2 | v=array(eval(input("")), dtype=int)
+        >>>    3 | i=0
+               4 | cont=200
+
+  [3] Linha 4: Variável 'cont' com nome muito curto (≤4 chars)
+      Trecho  : cont = ...
+      Contexto:
+               3 | i=0
+        >>>    4 | cont=200
+               5 | while i<size(v):
+
+  [4] Linha 6: Variável 'face' com nome muito curto (≤4 chars)
+      Trecho  : face = ...
+      Contexto:
+               5 | while i<size(v):
+        >>>    6 | 	face=v[i]
+               7 | 	if face==1:
+
+  [5] Linha 19: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+              18 | 		cont=cont*3
+        >>>   19 | 	i=i+1
+              20 | print(round(cont, 2))
+
+  [6] Linha 8: Variável 'cont' com nome muito curto (≤4 chars)
+      Trecho  : cont = ...
+      Contexto:
+               7 | 	if face==1:
+        >>>    8 | 		cont=cont/2
+               9 | 	elif face==2:
+
+  [7] Linha 10: Variável 'cont' com nome muito curto (≤4 chars)
+      Trecho  : cont = ...
+      Contexto:
+               9 | 	elif face==2:
+        >>>   10 | 		cont=cont*3
+              11 | 	elif face ==3:
+
+  [8] Linha 12: Variável 'cont' com nome muito curto (≤4 chars)
+      Trecho  : cont = ...
+      Contexto:
+              11 | 	elif face ==3:
+        >>>   12 | 		cont=cont/2
+              13 | 	elif face==4:
+
+  [9] Linha 14: Variável 'cont' com nome muito curto (≤4 chars)
+      Trecho  : cont = ...
+      Contexto:
+              13 | 	elif face==4:
+        >>>   14 | 		cont=cont*3
+              15 | 	elif face==5:
+
+  [10] Linha 16: Variável 'cont' com nome muito curto (≤4 chars)
+      Trecho  : cont = ...
+      Contexto:
+              15 | 	elif face==5:
+        >>>   16 | 		cont=cont/2
+              17 | 	elif face==6:
+
+  [11] Linha 18: Variável 'cont' com nome muito curto (≤4 chars)
+      Trecho  : cont = ...
+      Contexto:
+              17 | 	elif face==6:
+        >>>   18 | 		cont=cont*3
+              19 | 	i=i+1
+
+======================================================================

@@ -1,0 +1,68 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo     : 5158_6371.py
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2023_1_v1.81\2023-1\523\users\8679\codes\5158_6371.py
+Assessment  : 5158
+Título      : TP 6: Estrutura de Repetição por Contagem (for)
+Questão     : 6371
+Aluno       : 8679
+Grupo       : TP 06
+Significado : Estrutura de Repetição por Contagem
+Total MCs   : 3
+
+⚠️  Misconceptions detectados: B8, B9, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import *
+     2 | 
+     3 | v = array(eval(input()))
+     4 | v0 = zeros(size(v), dtype=int)
+     5 | 
+     6 | for i in range(size(v)):
+     7 | 	if v[i] != 0:
+     8 | 		v0[i] = (v[i] - 1) ** 2
+     9 | 	elif v[i] == 0:
+    10 | 		v0[i] = 9 ** 2
+    11 | print(v0)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 7: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 7) / elif ... sem else
+      Contexto:
+               6 | for i in range(size(v)):
+        >>>    7 | 	if v[i] != 0:
+               8 | 		v0[i] = (v[i] - 1) ** 2
+
+▶ B9 — elif/else retestando condições já verificadas
+  Ocorrências: 1
+
+  [1] Linha 0: B9 detectado pelo VisitorMC3 (localização exata não mapeada)
+      Trecho  : —
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 2
+
+  [1] Linha 3: Variável 'v' com nome muito curto (≤4 chars)
+      Trecho  : v = ...
+      Contexto:
+               2 | 
+        >>>    3 | v = array(eval(input()))
+               4 | v0 = zeros(size(v), dtype=int)
+
+  [2] Linha 4: Variável 'v0' com nome muito curto (≤4 chars)
+      Trecho  : v0 = ...
+      Contexto:
+               3 | v = array(eval(input()))
+        >>>    4 | v0 = zeros(size(v), dtype=int)
+               5 | 
+
+======================================================================

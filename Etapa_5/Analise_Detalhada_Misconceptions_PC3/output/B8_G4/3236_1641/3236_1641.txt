@@ -1,0 +1,91 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo     : 3236_1641.py
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2021_1_v1.81\2021-1\377\users\6360\codes\3236_1641.py
+Assessment  : 3236
+Título      : TP6: Repetição por contagem
+Questão     : 1641
+Aluno       : 6360
+Grupo       : TP 06
+Significado : Estrutura de Repetição por Contagem
+Total MCs   : 2
+
+⚠️  Misconceptions detectados: B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import *
+     2 | v = array(eval(input()))
+     3 | 
+     4 | e = 0
+     5 | for i in range(size(v)):
+     6 | 	if v[i] % 3 == 0:
+     7 | 		e = e + 1
+     8 | 
+     9 | b = zeros(e, dtype = int)
+    10 | o = 0
+    11 | for i in range(size(v)):
+    12 | 	if v[i] % 3 == 0:
+    13 | 		b[o] = i
+    14 | 		o = o + 1
+    15 | print(e)
+    16 | print(b)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 0: B8 detectado pelo VisitorMC3 (localização exata não mapeada)
+      Trecho  : —
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 6
+
+  [1] Linha 2: Variável 'v' com nome muito curto (≤4 chars)
+      Trecho  : v = ...
+      Contexto:
+               1 | from numpy import *
+        >>>    2 | v = array(eval(input()))
+               3 | 
+
+  [2] Linha 4: Variável 'e' com nome muito curto (≤4 chars)
+      Trecho  : e = ...
+      Contexto:
+               3 | 
+        >>>    4 | e = 0
+               5 | for i in range(size(v)):
+
+  [3] Linha 9: Variável 'b' com nome muito curto (≤4 chars)
+      Trecho  : b = ...
+      Contexto:
+               8 | 
+        >>>    9 | b = zeros(e, dtype = int)
+              10 | o = 0
+
+  [4] Linha 10: Variável 'o' com nome muito curto (≤4 chars)
+      Trecho  : o = ...
+      Contexto:
+               9 | b = zeros(e, dtype = int)
+        >>>   10 | o = 0
+              11 | for i in range(size(v)):
+
+  [5] Linha 7: Variável 'e' com nome muito curto (≤4 chars)
+      Trecho  : e = ...
+      Contexto:
+               6 | 	if v[i] % 3 == 0:
+        >>>    7 | 		e = e + 1
+               8 | 
+
+  [6] Linha 14: Variável 'o' com nome muito curto (≤4 chars)
+      Trecho  : o = ...
+      Contexto:
+              13 | 		b[o] = i
+        >>>   14 | 		o = o + 1
+              15 | print(e)
+
+======================================================================

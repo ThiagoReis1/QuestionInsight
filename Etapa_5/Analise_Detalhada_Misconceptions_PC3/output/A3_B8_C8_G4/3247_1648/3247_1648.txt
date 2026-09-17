@@ -1,0 +1,126 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo     : 3247_1648.py
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2021_1_v1.81\2021-1\380\users\6423\codes\3247_1648.py
+Assessment  : 3247
+Título      : TP6: Repetição por contagem
+Questão     : 1648
+Aluno       : 6423
+Grupo       : TP 06
+Significado : Estrutura de Repetição por Contagem
+Total MCs   : 4
+
+⚠️  Misconceptions detectados: A3, B8, C8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | v = array(eval(input("")))
+     3 | x = 0
+     4 | 
+     5 | a = 0
+     6 | 
+     7 | s = 0
+     8 | 
+     9 | for i in range(size(v)):
+    10 | 	if v[i]<70:
+    11 | 		x = x+1
+    12 | 	i+=1
+    13 | z = zeros(x, dtype=int)
+    14 | for j in range(size(v)):
+    15 | 	if v[j]<70:
+    16 | 		v[a] = j
+    17 | 	a+=j
+    18 | 
+    19 | 
+    20 | 
+    21 | 
+    22 | print(x)
+    23 | print(v)
+    24 | print(j)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 2
+
+  [1] Linha 7: Variável 's' declarada mas nunca utilizada
+      Trecho  : s = ...
+      Contexto:
+               6 | 
+        >>>    7 | s = 0
+               8 | 
+
+  [2] Linha 13: Variável 'z' declarada mas nunca utilizada
+      Trecho  : z = ...
+      Contexto:
+              12 | 	i+=1
+        >>>   13 | z = zeros(x, dtype=int)
+              14 | for j in range(size(v)):
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 0: B8 detectado pelo VisitorMC3 (localização exata não mapeada)
+      Trecho  : —
+
+▶ C8 — Loop for com sua variável de iteração sobrescrita
+  Ocorrências: 1
+
+  [1] Linha 12: Variável de iteração 'i' modificada no loop
+      Trecho  : i += 1
+      Contexto:
+              11 | 		x = x+1
+        >>>   12 | 	i+=1
+              13 | z = zeros(x, dtype=int)
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 6
+
+  [1] Linha 2: Variável 'v' com nome muito curto (≤4 chars)
+      Trecho  : v = ...
+      Contexto:
+               1 | from numpy import*
+        >>>    2 | v = array(eval(input("")))
+               3 | x = 0
+
+  [2] Linha 3: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+               2 | v = array(eval(input("")))
+        >>>    3 | x = 0
+               4 | 
+
+  [3] Linha 5: Variável 'a' com nome muito curto (≤4 chars)
+      Trecho  : a = ...
+      Contexto:
+               4 | 
+        >>>    5 | a = 0
+               6 | 
+
+  [4] Linha 7: Variável 's' com nome muito curto (≤4 chars)
+      Trecho  : s = ...
+      Contexto:
+               6 | 
+        >>>    7 | s = 0
+               8 | 
+
+  [5] Linha 13: Variável 'z' com nome muito curto (≤4 chars)
+      Trecho  : z = ...
+      Contexto:
+              12 | 	i+=1
+        >>>   13 | z = zeros(x, dtype=int)
+              14 | for j in range(size(v)):
+
+  [6] Linha 11: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+              10 | 	if v[i]<70:
+        >>>   11 | 		x = x+1
+              12 | 	i+=1
+
+======================================================================

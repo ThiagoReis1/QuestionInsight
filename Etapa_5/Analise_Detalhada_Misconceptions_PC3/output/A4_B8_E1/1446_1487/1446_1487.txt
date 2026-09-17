@@ -1,0 +1,128 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo     : 1446_1487.py
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2018_2_v1.81\2018-2\206\users\3705\codes\1446_1487.py
+Assessment  : 1446
+Título      : TP 3 - Condicionais Encadeadas (if/elif/else)
+Questão     : 1487
+Aluno       : 3705
+Grupo       : TP 03
+Significado : Estrutura Condicional Encadeada
+Total MCs   : 3
+
+⚠️  Misconceptions detectados: A4, B8, E1
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | nome=input()
+     2 | quantidade=int(input())
+     3 | if(nome=="ARROZ" or nome=="CENOURA" or nome=="KAMPYO" or nome=="NORI" or nome=="OMELETE" or nome=="PEPINO" or nome=="SALMAO" or nome=="SHITAKE"):
+     4 | 	if(nome=="ARROZ"):
+     5 | 		print=(quantidade*500)
+     6 | 	elif(nome=="CENOURA"):
+     7 | 		print=(quantidade*100)
+     8 | 	elif(nome=="KAMPYO"):
+     9 | 		print=(quantidade*20)
+    10 | 	elif(nome=="NORI"):
+    11 | 		print=(quantidade*50)
+    12 | 	elif(nome=="OMELETE"):
+    13 | 		print=(quantidade*200)
+    14 | 	elif(nome=="PEPINO"):
+    15 | 		print=(quantidade*150)
+    16 | 	elif(nome=="SALMAO"):
+    17 | 		print=(quantidade*300)
+    18 | 	if(nome=="SHITAKE"):
+    19 | 		print=(quantidade*150)
+    20 | 	
+    21 | else:
+    22 | 	print("Entrada invalida")
+    23 | 						
+    24 | 		
+    25 | 		
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A4 — Redefinição de built-in
+  Ocorrências: 8
+
+  [1] Linha 5: Built-in 'print' redefinido como variável
+      Trecho  : print = quantidade * 500
+      Contexto:
+               4 | 	if(nome=="ARROZ"):
+        >>>    5 | 		print=(quantidade*500)
+               6 | 	elif(nome=="CENOURA"):
+
+  [2] Linha 19: Built-in 'print' redefinido como variável
+      Trecho  : print = quantidade * 150
+      Contexto:
+              18 | 	if(nome=="SHITAKE"):
+        >>>   19 | 		print=(quantidade*150)
+              20 | 	
+
+  [3] Linha 7: Built-in 'print' redefinido como variável
+      Trecho  : print = quantidade * 100
+      Contexto:
+               6 | 	elif(nome=="CENOURA"):
+        >>>    7 | 		print=(quantidade*100)
+               8 | 	elif(nome=="KAMPYO"):
+
+  [4] Linha 9: Built-in 'print' redefinido como variável
+      Trecho  : print = quantidade * 20
+      Contexto:
+               8 | 	elif(nome=="KAMPYO"):
+        >>>    9 | 		print=(quantidade*20)
+              10 | 	elif(nome=="NORI"):
+
+  [5] Linha 11: Built-in 'print' redefinido como variável
+      Trecho  : print = quantidade * 50
+      Contexto:
+              10 | 	elif(nome=="NORI"):
+        >>>   11 | 		print=(quantidade*50)
+              12 | 	elif(nome=="OMELETE"):
+
+  [6] Linha 13: Built-in 'print' redefinido como variável
+      Trecho  : print = quantidade * 200
+      Contexto:
+              12 | 	elif(nome=="OMELETE"):
+        >>>   13 | 		print=(quantidade*200)
+              14 | 	elif(nome=="PEPINO"):
+
+  [7] Linha 15: Built-in 'print' redefinido como variável
+      Trecho  : print = quantidade * 150
+      Contexto:
+              14 | 	elif(nome=="PEPINO"):
+        >>>   15 | 		print=(quantidade*150)
+              16 | 	elif(nome=="SALMAO"):
+
+  [8] Linha 17: Built-in 'print' redefinido como variável
+      Trecho  : print = quantidade * 300
+      Contexto:
+              16 | 	elif(nome=="SALMAO"):
+        >>>   17 | 		print=(quantidade*300)
+              18 | 	if(nome=="SHITAKE"):
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 14: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 14) / elif ... sem else
+      Contexto:
+              13 | 		print=(quantidade*200)
+        >>>   14 | 	elif(nome=="PEPINO"):
+              15 | 		print=(quantidade*150)
+
+▶ E1 — Verificação desnecessária de todas as combinações possíveis
+  Ocorrências: 1
+
+  [1] Linha 3: 8 condições em um único if — verificação excessiva
+      Trecho  : nome == 'ARROZ' or nome == 'CENOURA' or nome == 'KAMPYO' or (nome == 'NORI') or (nome == 'OMELETE') or (nome == 'PEPINO') or (nome == 'SALMAO') or (nome == 'SHITAKE')
+      Contexto:
+               2 | quantidade=int(input())
+        >>>    3 | if(nome=="ARROZ" or nome=="CENOURA" or nome=="KAMPYO" or nome=="NORI" or nome=="OMELETE" or nome=="PEPINO" or nome=="SALMAO" or nome=="SHITAKE"):
+               4 | 	if(nome=="ARROZ"):
+
+======================================================================

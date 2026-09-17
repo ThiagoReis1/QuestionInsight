@@ -1,0 +1,89 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo     : 1258_1647.py
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2018_1_v1.81\2018-1\181\users\3070\codes\1258_1647.py
+Assessment  : 1258
+Título      : TP 6: Estrutura de Repetição por Contagem (for)
+Questão     : 1647
+Aluno       : 3070
+Grupo       : TP 06
+Significado : Estrutura de Repetição por Contagem
+Total MCs   : 2
+
+⚠️  Misconceptions detectados: B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | vet = array(eval(input("vetor: ")))
+     3 | 
+     4 | alunapro = 0
+     5 | hora = 70
+     6 | 
+     7 | for i in range(size(vet)):
+     8 | 	if(vet[i] >= hora):
+     9 | 		alunapro = alunapro + 1
+    10 | print(alunapro)
+    11 | 
+    12 | nvet = zeros(alunapro, dtype=int)
+    13 | p = 0
+    14 | 
+    15 | for i in range(size(vet)):
+    16 | 	if(vet[i] >= 70):
+    17 | 		nvet[p] = nvet[p] + i
+    18 | 		p = p + 1
+    19 | print(nvet)		
+    20 | 
+    21 | 		
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 0: B8 detectado pelo VisitorMC3 (localização exata não mapeada)
+      Trecho  : —
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 5
+
+  [1] Linha 2: Variável 'vet' com nome muito curto (≤4 chars)
+      Trecho  : vet = ...
+      Contexto:
+               1 | from numpy import*
+        >>>    2 | vet = array(eval(input("vetor: ")))
+               3 | 
+
+  [2] Linha 5: Variável 'hora' com nome muito curto (≤4 chars)
+      Trecho  : hora = ...
+      Contexto:
+               4 | alunapro = 0
+        >>>    5 | hora = 70
+               6 | 
+
+  [3] Linha 12: Variável 'nvet' com nome muito curto (≤4 chars)
+      Trecho  : nvet = ...
+      Contexto:
+              11 | 
+        >>>   12 | nvet = zeros(alunapro, dtype=int)
+              13 | p = 0
+
+  [4] Linha 13: Variável 'p' com nome muito curto (≤4 chars)
+      Trecho  : p = ...
+      Contexto:
+              12 | nvet = zeros(alunapro, dtype=int)
+        >>>   13 | p = 0
+              14 | 
+
+  [5] Linha 18: Variável 'p' com nome muito curto (≤4 chars)
+      Trecho  : p = ...
+      Contexto:
+              17 | 		nvet[p] = nvet[p] + i
+        >>>   18 | 		p = p + 1
+              19 | print(nvet)		
+
+======================================================================

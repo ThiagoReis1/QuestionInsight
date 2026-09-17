@@ -1,0 +1,59 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo     : 5537_1644.py
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2023_2_v1.81\2023-2\563\users\9209\codes\5537_1644.py
+Assessment  : 5537
+Título      : TP 6: Estrutura de Repetição por Contagem (for)
+Questão     : 1644
+Aluno       : 9209
+Grupo       : TP 06
+Significado : Estrutura de Repetição por Contagem
+Total MCs   : 2
+
+⚠️  Misconceptions detectados: A3, B8
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import *
+     2 | 
+     3 | notas = array(eval(input("Informe os vetores da notas: ")))
+     4 | 
+     5 | reprovados = 0
+     6 | vetor = zeros(size(notas), dtype=int)
+     7 | 
+     8 | for i in range(size(notas)):
+     9 | 	if notas[i] < 5:
+    10 | 		reprovados += 1
+    11 | 		
+    12 | saida = zeros(reprovados, dtype=int)
+    13 | insaida = 0
+    14 | for i in range(size(notas)):
+    15 | 	if notas[i] < 5:
+    16 | 		saida[insaida] =  + i 
+    17 | 		insaida += 1
+    18 | print(reprovados)	
+    19 | print(saida)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 1
+
+  [1] Linha 6: Variável 'vetor' declarada mas nunca utilizada
+      Trecho  : vetor = ...
+      Contexto:
+               5 | reprovados = 0
+        >>>    6 | vetor = zeros(size(notas), dtype=int)
+               7 | 
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 0: B8 detectado pelo VisitorMC3 (localização exata não mapeada)
+      Trecho  : —
+
+======================================================================

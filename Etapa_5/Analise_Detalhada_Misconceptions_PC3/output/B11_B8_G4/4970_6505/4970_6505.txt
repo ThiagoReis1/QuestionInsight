@@ -1,0 +1,83 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo     : 4970_6505.py
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2023_1_v1.81\2023-1\530\users\8734\codes\4970_6505.py
+Assessment  : 4970
+Título      : TP2: Est. Condicional Simples e Composta
+Questão     : 6505
+Aluno       : 8734
+Grupo       : TP 02
+Significado : Estrutura Condicional Simples e Composta
+Total MCs   : 3
+
+⚠️  Misconceptions detectados: B11, B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | comb = input('A ou B ou c?')
+     2 | qnt = int(input('quantos?'))
+     3 | 
+     4 | if comb.upper() == 'A' :
+     5 | 	print(round(qnt * 30,2))
+     6 | 	
+     7 | if comb.upper() == 'B' :
+     8 | 	print(round(qnt * 30,2))
+     9 | 	
+    10 | if comb.upper() == 'C' :
+    11 | 	a = (qnt * 30) * 15/100
+    12 | 	b = (qnt * 30) - a
+    13 | 	print(round(b,2))
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B11 — Ifs distintos com blocos idênticos
+  Ocorrências: 1
+
+  [1] Linha 7: Bloco idêntico ao if da linha 4
+      Trecho  : print(round(qnt * 30, 2))
+      Contexto:
+               6 | 	
+        >>>    7 | if comb.upper() == 'B' :
+               8 | 	print(round(qnt * 30,2))
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 0: B8 detectado pelo VisitorMC3 (localização exata não mapeada)
+      Trecho  : —
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 4
+
+  [1] Linha 1: Variável 'comb' com nome muito curto (≤4 chars)
+      Trecho  : comb = ...
+      Contexto:
+        >>>    1 | comb = input('A ou B ou c?')
+               2 | qnt = int(input('quantos?'))
+
+  [2] Linha 2: Variável 'qnt' com nome muito curto (≤4 chars)
+      Trecho  : qnt = ...
+      Contexto:
+               1 | comb = input('A ou B ou c?')
+        >>>    2 | qnt = int(input('quantos?'))
+               3 | 
+
+  [3] Linha 11: Variável 'a' com nome muito curto (≤4 chars)
+      Trecho  : a = ...
+      Contexto:
+              10 | if comb.upper() == 'C' :
+        >>>   11 | 	a = (qnt * 30) * 15/100
+              12 | 	b = (qnt * 30) - a
+
+  [4] Linha 12: Variável 'b' com nome muito curto (≤4 chars)
+      Trecho  : b = ...
+      Contexto:
+              11 | 	a = (qnt * 30) * 15/100
+        >>>   12 | 	b = (qnt * 30) - a
+              13 | 	print(round(b,2))
+
+======================================================================

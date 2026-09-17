@@ -1,0 +1,101 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo     : 1182_2538.py
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2018_1_v1.81\2018-1\189\users\3307\codes\1182_2538.py
+Assessment  : 1182
+Título      : TP 04 - Estrutura de Repetição (while)
+Questão     : 2538
+Aluno       : 3307
+Grupo       : TP 04
+Significado : Estrutura de Repetição por Condição
+Total MCs   : 2
+
+⚠️  Misconceptions detectados: B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | # Entradas
+     2 | vs = float(input('Valor do sitio: '))
+     3 | vi = float(input('Valor inicial depositado: '))
+     4 | dm = float(input('Deposito mensal: '))
+     5 | juros = float(input('Juros: '))
+     6 | 
+     7 | mes = 0  # contador
+     8 | 
+     9 | if vs > 0 and vi > 0 and dm > 0 and juros > 0:
+    10 | 	while vi < vs:
+    11 | 		vi = vi + (vi * juros/100)
+    12 | 		vi = vi + dm 
+    13 | 		mes = mes + 1
+    14 | 	if vi > vs:
+    15 | 		print(mes)
+    16 | else:
+    17 | 	print('Dados incorretos')
+    18 | 		
+    19 | 		
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 0: B8 detectado pelo VisitorMC3 (localização exata não mapeada)
+      Trecho  : —
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 7
+
+  [1] Linha 2: Variável 'vs' com nome muito curto (≤4 chars)
+      Trecho  : vs = ...
+      Contexto:
+               1 | # Entradas
+        >>>    2 | vs = float(input('Valor do sitio: '))
+               3 | vi = float(input('Valor inicial depositado: '))
+
+  [2] Linha 3: Variável 'vi' com nome muito curto (≤4 chars)
+      Trecho  : vi = ...
+      Contexto:
+               2 | vs = float(input('Valor do sitio: '))
+        >>>    3 | vi = float(input('Valor inicial depositado: '))
+               4 | dm = float(input('Deposito mensal: '))
+
+  [3] Linha 4: Variável 'dm' com nome muito curto (≤4 chars)
+      Trecho  : dm = ...
+      Contexto:
+               3 | vi = float(input('Valor inicial depositado: '))
+        >>>    4 | dm = float(input('Deposito mensal: '))
+               5 | juros = float(input('Juros: '))
+
+  [4] Linha 7: Variável 'mes' com nome muito curto (≤4 chars)
+      Trecho  : mes = ...
+      Contexto:
+               6 | 
+        >>>    7 | mes = 0  # contador
+               8 | 
+
+  [5] Linha 11: Variável 'vi' com nome muito curto (≤4 chars)
+      Trecho  : vi = ...
+      Contexto:
+              10 | 	while vi < vs:
+        >>>   11 | 		vi = vi + (vi * juros/100)
+              12 | 		vi = vi + dm 
+
+  [6] Linha 12: Variável 'vi' com nome muito curto (≤4 chars)
+      Trecho  : vi = ...
+      Contexto:
+              11 | 		vi = vi + (vi * juros/100)
+        >>>   12 | 		vi = vi + dm 
+              13 | 		mes = mes + 1
+
+  [7] Linha 13: Variável 'mes' com nome muito curto (≤4 chars)
+      Trecho  : mes = ...
+      Contexto:
+              12 | 		vi = vi + dm 
+        >>>   13 | 		mes = mes + 1
+              14 | 	if vi > vs:
+
+======================================================================

@@ -1,0 +1,149 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo     : 307_1481.py
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2016_2_v1.81\2016-2\122\users\2002\codes\307_1481.py
+Assessment  : 307
+Título      : Trabalho Prático 03 - Estrutura Condicional Encadeada
+Questão     : 1481
+Aluno       : 2002
+Grupo       : TP 03
+Significado : Estrutura Condicional Encadeada
+Total MCs   : 3
+
+⚠️  Misconceptions detectados: B4, E1, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | 
+     2 | x = input("Alimento: ").upper()
+     3 | y = int(input("Quantidade de calorias permitidas: "))
+     4 | 
+     5 | if x !="BANANA" and x!="BIFE" and x!="BRIGADEIRO" and x!="FEIJOADA" and x!="GELATINA" and x!="MAMAO" and x!="OMELETE" and x!="TOMATE":
+     6 | 	print("Entrada invalida")
+     7 | elif y < 0 or y > 10000:
+     8 | 	print("Entrada invalida")
+     9 | elif x == "BANANA":
+    10 | 	z = y / 0.97
+    11 | 	print(round(z , 2))
+    12 | elif x == "BIFE":
+    13 | 	z = y / 2.95
+    14 | 	print(round(z , 2))
+    15 | elif x == "BRIGADEIRO":
+    16 | 	z = y / 5.0
+    17 | 	print(round(z , 2))
+    18 | elif x == "FEIJOADA":
+    19 | 	z = y / 1.27
+    20 | 	print(round(z , 2))
+    21 | elif x == "GELATINA":
+    22 | 	z = y / 0.67
+    23 | 	print(round(z , 2))
+    24 | elif x == "MAMAO":
+    25 | 	z = y / 0.68
+    26 | 	print(round(z , 2))
+    27 | elif x == "OMELETE":
+    28 | 	z = y / 1.04
+    29 | 	print(round(z , 2))
+    30 | else:
+    31 | 	z = y / 0.2
+    32 | 	print(round( z, 2))
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B4 — Comandos repetidos dentro de blocos if-elif-else
+  Ocorrências: 1
+
+  [1] Linha 7: Bloco idêntico ao da linha 5
+      Trecho  : print('Entrada invalida')
+      Contexto:
+               6 | 	print("Entrada invalida")
+        >>>    7 | elif y < 0 or y > 10000:
+               8 | 	print("Entrada invalida")
+
+▶ E1 — Verificação desnecessária de todas as combinações possíveis
+  Ocorrências: 1
+
+  [1] Linha 5: 8 condições em um único if — verificação excessiva
+      Trecho  : x != 'BANANA' and x != 'BIFE' and (x != 'BRIGADEIRO') and (x != 'FEIJOADA') and (x != 'GELATINA') and (x != 'MAMAO') and (x != 'OMELETE') and (x != 'TOMATE')
+      Contexto:
+               4 | 
+        >>>    5 | if x !="BANANA" and x!="BIFE" and x!="BRIGADEIRO" and x!="FEIJOADA" and x!="GELATINA" and x!="MAMAO" and x!="OMELETE" and x!="TOMATE":
+               6 | 	print("Entrada invalida")
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 10
+
+  [1] Linha 2: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+               1 | 
+        >>>    2 | x = input("Alimento: ").upper()
+               3 | y = int(input("Quantidade de calorias permitidas: "))
+
+  [2] Linha 3: Variável 'y' com nome muito curto (≤4 chars)
+      Trecho  : y = ...
+      Contexto:
+               2 | x = input("Alimento: ").upper()
+        >>>    3 | y = int(input("Quantidade de calorias permitidas: "))
+               4 | 
+
+  [3] Linha 10: Variável 'z' com nome muito curto (≤4 chars)
+      Trecho  : z = ...
+      Contexto:
+               9 | elif x == "BANANA":
+        >>>   10 | 	z = y / 0.97
+              11 | 	print(round(z , 2))
+
+  [4] Linha 13: Variável 'z' com nome muito curto (≤4 chars)
+      Trecho  : z = ...
+      Contexto:
+              12 | elif x == "BIFE":
+        >>>   13 | 	z = y / 2.95
+              14 | 	print(round(z , 2))
+
+  [5] Linha 16: Variável 'z' com nome muito curto (≤4 chars)
+      Trecho  : z = ...
+      Contexto:
+              15 | elif x == "BRIGADEIRO":
+        >>>   16 | 	z = y / 5.0
+              17 | 	print(round(z , 2))
+
+  [6] Linha 19: Variável 'z' com nome muito curto (≤4 chars)
+      Trecho  : z = ...
+      Contexto:
+              18 | elif x == "FEIJOADA":
+        >>>   19 | 	z = y / 1.27
+              20 | 	print(round(z , 2))
+
+  [7] Linha 22: Variável 'z' com nome muito curto (≤4 chars)
+      Trecho  : z = ...
+      Contexto:
+              21 | elif x == "GELATINA":
+        >>>   22 | 	z = y / 0.67
+              23 | 	print(round(z , 2))
+
+  [8] Linha 25: Variável 'z' com nome muito curto (≤4 chars)
+      Trecho  : z = ...
+      Contexto:
+              24 | elif x == "MAMAO":
+        >>>   25 | 	z = y / 0.68
+              26 | 	print(round(z , 2))
+
+  [9] Linha 28: Variável 'z' com nome muito curto (≤4 chars)
+      Trecho  : z = ...
+      Contexto:
+              27 | elif x == "OMELETE":
+        >>>   28 | 	z = y / 1.04
+              29 | 	print(round(z , 2))
+
+  [10] Linha 31: Variável 'z' com nome muito curto (≤4 chars)
+      Trecho  : z = ...
+      Contexto:
+              30 | else:
+        >>>   31 | 	z = y / 0.2
+              32 | 	print(round( z, 2))
+
+======================================================================

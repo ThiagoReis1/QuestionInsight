@@ -1,0 +1,109 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo     : 201_1253.py
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2016_1_v1.81\2016-1\106\users\1643\codes\201_1253.py
+Assessment  : 201
+Título      : Avaliação Parcial 06 – Repetição por contagem
+Questão     : 1253
+Aluno       : 1643
+Grupo       : TP 06
+Significado : Estrutura de Repetição por Contagem
+Total MCs   : 2
+
+⚠️  Misconceptions detectados: B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import *
+     2 | v = array(eval(input("qual o primeiro vetor:")))
+     3 | v1 = array(zeros(2, dtype = int))
+     4 | cont = 0
+     5 | cont1 = 0
+     6 | for i in range(0,size(v)):
+     7 | 	a = min(v)
+     8 | 	b = max(v)
+     9 | c = (0.6 * a) + (0.4 * b)
+    10 | d = (0.3 * a) + (0.7 *b)
+    11 | for j in range(0,size(v)):
+    12 | 	if(v[j]>= a and v[j] < c):
+    13 | 		cont = cont + 1
+    14 | for m in range(0,size(v)):
+    15 | 	if(v[m] >= d and v[m] < b):
+    16 | 		cont1 = cont1 + 1
+    17 | 
+    18 | v1[0] = cont
+    19 | v1[1] = cont1
+    20 | print(v1)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 0: B8 detectado pelo VisitorMC3 (localização exata não mapeada)
+      Trecho  : —
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 8
+
+  [1] Linha 2: Variável 'v' com nome muito curto (≤4 chars)
+      Trecho  : v = ...
+      Contexto:
+               1 | from numpy import *
+        >>>    2 | v = array(eval(input("qual o primeiro vetor:")))
+               3 | v1 = array(zeros(2, dtype = int))
+
+  [2] Linha 3: Variável 'v1' com nome muito curto (≤4 chars)
+      Trecho  : v1 = ...
+      Contexto:
+               2 | v = array(eval(input("qual o primeiro vetor:")))
+        >>>    3 | v1 = array(zeros(2, dtype = int))
+               4 | cont = 0
+
+  [3] Linha 4: Variável 'cont' com nome muito curto (≤4 chars)
+      Trecho  : cont = ...
+      Contexto:
+               3 | v1 = array(zeros(2, dtype = int))
+        >>>    4 | cont = 0
+               5 | cont1 = 0
+
+  [4] Linha 9: Variável 'c' com nome muito curto (≤4 chars)
+      Trecho  : c = ...
+      Contexto:
+               8 | 	b = max(v)
+        >>>    9 | c = (0.6 * a) + (0.4 * b)
+              10 | d = (0.3 * a) + (0.7 *b)
+
+  [5] Linha 10: Variável 'd' com nome muito curto (≤4 chars)
+      Trecho  : d = ...
+      Contexto:
+               9 | c = (0.6 * a) + (0.4 * b)
+        >>>   10 | d = (0.3 * a) + (0.7 *b)
+              11 | for j in range(0,size(v)):
+
+  [6] Linha 7: Variável 'a' com nome muito curto (≤4 chars)
+      Trecho  : a = ...
+      Contexto:
+               6 | for i in range(0,size(v)):
+        >>>    7 | 	a = min(v)
+               8 | 	b = max(v)
+
+  [7] Linha 8: Variável 'b' com nome muito curto (≤4 chars)
+      Trecho  : b = ...
+      Contexto:
+               7 | 	a = min(v)
+        >>>    8 | 	b = max(v)
+               9 | c = (0.6 * a) + (0.4 * b)
+
+  [8] Linha 13: Variável 'cont' com nome muito curto (≤4 chars)
+      Trecho  : cont = ...
+      Contexto:
+              12 | 	if(v[j]>= a and v[j] < c):
+        >>>   13 | 		cont = cont + 1
+              14 | for m in range(0,size(v)):
+
+======================================================================

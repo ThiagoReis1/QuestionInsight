@@ -2,72 +2,46 @@
 # QuestionInsight - arquivos ignorados pelo Git
 # ============================================================
 
-# ------------------------------------------------------------
-# Dados grandes e bases físicas geradas
-# ------------------------------------------------------------
-
+# Bases físicas locais e dados que não são pastas input/output do projeto.
 Extraidos/
-
 DataSets/*
 !DataSets/.gitkeep
 
 # Dados temporários e resultados brutos da Etapa 1
 Etapa_1/codebench-mining-tool/data/
 Etapa_1/codebench-mining-tool/csv/
-
-# CSVs consolidados gerados pela Etapa 1
 CSVS_JO/*
 !CSVS_JO/.gitkeep
 !CSVS_JO/unified_solutions.csv.example.csv
 
+# ============================================================
+# Inputs e outputs públicos do pipeline
+# ============================================================
+# Os diretórios input/output são intencionalmente versionados, incluindo CSV,
+# JSON, notebooks auxiliares, imagens, PDFs e logs que estiverem dentro deles.
+# Não há regra de exclusão para essas pastas.
 
-# ------------------------------------------------------------
-# Dados externos e soluções de referência
-# ------------------------------------------------------------
-
-Etapa_4/codebench-analytics-full/input/*
-!Etapa_4/codebench-analytics-full/input/.gitkeep
-
-
-# ------------------------------------------------------------
-# Saídas geradas pelo pipeline
-# ------------------------------------------------------------
-
-Etapa_2/output/
-Etapa_3/output/
-Etapa_4/output/
-Etapa_4/**/output/
-Etapa_5/output/
-Etapa_5/**/output/
-
-# Artefatos antigos ou auxiliares gerados pela Etapa 5
+# Artefatos antigos ou auxiliares fora de input/output
 Etapa_5/Provas/
 Etapa_5/Provas_Arrumadas/
 Etapa_5/relacao_assunto_questoes/
 Etapa_5/Separador_Codigo_PC3/codigos_separados_PC3/
 Etapa_5/artefatos_preparacao_analise/
 
-
-# ------------------------------------------------------------
-# Logs e relatórios locais gerados
-# ------------------------------------------------------------
-
+# Logs e relatórios locais fora de input/output
 *.log
 *.logs
 log/
 logs/
 
-
-# ------------------------------------------------------------
+# ============================================================
 # Cache Python e ferramentas de desenvolvimento
-# ------------------------------------------------------------
-
+# ============================================================
 __pycache__/
 *.py[cod]
 *.pyo
 *.pyd
 *.so
-
 .pytest_cache/
 .mypy_cache/
 .ruff_cache/
@@ -75,11 +49,7 @@ __pycache__/
 .coverage.*
 htmlcov/
 
-
-# ------------------------------------------------------------
 # Ambientes virtuais e configurações locais
-# ------------------------------------------------------------
-
 .venv/
 venv/
 env/
@@ -87,15 +57,10 @@ ENV/
 .env/
 .env.*
 !.env.example
-
 .vscode/
 .idea/
 
-
-# ------------------------------------------------------------
 # Arquivos temporários
-# ------------------------------------------------------------
-
 *.tmp
 *.temp
 *.swp
@@ -106,39 +71,55 @@ ENV/
 *.orig
 *.rej
 *~
-
 .DS_Store
 Thumbs.db
 
-
-# ------------------------------------------------------------
 # Arquivos de build e distribuição
-# ------------------------------------------------------------
-
 build/
 dist/
 *.egg-info/
-
-
-# ------------------------------------------------------------
-# Checkpoints e temporários de notebooks
-# ------------------------------------------------------------
-
 .ipynb_checkpoints/
 
-
-# ------------------------------------------------------------
-# Arquivos compactados e artefatos locais gerados
-# ------------------------------------------------------------
-
+# Compactados e bancos locais
 *.zip
 *.tar
 *.tar.gz
 *.tgz
 *.7z
 *.rar
-
-# Bancos locais e arquivos de ferramentas
 *.sqlite
 *.sqlite3
 *.db
+
+# Exceção final: todo conteúdo existente em input/output é público e deve ser
+# versionável, inclusive extensões normalmente ignoradas acima, como .log e
+# arquivos compactados gerados dentro dessas pastas.
+!Etapa_*/input/
+!Etapa_*/input/**
+!Etapa_*/**/input/
+!Etapa_*/**/input/**
+!Etapa_*/output/
+!Etapa_*/output/**
+!Etapa_*/**/output/
+!Etapa_*/**/output/**
+
+# ============================================================
+# Intermediários grandes da Etapa 4 não consumidos pela Etapa 5
+# ============================================================
+# Os CSVs por dataset permitem retomada local, mas não são necessários no
+# repositório porque a Etapa 5 usa os arquivos consolidados em output/metrics.
+Etapa_4/output/action_staging/
+Etapa_4/output/execution_staging/
+Etapa_4/output/solution_staging/
+
+# Dados brutos intermediários dos collectors. Inclui actions.csv de vários GB.
+# Os resultados consolidados em output/metrics permanecem versionáveis.
+Etapa_4/codebench-analytics-full/output/data/
+
+# Resultado final das métricas da solução do professor: manter no Git.
+!Etapa_4/codebench-analytics-full/output/data/
+Etapa_4/codebench-analytics-full/output/data/*
+!Etapa_4/codebench-analytics-full/output/data/code_metrics_professor.csv
+
+# Entrada opcional da solução do professor: não versionar no repositório.
+Etapa_4/codebench-analytics-full/input/codigo_solucao.csv

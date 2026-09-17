@@ -1,0 +1,95 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo     : 5921_1640.py
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2024_1_v1.81\2024-1\587\users\9889\codes\5921_1640.py
+Assessment  : 5921
+Título      : TP 6: Estrutura de Repetição por Contagem (for)
+Questão     : 1640
+Aluno       : 9889
+Grupo       : TP 06
+Significado : Estrutura de Repetição por Contagem
+Total MCs   : 2
+
+⚠️  Misconceptions detectados: B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import *
+     2 | 
+     3 | qam = array(eval(input("Digite a quantidade de alunos matriculados: ")))
+     4 | 
+     5 | qi = 0 # contador da quantidade impar
+     6 | 
+     7 | for i in qam:
+     8 | 	if (i % 2 != 0):
+     9 | 		qi = qi + 1
+    10 | 
+    11 | cqi = zeros(qi, dtype=int)
+    12 | ii = 0
+    13 | 
+    14 | for i in range (size(qam)):
+    15 | 	if (qam[i] % 2 != 0):
+    16 | 		cqi[ii] = i
+    17 | 		ii = ii + 1
+    18 | 
+    19 | print(qi)
+    20 | print(cqi)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 0: B8 detectado pelo VisitorMC3 (localização exata não mapeada)
+      Trecho  : —
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 6
+
+  [1] Linha 3: Variável 'qam' com nome muito curto (≤4 chars)
+      Trecho  : qam = ...
+      Contexto:
+               2 | 
+        >>>    3 | qam = array(eval(input("Digite a quantidade de alunos matriculados: ")))
+               4 | 
+
+  [2] Linha 5: Variável 'qi' com nome muito curto (≤4 chars)
+      Trecho  : qi = ...
+      Contexto:
+               4 | 
+        >>>    5 | qi = 0 # contador da quantidade impar
+               6 | 
+
+  [3] Linha 11: Variável 'cqi' com nome muito curto (≤4 chars)
+      Trecho  : cqi = ...
+      Contexto:
+              10 | 
+        >>>   11 | cqi = zeros(qi, dtype=int)
+              12 | ii = 0
+
+  [4] Linha 12: Variável 'ii' com nome muito curto (≤4 chars)
+      Trecho  : ii = ...
+      Contexto:
+              11 | cqi = zeros(qi, dtype=int)
+        >>>   12 | ii = 0
+              13 | 
+
+  [5] Linha 9: Variável 'qi' com nome muito curto (≤4 chars)
+      Trecho  : qi = ...
+      Contexto:
+               8 | 	if (i % 2 != 0):
+        >>>    9 | 		qi = qi + 1
+              10 | 
+
+  [6] Linha 17: Variável 'ii' com nome muito curto (≤4 chars)
+      Trecho  : ii = ...
+      Contexto:
+              16 | 		cqi[ii] = i
+        >>>   17 | 		ii = ii + 1
+              18 | 
+
+======================================================================

@@ -1,0 +1,83 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo     : 3782_2852.py
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2021_2_v1.81\2021-2\407\users\7159\codes\3782_2852.py
+Assessment  : 3782
+Título      : TP 6: Estrutura de Repetição por Contagem (for)
+Questão     : 2852
+Aluno       : 7159
+Grupo       : TP 06
+Significado : Estrutura de Repetição por Contagem
+Total MCs   : 3
+
+⚠️  Misconceptions detectados: B8, B9, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | 
+     3 | v = array(eval(input("vetor: ")))
+     4 | 
+     5 | soma = 0
+     6 | 
+     7 | for i in range(size(v)):
+     8 | 	if(v[i] != 88):
+     9 | 		soma = soma + v[i]
+    10 | 	elif(v[i] == 88):
+    11 | 		soma = soma / 2
+    12 | print(soma)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 8: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 8) / elif ... sem else
+      Contexto:
+               7 | for i in range(size(v)):
+        >>>    8 | 	if(v[i] != 88):
+               9 | 		soma = soma + v[i]
+
+▶ B9 — elif/else retestando condições já verificadas
+  Ocorrências: 1
+
+  [1] Linha 0: B9 detectado pelo VisitorMC3 (localização exata não mapeada)
+      Trecho  : —
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 4
+
+  [1] Linha 3: Variável 'v' com nome muito curto (≤4 chars)
+      Trecho  : v = ...
+      Contexto:
+               2 | 
+        >>>    3 | v = array(eval(input("vetor: ")))
+               4 | 
+
+  [2] Linha 5: Variável 'soma' com nome muito curto (≤4 chars)
+      Trecho  : soma = ...
+      Contexto:
+               4 | 
+        >>>    5 | soma = 0
+               6 | 
+
+  [3] Linha 9: Variável 'soma' com nome muito curto (≤4 chars)
+      Trecho  : soma = ...
+      Contexto:
+               8 | 	if(v[i] != 88):
+        >>>    9 | 		soma = soma + v[i]
+              10 | 	elif(v[i] == 88):
+
+  [4] Linha 11: Variável 'soma' com nome muito curto (≤4 chars)
+      Trecho  : soma = ...
+      Contexto:
+              10 | 	elif(v[i] == 88):
+        >>>   11 | 		soma = soma / 2
+              12 | print(soma)
+
+======================================================================

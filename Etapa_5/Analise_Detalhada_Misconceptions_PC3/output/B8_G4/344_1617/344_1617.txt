@@ -1,0 +1,117 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo     : 344_1617.py
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2016_2_v1.81\2016-2\122\users\2002\codes\344_1617.py
+Assessment  : 344
+Título      : Trabalho Prático 05: Vetores e Strings
+Questão     : 1617
+Aluno       : 2002
+Grupo       : TP 05
+Significado : Vetores e Strings
+Total MCs   : 2
+
+⚠️  Misconceptions detectados: B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import *
+     2 | 
+     3 | sword = array(eval(input("Tipos de Espadas: ").upper()))
+     4 | lv  = array(eval(input("Níveis dos combatentes: ")))
+     5 | i = 0
+     6 | dmg = 0
+     7 | #dmg = dano espada * nível
+     8 | while i < size(sword):
+     9 | 	if sword[i] == "CENOURA":
+    10 | 		dmg = dmg + 2*lv[i]
+    11 | 	if sword[i] == "FERRO":
+    12 | 		dmg = dmg + 4*lv[i]
+    13 | 	if sword[i] == "DWARVEN":
+    14 | 		dmg = dmg + 8*lv[i]
+    15 | 	if sword[i] == "ELVEN":
+    16 | 		dmg = dmg + 11*lv[i]
+    17 | 	if sword[i] == "DAEDRIC":
+    18 | 		dmg = dmg + 14*lv[i]
+    19 | 	i = i + 1
+    20 | 	
+    21 | print(dmg)
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 0: B8 detectado pelo VisitorMC3 (localização exata não mapeada)
+      Trecho  : —
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 9
+
+  [1] Linha 4: Variável 'lv' com nome muito curto (≤4 chars)
+      Trecho  : lv = ...
+      Contexto:
+               3 | sword = array(eval(input("Tipos de Espadas: ").upper()))
+        >>>    4 | lv  = array(eval(input("Níveis dos combatentes: ")))
+               5 | i = 0
+
+  [2] Linha 5: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+               4 | lv  = array(eval(input("Níveis dos combatentes: ")))
+        >>>    5 | i = 0
+               6 | dmg = 0
+
+  [3] Linha 6: Variável 'dmg' com nome muito curto (≤4 chars)
+      Trecho  : dmg = ...
+      Contexto:
+               5 | i = 0
+        >>>    6 | dmg = 0
+               7 | #dmg = dano espada * nível
+
+  [4] Linha 19: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+              18 | 		dmg = dmg + 14*lv[i]
+        >>>   19 | 	i = i + 1
+              20 | 	
+
+  [5] Linha 10: Variável 'dmg' com nome muito curto (≤4 chars)
+      Trecho  : dmg = ...
+      Contexto:
+               9 | 	if sword[i] == "CENOURA":
+        >>>   10 | 		dmg = dmg + 2*lv[i]
+              11 | 	if sword[i] == "FERRO":
+
+  [6] Linha 12: Variável 'dmg' com nome muito curto (≤4 chars)
+      Trecho  : dmg = ...
+      Contexto:
+              11 | 	if sword[i] == "FERRO":
+        >>>   12 | 		dmg = dmg + 4*lv[i]
+              13 | 	if sword[i] == "DWARVEN":
+
+  [7] Linha 14: Variável 'dmg' com nome muito curto (≤4 chars)
+      Trecho  : dmg = ...
+      Contexto:
+              13 | 	if sword[i] == "DWARVEN":
+        >>>   14 | 		dmg = dmg + 8*lv[i]
+              15 | 	if sword[i] == "ELVEN":
+
+  [8] Linha 16: Variável 'dmg' com nome muito curto (≤4 chars)
+      Trecho  : dmg = ...
+      Contexto:
+              15 | 	if sword[i] == "ELVEN":
+        >>>   16 | 		dmg = dmg + 11*lv[i]
+              17 | 	if sword[i] == "DAEDRIC":
+
+  [9] Linha 18: Variável 'dmg' com nome muito curto (≤4 chars)
+      Trecho  : dmg = ...
+      Contexto:
+              17 | 	if sword[i] == "DAEDRIC":
+        >>>   18 | 		dmg = dmg + 14*lv[i]
+              19 | 	i = i + 1
+
+======================================================================

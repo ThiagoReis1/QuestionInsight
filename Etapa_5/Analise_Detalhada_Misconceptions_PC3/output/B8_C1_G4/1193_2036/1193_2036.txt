@@ -1,0 +1,94 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo     : 1193_2036.py
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2018_1_v1.81\2018-1\185\users\3347\codes\1193_2036.py
+Assessment  : 1193
+Título      : TP 4: Estrutura de Repetição por Condição (while)
+Questão     : 2036
+Aluno       : 3347
+Grupo       : TP 04
+Significado : Estrutura de Repetição por Condição
+Total MCs   : 3
+
+⚠️  Misconceptions detectados: B8, C1, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | bola = input("PRETA ou VERMELHA: ").upper()
+     2 | 
+     3 | n = 0
+     4 | while(bola != "S"):
+     5 | 	print(bola)
+     6 | 	if(bola == "PRETA"):
+     7 | 		bola = input("PRETA ou VERMELHA: ").upper()
+     8 | 		n = n+1
+     9 | 	elif(bola == "VERMELHA"):
+    10 | 		bola = input("PRETA ou VERMELHA: ").upper()
+    11 | 	elif(bola == "S"):
+    12 | 		print(n)
+    13 | 	
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 9: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 9) / elif ... sem else
+      Contexto:
+               8 | 		n = n+1
+        >>>    9 | 	elif(bola == "VERMELHA"):
+              10 | 		bola = input("PRETA ou VERMELHA: ").upper()
+
+▶ C1 — Condição while testada novamente dentro do seu bloco
+  Ocorrências: 1
+
+  [1] Linha 6: If retesta condição inversa do while da linha 4
+      Trecho  : while bola != 'S' → if bola == 'PRETA'
+      Contexto:
+               5 | 	print(bola)
+        >>>    6 | 	if(bola == "PRETA"):
+               7 | 		bola = input("PRETA ou VERMELHA: ").upper()
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 5
+
+  [1] Linha 1: Variável 'bola' com nome muito curto (≤4 chars)
+      Trecho  : bola = ...
+      Contexto:
+        >>>    1 | bola = input("PRETA ou VERMELHA: ").upper()
+               2 | 
+
+  [2] Linha 3: Variável 'n' com nome muito curto (≤4 chars)
+      Trecho  : n = ...
+      Contexto:
+               2 | 
+        >>>    3 | n = 0
+               4 | while(bola != "S"):
+
+  [3] Linha 7: Variável 'bola' com nome muito curto (≤4 chars)
+      Trecho  : bola = ...
+      Contexto:
+               6 | 	if(bola == "PRETA"):
+        >>>    7 | 		bola = input("PRETA ou VERMELHA: ").upper()
+               8 | 		n = n+1
+
+  [4] Linha 8: Variável 'n' com nome muito curto (≤4 chars)
+      Trecho  : n = ...
+      Contexto:
+               7 | 		bola = input("PRETA ou VERMELHA: ").upper()
+        >>>    8 | 		n = n+1
+               9 | 	elif(bola == "VERMELHA"):
+
+  [5] Linha 10: Variável 'bola' com nome muito curto (≤4 chars)
+      Trecho  : bola = ...
+      Contexto:
+               9 | 	elif(bola == "VERMELHA"):
+        >>>   10 | 		bola = input("PRETA ou VERMELHA: ").upper()
+              11 | 	elif(bola == "S"):
+
+======================================================================
