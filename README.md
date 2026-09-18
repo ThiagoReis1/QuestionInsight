@@ -77,13 +77,15 @@ Para mais informações sobre a **Etapa 5**, visite o repositório relacionado: 
 
 **Parâmetros configuráveis** (definidos em `1_Misconceptions_Parser.py` e repassados ao visitor):
 
-- `C4_MAX_ALLOWED_RANGEITER = 50` — número máximo de iterações de um `range()` fixo antes de ser sinalizado como "deveria ser `while`".
+- `MC3Config.c4_range_threshold = 50` — detecta `range()` a partir de 50 iterações (`>= 50`).
 
-- `E2_MAX_ALLOWED_LISTS = 5` — número máximo de listas declaradas antes de sinalizar uso excessivo.
+- `MC3Config.e2_list_threshold = 5` — detecta a partir de 5 listas declaradas (`>= 5`).
 
-- `G4_MIN_VAR_CHRS = 4` / `G4_MIN_FNC_CHRS = 8` — tamanho mínimo de nome considerado significativo para variáveis e funções, respectivamente.
+- `MC3Config.g4_min_var_chars = 4` / `g4_min_func_chars = 8` — tamanho mínimo de nome considerado significativo.
 
-- `G4_MAX_ALLOWED_NONSIGNIFICANT = 70` — percentual máximo tolerado de nomes não significativos.
+- `MC3Config.g4_max_nonsignificant_percent = 70` — percentual máximo tolerado de nomes não significativos.
+
+Esses valores ficam centralizados em `Etapa_5/VisitorMC3.py` e são passados pelo parser por meio de uma instância imutável de `MC3Config`, garantindo configuração reproduzível.
 
 **Detalhes técnicos importantes:**
 
@@ -91,7 +93,7 @@ Para mais informações sobre a **Etapa 5**, visite o repositório relacionado: 
 
 - Usa análise de fluxo (`pending_write`/`used`) para distinguir corretamente atribuições realmente "mortas" de atribuições feitas em ramos diferentes de um `if/else` (evitando falsos positivos quando a variável é usada em pelo menos um caminho de execução).
 
-- É um projeto em evolução: o cabeçalho do arquivo documenta um changelog detalhado (atualmente na versão **v11**) com correções de falsos positivos/negativos acumuladas ao longo do desenvolvimento.
+- É um projeto em evolução: o cabeçalho do arquivo documenta um changelog detalhado com correções de falsos positivos/negativos acumuladas ao longo do desenvolvimento. A API pública `get*` é stateless: cada chamada executa o detector em uma instância temporária, sem reutilizar estado entre ASTs.
 
 #### `1_Misconceptions_Parser.py` / `1_Misconceptions_Parser.ipynb` — Orquestração da análise
 
@@ -109,15 +111,17 @@ Script responsável por rodar o `VisitorMC3` em escala sobre toda a base de cód
 
 1. Para cada questão do `questoes_ordenadas.csv`, localiza os arquivos de código de cada aluno que a respondeu via lookup O(1) no índice.
 
-1. Analisa cada código com `ast.parse()` + `VisitorMC3`, coletando os MC³ detectados (ignora silenciosamente arquivos vazios ou com erro de sintaxe/parsing).
+1. Analisa cada código com `ast.parse()` + `VisitorMC3`, coletando os MC³ detectados. Arquivos vazios continuam sendo ignorados; erros de leitura, parsing, detectores e questões são registrados em `output/misconceptions_falhas.json`, sem serem confundidos com arquivos analisados sem MC³.
 
-1. Processa as questões **em paralelo** (`ThreadPoolExecutor`, padrão 3 threads) para acelerar a análise em bases grandes, com monitoramento de status por thread em tempo real (modo texto) ou barra de progresso (`tqdm`, ao rodar com o argumento `progressBar`).
+1. Processa as questões **em paralelo**. O executor padrão é `ProcessPoolExecutor`; use `MC3_EXECUTOR=thread` para selecionar `ThreadPoolExecutor`. O número de workers é configurado por `MC3_WORKERS` e limitado a 8. Há monitoramento de status no modo thread e barra de progresso com o argumento `progressBar`.
 
 **Saídas:**
 
 - `output/misconceptions_resumo_por_questao.csv` — por questão: total de respostas e contagem de cada um dos 21 tipos de MC³.
 
 - `output/misconceptions_detalhado_por_usuario.csv` — por par (questão, usuário): lista de MC³ detectados, total de misconceptions e número de categorias afetadas.
+
+- `output/misconceptions_falhas.json` — registro estruturado das falhas observadas, com caminho, etapa, detector quando aplicável, tipo da exceção, mensagem e traceback.
 
 Ao final, o script imprime no console um relatório-resumo com tempo total de execução, velocidade de processamento (usuários/segundo), percentual de usuários com pelo menos uma misconception, top 10 MC³ mais frequentes e totais por categoria (A a H).
 

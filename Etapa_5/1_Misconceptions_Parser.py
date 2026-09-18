@@ -9,6 +9,7 @@ import multiprocessing
 import time
 import sys
 import json
+import traceback
 from pathlib import Path
 from tqdm import tqdm
 
@@ -41,15 +42,14 @@ def iterar_arquivos_usuario(data, user_id, kind, suffix=None):
         if path.is_file() and (suffix is None or path.name.endswith(suffix)):
             yield path
 
-# Constants for MC³ detection
-C4_MAX_ALLOWED_RANGEITER = 50
-E2_MAX_ALLOWED_LISTS = 5
-G4_MIN_VAR_CHRS = 4
-G4_MIN_FNC_CHRS = 8
-G4_MAX_ALLOWED_NONSIGNIFICANT = 70
+# Configuração centralizada dos critérios MC³
+MC3_CONFIG = MC3Config()
+FAILURES_JSON = Path('output/misconceptions_falhas.json')
 
-MAX_WORKERS = max(1, min(int(os.environ.get('MC3_WORKERS', multiprocessing.cpu_count() or 1)), 8))
-EXECUTOR_KIND = os.environ.get('MC3_EXECUTOR', 'process').strip().lower()
+# Número de threads/workers usados no processamento paralelo.
+# Altere diretamente para 16, 24, 32, etc., conforme o teste desejado.
+MAX_WORKERS = 32
+EXECUTOR_KIND = os.environ.get('MC3_EXECUTOR', 'thread').strip().lower()
 
 MC3_TYPES = [
     'A2', 'A3', 'A4', 'A5',
@@ -111,50 +111,53 @@ def obter_status_threads():
 
 
 def analisar_codigo(filepath):
-    """Analisa um arquivo Python e retorna os MC³ detectados."""
+    """Analisa um arquivo e retorna (misconceptions, falhas observadas)."""
+    failures = []
     try:
-        with open(filepath, 'r', encoding="utf-8") as file:
+        with open(filepath, 'r', encoding='utf-8') as file:
             code = file.read()
         if not code or len(code.strip()) == 0:
-            return []
+            return [], failures
         parsed = ast.parse(code)
-    except Exception:
-        return []
+    except SyntaxError as exc:
+        failures.append({
+            'path': str(filepath),
+            'stage': 'parse',
+            'error_type': type(exc).__name__,
+            'message': str(exc),
+            'line': exc.lineno,
+            'offset': exc.offset,
+        })
+        return [], failures
+    except (OSError, UnicodeError) as exc:
+        failures.append({
+            'path': str(filepath),
+            'stage': 'read',
+            'error_type': type(exc).__name__,
+            'message': str(exc),
+        })
+        return [], failures
 
-    visitor = VisitorMC3()
-
+    results = {}
     try:
-        res_map = {
-            'A2': visitor.getA2(parsed),
-            'A3': visitor.getA3(parsed),
-            'A4': visitor.getA4(parsed),
-            'A5': visitor.getA5(parsed),
-            'B4': visitor.getB4(parsed),
-            'B6': visitor.getB6(parsed),
-            'B8': visitor.getB8(parsed),
-            'B9': visitor.getB9(parsed),
-            'B10': visitor.getB10(parsed),
-            'B11': visitor.getB11(parsed),
-            'B12': visitor.getB12(parsed),
-            'C1': visitor.getC1(parsed),
-            'C2': visitor.getC2(parsed),
-            'C3': visitor.getC3(parsed),
-            'C4': visitor.getC4(parsed, C4_MAX_ALLOWED_RANGEITER),
-            'C8': visitor.getC8(parsed),
-            'D4': visitor.getD4(parsed),
-            'E1': visitor.getE1(parsed),
-            'E2': visitor.getE2(parsed, E2_MAX_ALLOWED_LISTS),
-            'G4': visitor.getG4(parsed, G4_MIN_VAR_CHRS, G4_MIN_FNC_CHRS, G4_MAX_ALLOWED_NONSIGNIFICANT),
-            'G5': visitor.getG5(parsed),
-            'H1': visitor.getH1(parsed),
-        }
+        results = VisitorMC3().analyze_all(parsed, MC3_CONFIG)
+    except Exception as exc:
+        failures.append({
+            'path': str(filepath),
+            'stage': 'detector',
+            'detector': 'aggregate',
+            'error_type': type(exc).__name__,
+            'message': str(exc),
+            'traceback': traceback.format_exc(),
+        })
 
-        # Normaliza tuplas (A4, A5) → bool e filtra os detectados
-        return [mc for mc, res in res_map.items()
-                if (res[0] if isinstance(res, tuple) else res)]
-
-    except Exception:
-        return []
+    misconceptions = []
+    for mc, result in results.items():
+        if isinstance(result, tuple):
+            result = result[0]
+        if result:
+            misconceptions.append(mc)
+    return misconceptions, failures
 
 
 def processar_questao(questao_data):
@@ -173,6 +176,7 @@ def processar_questao(questao_data):
 
     mc3_counters = defaultdict(int)
     detailed_results = []
+    failures = []
 
     atualizar_status_thread(thread_id, questao_id, "analisando_usuarios")
 
@@ -186,7 +190,9 @@ def processar_questao(questao_data):
         if filepath is None:
             continue  # aluno não tem arquivo para essa questão
 
-        misconceptions = set(analisar_codigo(filepath))
+        misconceptions_list, file_failures = analisar_codigo(filepath)
+        misconceptions = set(misconceptions_list)
+        failures.extend(file_failures)
 
         detailed_results.append({
             'question': questao_id,
@@ -208,7 +214,7 @@ def processar_questao(questao_data):
     marcar_questao_concluida(questao_id)
     atualizar_status_thread(thread_id, questao_id, "concluida")
 
-    return summary_row, detailed_results, mc3_counters
+    return summary_row, detailed_results, mc3_counters, failures
 
 
 def gerar_relatorio_misconceptions():
@@ -244,6 +250,20 @@ def gerar_relatorio_misconceptions():
         for mc3_type in MC3_TYPES:
             if mc3_type.startswith(categoria):
                 print(f"  {mc3_type}: {misconceptions_info[mc3_type]}")
+
+
+def salvar_falhas_json(failures):
+    """Salva falhas de leitura, parsing, detectores e questões em JSON."""
+    payload = {
+        'schema_version': 1,
+        'executor': EXECUTOR_KIND,
+        'workers': MAX_WORKERS,
+        'total_failures': len(failures),
+        'failures': failures,
+    }
+    FAILURES_JSON.parent.mkdir(parents=True, exist_ok=True)
+    FAILURES_JSON.write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding='utf-8')
+    print(f"⚠️ Falhas registradas: {FAILURES_JSON} ({len(failures)})")
 
 
 def salvar_resultados_thread_safe(summary_data, detailed_data):
@@ -298,6 +318,7 @@ def main():
 
     summary_data = []
     detailed_data = []
+    failure_data = []
     global_mc3_counts = defaultdict(int)
 
     if show_progress_bar:
@@ -345,9 +366,10 @@ def main():
         for future in as_completed(future_to_questao):
             questao_id = future_to_questao[future]
             try:
-                summary_row, detailed_results, mc3_counters = future.result()
+                summary_row, detailed_results, mc3_counters, failures = future.result()
                 summary_data.append(summary_row)
                 detailed_data.extend(detailed_results)
+                failure_data.extend(failures)
                 completed_questions.add(questao_id)
                 for mc3, count in mc3_counters.items():
                     global_mc3_counts[mc3] += count
@@ -365,7 +387,15 @@ def main():
                     pbar.set_postfix({'Erro': f"Questão {questao_id}"})
                     pbar.update(1)
                 else:
-                    print(f"❌ Erro ao processar questão {questao_id}: {e}")
+                    failure_data.append({
+                    'path': None,
+                    'stage': 'question',
+                    'question': questao_id,
+                    'error_type': type(e).__name__,
+                    'message': str(e),
+                    'traceback': traceback.format_exc(),
+                })
+                print(f"❌ Erro ao processar questão {questao_id}: {e}")
 
     # Sinaliza ao monitor que o processamento terminou — sem race condition
     stop_monitor.set()
@@ -380,6 +410,7 @@ def main():
     summary_data.sort(key=lambda row: int(row['question']))
     detailed_data.sort(key=lambda row: (int(row['question']), str(row['usuario'])))
     salvar_resultados_thread_safe(summary_data, detailed_data)
+    salvar_falhas_json(failure_data)
 
     tempo_total = time.time() - inicio_tempo
     print("\n" + "="*80)
