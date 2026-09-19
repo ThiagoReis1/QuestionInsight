@@ -10,6 +10,7 @@ import time
 import sys
 import json
 import traceback
+import re
 from pathlib import Path
 from tqdm import tqdm
 
@@ -41,6 +42,30 @@ def iterar_arquivos_usuario(data, user_id, kind, suffix=None):
         path = source_root / item['path']
         if path.is_file() and (suffix is None or path.name.endswith(suffix)):
             yield path
+
+
+def extrair_codigo_ultimo_submition(execution_path: Path) -> str | None:
+    """Extrai o código efetivamente avaliado no último SUBMITION com GRADE."""
+    separador = '*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*'
+    try:
+        conteudo = execution_path.read_text(encoding='utf-8', errors='replace')
+    except (OSError, UnicodeError):
+        return None
+    blocos = [b for b in conteudo.split(separador)
+              if re.search(r'^\s*==\s*SUBMITION\b', b, flags=re.I|re.M)]
+    if not blocos:
+        return None
+    ultimo = blocos[-1]
+    if (re.search(r'^\s*-+\s*GRADE\s*:', ultimo, flags=re.I|re.M) is None
+            or re.search(r'^\s*-+\s*ERROR\s*:', ultimo, flags=re.I|re.M) is not None):
+        return None
+    match = re.search(
+        r'^\s*--\s*CODE\s*:\s*\n(.*?)(?=^\s*--\s*(?:EXECUTION TIME|TEST CASE|ERROR|GRADE)\s*:|\Z)',
+        ultimo, flags=re.I|re.M|re.S)
+    if match is None:
+        return None
+    codigo = match.group(1).strip('\n\r')
+    return codigo if codigo.strip() else None
 
 # Configuração centralizada dos critérios MC³
 MC3_CONFIG = MC3Config()
@@ -78,10 +103,16 @@ def construir_indice(indice_usuarios_path, base_usuarios_path):
     total = 0
     for registro in data.get('users', []):
         usuario_id = str(registro['id'])
-        for filepath in iterar_arquivos_usuario(data, usuario_id, 'codes', '.py'):
+        for filepath in iterar_arquivos_usuario(data, usuario_id, 'executions', '.log'):
+            codigo = extrair_codigo_ultimo_submition(filepath)
+            if codigo is None:
+                continue
             question_id = filepath.stem.rsplit('_', 1)[-1]
             if question_id:
-                indice[(usuario_id, question_id)] = str(filepath)
+                indice[(usuario_id, question_id)] = {
+                    'execution_path': str(filepath),
+                    'code': codigo,
+                }
                 total += 1
     indice_arquivos = indice
     print(f"Índice construído: {total:,} arquivos referenciados ({len(data.get('users', [])):,} usuários)")
@@ -110,12 +141,12 @@ def obter_status_threads():
         return dict(thread_status), set(completed_questions)
 
 
-def analisar_codigo(filepath):
-    """Analisa um arquivo e retorna (misconceptions, falhas observadas)."""
+def analisar_codigo(registro_codigo):
+    """Analisa o código extraído do último SUBMITION do execution log."""
     failures = []
+    filepath = Path(registro_codigo['execution_path'])
+    code = registro_codigo['code']
     try:
-        with open(filepath, 'r', encoding='utf-8') as file:
-            code = file.read()
         if not code or len(code.strip()) == 0:
             return [], failures
         parsed = ast.parse(code)
@@ -419,29 +450,29 @@ def main():
     print(f"⏱️  Tempo total: {tempo_total:.2f} segundos")
     print(f"🔧 Threads: {MAX_WORKERS}")
     print(f"📊 Questões: {len(summary_data)}")
-    print(f"👥 Análises: {len(detailed_data)}")
+    print(f"💻 Códigos/análises: {len(detailed_data)}")
 
     if summary_data:
-        total_usuarios_analisados = len(detailed_data)
-        usuarios_com_misconceptions = sum(1 for r in detailed_data if r['total_misconceptions'] > 0)
+        total_codigos_analisados = len(detailed_data)
+        codigos_com_misconceptions = sum(1 for r in detailed_data if r['total_misconceptions'] > 0)
 
         print(f"\n📈 ESTATÍSTICAS:")
-        print(f"  👥 Usuários analisados: {total_usuarios_analisados:,}")
-        print(f"  ⚠️  Com misconceptions: {usuarios_com_misconceptions:,}")
-        print(f"  📊 Percentual: {round(usuarios_com_misconceptions/total_usuarios_analisados*100, 2)}%")
-        print(f"  ⚡ Velocidade: {total_usuarios_analisados/tempo_total:.1f} usuários/seg")
+        print(f"  💻 Códigos/análises analisados: {total_codigos_analisados:,}")
+        print(f"  ⚠️  Códigos com misconceptions: {codigos_com_misconceptions:,}")
+        print(f"  📊 Percentual: {round(codigos_com_misconceptions/total_codigos_analisados*100, 2)}%")
+        print(f"  ⚡ Velocidade: {total_codigos_analisados/tempo_total:.1f} códigos/seg")
 
         if not show_progress_bar:
             print(f"\n🏆 TOP 10 MC³:")
             for i, (mc3, count) in enumerate(
                 sorted(global_mc3_counts.items(), key=lambda x: x[1], reverse=True)[:10], 1):
-                print(f"  {i:2d}. {mc3}: {count:,} ({round(count/total_usuarios_analisados*100,2)}%)")
+                print(f"  {i:2d}. {mc3}: {count:,} ({round(count/total_codigos_analisados*100,2)}%)")
 
             print(f"\n📋 POR CATEGORIA:")
             for categoria in ['A', 'B', 'C', 'D', 'E', 'G', 'H']:
                 cat_total = sum(global_mc3_counts[mc] for mc in MC3_TYPES if mc.startswith(categoria))
                 if cat_total > 0:
-                    print(f"  {categoria}: {cat_total:,} ({round(cat_total/total_usuarios_analisados*100,2)}%) "
+                    print(f"  {categoria}: {cat_total:,} ({round(cat_total/total_codigos_analisados*100,2)}%) "
                           f"- {len([m for m in MC3_TYPES if m.startswith(categoria)])} tipos")
 
 
