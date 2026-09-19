@@ -24,7 +24,7 @@ A execução cria `resultados/` (ou o diretório indicado por `--output`) e grav
 | `prevalencias.csv` | N, positivos e prevalência geral e, quando aplicável, restrita a questões elegíveis. |
 | `README_analise.md` | Esta documentação, gerada pelo próprio script. |
 
-Na execução usada para validar o pacote, foram lidas **21,467 linhas** e produzidas **21,467 linhas analíticas**.
+Na execução usada para validar o pacote, foram lidas **20,834 linhas** e produzidas **20,834 linhas analíticas**.
 
 ## Como executar
 
