@@ -1,8 +1,8 @@
 ======================================================================
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
-Arquivo     : 1190_1538.py
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2018_1_v1.81\2018-1\188\users\3182\codes\1190_1538.py
+Arquivo     : 1190_1538.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2018_1_v1.81\2018-1\188\users\3182\executions\1190_1538.log
 Assessment  : 1190
 Título      : TP 4: Estrutura de Repetição por Condição (while)
 Questão     : 1538
@@ -26,20 +26,16 @@ CÓDIGO FONTE
      8 | 		cont=1-(x**soma)
      9 | 	else:
     10 | 		soma=soma+2
-    11 | 		cont=x**soma
-    12 | 		cont1=-x**soma
-    13 | 		cont=cont+cont1
-    14 | 		k=int(input("digite um numero"))
-    15 | 	print(cont)
-    16 | 		
-    17 | 	
+    11 | 		cont=cont-x**soma
+    12 | 	cont+=1
+    13 | print(cont)
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
 ----------------------------------------------------------------------
 
 ▶ G4 — Funções/variáveis com nomes não significativos
-  Ocorrências: 9
+  Ocorrências: 7
 
   [1] Linha 1: Variável 'x' com nome muito curto (≤4 chars)
       Trecho  : x = ...
@@ -80,27 +76,13 @@ DETALHAMENTO DOS MISCONCEPTIONS
       Contexto:
                9 | 	else:
         >>>   10 | 		soma=soma+2
-              11 | 		cont=x**soma
+              11 | 		cont=cont-x**soma
 
   [7] Linha 11: Variável 'cont' com nome muito curto (≤4 chars)
       Trecho  : cont = ...
       Contexto:
               10 | 		soma=soma+2
-        >>>   11 | 		cont=x**soma
-              12 | 		cont1=-x**soma
-
-  [8] Linha 13: Variável 'cont' com nome muito curto (≤4 chars)
-      Trecho  : cont = ...
-      Contexto:
-              12 | 		cont1=-x**soma
-        >>>   13 | 		cont=cont+cont1
-              14 | 		k=int(input("digite um numero"))
-
-  [9] Linha 14: Variável 'k' com nome muito curto (≤4 chars)
-      Trecho  : k = ...
-      Contexto:
-              13 | 		cont=cont+cont1
-        >>>   14 | 		k=int(input("digite um numero"))
-              15 | 	print(cont)
+        >>>   11 | 		cont=cont-x**soma
+              12 | 	cont+=1
 
 ======================================================================

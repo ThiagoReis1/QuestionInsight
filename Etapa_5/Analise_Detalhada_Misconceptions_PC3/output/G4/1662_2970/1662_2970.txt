@@ -1,12 +1,12 @@
 ======================================================================
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
-Arquivo     : 1662_2970.py
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2019_1_v1.81\2019-1\225\users\4413\codes\1662_2970.py
+Arquivo     : 1662_2970.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2019_1_v1.81\2019-1\225\users\3987\executions\1662_2970.log
 Assessment  : 1662
 Título      : TP2 - Estrutura Condicional Simples e Composta
 Questão     : 2970
-Aluno       : 4413
+Aluno       : 3987
 Grupo       : TP 02
 Significado : Estrutura Condicional Simples e Composta
 Total MCs   : 1
@@ -16,63 +16,49 @@ Total MCs   : 1
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | t = int(input("tempo: "))
-     2 | Qf = 1042000.00 
-     3 | Qo = 1500.00
-     4 | i = round(((Qf/Qo)**(1/t)) - 1, 5)
-     5 | print(i)
-     6 | if(i<=0.01):
-     7 | 	msg = ("Real")
+     1 | qf = 1042000.00
+     2 | qo = 1500.00
+     3 | t = float(input("tempo: "))
+     4 | i = ((qf/qo)**(1/t)) - 1
+     5 | if (i <= 0.01):
+     6 | 	print(round(i,5))
+     7 | 	print("Real")
      8 | else:
-     9 | 	msg = ("Irreal")
-    10 | print(msg)
+     9 | 	print(round(i,5))
+    10 | 	print("Irreal")
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
 ----------------------------------------------------------------------
 
 ▶ G4 — Funções/variáveis com nomes não significativos
-  Ocorrências: 6
+  Ocorrências: 4
 
-  [1] Linha 1: Variável 't' com nome muito curto (≤4 chars)
+  [1] Linha 1: Variável 'qf' com nome muito curto (≤4 chars)
+      Trecho  : qf = ...
+      Contexto:
+        >>>    1 | qf = 1042000.00
+               2 | qo = 1500.00
+
+  [2] Linha 2: Variável 'qo' com nome muito curto (≤4 chars)
+      Trecho  : qo = ...
+      Contexto:
+               1 | qf = 1042000.00
+        >>>    2 | qo = 1500.00
+               3 | t = float(input("tempo: "))
+
+  [3] Linha 3: Variável 't' com nome muito curto (≤4 chars)
       Trecho  : t = ...
       Contexto:
-        >>>    1 | t = int(input("tempo: "))
-               2 | Qf = 1042000.00 
-
-  [2] Linha 2: Variável 'Qf' com nome muito curto (≤4 chars)
-      Trecho  : Qf = ...
-      Contexto:
-               1 | t = int(input("tempo: "))
-        >>>    2 | Qf = 1042000.00 
-               3 | Qo = 1500.00
-
-  [3] Linha 3: Variável 'Qo' com nome muito curto (≤4 chars)
-      Trecho  : Qo = ...
-      Contexto:
-               2 | Qf = 1042000.00 
-        >>>    3 | Qo = 1500.00
-               4 | i = round(((Qf/Qo)**(1/t)) - 1, 5)
+               2 | qo = 1500.00
+        >>>    3 | t = float(input("tempo: "))
+               4 | i = ((qf/qo)**(1/t)) - 1
 
   [4] Linha 4: Variável 'i' com nome muito curto (≤4 chars)
       Trecho  : i = ...
       Contexto:
-               3 | Qo = 1500.00
-        >>>    4 | i = round(((Qf/Qo)**(1/t)) - 1, 5)
-               5 | print(i)
-
-  [5] Linha 7: Variável 'msg' com nome muito curto (≤4 chars)
-      Trecho  : msg = ...
-      Contexto:
-               6 | if(i<=0.01):
-        >>>    7 | 	msg = ("Real")
-               8 | else:
-
-  [6] Linha 9: Variável 'msg' com nome muito curto (≤4 chars)
-      Trecho  : msg = ...
-      Contexto:
-               8 | else:
-        >>>    9 | 	msg = ("Irreal")
-              10 | print(msg)
+               3 | t = float(input("tempo: "))
+        >>>    4 | i = ((qf/qo)**(1/t)) - 1
+               5 | if (i <= 0.01):
 
 ======================================================================

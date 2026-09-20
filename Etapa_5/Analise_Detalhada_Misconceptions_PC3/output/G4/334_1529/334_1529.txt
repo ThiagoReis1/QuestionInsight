@@ -1,12 +1,12 @@
 ======================================================================
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
-Arquivo     : 334_1529.py
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2016_2_v1.81\2016-2\127\users\1935\codes\334_1529.py
+Arquivo     : 334_1529.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2016_2_v1.81\2016-2\127\users\1920\executions\334_1529.log
 Assessment  : 334
 Título      : Trabalho Prático 04: Estrutura de Repetição por Condição (while)
 Questão     : 1529
-Aluno       : 1935
+Aluno       : 1920
 Grupo       : TP 04
 Significado : Estrutura de Repetição por Condição
 Total MCs   : 1
@@ -16,69 +16,60 @@ Total MCs   : 1
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | QI=float(input(":"))
-     2 | QC=float(input(":"))
-     3 | PI=float(input(":"))/100
-     4 | PC=float(input(":"))/100
-     5 | dia=0
-     6 | while (QI+QC<=50000):
-     7 | 	QI=QI*(1+PI)
-     8 | 	QC=QC*(1+PC)
-     9 | 	dia=dia+1
-    10 | print(dia)
+     1 | inf = int(input("Infantaria: "))
+     2 | cav = int(input("Cavalaria: "))
+     3 | pinf = float(input("% infantaria: "))
+     4 | pcav = float(input("% cavalaria: "))
+     5 | i = 0
+     6 | #-----------------------------------------
+     7 | while (not(inf + cav >= 50000)):
+     8 | 	inf += inf*pinf/100
+     9 | 	cav += cav*pcav/100
+    10 | 	i +=1
+    11 | print(i)
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
 ----------------------------------------------------------------------
 
 ▶ G4 — Funções/variáveis com nomes não significativos
-  Ocorrências: 8
+  Ocorrências: 5
 
-  [1] Linha 1: Variável 'QI' com nome muito curto (≤4 chars)
-      Trecho  : QI = ...
+  [1] Linha 1: Variável 'inf' com nome muito curto (≤4 chars)
+      Trecho  : inf = ...
       Contexto:
-        >>>    1 | QI=float(input(":"))
-               2 | QC=float(input(":"))
+        >>>    1 | inf = int(input("Infantaria: "))
+               2 | cav = int(input("Cavalaria: "))
 
-  [2] Linha 2: Variável 'QC' com nome muito curto (≤4 chars)
-      Trecho  : QC = ...
+  [2] Linha 2: Variável 'cav' com nome muito curto (≤4 chars)
+      Trecho  : cav = ...
       Contexto:
-               1 | QI=float(input(":"))
-        >>>    2 | QC=float(input(":"))
-               3 | PI=float(input(":"))/100
+               1 | inf = int(input("Infantaria: "))
+        >>>    2 | cav = int(input("Cavalaria: "))
+               3 | pinf = float(input("% infantaria: "))
 
-  [3] Linha 3: Variável 'PI' com nome muito curto (≤4 chars)
-      Trecho  : PI = ...
+  [3] Linha 3: Variável 'pinf' com nome muito curto (≤4 chars)
+      Trecho  : pinf = ...
       Contexto:
-               2 | QC=float(input(":"))
-        >>>    3 | PI=float(input(":"))/100
-               4 | PC=float(input(":"))/100
+               2 | cav = int(input("Cavalaria: "))
+        >>>    3 | pinf = float(input("% infantaria: "))
+               4 | pcav = float(input("% cavalaria: "))
 
-  [4] Linha 4: Variável 'PC' com nome muito curto (≤4 chars)
-      Trecho  : PC = ...
+  [4] Linha 4: Variável 'pcav' com nome muito curto (≤4 chars)
+      Trecho  : pcav = ...
       Contexto:
-               3 | PI=float(input(":"))/100
-        >>>    4 | PC=float(input(":"))/100
-               5 | dia=0
+               3 | pinf = float(input("% infantaria: "))
+        >>>    4 | pcav = float(input("% cavalaria: "))
+               5 | i = 0
 
-  [5] Linha 5: Variável 'dia' com nome muito curto (≤4 chars)
-      Trecho  : dia = ...
+  [5] Linha 5: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
       Contexto:
-               4 | PC=float(input(":"))/100
-        >>>    5 | dia=0
-               6 | while (QI+QC<=50000):
+               4 | pcav = float(input("% cavalaria: "))
+        >>>    5 | i = 0
+               6 | #-----------------------------------------
 
-  [6] Linha 7: Variável 'QI' com nome muito curto (≤4 chars)
-      Trecho  : QI = ...
-      Contexto:
-               6 | while (QI+QC<=50000):
-        >>>    7 | 	QI=QI*(1+PI)
-               8 | 	QC=QC*(1+PC)
-
-  [7] Linha 8: Variável 'QC' com nome muito curto (≤4 chars)
-      Trecho  : QC = ...
-      Contexto:
-               7 | 	QI=QI*(1+PI)
+======================================================================QI*(1+PI)
         >>>    8 | 	QC=QC*(1+PC)
                9 | 	dia=dia+1
 

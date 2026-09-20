@@ -1,12 +1,12 @@
 ======================================================================
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
-Arquivo     : 1795_1594.py
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2019_1_v1.81\2019-1\223\users\4478\codes\1795_1594.py
+Arquivo     : 1795_1594.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2019_1_v1.81\2019-1\223\users\4191\executions\1795_1594.log
 Assessment  : 1795
 Título      : TP5: Vetores e Strings
 Questão     : 1594
-Aluno       : 4478
+Aluno       : 4191
 Grupo       : TP 05
 Significado : Vetores e Strings
 Total MCs   : 1
@@ -17,65 +17,73 @@ Total MCs   : 1
 CÓDIGO FONTE
 ----------------------------------------------------------------------
      1 | from numpy import*
-     2 | danos = array(eval(input("danos de ataque: ")))
-     3 | i = 0 # contador do laço
-     4 | p = danos[i] * 1 # peso de ataque
-     5 | acum = 0 #acumuladora de danos
-     6 | 
-     7 | while(i < size(danos)):
-     8 | 	danos = danos[i]*p
-     9 | 	acum = acum + danos
-    10 | 	i = i + 1
-    11 | 	p = p + 1
-    12 | print(acum)
+     2 | 
+     3 | vet=array(eval(input("Danos: ")))
+     4 | 
+     5 | i=0
+     6 | peso=1
+     7 | dano=0
+     8 | while(i<size(vet)):
+     9 | 	dano=dano+vet[i]*peso
+    10 | 	peso=peso+1
+    11 | 	i=i+1
+    12 | 	
+    13 | print(dano)	
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
 ----------------------------------------------------------------------
 
 ▶ G4 — Funções/variáveis com nomes não significativos
-  Ocorrências: 6
+  Ocorrências: 7
 
-  [1] Linha 3: Variável 'i' com nome muito curto (≤4 chars)
+  [1] Linha 3: Variável 'vet' com nome muito curto (≤4 chars)
+      Trecho  : vet = ...
+      Contexto:
+               2 | 
+        >>>    3 | vet=array(eval(input("Danos: ")))
+               4 | 
+
+  [2] Linha 5: Variável 'i' com nome muito curto (≤4 chars)
       Trecho  : i = ...
       Contexto:
-               2 | danos = array(eval(input("danos de ataque: ")))
-        >>>    3 | i = 0 # contador do laço
-               4 | p = danos[i] * 1 # peso de ataque
+               4 | 
+        >>>    5 | i=0
+               6 | peso=1
 
-  [2] Linha 4: Variável 'p' com nome muito curto (≤4 chars)
-      Trecho  : p = ...
+  [3] Linha 6: Variável 'peso' com nome muito curto (≤4 chars)
+      Trecho  : peso = ...
       Contexto:
-               3 | i = 0 # contador do laço
-        >>>    4 | p = danos[i] * 1 # peso de ataque
-               5 | acum = 0 #acumuladora de danos
+               5 | i=0
+        >>>    6 | peso=1
+               7 | dano=0
 
-  [3] Linha 5: Variável 'acum' com nome muito curto (≤4 chars)
-      Trecho  : acum = ...
+  [4] Linha 7: Variável 'dano' com nome muito curto (≤4 chars)
+      Trecho  : dano = ...
       Contexto:
-               4 | p = danos[i] * 1 # peso de ataque
-        >>>    5 | acum = 0 #acumuladora de danos
-               6 | 
+               6 | peso=1
+        >>>    7 | dano=0
+               8 | while(i<size(vet)):
 
-  [4] Linha 9: Variável 'acum' com nome muito curto (≤4 chars)
-      Trecho  : acum = ...
+  [5] Linha 9: Variável 'dano' com nome muito curto (≤4 chars)
+      Trecho  : dano = ...
       Contexto:
-               8 | 	danos = danos[i]*p
-        >>>    9 | 	acum = acum + danos
-              10 | 	i = i + 1
+               8 | while(i<size(vet)):
+        >>>    9 | 	dano=dano+vet[i]*peso
+              10 | 	peso=peso+1
 
-  [5] Linha 10: Variável 'i' com nome muito curto (≤4 chars)
+  [6] Linha 10: Variável 'peso' com nome muito curto (≤4 chars)
+      Trecho  : peso = ...
+      Contexto:
+               9 | 	dano=dano+vet[i]*peso
+        >>>   10 | 	peso=peso+1
+              11 | 	i=i+1
+
+  [7] Linha 11: Variável 'i' com nome muito curto (≤4 chars)
       Trecho  : i = ...
       Contexto:
-               9 | 	acum = acum + danos
-        >>>   10 | 	i = i + 1
-              11 | 	p = p + 1
-
-  [6] Linha 11: Variável 'p' com nome muito curto (≤4 chars)
-      Trecho  : p = ...
-      Contexto:
-              10 | 	i = i + 1
-        >>>   11 | 	p = p + 1
-              12 | print(acum)
+              10 | 	peso=peso+1
+        >>>   11 | 	i=i+1
+              12 | 	
 
 ======================================================================

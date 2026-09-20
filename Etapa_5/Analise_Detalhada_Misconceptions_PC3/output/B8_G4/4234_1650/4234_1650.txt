@@ -1,12 +1,12 @@
 ======================================================================
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
-Arquivo     : 4234_1650.py
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2022_1_v1.81\2022-1\441\users\7566\codes\4234_1650.py
+Arquivo     : 4234_1650.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2022_1_v1.81\2022-1\441\users\7564\executions\4234_1650.log
 Assessment  : 4234
 Título      : TP 6: Estrutura de Repetição por Contagem (for)
 Questão     : 1650
-Aluno       : 7566
+Aluno       : 7564
 Grupo       : TP 06
 Significado : Estrutura de Repetição por Contagem
 Total MCs   : 2
@@ -16,32 +16,25 @@ Total MCs   : 2
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | from numpy import *
-     2 | a = input("insira a sequencia: ").split(',')
-     3 | p = 0
-     4 | c = 0
-     5 | r = 0
-     6 | l = 0
-     7 | b = 0
-     8 | for i in range(len(a)):
-     9 | 	if(a[i].upper() == "P"):
-    10 | 		p += 1
-    11 | 	elif(a[i].upper() == "C"):
-    12 | 		c += 1
-    13 | 	elif(a[i].upper() == "R"):
-    14 | 		r += 1
-    15 | 	elif(a[i].upper() == "L"):
-    16 | 		l += 1
-    17 | 	elif(a[i].upper() == "B"):
-    18 | 		b += 1
-    19 | k = zeros(5, dtype = int)
-    20 | k[0] = p
-    21 | k[1] = c
-    22 | k[2] = r
-    23 | k[3] = l
-    24 | k[4] = b
-    25 | print(max(k))
-    26 | print(k)
+     1 | from numpy import*
+     2 | v= input("").upper().split(',')
+     3 | pr=0
+     4 | ca=0
+     5 | ru=0
+     6 | lo=0
+     7 | br=0
+     8 | 
+     9 | for i in range(len(v)):
+    10 | 	if(v[i]=="P"):
+    11 | 		pr=pr+1
+    12 | 	elif(v[i]=="C"):
+    13 | 		ca=ca+1
+    14 | 	elif(v[i]=="R"):
+    15 | 		ru=ru+1
+    16 | 	elif(v[i]=="L"):
+    17 | 		lo=lo+1
+    18 | 	elif(v[i]=="B"):
+    19 | 		br=br+1
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
@@ -50,63 +43,90 @@ DETALHAMENTO DOS MISCONCEPTIONS
 ▶ B8 — Não utilização de elif/else
   Ocorrências: 1
 
-  [1] Linha 15: Cadeia if/elif sem bloco else final
-      Trecho  : if ... (linha 15) / elif ... sem else
+  [1] Linha 16: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 16) / elif ... sem else
       Contexto:
-              14 | 		r += 1
-        >>>   15 | 	elif(a[i].upper() == "L"):
-              16 | 		l += 1
+              15 | 		ru=ru+1
+        >>>   16 | 	elif(v[i]=="L"):
+              17 | 		lo=lo+1
 
 ▶ G4 — Funções/variáveis com nomes não significativos
-  Ocorrências: 7
+  Ocorrências: 11
 
-  [1] Linha 2: Variável 'a' com nome muito curto (≤4 chars)
-      Trecho  : a = ...
+  [1] Linha 2: Variável 'v' com nome muito curto (≤4 chars)
+      Trecho  : v = ...
       Contexto:
-               1 | from numpy import *
-        >>>    2 | a = input("insira a sequencia: ").split(',')
-               3 | p = 0
+               1 | from numpy import*
+        >>>    2 | v= input("").upper().split(',')
+               3 | pr=0
 
-  [2] Linha 3: Variável 'p' com nome muito curto (≤4 chars)
-      Trecho  : p = ...
+  [2] Linha 3: Variável 'pr' com nome muito curto (≤4 chars)
+      Trecho  : pr = ...
       Contexto:
-               2 | a = input("insira a sequencia: ").split(',')
-        >>>    3 | p = 0
-               4 | c = 0
+               2 | v= input("").upper().split(',')
+        >>>    3 | pr=0
+               4 | ca=0
 
-  [3] Linha 4: Variável 'c' com nome muito curto (≤4 chars)
-      Trecho  : c = ...
+  [3] Linha 4: Variável 'ca' com nome muito curto (≤4 chars)
+      Trecho  : ca = ...
       Contexto:
-               3 | p = 0
-        >>>    4 | c = 0
-               5 | r = 0
+               3 | pr=0
+        >>>    4 | ca=0
+               5 | ru=0
 
-  [4] Linha 5: Variável 'r' com nome muito curto (≤4 chars)
-      Trecho  : r = ...
+  [4] Linha 5: Variável 'ru' com nome muito curto (≤4 chars)
+      Trecho  : ru = ...
       Contexto:
-               4 | c = 0
-        >>>    5 | r = 0
-               6 | l = 0
+               4 | ca=0
+        >>>    5 | ru=0
+               6 | lo=0
 
-  [5] Linha 6: Variável 'l' com nome muito curto (≤4 chars)
-      Trecho  : l = ...
+  [5] Linha 6: Variável 'lo' com nome muito curto (≤4 chars)
+      Trecho  : lo = ...
       Contexto:
-               5 | r = 0
-        >>>    6 | l = 0
-               7 | b = 0
+               5 | ru=0
+        >>>    6 | lo=0
+               7 | br=0
 
-  [6] Linha 7: Variável 'b' com nome muito curto (≤4 chars)
-      Trecho  : b = ...
+  [6] Linha 7: Variável 'br' com nome muito curto (≤4 chars)
+      Trecho  : br = ...
       Contexto:
-               6 | l = 0
-        >>>    7 | b = 0
-               8 | for i in range(len(a)):
+               6 | lo=0
+        >>>    7 | br=0
+               8 | 
 
-  [7] Linha 19: Variável 'k' com nome muito curto (≤4 chars)
-      Trecho  : k = ...
+  [7] Linha 11: Variável 'pr' com nome muito curto (≤4 chars)
+      Trecho  : pr = ...
       Contexto:
-              18 | 		b += 1
-        >>>   19 | k = zeros(5, dtype = int)
-              20 | k[0] = p
+              10 | 	if(v[i]=="P"):
+        >>>   11 | 		pr=pr+1
+              12 | 	elif(v[i]=="C"):
+
+  [8] Linha 13: Variável 'ca' com nome muito curto (≤4 chars)
+      Trecho  : ca = ...
+      Contexto:
+              12 | 	elif(v[i]=="C"):
+        >>>   13 | 		ca=ca+1
+              14 | 	elif(v[i]=="R"):
+
+  [9] Linha 15: Variável 'ru' com nome muito curto (≤4 chars)
+      Trecho  : ru = ...
+      Contexto:
+              14 | 	elif(v[i]=="R"):
+        >>>   15 | 		ru=ru+1
+              16 | 	elif(v[i]=="L"):
+
+  [10] Linha 17: Variável 'lo' com nome muito curto (≤4 chars)
+      Trecho  : lo = ...
+      Contexto:
+              16 | 	elif(v[i]=="L"):
+        >>>   17 | 		lo=lo+1
+              18 | 	elif(v[i]=="B"):
+
+  [11] Linha 19: Variável 'br' com nome muito curto (≤4 chars)
+      Trecho  : br = ...
+      Contexto:
+              18 | 	elif(v[i]=="B"):
+        >>>   19 | 		br=br+1
 
 ======================================================================

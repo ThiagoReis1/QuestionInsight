@@ -1,12 +1,12 @@
 ======================================================================
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
-Arquivo     : 5014_6175.py
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2023_1_v1.81\2023-1\528\users\8780\codes\5014_6175.py
+Arquivo     : 5014_6175.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2023_1_v1.81\2023-1\528\users\8796\executions\5014_6175.log
 Assessment  : 5014
 Título      : TP3: Est. Condicional Encadeada
 Questão     : 6175
-Aluno       : 8780
+Aluno       : 8796
 Grupo       : TP 03
 Significado : Estrutura Condicional Encadeada
 Total MCs   : 1
@@ -16,48 +16,48 @@ Total MCs   : 1
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | x = float(input("Digite o valor de x: "))
+     1 | x = float(input())
      2 | 
-     3 | from math import *
-     4 | 
-     5 | if x < -4 or x > 4:
-     6 | 	print("entrada invalida")
-     7 | else:
-     8 | 	if x >= -4 and x < 0:
-     9 | 		y = sqrt(abs(x))
-    10 | 	else:
-    11 | 		y = sqrt(x)
-    12 | 		
-    13 | print(round(y, 4))
+     3 | raiz = 0
+     4 | if -4 <= x < 0:
+     5 | 	raiz = abs(x) ** (1/2)
+     6 | 	print(round(raiz, 4))
+     7 | elif 0 <= x <= 4:
+     8 | 	raiz = x ** (1/2)
+     9 | 	print(round(raiz, 4))
+    10 | else:
+    11 | 	print('entrada invalida')
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
 ----------------------------------------------------------------------
 
 ▶ G4 — Funções/variáveis com nomes não significativos
-  Ocorrências: 3
+  Ocorrências: 4
 
   [1] Linha 1: Variável 'x' com nome muito curto (≤4 chars)
       Trecho  : x = ...
       Contexto:
-        >>>    1 | x = float(input("Digite o valor de x: "))
+        >>>    1 | x = float(input())
                2 | 
 
-  [2] Linha 9: Variável 'y' com nome muito curto (≤4 chars)
-      Trecho  : y = ...
+  [2] Linha 3: Variável 'raiz' com nome muito curto (≤4 chars)
+      Trecho  : raiz = ...
       Contexto:
-               8 | 	if x >= -4 and x < 0:
-        >>>    9 | 		y = sqrt(abs(x))
-              10 | 	else:
+               2 | 
+        >>>    3 | raiz = 0
+               4 | if -4 <= x < 0:
 
-  [3] Linha 11: Variável 'y' com nome muito curto (≤4 chars)
-      Trecho  : y = ...
+  [3] Linha 5: Variável 'raiz' com nome muito curto (≤4 chars)
+      Trecho  : raiz = ...
       Contexto:
-              10 | 	else:
-        >>>   11 | 		y = sqrt(x)
-              12 | 		
+               4 | if -4 <= x < 0:
+        >>>    5 | 	raiz = abs(x) ** (1/2)
+               6 | 	print(round(raiz, 4))
 
-======================================================================ontexto:
+  [4] Linha 8: Variável 'raiz' com nome muito curto (≤4 chars)
+      Trecho  : raiz = ...
+      Contexto:
                7 | elif 0 <= x <= 4:
         >>>    8 | 	raiz = x ** (1/2)
                9 | 	print(round(raiz, 4))

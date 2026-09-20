@@ -1,12 +1,12 @@
 ======================================================================
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
-Arquivo     : 3778_3137.py
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2021_2_v1.81\2021-2\403\users\7185\codes\3778_3137.py
+Arquivo     : 3778_3137.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2021_2_v1.81\2021-2\403\users\5664\executions\3778_3137.log
 Assessment  : 3778
 Título      : TP 6: Estrutura de Repetição por Contagem (for)
 Questão     : 3137
-Aluno       : 7185
+Aluno       : 5664
 Grupo       : TP 06
 Significado : Estrutura de Repetição por Contagem
 Total MCs   : 1
@@ -16,59 +16,57 @@ Total MCs   : 1
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | from numpy import *
+     1 | from numpy import*
      2 | 
-     3 | # entrada
-     4 | 
-     5 | vet = array(eval(input()))
-     6 | 
-     7 | # acumulador
+     3 | v= array(eval(input('numeros: ')))
+     4 | m=0
+     5 | n=size(v)
+     6 | for i in range(size(v)):
+     7 | 	m= m+(exp(v[i]))
      8 | 
-     9 | num = 0 # numerador
-    10 | 
-    11 | # laço 1
-    12 | 
-    13 | for i in range(size(vet)):
-    14 | 	
-    15 | 	num = num + (exp(vet[i]))
-    16 | 	
-    17 | 
-    18 | m = log(num/exp(size(vet)))
-    19 | print (round(m, 2))
+     9 | k= log(m/exp(n))
+    10 | print(round(k,2))
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
 ----------------------------------------------------------------------
 
 ▶ G4 — Funções/variáveis com nomes não significativos
-  Ocorrências: 4
+  Ocorrências: 5
 
-  [1] Linha 5: Variável 'vet' com nome muito curto (≤4 chars)
-      Trecho  : vet = ...
+  [1] Linha 3: Variável 'v' com nome muito curto (≤4 chars)
+      Trecho  : v = ...
       Contexto:
-               4 | 
-        >>>    5 | vet = array(eval(input()))
-               6 | 
+               2 | 
+        >>>    3 | v= array(eval(input('numeros: ')))
+               4 | m=0
 
-  [2] Linha 9: Variável 'num' com nome muito curto (≤4 chars)
-      Trecho  : num = ...
-      Contexto:
-               8 | 
-        >>>    9 | num = 0 # numerador
-              10 | 
-
-  [3] Linha 18: Variável 'm' com nome muito curto (≤4 chars)
+  [2] Linha 4: Variável 'm' com nome muito curto (≤4 chars)
       Trecho  : m = ...
       Contexto:
-              17 | 
-        >>>   18 | m = log(num/exp(size(vet)))
-              19 | print (round(m, 2))
+               3 | v= array(eval(input('numeros: ')))
+        >>>    4 | m=0
+               5 | n=size(v)
 
-  [4] Linha 15: Variável 'num' com nome muito curto (≤4 chars)
-      Trecho  : num = ...
+  [3] Linha 5: Variável 'n' com nome muito curto (≤4 chars)
+      Trecho  : n = ...
       Contexto:
-              14 | 	
-        >>>   15 | 	num = num + (exp(vet[i]))
-              16 | 	
+               4 | m=0
+        >>>    5 | n=size(v)
+               6 | for i in range(size(v)):
+
+  [4] Linha 9: Variável 'k' com nome muito curto (≤4 chars)
+      Trecho  : k = ...
+      Contexto:
+               8 | 
+        >>>    9 | k= log(m/exp(n))
+              10 | print(round(k,2))
+
+  [5] Linha 7: Variável 'm' com nome muito curto (≤4 chars)
+      Trecho  : m = ...
+      Contexto:
+               6 | for i in range(size(v)):
+        >>>    7 | 	m= m+(exp(v[i]))
+               8 | 
 
 ======================================================================

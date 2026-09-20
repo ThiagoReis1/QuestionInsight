@@ -1,12 +1,12 @@
 ======================================================================
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
-Arquivo     : 367_1650.py
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2016_2_v1.81\2016-2\127\users\1928\codes\367_1650.py
+Arquivo     : 367_1650.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2016_2_v1.81\2016-2\127\users\1922\executions\367_1650.log
 Assessment  : 367
 Título      : Trabalho Prático 06 - Estrutura de Repetição por Contagem (for)
 Questão     : 1650
-Aluno       : 1928
+Aluno       : 1922
 Grupo       : TP 06
 Significado : Estrutura de Repetição por Contagem
 Total MCs   : 2
@@ -16,32 +16,32 @@ Total MCs   : 2
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | from numpy import *
+     1 | from numpy import*
      2 | 
-     3 | v = input("V: ")
-     4 | 
+     3 | v = input()
+     4 | v1 = v.split(";")
      5 | 
-     6 | b = 0
-     7 | pa = 0
-     8 | pr = 0
-     9 | a = 0
-    10 | i = 0
-    11 | 
-    12 | for j in range(0,len(v),2):
-    13 | 	if(v[j]== "P"):
-    14 | 		b = b + 1
-    15 | 	if(v[j] == "C"):
-    16 | 		pa = pa + 1
-    17 | 	if(v[j] == "R"):
-    18 | 		pr = pr + 1
-    19 | 	if(v[j] == "L"):
-    20 | 		a = a + 1
-    21 | 	if(v[j] == "B"):
-    22 | 		i = i + 1
-    23 | 
-    24 | v_2 = array([b, pa, pr, a, i])
-    25 | print(max(v_2))
-    26 | print(v_2)
+     6 | 
+     7 | 
+     8 | cont = zeros(5, dtype=int)
+     9 | 
+    10 | for i in range(size(v)):
+    11 | 	if(v1[i] == 'P'):
+    12 | 		cont[0] = cont[0] + 1
+    13 | 	elif(v1[i] == 'C'):
+    14 | 
+    15 | 		cont[1] = cont[1] + 1
+    16 | 	elif(v1[i] == 'R'):
+    17 | 	
+    18 | 		cont[2] = cont[2] + 1
+    19 | 	elif(v1[i] == 'L'):
+    20 | 		
+    21 | 		cont[3] = cont[3] + 1
+    22 | 	elif(v1[i] == 'B'):
+    23 | 		
+    24 | 		cont[4] = cont[4] + 1
+    25 | print(max(cont))
+    26 | print(cont)
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
@@ -50,44 +50,38 @@ DETALHAMENTO DOS MISCONCEPTIONS
 ▶ B8 — Não utilização de elif/else
   Ocorrências: 1
 
-  [1] Linha 0: B8 detectado pelo VisitorMC3 (localização exata não mapeada)
-      Trecho  : —
+  [1] Linha 19: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 19) / elif ... sem else
+      Contexto:
+              18 | 		cont[2] = cont[2] + 1
+        >>>   19 | 	elif(v1[i] == 'L'):
+              20 | 		
 
 ▶ G4 — Funções/variáveis com nomes não significativos
-  Ocorrências: 12
+  Ocorrências: 3
 
   [1] Linha 3: Variável 'v' com nome muito curto (≤4 chars)
       Trecho  : v = ...
       Contexto:
                2 | 
-        >>>    3 | v = input("V: ")
-               4 | 
+        >>>    3 | v = input()
+               4 | v1 = v.split(";")
 
-  [2] Linha 6: Variável 'b' com nome muito curto (≤4 chars)
-      Trecho  : b = ...
+  [2] Linha 4: Variável 'v1' com nome muito curto (≤4 chars)
+      Trecho  : v1 = ...
       Contexto:
+               3 | v = input()
+        >>>    4 | v1 = v.split(";")
                5 | 
-        >>>    6 | b = 0
-               7 | pa = 0
 
-  [3] Linha 7: Variável 'pa' com nome muito curto (≤4 chars)
-      Trecho  : pa = ...
+  [3] Linha 8: Variável 'cont' com nome muito curto (≤4 chars)
+      Trecho  : cont = ...
       Contexto:
-               6 | b = 0
-        >>>    7 | pa = 0
-               8 | pr = 0
+               7 | 
+        >>>    8 | cont = zeros(5, dtype=int)
+               9 | 
 
-  [4] Linha 8: Variável 'pr' com nome muito curto (≤4 chars)
-      Trecho  : pr = ...
-      Contexto:
-               7 | pa = 0
-        >>>    8 | pr = 0
-               9 | a = 0
-
-  [5] Linha 9: Variável 'a' com nome muito curto (≤4 chars)
-      Trecho  : a = ...
-      Contexto:
-               8 | pr = 0
+======================================================================            8 | pr = 0
         >>>    9 | a = 0
               10 | i = 0
 

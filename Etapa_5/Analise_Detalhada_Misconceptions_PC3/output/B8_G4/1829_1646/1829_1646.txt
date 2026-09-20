@@ -1,12 +1,12 @@
 ======================================================================
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
-Arquivo     : 1829_1646.py
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2019_1_v1.81\2019-1\221\users\4120\codes\1829_1646.py
+Arquivo     : 1829_1646.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2019_1_v1.81\2019-1\221\users\4116\executions\1829_1646.log
 Assessment  : 1829
 Título      : TP6: Repetição por contagem
 Questão     : 1646
-Aluno       : 4120
+Aluno       : 4116
 Grupo       : TP 06
 Significado : Estrutura de Repetição por Contagem
 Total MCs   : 2
@@ -16,20 +16,20 @@ Total MCs   : 2
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | from numpy import *
-     2 | s = array(eval(input("valores de saque: ")))
-     3 | c = 0
-     4 | for i in range(size(s)):
-     5 | 	if(s[i] <= 50):
-     6 | 		c = c + 1
-     7 | print(c)
-     8 | j=-1
-     9 | p = zeros(c, dtype = int)
-    10 | for i in range(size(s)):
-    11 | 	if(s[i] <= 50):
-    12 | 		p[j] = i
-    13 | print(p)
-    14 | 
+     1 | from numpy import*
+     2 | 
+     3 | v = array(eval(input(": ")))
+     4 | s = 0
+     5 | for i in range(size(v)):
+     6 | 	if (v[i] <= 50):
+     7 | 		s = s + 1 
+     8 | print(s)
+     9 | j = -1
+    10 | b = zeros(s, dtype=int)
+    11 | for i in range(size(v)):
+    12 | 	if (v[i] <= 50 ):
+    13 | 		b[j] = i
+    14 | print(b)
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
@@ -44,39 +44,39 @@ DETALHAMENTO DOS MISCONCEPTIONS
 ▶ G4 — Funções/variáveis com nomes não significativos
   Ocorrências: 5
 
-  [1] Linha 2: Variável 's' com nome muito curto (≤4 chars)
+  [1] Linha 3: Variável 'v' com nome muito curto (≤4 chars)
+      Trecho  : v = ...
+      Contexto:
+               2 | 
+        >>>    3 | v = array(eval(input(": ")))
+               4 | s = 0
+
+  [2] Linha 4: Variável 's' com nome muito curto (≤4 chars)
       Trecho  : s = ...
       Contexto:
-               1 | from numpy import *
-        >>>    2 | s = array(eval(input("valores de saque: ")))
-               3 | c = 0
+               3 | v = array(eval(input(": ")))
+        >>>    4 | s = 0
+               5 | for i in range(size(v)):
 
-  [2] Linha 3: Variável 'c' com nome muito curto (≤4 chars)
-      Trecho  : c = ...
-      Contexto:
-               2 | s = array(eval(input("valores de saque: ")))
-        >>>    3 | c = 0
-               4 | for i in range(size(s)):
-
-  [3] Linha 8: Variável 'j' com nome muito curto (≤4 chars)
+  [3] Linha 9: Variável 'j' com nome muito curto (≤4 chars)
       Trecho  : j = ...
       Contexto:
-               7 | print(c)
-        >>>    8 | j=-1
-               9 | p = zeros(c, dtype = int)
+               8 | print(s)
+        >>>    9 | j = -1
+              10 | b = zeros(s, dtype=int)
 
-  [4] Linha 9: Variável 'p' com nome muito curto (≤4 chars)
-      Trecho  : p = ...
+  [4] Linha 10: Variável 'b' com nome muito curto (≤4 chars)
+      Trecho  : b = ...
       Contexto:
-               8 | j=-1
-        >>>    9 | p = zeros(c, dtype = int)
-              10 | for i in range(size(s)):
+               9 | j = -1
+        >>>   10 | b = zeros(s, dtype=int)
+              11 | for i in range(size(v)):
 
-  [5] Linha 6: Variável 'c' com nome muito curto (≤4 chars)
-      Trecho  : c = ...
+  [5] Linha 7: Variável 's' com nome muito curto (≤4 chars)
+      Trecho  : s = ...
       Contexto:
-               5 | 	if(s[i] <= 50):
-        >>>    6 | 		c = c + 1
-               7 | print(c)
+               6 | 	if (v[i] <= 50):
+        >>>    7 | 		s = s + 1 
+               8 | print(s)
 
-======================================================================
+============================================================================

@@ -1,12 +1,12 @@
 ======================================================================
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
-Arquivo     : 5647_6473.py
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2024_1_v1.81\2024-1\590\users\9814\codes\5647_6473.py
+Arquivo     : 5647_6473.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2024_1_v1.81\2024-1\590\users\9818\executions\5647_6473.log
 Assessment  : 5647
 Título      : TP 1: Variáveis e Estrutura Sequencial
 Questão     : 6473
-Aluno       : 9814
+Aluno       : 9818
 Grupo       : TP 01
 Significado : Variáveis e Estrutura Sequencial
 Total MCs   : 1
@@ -18,14 +18,11 @@ CÓDIGO FONTE
 ----------------------------------------------------------------------
      1 | from math import *
      2 | 
-     3 | # faça seu código aqui!
-     4 | 
-     5 | L = float(input("Comprimento do lado: "))
+     3 | lado = float(input())
+     4 | apot = lado / (2 * tan(pi/10))
+     5 | adec = 5 * lado * apot
      6 | 
-     7 | A = L / (2 * tan(pi/10))
-     8 | AD = 5 * L * A
-     9 | 
-    10 | print(round(AD, 2))
+     7 | print(round(adec, 2))
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
@@ -34,25 +31,25 @@ DETALHAMENTO DOS MISCONCEPTIONS
 ▶ G4 — Funções/variáveis com nomes não significativos
   Ocorrências: 3
 
-  [1] Linha 5: Variável 'L' com nome muito curto (≤4 chars)
-      Trecho  : L = ...
+  [1] Linha 3: Variável 'lado' com nome muito curto (≤4 chars)
+      Trecho  : lado = ...
       Contexto:
-               4 | 
-        >>>    5 | L = float(input("Comprimento do lado: "))
+               2 | 
+        >>>    3 | lado = float(input())
+               4 | apot = lado / (2 * tan(pi/10))
+
+  [2] Linha 4: Variável 'apot' com nome muito curto (≤4 chars)
+      Trecho  : apot = ...
+      Contexto:
+               3 | lado = float(input())
+        >>>    4 | apot = lado / (2 * tan(pi/10))
+               5 | adec = 5 * lado * apot
+
+  [3] Linha 5: Variável 'adec' com nome muito curto (≤4 chars)
+      Trecho  : adec = ...
+      Contexto:
+               4 | apot = lado / (2 * tan(pi/10))
+        >>>    5 | adec = 5 * lado * apot
                6 | 
 
-  [2] Linha 7: Variável 'A' com nome muito curto (≤4 chars)
-      Trecho  : A = ...
-      Contexto:
-               6 | 
-        >>>    7 | A = L / (2 * tan(pi/10))
-               8 | AD = 5 * L * A
-
-  [3] Linha 8: Variável 'AD' com nome muito curto (≤4 chars)
-      Trecho  : AD = ...
-      Contexto:
-               7 | A = L / (2 * tan(pi/10))
-        >>>    8 | AD = 5 * L * A
-               9 | 
-
-===============================================================================================================
+======================================================================

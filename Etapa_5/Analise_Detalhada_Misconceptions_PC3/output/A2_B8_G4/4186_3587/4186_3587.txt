@@ -1,12 +1,12 @@
 ======================================================================
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
-Arquivo     : 4186_3587.py
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2022_1_v1.81\2022-1\438\users\7651\codes\4186_3587.py
+Arquivo     : 4186_3587.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2022_1_v1.81\2022-1\438\users\7648\executions\4186_3587.log
 Assessment  : 4186
 Título      : TP 05: Vetores e Strings
 Questão     : 3587
-Aluno       : 7651
+Aluno       : 7648
 Grupo       : TP 05
 Significado : Vetores e Strings
 Total MCs   : 3
@@ -17,92 +17,165 @@ Total MCs   : 3
 CÓDIGO FONTE
 ----------------------------------------------------------------------
      1 | from numpy import*
-     2 | v = array(eval(input()))
-     3 | i = 0
-     4 | c = 100
-     5 | 
-     6 | while (i < size(v)):
-     7 | 	if (v[i] == 1):
-     8 | 		c = c * 5
-     9 | 	if (v[i] == 2):
-    10 | 		c = c * 3
-    11 | 	if (v[i] == 3):
-    12 | 		c = c 
-    13 | 	if (v[i] == 4):
-    14 | 		c = c/2
-    15 | 	i += 1
-    16 | print (round(c,2))	
+     2 | 
+     3 | vet = array(eval(input("valores")))
+     4 | 
+     5 | i = 0
+     6 | p = 100
+     7 | 
+     8 | while( i < size(vet)):
+     9 | 	if vet[i] == 1:
+    10 | 		i = i 
+    11 | 		p = p*5
+    12 | 	elif vet[i] == 2:
+    13 | 		i = i  
+    14 | 		p = p*3 
+    15 | 	elif vet[i] == 3:
+    16 | 		i = i  
+    17 | 		p = p
+    18 | 	elif vet[i] == 4:
+    19 | 		i = i 
+    20 | 		p =p/2
+    21 | 	i = i + 1
+    22 | print(p)
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
 ----------------------------------------------------------------------
 
 ▶ A2 — Variável atribuída a si mesma
-  Ocorrências: 1
+  Ocorrências: 5
 
-  [1] Linha 12: 'c' atribuído a si mesmo
-      Trecho  : c = c
+  [1] Linha 10: 'i' atribuído a si mesmo
+      Trecho  : i = i
       Contexto:
-              11 | 	if (v[i] == 3):
-        >>>   12 | 		c = c 
-              13 | 	if (v[i] == 4):
+               9 | 	if vet[i] == 1:
+        >>>   10 | 		i = i 
+              11 | 		p = p*5
+
+  [2] Linha 13: 'i' atribuído a si mesmo
+      Trecho  : i = i
+      Contexto:
+              12 | 	elif vet[i] == 2:
+        >>>   13 | 		i = i  
+              14 | 		p = p*3 
+
+  [3] Linha 16: 'i' atribuído a si mesmo
+      Trecho  : i = i
+      Contexto:
+              15 | 	elif vet[i] == 3:
+        >>>   16 | 		i = i  
+              17 | 		p = p
+
+  [4] Linha 17: 'p' atribuído a si mesmo
+      Trecho  : p = p
+      Contexto:
+              16 | 		i = i  
+        >>>   17 | 		p = p
+              18 | 	elif vet[i] == 4:
+
+  [5] Linha 19: 'i' atribuído a si mesmo
+      Trecho  : i = i
+      Contexto:
+              18 | 	elif vet[i] == 4:
+        >>>   19 | 		i = i 
+              20 | 		p =p/2
 
 ▶ B8 — Não utilização de elif/else
   Ocorrências: 1
 
-  [1] Linha 0: B8 detectado pelo VisitorMC3 (localização exata não mapeada)
-      Trecho  : —
+  [1] Linha 15: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 15) / elif ... sem else
+      Contexto:
+              14 | 		p = p*3 
+        >>>   15 | 	elif vet[i] == 3:
+              16 | 		i = i  
 
 ▶ G4 — Funções/variáveis com nomes não significativos
-  Ocorrências: 7
+  Ocorrências: 12
 
-  [1] Linha 2: Variável 'v' com nome muito curto (≤4 chars)
-      Trecho  : v = ...
+  [1] Linha 3: Variável 'vet' com nome muito curto (≤4 chars)
+      Trecho  : vet = ...
       Contexto:
-               1 | from numpy import*
-        >>>    2 | v = array(eval(input()))
-               3 | i = 0
+               2 | 
+        >>>    3 | vet = array(eval(input("valores")))
+               4 | 
 
-  [2] Linha 3: Variável 'i' com nome muito curto (≤4 chars)
+  [2] Linha 5: Variável 'i' com nome muito curto (≤4 chars)
       Trecho  : i = ...
       Contexto:
-               2 | v = array(eval(input()))
-        >>>    3 | i = 0
-               4 | c = 100
+               4 | 
+        >>>    5 | i = 0
+               6 | p = 100
 
-  [3] Linha 4: Variável 'c' com nome muito curto (≤4 chars)
-      Trecho  : c = ...
+  [3] Linha 6: Variável 'p' com nome muito curto (≤4 chars)
+      Trecho  : p = ...
       Contexto:
-               3 | i = 0
-        >>>    4 | c = 100
-               5 | 
+               5 | i = 0
+        >>>    6 | p = 100
+               7 | 
 
-  [4] Linha 8: Variável 'c' com nome muito curto (≤4 chars)
-      Trecho  : c = ...
+  [4] Linha 21: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
       Contexto:
-               7 | 	if (v[i] == 1):
-        >>>    8 | 		c = c * 5
-               9 | 	if (v[i] == 2):
+              20 | 		p =p/2
+        >>>   21 | 	i = i + 1
+              22 | print(p)
 
-  [5] Linha 10: Variável 'c' com nome muito curto (≤4 chars)
-      Trecho  : c = ...
+  [5] Linha 10: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
       Contexto:
-               9 | 	if (v[i] == 2):
-        >>>   10 | 		c = c * 3
-              11 | 	if (v[i] == 3):
+               9 | 	if vet[i] == 1:
+        >>>   10 | 		i = i 
+              11 | 		p = p*5
 
-  [6] Linha 12: Variável 'c' com nome muito curto (≤4 chars)
-      Trecho  : c = ...
+  [6] Linha 11: Variável 'p' com nome muito curto (≤4 chars)
+      Trecho  : p = ...
       Contexto:
-              11 | 	if (v[i] == 3):
-        >>>   12 | 		c = c 
-              13 | 	if (v[i] == 4):
+              10 | 		i = i 
+        >>>   11 | 		p = p*5
+              12 | 	elif vet[i] == 2:
 
-  [7] Linha 14: Variável 'c' com nome muito curto (≤4 chars)
-      Trecho  : c = ...
+  [7] Linha 13: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
       Contexto:
-              13 | 	if (v[i] == 4):
-        >>>   14 | 		c = c/2
-              15 | 	i += 1
+              12 | 	elif vet[i] == 2:
+        >>>   13 | 		i = i  
+              14 | 		p = p*3 
+
+  [8] Linha 14: Variável 'p' com nome muito curto (≤4 chars)
+      Trecho  : p = ...
+      Contexto:
+              13 | 		i = i  
+        >>>   14 | 		p = p*3 
+              15 | 	elif vet[i] == 3:
+
+  [9] Linha 16: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+              15 | 	elif vet[i] == 3:
+        >>>   16 | 		i = i  
+              17 | 		p = p
+
+  [10] Linha 17: Variável 'p' com nome muito curto (≤4 chars)
+      Trecho  : p = ...
+      Contexto:
+              16 | 		i = i  
+        >>>   17 | 		p = p
+              18 | 	elif vet[i] == 4:
+
+  [11] Linha 19: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+              18 | 	elif vet[i] == 4:
+        >>>   19 | 		i = i 
+              20 | 		p =p/2
+
+  [12] Linha 20: Variável 'p' com nome muito curto (≤4 chars)
+      Trecho  : p = ...
+      Contexto:
+              19 | 		i = i 
+        >>>   20 | 		p =p/2
+              21 | 	i = i + 1
 
 ======================================================================

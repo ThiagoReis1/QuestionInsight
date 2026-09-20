@@ -1,12 +1,12 @@
 ======================================================================
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
-Arquivo     : 367_1644.py
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2016_2_v1.81\2016-2\127\users\1926\codes\367_1644.py
+Arquivo     : 367_1644.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2016_2_v1.81\2016-2\127\users\1927\executions\367_1644.log
 Assessment  : 367
 Título      : Trabalho Prático 06 - Estrutura de Repetição por Contagem (for)
 Questão     : 1644
-Aluno       : 1926
+Aluno       : 1927
 Grupo       : TP 06
 Significado : Estrutura de Repetição por Contagem
 Total MCs   : 2
@@ -17,24 +17,16 @@ Total MCs   : 2
 CÓDIGO FONTE
 ----------------------------------------------------------------------
      1 | from numpy import*
-     2 | vet = array(eval(input("vetor:")))
-     3 | 
-     4 | 
-     5 | i = 0
-     6 | for x  in vet:
-     7 | 	if(x%3==0):
-     8 | 		i = i + 1
-     9 | print(i)
-    10 | 		
-    11 | 		
-    12 | cont = zeros(i,dtype=int)
-    13 | while(i<size(vet)):
-    14 | 	if(vet[i]<5):
-    15 | 		cont[i] = i
-    16 | 	i = i + 1
-    17 | 	
-    18 | print(cont)
-    19 | 		
+     2 | v=array(eval(input()))
+     3 | i=0
+     4 | soma=0
+     5 | k=0
+     6 | for i in range(size(v)):
+     7 | 	if(v[i]<=5):
+     8 | 		k-=1
+     9 | 		soma= soma+ size(v[i])
+    10 | 	print(v)
+    11 | 	print(v[i])
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
@@ -49,39 +41,39 @@ DETALHAMENTO DOS MISCONCEPTIONS
 ▶ G4 — Funções/variáveis com nomes não significativos
   Ocorrências: 5
 
-  [1] Linha 2: Variável 'vet' com nome muito curto (≤4 chars)
-      Trecho  : vet = ...
+  [1] Linha 2: Variável 'v' com nome muito curto (≤4 chars)
+      Trecho  : v = ...
       Contexto:
                1 | from numpy import*
-        >>>    2 | vet = array(eval(input("vetor:")))
-               3 | 
+        >>>    2 | v=array(eval(input()))
+               3 | i=0
 
-  [2] Linha 5: Variável 'i' com nome muito curto (≤4 chars)
+  [2] Linha 3: Variável 'i' com nome muito curto (≤4 chars)
       Trecho  : i = ...
       Contexto:
-               4 | 
-        >>>    5 | i = 0
-               6 | for x  in vet:
+               2 | v=array(eval(input()))
+        >>>    3 | i=0
+               4 | soma=0
 
-  [3] Linha 12: Variável 'cont' com nome muito curto (≤4 chars)
-      Trecho  : cont = ...
+  [3] Linha 4: Variável 'soma' com nome muito curto (≤4 chars)
+      Trecho  : soma = ...
       Contexto:
-              11 | 		
-        >>>   12 | cont = zeros(i,dtype=int)
-              13 | while(i<size(vet)):
+               3 | i=0
+        >>>    4 | soma=0
+               5 | k=0
 
-  [4] Linha 16: Variável 'i' com nome muito curto (≤4 chars)
-      Trecho  : i = ...
+  [4] Linha 5: Variável 'k' com nome muito curto (≤4 chars)
+      Trecho  : k = ...
       Contexto:
-              15 | 		cont[i] = i
-        >>>   16 | 	i = i + 1
-              17 | 	
+               4 | soma=0
+        >>>    5 | k=0
+               6 | for i in range(size(v)):
 
-  [5] Linha 8: Variável 'i' com nome muito curto (≤4 chars)
-      Trecho  : i = ...
+  [5] Linha 9: Variável 'soma' com nome muito curto (≤4 chars)
+      Trecho  : soma = ...
       Contexto:
-               7 | 	if(x%3==0):
-        >>>    8 | 		i = i + 1
-               9 | print(i)
+               8 | 		k-=1
+        >>>    9 | 		soma= soma+ size(v[i])
+              10 | 	print(v)
 
 ======================================================================

@@ -1,8 +1,8 @@
 ======================================================================
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
-Arquivo     : 626_1532.py
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2017_1_v1.81\2017-1\142\users\2213\codes\626_1532.py
+Arquivo     : 626_1532.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2017_1_v1.81\2017-1\142\users\2213\executions\626_1532.log
 Assessment  : 626
 Título      : Trabalho Prático 04: Estrutura de Repetição por Condição (while)
 Questão     : 1532
@@ -19,10 +19,10 @@ CÓDIGO FONTE
      1 | from math import *
      2 | x= int(input("qual o valor:"))
      3 | k= int(input("qual o valor: "))
-     4 | soma=0
-     5 | i=1
-     6 | while(soma<k):
-     7 | 	soma=soma+(k**(2*i+1))/ factorial(2*i+1)
+     4 | soma=x
+     5 | i=2
+     6 | while(soma<i):
+     7 | 	soma=soma+(x**(2*i+1))/ factorial(2*i+1)
      8 | 	i=i+1
      9 | print(round(soma,9))
 
@@ -33,12 +33,12 @@ DETALHAMENTO DOS MISCONCEPTIONS
 ▶ A3 — Variável inicializada desnecessariamente
   Ocorrências: 1
 
-  [1] Linha 2: Variável 'x' declarada mas nunca utilizada
-      Trecho  : x = ...
+  [1] Linha 3: Variável 'k' declarada mas nunca utilizada
+      Trecho  : k = ...
       Contexto:
-               1 | from math import *
-        >>>    2 | x= int(input("qual o valor:"))
-               3 | k= int(input("qual o valor: "))
+               2 | x= int(input("qual o valor:"))
+        >>>    3 | k= int(input("qual o valor: "))
+               4 | soma=x
 
 ▶ G4 — Funções/variáveis com nomes não significativos
   Ocorrências: 6
@@ -55,33 +55,33 @@ DETALHAMENTO DOS MISCONCEPTIONS
       Contexto:
                2 | x= int(input("qual o valor:"))
         >>>    3 | k= int(input("qual o valor: "))
-               4 | soma=0
+               4 | soma=x
 
   [3] Linha 4: Variável 'soma' com nome muito curto (≤4 chars)
       Trecho  : soma = ...
       Contexto:
                3 | k= int(input("qual o valor: "))
-        >>>    4 | soma=0
-               5 | i=1
+        >>>    4 | soma=x
+               5 | i=2
 
   [4] Linha 5: Variável 'i' com nome muito curto (≤4 chars)
       Trecho  : i = ...
       Contexto:
-               4 | soma=0
-        >>>    5 | i=1
-               6 | while(soma<k):
+               4 | soma=x
+        >>>    5 | i=2
+               6 | while(soma<i):
 
   [5] Linha 7: Variável 'soma' com nome muito curto (≤4 chars)
       Trecho  : soma = ...
       Contexto:
-               6 | while(soma<k):
-        >>>    7 | 	soma=soma+(k**(2*i+1))/ factorial(2*i+1)
+               6 | while(soma<i):
+        >>>    7 | 	soma=soma+(x**(2*i+1))/ factorial(2*i+1)
                8 | 	i=i+1
 
   [6] Linha 8: Variável 'i' com nome muito curto (≤4 chars)
       Trecho  : i = ...
       Contexto:
-               7 | 	soma=soma+(k**(2*i+1))/ factorial(2*i+1)
+               7 | 	soma=soma+(x**(2*i+1))/ factorial(2*i+1)
         >>>    8 | 	i=i+1
                9 | print(round(soma,9))
 

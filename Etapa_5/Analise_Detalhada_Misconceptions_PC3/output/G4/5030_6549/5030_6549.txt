@@ -1,12 +1,12 @@
 ======================================================================
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
-Arquivo     : 5030_6549.py
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2023_1_v1.81\2023-1\523\users\8806\codes\5030_6549.py
+Arquivo     : 5030_6549.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2023_1_v1.81\2023-1\523\users\8687\executions\5030_6549.log
 Assessment  : 5030
 Título      : TP3: Est. Condicional Encadeada
 Questão     : 6549
-Aluno       : 8806
+Aluno       : 8687
 Grupo       : TP 03
 Significado : Estrutura Condicional Encadeada
 Total MCs   : 1
@@ -17,15 +17,14 @@ Total MCs   : 1
 CÓDIGO FONTE
 ----------------------------------------------------------------------
      1 | # faça seu código aqui!
-     2 | 
-     3 | num = int(input("Informe um numero inteiro: "))
-     4 | 
-     5 | if(num == 8):
-     6 | 	print("eh magico")
-     7 | elif(num < 8):
-     8 | 	print("eh menor")
-     9 | else:
-    10 | 	print("eh maior")
+     2 | num = int(input("Numero: "))
+     3 | 
+     4 | if num == 8:
+     5 | 	print("eh magico")
+     6 | elif num < 8:
+     7 | 	print("eh menor")
+     8 | else:
+     9 | 	print("eh maior")
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
@@ -34,11 +33,32 @@ DETALHAMENTO DOS MISCONCEPTIONS
 ▶ G4 — Funções/variáveis com nomes não significativos
   Ocorrências: 1
 
-  [1] Linha 3: Variável 'num' com nome muito curto (≤4 chars)
+  [1] Linha 2: Variável 'num' com nome muito curto (≤4 chars)
       Trecho  : num = ...
       Contexto:
-               2 | 
-        >>>    3 | num = int(input("Informe um numero inteiro: "))
-               4 | 
+               1 | # faça seu código aqui!
+        >>>    2 | num = int(input("Numero: "))
+               3 | 
+
+====================================================================== com nome muito curto (≤4 chars)
+      Trecho  : msg = ...
+      Contexto:
+               5 | if (num==8):
+        >>>    6 | 	msg = "eh magico"
+               7 | elif (num<8):
+
+  [3] Linha 8: Variável 'msg' com nome muito curto (≤4 chars)
+      Trecho  : msg = ...
+      Contexto:
+               7 | elif (num<8):
+        >>>    8 | 	msg = "eh menor"
+               9 | else:
+
+  [4] Linha 10: Variável 'msg' com nome muito curto (≤4 chars)
+      Trecho  : msg = ...
+      Contexto:
+               9 | else:
+        >>>   10 | 	msg = "eh maior"
+              11 | print(msg)
 
 ======================================================================

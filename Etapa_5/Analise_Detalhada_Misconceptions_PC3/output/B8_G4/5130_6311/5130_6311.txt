@@ -1,12 +1,12 @@
 ======================================================================
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
-Arquivo     : 5130_6311.py
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2023_1_v1.81\2023-1\528\users\8835\codes\5130_6311.py
+Arquivo     : 5130_6311.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2023_1_v1.81\2023-1\528\users\8772\executions\5130_6311.log
 Assessment  : 5130
 Título      : TP 5: Vetores e Strings
 Questão     : 6311
-Aluno       : 8835
+Aluno       : 8772
 Grupo       : TP 05
 Significado : Vetores e Strings
 Total MCs   : 2
@@ -16,24 +16,25 @@ Total MCs   : 2
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | n = input('').upper()
-     2 | i = 0
-     3 | total = 0
+     1 | s = input().upper()
+     2 | v = 0
+     3 | i = 0
      4 | p = 0
-     5 | l = 0
-     6 | m = 0
-     7 | while i < len(n):
-     8 | 	if n[i] == "C":
-     9 | 		total += 10.50
-    10 | 		p +=1
-    11 | 	if n[i] == "E":
-    12 | 		total += 8.75
-    13 | 		l+=1
-    14 | 	if n[i] == "P":
-    15 | 		total += 17.90
-    16 | 		m+=1
-    17 | 	i+= 1
-    18 | print(round(total,2), p, l, m)
+     5 | c = 0
+     6 | e = 0
+     7 | 
+     8 | while i < len(s):
+     9 | 	if s[i] == "C":
+    10 | 		v = v + 10.5
+    11 | 		c += 1
+    12 | 	elif s[i] == "E":
+    13 | 		v = v + 8.75
+    14 | 		e += 1
+    15 | 	elif s[i] == "P":
+    16 | 		v = v + 17.9
+    17 | 		p += 1
+    18 | 	i += 1
+    19 | print(round(v,2), c, e, p)
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
@@ -42,47 +43,48 @@ DETALHAMENTO DOS MISCONCEPTIONS
 ▶ B8 — Não utilização de elif/else
   Ocorrências: 1
 
-  [1] Linha 0: B8 detectado pelo VisitorMC3 (localização exata não mapeada)
-      Trecho  : —
+  [1] Linha 12: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 12) / elif ... sem else
+      Contexto:
+              11 | 		c += 1
+        >>>   12 | 	elif s[i] == "E":
+              13 | 		v = v + 8.75
 
 ▶ G4 — Funções/variáveis com nomes não significativos
-  Ocorrências: 5
+  Ocorrências: 9
 
-  [1] Linha 1: Variável 'n' com nome muito curto (≤4 chars)
-      Trecho  : n = ...
+  [1] Linha 1: Variável 's' com nome muito curto (≤4 chars)
+      Trecho  : s = ...
       Contexto:
-        >>>    1 | n = input('').upper()
-               2 | i = 0
+        >>>    1 | s = input().upper()
+               2 | v = 0
 
-  [2] Linha 2: Variável 'i' com nome muito curto (≤4 chars)
+  [2] Linha 2: Variável 'v' com nome muito curto (≤4 chars)
+      Trecho  : v = ...
+      Contexto:
+               1 | s = input().upper()
+        >>>    2 | v = 0
+               3 | i = 0
+
+  [3] Linha 3: Variável 'i' com nome muito curto (≤4 chars)
       Trecho  : i = ...
       Contexto:
-               1 | n = input('').upper()
-        >>>    2 | i = 0
-               3 | total = 0
+               2 | v = 0
+        >>>    3 | i = 0
+               4 | p = 0
 
-  [3] Linha 4: Variável 'p' com nome muito curto (≤4 chars)
+  [4] Linha 4: Variável 'p' com nome muito curto (≤4 chars)
       Trecho  : p = ...
       Contexto:
-               3 | total = 0
+               3 | i = 0
         >>>    4 | p = 0
-               5 | l = 0
+               5 | c = 0
 
-  [4] Linha 5: Variável 'l' com nome muito curto (≤4 chars)
-      Trecho  : l = ...
+  [5] Linha 5: Variável 'c' com nome muito curto (≤4 chars)
+      Trecho  : c = ...
       Contexto:
                4 | p = 0
-        >>>    5 | l = 0
-               6 | m = 0
-
-  [5] Linha 6: Variável 'm' com nome muito curto (≤4 chars)
-      Trecho  : m = ...
-      Contexto:
-               5 | l = 0
-        >>>    6 | m = 0
-               7 | while i < len(n):
-
-======================================================================5 | c = 0
+        >>>    5 | c = 0
                6 | e = 0
 
   [6] Linha 6: Variável 'e' com nome muito curto (≤4 chars)

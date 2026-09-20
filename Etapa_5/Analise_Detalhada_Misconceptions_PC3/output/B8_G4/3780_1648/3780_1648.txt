@@ -1,12 +1,12 @@
 ======================================================================
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
-Arquivo     : 3780_1648.py
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2021_2_v1.81\2021-2\406\users\7139\codes\3780_1648.py
+Arquivo     : 3780_1648.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2021_2_v1.81\2021-2\406\users\7127\executions\3780_1648.log
 Assessment  : 3780
 Título      : TP 6: Estrutura de Repetição por Contagem (for)
 Questão     : 1648
-Aluno       : 7139
+Aluno       : 7127
 Grupo       : TP 06
 Significado : Estrutura de Repetição por Contagem
 Total MCs   : 2
@@ -18,25 +18,22 @@ CÓDIGO FONTE
 ----------------------------------------------------------------------
      1 | from numpy import *
      2 | 
-     3 | vet1 = array(eval(input("Frequencia:")))
+     3 | v = array(eval(input("digite as notas: ")))
      4 | 
-     5 | reprov = 0 
-     6 | 
-     7 | for i in range (size(vet1)):
-     8 | 	if (vet1[i] < 70):
-     9 | 		reprov = reprov + 1
-    10 | 		
-    11 | print(reprov)
-    12 | 
-    13 | vet2 = zeros(reprov, dtype=int)
-    14 | j = 0 
-    15 | 
-    16 | for i in range(size(vet1)):
-    17 | 	if (vet1[i] < 70):
-    18 | 		vet2[j] = i
-    19 | 		j = j + 1
-    20 | 		
-    21 | print(vet2)
+     5 | r = 0
+     6 | b = 0
+     7 | 
+     8 | for i in range(size(v)):
+     9 | 	if(v[i] < 70):
+    10 | 		r = r + 1
+    11 | 		
+    12 | n = zeros(r, dtype=int)		
+    13 | for i in range(size(v)):
+    14 | 	if(v[i] < 70):
+    15 | 		n[b] = i
+    16 | 		b = b + 1
+    17 | print(r)
+    18 | print(n)
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
@@ -49,9 +46,48 @@ DETALHAMENTO DOS MISCONCEPTIONS
       Trecho  : —
 
 ▶ G4 — Funções/variáveis com nomes não significativos
-  Ocorrências: 1
+  Ocorrências: 6
 
-  [1] Linha 0: G4 detectado pelo VisitorMC3 (localização exata não mapeada)
-      Trecho  : —
+  [1] Linha 3: Variável 'v' com nome muito curto (≤4 chars)
+      Trecho  : v = ...
+      Contexto:
+               2 | 
+        >>>    3 | v = array(eval(input("digite as notas: ")))
+               4 | 
+
+  [2] Linha 5: Variável 'r' com nome muito curto (≤4 chars)
+      Trecho  : r = ...
+      Contexto:
+               4 | 
+        >>>    5 | r = 0
+               6 | b = 0
+
+  [3] Linha 6: Variável 'b' com nome muito curto (≤4 chars)
+      Trecho  : b = ...
+      Contexto:
+               5 | r = 0
+        >>>    6 | b = 0
+               7 | 
+
+  [4] Linha 12: Variável 'n' com nome muito curto (≤4 chars)
+      Trecho  : n = ...
+      Contexto:
+              11 | 		
+        >>>   12 | n = zeros(r, dtype=int)		
+              13 | for i in range(size(v)):
+
+  [5] Linha 10: Variável 'r' com nome muito curto (≤4 chars)
+      Trecho  : r = ...
+      Contexto:
+               9 | 	if(v[i] < 70):
+        >>>   10 | 		r = r + 1
+              11 | 		
+
+  [6] Linha 16: Variável 'b' com nome muito curto (≤4 chars)
+      Trecho  : b = ...
+      Contexto:
+              15 | 		n[b] = i
+        >>>   16 | 		b = b + 1
+              17 | print(r)
 
 ======================================================================

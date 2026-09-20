@@ -1,12 +1,12 @@
 ======================================================================
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
-Arquivo     : 1785_1596.py
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2019_1_v1.81\2019-1\226\users\4123\codes\1785_1596.py
+Arquivo     : 1785_1596.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2019_1_v1.81\2019-1\226\users\4157\executions\1785_1596.log
 Assessment  : 1785
 Título      : TP5: Vetores e Strings
 Questão     : 1596
-Aluno       : 4123
+Aluno       : 4157
 Grupo       : TP 05
 Significado : Vetores e Strings
 Total MCs   : 1
@@ -17,45 +17,43 @@ Total MCs   : 1
 CÓDIGO FONTE
 ----------------------------------------------------------------------
      1 | from numpy import*
-     2 | nt = array(eval(input()))
-     3 | n = sum(nt)
-     4 | o = min(nt)
-     5 | m = (n-o)/(len(nt)-1)
-     6 | print(round(m,2))
+     2 | vet = array(eval(input("notas do estudante:")))
+     3 | me = (sum(vet)-min(vet))/(size(vet)-1)
+     4 | print(round(me, 2))
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
 ----------------------------------------------------------------------
 
 ▶ G4 — Funções/variáveis com nomes não significativos
-  Ocorrências: 4
+  Ocorrências: 2
 
-  [1] Linha 2: Variável 'nt' com nome muito curto (≤4 chars)
-      Trecho  : nt = ...
+  [1] Linha 2: Variável 'vet' com nome muito curto (≤4 chars)
+      Trecho  : vet = ...
       Contexto:
                1 | from numpy import*
-        >>>    2 | nt = array(eval(input()))
-               3 | n = sum(nt)
+        >>>    2 | vet = array(eval(input("notas do estudante:")))
+               3 | me = (sum(vet)-min(vet))/(size(vet)-1)
 
-  [2] Linha 3: Variável 'n' com nome muito curto (≤4 chars)
-      Trecho  : n = ...
+  [2] Linha 3: Variável 'me' com nome muito curto (≤4 chars)
+      Trecho  : me = ...
       Contexto:
-               2 | nt = array(eval(input()))
-        >>>    3 | n = sum(nt)
-               4 | o = min(nt)
+               2 | vet = array(eval(input("notas do estudante:")))
+        >>>    3 | me = (sum(vet)-min(vet))/(size(vet)-1)
+               4 | print(round(me, 2))
 
-  [3] Linha 4: Variável 'o' com nome muito curto (≤4 chars)
-      Trecho  : o = ...
+======================================================================to curto (≤4 chars)
+      Trecho  : med = ...
       Contexto:
-               3 | n = sum(nt)
-        >>>    4 | o = min(nt)
-               5 | m = (n-o)/(len(nt)-1)
+               8 | soma = sum(notas) - notas[i]	
+        >>>    9 | med = soma/(size(notas) - 1)
+              10 | 
 
-  [4] Linha 5: Variável 'm' com nome muito curto (≤4 chars)
-      Trecho  : m = ...
+  [4] Linha 6: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
       Contexto:
-               4 | o = min(nt)
-        >>>    5 | m = (n-o)/(len(nt)-1)
-               6 | print(round(m,2))
+               5 | while(notas[i] != min(notas)):
+        >>>    6 | 	i = i + 1
+               7 | 	
 
 ======================================================================

@@ -1,12 +1,12 @@
 ======================================================================
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
-Arquivo     : 3236_1641.py
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2021_1_v1.81\2021-1\377\users\6360\codes\3236_1641.py
+Arquivo     : 3236_1641.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2021_1_v1.81\2021-1\377\users\5041\executions\3236_1641.log
 Assessment  : 3236
 Título      : TP6: Repetição por contagem
 Questão     : 1641
-Aluno       : 6360
+Aluno       : 5041
 Grupo       : TP 06
 Significado : Estrutura de Repetição por Contagem
 Total MCs   : 2
@@ -17,21 +17,27 @@ Total MCs   : 2
 CÓDIGO FONTE
 ----------------------------------------------------------------------
      1 | from numpy import *
-     2 | v = array(eval(input()))
-     3 | 
-     4 | e = 0
-     5 | for i in range(size(v)):
-     6 | 	if v[i] % 3 == 0:
-     7 | 		e = e + 1
+     2 | 
+     3 | q = array(eval(input("Informe a quantidade de alunos matriculados: ")))
+     4 | 
+     5 | i = 0
+     6 | u = 0
+     7 | 
      8 | 
-     9 | b = zeros(e, dtype = int)
-    10 | o = 0
-    11 | for i in range(size(v)):
-    12 | 	if v[i] % 3 == 0:
-    13 | 		b[o] = i
-    14 | 		o = o + 1
-    15 | print(e)
-    16 | print(b)
+     9 | for x in range(0, size(q)):
+    10 | 	if q[x]%3==0:
+    11 | 		i = i + 1
+    12 | 	v = zeros(i, dtype=int)
+    13 | 	
+    14 | for x in range(0, size(q)):
+    15 | 	if q[x]%3==0:
+    16 | 		v[u] = x
+    17 | 		u = u + 1
+    18 | 		
+    19 | 	
+    20 | 	
+    21 | print(i)
+    22 | print(v)
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
@@ -46,46 +52,46 @@ DETALHAMENTO DOS MISCONCEPTIONS
 ▶ G4 — Funções/variáveis com nomes não significativos
   Ocorrências: 6
 
-  [1] Linha 2: Variável 'v' com nome muito curto (≤4 chars)
+  [1] Linha 3: Variável 'q' com nome muito curto (≤4 chars)
+      Trecho  : q = ...
+      Contexto:
+               2 | 
+        >>>    3 | q = array(eval(input("Informe a quantidade de alunos matriculados: ")))
+               4 | 
+
+  [2] Linha 5: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+               4 | 
+        >>>    5 | i = 0
+               6 | u = 0
+
+  [3] Linha 6: Variável 'u' com nome muito curto (≤4 chars)
+      Trecho  : u = ...
+      Contexto:
+               5 | i = 0
+        >>>    6 | u = 0
+               7 | 
+
+  [4] Linha 12: Variável 'v' com nome muito curto (≤4 chars)
       Trecho  : v = ...
       Contexto:
-               1 | from numpy import *
-        >>>    2 | v = array(eval(input()))
-               3 | 
+              11 | 		i = i + 1
+        >>>   12 | 	v = zeros(i, dtype=int)
+              13 | 	
 
-  [2] Linha 4: Variável 'e' com nome muito curto (≤4 chars)
-      Trecho  : e = ...
+  [5] Linha 11: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
       Contexto:
-               3 | 
-        >>>    4 | e = 0
-               5 | for i in range(size(v)):
+              10 | 	if q[x]%3==0:
+        >>>   11 | 		i = i + 1
+              12 | 	v = zeros(i, dtype=int)
 
-  [3] Linha 9: Variável 'b' com nome muito curto (≤4 chars)
-      Trecho  : b = ...
+  [6] Linha 17: Variável 'u' com nome muito curto (≤4 chars)
+      Trecho  : u = ...
       Contexto:
-               8 | 
-        >>>    9 | b = zeros(e, dtype = int)
-              10 | o = 0
-
-  [4] Linha 10: Variável 'o' com nome muito curto (≤4 chars)
-      Trecho  : o = ...
-      Contexto:
-               9 | b = zeros(e, dtype = int)
-        >>>   10 | o = 0
-              11 | for i in range(size(v)):
-
-  [5] Linha 7: Variável 'e' com nome muito curto (≤4 chars)
-      Trecho  : e = ...
-      Contexto:
-               6 | 	if v[i] % 3 == 0:
-        >>>    7 | 		e = e + 1
-               8 | 
-
-  [6] Linha 14: Variável 'o' com nome muito curto (≤4 chars)
-      Trecho  : o = ...
-      Contexto:
-              13 | 		b[o] = i
-        >>>   14 | 		o = o + 1
-              15 | print(e)
+              16 | 		v[u] = x
+        >>>   17 | 		u = u + 1
+              18 | 		
 
 ======================================================================

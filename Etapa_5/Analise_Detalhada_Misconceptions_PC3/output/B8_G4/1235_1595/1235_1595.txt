@@ -1,12 +1,12 @@
 ======================================================================
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
-Arquivo     : 1235_1595.py
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2018_1_v1.81\2018-1\187\users\3203\codes\1235_1595.py
+Arquivo     : 1235_1595.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2018_1_v1.81\2018-1\187\users\3190\executions\1235_1595.log
 Assessment  : 1235
 Título      : TP 5: Vetores e Strings
 Questão     : 1595
-Aluno       : 3203
+Aluno       : 3190
 Grupo       : TP 05
 Significado : Vetores e Strings
 Total MCs   : 2
@@ -16,18 +16,22 @@ Total MCs   : 2
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | from numpy import *
+     1 | from numpy import* 
      2 | 
-     3 | v = array(eval(input()))
+     3 | vetor = array(eval(input("Insira as notas: ")))
      4 | 
-     5 | x=0
-     6 | m=0
-     7 | 
-     8 | while (x<size(v)) :
-     9 | 	if v[x]>0:
-    10 | 		m = (v[0]+v[1]+v[2])/3 - min(v[1])
-    11 | 		x = x+1
-    12 | print(round(m,2))
+     5 | i = 0 
+     6 | v = []
+     7 | u = 0
+     8 | 
+     9 | while(i<size(vetor)):
+    10 | 	if(vetor[i]!=min(vetor)):
+    11 | 		v = v + [i]
+    12 | 	i = i + 1
+    13 | 	
+    14 | u = u + vetor[v]
+    15 | f = float((sum(u))/size(u))
+    16 | print(round(f,2))
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
@@ -40,44 +44,42 @@ DETALHAMENTO DOS MISCONCEPTIONS
       Trecho  : —
 
 ▶ G4 — Funções/variáveis com nomes não significativos
-  Ocorrências: 5
+  Ocorrências: 7
 
-  [1] Linha 3: Variável 'v' com nome muito curto (≤4 chars)
+  [1] Linha 5: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+               4 | 
+        >>>    5 | i = 0 
+               6 | v = []
+
+  [2] Linha 6: Variável 'v' com nome muito curto (≤4 chars)
       Trecho  : v = ...
       Contexto:
-               2 | 
-        >>>    3 | v = array(eval(input()))
-               4 | 
+               5 | i = 0 
+        >>>    6 | v = []
+               7 | u = 0
 
-  [2] Linha 5: Variável 'x' com nome muito curto (≤4 chars)
-      Trecho  : x = ...
+  [3] Linha 7: Variável 'u' com nome muito curto (≤4 chars)
+      Trecho  : u = ...
       Contexto:
-               4 | 
-        >>>    5 | x=0
-               6 | m=0
+               6 | v = []
+        >>>    7 | u = 0
+               8 | 
 
-  [3] Linha 6: Variável 'm' com nome muito curto (≤4 chars)
-      Trecho  : m = ...
+  [4] Linha 14: Variável 'u' com nome muito curto (≤4 chars)
+      Trecho  : u = ...
       Contexto:
-               5 | x=0
-        >>>    6 | m=0
-               7 | 
+              13 | 	
+        >>>   14 | u = u + vetor[v]
+              15 | f = float((sum(u))/size(u))
 
-  [4] Linha 10: Variável 'm' com nome muito curto (≤4 chars)
-      Trecho  : m = ...
+  [5] Linha 15: Variável 'f' com nome muito curto (≤4 chars)
+      Trecho  : f = ...
       Contexto:
-               9 | 	if v[x]>0:
-        >>>   10 | 		m = (v[0]+v[1]+v[2])/3 - min(v[1])
-              11 | 		x = x+1
-
-  [5] Linha 11: Variável 'x' com nome muito curto (≤4 chars)
-      Trecho  : x = ...
-      Contexto:
-              10 | 		m = (v[0]+v[1]+v[2])/3 - min(v[1])
-        >>>   11 | 		x = x+1
-              12 | print(round(m,2))
-
-======================================================================(f,2))
+              14 | u = u + vetor[v]
+        >>>   15 | f = float((sum(u))/size(u))
+              16 | print(round(f,2))
 
   [6] Linha 12: Variável 'i' com nome muito curto (≤4 chars)
       Trecho  : i = ...

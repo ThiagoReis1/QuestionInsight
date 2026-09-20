@@ -1,12 +1,12 @@
 ======================================================================
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
-Arquivo     : 1526_1643.py
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2018_2_v1.81\2018-2\206\users\3783\codes\1526_1643.py
+Arquivo     : 1526_1643.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2018_2_v1.81\2018-2\206\users\3707\executions\1526_1643.log
 Assessment  : 1526
 Título      : TP 6: Estrutura de Repetição por Contagem (for)
 Questão     : 1643
-Aluno       : 3783
+Aluno       : 3707
 Grupo       : TP 06
 Significado : Estrutura de Repetição por Contagem
 Total MCs   : 2
@@ -16,25 +16,19 @@ Total MCs   : 2
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | from numpy import*
-     2 | v= array(eval(input("")))
-     3 | t=0
-     4 | y=0
-     5 | c=0
-     6 | while t<size(v):
-     7 | 	if v[t]>=5:
-     8 | 	   c+=1
-     9 | 	t+=1
-    10 | t=0
-    11 | x=zeros(c,dtype=int)
-    12 | while t<size(v):
-    13 | 	if v[t]>=5:
-    14 | 		x[y]=t
-    15 | 		y+=1
-    16 | 	t+=1
-    17 | print(c)
-    18 | print(x)
-    19 | 		
+     1 | from numpy import *
+     2 | a = array(eval(input()))
+     3 | k = 0
+     4 | p = ""
+     5 | for i in range(size(a)):
+     6 | 	if(a[i]>=5):
+     7 | 		k = k+1
+     8 | print(k)
+     9 | 
+    10 | for q in range(size(a)):
+    11 | 	if(a[q]>=5):
+    12 | 		p = p + str(q) + " "
+    13 | print("[" + p.strip() + "]")
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
@@ -47,46 +41,44 @@ DETALHAMENTO DOS MISCONCEPTIONS
       Trecho  : —
 
 ▶ G4 — Funções/variáveis com nomes não significativos
-  Ocorrências: 6
+  Ocorrências: 5
 
-  [1] Linha 2: Variável 'v' com nome muito curto (≤4 chars)
-      Trecho  : v = ...
+  [1] Linha 2: Variável 'a' com nome muito curto (≤4 chars)
+      Trecho  : a = ...
       Contexto:
-               1 | from numpy import*
-        >>>    2 | v= array(eval(input("")))
-               3 | t=0
+               1 | from numpy import *
+        >>>    2 | a = array(eval(input()))
+               3 | k = 0
 
-  [2] Linha 3: Variável 't' com nome muito curto (≤4 chars)
-      Trecho  : t = ...
+  [2] Linha 3: Variável 'k' com nome muito curto (≤4 chars)
+      Trecho  : k = ...
       Contexto:
-               2 | v= array(eval(input("")))
-        >>>    3 | t=0
-               4 | y=0
+               2 | a = array(eval(input()))
+        >>>    3 | k = 0
+               4 | p = ""
 
-  [3] Linha 4: Variável 'y' com nome muito curto (≤4 chars)
-      Trecho  : y = ...
+  [3] Linha 4: Variável 'p' com nome muito curto (≤4 chars)
+      Trecho  : p = ...
       Contexto:
-               3 | t=0
-        >>>    4 | y=0
-               5 | c=0
+               3 | k = 0
+        >>>    4 | p = ""
+               5 | for i in range(size(a)):
 
-  [4] Linha 5: Variável 'c' com nome muito curto (≤4 chars)
-      Trecho  : c = ...
+  [4] Linha 7: Variável 'k' com nome muito curto (≤4 chars)
+      Trecho  : k = ...
       Contexto:
-               4 | y=0
-        >>>    5 | c=0
-               6 | while t<size(v):
+               6 | 	if(a[i]>=5):
+        >>>    7 | 		k = k+1
+               8 | print(k)
 
-  [5] Linha 10: Variável 't' com nome muito curto (≤4 chars)
-      Trecho  : t = ...
+  [5] Linha 12: Variável 'p' com nome muito curto (≤4 chars)
+      Trecho  : p = ...
       Contexto:
-               9 | 	t+=1
-        >>>   10 | t=0
-              11 | x=zeros(c,dtype=int)
+              11 | 	if(a[q]>=5):
+        >>>   12 | 		p = p + str(q) + " "
+              13 | print("[" + p.strip() + "]")
 
-  [6] Linha 11: Variável 'x' com nome muito curto (≤4 chars)
-      Trecho  : x = ...
-      Contexto:
+======================================================================
               10 | t=0
         >>>   11 | x=zeros(c,dtype=int)
               12 | while t<size(v):

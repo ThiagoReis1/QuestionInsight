@@ -1,12 +1,12 @@
 ======================================================================
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
-Arquivo     : 1832_1648.py
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2019_1_v1.81\2019-1\224\users\4357\codes\1832_1648.py
+Arquivo     : 1832_1648.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2019_1_v1.81\2019-1\224\users\4370\executions\1832_1648.log
 Assessment  : 1832
 Título      : TP6: Repetição por contagem
 Questão     : 1648
-Aluno       : 4357
+Aluno       : 4370
 Grupo       : TP 06
 Significado : Estrutura de Repetição por Contagem
 Total MCs   : 2
@@ -16,24 +16,22 @@ Total MCs   : 2
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | from numpy import*
-     2 | aluno=array(eval(input("digite o numero:")))
-     3 | a=0
-     4 | b=0
-     5 | for i in aluno:
-     6 | 	if(i<70):
-     7 | 		a=a+1
-     8 | q=zeros(a,dtype=int)
-     9 | c=0
-    10 | for j in aluno:
-    11 | 	if(j<70):
-    12 | 		q[b]=c
-    13 | 		b=b+1
-    14 | 	c=c+1
-    15 | print(a)
-    16 | print(q)
-    17 | 
-    18 | 		
+     1 | from numpy import *
+     2 | f= array(eval(input("vetor de frequencia:")))
+     3 | rep=0
+     4 | for i in f:
+     5 | 	if(i<70):
+     6 | 		rep=rep + 1
+     7 | print(rep)
+     8 | c=0
+     9 | b=0
+    10 | z=zeros(rep,dtype=int)
+    11 | for i in f:
+    12 | 	if(i<70):
+    13 | 		z[b]=c
+    14 | 		b=b+1
+    15 | 	c=c+1
+    16 | print(z)
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
@@ -46,58 +44,55 @@ DETALHAMENTO DOS MISCONCEPTIONS
       Trecho  : —
 
 ▶ G4 — Funções/variáveis com nomes não significativos
-  Ocorrências: 7
+  Ocorrências: 8
 
-  [1] Linha 3: Variável 'a' com nome muito curto (≤4 chars)
-      Trecho  : a = ...
+  [1] Linha 2: Variável 'f' com nome muito curto (≤4 chars)
+      Trecho  : f = ...
       Contexto:
-               2 | aluno=array(eval(input("digite o numero:")))
-        >>>    3 | a=0
-               4 | b=0
+               1 | from numpy import *
+        >>>    2 | f= array(eval(input("vetor de frequencia:")))
+               3 | rep=0
 
-  [2] Linha 4: Variável 'b' com nome muito curto (≤4 chars)
-      Trecho  : b = ...
+  [2] Linha 3: Variável 'rep' com nome muito curto (≤4 chars)
+      Trecho  : rep = ...
       Contexto:
-               3 | a=0
-        >>>    4 | b=0
-               5 | for i in aluno:
+               2 | f= array(eval(input("vetor de frequencia:")))
+        >>>    3 | rep=0
+               4 | for i in f:
 
-  [3] Linha 8: Variável 'q' com nome muito curto (≤4 chars)
-      Trecho  : q = ...
-      Contexto:
-               7 | 		a=a+1
-        >>>    8 | q=zeros(a,dtype=int)
-               9 | c=0
-
-  [4] Linha 9: Variável 'c' com nome muito curto (≤4 chars)
+  [3] Linha 8: Variável 'c' com nome muito curto (≤4 chars)
       Trecho  : c = ...
       Contexto:
-               8 | q=zeros(a,dtype=int)
-        >>>    9 | c=0
-              10 | for j in aluno:
+               7 | print(rep)
+        >>>    8 | c=0
+               9 | b=0
 
-  [5] Linha 14: Variável 'c' com nome muito curto (≤4 chars)
-      Trecho  : c = ...
-      Contexto:
-              13 | 		b=b+1
-        >>>   14 | 	c=c+1
-              15 | print(a)
-
-  [6] Linha 7: Variável 'a' com nome muito curto (≤4 chars)
-      Trecho  : a = ...
-      Contexto:
-               6 | 	if(i<70):
-        >>>    7 | 		a=a+1
-               8 | q=zeros(a,dtype=int)
-
-  [7] Linha 13: Variável 'b' com nome muito curto (≤4 chars)
+  [4] Linha 9: Variável 'b' com nome muito curto (≤4 chars)
       Trecho  : b = ...
       Contexto:
-              12 | 		q[b]=c
-        >>>   13 | 		b=b+1
-              14 | 	c=c+1
+               8 | c=0
+        >>>    9 | b=0
+              10 | z=zeros(rep,dtype=int)
 
-======================================================================1
+  [5] Linha 10: Variável 'z' com nome muito curto (≤4 chars)
+      Trecho  : z = ...
+      Contexto:
+               9 | b=0
+        >>>   10 | z=zeros(rep,dtype=int)
+              11 | for i in f:
+
+  [6] Linha 15: Variável 'c' com nome muito curto (≤4 chars)
+      Trecho  : c = ...
+      Contexto:
+              14 | 		b=b+1
+        >>>   15 | 	c=c+1
+              16 | print(z)
+
+  [7] Linha 6: Variável 'rep' com nome muito curto (≤4 chars)
+      Trecho  : rep = ...
+      Contexto:
+               5 | 	if(i<70):
+        >>>    6 | 		rep=rep + 1
                7 | print(rep)
 
   [8] Linha 14: Variável 'b' com nome muito curto (≤4 chars)

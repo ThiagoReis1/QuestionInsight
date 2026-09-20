@@ -1,12 +1,12 @@
 ======================================================================
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
-Arquivo     : 4535_3387.py
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2022_2_v1.81\2022-2\491\users\8251\codes\4535_3387.py
+Arquivo     : 4535_3387.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2022_2_v1.81\2022-2\491\users\7170\executions\4535_3387.log
 Assessment  : 4535
 Título      : TP 02:  Est. Condicional Simples e Composta
 Questão     : 3387
-Aluno       : 8251
+Aluno       : 7170
 Grupo       : TP 02
 Significado : Estrutura Condicional Simples e Composta
 Total MCs   : 1
@@ -16,15 +16,16 @@ Total MCs   : 1
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | unid = input(" ")
-     2 | med = float(input("insira um numero: "))
+     1 | y = input("Qual a Unidade? Milhas por Galao (M) ou KM/L (K)? ").upper()
+     2 | a = float(input("Qual o Valor da Medida?: "))
      3 | 
-     4 | if ( unid == 'M'):
-     5 | 	K = (med/2.35215)
-     6 | 	print(round(K, 2))
-     7 | else: 
-     8 | 	M = (2.35215 * med)
-     9 | 	print(round(M, 2))
+     4 | if y == "K":
+     5 | 	x = 2.35215*a
+     6 | 	print(round(x, 2))
+     7 | 	
+     8 | else:
+     9 | 	x = a/2.35215
+    10 | 	print(round(x, 2))
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
@@ -33,31 +34,31 @@ DETALHAMENTO DOS MISCONCEPTIONS
 ▶ G4 — Funções/variáveis com nomes não significativos
   Ocorrências: 4
 
-  [1] Linha 1: Variável 'unid' com nome muito curto (≤4 chars)
-      Trecho  : unid = ...
+  [1] Linha 1: Variável 'y' com nome muito curto (≤4 chars)
+      Trecho  : y = ...
       Contexto:
-        >>>    1 | unid = input(" ")
-               2 | med = float(input("insira um numero: "))
+        >>>    1 | y = input("Qual a Unidade? Milhas por Galao (M) ou KM/L (K)? ").upper()
+               2 | a = float(input("Qual o Valor da Medida?: "))
 
-  [2] Linha 2: Variável 'med' com nome muito curto (≤4 chars)
-      Trecho  : med = ...
+  [2] Linha 2: Variável 'a' com nome muito curto (≤4 chars)
+      Trecho  : a = ...
       Contexto:
-               1 | unid = input(" ")
-        >>>    2 | med = float(input("insira um numero: "))
+               1 | y = input("Qual a Unidade? Milhas por Galao (M) ou KM/L (K)? ").upper()
+        >>>    2 | a = float(input("Qual o Valor da Medida?: "))
                3 | 
 
-  [3] Linha 5: Variável 'K' com nome muito curto (≤4 chars)
-      Trecho  : K = ...
+  [3] Linha 5: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
       Contexto:
-               4 | if ( unid == 'M'):
-        >>>    5 | 	K = (med/2.35215)
-               6 | 	print(round(K, 2))
+               4 | if y == "K":
+        >>>    5 | 	x = 2.35215*a
+               6 | 	print(round(x, 2))
 
-  [4] Linha 8: Variável 'M' com nome muito curto (≤4 chars)
-      Trecho  : M = ...
+  [4] Linha 9: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
       Contexto:
-               7 | else: 
-        >>>    8 | 	M = (2.35215 * med)
-               9 | 	print(round(M, 2))
+               8 | else:
+        >>>    9 | 	x = a/2.35215
+              10 | 	print(round(x, 2))
 
 ======================================================================

@@ -1,12 +1,12 @@
 ======================================================================
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
-Arquivo     : 4974_6509.py
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2023_1_v1.81\2023-1\523\users\8688\codes\4974_6509.py
+Arquivo     : 4974_6509.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2023_1_v1.81\2023-1\523\users\8689\executions\4974_6509.log
 Assessment  : 4974
 Título      : TP2: Est. Condicional Simples e Composta
 Questão     : 6509
-Aluno       : 8688
+Aluno       : 8689
 Grupo       : TP 02
 Significado : Estrutura Condicional Simples e Composta
 Total MCs   : 1
@@ -16,29 +16,57 @@ Total MCs   : 1
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | # faça seu código aqui!
-     2 | 
-     3 | hora = int(input("qual o horario do pedido: "))
-     4 | qtd = int(input("qtd de pratos: "))
+     1 | h = float(input("Informe o horario em que o prato foi pedido: "))
+     2 | q = int(input("Informe a quantidade de pratos: "))
+     3 | 
+     4 | p = 28.50
      5 | 
-     6 | if hora >= 18:
-     7 | 	p = qtd * 28.50
-     8 | 	desc = 0.20 * p
-     9 | 	total = p - desc
-    10 | else:
-    11 | 	total = qtd * 28.50
-    12 | 	
-    13 | print(round(total,2))
-    14 | 	
+     6 | if h >= 18:
+     7 | 	p1 = (q * p) - (p * q) * 0.2
+     8 | else:
+     9 | 	p1 = q * p
+    10 | 	
+    11 | print(round(p1, 2))
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
 ----------------------------------------------------------------------
 
 ▶ G4 — Funções/variáveis com nomes não significativos
-  Ocorrências: 1
+  Ocorrências: 5
 
-  [1] Linha 0: G4 detectado pelo VisitorMC3 (localização exata não mapeada)
-      Trecho  : —
+  [1] Linha 1: Variável 'h' com nome muito curto (≤4 chars)
+      Trecho  : h = ...
+      Contexto:
+        >>>    1 | h = float(input("Informe o horario em que o prato foi pedido: "))
+               2 | q = int(input("Informe a quantidade de pratos: "))
+
+  [2] Linha 2: Variável 'q' com nome muito curto (≤4 chars)
+      Trecho  : q = ...
+      Contexto:
+               1 | h = float(input("Informe o horario em que o prato foi pedido: "))
+        >>>    2 | q = int(input("Informe a quantidade de pratos: "))
+               3 | 
+
+  [3] Linha 4: Variável 'p' com nome muito curto (≤4 chars)
+      Trecho  : p = ...
+      Contexto:
+               3 | 
+        >>>    4 | p = 28.50
+               5 | 
+
+  [4] Linha 7: Variável 'p1' com nome muito curto (≤4 chars)
+      Trecho  : p1 = ...
+      Contexto:
+               6 | if h >= 18:
+        >>>    7 | 	p1 = (q * p) - (p * q) * 0.2
+               8 | else:
+
+  [5] Linha 9: Variável 'p1' com nome muito curto (≤4 chars)
+      Trecho  : p1 = ...
+      Contexto:
+               8 | else:
+        >>>    9 | 	p1 = q * p
+              10 | 	
 
 ======================================================================

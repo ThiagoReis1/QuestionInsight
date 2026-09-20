@@ -1,12 +1,12 @@
 ======================================================================
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
-Arquivo     : 1750_1535.py
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2019_1_v1.81\2019-1\221\users\4304\codes\1750_1535.py
+Arquivo     : 1750_1535.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2019_1_v1.81\2019-1\221\users\4166\executions\1750_1535.log
 Assessment  : 1750
 Título      : TP4: Estrutura de Repetição por Condição (while)
 Questão     : 1535
-Aluno       : 4304
+Aluno       : 4166
 Grupo       : TP 04
 Significado : Estrutura de Repetição por Condição
 Total MCs   : 1
@@ -16,66 +16,67 @@ Total MCs   : 1
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | x= float(input("um numero real: "))
-     2 | k= int(input("quantidade de termos: "))
-     3 | t=0
-     4 | soma=0
-     5 | i=1
-     6 | sinal= 1
-     7 | while(t<k):
-     8 | 	soma= soma+(((x)**i)/i)*sinal
-     9 | 	sinal= sinal*(-1)
-    10 | 	i= i+2
-    11 | 	t= t+1
-    12 | print(round(soma,6))
-    13 | 	
+     1 | x=float(input("x:"))
+     2 | k=int(input("termos da serie:"))
+     3 | 
+     4 | t=x
+     5 | n=1
+     6 | 
+     7 | while(k>n):
+     8 | 	restante=(-1)**n*(x**(2*n+1))/(2*n+1)
+     9 | 	t=t+restante
+    10 | 	n=n+1
+    11 | print(round(t, 6))
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
 ----------------------------------------------------------------------
 
 ▶ G4 — Funções/variáveis com nomes não significativos
-  Ocorrências: 8
+  Ocorrências: 6
 
   [1] Linha 1: Variável 'x' com nome muito curto (≤4 chars)
       Trecho  : x = ...
       Contexto:
-        >>>    1 | x= float(input("um numero real: "))
-               2 | k= int(input("quantidade de termos: "))
+        >>>    1 | x=float(input("x:"))
+               2 | k=int(input("termos da serie:"))
 
   [2] Linha 2: Variável 'k' com nome muito curto (≤4 chars)
       Trecho  : k = ...
       Contexto:
-               1 | x= float(input("um numero real: "))
-        >>>    2 | k= int(input("quantidade de termos: "))
-               3 | t=0
+               1 | x=float(input("x:"))
+        >>>    2 | k=int(input("termos da serie:"))
+               3 | 
 
-  [3] Linha 3: Variável 't' com nome muito curto (≤4 chars)
+  [3] Linha 4: Variável 't' com nome muito curto (≤4 chars)
       Trecho  : t = ...
       Contexto:
-               2 | k= int(input("quantidade de termos: "))
-        >>>    3 | t=0
-               4 | soma=0
+               3 | 
+        >>>    4 | t=x
+               5 | n=1
 
-  [4] Linha 4: Variável 'soma' com nome muito curto (≤4 chars)
-      Trecho  : soma = ...
+  [4] Linha 5: Variável 'n' com nome muito curto (≤4 chars)
+      Trecho  : n = ...
       Contexto:
-               3 | t=0
-        >>>    4 | soma=0
-               5 | i=1
+               4 | t=x
+        >>>    5 | n=1
+               6 | 
 
-  [5] Linha 5: Variável 'i' com nome muito curto (≤4 chars)
-      Trecho  : i = ...
+  [5] Linha 9: Variável 't' com nome muito curto (≤4 chars)
+      Trecho  : t = ...
       Contexto:
-               4 | soma=0
-        >>>    5 | i=1
-               6 | sinal= 1
+               8 | 	restante=(-1)**n*(x**(2*n+1))/(2*n+1)
+        >>>    9 | 	t=t+restante
+              10 | 	n=n+1
 
-  [6] Linha 8: Variável 'soma' com nome muito curto (≤4 chars)
-      Trecho  : soma = ...
+  [6] Linha 10: Variável 'n' com nome muito curto (≤4 chars)
+      Trecho  : n = ...
       Contexto:
-               7 | while(t<k):
-        >>>    8 | 	soma= soma+(((x)**i)/i)*sinal
+               9 | 	t=t+restante
+        >>>   10 | 	n=n+1
+              11 | print(round(t, 6))
+
+======================================================================soma= soma+(((x)**i)/i)*sinal
                9 | 	sinal= sinal*(-1)
 
   [7] Linha 10: Variável 'i' com nome muito curto (≤4 chars)

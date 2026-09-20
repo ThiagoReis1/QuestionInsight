@@ -1,12 +1,12 @@
 ======================================================================
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
-Arquivo     : 1745_1531.py
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2019_1_v1.81\2019-1\225\users\4496\codes\1745_1531.py
+Arquivo     : 1745_1531.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2019_1_v1.81\2019-1\225\users\4312\executions\1745_1531.log
 Assessment  : 1745
 Título      : TP4: Estrutura de Repetição por Condição (while)
 Questão     : 1531
-Aluno       : 4496
+Aluno       : 4312
 Grupo       : TP 04
 Significado : Estrutura de Repetição por Condição
 Total MCs   : 1
@@ -17,117 +17,80 @@ Total MCs   : 1
 CÓDIGO FONTE
 ----------------------------------------------------------------------
      1 | from math import*
-     2 | 
-     3 | x = eval(input("ang x: "))
-     4 | n = int(input)
-     5 | 
+     2 | ang = eval(input("Insira o angulo: "))
+     3 | k = int(input("Quant. dos termos: "))
+     4 | 
+     5 | i = 0
      6 | cont = 0
-     7 | e = 1
-     8 | d = 2
-     9 | aux = 1
-    10 | 
-    11 | while(n<soma):
-    12 | 	e = e + (aux * (x**2)/factorial(d))
-    13 | 	if(aux == 1):
-    14 | 		aux = -1
-    15 | 	else:
-    16 | 		aux = 1
-    17 | 
-    18 | cont = cont + 1
-    19 | e = e + 1
-    20 | d = d + 2
-    21 | 
-    22 | print(round(n,10))
+     7 | c = 0
+     8 | while(i < k):
+     9 | 	cont = cont + ((-1)**i * (ang**c / factorial(c)))
+    10 | 	c = c + 2
+    11 | 	i = i + 1
+    12 | 
+    13 | print(round(cont, 10))
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
 ----------------------------------------------------------------------
 
 ▶ G4 — Funções/variáveis com nomes não significativos
-  Ocorrências: 12
+  Ocorrências: 8
 
-  [1] Linha 3: Variável 'x' com nome muito curto (≤4 chars)
-      Trecho  : x = ...
+  [1] Linha 2: Variável 'ang' com nome muito curto (≤4 chars)
+      Trecho  : ang = ...
       Contexto:
-               2 | 
-        >>>    3 | x = eval(input("ang x: "))
-               4 | n = int(input)
+               1 | from math import*
+        >>>    2 | ang = eval(input("Insira o angulo: "))
+               3 | k = int(input("Quant. dos termos: "))
 
-  [2] Linha 4: Variável 'n' com nome muito curto (≤4 chars)
-      Trecho  : n = ...
+  [2] Linha 3: Variável 'k' com nome muito curto (≤4 chars)
+      Trecho  : k = ...
       Contexto:
-               3 | x = eval(input("ang x: "))
-        >>>    4 | n = int(input)
-               5 | 
+               2 | ang = eval(input("Insira o angulo: "))
+        >>>    3 | k = int(input("Quant. dos termos: "))
+               4 | 
 
-  [3] Linha 6: Variável 'cont' com nome muito curto (≤4 chars)
+  [3] Linha 5: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+               4 | 
+        >>>    5 | i = 0
+               6 | cont = 0
+
+  [4] Linha 6: Variável 'cont' com nome muito curto (≤4 chars)
       Trecho  : cont = ...
       Contexto:
-               5 | 
+               5 | i = 0
         >>>    6 | cont = 0
-               7 | e = 1
+               7 | c = 0
 
-  [4] Linha 7: Variável 'e' com nome muito curto (≤4 chars)
-      Trecho  : e = ...
+  [5] Linha 7: Variável 'c' com nome muito curto (≤4 chars)
+      Trecho  : c = ...
       Contexto:
                6 | cont = 0
-        >>>    7 | e = 1
-               8 | d = 2
+        >>>    7 | c = 0
+               8 | while(i < k):
 
-  [5] Linha 8: Variável 'd' com nome muito curto (≤4 chars)
-      Trecho  : d = ...
-      Contexto:
-               7 | e = 1
-        >>>    8 | d = 2
-               9 | aux = 1
-
-  [6] Linha 9: Variável 'aux' com nome muito curto (≤4 chars)
-      Trecho  : aux = ...
-      Contexto:
-               8 | d = 2
-        >>>    9 | aux = 1
-              10 | 
-
-  [7] Linha 18: Variável 'cont' com nome muito curto (≤4 chars)
+  [6] Linha 9: Variável 'cont' com nome muito curto (≤4 chars)
       Trecho  : cont = ...
       Contexto:
-              17 | 
-        >>>   18 | cont = cont + 1
-              19 | e = e + 1
+               8 | while(i < k):
+        >>>    9 | 	cont = cont + ((-1)**i * (ang**c / factorial(c)))
+              10 | 	c = c + 2
 
-  [8] Linha 19: Variável 'e' com nome muito curto (≤4 chars)
-      Trecho  : e = ...
+  [7] Linha 10: Variável 'c' com nome muito curto (≤4 chars)
+      Trecho  : c = ...
       Contexto:
-              18 | cont = cont + 1
-        >>>   19 | e = e + 1
-              20 | d = d + 2
+               9 | 	cont = cont + ((-1)**i * (ang**c / factorial(c)))
+        >>>   10 | 	c = c + 2
+              11 | 	i = i + 1
 
-  [9] Linha 20: Variável 'd' com nome muito curto (≤4 chars)
-      Trecho  : d = ...
+  [8] Linha 11: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
       Contexto:
-              19 | e = e + 1
-        >>>   20 | d = d + 2
-              21 | 
-
-  [10] Linha 12: Variável 'e' com nome muito curto (≤4 chars)
-      Trecho  : e = ...
-      Contexto:
-              11 | while(n<soma):
-        >>>   12 | 	e = e + (aux * (x**2)/factorial(d))
-              13 | 	if(aux == 1):
-
-  [11] Linha 14: Variável 'aux' com nome muito curto (≤4 chars)
-      Trecho  : aux = ...
-      Contexto:
-              13 | 	if(aux == 1):
-        >>>   14 | 		aux = -1
-              15 | 	else:
-
-  [12] Linha 16: Variável 'aux' com nome muito curto (≤4 chars)
-      Trecho  : aux = ...
-      Contexto:
-              15 | 	else:
-        >>>   16 | 		aux = 1
-              17 | 
+              10 | 	c = c + 2
+        >>>   11 | 	i = i + 1
+              12 | 
 
 ======================================================================

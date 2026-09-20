@@ -1,12 +1,12 @@
 ======================================================================
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
-Arquivo     : 1752_1530.py
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2019_1_v1.81\2019-1\223\users\4182\codes\1752_1530.py
+Arquivo     : 1752_1530.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2019_1_v1.81\2019-1\223\users\4171\executions\1752_1530.log
 Assessment  : 1752
 Título      : TP4: Estrutura de Repetição por Condição (while)
 Questão     : 1530
-Aluno       : 4182
+Aluno       : 4171
 Grupo       : TP 04
 Significado : Estrutura de Repetição por Condição
 Total MCs   : 1
@@ -16,21 +16,31 @@ Total MCs   : 1
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | qip = int(input())
-     2 | qiv = int(input())
-     3 | pap = float(input())
-     4 | pav = float(input())
+     1 | pgI = int(input())
+     2 | vmI = int(input())
+     3 | percP = float(input())/100
+     4 | percV = float(input())/100
      5 | 
-     6 | lim = qiv + qip
-     7 | anos = 0
-     8 | 
-     9 | while (lim <= 80000):
-    10 | 	c1 = qip*pap/100
-    11 | 	qip = qip + c1
-    12 | 	c2 = qiv*pav/100
-    13 | 	qiv = qiv + c2
-    14 | 	anos = anos + 1
-    15 | print(anos)
+     6 | pgI2 = pgI
+     7 | vmI2 = vmI
+     8 | acP = 0
+     9 | acV = 0
+    10 | anos = 0
+    11 | ct = 0
+    12 | 
+    13 | while ct <= 80000:
+    14 | 	
+    15 | 	pgI2 += pgI2 * percP
+    16 | 	acP = pgI2
+    17 | 	
+    18 | 	vmI2 += vmI2 * percV
+    19 | 	acV = vmI2
+    20 | 	
+    21 | 	ct = acV+acP
+    22 | 	
+    23 | 	anos += 1
+    24 | 	
+    25 | print(anos)
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
@@ -39,80 +49,80 @@ DETALHAMENTO DOS MISCONCEPTIONS
 ▶ G4 — Funções/variáveis com nomes não significativos
   Ocorrências: 11
 
-  [1] Linha 1: Variável 'qip' com nome muito curto (≤4 chars)
-      Trecho  : qip = ...
+  [1] Linha 1: Variável 'pgI' com nome muito curto (≤4 chars)
+      Trecho  : pgI = ...
       Contexto:
-        >>>    1 | qip = int(input())
-               2 | qiv = int(input())
+        >>>    1 | pgI = int(input())
+               2 | vmI = int(input())
 
-  [2] Linha 2: Variável 'qiv' com nome muito curto (≤4 chars)
-      Trecho  : qiv = ...
+  [2] Linha 2: Variável 'vmI' com nome muito curto (≤4 chars)
+      Trecho  : vmI = ...
       Contexto:
-               1 | qip = int(input())
-        >>>    2 | qiv = int(input())
-               3 | pap = float(input())
+               1 | pgI = int(input())
+        >>>    2 | vmI = int(input())
+               3 | percP = float(input())/100
 
-  [3] Linha 3: Variável 'pap' com nome muito curto (≤4 chars)
-      Trecho  : pap = ...
-      Contexto:
-               2 | qiv = int(input())
-        >>>    3 | pap = float(input())
-               4 | pav = float(input())
-
-  [4] Linha 4: Variável 'pav' com nome muito curto (≤4 chars)
-      Trecho  : pav = ...
-      Contexto:
-               3 | pap = float(input())
-        >>>    4 | pav = float(input())
-               5 | 
-
-  [5] Linha 6: Variável 'lim' com nome muito curto (≤4 chars)
-      Trecho  : lim = ...
+  [3] Linha 6: Variável 'pgI2' com nome muito curto (≤4 chars)
+      Trecho  : pgI2 = ...
       Contexto:
                5 | 
-        >>>    6 | lim = qiv + qip
-               7 | anos = 0
+        >>>    6 | pgI2 = pgI
+               7 | vmI2 = vmI
 
-  [6] Linha 7: Variável 'anos' com nome muito curto (≤4 chars)
+  [4] Linha 7: Variável 'vmI2' com nome muito curto (≤4 chars)
+      Trecho  : vmI2 = ...
+      Contexto:
+               6 | pgI2 = pgI
+        >>>    7 | vmI2 = vmI
+               8 | acP = 0
+
+  [5] Linha 8: Variável 'acP' com nome muito curto (≤4 chars)
+      Trecho  : acP = ...
+      Contexto:
+               7 | vmI2 = vmI
+        >>>    8 | acP = 0
+               9 | acV = 0
+
+  [6] Linha 9: Variável 'acV' com nome muito curto (≤4 chars)
+      Trecho  : acV = ...
+      Contexto:
+               8 | acP = 0
+        >>>    9 | acV = 0
+              10 | anos = 0
+
+  [7] Linha 10: Variável 'anos' com nome muito curto (≤4 chars)
       Trecho  : anos = ...
       Contexto:
-               6 | lim = qiv + qip
-        >>>    7 | anos = 0
-               8 | 
+               9 | acV = 0
+        >>>   10 | anos = 0
+              11 | ct = 0
 
-  [7] Linha 10: Variável 'c1' com nome muito curto (≤4 chars)
-      Trecho  : c1 = ...
+  [8] Linha 11: Variável 'ct' com nome muito curto (≤4 chars)
+      Trecho  : ct = ...
       Contexto:
-               9 | while (lim <= 80000):
-        >>>   10 | 	c1 = qip*pap/100
-              11 | 	qip = qip + c1
+              10 | anos = 0
+        >>>   11 | ct = 0
+              12 | 
 
-  [8] Linha 11: Variável 'qip' com nome muito curto (≤4 chars)
-      Trecho  : qip = ...
+  [9] Linha 16: Variável 'acP' com nome muito curto (≤4 chars)
+      Trecho  : acP = ...
       Contexto:
-              10 | 	c1 = qip*pap/100
-        >>>   11 | 	qip = qip + c1
-              12 | 	c2 = qiv*pav/100
+              15 | 	pgI2 += pgI2 * percP
+        >>>   16 | 	acP = pgI2
+              17 | 	
 
-  [9] Linha 12: Variável 'c2' com nome muito curto (≤4 chars)
-      Trecho  : c2 = ...
+  [10] Linha 19: Variável 'acV' com nome muito curto (≤4 chars)
+      Trecho  : acV = ...
       Contexto:
-              11 | 	qip = qip + c1
-        >>>   12 | 	c2 = qiv*pav/100
-              13 | 	qiv = qiv + c2
+              18 | 	vmI2 += vmI2 * percV
+        >>>   19 | 	acV = vmI2
+              20 | 	
 
-  [10] Linha 13: Variável 'qiv' com nome muito curto (≤4 chars)
-      Trecho  : qiv = ...
+  [11] Linha 21: Variável 'ct' com nome muito curto (≤4 chars)
+      Trecho  : ct = ...
       Contexto:
-              12 | 	c2 = qiv*pav/100
-        >>>   13 | 	qiv = qiv + c2
-              14 | 	anos = anos + 1
-
-  [11] Linha 14: Variável 'anos' com nome muito curto (≤4 chars)
-      Trecho  : anos = ...
-      Contexto:
-              13 | 	qiv = qiv + c2
-        >>>   14 | 	anos = anos + 1
-              15 | print(anos)
+              20 | 	
+        >>>   21 | 	ct = acV+acP
+              22 | 	
 
 ======================================================================

@@ -1,12 +1,12 @@
 ======================================================================
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
-Arquivo     : 294_1393.py
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2016_2_v1.81\2016-2\127\users\1909\codes\294_1393.py
+Arquivo     : 294_1393.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2016_2_v1.81\2016-2\127\users\1903\executions\294_1393.log
 Assessment  : 294
 Título      : Trabalho Prático 02 - Estrutura Condicional Simples e Composta (sem aninhamento)
 Questão     : 1393
-Aluno       : 1909
+Aluno       : 1903
 Grupo       : TP 02
 Significado : Estrutura Condicional Simples e Composta
 Total MCs   : 1
@@ -16,13 +16,16 @@ Total MCs   : 1
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | peso = float(input())
-     2 | if(peso >= 5000):
-     3 | 	peso = (peso * 0.04) + 60
-     4 | 	print(round(peso,2))
-     5 | else:
-     6 | 	peso = peso * 0.05
-     7 | 	print(round(peso,2))
+     1 | p = float(input("Digite o peso da encomenda em gramas: "))
+     2 | 
+     3 | a = p*0.05
+     4 | 
+     5 | b = p*0.04 + 60
+     6 | 
+     7 | if(p<5000):
+     8 | 	print(round(a,2))
+     9 | else:
+    10 | 	print(round(b,2))
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
@@ -31,24 +34,24 @@ DETALHAMENTO DOS MISCONCEPTIONS
 ▶ G4 — Funções/variáveis com nomes não significativos
   Ocorrências: 3
 
-  [1] Linha 1: Variável 'peso' com nome muito curto (≤4 chars)
-      Trecho  : peso = ...
+  [1] Linha 1: Variável 'p' com nome muito curto (≤4 chars)
+      Trecho  : p = ...
       Contexto:
-        >>>    1 | peso = float(input())
-               2 | if(peso >= 5000):
+        >>>    1 | p = float(input("Digite o peso da encomenda em gramas: "))
+               2 | 
 
-  [2] Linha 3: Variável 'peso' com nome muito curto (≤4 chars)
-      Trecho  : peso = ...
+  [2] Linha 3: Variável 'a' com nome muito curto (≤4 chars)
+      Trecho  : a = ...
       Contexto:
-               2 | if(peso >= 5000):
-        >>>    3 | 	peso = (peso * 0.04) + 60
-               4 | 	print(round(peso,2))
+               2 | 
+        >>>    3 | a = p*0.05
+               4 | 
 
-  [3] Linha 6: Variável 'peso' com nome muito curto (≤4 chars)
-      Trecho  : peso = ...
+  [3] Linha 5: Variável 'b' com nome muito curto (≤4 chars)
+      Trecho  : b = ...
       Contexto:
-               5 | else:
-        >>>    6 | 	peso = peso * 0.05
-               7 | 	print(round(peso,2))
+               4 | 
+        >>>    5 | b = p*0.04 + 60
+               6 | 
 
-======================================================================
+==================================================================================================================

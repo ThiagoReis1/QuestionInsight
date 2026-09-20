@@ -1,12 +1,12 @@
 ======================================================================
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
-Arquivo     : 1220_1598.py
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2018_1_v1.81\2018-1\189\users\3313\codes\1220_1598.py
+Arquivo     : 1220_1598.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2018_1_v1.81\2018-1\189\users\3476\executions\1220_1598.log
 Assessment  : 1220
 Título      : TP 5: Vetores e Strings
 Questão     : 1598
-Aluno       : 3313
+Aluno       : 3476
 Grupo       : TP 05
 Significado : Vetores e Strings
 Total MCs   : 1
@@ -17,16 +17,17 @@ Total MCs   : 1
 CÓDIGO FONTE
 ----------------------------------------------------------------------
      1 | from numpy import*
-     2 | v = array(eval(input("insira os custos: ")))
-     3 | i = 0
+     2 | v = array(eval(input("Digite:")))
+     3 | cont = 0
      4 | soma = 0
-     5 | while(i<size(v)):
-     6 | 	if(v[i]>80):
-     7 | 		soma = soma + v[i] - 5
-     8 | 	else:
-     9 | 		soma = soma + v[i]
-    10 | 	i = i+1
-    11 | print(round(soma,2))
+     5 | sum(v) 
+     6 | while(cont<size(v)):
+     7 | 	if(v[cont]>80):
+     8 | 		soma = sum(v) - 5
+     9 | 	else:		
+    10 | 		soma = v[cont]
+    11 | 	cont = cont + 1
+    12 | print(round(soma,2))
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
@@ -39,42 +40,42 @@ DETALHAMENTO DOS MISCONCEPTIONS
       Trecho  : v = ...
       Contexto:
                1 | from numpy import*
-        >>>    2 | v = array(eval(input("insira os custos: ")))
-               3 | i = 0
+        >>>    2 | v = array(eval(input("Digite:")))
+               3 | cont = 0
 
-  [2] Linha 3: Variável 'i' com nome muito curto (≤4 chars)
-      Trecho  : i = ...
+  [2] Linha 3: Variável 'cont' com nome muito curto (≤4 chars)
+      Trecho  : cont = ...
       Contexto:
-               2 | v = array(eval(input("insira os custos: ")))
-        >>>    3 | i = 0
+               2 | v = array(eval(input("Digite:")))
+        >>>    3 | cont = 0
                4 | soma = 0
 
   [3] Linha 4: Variável 'soma' com nome muito curto (≤4 chars)
       Trecho  : soma = ...
       Contexto:
-               3 | i = 0
+               3 | cont = 0
         >>>    4 | soma = 0
-               5 | while(i<size(v)):
+               5 | sum(v) 
 
-  [4] Linha 10: Variável 'i' com nome muito curto (≤4 chars)
-      Trecho  : i = ...
+  [4] Linha 11: Variável 'cont' com nome muito curto (≤4 chars)
+      Trecho  : cont = ...
       Contexto:
-               9 | 		soma = soma + v[i]
-        >>>   10 | 	i = i+1
-              11 | print(round(soma,2))
+              10 | 		soma = v[cont]
+        >>>   11 | 	cont = cont + 1
+              12 | print(round(soma,2))
 
-  [5] Linha 7: Variável 'soma' com nome muito curto (≤4 chars)
+  [5] Linha 8: Variável 'soma' com nome muito curto (≤4 chars)
       Trecho  : soma = ...
       Contexto:
-               6 | 	if(v[i]>80):
-        >>>    7 | 		soma = soma + v[i] - 5
-               8 | 	else:
+               7 | 	if(v[cont]>80):
+        >>>    8 | 		soma = sum(v) - 5
+               9 | 	else:		
 
-  [6] Linha 9: Variável 'soma' com nome muito curto (≤4 chars)
+  [6] Linha 10: Variável 'soma' com nome muito curto (≤4 chars)
       Trecho  : soma = ...
       Contexto:
-               8 | 	else:
-        >>>    9 | 		soma = soma + v[i]
-              10 | 	i = i+1
+               9 | 	else:		
+        >>>   10 | 		soma = v[cont]
+              11 | 	cont = cont + 1
 
 ======================================================================

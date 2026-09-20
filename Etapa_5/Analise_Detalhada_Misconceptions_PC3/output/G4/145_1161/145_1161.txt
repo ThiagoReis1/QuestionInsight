@@ -1,12 +1,12 @@
 ======================================================================
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
-Arquivo     : 145_1161.py
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2016_1_v1.81\2016-1\109\users\1210\codes\145_1161.py
+Arquivo     : 145_1161.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2016_1_v1.81\2016-1\109\users\1118\executions\145_1161.log
 Assessment  : 145
 Título      : Avaliação Parcial 04 – Estrutura de Repetição por Condição (while)
 Questão     : 1161
-Aluno       : 1210
+Aluno       : 1118
 Grupo       : TP 04
 Significado : Estrutura de Repetição por Condição
 Total MCs   : 1
@@ -16,19 +16,18 @@ Total MCs   : 1
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | z=int(input("numero de zumbis z:"))
-     2 | h=int(input("numero de habitantes h:"))
-     3 | x=int(input("capacidade de transformar pessoas em zumbis por dia:"))
-     4 | y=int(input("capacidade de matar zumbis por dia:"))
-     5 | t=0
+     1 | z = int(input())
+     2 | h = int(input())
+     3 | x = int(input())
+     4 | y = int(input())
+     5 | i = 0
      6 | 
-     7 | while(h > 0):
-     8 | 	z=z-y
-     9 | 	h=h-x*z
-    10 | 	t=t+1
-    11 | 	
-    12 | print(t)
-    13 | 	
+     7 | while h > 0:
+     8 | 	h = h - x*z
+     9 | 	z = z + x*z 
+    10 | 	z = z-y
+    11 | 	i += 1
+    12 | print(i)
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
@@ -40,56 +39,56 @@ DETALHAMENTO DOS MISCONCEPTIONS
   [1] Linha 1: Variável 'z' com nome muito curto (≤4 chars)
       Trecho  : z = ...
       Contexto:
-        >>>    1 | z=int(input("numero de zumbis z:"))
-               2 | h=int(input("numero de habitantes h:"))
+        >>>    1 | z = int(input())
+               2 | h = int(input())
 
   [2] Linha 2: Variável 'h' com nome muito curto (≤4 chars)
       Trecho  : h = ...
       Contexto:
-               1 | z=int(input("numero de zumbis z:"))
-        >>>    2 | h=int(input("numero de habitantes h:"))
-               3 | x=int(input("capacidade de transformar pessoas em zumbis por dia:"))
+               1 | z = int(input())
+        >>>    2 | h = int(input())
+               3 | x = int(input())
 
   [3] Linha 3: Variável 'x' com nome muito curto (≤4 chars)
       Trecho  : x = ...
       Contexto:
-               2 | h=int(input("numero de habitantes h:"))
-        >>>    3 | x=int(input("capacidade de transformar pessoas em zumbis por dia:"))
-               4 | y=int(input("capacidade de matar zumbis por dia:"))
+               2 | h = int(input())
+        >>>    3 | x = int(input())
+               4 | y = int(input())
 
   [4] Linha 4: Variável 'y' com nome muito curto (≤4 chars)
       Trecho  : y = ...
       Contexto:
-               3 | x=int(input("capacidade de transformar pessoas em zumbis por dia:"))
-        >>>    4 | y=int(input("capacidade de matar zumbis por dia:"))
-               5 | t=0
+               3 | x = int(input())
+        >>>    4 | y = int(input())
+               5 | i = 0
 
-  [5] Linha 5: Variável 't' com nome muito curto (≤4 chars)
-      Trecho  : t = ...
+  [5] Linha 5: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
       Contexto:
-               4 | y=int(input("capacidade de matar zumbis por dia:"))
-        >>>    5 | t=0
+               4 | y = int(input())
+        >>>    5 | i = 0
                6 | 
 
-  [6] Linha 8: Variável 'z' com nome muito curto (≤4 chars)
-      Trecho  : z = ...
-      Contexto:
-               7 | while(h > 0):
-        >>>    8 | 	z=z-y
-               9 | 	h=h-x*z
-
-  [7] Linha 9: Variável 'h' com nome muito curto (≤4 chars)
+  [6] Linha 8: Variável 'h' com nome muito curto (≤4 chars)
       Trecho  : h = ...
       Contexto:
-               8 | 	z=z-y
-        >>>    9 | 	h=h-x*z
-              10 | 	t=t+1
+               7 | while h > 0:
+        >>>    8 | 	h = h - x*z
+               9 | 	z = z + x*z 
 
-  [8] Linha 10: Variável 't' com nome muito curto (≤4 chars)
-      Trecho  : t = ...
+  [7] Linha 9: Variável 'z' com nome muito curto (≤4 chars)
+      Trecho  : z = ...
       Contexto:
-               9 | 	h=h-x*z
-        >>>   10 | 	t=t+1
-              11 | 	
+               8 | 	h = h - x*z
+        >>>    9 | 	z = z + x*z 
+              10 | 	z = z-y
+
+  [8] Linha 10: Variável 'z' com nome muito curto (≤4 chars)
+      Trecho  : z = ...
+      Contexto:
+               9 | 	z = z + x*z 
+        >>>   10 | 	z = z-y
+              11 | 	i += 1
 
 ======================================================================

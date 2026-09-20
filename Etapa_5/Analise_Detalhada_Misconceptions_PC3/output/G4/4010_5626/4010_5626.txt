@@ -1,12 +1,12 @@
 ======================================================================
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
-Arquivo     : 4010_5626.py
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2022_1_v1.81\2022-1\444\users\7702\codes\4010_5626.py
+Arquivo     : 4010_5626.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2022_1_v1.81\2022-1\444\users\7502\executions\4010_5626.log
 Assessment  : 4010
 Título      : TP 02:  Est. Condicional Simples e Composta
 Questão     : 5626
-Aluno       : 7702
+Aluno       : 7502
 Grupo       : TP 02
 Significado : Estrutura Condicional Simples e Composta
 Total MCs   : 1
@@ -16,31 +16,56 @@ Total MCs   : 1
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | R = int(input("renda: "))
-     2 | P = int(input("prestacao: "))
-     3 | if (P > (0.25*R)):
-     4 | 	print("Emprestimo nao aprovado")
-     5 | else:
-     6 | 	print("Emprestimo aprovado")
+     1 | vr = int(input("Valor de renda: "))
+     2 | vp = int(input("Valor da prestacao: "))
+     3 | 
+     4 | tr = vr*.25
+     5 | 
+     6 | if vp > tr:
+     7 | 	x = "Emprestimo nao aprovado"
+     8 | else:
+     9 | 	x = "Emprestimo aprovado"
+    10 | print(x)	
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
 ----------------------------------------------------------------------
 
 ▶ G4 — Funções/variáveis com nomes não significativos
-  Ocorrências: 2
+  Ocorrências: 5
 
-  [1] Linha 1: Variável 'R' com nome muito curto (≤4 chars)
-      Trecho  : R = ...
+  [1] Linha 1: Variável 'vr' com nome muito curto (≤4 chars)
+      Trecho  : vr = ...
       Contexto:
-        >>>    1 | R = int(input("renda: "))
-               2 | P = int(input("prestacao: "))
+        >>>    1 | vr = int(input("Valor de renda: "))
+               2 | vp = int(input("Valor da prestacao: "))
 
-  [2] Linha 2: Variável 'P' com nome muito curto (≤4 chars)
-      Trecho  : P = ...
+  [2] Linha 2: Variável 'vp' com nome muito curto (≤4 chars)
+      Trecho  : vp = ...
       Contexto:
-               1 | R = int(input("renda: "))
-        >>>    2 | P = int(input("prestacao: "))
-               3 | if (P > (0.25*R)):
+               1 | vr = int(input("Valor de renda: "))
+        >>>    2 | vp = int(input("Valor da prestacao: "))
+               3 | 
+
+  [3] Linha 4: Variável 'tr' com nome muito curto (≤4 chars)
+      Trecho  : tr = ...
+      Contexto:
+               3 | 
+        >>>    4 | tr = vr*.25
+               5 | 
+
+  [4] Linha 7: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+               6 | if vp > tr:
+        >>>    7 | 	x = "Emprestimo nao aprovado"
+               8 | else:
+
+  [5] Linha 9: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+               8 | else:
+        >>>    9 | 	x = "Emprestimo aprovado"
+              10 | print(x)	
 
 ======================================================================

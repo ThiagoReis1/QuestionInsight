@@ -1,12 +1,12 @@
 ======================================================================
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
-Arquivo     : 1187_2038.py
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2018_1_v1.81\2018-1\186\users\3264\codes\1187_2038.py
+Arquivo     : 1187_2038.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2018_1_v1.81\2018-1\186\users\3127\executions\1187_2038.log
 Assessment  : 1187
 Título      : TP 4: Estrutura de Repetição por Condição (while)
 Questão     : 2038
-Aluno       : 3264
+Aluno       : 3127
 Grupo       : TP 04
 Significado : Estrutura de Repetição por Condição
 Total MCs   : 1
@@ -16,20 +16,20 @@ Total MCs   : 1
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | resp = input("")
-     2 | 
-     3 | a=0
-     4 | n=0
-     5 | resp2 = resp.upper()
-     6 | while(resp2!="S"):
-     7 | 	if(resp2 =="SIM"):
-     8 | 		a = a + 1
-     9 | 	else:
-    10 | 		n = n+1
-    11 | 	resp = input("")
-    12 | 	resp2 = resp.upper()
-    13 | print(a)
-    14 | 		
+     1 | r = str(input("o atendimento foi satisfatorio SIM ou NAO: "))
+     2 | resp = str(r.upper())
+     3 | cont = 0
+     4 | contN = 0
+     5 | while(resp!="S"):
+     6 | 	if(resp == "SIM"):
+     7 | 		cont = cont + 1
+     8 | 	else:
+     9 | 		contN = contN + 1
+    10 | 	r = str(input("o atendimento foi satisfatorio SIM ou NAO: "))
+    11 | 	resp = str(r.upper())
+    12 | 
+    13 | 		
+    14 | print(cont)
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
@@ -38,48 +38,37 @@ DETALHAMENTO DOS MISCONCEPTIONS
 ▶ G4 — Funções/variáveis com nomes não significativos
   Ocorrências: 6
 
-  [1] Linha 1: Variável 'resp' com nome muito curto (≤4 chars)
+  [1] Linha 1: Variável 'r' com nome muito curto (≤4 chars)
+      Trecho  : r = ...
+      Contexto:
+        >>>    1 | r = str(input("o atendimento foi satisfatorio SIM ou NAO: "))
+               2 | resp = str(r.upper())
+
+  [2] Linha 2: Variável 'resp' com nome muito curto (≤4 chars)
       Trecho  : resp = ...
       Contexto:
-        >>>    1 | resp = input("")
-               2 | 
+               1 | r = str(input("o atendimento foi satisfatorio SIM ou NAO: "))
+        >>>    2 | resp = str(r.upper())
+               3 | cont = 0
 
-  [2] Linha 3: Variável 'a' com nome muito curto (≤4 chars)
-      Trecho  : a = ...
+  [3] Linha 3: Variável 'cont' com nome muito curto (≤4 chars)
+      Trecho  : cont = ...
       Contexto:
-               2 | 
-        >>>    3 | a=0
-               4 | n=0
+               2 | resp = str(r.upper())
+        >>>    3 | cont = 0
+               4 | contN = 0
 
-  [3] Linha 4: Variável 'n' com nome muito curto (≤4 chars)
-      Trecho  : n = ...
+  [4] Linha 10: Variável 'r' com nome muito curto (≤4 chars)
+      Trecho  : r = ...
       Contexto:
-               3 | a=0
-        >>>    4 | n=0
-               5 | resp2 = resp.upper()
+               9 | 		contN = contN + 1
+        >>>   10 | 	r = str(input("o atendimento foi satisfatorio SIM ou NAO: "))
+              11 | 	resp = str(r.upper())
 
-  [4] Linha 11: Variável 'resp' com nome muito curto (≤4 chars)
+  [5] Linha 11: Variável 'resp' com nome muito curto (≤4 chars)
       Trecho  : resp = ...
       Contexto:
-              10 | 		n = n+1
-        >>>   11 | 	resp = input("")
-              12 | 	resp2 = resp.upper()
-
-  [5] Linha 8: Variável 'a' com nome muito curto (≤4 chars)
-      Trecho  : a = ...
-      Contexto:
-               7 | 	if(resp2 =="SIM"):
-        >>>    8 | 		a = a + 1
-               9 | 	else:
-
-  [6] Linha 10: Variável 'n' com nome muito curto (≤4 chars)
-      Trecho  : n = ...
-      Contexto:
-               9 | 	else:
-        >>>   10 | 		n = n+1
-              11 | 	resp = input("")
-
-======================================================================nput("o atendimento foi satisfatorio SIM ou NAO: "))
+              10 | 	r = str(input("o atendimento foi satisfatorio SIM ou NAO: "))
         >>>   11 | 	resp = str(r.upper())
               12 | 
 

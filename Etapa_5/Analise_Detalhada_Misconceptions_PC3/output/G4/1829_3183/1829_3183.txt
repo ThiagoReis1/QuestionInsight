@@ -1,12 +1,12 @@
 ======================================================================
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
-Arquivo     : 1829_3183.py
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2019_1_v1.81\2019-1\221\users\4120\codes\1829_3183.py
+Arquivo     : 1829_3183.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2019_1_v1.81\2019-1\221\users\4109\executions\1829_3183.log
 Assessment  : 1829
 Título      : TP6: Repetição por contagem
 Questão     : 3183
-Aluno       : 4120
+Aluno       : 4109
 Grupo       : TP 06
 Significado : Estrutura de Repetição por Contagem
 Total MCs   : 1
@@ -16,18 +16,12 @@ Total MCs   : 1
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | from numpy import *
-     2 | 
-     3 | vet = array(eval(input("Digite os numeros de maneira decrescente: ")))
-     4 | p = zeros(size(vet), dtype=int)
-     5 | 
-     6 | for i in range(size(vet)):
-     7 | 	if(i == 0):
-     8 | 		p[i] = vet[-1]
-     9 | 	else:
-    10 | 		p[i] = vet[i-2]
-    11 | 
-    12 | print(p)
+     1 | from numpy import*
+     2 | x = array(eval(input('Vetores: ')))
+     3 | 
+     4 | #for i in range(len(x)):
+     5 | x = (x[::-1])
+     6 | print(x)
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
@@ -36,14 +30,21 @@ DETALHAMENTO DOS MISCONCEPTIONS
 ▶ G4 — Funções/variáveis com nomes não significativos
   Ocorrências: 2
 
-  [1] Linha 3: Variável 'vet' com nome muito curto (≤4 chars)
-      Trecho  : vet = ...
+  [1] Linha 2: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
       Contexto:
-               2 | 
-        >>>    3 | vet = array(eval(input("Digite os numeros de maneira decrescente: ")))
-               4 | p = zeros(size(vet), dtype=int)
+               1 | from numpy import*
+        >>>    2 | x = array(eval(input('Vetores: ')))
+               3 | 
 
-  [2] Linha 4: Variável 'p' com nome muito curto (≤4 chars)
+  [2] Linha 5: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+               4 | #for i in range(len(x)):
+        >>>    5 | x = (x[::-1])
+               6 | print(x)
+
+======================================================================)
       Trecho  : p = ...
       Contexto:
                3 | vet = array(eval(input("Digite os numeros de maneira decrescente: ")))

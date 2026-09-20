@@ -1,12 +1,12 @@
 ======================================================================
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
-Arquivo     : 623_2038.py
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2017_1_v1.81\2017-1\139\users\2404\codes\623_2038.py
+Arquivo     : 623_2038.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2017_1_v1.81\2017-1\139\users\2385\executions\623_2038.log
 Assessment  : 623
 Título      : Trabalho Prático 4: Estrutura de Repetição por Condição (while)
 Questão     : 2038
-Aluno       : 2404
+Aluno       : 2385
 Grupo       : TP 04
 Significado : Estrutura de Repetição por Condição
 Total MCs   : 2
@@ -16,15 +16,14 @@ Total MCs   : 2
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | x= input("resposta de satisfação:")
-     2 | a=0
-     3 | while(x.upper() !='S'and (x.upper() !='SIM' or x.upper() !='NAO')):
-     4 | 	if(x.upper() =='SIM'):
-     5 | 		a=a+1
-     6 | 		x= input("resposta de satisfação:")
-     7 | 	if(x.upper() == 'NAO'):
-     8 | 		x= input("resposta de satisfação:")
-     9 | print(a)
+     1 | e=input()
+     2 | x=0
+     3 | 
+     4 | while(e.upper()!="S"):
+     5 | 	if(e.upper()=="SIM"):
+     6 | 		x=x+1
+     7 | 	e=input()
+     8 | print(x)
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
@@ -37,26 +36,36 @@ DETALHAMENTO DOS MISCONCEPTIONS
       Trecho  : —
 
 ▶ G4 — Funções/variáveis com nomes não significativos
-  Ocorrências: 5
+  Ocorrências: 4
 
-  [1] Linha 1: Variável 'x' com nome muito curto (≤4 chars)
+  [1] Linha 1: Variável 'e' com nome muito curto (≤4 chars)
+      Trecho  : e = ...
+      Contexto:
+        >>>    1 | e=input()
+               2 | x=0
+
+  [2] Linha 2: Variável 'x' com nome muito curto (≤4 chars)
       Trecho  : x = ...
       Contexto:
-        >>>    1 | x= input("resposta de satisfação:")
-               2 | a=0
+               1 | e=input()
+        >>>    2 | x=0
+               3 | 
 
-  [2] Linha 2: Variável 'a' com nome muito curto (≤4 chars)
-      Trecho  : a = ...
+  [3] Linha 7: Variável 'e' com nome muito curto (≤4 chars)
+      Trecho  : e = ...
       Contexto:
-               1 | x= input("resposta de satisfação:")
-        >>>    2 | a=0
-               3 | while(x.upper() !='S'and (x.upper() !='SIM' or x.upper() !='NAO')):
+               6 | 		x=x+1
+        >>>    7 | 	e=input()
+               8 | print(x)
 
-  [3] Linha 5: Variável 'a' com nome muito curto (≤4 chars)
-      Trecho  : a = ...
+  [4] Linha 6: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
       Contexto:
-               4 | 	if(x.upper() =='SIM'):
-        >>>    5 | 		a=a+1
+               5 | 	if(e.upper()=="SIM"):
+        >>>    6 | 		x=x+1
+               7 | 	e=input()
+
+======================================================================
                6 | 		x= input("resposta de satisfação:")
 
   [4] Linha 6: Variável 'x' com nome muito curto (≤4 chars)

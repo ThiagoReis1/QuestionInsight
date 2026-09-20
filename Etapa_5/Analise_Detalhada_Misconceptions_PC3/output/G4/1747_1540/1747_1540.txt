@@ -1,12 +1,12 @@
 ======================================================================
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
-Arquivo     : 1747_1540.py
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2019_1_v1.81\2019-1\226\users\4477\codes\1747_1540.py
+Arquivo     : 1747_1540.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2019_1_v1.81\2019-1\226\users\4152\executions\1747_1540.log
 Assessment  : 1747
 Título      : TP4: Estrutura de Repetição por Condição (while)
 Questão     : 1540
-Aluno       : 4477
+Aluno       : 4152
 Grupo       : TP 04
 Significado : Estrutura de Repetição por Condição
 Total MCs   : 1
@@ -17,68 +17,95 @@ Total MCs   : 1
 CÓDIGO FONTE
 ----------------------------------------------------------------------
      1 | from math import *
-     2 | # Entradas
-     3 | x = eval(input("Determine x: "))
-     4 | k = int(input("Determine k: "))
-     5 | # Variavel
-     6 | soma = 0
-     7 | i = 0
-     8 | sinal = -1
-     9 | # laco
-    10 | while (x <= k-1):
-    11 | 	soma = soma + sinal * x**i/factorial2 - 1
-    12 | 	sinal = - sinal
-    13 | 	i = i+1
-    14 | #saida
-    15 | print(round(soma, 6))
+     2 | x = eval(input("Digite aqui o angulo: "))
+     3 | k = int(input("Digite aqui o numero de termos da sreie: "))
+     4 | #Termo Geral = x ** i / factorial(j)
+     5 | i = 0
+     6 | j = 0
+     7 | soma = 0
+     8 | s = 2
+     9 | while (i < k):
+    10 | 	soma = soma + ((x ** i) / factorial(j)) * ((-1) ** s)
+    11 | 	i = i + 1
+    12 | 	j = j + 2
+    13 | 	s = s + 1
+    14 | print(round(soma, 6))
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
 ----------------------------------------------------------------------
 
 ▶ G4 — Funções/variáveis com nomes não significativos
-  Ocorrências: 6
+  Ocorrências: 10
 
-  [1] Linha 3: Variável 'x' com nome muito curto (≤4 chars)
+  [1] Linha 2: Variável 'x' com nome muito curto (≤4 chars)
       Trecho  : x = ...
       Contexto:
-               2 | # Entradas
-        >>>    3 | x = eval(input("Determine x: "))
-               4 | k = int(input("Determine k: "))
+               1 | from math import *
+        >>>    2 | x = eval(input("Digite aqui o angulo: "))
+               3 | k = int(input("Digite aqui o numero de termos da sreie: "))
 
-  [2] Linha 4: Variável 'k' com nome muito curto (≤4 chars)
+  [2] Linha 3: Variável 'k' com nome muito curto (≤4 chars)
       Trecho  : k = ...
       Contexto:
-               3 | x = eval(input("Determine x: "))
-        >>>    4 | k = int(input("Determine k: "))
-               5 | # Variavel
+               2 | x = eval(input("Digite aqui o angulo: "))
+        >>>    3 | k = int(input("Digite aqui o numero de termos da sreie: "))
+               4 | #Termo Geral = x ** i / factorial(j)
 
-  [3] Linha 6: Variável 'soma' com nome muito curto (≤4 chars)
-      Trecho  : soma = ...
-      Contexto:
-               5 | # Variavel
-        >>>    6 | soma = 0
-               7 | i = 0
-
-  [4] Linha 7: Variável 'i' com nome muito curto (≤4 chars)
+  [3] Linha 5: Variável 'i' com nome muito curto (≤4 chars)
       Trecho  : i = ...
       Contexto:
-               6 | soma = 0
-        >>>    7 | i = 0
-               8 | sinal = -1
+               4 | #Termo Geral = x ** i / factorial(j)
+        >>>    5 | i = 0
+               6 | j = 0
 
-  [5] Linha 11: Variável 'soma' com nome muito curto (≤4 chars)
+  [4] Linha 6: Variável 'j' com nome muito curto (≤4 chars)
+      Trecho  : j = ...
+      Contexto:
+               5 | i = 0
+        >>>    6 | j = 0
+               7 | soma = 0
+
+  [5] Linha 7: Variável 'soma' com nome muito curto (≤4 chars)
       Trecho  : soma = ...
       Contexto:
-              10 | while (x <= k-1):
-        >>>   11 | 	soma = soma + sinal * x**i/factorial2 - 1
-              12 | 	sinal = - sinal
+               6 | j = 0
+        >>>    7 | soma = 0
+               8 | s = 2
 
-  [6] Linha 13: Variável 'i' com nome muito curto (≤4 chars)
+  [6] Linha 8: Variável 's' com nome muito curto (≤4 chars)
+      Trecho  : s = ...
+      Contexto:
+               7 | soma = 0
+        >>>    8 | s = 2
+               9 | while (i < k):
+
+  [7] Linha 10: Variável 'soma' com nome muito curto (≤4 chars)
+      Trecho  : soma = ...
+      Contexto:
+               9 | while (i < k):
+        >>>   10 | 	soma = soma + ((x ** i) / factorial(j)) * ((-1) ** s)
+              11 | 	i = i + 1
+
+  [8] Linha 11: Variável 'i' com nome muito curto (≤4 chars)
       Trecho  : i = ...
       Contexto:
-              12 | 	sinal = - sinal
-        >>>   13 | 	i = i+1
-              14 | #saida
+              10 | 	soma = soma + ((x ** i) / factorial(j)) * ((-1) ** s)
+        >>>   11 | 	i = i + 1
+              12 | 	j = j + 2
+
+  [9] Linha 12: Variável 'j' com nome muito curto (≤4 chars)
+      Trecho  : j = ...
+      Contexto:
+              11 | 	i = i + 1
+        >>>   12 | 	j = j + 2
+              13 | 	s = s + 1
+
+  [10] Linha 13: Variável 's' com nome muito curto (≤4 chars)
+      Trecho  : s = ...
+      Contexto:
+              12 | 	j = j + 2
+        >>>   13 | 	s = s + 1
+              14 | print(round(soma, 6))
 
 ======================================================================

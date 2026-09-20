@@ -1,12 +1,12 @@
 ======================================================================
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
-Arquivo     : 280_1350.py
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2016_2_v1.81\2016-2\127\users\1906\codes\280_1350.py
+Arquivo     : 280_1350.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2016_2_v1.81\2016-2\127\users\1929\executions\280_1350.log
 Assessment  : 280
 Título      : Trabalho Prático 1: Variáveis e Estrutura Sequencial de Programação
 Questão     : 1350
-Aluno       : 1906
+Aluno       : 1929
 Grupo       : TP 01
 Significado : Variáveis e Estrutura Sequencial
 Total MCs   : 1
@@ -16,50 +16,24 @@ Total MCs   : 1
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | estimativa_de_arvores = x
-     2 | semi_eixo_maior = a
-     3 | semi_eixo_menor = b
-     4 | area = π*a*b
-     5 | quantidade_total_de_arvores_na_regiao = print()
+     1 | estimativa = float(input("estimativa de arvores: "))
+     2 | semi_maior = float(input("comprimento do semieixo maior: "))
+     3 | semi_menor = float(input("comprimento do semieixo menor: "))
+     4 | from math import *
+     5 | area = pi*semi_maior*semi_menor
+     6 | total= print(int(area*estimativa))
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
 ----------------------------------------------------------------------
 
 ▶ A3 — Variável inicializada desnecessariamente
-  Ocorrências: 5
+  Ocorrências: 1
 
-  [1] Linha 1: Variável 'estimativa_de_arvores' declarada mas nunca utilizada
-      Trecho  : estimativa_de_arvores = ...
+  [1] Linha 6: Variável 'total' declarada mas nunca utilizada
+      Trecho  : total = ...
       Contexto:
-        >>>    1 | estimativa_de_arvores = x
-               2 | semi_eixo_maior = a
-
-  [2] Linha 2: Variável 'semi_eixo_maior' declarada mas nunca utilizada
-      Trecho  : semi_eixo_maior = ...
-      Contexto:
-               1 | estimativa_de_arvores = x
-        >>>    2 | semi_eixo_maior = a
-               3 | semi_eixo_menor = b
-
-  [3] Linha 3: Variável 'semi_eixo_menor' declarada mas nunca utilizada
-      Trecho  : semi_eixo_menor = ...
-      Contexto:
-               2 | semi_eixo_maior = a
-        >>>    3 | semi_eixo_menor = b
-               4 | area = π*a*b
-
-  [4] Linha 4: Variável 'area' declarada mas nunca utilizada
-      Trecho  : area = ...
-      Contexto:
-               3 | semi_eixo_menor = b
-        >>>    4 | area = π*a*b
-               5 | quantidade_total_de_arvores_na_regiao = print()
-
-  [5] Linha 5: Variável 'quantidade_total_de_arvores_na_regiao' declarada mas nunca utilizada
-      Trecho  : quantidade_total_de_arvores_na_regiao = ...
-      Contexto:
-               4 | area = π*a*b
-        >>>    5 | quantidade_total_de_arvores_na_regiao = print()
+               5 | area = pi*semi_maior*semi_menor
+        >>>    6 | total= print(int(area*estimativa))
 
 ======================================================================

@@ -1,12 +1,12 @@
 ======================================================================
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
-Arquivo     : 1664_2967.py
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2019_1_v1.81\2019-1\226\users\4162\codes\1664_2967.py
+Arquivo     : 1664_2967.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2019_1_v1.81\2019-1\226\users\4424\executions\1664_2967.log
 Assessment  : 1664
 Título      : TP2 - Estrutura Condicional Simples e Composta
 Questão     : 2967
-Aluno       : 4162
+Aluno       : 4424
 Grupo       : TP 02
 Significado : Estrutura Condicional Simples e Composta
 Total MCs   : 2
@@ -16,14 +16,20 @@ Total MCs   : 2
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | a1= float(input("insira sua altura: "))
-     2 | a2= float(input("insira a altura do amigo: "))
-     3 | if a1>=1.37 or a2>=1.37:
-     4 | 	print("Sim")
-     5 | 	print(max(a1,a2))
-     6 | if a1<1.37 and a2<1.37:
-     7 | 	print("Nao")
-     8 | 	print(max(a1,a2))
+     1 | h1=float(input("escreva: "))
+     2 | h2=float(input("escreva: "))
+     3 | 
+     4 | if(h1 and h2>1.37):
+     5 | 	msg=("Sim")
+     6 | if(h1 and h2<1.37):
+     7 | 	msg=("Nao")
+     8 | if(h1>h2):
+     9 | 	x=(h1)
+    10 | if(h2>h1):
+    11 | 	x=(h2)
+    12 | 	
+    13 | print(msg)
+    14 | print(x)
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
@@ -36,19 +42,47 @@ DETALHAMENTO DOS MISCONCEPTIONS
       Trecho  : —
 
 ▶ G4 — Funções/variáveis com nomes não significativos
-  Ocorrências: 2
+  Ocorrências: 6
 
-  [1] Linha 1: Variável 'a1' com nome muito curto (≤4 chars)
-      Trecho  : a1 = ...
+  [1] Linha 1: Variável 'h1' com nome muito curto (≤4 chars)
+      Trecho  : h1 = ...
       Contexto:
-        >>>    1 | a1= float(input("insira sua altura: "))
-               2 | a2= float(input("insira a altura do amigo: "))
+        >>>    1 | h1=float(input("escreva: "))
+               2 | h2=float(input("escreva: "))
 
-  [2] Linha 2: Variável 'a2' com nome muito curto (≤4 chars)
-      Trecho  : a2 = ...
+  [2] Linha 2: Variável 'h2' com nome muito curto (≤4 chars)
+      Trecho  : h2 = ...
       Contexto:
-               1 | a1= float(input("insira sua altura: "))
-        >>>    2 | a2= float(input("insira a altura do amigo: "))
-               3 | if a1>=1.37 or a2>=1.37:
+               1 | h1=float(input("escreva: "))
+        >>>    2 | h2=float(input("escreva: "))
+               3 | 
+
+  [3] Linha 5: Variável 'msg' com nome muito curto (≤4 chars)
+      Trecho  : msg = ...
+      Contexto:
+               4 | if(h1 and h2>1.37):
+        >>>    5 | 	msg=("Sim")
+               6 | if(h1 and h2<1.37):
+
+  [4] Linha 7: Variável 'msg' com nome muito curto (≤4 chars)
+      Trecho  : msg = ...
+      Contexto:
+               6 | if(h1 and h2<1.37):
+        >>>    7 | 	msg=("Nao")
+               8 | if(h1>h2):
+
+  [5] Linha 9: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+               8 | if(h1>h2):
+        >>>    9 | 	x=(h1)
+              10 | if(h2>h1):
+
+  [6] Linha 11: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+              10 | if(h2>h1):
+        >>>   11 | 	x=(h2)
+              12 | 	
 
 ======================================================================

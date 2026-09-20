@@ -1,12 +1,12 @@
 ======================================================================
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
-Arquivo     : 191_1192.py
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2016_1_v1.81\2016-1\105\users\1514\codes\191_1192.py
+Arquivo     : 191_1192.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2016_1_v1.81\2016-1\105\users\1491\executions\191_1192.log
 Assessment  : 191
 Título      : Avaliação Parcial 05 – Vetores e Strings
 Questão     : 1192
-Aluno       : 1514
+Aluno       : 1491
 Grupo       : TP 05
 Significado : Vetores e Strings
 Total MCs   : 2
@@ -16,24 +16,25 @@ Total MCs   : 2
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | from numpy import*
-     2 | t = array(eval(input("Temperatura:")))
-     3 | i = 0
-     4 | 
-     5 | n = 0
-     6 | while(i < size(t)):
-     7 | 	if(t[i] >= 0):
-     8 | 		n = n + 1
+     1 | from numpy import *
+     2 | 
+     3 | v = array(eval(input("Temperaturas:")))
+     4 | i = 0
+     5 | j = 0
+     6 | while(i < size (v)):
+     7 | 	if(v[i] >= 0):
+     8 | 		j = j + 1
      9 | 	i = i + 1
-    10 | t2 = array(zeros(n, dtype = float))
+    10 | v2 = array(zeros(j, dtype = float))
     11 | i = 0
     12 | j = 0
-    13 | while(i < size(t)):
-    14 | 	if(t[i] >= 0):
-    15 | 		t2[j] = t[i]
+    13 | while(i < size (v)):
+    14 | 	if(v[i] >= 0):
+    15 | 		v2[j] = v[i]
     16 | 		j = j + 1
     17 | 	i = i + 1
-    18 | print(t2)
+    18 | 	
+    19 | print(v2)
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
@@ -48,38 +49,38 @@ DETALHAMENTO DOS MISCONCEPTIONS
 ▶ G4 — Funções/variáveis com nomes não significativos
   Ocorrências: 10
 
-  [1] Linha 2: Variável 't' com nome muito curto (≤4 chars)
-      Trecho  : t = ...
+  [1] Linha 3: Variável 'v' com nome muito curto (≤4 chars)
+      Trecho  : v = ...
       Contexto:
-               1 | from numpy import*
-        >>>    2 | t = array(eval(input("Temperatura:")))
-               3 | i = 0
+               2 | 
+        >>>    3 | v = array(eval(input("Temperaturas:")))
+               4 | i = 0
 
-  [2] Linha 3: Variável 'i' com nome muito curto (≤4 chars)
+  [2] Linha 4: Variável 'i' com nome muito curto (≤4 chars)
       Trecho  : i = ...
       Contexto:
-               2 | t = array(eval(input("Temperatura:")))
-        >>>    3 | i = 0
-               4 | 
+               3 | v = array(eval(input("Temperaturas:")))
+        >>>    4 | i = 0
+               5 | j = 0
 
-  [3] Linha 5: Variável 'n' com nome muito curto (≤4 chars)
-      Trecho  : n = ...
+  [3] Linha 5: Variável 'j' com nome muito curto (≤4 chars)
+      Trecho  : j = ...
       Contexto:
-               4 | 
-        >>>    5 | n = 0
-               6 | while(i < size(t)):
+               4 | i = 0
+        >>>    5 | j = 0
+               6 | while(i < size (v)):
 
-  [4] Linha 10: Variável 't2' com nome muito curto (≤4 chars)
-      Trecho  : t2 = ...
+  [4] Linha 10: Variável 'v2' com nome muito curto (≤4 chars)
+      Trecho  : v2 = ...
       Contexto:
                9 | 	i = i + 1
-        >>>   10 | t2 = array(zeros(n, dtype = float))
+        >>>   10 | v2 = array(zeros(j, dtype = float))
               11 | i = 0
 
   [5] Linha 11: Variável 'i' com nome muito curto (≤4 chars)
       Trecho  : i = ...
       Contexto:
-              10 | t2 = array(zeros(n, dtype = float))
+              10 | v2 = array(zeros(j, dtype = float))
         >>>   11 | i = 0
               12 | j = 0
 
@@ -88,34 +89,34 @@ DETALHAMENTO DOS MISCONCEPTIONS
       Contexto:
               11 | i = 0
         >>>   12 | j = 0
-              13 | while(i < size(t)):
+              13 | while(i < size (v)):
 
   [7] Linha 9: Variável 'i' com nome muito curto (≤4 chars)
       Trecho  : i = ...
       Contexto:
-               8 | 		n = n + 1
+               8 | 		j = j + 1
         >>>    9 | 	i = i + 1
-              10 | t2 = array(zeros(n, dtype = float))
+              10 | v2 = array(zeros(j, dtype = float))
 
   [8] Linha 17: Variável 'i' com nome muito curto (≤4 chars)
       Trecho  : i = ...
       Contexto:
               16 | 		j = j + 1
         >>>   17 | 	i = i + 1
-              18 | print(t2)
+              18 | 	
 
-  [9] Linha 8: Variável 'n' com nome muito curto (≤4 chars)
-      Trecho  : n = ...
+  [9] Linha 8: Variável 'j' com nome muito curto (≤4 chars)
+      Trecho  : j = ...
       Contexto:
-               7 | 	if(t[i] >= 0):
-        >>>    8 | 		n = n + 1
+               7 | 	if(v[i] >= 0):
+        >>>    8 | 		j = j + 1
                9 | 	i = i + 1
 
   [10] Linha 16: Variável 'j' com nome muito curto (≤4 chars)
       Trecho  : j = ...
       Contexto:
-              15 | 		t2[j] = t[i]
+              15 | 		v2[j] = v[i]
         >>>   16 | 		j = j + 1
               17 | 	i = i + 1
 
-==========================================================================
+======================================================================

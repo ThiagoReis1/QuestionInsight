@@ -1,12 +1,12 @@
 ======================================================================
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
-Arquivo     : 5124_6311.py
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2023_1_v1.81\2023-1\525\users\8876\codes\5124_6311.py
+Arquivo     : 5124_6311.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2023_1_v1.81\2023-1\525\users\8647\executions\5124_6311.log
 Assessment  : 5124
 Título      : TP 5: Vetores e Strings
 Questão     : 6311
-Aluno       : 8876
+Aluno       : 8647
 Grupo       : TP 05
 Significado : Vetores e Strings
 Total MCs   : 1
@@ -16,36 +16,27 @@ Total MCs   : 1
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | from numpy import *
+     1 | produtos = input("Quais sao os produtos? (C, E ou P): ").upper()
      2 | 
-     3 | string = input("").upper()
-     4 | 
-     5 | congelados = 10.50
-     6 | enlatados = 8.75
-     7 | pescados = 17.90
-     8 | total = 0
-     9 | 
-    10 | i = 0
-    11 | c = 0
-    12 | e = 0
-    13 | p = 0
-    14 | 
-    15 | while i < len(string):
-    16 | 	if string[i] == "C":
-    17 | 		total = total + congelados
-    18 | 		c = c + 1
-    19 | 	elif string[i] == "E":
-    20 | 		total = total + enlatados
-    21 | 		e = e + 1
-    22 | 	elif string[i] == "P":
-    23 | 		total = total + pescados
-    24 | 		p = p + 1
-    25 | 	i = i + 1
-    26 | 
-    27 | print(round(total,2),c,e,p)
-    28 | 	
-    29 | 		
-    30 | 	
+     3 | i = 0
+     4 | cont = 0
+     5 | quant = 0
+     6 | quant1 = 0
+     7 | quant2 = 0
+     8 | 
+     9 | while i < len(produtos):
+    10 | 	if produtos[i] == "C":
+    11 | 		cont = cont + 10.50
+    12 | 		quant = quant + 1
+    13 | 	if produtos[i] == "E":
+    14 | 		cont = cont + 8.75
+    15 | 		quant1 = quant1 + 1
+    16 | 	if produtos[i] == "P":
+    17 | 		cont = cont + 17.90
+    18 | 		quant2 = quant2 + 1
+    19 | 	i += 1
+    20 | 	
+    21 | print(round(cont, 2), quant, quant1, quant2)
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
@@ -54,9 +45,10 @@ DETALHAMENTO DOS MISCONCEPTIONS
 ▶ B8 — Não utilização de elif/else
   Ocorrências: 1
 
-  [1] Linha 19: Cadeia if/elif sem bloco else final
-      Trecho  : if ... (linha 19) / elif ... sem else
-      Contexto:
+  [1] Linha 0: B8 detectado pelo VisitorMC3 (localização exata não mapeada)
+      Trecho  : —
+
+======================================================================texto:
               18 | 		c = c + 1
         >>>   19 | 	elif string[i] == "E":
               20 | 		total = total + enlatados

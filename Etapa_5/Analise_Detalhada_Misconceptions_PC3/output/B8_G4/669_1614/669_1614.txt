@@ -1,12 +1,12 @@
 ======================================================================
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
-Arquivo     : 669_1614.py
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2017_1_v1.81\2017-1\139\users\2391\codes\669_1614.py
+Arquivo     : 669_1614.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2017_1_v1.81\2017-1\139\users\2382\executions\669_1614.log
 Assessment  : 669
 Título      : Trabalho Prático 5: Vetores e Strings
 Questão     : 1614
-Aluno       : 2391
+Aluno       : 2382
 Grupo       : TP 05
 Significado : Vetores e Strings
 Total MCs   : 2
@@ -17,31 +17,27 @@ Total MCs   : 2
 CÓDIGO FONTE
 ----------------------------------------------------------------------
      1 | from numpy import *
-     2 | vetor = array(eval(input()))
-     3 | vetor2 = array(eval(input()))
-     4 | i = 0
-     5 | b = 0.97
-     6 | c = 2.95
-     7 | f = 1.27
-     8 | o = 1.04
-     9 | t = 0.2
-    10 | novo = 0
-    11 | 
-    12 | while(i<size(vetor)):
-    13 | 	if(vetor[i]=="BANANA"):
-    14 | 		novo = novo + b * vetor2[i]
-    15 | 	elif(vetor[i]=="BIFE"):
-    16 | 		novo = novo + c * vetor2[i]
-    17 | 	elif(vetor[i]=="FEIJOADA"):
-    18 | 		novo = novo + f * vetor2[i]
-    19 | 	elif(vetor[i]=="OMELETE"):
-    20 | 		novo = novo + o * vetor2[i]
-    21 | 	elif(vetor[i]=="TOMATE"):
-    22 | 		novo = novo + t * vetor2[i]
-    23 | 	i = i + 1
-    24 | print(round(novo,2))
-    25 | 		
-    26 | 
+     2 | vet=array(eval(input()))
+     3 | v=array(eval(input()))
+     4 | i=0
+     5 | s=0
+     6 | 
+     7 | while(i<size(vet)):
+     8 | 	if(vet[i]=="BANANA"):
+     9 | 		s=s+v[i]*0.97
+    10 | 	elif(vet[i]=="BIFE"):
+    11 | 		s=s+v[i]*2.95
+    12 | 	elif(vet[i]=="FEIJOADA"):
+    13 | 		s=s+v[i]*1.27
+    14 | 	elif(vet[i]=="OMELETE"):
+    15 | 		s=s+v[i]*1.04
+    16 | 	elif(vet[i]=="TOMATE"):
+    17 | 		s=s+v[i]*0.2
+    18 | 	
+    19 | 	
+    20 | 	i=i+1
+    21 | 	
+    22 | print(round(s,2))
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
@@ -50,105 +46,114 @@ DETALHAMENTO DOS MISCONCEPTIONS
 ▶ B8 — Não utilização de elif/else
   Ocorrências: 1
 
-  [1] Linha 19: Cadeia if/elif sem bloco else final
-      Trecho  : if ... (linha 19) / elif ... sem else
+  [1] Linha 14: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 14) / elif ... sem else
       Contexto:
-              18 | 		novo = novo + f * vetor2[i]
-        >>>   19 | 	elif(vetor[i]=="OMELETE"):
-              20 | 		novo = novo + o * vetor2[i]
+              13 | 		s=s+v[i]*1.27
+        >>>   14 | 	elif(vet[i]=="OMELETE"):
+              15 | 		s=s+v[i]*1.04
 
 ▶ G4 — Funções/variáveis com nomes não significativos
-  Ocorrências: 13
+  Ocorrências: 10
 
-  [1] Linha 4: Variável 'i' com nome muito curto (≤4 chars)
+  [1] Linha 2: Variável 'vet' com nome muito curto (≤4 chars)
+      Trecho  : vet = ...
+      Contexto:
+               1 | from numpy import *
+        >>>    2 | vet=array(eval(input()))
+               3 | v=array(eval(input()))
+
+  [2] Linha 3: Variável 'v' com nome muito curto (≤4 chars)
+      Trecho  : v = ...
+      Contexto:
+               2 | vet=array(eval(input()))
+        >>>    3 | v=array(eval(input()))
+               4 | i=0
+
+  [3] Linha 4: Variável 'i' com nome muito curto (≤4 chars)
       Trecho  : i = ...
       Contexto:
-               3 | vetor2 = array(eval(input()))
-        >>>    4 | i = 0
-               5 | b = 0.97
+               3 | v=array(eval(input()))
+        >>>    4 | i=0
+               5 | s=0
 
-  [2] Linha 5: Variável 'b' com nome muito curto (≤4 chars)
-      Trecho  : b = ...
+  [4] Linha 5: Variável 's' com nome muito curto (≤4 chars)
+      Trecho  : s = ...
       Contexto:
-               4 | i = 0
-        >>>    5 | b = 0.97
-               6 | c = 2.95
+               4 | i=0
+        >>>    5 | s=0
+               6 | 
 
-  [3] Linha 6: Variável 'c' com nome muito curto (≤4 chars)
-      Trecho  : c = ...
+  [5] Linha 20: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
       Contexto:
-               5 | b = 0.97
-        >>>    6 | c = 2.95
-               7 | f = 1.27
+              19 | 	
+        >>>   20 | 	i=i+1
+              21 | 	
 
-  [4] Linha 7: Variável 'f' com nome muito curto (≤4 chars)
-      Trecho  : f = ...
+  [6] Linha 9: Variável 's' com nome muito curto (≤4 chars)
+      Trecho  : s = ...
       Contexto:
-               6 | c = 2.95
-        >>>    7 | f = 1.27
-               8 | o = 1.04
+               8 | 	if(vet[i]=="BANANA"):
+        >>>    9 | 		s=s+v[i]*0.97
+              10 | 	elif(vet[i]=="BIFE"):
 
-  [5] Linha 8: Variável 'o' com nome muito curto (≤4 chars)
-      Trecho  : o = ...
+  [7] Linha 11: Variável 's' com nome muito curto (≤4 chars)
+      Trecho  : s = ...
       Contexto:
-               7 | f = 1.27
-        >>>    8 | o = 1.04
-               9 | t = 0.2
+              10 | 	elif(vet[i]=="BIFE"):
+        >>>   11 | 		s=s+v[i]*2.95
+              12 | 	elif(vet[i]=="FEIJOADA"):
 
-  [6] Linha 9: Variável 't' com nome muito curto (≤4 chars)
+  [8] Linha 13: Variável 's' com nome muito curto (≤4 chars)
+      Trecho  : s = ...
+      Contexto:
+              12 | 	elif(vet[i]=="FEIJOADA"):
+        >>>   13 | 		s=s+v[i]*1.27
+              14 | 	elif(vet[i]=="OMELETE"):
+
+  [9] Linha 15: Variável 's' com nome muito curto (≤4 chars)
+      Trecho  : s = ...
+      Contexto:
+              14 | 	elif(vet[i]=="OMELETE"):
+        >>>   15 | 		s=s+v[i]*1.04
+              16 | 	elif(vet[i]=="TOMATE"):
+
+  [10] Linha 17: Variável 's' com nome muito curto (≤4 chars)
+      Trecho  : s = ...
+      Contexto:
+              16 | 	elif(vet[i]=="TOMATE"):
+        >>>   17 | 		s=s+v[i]*0.2
+              18 | 	
+
+======================================================================             15 | 	elif(nomes[i] == "BIFE"):
+
+  [11] Linha 16: Variável 't' com nome muito curto (≤4 chars)
       Trecho  : t = ...
       Contexto:
-               8 | o = 1.04
-        >>>    9 | t = 0.2
-              10 | novo = 0
+              15 | 	elif(nomes[i] == "BIFE"):
+        >>>   16 | 		t = t + quant[i]*bife
+              17 | 	elif(nomes[i] == "FEIJOADA"):
 
-  [7] Linha 10: Variável 'novo' com nome muito curto (≤4 chars)
-      Trecho  : novo = ...
+  [12] Linha 18: Variável 't' com nome muito curto (≤4 chars)
+      Trecho  : t = ...
       Contexto:
-               9 | t = 0.2
-        >>>   10 | novo = 0
-              11 | 
+              17 | 	elif(nomes[i] == "FEIJOADA"):
+        >>>   18 | 		t = t + quant[i]*fei
+              19 | 	elif(nomes[i] == "OMELETE"):
 
-  [8] Linha 23: Variável 'i' com nome muito curto (≤4 chars)
-      Trecho  : i = ...
+  [13] Linha 20: Variável 't' com nome muito curto (≤4 chars)
+      Trecho  : t = ...
       Contexto:
-              22 | 		novo = novo + t * vetor2[i]
-        >>>   23 | 	i = i + 1
-              24 | print(round(novo,2))
+              19 | 	elif(nomes[i] == "OMELETE"):
+        >>>   20 | 		t = t + quant[i]*ome
+              21 | 	elif(nomes[i] == "TOMATE"):
 
-  [9] Linha 14: Variável 'novo' com nome muito curto (≤4 chars)
-      Trecho  : novo = ...
+  [14] Linha 22: Variável 't' com nome muito curto (≤4 chars)
+      Trecho  : t = ...
       Contexto:
-              13 | 	if(vetor[i]=="BANANA"):
-        >>>   14 | 		novo = novo + b * vetor2[i]
-              15 | 	elif(vetor[i]=="BIFE"):
-
-  [10] Linha 16: Variável 'novo' com nome muito curto (≤4 chars)
-      Trecho  : novo = ...
-      Contexto:
-              15 | 	elif(vetor[i]=="BIFE"):
-        >>>   16 | 		novo = novo + c * vetor2[i]
-              17 | 	elif(vetor[i]=="FEIJOADA"):
-
-  [11] Linha 18: Variável 'novo' com nome muito curto (≤4 chars)
-      Trecho  : novo = ...
-      Contexto:
-              17 | 	elif(vetor[i]=="FEIJOADA"):
-        >>>   18 | 		novo = novo + f * vetor2[i]
-              19 | 	elif(vetor[i]=="OMELETE"):
-
-  [12] Linha 20: Variável 'novo' com nome muito curto (≤4 chars)
-      Trecho  : novo = ...
-      Contexto:
-              19 | 	elif(vetor[i]=="OMELETE"):
-        >>>   20 | 		novo = novo + o * vetor2[i]
-              21 | 	elif(vetor[i]=="TOMATE"):
-
-  [13] Linha 22: Variável 'novo' com nome muito curto (≤4 chars)
-      Trecho  : novo = ...
-      Contexto:
-              21 | 	elif(vetor[i]=="TOMATE"):
-        >>>   22 | 		novo = novo + t * vetor2[i]
-              23 | 	i = i + 1
+              21 | 	elif(nomes[i] == "TOMATE"):
+        >>>   22 | 		t = t +  quant[i]*tom
+              23 | 	i = i + 1	
 
 ======================================================================

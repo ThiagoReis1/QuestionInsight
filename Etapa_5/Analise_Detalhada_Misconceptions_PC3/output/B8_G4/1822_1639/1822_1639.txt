@@ -1,12 +1,12 @@
 ======================================================================
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
-Arquivo     : 1822_1639.py
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2019_1_v1.81\2019-1\226\users\4476\codes\1822_1639.py
+Arquivo     : 1822_1639.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2019_1_v1.81\2019-1\226\users\4159\executions\1822_1639.log
 Assessment  : 1822
 Título      : TP6: Repetição por contagem
 Questão     : 1639
-Aluno       : 4476
+Aluno       : 4159
 Grupo       : TP 06
 Significado : Estrutura de Repetição por Contagem
 Total MCs   : 2
@@ -16,25 +16,20 @@ Total MCs   : 2
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | from numpy import *
-     2 | v = array(eval(input("Digite o vetor: ")))
-     3 | 
-     4 | par = 0
-     5 | 
-     6 | for i in range(size(v)):
-     7 | 	if v[i] % 2 == 0:
-     8 | 		par = par + 1
-     9 | print(par)
-    10 | 
-    11 | v2 = zeros(par, dtype=int)
-    12 | 
-    13 | j = 0
-    14 | 
-    15 | for i in range(size(v)):
-    16 | 	if v[i] % 2 == 0:
-    17 | 		v2[j] = i
-    18 | 		j = j + 1
-    19 | print(v2)
+     1 | from numpy import*
+     2 | v = array(eval(input("numero de alunos: ")))
+     3 | c = 0
+     4 | x = 0
+     5 | for i in range(size(v)):
+     6 | 	if((v[i]%2)==0):
+     7 | 		c = c + 1 
+     8 | g = zeros(c, dtype=int)
+     9 | for d in range(size(v)):
+    10 | 	if((v[d]%2)==0):
+    11 | 			g[x] = d
+    12 | 			x = x+1
+    13 | print(c)
+    14 | print(g)
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
@@ -52,43 +47,43 @@ DETALHAMENTO DOS MISCONCEPTIONS
   [1] Linha 2: Variável 'v' com nome muito curto (≤4 chars)
       Trecho  : v = ...
       Contexto:
-               1 | from numpy import *
-        >>>    2 | v = array(eval(input("Digite o vetor: ")))
-               3 | 
+               1 | from numpy import*
+        >>>    2 | v = array(eval(input("numero de alunos: ")))
+               3 | c = 0
 
-  [2] Linha 4: Variável 'par' com nome muito curto (≤4 chars)
-      Trecho  : par = ...
+  [2] Linha 3: Variável 'c' com nome muito curto (≤4 chars)
+      Trecho  : c = ...
       Contexto:
-               3 | 
-        >>>    4 | par = 0
-               5 | 
+               2 | v = array(eval(input("numero de alunos: ")))
+        >>>    3 | c = 0
+               4 | x = 0
 
-  [3] Linha 11: Variável 'v2' com nome muito curto (≤4 chars)
-      Trecho  : v2 = ...
+  [3] Linha 4: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
       Contexto:
-              10 | 
-        >>>   11 | v2 = zeros(par, dtype=int)
-              12 | 
+               3 | c = 0
+        >>>    4 | x = 0
+               5 | for i in range(size(v)):
 
-  [4] Linha 13: Variável 'j' com nome muito curto (≤4 chars)
-      Trecho  : j = ...
+  [4] Linha 8: Variável 'g' com nome muito curto (≤4 chars)
+      Trecho  : g = ...
       Contexto:
-              12 | 
-        >>>   13 | j = 0
-              14 | 
+               7 | 		c = c + 1 
+        >>>    8 | g = zeros(c, dtype=int)
+               9 | for d in range(size(v)):
 
-  [5] Linha 8: Variável 'par' com nome muito curto (≤4 chars)
-      Trecho  : par = ...
+  [5] Linha 7: Variável 'c' com nome muito curto (≤4 chars)
+      Trecho  : c = ...
       Contexto:
-               7 | 	if v[i] % 2 == 0:
-        >>>    8 | 		par = par + 1
-               9 | print(par)
+               6 | 	if((v[i]%2)==0):
+        >>>    7 | 		c = c + 1 
+               8 | g = zeros(c, dtype=int)
 
-  [6] Linha 18: Variável 'j' com nome muito curto (≤4 chars)
-      Trecho  : j = ...
+  [6] Linha 12: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
       Contexto:
-              17 | 		v2[j] = i
-        >>>   18 | 		j = j + 1
-              19 | print(v2)
+              11 | 			g[x] = d
+        >>>   12 | 			x = x+1
+              13 | print(c)
 
 ======================================================================

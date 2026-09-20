@@ -1,12 +1,12 @@
 ======================================================================
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
-Arquivo     : 4239_1639.py
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2022_1_v1.81\2022-1\445\users\7606\codes\4239_1639.py
+Arquivo     : 4239_1639.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2022_1_v1.81\2022-1\445\users\7601\executions\4239_1639.log
 Assessment  : 4239
 Título      : TP 6: Estrutura de Repetição por Contagem (for)
 Questão     : 1639
-Aluno       : 7606
+Aluno       : 7601
 Grupo       : TP 06
 Significado : Estrutura de Repetição por Contagem
 Total MCs   : 2
@@ -17,24 +17,27 @@ Total MCs   : 2
 CÓDIGO FONTE
 ----------------------------------------------------------------------
      1 | from numpy import*
-     2 | v = array(eval(input("digite")))
-     3 | qtd = 0
-     4 | for i in range(size(v)):
-     5 | 	if v[i] % 2 == 0:
-     6 | 		qtd = qtd + 1
-     7 | 		
-     8 | print(qtd)
-     9 | resultados = zeros(qtd, dtype = int)
-    10 | a = 0
-    11 | 
-    12 | for i in range(size(v)):
-    13 | 	if v[i] % 2 == 0:
-    14 | 		resultados[a] = i
-    15 | 		a = a + 1
-    16 | 
-    17 | print(resultados)
-    18 | 
-    19 | 	
+     2 | 
+     3 | alunos = array(eval(input("Digite o vetor da quantidade de alunos: ")))
+     4 | 
+     5 | m = 0
+     6 | 
+     7 | for i in range(size(alunos)):
+     8 | 	if alunos[i] % 2 == 0:
+     9 | 		m = m + 1
+    10 | print(m)
+    11 | 		
+    12 | cont = zeros(m, dtype = int)
+    13 | j = 0
+    14 | k = 0 
+    15 | 
+    16 | for i in range(size(alunos)):
+    17 | 	if alunos[i] % 2 == 0:
+    18 | 		cont[j] = cont[j] + k
+    19 | 		j = j + 1
+    20 | 	k = k + 1	
+    21 | 		
+    22 | print(cont)
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
@@ -47,44 +50,46 @@ DETALHAMENTO DOS MISCONCEPTIONS
       Trecho  : —
 
 ▶ G4 — Funções/variáveis com nomes não significativos
-  Ocorrências: 5
+  Ocorrências: 7
 
-  [1] Linha 2: Variável 'v' com nome muito curto (≤4 chars)
-      Trecho  : v = ...
+  [1] Linha 5: Variável 'm' com nome muito curto (≤4 chars)
+      Trecho  : m = ...
       Contexto:
-               1 | from numpy import*
-        >>>    2 | v = array(eval(input("digite")))
-               3 | qtd = 0
+               4 | 
+        >>>    5 | m = 0
+               6 | 
 
-  [2] Linha 3: Variável 'qtd' com nome muito curto (≤4 chars)
-      Trecho  : qtd = ...
+  [2] Linha 12: Variável 'cont' com nome muito curto (≤4 chars)
+      Trecho  : cont = ...
       Contexto:
-               2 | v = array(eval(input("digite")))
-        >>>    3 | qtd = 0
-               4 | for i in range(size(v)):
+              11 | 		
+        >>>   12 | cont = zeros(m, dtype = int)
+              13 | j = 0
 
-  [3] Linha 10: Variável 'a' com nome muito curto (≤4 chars)
-      Trecho  : a = ...
+  [3] Linha 13: Variável 'j' com nome muito curto (≤4 chars)
+      Trecho  : j = ...
       Contexto:
-               9 | resultados = zeros(qtd, dtype = int)
-        >>>   10 | a = 0
-              11 | 
+              12 | cont = zeros(m, dtype = int)
+        >>>   13 | j = 0
+              14 | k = 0 
 
-  [4] Linha 6: Variável 'qtd' com nome muito curto (≤4 chars)
-      Trecho  : qtd = ...
+  [4] Linha 14: Variável 'k' com nome muito curto (≤4 chars)
+      Trecho  : k = ...
       Contexto:
-               5 | 	if v[i] % 2 == 0:
-        >>>    6 | 		qtd = qtd + 1
-               7 | 		
+              13 | j = 0
+        >>>   14 | k = 0 
+              15 | 
 
-  [5] Linha 15: Variável 'a' com nome muito curto (≤4 chars)
-      Trecho  : a = ...
+  [5] Linha 20: Variável 'k' com nome muito curto (≤4 chars)
+      Trecho  : k = ...
       Contexto:
-              14 | 		resultados[a] = i
-        >>>   15 | 		a = a + 1
-              16 | 
+              19 | 		j = j + 1
+        >>>   20 | 	k = k + 1	
+              21 | 		
 
-======================================================================     Contexto:
+  [6] Linha 9: Variável 'm' com nome muito curto (≤4 chars)
+      Trecho  : m = ...
+      Contexto:
                8 | 	if alunos[i] % 2 == 0:
         >>>    9 | 		m = m + 1
               10 | print(m)

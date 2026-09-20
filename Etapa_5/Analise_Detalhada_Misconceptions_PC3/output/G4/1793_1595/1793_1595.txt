@@ -1,12 +1,12 @@
 ======================================================================
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
-Arquivo     : 1793_1595.py
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2019_1_v1.81\2019-1\224\users\4384\codes\1793_1595.py
+Arquivo     : 1793_1595.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2019_1_v1.81\2019-1\224\users\4347\executions\1793_1595.log
 Assessment  : 1793
 Título      : TP5: Vetores e Strings
 Questão     : 1595
-Aluno       : 4384
+Aluno       : 4347
 Grupo       : TP 05
 Significado : Vetores e Strings
 Total MCs   : 1
@@ -16,49 +16,48 @@ Total MCs   : 1
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | from numpy import *
-     2 | al=array(eval(input("notas:")))
-     3 | x=sort(al)
-     4 | c=x[1:5]
-     5 | a=sum(c)/size(c)
-     6 | print(round(a,2))
+     1 | from numpy import*
+     2 | n=array(eval(input("nota dos alunos")))
+     3 | h=0
+     4 | t=0
+     5 | while(size(n)>h):
+     6 | 	t=t+n[h]
+     7 | 	h=h+1
+     8 | t=t-min(n)
+     9 | y=size(n)
+    10 | y=y-1
+    11 | t=t/y
+    12 | print(round(t,2))
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
 ----------------------------------------------------------------------
 
 ▶ G4 — Funções/variáveis com nomes não significativos
-  Ocorrências: 4
+  Ocorrências: 9
 
-  [1] Linha 2: Variável 'al' com nome muito curto (≤4 chars)
-      Trecho  : al = ...
+  [1] Linha 2: Variável 'n' com nome muito curto (≤4 chars)
+      Trecho  : n = ...
       Contexto:
-               1 | from numpy import *
-        >>>    2 | al=array(eval(input("notas:")))
-               3 | x=sort(al)
+               1 | from numpy import*
+        >>>    2 | n=array(eval(input("nota dos alunos")))
+               3 | h=0
 
-  [2] Linha 3: Variável 'x' com nome muito curto (≤4 chars)
-      Trecho  : x = ...
+  [2] Linha 3: Variável 'h' com nome muito curto (≤4 chars)
+      Trecho  : h = ...
       Contexto:
-               2 | al=array(eval(input("notas:")))
-        >>>    3 | x=sort(al)
-               4 | c=x[1:5]
+               2 | n=array(eval(input("nota dos alunos")))
+        >>>    3 | h=0
+               4 | t=0
 
-  [3] Linha 4: Variável 'c' com nome muito curto (≤4 chars)
-      Trecho  : c = ...
+  [3] Linha 4: Variável 't' com nome muito curto (≤4 chars)
+      Trecho  : t = ...
       Contexto:
-               3 | x=sort(al)
-        >>>    4 | c=x[1:5]
-               5 | a=sum(c)/size(c)
+               3 | h=0
+        >>>    4 | t=0
+               5 | while(size(n)>h):
 
-  [4] Linha 5: Variável 'a' com nome muito curto (≤4 chars)
-      Trecho  : a = ...
-      Contexto:
-               4 | c=x[1:5]
-        >>>    5 | a=sum(c)/size(c)
-               6 | print(round(a,2))
-
-======================================================================s)
+  [4] Linha 8: Variável 't' com nome muito curto (≤4 chars)
       Trecho  : t = ...
       Contexto:
                7 | 	h=h+1

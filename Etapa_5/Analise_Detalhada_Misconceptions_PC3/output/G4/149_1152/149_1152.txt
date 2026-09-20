@@ -1,12 +1,12 @@
 ======================================================================
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
-Arquivo     : 149_1152.py
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2016_1_v1.81\2016-1\102\users\1305\codes\149_1152.py
+Arquivo     : 149_1152.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2016_1_v1.81\2016-1\102\users\1309\executions\149_1152.log
 Assessment  : 149
 Título      : Avaliação Parcial 04 – Estrutura de Repetição por Condição (while)
 Questão     : 1152
-Aluno       : 1305
+Aluno       : 1309
 Grupo       : TP 04
 Significado : Estrutura de Repetição por Condição
 Total MCs   : 1
@@ -16,88 +16,108 @@ Total MCs   : 1
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | n1 = int(input("digite o numero de habitantes de Bravos:"))
-     2 | n2 = int(input("digite o numero de habitantes de Pentos:"))
-     3 | n3 = int(input("digite o numero de habitantes de Porto Real:"))
-     4 | t1 = int(input("digite a taxa de crescimento populacional de Bravos:"))
-     5 | t2 = int(input("digite a taxa de crescimento populacional de Pentos:"))
-     6 | t3 = int(input("digite a taxa de crescimento populacional de Porto Real:"))
-     7 | while (n1+n2) <= n3:
-     8 | 	n1 = n1 * t1 / 100 + n1
-     9 | 	n2 = n2 * t2 / 100 + n2
-    10 | 	n3 = n3 * t3 / 100 + n3
-    11 | 	
+     1 | popP=float(input("digite a população de Pentos:"))
+     2 | popB=float(input("digite a população de Bravos:"))
+     3 | popPR=float(input("digite a população de Porto Real:"))
+     4 | tp=float(input("digite a taxa de crescimento de Pentos:"))
+     5 | tb=float(input("digite a taxa de crescimento de Bravos:"))
+     6 | tpr=float(input("digite a taxa de crescimento de Porto Real:"))
+     7 | 
+     8 | t=1
+     9 | 
+    10 | povo=0
+    11 | 
+    12 | while(povo<=popPR):
+    13 | 	bbp=popP*tp/100
+    14 | 	popP=popP + bbp
+    15 | 	bbB=popB*tb/100
+    16 | 	popB=popB+bbB
+    17 | 	bbPR=popPR*tpr/100
+    18 | 	popPR=popPR+bbPR
+    19 | 	povo=popP+popB
+    20 | 	t=t+1
+    21 | print(t)
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
 ----------------------------------------------------------------------
 
 ▶ G4 — Funções/variáveis com nomes não significativos
-  Ocorrências: 9
+  Ocorrências: 14
 
-  [1] Linha 1: Variável 'n1' com nome muito curto (≤4 chars)
-      Trecho  : n1 = ...
+  [1] Linha 1: Variável 'popP' com nome muito curto (≤4 chars)
+      Trecho  : popP = ...
       Contexto:
-        >>>    1 | n1 = int(input("digite o numero de habitantes de Bravos:"))
-               2 | n2 = int(input("digite o numero de habitantes de Pentos:"))
+        >>>    1 | popP=float(input("digite a população de Pentos:"))
+               2 | popB=float(input("digite a população de Bravos:"))
 
-  [2] Linha 2: Variável 'n2' com nome muito curto (≤4 chars)
-      Trecho  : n2 = ...
+  [2] Linha 2: Variável 'popB' com nome muito curto (≤4 chars)
+      Trecho  : popB = ...
       Contexto:
-               1 | n1 = int(input("digite o numero de habitantes de Bravos:"))
-        >>>    2 | n2 = int(input("digite o numero de habitantes de Pentos:"))
-               3 | n3 = int(input("digite o numero de habitantes de Porto Real:"))
+               1 | popP=float(input("digite a população de Pentos:"))
+        >>>    2 | popB=float(input("digite a população de Bravos:"))
+               3 | popPR=float(input("digite a população de Porto Real:"))
 
-  [3] Linha 3: Variável 'n3' com nome muito curto (≤4 chars)
-      Trecho  : n3 = ...
+  [3] Linha 4: Variável 'tp' com nome muito curto (≤4 chars)
+      Trecho  : tp = ...
       Contexto:
-               2 | n2 = int(input("digite o numero de habitantes de Pentos:"))
-        >>>    3 | n3 = int(input("digite o numero de habitantes de Porto Real:"))
-               4 | t1 = int(input("digite a taxa de crescimento populacional de Bravos:"))
+               3 | popPR=float(input("digite a população de Porto Real:"))
+        >>>    4 | tp=float(input("digite a taxa de crescimento de Pentos:"))
+               5 | tb=float(input("digite a taxa de crescimento de Bravos:"))
 
-  [4] Linha 4: Variável 't1' com nome muito curto (≤4 chars)
-      Trecho  : t1 = ...
+  [4] Linha 5: Variável 'tb' com nome muito curto (≤4 chars)
+      Trecho  : tb = ...
       Contexto:
-               3 | n3 = int(input("digite o numero de habitantes de Porto Real:"))
-        >>>    4 | t1 = int(input("digite a taxa de crescimento populacional de Bravos:"))
-               5 | t2 = int(input("digite a taxa de crescimento populacional de Pentos:"))
+               4 | tp=float(input("digite a taxa de crescimento de Pentos:"))
+        >>>    5 | tb=float(input("digite a taxa de crescimento de Bravos:"))
+               6 | tpr=float(input("digite a taxa de crescimento de Porto Real:"))
 
-  [5] Linha 5: Variável 't2' com nome muito curto (≤4 chars)
-      Trecho  : t2 = ...
+  [5] Linha 6: Variável 'tpr' com nome muito curto (≤4 chars)
+      Trecho  : tpr = ...
       Contexto:
-               4 | t1 = int(input("digite a taxa de crescimento populacional de Bravos:"))
-        >>>    5 | t2 = int(input("digite a taxa de crescimento populacional de Pentos:"))
-               6 | t3 = int(input("digite a taxa de crescimento populacional de Porto Real:"))
+               5 | tb=float(input("digite a taxa de crescimento de Bravos:"))
+        >>>    6 | tpr=float(input("digite a taxa de crescimento de Porto Real:"))
+               7 | 
 
-  [6] Linha 6: Variável 't3' com nome muito curto (≤4 chars)
-      Trecho  : t3 = ...
+  [6] Linha 8: Variável 't' com nome muito curto (≤4 chars)
+      Trecho  : t = ...
       Contexto:
-               5 | t2 = int(input("digite a taxa de crescimento populacional de Pentos:"))
-        >>>    6 | t3 = int(input("digite a taxa de crescimento populacional de Porto Real:"))
-               7 | while (n1+n2) <= n3:
+               7 | 
+        >>>    8 | t=1
+               9 | 
 
-  [7] Linha 8: Variável 'n1' com nome muito curto (≤4 chars)
-      Trecho  : n1 = ...
+  [7] Linha 10: Variável 'povo' com nome muito curto (≤4 chars)
+      Trecho  : povo = ...
       Contexto:
-               7 | while (n1+n2) <= n3:
-        >>>    8 | 	n1 = n1 * t1 / 100 + n1
-               9 | 	n2 = n2 * t2 / 100 + n2
+               9 | 
+        >>>   10 | povo=0
+              11 | 
 
-  [8] Linha 9: Variável 'n2' com nome muito curto (≤4 chars)
-      Trecho  : n2 = ...
+  [8] Linha 13: Variável 'bbp' com nome muito curto (≤4 chars)
+      Trecho  : bbp = ...
       Contexto:
-               8 | 	n1 = n1 * t1 / 100 + n1
-        >>>    9 | 	n2 = n2 * t2 / 100 + n2
-              10 | 	n3 = n3 * t3 / 100 + n3
+              12 | while(povo<=popPR):
+        >>>   13 | 	bbp=popP*tp/100
+              14 | 	popP=popP + bbp
 
-  [9] Linha 10: Variável 'n3' com nome muito curto (≤4 chars)
-      Trecho  : n3 = ...
+  [9] Linha 14: Variável 'popP' com nome muito curto (≤4 chars)
+      Trecho  : popP = ...
       Contexto:
-               9 | 	n2 = n2 * t2 / 100 + n2
-        >>>   10 | 	n3 = n3 * t3 / 100 + n3
-              11 | 	
+              13 | 	bbp=popP*tp/100
+        >>>   14 | 	popP=popP + bbp
+              15 | 	bbB=popB*tb/100
 
-======================================================================    15 | 	bbB=popB*tb/100
+  [10] Linha 15: Variável 'bbB' com nome muito curto (≤4 chars)
+      Trecho  : bbB = ...
+      Contexto:
+              14 | 	popP=popP + bbp
+        >>>   15 | 	bbB=popB*tb/100
+              16 | 	popB=popB+bbB
+
+  [11] Linha 16: Variável 'popB' com nome muito curto (≤4 chars)
+      Trecho  : popB = ...
+      Contexto:
+              15 | 	bbB=popB*tb/100
         >>>   16 | 	popB=popB+bbB
               17 | 	bbPR=popPR*tpr/100
 

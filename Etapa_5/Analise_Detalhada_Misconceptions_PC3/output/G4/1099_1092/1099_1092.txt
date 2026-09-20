@@ -1,12 +1,12 @@
 ======================================================================
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
-Arquivo     : 1099_1092.py
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2018_1_v1.81\2018-1\187\users\3196\codes\1099_1092.py
+Arquivo     : 1099_1092.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2018_1_v1.81\2018-1\187\users\3213\executions\1099_1092.log
 Assessment  : 1099
 Título      : TP 02 – Estrutura Condicional Composta
 Questão     : 1092
-Aluno       : 3196
+Aluno       : 3213
 Grupo       : TP 02
 Significado : Estrutura Condicional Simples e Composta
 Total MCs   : 1
@@ -16,57 +16,80 @@ Total MCs   : 1
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | num = int(input('digite o numero'))
-     2 | num1 = num//100
-     3 | num2 = (num%100)//10
-     4 | num3 = (num%100)%10
-     5 | 
-     6 | numf = (num1**3) + (num2**3) + (num3**3)
-     7 | print(num)
-     8 | if num == numf:
-     9 | 	print('atende')
-    10 | else:
-    11 | 	print('nao atende')
+     1 | nu = int(input("Digite o numero: "))
+     2 | 
+     3 | a1 = nu // 100
+     4 | a2 = (nu % 100) // 10
+     5 | a3 = ((nu % 100) % 10) // 1
+     6 | 
+     7 | #print(a1)
+     8 | #print(a2)
+     9 | #print(a3)
+    10 | 
+    11 | ca = (a1 ** 3) + (a2 ** 3) + (a3 ** 3)
+    12 | #print(ca)
+    13 | 
+    14 | if (ca == nu):
+    15 | 	si = "atende"
+    16 | else:
+    17 | 	si = "nao atende"
+    18 | 
+    19 | print(nu)
+    20 | print(si)
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
 ----------------------------------------------------------------------
 
 ▶ G4 — Funções/variáveis com nomes não significativos
-  Ocorrências: 5
+  Ocorrências: 7
 
-  [1] Linha 1: Variável 'num' com nome muito curto (≤4 chars)
-      Trecho  : num = ...
+  [1] Linha 1: Variável 'nu' com nome muito curto (≤4 chars)
+      Trecho  : nu = ...
       Contexto:
-        >>>    1 | num = int(input('digite o numero'))
-               2 | num1 = num//100
+        >>>    1 | nu = int(input("Digite o numero: "))
+               2 | 
 
-  [2] Linha 2: Variável 'num1' com nome muito curto (≤4 chars)
-      Trecho  : num1 = ...
+  [2] Linha 3: Variável 'a1' com nome muito curto (≤4 chars)
+      Trecho  : a1 = ...
       Contexto:
-               1 | num = int(input('digite o numero'))
-        >>>    2 | num1 = num//100
-               3 | num2 = (num%100)//10
+               2 | 
+        >>>    3 | a1 = nu // 100
+               4 | a2 = (nu % 100) // 10
 
-  [3] Linha 3: Variável 'num2' com nome muito curto (≤4 chars)
-      Trecho  : num2 = ...
+  [3] Linha 4: Variável 'a2' com nome muito curto (≤4 chars)
+      Trecho  : a2 = ...
       Contexto:
-               2 | num1 = num//100
-        >>>    3 | num2 = (num%100)//10
-               4 | num3 = (num%100)%10
+               3 | a1 = nu // 100
+        >>>    4 | a2 = (nu % 100) // 10
+               5 | a3 = ((nu % 100) % 10) // 1
 
-  [4] Linha 4: Variável 'num3' com nome muito curto (≤4 chars)
-      Trecho  : num3 = ...
+  [4] Linha 5: Variável 'a3' com nome muito curto (≤4 chars)
+      Trecho  : a3 = ...
       Contexto:
-               3 | num2 = (num%100)//10
-        >>>    4 | num3 = (num%100)%10
-               5 | 
+               4 | a2 = (nu % 100) // 10
+        >>>    5 | a3 = ((nu % 100) % 10) // 1
+               6 | 
 
-  [5] Linha 6: Variável 'numf' com nome muito curto (≤4 chars)
-      Trecho  : numf = ...
+  [5] Linha 11: Variável 'ca' com nome muito curto (≤4 chars)
+      Trecho  : ca = ...
       Contexto:
-               5 | 
-        >>>    6 | numf = (num1**3) + (num2**3) + (num3**3)
-               7 | print(num)
+              10 | 
+        >>>   11 | ca = (a1 ** 3) + (a2 ** 3) + (a3 ** 3)
+              12 | #print(ca)
+
+  [6] Linha 15: Variável 'si' com nome muito curto (≤4 chars)
+      Trecho  : si = ...
+      Contexto:
+              14 | if (ca == nu):
+        >>>   15 | 	si = "atende"
+              16 | else:
+
+  [7] Linha 17: Variável 'si' com nome muito curto (≤4 chars)
+      Trecho  : si = ...
+      Contexto:
+              16 | else:
+        >>>   17 | 	si = "nao atende"
+              18 | 
 
 ======================================================================

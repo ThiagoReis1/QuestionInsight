@@ -1,12 +1,12 @@
 ======================================================================
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
-Arquivo     : 5704_6003.py
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2024_1_v1.81\2024-1\590\users\9832\codes\5704_6003.py
+Arquivo     : 5704_6003.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2024_1_v1.81\2024-1\590\users\9825\executions\5704_6003.log
 Assessment  : 5704
 Título      : TP 2:  Est. Condicional Simples e Composta
 Questão     : 6003
-Aluno       : 9832
+Aluno       : 9825
 Grupo       : TP 02
 Significado : Estrutura Condicional Simples e Composta
 Total MCs   : 1
@@ -16,44 +16,43 @@ Total MCs   : 1
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | c = input("Quantidade de cenouras: ")
+     1 | c = int(input())
      2 | 
-     3 | try :
-     4 | 	c = int(c)
-     5 | 	
-     6 | except ValueError:
-     7 | 	print("Digite valores positivos!")
-     8 | 	
-     9 | else :
-    10 | 	if ( c < 0 ) :
-    11 | 		print("Digite valores positivos!")
-    12 | 		
-    13 | 	else :
-    14 | 		t = 0
-    15 | 		if (  c < 5 ) :
-    16 | 			t = c * 1.2
-    17 | 			print( round(t,2) )
-    18 | 		
-    19 | 		else :
-    20 | 			t = c * 0.9
-    21 | 			print( round(t,2) )
+     3 | if c < 5:
+     4 | 	v = (c * 1.2)
+     5 | else:
+     6 | 	v = (c * 0.9)
+     7 | 
+     8 | print(round(v, 2))
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
 ----------------------------------------------------------------------
 
 ▶ G4 — Funções/variáveis com nomes não significativos
-  Ocorrências: 5
+  Ocorrências: 3
 
   [1] Linha 1: Variável 'c' com nome muito curto (≤4 chars)
       Trecho  : c = ...
       Contexto:
-        >>>    1 | c = input("Quantidade de cenouras: ")
+        >>>    1 | c = int(input())
                2 | 
 
-  [2] Linha 4: Variável 'c' com nome muito curto (≤4 chars)
-      Trecho  : c = ...
+  [2] Linha 4: Variável 'v' com nome muito curto (≤4 chars)
+      Trecho  : v = ...
       Contexto:
+               3 | if c < 5:
+        >>>    4 | 	v = (c * 1.2)
+               5 | else:
+
+  [3] Linha 6: Variável 'v' com nome muito curto (≤4 chars)
+      Trecho  : v = ...
+      Contexto:
+               5 | else:
+        >>>    6 | 	v = (c * 0.9)
+               7 | 
+
+======================================================================    Contexto:
                3 | try :
         >>>    4 | 	c = int(c)
                5 | 	

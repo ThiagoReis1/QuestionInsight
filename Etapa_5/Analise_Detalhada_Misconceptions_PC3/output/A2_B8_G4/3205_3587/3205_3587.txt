@@ -1,12 +1,12 @@
 ======================================================================
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
-Arquivo     : 3205_3587.py
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2021_1_v1.81\2021-1\380\users\6417\codes\3205_3587.py
+Arquivo     : 3205_3587.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2021_1_v1.81\2021-1\380\users\6422\executions\3205_3587.log
 Assessment  : 3205
 Título      : TP5: Vetores e Strings (P)
 Questão     : 3587
-Aluno       : 6417
+Aluno       : 6422
 Grupo       : TP 05
 Significado : Vetores e Strings
 Total MCs   : 3
@@ -16,29 +16,23 @@ Total MCs   : 3
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | from numpy import *
+     1 | from numpy import*
      2 | 
-     3 | vet = array(eval(input("Numeros do vetor: ")))
-     4 | 
-     5 | i = 0
-     6 | soma = 100
-     7 | 
-     8 | while i < size(vet):
-     9 | 	if(vet[i] == 1):
-    10 | 		soma = soma * 5
-    11 | 		
-    12 | 	elif(vet[i] == 2):
-    13 | 		soma = soma* 3
-    14 | 	
-    15 | 	elif(vet[i] == 3):
-    16 | 		soma = soma
-    17 | 		
-    18 | 	elif(vet[i] == 4):
-    19 | 		soma = soma / 2
-    20 | 	
-    21 | 	i = i + 1
-    22 | 	
-    23 | print(round(soma,2))
+     3 | p = array(eval(input("numero: ")))
+     4 | i = 0
+     5 | s = 100
+     6 | 
+     7 | while i < size(p):
+     8 | 	if p[i] == 1:
+     9 | 		s =  s*5
+    10 | 	elif p[i] == 2:
+    11 | 		s =  s*3
+    12 | 	elif p[i] == 3:
+    13 | 		s = s
+    14 | 	elif p[i] == 4:
+    15 | 		s =  s/2
+    16 | 	i = i + 1
+    17 | print(round(s, 2))
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
@@ -47,80 +41,83 @@ DETALHAMENTO DOS MISCONCEPTIONS
 ▶ A2 — Variável atribuída a si mesma
   Ocorrências: 1
 
-  [1] Linha 16: 'soma' atribuído a si mesmo
-      Trecho  : soma = soma
+  [1] Linha 13: 's' atribuído a si mesmo
+      Trecho  : s = s
       Contexto:
-              15 | 	elif(vet[i] == 3):
-        >>>   16 | 		soma = soma
-              17 | 		
+              12 | 	elif p[i] == 3:
+        >>>   13 | 		s = s
+              14 | 	elif p[i] == 4:
 
 ▶ B8 — Não utilização de elif/else
   Ocorrências: 1
 
-  [1] Linha 15: Cadeia if/elif sem bloco else final
-      Trecho  : if ... (linha 15) / elif ... sem else
+  [1] Linha 12: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 12) / elif ... sem else
       Contexto:
-              14 | 	
-        >>>   15 | 	elif(vet[i] == 3):
-              16 | 		soma = soma
+              11 | 		s =  s*3
+        >>>   12 | 	elif p[i] == 3:
+              13 | 		s = s
 
 ▶ G4 — Funções/variáveis com nomes não significativos
   Ocorrências: 8
 
-  [1] Linha 3: Variável 'vet' com nome muito curto (≤4 chars)
-      Trecho  : vet = ...
+  [1] Linha 3: Variável 'p' com nome muito curto (≤4 chars)
+      Trecho  : p = ...
       Contexto:
                2 | 
-        >>>    3 | vet = array(eval(input("Numeros do vetor: ")))
-               4 | 
+        >>>    3 | p = array(eval(input("numero: ")))
+               4 | i = 0
 
-  [2] Linha 5: Variável 'i' com nome muito curto (≤4 chars)
+  [2] Linha 4: Variável 'i' com nome muito curto (≤4 chars)
       Trecho  : i = ...
       Contexto:
-               4 | 
-        >>>    5 | i = 0
-               6 | soma = 100
+               3 | p = array(eval(input("numero: ")))
+        >>>    4 | i = 0
+               5 | s = 100
 
-  [3] Linha 6: Variável 'soma' com nome muito curto (≤4 chars)
-      Trecho  : soma = ...
+  [3] Linha 5: Variável 's' com nome muito curto (≤4 chars)
+      Trecho  : s = ...
       Contexto:
-               5 | i = 0
-        >>>    6 | soma = 100
-               7 | 
+               4 | i = 0
+        >>>    5 | s = 100
+               6 | 
 
-  [4] Linha 21: Variável 'i' com nome muito curto (≤4 chars)
+  [4] Linha 16: Variável 'i' com nome muito curto (≤4 chars)
       Trecho  : i = ...
       Contexto:
-              20 | 	
-        >>>   21 | 	i = i + 1
-              22 | 	
+              15 | 		s =  s/2
+        >>>   16 | 	i = i + 1
+              17 | print(round(s, 2))
 
-  [5] Linha 10: Variável 'soma' com nome muito curto (≤4 chars)
-      Trecho  : soma = ...
+  [5] Linha 9: Variável 's' com nome muito curto (≤4 chars)
+      Trecho  : s = ...
       Contexto:
-               9 | 	if(vet[i] == 1):
-        >>>   10 | 		soma = soma * 5
-              11 | 		
+               8 | 	if p[i] == 1:
+        >>>    9 | 		s =  s*5
+              10 | 	elif p[i] == 2:
 
-  [6] Linha 13: Variável 'soma' com nome muito curto (≤4 chars)
-      Trecho  : soma = ...
+  [6] Linha 11: Variável 's' com nome muito curto (≤4 chars)
+      Trecho  : s = ...
       Contexto:
-              12 | 	elif(vet[i] == 2):
-        >>>   13 | 		soma = soma* 3
-              14 | 	
+              10 | 	elif p[i] == 2:
+        >>>   11 | 		s =  s*3
+              12 | 	elif p[i] == 3:
 
-  [7] Linha 16: Variável 'soma' com nome muito curto (≤4 chars)
-      Trecho  : soma = ...
+  [7] Linha 13: Variável 's' com nome muito curto (≤4 chars)
+      Trecho  : s = ...
       Contexto:
-              15 | 	elif(vet[i] == 3):
-        >>>   16 | 		soma = soma
-              17 | 		
+              12 | 	elif p[i] == 3:
+        >>>   13 | 		s = s
+              14 | 	elif p[i] == 4:
 
-  [8] Linha 19: Variável 'soma' com nome muito curto (≤4 chars)
-      Trecho  : soma = ...
+  [8] Linha 15: Variável 's' com nome muito curto (≤4 chars)
+      Trecho  : s = ...
       Contexto:
-              18 | 	elif(vet[i] == 4):
-        >>>   19 | 		soma = soma / 2
+              14 | 	elif p[i] == 4:
+        >>>   15 | 		s =  s/2
+              16 | 	i = i + 1
+
+======================================================================ma = soma / 2
               20 | 	
 
 ======================================================================

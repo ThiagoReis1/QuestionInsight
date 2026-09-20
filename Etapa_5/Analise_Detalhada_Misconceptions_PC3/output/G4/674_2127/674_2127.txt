@@ -1,12 +1,12 @@
 ======================================================================
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
-Arquivo     : 674_2127.py
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2017_1_v1.81\2017-1\141\users\2540\codes\674_2127.py
+Arquivo     : 674_2127.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2017_1_v1.81\2017-1\141\users\2336\executions\674_2127.log
 Assessment  : 674
 Título      : Trabalho Prático 5: Vetores e Strings
 Questão     : 2127
-Aluno       : 2540
+Aluno       : 2336
 Grupo       : TP 05
 Significado : Vetores e Strings
 Total MCs   : 1
@@ -17,46 +17,57 @@ Total MCs   : 1
 CÓDIGO FONTE
 ----------------------------------------------------------------------
      1 | from numpy import*
-     2 | 
-     3 | N = array(eval(input("notas: ")))
-     4 | 
-     5 | M = sum(N) - min(N)
-     6 | Mf = M /3
-     7 | 
-     8 | if(Mf>=50.0):
-     9 | 	print(round(Mf,2))
-    10 | 	print("APROVADO")
-    11 | else:
-    12 | 	print(round(Mf,2))
-    13 | 	print("REPROVADO")
-    14 | 	
+     2 | vet = array(eval(input()))
+     3 | 
+     4 | M = sum(vet) - min(vet)
+     5 | MF = M/3
+     6 | print(round(MF,2))
+     7 | if MF >= 50.0:
+     8 | 	x = "APROVADO"
+     9 | else:
+    10 | 	x = "REPROVADO"
+    11 | print(x)
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
 ----------------------------------------------------------------------
 
 ▶ G4 — Funções/variáveis com nomes não significativos
-  Ocorrências: 3
+  Ocorrências: 5
 
-  [1] Linha 3: Variável 'N' com nome muito curto (≤4 chars)
-      Trecho  : N = ...
+  [1] Linha 2: Variável 'vet' com nome muito curto (≤4 chars)
+      Trecho  : vet = ...
       Contexto:
-               2 | 
-        >>>    3 | N = array(eval(input("notas: ")))
-               4 | 
+               1 | from numpy import*
+        >>>    2 | vet = array(eval(input()))
+               3 | 
 
-  [2] Linha 5: Variável 'M' com nome muito curto (≤4 chars)
+  [2] Linha 4: Variável 'M' com nome muito curto (≤4 chars)
       Trecho  : M = ...
       Contexto:
-               4 | 
-        >>>    5 | M = sum(N) - min(N)
-               6 | Mf = M /3
+               3 | 
+        >>>    4 | M = sum(vet) - min(vet)
+               5 | MF = M/3
 
-  [3] Linha 6: Variável 'Mf' com nome muito curto (≤4 chars)
-      Trecho  : Mf = ...
+  [3] Linha 5: Variável 'MF' com nome muito curto (≤4 chars)
+      Trecho  : MF = ...
       Contexto:
-               5 | M = sum(N) - min(N)
-        >>>    6 | Mf = M /3
-               7 | 
+               4 | M = sum(vet) - min(vet)
+        >>>    5 | MF = M/3
+               6 | print(round(MF,2))
+
+  [4] Linha 8: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+               7 | if MF >= 50.0:
+        >>>    8 | 	x = "APROVADO"
+               9 | else:
+
+  [5] Linha 10: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+               9 | else:
+        >>>   10 | 	x = "REPROVADO"
+              11 | print(x)
 
 ======================================================================

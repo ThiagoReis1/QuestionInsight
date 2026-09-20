@@ -1,12 +1,12 @@
 ======================================================================
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
-Arquivo     : 5923_2845.py
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2024_1_v1.81\2024-1\590\users\9814\codes\5923_2845.py
+Arquivo     : 5923_2845.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2024_1_v1.81\2024-1\590\users\9828\executions\5923_2845.log
 Assessment  : 5923
 Título      : TP 6: Estrutura de Repetição por Contagem (for)
 Questão     : 2845
-Aluno       : 9814
+Aluno       : 9828
 Grupo       : TP 06
 Significado : Estrutura de Repetição por Contagem
 Total MCs   : 1
@@ -16,44 +16,38 @@ Total MCs   : 1
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | from numpy import * 
-     2 | 
-     3 | v = array(eval(input('Determine: ')), dtype=int)
-     4 | 
-     5 | s = size(v)
-     6 | v0 = zeros(s, dtype=int)
-     7 | 
-     8 | for i in range(s):
-     9 | 	if v[i] == 9:
-    10 | 		v0[i] = 0
-    11 | 	else:
-    12 | 		v0[i] = v[i] + 1
-    13 | 		
-    14 | print(v0)
+     1 | from numpy import *
+     2 | m = array(eval(input("msg: ")))
+     3 | i = zeros(size(m), dtype=int)
+     4 | for j in range(0,size(m)):
+     5 | 	if m[j] == 9:
+     6 | 		i[j] = 0
+     7 | 	else:
+     8 | 		i[j] = m[j] + 1
+     9 | print(i)
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
 ----------------------------------------------------------------------
 
 ▶ G4 — Funções/variáveis com nomes não significativos
-  Ocorrências: 3
+  Ocorrências: 2
 
-  [1] Linha 3: Variável 'v' com nome muito curto (≤4 chars)
-      Trecho  : v = ...
+  [1] Linha 2: Variável 'm' com nome muito curto (≤4 chars)
+      Trecho  : m = ...
       Contexto:
-               2 | 
-        >>>    3 | v = array(eval(input('Determine: ')), dtype=int)
-               4 | 
+               1 | from numpy import *
+        >>>    2 | m = array(eval(input("msg: ")))
+               3 | i = zeros(size(m), dtype=int)
 
-  [2] Linha 5: Variável 's' com nome muito curto (≤4 chars)
-      Trecho  : s = ...
+  [2] Linha 3: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
       Contexto:
-               4 | 
-        >>>    5 | s = size(v)
-               6 | v0 = zeros(s, dtype=int)
+               2 | m = array(eval(input("msg: ")))
+        >>>    3 | i = zeros(size(m), dtype=int)
+               4 | for j in range(0,size(m)):
 
-  [3] Linha 6: Variável 'v0' com nome muito curto (≤4 chars)
-      Trecho  : v0 = ...
+======================================================================o  : v0 = ...
       Contexto:
                5 | s = size(v)
         >>>    6 | v0 = zeros(s, dtype=int)

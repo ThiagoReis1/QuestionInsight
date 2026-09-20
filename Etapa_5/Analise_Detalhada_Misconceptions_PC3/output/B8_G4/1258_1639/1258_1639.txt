@@ -1,12 +1,12 @@
 ======================================================================
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
-Arquivo     : 1258_1639.py
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2018_1_v1.81\2018-1\181\users\3399\codes\1258_1639.py
+Arquivo     : 1258_1639.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2018_1_v1.81\2018-1\181\users\3064\executions\1258_1639.log
 Assessment  : 1258
 Título      : TP 6: Estrutura de Repetição por Contagem (for)
 Questão     : 1639
-Aluno       : 3399
+Aluno       : 3064
 Grupo       : TP 06
 Significado : Estrutura de Repetição por Contagem
 Total MCs   : 2
@@ -16,24 +16,27 @@ Total MCs   : 2
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | from numpy import *
-     2 | v = array(eval(input("vetor de alunos: ")))
-     3 | 
-     4 | npar = 0
-     5 | for i in range(size(v)):
-     6 | 	if(v[i] % 2 == 0):
-     7 | 		npar = npar + 1
-     8 | print(npar)
-     9 | 
-    10 | t = 0
-    11 | vetor = zeros(npar, dtype=int)
+     1 | from numpy import*
+     2 | 
+     3 | v= array(eval(input("Informe a quantidade de alunos nas turmas: ")))
+     4 | s=0
+     5 | 
+     6 | 
+     7 | 
+     8 | for i in range(size(v)):
+     9 | 	if (v[i]%2==0):
+    10 | 		s=s+1
+    11 | print(s)		
     12 | 
-    13 | for i in range(0, size(v)):
-    14 | 	if(v[i] % 2 == 0):
-    15 | 		vetor[t] = i
-    16 | 		t = t + 1
-    17 | print(vetor)
-    18 | 
+    13 | vi=zeros(s,dtype=int)
+    14 | 
+    15 | j=0
+    16 | 
+    17 | for i in range(size(v)):
+    18 | 	if(v[i]%2==0):
+    19 | 		vi[j]=i
+    20 | 		j=j+1
+    21 | print(vi)		
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
@@ -46,41 +49,50 @@ DETALHAMENTO DOS MISCONCEPTIONS
       Trecho  : —
 
 ▶ G4 — Funções/variáveis com nomes não significativos
-  Ocorrências: 5
+  Ocorrências: 6
 
-  [1] Linha 2: Variável 'v' com nome muito curto (≤4 chars)
+  [1] Linha 3: Variável 'v' com nome muito curto (≤4 chars)
       Trecho  : v = ...
       Contexto:
-               1 | from numpy import *
-        >>>    2 | v = array(eval(input("vetor de alunos: ")))
-               3 | 
+               2 | 
+        >>>    3 | v= array(eval(input("Informe a quantidade de alunos nas turmas: ")))
+               4 | s=0
 
-  [2] Linha 4: Variável 'npar' com nome muito curto (≤4 chars)
-      Trecho  : npar = ...
+  [2] Linha 4: Variável 's' com nome muito curto (≤4 chars)
+      Trecho  : s = ...
       Contexto:
-               3 | 
-        >>>    4 | npar = 0
-               5 | for i in range(size(v)):
+               3 | v= array(eval(input("Informe a quantidade de alunos nas turmas: ")))
+        >>>    4 | s=0
+               5 | 
 
-  [3] Linha 10: Variável 't' com nome muito curto (≤4 chars)
-      Trecho  : t = ...
+  [3] Linha 13: Variável 'vi' com nome muito curto (≤4 chars)
+      Trecho  : vi = ...
       Contexto:
-               9 | 
-        >>>   10 | t = 0
-              11 | vetor = zeros(npar, dtype=int)
+              12 | 
+        >>>   13 | vi=zeros(s,dtype=int)
+              14 | 
 
-  [4] Linha 7: Variável 'npar' com nome muito curto (≤4 chars)
-      Trecho  : npar = ...
+  [4] Linha 15: Variável 'j' com nome muito curto (≤4 chars)
+      Trecho  : j = ...
       Contexto:
-               6 | 	if(v[i] % 2 == 0):
-        >>>    7 | 		npar = npar + 1
-               8 | print(npar)
+              14 | 
+        >>>   15 | j=0
+              16 | 
 
-  [5] Linha 16: Variável 't' com nome muito curto (≤4 chars)
-      Trecho  : t = ...
+  [5] Linha 10: Variável 's' com nome muito curto (≤4 chars)
+      Trecho  : s = ...
       Contexto:
-              15 | 		vetor[t] = i
-        >>>   16 | 		t = t + 1
-              17 | print(vetor)
+               9 | 	if (v[i]%2==0):
+        >>>   10 | 		s=s+1
+              11 | print(s)		
+
+  [6] Linha 20: Variável 'j' com nome muito curto (≤4 chars)
+      Trecho  : j = ...
+      Contexto:
+              19 | 		vi[j]=i
+        >>>   20 | 		j=j+1
+              21 | print(vi)		
+
+======================================================================  18 | print(v0)
 
 ======================================================================

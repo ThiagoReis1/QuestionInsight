@@ -1,12 +1,12 @@
 ======================================================================
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
-Arquivo     : 1097_1094.py
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2018_1_v1.81\2018-1\186\users\3139\codes\1097_1094.py
+Arquivo     : 1097_1094.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2018_1_v1.81\2018-1\186\users\3124\executions\1097_1094.log
 Assessment  : 1097
 Título      : TP 2 - Condicionais compostos (if/else)
 Questão     : 1094
-Aluno       : 3139
+Aluno       : 3124
 Grupo       : TP 02
 Significado : Estrutura Condicional Simples e Composta
 Total MCs   : 1
@@ -16,71 +16,93 @@ Total MCs   : 1
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | x = int(input("numero: "))
+     1 | n = int(input(""))
      2 | 
-     3 | c = (x // 1000)
-     4 | e = (x % 1000) 
-     5 | 
-     6 | F = (c + e) ** 2
-     7 | 
-     8 | if (F == x):
-     9 | 	msg = "atende"
-    10 | else:
-    11 | 	msg = "nao atende"
-    12 | 	
-    13 | print(msg)
-    14 | print(x)
-    15 | 
-    16 | 
-    17 | 
-    18 | 
+     3 | d1 = n//100000
+     4 | d2 = n//10000%10
+     5 | d3 = n//1000%10
+     6 | d4 = n//100%10
+     7 | d5 = n//10%10
+     8 | d6 = n%10
+     9 | 
+    10 | m = d1*100 + d2*100 + d3*100
+    11 | o = d4*100 + d5*100 + d6*100
+    12 | 
+    13 | 
+    14 | if ((m+o)**2 == n):
+    15 |     mensagem = "atende"
+    16 | else:
+    17 | 	 mensagem = "nao atende"
+    18 | print(mensagem)
+    19 | print(n)	
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
 ----------------------------------------------------------------------
 
 ▶ G4 — Funções/variáveis com nomes não significativos
-  Ocorrências: 6
+  Ocorrências: 9
 
-  [1] Linha 1: Variável 'x' com nome muito curto (≤4 chars)
-      Trecho  : x = ...
+  [1] Linha 1: Variável 'n' com nome muito curto (≤4 chars)
+      Trecho  : n = ...
       Contexto:
-        >>>    1 | x = int(input("numero: "))
+        >>>    1 | n = int(input(""))
                2 | 
 
-  [2] Linha 3: Variável 'c' com nome muito curto (≤4 chars)
-      Trecho  : c = ...
+  [2] Linha 3: Variável 'd1' com nome muito curto (≤4 chars)
+      Trecho  : d1 = ...
       Contexto:
                2 | 
-        >>>    3 | c = (x // 1000)
-               4 | e = (x % 1000) 
+        >>>    3 | d1 = n//100000
+               4 | d2 = n//10000%10
 
-  [3] Linha 4: Variável 'e' com nome muito curto (≤4 chars)
-      Trecho  : e = ...
+  [3] Linha 4: Variável 'd2' com nome muito curto (≤4 chars)
+      Trecho  : d2 = ...
       Contexto:
-               3 | c = (x // 1000)
-        >>>    4 | e = (x % 1000) 
-               5 | 
+               3 | d1 = n//100000
+        >>>    4 | d2 = n//10000%10
+               5 | d3 = n//1000%10
 
-  [4] Linha 6: Variável 'F' com nome muito curto (≤4 chars)
-      Trecho  : F = ...
+  [4] Linha 5: Variável 'd3' com nome muito curto (≤4 chars)
+      Trecho  : d3 = ...
       Contexto:
-               5 | 
-        >>>    6 | F = (c + e) ** 2
-               7 | 
+               4 | d2 = n//10000%10
+        >>>    5 | d3 = n//1000%10
+               6 | d4 = n//100%10
 
-  [5] Linha 9: Variável 'msg' com nome muito curto (≤4 chars)
-      Trecho  : msg = ...
+  [5] Linha 6: Variável 'd4' com nome muito curto (≤4 chars)
+      Trecho  : d4 = ...
       Contexto:
-               8 | if (F == x):
-        >>>    9 | 	msg = "atende"
-              10 | else:
+               5 | d3 = n//1000%10
+        >>>    6 | d4 = n//100%10
+               7 | d5 = n//10%10
 
-  [6] Linha 11: Variável 'msg' com nome muito curto (≤4 chars)
-      Trecho  : msg = ...
+  [6] Linha 7: Variável 'd5' com nome muito curto (≤4 chars)
+      Trecho  : d5 = ...
       Contexto:
-              10 | else:
-        >>>   11 | 	msg = "nao atende"
-              12 | 	
+               6 | d4 = n//100%10
+        >>>    7 | d5 = n//10%10
+               8 | d6 = n%10
+
+  [7] Linha 8: Variável 'd6' com nome muito curto (≤4 chars)
+      Trecho  : d6 = ...
+      Contexto:
+               7 | d5 = n//10%10
+        >>>    8 | d6 = n%10
+               9 | 
+
+  [8] Linha 10: Variável 'm' com nome muito curto (≤4 chars)
+      Trecho  : m = ...
+      Contexto:
+               9 | 
+        >>>   10 | m = d1*100 + d2*100 + d3*100
+              11 | o = d4*100 + d5*100 + d6*100
+
+  [9] Linha 11: Variável 'o' com nome muito curto (≤4 chars)
+      Trecho  : o = ...
+      Contexto:
+              10 | m = d1*100 + d2*100 + d3*100
+        >>>   11 | o = d4*100 + d5*100 + d6*100
+              12 | 
 
 ======================================================================

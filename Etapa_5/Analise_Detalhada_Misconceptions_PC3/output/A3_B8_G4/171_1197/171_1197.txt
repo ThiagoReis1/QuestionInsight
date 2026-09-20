@@ -1,8 +1,8 @@
 ======================================================================
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
-Arquivo     : 171_1197.py
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2016_1_v1.81\2016-1\110\users\1108\codes\171_1197.py
+Arquivo     : 171_1197.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2016_1_v1.81\2016-1\110\users\1108\executions\171_1197.log
 Assessment  : 171
 Título      : Avaliação Parcial 05 – Vetores e Strings
 Questão     : 1197
@@ -17,20 +17,16 @@ Total MCs   : 3
 CÓDIGO FONTE
 ----------------------------------------------------------------------
      1 | from numpy import*
-     2 | temp =array(eval(input()), dtype = float)
-     3 | t = array(j, dtype  = float)
-     4 | i = 0 
-     5 | j = 0
-     6 | k = 0
-     7 | tmax = 50
-     8 | while(i < size(temp)):
-     9 | 	if(temp[i] < tmax):
-    10 | 		j = j + 1
-    11 | 		t[j] = array(temp(i))
-    12 | 	i = i + 1
-    13 | 
-    14 | 
-    15 | 
+     2 | temp = array(eval(input()), dtype = float)
+     3 | i = 0 
+     4 | j = 0
+     5 | k = 0
+     6 | tmax = 50
+     7 | while(i < size(temp)):
+     8 | 	if(temp[i] < tmax):
+     9 | 		j = j + 1
+    10 | 		print(temp[i])
+    11 | 	i = i + 1
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
@@ -39,12 +35,12 @@ DETALHAMENTO DOS MISCONCEPTIONS
 ▶ A3 — Variável inicializada desnecessariamente
   Ocorrências: 1
 
-  [1] Linha 6: Variável 'k' declarada mas nunca utilizada
+  [1] Linha 5: Variável 'k' declarada mas nunca utilizada
       Trecho  : k = ...
       Contexto:
-               5 | j = 0
-        >>>    6 | k = 0
-               7 | tmax = 50
+               4 | j = 0
+        >>>    5 | k = 0
+               6 | tmax = 50
 
 ▶ B8 — Não utilização de elif/else
   Ocorrências: 1
@@ -53,62 +49,54 @@ DETALHAMENTO DOS MISCONCEPTIONS
       Trecho  : —
 
 ▶ G4 — Funções/variáveis com nomes não significativos
-  Ocorrências: 8
+  Ocorrências: 7
 
   [1] Linha 2: Variável 'temp' com nome muito curto (≤4 chars)
       Trecho  : temp = ...
       Contexto:
                1 | from numpy import*
-        >>>    2 | temp =array(eval(input()), dtype = float)
-               3 | t = array(j, dtype  = float)
+        >>>    2 | temp = array(eval(input()), dtype = float)
+               3 | i = 0 
 
-  [2] Linha 3: Variável 't' com nome muito curto (≤4 chars)
-      Trecho  : t = ...
-      Contexto:
-               2 | temp =array(eval(input()), dtype = float)
-        >>>    3 | t = array(j, dtype  = float)
-               4 | i = 0 
-
-  [3] Linha 4: Variável 'i' com nome muito curto (≤4 chars)
+  [2] Linha 3: Variável 'i' com nome muito curto (≤4 chars)
       Trecho  : i = ...
       Contexto:
-               3 | t = array(j, dtype  = float)
-        >>>    4 | i = 0 
-               5 | j = 0
+               2 | temp = array(eval(input()), dtype = float)
+        >>>    3 | i = 0 
+               4 | j = 0
 
-  [4] Linha 5: Variável 'j' com nome muito curto (≤4 chars)
+  [3] Linha 4: Variável 'j' com nome muito curto (≤4 chars)
       Trecho  : j = ...
       Contexto:
-               4 | i = 0 
-        >>>    5 | j = 0
-               6 | k = 0
+               3 | i = 0 
+        >>>    4 | j = 0
+               5 | k = 0
 
-  [5] Linha 6: Variável 'k' com nome muito curto (≤4 chars)
+  [4] Linha 5: Variável 'k' com nome muito curto (≤4 chars)
       Trecho  : k = ...
       Contexto:
-               5 | j = 0
-        >>>    6 | k = 0
-               7 | tmax = 50
+               4 | j = 0
+        >>>    5 | k = 0
+               6 | tmax = 50
 
-  [6] Linha 7: Variável 'tmax' com nome muito curto (≤4 chars)
+  [5] Linha 6: Variável 'tmax' com nome muito curto (≤4 chars)
       Trecho  : tmax = ...
       Contexto:
-               6 | k = 0
-        >>>    7 | tmax = 50
-               8 | while(i < size(temp)):
+               5 | k = 0
+        >>>    6 | tmax = 50
+               7 | while(i < size(temp)):
 
-  [7] Linha 12: Variável 'i' com nome muito curto (≤4 chars)
+  [6] Linha 11: Variável 'i' com nome muito curto (≤4 chars)
       Trecho  : i = ...
       Contexto:
-              11 | 		t[j] = array(temp(i))
-        >>>   12 | 	i = i + 1
-              13 | 
+              10 | 		print(temp[i])
+        >>>   11 | 	i = i + 1
 
-  [8] Linha 10: Variável 'j' com nome muito curto (≤4 chars)
+  [7] Linha 9: Variável 'j' com nome muito curto (≤4 chars)
       Trecho  : j = ...
       Contexto:
-               9 | 	if(temp[i] < tmax):
-        >>>   10 | 		j = j + 1
-              11 | 		t[j] = array(temp(i))
+               8 | 	if(temp[i] < tmax):
+        >>>    9 | 		j = j + 1
+              10 | 		print(temp[i])
 
 ======================================================================

@@ -1,12 +1,12 @@
 ======================================================================
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
-Arquivo     : 1225_1597.py
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2018_1_v1.81\2018-1\181\users\3255\codes\1225_1597.py
+Arquivo     : 1225_1597.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2018_1_v1.81\2018-1\181\users\3053\executions\1225_1597.log
 Assessment  : 1225
 Título      : TP 5: Vetores e Strings
 Questão     : 1597
-Aluno       : 3255
+Aluno       : 3053
 Grupo       : TP 05
 Significado : Vetores e Strings
 Total MCs   : 2
@@ -17,76 +17,109 @@ Total MCs   : 2
 CÓDIGO FONTE
 ----------------------------------------------------------------------
      1 | from numpy import*
-     2 | 
-     3 | v= array(eval(input("Vetor: ")))
-     4 | 
-     5 | ct= sum(v)
-     6 | d=0
+     2 | v = array(eval(input("Valores: ")))
+     3 | 
+     4 | i = 0
+     5 | g = 0
+     6 | soma = sum(v)
      7 | 
-     8 | if(size(v) <= 80):
-     9 | 	d=d 
-    10 | else:
-    11 | 	d= 5/100
-    12 | 	ct= ct * d
-    13 | print(round(ct, 2))
+     8 | while(i < size(v)):
+     9 | 	if (v[i] > 80):
+    10 | 		g = g + 1
+    11 | 	else:
+    12 | 	   g = g
+    13 | 	i = i + 1
+    14 | if (g>=1):
+    15 | 	soma = soma - 5
+    16 | else:
+    17 | 	soma = soma
+    18 | print(round(soma , 2))
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
 ----------------------------------------------------------------------
 
 ▶ A2 — Variável atribuída a si mesma
-  Ocorrências: 1
+  Ocorrências: 2
 
-  [1] Linha 9: 'd' atribuído a si mesmo
-      Trecho  : d = d
+  [1] Linha 17: 'soma' atribuído a si mesmo
+      Trecho  : soma = soma
       Contexto:
-               8 | if(size(v) <= 80):
-        >>>    9 | 	d=d 
-              10 | else:
+              16 | else:
+        >>>   17 | 	soma = soma
+              18 | print(round(soma , 2))
+
+  [2] Linha 12: 'g' atribuído a si mesmo
+      Trecho  : g = g
+      Contexto:
+              11 | 	else:
+        >>>   12 | 	   g = g
+              13 | 	i = i + 1
 
 ▶ G4 — Funções/variáveis com nomes não significativos
-  Ocorrências: 6
+  Ocorrências: 9
 
-  [1] Linha 3: Variável 'v' com nome muito curto (≤4 chars)
+  [1] Linha 2: Variável 'v' com nome muito curto (≤4 chars)
       Trecho  : v = ...
       Contexto:
-               2 | 
-        >>>    3 | v= array(eval(input("Vetor: ")))
-               4 | 
+               1 | from numpy import*
+        >>>    2 | v = array(eval(input("Valores: ")))
+               3 | 
 
-  [2] Linha 5: Variável 'ct' com nome muito curto (≤4 chars)
-      Trecho  : ct = ...
+  [2] Linha 4: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
       Contexto:
-               4 | 
-        >>>    5 | ct= sum(v)
-               6 | d=0
+               3 | 
+        >>>    4 | i = 0
+               5 | g = 0
 
-  [3] Linha 6: Variável 'd' com nome muito curto (≤4 chars)
-      Trecho  : d = ...
+  [3] Linha 5: Variável 'g' com nome muito curto (≤4 chars)
+      Trecho  : g = ...
       Contexto:
-               5 | ct= sum(v)
-        >>>    6 | d=0
+               4 | i = 0
+        >>>    5 | g = 0
+               6 | soma = sum(v)
+
+  [4] Linha 6: Variável 'soma' com nome muito curto (≤4 chars)
+      Trecho  : soma = ...
+      Contexto:
+               5 | g = 0
+        >>>    6 | soma = sum(v)
                7 | 
 
-  [4] Linha 9: Variável 'd' com nome muito curto (≤4 chars)
-      Trecho  : d = ...
+  [5] Linha 13: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
       Contexto:
-               8 | if(size(v) <= 80):
-        >>>    9 | 	d=d 
-              10 | else:
+              12 | 	   g = g
+        >>>   13 | 	i = i + 1
+              14 | if (g>=1):
 
-  [5] Linha 11: Variável 'd' com nome muito curto (≤4 chars)
-      Trecho  : d = ...
+  [6] Linha 15: Variável 'soma' com nome muito curto (≤4 chars)
+      Trecho  : soma = ...
       Contexto:
-              10 | else:
-        >>>   11 | 	d= 5/100
-              12 | 	ct= ct * d
+              14 | if (g>=1):
+        >>>   15 | 	soma = soma - 5
+              16 | else:
 
-  [6] Linha 12: Variável 'ct' com nome muito curto (≤4 chars)
-      Trecho  : ct = ...
+  [7] Linha 17: Variável 'soma' com nome muito curto (≤4 chars)
+      Trecho  : soma = ...
       Contexto:
-              11 | 	d= 5/100
-        >>>   12 | 	ct= ct * d
-              13 | print(round(ct, 2))
+              16 | else:
+        >>>   17 | 	soma = soma
+              18 | print(round(soma , 2))
+
+  [8] Linha 10: Variável 'g' com nome muito curto (≤4 chars)
+      Trecho  : g = ...
+      Contexto:
+               9 | 	if (v[i] > 80):
+        >>>   10 | 		g = g + 1
+              11 | 	else:
+
+  [9] Linha 12: Variável 'g' com nome muito curto (≤4 chars)
+      Trecho  : g = ...
+      Contexto:
+              11 | 	else:
+        >>>   12 | 	   g = g
+              13 | 	i = i + 1
 
 ======================================================================

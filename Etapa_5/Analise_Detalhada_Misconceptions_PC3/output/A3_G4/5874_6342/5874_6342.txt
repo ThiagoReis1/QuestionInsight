@@ -1,12 +1,12 @@
 ======================================================================
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
-Arquivo     : 5874_6342.py
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2024_1_v1.81\2024-1\589\users\9954\codes\5874_6342.py
+Arquivo     : 5874_6342.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2024_1_v1.81\2024-1\589\users\9744\executions\5874_6342.log
 Assessment  : 5874
 Título      : TP 5: Vetores e Strings
 Questão     : 6342
-Aluno       : 9954
+Aluno       : 9744
 Grupo       : TP 05
 Significado : Vetores e Strings
 Total MCs   : 2
@@ -16,45 +16,49 @@ Total MCs   : 2
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | from numpy import*
-     2 | 
-     3 | n = input().upper()
-     4 | i = 0
+     1 | tig1 = input()
+     2 | tig = tig1.upper()
+     3 | a = 0
+     4 | if(tig[0]=="M"):
+     5 | 	print(tig)
+     6 | else:
+     7 | 	print("nome invalido")
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
 ----------------------------------------------------------------------
 
 ▶ A3 — Variável inicializada desnecessariamente
-  Ocorrências: 2
+  Ocorrências: 1
 
-  [1] Linha 3: Variável 'n' declarada mas nunca utilizada
-      Trecho  : n = ...
+  [1] Linha 3: Variável 'a' declarada mas nunca utilizada
+      Trecho  : a = ...
       Contexto:
-               2 | 
-        >>>    3 | n = input().upper()
-               4 | i = 0
-
-  [2] Linha 4: Variável 'i' declarada mas nunca utilizada
-      Trecho  : i = ...
-      Contexto:
-               3 | n = input().upper()
-        >>>    4 | i = 0
+               2 | tig = tig1.upper()
+        >>>    3 | a = 0
+               4 | if(tig[0]=="M"):
 
 ▶ G4 — Funções/variáveis com nomes não significativos
-  Ocorrências: 2
+  Ocorrências: 3
 
-  [1] Linha 3: Variável 'n' com nome muito curto (≤4 chars)
-      Trecho  : n = ...
+  [1] Linha 1: Variável 'tig1' com nome muito curto (≤4 chars)
+      Trecho  : tig1 = ...
       Contexto:
-               2 | 
-        >>>    3 | n = input().upper()
-               4 | i = 0
+        >>>    1 | tig1 = input()
+               2 | tig = tig1.upper()
 
-  [2] Linha 4: Variável 'i' com nome muito curto (≤4 chars)
-      Trecho  : i = ...
+  [2] Linha 2: Variável 'tig' com nome muito curto (≤4 chars)
+      Trecho  : tig = ...
       Contexto:
-               3 | n = input().upper()
-        >>>    4 | i = 0
+               1 | tig1 = input()
+        >>>    2 | tig = tig1.upper()
+               3 | a = 0
+
+  [3] Linha 3: Variável 'a' com nome muito curto (≤4 chars)
+      Trecho  : a = ...
+      Contexto:
+               2 | tig = tig1.upper()
+        >>>    3 | a = 0
+               4 | if(tig[0]=="M"):
 
 ======================================================================

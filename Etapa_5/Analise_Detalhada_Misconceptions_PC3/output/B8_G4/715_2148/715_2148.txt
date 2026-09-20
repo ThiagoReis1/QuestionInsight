@@ -1,12 +1,12 @@
 ======================================================================
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
-Arquivo     : 715_2148.py
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2017_1_v1.81\2017-1\139\users\2512\codes\715_2148.py
+Arquivo     : 715_2148.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2017_1_v1.81\2017-1\139\users\2400\executions\715_2148.log
 Assessment  : 715
 Título      : Trabalho Prático 6: Repetição por Contagem
 Questão     : 2148
-Aluno       : 2512
+Aluno       : 2400
 Grupo       : TP 06
 Significado : Estrutura de Repetição por Contagem
 Total MCs   : 2
@@ -17,15 +17,16 @@ Total MCs   : 2
 CÓDIGO FONTE
 ----------------------------------------------------------------------
      1 | from numpy import*
-     2 | 
-     3 | vet = array(eval(input()))
-     4 | 
-     5 | print(sum(vet))
-     6 | ap = 0
-     7 | for elemento in vet:
-     8 | 	if (elemento>=5):
-     9 | 		ap = ap + 1
-    10 | print(ap)
+     2 | vetor = array(eval(input()))
+     3 | p=sum(vetor)
+     4 | lado=0
+     5 | i=0
+     6 | while(i<size(vetor)):
+     7 | 	if(vetor[i]>=5):
+     8 | 		lado=lado+1
+     9 | 	i=i+1
+    10 | print(p)
+    11 | print(lado)
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
@@ -38,27 +39,41 @@ DETALHAMENTO DOS MISCONCEPTIONS
       Trecho  : —
 
 ▶ G4 — Funções/variáveis com nomes não significativos
-  Ocorrências: 3
+  Ocorrências: 5
 
-  [1] Linha 3: Variável 'vet' com nome muito curto (≤4 chars)
-      Trecho  : vet = ...
+  [1] Linha 3: Variável 'p' com nome muito curto (≤4 chars)
+      Trecho  : p = ...
       Contexto:
-               2 | 
-        >>>    3 | vet = array(eval(input()))
-               4 | 
+               2 | vetor = array(eval(input()))
+        >>>    3 | p=sum(vetor)
+               4 | lado=0
 
-  [2] Linha 6: Variável 'ap' com nome muito curto (≤4 chars)
-      Trecho  : ap = ...
+  [2] Linha 4: Variável 'lado' com nome muito curto (≤4 chars)
+      Trecho  : lado = ...
       Contexto:
-               5 | print(sum(vet))
-        >>>    6 | ap = 0
-               7 | for elemento in vet:
+               3 | p=sum(vetor)
+        >>>    4 | lado=0
+               5 | i=0
 
-  [3] Linha 9: Variável 'ap' com nome muito curto (≤4 chars)
-      Trecho  : ap = ...
+  [3] Linha 5: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
       Contexto:
-               8 | 	if (elemento>=5):
-        >>>    9 | 		ap = ap + 1
-              10 | print(ap)
+               4 | lado=0
+        >>>    5 | i=0
+               6 | while(i<size(vetor)):
+
+  [4] Linha 9: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+               8 | 		lado=lado+1
+        >>>    9 | 	i=i+1
+              10 | print(p)
+
+  [5] Linha 8: Variável 'lado' com nome muito curto (≤4 chars)
+      Trecho  : lado = ...
+      Contexto:
+               7 | 	if(vetor[i]>=5):
+        >>>    8 | 		lado=lado+1
+               9 | 	i=i+1
 
 ======================================================================

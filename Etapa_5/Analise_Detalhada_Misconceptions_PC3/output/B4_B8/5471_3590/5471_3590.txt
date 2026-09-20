@@ -1,12 +1,12 @@
 ======================================================================
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
-Arquivo     : 5471_3590.py
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2023_2_v1.81\2023-2\560\users\9279\codes\5471_3590.py
+Arquivo     : 5471_3590.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2023_2_v1.81\2023-2\560\users\9234\executions\5471_3590.log
 Assessment  : 5471
 Título      : TP 5: Vetores e Strings
 Questão     : 3590
-Aluno       : 9279
+Aluno       : 9234
 Grupo       : TP 05
 Significado : Vetores e Strings
 Total MCs   : 2
@@ -16,23 +16,23 @@ Total MCs   : 2
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | from numpy import *
-     2 | v = array(eval(input("v:")))
-     3 | pontos = 0
-     4 | for x in v:
-     5 | 	if x == 1:
-     6 | 		pontos += 10
-     7 | 	elif x == 2:
-     8 | 		pontos += 5
-     9 | 	elif x == 3:
-    10 | 		pontos += 0
-    11 | 	elif x == 4:
-    12 | 		pontos += 5
-    13 | 	elif x == 5:
-    14 | 		pontos += 20
-    15 | 	elif x == 6:
-    16 | 		pontos += 10
-    17 | print(pontos)
+     1 | dados = eval(input("digite o vetor de dados acertados pelo jugaddor: "))
+     2 | total = 0
+     3 | for i in range(len(dados)):
+     4 | 	dado = dados[i]
+     5 | 	if dado == 1:
+     6 | 		total += 10
+     7 | 	elif dado == 2:
+     8 | 		total += 5
+     9 | 	elif dado == 3:
+    10 | 		total += 0
+    11 | 	elif dado == 4:
+    12 | 		total += 5
+    13 | 	elif dado == 5:
+    14 | 		total += 20
+    15 | 	elif dado == 6:
+    16 | 		total += 10
+    17 | print(total)
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
@@ -42,25 +42,25 @@ DETALHAMENTO DOS MISCONCEPTIONS
   Ocorrências: 3
 
   [1] Linha 11: Bloco idêntico ao da linha 7
-      Trecho  : pontos += 5
+      Trecho  : total += 5
       Contexto:
-              10 | 		pontos += 0
-        >>>   11 | 	elif x == 4:
-              12 | 		pontos += 5
+              10 | 		total += 0
+        >>>   11 | 	elif dado == 4:
+              12 | 		total += 5
 
   [2] Linha 15: Bloco idêntico ao da linha 5
-      Trecho  : pontos += 10
+      Trecho  : total += 10
       Contexto:
-              14 | 		pontos += 20
-        >>>   15 | 	elif x == 6:
-              16 | 		pontos += 10
+              14 | 		total += 20
+        >>>   15 | 	elif dado == 6:
+              16 | 		total += 10
 
   [3] Linha 11: Bloco idêntico ao da linha 7
-      Trecho  : pontos += 5
+      Trecho  : total += 5
       Contexto:
-              10 | 		pontos += 0
-        >>>   11 | 	elif x == 4:
-              12 | 		pontos += 5
+              10 | 		total += 0
+        >>>   11 | 	elif dado == 4:
+              12 | 		total += 5
 
 ▶ B8 — Não utilização de elif/else
   Ocorrências: 1
@@ -68,14 +68,8 @@ DETALHAMENTO DOS MISCONCEPTIONS
   [1] Linha 13: Cadeia if/elif sem bloco else final
       Trecho  : if ... (linha 13) / elif ... sem else
       Contexto:
-              12 | 		pontos += 5
-        >>>   13 | 	elif x == 5:
-              14 | 		pontos += 20
-
-====================================================================== : if ... (linha 22) / elif ... sem else
-      Contexto:
-              21 | 		
-        >>>   22 | 	elif faces == 5:
-              23 | 		p_total += 20
+              12 | 		total += 5
+        >>>   13 | 	elif dado == 5:
+              14 | 		total += 20
 
 ======================================================================

@@ -1,12 +1,12 @@
 ======================================================================
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
-Arquivo     : 579_1981.py
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2017_1_v1.81\2017-1\141\users\2426\codes\579_1981.py
+Arquivo     : 579_1981.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2017_1_v1.81\2017-1\141\users\2337\executions\579_1981.log
 Assessment  : 579
 Título      : Trabalho Prático 3: Estruturas Condicionais Encadeadas
 Questão     : 1981
-Aluno       : 2426
+Aluno       : 2337
 Grupo       : TP 03
 Significado : Estrutura Condicional Encadeada
 Total MCs   : 2
@@ -16,97 +16,81 @@ Total MCs   : 2
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | c = (input().upper())
-     2 | vezes = input().upper()
-     3 | if(c == "CAMPEAO"):
-     4 | 	x = "06-VEZES"
-     5 | 	y = "01-VEZES"
-     6 | 	z = "03-VEZES"
-     7 | 	if(vezes == x):
-     8 | 		print("CORINTHIANS")
-     9 | 	elif(vezes == z):
-    10 | 		z = "3-VEZES"
-    11 | 		print("SANTOS")
-    12 | elif(c == "VICE CAMPEAO"):
-    13 | 	if(vezes == x):
-    14 | 		x ="6-VEZES"
-    15 | 		print("INTERNACIONAL")
-    16 | 	elif(vezes == y):
-    17 | 		y = "1-VEZ"
-    18 | 		print("FLAMENGO")
-    19 | else:
-    20 | 	print("TIME DE FUTEBOL NAO IDENTIFICADO")
+     1 | r = input("digite o resultado do time de futebol")
+     2 | v = input("digite quantas vezes o time de futebol alcançou esse resultado")
+     3 | 
+     4 | if(r != "Campeao" and r != "Vice-campeao") or (v != "06-vezes" and v != "03-vezes" and v != "01-vezes"):
+     5 | 	print("TIME DE FUTEBOL NAO IDENTIFICADO")
+     6 | else:
+     7 | 	if r == "Campeao" and v == "06-vezes":
+     8 | 		X = "Corinthians"
+     9 | 		print(X.upper())
+    10 | 	elif r == "Campeao" and v == "03-vezes":
+    11 | 		X = "Santos"
+    12 | 		print(X.upper())
+    13 | 	elif r == "Vice-campeao" and v == "01-vezes":
+    14 | 		X = "Flamengo"
+    15 | 		print(X.upper())
+    16 | 	elif r == "Vice-campeao" and v == "06-vezes":
+    17 | 		X = "Internacional"
+    18 | 		print(X.upper())
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
 ----------------------------------------------------------------------
 
 ▶ B8 — Não utilização de elif/else
-  Ocorrências: 2
+  Ocorrências: 1
 
-  [1] Linha 7: Cadeia if/elif sem bloco else final
-      Trecho  : if ... (linha 7) / elif ... sem else
-      Contexto:
-               6 | 	z = "03-VEZES"
-        >>>    7 | 	if(vezes == x):
-               8 | 		print("CORINTHIANS")
-
-  [2] Linha 13: Cadeia if/elif sem bloco else final
+  [1] Linha 13: Cadeia if/elif sem bloco else final
       Trecho  : if ... (linha 13) / elif ... sem else
       Contexto:
-              12 | elif(c == "VICE CAMPEAO"):
-        >>>   13 | 	if(vezes == x):
-              14 | 		x ="6-VEZES"
+              12 | 		print(X.upper())
+        >>>   13 | 	elif r == "Vice-campeao" and v == "01-vezes":
+              14 | 		X = "Flamengo"
 
 ▶ G4 — Funções/variáveis com nomes não significativos
-  Ocorrências: 7
+  Ocorrências: 6
 
-  [1] Linha 1: Variável 'c' com nome muito curto (≤4 chars)
-      Trecho  : c = ...
+  [1] Linha 1: Variável 'r' com nome muito curto (≤4 chars)
+      Trecho  : r = ...
       Contexto:
-        >>>    1 | c = (input().upper())
-               2 | vezes = input().upper()
+        >>>    1 | r = input("digite o resultado do time de futebol")
+               2 | v = input("digite quantas vezes o time de futebol alcançou esse resultado")
 
-  [2] Linha 4: Variável 'x' com nome muito curto (≤4 chars)
-      Trecho  : x = ...
+  [2] Linha 2: Variável 'v' com nome muito curto (≤4 chars)
+      Trecho  : v = ...
       Contexto:
-               3 | if(c == "CAMPEAO"):
-        >>>    4 | 	x = "06-VEZES"
-               5 | 	y = "01-VEZES"
+               1 | r = input("digite o resultado do time de futebol")
+        >>>    2 | v = input("digite quantas vezes o time de futebol alcançou esse resultado")
+               3 | 
 
-  [3] Linha 5: Variável 'y' com nome muito curto (≤4 chars)
-      Trecho  : y = ...
+  [3] Linha 8: Variável 'X' com nome muito curto (≤4 chars)
+      Trecho  : X = ...
       Contexto:
-               4 | 	x = "06-VEZES"
-        >>>    5 | 	y = "01-VEZES"
-               6 | 	z = "03-VEZES"
+               7 | 	if r == "Campeao" and v == "06-vezes":
+        >>>    8 | 		X = "Corinthians"
+               9 | 		print(X.upper())
 
-  [4] Linha 6: Variável 'z' com nome muito curto (≤4 chars)
-      Trecho  : z = ...
+  [4] Linha 11: Variável 'X' com nome muito curto (≤4 chars)
+      Trecho  : X = ...
       Contexto:
-               5 | 	y = "01-VEZES"
-        >>>    6 | 	z = "03-VEZES"
-               7 | 	if(vezes == x):
+              10 | 	elif r == "Campeao" and v == "03-vezes":
+        >>>   11 | 		X = "Santos"
+              12 | 		print(X.upper())
 
-  [5] Linha 10: Variável 'z' com nome muito curto (≤4 chars)
-      Trecho  : z = ...
+  [5] Linha 14: Variável 'X' com nome muito curto (≤4 chars)
+      Trecho  : X = ...
       Contexto:
-               9 | 	elif(vezes == z):
-        >>>   10 | 		z = "3-VEZES"
-              11 | 		print("SANTOS")
+              13 | 	elif r == "Vice-campeao" and v == "01-vezes":
+        >>>   14 | 		X = "Flamengo"
+              15 | 		print(X.upper())
 
-  [6] Linha 14: Variável 'x' com nome muito curto (≤4 chars)
-      Trecho  : x = ...
+  [6] Linha 17: Variável 'X' com nome muito curto (≤4 chars)
+      Trecho  : X = ...
       Contexto:
-              13 | 	if(vezes == x):
-        >>>   14 | 		x ="6-VEZES"
-              15 | 		print("INTERNACIONAL")
-
-  [7] Linha 17: Variável 'y' com nome muito curto (≤4 chars)
-      Trecho  : y = ...
-      Contexto:
-              16 | 	elif(vezes == y):
-        >>>   17 | 		y = "1-VEZ"
-              18 | 		print("FLAMENGO")
+              16 | 	elif r == "Vice-campeao" and v == "06-vezes":
+        >>>   17 | 		X = "Internacional"
+              18 | 		print(X.upper())
 
 ======================================================================

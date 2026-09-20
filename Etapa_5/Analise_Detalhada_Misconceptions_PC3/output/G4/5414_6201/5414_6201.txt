@@ -1,12 +1,12 @@
 ======================================================================
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
-Arquivo     : 5414_6201.py
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2023_2_v1.81\2023-2\559\users\9295\codes\5414_6201.py
+Arquivo     : 5414_6201.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2023_2_v1.81\2023-2\559\users\9227\executions\5414_6201.log
 Assessment  : 5414
 Título      : TP 4: Estrutura de Repetição por Condição
 Questão     : 6201
-Aluno       : 9295
+Aluno       : 9227
 Grupo       : TP 04
 Significado : Estrutura de Repetição por Condição
 Total MCs   : 1
@@ -16,20 +16,16 @@ Total MCs   : 1
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | a_p = float(input("Insira a altura: "))
-     2 | t_p = float(input("Insira a taxa de crescimento: "))
-     3 | a_j = 1.77
-     4 | t_j = 0.02
+     1 | ajoe = 1.77
+     2 | tjoe = 0.02
+     3 | a = float(input("altura de uma pessoa:"))
+     4 | t = float(input("taxa de crescimento:"))
      5 | cont = 0
-     6 | 
-     7 | while (a_p < a_j):
-     8 | 	a_p = a_p * t_p
-     9 | 	a_j = a_j * t_j
-    10 | 	cont = cont + 1
-    11 | 	
-    12 | 	print(cont)
-    13 | 
-    14 | 	
+     6 | while a < ajoe:
+     7 | 	cont = cont + 1
+     8 | 	a = a + t
+     9 | 	ajoe = ajoe + tjoe
+    10 | print(cont)
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
@@ -38,59 +34,59 @@ DETALHAMENTO DOS MISCONCEPTIONS
 ▶ G4 — Funções/variáveis com nomes não significativos
   Ocorrências: 8
 
-  [1] Linha 1: Variável 'a_p' com nome muito curto (≤4 chars)
-      Trecho  : a_p = ...
+  [1] Linha 1: Variável 'ajoe' com nome muito curto (≤4 chars)
+      Trecho  : ajoe = ...
       Contexto:
-        >>>    1 | a_p = float(input("Insira a altura: "))
-               2 | t_p = float(input("Insira a taxa de crescimento: "))
+        >>>    1 | ajoe = 1.77
+               2 | tjoe = 0.02
 
-  [2] Linha 2: Variável 't_p' com nome muito curto (≤4 chars)
-      Trecho  : t_p = ...
+  [2] Linha 2: Variável 'tjoe' com nome muito curto (≤4 chars)
+      Trecho  : tjoe = ...
       Contexto:
-               1 | a_p = float(input("Insira a altura: "))
-        >>>    2 | t_p = float(input("Insira a taxa de crescimento: "))
-               3 | a_j = 1.77
+               1 | ajoe = 1.77
+        >>>    2 | tjoe = 0.02
+               3 | a = float(input("altura de uma pessoa:"))
 
-  [3] Linha 3: Variável 'a_j' com nome muito curto (≤4 chars)
-      Trecho  : a_j = ...
+  [3] Linha 3: Variável 'a' com nome muito curto (≤4 chars)
+      Trecho  : a = ...
       Contexto:
-               2 | t_p = float(input("Insira a taxa de crescimento: "))
-        >>>    3 | a_j = 1.77
-               4 | t_j = 0.02
+               2 | tjoe = 0.02
+        >>>    3 | a = float(input("altura de uma pessoa:"))
+               4 | t = float(input("taxa de crescimento:"))
 
-  [4] Linha 4: Variável 't_j' com nome muito curto (≤4 chars)
-      Trecho  : t_j = ...
+  [4] Linha 4: Variável 't' com nome muito curto (≤4 chars)
+      Trecho  : t = ...
       Contexto:
-               3 | a_j = 1.77
-        >>>    4 | t_j = 0.02
+               3 | a = float(input("altura de uma pessoa:"))
+        >>>    4 | t = float(input("taxa de crescimento:"))
                5 | cont = 0
 
   [5] Linha 5: Variável 'cont' com nome muito curto (≤4 chars)
       Trecho  : cont = ...
       Contexto:
-               4 | t_j = 0.02
+               4 | t = float(input("taxa de crescimento:"))
         >>>    5 | cont = 0
-               6 | 
+               6 | while a < ajoe:
 
-  [6] Linha 8: Variável 'a_p' com nome muito curto (≤4 chars)
-      Trecho  : a_p = ...
-      Contexto:
-               7 | while (a_p < a_j):
-        >>>    8 | 	a_p = a_p * t_p
-               9 | 	a_j = a_j * t_j
-
-  [7] Linha 9: Variável 'a_j' com nome muito curto (≤4 chars)
-      Trecho  : a_j = ...
-      Contexto:
-               8 | 	a_p = a_p * t_p
-        >>>    9 | 	a_j = a_j * t_j
-              10 | 	cont = cont + 1
-
-  [8] Linha 10: Variável 'cont' com nome muito curto (≤4 chars)
+  [6] Linha 7: Variável 'cont' com nome muito curto (≤4 chars)
       Trecho  : cont = ...
       Contexto:
-               9 | 	a_j = a_j * t_j
-        >>>   10 | 	cont = cont + 1
-              11 | 	
+               6 | while a < ajoe:
+        >>>    7 | 	cont = cont + 1
+               8 | 	a = a + t
+
+  [7] Linha 8: Variável 'a' com nome muito curto (≤4 chars)
+      Trecho  : a = ...
+      Contexto:
+               7 | 	cont = cont + 1
+        >>>    8 | 	a = a + t
+               9 | 	ajoe = ajoe + tjoe
+
+  [8] Linha 9: Variável 'ajoe' com nome muito curto (≤4 chars)
+      Trecho  : ajoe = ...
+      Contexto:
+               8 | 	a = a + t
+        >>>    9 | 	ajoe = ajoe + tjoe
+              10 | print(cont)
 
 ======================================================================

@@ -1,12 +1,12 @@
 ======================================================================
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
-Arquivo     : 4453_1364.py
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2022_2_v1.81\2022-2\487\users\8185\codes\4453_1364.py
+Arquivo     : 4453_1364.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2022_2_v1.81\2022-2\487\users\8192\executions\4453_1364.log
 Assessment  : 4453
 Título      : TP 01: Variáveis e Estrutura Sequencial
 Questão     : 1364
-Aluno       : 8185
+Aluno       : 8192
 Grupo       : TP 01
 Significado : Variáveis e Estrutura Sequencial
 Total MCs   : 1
@@ -16,12 +16,16 @@ Total MCs   : 1
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | from math import*
-     2 | v0 = float(input("velocidade inicial: "))
-     3 | d = float(input("distancia: "))
-     4 | g = 9.8
-     5 | a = asin(d*(g/v0**2))*(90/pi)
-     6 | print(round(a, 2))
+     1 | VI = float(input("Velocidade Inicial?: "))
+     2 | DI = float(input("Distancia Falmer?: "))
+     3 | 
+     4 | import math
+     5 | 
+     6 | P1 = (DI * ( 9.8 / VI ** 2)) 
+     7 | P2 = math.asin(P1) * (90 / math.pi)
+     8 | 
+     9 | 
+    10 | print(round(P2, 2))
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
@@ -30,32 +34,31 @@ DETALHAMENTO DOS MISCONCEPTIONS
 ▶ G4 — Funções/variáveis com nomes não significativos
   Ocorrências: 4
 
-  [1] Linha 2: Variável 'v0' com nome muito curto (≤4 chars)
-      Trecho  : v0 = ...
+  [1] Linha 1: Variável 'VI' com nome muito curto (≤4 chars)
+      Trecho  : VI = ...
       Contexto:
-               1 | from math import*
-        >>>    2 | v0 = float(input("velocidade inicial: "))
-               3 | d = float(input("distancia: "))
+        >>>    1 | VI = float(input("Velocidade Inicial?: "))
+               2 | DI = float(input("Distancia Falmer?: "))
 
-  [2] Linha 3: Variável 'd' com nome muito curto (≤4 chars)
-      Trecho  : d = ...
+  [2] Linha 2: Variável 'DI' com nome muito curto (≤4 chars)
+      Trecho  : DI = ...
       Contexto:
-               2 | v0 = float(input("velocidade inicial: "))
-        >>>    3 | d = float(input("distancia: "))
-               4 | g = 9.8
+               1 | VI = float(input("Velocidade Inicial?: "))
+        >>>    2 | DI = float(input("Distancia Falmer?: "))
+               3 | 
 
-  [3] Linha 4: Variável 'g' com nome muito curto (≤4 chars)
-      Trecho  : g = ...
+  [3] Linha 6: Variável 'P1' com nome muito curto (≤4 chars)
+      Trecho  : P1 = ...
       Contexto:
-               3 | d = float(input("distancia: "))
-        >>>    4 | g = 9.8
-               5 | a = asin(d*(g/v0**2))*(90/pi)
+               5 | 
+        >>>    6 | P1 = (DI * ( 9.8 / VI ** 2)) 
+               7 | P2 = math.asin(P1) * (90 / math.pi)
 
-  [4] Linha 5: Variável 'a' com nome muito curto (≤4 chars)
-      Trecho  : a = ...
+  [4] Linha 7: Variável 'P2' com nome muito curto (≤4 chars)
+      Trecho  : P2 = ...
       Contexto:
-               4 | g = 9.8
-        >>>    5 | a = asin(d*(g/v0**2))*(90/pi)
-               6 | print(round(a, 2))
+               6 | P1 = (DI * ( 9.8 / VI ** 2)) 
+        >>>    7 | P2 = math.asin(P1) * (90 / math.pi)
+               8 | 
 
 ======================================================================

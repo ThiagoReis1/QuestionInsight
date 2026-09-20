@@ -1,12 +1,12 @@
 ======================================================================
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
-Arquivo     : 859_1408.py
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2017_2_v1.81\2017-2\162\users\2875\codes\859_1408.py
+Arquivo     : 859_1408.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2017_2_v1.81\2017-2\162\users\2535\executions\859_1408.log
 Assessment  : 859
 Título      : Trabalho Prático 02 - Estrutura Condicional Simples e Composta (sem aninhamento)
 Questão     : 1408
-Aluno       : 2875
+Aluno       : 2535
 Grupo       : TP 02
 Significado : Estrutura Condicional Simples e Composta
 Total MCs   : 1
@@ -16,73 +16,60 @@ Total MCs   : 1
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | arma= input("Nome da arma: ")
-     2 | des= int(input("Destreza do personagem: "))
-     3 | d1= int(input("Valor sorteado: "))
-     4 | d2= int(input("Valor sorteado: "))
-     5 | S= d1+d2
-     6 | 
-     7 | 
-     8 | if arma == "sabre" :
-     9 | 	msg = S + (2*des)
-    10 | else:
-    11 | 	msg = 2*S+des
-    12 | 	
-    13 | print(msg)
+     1 | A = input("arma: ")
+     2 | D = int(input("destreza: "))
+     3 | d1 = int(input("dado1: "))
+     4 | d2 = int(input("dado2: "))
+     5 | 
+     6 | #soma dados:
+     7 | S = d1 + d2
+     8 | danoS = S + 2*D
+     9 | danoK = 2*S + D
+    10 | 
+    11 | if (A == "sabre"):
+    12 | 	print(danoS)
+    13 | else:
+    14 | 	print(danoK)
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
 ----------------------------------------------------------------------
 
 ▶ G4 — Funções/variáveis com nomes não significativos
-  Ocorrências: 7
+  Ocorrências: 5
 
-  [1] Linha 1: Variável 'arma' com nome muito curto (≤4 chars)
-      Trecho  : arma = ...
+  [1] Linha 1: Variável 'A' com nome muito curto (≤4 chars)
+      Trecho  : A = ...
       Contexto:
-        >>>    1 | arma= input("Nome da arma: ")
-               2 | des= int(input("Destreza do personagem: "))
+        >>>    1 | A = input("arma: ")
+               2 | D = int(input("destreza: "))
 
-  [2] Linha 2: Variável 'des' com nome muito curto (≤4 chars)
-      Trecho  : des = ...
+  [2] Linha 2: Variável 'D' com nome muito curto (≤4 chars)
+      Trecho  : D = ...
       Contexto:
-               1 | arma= input("Nome da arma: ")
-        >>>    2 | des= int(input("Destreza do personagem: "))
-               3 | d1= int(input("Valor sorteado: "))
+               1 | A = input("arma: ")
+        >>>    2 | D = int(input("destreza: "))
+               3 | d1 = int(input("dado1: "))
 
   [3] Linha 3: Variável 'd1' com nome muito curto (≤4 chars)
       Trecho  : d1 = ...
       Contexto:
-               2 | des= int(input("Destreza do personagem: "))
-        >>>    3 | d1= int(input("Valor sorteado: "))
-               4 | d2= int(input("Valor sorteado: "))
+               2 | D = int(input("destreza: "))
+        >>>    3 | d1 = int(input("dado1: "))
+               4 | d2 = int(input("dado2: "))
 
   [4] Linha 4: Variável 'd2' com nome muito curto (≤4 chars)
       Trecho  : d2 = ...
       Contexto:
-               3 | d1= int(input("Valor sorteado: "))
-        >>>    4 | d2= int(input("Valor sorteado: "))
-               5 | S= d1+d2
+               3 | d1 = int(input("dado1: "))
+        >>>    4 | d2 = int(input("dado2: "))
+               5 | 
 
-  [5] Linha 5: Variável 'S' com nome muito curto (≤4 chars)
+  [5] Linha 7: Variável 'S' com nome muito curto (≤4 chars)
       Trecho  : S = ...
       Contexto:
-               4 | d2= int(input("Valor sorteado: "))
-        >>>    5 | S= d1+d2
-               6 | 
-
-  [6] Linha 9: Variável 'msg' com nome muito curto (≤4 chars)
-      Trecho  : msg = ...
-      Contexto:
-               8 | if arma == "sabre" :
-        >>>    9 | 	msg = S + (2*des)
-              10 | else:
-
-  [7] Linha 11: Variável 'msg' com nome muito curto (≤4 chars)
-      Trecho  : msg = ...
-      Contexto:
-              10 | else:
-        >>>   11 | 	msg = 2*S+des
-              12 | 	
+               6 | #soma dados:
+        >>>    7 | S = d1 + d2
+               8 | danoS = S + 2*D
 
 ======================================================================

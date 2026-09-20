@@ -1,12 +1,12 @@
 ======================================================================
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
-Arquivo     : 1147_2488.py
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2018_1_v1.81\2018-1\186\users\3140\codes\1147_2488.py
+Arquivo     : 1147_2488.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2018_1_v1.81\2018-1\186\users\3570\executions\1147_2488.log
 Assessment  : 1147
 Título      : TP 3 – Condicionais Encadeadas (if/elif)
 Questão     : 2488
-Aluno       : 3140
+Aluno       : 3570
 Grupo       : TP 03
 Significado : Estrutura Condicional Encadeada
 Total MCs   : 2
@@ -16,27 +16,25 @@ Total MCs   : 2
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | s=float(input("Salario atual"))
+     1 | at = float(input("salario atual:"))
      2 | 
-     3 | print("Entrada: R$",s)
-     4 | 
-     5 | if(s>0):
-     6 | 	if(s<=800):
-     7 | 		r=(s*0.5)+s
-     8 | 	elif(s>800 and s<=1000):
-     9 | 		r=(s*0.4)+s
-    10 | 	elif(s>1000 and s<=1200):
-    11 | 		r=(s*0.3)+s
-    12 | 	elif(s>1200 and s<=1400):
-    13 | 		r=(s*0.2)+s
-    14 | 	elif(s>1400 and s<1600):
-    15 | 		r=(s*0.1)+s
-    16 | 	else:
-    17 | 		r=(0.05*s)+s
-    18 | 	
-    19 | 	print("Novo salario: R$ ",round(r,2))	
-    20 | else:
-    21 | 	print("Dado invalido")
+     3 | print("Entrada: R$",at)
+     4 | if (at >= 0):
+     5 | 	if (at <= 800):
+     6 | 		nv = at + (at*0.5)
+     7 | 	elif ( at > 800) and (at <= 1000):
+     8 | 		nv = at + (at*0.4)
+     9 | 	elif (at > 1000) and (at <= 1200):
+    10 | 		nv = at + (at*0.3)
+    11 | 	elif (at > 1200) and (at <= 1400):
+    12 | 		nv = at + (at*0.2)
+    13 | 	elif (at > 1400) and (at <= 1600):
+    14 | 		nv = at + (at*0.1)
+    15 | 	else:
+    16 | 		nv = at + (at*0.05)
+    17 | 	print("Novo salario: R$",round(nv,2))	
+    18 | else:
+    19 | 	print("Dado invalido")
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
@@ -51,55 +49,48 @@ DETALHAMENTO DOS MISCONCEPTIONS
 ▶ G4 — Funções/variáveis com nomes não significativos
   Ocorrências: 7
 
-  [1] Linha 1: Variável 's' com nome muito curto (≤4 chars)
-      Trecho  : s = ...
+  [1] Linha 1: Variável 'at' com nome muito curto (≤4 chars)
+      Trecho  : at = ...
       Contexto:
-        >>>    1 | s=float(input("Salario atual"))
+        >>>    1 | at = float(input("salario atual:"))
                2 | 
 
-  [2] Linha 7: Variável 'r' com nome muito curto (≤4 chars)
-      Trecho  : r = ...
+  [2] Linha 6: Variável 'nv' com nome muito curto (≤4 chars)
+      Trecho  : nv = ...
       Contexto:
-               6 | 	if(s<=800):
-        >>>    7 | 		r=(s*0.5)+s
-               8 | 	elif(s>800 and s<=1000):
+               5 | 	if (at <= 800):
+        >>>    6 | 		nv = at + (at*0.5)
+               7 | 	elif ( at > 800) and (at <= 1000):
 
-  [3] Linha 9: Variável 'r' com nome muito curto (≤4 chars)
-      Trecho  : r = ...
+  [3] Linha 8: Variável 'nv' com nome muito curto (≤4 chars)
+      Trecho  : nv = ...
       Contexto:
-               8 | 	elif(s>800 and s<=1000):
-        >>>    9 | 		r=(s*0.4)+s
-              10 | 	elif(s>1000 and s<=1200):
+               7 | 	elif ( at > 800) and (at <= 1000):
+        >>>    8 | 		nv = at + (at*0.4)
+               9 | 	elif (at > 1000) and (at <= 1200):
 
-  [4] Linha 11: Variável 'r' com nome muito curto (≤4 chars)
-      Trecho  : r = ...
+  [4] Linha 10: Variável 'nv' com nome muito curto (≤4 chars)
+      Trecho  : nv = ...
       Contexto:
-              10 | 	elif(s>1000 and s<=1200):
-        >>>   11 | 		r=(s*0.3)+s
-              12 | 	elif(s>1200 and s<=1400):
+               9 | 	elif (at > 1000) and (at <= 1200):
+        >>>   10 | 		nv = at + (at*0.3)
+              11 | 	elif (at > 1200) and (at <= 1400):
 
-  [5] Linha 13: Variável 'r' com nome muito curto (≤4 chars)
-      Trecho  : r = ...
+  [5] Linha 12: Variável 'nv' com nome muito curto (≤4 chars)
+      Trecho  : nv = ...
       Contexto:
-              12 | 	elif(s>1200 and s<=1400):
-        >>>   13 | 		r=(s*0.2)+s
-              14 | 	elif(s>1400 and s<1600):
+              11 | 	elif (at > 1200) and (at <= 1400):
+        >>>   12 | 		nv = at + (at*0.2)
+              13 | 	elif (at > 1400) and (at <= 1600):
 
-  [6] Linha 15: Variável 'r' com nome muito curto (≤4 chars)
-      Trecho  : r = ...
+  [6] Linha 14: Variável 'nv' com nome muito curto (≤4 chars)
+      Trecho  : nv = ...
       Contexto:
-              14 | 	elif(s>1400 and s<1600):
-        >>>   15 | 		r=(s*0.1)+s
-              16 | 	else:
+              13 | 	elif (at > 1400) and (at <= 1600):
+        >>>   14 | 		nv = at + (at*0.1)
+              15 | 	else:
 
-  [7] Linha 17: Variável 'r' com nome muito curto (≤4 chars)
-      Trecho  : r = ...
-      Contexto:
-              16 | 	else:
-        >>>   17 | 		r=(0.05*s)+s
-              18 | 	
-
-======================================================================rs)
+  [7] Linha 16: Variável 'nv' com nome muito curto (≤4 chars)
       Trecho  : nv = ...
       Contexto:
               15 | 	else:

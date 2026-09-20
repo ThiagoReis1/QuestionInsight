@@ -1,12 +1,12 @@
 ======================================================================
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
-Arquivo     : 1154_2452.py
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2018_1_v1.81\2018-1\185\users\3359\codes\1154_2452.py
+Arquivo     : 1154_2452.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2018_1_v1.81\2018-1\185\users\3342\executions\1154_2452.log
 Assessment  : 1154
 Título      : TP 3 – Condicionais Encadeadas (if/elif)
 Questão     : 2452
-Aluno       : 3359
+Aluno       : 3342
 Grupo       : TP 03
 Significado : Estrutura Condicional Encadeada
 Total MCs   : 2
@@ -16,19 +16,19 @@ Total MCs   : 2
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | a = float(input("digite o peso: "))
-     2 | b = float(input("digite a altura: "))
+     1 | p=float(input())
+     2 | a=float(input())
      3 | 
-     4 | imc = a / b ** 2 
-     5 | 
-     6 | if (imc < 18.5 or 18.5 <= imc < 25 or 25 <= imc < 30 or imc >= 30):
-     7 | 	if (imc < 18.5):
+     4 | 
+     5 | imc=(p/(a*2))
+     6 | if(imc>=0):
+     7 | 	if (imc<18.5):
      8 | 		print("abaixo do peso")
-     9 | 	elif (18.5 <= imc < 25):
+     9 | 	if (imc>=18.5 and imc<25):
     10 | 		print("normal")
-    11 | 	elif (25 <= imc < 30):
+    11 | 	if (imc>=25 and imc<30):
     12 | 		print("acima do peso")
-    13 | 	elif (imc >= 30):
+    13 | 	if (imc>=30):
     14 | 		print("obeso")
 
 ----------------------------------------------------------------------
@@ -38,34 +38,30 @@ DETALHAMENTO DOS MISCONCEPTIONS
 ▶ B8 — Não utilização de elif/else
   Ocorrências: 1
 
-  [1] Linha 11: Cadeia if/elif sem bloco else final
-      Trecho  : if ... (linha 11) / elif ... sem else
-      Contexto:
-              10 | 		print("normal")
-        >>>   11 | 	elif (25 <= imc < 30):
-              12 | 		print("acima do peso")
+  [1] Linha 0: B8 detectado pelo VisitorMC3 (localização exata não mapeada)
+      Trecho  : —
 
 ▶ G4 — Funções/variáveis com nomes não significativos
   Ocorrências: 3
 
-  [1] Linha 1: Variável 'a' com nome muito curto (≤4 chars)
+  [1] Linha 1: Variável 'p' com nome muito curto (≤4 chars)
+      Trecho  : p = ...
+      Contexto:
+        >>>    1 | p=float(input())
+               2 | a=float(input())
+
+  [2] Linha 2: Variável 'a' com nome muito curto (≤4 chars)
       Trecho  : a = ...
       Contexto:
-        >>>    1 | a = float(input("digite o peso: "))
-               2 | b = float(input("digite a altura: "))
-
-  [2] Linha 2: Variável 'b' com nome muito curto (≤4 chars)
-      Trecho  : b = ...
-      Contexto:
-               1 | a = float(input("digite o peso: "))
-        >>>    2 | b = float(input("digite a altura: "))
+               1 | p=float(input())
+        >>>    2 | a=float(input())
                3 | 
 
-  [3] Linha 4: Variável 'imc' com nome muito curto (≤4 chars)
+  [3] Linha 5: Variável 'imc' com nome muito curto (≤4 chars)
       Trecho  : imc = ...
       Contexto:
-               3 | 
-        >>>    4 | imc = a / b ** 2 
-               5 | 
+               4 | 
+        >>>    5 | imc=(p/(a*2))
+               6 | if(imc>=0):
 
 ======================================================================

@@ -1,12 +1,12 @@
 ======================================================================
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
-Arquivo     : 147_1163.py
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2016_1_v1.81\2016-1\110\users\1555\codes\147_1163.py
+Arquivo     : 147_1163.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2016_1_v1.81\2016-1\110\users\1221\executions\147_1163.log
 Assessment  : 147
 Título      : Avaliação Parcial 04 – Estrutura de Repetição por Condição (while)
 Questão     : 1163
-Aluno       : 1555
+Aluno       : 1221
 Grupo       : TP 04
 Significado : Estrutura de Repetição por Condição
 Total MCs   : 2
@@ -16,90 +16,90 @@ Total MCs   : 2
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | pil = int(input("Digite a população inicial de lambaris:" ))
-     2 | pit = int(input("Digite a população inicial de tucunares: "))
-     3 | tml = float(input("Digite a taxa mensal de crescimento de lambaris:" ))
-     4 | tmt = float(input("Digite a taxa mensal de crescimento de tucunares: "))
-     5 | i = 0
-     6 | 
-     7 | 	
+     1 | lambaris=float(input("Populacao inicial de lambaris:"))
+     2 | tucunare=float(input("Populacao inicial de tucunares:"))
+     3 | t_l=float(input("Taxa mensal de crescimento de lambaris:"))
+     4 | t_t=float(input("Taxa mensal de crescimento de lambaris:"))
+     5 | l= lambaris
+     6 | t=tucunare
+     7 | cont=1
+     8 | while(l >= t):
+     9 | 	la= (l * t_l) + l
+    10 | 	t= (t * t_t) + t	
+    11 | 	cont= cont + 1
+    12 | 	print(cont, l , t)
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
 ----------------------------------------------------------------------
 
 ▶ A3 — Variável inicializada desnecessariamente
-  Ocorrências: 5
+  Ocorrências: 1
 
-  [1] Linha 1: Variável 'pil' declarada mas nunca utilizada
-      Trecho  : pil = ...
+  [1] Linha 9: Variável 'la' declarada mas nunca utilizada
+      Trecho  : la = ...
       Contexto:
-        >>>    1 | pil = int(input("Digite a população inicial de lambaris:" ))
-               2 | pit = int(input("Digite a população inicial de tucunares: "))
-
-  [2] Linha 2: Variável 'pit' declarada mas nunca utilizada
-      Trecho  : pit = ...
-      Contexto:
-               1 | pil = int(input("Digite a população inicial de lambaris:" ))
-        >>>    2 | pit = int(input("Digite a população inicial de tucunares: "))
-               3 | tml = float(input("Digite a taxa mensal de crescimento de lambaris:" ))
-
-  [3] Linha 3: Variável 'tml' declarada mas nunca utilizada
-      Trecho  : tml = ...
-      Contexto:
-               2 | pit = int(input("Digite a população inicial de tucunares: "))
-        >>>    3 | tml = float(input("Digite a taxa mensal de crescimento de lambaris:" ))
-               4 | tmt = float(input("Digite a taxa mensal de crescimento de tucunares: "))
-
-  [4] Linha 4: Variável 'tmt' declarada mas nunca utilizada
-      Trecho  : tmt = ...
-      Contexto:
-               3 | tml = float(input("Digite a taxa mensal de crescimento de lambaris:" ))
-        >>>    4 | tmt = float(input("Digite a taxa mensal de crescimento de tucunares: "))
-               5 | i = 0
-
-  [5] Linha 5: Variável 'i' declarada mas nunca utilizada
-      Trecho  : i = ...
-      Contexto:
-               4 | tmt = float(input("Digite a taxa mensal de crescimento de tucunares: "))
-        >>>    5 | i = 0
-               6 | 
+               8 | while(l >= t):
+        >>>    9 | 	la= (l * t_l) + l
+              10 | 	t= (t * t_t) + t	
 
 ▶ G4 — Funções/variáveis com nomes não significativos
-  Ocorrências: 5
+  Ocorrências: 8
 
-  [1] Linha 1: Variável 'pil' com nome muito curto (≤4 chars)
-      Trecho  : pil = ...
+  [1] Linha 3: Variável 't_l' com nome muito curto (≤4 chars)
+      Trecho  : t_l = ...
       Contexto:
-        >>>    1 | pil = int(input("Digite a população inicial de lambaris:" ))
-               2 | pit = int(input("Digite a população inicial de tucunares: "))
+               2 | tucunare=float(input("Populacao inicial de tucunares:"))
+        >>>    3 | t_l=float(input("Taxa mensal de crescimento de lambaris:"))
+               4 | t_t=float(input("Taxa mensal de crescimento de lambaris:"))
 
-  [2] Linha 2: Variável 'pit' com nome muito curto (≤4 chars)
-      Trecho  : pit = ...
+  [2] Linha 4: Variável 't_t' com nome muito curto (≤4 chars)
+      Trecho  : t_t = ...
       Contexto:
-               1 | pil = int(input("Digite a população inicial de lambaris:" ))
-        >>>    2 | pit = int(input("Digite a população inicial de tucunares: "))
-               3 | tml = float(input("Digite a taxa mensal de crescimento de lambaris:" ))
+               3 | t_l=float(input("Taxa mensal de crescimento de lambaris:"))
+        >>>    4 | t_t=float(input("Taxa mensal de crescimento de lambaris:"))
+               5 | l= lambaris
 
-  [3] Linha 3: Variável 'tml' com nome muito curto (≤4 chars)
-      Trecho  : tml = ...
+  [3] Linha 5: Variável 'l' com nome muito curto (≤4 chars)
+      Trecho  : l = ...
       Contexto:
-               2 | pit = int(input("Digite a população inicial de tucunares: "))
-        >>>    3 | tml = float(input("Digite a taxa mensal de crescimento de lambaris:" ))
-               4 | tmt = float(input("Digite a taxa mensal de crescimento de tucunares: "))
+               4 | t_t=float(input("Taxa mensal de crescimento de lambaris:"))
+        >>>    5 | l= lambaris
+               6 | t=tucunare
 
-  [4] Linha 4: Variável 'tmt' com nome muito curto (≤4 chars)
-      Trecho  : tmt = ...
+  [4] Linha 6: Variável 't' com nome muito curto (≤4 chars)
+      Trecho  : t = ...
       Contexto:
-               3 | tml = float(input("Digite a taxa mensal de crescimento de lambaris:" ))
-        >>>    4 | tmt = float(input("Digite a taxa mensal de crescimento de tucunares: "))
-               5 | i = 0
+               5 | l= lambaris
+        >>>    6 | t=tucunare
+               7 | cont=1
 
-  [5] Linha 5: Variável 'i' com nome muito curto (≤4 chars)
-      Trecho  : i = ...
+  [5] Linha 7: Variável 'cont' com nome muito curto (≤4 chars)
+      Trecho  : cont = ...
       Contexto:
-               4 | tmt = float(input("Digite a taxa mensal de crescimento de tucunares: "))
-        >>>    5 | i = 0
-               6 | 
+               6 | t=tucunare
+        >>>    7 | cont=1
+               8 | while(l >= t):
+
+  [6] Linha 9: Variável 'la' com nome muito curto (≤4 chars)
+      Trecho  : la = ...
+      Contexto:
+               8 | while(l >= t):
+        >>>    9 | 	la= (l * t_l) + l
+              10 | 	t= (t * t_t) + t	
+
+  [7] Linha 10: Variável 't' com nome muito curto (≤4 chars)
+      Trecho  : t = ...
+      Contexto:
+               9 | 	la= (l * t_l) + l
+        >>>   10 | 	t= (t * t_t) + t	
+              11 | 	cont= cont + 1
+
+  [8] Linha 11: Variável 'cont' com nome muito curto (≤4 chars)
+      Trecho  : cont = ...
+      Contexto:
+              10 | 	t= (t * t_t) + t	
+        >>>   11 | 	cont= cont + 1
+              12 | 	print(cont, l , t)
 
 ======================================================================

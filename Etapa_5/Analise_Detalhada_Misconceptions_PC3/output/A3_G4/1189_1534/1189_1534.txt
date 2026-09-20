@@ -1,8 +1,8 @@
 ======================================================================
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
-Arquivo     : 1189_1534.py
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2018_1_v1.81\2018-1\187\users\3499\codes\1189_1534.py
+Arquivo     : 1189_1534.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2018_1_v1.81\2018-1\187\users\3499\executions\1189_1534.log
 Assessment  : 1189
 Título      : TP 04: Estrutura de Repetição por Condição (while)
 Questão     : 1534
@@ -20,21 +20,27 @@ CÓDIGO FONTE
      2 | k = int(input())
      3 | c = x
      4 | acm = 0
-     5 | d = 1
+     5 | 
      6 | while(acm < x):
-     7 | 	x = x + ((1)**(d + 1)**(x*k))/x
+     7 | 	x = x + x**3/3 + x**5/5 + x**7/7 + x**9/9 + x**11/11 + x**13/13 + x**15/15 + x**17/17 + x**19/19
      8 | 	acm = acm + x
      9 | 	print(round(acm, 7))
-    10 | 	
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
 ----------------------------------------------------------------------
 
 ▶ A3 — Variável inicializada desnecessariamente
-  Ocorrências: 1
+  Ocorrências: 2
 
-  [1] Linha 3: Variável 'c' declarada mas nunca utilizada
+  [1] Linha 2: Variável 'k' declarada mas nunca utilizada
+      Trecho  : k = ...
+      Contexto:
+               1 | x = float(input())
+        >>>    2 | k = int(input())
+               3 | c = x
+
+  [2] Linha 3: Variável 'c' declarada mas nunca utilizada
       Trecho  : c = ...
       Contexto:
                2 | k = int(input())
@@ -42,7 +48,7 @@ DETALHAMENTO DOS MISCONCEPTIONS
                4 | acm = 0
 
 ▶ G4 — Funções/variáveis com nomes não significativos
-  Ocorrências: 7
+  Ocorrências: 6
 
   [1] Linha 1: Variável 'x' com nome muito curto (≤4 chars)
       Trecho  : x = ...
@@ -69,26 +75,19 @@ DETALHAMENTO DOS MISCONCEPTIONS
       Contexto:
                3 | c = x
         >>>    4 | acm = 0
-               5 | d = 1
+               5 | 
 
-  [5] Linha 5: Variável 'd' com nome muito curto (≤4 chars)
-      Trecho  : d = ...
-      Contexto:
-               4 | acm = 0
-        >>>    5 | d = 1
-               6 | while(acm < x):
-
-  [6] Linha 7: Variável 'x' com nome muito curto (≤4 chars)
+  [5] Linha 7: Variável 'x' com nome muito curto (≤4 chars)
       Trecho  : x = ...
       Contexto:
                6 | while(acm < x):
-        >>>    7 | 	x = x + ((1)**(d + 1)**(x*k))/x
+        >>>    7 | 	x = x + x**3/3 + x**5/5 + x**7/7 + x**9/9 + x**11/11 + x**13/13 + x**15/15 + x**17/17 + x**19/19
                8 | 	acm = acm + x
 
-  [7] Linha 8: Variável 'acm' com nome muito curto (≤4 chars)
+  [6] Linha 8: Variável 'acm' com nome muito curto (≤4 chars)
       Trecho  : acm = ...
       Contexto:
-               7 | 	x = x + ((1)**(d + 1)**(x*k))/x
+               7 | 	x = x + x**3/3 + x**5/5 + x**7/7 + x**9/9 + x**11/11 + x**13/13 + x**15/15 + x**17/17 + x**19/19
         >>>    8 | 	acm = acm + x
                9 | 	print(round(acm, 7))
 

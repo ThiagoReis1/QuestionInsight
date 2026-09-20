@@ -1,12 +1,12 @@
 ======================================================================
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
-Arquivo     : 715_1643.py
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2017_1_v1.81\2017-1\139\users\2405\codes\715_1643.py
+Arquivo     : 715_1643.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2017_1_v1.81\2017-1\139\users\2383\executions\715_1643.log
 Assessment  : 715
 Título      : Trabalho Prático 6: Repetição por Contagem
 Questão     : 1643
-Aluno       : 2405
+Aluno       : 2383
 Grupo       : TP 06
 Significado : Estrutura de Repetição por Contagem
 Total MCs   : 2
@@ -16,25 +16,26 @@ Total MCs   : 2
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | from numpy import*
-     2 | x = 0
-     3 | vet = array(eval(input()))	
+     1 | from numpy import *
+     2 | 
+     3 | v=array(eval(input()))
      4 | 
-     5 | for i in vet:
-     6 | 	if(i >= 5):
-     7 | 		x = x + 1
-     8 | print(x)
-     9 | 
-    10 | var = zeros(x , dtype = int)
-    11 | j = 0
-    12 | 
-    13 | for i in range(size(vet)):
-    14 | 	if(vet[i] >= 5):
-    15 | 		var[j] = i
-    16 | 		j = j + 1
-    17 | 	
-    18 | print(var)
-    19 | 		
+     5 | cont=0
+     6 | for i in range(size(v)):
+     7 | 	if(v[i]>=5):
+     8 | 		cont=cont + 1
+     9 | vet=zeros(cont,dtype=int)
+    10 | 
+    11 | print(cont)
+    12 | j=0
+    13 | for i in range(size(v)):
+    14 | 	if(v[i]>=5):
+    15 | 		vet[j]=i
+    16 | 		j=j+1
+    17 | 		
+    18 | print(vet)
+    19 | 
+    20 | #for i in range(size(vet)):
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
@@ -49,46 +50,46 @@ DETALHAMENTO DOS MISCONCEPTIONS
 ▶ G4 — Funções/variáveis com nomes não significativos
   Ocorrências: 6
 
-  [1] Linha 2: Variável 'x' com nome muito curto (≤4 chars)
-      Trecho  : x = ...
+  [1] Linha 3: Variável 'v' com nome muito curto (≤4 chars)
+      Trecho  : v = ...
       Contexto:
-               1 | from numpy import*
-        >>>    2 | x = 0
-               3 | vet = array(eval(input()))	
-
-  [2] Linha 3: Variável 'vet' com nome muito curto (≤4 chars)
-      Trecho  : vet = ...
-      Contexto:
-               2 | x = 0
-        >>>    3 | vet = array(eval(input()))	
+               2 | 
+        >>>    3 | v=array(eval(input()))
                4 | 
 
-  [3] Linha 10: Variável 'var' com nome muito curto (≤4 chars)
-      Trecho  : var = ...
+  [2] Linha 5: Variável 'cont' com nome muito curto (≤4 chars)
+      Trecho  : cont = ...
       Contexto:
-               9 | 
-        >>>   10 | var = zeros(x , dtype = int)
-              11 | j = 0
+               4 | 
+        >>>    5 | cont=0
+               6 | for i in range(size(v)):
 
-  [4] Linha 11: Variável 'j' com nome muito curto (≤4 chars)
+  [3] Linha 9: Variável 'vet' com nome muito curto (≤4 chars)
+      Trecho  : vet = ...
+      Contexto:
+               8 | 		cont=cont + 1
+        >>>    9 | vet=zeros(cont,dtype=int)
+              10 | 
+
+  [4] Linha 12: Variável 'j' com nome muito curto (≤4 chars)
       Trecho  : j = ...
       Contexto:
-              10 | var = zeros(x , dtype = int)
-        >>>   11 | j = 0
-              12 | 
+              11 | print(cont)
+        >>>   12 | j=0
+              13 | for i in range(size(v)):
 
-  [5] Linha 7: Variável 'x' com nome muito curto (≤4 chars)
-      Trecho  : x = ...
+  [5] Linha 8: Variável 'cont' com nome muito curto (≤4 chars)
+      Trecho  : cont = ...
       Contexto:
-               6 | 	if(i >= 5):
-        >>>    7 | 		x = x + 1
-               8 | print(x)
+               7 | 	if(v[i]>=5):
+        >>>    8 | 		cont=cont + 1
+               9 | vet=zeros(cont,dtype=int)
 
   [6] Linha 16: Variável 'j' com nome muito curto (≤4 chars)
       Trecho  : j = ...
       Contexto:
-              15 | 		var[j] = i
-        >>>   16 | 		j = j + 1
-              17 | 	
+              15 | 		vet[j]=i
+        >>>   16 | 		j=j+1
+              17 | 		
 
 ======================================================================

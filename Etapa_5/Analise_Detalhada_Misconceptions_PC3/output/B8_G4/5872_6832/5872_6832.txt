@@ -1,12 +1,12 @@
 ======================================================================
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
-Arquivo     : 5872_6832.py
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2024_1_v1.81\2024-1\594\users\9684\codes\5872_6832.py
+Arquivo     : 5872_6832.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2024_1_v1.81\2024-1\594\users\9690\executions\5872_6832.log
 Assessment  : 5872
 Título      : TP 5: Vetores e Strings
 Questão     : 6832
-Aluno       : 9684
+Aluno       : 9690
 Grupo       : TP 05
 Significado : Vetores e Strings
 Total MCs   : 2
@@ -16,25 +16,18 @@ Total MCs   : 2
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | v = input("")
-     2 | s = 0
-     3 | i = 0
-     4 | t = len(v) -1
-     5 | while i <= t:
-     6 | 	if v[i] == "H": 
-     7 | 		s += 5.40
-     8 | 	if v[i] == "C":
-     9 | 		s += 8.95
-    10 | 	if v[i] == "L":
-    11 | 		s += 4.50
-    12 | 	i += 1
-    13 | print(round(s, 2))
-    14 | 
-    15 | 
-    16 | 
-    17 | 
-    18 | 
-    19 | 
+     1 | v = input(": ").upper()
+     2 | i = 0
+     3 | t = 0
+     4 | while i<len(v):
+     5 | 	if v[i]=="H":
+     6 | 		t += 5.40
+     7 | 	elif v[i]=="C":
+     8 | 		t +=8.95
+     9 | 	elif v[i]=="L":
+    10 | 		t +=4.50
+    11 | 	i+=1
+    12 | print(round(t,2))
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
@@ -43,116 +36,34 @@ DETALHAMENTO DOS MISCONCEPTIONS
 ▶ B8 — Não utilização de elif/else
   Ocorrências: 1
 
-  [1] Linha 0: B8 detectado pelo VisitorMC3 (localização exata não mapeada)
-      Trecho  : —
+  [1] Linha 7: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 7) / elif ... sem else
+      Contexto:
+               6 | 		t += 5.40
+        >>>    7 | 	elif v[i]=="C":
+               8 | 		t +=8.95
 
 ▶ G4 — Funções/variáveis com nomes não significativos
-  Ocorrências: 4
+  Ocorrências: 3
 
   [1] Linha 1: Variável 'v' com nome muito curto (≤4 chars)
       Trecho  : v = ...
       Contexto:
-        >>>    1 | v = input("")
-               2 | s = 0
+        >>>    1 | v = input(": ").upper()
+               2 | i = 0
 
-  [2] Linha 2: Variável 's' com nome muito curto (≤4 chars)
-      Trecho  : s = ...
-      Contexto:
-               1 | v = input("")
-        >>>    2 | s = 0
-               3 | i = 0
-
-  [3] Linha 3: Variável 'i' com nome muito curto (≤4 chars)
+  [2] Linha 2: Variável 'i' com nome muito curto (≤4 chars)
       Trecho  : i = ...
       Contexto:
-               2 | s = 0
-        >>>    3 | i = 0
-               4 | t = len(v) -1
+               1 | v = input(": ").upper()
+        >>>    2 | i = 0
+               3 | t = 0
 
-  [4] Linha 4: Variável 't' com nome muito curto (≤4 chars)
+  [3] Linha 3: Variável 't' com nome muito curto (≤4 chars)
       Trecho  : t = ...
       Contexto:
-               3 | i = 0
-        >>>    4 | t = len(v) -1
-               5 | while i <= t:
-
-======================================================================            7 | ql = 0
-
-  [4] Linha 7: Variável 'ql' com nome muito curto (≤4 chars)
-      Trecho  : ql = ...
-      Contexto:
-               6 | qc = 0
-        >>>    7 | ql = 0
-               8 | t = 0.0
-
-  [5] Linha 8: Variável 't' com nome muito curto (≤4 chars)
-      Trecho  : t = ...
-      Contexto:
-               7 | ql = 0
-        >>>    8 | t = 0.0
-               9 | i = 0
-
-  [6] Linha 9: Variável 'i' com nome muito curto (≤4 chars)
-      Trecho  : i = ...
-      Contexto:
-               8 | t = 0.0
-        >>>    9 | i = 0
-              10 | 
-
-  [7] Linha 22: Variável 'T' com nome muito curto (≤4 chars)
-      Trecho  : T = ...
-      Contexto:
-              21 | 	i = i + 1
-        >>>   22 | T = qh + qc + ql
-              23 | 	
-
-  [8] Linha 21: Variável 'i' com nome muito curto (≤4 chars)
-      Trecho  : i = ...
-      Contexto:
-              20 | 		t = t + 1
-        >>>   21 | 	i = i + 1
-              22 | T = qh + qc + ql
-
-  [9] Linha 13: Variável 'qh' com nome muito curto (≤4 chars)
-      Trecho  : qh = ...
-      Contexto:
-              12 | 	if x[i] == 'H':
-        >>>   13 | 		qh = qh + 5.40
-              14 | 		t = t + 1
-
-  [10] Linha 14: Variável 't' com nome muito curto (≤4 chars)
-      Trecho  : t = ...
-      Contexto:
-              13 | 		qh = qh + 5.40
-        >>>   14 | 		t = t + 1
-              15 | 	elif x[i] == 'C':
-
-  [11] Linha 16: Variável 'qc' com nome muito curto (≤4 chars)
-      Trecho  : qc = ...
-      Contexto:
-              15 | 	elif x[i] == 'C':
-        >>>   16 | 		qc = qc + 8.95
-              17 | 		t = t + 1
-
-  [12] Linha 17: Variável 't' com nome muito curto (≤4 chars)
-      Trecho  : t = ...
-      Contexto:
-              16 | 		qc = qc + 8.95
-        >>>   17 | 		t = t + 1
-              18 | 	elif x[i] == 'L':
-
-  [13] Linha 19: Variável 'ql' com nome muito curto (≤4 chars)
-      Trecho  : ql = ...
-      Contexto:
-              18 | 	elif x[i] == 'L':
-        >>>   19 | 		ql = ql + 4.50
-              20 | 		t = t + 1
-
-  [14] Linha 20: Variável 't' com nome muito curto (≤4 chars)
-      Trecho  : t = ...
-      Contexto:
-              19 | 		ql = ql + 4.50
-        >>>   20 | 		t = t + 1
-              21 | 	i = i + 1
+               2 | i = 0
+        >>>    3 | t = 0
+               4 | while i<len(v):
 
 ======================================================================

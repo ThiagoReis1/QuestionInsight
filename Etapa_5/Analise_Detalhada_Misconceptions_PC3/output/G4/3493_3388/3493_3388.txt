@@ -1,12 +1,12 @@
 ======================================================================
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
-Arquivo     : 3493_3388.py
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2021_2_v1.81\2021-2\408\users\7146\codes\3493_3388.py
+Arquivo     : 3493_3388.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2021_2_v1.81\2021-2\408\users\7141\executions\3493_3388.log
 Assessment  : 3493
 Título      : TP 02:  Est. Condicional Simples e Composta
 Questão     : 3388
-Aluno       : 7146
+Aluno       : 7141
 Grupo       : TP 02
 Significado : Estrutura Condicional Simples e Composta
 Total MCs   : 1
@@ -16,15 +16,15 @@ Total MCs   : 1
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | u = input("Digite a unidade em que a medida esta:").upper()
-     2 | v = float(input("Digite o valor da medida:"))
-     3 | b = 3.41214 * v
-     4 | w = v / 3.41214
-     5 | 
-     6 | if (u == "B"):
-     7 | 	print(round(w, 2))
-     8 | else:
-     9 | 	print(round(b, 2))
+     1 | u = input("Qual a unidade de medida usada: b ou w? ").upper()
+     2 | v = float(input("Qual o valor da medida?: "))
+     3 | 
+     4 | if (u == "W"):
+     5 |      b = 3.41214*v
+     6 | else:
+     7 | 	b = v/3.41214
+     8 | 	
+     9 | print(round(b, 2))
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
@@ -36,28 +36,28 @@ DETALHAMENTO DOS MISCONCEPTIONS
   [1] Linha 1: Variável 'u' com nome muito curto (≤4 chars)
       Trecho  : u = ...
       Contexto:
-        >>>    1 | u = input("Digite a unidade em que a medida esta:").upper()
-               2 | v = float(input("Digite o valor da medida:"))
+        >>>    1 | u = input("Qual a unidade de medida usada: b ou w? ").upper()
+               2 | v = float(input("Qual o valor da medida?: "))
 
   [2] Linha 2: Variável 'v' com nome muito curto (≤4 chars)
       Trecho  : v = ...
       Contexto:
-               1 | u = input("Digite a unidade em que a medida esta:").upper()
-        >>>    2 | v = float(input("Digite o valor da medida:"))
-               3 | b = 3.41214 * v
+               1 | u = input("Qual a unidade de medida usada: b ou w? ").upper()
+        >>>    2 | v = float(input("Qual o valor da medida?: "))
+               3 | 
 
-  [3] Linha 3: Variável 'b' com nome muito curto (≤4 chars)
+  [3] Linha 5: Variável 'b' com nome muito curto (≤4 chars)
       Trecho  : b = ...
       Contexto:
-               2 | v = float(input("Digite o valor da medida:"))
-        >>>    3 | b = 3.41214 * v
-               4 | w = v / 3.41214
+               4 | if (u == "W"):
+        >>>    5 |      b = 3.41214*v
+               6 | else:
 
-  [4] Linha 4: Variável 'w' com nome muito curto (≤4 chars)
-      Trecho  : w = ...
+  [4] Linha 7: Variável 'b' com nome muito curto (≤4 chars)
+      Trecho  : b = ...
       Contexto:
-               3 | b = 3.41214 * v
-        >>>    4 | w = v / 3.41214
-               5 | 
+               6 | else:
+        >>>    7 | 	b = v/3.41214
+               8 | 	
 
 ======================================================================

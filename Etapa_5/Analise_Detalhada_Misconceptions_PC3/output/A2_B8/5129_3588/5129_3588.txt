@@ -1,12 +1,12 @@
 ======================================================================
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
-Arquivo     : 5129_3588.py
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2023_1_v1.81\2023-1\527\users\8760\codes\5129_3588.py
+Arquivo     : 5129_3588.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2023_1_v1.81\2023-1\527\users\8759\executions\5129_3588.log
 Assessment  : 5129
 Título      : TP 5: Vetores e Strings
 Questão     : 3588
-Aluno       : 8760
+Aluno       : 8759
 Grupo       : TP 05
 Significado : Vetores e Strings
 Total MCs   : 2
@@ -16,26 +16,22 @@ Total MCs   : 2
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | from numpy import *
-     2 | 
-     3 | pontos = array(eval(input("")))
-     4 | 
-     5 | i = 0
-     6 | total = 10000
-     7 | 
-     8 | while i < size(pontos):
-     9 | 	
-    10 | 	if pontos[i] == 1:
-    11 | 		total = total * 2
-    12 | 	elif pontos[i] == 2:
-    13 | 		total = total 
-    14 | 	elif pontos[i] == 3:
-    15 | 		total = total / 2
-    16 | 	elif pontos[i] == 4:
-    17 | 		total = total/ 4
-    18 | 	i = i + 1
-    19 | 
-    20 | print(round(total, 2))
+     1 | from numpy import*
+     2 | pontos= 10000
+     3 | ond= array(eval(input()))
+     4 | i=0
+     5 | 
+     6 | while i< size(ond):
+     7 | 	if ond[i] == 1:
+     8 | 		pontos= pontos*2
+     9 | 	elif ond[i] == 2:
+    10 | 		pontos= pontos
+    11 | 	elif ond[i] == 3:
+    12 | 		pontos= pontos / 2
+    13 | 	elif ond[i] == 4:
+    14 | 		pontos= pontos / 4
+    15 | 	i=i + 1
+    16 | print(round(pontos, 2))
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
@@ -44,21 +40,23 @@ DETALHAMENTO DOS MISCONCEPTIONS
 ▶ A2 — Variável atribuída a si mesma
   Ocorrências: 1
 
-  [1] Linha 13: 'total' atribuído a si mesmo
-      Trecho  : total = total
+  [1] Linha 10: 'pontos' atribuído a si mesmo
+      Trecho  : pontos = pontos
       Contexto:
-              12 | 	elif pontos[i] == 2:
-        >>>   13 | 		total = total 
-              14 | 	elif pontos[i] == 3:
+               9 | 	elif ond[i] == 2:
+        >>>   10 | 		pontos= pontos
+              11 | 	elif ond[i] == 3:
 
 ▶ B8 — Não utilização de elif/else
   Ocorrências: 1
 
-  [1] Linha 14: Cadeia if/elif sem bloco else final
-      Trecho  : if ... (linha 14) / elif ... sem else
+  [1] Linha 11: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 11) / elif ... sem else
       Contexto:
-              13 | 		total = total 
-        >>>   14 | 	elif pontos[i] == 3:
-              15 | 		total = total / 2
+              10 | 		pontos= pontos
+        >>>   11 | 	elif ond[i] == 3:
+              12 | 		pontos= pontos / 2
+
+======================================================================
 
 ======================================================================

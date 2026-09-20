@@ -1,0 +1,83 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo     : 560_1986.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2017_1_v1.81\2017-1\144\users\2199\executions\560_1986.log
+Assessment  : 560
+Título      : Trabalho Prático 3: Estruturas Condicionais Encadeadas
+Questão     : 1986
+Aluno       : 2199
+Grupo       : TP 03
+Significado : Estrutura Condicional Encadeada
+Total MCs   : 2
+
+⚠️  Misconceptions detectados: B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | m = input("Modalidade do curso:")
+     2 | t = input("Turno do Curso:")
+     3 | 
+     4 | if(not(m == "Bacharelado" and m == "Licenciatura")):
+     5 | 		print("CURSO DE GRADUACAO NAO IDENTIFICADO")
+     6 | else:
+     7 | 	if(m.upper() == "BACHARELADO"):
+     8 | 		if(t.upper() == "DIURNO"):
+     9 | 			print("DIREITO")
+    10 | 		elif(m.upper() == "BACHARELADO"):
+    11 | 			if(t.upper() == "NOTURNO"):
+    12 | 				print("ADMINISTRACAO")
+    13 | 		
+    14 | 	if(m.upper() == "LICENCIATURA"):
+    15 | 		if(t.upper() == "VESPERTINO"):
+    16 | 			print("FILOSOFIA")
+    17 | 		elif(m.upper() == "LICENCIATURA"):
+    18 | 			if(t.upper() == "NOTURNO"):
+    19 | 				print("GEOGRAFIA")
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 3
+
+  [1] Linha 4: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 4) / elif ... sem else
+      Contexto:
+               3 | 
+        >>>    4 | if(not(m == "Bacharelado" and m == "Licenciatura")):
+               5 | 		print("CURSO DE GRADUACAO NAO IDENTIFICADO")
+
+  [2] Linha 8: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 8) / elif ... sem else
+      Contexto:
+               7 | 	if(m.upper() == "BACHARELADO"):
+        >>>    8 | 		if(t.upper() == "DIURNO"):
+               9 | 			print("DIREITO")
+
+  [3] Linha 15: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 15) / elif ... sem else
+      Contexto:
+              14 | 	if(m.upper() == "LICENCIATURA"):
+        >>>   15 | 		if(t.upper() == "VESPERTINO"):
+              16 | 			print("FILOSOFIA")
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 2
+
+  [1] Linha 1: Variável 'm' com nome muito curto (≤4 chars)
+      Trecho  : m = ...
+      Contexto:
+        >>>    1 | m = input("Modalidade do curso:")
+               2 | t = input("Turno do Curso:")
+
+  [2] Linha 2: Variável 't' com nome muito curto (≤4 chars)
+      Trecho  : t = ...
+      Contexto:
+               1 | m = input("Modalidade do curso:")
+        >>>    2 | t = input("Turno do Curso:")
+               3 | 
+
+======================================================================

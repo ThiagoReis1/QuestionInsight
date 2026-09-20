@@ -1,12 +1,12 @@
 ======================================================================
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
-Arquivo     : 4239_2849.py
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2022_1_v1.81\2022-1\445\users\7605\codes\4239_2849.py
+Arquivo     : 4239_2849.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2022_1_v1.81\2022-1\445\users\7602\executions\4239_2849.log
 Assessment  : 4239
 Título      : TP 6: Estrutura de Repetição por Contagem (for)
 Questão     : 2849
-Aluno       : 7605
+Aluno       : 7602
 Grupo       : TP 06
 Significado : Estrutura de Repetição por Contagem
 Total MCs   : 1
@@ -16,15 +16,15 @@ Total MCs   : 1
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | from numpy import *
-     2 | v = array(eval(input("Vetor: ")))
-     3 | soma = 0
-     4 | 
-     5 | for i in range(size(v)):
-     6 | 	if v[i] != 0:
-     7 | 		soma = soma + v[i]
+     1 | from numpy import*
+     2 | 
+     3 | x = array(eval(input()))
+     4 | soma = 0
+     5 | for i in range(size(x)):
+     6 | 	if x[i] != 0:
+     7 | 		soma += x[i]
      8 | 	else:
-     9 | 		soma = 0
+     9 | 		soma = 0 
     10 | print(soma)
 
 ----------------------------------------------------------------------
@@ -32,30 +32,30 @@ DETALHAMENTO DOS MISCONCEPTIONS
 ----------------------------------------------------------------------
 
 ▶ G4 — Funções/variáveis com nomes não significativos
-  Ocorrências: 4
+  Ocorrências: 3
 
-  [1] Linha 2: Variável 'v' com nome muito curto (≤4 chars)
-      Trecho  : v = ...
+  [1] Linha 3: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
       Contexto:
-               1 | from numpy import *
-        >>>    2 | v = array(eval(input("Vetor: ")))
-               3 | soma = 0
+               2 | 
+        >>>    3 | x = array(eval(input()))
+               4 | soma = 0
 
-  [2] Linha 3: Variável 'soma' com nome muito curto (≤4 chars)
+  [2] Linha 4: Variável 'soma' com nome muito curto (≤4 chars)
       Trecho  : soma = ...
       Contexto:
-               2 | v = array(eval(input("Vetor: ")))
-        >>>    3 | soma = 0
-               4 | 
+               3 | x = array(eval(input()))
+        >>>    4 | soma = 0
+               5 | for i in range(size(x)):
 
-  [3] Linha 7: Variável 'soma' com nome muito curto (≤4 chars)
+  [3] Linha 9: Variável 'soma' com nome muito curto (≤4 chars)
       Trecho  : soma = ...
       Contexto:
-               6 | 	if v[i] != 0:
-        >>>    7 | 		soma = soma + v[i]
                8 | 	else:
+        >>>    9 | 		soma = 0 
+              10 | print(soma)
 
-  [4] Linha 9: Variável 'soma' com nome muito curto (≤4 chars)
+======================================================================' com nome muito curto (≤4 chars)
       Trecho  : soma = ...
       Contexto:
                8 | 	else:

@@ -1,12 +1,12 @@
 ======================================================================
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
-Arquivo     : 714_1649.py
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2017_1_v1.81\2017-1\142\users\2232\codes\714_1649.py
+Arquivo     : 714_1649.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2017_1_v1.81\2017-1\142\users\2213\executions\714_1649.log
 Assessment  : 714
 Título      : Trabalho Prático 6: Repetição por Contagem
 Questão     : 1649
-Aluno       : 2232
+Aluno       : 2213
 Grupo       : TP 06
 Significado : Estrutura de Repetição por Contagem
 Total MCs   : 2
@@ -17,23 +17,21 @@ Total MCs   : 2
 CÓDIGO FONTE
 ----------------------------------------------------------------------
      1 | from numpy import*
-     2 | 
-     3 | vet=input("").split(',')
-     4 | cont=zeros(5, dtype=int)
-     5 | 
-     6 | for i in vet:
-     7 | 	if i.upper()=="P":
-     8 | 		cont[0]+=1
-     9 | 	elif i.upper()=="C":
-    10 | 		cont[1]+=1
-    11 | 	elif i.upper()=="M":
-    12 | 		cont[2]+=1
-    13 | 	elif i.upper()=="V":
-    14 | 		cont[3]+=1
-    15 | 	elif i.upper()=="A":
-    16 | 		cont[4]+=1
-    17 | print(max(cont))
-    18 | print(cont)
+     2 | c=input(":").split(',')
+     3 | p=zeros(5,dtype=int)
+     4 | for i in range (size(c)):
+     5 | 	if c[i]=='P':
+     6 | 		p[0]+=1
+     7 | 	elif c[i]=='C':
+     8 | 		p[1]+=1
+     9 | 	elif c[i]=='M':
+    10 | 		p[2]+=1
+    11 | 	elif c[i]=='V':
+    12 | 		p[3]+=1
+    13 | 	elif c[i]=='A':
+    14 | 		p[4]+=1
+    15 | print(max(p))
+    16 | print(p)
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
@@ -42,28 +40,28 @@ DETALHAMENTO DOS MISCONCEPTIONS
 ▶ B8 — Não utilização de elif/else
   Ocorrências: 1
 
-  [1] Linha 13: Cadeia if/elif sem bloco else final
-      Trecho  : if ... (linha 13) / elif ... sem else
+  [1] Linha 11: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 11) / elif ... sem else
       Contexto:
-              12 | 		cont[2]+=1
-        >>>   13 | 	elif i.upper()=="V":
-              14 | 		cont[3]+=1
+              10 | 		p[2]+=1
+        >>>   11 | 	elif c[i]=='V':
+              12 | 		p[3]+=1
 
 ▶ G4 — Funções/variáveis com nomes não significativos
   Ocorrências: 2
 
-  [1] Linha 3: Variável 'vet' com nome muito curto (≤4 chars)
-      Trecho  : vet = ...
+  [1] Linha 2: Variável 'c' com nome muito curto (≤4 chars)
+      Trecho  : c = ...
       Contexto:
-               2 | 
-        >>>    3 | vet=input("").split(',')
-               4 | cont=zeros(5, dtype=int)
+               1 | from numpy import*
+        >>>    2 | c=input(":").split(',')
+               3 | p=zeros(5,dtype=int)
 
-  [2] Linha 4: Variável 'cont' com nome muito curto (≤4 chars)
-      Trecho  : cont = ...
+  [2] Linha 3: Variável 'p' com nome muito curto (≤4 chars)
+      Trecho  : p = ...
       Contexto:
-               3 | vet=input("").split(',')
-        >>>    4 | cont=zeros(5, dtype=int)
-               5 | 
+               2 | c=input(":").split(',')
+        >>>    3 | p=zeros(5,dtype=int)
+               4 | for i in range (size(c)):
 
-======================================================================
+=======================================================================================================================

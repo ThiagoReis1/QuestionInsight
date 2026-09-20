@@ -1,12 +1,12 @@
 ======================================================================
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
-Arquivo     : 1747_1539.py
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2019_1_v1.81\2019-1\226\users\4165\codes\1747_1539.py
+Arquivo     : 1747_1539.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2019_1_v1.81\2019-1\226\users\4137\executions\1747_1539.log
 Assessment  : 1747
 Título      : TP4: Estrutura de Repetição por Condição (while)
 Questão     : 1539
-Aluno       : 4165
+Aluno       : 4137
 Grupo       : TP 04
 Significado : Estrutura de Repetição por Condição
 Total MCs   : 2
@@ -16,44 +16,52 @@ Total MCs   : 2
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | x = float(input("Numero real: "))
-     2 | k = int(input("Numero inteiro: "))
+     1 | x = float(input("Insira um numero real x:"))
+     2 | k = int(input("Quantidade de termos da serie:"))
+     3 | 
+     4 | 
+     5 | soma = 0
+     6 | cont = 0
+     7 | e = 0
+     8 | e1 = 2
+     9 | 
+    10 | y = 1/(1+x)
+    11 | 
+    12 | while(cont < k):
+    13 | 	soma = soma + (x**e)*((-1)**e1)
+    14 | 	e1 = e1 + 1
+    15 | 	e = e + 1
+    16 | 	cont = cont + 1
+    17 | print(round(soma, 7))
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
 ----------------------------------------------------------------------
 
 ▶ A3 — Variável inicializada desnecessariamente
-  Ocorrências: 2
+  Ocorrências: 1
 
-  [1] Linha 1: Variável 'x' declarada mas nunca utilizada
-      Trecho  : x = ...
+  [1] Linha 10: Variável 'y' declarada mas nunca utilizada
+      Trecho  : y = ...
       Contexto:
-        >>>    1 | x = float(input("Numero real: "))
-               2 | k = int(input("Numero inteiro: "))
-
-  [2] Linha 2: Variável 'k' declarada mas nunca utilizada
-      Trecho  : k = ...
-      Contexto:
-               1 | x = float(input("Numero real: "))
-        >>>    2 | k = int(input("Numero inteiro: "))
+               9 | 
+        >>>   10 | y = 1/(1+x)
+              11 | 
 
 ▶ G4 — Funções/variáveis com nomes não significativos
-  Ocorrências: 2
+  Ocorrências: 11
 
   [1] Linha 1: Variável 'x' com nome muito curto (≤4 chars)
       Trecho  : x = ...
       Contexto:
-        >>>    1 | x = float(input("Numero real: "))
-               2 | k = int(input("Numero inteiro: "))
+        >>>    1 | x = float(input("Insira um numero real x:"))
+               2 | k = int(input("Quantidade de termos da serie:"))
 
   [2] Linha 2: Variável 'k' com nome muito curto (≤4 chars)
       Trecho  : k = ...
       Contexto:
-               1 | x = float(input("Numero real: "))
-        >>>    2 | k = int(input("Numero inteiro: "))
-
-======================================================================      >>>    2 | k = int(input("Quantidade de termos da serie:"))
+               1 | x = float(input("Insira um numero real x:"))
+        >>>    2 | k = int(input("Quantidade de termos da serie:"))
                3 | 
 
   [3] Linha 5: Variável 'soma' com nome muito curto (≤4 chars)

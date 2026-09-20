@@ -1,12 +1,12 @@
 ======================================================================
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
-Arquivo     : 1971_1028.py
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2019_2_v1.81\2019-2\260\users\4703\codes\1971_1028.py
+Arquivo     : 1971_1028.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2019_2_v1.81\2019-2\260\users\4741\executions\1971_1028.log
 Assessment  : 1971
 Título      : TP 01: Variáveis e Estrutura Sequencial (2019)
 Questão     : 1028
-Aluno       : 4703
+Aluno       : 4741
 Grupo       : TP 01
 Significado : Variáveis e Estrutura Sequencial
 Total MCs   : 1
@@ -16,43 +16,37 @@ Total MCs   : 1
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | print("1. O volume de água consumida durante certo mês.")
-     2 | x=(0.37+15.00)*30
-     3 | round(x,2)
-     4 | print(float((0.37+15.00)*30))
+     1 | agua=float(input("volume consumido:"))
+     2 | subt=float(agua*0.37)+15
+     3 | icms=float((35/100)*subt)
+     4 | tarifa=subt+icms
+     5 | print(round(tarifa,2))
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
 ----------------------------------------------------------------------
 
 ▶ G4 — Funções/variáveis com nomes não significativos
-  Ocorrências: 1
+  Ocorrências: 3
 
-  [1] Linha 2: Variável 'x' com nome muito curto (≤4 chars)
-      Trecho  : x = ...
+  [1] Linha 1: Variável 'agua' com nome muito curto (≤4 chars)
+      Trecho  : agua = ...
       Contexto:
-               1 | print("1. O volume de água consumida durante certo mês.")
-        >>>    2 | x=(0.37+15.00)*30
-               3 | round(x,2)
+        >>>    1 | agua=float(input("volume consumido:"))
+               2 | subt=float(agua*0.37)+15
 
-====================================================================== : vixi = ...
+  [2] Linha 2: Variável 'subt' com nome muito curto (≤4 chars)
+      Trecho  : subt = ...
       Contexto:
-               3 | 
-        >>>    4 | vixi=0.37*reais+15
-               5 | ola= vixi*por
+               1 | agua=float(input("volume consumido:"))
+        >>>    2 | subt=float(agua*0.37)+15
+               3 | icms=float((35/100)*subt)
 
-  [3] Linha 5: Variável 'ola' com nome muito curto (≤4 chars)
-      Trecho  : ola = ...
+  [3] Linha 3: Variável 'icms' com nome muito curto (≤4 chars)
+      Trecho  : icms = ...
       Contexto:
-               4 | vixi=0.37*reais+15
-        >>>    5 | ola= vixi*por
-               6 | oi= ola+vixi
-
-  [4] Linha 6: Variável 'oi' com nome muito curto (≤4 chars)
-      Trecho  : oi = ...
-      Contexto:
-               5 | ola= vixi*por
-        >>>    6 | oi= ola+vixi
-               7 | 
+               2 | subt=float(agua*0.37)+15
+        >>>    3 | icms=float((35/100)*subt)
+               4 | tarifa=subt+icms
 
 ======================================================================

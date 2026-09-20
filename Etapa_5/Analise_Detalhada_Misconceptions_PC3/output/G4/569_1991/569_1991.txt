@@ -1,12 +1,12 @@
 ======================================================================
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
-Arquivo     : 569_1991.py
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2017_1_v1.81\2017-1\136\users\2348\codes\569_1991.py
+Arquivo     : 569_1991.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2017_1_v1.81\2017-1\136\users\2141\executions\569_1991.log
 Assessment  : 569
 Título      : Trabalho Prático 3: Estruturas Condicionais Encadeadas
 Questão     : 1991
-Aluno       : 2348
+Aluno       : 2141
 Grupo       : TP 03
 Significado : Estrutura Condicional Encadeada
 Total MCs   : 1
@@ -16,84 +16,80 @@ Total MCs   : 1
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | a=input("aminoacido:")
-     2 | o=15.9994
-     3 | c=12.011
-     4 | n=14.00674
-     5 | h=1.0079
-     6 | if(a=="GLICINA"):
-     7 | 	x=(c*2)+(h*5)+n+(o*2)
-     8 | 	print(round(x,2))
-     9 | elif(a=="PROLINA"):
-    10 | 	x=(c*5)+(h*10)+n+(o*2)
-    11 | 	print(round(x,2))
-    12 | elif(a=="SERINA"):
-    13 | 	x=(c*3)+(h*7)+n+(o*3)
-    14 | 	print(round(x,2))
-    15 | else:
-    16 | 	print("Entrada:",a)
-    17 | 	print("Dado Invalido")
+     1 | aminoacido = input("aminoacido: ")
+     2 | 
+     3 | O = 15.9994
+     4 | C = 12.011
+     5 | N = 14.0067
+     6 | H = 1.00794
+     7 | 
+     8 | if(aminoacido.upper() == "GLICINA"):
+     9 | 	x = (C * 2) + (H * 5) + N + (O * 2)
+    10 | 	print(round(x, 2))
+    11 | elif(aminoacido.upper() == "PROLINA"):
+    12 | 	x = (C * 5) + (H * 10) + N + (O * 2)
+    13 | 	print(round(x, 2))
+    14 | elif(aminoacido.upper() == "SERINA"):
+    15 | 	x = (C * 3) + (H * 7) + N + (O * 3)
+    16 | 	print(round(x, 2))
+    17 | else:
+    18 | 	print("Entrada:", aminoacido)
+    19 | 	print("Dado Invalido")
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
 ----------------------------------------------------------------------
 
 ▶ G4 — Funções/variáveis com nomes não significativos
-  Ocorrências: 8
+  Ocorrências: 7
 
-  [1] Linha 1: Variável 'a' com nome muito curto (≤4 chars)
-      Trecho  : a = ...
+  [1] Linha 3: Variável 'O' com nome muito curto (≤4 chars)
+      Trecho  : O = ...
       Contexto:
-        >>>    1 | a=input("aminoacido:")
-               2 | o=15.9994
+               2 | 
+        >>>    3 | O = 15.9994
+               4 | C = 12.011
 
-  [2] Linha 2: Variável 'o' com nome muito curto (≤4 chars)
-      Trecho  : o = ...
+  [2] Linha 4: Variável 'C' com nome muito curto (≤4 chars)
+      Trecho  : C = ...
       Contexto:
-               1 | a=input("aminoacido:")
-        >>>    2 | o=15.9994
-               3 | c=12.011
+               3 | O = 15.9994
+        >>>    4 | C = 12.011
+               5 | N = 14.0067
 
-  [3] Linha 3: Variável 'c' com nome muito curto (≤4 chars)
-      Trecho  : c = ...
+  [3] Linha 5: Variável 'N' com nome muito curto (≤4 chars)
+      Trecho  : N = ...
       Contexto:
-               2 | o=15.9994
-        >>>    3 | c=12.011
-               4 | n=14.00674
+               4 | C = 12.011
+        >>>    5 | N = 14.0067
+               6 | H = 1.00794
 
-  [4] Linha 4: Variável 'n' com nome muito curto (≤4 chars)
-      Trecho  : n = ...
+  [4] Linha 6: Variável 'H' com nome muito curto (≤4 chars)
+      Trecho  : H = ...
       Contexto:
-               3 | c=12.011
-        >>>    4 | n=14.00674
-               5 | h=1.0079
+               5 | N = 14.0067
+        >>>    6 | H = 1.00794
+               7 | 
 
-  [5] Linha 5: Variável 'h' com nome muito curto (≤4 chars)
-      Trecho  : h = ...
-      Contexto:
-               4 | n=14.00674
-        >>>    5 | h=1.0079
-               6 | if(a=="GLICINA"):
-
-  [6] Linha 7: Variável 'x' com nome muito curto (≤4 chars)
+  [5] Linha 9: Variável 'x' com nome muito curto (≤4 chars)
       Trecho  : x = ...
       Contexto:
-               6 | if(a=="GLICINA"):
-        >>>    7 | 	x=(c*2)+(h*5)+n+(o*2)
-               8 | 	print(round(x,2))
+               8 | if(aminoacido.upper() == "GLICINA"):
+        >>>    9 | 	x = (C * 2) + (H * 5) + N + (O * 2)
+              10 | 	print(round(x, 2))
 
-  [7] Linha 10: Variável 'x' com nome muito curto (≤4 chars)
+  [6] Linha 12: Variável 'x' com nome muito curto (≤4 chars)
       Trecho  : x = ...
       Contexto:
-               9 | elif(a=="PROLINA"):
-        >>>   10 | 	x=(c*5)+(h*10)+n+(o*2)
-              11 | 	print(round(x,2))
+              11 | elif(aminoacido.upper() == "PROLINA"):
+        >>>   12 | 	x = (C * 5) + (H * 10) + N + (O * 2)
+              13 | 	print(round(x, 2))
 
-  [8] Linha 13: Variável 'x' com nome muito curto (≤4 chars)
+  [7] Linha 15: Variável 'x' com nome muito curto (≤4 chars)
       Trecho  : x = ...
       Contexto:
-              12 | elif(a=="SERINA"):
-        >>>   13 | 	x=(c*3)+(h*7)+n+(o*3)
-              14 | 	print(round(x,2))
+              14 | elif(aminoacido.upper() == "SERINA"):
+        >>>   15 | 	x = (C * 3) + (H * 7) + N + (O * 3)
+              16 | 	print(round(x, 2))
 
 ======================================================================

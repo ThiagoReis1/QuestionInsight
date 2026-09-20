@@ -1,12 +1,12 @@
 ======================================================================
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
-Arquivo     : 623_1532.py
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2017_1_v1.81\2017-1\139\users\2405\codes\623_1532.py
+Arquivo     : 623_1532.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2017_1_v1.81\2017-1\139\users\2401\executions\623_1532.log
 Assessment  : 623
 Título      : Trabalho Prático 4: Estrutura de Repetição por Condição (while)
 Questão     : 1532
-Aluno       : 2405
+Aluno       : 2401
 Grupo       : TP 04
 Significado : Estrutura de Repetição por Condição
 Total MCs   : 1
@@ -17,23 +17,16 @@ Total MCs   : 1
 CÓDIGO FONTE
 ----------------------------------------------------------------------
      1 | from math import*
-     2 | 
-     3 | x = float(input("digite x: "))
-     4 | k = int(input("digite k: "))
-     5 | 
-     6 | varC = x
-     7 | exp = 3
-     8 | i = 1
-     9 | while( i < k):
-    10 | 	varC = varC + x**exp/factorial(exp)
-    11 | 	
-    12 | 	i = i + 1
-    13 | 	exp = exp + 2
-    14 | 	
-    15 | print(round(varC ,9))
-    16 | 
-    17 | 	
-    18 | 	
+     2 | s=0
+     3 | x=float(input())
+     4 | k=int(input())
+     5 | i=1
+     6 | j=1
+     7 | while(i<=k):
+     8 | 	s=s+((x)**j)/factorial(j)
+     9 | 	i=i+1
+    10 | 	j=j+2
+    11 | print(round(s,9))
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
@@ -42,60 +35,60 @@ DETALHAMENTO DOS MISCONCEPTIONS
 ▶ G4 — Funções/variáveis com nomes não significativos
   Ocorrências: 8
 
-  [1] Linha 3: Variável 'x' com nome muito curto (≤4 chars)
+  [1] Linha 2: Variável 's' com nome muito curto (≤4 chars)
+      Trecho  : s = ...
+      Contexto:
+               1 | from math import*
+        >>>    2 | s=0
+               3 | x=float(input())
+
+  [2] Linha 3: Variável 'x' com nome muito curto (≤4 chars)
       Trecho  : x = ...
       Contexto:
-               2 | 
-        >>>    3 | x = float(input("digite x: "))
-               4 | k = int(input("digite k: "))
+               2 | s=0
+        >>>    3 | x=float(input())
+               4 | k=int(input())
 
-  [2] Linha 4: Variável 'k' com nome muito curto (≤4 chars)
+  [3] Linha 4: Variável 'k' com nome muito curto (≤4 chars)
       Trecho  : k = ...
       Contexto:
-               3 | x = float(input("digite x: "))
-        >>>    4 | k = int(input("digite k: "))
-               5 | 
+               3 | x=float(input())
+        >>>    4 | k=int(input())
+               5 | i=1
 
-  [3] Linha 6: Variável 'varC' com nome muito curto (≤4 chars)
-      Trecho  : varC = ...
-      Contexto:
-               5 | 
-        >>>    6 | varC = x
-               7 | exp = 3
-
-  [4] Linha 7: Variável 'exp' com nome muito curto (≤4 chars)
-      Trecho  : exp = ...
-      Contexto:
-               6 | varC = x
-        >>>    7 | exp = 3
-               8 | i = 1
-
-  [5] Linha 8: Variável 'i' com nome muito curto (≤4 chars)
+  [4] Linha 5: Variável 'i' com nome muito curto (≤4 chars)
       Trecho  : i = ...
       Contexto:
-               7 | exp = 3
-        >>>    8 | i = 1
-               9 | while( i < k):
+               4 | k=int(input())
+        >>>    5 | i=1
+               6 | j=1
 
-  [6] Linha 10: Variável 'varC' com nome muito curto (≤4 chars)
-      Trecho  : varC = ...
+  [5] Linha 6: Variável 'j' com nome muito curto (≤4 chars)
+      Trecho  : j = ...
       Contexto:
-               9 | while( i < k):
-        >>>   10 | 	varC = varC + x**exp/factorial(exp)
-              11 | 	
+               5 | i=1
+        >>>    6 | j=1
+               7 | while(i<=k):
 
-  [7] Linha 12: Variável 'i' com nome muito curto (≤4 chars)
+  [6] Linha 8: Variável 's' com nome muito curto (≤4 chars)
+      Trecho  : s = ...
+      Contexto:
+               7 | while(i<=k):
+        >>>    8 | 	s=s+((x)**j)/factorial(j)
+               9 | 	i=i+1
+
+  [7] Linha 9: Variável 'i' com nome muito curto (≤4 chars)
       Trecho  : i = ...
       Contexto:
-              11 | 	
-        >>>   12 | 	i = i + 1
-              13 | 	exp = exp + 2
+               8 | 	s=s+((x)**j)/factorial(j)
+        >>>    9 | 	i=i+1
+              10 | 	j=j+2
 
-  [8] Linha 13: Variável 'exp' com nome muito curto (≤4 chars)
-      Trecho  : exp = ...
+  [8] Linha 10: Variável 'j' com nome muito curto (≤4 chars)
+      Trecho  : j = ...
       Contexto:
-              12 | 	i = i + 1
-        >>>   13 | 	exp = exp + 2
-              14 | 	
+               9 | 	i=i+1
+        >>>   10 | 	j=j+2
+              11 | print(round(s,9))
 
 ======================================================================

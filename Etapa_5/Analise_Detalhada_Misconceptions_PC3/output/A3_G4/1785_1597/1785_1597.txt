@@ -1,8 +1,8 @@
 ======================================================================
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
-Arquivo     : 1785_1597.py
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2019_1_v1.81\2019-1\226\users\4163\codes\1785_1597.py
+Arquivo     : 1785_1597.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2019_1_v1.81\2019-1\226\users\4163\executions\1785_1597.log
 Assessment  : 1785
 Título      : TP5: Vetores e Strings
 Questão     : 1597
@@ -31,17 +31,15 @@ CÓDIGO FONTE
     13 | while(a<size(lis)):
     14 | 	if x[a] < 80:
     15 | 		d = x[a]-5
-    16 | 		d = lis[b]
+    16 | 		d = lis[a]
     17 | 		a = a + 1
     18 | 		b = b + 1
     19 | 	else:
-    20 | 		lis[b] = x[a]
+    20 | 		lis[b] = lis[b] + x[a]
     21 | 		a = a +1
     22 | 		b = b +1
     23 | comp = sum(lis)
     24 | print(comp)		
-    25 | print(lis)
-    26 | 	
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
@@ -55,7 +53,7 @@ DETALHAMENTO DOS MISCONCEPTIONS
       Contexto:
               14 | 	if x[a] < 80:
         >>>   15 | 		d = x[a]-5
-              16 | 		d = lis[b]
+              16 | 		d = lis[a]
 
 ▶ G4 — Funções/variáveis com nomes não significativos
   Ocorrências: 13
@@ -114,19 +112,19 @@ DETALHAMENTO DOS MISCONCEPTIONS
       Contexto:
               14 | 	if x[a] < 80:
         >>>   15 | 		d = x[a]-5
-              16 | 		d = lis[b]
+              16 | 		d = lis[a]
 
   [9] Linha 16: Variável 'd' com nome muito curto (≤4 chars)
       Trecho  : d = ...
       Contexto:
               15 | 		d = x[a]-5
-        >>>   16 | 		d = lis[b]
+        >>>   16 | 		d = lis[a]
               17 | 		a = a + 1
 
   [10] Linha 17: Variável 'a' com nome muito curto (≤4 chars)
       Trecho  : a = ...
       Contexto:
-              16 | 		d = lis[b]
+              16 | 		d = lis[a]
         >>>   17 | 		a = a + 1
               18 | 		b = b + 1
 
@@ -140,7 +138,7 @@ DETALHAMENTO DOS MISCONCEPTIONS
   [12] Linha 21: Variável 'a' com nome muito curto (≤4 chars)
       Trecho  : a = ...
       Contexto:
-              20 | 		lis[b] = x[a]
+              20 | 		lis[b] = lis[b] + x[a]
         >>>   21 | 		a = a +1
               22 | 		b = b +1
 

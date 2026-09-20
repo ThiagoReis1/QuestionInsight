@@ -1,12 +1,12 @@
 ======================================================================
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
-Arquivo     : 1528_1653.py
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2018_2_v1.81\2018-2\207\users\3737\codes\1528_1653.py
+Arquivo     : 1528_1653.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2018_2_v1.81\2018-2\207\users\3739\executions\1528_1653.log
 Assessment  : 1528
 Título      : TP 6: Estrutura de Repetição por Contagem (for)
 Questão     : 1653
-Aluno       : 3737
+Aluno       : 3739
 Grupo       : TP 06
 Significado : Estrutura de Repetição por Contagem
 Total MCs   : 2
@@ -16,27 +16,24 @@ Total MCs   : 2
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | from numpy import*
-     2 | 
-     3 | cont=zeros(5,dtype=int)
-     4 | 
-     5 | vet=input("").split(",")
-     6 | 
-     7 | for x in vet:
-     8 | 	if x=="AR":
-     9 | 		cont[0]=cont[0]+1
-    10 | 	elif x=="BR":
-    11 | 		cont[1]=cont[1]+1
-    12 | 	elif x=="CL":
-    13 | 		cont[2]=cont[2]+1
-    14 | 	elif x=="CO":
-    15 | 		cont[3]=cont[3]+1
-    16 | 	elif x=="UY":
-    17 | 		cont[4]=cont[4]+1
-    18 | 
-    19 | print(max(cont))
-    20 | 
-    21 | print(cont)
+     1 | from numpy import *
+     2 | # Cria o vetor de 5 categorias com zeros
+     3 | cont = zeros(5, dtype=int)
+     4 | # Leitura do vetor de tipos NACIONALIDADES
+     5 | vet = input("Tipos de NACIONALIDADE: ").upper().split(',')
+     6 | # Contagem de NACIONALIDADES
+     7 | for i in range(size(vet)):
+     8 | 	if (vet[i] == 'AR'):
+     9 | 		cont[0] = cont[0] + 1
+    10 | 	elif(vet[i] == 'BR'):
+    11 | 		cont[1] =cont[1] + 1
+    12 | 	elif(vet[i] == 'CL'):
+    13 | 		cont[2] = cont[2] + 1
+    14 | 	elif(vet[i] == 'CO'):
+    15 | 		cont[3] = cont[3] + 1
+    16 | 	elif(vet[i] == 'UY'):
+    17 | 		cont[4] = cont[4] + 1
+    18 | print (cont)
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
@@ -48,9 +45,9 @@ DETALHAMENTO DOS MISCONCEPTIONS
   [1] Linha 14: Cadeia if/elif sem bloco else final
       Trecho  : if ... (linha 14) / elif ... sem else
       Contexto:
-              13 | 		cont[2]=cont[2]+1
-        >>>   14 | 	elif x=="CO":
-              15 | 		cont[3]=cont[3]+1
+              13 | 		cont[2] = cont[2] + 1
+        >>>   14 | 	elif(vet[i] == 'CO'):
+              15 | 		cont[3] = cont[3] + 1
 
 ▶ G4 — Funções/variáveis com nomes não significativos
   Ocorrências: 2
@@ -58,15 +55,15 @@ DETALHAMENTO DOS MISCONCEPTIONS
   [1] Linha 3: Variável 'cont' com nome muito curto (≤4 chars)
       Trecho  : cont = ...
       Contexto:
-               2 | 
-        >>>    3 | cont=zeros(5,dtype=int)
-               4 | 
+               2 | # Cria o vetor de 5 categorias com zeros
+        >>>    3 | cont = zeros(5, dtype=int)
+               4 | # Leitura do vetor de tipos NACIONALIDADES
 
   [2] Linha 5: Variável 'vet' com nome muito curto (≤4 chars)
       Trecho  : vet = ...
       Contexto:
-               4 | 
-        >>>    5 | vet=input("").split(",")
-               6 | 
+               4 | # Leitura do vetor de tipos NACIONALIDADES
+        >>>    5 | vet = input("Tipos de NACIONALIDADE: ").upper().split(',')
+               6 | # Contagem de NACIONALIDADES
 
 ======================================================================

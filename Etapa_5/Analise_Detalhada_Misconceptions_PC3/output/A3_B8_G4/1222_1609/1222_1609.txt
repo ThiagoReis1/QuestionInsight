@@ -1,8 +1,8 @@
 ======================================================================
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
-Arquivo     : 1222_1609.py
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2018_1_v1.81\2018-1\185\users\3348\codes\1222_1609.py
+Arquivo     : 1222_1609.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2018_1_v1.81\2018-1\185\users\3348\executions\1222_1609.log
 Assessment  : 1222
 Título      : Trabalho Prático 05: Vetores e Strings
 Questão     : 1609
@@ -24,13 +24,13 @@ CÓDIGO FONTE
      6 | j=0
      7 | 
      8 | while(i<size(v)):
-     9 | 	n= v[i].replace("L","R")
-    10 | 	if(u==v[i]):
+     9 | 	n= v[i].replace("R","L")
+    10 | 	if(u[0:-1]==v[i]):
     11 | 		j = i
-    12 | 	if(u!=v[i]):
+    12 | 	if(u[0:-1]!=v[i]):
     13 | 		j = "NAO ENCONTRADA"
     14 | 	i= i + 1
-    15 | print(j)
+    15 | 	print(j)
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
@@ -43,8 +43,8 @@ DETALHAMENTO DOS MISCONCEPTIONS
       Trecho  : n = ...
       Contexto:
                8 | while(i<size(v)):
-        >>>    9 | 	n= v[i].replace("L","R")
-              10 | 	if(u==v[i]):
+        >>>    9 | 	n= v[i].replace("R","L")
+              10 | 	if(u[0:-1]==v[i]):
 
 ▶ B8 — Não utilização de elif/else
   Ocorrências: 1
@@ -87,27 +87,27 @@ DETALHAMENTO DOS MISCONCEPTIONS
       Trecho  : n = ...
       Contexto:
                8 | while(i<size(v)):
-        >>>    9 | 	n= v[i].replace("L","R")
-              10 | 	if(u==v[i]):
+        >>>    9 | 	n= v[i].replace("R","L")
+              10 | 	if(u[0:-1]==v[i]):
 
   [6] Linha 14: Variável 'i' com nome muito curto (≤4 chars)
       Trecho  : i = ...
       Contexto:
               13 | 		j = "NAO ENCONTRADA"
         >>>   14 | 	i= i + 1
-              15 | print(j)
+              15 | 	print(j)
 
   [7] Linha 11: Variável 'j' com nome muito curto (≤4 chars)
       Trecho  : j = ...
       Contexto:
-              10 | 	if(u==v[i]):
+              10 | 	if(u[0:-1]==v[i]):
         >>>   11 | 		j = i
-              12 | 	if(u!=v[i]):
+              12 | 	if(u[0:-1]!=v[i]):
 
   [8] Linha 13: Variável 'j' com nome muito curto (≤4 chars)
       Trecho  : j = ...
       Contexto:
-              12 | 	if(u!=v[i]):
+              12 | 	if(u[0:-1]!=v[i]):
         >>>   13 | 		j = "NAO ENCONTRADA"
               14 | 	i= i + 1
 

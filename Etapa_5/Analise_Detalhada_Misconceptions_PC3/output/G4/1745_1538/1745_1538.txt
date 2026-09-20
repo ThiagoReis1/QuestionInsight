@@ -1,8 +1,8 @@
 ======================================================================
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
-Arquivo     : 1745_1538.py
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2019_1_v1.81\2019-1\225\users\3988\codes\1745_1538.py
+Arquivo     : 1745_1538.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2019_1_v1.81\2019-1\225\users\3988\executions\1745_1538.log
 Assessment  : 1745
 Título      : TP4: Estrutura de Repetição por Condição (while)
 Questão     : 1538
@@ -20,20 +20,22 @@ CÓDIGO FONTE
      2 | k = int(input("i: "))
      3 | d = 0
      4 | t = 0
-     5 | m = 0
-     6 | while(k>t):
-     7 | 	m = m + (x**d) 
-     8 | 	d = d + 2
-     9 | 	t = t + 1
-    10 | 	j = m
-    11 | print(round(j,  8))
+     5 | n = 2
+     6 | m = 0
+     7 | while(k>t):
+     8 | 	m = m + ((x**d)-(x**n)) 
+     9 | 	d = d + 4
+    10 | 	n = n + 4
+    11 | 	t = t + 1
+    12 | 	j = m
+    13 | print(round(j,  8))
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
 ----------------------------------------------------------------------
 
 ▶ G4 — Funções/variáveis com nomes não significativos
-  Ocorrências: 9
+  Ocorrências: 11
 
   [1] Linha 1: Variável 'x' com nome muito curto (≤4 chars)
       Trecho  : x = ...
@@ -60,41 +62,55 @@ DETALHAMENTO DOS MISCONCEPTIONS
       Contexto:
                3 | d = 0
         >>>    4 | t = 0
-               5 | m = 0
+               5 | n = 2
 
-  [5] Linha 5: Variável 'm' com nome muito curto (≤4 chars)
-      Trecho  : m = ...
+  [5] Linha 5: Variável 'n' com nome muito curto (≤4 chars)
+      Trecho  : n = ...
       Contexto:
                4 | t = 0
-        >>>    5 | m = 0
-               6 | while(k>t):
+        >>>    5 | n = 2
+               6 | m = 0
 
-  [6] Linha 7: Variável 'm' com nome muito curto (≤4 chars)
+  [6] Linha 6: Variável 'm' com nome muito curto (≤4 chars)
       Trecho  : m = ...
       Contexto:
-               6 | while(k>t):
-        >>>    7 | 	m = m + (x**d) 
-               8 | 	d = d + 2
+               5 | n = 2
+        >>>    6 | m = 0
+               7 | while(k>t):
 
-  [7] Linha 8: Variável 'd' com nome muito curto (≤4 chars)
+  [7] Linha 8: Variável 'm' com nome muito curto (≤4 chars)
+      Trecho  : m = ...
+      Contexto:
+               7 | while(k>t):
+        >>>    8 | 	m = m + ((x**d)-(x**n)) 
+               9 | 	d = d + 4
+
+  [8] Linha 9: Variável 'd' com nome muito curto (≤4 chars)
       Trecho  : d = ...
       Contexto:
-               7 | 	m = m + (x**d) 
-        >>>    8 | 	d = d + 2
-               9 | 	t = t + 1
+               8 | 	m = m + ((x**d)-(x**n)) 
+        >>>    9 | 	d = d + 4
+              10 | 	n = n + 4
 
-  [8] Linha 9: Variável 't' com nome muito curto (≤4 chars)
+  [9] Linha 10: Variável 'n' com nome muito curto (≤4 chars)
+      Trecho  : n = ...
+      Contexto:
+               9 | 	d = d + 4
+        >>>   10 | 	n = n + 4
+              11 | 	t = t + 1
+
+  [10] Linha 11: Variável 't' com nome muito curto (≤4 chars)
       Trecho  : t = ...
       Contexto:
-               8 | 	d = d + 2
-        >>>    9 | 	t = t + 1
-              10 | 	j = m
+              10 | 	n = n + 4
+        >>>   11 | 	t = t + 1
+              12 | 	j = m
 
-  [9] Linha 10: Variável 'j' com nome muito curto (≤4 chars)
+  [11] Linha 12: Variável 'j' com nome muito curto (≤4 chars)
       Trecho  : j = ...
       Contexto:
-               9 | 	t = t + 1
-        >>>   10 | 	j = m
-              11 | print(round(j,  8))
+              11 | 	t = t + 1
+        >>>   12 | 	j = m
+              13 | print(round(j,  8))
 
 ======================================================================

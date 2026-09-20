@@ -1,12 +1,12 @@
 ======================================================================
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
-Arquivo     : 5867_6832.py
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2024_1_v1.81\2024-1\590\users\9827\codes\5867_6832.py
+Arquivo     : 5867_6832.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2024_1_v1.81\2024-1\590\users\9818\executions\5867_6832.log
 Assessment  : 5867
 Título      : TP 5: Vetores e Strings
 Questão     : 6832
-Aluno       : 9827
+Aluno       : 9818
 Grupo       : TP 05
 Significado : Vetores e Strings
 Total MCs   : 1
@@ -16,20 +16,19 @@ Total MCs   : 1
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | string = input().upper()
-     2 | 
+     1 | from numpy import *
+     2 | item = input("produto: ")
      3 | i = 0
-     4 | soma = 0
-     5 | 
-     6 | while i < len(string):
-     7 | 	if	string[i] == 'H':
-     8 | 		soma +=5.4
-     9 | 	elif	string[i] == 'C':
-    10 | 		soma +=8.95
-    11 | 	elif	string[i] == 'L':
-    12 | 		soma += 4.5
-    13 | 	i+=1
-    14 | print(round(soma,2))
+     4 | total = 0
+     5 | while i < len(item):
+     6 | 	if item[i] == "H":
+     7 | 		total += 5.40
+     8 | 	elif item[i] == "C":
+     9 | 		total += 8.95
+    10 | 	elif item[i] == "L":
+    11 | 		total += 4.50
+    12 | 	i += 1
+    13 | print(round(total, 2))
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
@@ -38,11 +37,11 @@ DETALHAMENTO DOS MISCONCEPTIONS
 ▶ B8 — Não utilização de elif/else
   Ocorrências: 1
 
-  [1] Linha 9: Cadeia if/elif sem bloco else final
-      Trecho  : if ... (linha 9) / elif ... sem else
+  [1] Linha 8: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 8) / elif ... sem else
       Contexto:
-               8 | 		soma +=5.4
-        >>>    9 | 	elif	string[i] == 'C':
-              10 | 		soma +=8.95
+               7 | 		total += 5.40
+        >>>    8 | 	elif item[i] == "C":
+               9 | 		total += 8.95
 
 ======================================================================

@@ -1,12 +1,12 @@
 ======================================================================
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
-Arquivo     : 487_1363.py
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2017_1_v1.81\2017-1\140\users\2566\codes\487_1363.py
+Arquivo     : 487_1363.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2017_1_v1.81\2017-1\140\users\2303\executions\487_1363.log
 Assessment  : 487
 Título      : Trabalho Prático 01: Variáveis e Estrutura Sequencial de Programação
 Questão     : 1363
-Aluno       : 2566
+Aluno       : 2303
 Grupo       : TP 01
 Significado : Variáveis e Estrutura Sequencial
 Total MCs   : 1
@@ -16,18 +16,15 @@ Total MCs   : 1
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | #Quantidade de ingredientes
-     2 | var1 = 2**(1 + p/1000)
-     3 | var2 = p*pi**2/3141
-     4 | var3 = 2 * p/40**0.5
-     5 | 
-     6 | #Massa
-     7 | p = (var1 + var2 + var3)
-     8 | 
-     9 | #Impressao
-    10 | print(round(var1, 2))
-    11 | print(round(var2, 2))
-    12 | print(round(var3, 2))
+     1 | p = float(input("Insira a massa: "))
+     2 | flaw = 2**((1000+p)/1000)
+     3 | import math
+     4 | soul = (p*math.pi**2)/3141
+     5 | dwar = 2*(p/40)**(1/2)
+     6 | 
+     7 | print(round(flaw,2))
+     8 | print(round(soul,2))
+     9 | print(round(dwar,2))
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
@@ -36,32 +33,31 @@ DETALHAMENTO DOS MISCONCEPTIONS
 ▶ G4 — Funções/variáveis com nomes não significativos
   Ocorrências: 4
 
-  [1] Linha 2: Variável 'var1' com nome muito curto (≤4 chars)
-      Trecho  : var1 = ...
-      Contexto:
-               1 | #Quantidade de ingredientes
-        >>>    2 | var1 = 2**(1 + p/1000)
-               3 | var2 = p*pi**2/3141
-
-  [2] Linha 3: Variável 'var2' com nome muito curto (≤4 chars)
-      Trecho  : var2 = ...
-      Contexto:
-               2 | var1 = 2**(1 + p/1000)
-        >>>    3 | var2 = p*pi**2/3141
-               4 | var3 = 2 * p/40**0.5
-
-  [3] Linha 4: Variável 'var3' com nome muito curto (≤4 chars)
-      Trecho  : var3 = ...
-      Contexto:
-               3 | var2 = p*pi**2/3141
-        >>>    4 | var3 = 2 * p/40**0.5
-               5 | 
-
-  [4] Linha 7: Variável 'p' com nome muito curto (≤4 chars)
+  [1] Linha 1: Variável 'p' com nome muito curto (≤4 chars)
       Trecho  : p = ...
       Contexto:
-               6 | #Massa
-        >>>    7 | p = (var1 + var2 + var3)
-               8 | 
+        >>>    1 | p = float(input("Insira a massa: "))
+               2 | flaw = 2**((1000+p)/1000)
+
+  [2] Linha 2: Variável 'flaw' com nome muito curto (≤4 chars)
+      Trecho  : flaw = ...
+      Contexto:
+               1 | p = float(input("Insira a massa: "))
+        >>>    2 | flaw = 2**((1000+p)/1000)
+               3 | import math
+
+  [3] Linha 4: Variável 'soul' com nome muito curto (≤4 chars)
+      Trecho  : soul = ...
+      Contexto:
+               3 | import math
+        >>>    4 | soul = (p*math.pi**2)/3141
+               5 | dwar = 2*(p/40)**(1/2)
+
+  [4] Linha 5: Variável 'dwar' com nome muito curto (≤4 chars)
+      Trecho  : dwar = ...
+      Contexto:
+               4 | soul = (p*math.pi**2)/3141
+        >>>    5 | dwar = 2*(p/40)**(1/2)
+               6 | 
 
 ======================================================================

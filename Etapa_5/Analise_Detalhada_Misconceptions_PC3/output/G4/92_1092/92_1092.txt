@@ -1,12 +1,12 @@
 ======================================================================
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
-Arquivo     : 92_1092.py
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2016_1_v1.81\2016-1\109\users\1203\codes\92_1092.py
+Arquivo     : 92_1092.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2016_1_v1.81\2016-1\109\users\1117\executions\92_1092.log
 Assessment  : 92
 Título      : Avaliação Parcial 02 – Estrutura Condicional Composta (sem Aninhamento)
 Questão     : 1092
-Aluno       : 1203
+Aluno       : 1117
 Grupo       : TP 02
 Significado : Estrutura Condicional Simples e Composta
 Total MCs   : 1
@@ -16,17 +16,14 @@ Total MCs   : 1
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | X= int(input())
-     2 | s1=X//100
-     3 | s2=(X%100)//10
-     4 | s3=(X%100)%10//1
-     5 | 
-     6 | if (s1**3 + s2**3 + s3**3 == X):
-     7 | 	
-     8 | 	print(X, "atende a propriedade")
-     9 | else:
-    10 | 	print(s1**3 + s2**3 + s3**3)
-    11 | 	
+     1 | X = int(input())
+     2 | a = X//100
+     3 | b = (X%100)//10
+     4 | c = (X%100)%10
+     5 | if X == a**3 + b**3 + c**3:
+     6 | 	print(X ,"atende a propriedade")
+     7 | else:
+     8 | 	print(a**3 + b**3 + c**3)
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
@@ -38,28 +35,28 @@ DETALHAMENTO DOS MISCONCEPTIONS
   [1] Linha 1: Variável 'X' com nome muito curto (≤4 chars)
       Trecho  : X = ...
       Contexto:
-        >>>    1 | X= int(input())
-               2 | s1=X//100
+        >>>    1 | X = int(input())
+               2 | a = X//100
 
-  [2] Linha 2: Variável 's1' com nome muito curto (≤4 chars)
-      Trecho  : s1 = ...
+  [2] Linha 2: Variável 'a' com nome muito curto (≤4 chars)
+      Trecho  : a = ...
       Contexto:
-               1 | X= int(input())
-        >>>    2 | s1=X//100
-               3 | s2=(X%100)//10
+               1 | X = int(input())
+        >>>    2 | a = X//100
+               3 | b = (X%100)//10
 
-  [3] Linha 3: Variável 's2' com nome muito curto (≤4 chars)
-      Trecho  : s2 = ...
+  [3] Linha 3: Variável 'b' com nome muito curto (≤4 chars)
+      Trecho  : b = ...
       Contexto:
-               2 | s1=X//100
-        >>>    3 | s2=(X%100)//10
-               4 | s3=(X%100)%10//1
+               2 | a = X//100
+        >>>    3 | b = (X%100)//10
+               4 | c = (X%100)%10
 
-  [4] Linha 4: Variável 's3' com nome muito curto (≤4 chars)
-      Trecho  : s3 = ...
+  [4] Linha 4: Variável 'c' com nome muito curto (≤4 chars)
+      Trecho  : c = ...
       Contexto:
-               3 | s2=(X%100)//10
-        >>>    4 | s3=(X%100)%10//1
-               5 | 
+               3 | b = (X%100)//10
+        >>>    4 | c = (X%100)%10
+               5 | if X == a**3 + b**3 + c**3:
 
-======================================================================
+===========================================================================

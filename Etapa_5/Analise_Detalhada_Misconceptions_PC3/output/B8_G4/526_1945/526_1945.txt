@@ -1,8 +1,8 @@
 ======================================================================
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
-Arquivo     : 526_1945.py
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2017_1_v1.81\2017-1\143\users\2242\codes\526_1945.py
+Arquivo     : 526_1945.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2017_1_v1.81\2017-1\143\users\2242\executions\526_1945.log
 Assessment  : 526
 Título      : Trabalho Prático 02 - Estrutura Condicional Simples e Composta
 Questão     : 1945
@@ -18,12 +18,14 @@ CÓDIGO FONTE
 ----------------------------------------------------------------------
      1 | nome = input("Qual o nome do aminoácido? ")
      2 | 
-     3 | if(nome.upper() == "aspartato"):
-     4 | 	peso = (12.011 * 4) + (1.00794 * 6) + 14.0067 + (15.9994 * 4)
-     5 | 
-     6 | if(nome == "cisteina"):
-     7 | 	peso = (12.011 * 3) + (1.00794 * 7) + 14.0067 + (15.9994 * 2) + 32.066
-     8 | print(round(peso,2))
+     3 | #para calcular o peso molecular do aspartato
+     4 | if(nome.lower() == "aspartato"):
+     5 | 	peso = (12.011 * 4) + (1.00794 * 6) + 14.0067 + (15.9994 * 4)
+     6 | 
+     7 | #para calcular o peso molecular da cisteina
+     8 | if(nome == "cisteina"):
+     9 | 	peso = (12.011 * 3) + (1.00794 * 7) + 14.0067 + (15.9994 * 2) + 32.066
+    10 | print(round(peso,2))
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
@@ -44,18 +46,18 @@ DETALHAMENTO DOS MISCONCEPTIONS
         >>>    1 | nome = input("Qual o nome do aminoácido? ")
                2 | 
 
-  [2] Linha 4: Variável 'peso' com nome muito curto (≤4 chars)
+  [2] Linha 5: Variável 'peso' com nome muito curto (≤4 chars)
       Trecho  : peso = ...
       Contexto:
-               3 | if(nome.upper() == "aspartato"):
-        >>>    4 | 	peso = (12.011 * 4) + (1.00794 * 6) + 14.0067 + (15.9994 * 4)
-               5 | 
+               4 | if(nome.lower() == "aspartato"):
+        >>>    5 | 	peso = (12.011 * 4) + (1.00794 * 6) + 14.0067 + (15.9994 * 4)
+               6 | 
 
-  [3] Linha 7: Variável 'peso' com nome muito curto (≤4 chars)
+  [3] Linha 9: Variável 'peso' com nome muito curto (≤4 chars)
       Trecho  : peso = ...
       Contexto:
-               6 | if(nome == "cisteina"):
-        >>>    7 | 	peso = (12.011 * 3) + (1.00794 * 7) + 14.0067 + (15.9994 * 2) + 32.066
-               8 | print(round(peso,2))
+               8 | if(nome == "cisteina"):
+        >>>    9 | 	peso = (12.011 * 3) + (1.00794 * 7) + 14.0067 + (15.9994 * 2) + 32.066
+              10 | print(round(peso,2))
 
 ======================================================================

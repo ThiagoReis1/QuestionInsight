@@ -1,8 +1,8 @@
 ======================================================================
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
-Arquivo     : 1190_1537.py
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2018_1_v1.81\2018-1\188\users\3170\codes\1190_1537.py
+Arquivo     : 1190_1537.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2018_1_v1.81\2018-1\188\users\3170\executions\1190_1537.log
 Assessment  : 1190
 Título      : TP 4: Estrutura de Repetição por Condição (while)
 Questão     : 1537
@@ -23,14 +23,11 @@ CÓDIGO FONTE
      5 | while(k>0):
      6 | 	if(i==1):
      7 | 		soma=1+x+(x**2/(i))
-     8 | 		
+     8 | 		soma=cont+1
      9 | 	else:
     10 | 		soma=1+x+(x**2/(i))
-    11 | 		cont=cont+1
-    12 | print(round(cont, 9))
-    13 | 		
-    14 | 		
-    15 | 		
+    11 | 		soma=cont+1
+    12 | 		print(cont)
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
@@ -44,10 +41,10 @@ DETALHAMENTO DOS MISCONCEPTIONS
       Contexto:
                6 | 	if(i==1):
         >>>    7 | 		soma=1+x+(x**2/(i))
-               8 | 		
+               8 | 		soma=cont+1
 
 ▶ G4 — Funções/variáveis com nomes não significativos
-  Ocorrências: 7
+  Ocorrências: 8
 
   [1] Linha 1: Variável 'x' com nome muito curto (≤4 chars)
       Trecho  : x = ...
@@ -81,20 +78,27 @@ DETALHAMENTO DOS MISCONCEPTIONS
       Contexto:
                6 | 	if(i==1):
         >>>    7 | 		soma=1+x+(x**2/(i))
-               8 | 		
+               8 | 		soma=cont+1
 
-  [6] Linha 10: Variável 'soma' com nome muito curto (≤4 chars)
+  [6] Linha 8: Variável 'soma' com nome muito curto (≤4 chars)
+      Trecho  : soma = ...
+      Contexto:
+               7 | 		soma=1+x+(x**2/(i))
+        >>>    8 | 		soma=cont+1
+               9 | 	else:
+
+  [7] Linha 10: Variável 'soma' com nome muito curto (≤4 chars)
       Trecho  : soma = ...
       Contexto:
                9 | 	else:
         >>>   10 | 		soma=1+x+(x**2/(i))
-              11 | 		cont=cont+1
+              11 | 		soma=cont+1
 
-  [7] Linha 11: Variável 'cont' com nome muito curto (≤4 chars)
-      Trecho  : cont = ...
+  [8] Linha 11: Variável 'soma' com nome muito curto (≤4 chars)
+      Trecho  : soma = ...
       Contexto:
               10 | 		soma=1+x+(x**2/(i))
-        >>>   11 | 		cont=cont+1
-              12 | print(round(cont, 9))
+        >>>   11 | 		soma=cont+1
+              12 | 		print(cont)
 
 ======================================================================

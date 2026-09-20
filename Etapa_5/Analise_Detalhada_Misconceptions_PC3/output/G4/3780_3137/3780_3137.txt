@@ -1,12 +1,12 @@
 ======================================================================
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
-Arquivo     : 3780_3137.py
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2021_2_v1.81\2021-2\406\users\7136\codes\3780_3137.py
+Arquivo     : 3780_3137.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2021_2_v1.81\2021-2\406\users\7125\executions\3780_3137.log
 Assessment  : 3780
 Título      : TP 6: Estrutura de Repetição por Contagem (for)
 Questão     : 3137
-Aluno       : 7136
+Aluno       : 7125
 Grupo       : TP 06
 Significado : Estrutura de Repetição por Contagem
 Total MCs   : 1
@@ -18,57 +18,70 @@ CÓDIGO FONTE
 ----------------------------------------------------------------------
      1 | from numpy import *
      2 | 
-     3 | v = array(eval(input(": ")))
-     4 | s = 0
-     5 | i = 0
-     6 | 
-     7 | for i in range (size(v)):
-     8 | 	s = s + exp(v[i])
-     9 | 	
-    10 | m = log(s/(exp(size(v))))
-    11 | 
-    12 | print(round(m, 2))
+     3 | num = array(eval(input(": ")))
+     4 | 
+     5 | 
+     6 | m = 0
+     7 | o = exp(size(num))
+     8 | 
+     9 | for x in range(size(num)):
+    10 | 	m = m + exp(num[x])
+    11 | total = log(m/o)
+    12 | print(round(total,2))
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
 ----------------------------------------------------------------------
 
 ▶ G4 — Funções/variáveis com nomes não significativos
-  Ocorrências: 5
+  Ocorrências: 4
 
-  [1] Linha 3: Variável 'v' com nome muito curto (≤4 chars)
-      Trecho  : v = ...
+  [1] Linha 3: Variável 'num' com nome muito curto (≤4 chars)
+      Trecho  : num = ...
       Contexto:
                2 | 
-        >>>    3 | v = array(eval(input(": ")))
-               4 | s = 0
+        >>>    3 | num = array(eval(input(": ")))
+               4 | 
 
-  [2] Linha 4: Variável 's' com nome muito curto (≤4 chars)
-      Trecho  : s = ...
+  [2] Linha 6: Variável 'm' com nome muito curto (≤4 chars)
+      Trecho  : m = ...
       Contexto:
-               3 | v = array(eval(input(": ")))
-        >>>    4 | s = 0
-               5 | i = 0
+               5 | 
+        >>>    6 | m = 0
+               7 | o = exp(size(num))
 
-  [3] Linha 5: Variável 'i' com nome muito curto (≤4 chars)
-      Trecho  : i = ...
+  [3] Linha 7: Variável 'o' com nome muito curto (≤4 chars)
+      Trecho  : o = ...
       Contexto:
-               4 | s = 0
-        >>>    5 | i = 0
-               6 | 
+               6 | m = 0
+        >>>    7 | o = exp(size(num))
+               8 | 
 
   [4] Linha 10: Variável 'm' com nome muito curto (≤4 chars)
       Trecho  : m = ...
       Contexto:
-               9 | 	
-        >>>   10 | m = log(s/(exp(size(v))))
-              11 | 
+               9 | for x in range(size(num)):
+        >>>   10 | 	m = m + exp(num[x])
+              11 | total = log(m/o)
 
-  [5] Linha 8: Variável 's' com nome muito curto (≤4 chars)
-      Trecho  : s = ...
+======================================================================h = ...
       Contexto:
-               7 | for i in range (size(v)):
-        >>>    8 | 	s = s + exp(v[i])
-               9 | 	
+              11 | 	i = i + 1
+        >>>   12 | h = log(g/exp(c))
+              13 | 
+
+  [6] Linha 10: Variável 'g' com nome muito curto (≤4 chars)
+      Trecho  : g = ...
+      Contexto:
+               9 | while(i < size(n)):
+        >>>   10 | 	g = g + exp(n[i])
+              11 | 	i = i + 1
+
+  [7] Linha 11: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+              10 | 	g = g + exp(n[i])
+        >>>   11 | 	i = i + 1
+              12 | h = log(g/exp(c))
 
 ======================================================================

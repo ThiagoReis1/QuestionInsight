@@ -1,12 +1,12 @@
 ======================================================================
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
-Arquivo     : 1972_1366.py
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2019_2_v1.81\2019-2\261\users\4668\codes\1972_1366.py
+Arquivo     : 1972_1366.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2019_2_v1.81\2019-2\261\users\4682\executions\1972_1366.log
 Assessment  : 1972
 Título      : TP 01: Variáveis e Estrutura Sequencial (2019)
 Questão     : 1366
-Aluno       : 4668
+Aluno       : 4682
 Grupo       : TP 01
 Significado : Variáveis e Estrutura Sequencial
 Total MCs   : 1
@@ -16,39 +16,50 @@ Total MCs   : 1
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | from math import*
-     2 | angulo=float(input("angulo:"))
-     3 | vel=float(input("velocidade inicial:"))
-     4 | ang=radians(angulo)
-     5 | d=((vel**2)*((sin(2*ang))/9.8))
-     6 | print(round(d,2))
+     1 | from math import *
+     2 | 
+     3 | angu=radians(float(input("angulo:")))
+     4 | velo=float(input("velocidade:"))
+     5 | 
+     6 | grav=9.8
+     7 | 
+     8 | d=velo**2*(sin(2*angu)/grav)
+     9 | 
+    10 | print(round(d,2))
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
 ----------------------------------------------------------------------
 
 ▶ G4 — Funções/variáveis com nomes não significativos
-  Ocorrências: 3
+  Ocorrências: 4
 
-  [1] Linha 3: Variável 'vel' com nome muito curto (≤4 chars)
-      Trecho  : vel = ...
+  [1] Linha 3: Variável 'angu' com nome muito curto (≤4 chars)
+      Trecho  : angu = ...
       Contexto:
-               2 | angulo=float(input("angulo:"))
-        >>>    3 | vel=float(input("velocidade inicial:"))
-               4 | ang=radians(angulo)
+               2 | 
+        >>>    3 | angu=radians(float(input("angulo:")))
+               4 | velo=float(input("velocidade:"))
 
-  [2] Linha 4: Variável 'ang' com nome muito curto (≤4 chars)
-      Trecho  : ang = ...
+  [2] Linha 4: Variável 'velo' com nome muito curto (≤4 chars)
+      Trecho  : velo = ...
       Contexto:
-               3 | vel=float(input("velocidade inicial:"))
-        >>>    4 | ang=radians(angulo)
-               5 | d=((vel**2)*((sin(2*ang))/9.8))
+               3 | angu=radians(float(input("angulo:")))
+        >>>    4 | velo=float(input("velocidade:"))
+               5 | 
 
-  [3] Linha 5: Variável 'd' com nome muito curto (≤4 chars)
+  [3] Linha 6: Variável 'grav' com nome muito curto (≤4 chars)
+      Trecho  : grav = ...
+      Contexto:
+               5 | 
+        >>>    6 | grav=9.8
+               7 | 
+
+  [4] Linha 8: Variável 'd' com nome muito curto (≤4 chars)
       Trecho  : d = ...
       Contexto:
-               4 | ang=radians(angulo)
-        >>>    5 | d=((vel**2)*((sin(2*ang))/9.8))
-               6 | print(round(d,2))
+               7 | 
+        >>>    8 | d=velo**2*(sin(2*angu)/grav)
+               9 | 
 
 ======================================================================

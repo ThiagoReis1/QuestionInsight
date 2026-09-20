@@ -1,12 +1,12 @@
 ======================================================================
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
-Arquivo     : 1667_2968.py
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2019_1_v1.81\2019-1\223\users\4179\codes\1667_2968.py
+Arquivo     : 1667_2968.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2019_1_v1.81\2019-1\223\users\4194\executions\1667_2968.log
 Assessment  : 1667
 Título      : TP2 - Estrutura Condicional Simples e Composta
 Questão     : 2968
-Aluno       : 4179
+Aluno       : 4194
 Grupo       : TP 02
 Significado : Estrutura Condicional Simples e Composta
 Total MCs   : 1
@@ -16,49 +16,64 @@ Total MCs   : 1
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | l=input("lanche ou salgado:? L/S ")
-     2 | qt=int(input("Quantidade de lanches:?"))
-     3 | qtr=int(input("Quantidade de refrigerantes:?"))
-     4 | if (l=="L"):
-     5 | 	lan=5.00
-     6 | 	refri=4.00
-     7 | 	print(round(qt*lan+qtr*refri,2))
-     8 | else:
-     9 | 	print(S)
-    10 | 	
+     1 | var1 = input("(L/S: )")
+     2 | var2 = int(input("Quantidade: "))
+     3 | var3 = int(input("Quantidade de refrigerante: "))
+     4 | l = 5.00
+     5 | s = 3.50
+     6 | r = 4.00
+     7 | 
+     8 | if(var1 == "L"):
+     9 | 	print(float(var2*l + var3*r))
+    10 | else:
+    11 | 	print(float(var2*s + var3*r))
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
 ----------------------------------------------------------------------
 
 ▶ G4 — Funções/variáveis com nomes não significativos
-  Ocorrências: 4
+  Ocorrências: 6
 
-  [1] Linha 1: Variável 'l' com nome muito curto (≤4 chars)
+  [1] Linha 1: Variável 'var1' com nome muito curto (≤4 chars)
+      Trecho  : var1 = ...
+      Contexto:
+        >>>    1 | var1 = input("(L/S: )")
+               2 | var2 = int(input("Quantidade: "))
+
+  [2] Linha 2: Variável 'var2' com nome muito curto (≤4 chars)
+      Trecho  : var2 = ...
+      Contexto:
+               1 | var1 = input("(L/S: )")
+        >>>    2 | var2 = int(input("Quantidade: "))
+               3 | var3 = int(input("Quantidade de refrigerante: "))
+
+  [3] Linha 3: Variável 'var3' com nome muito curto (≤4 chars)
+      Trecho  : var3 = ...
+      Contexto:
+               2 | var2 = int(input("Quantidade: "))
+        >>>    3 | var3 = int(input("Quantidade de refrigerante: "))
+               4 | l = 5.00
+
+  [4] Linha 4: Variável 'l' com nome muito curto (≤4 chars)
       Trecho  : l = ...
       Contexto:
-        >>>    1 | l=input("lanche ou salgado:? L/S ")
-               2 | qt=int(input("Quantidade de lanches:?"))
+               3 | var3 = int(input("Quantidade de refrigerante: "))
+        >>>    4 | l = 5.00
+               5 | s = 3.50
 
-  [2] Linha 2: Variável 'qt' com nome muito curto (≤4 chars)
-      Trecho  : qt = ...
+  [5] Linha 5: Variável 's' com nome muito curto (≤4 chars)
+      Trecho  : s = ...
       Contexto:
-               1 | l=input("lanche ou salgado:? L/S ")
-        >>>    2 | qt=int(input("Quantidade de lanches:?"))
-               3 | qtr=int(input("Quantidade de refrigerantes:?"))
+               4 | l = 5.00
+        >>>    5 | s = 3.50
+               6 | r = 4.00
 
-  [3] Linha 3: Variável 'qtr' com nome muito curto (≤4 chars)
-      Trecho  : qtr = ...
+  [6] Linha 6: Variável 'r' com nome muito curto (≤4 chars)
+      Trecho  : r = ...
       Contexto:
-               2 | qt=int(input("Quantidade de lanches:?"))
-        >>>    3 | qtr=int(input("Quantidade de refrigerantes:?"))
-               4 | if (l=="L"):
-
-  [4] Linha 5: Variável 'lan' com nome muito curto (≤4 chars)
-      Trecho  : lan = ...
-      Contexto:
-               4 | if (l=="L"):
-        >>>    5 | 	lan=5.00
-               6 | 	refri=4.00
+               5 | s = 3.50
+        >>>    6 | r = 4.00
+               7 | 
 
 ======================================================================

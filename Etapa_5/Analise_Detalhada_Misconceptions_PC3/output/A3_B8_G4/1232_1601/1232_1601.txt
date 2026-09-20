@@ -1,12 +1,12 @@
 ======================================================================
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
-Arquivo     : 1232_1601.py
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2018_1_v1.81\2018-1\186\users\3140\codes\1232_1601.py
+Arquivo     : 1232_1601.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2018_1_v1.81\2018-1\186\users\3139\executions\1232_1601.log
 Assessment  : 1232
 Título      : TP 5: Vetores e Strings
 Questão     : 1601
-Aluno       : 3140
+Aluno       : 3139
 Grupo       : TP 05
 Significado : Vetores e Strings
 Total MCs   : 3
@@ -16,18 +16,19 @@ Total MCs   : 3
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | from numpy import*
-     2 | vet = array(eval(input("Tempo de chegada")))
-     3 | 
-     4 | i = min(vet)
-     5 | x= 0
-     6 | y=0
-     7 | 
-     8 | while(x < size(vet)):
-     9 | 	if(vet[x]==min(vet)):
-    10 | 		y= y +1
-    11 | 		print(x)
-    12 | 	x = x +1
+     1 | from numpy import* 
+     2 | 
+     3 | vet = array(eval(input("tempo dos competidores: ")))
+     4 | 
+     5 | x = min(vet)
+     6 | cp = 0
+     7 | cont = 0
+     8 | 
+     9 | while(cp < size(vet)):
+    10 | 	if(vet[cp] == min(vet)):
+    11 | 		cont = cont + 1
+    12 | 		print(cp)
+    13 | 	cp = cp + 1
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
@@ -36,12 +37,12 @@ DETALHAMENTO DOS MISCONCEPTIONS
 ▶ A3 — Variável inicializada desnecessariamente
   Ocorrências: 1
 
-  [1] Linha 4: Variável 'i' declarada mas nunca utilizada
-      Trecho  : i = ...
+  [1] Linha 5: Variável 'x' declarada mas nunca utilizada
+      Trecho  : x = ...
       Contexto:
-               3 | 
-        >>>    4 | i = min(vet)
-               5 | x= 0
+               4 | 
+        >>>    5 | x = min(vet)
+               6 | cp = 0
 
 ▶ B8 — Não utilização de elif/else
   Ocorrências: 1
@@ -52,45 +53,45 @@ DETALHAMENTO DOS MISCONCEPTIONS
 ▶ G4 — Funções/variáveis com nomes não significativos
   Ocorrências: 6
 
-  [1] Linha 2: Variável 'vet' com nome muito curto (≤4 chars)
+  [1] Linha 3: Variável 'vet' com nome muito curto (≤4 chars)
       Trecho  : vet = ...
       Contexto:
-               1 | from numpy import*
-        >>>    2 | vet = array(eval(input("Tempo de chegada")))
-               3 | 
+               2 | 
+        >>>    3 | vet = array(eval(input("tempo dos competidores: ")))
+               4 | 
 
-  [2] Linha 4: Variável 'i' com nome muito curto (≤4 chars)
-      Trecho  : i = ...
-      Contexto:
-               3 | 
-        >>>    4 | i = min(vet)
-               5 | x= 0
-
-  [3] Linha 5: Variável 'x' com nome muito curto (≤4 chars)
+  [2] Linha 5: Variável 'x' com nome muito curto (≤4 chars)
       Trecho  : x = ...
       Contexto:
-               4 | i = min(vet)
-        >>>    5 | x= 0
-               6 | y=0
+               4 | 
+        >>>    5 | x = min(vet)
+               6 | cp = 0
 
-  [4] Linha 6: Variável 'y' com nome muito curto (≤4 chars)
-      Trecho  : y = ...
+  [3] Linha 6: Variável 'cp' com nome muito curto (≤4 chars)
+      Trecho  : cp = ...
       Contexto:
-               5 | x= 0
-        >>>    6 | y=0
-               7 | 
+               5 | x = min(vet)
+        >>>    6 | cp = 0
+               7 | cont = 0
 
-  [5] Linha 12: Variável 'x' com nome muito curto (≤4 chars)
-      Trecho  : x = ...
+  [4] Linha 7: Variável 'cont' com nome muito curto (≤4 chars)
+      Trecho  : cont = ...
       Contexto:
-              11 | 		print(x)
-        >>>   12 | 	x = x +1
+               6 | cp = 0
+        >>>    7 | cont = 0
+               8 | 
 
-  [6] Linha 10: Variável 'y' com nome muito curto (≤4 chars)
-      Trecho  : y = ...
+  [5] Linha 13: Variável 'cp' com nome muito curto (≤4 chars)
+      Trecho  : cp = ...
       Contexto:
-               9 | 	if(vet[x]==min(vet)):
-        >>>   10 | 		y= y +1
-              11 | 		print(x)
+              12 | 		print(cp)
+        >>>   13 | 	cp = cp + 1
+
+  [6] Linha 11: Variável 'cont' com nome muito curto (≤4 chars)
+      Trecho  : cont = ...
+      Contexto:
+              10 | 	if(vet[cp] == min(vet)):
+        >>>   11 | 		cont = cont + 1
+              12 | 		print(cp)
 
 ======================================================================

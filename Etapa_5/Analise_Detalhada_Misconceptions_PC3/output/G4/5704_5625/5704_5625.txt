@@ -1,12 +1,12 @@
 ======================================================================
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
-Arquivo     : 5704_5625.py
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2024_1_v1.81\2024-1\590\users\9849\codes\5704_5625.py
+Arquivo     : 5704_5625.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2024_1_v1.81\2024-1\590\users\9832\executions\5704_5625.log
 Assessment  : 5704
 Título      : TP 2:  Est. Condicional Simples e Composta
 Questão     : 5625
-Aluno       : 9849
+Aluno       : 9832
 Grupo       : TP 02
 Significado : Estrutura Condicional Simples e Composta
 Total MCs   : 1
@@ -16,28 +16,107 @@ Total MCs   : 1
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | i = input().upper()
-     2 | qtd= float(input())
-     3 | qtd_acai= float(input())
-     4 | 
-     5 | T = 5.5
-     6 | S = 4
-     7 | A = 10
-     8 | if (i == "T"):
-     9 | 	valor=qtd*T + qtd_acai*A
-    10 | else:
-    11 | 	valor=qtd*S + qtd_acai*A
-    12 | print(round(valor,2))
-    13 | 	
+     1 | o = input("Tapioca (t ou T) ou Salgado (s ou S)? ").upper()
+     2 | 
+     3 | if ( o != "T" and o != "S" ) :
+     4 | 	print("T ou S!")
+     5 | 	
+     6 | else:
+     7 | 	q1 = input("Quantitade de alimentos: ")
+     8 | 	q2 = input("Quantidade de acais: ")
+     9 | 	
+    10 | 	try :
+    11 | 		q1 = int(q1)
+    12 | 		q2 = int(q2)
+    13 | 		
+    14 | 	except ValueError :
+    15 | 		print("Digite numeros!")
+    16 | 		
+    17 | 	else:
+    18 | 		if ( q1 < 0 or q2 < 0 ) :
+    19 | 			print("Digite valores positivos!")
+    20 | 			
+    21 | 		else :
+    22 | 			t = 5.5
+    23 | 			s = 4.0
+    24 | 			a = 10.0
+    25 | 			a = a * q2
+    26 | 			total = 0
+    27 | 			if ( o == "S" ) :
+    28 | 				total = ( q1 * s ) + a
+    29 | 				print( round(total,2) )
+    30 | 				
+    31 | 			else:
+    32 | 				total = ( q1 * t ) + a
+    33 | 				print( round(total,2) )
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
 ----------------------------------------------------------------------
 
 ▶ G4 — Funções/variáveis com nomes não significativos
-  Ocorrências: 1
+  Ocorrências: 9
 
-  [1] Linha 0: G4 detectado pelo VisitorMC3 (localização exata não mapeada)
-      Trecho  : —
+  [1] Linha 1: Variável 'o' com nome muito curto (≤4 chars)
+      Trecho  : o = ...
+      Contexto:
+        >>>    1 | o = input("Tapioca (t ou T) ou Salgado (s ou S)? ").upper()
+               2 | 
+
+  [2] Linha 7: Variável 'q1' com nome muito curto (≤4 chars)
+      Trecho  : q1 = ...
+      Contexto:
+               6 | else:
+        >>>    7 | 	q1 = input("Quantitade de alimentos: ")
+               8 | 	q2 = input("Quantidade de acais: ")
+
+  [3] Linha 8: Variável 'q2' com nome muito curto (≤4 chars)
+      Trecho  : q2 = ...
+      Contexto:
+               7 | 	q1 = input("Quantitade de alimentos: ")
+        >>>    8 | 	q2 = input("Quantidade de acais: ")
+               9 | 	
+
+  [4] Linha 11: Variável 'q1' com nome muito curto (≤4 chars)
+      Trecho  : q1 = ...
+      Contexto:
+              10 | 	try :
+        >>>   11 | 		q1 = int(q1)
+              12 | 		q2 = int(q2)
+
+  [5] Linha 12: Variável 'q2' com nome muito curto (≤4 chars)
+      Trecho  : q2 = ...
+      Contexto:
+              11 | 		q1 = int(q1)
+        >>>   12 | 		q2 = int(q2)
+              13 | 		
+
+  [6] Linha 22: Variável 't' com nome muito curto (≤4 chars)
+      Trecho  : t = ...
+      Contexto:
+              21 | 		else :
+        >>>   22 | 			t = 5.5
+              23 | 			s = 4.0
+
+  [7] Linha 23: Variável 's' com nome muito curto (≤4 chars)
+      Trecho  : s = ...
+      Contexto:
+              22 | 			t = 5.5
+        >>>   23 | 			s = 4.0
+              24 | 			a = 10.0
+
+  [8] Linha 24: Variável 'a' com nome muito curto (≤4 chars)
+      Trecho  : a = ...
+      Contexto:
+              23 | 			s = 4.0
+        >>>   24 | 			a = 10.0
+              25 | 			a = a * q2
+
+  [9] Linha 25: Variável 'a' com nome muito curto (≤4 chars)
+      Trecho  : a = ...
+      Contexto:
+              24 | 			a = 10.0
+        >>>   25 | 			a = a * q2
+              26 | 			total = 0
 
 ======================================================================

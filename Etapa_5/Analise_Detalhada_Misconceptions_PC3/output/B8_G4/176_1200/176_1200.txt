@@ -1,12 +1,12 @@
 ======================================================================
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
-Arquivo     : 176_1200.py
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2016_1_v1.81\2016-1\107\users\1752\codes\176_1200.py
+Arquivo     : 176_1200.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2016_1_v1.81\2016-1\107\users\1732\executions\176_1200.log
 Assessment  : 176
 Título      : Avaliação Parcial 05 – Vetores e Strings
 Questão     : 1200
-Aluno       : 1752
+Aluno       : 1732
 Grupo       : TP 05
 Significado : Vetores e Strings
 Total MCs   : 2
@@ -17,23 +17,26 @@ Total MCs   : 2
 CÓDIGO FONTE
 ----------------------------------------------------------------------
      1 | from numpy import*
-     2 | minimo = 0
-     3 | v = array(eval(input("Informe o vetor: ")))
-     4 | i = 0
-     5 | l = 0
-     6 | while(i < size(v)):
-     7 | 	if(minimo <= v[i]):
-     8 | 		l = l + 1
-     9 | 	i = i + 1
-    10 | v1 = ones(l, dtype=float)
-    11 | i = 0
-    12 | i1 = 0
-    13 | while(i < size(v)):
-    14 | 	if(minimo <= v[i]):
-    15 | 		v1[i1] = v[i]
-    16 | 		i1 = i1 + 1
-    17 | 	i = i + 1
-    18 | print(v1)
+     2 | #limites invalidos
+     3 | minimo = 0
+     4 | #vetor
+     5 | v = array(eval(input("Digite o vetor: ")))
+     6 | i = 0
+     7 | l = 0
+     8 | while(i < size(v)):
+     9 |    if(minimo <= v[i]):
+    10 |       l = l + 1
+    11 |    i = i + 1
+    12 | #formacao do vetor resultante
+    13 | v1 = ones(l, dtype=float)
+    14 | i = 0
+    15 | i1 = 0
+    16 | while(i < size(v)):
+    17 |    if(minimo <= v[i]):
+    18 |       v1[i1] = v[i]
+    19 |       i1 = i1 + 1
+    20 |    i = i + 1
+    21 | print(v1)
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
@@ -48,77 +51,73 @@ DETALHAMENTO DOS MISCONCEPTIONS
 ▶ G4 — Funções/variáveis com nomes não significativos
   Ocorrências: 10
 
-  [1] Linha 3: Variável 'v' com nome muito curto (≤4 chars)
+  [1] Linha 5: Variável 'v' com nome muito curto (≤4 chars)
       Trecho  : v = ...
       Contexto:
-               2 | minimo = 0
-        >>>    3 | v = array(eval(input("Informe o vetor: ")))
-               4 | i = 0
+               4 | #vetor
+        >>>    5 | v = array(eval(input("Digite o vetor: ")))
+               6 | i = 0
 
-  [2] Linha 4: Variável 'i' com nome muito curto (≤4 chars)
+  [2] Linha 6: Variável 'i' com nome muito curto (≤4 chars)
       Trecho  : i = ...
       Contexto:
-               3 | v = array(eval(input("Informe o vetor: ")))
-        >>>    4 | i = 0
-               5 | l = 0
+               5 | v = array(eval(input("Digite o vetor: ")))
+        >>>    6 | i = 0
+               7 | l = 0
 
-  [3] Linha 5: Variável 'l' com nome muito curto (≤4 chars)
+  [3] Linha 7: Variável 'l' com nome muito curto (≤4 chars)
       Trecho  : l = ...
       Contexto:
-               4 | i = 0
-        >>>    5 | l = 0
-               6 | while(i < size(v)):
+               6 | i = 0
+        >>>    7 | l = 0
+               8 | while(i < size(v)):
 
-  [4] Linha 10: Variável 'v1' com nome muito curto (≤4 chars)
+  [4] Linha 13: Variável 'v1' com nome muito curto (≤4 chars)
       Trecho  : v1 = ...
       Contexto:
-               9 | 	i = i + 1
-        >>>   10 | v1 = ones(l, dtype=float)
-              11 | i = 0
+              12 | #formacao do vetor resultante
+        >>>   13 | v1 = ones(l, dtype=float)
+              14 | i = 0
 
-  [5] Linha 11: Variável 'i' com nome muito curto (≤4 chars)
+  [5] Linha 14: Variável 'i' com nome muito curto (≤4 chars)
       Trecho  : i = ...
       Contexto:
-              10 | v1 = ones(l, dtype=float)
-        >>>   11 | i = 0
-              12 | i1 = 0
+              13 | v1 = ones(l, dtype=float)
+        >>>   14 | i = 0
+              15 | i1 = 0
 
-  [6] Linha 12: Variável 'i1' com nome muito curto (≤4 chars)
+  [6] Linha 15: Variável 'i1' com nome muito curto (≤4 chars)
       Trecho  : i1 = ...
       Contexto:
-              11 | i = 0
-        >>>   12 | i1 = 0
-              13 | while(i < size(v)):
+              14 | i = 0
+        >>>   15 | i1 = 0
+              16 | while(i < size(v)):
 
-  [7] Linha 9: Variável 'i' com nome muito curto (≤4 chars)
+  [7] Linha 11: Variável 'i' com nome muito curto (≤4 chars)
       Trecho  : i = ...
       Contexto:
-               8 | 		l = l + 1
-        >>>    9 | 	i = i + 1
-              10 | v1 = ones(l, dtype=float)
+              10 |       l = l + 1
+        >>>   11 |    i = i + 1
+              12 | #formacao do vetor resultante
 
-  [8] Linha 17: Variável 'i' com nome muito curto (≤4 chars)
+  [8] Linha 20: Variável 'i' com nome muito curto (≤4 chars)
       Trecho  : i = ...
       Contexto:
-              16 | 		i1 = i1 + 1
-        >>>   17 | 	i = i + 1
-              18 | print(v1)
+              19 |       i1 = i1 + 1
+        >>>   20 |    i = i + 1
+              21 | print(v1)
 
-  [9] Linha 8: Variável 'l' com nome muito curto (≤4 chars)
+  [9] Linha 10: Variável 'l' com nome muito curto (≤4 chars)
       Trecho  : l = ...
       Contexto:
-               7 | 	if(minimo <= v[i]):
-        >>>    8 | 		l = l + 1
-               9 | 	i = i + 1
+               9 |    if(minimo <= v[i]):
+        >>>   10 |       l = l + 1
+              11 |    i = i + 1
 
-  [10] Linha 16: Variável 'i1' com nome muito curto (≤4 chars)
+  [10] Linha 19: Variável 'i1' com nome muito curto (≤4 chars)
       Trecho  : i1 = ...
       Contexto:
-              15 | 		v1[i1] = v[i]
-        >>>   16 | 		i1 = i1 + 1
-              17 | 	i = i + 1
-
-======================================================================1] = v[i]
+              18 |       v1[i1] = v[i]
         >>>   19 |       i1 = i1 + 1
               20 |    i = i + 1
 

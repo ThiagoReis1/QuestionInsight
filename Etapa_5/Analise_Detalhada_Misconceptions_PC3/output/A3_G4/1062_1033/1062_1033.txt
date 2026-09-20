@@ -1,12 +1,12 @@
 ======================================================================
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
-Arquivo     : 1062_1033.py
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2018_1_v1.81\2018-1\188\users\3440\codes\1062_1033.py
+Arquivo     : 1062_1033.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2018_1_v1.81\2018-1\188\users\3177\executions\1062_1033.log
 Assessment  : 1062
 Título      : TP01 - Variáveis e Estrutura Sequencial
 Questão     : 1033
-Aluno       : 3440
+Aluno       : 3177
 Grupo       : TP 01
 Significado : Variáveis e Estrutura Sequencial
 Total MCs   : 2
@@ -16,67 +16,62 @@ Total MCs   : 2
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | merc = 43.21
-     2 | taxa = 25.00
-     3 | 
-     4 | peso = input("Digite o peso da mercadoria transportada: ")
-     5 | 
-     6 | valor = float(input("Digite o valor total: "))
+     1 | kg = float(input("peso da mercadoria"))
+     2 | mk = 43.21 * kg
+     3 | tf = 25
+     4 | ic = 62/100
+     5 | P = ((mk + tf) * 62/100) + (mk + tf)
+     6 | print(round(P,2))
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
 ----------------------------------------------------------------------
 
 ▶ A3 — Variável inicializada desnecessariamente
-  Ocorrências: 4
+  Ocorrências: 1
 
-  [1] Linha 1: Variável 'merc' declarada mas nunca utilizada
-      Trecho  : merc = ...
+  [1] Linha 4: Variável 'ic' declarada mas nunca utilizada
+      Trecho  : ic = ...
       Contexto:
-        >>>    1 | merc = 43.21
-               2 | taxa = 25.00
-
-  [2] Linha 2: Variável 'taxa' declarada mas nunca utilizada
-      Trecho  : taxa = ...
-      Contexto:
-               1 | merc = 43.21
-        >>>    2 | taxa = 25.00
-               3 | 
-
-  [3] Linha 4: Variável 'peso' declarada mas nunca utilizada
-      Trecho  : peso = ...
-      Contexto:
-               3 | 
-        >>>    4 | peso = input("Digite o peso da mercadoria transportada: ")
-               5 | 
-
-  [4] Linha 6: Variável 'valor' declarada mas nunca utilizada
-      Trecho  : valor = ...
-      Contexto:
-               5 | 
-        >>>    6 | valor = float(input("Digite o valor total: "))
+               3 | tf = 25
+        >>>    4 | ic = 62/100
+               5 | P = ((mk + tf) * 62/100) + (mk + tf)
 
 ▶ G4 — Funções/variáveis com nomes não significativos
-  Ocorrências: 3
+  Ocorrências: 5
 
-  [1] Linha 1: Variável 'merc' com nome muito curto (≤4 chars)
-      Trecho  : merc = ...
+  [1] Linha 1: Variável 'kg' com nome muito curto (≤4 chars)
+      Trecho  : kg = ...
       Contexto:
-        >>>    1 | merc = 43.21
-               2 | taxa = 25.00
+        >>>    1 | kg = float(input("peso da mercadoria"))
+               2 | mk = 43.21 * kg
 
-  [2] Linha 2: Variável 'taxa' com nome muito curto (≤4 chars)
-      Trecho  : taxa = ...
+  [2] Linha 2: Variável 'mk' com nome muito curto (≤4 chars)
+      Trecho  : mk = ...
       Contexto:
-               1 | merc = 43.21
-        >>>    2 | taxa = 25.00
-               3 | 
+               1 | kg = float(input("peso da mercadoria"))
+        >>>    2 | mk = 43.21 * kg
+               3 | tf = 25
 
-  [3] Linha 4: Variável 'peso' com nome muito curto (≤4 chars)
-      Trecho  : peso = ...
+  [3] Linha 3: Variável 'tf' com nome muito curto (≤4 chars)
+      Trecho  : tf = ...
       Contexto:
-               3 | 
-        >>>    4 | peso = input("Digite o peso da mercadoria transportada: ")
-               5 | 
+               2 | mk = 43.21 * kg
+        >>>    3 | tf = 25
+               4 | ic = 62/100
+
+  [4] Linha 4: Variável 'ic' com nome muito curto (≤4 chars)
+      Trecho  : ic = ...
+      Contexto:
+               3 | tf = 25
+        >>>    4 | ic = 62/100
+               5 | P = ((mk + tf) * 62/100) + (mk + tf)
+
+  [5] Linha 5: Variável 'P' com nome muito curto (≤4 chars)
+      Trecho  : P = ...
+      Contexto:
+               4 | ic = 62/100
+        >>>    5 | P = ((mk + tf) * 62/100) + (mk + tf)
+               6 | print(round(P,2))
 
 ======================================================================

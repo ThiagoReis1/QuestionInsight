@@ -1,12 +1,12 @@
 ======================================================================
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
-Arquivo     : 5935_6371.py
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2024_1_v1.81\2024-1\589\users\9840\codes\5935_6371.py
+Arquivo     : 5935_6371.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2024_1_v1.81\2024-1\589\users\9746\executions\5935_6371.log
 Assessment  : 5935
 Título      : TP 6: Estrutura de Repetição por Contagem (for)
 Questão     : 6371
-Aluno       : 9840
+Aluno       : 9746
 Grupo       : TP 06
 Significado : Estrutura de Repetição por Contagem
 Total MCs   : 1
@@ -16,35 +16,30 @@ Total MCs   : 1
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | from numpy import*
-     2 | v= array(eval(input("manda la:")))
-     3 | z=zeros(size(v),dtype=int)
-     4 | for i in range(size(v)):
-     5 | 	if v[i]!=0:
-     6 | 		z[i]=z[i]+(v[i]-1)**2
-     7 | 	else:
-     8 | 		z[i]=z[i]+9**2
-     9 | print(z, end=" ")
+     1 | from numpy import *
+     2 | 
+     3 | v = array(eval(input()))
+     4 | 
+     5 | for i in range(0, len(v)):
+     6 | 	if v[i] == 0:
+     7 | 		v[i] = 81
+     8 | 	else:	
+     9 | 		v[i] = (v[i] - 1)**2
+    10 | 	
+    11 | print(v)
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
 ----------------------------------------------------------------------
 
 ▶ G4 — Funções/variáveis com nomes não significativos
-  Ocorrências: 2
+  Ocorrências: 1
 
-  [1] Linha 2: Variável 'v' com nome muito curto (≤4 chars)
+  [1] Linha 3: Variável 'v' com nome muito curto (≤4 chars)
       Trecho  : v = ...
       Contexto:
-               1 | from numpy import*
-        >>>    2 | v= array(eval(input("manda la:")))
-               3 | z=zeros(size(v),dtype=int)
-
-  [2] Linha 3: Variável 'z' com nome muito curto (≤4 chars)
-      Trecho  : z = ...
-      Contexto:
-               2 | v= array(eval(input("manda la:")))
-        >>>    3 | z=zeros(size(v),dtype=int)
-               4 | for i in range(size(v)):
+               2 | 
+        >>>    3 | v = array(eval(input()))
+               4 | 
 
 ======================================================================

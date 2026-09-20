@@ -1,12 +1,12 @@
 ======================================================================
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
-Arquivo     : 473_1364.py
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2017_1_v1.81\2017-1\143\users\2247\codes\473_1364.py
+Arquivo     : 473_1364.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2017_1_v1.81\2017-1\143\users\2271\executions\473_1364.log
 Assessment  : 473
 Título      : Trabalho Prático 01: Variáveis e Estrutura Sequencial de Programação
 Questão     : 1364
-Aluno       : 2247
+Aluno       : 2271
 Grupo       : TP 01
 Significado : Variáveis e Estrutura Sequencial
 Total MCs   : 2
@@ -16,122 +16,59 @@ Total MCs   : 2
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | from math import *
-     2 | v = float(input("entre com a velocidade"))
-     3 | d = float(input("entre com a distancia"))
-     4 | g = float(input(9.8))
+     1 | vo = float(input("velocidade inicial: "))
+     2 | d = float(input("distancia: "))
+     3 | a = 30
+     4 | g = 9.8
+     5 | from math import *
+     6 | a = asin(d * (g / vo ** 2)) * 90 / pi
+     7 | print(round(a, 2))
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
 ----------------------------------------------------------------------
 
 ▶ A3 — Variável inicializada desnecessariamente
-  Ocorrências: 3
+  Ocorrências: 1
 
-  [1] Linha 2: Variável 'v' declarada mas nunca utilizada
-      Trecho  : v = ...
-      Contexto:
-               1 | from math import *
-        >>>    2 | v = float(input("entre com a velocidade"))
-               3 | d = float(input("entre com a distancia"))
-
-  [2] Linha 3: Variável 'd' declarada mas nunca utilizada
-      Trecho  : d = ...
-      Contexto:
-               2 | v = float(input("entre com a velocidade"))
-        >>>    3 | d = float(input("entre com a distancia"))
-               4 | g = float(input(9.8))
-
-  [3] Linha 4: Variável 'g' declarada mas nunca utilizada
-      Trecho  : g = ...
-      Contexto:
-               3 | d = float(input("entre com a distancia"))
-        >>>    4 | g = float(input(9.8))
+  [1] Linha 0: A3 detectado pelo VisitorMC3 (localização exata não mapeada)
+      Trecho  : —
 
 ▶ G4 — Funções/variáveis com nomes não significativos
-  Ocorrências: 3
+  Ocorrências: 5
 
-  [1] Linha 2: Variável 'v' com nome muito curto (≤4 chars)
-      Trecho  : v = ...
+  [1] Linha 1: Variável 'vo' com nome muito curto (≤4 chars)
+      Trecho  : vo = ...
       Contexto:
-               1 | from math import *
-        >>>    2 | v = float(input("entre com a velocidade"))
-               3 | d = float(input("entre com a distancia"))
+        >>>    1 | vo = float(input("velocidade inicial: "))
+               2 | d = float(input("distancia: "))
 
-  [2] Linha 3: Variável 'd' com nome muito curto (≤4 chars)
+  [2] Linha 2: Variável 'd' com nome muito curto (≤4 chars)
       Trecho  : d = ...
       Contexto:
-               2 | v = float(input("entre com a velocidade"))
-        >>>    3 | d = float(input("entre com a distancia"))
-               4 | g = float(input(9.8))
+               1 | vo = float(input("velocidade inicial: "))
+        >>>    2 | d = float(input("distancia: "))
+               3 | a = 30
 
-  [3] Linha 4: Variável 'g' com nome muito curto (≤4 chars)
+  [3] Linha 3: Variável 'a' com nome muito curto (≤4 chars)
+      Trecho  : a = ...
+      Contexto:
+               2 | d = float(input("distancia: "))
+        >>>    3 | a = 30
+               4 | g = 9.8
+
+  [4] Linha 4: Variável 'g' com nome muito curto (≤4 chars)
       Trecho  : g = ...
       Contexto:
-               3 | d = float(input("entre com a distancia"))
-        >>>    4 | g = float(input(9.8))
+               3 | a = 30
+        >>>    4 | g = 9.8
+               5 | from math import *
 
-======================================================================         13 | d = float(input("Digite uma distancia:"))
-        >>>   14 | v0 = float(input("Digite uma velocidade inicial:"))
-              15 | g = float(input("9.8"))
-
-  [6] Linha 15: Variável 'g' declarada mas nunca utilizada
-      Trecho  : g = ...
+  [5] Linha 6: Variável 'a' com nome muito curto (≤4 chars)
+      Trecho  : a = ...
       Contexto:
-              14 | v0 = float(input("Digite uma velocidade inicial:"))
-        >>>   15 | g = float(input("9.8"))
-              16 | 
-
-▶ G4 — Funções/variáveis com nomes não significativos
-  Ocorrências: 7
-
-  [1] Linha 5: Variável 'an' com nome muito curto (≤4 chars)
-      Trecho  : an = ...
-      Contexto:
-               4 | 
-        >>>    5 | an = (float(input("asin(d*g/v0**2)*90/pi")))
-               6 | 
-
-  [2] Linha 9: Variável 'an' com nome muito curto (≤4 chars)
-      Trecho  : an = ...
-      Contexto:
-               8 | # entrada das variaveis para calcular angulo
-        >>>    9 | an = input("valor do angulo")
-              10 | 
-
-  [3] Linha 11: Variável 'asin' com nome muito curto (≤4 chars)
-      Trecho  : asin = ...
-      Contexto:
-              10 | 
-        >>>   11 | asin = float(input("Digite um valor "))
-              12 | pi = math(float(input("Digite um valor em pi:")))
-
-  [4] Linha 12: Variável 'pi' com nome muito curto (≤4 chars)
-      Trecho  : pi = ...
-      Contexto:
-              11 | asin = float(input("Digite um valor "))
-        >>>   12 | pi = math(float(input("Digite um valor em pi:")))
-              13 | d = float(input("Digite uma distancia:"))
-
-  [5] Linha 13: Variável 'd' com nome muito curto (≤4 chars)
-      Trecho  : d = ...
-      Contexto:
-              12 | pi = math(float(input("Digite um valor em pi:")))
-        >>>   13 | d = float(input("Digite uma distancia:"))
-              14 | v0 = float(input("Digite uma velocidade inicial:"))
-
-  [6] Linha 14: Variável 'v0' com nome muito curto (≤4 chars)
-      Trecho  : v0 = ...
-      Contexto:
-              13 | d = float(input("Digite uma distancia:"))
-        >>>   14 | v0 = float(input("Digite uma velocidade inicial:"))
-              15 | g = float(input("9.8"))
-
-  [7] Linha 15: Variável 'g' com nome muito curto (≤4 chars)
-      Trecho  : g = ...
-      Contexto:
-              14 | v0 = float(input("Digite uma velocidade inicial:"))
-        >>>   15 | g = float(input("9.8"))
-              16 | 
+               5 | from math import *
+        >>>    6 | a = asin(d * (g / vo ** 2)) * 90 / pi
+               7 | print(round(a, 2))
 
 ======================================================================

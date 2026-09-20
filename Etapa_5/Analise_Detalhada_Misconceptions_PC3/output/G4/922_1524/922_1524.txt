@@ -1,12 +1,12 @@
 ======================================================================
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
-Arquivo     : 922_1524.py
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2017_2_v1.81\2017-2\162\users\2535\codes\922_1524.py
+Arquivo     : 922_1524.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2017_2_v1.81\2017-2\162\users\2825\executions\922_1524.log
 Assessment  : 922
 Título      : Trabalho Prático 4: Estrutura de Repetição por Condição (while)
 Questão     : 1524
-Aluno       : 2535
+Aluno       : 2825
 Grupo       : TP 04
 Significado : Estrutura de Repetição por Condição
 Total MCs   : 1
@@ -16,78 +16,77 @@ Total MCs   : 1
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | qi = int(input("qi: "))
-     2 | x = int(input("x: "))
-     3 | y = int(input("y: "))
-     4 | t = 0
-     5 | 
-     6 | while(qi > 0):
-     7 | 	qi = qi - y
-     8 | 	qi = qi + x
-     9 | 	t = t + 1
-    10 | 	
-    11 | print(t)
+     1 | qi = int(input("quantidade inicial de grifos:"))
+     2 | qx = int (input("novos grifos:"))
+     3 | qy = int(input("grifos contaminados:"))
+     4 | tt = qi + qx
+     5 | t = 1
+     6 | while(tt > qy ):
+     7 | 	qi = tt - qy
+     8 | 	tt = qi + qx
+     9 | 	t = t +1
+    10 | print(t)
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
 ----------------------------------------------------------------------
 
 ▶ G4 — Funções/variáveis com nomes não significativos
-  Ocorrências: 7
+  Ocorrências: 8
 
   [1] Linha 1: Variável 'qi' com nome muito curto (≤4 chars)
       Trecho  : qi = ...
       Contexto:
-        >>>    1 | qi = int(input("qi: "))
-               2 | x = int(input("x: "))
+        >>>    1 | qi = int(input("quantidade inicial de grifos:"))
+               2 | qx = int (input("novos grifos:"))
 
-  [2] Linha 2: Variável 'x' com nome muito curto (≤4 chars)
-      Trecho  : x = ...
+  [2] Linha 2: Variável 'qx' com nome muito curto (≤4 chars)
+      Trecho  : qx = ...
       Contexto:
-               1 | qi = int(input("qi: "))
-        >>>    2 | x = int(input("x: "))
-               3 | y = int(input("y: "))
+               1 | qi = int(input("quantidade inicial de grifos:"))
+        >>>    2 | qx = int (input("novos grifos:"))
+               3 | qy = int(input("grifos contaminados:"))
 
-  [3] Linha 3: Variável 'y' com nome muito curto (≤4 chars)
-      Trecho  : y = ...
+  [3] Linha 3: Variável 'qy' com nome muito curto (≤4 chars)
+      Trecho  : qy = ...
       Contexto:
-               2 | x = int(input("x: "))
-        >>>    3 | y = int(input("y: "))
-               4 | t = 0
+               2 | qx = int (input("novos grifos:"))
+        >>>    3 | qy = int(input("grifos contaminados:"))
+               4 | tt = qi + qx
 
-  [4] Linha 4: Variável 't' com nome muito curto (≤4 chars)
+  [4] Linha 4: Variável 'tt' com nome muito curto (≤4 chars)
+      Trecho  : tt = ...
+      Contexto:
+               3 | qy = int(input("grifos contaminados:"))
+        >>>    4 | tt = qi + qx
+               5 | t = 1
+
+  [5] Linha 5: Variável 't' com nome muito curto (≤4 chars)
       Trecho  : t = ...
       Contexto:
-               3 | y = int(input("y: "))
-        >>>    4 | t = 0
-               5 | 
+               4 | tt = qi + qx
+        >>>    5 | t = 1
+               6 | while(tt > qy ):
 
-  [5] Linha 7: Variável 'qi' com nome muito curto (≤4 chars)
+  [6] Linha 7: Variável 'qi' com nome muito curto (≤4 chars)
       Trecho  : qi = ...
       Contexto:
-               6 | while(qi > 0):
-        >>>    7 | 	qi = qi - y
-               8 | 	qi = qi + x
+               6 | while(tt > qy ):
+        >>>    7 | 	qi = tt - qy
+               8 | 	tt = qi + qx
 
-  [6] Linha 8: Variável 'qi' com nome muito curto (≤4 chars)
-      Trecho  : qi = ...
+  [7] Linha 8: Variável 'tt' com nome muito curto (≤4 chars)
+      Trecho  : tt = ...
       Contexto:
-               7 | 	qi = qi - y
-        >>>    8 | 	qi = qi + x
-               9 | 	t = t + 1
+               7 | 	qi = tt - qy
+        >>>    8 | 	tt = qi + qx
+               9 | 	t = t +1
 
-  [7] Linha 9: Variável 't' com nome muito curto (≤4 chars)
+  [8] Linha 9: Variável 't' com nome muito curto (≤4 chars)
       Trecho  : t = ...
       Contexto:
-               8 | 	qi = qi + x
-        >>>    9 | 	t = t + 1
-              10 | 	
-
-=================================================================================Variável 't' com nome muito curto (≤4 chars)
-      Trecho  : t = ...
-      Contexto:
-               8 | 	q = q + qx - qy
-        >>>    9 | 	t = t + 1
+               8 | 	tt = qi + qx
+        >>>    9 | 	t = t +1
               10 | print(t)
 
 ======================================================================

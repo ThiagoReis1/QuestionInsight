@@ -1,12 +1,12 @@
 ======================================================================
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
-Arquivo     : 3782_1643.py
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2021_2_v1.81\2021-2\407\users\7158\codes\3782_1643.py
+Arquivo     : 3782_1643.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2021_2_v1.81\2021-2\407\users\6080\executions\3782_1643.log
 Assessment  : 3782
 Título      : TP 6: Estrutura de Repetição por Contagem (for)
 Questão     : 1643
-Aluno       : 7158
+Aluno       : 6080
 Grupo       : TP 06
 Significado : Estrutura de Repetição por Contagem
 Total MCs   : 2
@@ -17,18 +17,17 @@ Total MCs   : 2
 CÓDIGO FONTE
 ----------------------------------------------------------------------
      1 | from numpy import*
-     2 | notas = array(eval(input("Informe as notas: ")))
-     3 | rp = 0
-     4 | ind = []
-     5 | 
-     6 | for i in range(size(notas)):
-     7 | 	if notas[i] >= 5:
-     8 | 		rp = rp + 1
-     9 | 		ind.append(i)
-    10 | u = zeros(size(ind),dtype=int)
-    11 | u = u + ind
-    12 | print(rp)
-    13 | print(u)
+     2 | nota=array(eval(input("notas: ")))
+     3 | ap=0
+     4 | ind=[]
+     5 | for i in range(size(nota)):
+     6 | 	if nota[i]>=5.0:
+     7 | 		ap=ap+1
+     8 | 		ind.append(i)
+     9 | u=zeros(size(ind),dtype=int)
+    10 | u=u+ind
+    11 | print(ap)
+    12 | print(u)
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
@@ -41,41 +40,48 @@ DETALHAMENTO DOS MISCONCEPTIONS
       Trecho  : —
 
 ▶ G4 — Funções/variáveis com nomes não significativos
-  Ocorrências: 5
+  Ocorrências: 6
 
-  [1] Linha 3: Variável 'rp' com nome muito curto (≤4 chars)
-      Trecho  : rp = ...
+  [1] Linha 2: Variável 'nota' com nome muito curto (≤4 chars)
+      Trecho  : nota = ...
       Contexto:
-               2 | notas = array(eval(input("Informe as notas: ")))
-        >>>    3 | rp = 0
-               4 | ind = []
+               1 | from numpy import*
+        >>>    2 | nota=array(eval(input("notas: ")))
+               3 | ap=0
 
-  [2] Linha 4: Variável 'ind' com nome muito curto (≤4 chars)
+  [2] Linha 3: Variável 'ap' com nome muito curto (≤4 chars)
+      Trecho  : ap = ...
+      Contexto:
+               2 | nota=array(eval(input("notas: ")))
+        >>>    3 | ap=0
+               4 | ind=[]
+
+  [3] Linha 4: Variável 'ind' com nome muito curto (≤4 chars)
       Trecho  : ind = ...
       Contexto:
-               3 | rp = 0
-        >>>    4 | ind = []
-               5 | 
+               3 | ap=0
+        >>>    4 | ind=[]
+               5 | for i in range(size(nota)):
 
-  [3] Linha 10: Variável 'u' com nome muito curto (≤4 chars)
+  [4] Linha 9: Variável 'u' com nome muito curto (≤4 chars)
       Trecho  : u = ...
       Contexto:
-               9 | 		ind.append(i)
-        >>>   10 | u = zeros(size(ind),dtype=int)
-              11 | u = u + ind
+               8 | 		ind.append(i)
+        >>>    9 | u=zeros(size(ind),dtype=int)
+              10 | u=u+ind
 
-  [4] Linha 11: Variável 'u' com nome muito curto (≤4 chars)
+  [5] Linha 10: Variável 'u' com nome muito curto (≤4 chars)
       Trecho  : u = ...
       Contexto:
-              10 | u = zeros(size(ind),dtype=int)
-        >>>   11 | u = u + ind
-              12 | print(rp)
+               9 | u=zeros(size(ind),dtype=int)
+        >>>   10 | u=u+ind
+              11 | print(ap)
 
-  [5] Linha 8: Variável 'rp' com nome muito curto (≤4 chars)
-      Trecho  : rp = ...
+  [6] Linha 7: Variável 'ap' com nome muito curto (≤4 chars)
+      Trecho  : ap = ...
       Contexto:
-               7 | 	if notas[i] >= 5:
-        >>>    8 | 		rp = rp + 1
-               9 | 		ind.append(i)
+               6 | 	if nota[i]>=5.0:
+        >>>    7 | 		ap=ap+1
+               8 | 		ind.append(i)
 
 ======================================================================

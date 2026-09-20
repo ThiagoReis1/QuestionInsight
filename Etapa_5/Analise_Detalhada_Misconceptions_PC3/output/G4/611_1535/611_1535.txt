@@ -1,12 +1,12 @@
 ======================================================================
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
-Arquivo     : 611_1535.py
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2017_1_v1.81\2017-1\135\users\2338\codes\611_1535.py
+Arquivo     : 611_1535.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2017_1_v1.81\2017-1\135\users\2117\executions\611_1535.log
 Assessment  : 611
 Título      : Trabalho Prático 4: Estrutura de Repetição por Condição (while)
 Questão     : 1535
-Aluno       : 2338
+Aluno       : 2117
 Grupo       : TP 04
 Significado : Estrutura de Repetição por Condição
 Total MCs   : 1
@@ -16,21 +16,20 @@ Total MCs   : 1
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | from math import*
-     2 | 
-     3 | x = int(input("digite um numero: "))
-     4 | k = int(input("digite um numero: "))
-     5 | 
-     6 | soma = 0
-     7 | sinal = -1
-     8 | e = 1
-     9 | a = 1
-    10 | while (e <= k):
-    11 | 	soma = soma - sinal * (x**e/a)
-    12 | 	sinal = -sinal
-    13 | 	e = e+4
-    14 | 	a = a+2
-    15 | print(round(soma ,6))
+     1 | x=float(input("número real x: "))
+     2 | k=int(input("quantidade de termos: "))
+     3 | 
+     4 | t=0
+     5 | sinal=1
+     6 | e=1
+     7 | y=0
+     8 | 
+     9 | while(t<k):
+    10 | 	y=y+sinal*((x**e)/e)
+    11 | 	e=e+2
+    12 | 	t=t+1
+    13 | 	sinal=-sinal
+    14 | print(round(y,6))
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
@@ -39,60 +38,59 @@ DETALHAMENTO DOS MISCONCEPTIONS
 ▶ G4 — Funções/variáveis com nomes não significativos
   Ocorrências: 8
 
-  [1] Linha 3: Variável 'x' com nome muito curto (≤4 chars)
+  [1] Linha 1: Variável 'x' com nome muito curto (≤4 chars)
       Trecho  : x = ...
       Contexto:
-               2 | 
-        >>>    3 | x = int(input("digite um numero: "))
-               4 | k = int(input("digite um numero: "))
+        >>>    1 | x=float(input("número real x: "))
+               2 | k=int(input("quantidade de termos: "))
 
-  [2] Linha 4: Variável 'k' com nome muito curto (≤4 chars)
+  [2] Linha 2: Variável 'k' com nome muito curto (≤4 chars)
       Trecho  : k = ...
       Contexto:
-               3 | x = int(input("digite um numero: "))
-        >>>    4 | k = int(input("digite um numero: "))
-               5 | 
+               1 | x=float(input("número real x: "))
+        >>>    2 | k=int(input("quantidade de termos: "))
+               3 | 
 
-  [3] Linha 6: Variável 'soma' com nome muito curto (≤4 chars)
-      Trecho  : soma = ...
+  [3] Linha 4: Variável 't' com nome muito curto (≤4 chars)
+      Trecho  : t = ...
       Contexto:
-               5 | 
-        >>>    6 | soma = 0
-               7 | sinal = -1
+               3 | 
+        >>>    4 | t=0
+               5 | sinal=1
 
-  [4] Linha 8: Variável 'e' com nome muito curto (≤4 chars)
+  [4] Linha 6: Variável 'e' com nome muito curto (≤4 chars)
       Trecho  : e = ...
       Contexto:
-               7 | sinal = -1
-        >>>    8 | e = 1
-               9 | a = 1
+               5 | sinal=1
+        >>>    6 | e=1
+               7 | y=0
 
-  [5] Linha 9: Variável 'a' com nome muito curto (≤4 chars)
-      Trecho  : a = ...
+  [5] Linha 7: Variável 'y' com nome muito curto (≤4 chars)
+      Trecho  : y = ...
       Contexto:
-               8 | e = 1
-        >>>    9 | a = 1
-              10 | while (e <= k):
+               6 | e=1
+        >>>    7 | y=0
+               8 | 
 
-  [6] Linha 11: Variável 'soma' com nome muito curto (≤4 chars)
-      Trecho  : soma = ...
+  [6] Linha 10: Variável 'y' com nome muito curto (≤4 chars)
+      Trecho  : y = ...
       Contexto:
-              10 | while (e <= k):
-        >>>   11 | 	soma = soma - sinal * (x**e/a)
-              12 | 	sinal = -sinal
+               9 | while(t<k):
+        >>>   10 | 	y=y+sinal*((x**e)/e)
+              11 | 	e=e+2
 
-  [7] Linha 13: Variável 'e' com nome muito curto (≤4 chars)
+  [7] Linha 11: Variável 'e' com nome muito curto (≤4 chars)
       Trecho  : e = ...
       Contexto:
-              12 | 	sinal = -sinal
-        >>>   13 | 	e = e+4
-              14 | 	a = a+2
+              10 | 	y=y+sinal*((x**e)/e)
+        >>>   11 | 	e=e+2
+              12 | 	t=t+1
 
-  [8] Linha 14: Variável 'a' com nome muito curto (≤4 chars)
-      Trecho  : a = ...
+  [8] Linha 12: Variável 't' com nome muito curto (≤4 chars)
+      Trecho  : t = ...
       Contexto:
-              13 | 	e = e+4
-        >>>   14 | 	a = a+2
-              15 | print(round(soma ,6))
+              11 | 	e=e+2
+        >>>   12 | 	t=t+1
+              13 | 	sinal=-sinal
 
 ======================================================================

@@ -1,12 +1,12 @@
 ======================================================================
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
-Arquivo     : 199_1248.py
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2016_1_v1.81\2016-1\102\users\1307\codes\199_1248.py
+Arquivo     : 199_1248.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2016_1_v1.81\2016-1\102\users\1306\executions\199_1248.log
 Assessment  : 199
 Título      : Avaliação Parcial 06 – Repetição por contagem
 Questão     : 1248
-Aluno       : 1307
+Aluno       : 1306
 Grupo       : TP 06
 Significado : Estrutura de Repetição por Contagem
 Total MCs   : 2
@@ -16,23 +16,28 @@ Total MCs   : 2
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | from numpy import*
-     2 | x = array(eval(input("Digite um vetor: ")))
-     3 | 
-     4 | A = min(x)
-     5 | B = max(x)
-     6 | C = 0.75 * A + 0.25 * B
-     7 | D = 0.25 * A + 0.75 * B
-     8 | 
-     9 | j = 0
-    10 | k = 0
-    11 | for i in x:
-    12 | 	if(i >= C and i < D):
-    13 | 		j = j + 1
-    14 | 	if(i >= D and i < B):
-    15 | 		k = k + 1
-    16 | z = array([j,k])
-    17 | print(z)
+     1 | from numpy import *
+     2 | v= array(eval(input("vetor v:\n")))
+     3 | B = max(v)
+     4 | A = min(v)
+     5 | C = (0.75*A + 0.25*B)
+     6 | D = 0.25*A + 0.75*B
+     7 | print(A,B,C,D)
+     8 | x1=0
+     9 | x2=0
+    10 | for x in v:
+    11 | 	if (x >=C):
+    12 | 		if x<D:
+    13 | 			x1=x1+1
+    14 | for x in v:
+    15 | 	if (x>=D):
+    16 | 		if(x<B):
+    17 | 			x2= x2+1
+    18 | 
+    19 | e = array(zeros(2, dtype = float))
+    20 | e[0] = x1
+    21 | e[1] = x2
+    22 | print(e)
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
@@ -47,77 +52,74 @@ DETALHAMENTO DOS MISCONCEPTIONS
 ▶ G4 — Funções/variáveis com nomes não significativos
   Ocorrências: 10
 
-  [1] Linha 2: Variável 'x' com nome muito curto (≤4 chars)
-      Trecho  : x = ...
+  [1] Linha 2: Variável 'v' com nome muito curto (≤4 chars)
+      Trecho  : v = ...
       Contexto:
-               1 | from numpy import*
-        >>>    2 | x = array(eval(input("Digite um vetor: ")))
-               3 | 
+               1 | from numpy import *
+        >>>    2 | v= array(eval(input("vetor v:\n")))
+               3 | B = max(v)
 
-  [2] Linha 4: Variável 'A' com nome muito curto (≤4 chars)
-      Trecho  : A = ...
-      Contexto:
-               3 | 
-        >>>    4 | A = min(x)
-               5 | B = max(x)
-
-  [3] Linha 5: Variável 'B' com nome muito curto (≤4 chars)
+  [2] Linha 3: Variável 'B' com nome muito curto (≤4 chars)
       Trecho  : B = ...
       Contexto:
-               4 | A = min(x)
-        >>>    5 | B = max(x)
-               6 | C = 0.75 * A + 0.25 * B
+               2 | v= array(eval(input("vetor v:\n")))
+        >>>    3 | B = max(v)
+               4 | A = min(v)
 
-  [4] Linha 6: Variável 'C' com nome muito curto (≤4 chars)
+  [3] Linha 4: Variável 'A' com nome muito curto (≤4 chars)
+      Trecho  : A = ...
+      Contexto:
+               3 | B = max(v)
+        >>>    4 | A = min(v)
+               5 | C = (0.75*A + 0.25*B)
+
+  [4] Linha 5: Variável 'C' com nome muito curto (≤4 chars)
       Trecho  : C = ...
       Contexto:
-               5 | B = max(x)
-        >>>    6 | C = 0.75 * A + 0.25 * B
-               7 | D = 0.25 * A + 0.75 * B
+               4 | A = min(v)
+        >>>    5 | C = (0.75*A + 0.25*B)
+               6 | D = 0.25*A + 0.75*B
 
-  [5] Linha 7: Variável 'D' com nome muito curto (≤4 chars)
+  [5] Linha 6: Variável 'D' com nome muito curto (≤4 chars)
       Trecho  : D = ...
       Contexto:
-               6 | C = 0.75 * A + 0.25 * B
-        >>>    7 | D = 0.25 * A + 0.75 * B
-               8 | 
+               5 | C = (0.75*A + 0.25*B)
+        >>>    6 | D = 0.25*A + 0.75*B
+               7 | print(A,B,C,D)
 
-  [6] Linha 9: Variável 'j' com nome muito curto (≤4 chars)
-      Trecho  : j = ...
+  [6] Linha 8: Variável 'x1' com nome muito curto (≤4 chars)
+      Trecho  : x1 = ...
       Contexto:
-               8 | 
-        >>>    9 | j = 0
-              10 | k = 0
+               7 | print(A,B,C,D)
+        >>>    8 | x1=0
+               9 | x2=0
 
-  [7] Linha 10: Variável 'k' com nome muito curto (≤4 chars)
-      Trecho  : k = ...
+  [7] Linha 9: Variável 'x2' com nome muito curto (≤4 chars)
+      Trecho  : x2 = ...
       Contexto:
-               9 | j = 0
-        >>>   10 | k = 0
-              11 | for i in x:
+               8 | x1=0
+        >>>    9 | x2=0
+              10 | for x in v:
 
-  [8] Linha 16: Variável 'z' com nome muito curto (≤4 chars)
-      Trecho  : z = ...
+  [8] Linha 19: Variável 'e' com nome muito curto (≤4 chars)
+      Trecho  : e = ...
       Contexto:
-              15 | 		k = k + 1
-        >>>   16 | z = array([j,k])
-              17 | print(z)
+              18 | 
+        >>>   19 | e = array(zeros(2, dtype = float))
+              20 | e[0] = x1
 
-  [9] Linha 13: Variável 'j' com nome muito curto (≤4 chars)
-      Trecho  : j = ...
+  [9] Linha 13: Variável 'x1' com nome muito curto (≤4 chars)
+      Trecho  : x1 = ...
       Contexto:
-              12 | 	if(i >= C and i < D):
-        >>>   13 | 		j = j + 1
-              14 | 	if(i >= D and i < B):
+              12 | 		if x<D:
+        >>>   13 | 			x1=x1+1
+              14 | for x in v:
 
-  [10] Linha 15: Variável 'k' com nome muito curto (≤4 chars)
-      Trecho  : k = ...
+  [10] Linha 17: Variável 'x2' com nome muito curto (≤4 chars)
+      Trecho  : x2 = ...
       Contexto:
-              14 | 	if(i >= D and i < B):
-        >>>   15 | 		k = k + 1
-              16 | z = array([j,k])
-
-======================================================================| 			x2= x2+1
+              16 | 		if(x<B):
+        >>>   17 | 			x2= x2+1
               18 | 
 
 ======================================================================

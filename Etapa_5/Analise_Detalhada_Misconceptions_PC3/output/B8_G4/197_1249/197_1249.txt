@@ -1,12 +1,12 @@
 ======================================================================
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
-Arquivo     : 197_1249.py
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2016_1_v1.81\2016-1\103\users\1460\codes\197_1249.py
+Arquivo     : 197_1249.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2016_1_v1.81\2016-1\103\users\1461\executions\197_1249.log
 Assessment  : 197
 Título      : Avaliação Parcial 06 – Repetição por contagem
 Questão     : 1249
-Aluno       : 1460
+Aluno       : 1461
 Grupo       : TP 06
 Significado : Estrutura de Repetição por Contagem
 Total MCs   : 2
@@ -16,20 +16,28 @@ Total MCs   : 2
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | from numpy import *
-     2 | v = array(eval(input("digite o vetor: ")))
-     3 | B = max(v)
-     4 | A = min(v)
-     5 | C = 0.7 * A + 0.3 * B
-     6 | D = 0.4 * A + 0.6 * B
-     7 | v2 = array([0,0])
-     8 | for i in range (size(v)):
-     9 | 	if (v[i] >= A) and (v[i] < C):
-    10 | 		v2[0] = v2[0] + 1
-    11 | 	elif (v[i] <= D) and (v[i] < B):
-    12 | 		v2[1] = v2[0] + 1
-    13 | print(v2)
-    14 | 		
+     1 | # Monalisa Pereira 21600560
+     2 | # 250816
+     3 | # Av 06 - Ex 01
+     4 | 
+     5 | from numpy import *
+     6 | 
+     7 | v = array(eval(input("Insira um vetor: ")))
+     8 | 
+     9 | A = min(v)
+    10 | B = max(v)
+    11 | C = 0.7*A+0.3*B
+    12 | D = 0.4*A+0.6*B
+    13 | 
+    14 | x = array(zeros(2, dtype=int))
+    15 | 
+    16 | for i in v:
+    17 | 	if (i>=A) and (i<C):
+    18 | 		x[0] = x[0]+1
+    19 | 	elif (i>=C) and (i<D):
+    20 | 		x[1] = x[1]+1
+    21 | 		
+    22 | print(x)
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
@@ -38,56 +46,56 @@ DETALHAMENTO DOS MISCONCEPTIONS
 ▶ B8 — Não utilização de elif/else
   Ocorrências: 1
 
-  [1] Linha 9: Cadeia if/elif sem bloco else final
-      Trecho  : if ... (linha 9) / elif ... sem else
+  [1] Linha 17: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 17) / elif ... sem else
       Contexto:
-               8 | for i in range (size(v)):
-        >>>    9 | 	if (v[i] >= A) and (v[i] < C):
-              10 | 		v2[0] = v2[0] + 1
+              16 | for i in v:
+        >>>   17 | 	if (i>=A) and (i<C):
+              18 | 		x[0] = x[0]+1
 
 ▶ G4 — Funções/variáveis com nomes não significativos
   Ocorrências: 6
 
-  [1] Linha 2: Variável 'v' com nome muito curto (≤4 chars)
+  [1] Linha 7: Variável 'v' com nome muito curto (≤4 chars)
       Trecho  : v = ...
       Contexto:
-               1 | from numpy import *
-        >>>    2 | v = array(eval(input("digite o vetor: ")))
-               3 | B = max(v)
+               6 | 
+        >>>    7 | v = array(eval(input("Insira um vetor: ")))
+               8 | 
 
-  [2] Linha 3: Variável 'B' com nome muito curto (≤4 chars)
-      Trecho  : B = ...
-      Contexto:
-               2 | v = array(eval(input("digite o vetor: ")))
-        >>>    3 | B = max(v)
-               4 | A = min(v)
-
-  [3] Linha 4: Variável 'A' com nome muito curto (≤4 chars)
+  [2] Linha 9: Variável 'A' com nome muito curto (≤4 chars)
       Trecho  : A = ...
       Contexto:
-               3 | B = max(v)
-        >>>    4 | A = min(v)
-               5 | C = 0.7 * A + 0.3 * B
+               8 | 
+        >>>    9 | A = min(v)
+              10 | B = max(v)
 
-  [4] Linha 5: Variável 'C' com nome muito curto (≤4 chars)
+  [3] Linha 10: Variável 'B' com nome muito curto (≤4 chars)
+      Trecho  : B = ...
+      Contexto:
+               9 | A = min(v)
+        >>>   10 | B = max(v)
+              11 | C = 0.7*A+0.3*B
+
+  [4] Linha 11: Variável 'C' com nome muito curto (≤4 chars)
       Trecho  : C = ...
       Contexto:
-               4 | A = min(v)
-        >>>    5 | C = 0.7 * A + 0.3 * B
-               6 | D = 0.4 * A + 0.6 * B
+              10 | B = max(v)
+        >>>   11 | C = 0.7*A+0.3*B
+              12 | D = 0.4*A+0.6*B
 
-  [5] Linha 6: Variável 'D' com nome muito curto (≤4 chars)
+  [5] Linha 12: Variável 'D' com nome muito curto (≤4 chars)
       Trecho  : D = ...
       Contexto:
-               5 | C = 0.7 * A + 0.3 * B
-        >>>    6 | D = 0.4 * A + 0.6 * B
-               7 | v2 = array([0,0])
+              11 | C = 0.7*A+0.3*B
+        >>>   12 | D = 0.4*A+0.6*B
+              13 | 
 
-  [6] Linha 7: Variável 'v2' com nome muito curto (≤4 chars)
-      Trecho  : v2 = ...
+  [6] Linha 14: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
       Contexto:
-               6 | D = 0.4 * A + 0.6 * B
-        >>>    7 | v2 = array([0,0])
-               8 | for i in range (size(v)):
+              13 | 
+        >>>   14 | x = array(zeros(2, dtype=int))
+              15 | 
 
 ======================================================================

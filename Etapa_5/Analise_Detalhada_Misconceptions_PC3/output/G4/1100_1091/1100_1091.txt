@@ -1,12 +1,12 @@
 ======================================================================
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
-Arquivo     : 1100_1091.py
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2018_1_v1.81\2018-1\180\users\3276\codes\1100_1091.py
+Arquivo     : 1100_1091.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2018_1_v1.81\2018-1\180\users\3235\executions\1100_1091.log
 Assessment  : 1100
 Título      : TP 2 - Condicionais compostos (if/else)
 Questão     : 1091
-Aluno       : 3276
+Aluno       : 3235
 Grupo       : TP 02
 Significado : Estrutura Condicional Simples e Composta
 Total MCs   : 1
@@ -16,42 +16,90 @@ Total MCs   : 1
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | n=int(input("numero"))
-     2 | d2=(n//100)%100
-     3 | d4=n%100
-     4 | 
-     5 | if((d2+d4)**2 == n):
-     6 | 	print(n)
-     7 | 	print("atende")
-     8 | else:
-     9 | 	print(n)
-    10 | 	print("nao atende")
+     1 | a = int(input())
+     2 | 
+     3 | n1 = a // 1000
+     4 | n1r = a % 1000
+     5 | n2 = n1r // 100
+     6 | n2r = n1r % 100
+     7 | n3 = n2r // 10
+     8 | n3r = n2r % 10
+     9 | n4 = n3r // 1
+    10 | 
+    11 | f = ((n1 * 10 + n2) + (n3 * 10 + n4)) ** 2
+    12 | print(a)
+    13 | if (f == a):
+    14 | 	print("atende")
+    15 | else:
+    16 | 	print("nao atende")
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
 ----------------------------------------------------------------------
 
 ▶ G4 — Funções/variáveis com nomes não significativos
-  Ocorrências: 3
+  Ocorrências: 9
 
-  [1] Linha 1: Variável 'n' com nome muito curto (≤4 chars)
-      Trecho  : n = ...
+  [1] Linha 1: Variável 'a' com nome muito curto (≤4 chars)
+      Trecho  : a = ...
       Contexto:
-        >>>    1 | n=int(input("numero"))
-               2 | d2=(n//100)%100
+        >>>    1 | a = int(input())
+               2 | 
 
-  [2] Linha 2: Variável 'd2' com nome muito curto (≤4 chars)
-      Trecho  : d2 = ...
+  [2] Linha 3: Variável 'n1' com nome muito curto (≤4 chars)
+      Trecho  : n1 = ...
       Contexto:
-               1 | n=int(input("numero"))
-        >>>    2 | d2=(n//100)%100
-               3 | d4=n%100
+               2 | 
+        >>>    3 | n1 = a // 1000
+               4 | n1r = a % 1000
 
-  [3] Linha 3: Variável 'd4' com nome muito curto (≤4 chars)
-      Trecho  : d4 = ...
+  [3] Linha 4: Variável 'n1r' com nome muito curto (≤4 chars)
+      Trecho  : n1r = ...
       Contexto:
-               2 | d2=(n//100)%100
-        >>>    3 | d4=n%100
-               4 | 
+               3 | n1 = a // 1000
+        >>>    4 | n1r = a % 1000
+               5 | n2 = n1r // 100
+
+  [4] Linha 5: Variável 'n2' com nome muito curto (≤4 chars)
+      Trecho  : n2 = ...
+      Contexto:
+               4 | n1r = a % 1000
+        >>>    5 | n2 = n1r // 100
+               6 | n2r = n1r % 100
+
+  [5] Linha 6: Variável 'n2r' com nome muito curto (≤4 chars)
+      Trecho  : n2r = ...
+      Contexto:
+               5 | n2 = n1r // 100
+        >>>    6 | n2r = n1r % 100
+               7 | n3 = n2r // 10
+
+  [6] Linha 7: Variável 'n3' com nome muito curto (≤4 chars)
+      Trecho  : n3 = ...
+      Contexto:
+               6 | n2r = n1r % 100
+        >>>    7 | n3 = n2r // 10
+               8 | n3r = n2r % 10
+
+  [7] Linha 8: Variável 'n3r' com nome muito curto (≤4 chars)
+      Trecho  : n3r = ...
+      Contexto:
+               7 | n3 = n2r // 10
+        >>>    8 | n3r = n2r % 10
+               9 | n4 = n3r // 1
+
+  [8] Linha 9: Variável 'n4' com nome muito curto (≤4 chars)
+      Trecho  : n4 = ...
+      Contexto:
+               8 | n3r = n2r % 10
+        >>>    9 | n4 = n3r // 1
+              10 | 
+
+  [9] Linha 11: Variável 'f' com nome muito curto (≤4 chars)
+      Trecho  : f = ...
+      Contexto:
+              10 | 
+        >>>   11 | f = ((n1 * 10 + n2) + (n3 * 10 + n4)) ** 2
+              12 | print(a)
 
 ======================================================================

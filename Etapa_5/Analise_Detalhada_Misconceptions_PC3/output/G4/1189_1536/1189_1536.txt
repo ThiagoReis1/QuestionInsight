@@ -1,12 +1,12 @@
 ======================================================================
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
-Arquivo     : 1189_1536.py
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2018_1_v1.81\2018-1\187\users\3449\codes\1189_1536.py
+Arquivo     : 1189_1536.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2018_1_v1.81\2018-1\187\users\3213\executions\1189_1536.log
 Assessment  : 1189
 Título      : TP 04: Estrutura de Repetição por Condição (while)
 Questão     : 1536
-Aluno       : 3449
+Aluno       : 3213
 Grupo       : TP 04
 Significado : Estrutura de Repetição por Condição
 Total MCs   : 1
@@ -16,75 +16,89 @@ Total MCs   : 1
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | x= float(input("numero real: "))
-     2 | k=int(input("quantidade de termos: "))
+     1 | x = float(input("valor de x: "))
+     2 | k = int(input("valor de k: "))
      3 | 
-     4 | termo=x
-     5 | cont=1
-     6 | e= k
-     7 | t=1
+     4 | cont = 1
+     5 | soma = x
+     6 | vc = k
+     7 | ex = 1
      8 | 
-     9 | while	(e > cont):
-    10 | 	termo= termo + ((-1)*(-1)**(cont+1)) *((x**(t+1))/(t+1))
-    11 | 	cont=cont+1
-    12 | 	t= t+1
-    13 | 	
-    14 | print(round(termo,10))
-    15 | 	
+     9 | #if ((-1 < ac <= 1) and (vc > 0)):
+    10 | while (cont < vc):
+    11 | 		soma = soma + (-1)*(-1)**(cont+1)*((x**(ex+1))/(ex+1))
+    12 | 		cont = cont + 1
+    13 | 		ex = ex + 1
+    14 | 		
+    15 | print(round(soma,10))
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
 ----------------------------------------------------------------------
 
 ▶ G4 — Funções/variáveis com nomes não significativos
-  Ocorrências: 7
+  Ocorrências: 9
 
   [1] Linha 1: Variável 'x' com nome muito curto (≤4 chars)
       Trecho  : x = ...
       Contexto:
-        >>>    1 | x= float(input("numero real: "))
-               2 | k=int(input("quantidade de termos: "))
+        >>>    1 | x = float(input("valor de x: "))
+               2 | k = int(input("valor de k: "))
 
   [2] Linha 2: Variável 'k' com nome muito curto (≤4 chars)
       Trecho  : k = ...
       Contexto:
-               1 | x= float(input("numero real: "))
-        >>>    2 | k=int(input("quantidade de termos: "))
+               1 | x = float(input("valor de x: "))
+        >>>    2 | k = int(input("valor de k: "))
                3 | 
 
-  [3] Linha 5: Variável 'cont' com nome muito curto (≤4 chars)
+  [3] Linha 4: Variável 'cont' com nome muito curto (≤4 chars)
       Trecho  : cont = ...
       Contexto:
-               4 | termo=x
-        >>>    5 | cont=1
-               6 | e= k
+               3 | 
+        >>>    4 | cont = 1
+               5 | soma = x
 
-  [4] Linha 6: Variável 'e' com nome muito curto (≤4 chars)
-      Trecho  : e = ...
+  [4] Linha 5: Variável 'soma' com nome muito curto (≤4 chars)
+      Trecho  : soma = ...
       Contexto:
-               5 | cont=1
-        >>>    6 | e= k
-               7 | t=1
+               4 | cont = 1
+        >>>    5 | soma = x
+               6 | vc = k
 
-  [5] Linha 7: Variável 't' com nome muito curto (≤4 chars)
-      Trecho  : t = ...
+  [5] Linha 6: Variável 'vc' com nome muito curto (≤4 chars)
+      Trecho  : vc = ...
       Contexto:
-               6 | e= k
-        >>>    7 | t=1
+               5 | soma = x
+        >>>    6 | vc = k
+               7 | ex = 1
+
+  [6] Linha 7: Variável 'ex' com nome muito curto (≤4 chars)
+      Trecho  : ex = ...
+      Contexto:
+               6 | vc = k
+        >>>    7 | ex = 1
                8 | 
 
-  [6] Linha 11: Variável 'cont' com nome muito curto (≤4 chars)
+  [7] Linha 11: Variável 'soma' com nome muito curto (≤4 chars)
+      Trecho  : soma = ...
+      Contexto:
+              10 | while (cont < vc):
+        >>>   11 | 		soma = soma + (-1)*(-1)**(cont+1)*((x**(ex+1))/(ex+1))
+              12 | 		cont = cont + 1
+
+  [8] Linha 12: Variável 'cont' com nome muito curto (≤4 chars)
       Trecho  : cont = ...
       Contexto:
-              10 | 	termo= termo + ((-1)*(-1)**(cont+1)) *((x**(t+1))/(t+1))
-        >>>   11 | 	cont=cont+1
-              12 | 	t= t+1
+              11 | 		soma = soma + (-1)*(-1)**(cont+1)*((x**(ex+1))/(ex+1))
+        >>>   12 | 		cont = cont + 1
+              13 | 		ex = ex + 1
 
-  [7] Linha 12: Variável 't' com nome muito curto (≤4 chars)
-      Trecho  : t = ...
+  [9] Linha 13: Variável 'ex' com nome muito curto (≤4 chars)
+      Trecho  : ex = ...
       Contexto:
-              11 | 	cont=cont+1
-        >>>   12 | 	t= t+1
-              13 | 	
+              12 | 		cont = cont + 1
+        >>>   13 | 		ex = ex + 1
+              14 | 		
 
 ======================================================================

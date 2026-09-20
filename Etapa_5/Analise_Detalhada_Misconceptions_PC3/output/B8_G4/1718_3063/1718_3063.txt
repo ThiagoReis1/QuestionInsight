@@ -1,12 +1,12 @@
 ======================================================================
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
-Arquivo     : 1718_3063.py
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2019_1_v1.81\2019-1\231\users\4233\codes\1718_3063.py
+Arquivo     : 1718_3063.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2019_1_v1.81\2019-1\231\users\4339\executions\1718_3063.log
 Assessment  : 1718
 Título      : TP3 - Estrutura Condicional Encadeada
 Questão     : 3063
-Aluno       : 4233
+Aluno       : 4339
 Grupo       : TP 03
 Significado : Estrutura Condicional Encadeada
 Total MCs   : 2
@@ -16,23 +16,27 @@ Total MCs   : 2
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | q = int(input("Quantidade de PO: "))
-     2 | nome = input("Armadura(INTEIRA,MALHA,PLACA): ")
-     3 | d = int(input("Numero de destreza: "))
+     1 | po=int(input("quantidade de pecas de ouro:"))
+     2 | no = input("nome da armadura (MALHA/INTEIRA/PLACA):")
+     3 | fd= int(input("valor do dado:"))
      4 | 
-     5 | if (q<100) and (nome=="PLACA") or (q<200) and (nome=="INTEIRA") or (q<50) and (nome=="MALHA"):
-     6 | 	print("PO insuficiente")
-     7 | elif(d>8) or (d<1):
-     8 | 	print("Entrada invalida")
-     9 | elif(nome == "INTEIRA"): 
-    10 | 	ft = (30*d)-20
-    11 | 	print(ft)
-    12 | elif(nome == "MALHA"):
-    13 | 	ft = (15*d)-1
-    14 | 	print(ft)
-    15 | elif(nome == "PLACA"):
-    16 | 	ft = (20*d)-18
-    17 | 	print(ft)
+     5 | if((fd < 1) or(fd > 8)):
+     6 | 	print("Entrada invalida")
+     7 | 
+     8 | elif((po != 200)and(po != 50)and(po != 100)):
+     9 | 	print("PO insuficiente")
+    10 | 
+    11 | elif(po==200 and no == "INTEIRA"):
+    12 | 	resi= 30*fd-20
+    13 | 	print(resi)
+    14 | 
+    15 | elif(po==50 and no=="MALHA" ):
+    16 | 	resi=15*fd-1
+    17 | 	print (resi)
+    18 | 
+    19 | elif(po==100 and no=="PLACA"):
+    20 | 	resi=20*fd-18
+    21 | 	print(resi)
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
@@ -41,55 +45,55 @@ DETALHAMENTO DOS MISCONCEPTIONS
 ▶ B8 — Não utilização de elif/else
   Ocorrências: 1
 
-  [1] Linha 12: Cadeia if/elif sem bloco else final
-      Trecho  : if ... (linha 12) / elif ... sem else
+  [1] Linha 15: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 15) / elif ... sem else
       Contexto:
-              11 | 	print(ft)
-        >>>   12 | elif(nome == "MALHA"):
-              13 | 	ft = (15*d)-1
+              14 | 
+        >>>   15 | elif(po==50 and no=="MALHA" ):
+              16 | 	resi=15*fd-1
 
 ▶ G4 — Funções/variáveis com nomes não significativos
   Ocorrências: 6
 
-  [1] Linha 1: Variável 'q' com nome muito curto (≤4 chars)
-      Trecho  : q = ...
+  [1] Linha 1: Variável 'po' com nome muito curto (≤4 chars)
+      Trecho  : po = ...
       Contexto:
-        >>>    1 | q = int(input("Quantidade de PO: "))
-               2 | nome = input("Armadura(INTEIRA,MALHA,PLACA): ")
+        >>>    1 | po=int(input("quantidade de pecas de ouro:"))
+               2 | no = input("nome da armadura (MALHA/INTEIRA/PLACA):")
 
-  [2] Linha 2: Variável 'nome' com nome muito curto (≤4 chars)
-      Trecho  : nome = ...
+  [2] Linha 2: Variável 'no' com nome muito curto (≤4 chars)
+      Trecho  : no = ...
       Contexto:
-               1 | q = int(input("Quantidade de PO: "))
-        >>>    2 | nome = input("Armadura(INTEIRA,MALHA,PLACA): ")
-               3 | d = int(input("Numero de destreza: "))
+               1 | po=int(input("quantidade de pecas de ouro:"))
+        >>>    2 | no = input("nome da armadura (MALHA/INTEIRA/PLACA):")
+               3 | fd= int(input("valor do dado:"))
 
-  [3] Linha 3: Variável 'd' com nome muito curto (≤4 chars)
-      Trecho  : d = ...
+  [3] Linha 3: Variável 'fd' com nome muito curto (≤4 chars)
+      Trecho  : fd = ...
       Contexto:
-               2 | nome = input("Armadura(INTEIRA,MALHA,PLACA): ")
-        >>>    3 | d = int(input("Numero de destreza: "))
+               2 | no = input("nome da armadura (MALHA/INTEIRA/PLACA):")
+        >>>    3 | fd= int(input("valor do dado:"))
                4 | 
 
-  [4] Linha 10: Variável 'ft' com nome muito curto (≤4 chars)
-      Trecho  : ft = ...
+  [4] Linha 12: Variável 'resi' com nome muito curto (≤4 chars)
+      Trecho  : resi = ...
       Contexto:
-               9 | elif(nome == "INTEIRA"): 
-        >>>   10 | 	ft = (30*d)-20
-              11 | 	print(ft)
+              11 | elif(po==200 and no == "INTEIRA"):
+        >>>   12 | 	resi= 30*fd-20
+              13 | 	print(resi)
 
-  [5] Linha 13: Variável 'ft' com nome muito curto (≤4 chars)
-      Trecho  : ft = ...
+  [5] Linha 16: Variável 'resi' com nome muito curto (≤4 chars)
+      Trecho  : resi = ...
       Contexto:
-              12 | elif(nome == "MALHA"):
-        >>>   13 | 	ft = (15*d)-1
-              14 | 	print(ft)
+              15 | elif(po==50 and no=="MALHA" ):
+        >>>   16 | 	resi=15*fd-1
+              17 | 	print (resi)
 
-  [6] Linha 16: Variável 'ft' com nome muito curto (≤4 chars)
-      Trecho  : ft = ...
+  [6] Linha 20: Variável 'resi' com nome muito curto (≤4 chars)
+      Trecho  : resi = ...
       Contexto:
-              15 | elif(nome == "PLACA"):
-        >>>   16 | 	ft = (20*d)-18
-              17 | 	print(ft)
+              19 | elif(po==100 and no=="PLACA"):
+        >>>   20 | 	resi=20*fd-18
+              21 | 	print(resi)
 
 ======================================================================

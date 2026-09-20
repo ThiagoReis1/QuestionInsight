@@ -1,12 +1,12 @@
 ======================================================================
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
-Arquivo     : 3719_1597.py
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2021_2_v1.81\2021-2\403\users\7112\codes\3719_1597.py
+Arquivo     : 3719_1597.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2021_2_v1.81\2021-2\403\users\7185\executions\3719_1597.log
 Assessment  : 3719
 Título      : TP5: Vetores e Strings
 Questão     : 1597
-Aluno       : 7112
+Aluno       : 7185
 Grupo       : TP 05
 Significado : Vetores e Strings
 Total MCs   : 2
@@ -18,21 +18,24 @@ CÓDIGO FONTE
 ----------------------------------------------------------------------
      1 | from numpy import*
      2 | 
-     3 | v = array(eval(input("")))
+     3 | c = array(eval(input()))
      4 | 
-     5 | i = 0 
-     6 | t= sum(v)
-     7 | 
-     8 | while( i< size(v)):
-     9 | 	
-    10 | 	if v[i] > 80 :
-    11 | 		t = sum(v) - 5
-    12 | 	
-    13 | 	i = i +1
-    14 | 	
-    15 | 
-    16 | 
-    17 | print(round(t,2))
+     5 | # variaveis loop
+     6 | 
+     7 | i = 0 # percorrer vetor custo
+     8 | d = 0 # calcula o total de descontos
+     9 | 
+    10 | while (i < size(c)):
+    11 | 	
+    12 | 	if (c[i] > 80.0):
+    13 | 		
+    14 | 		d = d + 1
+    15 | 		
+    16 | 	
+    17 | 	i = i + 1
+    18 | 
+    19 | t = sum(c) - (d * 5)
+    20 | print (t)
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
@@ -45,41 +48,48 @@ DETALHAMENTO DOS MISCONCEPTIONS
       Trecho  : —
 
 ▶ G4 — Funções/variáveis com nomes não significativos
-  Ocorrências: 5
+  Ocorrências: 6
 
-  [1] Linha 3: Variável 'v' com nome muito curto (≤4 chars)
-      Trecho  : v = ...
+  [1] Linha 3: Variável 'c' com nome muito curto (≤4 chars)
+      Trecho  : c = ...
       Contexto:
                2 | 
-        >>>    3 | v = array(eval(input("")))
+        >>>    3 | c = array(eval(input()))
                4 | 
 
-  [2] Linha 5: Variável 'i' com nome muito curto (≤4 chars)
+  [2] Linha 7: Variável 'i' com nome muito curto (≤4 chars)
       Trecho  : i = ...
       Contexto:
-               4 | 
-        >>>    5 | i = 0 
-               6 | t= sum(v)
+               6 | 
+        >>>    7 | i = 0 # percorrer vetor custo
+               8 | d = 0 # calcula o total de descontos
 
-  [3] Linha 6: Variável 't' com nome muito curto (≤4 chars)
+  [3] Linha 8: Variável 'd' com nome muito curto (≤4 chars)
+      Trecho  : d = ...
+      Contexto:
+               7 | i = 0 # percorrer vetor custo
+        >>>    8 | d = 0 # calcula o total de descontos
+               9 | 
+
+  [4] Linha 19: Variável 't' com nome muito curto (≤4 chars)
       Trecho  : t = ...
       Contexto:
-               5 | i = 0 
-        >>>    6 | t= sum(v)
-               7 | 
+              18 | 
+        >>>   19 | t = sum(c) - (d * 5)
+              20 | print (t)
 
-  [4] Linha 13: Variável 'i' com nome muito curto (≤4 chars)
+  [5] Linha 17: Variável 'i' com nome muito curto (≤4 chars)
       Trecho  : i = ...
       Contexto:
-              12 | 	
-        >>>   13 | 	i = i +1
-              14 | 	
+              16 | 	
+        >>>   17 | 	i = i + 1
+              18 | 
 
-  [5] Linha 11: Variável 't' com nome muito curto (≤4 chars)
-      Trecho  : t = ...
+  [6] Linha 14: Variável 'd' com nome muito curto (≤4 chars)
+      Trecho  : d = ...
       Contexto:
-              10 | 	if v[i] > 80 :
-        >>>   11 | 		t = sum(v) - 5
-              12 | 	
+              13 | 		
+        >>>   14 | 		d = d + 1
+              15 | 		
 
 ======================================================================

@@ -1,12 +1,12 @@
 ======================================================================
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
-Arquivo     : 1796_3124.py
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2019_1_v1.81\2019-1\231\users\4237\codes\1796_3124.py
+Arquivo     : 1796_3124.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2019_1_v1.81\2019-1\231\users\4219\executions\1796_3124.log
 Assessment  : 1796
 Título      : TP5: Vetores e Strings
 Questão     : 3124
-Aluno       : 4237
+Aluno       : 4219
 Grupo       : TP 05
 Significado : Vetores e Strings
 Total MCs   : 2
@@ -17,10 +17,17 @@ Total MCs   : 2
 CÓDIGO FONTE
 ----------------------------------------------------------------------
      1 | from numpy import*
-     2 | 
-     3 | num = array(eval(input("Numero: ")))
-     4 | 
-     5 | m = num[0]
+     2 | vet = array(eval(input("digite um vetor: ")))
+     3 | tam = size(vet)
+     4 | cont = 0
+     5 | n = tam
+     6 | mul = 1
+     7 | while cont< tam :
+     8 | 	med = vet[cont]
+     9 | 	mul = mul *med
+    10 | 	cont = cont + 1
+    11 | z = mul ** (1/tam)
+    12 | print(round(z, 2))
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
@@ -29,26 +36,77 @@ DETALHAMENTO DOS MISCONCEPTIONS
 ▶ A3 — Variável inicializada desnecessariamente
   Ocorrências: 1
 
-  [1] Linha 5: Variável 'm' declarada mas nunca utilizada
-      Trecho  : m = ...
+  [1] Linha 5: Variável 'n' declarada mas nunca utilizada
+      Trecho  : n = ...
       Contexto:
-               4 | 
-        >>>    5 | m = num[0]
+               4 | cont = 0
+        >>>    5 | n = tam
+               6 | mul = 1
 
 ▶ G4 — Funções/variáveis com nomes não significativos
-  Ocorrências: 2
+  Ocorrências: 9
 
-  [1] Linha 3: Variável 'num' com nome muito curto (≤4 chars)
-      Trecho  : num = ...
+  [1] Linha 2: Variável 'vet' com nome muito curto (≤4 chars)
+      Trecho  : vet = ...
       Contexto:
-               2 | 
-        >>>    3 | num = array(eval(input("Numero: ")))
-               4 | 
+               1 | from numpy import*
+        >>>    2 | vet = array(eval(input("digite um vetor: ")))
+               3 | tam = size(vet)
 
-  [2] Linha 5: Variável 'm' com nome muito curto (≤4 chars)
-      Trecho  : m = ...
+  [2] Linha 3: Variável 'tam' com nome muito curto (≤4 chars)
+      Trecho  : tam = ...
       Contexto:
-               4 | 
-        >>>    5 | m = num[0]
+               2 | vet = array(eval(input("digite um vetor: ")))
+        >>>    3 | tam = size(vet)
+               4 | cont = 0
+
+  [3] Linha 4: Variável 'cont' com nome muito curto (≤4 chars)
+      Trecho  : cont = ...
+      Contexto:
+               3 | tam = size(vet)
+        >>>    4 | cont = 0
+               5 | n = tam
+
+  [4] Linha 5: Variável 'n' com nome muito curto (≤4 chars)
+      Trecho  : n = ...
+      Contexto:
+               4 | cont = 0
+        >>>    5 | n = tam
+               6 | mul = 1
+
+  [5] Linha 6: Variável 'mul' com nome muito curto (≤4 chars)
+      Trecho  : mul = ...
+      Contexto:
+               5 | n = tam
+        >>>    6 | mul = 1
+               7 | while cont< tam :
+
+  [6] Linha 11: Variável 'z' com nome muito curto (≤4 chars)
+      Trecho  : z = ...
+      Contexto:
+              10 | 	cont = cont + 1
+        >>>   11 | z = mul ** (1/tam)
+              12 | print(round(z, 2))
+
+  [7] Linha 8: Variável 'med' com nome muito curto (≤4 chars)
+      Trecho  : med = ...
+      Contexto:
+               7 | while cont< tam :
+        >>>    8 | 	med = vet[cont]
+               9 | 	mul = mul *med
+
+  [8] Linha 9: Variável 'mul' com nome muito curto (≤4 chars)
+      Trecho  : mul = ...
+      Contexto:
+               8 | 	med = vet[cont]
+        >>>    9 | 	mul = mul *med
+              10 | 	cont = cont + 1
+
+  [9] Linha 10: Variável 'cont' com nome muito curto (≤4 chars)
+      Trecho  : cont = ...
+      Contexto:
+               9 | 	mul = mul *med
+        >>>   10 | 	cont = cont + 1
+              11 | z = mul ** (1/tam)
 
 ======================================================================

@@ -1,12 +1,12 @@
 ======================================================================
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
-Arquivo     : 1150_1125.py
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2018_1_v1.81\2018-1\180\users\3236\codes\1150_1125.py
+Arquivo     : 1150_1125.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2018_1_v1.81\2018-1\180\users\3230\executions\1150_1125.log
 Assessment  : 1150
 Título      : TP 3 – Condicionais Encadeadas (if/elif)
 Questão     : 1125
-Aluno       : 3236
+Aluno       : 3230
 Grupo       : TP 03
 Significado : Estrutura Condicional Encadeada
 Total MCs   : 3
@@ -16,23 +16,22 @@ Total MCs   : 3
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | x = input("Digite um lobo: ")
+     1 | an=input()
      2 | 
-     3 | if(x == "Lasdy" or x == "Vento Cinzento" or x == "Cao felpudo" or x == "Fantasma" or x == "Verao" or x == "Nymeria"):
-     4 |    if(x == "Lady"):
-     5 | 	   print("Sansa")
-     6 |    elif(x == "Vento Cinzento"):
-     7 | 	   print("Robb")
-     8 |    elif(x == "Cao felpudo"):
-     9 | 	   print("Rickon")
-    10 |    elif(x == "Fantasma"):
-    11 | 	   print("Jon Snow")
-    12 |    elif(x == "Verao"):
-    13 | 	   print("Bran")
-    14 |    elif(x == "Nymeria"):
-    15 | 	   print("Arya")
-    16 | else:
-    17 | 	print(x)
+     3 | if((an!="Lady")and(an!="Vento Cinzento")and(an!="Cao Felpudo")and(an!="Fantasma")and(an!="Verao")and(an!="Nymeria")):
+     4 | 	print("Entrada",an, "invalida")
+     5 | elif(an=="Lady"):
+     6 | 	print("Sansa")
+     7 | elif(an=="Vento Cinzento"):
+     8 | 	print("Robb")
+     9 | elif(an=="Cao Felpudo"):
+    10 | 	print("Rickon")
+    11 | elif(an=="Fantasma"):
+    12 | 	print("Jon Snow")
+    13 | elif(an=="Verao"):
+    14 | 	print("Bran")
+    15 | elif(an=="Nymeria"):
+    16 | 	print("Arya")
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
@@ -41,30 +40,30 @@ DETALHAMENTO DOS MISCONCEPTIONS
 ▶ B8 — Não utilização de elif/else
   Ocorrências: 1
 
-  [1] Linha 12: Cadeia if/elif sem bloco else final
-      Trecho  : if ... (linha 12) / elif ... sem else
+  [1] Linha 13: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 13) / elif ... sem else
       Contexto:
-              11 | 	   print("Jon Snow")
-        >>>   12 |    elif(x == "Verao"):
-              13 | 	   print("Bran")
+              12 | 	print("Jon Snow")
+        >>>   13 | elif(an=="Verao"):
+              14 | 	print("Bran")
 
 ▶ E1 — Verificação desnecessária de todas as combinações possíveis
   Ocorrências: 1
 
   [1] Linha 3: 6 condições em um único if — verificação excessiva
-      Trecho  : x == 'Lasdy' or x == 'Vento Cinzento' or x == 'Cao felpudo' or (x == 'Fantasma') or (x == 'Verao') or (x == 'Nymeria')
+      Trecho  : an != 'Lady' and an != 'Vento Cinzento' and (an != 'Cao Felpudo') and (an != 'Fantasma') and (an != 'Verao') and (an != 'Nymeria')
       Contexto:
                2 | 
-        >>>    3 | if(x == "Lasdy" or x == "Vento Cinzento" or x == "Cao felpudo" or x == "Fantasma" or x == "Verao" or x == "Nymeria"):
-               4 |    if(x == "Lady"):
+        >>>    3 | if((an!="Lady")and(an!="Vento Cinzento")and(an!="Cao Felpudo")and(an!="Fantasma")and(an!="Verao")and(an!="Nymeria")):
+               4 | 	print("Entrada",an, "invalida")
 
 ▶ G4 — Funções/variáveis com nomes não significativos
   Ocorrências: 1
 
-  [1] Linha 1: Variável 'x' com nome muito curto (≤4 chars)
-      Trecho  : x = ...
+  [1] Linha 1: Variável 'an' com nome muito curto (≤4 chars)
+      Trecho  : an = ...
       Contexto:
-        >>>    1 | x = input("Digite um lobo: ")
+        >>>    1 | an=input()
                2 | 
 
 ======================================================================

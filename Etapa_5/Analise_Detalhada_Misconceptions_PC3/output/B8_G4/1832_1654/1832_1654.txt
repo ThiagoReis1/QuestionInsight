@@ -1,12 +1,12 @@
 ======================================================================
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
-Arquivo     : 1832_1654.py
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2019_1_v1.81\2019-1\224\users\4382\codes\1832_1654.py
+Arquivo     : 1832_1654.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2019_1_v1.81\2019-1\224\users\4354\executions\1832_1654.log
 Assessment  : 1832
 Título      : TP6: Repetição por contagem
 Questão     : 1654
-Aluno       : 4382
+Aluno       : 4354
 Grupo       : TP 06
 Significado : Estrutura de Repetição por Contagem
 Total MCs   : 2
@@ -17,24 +17,29 @@ Total MCs   : 2
 CÓDIGO FONTE
 ----------------------------------------------------------------------
      1 | from numpy import *
-     2 | x = input("digite : ")
-     3 | v = x.split(',')
-     4 | z = zeros(5,dtype = int)
+     2 | string = input("digite a string: ")
+     3 | v = string.split(",")
+     4 | a,p,m,s,r = 0,0,0,0,0
      5 | for i in v:
      6 | 	if(i == "AM"):
-     7 | 		z[0] = z[0] + 1
+     7 | 		a = a + 1
      8 | 	if(i == "PE"):
-     9 | 		z[1] = z[1] + 1
+     9 | 		p = p + 1
     10 | 	if(i == "MG"):
-    11 | 		z[2] = z[2] + 1
+    11 | 		m = m + 1
     12 | 	if(i == "SP"):
-    13 | 		z[3] = z[3] + 1
+    13 | 		s = s + 1
     14 | 	if(i == "RS"):
-    15 | 		z[4] = z[4] + 1
-    16 | print(max(z))
-    17 | print(z)
-    18 | 			 
-    19 | 	 
+    15 | 		r = r + 1
+    16 | z = zeros(5, dtype = int)
+    17 | z[0] = a
+    18 | z[1] = p
+    19 | z[2] = m
+    20 | z[3] = s
+    21 | z[4] = r
+    22 | print(int(max(z)))
+    23 | 
+    24 | print(z)
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
@@ -47,27 +52,55 @@ DETALHAMENTO DOS MISCONCEPTIONS
       Trecho  : —
 
 ▶ G4 — Funções/variáveis com nomes não significativos
-  Ocorrências: 3
+  Ocorrências: 7
 
-  [1] Linha 2: Variável 'x' com nome muito curto (≤4 chars)
-      Trecho  : x = ...
-      Contexto:
-               1 | from numpy import *
-        >>>    2 | x = input("digite : ")
-               3 | v = x.split(',')
-
-  [2] Linha 3: Variável 'v' com nome muito curto (≤4 chars)
+  [1] Linha 3: Variável 'v' com nome muito curto (≤4 chars)
       Trecho  : v = ...
       Contexto:
-               2 | x = input("digite : ")
-        >>>    3 | v = x.split(',')
-               4 | z = zeros(5,dtype = int)
+               2 | string = input("digite a string: ")
+        >>>    3 | v = string.split(",")
+               4 | a,p,m,s,r = 0,0,0,0,0
 
-  [3] Linha 4: Variável 'z' com nome muito curto (≤4 chars)
+  [2] Linha 16: Variável 'z' com nome muito curto (≤4 chars)
       Trecho  : z = ...
       Contexto:
-               3 | v = x.split(',')
-        >>>    4 | z = zeros(5,dtype = int)
-               5 | for i in v:
+              15 | 		r = r + 1
+        >>>   16 | z = zeros(5, dtype = int)
+              17 | z[0] = a
+
+  [3] Linha 7: Variável 'a' com nome muito curto (≤4 chars)
+      Trecho  : a = ...
+      Contexto:
+               6 | 	if(i == "AM"):
+        >>>    7 | 		a = a + 1
+               8 | 	if(i == "PE"):
+
+  [4] Linha 9: Variável 'p' com nome muito curto (≤4 chars)
+      Trecho  : p = ...
+      Contexto:
+               8 | 	if(i == "PE"):
+        >>>    9 | 		p = p + 1
+              10 | 	if(i == "MG"):
+
+  [5] Linha 11: Variável 'm' com nome muito curto (≤4 chars)
+      Trecho  : m = ...
+      Contexto:
+              10 | 	if(i == "MG"):
+        >>>   11 | 		m = m + 1
+              12 | 	if(i == "SP"):
+
+  [6] Linha 13: Variável 's' com nome muito curto (≤4 chars)
+      Trecho  : s = ...
+      Contexto:
+              12 | 	if(i == "SP"):
+        >>>   13 | 		s = s + 1
+              14 | 	if(i == "RS"):
+
+  [7] Linha 15: Variável 'r' com nome muito curto (≤4 chars)
+      Trecho  : r = ...
+      Contexto:
+              14 | 	if(i == "RS"):
+        >>>   15 | 		r = r + 1
+              16 | z = zeros(5, dtype = int)
 
 ======================================================================

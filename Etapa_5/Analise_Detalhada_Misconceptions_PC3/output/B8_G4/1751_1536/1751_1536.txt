@@ -1,8 +1,8 @@
 ======================================================================
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
-Arquivo     : 1751_1536.py
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2019_1_v1.81\2019-1\220\users\4264\codes\1751_1536.py
+Arquivo     : 1751_1536.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2019_1_v1.81\2019-1\220\users\4264\executions\1751_1536.log
 Assessment  : 1751
 Título      : TP4: Estrutura de Repetição por Condição (while)
 Questão     : 1536
@@ -20,17 +20,16 @@ CÓDIGO FONTE
      2 | x=float(input())
      3 | k=int(input())
      4 | if(x > -1 and x <= 1):
-     5 | 	e=0
+     5 | 	e=x
      6 | 	i=0
      7 | 	t=2
-     8 | 	sinal=-1
+     8 | 	sinal=+1
      9 | 	while(i < k):
-    10 | 		e=e-(sinal*(x**t))/t
+    10 | 		e=e-(sinal*(e**t))/t
     11 | 		sinal=-sinal
     12 | 		t=t+1
     13 | 		i=i+1
     14 | 	print(round(log(1+e), 10))
-    15 | 	
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
@@ -63,13 +62,13 @@ DETALHAMENTO DOS MISCONCEPTIONS
       Trecho  : e = ...
       Contexto:
                4 | if(x > -1 and x <= 1):
-        >>>    5 | 	e=0
+        >>>    5 | 	e=x
                6 | 	i=0
 
   [4] Linha 6: Variável 'i' com nome muito curto (≤4 chars)
       Trecho  : i = ...
       Contexto:
-               5 | 	e=0
+               5 | 	e=x
         >>>    6 | 	i=0
                7 | 	t=2
 
@@ -78,13 +77,13 @@ DETALHAMENTO DOS MISCONCEPTIONS
       Contexto:
                6 | 	i=0
         >>>    7 | 	t=2
-               8 | 	sinal=-1
+               8 | 	sinal=+1
 
   [6] Linha 10: Variável 'e' com nome muito curto (≤4 chars)
       Trecho  : e = ...
       Contexto:
                9 | 	while(i < k):
-        >>>   10 | 		e=e-(sinal*(x**t))/t
+        >>>   10 | 		e=e-(sinal*(e**t))/t
               11 | 		sinal=-sinal
 
   [7] Linha 12: Variável 't' com nome muito curto (≤4 chars)

@@ -1,12 +1,12 @@
 ======================================================================
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
-Arquivo     : 614_1531.py
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2017_1_v1.81\2017-1\143\users\2246\codes\614_1531.py
+Arquivo     : 614_1531.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2017_1_v1.81\2017-1\143\users\2244\executions\614_1531.log
 Assessment  : 614
 Título      : Trabalho Prático 4: Estrutura de Repetição por Condição (while)
 Questão     : 1531
-Aluno       : 2246
+Aluno       : 2244
 Grupo       : TP 04
 Significado : Estrutura de Repetição por Condição
 Total MCs   : 1
@@ -17,78 +17,80 @@ Total MCs   : 1
 CÓDIGO FONTE
 ----------------------------------------------------------------------
      1 | from math import*
-     2 | b = eval(input(":"))
-     3 | n= int(input(":"))
-     4 | t= 0
-     5 | a= 0
-     6 | sinal = +1
-     7 | while(t<n):
-     8 | 	a = a + (sinal) * (b**(2*t))/ factorial(2*t)
-     9 | 	t = t + 1
-    10 | 	sinal= - sinal
-    11 | print(round(a,10))
+     2 | x= eval(input("Digite o valor do angulo:"))
+     3 | k= int(input("Digite o valor da quantidade de termos:"))
+     4 | i= 1
+     5 | soma= 1
+     6 | a= 2
+     7 | sinal = -1
+     8 | while(i<k):
+     9 | 	soma= soma + sinal * (x**a/factorial(a))
+    10 | 	i= i + 1
+    11 | 	a = a + 2
+    12 | 	sinal= sinal*-1
+    13 | print(round(soma,10))
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
 ----------------------------------------------------------------------
 
 ▶ G4 — Funções/variáveis com nomes não significativos
-  Ocorrências: 6
+  Ocorrências: 8
 
-  [1] Linha 2: Variável 'b' com nome muito curto (≤4 chars)
-      Trecho  : b = ...
+  [1] Linha 2: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
       Contexto:
                1 | from math import*
-        >>>    2 | b = eval(input(":"))
-               3 | n= int(input(":"))
+        >>>    2 | x= eval(input("Digite o valor do angulo:"))
+               3 | k= int(input("Digite o valor da quantidade de termos:"))
 
-  [2] Linha 3: Variável 'n' com nome muito curto (≤4 chars)
-      Trecho  : n = ...
+  [2] Linha 3: Variável 'k' com nome muito curto (≤4 chars)
+      Trecho  : k = ...
       Contexto:
-               2 | b = eval(input(":"))
-        >>>    3 | n= int(input(":"))
-               4 | t= 0
+               2 | x= eval(input("Digite o valor do angulo:"))
+        >>>    3 | k= int(input("Digite o valor da quantidade de termos:"))
+               4 | i= 1
 
-  [3] Linha 4: Variável 't' com nome muito curto (≤4 chars)
-      Trecho  : t = ...
-      Contexto:
-               3 | n= int(input(":"))
-        >>>    4 | t= 0
-               5 | a= 0
-
-  [4] Linha 5: Variável 'a' com nome muito curto (≤4 chars)
-      Trecho  : a = ...
-      Contexto:
-               4 | t= 0
-        >>>    5 | a= 0
-               6 | sinal = +1
-
-  [5] Linha 8: Variável 'a' com nome muito curto (≤4 chars)
-      Trecho  : a = ...
-      Contexto:
-               7 | while(t<n):
-        >>>    8 | 	a = a + (sinal) * (b**(2*t))/ factorial(2*t)
-               9 | 	t = t + 1
-
-  [6] Linha 9: Variável 't' com nome muito curto (≤4 chars)
-      Trecho  : t = ...
-      Contexto:
-               8 | 	a = a + (sinal) * (b**(2*t))/ factorial(2*t)
-        >>>    9 | 	t = t + 1
-              10 | 	sinal= - sinal
-
-======================================================================nome muito curto (≤4 chars)
-      Trecho  : a = ...
-      Contexto:
-               9 | 	s = s + sinal * (x ** a/factorial(a))
-        >>>   10 | 	a = a + 2
-              11 | 	sinal = 1 
-
-  [8] Linha 12: Variável 'i' com nome muito curto (≤4 chars)
+  [3] Linha 4: Variável 'i' com nome muito curto (≤4 chars)
       Trecho  : i = ...
       Contexto:
-              11 | 	sinal = 1 
-        >>>   12 | 	i = i + 1
-              13 | print(round(s,10))
+               3 | k= int(input("Digite o valor da quantidade de termos:"))
+        >>>    4 | i= 1
+               5 | soma= 1
+
+  [4] Linha 5: Variável 'soma' com nome muito curto (≤4 chars)
+      Trecho  : soma = ...
+      Contexto:
+               4 | i= 1
+        >>>    5 | soma= 1
+               6 | a= 2
+
+  [5] Linha 6: Variável 'a' com nome muito curto (≤4 chars)
+      Trecho  : a = ...
+      Contexto:
+               5 | soma= 1
+        >>>    6 | a= 2
+               7 | sinal = -1
+
+  [6] Linha 9: Variável 'soma' com nome muito curto (≤4 chars)
+      Trecho  : soma = ...
+      Contexto:
+               8 | while(i<k):
+        >>>    9 | 	soma= soma + sinal * (x**a/factorial(a))
+              10 | 	i= i + 1
+
+  [7] Linha 10: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+               9 | 	soma= soma + sinal * (x**a/factorial(a))
+        >>>   10 | 	i= i + 1
+              11 | 	a = a + 2
+
+  [8] Linha 11: Variável 'a' com nome muito curto (≤4 chars)
+      Trecho  : a = ...
+      Contexto:
+              10 | 	i= i + 1
+        >>>   11 | 	a = a + 2
+              12 | 	sinal= sinal*-1
 
 ======================================================================

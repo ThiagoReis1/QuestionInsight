@@ -1,12 +1,12 @@
 ======================================================================
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
-Arquivo     : 4921_6473.py
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2023_1_v1.81\2023-1\524\users\8661\codes\4921_6473.py
+Arquivo     : 4921_6473.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2023_1_v1.81\2023-1\524\users\8629\executions\4921_6473.log
 Assessment  : 4921
 Título      : TP1: Variáveis e Estrutura Sequencial
 Questão     : 6473
-Aluno       : 8661
+Aluno       : 8629
 Grupo       : TP 01
 Significado : Variáveis e Estrutura Sequencial
 Total MCs   : 1
@@ -16,39 +16,48 @@ Total MCs   : 1
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | from math import *
+     1 | import math
      2 | 
-     3 | L = float(input("lado?"))
-     4 | a = L /(2 * (tan(pi/10)))
-     5 | T = (5 * L * a)
-     6 | print(round(T, 2))
+     3 | lado = float(input("lado: "))
+     4 | pi = math.pi / 10
+     5 | tan = 2 *math.tan(pi)
+     6 | apotema = (lado) / tan
+     7 | area = 5 * lado * apotema
+     8 | print(round(area, 2))
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
 ----------------------------------------------------------------------
 
 ▶ G4 — Funções/variáveis com nomes não significativos
-  Ocorrências: 3
+  Ocorrências: 4
 
-  [1] Linha 3: Variável 'L' com nome muito curto (≤4 chars)
-      Trecho  : L = ...
+  [1] Linha 3: Variável 'lado' com nome muito curto (≤4 chars)
+      Trecho  : lado = ...
       Contexto:
                2 | 
-        >>>    3 | L = float(input("lado?"))
-               4 | a = L /(2 * (tan(pi/10)))
+        >>>    3 | lado = float(input("lado: "))
+               4 | pi = math.pi / 10
 
-  [2] Linha 4: Variável 'a' com nome muito curto (≤4 chars)
-      Trecho  : a = ...
+  [2] Linha 4: Variável 'pi' com nome muito curto (≤4 chars)
+      Trecho  : pi = ...
       Contexto:
-               3 | L = float(input("lado?"))
-        >>>    4 | a = L /(2 * (tan(pi/10)))
-               5 | T = (5 * L * a)
+               3 | lado = float(input("lado: "))
+        >>>    4 | pi = math.pi / 10
+               5 | tan = 2 *math.tan(pi)
 
-  [3] Linha 5: Variável 'T' com nome muito curto (≤4 chars)
-      Trecho  : T = ...
+  [3] Linha 5: Variável 'tan' com nome muito curto (≤4 chars)
+      Trecho  : tan = ...
       Contexto:
-               4 | a = L /(2 * (tan(pi/10)))
-        >>>    5 | T = (5 * L * a)
-               6 | print(round(T, 2))
+               4 | pi = math.pi / 10
+        >>>    5 | tan = 2 *math.tan(pi)
+               6 | apotema = (lado) / tan
+
+  [4] Linha 7: Variável 'area' com nome muito curto (≤4 chars)
+      Trecho  : area = ...
+      Contexto:
+               6 | apotema = (lado) / tan
+        >>>    7 | area = 5 * lado * apotema
+               8 | print(round(area, 2))
 
 ======================================================================

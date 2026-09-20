@@ -1,12 +1,12 @@
 ======================================================================
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
-Arquivo     : 1147_2456.py
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2018_1_v1.81\2018-1\186\users\3137\codes\1147_2456.py
+Arquivo     : 1147_2456.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2018_1_v1.81\2018-1\186\users\3139\executions\1147_2456.log
 Assessment  : 1147
 Título      : TP 3 – Condicionais Encadeadas (if/elif)
 Questão     : 2456
-Aluno       : 3137
+Aluno       : 3139
 Grupo       : TP 03
 Significado : Estrutura Condicional Encadeada
 Total MCs   : 2
@@ -16,17 +16,21 @@ Total MCs   : 2
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | vm= float(input("vm: "))
-     2 | nc= int(input("nc: "))
-     3 | if (nc==1):
-     4 | 	vt= (m*0.10)
-     5 | 	print(vt)
-     6 | elif (nc ==2):
-     7 | 	vt= vm*0.30 * nc
-     8 | 	print(vt)
-     9 | elif nc >= 3 :
-    10 | 	vt= vm*0.40* nc
-    11 | 	print(vt)
+     1 | v = float(input("valor da mensalidade: "))
+     2 | c = int(input("numero de criancas: "))
+     3 | 
+     4 | if (c == 1):
+     5 | 	x = (v*c)
+     6 | 	val = (x - x*(0.1))
+     7 | 	print(round(val, 2))
+     8 | elif (c == 2):
+     9 | 	x = (v*c)
+    10 | 	val = (x- x*(0.3)) 
+    11 | 	print(round(val, 2))
+    12 | elif (c >= 3):
+    13 | 	x = (v*c)
+    14 | 	val = (x - x*(0.4))
+    15 | 	print(round(val, 2))
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
@@ -35,48 +39,69 @@ DETALHAMENTO DOS MISCONCEPTIONS
 ▶ B8 — Não utilização de elif/else
   Ocorrências: 1
 
-  [1] Linha 6: Cadeia if/elif sem bloco else final
-      Trecho  : if ... (linha 6) / elif ... sem else
+  [1] Linha 8: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 8) / elif ... sem else
       Contexto:
-               5 | 	print(vt)
-        >>>    6 | elif (nc ==2):
-               7 | 	vt= vm*0.30 * nc
+               7 | 	print(round(val, 2))
+        >>>    8 | elif (c == 2):
+               9 | 	x = (v*c)
 
 ▶ G4 — Funções/variáveis com nomes não significativos
-  Ocorrências: 5
+  Ocorrências: 8
 
-  [1] Linha 1: Variável 'vm' com nome muito curto (≤4 chars)
-      Trecho  : vm = ...
+  [1] Linha 1: Variável 'v' com nome muito curto (≤4 chars)
+      Trecho  : v = ...
       Contexto:
-        >>>    1 | vm= float(input("vm: "))
-               2 | nc= int(input("nc: "))
+        >>>    1 | v = float(input("valor da mensalidade: "))
+               2 | c = int(input("numero de criancas: "))
 
-  [2] Linha 2: Variável 'nc' com nome muito curto (≤4 chars)
-      Trecho  : nc = ...
+  [2] Linha 2: Variável 'c' com nome muito curto (≤4 chars)
+      Trecho  : c = ...
       Contexto:
-               1 | vm= float(input("vm: "))
-        >>>    2 | nc= int(input("nc: "))
-               3 | if (nc==1):
+               1 | v = float(input("valor da mensalidade: "))
+        >>>    2 | c = int(input("numero de criancas: "))
+               3 | 
 
-  [3] Linha 4: Variável 'vt' com nome muito curto (≤4 chars)
-      Trecho  : vt = ...
+  [3] Linha 5: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
       Contexto:
-               3 | if (nc==1):
-        >>>    4 | 	vt= (m*0.10)
-               5 | 	print(vt)
+               4 | if (c == 1):
+        >>>    5 | 	x = (v*c)
+               6 | 	val = (x - x*(0.1))
 
-  [4] Linha 7: Variável 'vt' com nome muito curto (≤4 chars)
-      Trecho  : vt = ...
+  [4] Linha 6: Variável 'val' com nome muito curto (≤4 chars)
+      Trecho  : val = ...
       Contexto:
-               6 | elif (nc ==2):
-        >>>    7 | 	vt= vm*0.30 * nc
-               8 | 	print(vt)
+               5 | 	x = (v*c)
+        >>>    6 | 	val = (x - x*(0.1))
+               7 | 	print(round(val, 2))
 
-  [5] Linha 10: Variável 'vt' com nome muito curto (≤4 chars)
-      Trecho  : vt = ...
+  [5] Linha 9: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
       Contexto:
-               9 | elif nc >= 3 :
-        >>>   10 | 	vt= vm*0.40* nc
-              11 | 	print(vt)
+               8 | elif (c == 2):
+        >>>    9 | 	x = (v*c)
+              10 | 	val = (x- x*(0.3)) 
+
+  [6] Linha 10: Variável 'val' com nome muito curto (≤4 chars)
+      Trecho  : val = ...
+      Contexto:
+               9 | 	x = (v*c)
+        >>>   10 | 	val = (x- x*(0.3)) 
+              11 | 	print(round(val, 2))
+
+  [7] Linha 13: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+              12 | elif (c >= 3):
+        >>>   13 | 	x = (v*c)
+              14 | 	val = (x - x*(0.4))
+
+  [8] Linha 14: Variável 'val' com nome muito curto (≤4 chars)
+      Trecho  : val = ...
+      Contexto:
+              13 | 	x = (v*c)
+        >>>   14 | 	val = (x - x*(0.4))
+              15 | 	print(round(val, 2))
 
 ======================================================================

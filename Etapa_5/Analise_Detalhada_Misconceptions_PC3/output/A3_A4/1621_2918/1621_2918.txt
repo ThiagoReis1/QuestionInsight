@@ -1,12 +1,12 @@
 ======================================================================
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
-Arquivo     : 1621_2918.py
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2019_1_v1.81\2019-1\222\users\4326\codes\1621_2918.py
+Arquivo     : 1621_2918.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2019_1_v1.81\2019-1\222\users\4082\executions\1621_2918.log
 Assessment  : 1621
 Título      : TP1: Variáveis e Estrutura Sequencial
 Questão     : 2918
-Aluno       : 4326
+Aluno       : 4082
 Grupo       : TP 01
 Significado : Variáveis e Estrutura Sequencial
 Total MCs   : 2
@@ -16,45 +16,32 @@ Total MCs   : 2
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | precoIngresso=float(input("Digite o preco do Ingresso:"))
-     2 | precoPromocional=float(input("Digite a quantidade de Ingresso:"))
-     3 | 
-     4 | 
-     5 | print=round(precoPromocional=precoIngresso-(presoIngresso*0.2/100))
-     6 | 
-     7 | 
-     8 | 
-     9 | 
+     1 | p=float(input("o preco do valor integral do ingresso?"))
+     2 | q=int(input("a quantidade de ingressos"))
+     3 | valor=p*(20/100)
+     4 | total=valor*q
+     5 | print=(round(total,2))
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
 ----------------------------------------------------------------------
 
 ▶ A3 — Variável inicializada desnecessariamente
-  Ocorrências: 2
+  Ocorrências: 1
 
-  [1] Linha 2: Variável 'precoPromocional' declarada mas nunca utilizada
-      Trecho  : precoPromocional = ...
-      Contexto:
-               1 | precoIngresso=float(input("Digite o preco do Ingresso:"))
-        >>>    2 | precoPromocional=float(input("Digite a quantidade de Ingresso:"))
-               3 | 
-
-  [2] Linha 5: Variável 'print' declarada mas nunca utilizada
+  [1] Linha 5: Variável 'print' declarada mas nunca utilizada
       Trecho  : print = ...
       Contexto:
-               4 | 
-        >>>    5 | print=round(precoPromocional=precoIngresso-(presoIngresso*0.2/100))
-               6 | 
+               4 | total=valor*q
+        >>>    5 | print=(round(total,2))
 
 ▶ A4 — Redefinição de built-in
   Ocorrências: 1
 
   [1] Linha 5: Built-in 'print' redefinido como variável
-      Trecho  : print = round(precoPromocional=precoIngresso - presoIngresso * 0.2 / 100)
+      Trecho  : print = round(total, 2)
       Contexto:
-               4 | 
-        >>>    5 | print=round(precoPromocional=precoIngresso-(presoIngresso*0.2/100))
-               6 | 
+               4 | total=valor*q
+        >>>    5 | print=(round(total,2))
 
 ======================================================================

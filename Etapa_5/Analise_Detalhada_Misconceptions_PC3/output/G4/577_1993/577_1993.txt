@@ -1,12 +1,12 @@
 ======================================================================
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
-Arquivo     : 577_1993.py
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2017_1_v1.81\2017-1\139\users\2397\codes\577_1993.py
+Arquivo     : 577_1993.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2017_1_v1.81\2017-1\139\users\2400\executions\577_1993.log
 Assessment  : 577
 Título      : Trabalho Prático 3: Estruturas Condicionais Encadeadas
 Questão     : 1993
-Aluno       : 2397
+Aluno       : 2400
 Grupo       : TP 03
 Significado : Estrutura Condicional Encadeada
 Total MCs   : 1
@@ -16,52 +16,101 @@ Total MCs   : 1
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | n= input().lower()
-     2 | if(n=="cisteina"):
-     3 | 	p=3*12.011 +7*1.00794 + 1*14.0067 +2*15.9994 +1*32.066
-     4 | 	print(round(p,2))
-     5 | elif(n=="isoleucina"):
-     6 | 	p=6*12.011 +13*1.00794 + 1*14.0067 +2*15.9994 
-     7 | 	print(round(p,2))
-     8 | elif(n=="metionina"):
-     9 | 	p=5*12.011 +11*1.00794 + 1*14.0067 +2*15.9994 +1*32.066
-    10 | 	print(round(p,2))
-    11 | else:
-    12 | 	print("Entrada:",n)
-    13 | 	print("Dado Invalido")
+     1 | O=15.9994
+     2 | C=12.011
+     3 | N= 14.0067
+     4 | S= 32.066
+     5 | H= 1.00794
+     6 | J=input()
+     7 | nome=J.lower()
+     8 | 
+     9 | if(nome=='cisteina'):
+    10 | 	A=C*3+H*7+N+O*2+S
+    11 | 	print(round(A,2))
+    12 | elif(nome=='isoleucina'):
+    13 | 	A=C*6+H*13+N+O*2
+    14 | 	print(round(A,2))
+    15 | elif(nome=='metionina'):
+    16 | 	A=C*5+H*11+N+O*2+S
+    17 | 	print(round(A,2))
+    18 | else:
+    19 | 	print("Entrada:",nome)
+    20 | 	print("Dado Invalido")
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
 ----------------------------------------------------------------------
 
 ▶ G4 — Funções/variáveis com nomes não significativos
-  Ocorrências: 4
+  Ocorrências: 10
 
-  [1] Linha 1: Variável 'n' com nome muito curto (≤4 chars)
-      Trecho  : n = ...
+  [1] Linha 1: Variável 'O' com nome muito curto (≤4 chars)
+      Trecho  : O = ...
       Contexto:
-        >>>    1 | n= input().lower()
-               2 | if(n=="cisteina"):
+        >>>    1 | O=15.9994
+               2 | C=12.011
 
-  [2] Linha 3: Variável 'p' com nome muito curto (≤4 chars)
-      Trecho  : p = ...
+  [2] Linha 2: Variável 'C' com nome muito curto (≤4 chars)
+      Trecho  : C = ...
       Contexto:
-               2 | if(n=="cisteina"):
-        >>>    3 | 	p=3*12.011 +7*1.00794 + 1*14.0067 +2*15.9994 +1*32.066
-               4 | 	print(round(p,2))
+               1 | O=15.9994
+        >>>    2 | C=12.011
+               3 | N= 14.0067
 
-  [3] Linha 6: Variável 'p' com nome muito curto (≤4 chars)
-      Trecho  : p = ...
+  [3] Linha 3: Variável 'N' com nome muito curto (≤4 chars)
+      Trecho  : N = ...
       Contexto:
-               5 | elif(n=="isoleucina"):
-        >>>    6 | 	p=6*12.011 +13*1.00794 + 1*14.0067 +2*15.9994 
-               7 | 	print(round(p,2))
+               2 | C=12.011
+        >>>    3 | N= 14.0067
+               4 | S= 32.066
 
-  [4] Linha 9: Variável 'p' com nome muito curto (≤4 chars)
-      Trecho  : p = ...
+  [4] Linha 4: Variável 'S' com nome muito curto (≤4 chars)
+      Trecho  : S = ...
       Contexto:
-               8 | elif(n=="metionina"):
-        >>>    9 | 	p=5*12.011 +11*1.00794 + 1*14.0067 +2*15.9994 +1*32.066
-              10 | 	print(round(p,2))
+               3 | N= 14.0067
+        >>>    4 | S= 32.066
+               5 | H= 1.00794
+
+  [5] Linha 5: Variável 'H' com nome muito curto (≤4 chars)
+      Trecho  : H = ...
+      Contexto:
+               4 | S= 32.066
+        >>>    5 | H= 1.00794
+               6 | J=input()
+
+  [6] Linha 6: Variável 'J' com nome muito curto (≤4 chars)
+      Trecho  : J = ...
+      Contexto:
+               5 | H= 1.00794
+        >>>    6 | J=input()
+               7 | nome=J.lower()
+
+  [7] Linha 7: Variável 'nome' com nome muito curto (≤4 chars)
+      Trecho  : nome = ...
+      Contexto:
+               6 | J=input()
+        >>>    7 | nome=J.lower()
+               8 | 
+
+  [8] Linha 10: Variável 'A' com nome muito curto (≤4 chars)
+      Trecho  : A = ...
+      Contexto:
+               9 | if(nome=='cisteina'):
+        >>>   10 | 	A=C*3+H*7+N+O*2+S
+              11 | 	print(round(A,2))
+
+  [9] Linha 13: Variável 'A' com nome muito curto (≤4 chars)
+      Trecho  : A = ...
+      Contexto:
+              12 | elif(nome=='isoleucina'):
+        >>>   13 | 	A=C*6+H*13+N+O*2
+              14 | 	print(round(A,2))
+
+  [10] Linha 16: Variável 'A' com nome muito curto (≤4 chars)
+      Trecho  : A = ...
+      Contexto:
+              15 | elif(nome=='metionina'):
+        >>>   16 | 	A=C*5+H*11+N+O*2+S
+              17 | 	print(round(A,2))
 
 ======================================================================

@@ -1,12 +1,12 @@
 ======================================================================
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
-Arquivo     : 1828_1648.py
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2019_1_v1.81\2019-1\225\users\4013\codes\1828_1648.py
+Arquivo     : 1828_1648.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2019_1_v1.81\2019-1\225\users\4009\executions\1828_1648.log
 Assessment  : 1828
 Título      : TP6: Repetição por contagem
 Questão     : 1648
-Aluno       : 4013
+Aluno       : 4009
 Grupo       : TP 06
 Significado : Estrutura de Repetição por Contagem
 Total MCs   : 2
@@ -16,21 +16,20 @@ Total MCs   : 2
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | from numpy import*
-     2 | vet = array(eval(input("aulas frequentadas:")))
-     3 | rp = 0
-     4 | for i in range(size(vet)):
-     5 | 	if(vet[i] < 70):
-     6 | 		rp = rp + 1
-     7 | print(rp)
-     8 | v = zeros(rp , dtype=int)
-     9 | j = 0
-    10 | for i in range(size(vet)):
-    11 | 	if(vet[i] < 70):
-    12 | 		v[j] = i
-    13 | 		j = j + 1
-    14 | 	
-    15 | print(v)
+     1 | from numpy import *
+     2 | v = array(eval(input("")))
+     3 | qtd = 0
+     4 | for i in range(len(v)):
+     5 | 	if v[i]< 70:
+     6 | 		qtd+=1
+     7 | v2 = zeros(qtd, dtype = int)
+     8 | c = 0;
+     9 | for i in range(len(v)):
+    10 | 	if v[i]<70:
+    11 | 		v2[c] = i
+    12 | 		c+=1
+    13 | print(qtd)
+    14 | print(v2)
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
@@ -43,35 +42,37 @@ DETALHAMENTO DOS MISCONCEPTIONS
       Trecho  : —
 
 ▶ G4 — Funções/variáveis com nomes não significativos
-  Ocorrências: 6
+  Ocorrências: 4
 
-  [1] Linha 2: Variável 'vet' com nome muito curto (≤4 chars)
-      Trecho  : vet = ...
-      Contexto:
-               1 | from numpy import*
-        >>>    2 | vet = array(eval(input("aulas frequentadas:")))
-               3 | rp = 0
-
-  [2] Linha 3: Variável 'rp' com nome muito curto (≤4 chars)
-      Trecho  : rp = ...
-      Contexto:
-               2 | vet = array(eval(input("aulas frequentadas:")))
-        >>>    3 | rp = 0
-               4 | for i in range(size(vet)):
-
-  [3] Linha 8: Variável 'v' com nome muito curto (≤4 chars)
+  [1] Linha 2: Variável 'v' com nome muito curto (≤4 chars)
       Trecho  : v = ...
       Contexto:
-               7 | print(rp)
-        >>>    8 | v = zeros(rp , dtype=int)
-               9 | j = 0
+               1 | from numpy import *
+        >>>    2 | v = array(eval(input("")))
+               3 | qtd = 0
 
-  [4] Linha 9: Variável 'j' com nome muito curto (≤4 chars)
-      Trecho  : j = ...
+  [2] Linha 3: Variável 'qtd' com nome muito curto (≤4 chars)
+      Trecho  : qtd = ...
       Contexto:
-               8 | v = zeros(rp , dtype=int)
-        >>>    9 | j = 0
-              10 | for i in range(size(vet)):
+               2 | v = array(eval(input("")))
+        >>>    3 | qtd = 0
+               4 | for i in range(len(v)):
+
+  [3] Linha 7: Variável 'v2' com nome muito curto (≤4 chars)
+      Trecho  : v2 = ...
+      Contexto:
+               6 | 		qtd+=1
+        >>>    7 | v2 = zeros(qtd, dtype = int)
+               8 | c = 0;
+
+  [4] Linha 8: Variável 'c' com nome muito curto (≤4 chars)
+      Trecho  : c = ...
+      Contexto:
+               7 | v2 = zeros(qtd, dtype = int)
+        >>>    8 | c = 0;
+               9 | for i in range(len(v)):
+
+======================================================================e(size(vet)):
 
   [5] Linha 6: Variável 'rp' com nome muito curto (≤4 chars)
       Trecho  : rp = ...

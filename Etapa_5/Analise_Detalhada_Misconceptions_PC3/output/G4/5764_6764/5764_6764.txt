@@ -1,12 +1,12 @@
 ======================================================================
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
-Arquivo     : 5764_6764.py
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2024_1_v1.81\2024-1\589\users\9735\codes\5764_6764.py
+Arquivo     : 5764_6764.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2024_1_v1.81\2024-1\589\users\9895\executions\5764_6764.log
 Assessment  : 5764
 Título      : TP 3: Est. Condicional Encadeada
 Questão     : 6764
-Aluno       : 9735
+Aluno       : 9895
 Grupo       : TP 03
 Significado : Estrutura Condicional Encadeada
 Total MCs   : 1
@@ -16,18 +16,16 @@ Total MCs   : 1
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | # faça seu código aqui!
-     2 | a = float(input("peso: "))
-     3 | 
-     4 | if (a<5):
-     5 | 	t = 13.75
-     6 | 	print(round(t, 2))
-     7 | elif (a==5):
-     8 | 	t = 14.75
-     9 | 	print(round(t, 2))
-    10 | else:
-    11 | 	t = 15.75
-    12 | 	print(round(t, 2))
+     1 | p = float(input("peso: "))
+     2 | if p < 5:
+     3 | 	a = 10 + 3.75
+     4 | 	print(round(a,2))
+     5 | elif p == 5:
+     6 | 	a = 10 + 4.75
+     7 | 	print(round(a,2))
+     8 | else:
+     9 | 	a = 10 + 5.75
+    10 | 	print(round(a,2))
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
@@ -36,32 +34,31 @@ DETALHAMENTO DOS MISCONCEPTIONS
 ▶ G4 — Funções/variáveis com nomes não significativos
   Ocorrências: 4
 
-  [1] Linha 2: Variável 'a' com nome muito curto (≤4 chars)
+  [1] Linha 1: Variável 'p' com nome muito curto (≤4 chars)
+      Trecho  : p = ...
+      Contexto:
+        >>>    1 | p = float(input("peso: "))
+               2 | if p < 5:
+
+  [2] Linha 3: Variável 'a' com nome muito curto (≤4 chars)
       Trecho  : a = ...
       Contexto:
-               1 | # faça seu código aqui!
-        >>>    2 | a = float(input("peso: "))
-               3 | 
+               2 | if p < 5:
+        >>>    3 | 	a = 10 + 3.75
+               4 | 	print(round(a,2))
 
-  [2] Linha 5: Variável 't' com nome muito curto (≤4 chars)
-      Trecho  : t = ...
+  [3] Linha 6: Variável 'a' com nome muito curto (≤4 chars)
+      Trecho  : a = ...
       Contexto:
-               4 | if (a<5):
-        >>>    5 | 	t = 13.75
-               6 | 	print(round(t, 2))
+               5 | elif p == 5:
+        >>>    6 | 	a = 10 + 4.75
+               7 | 	print(round(a,2))
 
-  [3] Linha 8: Variável 't' com nome muito curto (≤4 chars)
-      Trecho  : t = ...
+  [4] Linha 9: Variável 'a' com nome muito curto (≤4 chars)
+      Trecho  : a = ...
       Contexto:
-               7 | elif (a==5):
-        >>>    8 | 	t = 14.75
-               9 | 	print(round(t, 2))
-
-  [4] Linha 11: Variável 't' com nome muito curto (≤4 chars)
-      Trecho  : t = ...
-      Contexto:
-              10 | else:
-        >>>   11 | 	t = 15.75
-              12 | 	print(round(t, 2))
+               8 | else:
+        >>>    9 | 	a = 10 + 5.75
+              10 | 	print(round(a,2))
 
 ======================================================================

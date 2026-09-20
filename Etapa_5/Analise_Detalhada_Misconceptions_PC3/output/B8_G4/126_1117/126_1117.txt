@@ -1,12 +1,12 @@
 ======================================================================
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
-Arquivo     : 126_1117.py
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2016_1_v1.81\2016-1\102\users\1300\codes\126_1117.py
+Arquivo     : 126_1117.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2016_1_v1.81\2016-1\102\users\1307\executions\126_1117.log
 Assessment  : 126
 Título      : Avaliação Parcial 03 – Estruturas Condicionais Encadeadas
 Questão     : 1117
-Aluno       : 1300
+Aluno       : 1307
 Grupo       : TP 03
 Significado : Estrutura Condicional Encadeada
 Total MCs   : 2
@@ -16,31 +16,33 @@ Total MCs   : 2
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | p = float(input("Digite o preço normal da boate "))
-     2 | d = int(input("Digite o numero do dia: "))	
-     3 | m = input("Hoje é dia de música ao vivo?")
-     4 | print("Entradas:", p, ",", d, ",", m)
-     5 | v = p - (p* 25/100)
-     6 | if(p>=0):
-     7 | 	if(d >=1 and d<=7):
-     8 | 		if(m == "S" or m == "N"):
-     9 | 			if(m == "S"):
-    10 | 				if(d == 2 or d == 5 or d == 3):
-    11 | 					print("Valor a pagar: R$", round(v + 20,2))
-    12 | 				else:
-    13 | 					print("Valor a pagar: R$", round(p + 20,2))
-    14 | 			if(m == "N"):
-    15 | 				if(d == 2 or d == 5 or d == 3):
-    16 | 					print("Valor a pagar: R$", round(v,2))
-    17 | 				else:
-    18 | 					print("Valor a pagar: R$", round(p,2))
-    19 | 	else:
-    20 | 		print("Dados invalidos")
-    21 | else:
-    22 | 	print("Dados invalidos")
-    23 |             	
-    24 |                           
-    25 | 
+     1 | p = float(input("Digite o preco normal da entrada:"))
+     2 | d = int(input("Digite o numero do dia da semana: "))
+     3 | m = input("E dia de musica ao vivo? (S/N)")
+     4 | 
+     5 | print("Entradas:", p , ",", d , ",", m)
+     6 | 
+     7 | v = p - (p * 25 / 100)
+     8 | 
+     9 | if(p >= 0):
+    10 | 	if(d >= 1 and d <= 7):
+    11 | 		if(m == "S" or m == "N"):
+    12 | 			if(m == "S"):
+    13 | 				if(d == 2 or d == 3 or d == 5):         
+    14 | 					print("Valor a pagar: R$", round(v + 20,2))
+    15 | 				else:
+    16 | 					print("Valor a pagar: R$", round(p + 20,2))
+    17 | 			if(m == "N"):
+    18 | 				if(d == 2 or d == 3 or d == 5):
+    19 | 					print("Valor a pagar: R$", round(v,2))
+    20 | 				else:
+    21 | 					print("Valor a pagar: R$", round(p,2))
+    22 | 		else:
+    23 | 			print("Dados invalidos")
+    24 | 	else:
+    25 | 		print("Dados invalidos")
+    26 | else:
+    27 | 	print("Dados invalidos")
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
@@ -58,28 +60,53 @@ DETALHAMENTO DOS MISCONCEPTIONS
   [1] Linha 1: Variável 'p' com nome muito curto (≤4 chars)
       Trecho  : p = ...
       Contexto:
-        >>>    1 | p = float(input("Digite o preço normal da boate "))
-               2 | d = int(input("Digite o numero do dia: "))	
+        >>>    1 | p = float(input("Digite o preco normal da entrada:"))
+               2 | d = int(input("Digite o numero do dia da semana: "))
 
   [2] Linha 2: Variável 'd' com nome muito curto (≤4 chars)
       Trecho  : d = ...
       Contexto:
-               1 | p = float(input("Digite o preço normal da boate "))
-        >>>    2 | d = int(input("Digite o numero do dia: "))	
-               3 | m = input("Hoje é dia de música ao vivo?")
+               1 | p = float(input("Digite o preco normal da entrada:"))
+        >>>    2 | d = int(input("Digite o numero do dia da semana: "))
+               3 | m = input("E dia de musica ao vivo? (S/N)")
 
   [3] Linha 3: Variável 'm' com nome muito curto (≤4 chars)
       Trecho  : m = ...
       Contexto:
-               2 | d = int(input("Digite o numero do dia: "))	
-        >>>    3 | m = input("Hoje é dia de música ao vivo?")
-               4 | print("Entradas:", p, ",", d, ",", m)
+               2 | d = int(input("Digite o numero do dia da semana: "))
+        >>>    3 | m = input("E dia de musica ao vivo? (S/N)")
+               4 | 
 
-  [4] Linha 5: Variável 'v' com nome muito curto (≤4 chars)
+  [4] Linha 7: Variável 'v' com nome muito curto (≤4 chars)
       Trecho  : v = ...
       Contexto:
-               4 | print("Entradas:", p, ",", d, ",", m)
-        >>>    5 | v = p - (p* 25/100)
-               6 | if(p>=0):
+               6 | 
+        >>>    7 | v = p - (p * 25 / 100)
+               8 | 
+
+======================================================================" or s=="3" or s=="5"):
+        >>>    8 |    vi=p-(p*0.25)+20
+               9 |    print("Valor a pagar: R$",round(vi,2))
+
+  [5] Linha 11: Variável 'vi' com nome muito curto (≤4 chars)
+      Trecho  : vi = ...
+      Contexto:
+              10 | elif (m=="S") and (s!="2" or s!="3" or s!="5"):
+        >>>   11 |    vi=p+20
+              12 |    print("Valor a pagar: R$",round(vi,2))
+
+  [6] Linha 14: Variável 'vi' com nome muito curto (≤4 chars)
+      Trecho  : vi = ...
+      Contexto:
+              13 | elif (m=="N") and (s=="2" or s=="3" or s=="5"):
+        >>>   14 |    vi=p-(p*0.25)
+              15 |    print("Valor a pagar: R$",round(vi,2))
+
+  [7] Linha 17: Variável 'vi' com nome muito curto (≤4 chars)
+      Trecho  : vi = ...
+      Contexto:
+              16 | elif (m=="N") and (s!="2" or s!="3" or s!="5"):
+        >>>   17 |    vi=p
+              18 |    print("Valor a pagar: R$",round(vi,2))
 
 ======================================================================

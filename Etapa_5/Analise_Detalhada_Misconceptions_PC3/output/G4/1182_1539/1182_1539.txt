@@ -1,12 +1,12 @@
 ======================================================================
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
-Arquivo     : 1182_1539.py
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2018_1_v1.81\2018-1\189\users\3476\codes\1182_1539.py
+Arquivo     : 1182_1539.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2018_1_v1.81\2018-1\189\users\3307\executions\1182_1539.log
 Assessment  : 1182
 Título      : TP 04 - Estrutura de Repetição (while)
 Questão     : 1539
-Aluno       : 3476
+Aluno       : 3307
 Grupo       : TP 04
 Significado : Estrutura de Repetição por Condição
 Total MCs   : 1
@@ -16,62 +16,76 @@ Total MCs   : 1
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | x = float(input())
-     2 | k = int(input())
-     3 | cont=1
-     4 | s = 1
-     5 | while(cont<=k):
-     6 | 	s = s + ((-1)**cont)*(x**cont)
-     7 | 	cont=cont+1
-     8 | print(round(cont,7))
-     9 | 	
+     1 | # Data: 14/05
+     2 | 
+     3 | # Le um numero real e no. de termos 
+     4 | num = float(input('Numero: '))
+     5 | qt = int(input('No. de termos: '))
+     6 | 
+     7 | i = 0     # contador
+     8 | soma = 0  # acumulador
+     9 | fim = qt - 1 # fim da contagem
+    10 | 
+    11 | while i <= fim:
+    12 | 	soma = soma + ((-1) ** i) * (num) ** (i)
+    13 | 	i = i + 1
+    14 | 
+    15 | print(round(soma , 7))
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
 ----------------------------------------------------------------------
 
 ▶ G4 — Funções/variáveis com nomes não significativos
-  Ocorrências: 6
+  Ocorrências: 7
 
-  [1] Linha 1: Variável 'x' com nome muito curto (≤4 chars)
-      Trecho  : x = ...
+  [1] Linha 4: Variável 'num' com nome muito curto (≤4 chars)
+      Trecho  : num = ...
       Contexto:
-        >>>    1 | x = float(input())
-               2 | k = int(input())
+               3 | # Le um numero real e no. de termos 
+        >>>    4 | num = float(input('Numero: '))
+               5 | qt = int(input('No. de termos: '))
 
-  [2] Linha 2: Variável 'k' com nome muito curto (≤4 chars)
-      Trecho  : k = ...
+  [2] Linha 5: Variável 'qt' com nome muito curto (≤4 chars)
+      Trecho  : qt = ...
       Contexto:
-               1 | x = float(input())
-        >>>    2 | k = int(input())
-               3 | cont=1
+               4 | num = float(input('Numero: '))
+        >>>    5 | qt = int(input('No. de termos: '))
+               6 | 
 
-  [3] Linha 3: Variável 'cont' com nome muito curto (≤4 chars)
-      Trecho  : cont = ...
+  [3] Linha 7: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
       Contexto:
-               2 | k = int(input())
-        >>>    3 | cont=1
-               4 | s = 1
+               6 | 
+        >>>    7 | i = 0     # contador
+               8 | soma = 0  # acumulador
 
-  [4] Linha 4: Variável 's' com nome muito curto (≤4 chars)
-      Trecho  : s = ...
+  [4] Linha 8: Variável 'soma' com nome muito curto (≤4 chars)
+      Trecho  : soma = ...
       Contexto:
-               3 | cont=1
-        >>>    4 | s = 1
-               5 | while(cont<=k):
+               7 | i = 0     # contador
+        >>>    8 | soma = 0  # acumulador
+               9 | fim = qt - 1 # fim da contagem
 
-  [5] Linha 6: Variável 's' com nome muito curto (≤4 chars)
-      Trecho  : s = ...
+  [5] Linha 9: Variável 'fim' com nome muito curto (≤4 chars)
+      Trecho  : fim = ...
       Contexto:
-               5 | while(cont<=k):
-        >>>    6 | 	s = s + ((-1)**cont)*(x**cont)
-               7 | 	cont=cont+1
+               8 | soma = 0  # acumulador
+        >>>    9 | fim = qt - 1 # fim da contagem
+              10 | 
 
-  [6] Linha 7: Variável 'cont' com nome muito curto (≤4 chars)
-      Trecho  : cont = ...
+  [6] Linha 12: Variável 'soma' com nome muito curto (≤4 chars)
+      Trecho  : soma = ...
       Contexto:
-               6 | 	s = s + ((-1)**cont)*(x**cont)
-        >>>    7 | 	cont=cont+1
-               8 | print(round(cont,7))
+              11 | while i <= fim:
+        >>>   12 | 	soma = soma + ((-1) ** i) * (num) ** (i)
+              13 | 	i = i + 1
+
+  [7] Linha 13: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+              12 | 	soma = soma + ((-1) ** i) * (num) ** (i)
+        >>>   13 | 	i = i + 1
+              14 | 
 
 ======================================================================

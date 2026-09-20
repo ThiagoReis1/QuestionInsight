@@ -1,12 +1,12 @@
 ======================================================================
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
-Arquivo     : 1099_1097.py
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2018_1_v1.81\2018-1\187\users\3499\codes\1099_1097.py
+Arquivo     : 1099_1097.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2018_1_v1.81\2018-1\187\users\3204\executions\1099_1097.log
 Assessment  : 1099
 Título      : TP 02 – Estrutura Condicional Composta
 Questão     : 1097
-Aluno       : 3499
+Aluno       : 3204
 Grupo       : TP 02
 Significado : Estrutura Condicional Simples e Composta
 Total MCs   : 1
@@ -16,42 +16,50 @@ Total MCs   : 1
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | a = int(input(''))
-     2 | n = a // 1000
-     3 | p = a % 1000
-     4 | 
-     5 | if ((n - p)**2 == a):
-     6 | 	print('atende')
-     7 | 	print(a)
-     8 | else:
-     9 |    print('nao atende')
-    10 |    print(a)
+     1 | num = int(input("Escreva o numero:"))
+     2 | 
+     3 | d1 = num//1000
+     4 | d2 = num%1000
+     5 | c = (d1-d2)**2
+     6 | if(c == num):
+     7 | 	print("atende")
+     8 | 	print(int(num))
+     9 | else:
+    10 | 	print("nao atende")
+    11 | 	print(int(num))
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
 ----------------------------------------------------------------------
 
 ▶ G4 — Funções/variáveis com nomes não significativos
-  Ocorrências: 3
+  Ocorrências: 4
 
-  [1] Linha 1: Variável 'a' com nome muito curto (≤4 chars)
-      Trecho  : a = ...
+  [1] Linha 1: Variável 'num' com nome muito curto (≤4 chars)
+      Trecho  : num = ...
       Contexto:
-        >>>    1 | a = int(input(''))
-               2 | n = a // 1000
+        >>>    1 | num = int(input("Escreva o numero:"))
+               2 | 
 
-  [2] Linha 2: Variável 'n' com nome muito curto (≤4 chars)
-      Trecho  : n = ...
+  [2] Linha 3: Variável 'd1' com nome muito curto (≤4 chars)
+      Trecho  : d1 = ...
       Contexto:
-               1 | a = int(input(''))
-        >>>    2 | n = a // 1000
-               3 | p = a % 1000
+               2 | 
+        >>>    3 | d1 = num//1000
+               4 | d2 = num%1000
 
-  [3] Linha 3: Variável 'p' com nome muito curto (≤4 chars)
-      Trecho  : p = ...
+  [3] Linha 4: Variável 'd2' com nome muito curto (≤4 chars)
+      Trecho  : d2 = ...
       Contexto:
-               2 | n = a // 1000
-        >>>    3 | p = a % 1000
-               4 | 
+               3 | d1 = num//1000
+        >>>    4 | d2 = num%1000
+               5 | c = (d1-d2)**2
+
+  [4] Linha 5: Variável 'c' com nome muito curto (≤4 chars)
+      Trecho  : c = ...
+      Contexto:
+               4 | d2 = num%1000
+        >>>    5 | c = (d1-d2)**2
+               6 | if(c == num):
 
 ======================================================================

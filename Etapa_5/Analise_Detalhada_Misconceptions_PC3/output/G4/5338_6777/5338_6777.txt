@@ -1,12 +1,12 @@
 ======================================================================
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
-Arquivo     : 5338_6777.py
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2023_2_v1.81\2023-2\562\users\9201\codes\5338_6777.py
+Arquivo     : 5338_6777.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2023_2_v1.81\2023-2\562\users\9191\executions\5338_6777.log
 Assessment  : 5338
 Título      : TP 3: Est. Condicional Encadeada
 Questão     : 6777
-Aluno       : 9201
+Aluno       : 9191
 Grupo       : TP 03
 Significado : Estrutura Condicional Encadeada
 Total MCs   : 1
@@ -16,29 +16,30 @@ Total MCs   : 1
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | a = int(input("digite um valor:"))
-     2 | p = input("digite:").upper()
+     1 | N=int(input("numero inteiro:"))
+     2 | P=input("B/I?:").upper()
      3 | 
-     4 | d = 2023 - a
-     5 | 
-     6 | if(p=="B") and(d>=18):
-     7 | 	v = d - 18
-     8 | 	print("sim")
-     9 | 	print(v)
-    10 | elif(p=="B") and (d<18):
-    11 | 	v = 18-d
-    12 | 	print("nao")
-    13 | 	print(v)
-    14 | elif(p=="I") and (d>=17):
-    15 | 	print("sim")
-    16 | 	v = d -17
-    17 | 	print(v)
-    18 | elif(p=="I") and(d<17):
-    19 | 	v = 17-d
-    20 | 	print("nao")
-    21 | 	print(v)
-    22 | else:
-    23 | 	print("invalido")
+     4 | x=2023-N
+     5 | if P=="I":
+     6 | 	if x>=17:
+     7 | 		print("sim")
+     8 | 		y=(2023-N)-17
+     9 | 		print(y)
+    10 | 	else:
+    11 | 		print("nao")
+    12 | 		y=17-(2023-N)
+    13 | 		print(y)
+    14 | elif P=="B":
+    15 | 	if x>=18:
+    16 | 		print("sim")
+    17 | 		y=(2023-N)-18
+    18 | 		print(y)
+    19 | 	else:
+    20 | 		print("nao")
+    21 | 		y=18-(2023-N)
+    22 | 		print(y)
+    23 | else:
+    24 | 		print("invalido")
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
@@ -47,52 +48,52 @@ DETALHAMENTO DOS MISCONCEPTIONS
 ▶ G4 — Funções/variáveis com nomes não significativos
   Ocorrências: 7
 
-  [1] Linha 1: Variável 'a' com nome muito curto (≤4 chars)
-      Trecho  : a = ...
+  [1] Linha 1: Variável 'N' com nome muito curto (≤4 chars)
+      Trecho  : N = ...
       Contexto:
-        >>>    1 | a = int(input("digite um valor:"))
-               2 | p = input("digite:").upper()
+        >>>    1 | N=int(input("numero inteiro:"))
+               2 | P=input("B/I?:").upper()
 
-  [2] Linha 2: Variável 'p' com nome muito curto (≤4 chars)
-      Trecho  : p = ...
+  [2] Linha 2: Variável 'P' com nome muito curto (≤4 chars)
+      Trecho  : P = ...
       Contexto:
-               1 | a = int(input("digite um valor:"))
-        >>>    2 | p = input("digite:").upper()
+               1 | N=int(input("numero inteiro:"))
+        >>>    2 | P=input("B/I?:").upper()
                3 | 
 
-  [3] Linha 4: Variável 'd' com nome muito curto (≤4 chars)
-      Trecho  : d = ...
+  [3] Linha 4: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
       Contexto:
                3 | 
-        >>>    4 | d = 2023 - a
-               5 | 
+        >>>    4 | x=2023-N
+               5 | if P=="I":
 
-  [4] Linha 7: Variável 'v' com nome muito curto (≤4 chars)
-      Trecho  : v = ...
+  [4] Linha 8: Variável 'y' com nome muito curto (≤4 chars)
+      Trecho  : y = ...
       Contexto:
-               6 | if(p=="B") and(d>=18):
-        >>>    7 | 	v = d - 18
-               8 | 	print("sim")
+               7 | 		print("sim")
+        >>>    8 | 		y=(2023-N)-17
+               9 | 		print(y)
 
-  [5] Linha 11: Variável 'v' com nome muito curto (≤4 chars)
-      Trecho  : v = ...
+  [5] Linha 12: Variável 'y' com nome muito curto (≤4 chars)
+      Trecho  : y = ...
       Contexto:
-              10 | elif(p=="B") and (d<18):
-        >>>   11 | 	v = 18-d
-              12 | 	print("nao")
+              11 | 		print("nao")
+        >>>   12 | 		y=17-(2023-N)
+              13 | 		print(y)
 
-  [6] Linha 16: Variável 'v' com nome muito curto (≤4 chars)
-      Trecho  : v = ...
+  [6] Linha 17: Variável 'y' com nome muito curto (≤4 chars)
+      Trecho  : y = ...
       Contexto:
-              15 | 	print("sim")
-        >>>   16 | 	v = d -17
-              17 | 	print(v)
+              16 | 		print("sim")
+        >>>   17 | 		y=(2023-N)-18
+              18 | 		print(y)
 
-  [7] Linha 19: Variável 'v' com nome muito curto (≤4 chars)
-      Trecho  : v = ...
+  [7] Linha 21: Variável 'y' com nome muito curto (≤4 chars)
+      Trecho  : y = ...
       Contexto:
-              18 | elif(p=="I") and(d<17):
-        >>>   19 | 	v = 17-d
-              20 | 	print("nao")
+              20 | 		print("nao")
+        >>>   21 | 		y=18-(2023-N)
+              22 | 		print(y)
 
-======================================================================
+=====================================================================================================

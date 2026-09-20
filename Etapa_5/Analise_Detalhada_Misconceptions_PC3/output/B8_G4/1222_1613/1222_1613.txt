@@ -1,12 +1,12 @@
 ======================================================================
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
-Arquivo     : 1222_1613.py
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2018_1_v1.81\2018-1\185\users\3353\codes\1222_1613.py
+Arquivo     : 1222_1613.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2018_1_v1.81\2018-1\185\users\3355\executions\1222_1613.log
 Assessment  : 1222
 Título      : Trabalho Prático 05: Vetores e Strings
 Questão     : 1613
-Aluno       : 3353
+Aluno       : 3355
 Grupo       : TP 05
 Significado : Vetores e Strings
 Total MCs   : 2
@@ -16,28 +16,26 @@ Total MCs   : 2
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | from numpy import*
-     2 | 
-     3 | atv=array(eval((input("digite os Atividades: "))))
-     4 | d=array(eval(input("digite as duracoes: ")))
-     5 | i=0
-     6 | soma=0
-     7 | 
-     8 | tma=size(atv)
-     9 | while(i<tma):
-    10 | 	if(atv[i]=="ALONGAMENTO"):
-    11 | 		soma=soma+(d[i]*3)
-    12 | 	elif(atv[i]=="CORRIDA"):
-    13 | 		soma=soma+(d[i]*10.3)
-    14 | 	elif(atv[i]=="DANCA"):
-    15 | 		soma=soma+(d[i]*6.7)
-    16 | 	elif(atv[i]=="ESCALADA"):
-    17 | 		soma=soma+(d[i]*9.7)
-    18 | 	elif(atv[i]=="HIDROGINASTICA"):
-    19 | 		soma=soma+(d[i]*5)
-    20 | 	i=i+1
-    21 | 
-    22 | print(round(soma,2))
+     1 | from numpy import *
+     2 | vn = array(eval(input("Nomes de atividades fisicas: ")))
+     3 | vt = array(eval(input("Duracao (em minutos) das atividades: ")))
+     4 | 
+     5 | n = 0
+     6 | c = 0
+     7 | while(n<size(vn)):
+     8 | 	if (vn[n]=="ALONGAMENTO"):
+     9 | 		c = c + 3*vt[n]
+    10 | 	elif (vn[n]=="CORRIDA"):
+    11 | 		c = c + 10.3*vt[n]
+    12 | 	elif (vn[n]=="DANCA"):
+    13 | 		c = c + 6.7*vt[n]
+    14 | 	elif (vn[n]=="ESCALADA"):
+    15 | 		c = c + 9.7*vt[n]
+    16 | 	elif (vn[n]=="HIDROGINASTICA"):
+    17 | 		c = c + 5*vt[n]
+    18 | 	n = n + 1
+    19 | 	
+    20 | print(round(c, 2))
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
@@ -46,88 +44,87 @@ DETALHAMENTO DOS MISCONCEPTIONS
 ▶ B8 — Não utilização de elif/else
   Ocorrências: 1
 
-  [1] Linha 16: Cadeia if/elif sem bloco else final
-      Trecho  : if ... (linha 16) / elif ... sem else
+  [1] Linha 14: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 14) / elif ... sem else
       Contexto:
-              15 | 		soma=soma+(d[i]*6.7)
-        >>>   16 | 	elif(atv[i]=="ESCALADA"):
-              17 | 		soma=soma+(d[i]*9.7)
+              13 | 		c = c + 6.7*vt[n]
+        >>>   14 | 	elif (vn[n]=="ESCALADA"):
+              15 | 		c = c + 9.7*vt[n]
 
 ▶ G4 — Funções/variáveis com nomes não significativos
-  Ocorrências: 11
+  Ocorrências: 10
 
-  [1] Linha 3: Variável 'atv' com nome muito curto (≤4 chars)
-      Trecho  : atv = ...
+  [1] Linha 2: Variável 'vn' com nome muito curto (≤4 chars)
+      Trecho  : vn = ...
       Contexto:
-               2 | 
-        >>>    3 | atv=array(eval((input("digite os Atividades: "))))
-               4 | d=array(eval(input("digite as duracoes: ")))
+               1 | from numpy import *
+        >>>    2 | vn = array(eval(input("Nomes de atividades fisicas: ")))
+               3 | vt = array(eval(input("Duracao (em minutos) das atividades: ")))
 
-  [2] Linha 4: Variável 'd' com nome muito curto (≤4 chars)
-      Trecho  : d = ...
+  [2] Linha 3: Variável 'vt' com nome muito curto (≤4 chars)
+      Trecho  : vt = ...
       Contexto:
-               3 | atv=array(eval((input("digite os Atividades: "))))
-        >>>    4 | d=array(eval(input("digite as duracoes: ")))
-               5 | i=0
+               2 | vn = array(eval(input("Nomes de atividades fisicas: ")))
+        >>>    3 | vt = array(eval(input("Duracao (em minutos) das atividades: ")))
+               4 | 
 
-  [3] Linha 5: Variável 'i' com nome muito curto (≤4 chars)
-      Trecho  : i = ...
+  [3] Linha 5: Variável 'n' com nome muito curto (≤4 chars)
+      Trecho  : n = ...
       Contexto:
-               4 | d=array(eval(input("digite as duracoes: ")))
-        >>>    5 | i=0
-               6 | soma=0
+               4 | 
+        >>>    5 | n = 0
+               6 | c = 0
 
-  [4] Linha 6: Variável 'soma' com nome muito curto (≤4 chars)
-      Trecho  : soma = ...
+  [4] Linha 6: Variável 'c' com nome muito curto (≤4 chars)
+      Trecho  : c = ...
       Contexto:
-               5 | i=0
-        >>>    6 | soma=0
-               7 | 
+               5 | n = 0
+        >>>    6 | c = 0
+               7 | while(n<size(vn)):
 
-  [5] Linha 8: Variável 'tma' com nome muito curto (≤4 chars)
-      Trecho  : tma = ...
+  [5] Linha 18: Variável 'n' com nome muito curto (≤4 chars)
+      Trecho  : n = ...
       Contexto:
-               7 | 
-        >>>    8 | tma=size(atv)
-               9 | while(i<tma):
+              17 | 		c = c + 5*vt[n]
+        >>>   18 | 	n = n + 1
+              19 | 	
 
-  [6] Linha 20: Variável 'i' com nome muito curto (≤4 chars)
-      Trecho  : i = ...
+  [6] Linha 9: Variável 'c' com nome muito curto (≤4 chars)
+      Trecho  : c = ...
       Contexto:
-              19 | 		soma=soma+(d[i]*5)
-        >>>   20 | 	i=i+1
-              21 | 
+               8 | 	if (vn[n]=="ALONGAMENTO"):
+        >>>    9 | 		c = c + 3*vt[n]
+              10 | 	elif (vn[n]=="CORRIDA"):
 
-  [7] Linha 11: Variável 'soma' com nome muito curto (≤4 chars)
-      Trecho  : soma = ...
+  [7] Linha 11: Variável 'c' com nome muito curto (≤4 chars)
+      Trecho  : c = ...
       Contexto:
-              10 | 	if(atv[i]=="ALONGAMENTO"):
-        >>>   11 | 		soma=soma+(d[i]*3)
-              12 | 	elif(atv[i]=="CORRIDA"):
+              10 | 	elif (vn[n]=="CORRIDA"):
+        >>>   11 | 		c = c + 10.3*vt[n]
+              12 | 	elif (vn[n]=="DANCA"):
 
-  [8] Linha 13: Variável 'soma' com nome muito curto (≤4 chars)
-      Trecho  : soma = ...
+  [8] Linha 13: Variável 'c' com nome muito curto (≤4 chars)
+      Trecho  : c = ...
       Contexto:
-              12 | 	elif(atv[i]=="CORRIDA"):
-        >>>   13 | 		soma=soma+(d[i]*10.3)
-              14 | 	elif(atv[i]=="DANCA"):
+              12 | 	elif (vn[n]=="DANCA"):
+        >>>   13 | 		c = c + 6.7*vt[n]
+              14 | 	elif (vn[n]=="ESCALADA"):
 
-  [9] Linha 15: Variável 'soma' com nome muito curto (≤4 chars)
-      Trecho  : soma = ...
+  [9] Linha 15: Variável 'c' com nome muito curto (≤4 chars)
+      Trecho  : c = ...
       Contexto:
-              14 | 	elif(atv[i]=="DANCA"):
-        >>>   15 | 		soma=soma+(d[i]*6.7)
-              16 | 	elif(atv[i]=="ESCALADA"):
+              14 | 	elif (vn[n]=="ESCALADA"):
+        >>>   15 | 		c = c + 9.7*vt[n]
+              16 | 	elif (vn[n]=="HIDROGINASTICA"):
 
-  [10] Linha 17: Variável 'soma' com nome muito curto (≤4 chars)
-      Trecho  : soma = ...
+  [10] Linha 17: Variável 'c' com nome muito curto (≤4 chars)
+      Trecho  : c = ...
       Contexto:
-              16 | 	elif(atv[i]=="ESCALADA"):
-        >>>   17 | 		soma=soma+(d[i]*9.7)
-              18 | 	elif(atv[i]=="HIDROGINASTICA"):
+              16 | 	elif (vn[n]=="HIDROGINASTICA"):
+        >>>   17 | 		c = c + 5*vt[n]
+              18 | 	n = n + 1
 
-  [11] Linha 19: Variável 'soma' com nome muito curto (≤4 chars)
-      Trecho  : soma = ...
+======================================================================: soma = ...
       Contexto:
               18 | 	elif(atv[i]=="HIDROGINASTICA"):
         >>>   19 | 		soma=soma+(d[i]*5)

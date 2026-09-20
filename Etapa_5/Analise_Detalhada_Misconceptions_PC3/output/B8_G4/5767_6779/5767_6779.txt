@@ -1,12 +1,12 @@
 ======================================================================
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
-Arquivo     : 5767_6779.py
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2024_1_v1.81\2024-1\594\users\9681\codes\5767_6779.py
+Arquivo     : 5767_6779.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2024_1_v1.81\2024-1\594\users\9680\executions\5767_6779.log
 Assessment  : 5767
 Título      : TP 3: Est. Condicional Encadeada
 Questão     : 6779
-Aluno       : 9681
+Aluno       : 9680
 Grupo       : TP 03
 Significado : Estrutura Condicional Encadeada
 Total MCs   : 2
@@ -16,56 +16,93 @@ Total MCs   : 2
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | ano = int(input("Qual o ano de seu nascimento: "))
-     2 | pais = str(input("Qual o pais: [B] para Brasil e [J] para Japao: ")).upper ()
-     3 | b = 2023 - ano
-     4 | j = 2023 - ano
-     5 | if pais == "B":
-     6 | 	if b >= 18:
-     7 | 		total = b -18
-     8 | 		print("sim")
-     9 | 		print(total)
-    10 | 	elif b <= 18:
-    11 | 		total = 18 - b
-    12 | 		print("nao")
-    13 | 		print(total)
-    14 | elif pais == "J":
-    15 | 	if j >= 16:
-    16 | 		total = j - 16
-    17 | 		print("sim")
-    18 | 		print(total)
-    19 | 	elif j <= 16:
-    20 | 		total = 16 - j
-    21 | 		print("nao")
-    22 | 		print(total)
-    23 | else:
-    24 | 	print("invalido")
+     1 | an = int(input("ano de naisxcimento: "))
+     2 | pa = input("pais p ve: ").upper()
+     3 | 
+     4 | cc = 2023 - an
+     5 | vr = cc - 18
+     6 | vj = cc - 16
+     7 | vb = 18 - cc
+     8 | vt = 16 - cc
+     9 | 
+    10 | if pa != "B" and  pa != "J":
+    11 | 	print("invalido")
+    12 | elif cc >= 18 and pa == "B":
+    13 | 	print("sim")
+    14 | 	print(vr)
+    15 | elif cc < 18 and pa == "B":
+    16 | 	print("nao")
+    17 | 	print(vb)
+    18 | elif cc >= 16 and pa == "J":
+    19 | 	print("sim")
+    20 | 	print(vj)
+    21 | elif cc < 16 and pa == "J":
+    22 | 	print("nao")
+    23 | 	print(vt)
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
 ----------------------------------------------------------------------
 
 ▶ B8 — Não utilização de elif/else
-  Ocorrências: 2
-
-  [1] Linha 6: Cadeia if/elif sem bloco else final
-      Trecho  : if ... (linha 6) / elif ... sem else
-      Contexto:
-               5 | if pais == "B":
-        >>>    6 | 	if b >= 18:
-               7 | 		total = b -18
-
-  [2] Linha 15: Cadeia if/elif sem bloco else final
-      Trecho  : if ... (linha 15) / elif ... sem else
-      Contexto:
-              14 | elif pais == "J":
-        >>>   15 | 	if j >= 16:
-              16 | 		total = j - 16
-
-▶ G4 — Funções/variáveis com nomes não significativos
   Ocorrências: 1
 
-  [1] Linha 0: G4 detectado pelo VisitorMC3 (localização exata não mapeada)
-      Trecho  : —
+  [1] Linha 18: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 18) / elif ... sem else
+      Contexto:
+              17 | 	print(vb)
+        >>>   18 | elif cc >= 16 and pa == "J":
+              19 | 	print("sim")
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 7
+
+  [1] Linha 1: Variável 'an' com nome muito curto (≤4 chars)
+      Trecho  : an = ...
+      Contexto:
+        >>>    1 | an = int(input("ano de naisxcimento: "))
+               2 | pa = input("pais p ve: ").upper()
+
+  [2] Linha 2: Variável 'pa' com nome muito curto (≤4 chars)
+      Trecho  : pa = ...
+      Contexto:
+               1 | an = int(input("ano de naisxcimento: "))
+        >>>    2 | pa = input("pais p ve: ").upper()
+               3 | 
+
+  [3] Linha 4: Variável 'cc' com nome muito curto (≤4 chars)
+      Trecho  : cc = ...
+      Contexto:
+               3 | 
+        >>>    4 | cc = 2023 - an
+               5 | vr = cc - 18
+
+  [4] Linha 5: Variável 'vr' com nome muito curto (≤4 chars)
+      Trecho  : vr = ...
+      Contexto:
+               4 | cc = 2023 - an
+        >>>    5 | vr = cc - 18
+               6 | vj = cc - 16
+
+  [5] Linha 6: Variável 'vj' com nome muito curto (≤4 chars)
+      Trecho  : vj = ...
+      Contexto:
+               5 | vr = cc - 18
+        >>>    6 | vj = cc - 16
+               7 | vb = 18 - cc
+
+  [6] Linha 7: Variável 'vb' com nome muito curto (≤4 chars)
+      Trecho  : vb = ...
+      Contexto:
+               6 | vj = cc - 16
+        >>>    7 | vb = 18 - cc
+               8 | vt = 16 - cc
+
+  [7] Linha 8: Variável 'vt' com nome muito curto (≤4 chars)
+      Trecho  : vt = ...
+      Contexto:
+               7 | vb = 18 - cc
+        >>>    8 | vt = 16 - cc
+               9 | 
 
 ======================================================================

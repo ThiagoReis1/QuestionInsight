@@ -1,12 +1,12 @@
 ======================================================================
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
-Arquivo     : 1796_1599.py
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2019_1_v1.81\2019-1\231\users\4206\codes\1796_1599.py
+Arquivo     : 1796_1599.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2019_1_v1.81\2019-1\231\users\4223\executions\1796_1599.log
 Assessment  : 1796
 Título      : TP5: Vetores e Strings
 Questão     : 1599
-Aluno       : 4206
+Aluno       : 4223
 Grupo       : TP 05
 Significado : Vetores e Strings
 Total MCs   : 1
@@ -16,19 +16,15 @@ Total MCs   : 1
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | from numpy import *
-     2 | a = array(eval(input()))
-     3 | t = 0
-     4 | b = array(zeros(size(a),dtype = float))
-     5 | while(t!=size(a)):
-     6 | 	if(a[0+t]>80):
-     7 | 		b[0+t] = a[0+t]-((a[0+t])*15/100)
-     8 | 		t = t+1
-     9 | 	else:
-    10 | 		b[0+t]=a[0+t]
-    11 | 		t = t+1
-    12 | 		
-    13 | print(round(sum(b),2))		
+     1 | from numpy import*
+     2 | v=array(eval(input("Valor de custo dos itens: ")))
+     3 | i=0
+     4 | sum(v)
+     5 | while(i>=80):
+     6 | 	i=i+1
+     7 | 	i=i*(15/100)
+     8 | soma=sum(v)
+     9 | print(round(soma, 2))
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
@@ -37,38 +33,42 @@ DETALHAMENTO DOS MISCONCEPTIONS
 ▶ G4 — Funções/variáveis com nomes não significativos
   Ocorrências: 5
 
-  [1] Linha 2: Variável 'a' com nome muito curto (≤4 chars)
-      Trecho  : a = ...
+  [1] Linha 2: Variável 'v' com nome muito curto (≤4 chars)
+      Trecho  : v = ...
       Contexto:
-               1 | from numpy import *
-        >>>    2 | a = array(eval(input()))
-               3 | t = 0
+               1 | from numpy import*
+        >>>    2 | v=array(eval(input("Valor de custo dos itens: ")))
+               3 | i=0
 
-  [2] Linha 3: Variável 't' com nome muito curto (≤4 chars)
-      Trecho  : t = ...
+  [2] Linha 3: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
       Contexto:
-               2 | a = array(eval(input()))
-        >>>    3 | t = 0
-               4 | b = array(zeros(size(a),dtype = float))
+               2 | v=array(eval(input("Valor de custo dos itens: ")))
+        >>>    3 | i=0
+               4 | sum(v)
 
-  [3] Linha 4: Variável 'b' com nome muito curto (≤4 chars)
-      Trecho  : b = ...
+  [3] Linha 8: Variável 'soma' com nome muito curto (≤4 chars)
+      Trecho  : soma = ...
       Contexto:
-               3 | t = 0
-        >>>    4 | b = array(zeros(size(a),dtype = float))
-               5 | while(t!=size(a)):
+               7 | 	i=i*(15/100)
+        >>>    8 | soma=sum(v)
+               9 | print(round(soma, 2))
 
-  [4] Linha 8: Variável 't' com nome muito curto (≤4 chars)
-      Trecho  : t = ...
+  [4] Linha 6: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
       Contexto:
-               7 | 		b[0+t] = a[0+t]-((a[0+t])*15/100)
-        >>>    8 | 		t = t+1
-               9 | 	else:
+               5 | while(i>=80):
+        >>>    6 | 	i=i+1
+               7 | 	i=i*(15/100)
 
-  [5] Linha 11: Variável 't' com nome muito curto (≤4 chars)
-      Trecho  : t = ...
+  [5] Linha 7: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
       Contexto:
-              10 | 		b[0+t]=a[0+t]
+               6 | 	i=i+1
+        >>>    7 | 	i=i*(15/100)
+               8 | soma=sum(v)
+
+==============================================================================
         >>>   11 | 		t = t+1
               12 | 		
 

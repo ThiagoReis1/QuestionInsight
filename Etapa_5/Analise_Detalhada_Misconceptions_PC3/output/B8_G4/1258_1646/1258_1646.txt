@@ -1,12 +1,12 @@
 ======================================================================
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
-Arquivo     : 1258_1646.py
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2018_1_v1.81\2018-1\181\users\3066\codes\1258_1646.py
+Arquivo     : 1258_1646.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2018_1_v1.81\2018-1\181\users\3053\executions\1258_1646.log
 Assessment  : 1258
 Título      : TP 6: Estrutura de Repetição por Contagem (for)
 Questão     : 1646
-Aluno       : 3066
+Aluno       : 3053
 Grupo       : TP 06
 Significado : Estrutura de Repetição por Contagem
 Total MCs   : 2
@@ -16,25 +16,26 @@ Total MCs   : 2
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | from numpy import *
-     2 | s = array(eval(input("digite: ")))
-     3 | p = 0
-     4 | for i in range(size(s)):
-     5 | 	if (s[i] <= 50):
-     6 | 		p = p + 1
-     7 | print(p)
-     8 | 
-     9 | vs = zeros(p, dtype = int)
-    10 | k = 0
-    11 | for i in range(size(s)):
-    12 | 	
-    13 | 	if (s[i] <= 50):
-    14 | 		vs[k] = i
-    15 | 		k = k + 1
-    16 | print(vs)
-    17 | 	
-    18 | 	
-    19 | 	
+     1 | from numpy import*
+     2 | v = array(eval(input("Valores: ")))
+     3 | 
+     4 | t = size(v)
+     5 | a = 0
+     6 | 
+     7 | for i in range(t):
+     8 |   if (v[i]<=50):
+     9 | 	  a = a + 1
+    10 | 
+    11 | v1 = zeros(a, dtype=int)
+    12 | y = 0
+    13 | 
+    14 | for i in range(t):
+    15 | 	if (v[i]<=50):
+    16 | 		 v1[y] = i
+    17 | 		 y = y + 1
+    18 | 		
+    19 | print(a)
+    20 | print(v1)
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
@@ -47,48 +48,55 @@ DETALHAMENTO DOS MISCONCEPTIONS
       Trecho  : —
 
 ▶ G4 — Funções/variáveis com nomes não significativos
-  Ocorrências: 6
+  Ocorrências: 7
 
-  [1] Linha 2: Variável 's' com nome muito curto (≤4 chars)
-      Trecho  : s = ...
+  [1] Linha 2: Variável 'v' com nome muito curto (≤4 chars)
+      Trecho  : v = ...
       Contexto:
-               1 | from numpy import *
-        >>>    2 | s = array(eval(input("digite: ")))
-               3 | p = 0
+               1 | from numpy import*
+        >>>    2 | v = array(eval(input("Valores: ")))
+               3 | 
 
-  [2] Linha 3: Variável 'p' com nome muito curto (≤4 chars)
-      Trecho  : p = ...
+  [2] Linha 4: Variável 't' com nome muito curto (≤4 chars)
+      Trecho  : t = ...
       Contexto:
-               2 | s = array(eval(input("digite: ")))
-        >>>    3 | p = 0
-               4 | for i in range(size(s)):
+               3 | 
+        >>>    4 | t = size(v)
+               5 | a = 0
 
-  [3] Linha 9: Variável 'vs' com nome muito curto (≤4 chars)
-      Trecho  : vs = ...
+  [3] Linha 5: Variável 'a' com nome muito curto (≤4 chars)
+      Trecho  : a = ...
       Contexto:
-               8 | 
-        >>>    9 | vs = zeros(p, dtype = int)
-              10 | k = 0
+               4 | t = size(v)
+        >>>    5 | a = 0
+               6 | 
 
-  [4] Linha 10: Variável 'k' com nome muito curto (≤4 chars)
-      Trecho  : k = ...
+  [4] Linha 11: Variável 'v1' com nome muito curto (≤4 chars)
+      Trecho  : v1 = ...
       Contexto:
-               9 | vs = zeros(p, dtype = int)
-        >>>   10 | k = 0
-              11 | for i in range(size(s)):
+              10 | 
+        >>>   11 | v1 = zeros(a, dtype=int)
+              12 | y = 0
 
-  [5] Linha 6: Variável 'p' com nome muito curto (≤4 chars)
-      Trecho  : p = ...
+  [5] Linha 12: Variável 'y' com nome muito curto (≤4 chars)
+      Trecho  : y = ...
       Contexto:
-               5 | 	if (s[i] <= 50):
-        >>>    6 | 		p = p + 1
-               7 | print(p)
+              11 | v1 = zeros(a, dtype=int)
+        >>>   12 | y = 0
+              13 | 
 
-  [6] Linha 15: Variável 'k' com nome muito curto (≤4 chars)
-      Trecho  : k = ...
+  [6] Linha 9: Variável 'a' com nome muito curto (≤4 chars)
+      Trecho  : a = ...
       Contexto:
-              14 | 		vs[k] = i
-        >>>   15 | 		k = k + 1
-              16 | print(vs)
+               8 |   if (v[i]<=50):
+        >>>    9 | 	  a = a + 1
+              10 | 
+
+  [7] Linha 17: Variável 'y' com nome muito curto (≤4 chars)
+      Trecho  : y = ...
+      Contexto:
+              16 | 		 v1[y] = i
+        >>>   17 | 		 y = y + 1
+              18 | 		
 
 ======================================================================

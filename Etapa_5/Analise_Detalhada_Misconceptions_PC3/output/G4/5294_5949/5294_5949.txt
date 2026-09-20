@@ -1,12 +1,12 @@
 ======================================================================
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
-Arquivo     : 5294_5949.py
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2023_2_v1.81\2023-2\557\users\9285\codes\5294_5949.py
+Arquivo     : 5294_5949.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2023_2_v1.81\2023-2\557\users\9250\executions\5294_5949.log
 Assessment  : 5294
 Título      : TP 2:  Est. Condicional Simples e Composta
 Questão     : 5949
-Aluno       : 9285
+Aluno       : 9250
 Grupo       : TP 02
 Significado : Estrutura Condicional Simples e Composta
 Total MCs   : 1
@@ -16,55 +16,50 @@ Total MCs   : 1
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | tip= input("Insira se voce comprou (C)Croissant ou (B)Bolo: ")
-     2 | qnt= int(input("Qual a quantidade de bolo ou croissant adquiridos?: "))
-     3 | cap= int(input("Qual a quantidade de capuccinos?: "))
-     4 | if tip == "C":
-     5 | 	val= qnt*6.00 + cap*5.50
-     6 | else:
-     7 | 	val= qnt*3.00 + cap*5.50
-     8 | 
-     9 | print(val)	
+     1 | bc = input("escolha (b) para bolo ou (c) para croissant: ").upper()
+     2 | qtd = int(input("quantidade de fatias: "))
+     3 | qtd_capp = int(input("quantidade de cappuccinos: "))
+     4 | 
+     5 | if bc == "B":
+     6 | 	vt = (qtd*3.00) + (qtd_capp*5.50)
+     7 | 	print(vt)
+     8 | 	
+     9 | else:
+    10 | 	vt = (qtd*6.00) + (qtd_capp*5.50)
+    11 | 	print(vt)
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
 ----------------------------------------------------------------------
 
 ▶ G4 — Funções/variáveis com nomes não significativos
-  Ocorrências: 5
+  Ocorrências: 4
 
-  [1] Linha 1: Variável 'tip' com nome muito curto (≤4 chars)
-      Trecho  : tip = ...
+  [1] Linha 1: Variável 'bc' com nome muito curto (≤4 chars)
+      Trecho  : bc = ...
       Contexto:
-        >>>    1 | tip= input("Insira se voce comprou (C)Croissant ou (B)Bolo: ")
-               2 | qnt= int(input("Qual a quantidade de bolo ou croissant adquiridos?: "))
+        >>>    1 | bc = input("escolha (b) para bolo ou (c) para croissant: ").upper()
+               2 | qtd = int(input("quantidade de fatias: "))
 
-  [2] Linha 2: Variável 'qnt' com nome muito curto (≤4 chars)
-      Trecho  : qnt = ...
+  [2] Linha 2: Variável 'qtd' com nome muito curto (≤4 chars)
+      Trecho  : qtd = ...
       Contexto:
-               1 | tip= input("Insira se voce comprou (C)Croissant ou (B)Bolo: ")
-        >>>    2 | qnt= int(input("Qual a quantidade de bolo ou croissant adquiridos?: "))
-               3 | cap= int(input("Qual a quantidade de capuccinos?: "))
+               1 | bc = input("escolha (b) para bolo ou (c) para croissant: ").upper()
+        >>>    2 | qtd = int(input("quantidade de fatias: "))
+               3 | qtd_capp = int(input("quantidade de cappuccinos: "))
 
-  [3] Linha 3: Variável 'cap' com nome muito curto (≤4 chars)
-      Trecho  : cap = ...
+  [3] Linha 6: Variável 'vt' com nome muito curto (≤4 chars)
+      Trecho  : vt = ...
       Contexto:
-               2 | qnt= int(input("Qual a quantidade de bolo ou croissant adquiridos?: "))
-        >>>    3 | cap= int(input("Qual a quantidade de capuccinos?: "))
-               4 | if tip == "C":
+               5 | if bc == "B":
+        >>>    6 | 	vt = (qtd*3.00) + (qtd_capp*5.50)
+               7 | 	print(vt)
 
-  [4] Linha 5: Variável 'val' com nome muito curto (≤4 chars)
-      Trecho  : val = ...
+  [4] Linha 10: Variável 'vt' com nome muito curto (≤4 chars)
+      Trecho  : vt = ...
       Contexto:
-               4 | if tip == "C":
-        >>>    5 | 	val= qnt*6.00 + cap*5.50
-               6 | else:
-
-  [5] Linha 7: Variável 'val' com nome muito curto (≤4 chars)
-      Trecho  : val = ...
-      Contexto:
-               6 | else:
-        >>>    7 | 	val= qnt*3.00 + cap*5.50
-               8 | 
+               9 | else:
+        >>>   10 | 	vt = (qtd*6.00) + (qtd_capp*5.50)
+              11 | 	print(vt)
 
 ======================================================================

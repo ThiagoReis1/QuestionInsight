@@ -1,12 +1,12 @@
 ======================================================================
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
-Arquivo     : 193_1247.py
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2016_1_v1.81\2016-1\108\users\1353\codes\193_1247.py
+Arquivo     : 193_1247.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2016_1_v1.81\2016-1\108\users\1328\executions\193_1247.log
 Assessment  : 193
 Título      : Avaliação Parcial 06 – Repetição por contagem
 Questão     : 1247
-Aluno       : 1353
+Aluno       : 1328
 Grupo       : TP 06
 Significado : Estrutura de Repetição por Contagem
 Total MCs   : 2
@@ -17,29 +17,18 @@ Total MCs   : 2
 CÓDIGO FONTE
 ----------------------------------------------------------------------
      1 | from numpy import*
-     2 | 
-     3 | v=array(eval(input("vetor v:")))
-     4 | 
-     5 | A=min(v)
-     6 | B=max(v)
-     7 | 
-     8 | C = 0.75 * A + 0.25 * B
-     9 | D = 0.25 * A + 0.75 * B
-    10 | 
-    11 | AeC=0
-    12 | BeD=0
-    13 | 
-    14 | for i in v:
-    15 | 	if i>=A and i<C:
-    16 | 		AeC+=1
-    17 | 	elif i>=D and i<B:
-    18 | 		BeD+=1
-    19 | 
-    20 | x=zeros(2,dtype=int)
-    21 | x[0]=AeC
-    22 | x[1]=BeD
-    23 | print(x)
-    24 | 	
+     2 | vetor = array(eval(input("")))
+     3 | A = min(vetor)
+     4 | B = max(vetor)
+     5 | C = 0.75 * A + 0.25 * B
+     6 | D = 0.25 * A + 0.75 * B
+     7 | v = zeros(2, dtype = int)
+     8 | for i in vetor:
+     9 | 	if(i>= A and i < C):
+    10 | 		v[0]+=1
+    11 | 	elif(i>=D and i < B):
+    12 | 		v[1] +=1
+    13 | print(v)
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
@@ -48,55 +37,52 @@ DETALHAMENTO DOS MISCONCEPTIONS
 ▶ B8 — Não utilização de elif/else
   Ocorrências: 1
 
-  [1] Linha 15: Cadeia if/elif sem bloco else final
-      Trecho  : if ... (linha 15) / elif ... sem else
+  [1] Linha 9: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 9) / elif ... sem else
       Contexto:
-              14 | for i in v:
-        >>>   15 | 	if i>=A and i<C:
-              16 | 		AeC+=1
+               8 | for i in vetor:
+        >>>    9 | 	if(i>= A and i < C):
+              10 | 		v[0]+=1
 
 ▶ G4 — Funções/variáveis com nomes não significativos
-  Ocorrências: 8
+  Ocorrências: 5
 
-  [1] Linha 3: Variável 'v' com nome muito curto (≤4 chars)
-      Trecho  : v = ...
-      Contexto:
-               2 | 
-        >>>    3 | v=array(eval(input("vetor v:")))
-               4 | 
-
-  [2] Linha 5: Variável 'A' com nome muito curto (≤4 chars)
+  [1] Linha 3: Variável 'A' com nome muito curto (≤4 chars)
       Trecho  : A = ...
       Contexto:
-               4 | 
-        >>>    5 | A=min(v)
-               6 | B=max(v)
+               2 | vetor = array(eval(input("")))
+        >>>    3 | A = min(vetor)
+               4 | B = max(vetor)
 
-  [3] Linha 6: Variável 'B' com nome muito curto (≤4 chars)
+  [2] Linha 4: Variável 'B' com nome muito curto (≤4 chars)
       Trecho  : B = ...
       Contexto:
-               5 | A=min(v)
-        >>>    6 | B=max(v)
-               7 | 
+               3 | A = min(vetor)
+        >>>    4 | B = max(vetor)
+               5 | C = 0.75 * A + 0.25 * B
 
-  [4] Linha 8: Variável 'C' com nome muito curto (≤4 chars)
+  [3] Linha 5: Variável 'C' com nome muito curto (≤4 chars)
       Trecho  : C = ...
       Contexto:
-               7 | 
-        >>>    8 | C = 0.75 * A + 0.25 * B
-               9 | D = 0.25 * A + 0.75 * B
+               4 | B = max(vetor)
+        >>>    5 | C = 0.75 * A + 0.25 * B
+               6 | D = 0.25 * A + 0.75 * B
 
-  [5] Linha 9: Variável 'D' com nome muito curto (≤4 chars)
+  [4] Linha 6: Variável 'D' com nome muito curto (≤4 chars)
       Trecho  : D = ...
       Contexto:
-               8 | C = 0.75 * A + 0.25 * B
-        >>>    9 | D = 0.25 * A + 0.75 * B
-              10 | 
+               5 | C = 0.75 * A + 0.25 * B
+        >>>    6 | D = 0.25 * A + 0.75 * B
+               7 | v = zeros(2, dtype = int)
 
-  [6] Linha 11: Variável 'AeC' com nome muito curto (≤4 chars)
-      Trecho  : AeC = ...
+  [5] Linha 7: Variável 'v' com nome muito curto (≤4 chars)
+      Trecho  : v = ...
       Contexto:
-              10 | 
+               6 | D = 0.25 * A + 0.75 * B
+        >>>    7 | v = zeros(2, dtype = int)
+               8 | for i in vetor:
+
+======================================================================        10 | 
         >>>   11 | AeC=0
               12 | BeD=0
 

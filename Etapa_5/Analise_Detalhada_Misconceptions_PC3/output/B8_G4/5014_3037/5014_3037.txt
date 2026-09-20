@@ -1,12 +1,12 @@
 ======================================================================
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
-Arquivo     : 5014_3037.py
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2023_1_v1.81\2023-1\528\users\8776\codes\5014_3037.py
+Arquivo     : 5014_3037.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2023_1_v1.81\2023-1\528\users\8783\executions\5014_3037.log
 Assessment  : 5014
 Título      : TP3: Est. Condicional Encadeada
 Questão     : 3037
-Aluno       : 8776
+Aluno       : 8783
 Grupo       : TP 03
 Significado : Estrutura Condicional Encadeada
 Total MCs   : 2
@@ -16,13 +16,15 @@ Total MCs   : 2
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | x = float(input())
-     2 | if x <= -1 or x >= 1:
-     3 | 	print(x**2)
-     4 | elif -1<x<0 or 0<x<1:
-     5 | 	print(x)
-     6 | elif x==0:
-     7 | 	print(1)
+     1 | x=float(input())
+     2 | if x<=-1 or x>=1:
+     3 | 	r=x**2
+     4 | 	print(round(r,4))
+     5 | elif x>-1 and x<0 or x>0 and x<1:
+     6 | 	print(round(x,4))
+     7 | elif x==0:
+     8 | 	r=1
+     9 | 	print(round(r,4))
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
@@ -31,20 +33,34 @@ DETALHAMENTO DOS MISCONCEPTIONS
 ▶ B8 — Não utilização de elif/else
   Ocorrências: 1
 
-  [1] Linha 4: Cadeia if/elif sem bloco else final
-      Trecho  : if ... (linha 4) / elif ... sem else
+  [1] Linha 5: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 5) / elif ... sem else
       Contexto:
-               3 | 	print(x**2)
-        >>>    4 | elif -1<x<0 or 0<x<1:
-               5 | 	print(x)
+               4 | 	print(round(r,4))
+        >>>    5 | elif x>-1 and x<0 or x>0 and x<1:
+               6 | 	print(round(x,4))
 
 ▶ G4 — Funções/variáveis com nomes não significativos
-  Ocorrências: 1
+  Ocorrências: 3
 
   [1] Linha 1: Variável 'x' com nome muito curto (≤4 chars)
       Trecho  : x = ...
       Contexto:
-        >>>    1 | x = float(input())
-               2 | if x <= -1 or x >= 1:
+        >>>    1 | x=float(input())
+               2 | if x<=-1 or x>=1:
+
+  [2] Linha 3: Variável 'r' com nome muito curto (≤4 chars)
+      Trecho  : r = ...
+      Contexto:
+               2 | if x<=-1 or x>=1:
+        >>>    3 | 	r=x**2
+               4 | 	print(round(r,4))
+
+  [3] Linha 8: Variável 'r' com nome muito curto (≤4 chars)
+      Trecho  : r = ...
+      Contexto:
+               7 | elif x==0:
+        >>>    8 | 	r=1
+               9 | 	print(round(r,4))
 
 ======================================================================

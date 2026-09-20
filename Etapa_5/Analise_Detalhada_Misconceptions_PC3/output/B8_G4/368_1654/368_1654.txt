@@ -1,12 +1,12 @@
 ======================================================================
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
-Arquivo     : 368_1654.py
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2016_2_v1.81\2016-2\128\users\2051\codes\368_1654.py
+Arquivo     : 368_1654.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2016_2_v1.81\2016-2\128\users\2019\executions\368_1654.log
 Assessment  : 368
 Título      : Trabalho Prático 06 - Estrutura de Repetição por Contagem (for)
 Questão     : 1654
-Aluno       : 2051
+Aluno       : 2019
 Grupo       : TP 06
 Significado : Estrutura de Repetição por Contagem
 Total MCs   : 2
@@ -18,20 +18,20 @@ CÓDIGO FONTE
 ----------------------------------------------------------------------
      1 | from numpy import *
      2 | 
-     3 | cont= zeros(5, dtype=int) 
-     4 | vet = input("ESTADO: ").upper().split(',') 
-     5 | 
-     6 | for x in vet:
-     7 | 	if(x == 'AM'): 
-     8 | 		cont[0] = cont[0] + 1 
-     9 | 	elif(x == 'PE'): 
+     3 | v= input ("vetor: ").upper().split(',') 
+     4 | cont = zeros(5,dtype=int)
+     5 | x=0
+     6 | for x in range (size(v)):
+     7 | 	if (v[x] == 'AM'):
+     8 | 		cont[0] = cont[0] + 1
+     9 | 	elif (v[x] == 'PE'):
     10 | 		cont[1] = cont[1] + 1 
-    11 | 	elif(x == 'MG'): 
+    11 | 	elif (v[x] == 'MG'):
     12 | 		cont[2] = cont[2] + 1 
-    13 | 	elif(x == 'SP'):
+    13 | 	elif (v[x] == 'SP'):
     14 | 		cont[3] = cont[3] + 1 
-    15 | 	elif(x == 'RS'):
-    16 | 		cont[4] = cont[4] + 1 
+    15 | 	elif (v[x] == 'RS'):
+    16 | 		cont[4] = cont[4]+1		
     17 | print(max(cont))
     18 | print(cont)
 
@@ -46,24 +46,31 @@ DETALHAMENTO DOS MISCONCEPTIONS
       Trecho  : if ... (linha 13) / elif ... sem else
       Contexto:
               12 | 		cont[2] = cont[2] + 1 
-        >>>   13 | 	elif(x == 'SP'):
+        >>>   13 | 	elif (v[x] == 'SP'):
               14 | 		cont[3] = cont[3] + 1 
 
 ▶ G4 — Funções/variáveis com nomes não significativos
-  Ocorrências: 2
+  Ocorrências: 3
 
-  [1] Linha 3: Variável 'cont' com nome muito curto (≤4 chars)
-      Trecho  : cont = ...
+  [1] Linha 3: Variável 'v' com nome muito curto (≤4 chars)
+      Trecho  : v = ...
       Contexto:
                2 | 
-        >>>    3 | cont= zeros(5, dtype=int) 
-               4 | vet = input("ESTADO: ").upper().split(',') 
+        >>>    3 | v= input ("vetor: ").upper().split(',') 
+               4 | cont = zeros(5,dtype=int)
 
-  [2] Linha 4: Variável 'vet' com nome muito curto (≤4 chars)
-      Trecho  : vet = ...
+  [2] Linha 4: Variável 'cont' com nome muito curto (≤4 chars)
+      Trecho  : cont = ...
       Contexto:
-               3 | cont= zeros(5, dtype=int) 
-        >>>    4 | vet = input("ESTADO: ").upper().split(',') 
-               5 | 
+               3 | v= input ("vetor: ").upper().split(',') 
+        >>>    4 | cont = zeros(5,dtype=int)
+               5 | x=0
+
+  [3] Linha 5: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+               4 | cont = zeros(5,dtype=int)
+        >>>    5 | x=0
+               6 | for x in range (size(v)):
 
 ======================================================================

@@ -1,12 +1,12 @@
 ======================================================================
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
-Arquivo     : 5528_6382.py
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2023_2_v1.81\2023-2\560\users\9244\codes\5528_6382.py
+Arquivo     : 5528_6382.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2023_2_v1.81\2023-2\560\users\9301\executions\5528_6382.log
 Assessment  : 5528
 Título      : TP 6: Estrutura de Repetição por Contagem (for)
 Questão     : 6382
-Aluno       : 9244
+Aluno       : 9301
 Grupo       : TP 06
 Significado : Estrutura de Repetição por Contagem
 Total MCs   : 1
@@ -16,12 +16,15 @@ Total MCs   : 1
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | from numpy import*
-     2 | v = array(eval(input("digite: ")))
-     3 | 
-     4 | for i in range(size(v, v + 1, 9)):
-     5 | 	c = (v + 1)**2
-     6 | print(c)
+     1 | from numpy import *
+     2 | v = eval(input("digite o vator: "))
+     3 | num = []
+     4 | for x in v:
+     5 | 	if x == 9:
+     6 | 		num.append(0)
+     7 | 	else:
+     8 | 		num.append((x + 1) ** 2)		
+     9 | print('[' + ' '.join(map(str, num)) + ']')
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
@@ -33,18 +36,15 @@ DETALHAMENTO DOS MISCONCEPTIONS
   [1] Linha 2: Variável 'v' com nome muito curto (≤4 chars)
       Trecho  : v = ...
       Contexto:
-               1 | from numpy import*
-        >>>    2 | v = array(eval(input("digite: ")))
-               3 | 
+               1 | from numpy import *
+        >>>    2 | v = eval(input("digite o vator: "))
+               3 | num = []
 
-  [2] Linha 5: Variável 'c' com nome muito curto (≤4 chars)
-      Trecho  : c = ...
+  [2] Linha 3: Variável 'num' com nome muito curto (≤4 chars)
+      Trecho  : num = ...
       Contexto:
-               4 | for i in range(size(v, v + 1, 9)):
-        >>>    5 | 	c = (v + 1)**2
-               6 | print(c)
-
-======================================================================>    3 | num = []
+               2 | v = eval(input("digite o vator: "))
+        >>>    3 | num = []
                4 | for x in v:
 
 ======================================================================

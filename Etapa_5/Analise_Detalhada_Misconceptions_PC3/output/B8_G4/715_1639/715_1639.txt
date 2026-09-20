@@ -1,12 +1,12 @@
 ======================================================================
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
-Arquivo     : 715_1639.py
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2017_1_v1.81\2017-1\139\users\2397\codes\715_1639.py
+Arquivo     : 715_1639.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2017_1_v1.81\2017-1\139\users\2398\executions\715_1639.log
 Assessment  : 715
 Título      : Trabalho Prático 6: Repetição por Contagem
 Questão     : 1639
-Aluno       : 2397
+Aluno       : 2398
 Grupo       : TP 06
 Significado : Estrutura de Repetição por Contagem
 Total MCs   : 2
@@ -17,24 +17,19 @@ Total MCs   : 2
 CÓDIGO FONTE
 ----------------------------------------------------------------------
      1 | from numpy import*
-     2 | v=array(eval(input()))
-     3 | par=0
-     4 | i=0
-     5 | 
-     6 | while(i<size(v)):
-     7 | 	if((v[i]%2)==0):
-     8 | 		par=par+1
-     9 | 	i=i+1
-    10 | vr=zeros(par,dtype=int)
-    11 | j=0
-    12 | k=0
-    13 | while(j<size(v)):
-    14 | 	if((v[j]%2)==0):
-    15 | 		vr[k]=j
-    16 | 		k=k+1
-    17 | 	j=j+1
-    18 | print(par)
-    19 | print(vr)
+     2 | n = array(eval(input()))
+     3 | p = 0
+     4 | c = 0
+     5 | for i in range(size(n)):
+     6 | 	if (n[i]%2==0):
+     7 | 		p = p+1
+     8 | z = zeros(p, dtype=int)
+     9 | for j in range(size(n)):
+    10 | 	if(n[j]%2==0):
+    11 | 		z[c] = j
+    12 | 		c = c+1
+    13 | print(p)
+    14 | print(z)
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
@@ -47,52 +42,51 @@ DETALHAMENTO DOS MISCONCEPTIONS
       Trecho  : —
 
 ▶ G4 — Funções/variáveis com nomes não significativos
-  Ocorrências: 10
+  Ocorrências: 6
 
-  [1] Linha 2: Variável 'v' com nome muito curto (≤4 chars)
-      Trecho  : v = ...
+  [1] Linha 2: Variável 'n' com nome muito curto (≤4 chars)
+      Trecho  : n = ...
       Contexto:
                1 | from numpy import*
-        >>>    2 | v=array(eval(input()))
-               3 | par=0
+        >>>    2 | n = array(eval(input()))
+               3 | p = 0
 
-  [2] Linha 3: Variável 'par' com nome muito curto (≤4 chars)
-      Trecho  : par = ...
+  [2] Linha 3: Variável 'p' com nome muito curto (≤4 chars)
+      Trecho  : p = ...
       Contexto:
-               2 | v=array(eval(input()))
-        >>>    3 | par=0
-               4 | i=0
+               2 | n = array(eval(input()))
+        >>>    3 | p = 0
+               4 | c = 0
 
-  [3] Linha 4: Variável 'i' com nome muito curto (≤4 chars)
-      Trecho  : i = ...
+  [3] Linha 4: Variável 'c' com nome muito curto (≤4 chars)
+      Trecho  : c = ...
       Contexto:
-               3 | par=0
-        >>>    4 | i=0
-               5 | 
+               3 | p = 0
+        >>>    4 | c = 0
+               5 | for i in range(size(n)):
 
-  [4] Linha 10: Variável 'vr' com nome muito curto (≤4 chars)
-      Trecho  : vr = ...
+  [4] Linha 8: Variável 'z' com nome muito curto (≤4 chars)
+      Trecho  : z = ...
       Contexto:
-               9 | 	i=i+1
-        >>>   10 | vr=zeros(par,dtype=int)
-              11 | j=0
+               7 | 		p = p+1
+        >>>    8 | z = zeros(p, dtype=int)
+               9 | for j in range(size(n)):
 
-  [5] Linha 11: Variável 'j' com nome muito curto (≤4 chars)
-      Trecho  : j = ...
+  [5] Linha 7: Variável 'p' com nome muito curto (≤4 chars)
+      Trecho  : p = ...
       Contexto:
-              10 | vr=zeros(par,dtype=int)
-        >>>   11 | j=0
-              12 | k=0
+               6 | 	if (n[i]%2==0):
+        >>>    7 | 		p = p+1
+               8 | z = zeros(p, dtype=int)
 
-  [6] Linha 12: Variável 'k' com nome muito curto (≤4 chars)
-      Trecho  : k = ...
+  [6] Linha 12: Variável 'c' com nome muito curto (≤4 chars)
+      Trecho  : c = ...
       Contexto:
-              11 | j=0
-        >>>   12 | k=0
-              13 | while(j<size(v)):
+              11 | 		z[c] = j
+        >>>   12 | 		c = c+1
+              13 | print(p)
 
-  [7] Linha 9: Variável 'i' com nome muito curto (≤4 chars)
-      Trecho  : i = ...
+======================================================================i = ...
       Contexto:
                8 | 		par=par+1
         >>>    9 | 	i=i+1

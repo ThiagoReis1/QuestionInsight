@@ -1,12 +1,12 @@
 ======================================================================
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
-Arquivo     : 4672_6220.py
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2022_2_v1.81\2022-2\491\users\8323\codes\4672_6220.py
+Arquivo     : 4672_6220.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2022_2_v1.81\2022-2\491\users\8251\executions\4672_6220.log
 Assessment  : 4672
 Título      : TP 04: Estrutura de Repetição por Condição
 Questão     : 6220
-Aluno       : 8323
+Aluno       : 8251
 Grupo       : TP 04
 Significado : Estrutura de Repetição por Condição
 Total MCs   : 2
@@ -16,14 +16,16 @@ Total MCs   : 2
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | x = int(input())
-     2 | y = int(input())
-     3 | soma = 0
-     4 | while x <= y:
-     5 | 	if x % 3 == 0:
-     6 | 		soma = soma + x
-     7 | 	x = x + 1
-     8 | print(soma)	
+     1 | x = int(input("insira um numero: "))
+     2 | y = int(input("insira o numero: "))
+     3 | 
+     4 | c = x
+     5 | 
+     6 | while c <= y:
+     7 | 	if(c % 3 == 0):
+     8 | 		c = c + x
+     9 | 	
+    10 | print(c)
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
@@ -36,40 +38,44 @@ DETALHAMENTO DOS MISCONCEPTIONS
       Trecho  : —
 
 ▶ G4 — Funções/variáveis com nomes não significativos
-  Ocorrências: 5
+  Ocorrências: 4
 
   [1] Linha 1: Variável 'x' com nome muito curto (≤4 chars)
       Trecho  : x = ...
       Contexto:
-        >>>    1 | x = int(input())
-               2 | y = int(input())
+        >>>    1 | x = int(input("insira um numero: "))
+               2 | y = int(input("insira o numero: "))
 
   [2] Linha 2: Variável 'y' com nome muito curto (≤4 chars)
       Trecho  : y = ...
       Contexto:
-               1 | x = int(input())
-        >>>    2 | y = int(input())
-               3 | soma = 0
+               1 | x = int(input("insira um numero: "))
+        >>>    2 | y = int(input("insira o numero: "))
+               3 | 
 
-  [3] Linha 3: Variável 'soma' com nome muito curto (≤4 chars)
-      Trecho  : soma = ...
+  [3] Linha 4: Variável 'c' com nome muito curto (≤4 chars)
+      Trecho  : c = ...
       Contexto:
-               2 | y = int(input())
-        >>>    3 | soma = 0
-               4 | while x <= y:
+               3 | 
+        >>>    4 | c = x
+               5 | 
 
-  [4] Linha 7: Variável 'x' com nome muito curto (≤4 chars)
-      Trecho  : x = ...
+  [4] Linha 8: Variável 'c' com nome muito curto (≤4 chars)
+      Trecho  : c = ...
       Contexto:
-               6 | 		soma = soma + x
-        >>>    7 | 	x = x + 1
-               8 | print(soma)	
+               7 | 	if(c % 3 == 0):
+        >>>    8 | 		c = c + x
+               9 | 	
 
-  [5] Linha 6: Variável 'soma' com nome muito curto (≤4 chars)
-      Trecho  : soma = ...
-      Contexto:
-               5 | 	if x % 3 == 0:
+======================================================================f x % 3 == 0:
         >>>    6 | 		soma = soma + x
                7 | 	x = x + 1
+
+======================================================================rto (≤4 chars)
+      Trecho  : acum = ...
+      Contexto:
+               7 | 	if cont % 3 == 0:
+        >>>    8 | 		acum = cont + acum
+               9 | 	cont = cont + 1
 
 ======================================================================

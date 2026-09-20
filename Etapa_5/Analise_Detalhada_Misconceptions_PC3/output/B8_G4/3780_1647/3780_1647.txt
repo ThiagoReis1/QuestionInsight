@@ -1,12 +1,12 @@
 ======================================================================
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
-Arquivo     : 3780_1647.py
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2021_2_v1.81\2021-2\406\users\7136\codes\3780_1647.py
+Arquivo     : 3780_1647.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2021_2_v1.81\2021-2\406\users\7130\executions\3780_1647.log
 Assessment  : 3780
 Título      : TP 6: Estrutura de Repetição por Contagem (for)
 Questão     : 1647
-Aluno       : 7136
+Aluno       : 7130
 Grupo       : TP 06
 Significado : Estrutura de Repetição por Contagem
 Total MCs   : 2
@@ -18,25 +18,22 @@ CÓDIGO FONTE
 ----------------------------------------------------------------------
      1 | from numpy import*
      2 | 
-     3 | v = array(eval(input(": ")))
-     4 | 
-     5 | cont = 0
-     6 | 
-     7 | for i in range (size(v)):
-     8 | 	if v[i] >= 70:
-     9 | 		cont = cont + 1
-    10 | print(cont)
-    11 | 
-    12 | va = zeros(cont, dtype = int)
-    13 | j = 0
-    14 | 
-    15 | for i in range (size(v)):
-    16 | 	if v[i] >= 70:
-    17 | 		va[j] = i
-    18 | 		j = j + 1
-    19 | print(va)
-    20 | 		
-    21 | 	
+     3 | ap = array(eval(input("Quantidade de alunos aprovados: ")))
+     4 | a = 0
+     5 | 
+     6 | for i in range(size(ap)):
+     7 | 	if ap[i] >= 70:
+     8 | 		a = a + 1
+     9 | print(a)
+    10 | 
+    11 | c = zeros(a, dtype = int)
+    12 | cont = 0
+    13 | 
+    14 | for j in range(size(ap)):
+    15 | 	if ap[j] >= 70:
+    16 | 		c[cont] = j
+    17 | 		cont = cont + 1
+    18 | print(c)
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
@@ -51,46 +48,46 @@ DETALHAMENTO DOS MISCONCEPTIONS
 ▶ G4 — Funções/variáveis com nomes não significativos
   Ocorrências: 6
 
-  [1] Linha 3: Variável 'v' com nome muito curto (≤4 chars)
-      Trecho  : v = ...
+  [1] Linha 3: Variável 'ap' com nome muito curto (≤4 chars)
+      Trecho  : ap = ...
       Contexto:
                2 | 
-        >>>    3 | v = array(eval(input(": ")))
-               4 | 
+        >>>    3 | ap = array(eval(input("Quantidade de alunos aprovados: ")))
+               4 | a = 0
 
-  [2] Linha 5: Variável 'cont' com nome muito curto (≤4 chars)
+  [2] Linha 4: Variável 'a' com nome muito curto (≤4 chars)
+      Trecho  : a = ...
+      Contexto:
+               3 | ap = array(eval(input("Quantidade de alunos aprovados: ")))
+        >>>    4 | a = 0
+               5 | 
+
+  [3] Linha 11: Variável 'c' com nome muito curto (≤4 chars)
+      Trecho  : c = ...
+      Contexto:
+              10 | 
+        >>>   11 | c = zeros(a, dtype = int)
+              12 | cont = 0
+
+  [4] Linha 12: Variável 'cont' com nome muito curto (≤4 chars)
       Trecho  : cont = ...
       Contexto:
-               4 | 
-        >>>    5 | cont = 0
-               6 | 
+              11 | c = zeros(a, dtype = int)
+        >>>   12 | cont = 0
+              13 | 
 
-  [3] Linha 12: Variável 'va' com nome muito curto (≤4 chars)
-      Trecho  : va = ...
+  [5] Linha 8: Variável 'a' com nome muito curto (≤4 chars)
+      Trecho  : a = ...
       Contexto:
-              11 | 
-        >>>   12 | va = zeros(cont, dtype = int)
-              13 | j = 0
+               7 | 	if ap[i] >= 70:
+        >>>    8 | 		a = a + 1
+               9 | print(a)
 
-  [4] Linha 13: Variável 'j' com nome muito curto (≤4 chars)
-      Trecho  : j = ...
-      Contexto:
-              12 | va = zeros(cont, dtype = int)
-        >>>   13 | j = 0
-              14 | 
-
-  [5] Linha 9: Variável 'cont' com nome muito curto (≤4 chars)
+  [6] Linha 17: Variável 'cont' com nome muito curto (≤4 chars)
       Trecho  : cont = ...
       Contexto:
-               8 | 	if v[i] >= 70:
-        >>>    9 | 		cont = cont + 1
-              10 | print(cont)
-
-  [6] Linha 18: Variável 'j' com nome muito curto (≤4 chars)
-      Trecho  : j = ...
-      Contexto:
-              17 | 		va[j] = i
-        >>>   18 | 		j = j + 1
-              19 | print(va)
+              16 | 		c[cont] = j
+        >>>   17 | 		cont = cont + 1
+              18 | print(c)
 
 ======================================================================

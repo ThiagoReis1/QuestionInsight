@@ -1,12 +1,12 @@
 ======================================================================
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
-Arquivo     : 199_1253.py
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2016_1_v1.81\2016-1\102\users\1462\codes\199_1253.py
+Arquivo     : 199_1253.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2016_1_v1.81\2016-1\102\users\1314\executions\199_1253.log
 Assessment  : 199
 Título      : Avaliação Parcial 06 – Repetição por contagem
 Questão     : 1253
-Aluno       : 1462
+Aluno       : 1314
 Grupo       : TP 06
 Significado : Estrutura de Repetição por Contagem
 Total MCs   : 2
@@ -17,19 +17,25 @@ Total MCs   : 2
 CÓDIGO FONTE
 ----------------------------------------------------------------------
      1 | from numpy import*
-     2 | v = array(eval(input("Digite o valor do vetor: ")))
-     3 | A = min(v)
-     4 | B= max(v)
-     5 | C = 0.6 * A + 0.4 * B
-     6 | D = 0.3 * A + 0.7 * B
-     7 | x = zeros(2, dtype = float)
-     8 | i = 0
-     9 | for i in v:
-    10 | 	if(v[i] >= A) and (v[i] < B):
-    11 | 		x[0] = x[0] + 1
-    12 | 	elif (v[i] >= D) and (v[i] < C):
-    13 | 		x[1] = x[1] + 1
-    14 | print(x)			
+     2 | v=array(eval(input("Vetor:")))
+     3 | 
+     4 | A=min(v)
+     5 | B=max(v)
+     6 | C=0.6*A+0.4*B
+     7 | D=0.3*A+0.7*B
+     8 | x=ones(2,dtype=int)
+     9 | xa=0
+    10 | xb=0
+    11 | 
+    12 | for i in range(size(v)):
+    13 | 	if	(v[i]>=A and v[i]<C):
+    14 | 		xa=xa+1
+    15 | 	if (v[i]>=D and v[i]<B):
+    16 | 		xb=xb+1
+    17 | 		
+    18 | x[0]=xa
+    19 | x[1]=xb
+    20 | print(x)
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
@@ -38,63 +44,80 @@ DETALHAMENTO DOS MISCONCEPTIONS
 ▶ B8 — Não utilização de elif/else
   Ocorrências: 1
 
-  [1] Linha 10: Cadeia if/elif sem bloco else final
-      Trecho  : if ... (linha 10) / elif ... sem else
-      Contexto:
-               9 | for i in v:
-        >>>   10 | 	if(v[i] >= A) and (v[i] < B):
-              11 | 		x[0] = x[0] + 1
+  [1] Linha 0: B8 detectado pelo VisitorMC3 (localização exata não mapeada)
+      Trecho  : —
 
 ▶ G4 — Funções/variáveis com nomes não significativos
-  Ocorrências: 7
+  Ocorrências: 10
 
   [1] Linha 2: Variável 'v' com nome muito curto (≤4 chars)
       Trecho  : v = ...
       Contexto:
                1 | from numpy import*
-        >>>    2 | v = array(eval(input("Digite o valor do vetor: ")))
-               3 | A = min(v)
+        >>>    2 | v=array(eval(input("Vetor:")))
+               3 | 
 
-  [2] Linha 3: Variável 'A' com nome muito curto (≤4 chars)
+  [2] Linha 4: Variável 'A' com nome muito curto (≤4 chars)
       Trecho  : A = ...
       Contexto:
-               2 | v = array(eval(input("Digite o valor do vetor: ")))
-        >>>    3 | A = min(v)
-               4 | B= max(v)
+               3 | 
+        >>>    4 | A=min(v)
+               5 | B=max(v)
 
-  [3] Linha 4: Variável 'B' com nome muito curto (≤4 chars)
+  [3] Linha 5: Variável 'B' com nome muito curto (≤4 chars)
       Trecho  : B = ...
       Contexto:
-               3 | A = min(v)
-        >>>    4 | B= max(v)
-               5 | C = 0.6 * A + 0.4 * B
+               4 | A=min(v)
+        >>>    5 | B=max(v)
+               6 | C=0.6*A+0.4*B
 
-  [4] Linha 5: Variável 'C' com nome muito curto (≤4 chars)
+  [4] Linha 6: Variável 'C' com nome muito curto (≤4 chars)
       Trecho  : C = ...
       Contexto:
-               4 | B= max(v)
-        >>>    5 | C = 0.6 * A + 0.4 * B
-               6 | D = 0.3 * A + 0.7 * B
+               5 | B=max(v)
+        >>>    6 | C=0.6*A+0.4*B
+               7 | D=0.3*A+0.7*B
 
-  [5] Linha 6: Variável 'D' com nome muito curto (≤4 chars)
+  [5] Linha 7: Variável 'D' com nome muito curto (≤4 chars)
       Trecho  : D = ...
       Contexto:
-               5 | C = 0.6 * A + 0.4 * B
-        >>>    6 | D = 0.3 * A + 0.7 * B
-               7 | x = zeros(2, dtype = float)
+               6 | C=0.6*A+0.4*B
+        >>>    7 | D=0.3*A+0.7*B
+               8 | x=ones(2,dtype=int)
 
-  [6] Linha 7: Variável 'x' com nome muito curto (≤4 chars)
+  [6] Linha 8: Variável 'x' com nome muito curto (≤4 chars)
       Trecho  : x = ...
       Contexto:
-               6 | D = 0.3 * A + 0.7 * B
-        >>>    7 | x = zeros(2, dtype = float)
-               8 | i = 0
+               7 | D=0.3*A+0.7*B
+        >>>    8 | x=ones(2,dtype=int)
+               9 | xa=0
 
-  [7] Linha 8: Variável 'i' com nome muito curto (≤4 chars)
-      Trecho  : i = ...
+  [7] Linha 9: Variável 'xa' com nome muito curto (≤4 chars)
+      Trecho  : xa = ...
       Contexto:
-               7 | x = zeros(2, dtype = float)
-        >>>    8 | i = 0
-               9 | for i in v:
+               8 | x=ones(2,dtype=int)
+        >>>    9 | xa=0
+              10 | xb=0
+
+  [8] Linha 10: Variável 'xb' com nome muito curto (≤4 chars)
+      Trecho  : xb = ...
+      Contexto:
+               9 | xa=0
+        >>>   10 | xb=0
+              11 | 
+
+  [9] Linha 14: Variável 'xa' com nome muito curto (≤4 chars)
+      Trecho  : xa = ...
+      Contexto:
+              13 | 	if	(v[i]>=A and v[i]<C):
+        >>>   14 | 		xa=xa+1
+              15 | 	if (v[i]>=D and v[i]<B):
+
+  [10] Linha 16: Variável 'xb' com nome muito curto (≤4 chars)
+      Trecho  : xb = ...
+      Contexto:
+              15 | 	if (v[i]>=D and v[i]<B):
+        >>>   16 | 		xb=xb+1
+              17 | 		
 
 ======================================================================

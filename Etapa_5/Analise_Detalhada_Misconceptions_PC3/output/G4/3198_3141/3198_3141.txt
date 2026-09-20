@@ -1,12 +1,12 @@
 ======================================================================
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
-Arquivo     : 3198_3141.py
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2021_1_v1.81\2021-1\377\users\6453\codes\3198_3141.py
+Arquivo     : 3198_3141.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2021_1_v1.81\2021-1\377\users\6464\executions\3198_3141.log
 Assessment  : 3198
 Título      : TP5: Vetores e Strings (G)
 Questão     : 3141
-Aluno       : 6453
+Aluno       : 6464
 Grupo       : TP 05
 Significado : Vetores e Strings
 Total MCs   : 1
@@ -16,66 +16,62 @@ Total MCs   : 1
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | from numpy import*
+     1 | from numpy import array
      2 | 
-     3 | 
-     4 | p = array(eval(input("p: ")))
+     3 | v = array(eval(input()), dtype=float)
+     4 | n = len(v)
      5 | 
-     6 | i = 0 
-     7 | t = 0 
-     8 | while(i < size(p)):
-     9 | 	t = t + p[i]**(1/6)
-    10 | 	i = i + 1
-    11 | m = (t/size(p))**6
-    12 | print(round(m, 2))  
+     6 | M = 0
+     7 | i = 0
+     8 | 
+     9 | while i < n:
+    10 | 	M += v[i]**(1/6)
+    11 | 	i += 1
+    12 | 
+    13 | M = (M/n)**6
+    14 | 
+    15 | print(round(M, 2))
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
 ----------------------------------------------------------------------
 
 ▶ G4 — Funções/variáveis com nomes não significativos
-  Ocorrências: 6
+  Ocorrências: 5
 
-  [1] Linha 4: Variável 'p' com nome muito curto (≤4 chars)
-      Trecho  : p = ...
+  [1] Linha 3: Variável 'v' com nome muito curto (≤4 chars)
+      Trecho  : v = ...
       Contexto:
-               3 | 
-        >>>    4 | p = array(eval(input("p: ")))
+               2 | 
+        >>>    3 | v = array(eval(input()), dtype=float)
+               4 | n = len(v)
+
+  [2] Linha 4: Variável 'n' com nome muito curto (≤4 chars)
+      Trecho  : n = ...
+      Contexto:
+               3 | v = array(eval(input()), dtype=float)
+        >>>    4 | n = len(v)
                5 | 
 
-  [2] Linha 6: Variável 'i' com nome muito curto (≤4 chars)
-      Trecho  : i = ...
+  [3] Linha 6: Variável 'M' com nome muito curto (≤4 chars)
+      Trecho  : M = ...
       Contexto:
                5 | 
-        >>>    6 | i = 0 
-               7 | t = 0 
+        >>>    6 | M = 0
+               7 | i = 0
 
-  [3] Linha 7: Variável 't' com nome muito curto (≤4 chars)
-      Trecho  : t = ...
-      Contexto:
-               6 | i = 0 
-        >>>    7 | t = 0 
-               8 | while(i < size(p)):
-
-  [4] Linha 11: Variável 'm' com nome muito curto (≤4 chars)
-      Trecho  : m = ...
-      Contexto:
-              10 | 	i = i + 1
-        >>>   11 | m = (t/size(p))**6
-              12 | print(round(m, 2))  
-
-  [5] Linha 9: Variável 't' com nome muito curto (≤4 chars)
-      Trecho  : t = ...
-      Contexto:
-               8 | while(i < size(p)):
-        >>>    9 | 	t = t + p[i]**(1/6)
-              10 | 	i = i + 1
-
-  [6] Linha 10: Variável 'i' com nome muito curto (≤4 chars)
+  [4] Linha 7: Variável 'i' com nome muito curto (≤4 chars)
       Trecho  : i = ...
       Contexto:
-               9 | 	t = t + p[i]**(1/6)
-        >>>   10 | 	i = i + 1
-              11 | m = (t/size(p))**6
+               6 | M = 0
+        >>>    7 | i = 0
+               8 | 
+
+  [5] Linha 13: Variável 'M' com nome muito curto (≤4 chars)
+      Trecho  : M = ...
+      Contexto:
+              12 | 
+        >>>   13 | M = (M/n)**6
+              14 | 
 
 ======================================================================

@@ -1,12 +1,12 @@
 ======================================================================
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
-Arquivo     : 1255_1643.py
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2018_1_v1.81\2018-1\189\users\3308\codes\1255_1643.py
+Arquivo     : 1255_1643.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2018_1_v1.81\2018-1\189\users\3306\executions\1255_1643.log
 Assessment  : 1255
 Título      : TP 06 - Estrutura de Repetição por Contagem (for)
 Questão     : 1643
-Aluno       : 3308
+Aluno       : 3306
 Grupo       : TP 06
 Significado : Estrutura de Repetição por Contagem
 Total MCs   : 2
@@ -17,21 +17,19 @@ Total MCs   : 2
 CÓDIGO FONTE
 ----------------------------------------------------------------------
      1 | from numpy import*
-     2 | nf = array(eval(input("digite as notas finais:")))
-     3 | ap = 0
-     4 | for i in nf :
+     2 | v= array(eval(input("medias:")))
+     3 | aprov= 0
+     4 | for i in v:
      5 | 	if(i>=5):
-     6 | 		ap = ap + 1
-     7 | v = zeros(ap,dtype=int)
-     8 | d = 0
-     9 | i = 0
-    10 | for i in range(size(nf)) :
-    11 | 	if(nf[i]>=5):
-    12 | 		v[d]= i
-    13 | 		d = d + 1
-    14 | print(ap)
-    15 | print(v)
-    16 | 		
+     6 | 		aprov+=1
+     7 | cont= zeros(aprov,dtype=int)
+     8 | t=0
+     9 | for i in range(0,size(v)):
+    10 | 	if(v[i]>=5):
+    11 | 		cont[t]= i
+    12 | 		t+=1
+    13 | print(aprov)
+    14 | print(cont)
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
@@ -44,30 +42,30 @@ DETALHAMENTO DOS MISCONCEPTIONS
       Trecho  : —
 
 ▶ G4 — Funções/variáveis com nomes não significativos
-  Ocorrências: 7
+  Ocorrências: 3
 
-  [1] Linha 2: Variável 'nf' com nome muito curto (≤4 chars)
-      Trecho  : nf = ...
-      Contexto:
-               1 | from numpy import*
-        >>>    2 | nf = array(eval(input("digite as notas finais:")))
-               3 | ap = 0
-
-  [2] Linha 3: Variável 'ap' com nome muito curto (≤4 chars)
-      Trecho  : ap = ...
-      Contexto:
-               2 | nf = array(eval(input("digite as notas finais:")))
-        >>>    3 | ap = 0
-               4 | for i in nf :
-
-  [3] Linha 7: Variável 'v' com nome muito curto (≤4 chars)
+  [1] Linha 2: Variável 'v' com nome muito curto (≤4 chars)
       Trecho  : v = ...
       Contexto:
-               6 | 		ap = ap + 1
-        >>>    7 | v = zeros(ap,dtype=int)
-               8 | d = 0
+               1 | from numpy import*
+        >>>    2 | v= array(eval(input("medias:")))
+               3 | aprov= 0
 
-  [4] Linha 8: Variável 'd' com nome muito curto (≤4 chars)
+  [2] Linha 7: Variável 'cont' com nome muito curto (≤4 chars)
+      Trecho  : cont = ...
+      Contexto:
+               6 | 		aprov+=1
+        >>>    7 | cont= zeros(aprov,dtype=int)
+               8 | t=0
+
+  [3] Linha 8: Variável 't' com nome muito curto (≤4 chars)
+      Trecho  : t = ...
+      Contexto:
+               7 | cont= zeros(aprov,dtype=int)
+        >>>    8 | t=0
+               9 | for i in range(0,size(v)):
+
+======================================================================: Variável 'd' com nome muito curto (≤4 chars)
       Trecho  : d = ...
       Contexto:
                7 | v = zeros(ap,dtype=int)

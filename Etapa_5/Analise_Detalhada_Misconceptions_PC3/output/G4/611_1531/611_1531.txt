@@ -1,12 +1,12 @@
 ======================================================================
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
-Arquivo     : 611_1531.py
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2017_1_v1.81\2017-1\135\users\2104\codes\611_1531.py
+Arquivo     : 611_1531.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2017_1_v1.81\2017-1\135\users\2342\executions\611_1531.log
 Assessment  : 611
 Título      : Trabalho Prático 4: Estrutura de Repetição por Condição (while)
 Questão     : 1531
-Aluno       : 2104
+Aluno       : 2342
 Grupo       : TP 04
 Significado : Estrutura de Repetição por Condição
 Total MCs   : 1
@@ -17,65 +17,81 @@ Total MCs   : 1
 CÓDIGO FONTE
 ----------------------------------------------------------------------
      1 | from math import*
-     2 | p = eval(input("numero chato:"))
-     3 | k = int(input("numero de constantes:"))
-     4 | i = 0
-     5 | sinal = 1
-     6 | #Qf = (sinal*(p**i))/(factorial(i))
-     7 | f = 0
-     8 | while(i<k):
-     9 | 	f = f  + sinal*(p**(2*i))/(factorial(2*i))
-    10 | 	i = i+1
-    11 | 	sinal = -1*sinal
-    12 | print(round(f,10))
+     2 | 
+     3 | x = eval(input(" "))
+     4 | k = int(input(" "))
+     5 | i = 0
+     6 | t = 2
+     7 | c = 0.7071067812
+     8 | 
+     9 | while(k<=0):
+    10 | 	c = 1 - x**i/factorial(t)
+    11 | 	i = i + 1
+    12 | 	t = t + 2
+    13 | 	
+    14 | print(round(c,6))
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
 ----------------------------------------------------------------------
 
 ▶ G4 — Funções/variáveis com nomes não significativos
-  Ocorrências: 6
+  Ocorrências: 8
 
-  [1] Linha 2: Variável 'p' com nome muito curto (≤4 chars)
-      Trecho  : p = ...
+  [1] Linha 3: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
       Contexto:
-               1 | from math import*
-        >>>    2 | p = eval(input("numero chato:"))
-               3 | k = int(input("numero de constantes:"))
+               2 | 
+        >>>    3 | x = eval(input(" "))
+               4 | k = int(input(" "))
 
-  [2] Linha 3: Variável 'k' com nome muito curto (≤4 chars)
+  [2] Linha 4: Variável 'k' com nome muito curto (≤4 chars)
       Trecho  : k = ...
       Contexto:
-               2 | p = eval(input("numero chato:"))
-        >>>    3 | k = int(input("numero de constantes:"))
-               4 | i = 0
+               3 | x = eval(input(" "))
+        >>>    4 | k = int(input(" "))
+               5 | i = 0
 
-  [3] Linha 4: Variável 'i' com nome muito curto (≤4 chars)
+  [3] Linha 5: Variável 'i' com nome muito curto (≤4 chars)
       Trecho  : i = ...
       Contexto:
-               3 | k = int(input("numero de constantes:"))
-        >>>    4 | i = 0
-               5 | sinal = 1
+               4 | k = int(input(" "))
+        >>>    5 | i = 0
+               6 | t = 2
 
-  [4] Linha 7: Variável 'f' com nome muito curto (≤4 chars)
-      Trecho  : f = ...
+  [4] Linha 6: Variável 't' com nome muito curto (≤4 chars)
+      Trecho  : t = ...
       Contexto:
-               6 | #Qf = (sinal*(p**i))/(factorial(i))
-        >>>    7 | f = 0
-               8 | while(i<k):
+               5 | i = 0
+        >>>    6 | t = 2
+               7 | c = 0.7071067812
 
-  [5] Linha 9: Variável 'f' com nome muito curto (≤4 chars)
-      Trecho  : f = ...
+  [5] Linha 7: Variável 'c' com nome muito curto (≤4 chars)
+      Trecho  : c = ...
       Contexto:
-               8 | while(i<k):
-        >>>    9 | 	f = f  + sinal*(p**(2*i))/(factorial(2*i))
-              10 | 	i = i+1
+               6 | t = 2
+        >>>    7 | c = 0.7071067812
+               8 | 
 
-  [6] Linha 10: Variável 'i' com nome muito curto (≤4 chars)
+  [6] Linha 10: Variável 'c' com nome muito curto (≤4 chars)
+      Trecho  : c = ...
+      Contexto:
+               9 | while(k<=0):
+        >>>   10 | 	c = 1 - x**i/factorial(t)
+              11 | 	i = i + 1
+
+  [7] Linha 11: Variável 'i' com nome muito curto (≤4 chars)
       Trecho  : i = ...
       Contexto:
-               9 | 	f = f  + sinal*(p**(2*i))/(factorial(2*i))
-        >>>   10 | 	i = i+1
-              11 | 	sinal = -1*sinal
+              10 | 	c = 1 - x**i/factorial(t)
+        >>>   11 | 	i = i + 1
+              12 | 	t = t + 2
+
+  [8] Linha 12: Variável 't' com nome muito curto (≤4 chars)
+      Trecho  : t = ...
+      Contexto:
+              11 | 	i = i + 1
+        >>>   12 | 	t = t + 2
+              13 | 	
 
 ======================================================================

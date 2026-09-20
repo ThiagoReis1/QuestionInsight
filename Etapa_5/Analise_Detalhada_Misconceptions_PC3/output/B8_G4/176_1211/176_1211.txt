@@ -1,12 +1,12 @@
 ======================================================================
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
-Arquivo     : 176_1211.py
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2016_1_v1.81\2016-1\107\users\1629\codes\176_1211.py
+Arquivo     : 176_1211.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2016_1_v1.81\2016-1\107\users\1620\executions\176_1211.log
 Assessment  : 176
 Título      : Avaliação Parcial 05 – Vetores e Strings
 Questão     : 1211
-Aluno       : 1629
+Aluno       : 1620
 Grupo       : TP 05
 Significado : Vetores e Strings
 Total MCs   : 2
@@ -17,19 +17,16 @@ Total MCs   : 2
 CÓDIGO FONTE
 ----------------------------------------------------------------------
      1 | from numpy import *
-     2 | peso = eval(input())
-     3 | i=0
-     4 | k=0
-     5 | recorde=307
-     6 | tam = size(peso)
-     7 | while (i < tam):
-     8 | 	if(peso[i] > recorde):
-     9 | 		k=k+1
-    10 | 	i=i+1
-    11 | print(recorde)
-    12 | print(k)
-    13 | 		
-    14 | 		
+     2 | vet = array(eval(input("Informe o vetor: ")))
+     3 | i = 0
+     4 | qtd = 0
+     5 | while (i < size(vet)):
+     6 | 	if (vet[i] > 307):
+     7 | 		qtd = qtd + 1
+     8 | 	i = i + 1
+     9 | 	
+    10 | print("307")
+    11 | print(qtd)
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
@@ -42,48 +39,41 @@ DETALHAMENTO DOS MISCONCEPTIONS
       Trecho  : —
 
 ▶ G4 — Funções/variáveis com nomes não significativos
-  Ocorrências: 6
+  Ocorrências: 5
 
-  [1] Linha 2: Variável 'peso' com nome muito curto (≤4 chars)
-      Trecho  : peso = ...
+  [1] Linha 2: Variável 'vet' com nome muito curto (≤4 chars)
+      Trecho  : vet = ...
       Contexto:
                1 | from numpy import *
-        >>>    2 | peso = eval(input())
-               3 | i=0
+        >>>    2 | vet = array(eval(input("Informe o vetor: ")))
+               3 | i = 0
 
   [2] Linha 3: Variável 'i' com nome muito curto (≤4 chars)
       Trecho  : i = ...
       Contexto:
-               2 | peso = eval(input())
-        >>>    3 | i=0
-               4 | k=0
+               2 | vet = array(eval(input("Informe o vetor: ")))
+        >>>    3 | i = 0
+               4 | qtd = 0
 
-  [3] Linha 4: Variável 'k' com nome muito curto (≤4 chars)
-      Trecho  : k = ...
+  [3] Linha 4: Variável 'qtd' com nome muito curto (≤4 chars)
+      Trecho  : qtd = ...
       Contexto:
-               3 | i=0
-        >>>    4 | k=0
-               5 | recorde=307
+               3 | i = 0
+        >>>    4 | qtd = 0
+               5 | while (i < size(vet)):
 
-  [4] Linha 6: Variável 'tam' com nome muito curto (≤4 chars)
-      Trecho  : tam = ...
-      Contexto:
-               5 | recorde=307
-        >>>    6 | tam = size(peso)
-               7 | while (i < tam):
-
-  [5] Linha 10: Variável 'i' com nome muito curto (≤4 chars)
+  [4] Linha 8: Variável 'i' com nome muito curto (≤4 chars)
       Trecho  : i = ...
       Contexto:
-               9 | 		k=k+1
-        >>>   10 | 	i=i+1
-              11 | print(recorde)
+               7 | 		qtd = qtd + 1
+        >>>    8 | 	i = i + 1
+               9 | 	
 
-  [6] Linha 9: Variável 'k' com nome muito curto (≤4 chars)
-      Trecho  : k = ...
+  [5] Linha 7: Variável 'qtd' com nome muito curto (≤4 chars)
+      Trecho  : qtd = ...
       Contexto:
-               8 | 	if(peso[i] > recorde):
-        >>>    9 | 		k=k+1
-              10 | 	i=i+1
+               6 | 	if (vet[i] > 307):
+        >>>    7 | 		qtd = qtd + 1
+               8 | 	i = i + 1
 
 ======================================================================

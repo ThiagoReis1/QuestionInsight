@@ -1,12 +1,12 @@
 ======================================================================
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
-Arquivo     : 5945_1646.py
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2024_1_v1.81\2024-1\591\users\9778\codes\5945_1646.py
+Arquivo     : 5945_1646.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2024_1_v1.81\2024-1\591\users\9773\executions\5945_1646.log
 Assessment  : 5945
 Título      : TP 6: Estrutura de Repetição por Contagem (for)
 Questão     : 1646
-Aluno       : 9778
+Aluno       : 9773
 Grupo       : TP 06
 Significado : Estrutura de Repetição por Contagem
 Total MCs   : 2
@@ -16,23 +16,20 @@ Total MCs   : 2
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | from numpy import *
-     2 | 
-     3 | saque = array(eval(input('')))
-     4 | cont=0
-     5 | 
-     6 | for i in range (size(saque)):
-     7 | 	if saque[i] <= 50:
-     8 | 		cont +=1
-     9 | ind = zeros(cont,dtype = 'int')
-    10 | print(cont)
-    11 | j=0
-    12 | 
-    13 | for i in range(size(saque)):
-    14 | 	if saque[i]<= 50:
-    15 | 		ind[j]=i
-    16 | 		j+=1
-    17 | print(ind)
+     1 | from numpy import*
+     2 | saque=array(eval(input()))
+     3 | cont=0
+     4 | for i in range(size(saque)):
+     5 | 	if saque[i]<=50:
+     6 | 		cont+=1
+     7 | ind= zeros(cont, dtype='int')
+     8 | print(cont)
+     9 | j=0
+    10 | for i in range(size(saque)):
+    11 | 	if saque[i]<=50:
+    12 | 		ind[j]=i
+    13 | 		j+=1
+    14 | print(ind)
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
@@ -47,25 +44,25 @@ DETALHAMENTO DOS MISCONCEPTIONS
 ▶ G4 — Funções/variáveis com nomes não significativos
   Ocorrências: 3
 
-  [1] Linha 4: Variável 'cont' com nome muito curto (≤4 chars)
+  [1] Linha 3: Variável 'cont' com nome muito curto (≤4 chars)
       Trecho  : cont = ...
       Contexto:
-               3 | saque = array(eval(input('')))
-        >>>    4 | cont=0
-               5 | 
+               2 | saque=array(eval(input()))
+        >>>    3 | cont=0
+               4 | for i in range(size(saque)):
 
-  [2] Linha 9: Variável 'ind' com nome muito curto (≤4 chars)
+  [2] Linha 7: Variável 'ind' com nome muito curto (≤4 chars)
       Trecho  : ind = ...
       Contexto:
-               8 | 		cont +=1
-        >>>    9 | ind = zeros(cont,dtype = 'int')
-              10 | print(cont)
+               6 | 		cont+=1
+        >>>    7 | ind= zeros(cont, dtype='int')
+               8 | print(cont)
 
-  [3] Linha 11: Variável 'j' com nome muito curto (≤4 chars)
+  [3] Linha 9: Variável 'j' com nome muito curto (≤4 chars)
       Trecho  : j = ...
       Contexto:
-              10 | print(cont)
-        >>>   11 | j=0
-              12 | 
+               8 | print(cont)
+        >>>    9 | j=0
+              10 | for i in range(size(saque)):
 
 ======================================================================

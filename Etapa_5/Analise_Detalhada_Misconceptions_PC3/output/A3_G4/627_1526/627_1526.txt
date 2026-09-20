@@ -1,12 +1,12 @@
 ======================================================================
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
-Arquivo     : 627_1526.py
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2017_1_v1.81\2017-1\140\users\2289\codes\627_1526.py
+Arquivo     : 627_1526.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2017_1_v1.81\2017-1\140\users\2287\executions\627_1526.log
 Assessment  : 627
 Título      : Trabalho Prático 04: Estrutura de Repetição por Condição (while)
 Questão     : 1526
-Aluno       : 2289
+Aluno       : 2287
 Grupo       : TP 04
 Significado : Estrutura de Repetição por Condição
 Total MCs   : 2
@@ -16,16 +16,16 @@ Total MCs   : 2
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | n = int(input())
-     2 | k = int(input())
-     3 | q = int(input())
-     4 | e = 0
-     5 | s = 0
-     6 | while k>0:
-     7 | 	k = k*n+q
-     8 | 	s = s + 1
-     9 | 
-    10 | print(s)
+     1 | qom=int(input("quantidade inicial de manas:"))
+     2 | qm=int(input("quantidade de manas que gasto no dia:"))
+     3 | qr=int(input("quantidade de manas que recupera por noite:"))
+     4 | t=0
+     5 | 
+     6 | while(qom>0):
+     7 | 	qom= (qom-qm) + qr
+     8 | 	saldo= qom 
+     9 | 	t= t + 1 
+    10 | print(t)
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
@@ -34,62 +34,55 @@ DETALHAMENTO DOS MISCONCEPTIONS
 ▶ A3 — Variável inicializada desnecessariamente
   Ocorrências: 1
 
-  [1] Linha 4: Variável 'e' declarada mas nunca utilizada
-      Trecho  : e = ...
+  [1] Linha 8: Variável 'saldo' declarada mas nunca utilizada
+      Trecho  : saldo = ...
       Contexto:
-               3 | q = int(input())
-        >>>    4 | e = 0
-               5 | s = 0
+               7 | 	qom= (qom-qm) + qr
+        >>>    8 | 	saldo= qom 
+               9 | 	t= t + 1 
 
 ▶ G4 — Funções/variáveis com nomes não significativos
-  Ocorrências: 7
+  Ocorrências: 6
 
-  [1] Linha 1: Variável 'n' com nome muito curto (≤4 chars)
-      Trecho  : n = ...
+  [1] Linha 1: Variável 'qom' com nome muito curto (≤4 chars)
+      Trecho  : qom = ...
       Contexto:
-        >>>    1 | n = int(input())
-               2 | k = int(input())
+        >>>    1 | qom=int(input("quantidade inicial de manas:"))
+               2 | qm=int(input("quantidade de manas que gasto no dia:"))
 
-  [2] Linha 2: Variável 'k' com nome muito curto (≤4 chars)
-      Trecho  : k = ...
+  [2] Linha 2: Variável 'qm' com nome muito curto (≤4 chars)
+      Trecho  : qm = ...
       Contexto:
-               1 | n = int(input())
-        >>>    2 | k = int(input())
-               3 | q = int(input())
+               1 | qom=int(input("quantidade inicial de manas:"))
+        >>>    2 | qm=int(input("quantidade de manas que gasto no dia:"))
+               3 | qr=int(input("quantidade de manas que recupera por noite:"))
 
-  [3] Linha 3: Variável 'q' com nome muito curto (≤4 chars)
-      Trecho  : q = ...
+  [3] Linha 3: Variável 'qr' com nome muito curto (≤4 chars)
+      Trecho  : qr = ...
       Contexto:
-               2 | k = int(input())
-        >>>    3 | q = int(input())
-               4 | e = 0
+               2 | qm=int(input("quantidade de manas que gasto no dia:"))
+        >>>    3 | qr=int(input("quantidade de manas que recupera por noite:"))
+               4 | t=0
 
-  [4] Linha 4: Variável 'e' com nome muito curto (≤4 chars)
-      Trecho  : e = ...
+  [4] Linha 4: Variável 't' com nome muito curto (≤4 chars)
+      Trecho  : t = ...
       Contexto:
-               3 | q = int(input())
-        >>>    4 | e = 0
-               5 | s = 0
+               3 | qr=int(input("quantidade de manas que recupera por noite:"))
+        >>>    4 | t=0
+               5 | 
 
-  [5] Linha 5: Variável 's' com nome muito curto (≤4 chars)
-      Trecho  : s = ...
+  [5] Linha 7: Variável 'qom' com nome muito curto (≤4 chars)
+      Trecho  : qom = ...
       Contexto:
-               4 | e = 0
-        >>>    5 | s = 0
-               6 | while k>0:
+               6 | while(qom>0):
+        >>>    7 | 	qom= (qom-qm) + qr
+               8 | 	saldo= qom 
 
-  [6] Linha 7: Variável 'k' com nome muito curto (≤4 chars)
-      Trecho  : k = ...
+  [6] Linha 9: Variável 't' com nome muito curto (≤4 chars)
+      Trecho  : t = ...
       Contexto:
-               6 | while k>0:
-        >>>    7 | 	k = k*n+q
-               8 | 	s = s + 1
-
-  [7] Linha 8: Variável 's' com nome muito curto (≤4 chars)
-      Trecho  : s = ...
-      Contexto:
-               7 | 	k = k*n+q
-        >>>    8 | 	s = s + 1
-               9 | 
+               8 | 	saldo= qom 
+        >>>    9 | 	t= t + 1 
+              10 | print(t)
 
 ======================================================================

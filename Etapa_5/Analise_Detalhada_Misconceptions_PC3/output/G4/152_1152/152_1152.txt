@@ -1,12 +1,12 @@
 ======================================================================
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
-Arquivo     : 152_1152.py
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2016_1_v1.81\2016-1\106\users\1666\codes\152_1152.py
+Arquivo     : 152_1152.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2016_1_v1.81\2016-1\106\users\1649\executions\152_1152.log
 Assessment  : 152
 Título      : Avaliação Parcial 04 – Estrutura de Repetição por Condição (while)
 Questão     : 1152
-Aluno       : 1666
+Aluno       : 1649
 Grupo       : TP 04
 Significado : Estrutura de Repetição por Condição
 Total MCs   : 1
@@ -16,130 +16,150 @@ Total MCs   : 1
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | haba = int(input("Numero de habitantes de Bravos: "))
-     2 | habb = int(input("Numero de habitantes de Pentos: "))
-     3 | habc = int(input("Numero de habitantes de porto real: "))
-     4 | tbravos = float(input("Taxa de crescimento de Bravos: "))
-     5 | tpentos = float(input("Taxa de crescimento de Pentos: "))
-     6 | tporto_real = float(input("Taxa de crescimento de Porto Real: "))
-     7 | 
-     8 | popa = haba
-     9 | popb = habb
-    10 | popc = habc
-    11 | anos = 1
-    12 | ta = tbravos * 0.01
-    13 | tb = tpentos * 0.01
-    14 | tc = tporto_real * 0.01
-    15 | 
-    16 | while ( popa + popb < popc ):
-    17 | 	popa = popa  + (popa* ta)
-    18 | 	popb = popb  + (popb* tb)
-    19 | 	popc = popc  + (popc* tc)
-    20 | 	anos = anos + 1
-    21 | print(anos)
+     1 | na = float(input("Numero de habitantes da cidade Bravos:"))
+     2 | nb = float(input("Numero de habitantes da cidade Pentos:"))
+     3 | nc = float(input("Numero de habitantes da cidade Porto Real:"))
+     4 | pa = float(input("Digite o cp da cidade Bravos:"))
+     5 | pb = float(input("Digite o cp da cidade Pentos:"))
+     6 | pc = float(input("Digite o cp da cidade Porto Real:"))
+     7 | numa = na
+     8 | numb = nb
+     9 | numc = nc
+    10 | pera = pa*0.01
+    11 | perb = pb*0.01
+    12 | perc = pc*0.01
+    13 | a = 1
+    14 | 
+    15 | while((numa + numb) < numc):
+    16 | 	numa = numa + (numa*pera)
+    17 | 	numb = numb + (numb*perb)
+    18 | 	numc = numc + (numc*perc)
+    19 | 	a = a + 1
+    20 | print(a)
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
 ----------------------------------------------------------------------
 
 ▶ G4 — Funções/variáveis com nomes não significativos
-  Ocorrências: 14
+  Ocorrências: 17
 
-  [1] Linha 1: Variável 'haba' com nome muito curto (≤4 chars)
-      Trecho  : haba = ...
+  [1] Linha 1: Variável 'na' com nome muito curto (≤4 chars)
+      Trecho  : na = ...
       Contexto:
-        >>>    1 | haba = int(input("Numero de habitantes de Bravos: "))
-               2 | habb = int(input("Numero de habitantes de Pentos: "))
+        >>>    1 | na = float(input("Numero de habitantes da cidade Bravos:"))
+               2 | nb = float(input("Numero de habitantes da cidade Pentos:"))
 
-  [2] Linha 2: Variável 'habb' com nome muito curto (≤4 chars)
-      Trecho  : habb = ...
+  [2] Linha 2: Variável 'nb' com nome muito curto (≤4 chars)
+      Trecho  : nb = ...
       Contexto:
-               1 | haba = int(input("Numero de habitantes de Bravos: "))
-        >>>    2 | habb = int(input("Numero de habitantes de Pentos: "))
-               3 | habc = int(input("Numero de habitantes de porto real: "))
+               1 | na = float(input("Numero de habitantes da cidade Bravos:"))
+        >>>    2 | nb = float(input("Numero de habitantes da cidade Pentos:"))
+               3 | nc = float(input("Numero de habitantes da cidade Porto Real:"))
 
-  [3] Linha 3: Variável 'habc' com nome muito curto (≤4 chars)
-      Trecho  : habc = ...
+  [3] Linha 3: Variável 'nc' com nome muito curto (≤4 chars)
+      Trecho  : nc = ...
       Contexto:
-               2 | habb = int(input("Numero de habitantes de Pentos: "))
-        >>>    3 | habc = int(input("Numero de habitantes de porto real: "))
-               4 | tbravos = float(input("Taxa de crescimento de Bravos: "))
+               2 | nb = float(input("Numero de habitantes da cidade Pentos:"))
+        >>>    3 | nc = float(input("Numero de habitantes da cidade Porto Real:"))
+               4 | pa = float(input("Digite o cp da cidade Bravos:"))
 
-  [4] Linha 8: Variável 'popa' com nome muito curto (≤4 chars)
-      Trecho  : popa = ...
+  [4] Linha 4: Variável 'pa' com nome muito curto (≤4 chars)
+      Trecho  : pa = ...
       Contexto:
-               7 | 
-        >>>    8 | popa = haba
-               9 | popb = habb
+               3 | nc = float(input("Numero de habitantes da cidade Porto Real:"))
+        >>>    4 | pa = float(input("Digite o cp da cidade Bravos:"))
+               5 | pb = float(input("Digite o cp da cidade Pentos:"))
 
-  [5] Linha 9: Variável 'popb' com nome muito curto (≤4 chars)
-      Trecho  : popb = ...
+  [5] Linha 5: Variável 'pb' com nome muito curto (≤4 chars)
+      Trecho  : pb = ...
       Contexto:
-               8 | popa = haba
-        >>>    9 | popb = habb
-              10 | popc = habc
+               4 | pa = float(input("Digite o cp da cidade Bravos:"))
+        >>>    5 | pb = float(input("Digite o cp da cidade Pentos:"))
+               6 | pc = float(input("Digite o cp da cidade Porto Real:"))
 
-  [6] Linha 10: Variável 'popc' com nome muito curto (≤4 chars)
-      Trecho  : popc = ...
+  [6] Linha 6: Variável 'pc' com nome muito curto (≤4 chars)
+      Trecho  : pc = ...
       Contexto:
-               9 | popb = habb
-        >>>   10 | popc = habc
-              11 | anos = 1
+               5 | pb = float(input("Digite o cp da cidade Pentos:"))
+        >>>    6 | pc = float(input("Digite o cp da cidade Porto Real:"))
+               7 | numa = na
 
-  [7] Linha 11: Variável 'anos' com nome muito curto (≤4 chars)
-      Trecho  : anos = ...
+  [7] Linha 7: Variável 'numa' com nome muito curto (≤4 chars)
+      Trecho  : numa = ...
       Contexto:
-              10 | popc = habc
-        >>>   11 | anos = 1
-              12 | ta = tbravos * 0.01
+               6 | pc = float(input("Digite o cp da cidade Porto Real:"))
+        >>>    7 | numa = na
+               8 | numb = nb
 
-  [8] Linha 12: Variável 'ta' com nome muito curto (≤4 chars)
-      Trecho  : ta = ...
+  [8] Linha 8: Variável 'numb' com nome muito curto (≤4 chars)
+      Trecho  : numb = ...
       Contexto:
-              11 | anos = 1
-        >>>   12 | ta = tbravos * 0.01
-              13 | tb = tpentos * 0.01
+               7 | numa = na
+        >>>    8 | numb = nb
+               9 | numc = nc
 
-  [9] Linha 13: Variável 'tb' com nome muito curto (≤4 chars)
-      Trecho  : tb = ...
+  [9] Linha 9: Variável 'numc' com nome muito curto (≤4 chars)
+      Trecho  : numc = ...
       Contexto:
-              12 | ta = tbravos * 0.01
-        >>>   13 | tb = tpentos * 0.01
-              14 | tc = tporto_real * 0.01
+               8 | numb = nb
+        >>>    9 | numc = nc
+              10 | pera = pa*0.01
 
-  [10] Linha 14: Variável 'tc' com nome muito curto (≤4 chars)
-      Trecho  : tc = ...
+  [10] Linha 10: Variável 'pera' com nome muito curto (≤4 chars)
+      Trecho  : pera = ...
       Contexto:
-              13 | tb = tpentos * 0.01
-        >>>   14 | tc = tporto_real * 0.01
-              15 | 
+               9 | numc = nc
+        >>>   10 | pera = pa*0.01
+              11 | perb = pb*0.01
 
-  [11] Linha 17: Variável 'popa' com nome muito curto (≤4 chars)
-      Trecho  : popa = ...
+  [11] Linha 11: Variável 'perb' com nome muito curto (≤4 chars)
+      Trecho  : perb = ...
       Contexto:
-              16 | while ( popa + popb < popc ):
-        >>>   17 | 	popa = popa  + (popa* ta)
-              18 | 	popb = popb  + (popb* tb)
+              10 | pera = pa*0.01
+        >>>   11 | perb = pb*0.01
+              12 | perc = pc*0.01
 
-  [12] Linha 18: Variável 'popb' com nome muito curto (≤4 chars)
-      Trecho  : popb = ...
+  [12] Linha 12: Variável 'perc' com nome muito curto (≤4 chars)
+      Trecho  : perc = ...
       Contexto:
-              17 | 	popa = popa  + (popa* ta)
-        >>>   18 | 	popb = popb  + (popb* tb)
-              19 | 	popc = popc  + (popc* tc)
+              11 | perb = pb*0.01
+        >>>   12 | perc = pc*0.01
+              13 | a = 1
 
-  [13] Linha 19: Variável 'popc' com nome muito curto (≤4 chars)
-      Trecho  : popc = ...
+  [13] Linha 13: Variável 'a' com nome muito curto (≤4 chars)
+      Trecho  : a = ...
       Contexto:
-              18 | 	popb = popb  + (popb* tb)
-        >>>   19 | 	popc = popc  + (popc* tc)
-              20 | 	anos = anos + 1
+              12 | perc = pc*0.01
+        >>>   13 | a = 1
+              14 | 
 
-  [14] Linha 20: Variável 'anos' com nome muito curto (≤4 chars)
-      Trecho  : anos = ...
+  [14] Linha 16: Variável 'numa' com nome muito curto (≤4 chars)
+      Trecho  : numa = ...
       Contexto:
-              19 | 	popc = popc  + (popc* tc)
-        >>>   20 | 	anos = anos + 1
-              21 | print(anos)
+              15 | while((numa + numb) < numc):
+        >>>   16 | 	numa = numa + (numa*pera)
+              17 | 	numb = numb + (numb*perb)
+
+  [15] Linha 17: Variável 'numb' com nome muito curto (≤4 chars)
+      Trecho  : numb = ...
+      Contexto:
+              16 | 	numa = numa + (numa*pera)
+        >>>   17 | 	numb = numb + (numb*perb)
+              18 | 	numc = numc + (numc*perc)
+
+  [16] Linha 18: Variável 'numc' com nome muito curto (≤4 chars)
+      Trecho  : numc = ...
+      Contexto:
+              17 | 	numb = numb + (numb*perb)
+        >>>   18 | 	numc = numc + (numc*perc)
+              19 | 	a = a + 1
+
+  [17] Linha 19: Variável 'a' com nome muito curto (≤4 chars)
+      Trecho  : a = ...
+      Contexto:
+              18 | 	numc = numc + (numc*perc)
+        >>>   19 | 	a = a + 1
+              20 | print(a)
 
 ======================================================================

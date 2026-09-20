@@ -1,12 +1,12 @@
 ======================================================================
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
-Arquivo     : 3437_5165.py
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2021_2_v1.81\2021-2\408\users\7186\codes\3437_5165.py
+Arquivo     : 3437_5165.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2021_2_v1.81\2021-2\408\users\6012\executions\3437_5165.log
 Assessment  : 3437
 Título      : TP 01: Variáveis e Estrutura Sequencial
 Questão     : 5165
-Aluno       : 7186
+Aluno       : 6012
 Grupo       : TP 01
 Significado : Variáveis e Estrutura Sequencial
 Total MCs   : 1
@@ -16,10 +16,13 @@ Total MCs   : 1
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | p=float(input("Peso do saco de racao em gramas: "))
-     2 | q=float(input("A quantidade diaria de racao em gramas: "))
-     3 | qr=p-(q*6)
-     4 | print(round(qr, 4))
+     1 | #em gramas
+     2 | p = float(input("peso do saco: "))
+     3 | q = float(input("quantidade de racao: "))
+     4 | # calculo de quanto restara no saco
+     5 | consumo = (q * 6)
+     6 | s = p - consumo
+     7 | print(round(s, 4))
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
@@ -28,24 +31,25 @@ DETALHAMENTO DOS MISCONCEPTIONS
 ▶ G4 — Funções/variáveis com nomes não significativos
   Ocorrências: 3
 
-  [1] Linha 1: Variável 'p' com nome muito curto (≤4 chars)
+  [1] Linha 2: Variável 'p' com nome muito curto (≤4 chars)
       Trecho  : p = ...
       Contexto:
-        >>>    1 | p=float(input("Peso do saco de racao em gramas: "))
-               2 | q=float(input("A quantidade diaria de racao em gramas: "))
+               1 | #em gramas
+        >>>    2 | p = float(input("peso do saco: "))
+               3 | q = float(input("quantidade de racao: "))
 
-  [2] Linha 2: Variável 'q' com nome muito curto (≤4 chars)
+  [2] Linha 3: Variável 'q' com nome muito curto (≤4 chars)
       Trecho  : q = ...
       Contexto:
-               1 | p=float(input("Peso do saco de racao em gramas: "))
-        >>>    2 | q=float(input("A quantidade diaria de racao em gramas: "))
-               3 | qr=p-(q*6)
+               2 | p = float(input("peso do saco: "))
+        >>>    3 | q = float(input("quantidade de racao: "))
+               4 | # calculo de quanto restara no saco
 
-  [3] Linha 3: Variável 'qr' com nome muito curto (≤4 chars)
-      Trecho  : qr = ...
+  [3] Linha 6: Variável 's' com nome muito curto (≤4 chars)
+      Trecho  : s = ...
       Contexto:
-               2 | q=float(input("A quantidade diaria de racao em gramas: "))
-        >>>    3 | qr=p-(q*6)
-               4 | print(round(qr, 4))
+               5 | consumo = (q * 6)
+        >>>    6 | s = p - consumo
+               7 | print(round(s, 4))
 
 ======================================================================

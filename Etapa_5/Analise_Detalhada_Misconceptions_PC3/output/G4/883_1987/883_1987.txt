@@ -1,12 +1,12 @@
 ======================================================================
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
-Arquivo     : 883_1987.py
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2017_2_v1.81\2017-2\162\users\2819\codes\883_1987.py
+Arquivo     : 883_1987.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2017_2_v1.81\2017-2\162\users\2822\executions\883_1987.log
 Assessment  : 883
 Título      : Trabalho Prático 3: Estruturas Condicionais Encadeadas
 Questão     : 1987
-Aluno       : 2819
+Aluno       : 2822
 Grupo       : TP 03
 Significado : Estrutura Condicional Encadeada
 Total MCs   : 1
@@ -16,93 +16,52 @@ Total MCs   : 1
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | m = input("") #molecula 
-     2 | mp = m.upper()
-     3 | 
-     4 | o = 15.9994
-     5 | c = 12.011
-     6 | n = 14.00674
-     7 | h = 1.00794
-     8 | if(mp == "ALANINA"):
-     9 | 	pm = 3*c + 7*h + n + 2*o
-    10 | 	print(round(pm, 2))
-    11 | elif(mp == "VALINA"):
-    12 | 	pm = 5*c + 11*h + n + 2*o
-    13 | 	print(round(pm, 2))
-    14 | elif(mp == "TIROSINA"):
-    15 | 	pm = 9*c + 11*h + n + 3*o
-    16 | 	print(round(pm, 2))
-    17 | else:
-    18 | 	print("Entrada: ", m) #problema
-    19 | 	print("Dado Invalido")
+     1 | nome = input("Nome do aminoácido: ").upper()
+     2 | 
+     3 | if(nome == "ALANINA" or nome == "VALINA" or nome == "TIROSINA"):
+     4 | 	if(nome == "ALANINA"):
+     5 | 		peso = (3*12.011)+(7*1.00794)+(14.00674)+(2*15.9994)
+     6 | 	elif(nome == "VALINA"):
+     7 | 		peso = (5*12.011)+(11*1.00794)+(14.00674)+(2*15.9994)
+     8 | 	else:
+     9 | 		peso = (9*12.011)+(11*1.00794)+(14.00674)+(3*15.9994)
+    10 | 	print(round(peso,2))
+    11 | else:
+    12 | 	print("Entrada:",nome)
+    13 | 	print("Dado Invalido")
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
 ----------------------------------------------------------------------
 
 ▶ G4 — Funções/variáveis com nomes não significativos
-  Ocorrências: 9
+  Ocorrências: 4
 
-  [1] Linha 1: Variável 'm' com nome muito curto (≤4 chars)
-      Trecho  : m = ...
+  [1] Linha 1: Variável 'nome' com nome muito curto (≤4 chars)
+      Trecho  : nome = ...
       Contexto:
-        >>>    1 | m = input("") #molecula 
-               2 | mp = m.upper()
+        >>>    1 | nome = input("Nome do aminoácido: ").upper()
+               2 | 
 
-  [2] Linha 2: Variável 'mp' com nome muito curto (≤4 chars)
-      Trecho  : mp = ...
+  [2] Linha 5: Variável 'peso' com nome muito curto (≤4 chars)
+      Trecho  : peso = ...
       Contexto:
-               1 | m = input("") #molecula 
-        >>>    2 | mp = m.upper()
-               3 | 
+               4 | 	if(nome == "ALANINA"):
+        >>>    5 | 		peso = (3*12.011)+(7*1.00794)+(14.00674)+(2*15.9994)
+               6 | 	elif(nome == "VALINA"):
 
-  [3] Linha 4: Variável 'o' com nome muito curto (≤4 chars)
-      Trecho  : o = ...
+  [3] Linha 7: Variável 'peso' com nome muito curto (≤4 chars)
+      Trecho  : peso = ...
       Contexto:
-               3 | 
-        >>>    4 | o = 15.9994
-               5 | c = 12.011
+               6 | 	elif(nome == "VALINA"):
+        >>>    7 | 		peso = (5*12.011)+(11*1.00794)+(14.00674)+(2*15.9994)
+               8 | 	else:
 
-  [4] Linha 5: Variável 'c' com nome muito curto (≤4 chars)
-      Trecho  : c = ...
+  [4] Linha 9: Variável 'peso' com nome muito curto (≤4 chars)
+      Trecho  : peso = ...
       Contexto:
-               4 | o = 15.9994
-        >>>    5 | c = 12.011
-               6 | n = 14.00674
-
-  [5] Linha 6: Variável 'n' com nome muito curto (≤4 chars)
-      Trecho  : n = ...
-      Contexto:
-               5 | c = 12.011
-        >>>    6 | n = 14.00674
-               7 | h = 1.00794
-
-  [6] Linha 7: Variável 'h' com nome muito curto (≤4 chars)
-      Trecho  : h = ...
-      Contexto:
-               6 | n = 14.00674
-        >>>    7 | h = 1.00794
-               8 | if(mp == "ALANINA"):
-
-  [7] Linha 9: Variável 'pm' com nome muito curto (≤4 chars)
-      Trecho  : pm = ...
-      Contexto:
-               8 | if(mp == "ALANINA"):
-        >>>    9 | 	pm = 3*c + 7*h + n + 2*o
-              10 | 	print(round(pm, 2))
-
-  [8] Linha 12: Variável 'pm' com nome muito curto (≤4 chars)
-      Trecho  : pm = ...
-      Contexto:
-              11 | elif(mp == "VALINA"):
-        >>>   12 | 	pm = 5*c + 11*h + n + 2*o
-              13 | 	print(round(pm, 2))
-
-  [9] Linha 15: Variável 'pm' com nome muito curto (≤4 chars)
-      Trecho  : pm = ...
-      Contexto:
-              14 | elif(mp == "TIROSINA"):
-        >>>   15 | 	pm = 9*c + 11*h + n + 3*o
-              16 | 	print(round(pm, 2))
+               8 | 	else:
+        >>>    9 | 		peso = (9*12.011)+(11*1.00794)+(14.00674)+(3*15.9994)
+              10 | 	print(round(peso,2))
 
 ======================================================================

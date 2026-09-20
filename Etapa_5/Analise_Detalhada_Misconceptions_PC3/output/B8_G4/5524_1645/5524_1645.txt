@@ -1,12 +1,12 @@
 ======================================================================
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
-Arquivo     : 5524_1645.py
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2023_2_v1.81\2023-2\557\users\9310\codes\5524_1645.py
+Arquivo     : 5524_1645.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2023_2_v1.81\2023-2\557\users\9167\executions\5524_1645.log
 Assessment  : 5524
 Título      : TP 6: Estrutura de Repetição por Contagem (for)
 Questão     : 1645
-Aluno       : 9310
+Aluno       : 9167
 Grupo       : TP 06
 Significado : Estrutura de Repetição por Contagem
 Total MCs   : 2
@@ -18,25 +18,21 @@ CÓDIGO FONTE
 ----------------------------------------------------------------------
      1 | from numpy import *
      2 | 
-     3 | a = array(eval(input()))
+     3 | s = array(eval(input("aa:  ")))
      4 | cont = 0
      5 | 
-     6 | for i in range(len(a)):
-     7 | 	if a[i] >= 2000:
+     6 | for i in range(size(s)):
+     7 | 	if s[i]>=2000:
      8 | 		cont += 1
-     9 | 
-    10 | c = zeros(cont, dtype = int)
-    11 | k = 0
-    12 | 
-    13 | for j in range(len(a)):
-    14 | 	if (a[j] >= 2000):
-    15 | 		c[k] = j
-    16 | 		k += 1
-    17 | 		
-    18 | print(cont)
-    19 | print(c)
-    20 | 	
-    21 | 
+     9 | print(cont)
+    10 | novo = zeros(cont, dtype=int)
+    11 | 
+    12 | j = 0
+    13 | for i in range(size(s)):
+    14 | 	if s[i] >= 2000:
+    15 | 		novo[j] = i
+    16 | 		j += 1
+    17 | print(novo)
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
@@ -51,32 +47,32 @@ DETALHAMENTO DOS MISCONCEPTIONS
 ▶ G4 — Funções/variáveis com nomes não significativos
   Ocorrências: 4
 
-  [1] Linha 3: Variável 'a' com nome muito curto (≤4 chars)
-      Trecho  : a = ...
+  [1] Linha 3: Variável 's' com nome muito curto (≤4 chars)
+      Trecho  : s = ...
       Contexto:
                2 | 
-        >>>    3 | a = array(eval(input()))
+        >>>    3 | s = array(eval(input("aa:  ")))
                4 | cont = 0
 
   [2] Linha 4: Variável 'cont' com nome muito curto (≤4 chars)
       Trecho  : cont = ...
       Contexto:
-               3 | a = array(eval(input()))
+               3 | s = array(eval(input("aa:  ")))
         >>>    4 | cont = 0
                5 | 
 
-  [3] Linha 10: Variável 'c' com nome muito curto (≤4 chars)
-      Trecho  : c = ...
+  [3] Linha 10: Variável 'novo' com nome muito curto (≤4 chars)
+      Trecho  : novo = ...
       Contexto:
-               9 | 
-        >>>   10 | c = zeros(cont, dtype = int)
-              11 | k = 0
+               9 | print(cont)
+        >>>   10 | novo = zeros(cont, dtype=int)
+              11 | 
 
-  [4] Linha 11: Variável 'k' com nome muito curto (≤4 chars)
-      Trecho  : k = ...
+  [4] Linha 12: Variável 'j' com nome muito curto (≤4 chars)
+      Trecho  : j = ...
       Contexto:
-              10 | c = zeros(cont, dtype = int)
-        >>>   11 | k = 0
-              12 | 
+              11 | 
+        >>>   12 | j = 0
+              13 | for i in range(size(s)):
 
 ======================================================================

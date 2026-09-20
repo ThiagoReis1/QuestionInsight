@@ -1,8 +1,8 @@
 ======================================================================
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
-Arquivo     : 1152_2456.py
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2018_1_v1.81\2018-1\189\users\3511\codes\1152_2456.py
+Arquivo     : 1152_2456.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2018_1_v1.81\2018-1\189\users\3511\executions\1152_2456.log
 Assessment  : 1152
 Título      : TP 03 – Condicionais Encadeadas (if/elif)
 Questão     : 2456
@@ -18,13 +18,12 @@ CÓDIGO FONTE
 ----------------------------------------------------------------------
      1 | m = float(input("Valor da mensalidade: "))
      2 | c = float(input("Numero de criancas: "))
-     3 | vt= m * c
-     4 | if(c==1):
-     5 | 	print(round((vt * 10) / 100),2)
-     6 | elif(c==2):	
-     7 | 	print(round((vt * 30) / 100),2)
-     8 | elif(c>=3):
-     9 | 	print(round((vt * 40) / 100),2)
+     3 | if(c==1):
+     4 | 	print(round(((m * c) * 10) / 100),2)
+     5 | elif(c==2):	
+     6 | 	print(round(((m * c) * 30) / 100),2)
+     7 | elif(c>=3):
+     8 | 	print(round(((m * c) * 40) / 100),2)
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
@@ -33,15 +32,15 @@ DETALHAMENTO DOS MISCONCEPTIONS
 ▶ B8 — Não utilização de elif/else
   Ocorrências: 1
 
-  [1] Linha 6: Cadeia if/elif sem bloco else final
-      Trecho  : if ... (linha 6) / elif ... sem else
+  [1] Linha 5: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 5) / elif ... sem else
       Contexto:
-               5 | 	print(round((vt * 10) / 100),2)
-        >>>    6 | elif(c==2):	
-               7 | 	print(round((vt * 30) / 100),2)
+               4 | 	print(round(((m * c) * 10) / 100),2)
+        >>>    5 | elif(c==2):	
+               6 | 	print(round(((m * c) * 30) / 100),2)
 
 ▶ G4 — Funções/variáveis com nomes não significativos
-  Ocorrências: 3
+  Ocorrências: 2
 
   [1] Linha 1: Variável 'm' com nome muito curto (≤4 chars)
       Trecho  : m = ...
@@ -54,13 +53,6 @@ DETALHAMENTO DOS MISCONCEPTIONS
       Contexto:
                1 | m = float(input("Valor da mensalidade: "))
         >>>    2 | c = float(input("Numero de criancas: "))
-               3 | vt= m * c
-
-  [3] Linha 3: Variável 'vt' com nome muito curto (≤4 chars)
-      Trecho  : vt = ...
-      Contexto:
-               2 | c = float(input("Numero de criancas: "))
-        >>>    3 | vt= m * c
-               4 | if(c==1):
+               3 | if(c==1):
 
 ======================================================================

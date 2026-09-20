@@ -1,12 +1,12 @@
 ======================================================================
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
-Arquivo     : 5769_6936.py
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2024_1_v1.81\2024-1\590\users\9826\codes\5769_6936.py
+Arquivo     : 5769_6936.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2024_1_v1.81\2024-1\590\users\9817\executions\5769_6936.log
 Assessment  : 5769
 Título      : TP 3: Est. Condicional Encadeada
 Questão     : 6936
-Aluno       : 9826
+Aluno       : 9817
 Grupo       : TP 03
 Significado : Estrutura Condicional Encadeada
 Total MCs   : 1
@@ -16,18 +16,20 @@ Total MCs   : 1
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | valor = float(input("digite um valor: "))
-     2 | codigo = input().upper()
+     1 | valor= float(input("Digite o valor total da compra:"))
+     2 | cod= input("D, P ou C:")
      3 | 
-     4 | if codigo == "D" or codigo == "P":
-     5 | 	total = valor - (valor * 0.13)
+     4 | if cod == "D" or cod == "P":
+     5 | 	total= valor - (13/100 * valor)
      6 | 	print(round(total, 2))
-     7 | elif codigo == "C":
-     8 | 	vezes = int(input("digite: "))
-     9 | 	if vezes == 1:
-    10 | 		print(round(valor, 2))
-    11 | 	elif vezes == 2:
-    12 | 		print(round(valor + (valor * 0.08),2))
+     7 | elif cod == "C":
+     8 | 	entradas= int(input("1 ou 2:"))
+     9 | 	if entradas == 1:
+    10 | 		total= valor
+    11 | 		print(round(total,2))
+    12 | 	elif entradas == 2:
+    13 | 		total = valor + (8/100 * valor)
+    14 | 		print(round(total, 2))
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
@@ -40,14 +42,14 @@ DETALHAMENTO DOS MISCONCEPTIONS
       Trecho  : if ... (linha 4) / elif ... sem else
       Contexto:
                3 | 
-        >>>    4 | if codigo == "D" or codigo == "P":
-               5 | 	total = valor - (valor * 0.13)
+        >>>    4 | if cod == "D" or cod == "P":
+               5 | 	total= valor - (13/100 * valor)
 
   [2] Linha 9: Cadeia if/elif sem bloco else final
       Trecho  : if ... (linha 9) / elif ... sem else
       Contexto:
-               8 | 	vezes = int(input("digite: "))
-        >>>    9 | 	if vezes == 1:
-              10 | 		print(round(valor, 2))
+               8 | 	entradas= int(input("1 ou 2:"))
+        >>>    9 | 	if entradas == 1:
+              10 | 		total= valor
 
-======================================================================================================================================
+======================================================================

@@ -1,12 +1,12 @@
 ======================================================================
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
-Arquivo     : 119_1109.py
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2016_1_v1.81\2016-1\110\users\1224\codes\119_1109.py
+Arquivo     : 119_1109.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2016_1_v1.81\2016-1\110\users\1225\executions\119_1109.log
 Assessment  : 119
 Título      : Avaliação Parcial 03– Estrutura Condicional Encadeada
 Questão     : 1109
-Aluno       : 1224
+Aluno       : 1225
 Grupo       : TP 03
 Significado : Estrutura Condicional Encadeada
 Total MCs   : 2
@@ -16,32 +16,26 @@ Total MCs   : 2
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | x = int(input("digito a idade"))
-     2 | y = float(input("digite o peso "))
-     3 | if(x >130) or (x < 0) or (y > 550.0) or (y < 0):
-     4 | 		print("Entradas:",x,"anos e",y,"kg")
-     5 | 		print("Dados invalidos")
-     6 | else:
-     7 | 	
-     8 |    if( x >= 12) and (y >= 60):
-     9 | 	   z = 1000
-    10 |    elif( x >= 12) and (y < 60):
-    11 | 	   z = 875
-    12 |    elif (x < 12) and ( y < 6):
-    13 | 	   z = 75
-    14 |    elif (x < 12) and ( y > 5) and (y < 10):
-    15 | 	   z = 125
-    16 |    elif(x < 12) and (y > 9) and (y < 17):
-    17 | 	   z = 250
-    18 |    elif (x < 12) and ( y > 16) and (y < 25):
-    19 | 	   z = 375
-    20 |    elif (x < 12) and ( y > 24) and (y < 31):
-    21 | 	   z = 500
-    22 |    elif (x < 12) and ( y > 30):
-    23 | 	   z = 750
-    24 |    print("Entradas:", x, "anos e", y, "kg" )
-    25 |    print("Dosagem:",z,"mg")
-    26 | 
+     1 | x=int(input("informe a idade: "))
+     2 | y=float(input("informe o peso: "))
+     3 | if(x>=12 and y>=60):
+     4 | 	z=1000 
+     5 | else:
+     6 |  	z=875 
+     7 | if(x<12 and y<=5):
+     8 |  	z=75 
+     9 | elif(x<12 and y<=9):
+    10 |  	z=125 
+    11 | elif(x<12 and y<=16):
+    12 |  	z=250
+    13 | elif(x<12 and y<=24):
+    14 |  	z=375
+    15 | elif(x<12 and y<=30):
+    16 |  	z=500
+    17 | elif(x<12 and y>30):
+    18 |  	z=750
+    19 | print("Entradas:", x, "anos e", y,"kg")
+    20 | print("Dosagem:",z,"mg")
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
@@ -50,12 +44,12 @@ DETALHAMENTO DOS MISCONCEPTIONS
 ▶ B8 — Não utilização de elif/else
   Ocorrências: 1
 
-  [1] Linha 20: Cadeia if/elif sem bloco else final
-      Trecho  : if ... (linha 20) / elif ... sem else
+  [1] Linha 15: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 15) / elif ... sem else
       Contexto:
-              19 | 	   z = 375
-        >>>   20 |    elif (x < 12) and ( y > 24) and (y < 31):
-              21 | 	   z = 500
+              14 |  	z=375
+        >>>   15 | elif(x<12 and y<=30):
+              16 |  	z=500
 
 ▶ G4 — Funções/variáveis com nomes não significativos
   Ocorrências: 10
@@ -63,70 +57,70 @@ DETALHAMENTO DOS MISCONCEPTIONS
   [1] Linha 1: Variável 'x' com nome muito curto (≤4 chars)
       Trecho  : x = ...
       Contexto:
-        >>>    1 | x = int(input("digito a idade"))
-               2 | y = float(input("digite o peso "))
+        >>>    1 | x=int(input("informe a idade: "))
+               2 | y=float(input("informe o peso: "))
 
   [2] Linha 2: Variável 'y' com nome muito curto (≤4 chars)
       Trecho  : y = ...
       Contexto:
-               1 | x = int(input("digito a idade"))
-        >>>    2 | y = float(input("digite o peso "))
-               3 | if(x >130) or (x < 0) or (y > 550.0) or (y < 0):
+               1 | x=int(input("informe a idade: "))
+        >>>    2 | y=float(input("informe o peso: "))
+               3 | if(x>=12 and y>=60):
 
-  [3] Linha 9: Variável 'z' com nome muito curto (≤4 chars)
+  [3] Linha 4: Variável 'z' com nome muito curto (≤4 chars)
       Trecho  : z = ...
       Contexto:
-               8 |    if( x >= 12) and (y >= 60):
-        >>>    9 | 	   z = 1000
-              10 |    elif( x >= 12) and (y < 60):
+               3 | if(x>=12 and y>=60):
+        >>>    4 | 	z=1000 
+               5 | else:
 
-  [4] Linha 11: Variável 'z' com nome muito curto (≤4 chars)
+  [4] Linha 6: Variável 'z' com nome muito curto (≤4 chars)
       Trecho  : z = ...
       Contexto:
-              10 |    elif( x >= 12) and (y < 60):
-        >>>   11 | 	   z = 875
-              12 |    elif (x < 12) and ( y < 6):
+               5 | else:
+        >>>    6 |  	z=875 
+               7 | if(x<12 and y<=5):
 
-  [5] Linha 13: Variável 'z' com nome muito curto (≤4 chars)
+  [5] Linha 8: Variável 'z' com nome muito curto (≤4 chars)
       Trecho  : z = ...
       Contexto:
-              12 |    elif (x < 12) and ( y < 6):
-        >>>   13 | 	   z = 75
-              14 |    elif (x < 12) and ( y > 5) and (y < 10):
+               7 | if(x<12 and y<=5):
+        >>>    8 |  	z=75 
+               9 | elif(x<12 and y<=9):
 
-  [6] Linha 15: Variável 'z' com nome muito curto (≤4 chars)
+  [6] Linha 10: Variável 'z' com nome muito curto (≤4 chars)
       Trecho  : z = ...
       Contexto:
-              14 |    elif (x < 12) and ( y > 5) and (y < 10):
-        >>>   15 | 	   z = 125
-              16 |    elif(x < 12) and (y > 9) and (y < 17):
+               9 | elif(x<12 and y<=9):
+        >>>   10 |  	z=125 
+              11 | elif(x<12 and y<=16):
 
-  [7] Linha 17: Variável 'z' com nome muito curto (≤4 chars)
+  [7] Linha 12: Variável 'z' com nome muito curto (≤4 chars)
       Trecho  : z = ...
       Contexto:
-              16 |    elif(x < 12) and (y > 9) and (y < 17):
-        >>>   17 | 	   z = 250
-              18 |    elif (x < 12) and ( y > 16) and (y < 25):
+              11 | elif(x<12 and y<=16):
+        >>>   12 |  	z=250
+              13 | elif(x<12 and y<=24):
 
-  [8] Linha 19: Variável 'z' com nome muito curto (≤4 chars)
+  [8] Linha 14: Variável 'z' com nome muito curto (≤4 chars)
       Trecho  : z = ...
       Contexto:
-              18 |    elif (x < 12) and ( y > 16) and (y < 25):
-        >>>   19 | 	   z = 375
-              20 |    elif (x < 12) and ( y > 24) and (y < 31):
+              13 | elif(x<12 and y<=24):
+        >>>   14 |  	z=375
+              15 | elif(x<12 and y<=30):
 
-  [9] Linha 21: Variável 'z' com nome muito curto (≤4 chars)
+  [9] Linha 16: Variável 'z' com nome muito curto (≤4 chars)
       Trecho  : z = ...
       Contexto:
-              20 |    elif (x < 12) and ( y > 24) and (y < 31):
-        >>>   21 | 	   z = 500
-              22 |    elif (x < 12) and ( y > 30):
+              15 | elif(x<12 and y<=30):
+        >>>   16 |  	z=500
+              17 | elif(x<12 and y>30):
 
-  [10] Linha 23: Variável 'z' com nome muito curto (≤4 chars)
+  [10] Linha 18: Variável 'z' com nome muito curto (≤4 chars)
       Trecho  : z = ...
       Contexto:
-              22 |    elif (x < 12) and ( y > 30):
-        >>>   23 | 	   z = 750
-              24 |    print("Entradas:", x, "anos e", y, "kg" )
+              17 | elif(x<12 and y>30):
+        >>>   18 |  	z=750
+              19 | print("Entradas:", x, "anos e", y,"kg")
 
 ======================================================================

@@ -1,12 +1,12 @@
 ======================================================================
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
-Arquivo     : 4973_5953.py
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2023_1_v1.81\2023-1\524\users\8663\codes\4973_5953.py
+Arquivo     : 4973_5953.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2023_1_v1.81\2023-1\524\users\8659\executions\4973_5953.log
 Assessment  : 4973
 Título      : TP2: Est. Condicional Simples e Composta
 Questão     : 5953
-Aluno       : 8663
+Aluno       : 8659
 Grupo       : TP 02
 Significado : Estrutura Condicional Simples e Composta
 Total MCs   : 1
@@ -16,71 +16,58 @@ Total MCs   : 1
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | lp = input()
-     2 | q = int(input())
-     3 | r = int(input())
-     4 | 
-     5 | pl = 6*q + 3*r
-     6 | pp = 13.5*q + 3*r
-     7 | 
-     8 | if lp.upper() == "L":
-     9 | 	v = pl
-    10 | else:
-    11 | 	v = pp
-    12 | print(round(v, 2))
+     1 | c = input("lanche 'L' ou prato executivo 'P': ")
+     2 | q = int(input("quantidade: "))
+     3 | r = int(input("quantidade de refrigerante: "))
+     4 | refri = r * 3
+     5 | if c.upper() == "P":
+     6 | 	pf = refri + (q * 13.50)
+     7 | else:
+     8 | 	pf = 6 * q + refri
+     9 | print(pf)
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
 ----------------------------------------------------------------------
 
 ▶ G4 — Funções/variáveis com nomes não significativos
-  Ocorrências: 7
+  Ocorrências: 5
 
-  [1] Linha 1: Variável 'lp' com nome muito curto (≤4 chars)
-      Trecho  : lp = ...
+  [1] Linha 1: Variável 'c' com nome muito curto (≤4 chars)
+      Trecho  : c = ...
       Contexto:
-        >>>    1 | lp = input()
-               2 | q = int(input())
+        >>>    1 | c = input("lanche 'L' ou prato executivo 'P': ")
+               2 | q = int(input("quantidade: "))
 
   [2] Linha 2: Variável 'q' com nome muito curto (≤4 chars)
       Trecho  : q = ...
       Contexto:
-               1 | lp = input()
-        >>>    2 | q = int(input())
-               3 | r = int(input())
+               1 | c = input("lanche 'L' ou prato executivo 'P': ")
+        >>>    2 | q = int(input("quantidade: "))
+               3 | r = int(input("quantidade de refrigerante: "))
 
   [3] Linha 3: Variável 'r' com nome muito curto (≤4 chars)
       Trecho  : r = ...
       Contexto:
-               2 | q = int(input())
-        >>>    3 | r = int(input())
-               4 | 
+               2 | q = int(input("quantidade: "))
+        >>>    3 | r = int(input("quantidade de refrigerante: "))
+               4 | refri = r * 3
 
-  [4] Linha 5: Variável 'pl' com nome muito curto (≤4 chars)
-      Trecho  : pl = ...
+  [4] Linha 6: Variável 'pf' com nome muito curto (≤4 chars)
+      Trecho  : pf = ...
       Contexto:
-               4 | 
-        >>>    5 | pl = 6*q + 3*r
-               6 | pp = 13.5*q + 3*r
+               5 | if c.upper() == "P":
+        >>>    6 | 	pf = refri + (q * 13.50)
+               7 | else:
 
-  [5] Linha 6: Variável 'pp' com nome muito curto (≤4 chars)
-      Trecho  : pp = ...
+  [5] Linha 8: Variável 'pf' com nome muito curto (≤4 chars)
+      Trecho  : pf = ...
       Contexto:
-               5 | pl = 6*q + 3*r
-        >>>    6 | pp = 13.5*q + 3*r
-               7 | 
+               7 | else:
+        >>>    8 | 	pf = 6 * q + refri
+               9 | print(pf)
 
-  [6] Linha 9: Variável 'v' com nome muito curto (≤4 chars)
-      Trecho  : v = ...
-      Contexto:
-               8 | if lp.upper() == "L":
-        >>>    9 | 	v = pl
-              10 | else:
-
-  [7] Linha 11: Variável 'v' com nome muito curto (≤4 chars)
-      Trecho  : v = ...
-      Contexto:
-              10 | else:
+======================================================================10 | else:
         >>>   11 | 	v = pp
               12 | print(round(v, 2))
 

@@ -1,12 +1,12 @@
 ======================================================================
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
-Arquivo     : 165_1155.py
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2016_1_v1.81\2016-1\105\users\1510\codes\165_1155.py
+Arquivo     : 165_1155.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2016_1_v1.81\2016-1\105\users\1508\executions\165_1155.log
 Assessment  : 165
 Título      : Avaliação Parcial 04 – Estrutura de Repetição por Condição (while) - Versão Olímpica :D
 Questão     : 1155
-Aluno       : 1510
+Aluno       : 1508
 Grupo       : TP 04
 Significado : Estrutura de Repetição por Condição
 Total MCs   : 1
@@ -16,22 +16,24 @@ Total MCs   : 1
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | #Universidade Federal do Amazonas
-     2 | #Jorge Trajano da Silva Junior - 21553770
-     3 | #Avaliação 04 - Exercício 04
-     4 | #05/08/2016
-     5 | nv = int(input("Informe a quantidade inicial de vírus: "))
-     6 | nl = int(input("Informe a quantidade inicial de leucócitos: "))
-     7 | tv = float(input("Informe a taxa de multiplicação diaria do virus: "))
-     8 | tl = float(input("Informe a taxa de multiplicação diaria dos leucocitos: "))
-     9 | v = nv
-    10 | l = nl
-    11 | i = 0
-    12 | while(v >= 2*l):
-    13 | 	l = l + (l*tl/100)
-    14 | 	v = v + (v*tv/100)
-    15 | 	i = i + 1
-    16 | print(i)
+     1 | # ysraele duany - 21650271
+     2 | 
+     3 | v = int(input("virus: "))
+     4 | l = int(input("leucocitos: "))
+     5 | taxav = float(input("taxa de virus: "))
+     6 | taxal = float(input("taxa de leucocitos: "))
+     7 | 
+     8 | tv = taxav/100
+     9 | tl = taxal/100
+    10 | v = v+ (v * tv)
+    11 | l = l + (l * tl)
+    12 | i = 1
+    13 | 
+    14 | while(v >= 2*l):
+    15 | 	v = v + (v * tv)
+    16 | 	l = l + (l * tl)
+    17 | 	i = i + 1
+    18 | print(i)
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
@@ -40,63 +42,84 @@ DETALHAMENTO DOS MISCONCEPTIONS
 ▶ G4 — Funções/variáveis com nomes não significativos
   Ocorrências: 10
 
-  [1] Linha 5: Variável 'nv' com nome muito curto (≤4 chars)
-      Trecho  : nv = ...
-      Contexto:
-               4 | #05/08/2016
-        >>>    5 | nv = int(input("Informe a quantidade inicial de vírus: "))
-               6 | nl = int(input("Informe a quantidade inicial de leucócitos: "))
-
-  [2] Linha 6: Variável 'nl' com nome muito curto (≤4 chars)
-      Trecho  : nl = ...
-      Contexto:
-               5 | nv = int(input("Informe a quantidade inicial de vírus: "))
-        >>>    6 | nl = int(input("Informe a quantidade inicial de leucócitos: "))
-               7 | tv = float(input("Informe a taxa de multiplicação diaria do virus: "))
-
-  [3] Linha 7: Variável 'tv' com nome muito curto (≤4 chars)
-      Trecho  : tv = ...
-      Contexto:
-               6 | nl = int(input("Informe a quantidade inicial de leucócitos: "))
-        >>>    7 | tv = float(input("Informe a taxa de multiplicação diaria do virus: "))
-               8 | tl = float(input("Informe a taxa de multiplicação diaria dos leucocitos: "))
-
-  [4] Linha 8: Variável 'tl' com nome muito curto (≤4 chars)
-      Trecho  : tl = ...
-      Contexto:
-               7 | tv = float(input("Informe a taxa de multiplicação diaria do virus: "))
-        >>>    8 | tl = float(input("Informe a taxa de multiplicação diaria dos leucocitos: "))
-               9 | v = nv
-
-  [5] Linha 9: Variável 'v' com nome muito curto (≤4 chars)
+  [1] Linha 3: Variável 'v' com nome muito curto (≤4 chars)
       Trecho  : v = ...
       Contexto:
-               8 | tl = float(input("Informe a taxa de multiplicação diaria dos leucocitos: "))
-        >>>    9 | v = nv
-              10 | l = nl
+               2 | 
+        >>>    3 | v = int(input("virus: "))
+               4 | l = int(input("leucocitos: "))
 
-  [6] Linha 10: Variável 'l' com nome muito curto (≤4 chars)
+  [2] Linha 4: Variável 'l' com nome muito curto (≤4 chars)
       Trecho  : l = ...
       Contexto:
-               9 | v = nv
-        >>>   10 | l = nl
-              11 | i = 0
+               3 | v = int(input("virus: "))
+        >>>    4 | l = int(input("leucocitos: "))
+               5 | taxav = float(input("taxa de virus: "))
 
-  [7] Linha 11: Variável 'i' com nome muito curto (≤4 chars)
+  [3] Linha 8: Variável 'tv' com nome muito curto (≤4 chars)
+      Trecho  : tv = ...
+      Contexto:
+               7 | 
+        >>>    8 | tv = taxav/100
+               9 | tl = taxal/100
+
+  [4] Linha 9: Variável 'tl' com nome muito curto (≤4 chars)
+      Trecho  : tl = ...
+      Contexto:
+               8 | tv = taxav/100
+        >>>    9 | tl = taxal/100
+              10 | v = v+ (v * tv)
+
+  [5] Linha 10: Variável 'v' com nome muito curto (≤4 chars)
+      Trecho  : v = ...
+      Contexto:
+               9 | tl = taxal/100
+        >>>   10 | v = v+ (v * tv)
+              11 | l = l + (l * tl)
+
+  [6] Linha 11: Variável 'l' com nome muito curto (≤4 chars)
+      Trecho  : l = ...
+      Contexto:
+              10 | v = v+ (v * tv)
+        >>>   11 | l = l + (l * tl)
+              12 | i = 1
+
+  [7] Linha 12: Variável 'i' com nome muito curto (≤4 chars)
       Trecho  : i = ...
       Contexto:
-              10 | l = nl
-        >>>   11 | i = 0
-              12 | while(v >= 2*l):
+              11 | l = l + (l * tl)
+        >>>   12 | i = 1
+              13 | 
 
-  [8] Linha 13: Variável 'l' com nome muito curto (≤4 chars)
+  [8] Linha 15: Variável 'v' com nome muito curto (≤4 chars)
+      Trecho  : v = ...
+      Contexto:
+              14 | while(v >= 2*l):
+        >>>   15 | 	v = v + (v * tv)
+              16 | 	l = l + (l * tl)
+
+  [9] Linha 16: Variável 'l' com nome muito curto (≤4 chars)
       Trecho  : l = ...
       Contexto:
-              12 | while(v >= 2*l):
-        >>>   13 | 	l = l + (l*tl/100)
-              14 | 	v = v + (v*tv/100)
+              15 | 	v = v + (v * tv)
+        >>>   16 | 	l = l + (l * tl)
+              17 | 	i = i + 1
 
-  [9] Linha 14: Variável 'v' com nome muito curto (≤4 chars)
+  [10] Linha 17: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+              16 | 	l = l + (l * tl)
+        >>>   17 | 	i = i + 1
+              18 | print(i)
+
+======================================================================to curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+              13 | 	l = l + (l * tl)
+        >>>   14 | 	i = i + 1
+              15 | print(i)
+
+======================================================================(≤4 chars)
       Trecho  : v = ...
       Contexto:
               13 | 	l = l + (l*tl/100)

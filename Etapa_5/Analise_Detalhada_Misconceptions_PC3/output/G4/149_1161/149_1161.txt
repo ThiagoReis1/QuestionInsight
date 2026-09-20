@@ -1,12 +1,12 @@
 ======================================================================
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
-Arquivo     : 149_1161.py
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2016_1_v1.81\2016-1\102\users\1304\codes\149_1161.py
+Arquivo     : 149_1161.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2016_1_v1.81\2016-1\102\users\1612\executions\149_1161.log
 Assessment  : 149
 Título      : Avaliação Parcial 04 – Estrutura de Repetição por Condição (while)
 Questão     : 1161
-Aluno       : 1304
+Aluno       : 1612
 Grupo       : TP 04
 Significado : Estrutura de Repetição por Condição
 Total MCs   : 1
@@ -16,19 +16,22 @@ Total MCs   : 1
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | Z = int(input("Insira o numero de zumbis: "))
-     2 | H = int(input("Insira o numero de habitantes: "))
-     3 | X = int(input("Insira o numero da cap. de transf. em zumbi: "))
-     4 | Y = int(input("Insira o numero de zumbis que pode matar por dia: "))
-     5 | i = 1
-     6 | NZ = 0
-     7 | while( H > 0):
-     8 | 	NZ =   (Z * X) - NZ
-     9 | 	
-    10 | 	H = H - NZ
-    11 | 	Z = Z + NZ - Y
-    12 | 	i = i + 1
-    13 | print(i)
+     1 | z=float(input("zumbis:"))
+     2 | h=float(input("habitantes"))
+     3 | x=float(input("zumbis por dia "))
+     4 | y=float(input("exterminados por dia"))
+     5 | 
+     6 | 
+     7 | dia=0
+     8 | 
+     9 | while z<=h:
+    10 | 	tz=(z-y)*x
+    11 | 	z= z + tz 
+    12 | 	th=(-1)*(z-y)*x
+    13 | 	h= h + th 
+    14 | 	dia= dia + 1
+    15 | 	
+    16 | print(dia)	
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
@@ -37,65 +40,76 @@ DETALHAMENTO DOS MISCONCEPTIONS
 ▶ G4 — Funções/variáveis com nomes não significativos
   Ocorrências: 10
 
-  [1] Linha 1: Variável 'Z' com nome muito curto (≤4 chars)
-      Trecho  : Z = ...
+  [1] Linha 1: Variável 'z' com nome muito curto (≤4 chars)
+      Trecho  : z = ...
       Contexto:
-        >>>    1 | Z = int(input("Insira o numero de zumbis: "))
-               2 | H = int(input("Insira o numero de habitantes: "))
+        >>>    1 | z=float(input("zumbis:"))
+               2 | h=float(input("habitantes"))
 
-  [2] Linha 2: Variável 'H' com nome muito curto (≤4 chars)
-      Trecho  : H = ...
+  [2] Linha 2: Variável 'h' com nome muito curto (≤4 chars)
+      Trecho  : h = ...
       Contexto:
-               1 | Z = int(input("Insira o numero de zumbis: "))
-        >>>    2 | H = int(input("Insira o numero de habitantes: "))
-               3 | X = int(input("Insira o numero da cap. de transf. em zumbi: "))
+               1 | z=float(input("zumbis:"))
+        >>>    2 | h=float(input("habitantes"))
+               3 | x=float(input("zumbis por dia "))
 
-  [3] Linha 3: Variável 'X' com nome muito curto (≤4 chars)
-      Trecho  : X = ...
+  [3] Linha 3: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
       Contexto:
-               2 | H = int(input("Insira o numero de habitantes: "))
-        >>>    3 | X = int(input("Insira o numero da cap. de transf. em zumbi: "))
-               4 | Y = int(input("Insira o numero de zumbis que pode matar por dia: "))
+               2 | h=float(input("habitantes"))
+        >>>    3 | x=float(input("zumbis por dia "))
+               4 | y=float(input("exterminados por dia"))
 
-  [4] Linha 4: Variável 'Y' com nome muito curto (≤4 chars)
-      Trecho  : Y = ...
+  [4] Linha 4: Variável 'y' com nome muito curto (≤4 chars)
+      Trecho  : y = ...
       Contexto:
-               3 | X = int(input("Insira o numero da cap. de transf. em zumbi: "))
-        >>>    4 | Y = int(input("Insira o numero de zumbis que pode matar por dia: "))
-               5 | i = 1
+               3 | x=float(input("zumbis por dia "))
+        >>>    4 | y=float(input("exterminados por dia"))
+               5 | 
 
-  [5] Linha 5: Variável 'i' com nome muito curto (≤4 chars)
-      Trecho  : i = ...
+  [5] Linha 7: Variável 'dia' com nome muito curto (≤4 chars)
+      Trecho  : dia = ...
       Contexto:
-               4 | Y = int(input("Insira o numero de zumbis que pode matar por dia: "))
-        >>>    5 | i = 1
-               6 | NZ = 0
+               6 | 
+        >>>    7 | dia=0
+               8 | 
 
-  [6] Linha 6: Variável 'NZ' com nome muito curto (≤4 chars)
-      Trecho  : NZ = ...
+  [6] Linha 10: Variável 'tz' com nome muito curto (≤4 chars)
+      Trecho  : tz = ...
       Contexto:
-               5 | i = 1
-        >>>    6 | NZ = 0
-               7 | while( H > 0):
+               9 | while z<=h:
+        >>>   10 | 	tz=(z-y)*x
+              11 | 	z= z + tz 
 
-  [7] Linha 8: Variável 'NZ' com nome muito curto (≤4 chars)
-      Trecho  : NZ = ...
+  [7] Linha 11: Variável 'z' com nome muito curto (≤4 chars)
+      Trecho  : z = ...
       Contexto:
-               7 | while( H > 0):
-        >>>    8 | 	NZ =   (Z * X) - NZ
-               9 | 	
+              10 | 	tz=(z-y)*x
+        >>>   11 | 	z= z + tz 
+              12 | 	th=(-1)*(z-y)*x
 
-  [8] Linha 10: Variável 'H' com nome muito curto (≤4 chars)
-      Trecho  : H = ...
+  [8] Linha 12: Variável 'th' com nome muito curto (≤4 chars)
+      Trecho  : th = ...
       Contexto:
-               9 | 	
-        >>>   10 | 	H = H - NZ
-              11 | 	Z = Z + NZ - Y
+              11 | 	z= z + tz 
+        >>>   12 | 	th=(-1)*(z-y)*x
+              13 | 	h= h + th 
 
-  [9] Linha 11: Variável 'Z' com nome muito curto (≤4 chars)
-      Trecho  : Z = ...
+  [9] Linha 13: Variável 'h' com nome muito curto (≤4 chars)
+      Trecho  : h = ...
       Contexto:
-              10 | 	H = H - NZ
+              12 | 	th=(-1)*(z-y)*x
+        >>>   13 | 	h= h + th 
+              14 | 	dia= dia + 1
+
+  [10] Linha 14: Variável 'dia' com nome muito curto (≤4 chars)
+      Trecho  : dia = ...
+      Contexto:
+              13 | 	h= h + th 
+        >>>   14 | 	dia= dia + 1
+              15 | 	
+
+======================================================================         10 | 	H = H - NZ
         >>>   11 | 	Z = Z + NZ - Y
               12 | 	i = i + 1
 

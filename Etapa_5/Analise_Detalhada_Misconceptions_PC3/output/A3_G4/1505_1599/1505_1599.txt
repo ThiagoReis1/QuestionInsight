@@ -1,0 +1,73 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo     : 1505_1599.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2018_2_v1.81\2018-2\208\users\3750\executions\1505_1599.log
+Assessment  : 1505
+Título      : TP 5: Vetores e Strings
+Questão     : 1599
+Aluno       : 3750
+Grupo       : TP 05
+Significado : Vetores e Strings
+Total MCs   : 2
+
+⚠️  Misconceptions detectados: A3, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | from numpy import*
+     2 | v = array(eval(input("")))
+     3 | f = v[0] *0.15
+     4 | v[0] -=f
+     5 | d = v[1]
+     6 | c = v[2] *0.15
+     7 | v[2] -=c
+     8 | print(sum(v))
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 1
+
+  [1] Linha 5: Variável 'd' declarada mas nunca utilizada
+      Trecho  : d = ...
+      Contexto:
+               4 | v[0] -=f
+        >>>    5 | d = v[1]
+               6 | c = v[2] *0.15
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 4
+
+  [1] Linha 2: Variável 'v' com nome muito curto (≤4 chars)
+      Trecho  : v = ...
+      Contexto:
+               1 | from numpy import*
+        >>>    2 | v = array(eval(input("")))
+               3 | f = v[0] *0.15
+
+  [2] Linha 3: Variável 'f' com nome muito curto (≤4 chars)
+      Trecho  : f = ...
+      Contexto:
+               2 | v = array(eval(input("")))
+        >>>    3 | f = v[0] *0.15
+               4 | v[0] -=f
+
+  [3] Linha 5: Variável 'd' com nome muito curto (≤4 chars)
+      Trecho  : d = ...
+      Contexto:
+               4 | v[0] -=f
+        >>>    5 | d = v[1]
+               6 | c = v[2] *0.15
+
+  [4] Linha 6: Variável 'c' com nome muito curto (≤4 chars)
+      Trecho  : c = ...
+      Contexto:
+               5 | d = v[1]
+        >>>    6 | c = v[2] *0.15
+               7 | v[2] -=c
+
+======================================================================

@@ -1,12 +1,12 @@
 ======================================================================
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
-Arquivo     : 1791_3136.py
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2019_1_v1.81\2019-1\225\users\3988\codes\1791_3136.py
+Arquivo     : 1791_3136.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2019_1_v1.81\2019-1\225\users\4001\executions\1791_3136.log
 Assessment  : 1791
 Título      : TP5: Vetores e Strings
 Questão     : 3136
-Aluno       : 3988
+Aluno       : 4001
 Grupo       : TP 05
 Significado : Vetores e Strings
 Total MCs   : 2
@@ -17,8 +17,15 @@ Total MCs   : 2
 CÓDIGO FONTE
 ----------------------------------------------------------------------
      1 | from numpy import*
-     2 | from match import*
-     3 | v = array(eval(input("en: ")))
+     2 | n = array(eval(input("Vetor: ")))
+     3 | i = 0 #contadora
+     4 | v = 0 #acumuladora
+     5 | h = 0
+     6 | while (i < size(n)):
+     7 | 	h = h + log(n[i] + 1) 
+     8 | 	i = i + 1
+     9 | m = exp(h / size(n)) - 1
+    10 | print(round(m, 2))
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
@@ -27,19 +34,63 @@ DETALHAMENTO DOS MISCONCEPTIONS
 ▶ A3 — Variável inicializada desnecessariamente
   Ocorrências: 1
 
-  [1] Linha 3: Variável 'v' declarada mas nunca utilizada
+  [1] Linha 4: Variável 'v' declarada mas nunca utilizada
       Trecho  : v = ...
       Contexto:
-               2 | from match import*
-        >>>    3 | v = array(eval(input("en: ")))
+               3 | i = 0 #contadora
+        >>>    4 | v = 0 #acumuladora
+               5 | h = 0
 
 ▶ G4 — Funções/variáveis com nomes não significativos
-  Ocorrências: 1
+  Ocorrências: 7
 
-  [1] Linha 3: Variável 'v' com nome muito curto (≤4 chars)
+  [1] Linha 2: Variável 'n' com nome muito curto (≤4 chars)
+      Trecho  : n = ...
+      Contexto:
+               1 | from numpy import*
+        >>>    2 | n = array(eval(input("Vetor: ")))
+               3 | i = 0 #contadora
+
+  [2] Linha 3: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+               2 | n = array(eval(input("Vetor: ")))
+        >>>    3 | i = 0 #contadora
+               4 | v = 0 #acumuladora
+
+  [3] Linha 4: Variável 'v' com nome muito curto (≤4 chars)
       Trecho  : v = ...
       Contexto:
-               2 | from match import*
-        >>>    3 | v = array(eval(input("en: ")))
+               3 | i = 0 #contadora
+        >>>    4 | v = 0 #acumuladora
+               5 | h = 0
+
+  [4] Linha 5: Variável 'h' com nome muito curto (≤4 chars)
+      Trecho  : h = ...
+      Contexto:
+               4 | v = 0 #acumuladora
+        >>>    5 | h = 0
+               6 | while (i < size(n)):
+
+  [5] Linha 9: Variável 'm' com nome muito curto (≤4 chars)
+      Trecho  : m = ...
+      Contexto:
+               8 | 	i = i + 1
+        >>>    9 | m = exp(h / size(n)) - 1
+              10 | print(round(m, 2))
+
+  [6] Linha 7: Variável 'h' com nome muito curto (≤4 chars)
+      Trecho  : h = ...
+      Contexto:
+               6 | while (i < size(n)):
+        >>>    7 | 	h = h + log(n[i] + 1) 
+               8 | 	i = i + 1
+
+  [7] Linha 8: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+               7 | 	h = h + log(n[i] + 1) 
+        >>>    8 | 	i = i + 1
+               9 | m = exp(h / size(n)) - 1
 
 ======================================================================

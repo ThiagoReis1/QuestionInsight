@@ -1,12 +1,12 @@
 ======================================================================
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
-Arquivo     : 1095_1091.py
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2018_1_v1.81\2018-1\181\users\3486\codes\1095_1091.py
+Arquivo     : 1095_1091.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2018_1_v1.81\2018-1\181\users\3061\executions\1095_1091.log
 Assessment  : 1095
 Título      : TP 2 - Condicionais compostos (if/else)
 Questão     : 1091
-Aluno       : 3486
+Aluno       : 3061
 Grupo       : TP 02
 Significado : Estrutura Condicional Simples e Composta
 Total MCs   : 1
@@ -16,17 +16,17 @@ Total MCs   : 1
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | num = int(input('digite um numero:'))
-     2 | x = num//100
-     3 | y = num%100
-     4 | if(((x + y)**2) == num):
-     5 | 	msg = 'atende'
-     6 | 	print(num)
-     7 | 	print(msg)
-     8 | else:
-     9 | 	msg = 'nao atende'
-    10 | 	print(num)
-    11 | 	print(msg)
+     1 | n=int(input("Coloque n aqui :"))
+     2 | d1=(n//1000)%10
+     3 | d2=(n//100)%10
+     4 | d3=(n//10)%10
+     5 | d4=(n//1)%10
+     6 | if(n == ( (d1*10 + d2) + (d3*10 + d4) )**2 ):
+     7 | 	print(n)
+     8 | 	print("atende")
+     9 | else:
+    10 | 	print(n)
+    11 | 	print("nao atende")
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
@@ -35,38 +35,38 @@ DETALHAMENTO DOS MISCONCEPTIONS
 ▶ G4 — Funções/variáveis com nomes não significativos
   Ocorrências: 5
 
-  [1] Linha 1: Variável 'num' com nome muito curto (≤4 chars)
-      Trecho  : num = ...
+  [1] Linha 1: Variável 'n' com nome muito curto (≤4 chars)
+      Trecho  : n = ...
       Contexto:
-        >>>    1 | num = int(input('digite um numero:'))
-               2 | x = num//100
+        >>>    1 | n=int(input("Coloque n aqui :"))
+               2 | d1=(n//1000)%10
 
-  [2] Linha 2: Variável 'x' com nome muito curto (≤4 chars)
-      Trecho  : x = ...
+  [2] Linha 2: Variável 'd1' com nome muito curto (≤4 chars)
+      Trecho  : d1 = ...
       Contexto:
-               1 | num = int(input('digite um numero:'))
-        >>>    2 | x = num//100
-               3 | y = num%100
+               1 | n=int(input("Coloque n aqui :"))
+        >>>    2 | d1=(n//1000)%10
+               3 | d2=(n//100)%10
 
-  [3] Linha 3: Variável 'y' com nome muito curto (≤4 chars)
-      Trecho  : y = ...
+  [3] Linha 3: Variável 'd2' com nome muito curto (≤4 chars)
+      Trecho  : d2 = ...
       Contexto:
-               2 | x = num//100
-        >>>    3 | y = num%100
-               4 | if(((x + y)**2) == num):
+               2 | d1=(n//1000)%10
+        >>>    3 | d2=(n//100)%10
+               4 | d3=(n//10)%10
 
-  [4] Linha 5: Variável 'msg' com nome muito curto (≤4 chars)
-      Trecho  : msg = ...
+  [4] Linha 4: Variável 'd3' com nome muito curto (≤4 chars)
+      Trecho  : d3 = ...
       Contexto:
-               4 | if(((x + y)**2) == num):
-        >>>    5 | 	msg = 'atende'
-               6 | 	print(num)
+               3 | d2=(n//100)%10
+        >>>    4 | d3=(n//10)%10
+               5 | d4=(n//1)%10
 
-  [5] Linha 9: Variável 'msg' com nome muito curto (≤4 chars)
-      Trecho  : msg = ...
+  [5] Linha 5: Variável 'd4' com nome muito curto (≤4 chars)
+      Trecho  : d4 = ...
       Contexto:
-               8 | else:
-        >>>    9 | 	msg = 'nao atende'
-              10 | 	print(num)
+               4 | d3=(n//10)%10
+        >>>    5 | d4=(n//1)%10
+               6 | if(n == ( (d1*10 + d2) + (d3*10 + d4) )**2 ):
 
 ======================================================================

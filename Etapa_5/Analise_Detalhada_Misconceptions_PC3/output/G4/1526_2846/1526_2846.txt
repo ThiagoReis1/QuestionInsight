@@ -1,12 +1,12 @@
 ======================================================================
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
-Arquivo     : 1526_2846.py
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2018_2_v1.81\2018-2\206\users\3692\codes\1526_2846.py
+Arquivo     : 1526_2846.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2018_2_v1.81\2018-2\206\users\3691\executions\1526_2846.log
 Assessment  : 1526
 Título      : TP 6: Estrutura de Repetição por Contagem (for)
 Questão     : 2846
-Aluno       : 3692
+Aluno       : 3691
 Grupo       : TP 06
 Significado : Estrutura de Repetição por Contagem
 Total MCs   : 1
@@ -16,24 +16,32 @@ Total MCs   : 1
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | from numpy import*
-     2 | mes = array(eval(input("Ponha o vetor: ")))
-     3 | for i in range(0, size(mes)):
-     4 | 	mes[i]= mes[i] *2
-     5 | print(mes)	
+     1 | import numpy as np
+     2 | vet = np.array(eval(input()))
+     3 | sai = np.zeros(len(vet),dtype = int)
+     4 | for i in range(0, len(vet),1) :
+     5 | 	sai[i] = vet[i] * 2
+     6 | print(sai)
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
 ----------------------------------------------------------------------
 
 ▶ G4 — Funções/variáveis com nomes não significativos
-  Ocorrências: 1
+  Ocorrências: 2
 
-  [1] Linha 2: Variável 'mes' com nome muito curto (≤4 chars)
-      Trecho  : mes = ...
+  [1] Linha 2: Variável 'vet' com nome muito curto (≤4 chars)
+      Trecho  : vet = ...
       Contexto:
-               1 | from numpy import*
-        >>>    2 | mes = array(eval(input("Ponha o vetor: ")))
-               3 | for i in range(0, size(mes)):
+               1 | import numpy as np
+        >>>    2 | vet = np.array(eval(input()))
+               3 | sai = np.zeros(len(vet),dtype = int)
+
+  [2] Linha 3: Variável 'sai' com nome muito curto (≤4 chars)
+      Trecho  : sai = ...
+      Contexto:
+               2 | vet = np.array(eval(input()))
+        >>>    3 | sai = np.zeros(len(vet),dtype = int)
+               4 | for i in range(0, len(vet),1) :
 
 ======================================================================

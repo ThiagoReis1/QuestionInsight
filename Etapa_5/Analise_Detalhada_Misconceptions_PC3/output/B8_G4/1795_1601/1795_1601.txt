@@ -1,12 +1,12 @@
 ======================================================================
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
-Arquivo     : 1795_1601.py
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2019_1_v1.81\2019-1\223\users\4180\codes\1795_1601.py
+Arquivo     : 1795_1601.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2019_1_v1.81\2019-1\223\users\4176\executions\1795_1601.log
 Assessment  : 1795
 Título      : TP5: Vetores e Strings
 Questão     : 1601
-Aluno       : 4180
+Aluno       : 4176
 Grupo       : TP 05
 Significado : Vetores e Strings
 Total MCs   : 2
@@ -18,13 +18,18 @@ CÓDIGO FONTE
 ----------------------------------------------------------------------
      1 | from numpy import*
      2 | 
-     3 | tcc = array(eval(input("Tempo de chegada dos corredores: ")))
-     4 | i = 0
-     5 | v = max[i]
-     6 | while ( i < size(tcc)):
-     7 | 	if(tcc [i] == max(tcc)):
-     8 | 		i = i + 1
-     9 | print(v)
+     3 | vet = array(eval(input("Digite o tempo: ")))
+     4 | 
+     5 | i= 0
+     6 | posi = 0
+     7 | 
+     8 | while (i < size(vet)):
+     9 | 	if(vet[posi] < vet[i]):
+    10 | 		posi += 1
+    11 | 	i += 1
+    12 | 
+    13 | else:
+    14 | 	print(i)
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
@@ -37,34 +42,27 @@ DETALHAMENTO DOS MISCONCEPTIONS
       Trecho  : —
 
 ▶ G4 — Funções/variáveis com nomes não significativos
-  Ocorrências: 4
+  Ocorrências: 3
 
-  [1] Linha 3: Variável 'tcc' com nome muito curto (≤4 chars)
-      Trecho  : tcc = ...
+  [1] Linha 3: Variável 'vet' com nome muito curto (≤4 chars)
+      Trecho  : vet = ...
       Contexto:
                2 | 
-        >>>    3 | tcc = array(eval(input("Tempo de chegada dos corredores: ")))
-               4 | i = 0
+        >>>    3 | vet = array(eval(input("Digite o tempo: ")))
+               4 | 
 
-  [2] Linha 4: Variável 'i' com nome muito curto (≤4 chars)
+  [2] Linha 5: Variável 'i' com nome muito curto (≤4 chars)
       Trecho  : i = ...
       Contexto:
-               3 | tcc = array(eval(input("Tempo de chegada dos corredores: ")))
-        >>>    4 | i = 0
-               5 | v = max[i]
+               4 | 
+        >>>    5 | i= 0
+               6 | posi = 0
 
-  [3] Linha 5: Variável 'v' com nome muito curto (≤4 chars)
-      Trecho  : v = ...
+  [3] Linha 6: Variável 'posi' com nome muito curto (≤4 chars)
+      Trecho  : posi = ...
       Contexto:
-               4 | i = 0
-        >>>    5 | v = max[i]
-               6 | while ( i < size(tcc)):
-
-  [4] Linha 8: Variável 'i' com nome muito curto (≤4 chars)
-      Trecho  : i = ...
-      Contexto:
-               7 | 	if(tcc [i] == max(tcc)):
-        >>>    8 | 		i = i + 1
-               9 | print(v)
+               5 | i= 0
+        >>>    6 | posi = 0
+               7 | 
 
 ======================================================================

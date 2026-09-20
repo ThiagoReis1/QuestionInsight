@@ -1,12 +1,12 @@
 ======================================================================
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
-Arquivo     : 2003_2301.py
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2019_2_v1.81\2019-2\263\users\4762\codes\2003_2301.py
+Arquivo     : 2003_2301.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2019_2_v1.81\2019-2\263\users\4749\executions\2003_2301.log
 Assessment  : 2003
 Título      : TP 01: Variáveis e Estrutura Sequencial (2019)
 Questão     : 2301
-Aluno       : 4762
+Aluno       : 4749
 Grupo       : TP 01
 Significado : Variáveis e Estrutura Sequencial
 Total MCs   : 1
@@ -16,15 +16,12 @@ Total MCs   : 1
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | from math import*
-     2 | b = (float(input("lado de b: ")))
-     3 | c = (float(input("lado de c: ")))
-     4 | A = radians(float(input("angulo alfa: ")))
-     5 | 
-     6 | a = (b**2)+(c**2)-(2*b*c)*(cos(A))
-     7 | final = sqrt(a)
-     8 | 
-     9 | print(round(final,2))
+     1 | from math import *
+     2 | b = float(input("Digite o lado b: "))
+     3 | c = float(input("Digite o lado c: "))
+     4 | a = radians(float(input("Digite o angulo a: ")))
+     5 | x = sqrt((b**2) + (c**2) - 2 * b * c * cos(a))
+     6 | print(round(x, 2))
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
@@ -36,29 +33,36 @@ DETALHAMENTO DOS MISCONCEPTIONS
   [1] Linha 2: Variável 'b' com nome muito curto (≤4 chars)
       Trecho  : b = ...
       Contexto:
-               1 | from math import*
-        >>>    2 | b = (float(input("lado de b: ")))
-               3 | c = (float(input("lado de c: ")))
+               1 | from math import *
+        >>>    2 | b = float(input("Digite o lado b: "))
+               3 | c = float(input("Digite o lado c: "))
 
   [2] Linha 3: Variável 'c' com nome muito curto (≤4 chars)
       Trecho  : c = ...
       Contexto:
-               2 | b = (float(input("lado de b: ")))
-        >>>    3 | c = (float(input("lado de c: ")))
-               4 | A = radians(float(input("angulo alfa: ")))
+               2 | b = float(input("Digite o lado b: "))
+        >>>    3 | c = float(input("Digite o lado c: "))
+               4 | a = radians(float(input("Digite o angulo a: ")))
 
-  [3] Linha 4: Variável 'A' com nome muito curto (≤4 chars)
-      Trecho  : A = ...
-      Contexto:
-               3 | c = (float(input("lado de c: ")))
-        >>>    4 | A = radians(float(input("angulo alfa: ")))
-               5 | 
-
-  [4] Linha 6: Variável 'a' com nome muito curto (≤4 chars)
+  [3] Linha 4: Variável 'a' com nome muito curto (≤4 chars)
       Trecho  : a = ...
       Contexto:
-               5 | 
-        >>>    6 | a = (b**2)+(c**2)-(2*b*c)*(cos(A))
-               7 | final = sqrt(a)
+               3 | c = float(input("Digite o lado c: "))
+        >>>    4 | a = radians(float(input("Digite o angulo a: ")))
+               5 | x = sqrt((b**2) + (c**2) - 2 * b * c * cos(a))
+
+  [4] Linha 5: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+               4 | a = radians(float(input("Digite o angulo a: ")))
+        >>>    5 | x = sqrt((b**2) + (c**2) - 2 * b * c * cos(a))
+               6 | print(round(x, 2))
+
+======================================================================o curto (≤4 chars)
+      Trecho  : a = ...
+      Contexto:
+               5 | ang = radians(an)
+        >>>    6 | a = ((lb**2)+(lc**2)-2*lb*lc*cos(ang))**0.5
+               7 | 
 
 ======================================================================

@@ -1,12 +1,12 @@
 ======================================================================
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
-Arquivo     : 1189_1531.py
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2018_1_v1.81\2018-1\187\users\3192\codes\1189_1531.py
+Arquivo     : 1189_1531.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2018_1_v1.81\2018-1\187\users\3219\executions\1189_1531.log
 Assessment  : 1189
 Título      : TP 04: Estrutura de Repetição por Condição (while)
 Questão     : 1531
-Aluno       : 3192
+Aluno       : 3219
 Grupo       : TP 04
 Significado : Estrutura de Repetição por Condição
 Total MCs   : 1
@@ -16,66 +16,96 @@ Total MCs   : 1
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | from math import * 
-     2 | ang = eval(input("digite um angulo: "))
-     3 | k = int(input("digite a quantidade de repeticoes: "))
-     4 | 
-     5 | cont = 1
-     6 | soma = 1
-     7 | 
-     8 | while(cont < k):
-     9 | 	soma = soma + ((-1)**(cont) * (ang)**(cont * 2)) / factorial(cont * 2)
-    10 | 	cont = cont + 1
-    11 | 	
-    12 | print(round(soma, 10))
+     1 | from math import*
+     2 | x= eval(input())
+     3 | k= int(input())
+     4 | soma= 0
+     5 | l= 1
+     6 | v= 0
+     7 | cont=1
+     8 | 
+     9 | while (v != k ):
+    10 | 	soma= soma + ((cont)**(v+1)) * ((x**1)/(factorial(l)))
+    11 | 	cont= cont*-1
+    12 | 	l= l + 2
+    13 | 	v= v+ 1
+    14 | print(round(soma,10 ))
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
 ----------------------------------------------------------------------
 
 ▶ G4 — Funções/variáveis com nomes não significativos
-  Ocorrências: 6
+  Ocorrências: 10
 
-  [1] Linha 2: Variável 'ang' com nome muito curto (≤4 chars)
-      Trecho  : ang = ...
+  [1] Linha 2: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
       Contexto:
-               1 | from math import * 
-        >>>    2 | ang = eval(input("digite um angulo: "))
-               3 | k = int(input("digite a quantidade de repeticoes: "))
+               1 | from math import*
+        >>>    2 | x= eval(input())
+               3 | k= int(input())
 
   [2] Linha 3: Variável 'k' com nome muito curto (≤4 chars)
       Trecho  : k = ...
       Contexto:
-               2 | ang = eval(input("digite um angulo: "))
-        >>>    3 | k = int(input("digite a quantidade de repeticoes: "))
-               4 | 
+               2 | x= eval(input())
+        >>>    3 | k= int(input())
+               4 | soma= 0
 
-  [3] Linha 5: Variável 'cont' com nome muito curto (≤4 chars)
-      Trecho  : cont = ...
-      Contexto:
-               4 | 
-        >>>    5 | cont = 1
-               6 | soma = 1
-
-  [4] Linha 6: Variável 'soma' com nome muito curto (≤4 chars)
+  [3] Linha 4: Variável 'soma' com nome muito curto (≤4 chars)
       Trecho  : soma = ...
       Contexto:
-               5 | cont = 1
-        >>>    6 | soma = 1
-               7 | 
+               3 | k= int(input())
+        >>>    4 | soma= 0
+               5 | l= 1
 
-  [5] Linha 9: Variável 'soma' com nome muito curto (≤4 chars)
-      Trecho  : soma = ...
+  [4] Linha 5: Variável 'l' com nome muito curto (≤4 chars)
+      Trecho  : l = ...
       Contexto:
-               8 | while(cont < k):
-        >>>    9 | 	soma = soma + ((-1)**(cont) * (ang)**(cont * 2)) / factorial(cont * 2)
-              10 | 	cont = cont + 1
+               4 | soma= 0
+        >>>    5 | l= 1
+               6 | v= 0
 
-  [6] Linha 10: Variável 'cont' com nome muito curto (≤4 chars)
+  [5] Linha 6: Variável 'v' com nome muito curto (≤4 chars)
+      Trecho  : v = ...
+      Contexto:
+               5 | l= 1
+        >>>    6 | v= 0
+               7 | cont=1
+
+  [6] Linha 7: Variável 'cont' com nome muito curto (≤4 chars)
       Trecho  : cont = ...
       Contexto:
-               9 | 	soma = soma + ((-1)**(cont) * (ang)**(cont * 2)) / factorial(cont * 2)
-        >>>   10 | 	cont = cont + 1
-              11 | 	
+               6 | v= 0
+        >>>    7 | cont=1
+               8 | 
+
+  [7] Linha 10: Variável 'soma' com nome muito curto (≤4 chars)
+      Trecho  : soma = ...
+      Contexto:
+               9 | while (v != k ):
+        >>>   10 | 	soma= soma + ((cont)**(v+1)) * ((x**1)/(factorial(l)))
+              11 | 	cont= cont*-1
+
+  [8] Linha 11: Variável 'cont' com nome muito curto (≤4 chars)
+      Trecho  : cont = ...
+      Contexto:
+              10 | 	soma= soma + ((cont)**(v+1)) * ((x**1)/(factorial(l)))
+        >>>   11 | 	cont= cont*-1
+              12 | 	l= l + 2
+
+  [9] Linha 12: Variável 'l' com nome muito curto (≤4 chars)
+      Trecho  : l = ...
+      Contexto:
+              11 | 	cont= cont*-1
+        >>>   12 | 	l= l + 2
+              13 | 	v= v+ 1
+
+  [10] Linha 13: Variável 'v' com nome muito curto (≤4 chars)
+      Trecho  : v = ...
+      Contexto:
+              12 | 	l= l + 2
+        >>>   13 | 	v= v+ 1
+              14 | print(round(soma,10 ))
 
 ======================================================================

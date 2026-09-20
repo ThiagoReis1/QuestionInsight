@@ -1,12 +1,12 @@
 ======================================================================
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
-Arquivo     : 569_1995.py
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2017_1_v1.81\2017-1\136\users\2136\codes\569_1995.py
+Arquivo     : 569_1995.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2017_1_v1.81\2017-1\136\users\2142\executions\569_1995.log
 Assessment  : 569
 Título      : Trabalho Prático 3: Estruturas Condicionais Encadeadas
 Questão     : 1995
-Aluno       : 2136
+Aluno       : 2142
 Grupo       : TP 03
 Significado : Estrutura Condicional Encadeada
 Total MCs   : 1
@@ -16,95 +16,88 @@ Total MCs   : 1
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | am = input("nome do aminoacido: ").lower()
+     1 | aminoacido = input("Aspartato, Cisteina ou Metionina: ").lower()
      2 | 
-     3 | #dados
-     4 | o=15.9994
-     5 | c=12.011
-     6 | n=14.0067
-     7 | s=32.066
-     8 | h=1.00794
-     9 | 
-    10 | if(am=="aspartato"):
-    11 | 	pm = 4*c + 6*h + n + 4*o
-    12 | 	print(round(pm,2))
-    13 | elif(am=="cisteina"):
-    14 | 	pm = 3*c + 7*h + n + 2*o + s
-    15 | 	print(round(pm,2))
-    16 | elif(am=="metionina"):
-    17 | 	pm = (5*c +11*h + n + 2*o + s)
-    18 | 	print(round(pm,2))
-    19 | else:
-    20 | 	print("Entrada: ", am)
-    21 | 	print("Dado Invalido")
+     3 | O = 15.9994
+     4 | C = 12.011
+     5 | N = 14.0067
+     6 | S = 32.066
+     7 | H = 1.00794
+     8 | 
+     9 | if(aminoacido == "aspartato"):
+    10 | 	x = (C * 4) + (H * 6) + N + (O * 4)
+    11 | 	print(round(x, 2))
+    12 | elif(aminoacido == "cisteina"):
+    13 | 	x = (C * 3) + (H * 7) + N + (O * 2) + S
+    14 | 	print(round(x, 2))
+    15 | elif(aminoacido == "metionina"):
+    16 | 	x = (C * 5) + (H * 11) + N + (O * 2) + S
+    17 | 	print(round(x, 2))
+    18 | else:
+    19 | 	print("Entrada:", aminoacido)
+    20 | 	print("Dado Invalido")
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
 ----------------------------------------------------------------------
 
 ▶ G4 — Funções/variáveis com nomes não significativos
-  Ocorrências: 9
+  Ocorrências: 8
 
-  [1] Linha 1: Variável 'am' com nome muito curto (≤4 chars)
-      Trecho  : am = ...
+  [1] Linha 3: Variável 'O' com nome muito curto (≤4 chars)
+      Trecho  : O = ...
       Contexto:
-        >>>    1 | am = input("nome do aminoacido: ").lower()
                2 | 
+        >>>    3 | O = 15.9994
+               4 | C = 12.011
 
-  [2] Linha 4: Variável 'o' com nome muito curto (≤4 chars)
-      Trecho  : o = ...
+  [2] Linha 4: Variável 'C' com nome muito curto (≤4 chars)
+      Trecho  : C = ...
       Contexto:
-               3 | #dados
-        >>>    4 | o=15.9994
-               5 | c=12.011
+               3 | O = 15.9994
+        >>>    4 | C = 12.011
+               5 | N = 14.0067
 
-  [3] Linha 5: Variável 'c' com nome muito curto (≤4 chars)
-      Trecho  : c = ...
+  [3] Linha 5: Variável 'N' com nome muito curto (≤4 chars)
+      Trecho  : N = ...
       Contexto:
-               4 | o=15.9994
-        >>>    5 | c=12.011
-               6 | n=14.0067
+               4 | C = 12.011
+        >>>    5 | N = 14.0067
+               6 | S = 32.066
 
-  [4] Linha 6: Variável 'n' com nome muito curto (≤4 chars)
-      Trecho  : n = ...
+  [4] Linha 6: Variável 'S' com nome muito curto (≤4 chars)
+      Trecho  : S = ...
       Contexto:
-               5 | c=12.011
-        >>>    6 | n=14.0067
-               7 | s=32.066
+               5 | N = 14.0067
+        >>>    6 | S = 32.066
+               7 | H = 1.00794
 
-  [5] Linha 7: Variável 's' com nome muito curto (≤4 chars)
-      Trecho  : s = ...
+  [5] Linha 7: Variável 'H' com nome muito curto (≤4 chars)
+      Trecho  : H = ...
       Contexto:
-               6 | n=14.0067
-        >>>    7 | s=32.066
-               8 | h=1.00794
+               6 | S = 32.066
+        >>>    7 | H = 1.00794
+               8 | 
 
-  [6] Linha 8: Variável 'h' com nome muito curto (≤4 chars)
-      Trecho  : h = ...
+  [6] Linha 10: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
       Contexto:
-               7 | s=32.066
-        >>>    8 | h=1.00794
-               9 | 
+               9 | if(aminoacido == "aspartato"):
+        >>>   10 | 	x = (C * 4) + (H * 6) + N + (O * 4)
+              11 | 	print(round(x, 2))
 
-  [7] Linha 11: Variável 'pm' com nome muito curto (≤4 chars)
-      Trecho  : pm = ...
+  [7] Linha 13: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
       Contexto:
-              10 | if(am=="aspartato"):
-        >>>   11 | 	pm = 4*c + 6*h + n + 4*o
-              12 | 	print(round(pm,2))
+              12 | elif(aminoacido == "cisteina"):
+        >>>   13 | 	x = (C * 3) + (H * 7) + N + (O * 2) + S
+              14 | 	print(round(x, 2))
 
-  [8] Linha 14: Variável 'pm' com nome muito curto (≤4 chars)
-      Trecho  : pm = ...
+  [8] Linha 16: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
       Contexto:
-              13 | elif(am=="cisteina"):
-        >>>   14 | 	pm = 3*c + 7*h + n + 2*o + s
-              15 | 	print(round(pm,2))
-
-  [9] Linha 17: Variável 'pm' com nome muito curto (≤4 chars)
-      Trecho  : pm = ...
-      Contexto:
-              16 | elif(am=="metionina"):
-        >>>   17 | 	pm = (5*c +11*h + n + 2*o + s)
-              18 | 	print(round(pm,2))
+              15 | elif(aminoacido == "metionina"):
+        >>>   16 | 	x = (C * 5) + (H * 11) + N + (O * 2) + S
+              17 | 	print(round(x, 2))
 
 ======================================================================

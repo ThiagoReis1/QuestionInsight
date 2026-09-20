@@ -1,12 +1,12 @@
 ======================================================================
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
-Arquivo     : 5473_6652.py
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2023_2_v1.81\2023-2\562\users\9271\codes\5473_6652.py
+Arquivo     : 5473_6652.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2023_2_v1.81\2023-2\562\users\9192\executions\5473_6652.log
 Assessment  : 5473
 Título      : TP 5: Vetores e Strings
 Questão     : 6652
-Aluno       : 9271
+Aluno       : 9192
 Grupo       : TP 05
 Significado : Vetores e Strings
 Total MCs   : 1
@@ -16,39 +16,66 @@ Total MCs   : 1
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | from numpy import *
-     2 | v = array(eval(input("Digite as notas: ")))
-     3 | p = [2,2,6,1]
-     4 | 
-     5 | mp = sum(v * p) / sum(p)
-     6 | print(round(mp,2))
+     1 | from numpy import*
+     2 | 
+     3 | n = array(eval(input("Informe a nota: ")))
+     4 | p = [2,2,6,1]
+     5 | 
+     6 | i = 0
+     7 | soma = 0
+     8 | while(i < size(n)):
+     9 | 	soma = soma + n[i] * p[i]
+    10 | 	i = i + 1
+    11 | 	
+    12 | print(round(soma/sum(p),2))
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
 ----------------------------------------------------------------------
 
 ▶ G4 — Funções/variáveis com nomes não significativos
-  Ocorrências: 3
+  Ocorrências: 6
 
-  [1] Linha 2: Variável 'v' com nome muito curto (≤4 chars)
-      Trecho  : v = ...
+  [1] Linha 3: Variável 'n' com nome muito curto (≤4 chars)
+      Trecho  : n = ...
       Contexto:
-               1 | from numpy import *
-        >>>    2 | v = array(eval(input("Digite as notas: ")))
-               3 | p = [2,2,6,1]
+               2 | 
+        >>>    3 | n = array(eval(input("Informe a nota: ")))
+               4 | p = [2,2,6,1]
 
-  [2] Linha 3: Variável 'p' com nome muito curto (≤4 chars)
+  [2] Linha 4: Variável 'p' com nome muito curto (≤4 chars)
       Trecho  : p = ...
       Contexto:
-               2 | v = array(eval(input("Digite as notas: ")))
-        >>>    3 | p = [2,2,6,1]
-               4 | 
+               3 | n = array(eval(input("Informe a nota: ")))
+        >>>    4 | p = [2,2,6,1]
+               5 | 
 
-  [3] Linha 5: Variável 'mp' com nome muito curto (≤4 chars)
-      Trecho  : mp = ...
+  [3] Linha 6: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
       Contexto:
-               4 | 
-        >>>    5 | mp = sum(v * p) / sum(p)
-               6 | print(round(mp,2))
+               5 | 
+        >>>    6 | i = 0
+               7 | soma = 0
+
+  [4] Linha 7: Variável 'soma' com nome muito curto (≤4 chars)
+      Trecho  : soma = ...
+      Contexto:
+               6 | i = 0
+        >>>    7 | soma = 0
+               8 | while(i < size(n)):
+
+  [5] Linha 9: Variável 'soma' com nome muito curto (≤4 chars)
+      Trecho  : soma = ...
+      Contexto:
+               8 | while(i < size(n)):
+        >>>    9 | 	soma = soma + n[i] * p[i]
+              10 | 	i = i + 1
+
+  [6] Linha 10: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+               9 | 	soma = soma + n[i] * p[i]
+        >>>   10 | 	i = i + 1
+              11 | 	
 
 ======================================================================

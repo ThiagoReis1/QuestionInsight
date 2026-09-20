@@ -1,12 +1,12 @@
 ======================================================================
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
-Arquivo     : 4797_1647.py
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2022_2_v1.81\2022-2\485\users\8159\codes\4797_1647.py
+Arquivo     : 4797_1647.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2022_2_v1.81\2022-2\485\users\8170\executions\4797_1647.log
 Assessment  : 4797
 Título      : TP 6: Estrutura de Repetição por Contagem (for)
 Questão     : 1647
-Aluno       : 8159
+Aluno       : 8170
 Grupo       : TP 06
 Significado : Estrutura de Repetição por Contagem
 Total MCs   : 2
@@ -16,21 +16,21 @@ Total MCs   : 2
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | from numpy import *
-     2 | ap = array(eval(input("Digite: ")))
-     3 | cont = 0
-     4 | p = 100 * 70/100
-     5 | for i in range(len(ap)):
-     6 | 	if ap[i] >= p:
-     7 | 		cont += 1
-     8 | vi = zeros(cont, dtype = int)
-     9 | j = 0
-    10 | for i in range(len(ap)):
-    11 | 	if ap[i] >= p:
-    12 | 		vi[j] += i
-    13 | 		j += 1
-    14 | print(cont)
-    15 | print(vi)
+     1 | from numpy import*
+     2 | v = array(eval(input("Porc de aulas frequentadas: ")))
+     3 | q = 0
+     4 | for i in range(size(v)):
+     5 | 	if (v[i]>=70):
+     6 | 		q = q + 1
+     7 | print(q)
+     8 | 
+     9 | z = zeros(q, dtype = int)
+    10 | x = 0
+    11 | for j in range(size(v)):
+    12 | 	if (v[j]>=70):
+    13 | 		z[x] = j
+    14 | 		x = x + 1
+    15 | print(z)
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
@@ -43,44 +43,45 @@ DETALHAMENTO DOS MISCONCEPTIONS
       Trecho  : —
 
 ▶ G4 — Funções/variáveis com nomes não significativos
-  Ocorrências: 5
+  Ocorrências: 6
 
-  [1] Linha 2: Variável 'ap' com nome muito curto (≤4 chars)
-      Trecho  : ap = ...
+  [1] Linha 2: Variável 'v' com nome muito curto (≤4 chars)
+      Trecho  : v = ...
       Contexto:
-               1 | from numpy import *
-        >>>    2 | ap = array(eval(input("Digite: ")))
-               3 | cont = 0
+               1 | from numpy import*
+        >>>    2 | v = array(eval(input("Porc de aulas frequentadas: ")))
+               3 | q = 0
 
-  [2] Linha 3: Variável 'cont' com nome muito curto (≤4 chars)
-      Trecho  : cont = ...
+  [2] Linha 3: Variável 'q' com nome muito curto (≤4 chars)
+      Trecho  : q = ...
       Contexto:
-               2 | ap = array(eval(input("Digite: ")))
-        >>>    3 | cont = 0
-               4 | p = 100 * 70/100
+               2 | v = array(eval(input("Porc de aulas frequentadas: ")))
+        >>>    3 | q = 0
+               4 | for i in range(size(v)):
 
-  [3] Linha 4: Variável 'p' com nome muito curto (≤4 chars)
-      Trecho  : p = ...
+  [3] Linha 9: Variável 'z' com nome muito curto (≤4 chars)
+      Trecho  : z = ...
       Contexto:
-               3 | cont = 0
-        >>>    4 | p = 100 * 70/100
-               5 | for i in range(len(ap)):
+               8 | 
+        >>>    9 | z = zeros(q, dtype = int)
+              10 | x = 0
 
-  [4] Linha 8: Variável 'vi' com nome muito curto (≤4 chars)
-      Trecho  : vi = ...
+  [4] Linha 10: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
       Contexto:
-               7 | 		cont += 1
-        >>>    8 | vi = zeros(cont, dtype = int)
-               9 | j = 0
+               9 | z = zeros(q, dtype = int)
+        >>>   10 | x = 0
+              11 | for j in range(size(v)):
 
-  [5] Linha 9: Variável 'j' com nome muito curto (≤4 chars)
-      Trecho  : j = ...
+  [5] Linha 6: Variável 'q' com nome muito curto (≤4 chars)
+      Trecho  : q = ...
       Contexto:
-               8 | vi = zeros(cont, dtype = int)
-        >>>    9 | j = 0
-              10 | for i in range(len(ap)):
+               5 | 	if (v[i]>=70):
+        >>>    6 | 		q = q + 1
+               7 | print(q)
 
-======================================================================x = ...
+  [6] Linha 14: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
       Contexto:
               13 | 		z[x] = j
         >>>   14 | 		x = x + 1

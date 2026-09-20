@@ -1,8 +1,8 @@
 ======================================================================
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
-Arquivo     : 621_1531.py
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2017_1_v1.81\2017-1\136\users\2142\codes\621_1531.py
+Arquivo     : 621_1531.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2017_1_v1.81\2017-1\136\users\2142\executions\621_1531.log
 Assessment  : 621
 Título      : Trabalho Prático 4: Estrutura de Repetição por Condição (while)
 Questão     : 1531
@@ -17,87 +17,72 @@ Total MCs   : 1
 CÓDIGO FONTE
 ----------------------------------------------------------------------
      1 | from math import *
-     2 | x = eval(input("Ângulo em radianos: "))
+     2 | x = eval(input("ângulo em radianos: "))
      3 | k = int(input("Números de termos da série: "))
-     4 | y = 1
+     4 | 
      5 | soma = 0
-     6 | i = 2
+     6 | i = 1
      7 | fim = k
      8 |  
      9 | while(i <= fim):
-    10 | 	soma = soma + ((y)**(i-1))*(x**(2*i-1))/factorial(2*i*2)
-    11 | 	y = -y
-    12 | 	i = i + 1
-    13 | print(round(soma,10))
+    10 | 	soma = soma + ((-1)**(i-1))*(x**(2*i-1))/factorial(2*i-1)
+    11 | 	i = i + 1
+    12 | print(round(soma,10))
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
 ----------------------------------------------------------------------
 
 ▶ G4 — Funções/variáveis com nomes não significativos
-  Ocorrências: 9
+  Ocorrências: 7
 
   [1] Linha 2: Variável 'x' com nome muito curto (≤4 chars)
       Trecho  : x = ...
       Contexto:
                1 | from math import *
-        >>>    2 | x = eval(input("Ângulo em radianos: "))
+        >>>    2 | x = eval(input("ângulo em radianos: "))
                3 | k = int(input("Números de termos da série: "))
 
   [2] Linha 3: Variável 'k' com nome muito curto (≤4 chars)
       Trecho  : k = ...
       Contexto:
-               2 | x = eval(input("Ângulo em radianos: "))
+               2 | x = eval(input("ângulo em radianos: "))
         >>>    3 | k = int(input("Números de termos da série: "))
-               4 | y = 1
+               4 | 
 
-  [3] Linha 4: Variável 'y' com nome muito curto (≤4 chars)
-      Trecho  : y = ...
-      Contexto:
-               3 | k = int(input("Números de termos da série: "))
-        >>>    4 | y = 1
-               5 | soma = 0
-
-  [4] Linha 5: Variável 'soma' com nome muito curto (≤4 chars)
+  [3] Linha 5: Variável 'soma' com nome muito curto (≤4 chars)
       Trecho  : soma = ...
       Contexto:
-               4 | y = 1
+               4 | 
         >>>    5 | soma = 0
-               6 | i = 2
+               6 | i = 1
 
-  [5] Linha 6: Variável 'i' com nome muito curto (≤4 chars)
+  [4] Linha 6: Variável 'i' com nome muito curto (≤4 chars)
       Trecho  : i = ...
       Contexto:
                5 | soma = 0
-        >>>    6 | i = 2
+        >>>    6 | i = 1
                7 | fim = k
 
-  [6] Linha 7: Variável 'fim' com nome muito curto (≤4 chars)
+  [5] Linha 7: Variável 'fim' com nome muito curto (≤4 chars)
       Trecho  : fim = ...
       Contexto:
-               6 | i = 2
+               6 | i = 1
         >>>    7 | fim = k
                8 |  
 
-  [7] Linha 10: Variável 'soma' com nome muito curto (≤4 chars)
+  [6] Linha 10: Variável 'soma' com nome muito curto (≤4 chars)
       Trecho  : soma = ...
       Contexto:
                9 | while(i <= fim):
-        >>>   10 | 	soma = soma + ((y)**(i-1))*(x**(2*i-1))/factorial(2*i*2)
-              11 | 	y = -y
+        >>>   10 | 	soma = soma + ((-1)**(i-1))*(x**(2*i-1))/factorial(2*i-1)
+              11 | 	i = i + 1
 
-  [8] Linha 11: Variável 'y' com nome muito curto (≤4 chars)
-      Trecho  : y = ...
-      Contexto:
-              10 | 	soma = soma + ((y)**(i-1))*(x**(2*i-1))/factorial(2*i*2)
-        >>>   11 | 	y = -y
-              12 | 	i = i + 1
-
-  [9] Linha 12: Variável 'i' com nome muito curto (≤4 chars)
+  [7] Linha 11: Variável 'i' com nome muito curto (≤4 chars)
       Trecho  : i = ...
       Contexto:
-              11 | 	y = -y
-        >>>   12 | 	i = i + 1
-              13 | print(round(soma,10))
+              10 | 	soma = soma + ((-1)**(i-1))*(x**(2*i-1))/factorial(2*i-1)
+        >>>   11 | 	i = i + 1
+              12 | print(round(soma,10))
 
 ======================================================================

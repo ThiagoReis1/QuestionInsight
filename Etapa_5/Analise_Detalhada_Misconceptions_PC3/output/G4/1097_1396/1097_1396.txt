@@ -1,8 +1,8 @@
 ======================================================================
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
-Arquivo     : 1097_1396.py
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2018_1_v1.81\2018-1\186\users\3139\codes\1097_1396.py
+Arquivo     : 1097_1396.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2018_1_v1.81\2018-1\186\users\3139\executions\1097_1396.log
 Assessment  : 1097
 Título      : TP 2 - Condicionais compostos (if/else)
 Questão     : 1396
@@ -16,17 +16,16 @@ Total MCs   : 1
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | t = float(input("tempo de voo: "))
-     2 | 
-     3 | x = (5000 + (100 * t))
-     4 | z = (8000 + (100 * t) + 90 * (t > 200))
-     5 | 
-     6 | if (t <= 200):
-     7 | 	msg = x
-     8 | else:
-     9 | 	msg = z
-    10 | 	
-    11 | print(round(msg, 2))
+     1 | X = float(input("valor consumido: "))
+     2 | y = X * 0.1
+     3 | z = X * 0.06
+     4 | 
+     5 | if (X <= 300):
+     6 | 	msg = y + X
+     7 | else:
+     8 | 	msg = z + X
+     9 | 	
+    10 | print(round(msg, 2))
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
@@ -35,38 +34,38 @@ DETALHAMENTO DOS MISCONCEPTIONS
 ▶ G4 — Funções/variáveis com nomes não significativos
   Ocorrências: 5
 
-  [1] Linha 1: Variável 't' com nome muito curto (≤4 chars)
-      Trecho  : t = ...
+  [1] Linha 1: Variável 'X' com nome muito curto (≤4 chars)
+      Trecho  : X = ...
       Contexto:
-        >>>    1 | t = float(input("tempo de voo: "))
-               2 | 
+        >>>    1 | X = float(input("valor consumido: "))
+               2 | y = X * 0.1
 
-  [2] Linha 3: Variável 'x' com nome muito curto (≤4 chars)
-      Trecho  : x = ...
+  [2] Linha 2: Variável 'y' com nome muito curto (≤4 chars)
+      Trecho  : y = ...
       Contexto:
-               2 | 
-        >>>    3 | x = (5000 + (100 * t))
-               4 | z = (8000 + (100 * t) + 90 * (t > 200))
+               1 | X = float(input("valor consumido: "))
+        >>>    2 | y = X * 0.1
+               3 | z = X * 0.06
 
-  [3] Linha 4: Variável 'z' com nome muito curto (≤4 chars)
+  [3] Linha 3: Variável 'z' com nome muito curto (≤4 chars)
       Trecho  : z = ...
       Contexto:
-               3 | x = (5000 + (100 * t))
-        >>>    4 | z = (8000 + (100 * t) + 90 * (t > 200))
-               5 | 
+               2 | y = X * 0.1
+        >>>    3 | z = X * 0.06
+               4 | 
 
-  [4] Linha 7: Variável 'msg' com nome muito curto (≤4 chars)
+  [4] Linha 6: Variável 'msg' com nome muito curto (≤4 chars)
       Trecho  : msg = ...
       Contexto:
-               6 | if (t <= 200):
-        >>>    7 | 	msg = x
-               8 | else:
+               5 | if (X <= 300):
+        >>>    6 | 	msg = y + X
+               7 | else:
 
-  [5] Linha 9: Variável 'msg' com nome muito curto (≤4 chars)
+  [5] Linha 8: Variável 'msg' com nome muito curto (≤4 chars)
       Trecho  : msg = ...
       Contexto:
-               8 | else:
-        >>>    9 | 	msg = z
-              10 | 	
+               7 | else:
+        >>>    8 | 	msg = z + X
+               9 | 	
 
 ======================================================================

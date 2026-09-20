@@ -1,0 +1,111 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo     : 1718_3068.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2019_1_v1.81\2019-1\231\users\4219\executions\1718_3068.log
+Assessment  : 1718
+Título      : TP3 - Estrutura Condicional Encadeada
+Questão     : 3068
+Aluno       : 4219
+Grupo       : TP 03
+Significado : Estrutura Condicional Encadeada
+Total MCs   : 3
+
+⚠️  Misconceptions detectados: B8, E1, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | nome = input("insira: ")
+     2 | des = int(input("insira: "))
+     3 | d1 = int(input("insira: "))
+     4 | d2 = int(input("insira: "))
+     5 | s = d1 + d2
+     6 | if ((1>d1) or (d1<10) or  (1>d2) or (d2<10) or (nome!= "CIMITARRA") or (nome!="KATANA") or (nome!= "SABRE") or (des<0)) :
+     7 | 	print("Entrada invalida")
+     8 | elif (nome =="CIMITARRA") :
+     9 | 	print(2*s+ 2*d)
+    10 | elif (nome=="KATANA") :
+    11 | 	print ((2*s)+ d )
+    12 | elif (nome=="SABRE") :
+    13 | 	print (s + 2*d )
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 10: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 10) / elif ... sem else
+      Contexto:
+               9 | 	print(2*s+ 2*d)
+        >>>   10 | elif (nome=="KATANA") :
+              11 | 	print ((2*s)+ d )
+
+▶ E1 — Verificação desnecessária de todas as combinações possíveis
+  Ocorrências: 1
+
+  [1] Linha 6: 8 condições em um único if — verificação excessiva
+      Trecho  : 1 > d1 or d1 < 10 or 1 > d2 or (d2 < 10) or (nome != 'CIMITARRA') or (nome != 'KATANA') or (nome != 'SABRE') or (des < 0)
+      Contexto:
+               5 | s = d1 + d2
+        >>>    6 | if ((1>d1) or (d1<10) or  (1>d2) or (d2<10) or (nome!= "CIMITARRA") or (nome!="KATANA") or (nome!= "SABRE") or (des<0)) :
+               7 | 	print("Entrada invalida")
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 5
+
+  [1] Linha 1: Variável 'nome' com nome muito curto (≤4 chars)
+      Trecho  : nome = ...
+      Contexto:
+        >>>    1 | nome = input("insira: ")
+               2 | des = int(input("insira: "))
+
+  [2] Linha 2: Variável 'des' com nome muito curto (≤4 chars)
+      Trecho  : des = ...
+      Contexto:
+               1 | nome = input("insira: ")
+        >>>    2 | des = int(input("insira: "))
+               3 | d1 = int(input("insira: "))
+
+  [3] Linha 3: Variável 'd1' com nome muito curto (≤4 chars)
+      Trecho  : d1 = ...
+      Contexto:
+               2 | des = int(input("insira: "))
+        >>>    3 | d1 = int(input("insira: "))
+               4 | d2 = int(input("insira: "))
+
+  [4] Linha 4: Variável 'd2' com nome muito curto (≤4 chars)
+      Trecho  : d2 = ...
+      Contexto:
+               3 | d1 = int(input("insira: "))
+        >>>    4 | d2 = int(input("insira: "))
+               5 | s = d1 + d2
+
+  [5] Linha 5: Variável 's' com nome muito curto (≤4 chars)
+      Trecho  : s = ...
+      Contexto:
+               4 | d2 = int(input("insira: "))
+        >>>    5 | s = d1 + d2
+               6 | if ((1>d1) or (d1<10) or  (1>d2) or (d2<10) or (nome!= "CIMITARRA") or (nome!="KATANA") or (nome!= "SABRE") or (des<0)) :
+
+======================================================================  >>>    6 | SA = "SABRE"
+               7 | KA = "KATANA"
+
+  [7] Linha 7: Variável 'KA' com nome muito curto (≤4 chars)
+      Trecho  : KA = ...
+      Contexto:
+               6 | SA = "SABRE"
+        >>>    7 | KA = "KATANA"
+               8 | CI= "CIMITARRA"
+
+  [8] Linha 8: Variável 'CI' com nome muito curto (≤4 chars)
+      Trecho  : CI = ...
+      Contexto:
+               7 | KA = "KATANA"
+        >>>    8 | CI= "CIMITARRA"
+               9 | 
+
+======================================================================

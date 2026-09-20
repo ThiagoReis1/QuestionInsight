@@ -1,12 +1,12 @@
 ======================================================================
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
-Arquivo     : 672_1616.py
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2017_1_v1.81\2017-1\142\users\2225\codes\672_1616.py
+Arquivo     : 672_1616.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2017_1_v1.81\2017-1\142\users\2212\executions\672_1616.log
 Assessment  : 672
 Título      : Trabalho Prático 5: Vetores e Strings
 Questão     : 1616
-Aluno       : 2225
+Aluno       : 2212
 Grupo       : TP 05
 Significado : Vetores e Strings
 Total MCs   : 2
@@ -16,25 +16,37 @@ Total MCs   : 2
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | from numpy import*
-     2 | 
-     3 | v=array(eval(input("tipo: ").upper()))
-     4 | d=array(eval(input("numero: ")))
-     5 | i=0
-     6 | da=0
-     7 | while(i<size(v)):
-     8 | 	if(v[i]=="GELO"):
-     9 | 		da=da+2*d[i]
-    10 | 	elif(v[i]=="FOGO"):
-    11 | 		da=da+3*d[i]
-    12 | 	elif(v[i]=="CHOQUE"):
-    13 | 		da=da+4*d[i]
-    14 | 	elif(v[i]=="CONJURACAO"):
-    15 | 		da=da+8*d[i]
-    16 | 	elif(v[i]=="ILUSAO"):
-    17 | 		da=da+10*d[i]
-    18 | 	i=i+1
-    19 | print(da)
+     1 | from numpy import *
+     2 | #formula do dano total:dm = s[i]*n[1]
+     3 | #gelo=2
+     4 | #fogo=3
+     5 | #choque=4
+     6 | #conjuração=8
+     7 | #ilusão=10
+     8 | s = array(eval(input("Magia: ")))
+     9 | n = array(eval(input("Mago: ")))
+    10 | 
+    11 | 
+    12 | i=0
+    13 | dm=0
+    14 | g=2 #gelo
+    15 | f=3 #fogo
+    16 | ch=4 #choque
+    17 | c=8 #conjuração
+    18 | l=10 #ilusão
+    19 | while(i<size(s)):
+    20 | 	if(s[i]=="GELO"):
+    21 | 		dm = dm + (g*n[i])
+    22 | 	elif(s[i]=="FOGO"):
+    23 | 		dm = dm + (f*n[i])
+    24 | 	elif(s[i]=="CHOQUE"):
+    25 | 		dm = dm + (ch*n[i])
+    26 | 	elif(s[i]=="CONJURACAO"):
+    27 | 		dm = dm + (c*n[i])
+    28 | 	elif(s[i]=="ILUSAO"):
+    29 | 		dm = dm + (l*n[i])
+    30 | 	i=i+1
+    31 | print(dm)
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
@@ -43,84 +55,119 @@ DETALHAMENTO DOS MISCONCEPTIONS
 ▶ B8 — Não utilização de elif/else
   Ocorrências: 1
 
-  [1] Linha 14: Cadeia if/elif sem bloco else final
-      Trecho  : if ... (linha 14) / elif ... sem else
+  [1] Linha 26: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 26) / elif ... sem else
       Contexto:
-              13 | 		da=da+4*d[i]
-        >>>   14 | 	elif(v[i]=="CONJURACAO"):
-              15 | 		da=da+8*d[i]
+              25 | 		dm = dm + (ch*n[i])
+        >>>   26 | 	elif(s[i]=="CONJURACAO"):
+              27 | 		dm = dm + (c*n[i])
 
 ▶ G4 — Funções/variáveis com nomes não significativos
-  Ocorrências: 10
+  Ocorrências: 15
 
-  [1] Linha 3: Variável 'v' com nome muito curto (≤4 chars)
-      Trecho  : v = ...
+  [1] Linha 8: Variável 's' com nome muito curto (≤4 chars)
+      Trecho  : s = ...
       Contexto:
-               2 | 
-        >>>    3 | v=array(eval(input("tipo: ").upper()))
-               4 | d=array(eval(input("numero: ")))
+               7 | #ilusão=10
+        >>>    8 | s = array(eval(input("Magia: ")))
+               9 | n = array(eval(input("Mago: ")))
 
-  [2] Linha 4: Variável 'd' com nome muito curto (≤4 chars)
-      Trecho  : d = ...
+  [2] Linha 9: Variável 'n' com nome muito curto (≤4 chars)
+      Trecho  : n = ...
       Contexto:
-               3 | v=array(eval(input("tipo: ").upper()))
-        >>>    4 | d=array(eval(input("numero: ")))
-               5 | i=0
+               8 | s = array(eval(input("Magia: ")))
+        >>>    9 | n = array(eval(input("Mago: ")))
+              10 | 
 
-  [3] Linha 5: Variável 'i' com nome muito curto (≤4 chars)
+  [3] Linha 12: Variável 'i' com nome muito curto (≤4 chars)
       Trecho  : i = ...
       Contexto:
-               4 | d=array(eval(input("numero: ")))
-        >>>    5 | i=0
-               6 | da=0
+              11 | 
+        >>>   12 | i=0
+              13 | dm=0
 
-  [4] Linha 6: Variável 'da' com nome muito curto (≤4 chars)
-      Trecho  : da = ...
+  [4] Linha 13: Variável 'dm' com nome muito curto (≤4 chars)
+      Trecho  : dm = ...
       Contexto:
-               5 | i=0
-        >>>    6 | da=0
-               7 | while(i<size(v)):
+              12 | i=0
+        >>>   13 | dm=0
+              14 | g=2 #gelo
 
-  [5] Linha 18: Variável 'i' com nome muito curto (≤4 chars)
+  [5] Linha 14: Variável 'g' com nome muito curto (≤4 chars)
+      Trecho  : g = ...
+      Contexto:
+              13 | dm=0
+        >>>   14 | g=2 #gelo
+              15 | f=3 #fogo
+
+  [6] Linha 15: Variável 'f' com nome muito curto (≤4 chars)
+      Trecho  : f = ...
+      Contexto:
+              14 | g=2 #gelo
+        >>>   15 | f=3 #fogo
+              16 | ch=4 #choque
+
+  [7] Linha 16: Variável 'ch' com nome muito curto (≤4 chars)
+      Trecho  : ch = ...
+      Contexto:
+              15 | f=3 #fogo
+        >>>   16 | ch=4 #choque
+              17 | c=8 #conjuração
+
+  [8] Linha 17: Variável 'c' com nome muito curto (≤4 chars)
+      Trecho  : c = ...
+      Contexto:
+              16 | ch=4 #choque
+        >>>   17 | c=8 #conjuração
+              18 | l=10 #ilusão
+
+  [9] Linha 18: Variável 'l' com nome muito curto (≤4 chars)
+      Trecho  : l = ...
+      Contexto:
+              17 | c=8 #conjuração
+        >>>   18 | l=10 #ilusão
+              19 | while(i<size(s)):
+
+  [10] Linha 30: Variável 'i' com nome muito curto (≤4 chars)
       Trecho  : i = ...
       Contexto:
-              17 | 		da=da+10*d[i]
-        >>>   18 | 	i=i+1
-              19 | print(da)
+              29 | 		dm = dm + (l*n[i])
+        >>>   30 | 	i=i+1
+              31 | print(dm)
 
-  [6] Linha 9: Variável 'da' com nome muito curto (≤4 chars)
-      Trecho  : da = ...
+  [11] Linha 21: Variável 'dm' com nome muito curto (≤4 chars)
+      Trecho  : dm = ...
       Contexto:
-               8 | 	if(v[i]=="GELO"):
-        >>>    9 | 		da=da+2*d[i]
-              10 | 	elif(v[i]=="FOGO"):
+              20 | 	if(s[i]=="GELO"):
+        >>>   21 | 		dm = dm + (g*n[i])
+              22 | 	elif(s[i]=="FOGO"):
 
-  [7] Linha 11: Variável 'da' com nome muito curto (≤4 chars)
-      Trecho  : da = ...
+  [12] Linha 23: Variável 'dm' com nome muito curto (≤4 chars)
+      Trecho  : dm = ...
       Contexto:
-              10 | 	elif(v[i]=="FOGO"):
-        >>>   11 | 		da=da+3*d[i]
-              12 | 	elif(v[i]=="CHOQUE"):
+              22 | 	elif(s[i]=="FOGO"):
+        >>>   23 | 		dm = dm + (f*n[i])
+              24 | 	elif(s[i]=="CHOQUE"):
 
-  [8] Linha 13: Variável 'da' com nome muito curto (≤4 chars)
-      Trecho  : da = ...
+  [13] Linha 25: Variável 'dm' com nome muito curto (≤4 chars)
+      Trecho  : dm = ...
       Contexto:
-              12 | 	elif(v[i]=="CHOQUE"):
-        >>>   13 | 		da=da+4*d[i]
-              14 | 	elif(v[i]=="CONJURACAO"):
+              24 | 	elif(s[i]=="CHOQUE"):
+        >>>   25 | 		dm = dm + (ch*n[i])
+              26 | 	elif(s[i]=="CONJURACAO"):
 
-  [9] Linha 15: Variável 'da' com nome muito curto (≤4 chars)
-      Trecho  : da = ...
+  [14] Linha 27: Variável 'dm' com nome muito curto (≤4 chars)
+      Trecho  : dm = ...
       Contexto:
-              14 | 	elif(v[i]=="CONJURACAO"):
-        >>>   15 | 		da=da+8*d[i]
-              16 | 	elif(v[i]=="ILUSAO"):
+              26 | 	elif(s[i]=="CONJURACAO"):
+        >>>   27 | 		dm = dm + (c*n[i])
+              28 | 	elif(s[i]=="ILUSAO"):
 
-  [10] Linha 17: Variável 'da' com nome muito curto (≤4 chars)
-      Trecho  : da = ...
+  [15] Linha 29: Variável 'dm' com nome muito curto (≤4 chars)
+      Trecho  : dm = ...
       Contexto:
-              16 | 	elif(v[i]=="ILUSAO"):
-        >>>   17 | 		da=da+10*d[i]
-              18 | 	i=i+1
+              28 | 	elif(s[i]=="ILUSAO"):
+        >>>   29 | 		dm = dm + (l*n[i])
+              30 | 	i=i+1
 
 ======================================================================

@@ -1,12 +1,12 @@
 ======================================================================
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
-Arquivo     : 1189_1537.py
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2018_1_v1.81\2018-1\187\users\3215\codes\1189_1537.py
+Arquivo     : 1189_1537.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2018_1_v1.81\2018-1\187\users\3200\executions\1189_1537.log
 Assessment  : 1189
 Título      : TP 04: Estrutura de Repetição por Condição (while)
 Questão     : 1537
-Aluno       : 3215
+Aluno       : 3200
 Grupo       : TP 04
 Significado : Estrutura de Repetição por Condição
 Total MCs   : 1
@@ -17,91 +17,95 @@ Total MCs   : 1
 CÓDIGO FONTE
 ----------------------------------------------------------------------
      1 | from math import *
-     2 | x = eval(input())
-     3 | k = int(input())
-     4 | r=0
-     5 | kf=0
-     6 | z=0
+     2 | x= float(input())
+     3 | k= int(input())
+     4 | soma=1.0
+     5 | cont=1
+     6 | exp=1
      7 | 
-     8 | 
-     9 | while(r<k):
-    10 | 	aux =((x**z)/factorial(z))   
-    11 | 	kf = kf + aux
-    12 | 	z= z+1
-    13 | 	r = r + 1
-    14 | 		
-    15 | 		
-    16 | 		
-    17 | print(round(kf,9))
+     8 | while(cont<k):
+     9 | 	den= (factorial(exp))
+    10 | 	calc= (x**exp)/den
+    11 | 	soma= soma + calc
+    12 | 	exp= exp+1
+    13 | 	cont= cont+1
+    14 | print(round(soma,9))
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
 ----------------------------------------------------------------------
 
 ▶ G4 — Funções/variáveis com nomes não significativos
-  Ocorrências: 9
+  Ocorrências: 10
 
   [1] Linha 2: Variável 'x' com nome muito curto (≤4 chars)
       Trecho  : x = ...
       Contexto:
                1 | from math import *
-        >>>    2 | x = eval(input())
-               3 | k = int(input())
+        >>>    2 | x= float(input())
+               3 | k= int(input())
 
   [2] Linha 3: Variável 'k' com nome muito curto (≤4 chars)
       Trecho  : k = ...
       Contexto:
-               2 | x = eval(input())
-        >>>    3 | k = int(input())
-               4 | r=0
+               2 | x= float(input())
+        >>>    3 | k= int(input())
+               4 | soma=1.0
 
-  [3] Linha 4: Variável 'r' com nome muito curto (≤4 chars)
-      Trecho  : r = ...
+  [3] Linha 4: Variável 'soma' com nome muito curto (≤4 chars)
+      Trecho  : soma = ...
       Contexto:
-               3 | k = int(input())
-        >>>    4 | r=0
-               5 | kf=0
+               3 | k= int(input())
+        >>>    4 | soma=1.0
+               5 | cont=1
 
-  [4] Linha 5: Variável 'kf' com nome muito curto (≤4 chars)
-      Trecho  : kf = ...
+  [4] Linha 5: Variável 'cont' com nome muito curto (≤4 chars)
+      Trecho  : cont = ...
       Contexto:
-               4 | r=0
-        >>>    5 | kf=0
-               6 | z=0
+               4 | soma=1.0
+        >>>    5 | cont=1
+               6 | exp=1
 
-  [5] Linha 6: Variável 'z' com nome muito curto (≤4 chars)
-      Trecho  : z = ...
+  [5] Linha 6: Variável 'exp' com nome muito curto (≤4 chars)
+      Trecho  : exp = ...
       Contexto:
-               5 | kf=0
-        >>>    6 | z=0
+               5 | cont=1
+        >>>    6 | exp=1
                7 | 
 
-  [6] Linha 10: Variável 'aux' com nome muito curto (≤4 chars)
-      Trecho  : aux = ...
+  [6] Linha 9: Variável 'den' com nome muito curto (≤4 chars)
+      Trecho  : den = ...
       Contexto:
-               9 | while(r<k):
-        >>>   10 | 	aux =((x**z)/factorial(z))   
-              11 | 	kf = kf + aux
+               8 | while(cont<k):
+        >>>    9 | 	den= (factorial(exp))
+              10 | 	calc= (x**exp)/den
 
-  [7] Linha 11: Variável 'kf' com nome muito curto (≤4 chars)
-      Trecho  : kf = ...
+  [7] Linha 10: Variável 'calc' com nome muito curto (≤4 chars)
+      Trecho  : calc = ...
       Contexto:
-              10 | 	aux =((x**z)/factorial(z))   
-        >>>   11 | 	kf = kf + aux
-              12 | 	z= z+1
+               9 | 	den= (factorial(exp))
+        >>>   10 | 	calc= (x**exp)/den
+              11 | 	soma= soma + calc
 
-  [8] Linha 12: Variável 'z' com nome muito curto (≤4 chars)
-      Trecho  : z = ...
+  [8] Linha 11: Variável 'soma' com nome muito curto (≤4 chars)
+      Trecho  : soma = ...
       Contexto:
-              11 | 	kf = kf + aux
-        >>>   12 | 	z= z+1
-              13 | 	r = r + 1
+              10 | 	calc= (x**exp)/den
+        >>>   11 | 	soma= soma + calc
+              12 | 	exp= exp+1
 
-  [9] Linha 13: Variável 'r' com nome muito curto (≤4 chars)
-      Trecho  : r = ...
+  [9] Linha 12: Variável 'exp' com nome muito curto (≤4 chars)
+      Trecho  : exp = ...
       Contexto:
-              12 | 	z= z+1
-        >>>   13 | 	r = r + 1
-              14 | 		
+              11 | 	soma= soma + calc
+        >>>   12 | 	exp= exp+1
+              13 | 	cont= cont+1
+
+  [10] Linha 13: Variável 'cont' com nome muito curto (≤4 chars)
+      Trecho  : cont = ...
+      Contexto:
+              12 | 	exp= exp+1
+        >>>   13 | 	cont= cont+1
+              14 | print(round(soma,9))
 
 ======================================================================

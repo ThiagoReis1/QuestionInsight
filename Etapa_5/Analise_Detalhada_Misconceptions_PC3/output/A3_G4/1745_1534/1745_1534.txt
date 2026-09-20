@@ -1,8 +1,8 @@
 ======================================================================
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
-Arquivo     : 1745_1534.py
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2019_1_v1.81\2019-1\225\users\4485\codes\1745_1534.py
+Arquivo     : 1745_1534.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2019_1_v1.81\2019-1\225\users\4485\executions\1745_1534.log
 Assessment  : 1745
 Título      : TP4: Estrutura de Repetição por Condição (while)
 Questão     : 1534
@@ -21,36 +21,30 @@ CÓDIGO FONTE
      3 | k= int(input("numero de termos:"))
      4 | t=1
      5 | n=0
-     6 | 
-     7 | while(-1 < x < +1) and (k>0):
-     8 | 	t=t+2
-     9 | 	x1=((x**t)/factorial(t))
-    10 | 	
-    11 | print(round(x,7))
+     6 | z=1
+     7 | n=k
+     8 | while(-1 < x < +1) and (k>0):
+     9 | 	x=x+((x**t)/factorial(t))
+    10 | 	t=t+2
+    11 | 	n=n+1
+    12 | 	print(round(x,7))
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
 ----------------------------------------------------------------------
 
 ▶ A3 — Variável inicializada desnecessariamente
-  Ocorrências: 2
+  Ocorrências: 1
 
-  [1] Linha 5: Variável 'n' declarada mas nunca utilizada
-      Trecho  : n = ...
+  [1] Linha 6: Variável 'z' declarada mas nunca utilizada
+      Trecho  : z = ...
       Contexto:
-               4 | t=1
-        >>>    5 | n=0
-               6 | 
-
-  [2] Linha 9: Variável 'x1' declarada mas nunca utilizada
-      Trecho  : x1 = ...
-      Contexto:
-               8 | 	t=t+2
-        >>>    9 | 	x1=((x**t)/factorial(t))
-              10 | 	
+               5 | n=0
+        >>>    6 | z=1
+               7 | n=k
 
 ▶ G4 — Funções/variáveis com nomes não significativos
-  Ocorrências: 6
+  Ocorrências: 9
 
   [1] Linha 2: Variável 'x' com nome muito curto (≤4 chars)
       Trecho  : x = ...
@@ -78,20 +72,41 @@ DETALHAMENTO DOS MISCONCEPTIONS
       Contexto:
                4 | t=1
         >>>    5 | n=0
-               6 | 
+               6 | z=1
 
-  [5] Linha 8: Variável 't' com nome muito curto (≤4 chars)
+  [5] Linha 6: Variável 'z' com nome muito curto (≤4 chars)
+      Trecho  : z = ...
+      Contexto:
+               5 | n=0
+        >>>    6 | z=1
+               7 | n=k
+
+  [6] Linha 7: Variável 'n' com nome muito curto (≤4 chars)
+      Trecho  : n = ...
+      Contexto:
+               6 | z=1
+        >>>    7 | n=k
+               8 | while(-1 < x < +1) and (k>0):
+
+  [7] Linha 9: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+               8 | while(-1 < x < +1) and (k>0):
+        >>>    9 | 	x=x+((x**t)/factorial(t))
+              10 | 	t=t+2
+
+  [8] Linha 10: Variável 't' com nome muito curto (≤4 chars)
       Trecho  : t = ...
       Contexto:
-               7 | while(-1 < x < +1) and (k>0):
-        >>>    8 | 	t=t+2
-               9 | 	x1=((x**t)/factorial(t))
+               9 | 	x=x+((x**t)/factorial(t))
+        >>>   10 | 	t=t+2
+              11 | 	n=n+1
 
-  [6] Linha 9: Variável 'x1' com nome muito curto (≤4 chars)
-      Trecho  : x1 = ...
+  [9] Linha 11: Variável 'n' com nome muito curto (≤4 chars)
+      Trecho  : n = ...
       Contexto:
-               8 | 	t=t+2
-        >>>    9 | 	x1=((x**t)/factorial(t))
-              10 | 	
+              10 | 	t=t+2
+        >>>   11 | 	n=n+1
+              12 | 	print(round(x,7))
 
 ======================================================================

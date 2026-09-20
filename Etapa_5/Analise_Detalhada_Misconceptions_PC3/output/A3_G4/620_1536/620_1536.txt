@@ -1,12 +1,12 @@
 ======================================================================
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
-Arquivo     : 620_1536.py
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2017_1_v1.81\2017-1\137\users\2495\codes\620_1536.py
+Arquivo     : 620_1536.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2017_1_v1.81\2017-1\137\users\2170\executions\620_1536.log
 Assessment  : 620
 Título      : Trabalho Prático 4: Estrutura de Repetição por Condição (while)
 Questão     : 1536
-Aluno       : 2495
+Aluno       : 2170
 Grupo       : TP 04
 Significado : Estrutura de Repetição por Condição
 Total MCs   : 2
@@ -16,44 +16,89 @@ Total MCs   : 2
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | x=float(input("digite x: ")) 
-     2 | k=int(input("digite k: "))
-     3 | 
+     1 | from math import*
+     2 | x=float(input(" Digite um numero real qualquer:"))
+     3 | k=float(input(" Digite um numero inteiro qualquer:"))
+     4 | arc= x
+     5 | n=1
+     6 | d=3
+     7 | while(-1>x and x<=1):
+     8 | 	x= arc + (n**2/d)
+     9 | 	n=n+1
+    10 | 	d=d+3
+    11 | print(round(x,10))
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
 ----------------------------------------------------------------------
 
 ▶ A3 — Variável inicializada desnecessariamente
-  Ocorrências: 2
+  Ocorrências: 1
 
-  [1] Linha 1: Variável 'x' declarada mas nunca utilizada
-      Trecho  : x = ...
-      Contexto:
-        >>>    1 | x=float(input("digite x: ")) 
-               2 | k=int(input("digite k: "))
-
-  [2] Linha 2: Variável 'k' declarada mas nunca utilizada
+  [1] Linha 3: Variável 'k' declarada mas nunca utilizada
       Trecho  : k = ...
       Contexto:
-               1 | x=float(input("digite x: ")) 
-        >>>    2 | k=int(input("digite k: "))
-               3 | 
+               2 | x=float(input(" Digite um numero real qualquer:"))
+        >>>    3 | k=float(input(" Digite um numero inteiro qualquer:"))
+               4 | arc= x
 
 ▶ G4 — Funções/variáveis com nomes não significativos
-  Ocorrências: 2
+  Ocorrências: 8
 
-  [1] Linha 1: Variável 'x' com nome muito curto (≤4 chars)
+  [1] Linha 2: Variável 'x' com nome muito curto (≤4 chars)
       Trecho  : x = ...
       Contexto:
-        >>>    1 | x=float(input("digite x: ")) 
-               2 | k=int(input("digite k: "))
+               1 | from math import*
+        >>>    2 | x=float(input(" Digite um numero real qualquer:"))
+               3 | k=float(input(" Digite um numero inteiro qualquer:"))
 
-  [2] Linha 2: Variável 'k' com nome muito curto (≤4 chars)
+  [2] Linha 3: Variável 'k' com nome muito curto (≤4 chars)
       Trecho  : k = ...
       Contexto:
-               1 | x=float(input("digite x: ")) 
-        >>>    2 | k=int(input("digite k: "))
-               3 | 
+               2 | x=float(input(" Digite um numero real qualquer:"))
+        >>>    3 | k=float(input(" Digite um numero inteiro qualquer:"))
+               4 | arc= x
+
+  [3] Linha 4: Variável 'arc' com nome muito curto (≤4 chars)
+      Trecho  : arc = ...
+      Contexto:
+               3 | k=float(input(" Digite um numero inteiro qualquer:"))
+        >>>    4 | arc= x
+               5 | n=1
+
+  [4] Linha 5: Variável 'n' com nome muito curto (≤4 chars)
+      Trecho  : n = ...
+      Contexto:
+               4 | arc= x
+        >>>    5 | n=1
+               6 | d=3
+
+  [5] Linha 6: Variável 'd' com nome muito curto (≤4 chars)
+      Trecho  : d = ...
+      Contexto:
+               5 | n=1
+        >>>    6 | d=3
+               7 | while(-1>x and x<=1):
+
+  [6] Linha 8: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+               7 | while(-1>x and x<=1):
+        >>>    8 | 	x= arc + (n**2/d)
+               9 | 	n=n+1
+
+  [7] Linha 9: Variável 'n' com nome muito curto (≤4 chars)
+      Trecho  : n = ...
+      Contexto:
+               8 | 	x= arc + (n**2/d)
+        >>>    9 | 	n=n+1
+              10 | 	d=d+3
+
+  [8] Linha 10: Variável 'd' com nome muito curto (≤4 chars)
+      Trecho  : d = ...
+      Contexto:
+               9 | 	n=n+1
+        >>>   10 | 	d=d+3
+              11 | print(round(x,10))
 
 ======================================================================

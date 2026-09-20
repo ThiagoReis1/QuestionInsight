@@ -1,12 +1,12 @@
 ======================================================================
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
-Arquivo     : 712_1658.py
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2017_1_v1.81\2017-1\143\users\2534\codes\712_1658.py
+Arquivo     : 712_1658.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2017_1_v1.81\2017-1\143\users\2269\executions\712_1658.log
 Assessment  : 712
 Título      : Trabalho Prático 6: Repetição por Contagem
 Questão     : 1658
-Aluno       : 2534
+Aluno       : 2269
 Grupo       : TP 06
 Significado : Estrutura de Repetição por Contagem
 Total MCs   : 2
@@ -17,23 +17,22 @@ Total MCs   : 2
 CÓDIGO FONTE
 ----------------------------------------------------------------------
      1 | from numpy import*
-     2 | v = input(": ").upper().split(',')
-     3 | 
-     4 | cont = zeros(5, dtype=int)
-     5 | 
-     6 | for I in range (size(v)):
-     7 | 	if(v[I] == "CHN"):
-     8 | 		cont[0] = cont[0] + 1
-     9 | 	elif(v[I] == "JPN"):
-    10 | 		cont[1] = cont[1] + 1
-    11 | 	elif(v[I] == "KOR"):
-    12 | 		cont[2] = cont[2] + 1
-    13 | 	elif(v[I] == "MGL"):
-    14 | 		cont[3] = cont[3] + 1
-    15 | 	elif(v[I] == "THA"):
-    16 | 		cont[4] = cont[4] + 1
-    17 | print(max(cont))
-    18 | print(cont)
+     2 | vet = input(": ").upper().split(',')
+     3 | cont = zeros(5, dtype=int)
+     4 | 
+     5 | for I in range (size(vet)):
+     6 | 	if(vet[I] == "CHN"):
+     7 | 		cont[0] = cont[0] + 1
+     8 | 	elif(vet[I] == "JPN"):
+     9 | 		cont[1] = cont[1] + 1
+    10 | 	elif(vet[I] == "KOR"):
+    11 | 		cont[2] = cont[2] + 1
+    12 | 	elif(vet[I] == "MGL"):
+    13 | 		cont[3] = cont[3] + 1 
+    14 | 	elif(vet[I] == "THA"):
+    15 | 		cont[4] = cont[4] + 1
+    16 | print(max(cont))
+    17 | print(cont)
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
@@ -42,28 +41,28 @@ DETALHAMENTO DOS MISCONCEPTIONS
 ▶ B8 — Não utilização de elif/else
   Ocorrências: 1
 
-  [1] Linha 13: Cadeia if/elif sem bloco else final
-      Trecho  : if ... (linha 13) / elif ... sem else
+  [1] Linha 12: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 12) / elif ... sem else
       Contexto:
-              12 | 		cont[2] = cont[2] + 1
-        >>>   13 | 	elif(v[I] == "MGL"):
-              14 | 		cont[3] = cont[3] + 1
+              11 | 		cont[2] = cont[2] + 1
+        >>>   12 | 	elif(vet[I] == "MGL"):
+              13 | 		cont[3] = cont[3] + 1 
 
 ▶ G4 — Funções/variáveis com nomes não significativos
   Ocorrências: 2
 
-  [1] Linha 2: Variável 'v' com nome muito curto (≤4 chars)
-      Trecho  : v = ...
+  [1] Linha 2: Variável 'vet' com nome muito curto (≤4 chars)
+      Trecho  : vet = ...
       Contexto:
                1 | from numpy import*
-        >>>    2 | v = input(": ").upper().split(',')
-               3 | 
+        >>>    2 | vet = input(": ").upper().split(',')
+               3 | cont = zeros(5, dtype=int)
 
-  [2] Linha 4: Variável 'cont' com nome muito curto (≤4 chars)
+  [2] Linha 3: Variável 'cont' com nome muito curto (≤4 chars)
       Trecho  : cont = ...
       Contexto:
-               3 | 
-        >>>    4 | cont = zeros(5, dtype=int)
-               5 | 
+               2 | vet = input(": ").upper().split(',')
+        >>>    3 | cont = zeros(5, dtype=int)
+               4 | 
 
 ======================================================================

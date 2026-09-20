@@ -1,8 +1,8 @@
 ======================================================================
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
-Arquivo     : 4176_3592.py
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2022_1_v1.81\2022-1\443\users\7594\codes\4176_3592.py
+Arquivo     : 4176_3592.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2022_1_v1.81\2022-1\443\users\7594\executions\4176_3592.log
 Assessment  : 4176
 Título      : TP 05: Vetores e Strings
 Questão     : 3592
@@ -17,18 +17,20 @@ Total MCs   : 3
 CÓDIGO FONTE
 ----------------------------------------------------------------------
      1 | from numpy import*
-     2 | d = array(eval(input()))
-     3 | p = 100
-     4 | i = 0
-     5 | 
-     6 | while i < size(d):
-     7 | 	if d[i]%2 == 0:
-     8 | 		p = p*d[i]
-     9 | 	elif d[i]%2 != 0:
-    10 | 		p = p/d[i]
-    11 | 	i += 1
-    12 | 
-    13 | print(round(p,2))
+     2 | 
+     3 | d = array(eval(input()))
+     4 | 
+     5 | p = 100
+     6 | i = 0
+     7 | 
+     8 | while i < size(d):
+     9 | 	if d[i]%2 == 0:
+    10 | 		p = p*d[i]
+    11 | 	elif d[i]%2 != 0:
+    12 | 		p = p/d[i]
+    13 | 	i += 1
+    14 | 
+    15 | print(round(p,2))
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
@@ -37,12 +39,12 @@ DETALHAMENTO DOS MISCONCEPTIONS
 ▶ B8 — Não utilização de elif/else
   Ocorrências: 1
 
-  [1] Linha 7: Cadeia if/elif sem bloco else final
-      Trecho  : if ... (linha 7) / elif ... sem else
+  [1] Linha 9: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 9) / elif ... sem else
       Contexto:
-               6 | while i < size(d):
-        >>>    7 | 	if d[i]%2 == 0:
-               8 | 		p = p*d[i]
+               8 | while i < size(d):
+        >>>    9 | 	if d[i]%2 == 0:
+              10 | 		p = p*d[i]
 
 ▶ B9 — elif/else retestando condições já verificadas
   Ocorrências: 1
@@ -53,39 +55,39 @@ DETALHAMENTO DOS MISCONCEPTIONS
 ▶ G4 — Funções/variáveis com nomes não significativos
   Ocorrências: 5
 
-  [1] Linha 2: Variável 'd' com nome muito curto (≤4 chars)
+  [1] Linha 3: Variável 'd' com nome muito curto (≤4 chars)
       Trecho  : d = ...
       Contexto:
-               1 | from numpy import*
-        >>>    2 | d = array(eval(input()))
-               3 | p = 100
+               2 | 
+        >>>    3 | d = array(eval(input()))
+               4 | 
 
-  [2] Linha 3: Variável 'p' com nome muito curto (≤4 chars)
+  [2] Linha 5: Variável 'p' com nome muito curto (≤4 chars)
       Trecho  : p = ...
       Contexto:
-               2 | d = array(eval(input()))
-        >>>    3 | p = 100
-               4 | i = 0
+               4 | 
+        >>>    5 | p = 100
+               6 | i = 0
 
-  [3] Linha 4: Variável 'i' com nome muito curto (≤4 chars)
+  [3] Linha 6: Variável 'i' com nome muito curto (≤4 chars)
       Trecho  : i = ...
       Contexto:
-               3 | p = 100
-        >>>    4 | i = 0
-               5 | 
+               5 | p = 100
+        >>>    6 | i = 0
+               7 | 
 
-  [4] Linha 8: Variável 'p' com nome muito curto (≤4 chars)
+  [4] Linha 10: Variável 'p' com nome muito curto (≤4 chars)
       Trecho  : p = ...
       Contexto:
-               7 | 	if d[i]%2 == 0:
-        >>>    8 | 		p = p*d[i]
-               9 | 	elif d[i]%2 != 0:
+               9 | 	if d[i]%2 == 0:
+        >>>   10 | 		p = p*d[i]
+              11 | 	elif d[i]%2 != 0:
 
-  [5] Linha 10: Variável 'p' com nome muito curto (≤4 chars)
+  [5] Linha 12: Variável 'p' com nome muito curto (≤4 chars)
       Trecho  : p = ...
       Contexto:
-               9 | 	elif d[i]%2 != 0:
-        >>>   10 | 		p = p/d[i]
-              11 | 	i += 1
+              11 | 	elif d[i]%2 != 0:
+        >>>   12 | 		p = p/d[i]
+              13 | 	i += 1
 
 ======================================================================

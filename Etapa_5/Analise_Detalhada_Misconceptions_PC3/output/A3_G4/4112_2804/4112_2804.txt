@@ -1,8 +1,8 @@
 ======================================================================
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
-Arquivo     : 4112_2804.py
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2022_1_v1.81\2022-1\444\users\7615\codes\4112_2804.py
+Arquivo     : 4112_2804.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2022_1_v1.81\2022-1\444\users\7615\executions\4112_2804.log
 Assessment  : 4112
 Título      : TP 04: Estrutura de Repetição por Condição
 Questão     : 2804
@@ -21,19 +21,18 @@ CÓDIGO FONTE
      3 | c= 0
      4 | a= 0
      5 | 
-     6 | while (d < 0):
-     7 | 	c= c + 1
-     8 | 	j= d * 0.01
-     9 | 	a= a + 1
-    10 | 
-    11 | print(round(a,2))
+     6 | while (d == 0):
+     7 | 	a= a + (d * 0.01)
+     8 | 	c= c + 1
+     9 | 	
+    10 | print(round(c,2))
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
 ----------------------------------------------------------------------
 
 ▶ A3 — Variável inicializada desnecessariamente
-  Ocorrências: 2
+  Ocorrências: 1
 
   [1] Linha 2: Variável 'q' declarada mas nunca utilizada
       Trecho  : q = ...
@@ -42,15 +41,8 @@ DETALHAMENTO DOS MISCONCEPTIONS
         >>>    2 | q= int(input("digite numero de meses:"))
                3 | c= 0
 
-  [2] Linha 8: Variável 'j' declarada mas nunca utilizada
-      Trecho  : j = ...
-      Contexto:
-               7 | 	c= c + 1
-        >>>    8 | 	j= d * 0.01
-               9 | 	a= a + 1
-
 ▶ G4 — Funções/variáveis com nomes não significativos
-  Ocorrências: 7
+  Ocorrências: 6
 
   [1] Linha 1: Variável 'd' com nome muito curto (≤4 chars)
       Trecho  : d = ...
@@ -79,25 +71,18 @@ DETALHAMENTO DOS MISCONCEPTIONS
         >>>    4 | a= 0
                5 | 
 
-  [5] Linha 7: Variável 'c' com nome muito curto (≤4 chars)
-      Trecho  : c = ...
-      Contexto:
-               6 | while (d < 0):
-        >>>    7 | 	c= c + 1
-               8 | 	j= d * 0.01
-
-  [6] Linha 8: Variável 'j' com nome muito curto (≤4 chars)
-      Trecho  : j = ...
-      Contexto:
-               7 | 	c= c + 1
-        >>>    8 | 	j= d * 0.01
-               9 | 	a= a + 1
-
-  [7] Linha 9: Variável 'a' com nome muito curto (≤4 chars)
+  [5] Linha 7: Variável 'a' com nome muito curto (≤4 chars)
       Trecho  : a = ...
       Contexto:
-               8 | 	j= d * 0.01
-        >>>    9 | 	a= a + 1
-              10 | 
+               6 | while (d == 0):
+        >>>    7 | 	a= a + (d * 0.01)
+               8 | 	c= c + 1
+
+  [6] Linha 8: Variável 'c' com nome muito curto (≤4 chars)
+      Trecho  : c = ...
+      Contexto:
+               7 | 	a= a + (d * 0.01)
+        >>>    8 | 	c= c + 1
+               9 | 	
 
 ======================================================================

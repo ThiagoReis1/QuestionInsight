@@ -1,12 +1,12 @@
 ======================================================================
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
-Arquivo     : 3236_1652.py
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2021_1_v1.81\2021-1\377\users\6359\codes\3236_1652.py
+Arquivo     : 3236_1652.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2021_1_v1.81\2021-1\377\users\5817\executions\3236_1652.log
 Assessment  : 3236
 Título      : TP6: Repetição por contagem
 Questão     : 1652
-Aluno       : 6359
+Aluno       : 5817
 Grupo       : TP 06
 Significado : Estrutura de Repetição por Contagem
 Total MCs   : 2
@@ -17,23 +17,22 @@ Total MCs   : 2
 CÓDIGO FONTE
 ----------------------------------------------------------------------
      1 | from numpy import*
-     2 | et=input("Etinias: ").split(',')
-     3 | v=zeros(5,dtype=int)
+     2 | s=input("Etinia: ").split(',')
+     3 | new=zeros(5,dtype=int)
      4 | 
-     5 | for i in range(size(et)):
-     6 | 	if et[i]=="B":
-     7 | 		v[0]+=1
-     8 | 	elif et[i]=="PA":
-     9 | 		v[1]+=1
-    10 | 	elif et[i]=="PR":
-    11 | 		v[2]+=1
-    12 | 	elif et[i]=="A":
-    13 | 		v[3]+=1
-    14 | 	elif et[i]=="I":
-    15 | 		v[4]+=1
-    16 | print(max(v))
-    17 | print(v)
-    18 | 		
+     5 | for i in range(size(s)):
+     6 | 	if s[i]=='B':
+     7 | 		new[0]+=1
+     8 | 	elif s[i]=='PA':
+     9 | 		new[1]+=1
+    10 | 	elif s[i]=='PR':
+    11 | 		new[2]+=1
+    12 | 	elif s[i]=='A':
+    13 | 		new[3]+=1
+    14 | 	elif s[i]=='I':
+    15 | 		new[4]+=1
+    16 | print(max(new))
+    17 | print(new)
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
@@ -45,25 +44,25 @@ DETALHAMENTO DOS MISCONCEPTIONS
   [1] Linha 12: Cadeia if/elif sem bloco else final
       Trecho  : if ... (linha 12) / elif ... sem else
       Contexto:
-              11 | 		v[2]+=1
-        >>>   12 | 	elif et[i]=="A":
-              13 | 		v[3]+=1
+              11 | 		new[2]+=1
+        >>>   12 | 	elif s[i]=='A':
+              13 | 		new[3]+=1
 
 ▶ G4 — Funções/variáveis com nomes não significativos
   Ocorrências: 2
 
-  [1] Linha 2: Variável 'et' com nome muito curto (≤4 chars)
-      Trecho  : et = ...
+  [1] Linha 2: Variável 's' com nome muito curto (≤4 chars)
+      Trecho  : s = ...
       Contexto:
                1 | from numpy import*
-        >>>    2 | et=input("Etinias: ").split(',')
-               3 | v=zeros(5,dtype=int)
+        >>>    2 | s=input("Etinia: ").split(',')
+               3 | new=zeros(5,dtype=int)
 
-  [2] Linha 3: Variável 'v' com nome muito curto (≤4 chars)
-      Trecho  : v = ...
+  [2] Linha 3: Variável 'new' com nome muito curto (≤4 chars)
+      Trecho  : new = ...
       Contexto:
-               2 | et=input("Etinias: ").split(',')
-        >>>    3 | v=zeros(5,dtype=int)
+               2 | s=input("Etinia: ").split(',')
+        >>>    3 | new=zeros(5,dtype=int)
                4 | 
 
 ======================================================================

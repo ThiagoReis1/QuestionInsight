@@ -1,12 +1,12 @@
 ======================================================================
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
-Arquivo     : 197_1252.py
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2016_1_v1.81\2016-1\103\users\1276\codes\197_1252.py
+Arquivo     : 197_1252.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2016_1_v1.81\2016-1\103\users\1239\executions\197_1252.log
 Assessment  : 197
 Título      : Avaliação Parcial 06 – Repetição por contagem
 Questão     : 1252
-Aluno       : 1276
+Aluno       : 1239
 Grupo       : TP 06
 Significado : Estrutura de Repetição por Contagem
 Total MCs   : 2
@@ -16,29 +16,27 @@ Total MCs   : 2
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | from numpy import*
-     2 | from math import*
-     3 | v = array(eval(input("Digite o vetor: ")))
-     4 | res = array(zeros(2, dtype=int))
-     5 | A = 0
-     6 | B = 0
-     7 | for x in v:
-     8 | 	if(x==min(v)):
-     9 | 		A = x
-    10 | 	if(x==max(v)):
-    11 | 		B = x
-    12 | C = (0.6*A)+(0.4*B)
-    13 | D = (0.3*A)+(0.7*B)
-    14 | x1 = 0
-    15 | x2 = 0
-    16 | for x in v :
-    17 | 	if(x>=A and x<C):
-    18 | 		x1 = x1 + 1
-    19 | 	if(x>=C and x<D):
-    20 | 		x2 = x2 + 1
-    21 | res[0] = x1
-    22 | res[1] = x2
-    23 | print(res)
+     1 | #Avaliação- ICC 25/08/2016
+     2 | #Brenda Ester 
+     3 | 
+     4 | from numpy import*
+     5 | from math import*
+     6 | 
+     7 | vet = array(eval(input("Digite o vetor: ")))
+     8 | x = array(zeros(2, dtype = int))
+     9 | 
+    10 | A = min(vet)
+    11 | B = max(vet)
+    12 | C = 0.6 * A + 0.4 * B
+    13 | D = 0.3 * A + 0.7 * B
+    14 | 
+    15 | for i in range(size(vet)):
+    16 | 	if(vet[i]>= A and vet[i]< C):
+    17 | 		x[0] = x[0] + 1
+    18 | for i in range(size(vet)):
+    19 | 	if(vet[i]>= C and vet[i]< D):
+    20 | 		x[1] = x[1] + 1
+    21 | print(x)
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
@@ -51,90 +49,48 @@ DETALHAMENTO DOS MISCONCEPTIONS
       Trecho  : —
 
 ▶ G4 — Funções/variáveis com nomes não significativos
-  Ocorrências: 12
+  Ocorrências: 6
 
-  [1] Linha 3: Variável 'v' com nome muito curto (≤4 chars)
-      Trecho  : v = ...
+  [1] Linha 7: Variável 'vet' com nome muito curto (≤4 chars)
+      Trecho  : vet = ...
       Contexto:
-               2 | from math import*
-        >>>    3 | v = array(eval(input("Digite o vetor: ")))
-               4 | res = array(zeros(2, dtype=int))
+               6 | 
+        >>>    7 | vet = array(eval(input("Digite o vetor: ")))
+               8 | x = array(zeros(2, dtype = int))
 
-  [2] Linha 4: Variável 'res' com nome muito curto (≤4 chars)
-      Trecho  : res = ...
+  [2] Linha 8: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
       Contexto:
-               3 | v = array(eval(input("Digite o vetor: ")))
-        >>>    4 | res = array(zeros(2, dtype=int))
-               5 | A = 0
+               7 | vet = array(eval(input("Digite o vetor: ")))
+        >>>    8 | x = array(zeros(2, dtype = int))
+               9 | 
 
-  [3] Linha 5: Variável 'A' com nome muito curto (≤4 chars)
+  [3] Linha 10: Variável 'A' com nome muito curto (≤4 chars)
       Trecho  : A = ...
       Contexto:
-               4 | res = array(zeros(2, dtype=int))
-        >>>    5 | A = 0
-               6 | B = 0
+               9 | 
+        >>>   10 | A = min(vet)
+              11 | B = max(vet)
 
-  [4] Linha 6: Variável 'B' com nome muito curto (≤4 chars)
+  [4] Linha 11: Variável 'B' com nome muito curto (≤4 chars)
       Trecho  : B = ...
       Contexto:
-               5 | A = 0
-        >>>    6 | B = 0
-               7 | for x in v:
+              10 | A = min(vet)
+        >>>   11 | B = max(vet)
+              12 | C = 0.6 * A + 0.4 * B
 
   [5] Linha 12: Variável 'C' com nome muito curto (≤4 chars)
       Trecho  : C = ...
       Contexto:
-              11 | 		B = x
-        >>>   12 | C = (0.6*A)+(0.4*B)
-              13 | D = (0.3*A)+(0.7*B)
+              11 | B = max(vet)
+        >>>   12 | C = 0.6 * A + 0.4 * B
+              13 | D = 0.3 * A + 0.7 * B
 
   [6] Linha 13: Variável 'D' com nome muito curto (≤4 chars)
       Trecho  : D = ...
       Contexto:
-              12 | C = (0.6*A)+(0.4*B)
-        >>>   13 | D = (0.3*A)+(0.7*B)
-              14 | x1 = 0
-
-  [7] Linha 14: Variável 'x1' com nome muito curto (≤4 chars)
-      Trecho  : x1 = ...
-      Contexto:
-              13 | D = (0.3*A)+(0.7*B)
-        >>>   14 | x1 = 0
-              15 | x2 = 0
-
-  [8] Linha 15: Variável 'x2' com nome muito curto (≤4 chars)
-      Trecho  : x2 = ...
-      Contexto:
-              14 | x1 = 0
-        >>>   15 | x2 = 0
-              16 | for x in v :
-
-  [9] Linha 9: Variável 'A' com nome muito curto (≤4 chars)
-      Trecho  : A = ...
-      Contexto:
-               8 | 	if(x==min(v)):
-        >>>    9 | 		A = x
-              10 | 	if(x==max(v)):
-
-  [10] Linha 11: Variável 'B' com nome muito curto (≤4 chars)
-      Trecho  : B = ...
-      Contexto:
-              10 | 	if(x==max(v)):
-        >>>   11 | 		B = x
-              12 | C = (0.6*A)+(0.4*B)
-
-  [11] Linha 18: Variável 'x1' com nome muito curto (≤4 chars)
-      Trecho  : x1 = ...
-      Contexto:
-              17 | 	if(x>=A and x<C):
-        >>>   18 | 		x1 = x1 + 1
-              19 | 	if(x>=C and x<D):
-
-  [12] Linha 20: Variável 'x2' com nome muito curto (≤4 chars)
-      Trecho  : x2 = ...
-      Contexto:
-              19 | 	if(x>=C and x<D):
-        >>>   20 | 		x2 = x2 + 1
-              21 | res[0] = x1
+              12 | C = 0.6 * A + 0.4 * B
+        >>>   13 | D = 0.3 * A + 0.7 * B
+              14 | 
 
 ======================================================================

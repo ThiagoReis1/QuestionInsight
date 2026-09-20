@@ -1,12 +1,12 @@
 ======================================================================
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
-Arquivo     : 1796_3134.py
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2019_1_v1.81\2019-1\231\users\4211\codes\1796_3134.py
+Arquivo     : 1796_3134.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2019_1_v1.81\2019-1\231\users\4213\executions\1796_3134.log
 Assessment  : 1796
 Título      : TP5: Vetores e Strings
 Questão     : 3134
-Aluno       : 4211
+Aluno       : 4213
 Grupo       : TP 05
 Significado : Vetores e Strings
 Total MCs   : 1
@@ -16,51 +16,56 @@ Total MCs   : 1
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | from numpy import*
-     2 | v = array(eval(input("Numeros Naturais: ")))
-     3 | i = 0
-     4 | while(i < size(v)):
-     5 | 	v[i] = v[i]**2
-     6 | 	i = i+1
-     7 | med = (sum(v)/size(v))**(1/2)
-     8 | print(round(med, 2))
+     1 | from numpy import *
+     2 | a=array(eval(input("Numeros:")))
+     3 | n=size(a)
+     4 | x=0
+     5 | v=zeros(n,dtype=float)
+     6 | while(x<n):
+     7 | 	v[x]=(a[x]**2)/n
+     8 | 	x=x+1
+     9 | e=sum(v)**(1/2)
+    10 | print(round(e,2))
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
 ----------------------------------------------------------------------
 
 ▶ G4 — Funções/variáveis com nomes não significativos
-  Ocorrências: 4
+  Ocorrências: 6
 
-  [1] Linha 2: Variável 'v' com nome muito curto (≤4 chars)
+  [1] Linha 2: Variável 'a' com nome muito curto (≤4 chars)
+      Trecho  : a = ...
+      Contexto:
+               1 | from numpy import *
+        >>>    2 | a=array(eval(input("Numeros:")))
+               3 | n=size(a)
+
+  [2] Linha 3: Variável 'n' com nome muito curto (≤4 chars)
+      Trecho  : n = ...
+      Contexto:
+               2 | a=array(eval(input("Numeros:")))
+        >>>    3 | n=size(a)
+               4 | x=0
+
+  [3] Linha 4: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+               3 | n=size(a)
+        >>>    4 | x=0
+               5 | v=zeros(n,dtype=float)
+
+  [4] Linha 5: Variável 'v' com nome muito curto (≤4 chars)
       Trecho  : v = ...
       Contexto:
-               1 | from numpy import*
-        >>>    2 | v = array(eval(input("Numeros Naturais: ")))
-               3 | i = 0
+               4 | x=0
+        >>>    5 | v=zeros(n,dtype=float)
+               6 | while(x<n):
 
-  [2] Linha 3: Variável 'i' com nome muito curto (≤4 chars)
-      Trecho  : i = ...
+  [5] Linha 9: Variável 'e' com nome muito curto (≤4 chars)
+      Trecho  : e = ...
       Contexto:
-               2 | v = array(eval(input("Numeros Naturais: ")))
-        >>>    3 | i = 0
-               4 | while(i < size(v)):
-
-  [3] Linha 7: Variável 'med' com nome muito curto (≤4 chars)
-      Trecho  : med = ...
-      Contexto:
-               6 | 	i = i+1
-        >>>    7 | med = (sum(v)/size(v))**(1/2)
-               8 | print(round(med, 2))
-
-  [4] Linha 6: Variável 'i' com nome muito curto (≤4 chars)
-      Trecho  : i = ...
-      Contexto:
-               5 | 	v[i] = v[i]**2
-        >>>    6 | 	i = i+1
-               7 | med = (sum(v)/size(v))**(1/2)
-
-======================================================================    8 | 	x=x+1
+               8 | 	x=x+1
         >>>    9 | e=sum(v)**(1/2)
               10 | print(round(e,2))
 

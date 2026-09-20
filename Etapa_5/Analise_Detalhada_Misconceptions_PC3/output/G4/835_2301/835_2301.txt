@@ -1,12 +1,12 @@
 ======================================================================
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
-Arquivo     : 835_2301.py
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2017_2_v1.81\2017-2\162\users\2937\codes\835_2301.py
+Arquivo     : 835_2301.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2017_2_v1.81\2017-2\162\users\2819\executions\835_2301.log
 Assessment  : 835
 Título      : Trabalho Prático 01: Variáveis e Estrutura Sequencial de Programação
 Questão     : 2301
-Aluno       : 2937
+Aluno       : 2819
 Grupo       : TP 01
 Significado : Variáveis e Estrutura Sequencial
 Total MCs   : 1
@@ -17,27 +17,45 @@ Total MCs   : 1
 CÓDIGO FONTE
 ----------------------------------------------------------------------
      1 | from math import *
-     2 | #Captura de dados
-     3 | b = radians(float(input("Informe o valor de b: ")))
-     4 | c = radians(float(input("Informe o valor de c: ")))
-     5 | alpha = float(input("Informe o valor do angulo alfa entre b e c: "))
-     6 | 
-     7 | #Processamento
-     8 | alpha = radians(alpha)
-     9 | 
-    10 | a = sqrt((b**2) + (c**2) - (2 * b * c * (cos (alpha))))
-    11 | 	  
-    12 | #Saída
-    13 | print(a)
+     2 | b = float(input(""))
+     3 | c = float(input(""))
+     4 | alfa = float(input(""))
+     5 | a = sqrt(b**2 + c**2 - 2*b*c*cos(radians(alfa)))
+     6 | print(round(a, 2))
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
 ----------------------------------------------------------------------
 
 ▶ G4 — Funções/variáveis com nomes não significativos
-  Ocorrências: 1
+  Ocorrências: 4
 
-  [1] Linha 0: G4 detectado pelo VisitorMC3 (localização exata não mapeada)
-      Trecho  : —
+  [1] Linha 2: Variável 'b' com nome muito curto (≤4 chars)
+      Trecho  : b = ...
+      Contexto:
+               1 | from math import *
+        >>>    2 | b = float(input(""))
+               3 | c = float(input(""))
+
+  [2] Linha 3: Variável 'c' com nome muito curto (≤4 chars)
+      Trecho  : c = ...
+      Contexto:
+               2 | b = float(input(""))
+        >>>    3 | c = float(input(""))
+               4 | alfa = float(input(""))
+
+  [3] Linha 4: Variável 'alfa' com nome muito curto (≤4 chars)
+      Trecho  : alfa = ...
+      Contexto:
+               3 | c = float(input(""))
+        >>>    4 | alfa = float(input(""))
+               5 | a = sqrt(b**2 + c**2 - 2*b*c*cos(radians(alfa)))
+
+  [4] Linha 5: Variável 'a' com nome muito curto (≤4 chars)
+      Trecho  : a = ...
+      Contexto:
+               4 | alfa = float(input(""))
+        >>>    5 | a = sqrt(b**2 + c**2 - 2*b*c*cos(radians(alfa)))
+               6 | print(round(a, 2))
 
 ======================================================================

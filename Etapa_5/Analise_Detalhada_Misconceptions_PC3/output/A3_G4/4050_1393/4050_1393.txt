@@ -1,8 +1,8 @@
 ======================================================================
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
-Arquivo     : 4050_1393.py
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2022_1_v1.81\2022-1\438\users\7740\codes\4050_1393.py
+Arquivo     : 4050_1393.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2022_1_v1.81\2022-1\438\users\7740\executions\4050_1393.log
 Assessment  : 4050
 Título      : TP 2 - Condicional Simples e Composta (if/else)
 Questão     : 1393
@@ -16,13 +16,16 @@ Total MCs   : 2
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | p = float(input("o peso da encomenda "))
-     2 | v = float(input("o valor do frete "))
-     3 | 
-     4 | 
+     1 | v = float(input("valor de vendas "))
+     2 | 
+     3 | if v >= 1000:
+     4 |    d =(v*1000)/100
      5 | 
-     6 | 
-     7 | 
+     6 | else:
+     7 | 	c =(v-1000)
+     8 | 	l =(v/10)
+     9 | 	p =(v+200+l)
+    10 | 	print(round(p,2))
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
@@ -31,33 +34,55 @@ DETALHAMENTO DOS MISCONCEPTIONS
 ▶ A3 — Variável inicializada desnecessariamente
   Ocorrências: 2
 
-  [1] Linha 1: Variável 'p' declarada mas nunca utilizada
-      Trecho  : p = ...
+  [1] Linha 4: Variável 'd' declarada mas nunca utilizada
+      Trecho  : d = ...
       Contexto:
-        >>>    1 | p = float(input("o peso da encomenda "))
-               2 | v = float(input("o valor do frete "))
+               3 | if v >= 1000:
+        >>>    4 |    d =(v*1000)/100
+               5 | 
 
-  [2] Linha 2: Variável 'v' declarada mas nunca utilizada
-      Trecho  : v = ...
+  [2] Linha 7: Variável 'c' declarada mas nunca utilizada
+      Trecho  : c = ...
       Contexto:
-               1 | p = float(input("o peso da encomenda "))
-        >>>    2 | v = float(input("o valor do frete "))
-               3 | 
+               6 | else:
+        >>>    7 | 	c =(v-1000)
+               8 | 	l =(v/10)
 
 ▶ G4 — Funções/variáveis com nomes não significativos
-  Ocorrências: 2
+  Ocorrências: 5
 
-  [1] Linha 1: Variável 'p' com nome muito curto (≤4 chars)
-      Trecho  : p = ...
-      Contexto:
-        >>>    1 | p = float(input("o peso da encomenda "))
-               2 | v = float(input("o valor do frete "))
-
-  [2] Linha 2: Variável 'v' com nome muito curto (≤4 chars)
+  [1] Linha 1: Variável 'v' com nome muito curto (≤4 chars)
       Trecho  : v = ...
       Contexto:
-               1 | p = float(input("o peso da encomenda "))
-        >>>    2 | v = float(input("o valor do frete "))
-               3 | 
+        >>>    1 | v = float(input("valor de vendas "))
+               2 | 
+
+  [2] Linha 4: Variável 'd' com nome muito curto (≤4 chars)
+      Trecho  : d = ...
+      Contexto:
+               3 | if v >= 1000:
+        >>>    4 |    d =(v*1000)/100
+               5 | 
+
+  [3] Linha 7: Variável 'c' com nome muito curto (≤4 chars)
+      Trecho  : c = ...
+      Contexto:
+               6 | else:
+        >>>    7 | 	c =(v-1000)
+               8 | 	l =(v/10)
+
+  [4] Linha 8: Variável 'l' com nome muito curto (≤4 chars)
+      Trecho  : l = ...
+      Contexto:
+               7 | 	c =(v-1000)
+        >>>    8 | 	l =(v/10)
+               9 | 	p =(v+200+l)
+
+  [5] Linha 9: Variável 'p' com nome muito curto (≤4 chars)
+      Trecho  : p = ...
+      Contexto:
+               8 | 	l =(v/10)
+        >>>    9 | 	p =(v+200+l)
+              10 | 	print(round(p,2))
 
 ======================================================================

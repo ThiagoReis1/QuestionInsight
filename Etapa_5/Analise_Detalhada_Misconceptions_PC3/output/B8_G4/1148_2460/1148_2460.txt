@@ -1,12 +1,12 @@
 ======================================================================
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
-Arquivo     : 1148_2460.py
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2018_1_v1.81\2018-1\188\users\3178\codes\1148_2460.py
+Arquivo     : 1148_2460.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2018_1_v1.81\2018-1\188\users\3169\executions\1148_2460.log
 Assessment  : 1148
 Título      : TP03 – Condicionais Encadeadas (if/elif)
 Questão     : 2460
-Aluno       : 3178
+Aluno       : 3169
 Grupo       : TP 03
 Significado : Estrutura Condicional Encadeada
 Total MCs   : 2
@@ -16,16 +16,17 @@ Total MCs   : 2
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | p1=float(input("Informe o preco:"))
-     2 | p2=float(input("Informe o preco:"))
-     3 | a=(p2-p1)
-     4 | 
-     5 | if(a>0):
-     6 | 	print("saldo postivo")
-     7 | elif(a<0):
-     8 | 	print("saldo negativo")
-     9 | elif(a==0):
-    10 | 	print("sem variacao")
+     1 | pa=float(input("Preco na abertura da bolsa:"))
+     2 | pf=float(input("preco no fechamento da bolsa:"))
+     3 | 
+     4 | f=(pf-pa)/100
+     5 | 
+     6 | if (f>0):
+     7 | 	print("saldo positivo")
+     8 | elif (f==0):
+     9 | 	print("sem variacao")
+    10 | elif (f<0):
+    11 | 	print("saldo negativo")
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
@@ -34,34 +35,34 @@ DETALHAMENTO DOS MISCONCEPTIONS
 ▶ B8 — Não utilização de elif/else
   Ocorrências: 1
 
-  [1] Linha 7: Cadeia if/elif sem bloco else final
-      Trecho  : if ... (linha 7) / elif ... sem else
+  [1] Linha 8: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 8) / elif ... sem else
       Contexto:
-               6 | 	print("saldo postivo")
-        >>>    7 | elif(a<0):
-               8 | 	print("saldo negativo")
+               7 | 	print("saldo positivo")
+        >>>    8 | elif (f==0):
+               9 | 	print("sem variacao")
 
 ▶ G4 — Funções/variáveis com nomes não significativos
   Ocorrências: 3
 
-  [1] Linha 1: Variável 'p1' com nome muito curto (≤4 chars)
-      Trecho  : p1 = ...
+  [1] Linha 1: Variável 'pa' com nome muito curto (≤4 chars)
+      Trecho  : pa = ...
       Contexto:
-        >>>    1 | p1=float(input("Informe o preco:"))
-               2 | p2=float(input("Informe o preco:"))
+        >>>    1 | pa=float(input("Preco na abertura da bolsa:"))
+               2 | pf=float(input("preco no fechamento da bolsa:"))
 
-  [2] Linha 2: Variável 'p2' com nome muito curto (≤4 chars)
-      Trecho  : p2 = ...
+  [2] Linha 2: Variável 'pf' com nome muito curto (≤4 chars)
+      Trecho  : pf = ...
       Contexto:
-               1 | p1=float(input("Informe o preco:"))
-        >>>    2 | p2=float(input("Informe o preco:"))
-               3 | a=(p2-p1)
+               1 | pa=float(input("Preco na abertura da bolsa:"))
+        >>>    2 | pf=float(input("preco no fechamento da bolsa:"))
+               3 | 
 
-  [3] Linha 3: Variável 'a' com nome muito curto (≤4 chars)
-      Trecho  : a = ...
+  [3] Linha 4: Variável 'f' com nome muito curto (≤4 chars)
+      Trecho  : f = ...
       Contexto:
-               2 | p2=float(input("Informe o preco:"))
-        >>>    3 | a=(p2-p1)
-               4 | 
+               3 | 
+        >>>    4 | f=(pf-pa)/100
+               5 | 
 
 ======================================================================

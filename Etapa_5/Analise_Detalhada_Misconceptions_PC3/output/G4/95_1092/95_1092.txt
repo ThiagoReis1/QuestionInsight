@@ -1,12 +1,12 @@
 ======================================================================
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
-Arquivo     : 95_1092.py
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2016_1_v1.81\2016-1\110\users\1214\codes\95_1092.py
+Arquivo     : 95_1092.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2016_1_v1.81\2016-1\110\users\1108\executions\95_1092.log
 Assessment  : 95
 Título      : Avaliação Parcial 02 – Estrutura Condicional Composta (sem Aninhamento)
 Questão     : 1092
-Aluno       : 1214
+Aluno       : 1108
 Grupo       : TP 02
 Significado : Estrutura Condicional Simples e Composta
 Total MCs   : 1
@@ -16,65 +16,63 @@ Total MCs   : 1
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | #Universidade Federal do Amazonas
-     2 | #Aluna: Larissa Magno Leão
-     3 | #Matrícula: 21551610
-     4 | #Exercicio 2
-     5 | 
-     6 | x= int(input("Informe um numero:"))
-     7 | 
-     8 | a= x //100 
-     9 | r= x % 100
-    10 | b= r // 10
-    11 | c= r % 10
-    12 | 
-    13 | soma= a **3 + b**3 + c**3
-    14 | 
-    15 | if (soma==x):
-    16 | 	print(x,"atende a propriedade")
-    17 | else:
-    18 | 	print(soma)
+     1 | X = int(input())
+     2 | 
+     3 | a = X // 100
+     4 | restoX = X % 100
+     5 | b = restoX // 10
+     6 | restoB = restoX % 10
+     7 | c = restoB
+     8 | 
+     9 | if(X == (a**3 + b**3 + c**3)):
+    10 | 	print(X," atende a propriedade")
+    11 | 
+    12 | else:
+    13 | 		s = a**3 + b**3 + c**3
+    14 | 		print(s)
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
 ----------------------------------------------------------------------
 
 ▶ G4 — Funções/variáveis com nomes não significativos
-  Ocorrências: 6
+  Ocorrências: 5
 
-  [1] Linha 6: Variável 'x' com nome muito curto (≤4 chars)
-      Trecho  : x = ...
+  [1] Linha 1: Variável 'X' com nome muito curto (≤4 chars)
+      Trecho  : X = ...
       Contexto:
-               5 | 
-        >>>    6 | x= int(input("Informe um numero:"))
-               7 | 
+        >>>    1 | X = int(input())
+               2 | 
 
-  [2] Linha 8: Variável 'a' com nome muito curto (≤4 chars)
+  [2] Linha 3: Variável 'a' com nome muito curto (≤4 chars)
       Trecho  : a = ...
       Contexto:
-               7 | 
-        >>>    8 | a= x //100 
-               9 | r= x % 100
+               2 | 
+        >>>    3 | a = X // 100
+               4 | restoX = X % 100
 
-  [3] Linha 9: Variável 'r' com nome muito curto (≤4 chars)
-      Trecho  : r = ...
-      Contexto:
-               8 | a= x //100 
-        >>>    9 | r= x % 100
-              10 | b= r // 10
-
-  [4] Linha 10: Variável 'b' com nome muito curto (≤4 chars)
+  [3] Linha 5: Variável 'b' com nome muito curto (≤4 chars)
       Trecho  : b = ...
       Contexto:
-               9 | r= x % 100
-        >>>   10 | b= r // 10
-              11 | c= r % 10
+               4 | restoX = X % 100
+        >>>    5 | b = restoX // 10
+               6 | restoB = restoX % 10
 
-  [5] Linha 11: Variável 'c' com nome muito curto (≤4 chars)
+  [4] Linha 7: Variável 'c' com nome muito curto (≤4 chars)
       Trecho  : c = ...
       Contexto:
-              10 | b= r // 10
-        >>>   11 | c= r % 10
+               6 | restoB = restoX % 10
+        >>>    7 | c = restoB
+               8 | 
+
+  [5] Linha 13: Variável 's' com nome muito curto (≤4 chars)
+      Trecho  : s = ...
+      Contexto:
+              12 | else:
+        >>>   13 | 		s = a**3 + b**3 + c**3
+              14 | 		print(s)
+
+======================================================================% 10
               12 | 
 
   [6] Linha 13: Variável 'soma' com nome muito curto (≤4 chars)

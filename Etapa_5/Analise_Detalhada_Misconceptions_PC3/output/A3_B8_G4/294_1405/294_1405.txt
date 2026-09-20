@@ -1,0 +1,83 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo     : 294_1405.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2016_2_v1.81\2016-2\127\users\1907\executions\294_1405.log
+Assessment  : 294
+Título      : Trabalho Prático 02 - Estrutura Condicional Simples e Composta (sem aninhamento)
+Questão     : 1405
+Aluno       : 1907
+Grupo       : TP 02
+Significado : Estrutura Condicional Simples e Composta
+Total MCs   : 3
+
+⚠️  Misconceptions detectados: A3, B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | atk = str(input("digite o atk"))
+     2 | N = int(input("digite o N"))
+     3 | t = int(input("digite a qtde de turnos"))
+     4 | if( atk == 'cuspe'):
+     5 |   dano = N*t
+     6 | if( atk == 'cauda'):
+     7 |   dano = 2*N*t
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 1
+
+  [1] Linha 5: Variável 'dano' declarada mas nunca utilizada
+      Trecho  : dano = ...
+      Contexto:
+               4 | if( atk == 'cuspe'):
+        >>>    5 |   dano = N*t
+               6 | if( atk == 'cauda'):
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 0: B8 detectado pelo VisitorMC3 (localização exata não mapeada)
+      Trecho  : —
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 5
+
+  [1] Linha 1: Variável 'atk' com nome muito curto (≤4 chars)
+      Trecho  : atk = ...
+      Contexto:
+        >>>    1 | atk = str(input("digite o atk"))
+               2 | N = int(input("digite o N"))
+
+  [2] Linha 2: Variável 'N' com nome muito curto (≤4 chars)
+      Trecho  : N = ...
+      Contexto:
+               1 | atk = str(input("digite o atk"))
+        >>>    2 | N = int(input("digite o N"))
+               3 | t = int(input("digite a qtde de turnos"))
+
+  [3] Linha 3: Variável 't' com nome muito curto (≤4 chars)
+      Trecho  : t = ...
+      Contexto:
+               2 | N = int(input("digite o N"))
+        >>>    3 | t = int(input("digite a qtde de turnos"))
+               4 | if( atk == 'cuspe'):
+
+  [4] Linha 5: Variável 'dano' com nome muito curto (≤4 chars)
+      Trecho  : dano = ...
+      Contexto:
+               4 | if( atk == 'cuspe'):
+        >>>    5 |   dano = N*t
+               6 | if( atk == 'cauda'):
+
+  [5] Linha 7: Variável 'dano' com nome muito curto (≤4 chars)
+      Trecho  : dano = ...
+      Contexto:
+               6 | if( atk == 'cauda'):
+        >>>    7 |   dano = 2*N*t
+
+======================================================================

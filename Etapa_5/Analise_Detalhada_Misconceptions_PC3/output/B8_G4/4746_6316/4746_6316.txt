@@ -1,12 +1,12 @@
 ======================================================================
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
-Arquivo     : 4746_6316.py
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2022_2_v1.81\2022-2\491\users\8323\codes\4746_6316.py
+Arquivo     : 4746_6316.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2022_2_v1.81\2022-2\491\users\8247\executions\4746_6316.log
 Assessment  : 4746
 Título      : TP 05: Vetores e Strings
 Questão     : 6316
-Aluno       : 8323
+Aluno       : 8247
 Grupo       : TP 05
 Significado : Vetores e Strings
 Total MCs   : 2
@@ -16,26 +16,24 @@ Total MCs   : 2
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | v = input().upper()
-     2 | 
-     3 | i = 0
-     4 | qd = 0
-     5 | qs = 0
-     6 | qi = 0
-     7 | price = 0
-     8 | 
-     9 | while i < len(v):
-    10 | 	if v[i] == "D":
-    11 | 		price = price + 2.25
-    12 | 		qd = qd + 1
-    13 | 	elif v[i] == "S":
-    14 | 		price = price + 4
-    15 | 		qs = qs + 1
-    16 | 	elif v[i] == "I":
-    17 | 		price = price + 6.90
-    18 | 		qi = qi + 1
-    19 | 	i = i + 1
-    20 | print(round(price, 2), qd, qs, qi)
+     1 | st = input().upper()
+     2 | d = 0
+     3 | s = 0 
+     4 | i = 0
+     5 | total = 0
+     6 | r = 0
+     7 | while r < len(st):
+     8 | 	if st[r] == 'D':
+     9 | 		total = total + 2.25
+    10 | 		d = d + 1
+    11 | 	elif st[r] == 'S':
+    12 | 		total = total + 4
+    13 | 		s = s + 1
+    14 | 	elif st[r] == 'I':
+    15 | 		total = total + 6.9
+    16 | 		i = i + 1
+    17 | 	r = r + 1
+    18 | print(round(total, 2), d, s, i)
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
@@ -44,12 +42,12 @@ DETALHAMENTO DOS MISCONCEPTIONS
 ▶ B8 — Não utilização de elif/else
   Ocorrências: 1
 
-  [1] Linha 13: Cadeia if/elif sem bloco else final
-      Trecho  : if ... (linha 13) / elif ... sem else
+  [1] Linha 11: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 11) / elif ... sem else
       Contexto:
-              12 | 		qd = qd + 1
-        >>>   13 | 	elif v[i] == "S":
-              14 | 		price = price + 4
+              10 | 		d = d + 1
+        >>>   11 | 	elif st[r] == 'S':
+              12 | 		total = total + 4
 
 ▶ G4 — Funções/variáveis com nomes não significativos
   Ocorrências: 1

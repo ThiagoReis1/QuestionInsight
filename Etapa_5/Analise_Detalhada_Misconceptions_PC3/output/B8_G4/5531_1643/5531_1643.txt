@@ -1,12 +1,12 @@
 ======================================================================
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
-Arquivo     : 5531_1643.py
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2023_2_v1.81\2023-2\562\users\9198\codes\5531_1643.py
+Arquivo     : 5531_1643.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2023_2_v1.81\2023-2\562\users\9191\executions\5531_1643.log
 Assessment  : 5531
 Título      : TP 6: Estrutura de Repetição por Contagem (for)
 Questão     : 1643
-Aluno       : 9198
+Aluno       : 9191
 Grupo       : TP 06
 Significado : Estrutura de Repetição por Contagem
 Total MCs   : 2
@@ -18,22 +18,22 @@ CÓDIGO FONTE
 ----------------------------------------------------------------------
      1 | from numpy import*
      2 | 
-     3 | x = array(eval(input("Digite: ")))
-     4 | c = 0
-     5 | 
-     6 | for i in range(size(x)):
-     7 | 	if (x[i] >= 5.0):
-     8 | 		c += 1
-     9 | print(c)
-    10 | 
-    11 | z = zeros(c, dtype=int)
-    12 | j = 0
-    13 | 
-    14 | for i in range(size(x)):
-    15 | 	if (x[i] >= 5):
-    16 | 		z[j] = i
-    17 | 		j += 1
-    18 | print(z)
+     3 | v=array(eval(input("nota final:"))) 
+     4 | c=0
+     5 | d=0
+     6 | 
+     7 | for i in range(size(v)):
+     8 | 	if v[i] >= 5:
+     9 | 		c = c + 1
+    10 | v1=zeros(c, dtype=int)
+    11 | 
+    12 | for x in range(size(v)):
+    13 | 	if v[x] >= 5:
+    14 | 		v1[d] = x
+    15 | 		d = d + 1 
+    16 | 		
+    17 | print(c)
+    18 | print(v1)
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
@@ -46,37 +46,38 @@ DETALHAMENTO DOS MISCONCEPTIONS
       Trecho  : —
 
 ▶ G4 — Funções/variáveis com nomes não significativos
-  Ocorrências: 4
+  Ocorrências: 6
 
-  [1] Linha 3: Variável 'x' com nome muito curto (≤4 chars)
-      Trecho  : x = ...
+  [1] Linha 3: Variável 'v' com nome muito curto (≤4 chars)
+      Trecho  : v = ...
       Contexto:
                2 | 
-        >>>    3 | x = array(eval(input("Digite: ")))
-               4 | c = 0
+        >>>    3 | v=array(eval(input("nota final:"))) 
+               4 | c=0
 
   [2] Linha 4: Variável 'c' com nome muito curto (≤4 chars)
       Trecho  : c = ...
       Contexto:
-               3 | x = array(eval(input("Digite: ")))
-        >>>    4 | c = 0
-               5 | 
+               3 | v=array(eval(input("nota final:"))) 
+        >>>    4 | c=0
+               5 | d=0
 
-  [3] Linha 11: Variável 'z' com nome muito curto (≤4 chars)
-      Trecho  : z = ...
+  [3] Linha 5: Variável 'd' com nome muito curto (≤4 chars)
+      Trecho  : d = ...
       Contexto:
-              10 | 
-        >>>   11 | z = zeros(c, dtype=int)
-              12 | j = 0
+               4 | c=0
+        >>>    5 | d=0
+               6 | 
 
-  [4] Linha 12: Variável 'j' com nome muito curto (≤4 chars)
-      Trecho  : j = ...
+  [4] Linha 10: Variável 'v1' com nome muito curto (≤4 chars)
+      Trecho  : v1 = ...
       Contexto:
-              11 | z = zeros(c, dtype=int)
-        >>>   12 | j = 0
-              13 | 
+               9 | 		c = c + 1
+        >>>   10 | v1=zeros(c, dtype=int)
+              11 | 
 
-====================================================================== Trecho  : c = ...
+  [5] Linha 9: Variável 'c' com nome muito curto (≤4 chars)
+      Trecho  : c = ...
       Contexto:
                8 | 	if v[i] >= 5:
         >>>    9 | 		c = c + 1

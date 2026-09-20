@@ -1,12 +1,12 @@
 ======================================================================
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
-Arquivo     : 623_1537.py
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2017_1_v1.81\2017-1\139\users\2408\codes\623_1537.py
+Arquivo     : 623_1537.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2017_1_v1.81\2017-1\139\users\2388\executions\623_1537.log
 Assessment  : 623
 Título      : Trabalho Prático 4: Estrutura de Repetição por Condição (while)
 Questão     : 1537
-Aluno       : 2408
+Aluno       : 2388
 Grupo       : TP 04
 Significado : Estrutura de Repetição por Condição
 Total MCs   : 1
@@ -16,22 +16,23 @@ Total MCs   : 1
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | from math import *
+     1 | from math import*
      2 | 
-     3 | x = int(input())
-     4 | k = int(input())
-     5 | if(k % 2 == 0):
-     6 | 	a = 1
-     7 | else:
-     8 | 	a = 1
-     9 | 	k = ( k * 2) + 1
-    10 | 	e= 0
-    11 | while(k >= 1):
-    12 | 	b =factorial(k)
-    13 | 	c = ( x ** k)
-    14 | 	c = a * (c / b)
-    15 | 	e = e + c
-    16 | print(round(e,9))
+     3 | x = float(input("num :"))
+     4 | k = int(input("quantidade de termos: "))
+     5 | 
+     6 | 
+     7 | y = 1
+     8 | t= 0
+     9 | e = 0
+    10 | m=1
+    11 | 
+    12 | while(t < k):
+    13 | 	m= 1 + e
+    14 | 	e = e+  ((x ** y)/ factorial(y))
+    15 | 	y = y + 1
+    16 | 	t = t + 1
+    17 | print(round(m,9))
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
@@ -44,70 +45,70 @@ DETALHAMENTO DOS MISCONCEPTIONS
       Trecho  : x = ...
       Contexto:
                2 | 
-        >>>    3 | x = int(input())
-               4 | k = int(input())
+        >>>    3 | x = float(input("num :"))
+               4 | k = int(input("quantidade de termos: "))
 
   [2] Linha 4: Variável 'k' com nome muito curto (≤4 chars)
       Trecho  : k = ...
       Contexto:
-               3 | x = int(input())
-        >>>    4 | k = int(input())
-               5 | if(k % 2 == 0):
+               3 | x = float(input("num :"))
+        >>>    4 | k = int(input("quantidade de termos: "))
+               5 | 
 
-  [3] Linha 6: Variável 'a' com nome muito curto (≤4 chars)
-      Trecho  : a = ...
+  [3] Linha 7: Variável 'y' com nome muito curto (≤4 chars)
+      Trecho  : y = ...
       Contexto:
-               5 | if(k % 2 == 0):
-        >>>    6 | 	a = 1
-               7 | else:
+               6 | 
+        >>>    7 | y = 1
+               8 | t= 0
 
-  [4] Linha 8: Variável 'a' com nome muito curto (≤4 chars)
-      Trecho  : a = ...
+  [4] Linha 8: Variável 't' com nome muito curto (≤4 chars)
+      Trecho  : t = ...
       Contexto:
-               7 | else:
-        >>>    8 | 	a = 1
-               9 | 	k = ( k * 2) + 1
+               7 | y = 1
+        >>>    8 | t= 0
+               9 | e = 0
 
-  [5] Linha 9: Variável 'k' com nome muito curto (≤4 chars)
-      Trecho  : k = ...
-      Contexto:
-               8 | 	a = 1
-        >>>    9 | 	k = ( k * 2) + 1
-              10 | 	e= 0
-
-  [6] Linha 10: Variável 'e' com nome muito curto (≤4 chars)
+  [5] Linha 9: Variável 'e' com nome muito curto (≤4 chars)
       Trecho  : e = ...
       Contexto:
-               9 | 	k = ( k * 2) + 1
-        >>>   10 | 	e= 0
-              11 | while(k >= 1):
+               8 | t= 0
+        >>>    9 | e = 0
+              10 | m=1
 
-  [7] Linha 12: Variável 'b' com nome muito curto (≤4 chars)
-      Trecho  : b = ...
+  [6] Linha 10: Variável 'm' com nome muito curto (≤4 chars)
+      Trecho  : m = ...
       Contexto:
-              11 | while(k >= 1):
-        >>>   12 | 	b =factorial(k)
-              13 | 	c = ( x ** k)
+               9 | e = 0
+        >>>   10 | m=1
+              11 | 
 
-  [8] Linha 13: Variável 'c' com nome muito curto (≤4 chars)
-      Trecho  : c = ...
+  [7] Linha 13: Variável 'm' com nome muito curto (≤4 chars)
+      Trecho  : m = ...
       Contexto:
-              12 | 	b =factorial(k)
-        >>>   13 | 	c = ( x ** k)
-              14 | 	c = a * (c / b)
+              12 | while(t < k):
+        >>>   13 | 	m= 1 + e
+              14 | 	e = e+  ((x ** y)/ factorial(y))
 
-  [9] Linha 14: Variável 'c' com nome muito curto (≤4 chars)
-      Trecho  : c = ...
-      Contexto:
-              13 | 	c = ( x ** k)
-        >>>   14 | 	c = a * (c / b)
-              15 | 	e = e + c
-
-  [10] Linha 15: Variável 'e' com nome muito curto (≤4 chars)
+  [8] Linha 14: Variável 'e' com nome muito curto (≤4 chars)
       Trecho  : e = ...
       Contexto:
-              14 | 	c = a * (c / b)
-        >>>   15 | 	e = e + c
-              16 | print(round(e,9))
+              13 | 	m= 1 + e
+        >>>   14 | 	e = e+  ((x ** y)/ factorial(y))
+              15 | 	y = y + 1
+
+  [9] Linha 15: Variável 'y' com nome muito curto (≤4 chars)
+      Trecho  : y = ...
+      Contexto:
+              14 | 	e = e+  ((x ** y)/ factorial(y))
+        >>>   15 | 	y = y + 1
+              16 | 	t = t + 1
+
+  [10] Linha 16: Variável 't' com nome muito curto (≤4 chars)
+      Trecho  : t = ...
+      Contexto:
+              15 | 	y = y + 1
+        >>>   16 | 	t = t + 1
+              17 | print(round(m,9))
 
 ======================================================================

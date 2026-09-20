@@ -1,8 +1,8 @@
 ======================================================================
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
-Arquivo     : 980_1650.py
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2017_2_v1.81\2017-2\160\users\2856\codes\980_1650.py
+Arquivo     : 980_1650.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2017_2_v1.81\2017-2\160\users\2856\executions\980_1650.log
 Assessment  : 980
 Título      : Trabalho Prático 06 – Repetição por contagem
 Questão     : 1650
@@ -17,23 +17,19 @@ Total MCs   : 2
 CÓDIGO FONTE
 ----------------------------------------------------------------------
      1 | from numpy import*
-     2 | x = input("x: ")
-     3 | x = x.split(',')
-     4 | v = zeros(5, dtype = int)
-     5 | for i in x:
-     6 | 	y = max(x)
-     7 | 	if(x == "P"):
-     8 | 		v[0] = v[0] + 1
-     9 | 	elif(x == "C"):
-    10 | 		v[1] = v[1] + 1
-    11 | 	elif(x == "R"):
-    12 | 		v[2] = v[2] + 1
-    13 | 	elif(x == "L"):
-    14 | 		v[3] = v[3] + 1
-    15 | 	elif(x == "B"):
-    16 | 		v[4] = v[4] + 1
-    17 | print(y)
-    18 | print(v)
+     2 | x = input("x: ").split(',')
+     3 | v = zeros(5, dtype = int)
+     4 | if(x == "p"):
+     5 | 	v[0] = v[0] + 1
+     6 | elif(x == "c"):
+     7 | 	v[1] = v[1] + 1
+     8 | elif(x == "r"):
+     9 | 	v[2] = v[2] + 1
+    10 | elif(x == "l"):
+    11 | 	v[3] = v[3] + 1
+    12 | elif(x == "b"):
+    13 | 	v[4] = v[4] + 1
+    14 | print(v)
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
@@ -42,45 +38,48 @@ DETALHAMENTO DOS MISCONCEPTIONS
 ▶ B8 — Não utilização de elif/else
   Ocorrências: 1
 
-  [1] Linha 13: Cadeia if/elif sem bloco else final
-      Trecho  : if ... (linha 13) / elif ... sem else
+  [1] Linha 10: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 10) / elif ... sem else
       Contexto:
-              12 | 		v[2] = v[2] + 1
-        >>>   13 | 	elif(x == "L"):
-              14 | 		v[3] = v[3] + 1
+               9 | 	v[2] = v[2] + 1
+        >>>   10 | elif(x == "l"):
+              11 | 	v[3] = v[3] + 1
 
 ▶ G4 — Funções/variáveis com nomes não significativos
-  Ocorrências: 4
+  Ocorrências: 2
 
   [1] Linha 2: Variável 'x' com nome muito curto (≤4 chars)
       Trecho  : x = ...
       Contexto:
                1 | from numpy import*
-        >>>    2 | x = input("x: ")
-               3 | x = x.split(',')
+        >>>    2 | x = input("x: ").split(',')
+               3 | v = zeros(5, dtype = int)
 
-  [2] Linha 3: Variável 'x' com nome muito curto (≤4 chars)
-      Trecho  : x = ...
-      Contexto:
-               2 | x = input("x: ")
-        >>>    3 | x = x.split(',')
-               4 | v = zeros(5, dtype = int)
-
-  [3] Linha 4: Variável 'v' com nome muito curto (≤4 chars)
+  [2] Linha 3: Variável 'v' com nome muito curto (≤4 chars)
       Trecho  : v = ...
       Contexto:
-               3 | x = x.split(',')
-        >>>    4 | v = zeros(5, dtype = int)
-               5 | for i in x:
+               2 | x = input("x: ").split(',')
+        >>>    3 | v = zeros(5, dtype = int)
+               4 | if(x == "p"):
 
-  [4] Linha 6: Variável 'y' com nome muito curto (≤4 chars)
-      Trecho  : y = ...
+======================================================================     3 | 
+
+  [2] Linha 4: Variável 'cont' com nome muito curto (≤4 chars)
+      Trecho  : cont = ...
       Contexto:
-               5 | for i in x:
-        >>>    6 | 	y = max(x)
-               7 | 	if(x == "P"):
+               3 | 
+        >>>    4 | cont = zeros(5, dtype=int)
+               5 | 
 
-======================================================================..
+  [3] Linha 6: Variável 'c_p' com nome muito curto (≤4 chars)
+      Trecho  : c_p = ...
+      Contexto:
+               5 | 
+        >>>    6 | c_p = 0
+               7 | c_c = 0
+
+  [4] Linha 7: Variável 'c_c' com nome muito curto (≤4 chars)
+      Trecho  : c_c = ...
       Contexto:
                6 | c_p = 0
         >>>    7 | c_c = 0

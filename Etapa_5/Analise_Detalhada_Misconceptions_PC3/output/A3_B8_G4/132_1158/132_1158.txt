@@ -1,0 +1,88 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo     : 132_1158.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2016_1_v1.81\2016-1\111\users\1178\executions\132_1158.log
+Assessment  : 132
+Título      : Avaliação Parcial 04 – Estrutura de Repetição por Condição (while)
+Questão     : 1158
+Aluno       : 1178
+Grupo       : TP 04
+Significado : Estrutura de Repetição por Condição
+Total MCs   : 3
+
+⚠️  Misconceptions detectados: A3, B8, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | pit = int(input("Populaçao inicial: "))
+     2 | taxac = float(input("Taxa anual: "))
+     3 | num= int(input("Roubo: "))
+     4 | ano1= pit+pit*0.05
+     5 | 
+     6 | viv = ano1 - num
+     7 | while(viv<=num):
+     8 | 	print("extintos")
+     9 | 	viv = ano1 - num
+    10 | if (ano1 != 0) or (ano1>num):
+    11 | 	print("9")
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ A3 — Variável inicializada desnecessariamente
+  Ocorrências: 1
+
+  [1] Linha 2: Variável 'taxac' declarada mas nunca utilizada
+      Trecho  : taxac = ...
+      Contexto:
+               1 | pit = int(input("Populaçao inicial: "))
+        >>>    2 | taxac = float(input("Taxa anual: "))
+               3 | num= int(input("Roubo: "))
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 0: B8 detectado pelo VisitorMC3 (localização exata não mapeada)
+      Trecho  : —
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 5
+
+  [1] Linha 1: Variável 'pit' com nome muito curto (≤4 chars)
+      Trecho  : pit = ...
+      Contexto:
+        >>>    1 | pit = int(input("Populaçao inicial: "))
+               2 | taxac = float(input("Taxa anual: "))
+
+  [2] Linha 3: Variável 'num' com nome muito curto (≤4 chars)
+      Trecho  : num = ...
+      Contexto:
+               2 | taxac = float(input("Taxa anual: "))
+        >>>    3 | num= int(input("Roubo: "))
+               4 | ano1= pit+pit*0.05
+
+  [3] Linha 4: Variável 'ano1' com nome muito curto (≤4 chars)
+      Trecho  : ano1 = ...
+      Contexto:
+               3 | num= int(input("Roubo: "))
+        >>>    4 | ano1= pit+pit*0.05
+               5 | 
+
+  [4] Linha 6: Variável 'viv' com nome muito curto (≤4 chars)
+      Trecho  : viv = ...
+      Contexto:
+               5 | 
+        >>>    6 | viv = ano1 - num
+               7 | while(viv<=num):
+
+  [5] Linha 9: Variável 'viv' com nome muito curto (≤4 chars)
+      Trecho  : viv = ...
+      Contexto:
+               8 | 	print("extintos")
+        >>>    9 | 	viv = ano1 - num
+              10 | if (ano1 != 0) or (ano1>num):
+
+======================================================================

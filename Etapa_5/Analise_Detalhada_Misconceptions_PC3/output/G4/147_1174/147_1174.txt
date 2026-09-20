@@ -1,12 +1,12 @@
 ======================================================================
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
-Arquivo     : 147_1174.py
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2016_1_v1.81\2016-1\110\users\1213\codes\147_1174.py
+Arquivo     : 147_1174.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2016_1_v1.81\2016-1\110\users\1225\executions\147_1174.log
 Assessment  : 147
 Título      : Avaliação Parcial 04 – Estrutura de Repetição por Condição (while)
 Questão     : 1174
-Aluno       : 1213
+Aluno       : 1225
 Grupo       : TP 04
 Significado : Estrutura de Repetição por Condição
 Total MCs   : 1
@@ -16,86 +16,55 @@ Total MCs   : 1
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | n = int(input("Digite um numero:"))
-     2 | i = -1
-     3 | y = 1
-     4 | soma = 0
-     5 | 
-     6 | while(i <= n):
-     7 | 	z = (2*y + 1)
-     8 | 	soma = soma + (i**3)/(9 + z)
-     9 | 	y = y+1
-    10 | 	i = i+1
-    11 | 	i = i*(-1)
-    12 | print(round(soma,8))	
+     1 | num=int(input("Digite o numero: "))
+     2 | j=0 #contador do laço
+     3 | y=0
+     4 | sinal=-1
+     5 | while(j<=num):
+     6 | 	y = y-sinal*(j**3)/(9+2*j+1)
+     7 | 	sinal=-sinal
+     8 | 	j = j+1
+     9 | print(round(y,8))
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
 ----------------------------------------------------------------------
 
 ▶ G4 — Funções/variáveis com nomes não significativos
-  Ocorrências: 9
+  Ocorrências: 5
 
-  [1] Linha 1: Variável 'n' com nome muito curto (≤4 chars)
-      Trecho  : n = ...
+  [1] Linha 1: Variável 'num' com nome muito curto (≤4 chars)
+      Trecho  : num = ...
       Contexto:
-        >>>    1 | n = int(input("Digite um numero:"))
-               2 | i = -1
+        >>>    1 | num=int(input("Digite o numero: "))
+               2 | j=0 #contador do laço
 
-  [2] Linha 2: Variável 'i' com nome muito curto (≤4 chars)
-      Trecho  : i = ...
+  [2] Linha 2: Variável 'j' com nome muito curto (≤4 chars)
+      Trecho  : j = ...
       Contexto:
-               1 | n = int(input("Digite um numero:"))
-        >>>    2 | i = -1
-               3 | y = 1
+               1 | num=int(input("Digite o numero: "))
+        >>>    2 | j=0 #contador do laço
+               3 | y=0
 
   [3] Linha 3: Variável 'y' com nome muito curto (≤4 chars)
       Trecho  : y = ...
       Contexto:
-               2 | i = -1
-        >>>    3 | y = 1
-               4 | soma = 0
+               2 | j=0 #contador do laço
+        >>>    3 | y=0
+               4 | sinal=-1
 
-  [4] Linha 4: Variável 'soma' com nome muito curto (≤4 chars)
-      Trecho  : soma = ...
-      Contexto:
-               3 | y = 1
-        >>>    4 | soma = 0
-               5 | 
-
-  [5] Linha 7: Variável 'z' com nome muito curto (≤4 chars)
-      Trecho  : z = ...
-      Contexto:
-               6 | while(i <= n):
-        >>>    7 | 	z = (2*y + 1)
-               8 | 	soma = soma + (i**3)/(9 + z)
-
-  [6] Linha 8: Variável 'soma' com nome muito curto (≤4 chars)
-      Trecho  : soma = ...
-      Contexto:
-               7 | 	z = (2*y + 1)
-        >>>    8 | 	soma = soma + (i**3)/(9 + z)
-               9 | 	y = y+1
-
-  [7] Linha 9: Variável 'y' com nome muito curto (≤4 chars)
+  [4] Linha 6: Variável 'y' com nome muito curto (≤4 chars)
       Trecho  : y = ...
       Contexto:
-               8 | 	soma = soma + (i**3)/(9 + z)
-        >>>    9 | 	y = y+1
-              10 | 	i = i+1
+               5 | while(j<=num):
+        >>>    6 | 	y = y-sinal*(j**3)/(9+2*j+1)
+               7 | 	sinal=-sinal
 
-  [8] Linha 10: Variável 'i' com nome muito curto (≤4 chars)
-      Trecho  : i = ...
+  [5] Linha 8: Variável 'j' com nome muito curto (≤4 chars)
+      Trecho  : j = ...
       Contexto:
-               9 | 	y = y+1
-        >>>   10 | 	i = i+1
-              11 | 	i = i*(-1)
-
-  [9] Linha 11: Variável 'i' com nome muito curto (≤4 chars)
-      Trecho  : i = ...
-      Contexto:
-              10 | 	i = i+1
-        >>>   11 | 	i = i*(-1)
-              12 | print(round(soma,8))	
+               7 | 	sinal=-sinal
+        >>>    8 | 	j = j+1
+               9 | print(round(y,8))
 
 ======================================================================

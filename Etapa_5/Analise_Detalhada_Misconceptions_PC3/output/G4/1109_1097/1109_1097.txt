@@ -1,12 +1,12 @@
 ======================================================================
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
-Arquivo     : 1109_1097.py
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2018_1_v1.81\2018-1\183\users\3389\codes\1109_1097.py
+Arquivo     : 1109_1097.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2018_1_v1.81\2018-1\183\users\3383\executions\1109_1097.log
 Assessment  : 1109
 Título      : TP 2 - Condicionais simples (if/else)
 Questão     : 1097
-Aluno       : 3389
+Aluno       : 3383
 Grupo       : TP 02
 Significado : Estrutura Condicional Simples e Composta
 Total MCs   : 1
@@ -16,115 +16,41 @@ Total MCs   : 1
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | valor=int(input())
-     2 | am=valor//100000
-     3 | ram=valor%100000
-     4 | bm=ram//10000
-     5 | rbm=ram%10000
-     6 | cm=rbm//1000
-     7 | rcm=rbm%1000
-     8 | dm=rcm//100
-     9 | rdm=rcm%100
-    10 | em=rdm//10
-    11 | rem=rdm%10
-    12 | fm=rem//1
-    13 | c=((am*100+bm*10+cm) - (dm*100+em*10+fm))**2
-    14 | if (c==valor):
-    15 | 	mensagem="atende"
-    16 | else:
-    17 | 	mensagem="nao atende"
-    18 | print(mensagem)
-    19 | print(valor)
+     1 | n=int(input("Digite seu numero: "))
+     2 | n1=n//1000
+     3 | n2=n%1000
+     4 | 
+     5 | condicao= (n1-n2)**2==n
+     6 | if condicao:
+     7 | 	print("atende",n)
+     8 | else:
+     9 | 	print("nao atende",n)
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
 ----------------------------------------------------------------------
 
 ▶ G4 — Funções/variáveis com nomes não significativos
-  Ocorrências: 12
+  Ocorrências: 3
 
-  [1] Linha 2: Variável 'am' com nome muito curto (≤4 chars)
-      Trecho  : am = ...
+  [1] Linha 1: Variável 'n' com nome muito curto (≤4 chars)
+      Trecho  : n = ...
       Contexto:
-               1 | valor=int(input())
-        >>>    2 | am=valor//100000
-               3 | ram=valor%100000
+        >>>    1 | n=int(input("Digite seu numero: "))
+               2 | n1=n//1000
 
-  [2] Linha 3: Variável 'ram' com nome muito curto (≤4 chars)
-      Trecho  : ram = ...
+  [2] Linha 2: Variável 'n1' com nome muito curto (≤4 chars)
+      Trecho  : n1 = ...
       Contexto:
-               2 | am=valor//100000
-        >>>    3 | ram=valor%100000
-               4 | bm=ram//10000
+               1 | n=int(input("Digite seu numero: "))
+        >>>    2 | n1=n//1000
+               3 | n2=n%1000
 
-  [3] Linha 4: Variável 'bm' com nome muito curto (≤4 chars)
-      Trecho  : bm = ...
+  [3] Linha 3: Variável 'n2' com nome muito curto (≤4 chars)
+      Trecho  : n2 = ...
       Contexto:
-               3 | ram=valor%100000
-        >>>    4 | bm=ram//10000
-               5 | rbm=ram%10000
-
-  [4] Linha 5: Variável 'rbm' com nome muito curto (≤4 chars)
-      Trecho  : rbm = ...
-      Contexto:
-               4 | bm=ram//10000
-        >>>    5 | rbm=ram%10000
-               6 | cm=rbm//1000
-
-  [5] Linha 6: Variável 'cm' com nome muito curto (≤4 chars)
-      Trecho  : cm = ...
-      Contexto:
-               5 | rbm=ram%10000
-        >>>    6 | cm=rbm//1000
-               7 | rcm=rbm%1000
-
-  [6] Linha 7: Variável 'rcm' com nome muito curto (≤4 chars)
-      Trecho  : rcm = ...
-      Contexto:
-               6 | cm=rbm//1000
-        >>>    7 | rcm=rbm%1000
-               8 | dm=rcm//100
-
-  [7] Linha 8: Variável 'dm' com nome muito curto (≤4 chars)
-      Trecho  : dm = ...
-      Contexto:
-               7 | rcm=rbm%1000
-        >>>    8 | dm=rcm//100
-               9 | rdm=rcm%100
-
-  [8] Linha 9: Variável 'rdm' com nome muito curto (≤4 chars)
-      Trecho  : rdm = ...
-      Contexto:
-               8 | dm=rcm//100
-        >>>    9 | rdm=rcm%100
-              10 | em=rdm//10
-
-  [9] Linha 10: Variável 'em' com nome muito curto (≤4 chars)
-      Trecho  : em = ...
-      Contexto:
-               9 | rdm=rcm%100
-        >>>   10 | em=rdm//10
-              11 | rem=rdm%10
-
-  [10] Linha 11: Variável 'rem' com nome muito curto (≤4 chars)
-      Trecho  : rem = ...
-      Contexto:
-              10 | em=rdm//10
-        >>>   11 | rem=rdm%10
-              12 | fm=rem//1
-
-  [11] Linha 12: Variável 'fm' com nome muito curto (≤4 chars)
-      Trecho  : fm = ...
-      Contexto:
-              11 | rem=rdm%10
-        >>>   12 | fm=rem//1
-              13 | c=((am*100+bm*10+cm) - (dm*100+em*10+fm))**2
-
-  [12] Linha 13: Variável 'c' com nome muito curto (≤4 chars)
-      Trecho  : c = ...
-      Contexto:
-              12 | fm=rem//1
-        >>>   13 | c=((am*100+bm*10+cm) - (dm*100+em*10+fm))**2
-              14 | if (c==valor):
+               2 | n1=n//1000
+        >>>    3 | n2=n%1000
+               4 | 
 
 ======================================================================

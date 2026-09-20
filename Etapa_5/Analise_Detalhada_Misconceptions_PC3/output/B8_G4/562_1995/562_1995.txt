@@ -1,12 +1,12 @@
 ======================================================================
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
-Arquivo     : 562_1995.py
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2017_1_v1.81\2017-1\137\users\2495\codes\562_1995.py
+Arquivo     : 562_1995.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2017_1_v1.81\2017-1\137\users\2181\executions\562_1995.log
 Assessment  : 562
 Título      : Trabalho Prático 3: Estruturas Condicionais Encadeadas
 Questão     : 1995
-Aluno       : 2495
+Aluno       : 2181
 Grupo       : TP 03
 Significado : Estrutura Condicional Encadeada
 Total MCs   : 2
@@ -16,27 +16,21 @@ Total MCs   : 2
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | X = input("Aminoácido: ")
+     1 | nome = input("Digite o nome do aminoacido: ")
      2 | 
-     3 | O = 15.9994
-     4 | C = 12.011
-     5 | N = 14.0067
-     6 | S = 32.066
-     7 | H = 1.00794
-     8 | 
-     9 | peso_Aspartato = 4*C + 6*H + N + 4*O
-    10 | peso_Cisteina = 3*C + 7*H + N + 2*O + 2*S
-    11 | peso_Metionina = 5*C + 11*H + N + 2*O + S
-    12 | 
-    13 | if(X!="Aspartato" or X !="Cisteina" or X!="Metionina"):
-    14 | 	print("Dado Invalido")
-    15 | elif(X=="Aspartato".upper()):
-    16 | 	Y = peso_Aspartato
-    17 | elif(X=="Cisteina".upper()):
-    18 | 	Y = peso_Cisteina
-    19 | elif(X=="Metionina".upper()):
-    20 | 	Y = peso_Metionina
-    21 | print(round(Y,2))
+     3 | if(nome.lower() != 'aspartato' and nome.lower() != 'cisteina' and nome.lower() != 'metionina'):
+     4 | 	print("Entrada: ",nome)
+     5 | 	print("Dado Invalido")
+     6 | else:
+     7 | 	if(nome.lower() == 'aspartato'):
+     8 | 		x = ((12.011*4) + (1.00794*6) + 14.0067 + (15.9994*4))
+     9 | 		print(round(x, 2))
+    10 | 	elif(nome.lower() == 'cisteina'):
+    11 | 		x = ((12.011*3) + (1.00794*7) + 14.0067 + (15.9994*2) + 32.066)
+    12 | 		print(round(x, 2))
+    13 | 	elif(nome.lower() == 'metionina'):
+    14 | 		x = ((12.011*5) + (1.00794*11) + 14.0067 + (15.9994*2) + 32.066)
+    15 | 		print(round(x, 2))		
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
@@ -45,76 +39,41 @@ DETALHAMENTO DOS MISCONCEPTIONS
 ▶ B8 — Não utilização de elif/else
   Ocorrências: 1
 
-  [1] Linha 17: Cadeia if/elif sem bloco else final
-      Trecho  : if ... (linha 17) / elif ... sem else
+  [1] Linha 10: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 10) / elif ... sem else
       Contexto:
-              16 | 	Y = peso_Aspartato
-        >>>   17 | elif(X=="Cisteina".upper()):
-              18 | 	Y = peso_Cisteina
+               9 | 		print(round(x, 2))
+        >>>   10 | 	elif(nome.lower() == 'cisteina'):
+              11 | 		x = ((12.011*3) + (1.00794*7) + 14.0067 + (15.9994*2) + 32.066)
 
 ▶ G4 — Funções/variáveis com nomes não significativos
-  Ocorrências: 9
+  Ocorrências: 4
 
-  [1] Linha 1: Variável 'X' com nome muito curto (≤4 chars)
-      Trecho  : X = ...
+  [1] Linha 1: Variável 'nome' com nome muito curto (≤4 chars)
+      Trecho  : nome = ...
       Contexto:
-        >>>    1 | X = input("Aminoácido: ")
+        >>>    1 | nome = input("Digite o nome do aminoacido: ")
                2 | 
 
-  [2] Linha 3: Variável 'O' com nome muito curto (≤4 chars)
-      Trecho  : O = ...
+  [2] Linha 8: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
       Contexto:
-               2 | 
-        >>>    3 | O = 15.9994
-               4 | C = 12.011
+               7 | 	if(nome.lower() == 'aspartato'):
+        >>>    8 | 		x = ((12.011*4) + (1.00794*6) + 14.0067 + (15.9994*4))
+               9 | 		print(round(x, 2))
 
-  [3] Linha 4: Variável 'C' com nome muito curto (≤4 chars)
-      Trecho  : C = ...
+  [3] Linha 11: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
       Contexto:
-               3 | O = 15.9994
-        >>>    4 | C = 12.011
-               5 | N = 14.0067
+              10 | 	elif(nome.lower() == 'cisteina'):
+        >>>   11 | 		x = ((12.011*3) + (1.00794*7) + 14.0067 + (15.9994*2) + 32.066)
+              12 | 		print(round(x, 2))
 
-  [4] Linha 5: Variável 'N' com nome muito curto (≤4 chars)
-      Trecho  : N = ...
+  [4] Linha 14: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
       Contexto:
-               4 | C = 12.011
-        >>>    5 | N = 14.0067
-               6 | S = 32.066
-
-  [5] Linha 6: Variável 'S' com nome muito curto (≤4 chars)
-      Trecho  : S = ...
-      Contexto:
-               5 | N = 14.0067
-        >>>    6 | S = 32.066
-               7 | H = 1.00794
-
-  [6] Linha 7: Variável 'H' com nome muito curto (≤4 chars)
-      Trecho  : H = ...
-      Contexto:
-               6 | S = 32.066
-        >>>    7 | H = 1.00794
-               8 | 
-
-  [7] Linha 16: Variável 'Y' com nome muito curto (≤4 chars)
-      Trecho  : Y = ...
-      Contexto:
-              15 | elif(X=="Aspartato".upper()):
-        >>>   16 | 	Y = peso_Aspartato
-              17 | elif(X=="Cisteina".upper()):
-
-  [8] Linha 18: Variável 'Y' com nome muito curto (≤4 chars)
-      Trecho  : Y = ...
-      Contexto:
-              17 | elif(X=="Cisteina".upper()):
-        >>>   18 | 	Y = peso_Cisteina
-              19 | elif(X=="Metionina".upper()):
-
-  [9] Linha 20: Variável 'Y' com nome muito curto (≤4 chars)
-      Trecho  : Y = ...
-      Contexto:
-              19 | elif(X=="Metionina".upper()):
-        >>>   20 | 	Y = peso_Metionina
-              21 | print(round(Y,2))
+              13 | 	elif(nome.lower() == 'metionina'):
+        >>>   14 | 		x = ((12.011*5) + (1.00794*11) + 14.0067 + (15.9994*2) + 32.066)
+              15 | 		print(round(x, 2))		
 
 ======================================================================

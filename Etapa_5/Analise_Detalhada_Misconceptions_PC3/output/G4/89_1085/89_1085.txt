@@ -1,12 +1,12 @@
 ======================================================================
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
-Arquivo     : 89_1085.py
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2016_1_v1.81\2016-1\111\users\1185\codes\89_1085.py
+Arquivo     : 89_1085.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2016_1_v1.81\2016-1\111\users\1180\executions\89_1085.log
 Assessment  : 89
 Título      : Avaliação Parcial 02 – Estrutura Condicional Composta (sem Aninhamento)
 Questão     : 1085
-Aluno       : 1185
+Aluno       : 1180
 Grupo       : TP 02
 Significado : Estrutura Condicional Simples e Composta
 Total MCs   : 1
@@ -16,56 +16,60 @@ Total MCs   : 1
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | a = float(input("Qual a nota da primeira prova? "))
-     2 | b = float(input("Qual a nota da segunda prova? "))
-     3 | c = float(input("Qual a nota da terceira prova? "))
-     4 | d = float(input("Qual a nota da quarta prova? "))
-     5 | e = float(input("Qual a nota da quinta prova? "))
-     6 | m = round((a + b + c + d + e)/ 5,2)
-     7 | if(m >= 6):
-     8 | 	print(m)	
+     1 | n1 = float(input("Informe n1: "))
+     2 | n2 = float(input("Informe n2: "))
+     3 | n3 = float(input("informe n3: "))
+     4 | n4 = float(input("informe n4: "))
+     5 | n5 = float(input("informe n5: "))
+     6 | media = (n1 + n2 + n3 + n4 + n5) / 5
+     7 | print(round(media,2))
+     8 | if(media >= 6.0):
      9 | 	print("Aprovado")
     10 | else:
-    11 | 	print(m)
-    12 | 	print("Reprovado")
-    13 | 	
+    11 | 	print("Reprovado")
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
 ----------------------------------------------------------------------
 
 ▶ G4 — Funções/variáveis com nomes não significativos
-  Ocorrências: 6
+  Ocorrências: 5
 
-  [1] Linha 1: Variável 'a' com nome muito curto (≤4 chars)
-      Trecho  : a = ...
+  [1] Linha 1: Variável 'n1' com nome muito curto (≤4 chars)
+      Trecho  : n1 = ...
       Contexto:
-        >>>    1 | a = float(input("Qual a nota da primeira prova? "))
-               2 | b = float(input("Qual a nota da segunda prova? "))
+        >>>    1 | n1 = float(input("Informe n1: "))
+               2 | n2 = float(input("Informe n2: "))
 
-  [2] Linha 2: Variável 'b' com nome muito curto (≤4 chars)
-      Trecho  : b = ...
+  [2] Linha 2: Variável 'n2' com nome muito curto (≤4 chars)
+      Trecho  : n2 = ...
       Contexto:
-               1 | a = float(input("Qual a nota da primeira prova? "))
-        >>>    2 | b = float(input("Qual a nota da segunda prova? "))
-               3 | c = float(input("Qual a nota da terceira prova? "))
+               1 | n1 = float(input("Informe n1: "))
+        >>>    2 | n2 = float(input("Informe n2: "))
+               3 | n3 = float(input("informe n3: "))
 
-  [3] Linha 3: Variável 'c' com nome muito curto (≤4 chars)
-      Trecho  : c = ...
+  [3] Linha 3: Variável 'n3' com nome muito curto (≤4 chars)
+      Trecho  : n3 = ...
       Contexto:
-               2 | b = float(input("Qual a nota da segunda prova? "))
-        >>>    3 | c = float(input("Qual a nota da terceira prova? "))
-               4 | d = float(input("Qual a nota da quarta prova? "))
+               2 | n2 = float(input("Informe n2: "))
+        >>>    3 | n3 = float(input("informe n3: "))
+               4 | n4 = float(input("informe n4: "))
 
-  [4] Linha 4: Variável 'd' com nome muito curto (≤4 chars)
-      Trecho  : d = ...
+  [4] Linha 4: Variável 'n4' com nome muito curto (≤4 chars)
+      Trecho  : n4 = ...
       Contexto:
-               3 | c = float(input("Qual a nota da terceira prova? "))
-        >>>    4 | d = float(input("Qual a nota da quarta prova? "))
-               5 | e = float(input("Qual a nota da quinta prova? "))
+               3 | n3 = float(input("informe n3: "))
+        >>>    4 | n4 = float(input("informe n4: "))
+               5 | n5 = float(input("informe n5: "))
 
-  [5] Linha 5: Variável 'e' com nome muito curto (≤4 chars)
-      Trecho  : e = ...
+  [5] Linha 5: Variável 'n5' com nome muito curto (≤4 chars)
+      Trecho  : n5 = ...
+      Contexto:
+               4 | n4 = float(input("informe n4: "))
+        >>>    5 | n5 = float(input("informe n5: "))
+               6 | media = (n1 + n2 + n3 + n4 + n5) / 5
+
+====================================================================== : e = ...
       Contexto:
                4 | d = float(input("Qual a nota da quarta prova? "))
         >>>    5 | e = float(input("Qual a nota da quinta prova? "))

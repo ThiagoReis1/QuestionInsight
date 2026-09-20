@@ -1,12 +1,12 @@
 ======================================================================
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
-Arquivo     : 669_1604.py
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2017_1_v1.81\2017-1\139\users\2411\codes\669_1604.py
+Arquivo     : 669_1604.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2017_1_v1.81\2017-1\139\users\2397\executions\669_1604.log
 Assessment  : 669
 Título      : Trabalho Prático 5: Vetores e Strings
 Questão     : 1604
-Aluno       : 2411
+Aluno       : 2397
 Grupo       : TP 05
 Significado : Vetores e Strings
 Total MCs   : 2
@@ -17,24 +17,20 @@ Total MCs   : 2
 CÓDIGO FONTE
 ----------------------------------------------------------------------
      1 | from numpy import*
-     2 | i = 0
-     3 | x = 0
-     4 | anel = array(eval(input()))
-     5 | while(anel[i] != 4):
-     6 | 	i = i + 1	
-     7 | 	if (anel[i] == 0):
-     8 | 		x = x + 80
-     9 | 	elif (anel[i] == 1):
-    10 | 		x = x + 40
-    11 | 	elif(anel[i] == 2):
-    12 | 		x = x + 20
-    13 | 	elif(anel[i] == 3):
-    14 | 		x = x + 10
-    15 | 	
-    16 | print(x)
-    17 | 
-    18 | 
-    19 | 
+     2 | v=array(eval(input()))
+     3 | i=0
+     4 | s=0
+     5 | while(i<size(v)):
+     6 | 	if(v[i]==1):
+     7 | 		s=s+80
+     8 | 	elif(v[i]==2):
+     9 | 		s=s+40
+    10 | 	elif(v[i]==3):
+    11 | 		s=s+20
+    12 | 	elif(v[i]==4):
+    13 | 		s=s+10
+    14 | 	i=i+1
+    15 | print(s)
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
@@ -43,98 +39,70 @@ DETALHAMENTO DOS MISCONCEPTIONS
 ▶ B8 — Não utilização de elif/else
   Ocorrências: 1
 
-  [1] Linha 11: Cadeia if/elif sem bloco else final
-      Trecho  : if ... (linha 11) / elif ... sem else
+  [1] Linha 10: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 10) / elif ... sem else
       Contexto:
-              10 | 		x = x + 40
-        >>>   11 | 	elif(anel[i] == 2):
-              12 | 		x = x + 20
+               9 | 		s=s+40
+        >>>   10 | 	elif(v[i]==3):
+              11 | 		s=s+20
 
 ▶ G4 — Funções/variáveis com nomes não significativos
   Ocorrências: 8
 
-  [1] Linha 2: Variável 'i' com nome muito curto (≤4 chars)
-      Trecho  : i = ...
+  [1] Linha 2: Variável 'v' com nome muito curto (≤4 chars)
+      Trecho  : v = ...
       Contexto:
                1 | from numpy import*
-        >>>    2 | i = 0
-               3 | x = 0
+        >>>    2 | v=array(eval(input()))
+               3 | i=0
 
-  [2] Linha 3: Variável 'x' com nome muito curto (≤4 chars)
-      Trecho  : x = ...
-      Contexto:
-               2 | i = 0
-        >>>    3 | x = 0
-               4 | anel = array(eval(input()))
-
-  [3] Linha 4: Variável 'anel' com nome muito curto (≤4 chars)
-      Trecho  : anel = ...
-      Contexto:
-               3 | x = 0
-        >>>    4 | anel = array(eval(input()))
-               5 | while(anel[i] != 4):
-
-  [4] Linha 6: Variável 'i' com nome muito curto (≤4 chars)
+  [2] Linha 3: Variável 'i' com nome muito curto (≤4 chars)
       Trecho  : i = ...
       Contexto:
-               5 | while(anel[i] != 4):
-        >>>    6 | 	i = i + 1	
-               7 | 	if (anel[i] == 0):
+               2 | v=array(eval(input()))
+        >>>    3 | i=0
+               4 | s=0
 
-  [5] Linha 8: Variável 'x' com nome muito curto (≤4 chars)
-      Trecho  : x = ...
+  [3] Linha 4: Variável 's' com nome muito curto (≤4 chars)
+      Trecho  : s = ...
       Contexto:
-               7 | 	if (anel[i] == 0):
-        >>>    8 | 		x = x + 80
-               9 | 	elif (anel[i] == 1):
+               3 | i=0
+        >>>    4 | s=0
+               5 | while(i<size(v)):
 
-  [6] Linha 10: Variável 'x' com nome muito curto (≤4 chars)
-      Trecho  : x = ...
+  [4] Linha 14: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
       Contexto:
-               9 | 	elif (anel[i] == 1):
-        >>>   10 | 		x = x + 40
-              11 | 	elif(anel[i] == 2):
+              13 | 		s=s+10
+        >>>   14 | 	i=i+1
+              15 | print(s)
 
-  [7] Linha 12: Variável 'x' com nome muito curto (≤4 chars)
-      Trecho  : x = ...
+  [5] Linha 7: Variável 's' com nome muito curto (≤4 chars)
+      Trecho  : s = ...
       Contexto:
-              11 | 	elif(anel[i] == 2):
-        >>>   12 | 		x = x + 20
-              13 | 	elif(anel[i] == 3):
+               6 | 	if(v[i]==1):
+        >>>    7 | 		s=s+80
+               8 | 	elif(v[i]==2):
 
-  [8] Linha 14: Variável 'x' com nome muito curto (≤4 chars)
-      Trecho  : x = ...
+  [6] Linha 9: Variável 's' com nome muito curto (≤4 chars)
+      Trecho  : s = ...
       Contexto:
-              13 | 	elif(anel[i] == 3):
-        >>>   14 | 		x = x + 10
-              15 | 	
+               8 | 	elif(v[i]==2):
+        >>>    9 | 		s=s+40
+              10 | 	elif(v[i]==3):
 
-======================================================================curto (≤4 chars)
-      Trecho  : p = ...
+  [7] Linha 11: Variável 's' com nome muito curto (≤4 chars)
+      Trecho  : s = ...
       Contexto:
-              11 | 	if(v[i] == 1):
-        >>>   12 | 		p = p + a1
-              13 | 	if(v[i] == 2):
+              10 | 	elif(v[i]==3):
+        >>>   11 | 		s=s+20
+              12 | 	elif(v[i]==4):
 
-  [11] Linha 14: Variável 'p' com nome muito curto (≤4 chars)
-      Trecho  : p = ...
+  [8] Linha 13: Variável 's' com nome muito curto (≤4 chars)
+      Trecho  : s = ...
       Contexto:
-              13 | 	if(v[i] == 2):
-        >>>   14 | 		p = p + a2
-              15 | 	if(v[i] == 3):
-
-  [12] Linha 16: Variável 'p' com nome muito curto (≤4 chars)
-      Trecho  : p = ...
-      Contexto:
-              15 | 	if(v[i] == 3):
-        >>>   16 | 		p = p + a3
-              17 | 	if(v[i] == 4):
-
-  [13] Linha 18: Variável 'p' com nome muito curto (≤4 chars)
-      Trecho  : p = ...
-      Contexto:
-              17 | 	if(v[i] == 4):
-        >>>   18 | 		p = p + a4
-              19 | 	i = i + 1
+              12 | 	elif(v[i]==4):
+        >>>   13 | 		s=s+10
+              14 | 	i=i+1
 
 ======================================================================

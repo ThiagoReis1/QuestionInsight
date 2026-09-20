@@ -1,12 +1,12 @@
 ======================================================================
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
-Arquivo     : 4745_6305.py
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2022_2_v1.81\2022-2\487\users\8180\codes\4745_6305.py
+Arquivo     : 4745_6305.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2022_2_v1.81\2022-2\487\users\8193\executions\4745_6305.log
 Assessment  : 4745
 Título      : TP 05: Vetores e Strings
 Questão     : 6305
-Aluno       : 8180
+Aluno       : 8193
 Grupo       : TP 05
 Significado : Vetores e Strings
 Total MCs   : 2
@@ -16,28 +16,28 @@ Total MCs   : 2
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | from numpy import*
-     2 | s = input("H,L,E: ").upper()
-     3 | H = 3.85
-     4 | L = 2.95
-     5 | E = 7.90
-     6 | cont = 0
-     7 | cont1 = 0
-     8 | cont2 = 0
-     9 | i = 0 
-    10 | vt = 0
-    11 | while(i < len(s)):
-    12 | 	if (s[i] == "H"):
-    13 | 		cont = cont + 1
-    14 | 		vt = vt + H
-    15 | 	if (s[i] == "L"):
-    16 | 		cont1 = cont1 + 1
-    17 | 		vt = vt + L
-    18 | 	if (s[i] == "E"):
-    19 | 		cont2 = cont2 + 1
-    20 | 		vt = vt + E
-    21 | 	i = i + 1
-    22 | print(round((vt),2), cont,cont1,cont2)
+     1 | v = input("").upper()
+     2 | cont = 0
+     3 | cont1 = 0
+     4 | cont2 = 0
+     5 | h = 0
+     6 | l = 0
+     7 | e = 0 
+     8 | 
+     9 | i = 0
+    10 | while (i<len(v)):
+    11 | 	if (v[i]=="H"):
+    12 | 		cont=cont+3.85	
+    13 | 		h = h+1
+    14 | 	if (v[i]=="L"):
+    15 | 		cont1 = cont1+2.95
+    16 | 		l = l+1
+    17 | 	if (v[i]=="E"):
+    18 | 		cont2 = cont2+7.90
+    19 | 		e = e+1
+    20 | 	i = i+1
+    21 | 
+    22 | print(round(cont+cont1+cont2, 2),h,l,e)
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
@@ -50,90 +50,82 @@ DETALHAMENTO DOS MISCONCEPTIONS
       Trecho  : —
 
 ▶ G4 — Funções/variáveis com nomes não significativos
-  Ocorrências: 12
+  Ocorrências: 11
 
-  [1] Linha 2: Variável 's' com nome muito curto (≤4 chars)
-      Trecho  : s = ...
+  [1] Linha 1: Variável 'v' com nome muito curto (≤4 chars)
+      Trecho  : v = ...
       Contexto:
-               1 | from numpy import*
-        >>>    2 | s = input("H,L,E: ").upper()
-               3 | H = 3.85
+        >>>    1 | v = input("").upper()
+               2 | cont = 0
 
-  [2] Linha 3: Variável 'H' com nome muito curto (≤4 chars)
-      Trecho  : H = ...
-      Contexto:
-               2 | s = input("H,L,E: ").upper()
-        >>>    3 | H = 3.85
-               4 | L = 2.95
-
-  [3] Linha 4: Variável 'L' com nome muito curto (≤4 chars)
-      Trecho  : L = ...
-      Contexto:
-               3 | H = 3.85
-        >>>    4 | L = 2.95
-               5 | E = 7.90
-
-  [4] Linha 5: Variável 'E' com nome muito curto (≤4 chars)
-      Trecho  : E = ...
-      Contexto:
-               4 | L = 2.95
-        >>>    5 | E = 7.90
-               6 | cont = 0
-
-  [5] Linha 6: Variável 'cont' com nome muito curto (≤4 chars)
+  [2] Linha 2: Variável 'cont' com nome muito curto (≤4 chars)
       Trecho  : cont = ...
       Contexto:
-               5 | E = 7.90
-        >>>    6 | cont = 0
-               7 | cont1 = 0
+               1 | v = input("").upper()
+        >>>    2 | cont = 0
+               3 | cont1 = 0
+
+  [3] Linha 5: Variável 'h' com nome muito curto (≤4 chars)
+      Trecho  : h = ...
+      Contexto:
+               4 | cont2 = 0
+        >>>    5 | h = 0
+               6 | l = 0
+
+  [4] Linha 6: Variável 'l' com nome muito curto (≤4 chars)
+      Trecho  : l = ...
+      Contexto:
+               5 | h = 0
+        >>>    6 | l = 0
+               7 | e = 0 
+
+  [5] Linha 7: Variável 'e' com nome muito curto (≤4 chars)
+      Trecho  : e = ...
+      Contexto:
+               6 | l = 0
+        >>>    7 | e = 0 
+               8 | 
 
   [6] Linha 9: Variável 'i' com nome muito curto (≤4 chars)
       Trecho  : i = ...
       Contexto:
-               8 | cont2 = 0
-        >>>    9 | i = 0 
-              10 | vt = 0
+               8 | 
+        >>>    9 | i = 0
+              10 | while (i<len(v)):
 
-  [7] Linha 10: Variável 'vt' com nome muito curto (≤4 chars)
-      Trecho  : vt = ...
-      Contexto:
-               9 | i = 0 
-        >>>   10 | vt = 0
-              11 | while(i < len(s)):
-
-  [8] Linha 21: Variável 'i' com nome muito curto (≤4 chars)
+  [7] Linha 20: Variável 'i' com nome muito curto (≤4 chars)
       Trecho  : i = ...
       Contexto:
-              20 | 		vt = vt + E
-        >>>   21 | 	i = i + 1
-              22 | print(round((vt),2), cont,cont1,cont2)
+              19 | 		e = e+1
+        >>>   20 | 	i = i+1
+              21 | 
 
-  [9] Linha 13: Variável 'cont' com nome muito curto (≤4 chars)
+  [8] Linha 12: Variável 'cont' com nome muito curto (≤4 chars)
       Trecho  : cont = ...
       Contexto:
-              12 | 	if (s[i] == "H"):
-        >>>   13 | 		cont = cont + 1
-              14 | 		vt = vt + H
+              11 | 	if (v[i]=="H"):
+        >>>   12 | 		cont=cont+3.85	
+              13 | 		h = h+1
 
-  [10] Linha 14: Variável 'vt' com nome muito curto (≤4 chars)
-      Trecho  : vt = ...
+  [9] Linha 13: Variável 'h' com nome muito curto (≤4 chars)
+      Trecho  : h = ...
       Contexto:
-              13 | 		cont = cont + 1
-        >>>   14 | 		vt = vt + H
-              15 | 	if (s[i] == "L"):
+              12 | 		cont=cont+3.85	
+        >>>   13 | 		h = h+1
+              14 | 	if (v[i]=="L"):
 
-  [11] Linha 17: Variável 'vt' com nome muito curto (≤4 chars)
-      Trecho  : vt = ...
+  [10] Linha 16: Variável 'l' com nome muito curto (≤4 chars)
+      Trecho  : l = ...
       Contexto:
-              16 | 		cont1 = cont1 + 1
-        >>>   17 | 		vt = vt + L
-              18 | 	if (s[i] == "E"):
+              15 | 		cont1 = cont1+2.95
+        >>>   16 | 		l = l+1
+              17 | 	if (v[i]=="E"):
 
-  [12] Linha 20: Variável 'vt' com nome muito curto (≤4 chars)
-      Trecho  : vt = ...
+  [11] Linha 19: Variável 'e' com nome muito curto (≤4 chars)
+      Trecho  : e = ...
       Contexto:
-              19 | 		cont2 = cont2 + 1
-        >>>   20 | 		vt = vt + E
-              21 | 	i = i + 1
+              18 | 		cont2 = cont2+7.90
+        >>>   19 | 		e = e+1
+              20 | 	i = i+1
 
 ======================================================================

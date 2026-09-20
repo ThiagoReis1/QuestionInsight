@@ -1,12 +1,12 @@
 ======================================================================
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
-Arquivo     : 3236_1642.py
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2021_1_v1.81\2021-1\377\users\6466\codes\3236_1642.py
+Arquivo     : 3236_1642.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2021_1_v1.81\2021-1\377\users\5817\executions\3236_1642.log
 Assessment  : 3236
 Título      : TP6: Repetição por contagem
 Questão     : 1642
-Aluno       : 6466
+Aluno       : 5817
 Grupo       : TP 06
 Significado : Estrutura de Repetição por Contagem
 Total MCs   : 2
@@ -17,20 +17,22 @@ Total MCs   : 2
 CÓDIGO FONTE
 ----------------------------------------------------------------------
      1 | from numpy import*
-     2 | alunos= array(eval(input("Quantos alunos? ")))
-     3 | cont= 0
+     2 | v=array(eval(input("Vetor: ")))
+     3 | cont=0
      4 | 
-     5 | for i in range(size(alunos)):
-     6 | 	if alunos[i]%5==0:
-     7 | 		cont=cont+1
-     8 | nv=zeros(cont, dtype=int)
-     9 | c=0
-    10 | for j in range(size(alunos)):
-    11 | 	if alunos[j]%5==0:
-    12 | 		nv[c]=j
-    13 | 		c=c+1
-    14 | print(cont)
-    15 | print(nv)
+     5 | for i in range(size(v)):
+     6 | 	if v[i]%5==0:
+     7 | 		cont+=1
+     8 | 		
+     9 | new=zeros(cont,dtype=int)
+    10 | k=0
+    11 | for j in range(size(v)):
+    12 | 	if v[j]%5==0:
+    13 | 		new[k]=j
+    14 | 		k+=1
+    15 | 		
+    16 | print(cont)
+    17 | print(new)
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
@@ -43,37 +45,37 @@ DETALHAMENTO DOS MISCONCEPTIONS
       Trecho  : —
 
 ▶ G4 — Funções/variáveis com nomes não significativos
-  Ocorrências: 5
+  Ocorrências: 4
 
-  [1] Linha 3: Variável 'cont' com nome muito curto (≤4 chars)
+  [1] Linha 2: Variável 'v' com nome muito curto (≤4 chars)
+      Trecho  : v = ...
+      Contexto:
+               1 | from numpy import*
+        >>>    2 | v=array(eval(input("Vetor: ")))
+               3 | cont=0
+
+  [2] Linha 3: Variável 'cont' com nome muito curto (≤4 chars)
       Trecho  : cont = ...
       Contexto:
-               2 | alunos= array(eval(input("Quantos alunos? ")))
-        >>>    3 | cont= 0
+               2 | v=array(eval(input("Vetor: ")))
+        >>>    3 | cont=0
                4 | 
 
-  [2] Linha 8: Variável 'nv' com nome muito curto (≤4 chars)
-      Trecho  : nv = ...
+  [3] Linha 9: Variável 'new' com nome muito curto (≤4 chars)
+      Trecho  : new = ...
       Contexto:
-               7 | 		cont=cont+1
-        >>>    8 | nv=zeros(cont, dtype=int)
-               9 | c=0
+               8 | 		
+        >>>    9 | new=zeros(cont,dtype=int)
+              10 | k=0
 
-  [3] Linha 9: Variável 'c' com nome muito curto (≤4 chars)
-      Trecho  : c = ...
+  [4] Linha 10: Variável 'k' com nome muito curto (≤4 chars)
+      Trecho  : k = ...
       Contexto:
-               8 | nv=zeros(cont, dtype=int)
-        >>>    9 | c=0
-              10 | for j in range(size(alunos)):
+               9 | new=zeros(cont,dtype=int)
+        >>>   10 | k=0
+              11 | for j in range(size(v)):
 
-  [4] Linha 7: Variável 'cont' com nome muito curto (≤4 chars)
-      Trecho  : cont = ...
-      Contexto:
-               6 | 	if alunos[i]%5==0:
-        >>>    7 | 		cont=cont+1
-               8 | nv=zeros(cont, dtype=int)
-
-  [5] Linha 13: Variável 'c' com nome muito curto (≤4 chars)
+======================================================================ável 'c' com nome muito curto (≤4 chars)
       Trecho  : c = ...
       Contexto:
               12 | 		nv[c]=j

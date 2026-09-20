@@ -1,8 +1,8 @@
 ======================================================================
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
-Arquivo     : 4921_6479.py
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2023_1_v1.81\2023-1\524\users\5087\codes\4921_6479.py
+Arquivo     : 4921_6479.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2023_1_v1.81\2023-1\524\users\5087\executions\4921_6479.log
 Assessment  : 4921
 Título      : TP1: Variáveis e Estrutura Sequencial
 Questão     : 6479
@@ -17,11 +17,11 @@ Total MCs   : 3
 CÓDIGO FONTE
 ----------------------------------------------------------------------
      1 | # faça o seu código aqui!
-     2 | import math
+     2 | import math 
      3 | 
      4 | var1 = 1
-     5 | var2 = (var1*3.22)
-     6 | vt = var1*var2
+     5 | var2 = 3.22
+     6 | vt = "var1*var2"
      7 | 
      8 | num = int(input("vt: "))
      9 | print(round(num, 2))
@@ -31,13 +31,27 @@ DETALHAMENTO DOS MISCONCEPTIONS
 ----------------------------------------------------------------------
 
 ▶ A3 — Variável inicializada desnecessariamente
-  Ocorrências: 1
+  Ocorrências: 3
 
-  [1] Linha 6: Variável 'vt' declarada mas nunca utilizada
+  [1] Linha 4: Variável 'var1' declarada mas nunca utilizada
+      Trecho  : var1 = ...
+      Contexto:
+               3 | 
+        >>>    4 | var1 = 1
+               5 | var2 = 3.22
+
+  [2] Linha 5: Variável 'var2' declarada mas nunca utilizada
+      Trecho  : var2 = ...
+      Contexto:
+               4 | var1 = 1
+        >>>    5 | var2 = 3.22
+               6 | vt = "var1*var2"
+
+  [3] Linha 6: Variável 'vt' declarada mas nunca utilizada
       Trecho  : vt = ...
       Contexto:
-               5 | var2 = (var1*3.22)
-        >>>    6 | vt = var1*var2
+               5 | var2 = 3.22
+        >>>    6 | vt = "var1*var2"
                7 | 
 
 ▶ A5 — Importação não utilizada
@@ -47,7 +61,7 @@ DETALHAMENTO DOS MISCONCEPTIONS
       Trecho  : import math
       Contexto:
                1 | # faça o seu código aqui!
-        >>>    2 | import math
+        >>>    2 | import math 
                3 | 
 
 ▶ G4 — Funções/variáveis com nomes não significativos
@@ -58,20 +72,20 @@ DETALHAMENTO DOS MISCONCEPTIONS
       Contexto:
                3 | 
         >>>    4 | var1 = 1
-               5 | var2 = (var1*3.22)
+               5 | var2 = 3.22
 
   [2] Linha 5: Variável 'var2' com nome muito curto (≤4 chars)
       Trecho  : var2 = ...
       Contexto:
                4 | var1 = 1
-        >>>    5 | var2 = (var1*3.22)
-               6 | vt = var1*var2
+        >>>    5 | var2 = 3.22
+               6 | vt = "var1*var2"
 
   [3] Linha 6: Variável 'vt' com nome muito curto (≤4 chars)
       Trecho  : vt = ...
       Contexto:
-               5 | var2 = (var1*3.22)
-        >>>    6 | vt = var1*var2
+               5 | var2 = 3.22
+        >>>    6 | vt = "var1*var2"
                7 | 
 
   [4] Linha 8: Variável 'num' com nome muito curto (≤4 chars)

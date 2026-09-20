@@ -1,12 +1,12 @@
 ======================================================================
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
-Arquivo     : 1225_1593.py
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2018_1_v1.81\2018-1\181\users\3399\codes\1225_1593.py
+Arquivo     : 1225_1593.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2018_1_v1.81\2018-1\181\users\3054\executions\1225_1593.log
 Assessment  : 1225
 Título      : TP 5: Vetores e Strings
 Questão     : 1593
-Aluno       : 3399
+Aluno       : 3054
 Grupo       : TP 05
 Significado : Vetores e Strings
 Total MCs   : 1
@@ -16,68 +16,61 @@ Total MCs   : 1
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | from numpy import *
-     2 | v = array(eval(input("vetor de notas: ")))
-     3 | 
-     4 | i = 1
-     5 | s = 0
-     6 | soma = 0
-     7 | while(s < size(v)):
-     8 | 	soma = soma + v[s]*i
-     9 | 	i = i + 1
-    10 | 	s = s + 1
-    11 | print(round(soma / 6, 2))
+     1 | from numpy import*
+     2 | 
+     3 | n = array(eval(input("informe as notas: ")))
+     4 | i = 0
+     5 | p = 1
+     6 | while(i < size(n)):
+     7 | 	media = (n[i] * p )#+ (n[i] *(p +1)) + (n[i] * (p+2)))/(p + (p+1) + (p + 2))
+     8 | 	i = i + 1
+     9 | 	p = p + 1
+    10 | media = media / p 	
+    11 | print(round(media,2))
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
 ----------------------------------------------------------------------
 
 ▶ G4 — Funções/variáveis com nomes não significativos
-  Ocorrências: 7
+  Ocorrências: 5
 
-  [1] Linha 2: Variável 'v' com nome muito curto (≤4 chars)
-      Trecho  : v = ...
+  [1] Linha 3: Variável 'n' com nome muito curto (≤4 chars)
+      Trecho  : n = ...
       Contexto:
-               1 | from numpy import *
-        >>>    2 | v = array(eval(input("vetor de notas: ")))
-               3 | 
+               2 | 
+        >>>    3 | n = array(eval(input("informe as notas: ")))
+               4 | i = 0
 
   [2] Linha 4: Variável 'i' com nome muito curto (≤4 chars)
       Trecho  : i = ...
       Contexto:
-               3 | 
-        >>>    4 | i = 1
-               5 | s = 0
+               3 | n = array(eval(input("informe as notas: ")))
+        >>>    4 | i = 0
+               5 | p = 1
 
-  [3] Linha 5: Variável 's' com nome muito curto (≤4 chars)
-      Trecho  : s = ...
+  [3] Linha 5: Variável 'p' com nome muito curto (≤4 chars)
+      Trecho  : p = ...
       Contexto:
-               4 | i = 1
-        >>>    5 | s = 0
-               6 | soma = 0
+               4 | i = 0
+        >>>    5 | p = 1
+               6 | while(i < size(n)):
 
-  [4] Linha 6: Variável 'soma' com nome muito curto (≤4 chars)
-      Trecho  : soma = ...
-      Contexto:
-               5 | s = 0
-        >>>    6 | soma = 0
-               7 | while(s < size(v)):
-
-  [5] Linha 8: Variável 'soma' com nome muito curto (≤4 chars)
-      Trecho  : soma = ...
-      Contexto:
-               7 | while(s < size(v)):
-        >>>    8 | 	soma = soma + v[s]*i
-               9 | 	i = i + 1
-
-  [6] Linha 9: Variável 'i' com nome muito curto (≤4 chars)
+  [4] Linha 8: Variável 'i' com nome muito curto (≤4 chars)
       Trecho  : i = ...
       Contexto:
-               8 | 	soma = soma + v[s]*i
-        >>>    9 | 	i = i + 1
-              10 | 	s = s + 1
+               7 | 	media = (n[i] * p )#+ (n[i] *(p +1)) + (n[i] * (p+2)))/(p + (p+1) + (p + 2))
+        >>>    8 | 	i = i + 1
+               9 | 	p = p + 1
 
-  [7] Linha 10: Variável 's' com nome muito curto (≤4 chars)
+  [5] Linha 9: Variável 'p' com nome muito curto (≤4 chars)
+      Trecho  : p = ...
+      Contexto:
+               8 | 	i = i + 1
+        >>>    9 | 	p = p + 1
+              10 | media = media / p 	
+
+======================================================================inha 10: Variável 's' com nome muito curto (≤4 chars)
       Trecho  : s = ...
       Contexto:
                9 | 	i = i + 1

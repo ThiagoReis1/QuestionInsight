@@ -1,12 +1,12 @@
 ======================================================================
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
-Arquivo     : 191_1193.py
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2016_1_v1.81\2016-1\105\users\1507\codes\191_1193.py
+Arquivo     : 191_1193.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2016_1_v1.81\2016-1\105\users\1496\executions\191_1193.log
 Assessment  : 191
 Título      : Avaliação Parcial 05 – Vetores e Strings
 Questão     : 1193
-Aluno       : 1507
+Aluno       : 1496
 Grupo       : TP 05
 Significado : Vetores e Strings
 Total MCs   : 2
@@ -17,24 +17,27 @@ Total MCs   : 2
 CÓDIGO FONTE
 ----------------------------------------------------------------------
      1 | from numpy import*
-     2 | v = array(eval(input("temperaturas registradas:")))
-     3 | i = 0
-     4 | t = 0
-     5 | l = (-100)
-     6 | while i < size(v):
-     7 | 	if v[i] > l:
-     8 | 		t = t + 1
-     9 | 	i = i + 1
+     2 | vet = array(eval(input("temperaturas:")))
+     3 | a=0
+     4 | b=0
+     5 | 
+     6 | while(a<size(vet)):
+     7 | 	if(vet[a]>-100 or vet[a]==-100):
+     8 | 		b=b+1
+     9 | 	a=a+1
     10 | 	
-    11 | vn = array(zeros(t, dtype = float))
-    12 | i = 0
-    13 | t = 0
-    14 | while i < size(v):
-    15 | 	if v[i] > l:
-    16 | 		vn[t] = v[i]
-    17 | 		t = t + 1
-    18 | 	i = i + 1
-    19 | print(vn)
+    11 | vet1 = array(zeros(b, dtype = float))
+    12 | a=0
+    13 | c=0
+    14 | 
+    15 | while(c<size(vet1)):
+    16 | 	if(vet[a]<-100):
+    17 | 		a=a+1
+    18 | 	else:
+    19 | 		vet1[c]=vet[a]
+    20 | 		c=c+1
+    21 | 		a=a+1
+    22 | print(vet1)
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
@@ -49,81 +52,81 @@ DETALHAMENTO DOS MISCONCEPTIONS
 ▶ G4 — Funções/variáveis com nomes não significativos
   Ocorrências: 11
 
-  [1] Linha 2: Variável 'v' com nome muito curto (≤4 chars)
-      Trecho  : v = ...
+  [1] Linha 2: Variável 'vet' com nome muito curto (≤4 chars)
+      Trecho  : vet = ...
       Contexto:
                1 | from numpy import*
-        >>>    2 | v = array(eval(input("temperaturas registradas:")))
-               3 | i = 0
+        >>>    2 | vet = array(eval(input("temperaturas:")))
+               3 | a=0
 
-  [2] Linha 3: Variável 'i' com nome muito curto (≤4 chars)
-      Trecho  : i = ...
+  [2] Linha 3: Variável 'a' com nome muito curto (≤4 chars)
+      Trecho  : a = ...
       Contexto:
-               2 | v = array(eval(input("temperaturas registradas:")))
-        >>>    3 | i = 0
-               4 | t = 0
+               2 | vet = array(eval(input("temperaturas:")))
+        >>>    3 | a=0
+               4 | b=0
 
-  [3] Linha 4: Variável 't' com nome muito curto (≤4 chars)
-      Trecho  : t = ...
+  [3] Linha 4: Variável 'b' com nome muito curto (≤4 chars)
+      Trecho  : b = ...
       Contexto:
-               3 | i = 0
-        >>>    4 | t = 0
-               5 | l = (-100)
+               3 | a=0
+        >>>    4 | b=0
+               5 | 
 
-  [4] Linha 5: Variável 'l' com nome muito curto (≤4 chars)
-      Trecho  : l = ...
-      Contexto:
-               4 | t = 0
-        >>>    5 | l = (-100)
-               6 | while i < size(v):
-
-  [5] Linha 11: Variável 'vn' com nome muito curto (≤4 chars)
-      Trecho  : vn = ...
+  [4] Linha 11: Variável 'vet1' com nome muito curto (≤4 chars)
+      Trecho  : vet1 = ...
       Contexto:
               10 | 	
-        >>>   11 | vn = array(zeros(t, dtype = float))
-              12 | i = 0
+        >>>   11 | vet1 = array(zeros(b, dtype = float))
+              12 | a=0
 
-  [6] Linha 12: Variável 'i' com nome muito curto (≤4 chars)
-      Trecho  : i = ...
+  [5] Linha 12: Variável 'a' com nome muito curto (≤4 chars)
+      Trecho  : a = ...
       Contexto:
-              11 | vn = array(zeros(t, dtype = float))
-        >>>   12 | i = 0
-              13 | t = 0
+              11 | vet1 = array(zeros(b, dtype = float))
+        >>>   12 | a=0
+              13 | c=0
 
-  [7] Linha 13: Variável 't' com nome muito curto (≤4 chars)
-      Trecho  : t = ...
+  [6] Linha 13: Variável 'c' com nome muito curto (≤4 chars)
+      Trecho  : c = ...
       Contexto:
-              12 | i = 0
-        >>>   13 | t = 0
-              14 | while i < size(v):
+              12 | a=0
+        >>>   13 | c=0
+              14 | 
 
-  [8] Linha 9: Variável 'i' com nome muito curto (≤4 chars)
-      Trecho  : i = ...
+  [7] Linha 9: Variável 'a' com nome muito curto (≤4 chars)
+      Trecho  : a = ...
       Contexto:
-               8 | 		t = t + 1
-        >>>    9 | 	i = i + 1
+               8 | 		b=b+1
+        >>>    9 | 	a=a+1
               10 | 	
 
-  [9] Linha 18: Variável 'i' com nome muito curto (≤4 chars)
-      Trecho  : i = ...
+  [8] Linha 8: Variável 'b' com nome muito curto (≤4 chars)
+      Trecho  : b = ...
       Contexto:
-              17 | 		t = t + 1
-        >>>   18 | 	i = i + 1
-              19 | print(vn)
+               7 | 	if(vet[a]>-100 or vet[a]==-100):
+        >>>    8 | 		b=b+1
+               9 | 	a=a+1
 
-  [10] Linha 8: Variável 't' com nome muito curto (≤4 chars)
-      Trecho  : t = ...
+  [9] Linha 17: Variável 'a' com nome muito curto (≤4 chars)
+      Trecho  : a = ...
       Contexto:
-               7 | 	if v[i] > l:
-        >>>    8 | 		t = t + 1
-               9 | 	i = i + 1
+              16 | 	if(vet[a]<-100):
+        >>>   17 | 		a=a+1
+              18 | 	else:
 
-  [11] Linha 17: Variável 't' com nome muito curto (≤4 chars)
-      Trecho  : t = ...
+  [10] Linha 20: Variável 'c' com nome muito curto (≤4 chars)
+      Trecho  : c = ...
       Contexto:
-              16 | 		vn[t] = v[i]
-        >>>   17 | 		t = t + 1
-              18 | 	i = i + 1
+              19 | 		vet1[c]=vet[a]
+        >>>   20 | 		c=c+1
+              21 | 		a=a+1
 
-======================================================================
+  [11] Linha 21: Variável 'a' com nome muito curto (≤4 chars)
+      Trecho  : a = ...
+      Contexto:
+              20 | 		c=c+1
+        >>>   21 | 		a=a+1
+              22 | print(vet1)
+
+==================================================================================================

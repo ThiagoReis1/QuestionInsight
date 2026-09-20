@@ -1,12 +1,12 @@
 ======================================================================
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
-Arquivo     : 1785_1602.py
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2019_1_v1.81\2019-1\226\users\4134\codes\1785_1602.py
+Arquivo     : 1785_1602.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2019_1_v1.81\2019-1\226\users\4144\executions\1785_1602.log
 Assessment  : 1785
 Título      : TP5: Vetores e Strings
 Questão     : 1602
-Aluno       : 4134
+Aluno       : 4144
 Grupo       : TP 05
 Significado : Vetores e Strings
 Total MCs   : 2
@@ -16,18 +16,14 @@ Total MCs   : 2
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | from numpy import*
-     2 | a = array(eval(input("tempo de chegada: ")))
-     3 | 
-     4 | b = max(a)
-     5 | c = size(a)
-     6 | t = 0
-     7 | while(t < c):
-     8 | 	if( a[t] == b):
-     9 | 		i = t
-    10 | 		t = c
-    11 | 	t += 1
-    12 | print(i)
+     1 | from numpy import *
+     2 | a = array(eval(input("digite as chegadas: ")))
+     3 | i = 0
+     4 | 
+     5 | while(i<size(a)):
+     6 | 	if(a[i]==max(a)):
+     7 | 		print(i)
+     8 | 	i = i +1
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
@@ -40,30 +36,29 @@ DETALHAMENTO DOS MISCONCEPTIONS
       Trecho  : —
 
 ▶ G4 — Funções/variáveis com nomes não significativos
-  Ocorrências: 6
+  Ocorrências: 3
 
   [1] Linha 2: Variável 'a' com nome muito curto (≤4 chars)
       Trecho  : a = ...
       Contexto:
-               1 | from numpy import*
-        >>>    2 | a = array(eval(input("tempo de chegada: ")))
-               3 | 
+               1 | from numpy import *
+        >>>    2 | a = array(eval(input("digite as chegadas: ")))
+               3 | i = 0
 
-  [2] Linha 4: Variável 'b' com nome muito curto (≤4 chars)
-      Trecho  : b = ...
+  [2] Linha 3: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
       Contexto:
-               3 | 
-        >>>    4 | b = max(a)
-               5 | c = size(a)
+               2 | a = array(eval(input("digite as chegadas: ")))
+        >>>    3 | i = 0
+               4 | 
 
-  [3] Linha 5: Variável 'c' com nome muito curto (≤4 chars)
-      Trecho  : c = ...
+  [3] Linha 8: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
       Contexto:
-               4 | b = max(a)
-        >>>    5 | c = size(a)
-               6 | t = 0
+               7 | 		print(i)
+        >>>    8 | 	i = i +1
 
-  [4] Linha 6: Variável 't' com nome muito curto (≤4 chars)
+====================================================================== Variável 't' com nome muito curto (≤4 chars)
       Trecho  : t = ...
       Contexto:
                5 | c = size(a)

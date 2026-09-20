@@ -1,12 +1,12 @@
 ======================================================================
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
-Arquivo     : 1710_3036.py
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2019_1_v1.81\2019-1\221\users\4166\codes\1710_3036.py
+Arquivo     : 1710_3036.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2019_1_v1.81\2019-1\221\users\4101\executions\1710_3036.log
 Assessment  : 1710
 Título      : TP3 - Estrutura Condicional Encadeada
 Questão     : 3036
-Aluno       : 4166
+Aluno       : 4101
 Grupo       : TP 03
 Significado : Estrutura Condicional Encadeada
 Total MCs   : 2
@@ -16,15 +16,17 @@ Total MCs   : 2
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | x=float(input("valor de x:"))
+     1 | x = float(input("Valor de x: "))
      2 | 
-     3 | if(x<=-1)or(x>=1):
-     4 | 	f=x
-     5 | elif((x>-1)and(x<0))or((0<x)and(x<1)):
-     6 | 	f=1
-     7 | elif(x==0):
-     8 | 	f=2
-     9 | print(round(f, 2))
+     3 | if(x<=-1 or x>=1):
+     4 | 	y = x 
+     5 | 	print(round(y, 2))
+     6 | elif(-1<x<0 or 0<x<1):
+     7 | 	y = 1
+     8 | 	print(round(y, 2))
+     9 | elif(x==0):
+    10 | 	y = 2
+    11 | 	print(round(y, 2))
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
@@ -33,12 +35,12 @@ DETALHAMENTO DOS MISCONCEPTIONS
 ▶ B8 — Não utilização de elif/else
   Ocorrências: 1
 
-  [1] Linha 5: Cadeia if/elif sem bloco else final
-      Trecho  : if ... (linha 5) / elif ... sem else
+  [1] Linha 6: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 6) / elif ... sem else
       Contexto:
-               4 | 	f=x
-        >>>    5 | elif((x>-1)and(x<0))or((0<x)and(x<1)):
-               6 | 	f=1
+               5 | 	print(round(y, 2))
+        >>>    6 | elif(-1<x<0 or 0<x<1):
+               7 | 	y = 1
 
 ▶ G4 — Funções/variáveis com nomes não significativos
   Ocorrências: 4
@@ -46,28 +48,28 @@ DETALHAMENTO DOS MISCONCEPTIONS
   [1] Linha 1: Variável 'x' com nome muito curto (≤4 chars)
       Trecho  : x = ...
       Contexto:
-        >>>    1 | x=float(input("valor de x:"))
+        >>>    1 | x = float(input("Valor de x: "))
                2 | 
 
-  [2] Linha 4: Variável 'f' com nome muito curto (≤4 chars)
-      Trecho  : f = ...
+  [2] Linha 4: Variável 'y' com nome muito curto (≤4 chars)
+      Trecho  : y = ...
       Contexto:
-               3 | if(x<=-1)or(x>=1):
-        >>>    4 | 	f=x
-               5 | elif((x>-1)and(x<0))or((0<x)and(x<1)):
+               3 | if(x<=-1 or x>=1):
+        >>>    4 | 	y = x 
+               5 | 	print(round(y, 2))
 
-  [3] Linha 6: Variável 'f' com nome muito curto (≤4 chars)
-      Trecho  : f = ...
+  [3] Linha 7: Variável 'y' com nome muito curto (≤4 chars)
+      Trecho  : y = ...
       Contexto:
-               5 | elif((x>-1)and(x<0))or((0<x)and(x<1)):
-        >>>    6 | 	f=1
-               7 | elif(x==0):
+               6 | elif(-1<x<0 or 0<x<1):
+        >>>    7 | 	y = 1
+               8 | 	print(round(y, 2))
 
-  [4] Linha 8: Variável 'f' com nome muito curto (≤4 chars)
-      Trecho  : f = ...
+  [4] Linha 10: Variável 'y' com nome muito curto (≤4 chars)
+      Trecho  : y = ...
       Contexto:
-               7 | elif(x==0):
-        >>>    8 | 	f=2
-               9 | print(round(f, 2))
+               9 | elif(x==0):
+        >>>   10 | 	y = 2
+              11 | 	print(round(y, 2))
 
 ======================================================================

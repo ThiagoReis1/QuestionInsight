@@ -1,12 +1,12 @@
 ======================================================================
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
-Arquivo     : 5922_6380.py
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2024_1_v1.81\2024-1\594\users\9841\codes\5922_6380.py
+Arquivo     : 5922_6380.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2024_1_v1.81\2024-1\594\users\9683\executions\5922_6380.log
 Assessment  : 5922
 Título      : TP 6: Estrutura de Repetição por Contagem (for)
 Questão     : 6380
-Aluno       : 9841
+Aluno       : 9683
 Grupo       : TP 06
 Significado : Estrutura de Repetição por Contagem
 Total MCs   : 2
@@ -17,18 +17,21 @@ Total MCs   : 2
 CÓDIGO FONTE
 ----------------------------------------------------------------------
      1 | from numpy import *
-     2 | v = zeros(4,dtype=int)
-     3 | e = str(input()).split(",")
-     4 | for c in e:
-     5 | 	if c == "E":
-     6 | 		v[0] += 1
-     7 | 	if c == "V":
-     8 | 		v[1] += 1
-     9 | 	if c == "A":
-    10 | 		v[2] += 1
-    11 | 	if c == "D":
-    12 | 		v[3] += 1
-    13 | print(v)
+     2 | 
+     3 | a = zeros(4, dtype=int)
+     4 | 
+     5 | v = input("Insira o caractere:slaxd").upper().split(",")
+     6 | 
+     7 | for x in v:
+     8 | 	if x == "E":
+     9 | 		a[0] += 1
+    10 | 	elif x == "V":
+    11 | 		a[1] += 1
+    12 | 	elif x == "A":
+    13 | 		a[2] += 1 
+    14 | 	elif x == "D":
+    15 | 		a[3] += 1
+    16 | print(a)
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
@@ -37,24 +40,28 @@ DETALHAMENTO DOS MISCONCEPTIONS
 ▶ B8 — Não utilização de elif/else
   Ocorrências: 1
 
-  [1] Linha 0: B8 detectado pelo VisitorMC3 (localização exata não mapeada)
-      Trecho  : —
+  [1] Linha 12: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 12) / elif ... sem else
+      Contexto:
+              11 | 		a[1] += 1
+        >>>   12 | 	elif x == "A":
+              13 | 		a[2] += 1 
 
 ▶ G4 — Funções/variáveis com nomes não significativos
   Ocorrências: 2
 
-  [1] Linha 2: Variável 'v' com nome muito curto (≤4 chars)
+  [1] Linha 3: Variável 'a' com nome muito curto (≤4 chars)
+      Trecho  : a = ...
+      Contexto:
+               2 | 
+        >>>    3 | a = zeros(4, dtype=int)
+               4 | 
+
+  [2] Linha 5: Variável 'v' com nome muito curto (≤4 chars)
       Trecho  : v = ...
       Contexto:
-               1 | from numpy import *
-        >>>    2 | v = zeros(4,dtype=int)
-               3 | e = str(input()).split(",")
-
-  [2] Linha 3: Variável 'e' com nome muito curto (≤4 chars)
-      Trecho  : e = ...
-      Contexto:
-               2 | v = zeros(4,dtype=int)
-        >>>    3 | e = str(input()).split(",")
-               4 | for c in e:
+               4 | 
+        >>>    5 | v = input("Insira o caractere:slaxd").upper().split(",")
+               6 | 
 
 ======================================================================

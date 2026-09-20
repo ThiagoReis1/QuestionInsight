@@ -1,12 +1,12 @@
 ======================================================================
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
-Arquivo     : 1528_1647.py
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2018_2_v1.81\2018-2\207\users\3828\codes\1528_1647.py
+Arquivo     : 1528_1647.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2018_2_v1.81\2018-2\207\users\2681\executions\1528_1647.log
 Assessment  : 1528
 Título      : TP 6: Estrutura de Repetição por Contagem (for)
 Questão     : 1647
-Aluno       : 3828
+Aluno       : 2681
 Grupo       : TP 06
 Significado : Estrutura de Repetição por Contagem
 Total MCs   : 2
@@ -16,25 +16,25 @@ Total MCs   : 2
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | from numpy import*
+     1 | from numpy import *
      2 | 
-     3 | entrada = array(eval(input("Digite entrada: ")))
-     4 | 
-     5 | # variavel acumuladora alunos aprovados
-     6 | a = 0
-     7 | 
-     8 | for x in range(size(entrada)):
-     9 | 	if(entrada[x] >= 70):
-    10 | 		a = a + 1
-    11 | z = 0
-    12 | cont = zeros(a, dtype=int)
-    13 | for y in range(size(entrada)):
-    14 | 	if (entrada[y] >= 70):
-    15 | 		cont[z] = y
-    16 | 		z = z + 1
+     3 | vet1 = array(eval(input("vetor: ")))
+     4 | y=0
+     5 | ap = 0
+     6 | f = 0
+     7 | for x in range(size(vet1)):
+     8 | 	if(vet1[x] >= 70 ):
+     9 | 		ap += 1
+    10 | 		
+    11 | z = ap
+    12 | vet2 = zeros(z, dtype = int)
+    13 | for y in range(size(vet1)):
+    14 | 	if(vet1[y]>= 70):
+    15 | 		vet2[f] = y
+    16 | 		f += 1
     17 | 
-    18 | print (a)
-    19 | print(z)
+    18 | print(ap)
+    19 | print(vet2)
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
@@ -47,41 +47,48 @@ DETALHAMENTO DOS MISCONCEPTIONS
       Trecho  : —
 
 ▶ G4 — Funções/variáveis com nomes não significativos
-  Ocorrências: 5
+  Ocorrências: 6
 
-  [1] Linha 6: Variável 'a' com nome muito curto (≤4 chars)
-      Trecho  : a = ...
+  [1] Linha 3: Variável 'vet1' com nome muito curto (≤4 chars)
+      Trecho  : vet1 = ...
       Contexto:
-               5 | # variavel acumuladora alunos aprovados
-        >>>    6 | a = 0
-               7 | 
+               2 | 
+        >>>    3 | vet1 = array(eval(input("vetor: ")))
+               4 | y=0
 
-  [2] Linha 11: Variável 'z' com nome muito curto (≤4 chars)
+  [2] Linha 4: Variável 'y' com nome muito curto (≤4 chars)
+      Trecho  : y = ...
+      Contexto:
+               3 | vet1 = array(eval(input("vetor: ")))
+        >>>    4 | y=0
+               5 | ap = 0
+
+  [3] Linha 5: Variável 'ap' com nome muito curto (≤4 chars)
+      Trecho  : ap = ...
+      Contexto:
+               4 | y=0
+        >>>    5 | ap = 0
+               6 | f = 0
+
+  [4] Linha 6: Variável 'f' com nome muito curto (≤4 chars)
+      Trecho  : f = ...
+      Contexto:
+               5 | ap = 0
+        >>>    6 | f = 0
+               7 | for x in range(size(vet1)):
+
+  [5] Linha 11: Variável 'z' com nome muito curto (≤4 chars)
       Trecho  : z = ...
       Contexto:
-              10 | 		a = a + 1
-        >>>   11 | z = 0
-              12 | cont = zeros(a, dtype=int)
+              10 | 		
+        >>>   11 | z = ap
+              12 | vet2 = zeros(z, dtype = int)
 
-  [3] Linha 12: Variável 'cont' com nome muito curto (≤4 chars)
-      Trecho  : cont = ...
+  [6] Linha 12: Variável 'vet2' com nome muito curto (≤4 chars)
+      Trecho  : vet2 = ...
       Contexto:
-              11 | z = 0
-        >>>   12 | cont = zeros(a, dtype=int)
-              13 | for y in range(size(entrada)):
-
-  [4] Linha 10: Variável 'a' com nome muito curto (≤4 chars)
-      Trecho  : a = ...
-      Contexto:
-               9 | 	if(entrada[x] >= 70):
-        >>>   10 | 		a = a + 1
-              11 | z = 0
-
-  [5] Linha 16: Variável 'z' com nome muito curto (≤4 chars)
-      Trecho  : z = ...
-      Contexto:
-              15 | 		cont[z] = y
-        >>>   16 | 		z = z + 1
-              17 | 
+              11 | z = ap
+        >>>   12 | vet2 = zeros(z, dtype = int)
+              13 | for y in range(size(vet1)):
 
 ======================================================================

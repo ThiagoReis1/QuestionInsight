@@ -1,12 +1,12 @@
 ======================================================================
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
-Arquivo     : 1406_1402.py
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2018_2_v1.81\2018-2\208\users\3749\codes\1406_1402.py
+Arquivo     : 1406_1402.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2018_2_v1.81\2018-2\208\users\3746\executions\1406_1402.log
 Assessment  : 1406
 Título      : TP 2 - Condicional Simples e Composta (if/else)
 Questão     : 1402
-Aluno       : 3749
+Aluno       : 3746
 Grupo       : TP 02
 Significado : Estrutura Condicional Simples e Composta
 Total MCs   : 1
@@ -16,42 +16,46 @@ Total MCs   : 1
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | arma = input("nome da arma (machado/lanca) ")
-     2 | fator = int(input("fator de sucesso: "))
-     3 | 
-     4 | x = 30 * fator / 10
-     5 | y = 5 + 20 * fator / 10
-     6 | 
-     7 | if (arma == "machado"):
-     8 | 	print(int(x))
-     9 | else:
-    10 | 	print(int(y))
+     1 | arma = input("machado ou lanca:")
+     2 | fs = int(input("fator de sucesso"))
+     3 | if (arma == "machado"):
+     4 | 	dano = 30 * (fs/10)
+     5 | else: 
+     6 | 	dano = 5 + 20 * (fs/10)
+     7 | print(float(dano))
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
 ----------------------------------------------------------------------
 
 ▶ G4 — Funções/variáveis com nomes não significativos
-  Ocorrências: 3
+  Ocorrências: 4
 
   [1] Linha 1: Variável 'arma' com nome muito curto (≤4 chars)
       Trecho  : arma = ...
       Contexto:
-        >>>    1 | arma = input("nome da arma (machado/lanca) ")
-               2 | fator = int(input("fator de sucesso: "))
+        >>>    1 | arma = input("machado ou lanca:")
+               2 | fs = int(input("fator de sucesso"))
 
-  [2] Linha 4: Variável 'x' com nome muito curto (≤4 chars)
-      Trecho  : x = ...
+  [2] Linha 2: Variável 'fs' com nome muito curto (≤4 chars)
+      Trecho  : fs = ...
       Contexto:
-               3 | 
-        >>>    4 | x = 30 * fator / 10
-               5 | y = 5 + 20 * fator / 10
+               1 | arma = input("machado ou lanca:")
+        >>>    2 | fs = int(input("fator de sucesso"))
+               3 | if (arma == "machado"):
 
-  [3] Linha 5: Variável 'y' com nome muito curto (≤4 chars)
-      Trecho  : y = ...
+  [3] Linha 4: Variável 'dano' com nome muito curto (≤4 chars)
+      Trecho  : dano = ...
       Contexto:
-               4 | x = 30 * fator / 10
-        >>>    5 | y = 5 + 20 * fator / 10
-               6 | 
+               3 | if (arma == "machado"):
+        >>>    4 | 	dano = 30 * (fs/10)
+               5 | else: 
+
+  [4] Linha 6: Variável 'dano' com nome muito curto (≤4 chars)
+      Trecho  : dano = ...
+      Contexto:
+               5 | else: 
+        >>>    6 | 	dano = 5 + 20 * (fs/10)
+               7 | print(float(dano))
 
 ======================================================================

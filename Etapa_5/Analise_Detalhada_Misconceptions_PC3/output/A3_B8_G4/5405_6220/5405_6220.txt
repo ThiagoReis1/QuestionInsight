@@ -1,8 +1,8 @@
 ======================================================================
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
-Arquivo     : 5405_6220.py
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2023_2_v1.81\2023-2\557\users\9163\codes\5405_6220.py
+Arquivo     : 5405_6220.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2023_2_v1.81\2023-2\557\users\9163\executions\5405_6220.log
 Assessment  : 5405
 Título      : TP 4: Estrutura de Repetição por Condição
 Questão     : 6220
@@ -19,13 +19,11 @@ CÓDIGO FONTE
      1 | numX = int(input())
      2 | numY = int(input())
      3 | cont = numX
-     4 | soma  = 0
-     5 | 
-     6 | while cont <= numY:
-     7 | 	if cont%3 == 0:
-     8 | 		soma = numX + numY
-     9 | 	cont+=1
-    10 | print(cont)	
+     4 | 
+     5 | while cont <= numX:
+     6 | 	if cont%3 == 0:
+     7 | 		print(cont)
+     8 | 		cont+=1
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
@@ -34,12 +32,12 @@ DETALHAMENTO DOS MISCONCEPTIONS
 ▶ A3 — Variável inicializada desnecessariamente
   Ocorrências: 1
 
-  [1] Linha 4: Variável 'soma' declarada mas nunca utilizada
-      Trecho  : soma = ...
+  [1] Linha 2: Variável 'numY' declarada mas nunca utilizada
+      Trecho  : numY = ...
       Contexto:
+               1 | numX = int(input())
+        >>>    2 | numY = int(input())
                3 | cont = numX
-        >>>    4 | soma  = 0
-               5 | 
 
 ▶ B8 — Não utilização de elif/else
   Ocorrências: 1
@@ -48,7 +46,7 @@ DETALHAMENTO DOS MISCONCEPTIONS
       Trecho  : —
 
 ▶ G4 — Funções/variáveis com nomes não significativos
-  Ocorrências: 5
+  Ocorrências: 3
 
   [1] Linha 1: Variável 'numX' com nome muito curto (≤4 chars)
       Trecho  : numX = ...
@@ -68,20 +66,6 @@ DETALHAMENTO DOS MISCONCEPTIONS
       Contexto:
                2 | numY = int(input())
         >>>    3 | cont = numX
-               4 | soma  = 0
-
-  [4] Linha 4: Variável 'soma' com nome muito curto (≤4 chars)
-      Trecho  : soma = ...
-      Contexto:
-               3 | cont = numX
-        >>>    4 | soma  = 0
-               5 | 
-
-  [5] Linha 8: Variável 'soma' com nome muito curto (≤4 chars)
-      Trecho  : soma = ...
-      Contexto:
-               7 | 	if cont%3 == 0:
-        >>>    8 | 		soma = numX + numY
-               9 | 	cont+=1
+               4 | 
 
 ======================================================================

@@ -1,12 +1,12 @@
 ======================================================================
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
-Arquivo     : 1269_1648.py
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2018_1_v1.81\2018-1\187\users\3449\codes\1269_1648.py
+Arquivo     : 1269_1648.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2018_1_v1.81\2018-1\187\users\3202\executions\1269_1648.log
 Assessment  : 1269
 Título      : TP 6: Estrutura de Repetição por Contagem (for)
 Questão     : 1648
-Aluno       : 3449
+Aluno       : 3202
 Grupo       : TP 06
 Significado : Estrutura de Repetição por Contagem
 Total MCs   : 2
@@ -16,31 +16,24 @@ Total MCs   : 2
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | from numpy import*
-     2 | v=array(eval(input("Alunos reprovados: ")))
-     3 | s=0
-     4 | for i in v:
-     5 | 	if (i<70):
-     6 | 		s=s +1
-     7 | print(s)
-     8 | 
-     9 | t= zeros(s, dtype=int)
-    10 | c= 0
-    11 | b= 0
-    12 | 
-    13 | for l in v:
-    14 | 	if	(l < 70):
-    15 | 		t[c]= t[c] + b
-    16 | 		b= b+1
-    17 | 		c= c+1
-    18 | 	else:
-    19 | 		b=b+1
-    20 | 		
-    21 | print(t)
-    22 | 	
-    23 | 
-    24 | 
-    25 | 				 
+     1 | from numpy import * 
+     2 | v = array(eval(input()))
+     3 | ar = 0 
+     4 | pv = 0
+     5 | pf = 0
+     6 | for x in v:
+     7 | 	if( x < 70):
+     8 | 		ar= ar + 1
+     9 | print(ar)
+    10 | f = zeros(ar, dtype=int)
+    11 | for i in v:
+    12 | 	if(i < 70):
+    13 | 		f[pf] = pv
+    14 | 		pf = pf + 1
+    15 | 	pv = pv + 1
+    16 | i = i + 1
+    17 | 
+    18 | print(f)
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
@@ -58,64 +51,64 @@ DETALHAMENTO DOS MISCONCEPTIONS
   [1] Linha 2: Variável 'v' com nome muito curto (≤4 chars)
       Trecho  : v = ...
       Contexto:
-               1 | from numpy import*
-        >>>    2 | v=array(eval(input("Alunos reprovados: ")))
-               3 | s=0
+               1 | from numpy import * 
+        >>>    2 | v = array(eval(input()))
+               3 | ar = 0 
 
-  [2] Linha 3: Variável 's' com nome muito curto (≤4 chars)
-      Trecho  : s = ...
+  [2] Linha 3: Variável 'ar' com nome muito curto (≤4 chars)
+      Trecho  : ar = ...
       Contexto:
-               2 | v=array(eval(input("Alunos reprovados: ")))
-        >>>    3 | s=0
-               4 | for i in v:
+               2 | v = array(eval(input()))
+        >>>    3 | ar = 0 
+               4 | pv = 0
 
-  [3] Linha 9: Variável 't' com nome muito curto (≤4 chars)
-      Trecho  : t = ...
+  [3] Linha 4: Variável 'pv' com nome muito curto (≤4 chars)
+      Trecho  : pv = ...
       Contexto:
-               8 | 
-        >>>    9 | t= zeros(s, dtype=int)
-              10 | c= 0
+               3 | ar = 0 
+        >>>    4 | pv = 0
+               5 | pf = 0
 
-  [4] Linha 10: Variável 'c' com nome muito curto (≤4 chars)
-      Trecho  : c = ...
+  [4] Linha 5: Variável 'pf' com nome muito curto (≤4 chars)
+      Trecho  : pf = ...
       Contexto:
-               9 | t= zeros(s, dtype=int)
-        >>>   10 | c= 0
-              11 | b= 0
+               4 | pv = 0
+        >>>    5 | pf = 0
+               6 | for x in v:
 
-  [5] Linha 11: Variável 'b' com nome muito curto (≤4 chars)
-      Trecho  : b = ...
+  [5] Linha 10: Variável 'f' com nome muito curto (≤4 chars)
+      Trecho  : f = ...
       Contexto:
-              10 | c= 0
-        >>>   11 | b= 0
-              12 | 
+               9 | print(ar)
+        >>>   10 | f = zeros(ar, dtype=int)
+              11 | for i in v:
 
-  [6] Linha 6: Variável 's' com nome muito curto (≤4 chars)
-      Trecho  : s = ...
+  [6] Linha 16: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
       Contexto:
-               5 | 	if (i<70):
-        >>>    6 | 		s=s +1
-               7 | print(s)
+              15 | 	pv = pv + 1
+        >>>   16 | i = i + 1
+              17 | 
 
-  [7] Linha 16: Variável 'b' com nome muito curto (≤4 chars)
-      Trecho  : b = ...
+  [7] Linha 15: Variável 'pv' com nome muito curto (≤4 chars)
+      Trecho  : pv = ...
       Contexto:
-              15 | 		t[c]= t[c] + b
-        >>>   16 | 		b= b+1
-              17 | 		c= c+1
+              14 | 		pf = pf + 1
+        >>>   15 | 	pv = pv + 1
+              16 | i = i + 1
 
-  [8] Linha 17: Variável 'c' com nome muito curto (≤4 chars)
-      Trecho  : c = ...
+  [8] Linha 8: Variável 'ar' com nome muito curto (≤4 chars)
+      Trecho  : ar = ...
       Contexto:
-              16 | 		b= b+1
-        >>>   17 | 		c= c+1
-              18 | 	else:
+               7 | 	if( x < 70):
+        >>>    8 | 		ar= ar + 1
+               9 | print(ar)
 
-  [9] Linha 19: Variável 'b' com nome muito curto (≤4 chars)
-      Trecho  : b = ...
+  [9] Linha 14: Variável 'pf' com nome muito curto (≤4 chars)
+      Trecho  : pf = ...
       Contexto:
-              18 | 	else:
-        >>>   19 | 		b=b+1
-              20 | 		
+              13 | 		f[pf] = pv
+        >>>   14 | 		pf = pf + 1
+              15 | 	pv = pv + 1
 
 ======================================================================

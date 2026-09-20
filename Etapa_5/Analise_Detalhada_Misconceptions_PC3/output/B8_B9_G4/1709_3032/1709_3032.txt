@@ -1,12 +1,12 @@
 ======================================================================
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
-Arquivo     : 1709_3032.py
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2019_1_v1.81\2019-1\226\users\4154\codes\1709_3032.py
+Arquivo     : 1709_3032.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2019_1_v1.81\2019-1\226\users\4149\executions\1709_3032.log
 Assessment  : 1709
 Título      : TP3 - Estrutura Condicional Encadeada
 Questão     : 3032
-Aluno       : 4154
+Aluno       : 4149
 Grupo       : TP 03
 Significado : Estrutura Condicional Encadeada
 Total MCs   : 3
@@ -17,15 +17,19 @@ Total MCs   : 3
 CÓDIGO FONTE
 ----------------------------------------------------------------------
      1 | from math import *
-     2 | a = float(input('valor de x: '))
-     3 | if a <= 0:
-     4 | 	print(0)
-     5 | elif ((a>0) and (a<1)) or (a == 1):
-     6 | 	print(1)
-     7 | elif ((a>1) and (a<2)) or (a == 2):
-     8 | 	print(round(sqrt(a),4))
-     9 | elif (a>2):
-    10 | 	print(round(a**(1/3),4))
+     2 | 
+     3 | x=float(input("entre com o valor de x: "))
+     4 | 
+     5 | a=sqrt(x)
+     6 | b=x**(1/3)
+     7 | if(x<=0):
+     8 | 	print(abs(0))
+     9 | elif(x>0)and(x<=1):
+    10 | 	print(abs(1))
+    11 | elif(x>1)and(x<=2):
+    12 | 	print(round(a,4))
+    13 | elif(x>2):
+    14 | 	print(round(b,4))
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
@@ -34,12 +38,12 @@ DETALHAMENTO DOS MISCONCEPTIONS
 ▶ B8 — Não utilização de elif/else
   Ocorrências: 1
 
-  [1] Linha 7: Cadeia if/elif sem bloco else final
-      Trecho  : if ... (linha 7) / elif ... sem else
+  [1] Linha 11: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 11) / elif ... sem else
       Contexto:
-               6 | 	print(1)
-        >>>    7 | elif ((a>1) and (a<2)) or (a == 2):
-               8 | 	print(round(sqrt(a),4))
+              10 | 	print(abs(1))
+        >>>   11 | elif(x>1)and(x<=2):
+              12 | 	print(round(a,4))
 
 ▶ B9 — elif/else retestando condições já verificadas
   Ocorrências: 1
@@ -48,13 +52,27 @@ DETALHAMENTO DOS MISCONCEPTIONS
       Trecho  : —
 
 ▶ G4 — Funções/variáveis com nomes não significativos
-  Ocorrências: 1
+  Ocorrências: 3
 
-  [1] Linha 2: Variável 'a' com nome muito curto (≤4 chars)
+  [1] Linha 3: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+               2 | 
+        >>>    3 | x=float(input("entre com o valor de x: "))
+               4 | 
+
+  [2] Linha 5: Variável 'a' com nome muito curto (≤4 chars)
       Trecho  : a = ...
       Contexto:
-               1 | from math import *
-        >>>    2 | a = float(input('valor de x: '))
-               3 | if a <= 0:
+               4 | 
+        >>>    5 | a=sqrt(x)
+               6 | b=x**(1/3)
+
+  [3] Linha 6: Variável 'b' com nome muito curto (≤4 chars)
+      Trecho  : b = ...
+      Contexto:
+               5 | a=sqrt(x)
+        >>>    6 | b=x**(1/3)
+               7 | if(x<=0):
 
 ======================================================================

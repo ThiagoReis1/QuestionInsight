@@ -1,12 +1,12 @@
 ======================================================================
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
-Arquivo     : 152_1161.py
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2016_1_v1.81\2016-1\106\users\1653\codes\152_1161.py
+Arquivo     : 152_1161.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2016_1_v1.81\2016-1\106\users\1659\executions\152_1161.log
 Assessment  : 152
 Título      : Avaliação Parcial 04 – Estrutura de Repetição por Condição (while)
 Questão     : 1161
-Aluno       : 1653
+Aluno       : 1659
 Grupo       : TP 04
 Significado : Estrutura de Repetição por Condição
 Total MCs   : 2
@@ -16,74 +16,107 @@ Total MCs   : 2
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | Z = int(input("Qual a populacao?"))
-     2 | H = int(input("Qual a populacao?"))
-     3 | X = int(input("Transfomar em zumbis?"))
-     4 | Y = int(input("Matar zumbis?"))
-     5 |  
+     1 | z = int(input("Digite z de zumbis: "))
+     2 | h = int(input("Digite h de habitantes: "))
+     3 | x = int(input("Digite x de pessoas: "))
+     4 | z = int(input("Digite y de exterminadores: "))
+     5 | i = 1
+     6 | soma = 0
+     7 | t = 0
+     8 | while(z > h):
+     9 | 	pop = x * z
+    10 | 	soma = soma + pop
+    11 | 	i = i + 1
+    12 | 	t = t + 1
+    13 | print(soma)
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
 ----------------------------------------------------------------------
 
 ▶ A3 — Variável inicializada desnecessariamente
-  Ocorrências: 4
+  Ocorrências: 1
 
-  [1] Linha 1: Variável 'Z' declarada mas nunca utilizada
-      Trecho  : Z = ...
-      Contexto:
-        >>>    1 | Z = int(input("Qual a populacao?"))
-               2 | H = int(input("Qual a populacao?"))
-
-  [2] Linha 2: Variável 'H' declarada mas nunca utilizada
-      Trecho  : H = ...
-      Contexto:
-               1 | Z = int(input("Qual a populacao?"))
-        >>>    2 | H = int(input("Qual a populacao?"))
-               3 | X = int(input("Transfomar em zumbis?"))
-
-  [3] Linha 3: Variável 'X' declarada mas nunca utilizada
-      Trecho  : X = ...
-      Contexto:
-               2 | H = int(input("Qual a populacao?"))
-        >>>    3 | X = int(input("Transfomar em zumbis?"))
-               4 | Y = int(input("Matar zumbis?"))
-
-  [4] Linha 4: Variável 'Y' declarada mas nunca utilizada
-      Trecho  : Y = ...
-      Contexto:
-               3 | X = int(input("Transfomar em zumbis?"))
-        >>>    4 | Y = int(input("Matar zumbis?"))
-               5 |  
+  [1] Linha 0: A3 detectado pelo VisitorMC3 (localização exata não mapeada)
+      Trecho  : —
 
 ▶ G4 — Funções/variáveis com nomes não significativos
-  Ocorrências: 4
+  Ocorrências: 11
 
-  [1] Linha 1: Variável 'Z' com nome muito curto (≤4 chars)
-      Trecho  : Z = ...
+  [1] Linha 1: Variável 'z' com nome muito curto (≤4 chars)
+      Trecho  : z = ...
       Contexto:
-        >>>    1 | Z = int(input("Qual a populacao?"))
-               2 | H = int(input("Qual a populacao?"))
+        >>>    1 | z = int(input("Digite z de zumbis: "))
+               2 | h = int(input("Digite h de habitantes: "))
 
-  [2] Linha 2: Variável 'H' com nome muito curto (≤4 chars)
-      Trecho  : H = ...
+  [2] Linha 2: Variável 'h' com nome muito curto (≤4 chars)
+      Trecho  : h = ...
       Contexto:
-               1 | Z = int(input("Qual a populacao?"))
-        >>>    2 | H = int(input("Qual a populacao?"))
-               3 | X = int(input("Transfomar em zumbis?"))
+               1 | z = int(input("Digite z de zumbis: "))
+        >>>    2 | h = int(input("Digite h de habitantes: "))
+               3 | x = int(input("Digite x de pessoas: "))
 
-  [3] Linha 3: Variável 'X' com nome muito curto (≤4 chars)
-      Trecho  : X = ...
+  [3] Linha 3: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
       Contexto:
-               2 | H = int(input("Qual a populacao?"))
-        >>>    3 | X = int(input("Transfomar em zumbis?"))
-               4 | Y = int(input("Matar zumbis?"))
+               2 | h = int(input("Digite h de habitantes: "))
+        >>>    3 | x = int(input("Digite x de pessoas: "))
+               4 | z = int(input("Digite y de exterminadores: "))
 
-  [4] Linha 4: Variável 'Y' com nome muito curto (≤4 chars)
-      Trecho  : Y = ...
+  [4] Linha 4: Variável 'z' com nome muito curto (≤4 chars)
+      Trecho  : z = ...
       Contexto:
-               3 | X = int(input("Transfomar em zumbis?"))
-        >>>    4 | Y = int(input("Matar zumbis?"))
-               5 |  
+               3 | x = int(input("Digite x de pessoas: "))
+        >>>    4 | z = int(input("Digite y de exterminadores: "))
+               5 | i = 1
+
+  [5] Linha 5: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+               4 | z = int(input("Digite y de exterminadores: "))
+        >>>    5 | i = 1
+               6 | soma = 0
+
+  [6] Linha 6: Variável 'soma' com nome muito curto (≤4 chars)
+      Trecho  : soma = ...
+      Contexto:
+               5 | i = 1
+        >>>    6 | soma = 0
+               7 | t = 0
+
+  [7] Linha 7: Variável 't' com nome muito curto (≤4 chars)
+      Trecho  : t = ...
+      Contexto:
+               6 | soma = 0
+        >>>    7 | t = 0
+               8 | while(z > h):
+
+  [8] Linha 9: Variável 'pop' com nome muito curto (≤4 chars)
+      Trecho  : pop = ...
+      Contexto:
+               8 | while(z > h):
+        >>>    9 | 	pop = x * z
+              10 | 	soma = soma + pop
+
+  [9] Linha 10: Variável 'soma' com nome muito curto (≤4 chars)
+      Trecho  : soma = ...
+      Contexto:
+               9 | 	pop = x * z
+        >>>   10 | 	soma = soma + pop
+              11 | 	i = i + 1
+
+  [10] Linha 11: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+              10 | 	soma = soma + pop
+        >>>   11 | 	i = i + 1
+              12 | 	t = t + 1
+
+  [11] Linha 12: Variável 't' com nome muito curto (≤4 chars)
+      Trecho  : t = ...
+      Contexto:
+              11 | 	i = i + 1
+        >>>   12 | 	t = t + 1
+              13 | print(soma)
 
 ======================================================================

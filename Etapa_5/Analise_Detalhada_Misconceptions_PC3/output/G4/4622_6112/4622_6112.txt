@@ -1,12 +1,12 @@
 ======================================================================
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
-Arquivo     : 4622_6112.py
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2022_2_v1.81\2022-2\487\users\8187\codes\4622_6112.py
+Arquivo     : 4622_6112.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2022_2_v1.81\2022-2\487\users\8185\executions\4622_6112.log
 Assessment  : 4622
 Título      : TP 03 – Condicionais Encadeadas (if/elif)
 Questão     : 6112
-Aluno       : 8187
+Aluno       : 8185
 Grupo       : TP 03
 Significado : Estrutura Condicional Encadeada
 Total MCs   : 1
@@ -16,60 +16,67 @@ Total MCs   : 1
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | q= float(input("quantidade c. comum: "))
+     1 | c = float(input("Quantidade de combustivel comum: "))
      2 | 
-     3 | if(q < 17.5)and(q >0):
-     4 | 	cal= q+10.5
-     5 | elif(q > 17.5)and(q <35.0)and(q>0):
-     6 | 	cal= q+14.0
-     7 | elif(q > 35.0)and(q < 50.0)and(q>0):
-     8 | 	cal= q+18.6
-     9 | else:
-    10 | 	cal= q+24.5
-    11 | print(round(cal,1))
+     3 | if (c > 0) and (c < 17.5):
+     4 | 	t = 10.5
+     5 | 	
+     6 | elif (c > 17.5) and (c < 35.0):
+     7 | 	t = 14.0
+     8 | 	
+     9 | elif (c > 35.0) and (c < 50.0):
+    10 | 	t = 18.6
+    11 | 	
+    12 | else:
+    13 | 	t = 24.5
+    14 | 	
+    15 | s = t + c
+    16 | print(round(s, 1))
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
 ----------------------------------------------------------------------
 
 ▶ G4 — Funções/variáveis com nomes não significativos
-  Ocorrências: 5
+  Ocorrências: 6
 
-  [1] Linha 1: Variável 'q' com nome muito curto (≤4 chars)
-      Trecho  : q = ...
+  [1] Linha 1: Variável 'c' com nome muito curto (≤4 chars)
+      Trecho  : c = ...
       Contexto:
-        >>>    1 | q= float(input("quantidade c. comum: "))
+        >>>    1 | c = float(input("Quantidade de combustivel comum: "))
                2 | 
 
-  [2] Linha 4: Variável 'cal' com nome muito curto (≤4 chars)
-      Trecho  : cal = ...
+  [2] Linha 15: Variável 's' com nome muito curto (≤4 chars)
+      Trecho  : s = ...
       Contexto:
-               3 | if(q < 17.5)and(q >0):
-        >>>    4 | 	cal= q+10.5
-               5 | elif(q > 17.5)and(q <35.0)and(q>0):
+              14 | 	
+        >>>   15 | s = t + c
+              16 | print(round(s, 1))
 
-  [3] Linha 6: Variável 'cal' com nome muito curto (≤4 chars)
-      Trecho  : cal = ...
+  [3] Linha 4: Variável 't' com nome muito curto (≤4 chars)
+      Trecho  : t = ...
       Contexto:
-               5 | elif(q > 17.5)and(q <35.0)and(q>0):
-        >>>    6 | 	cal= q+14.0
-               7 | elif(q > 35.0)and(q < 50.0)and(q>0):
+               3 | if (c > 0) and (c < 17.5):
+        >>>    4 | 	t = 10.5
+               5 | 	
 
-  [4] Linha 8: Variável 'cal' com nome muito curto (≤4 chars)
-      Trecho  : cal = ...
+  [4] Linha 7: Variável 't' com nome muito curto (≤4 chars)
+      Trecho  : t = ...
       Contexto:
-               7 | elif(q > 35.0)and(q < 50.0)and(q>0):
-        >>>    8 | 	cal= q+18.6
-               9 | else:
+               6 | elif (c > 17.5) and (c < 35.0):
+        >>>    7 | 	t = 14.0
+               8 | 	
 
-  [5] Linha 10: Variável 'cal' com nome muito curto (≤4 chars)
-      Trecho  : cal = ...
+  [5] Linha 10: Variável 't' com nome muito curto (≤4 chars)
+      Trecho  : t = ...
       Contexto:
-               9 | else:
-        >>>   10 | 	cal= q+24.5
-              11 | print(round(cal,1))
+               9 | elif (c > 35.0) and (c < 50.0):
+        >>>   10 | 	t = 18.6
+              11 | 	
 
-======================================================================:
+  [6] Linha 13: Variável 't' com nome muito curto (≤4 chars)
+      Trecho  : t = ...
+      Contexto:
               12 | else:
         >>>   13 | 	t = 24.5
               14 | 	

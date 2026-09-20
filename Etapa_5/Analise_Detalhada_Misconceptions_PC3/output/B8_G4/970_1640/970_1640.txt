@@ -1,12 +1,12 @@
 ======================================================================
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
-Arquivo     : 970_1640.py
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2017_2_v1.81\2017-2\163\users\2975\codes\970_1640.py
+Arquivo     : 970_1640.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2017_2_v1.81\2017-2\163\users\2830\executions\970_1640.log
 Assessment  : 970
 Título      : Trabalho Prático 06 – Repetição por contagem
 Questão     : 1640
-Aluno       : 2975
+Aluno       : 2830
 Grupo       : TP 06
 Significado : Estrutura de Repetição por Contagem
 Total MCs   : 2
@@ -16,27 +16,26 @@ Total MCs   : 2
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | from numpy import *
+     1 | from numpy import*
      2 | 
-     3 | 
-     4 | n = array(eval(input()))
-     5 | acm =0
-     6 | 
-     7 | for i in range(size(n)):
-     8 | 	
-     9 | 	if (n[i] % 2 != 0):
-    10 | 		acm = acm + 1
-    11 | 		
-    12 | print(acm)
-    13 | 
-    14 | cont = zeros(dtype==acm, int)
-    15 | 
-    16 | for j in range(size(n)):
-    17 | 	
-    18 | 	if (n[j] % 2 != 0):
-    19 | 		cont[j] = j
-    20 | 	
-    21 | print(cont)
+     3 | n = array(eval(input()))
+     4 | 
+     5 | i = 0 
+     6 | c = 0 
+     7 | while(i<size(n)):
+     8 | 	if(n[i]%2!=0):
+     9 | 		c = c + 1
+    10 | 	i = i + 1
+    11 | print(c)
+    12 | z = zeros(c,dtype=int)
+    13 | k = 0 
+    14 | j = 0 
+    15 | while(j < size(n)):
+    16 | 	if(n[j]%2 != 0):
+    17 | 		z[k] = j
+    18 | 		k = k + 1
+    19 | 	j = j + 1
+    20 | print(z)	
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
@@ -49,34 +48,76 @@ DETALHAMENTO DOS MISCONCEPTIONS
       Trecho  : —
 
 ▶ G4 — Funções/variáveis com nomes não significativos
-  Ocorrências: 4
+  Ocorrências: 10
 
-  [1] Linha 4: Variável 'n' com nome muito curto (≤4 chars)
+  [1] Linha 3: Variável 'n' com nome muito curto (≤4 chars)
       Trecho  : n = ...
       Contexto:
-               3 | 
-        >>>    4 | n = array(eval(input()))
-               5 | acm =0
+               2 | 
+        >>>    3 | n = array(eval(input()))
+               4 | 
 
-  [2] Linha 5: Variável 'acm' com nome muito curto (≤4 chars)
-      Trecho  : acm = ...
+  [2] Linha 5: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
       Contexto:
-               4 | n = array(eval(input()))
-        >>>    5 | acm =0
-               6 | 
+               4 | 
+        >>>    5 | i = 0 
+               6 | c = 0 
 
-  [3] Linha 14: Variável 'cont' com nome muito curto (≤4 chars)
-      Trecho  : cont = ...
+  [3] Linha 6: Variável 'c' com nome muito curto (≤4 chars)
+      Trecho  : c = ...
       Contexto:
-              13 | 
-        >>>   14 | cont = zeros(dtype==acm, int)
-              15 | 
+               5 | i = 0 
+        >>>    6 | c = 0 
+               7 | while(i<size(n)):
 
-  [4] Linha 10: Variável 'acm' com nome muito curto (≤4 chars)
-      Trecho  : acm = ...
+  [4] Linha 12: Variável 'z' com nome muito curto (≤4 chars)
+      Trecho  : z = ...
       Contexto:
-               9 | 	if (n[i] % 2 != 0):
-        >>>   10 | 		acm = acm + 1
-              11 | 		
+              11 | print(c)
+        >>>   12 | z = zeros(c,dtype=int)
+              13 | k = 0 
+
+  [5] Linha 13: Variável 'k' com nome muito curto (≤4 chars)
+      Trecho  : k = ...
+      Contexto:
+              12 | z = zeros(c,dtype=int)
+        >>>   13 | k = 0 
+              14 | j = 0 
+
+  [6] Linha 14: Variável 'j' com nome muito curto (≤4 chars)
+      Trecho  : j = ...
+      Contexto:
+              13 | k = 0 
+        >>>   14 | j = 0 
+              15 | while(j < size(n)):
+
+  [7] Linha 10: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+               9 | 		c = c + 1
+        >>>   10 | 	i = i + 1
+              11 | print(c)
+
+  [8] Linha 19: Variável 'j' com nome muito curto (≤4 chars)
+      Trecho  : j = ...
+      Contexto:
+              18 | 		k = k + 1
+        >>>   19 | 	j = j + 1
+              20 | print(z)	
+
+  [9] Linha 9: Variável 'c' com nome muito curto (≤4 chars)
+      Trecho  : c = ...
+      Contexto:
+               8 | 	if(n[i]%2!=0):
+        >>>    9 | 		c = c + 1
+              10 | 	i = i + 1
+
+  [10] Linha 18: Variável 'k' com nome muito curto (≤4 chars)
+      Trecho  : k = ...
+      Contexto:
+              17 | 		z[k] = j
+        >>>   18 | 		k = k + 1
+              19 | 	j = j + 1
 
 ======================================================================

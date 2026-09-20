@@ -1,12 +1,12 @@
 ======================================================================
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
-Arquivo     : 1830_1656.py
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2019_1_v1.81\2019-1\231\users\4198\codes\1830_1656.py
+Arquivo     : 1830_1656.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2019_1_v1.81\2019-1\231\users\4227\executions\1830_1656.log
 Assessment  : 1830
 Título      : TP6: Repetição por contagem
 Questão     : 1656
-Aluno       : 4198
+Aluno       : 4227
 Grupo       : TP 06
 Significado : Estrutura de Repetição por Contagem
 Total MCs   : 3
@@ -17,75 +17,84 @@ Total MCs   : 3
 CÓDIGO FONTE
 ----------------------------------------------------------------------
      1 | from numpy import*
-     2 | pais= input("Digite o nome do pais: ")
-     3 | cont= zeros(5, dtype=int)
-     4 | vet= 0
-     5 | for i in pais.split(','):
-     6 | 	if(i=="BE"):
-     7 | 		cont[0]= cont[0] + 1
-     8 | 	elif(i=="ES"):
-     9 | 		cont[1]= cont[1] + 1
-    10 | 	elif(i=="FR"):
-    11 | 		cont[2]= cont[2] + 1
-    12 | 	elif(i=="IT"):
-    13 | 		cont[3]= cont[3] + 1
-    14 | 	elif(i=="PT"):
-    15 | 		cont[4]= cont[4] + 1
-    16 | print(max(cont))
-    17 | print(cont)
-    18 | 
-    19 | 
-    20 | 	
+     2 | p = input("").split(",")
+     3 | x = zeros(5, dtype=int)
+     4 | a = 0
+     5 | b = 0
+     6 | c = 0
+     7 | d = 0
+     8 | e = 0
+     9 | for i in range(size(p)):
+    10 | 	if (p[i] == "BE"):
+    11 | 		x[0] = x[0] + 1 
+    12 | 	if (p[i] == "ES"):
+    13 | 		x[1] = x[1] + 1
+    14 | 	if (p[i] == "FR"):
+    15 | 		x[2] = x[2] + 1
+    16 | 	if (p[i] == "IT"):
+    17 | 		x[3] = x[3] + 1
+    18 | 	if(p[i] == "PT"):
+    19 | 		x[4] = x[4] + 1 
+    20 | a = max(x)
+    21 | print(a)
+    22 | print(x)
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
 ----------------------------------------------------------------------
 
 ▶ A3 — Variável inicializada desnecessariamente
-  Ocorrências: 1
+  Ocorrências: 4
 
-  [1] Linha 4: Variável 'vet' declarada mas nunca utilizada
-      Trecho  : vet = ...
+  [1] Linha 5: Variável 'b' declarada mas nunca utilizada
+      Trecho  : b = ...
       Contexto:
-               3 | cont= zeros(5, dtype=int)
-        >>>    4 | vet= 0
-               5 | for i in pais.split(','):
+               4 | a = 0
+        >>>    5 | b = 0
+               6 | c = 0
+
+  [2] Linha 6: Variável 'c' declarada mas nunca utilizada
+      Trecho  : c = ...
+      Contexto:
+               5 | b = 0
+        >>>    6 | c = 0
+               7 | d = 0
+
+  [3] Linha 7: Variável 'd' declarada mas nunca utilizada
+      Trecho  : d = ...
+      Contexto:
+               6 | c = 0
+        >>>    7 | d = 0
+               8 | e = 0
+
+  [4] Linha 8: Variável 'e' declarada mas nunca utilizada
+      Trecho  : e = ...
+      Contexto:
+               7 | d = 0
+        >>>    8 | e = 0
+               9 | for i in range(size(p)):
 
 ▶ B8 — Não utilização de elif/else
   Ocorrências: 1
 
-  [1] Linha 12: Cadeia if/elif sem bloco else final
-      Trecho  : if ... (linha 12) / elif ... sem else
-      Contexto:
-              11 | 		cont[2]= cont[2] + 1
-        >>>   12 | 	elif(i=="IT"):
-              13 | 		cont[3]= cont[3] + 1
+  [1] Linha 0: B8 detectado pelo VisitorMC3 (localização exata não mapeada)
+      Trecho  : —
 
 ▶ G4 — Funções/variáveis com nomes não significativos
-  Ocorrências: 3
+  Ocorrências: 8
 
-  [1] Linha 2: Variável 'pais' com nome muito curto (≤4 chars)
-      Trecho  : pais = ...
+  [1] Linha 2: Variável 'p' com nome muito curto (≤4 chars)
+      Trecho  : p = ...
       Contexto:
                1 | from numpy import*
-        >>>    2 | pais= input("Digite o nome do pais: ")
-               3 | cont= zeros(5, dtype=int)
+        >>>    2 | p = input("").split(",")
+               3 | x = zeros(5, dtype=int)
 
-  [2] Linha 3: Variável 'cont' com nome muito curto (≤4 chars)
-      Trecho  : cont = ...
+  [2] Linha 3: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
       Contexto:
-               2 | pais= input("Digite o nome do pais: ")
-        >>>    3 | cont= zeros(5, dtype=int)
-               4 | vet= 0
-
-  [3] Linha 4: Variável 'vet' com nome muito curto (≤4 chars)
-      Trecho  : vet = ...
-      Contexto:
-               3 | cont= zeros(5, dtype=int)
-        >>>    4 | vet= 0
-               5 | for i in pais.split(','):
-
-======================================================================    3 | x = zeros(5, dtype=int)
+               2 | p = input("").split(",")
+        >>>    3 | x = zeros(5, dtype=int)
                4 | a = 0
 
   [3] Linha 4: Variável 'a' com nome muito curto (≤4 chars)

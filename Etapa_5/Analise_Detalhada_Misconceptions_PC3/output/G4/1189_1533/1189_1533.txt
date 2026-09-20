@@ -1,12 +1,12 @@
 ======================================================================
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
-Arquivo     : 1189_1533.py
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2018_1_v1.81\2018-1\187\users\3214\codes\1189_1533.py
+Arquivo     : 1189_1533.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2018_1_v1.81\2018-1\187\users\3145\executions\1189_1533.log
 Assessment  : 1189
 Título      : TP 04: Estrutura de Repetição por Condição (while)
 Questão     : 1533
-Aluno       : 3214
+Aluno       : 3145
 Grupo       : TP 04
 Significado : Estrutura de Repetição por Condição
 Total MCs   : 1
@@ -16,88 +16,88 @@ Total MCs   : 1
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | from math import *
-     2 | numx=eval(input("Digite o numero real x:"))
-     3 | numk=int(input("Digite um  numero inteiro k:"))
-     4 | i=0
-     5 | kf=0
-     6 | j=0
-     7 | 
-     8 | while(i<numk):
-     9 | 	ak=((numx**j)/factorial(j))
-    10 | 	kf=kf+ak
-    11 | 	j=j+1
-    12 | 	i=i+1
-    13 | print(round(kf,9))
+     1 | from math import factorial
+     2 | nr=int(input())
+     3 | k=int(input())
+     4 | cont=1
+     5 | cos=0
+     6 | pt=0
+     7 | while cont<=k:
+     8 | 	cos+=nr**pt/factorial(pt)
+     9 | 	cont+=1
+    10 | 	pt+=2
+    11 | print(round(cos,8))
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
 ----------------------------------------------------------------------
 
 ▶ G4 — Funções/variáveis com nomes não significativos
-  Ocorrências: 9
+  Ocorrências: 5
 
-  [1] Linha 2: Variável 'numx' com nome muito curto (≤4 chars)
-      Trecho  : numx = ...
+  [1] Linha 2: Variável 'nr' com nome muito curto (≤4 chars)
+      Trecho  : nr = ...
       Contexto:
-               1 | from math import *
-        >>>    2 | numx=eval(input("Digite o numero real x:"))
-               3 | numk=int(input("Digite um  numero inteiro k:"))
+               1 | from math import factorial
+        >>>    2 | nr=int(input())
+               3 | k=int(input())
 
-  [2] Linha 3: Variável 'numk' com nome muito curto (≤4 chars)
-      Trecho  : numk = ...
+  [2] Linha 3: Variável 'k' com nome muito curto (≤4 chars)
+      Trecho  : k = ...
       Contexto:
-               2 | numx=eval(input("Digite o numero real x:"))
-        >>>    3 | numk=int(input("Digite um  numero inteiro k:"))
-               4 | i=0
+               2 | nr=int(input())
+        >>>    3 | k=int(input())
+               4 | cont=1
 
-  [3] Linha 4: Variável 'i' com nome muito curto (≤4 chars)
-      Trecho  : i = ...
+  [3] Linha 4: Variável 'cont' com nome muito curto (≤4 chars)
+      Trecho  : cont = ...
       Contexto:
-               3 | numk=int(input("Digite um  numero inteiro k:"))
-        >>>    4 | i=0
-               5 | kf=0
+               3 | k=int(input())
+        >>>    4 | cont=1
+               5 | cos=0
 
-  [4] Linha 5: Variável 'kf' com nome muito curto (≤4 chars)
-      Trecho  : kf = ...
+  [4] Linha 5: Variável 'cos' com nome muito curto (≤4 chars)
+      Trecho  : cos = ...
       Contexto:
-               4 | i=0
-        >>>    5 | kf=0
-               6 | j=0
+               4 | cont=1
+        >>>    5 | cos=0
+               6 | pt=0
 
-  [5] Linha 6: Variável 'j' com nome muito curto (≤4 chars)
-      Trecho  : j = ...
+  [5] Linha 6: Variável 'pt' com nome muito curto (≤4 chars)
+      Trecho  : pt = ...
       Contexto:
-               5 | kf=0
-        >>>    6 | j=0
-               7 | 
+               5 | cos=0
+        >>>    6 | pt=0
+               7 | while cont<=k:
 
-  [6] Linha 9: Variável 'ak' com nome muito curto (≤4 chars)
-      Trecho  : ak = ...
-      Contexto:
-               8 | while(i<numk):
-        >>>    9 | 	ak=((numx**j)/factorial(j))
-              10 | 	kf=kf+ak
+======================================================================            7 | while (pos<k):
 
-  [7] Linha 10: Variável 'kf' com nome muito curto (≤4 chars)
-      Trecho  : kf = ...
+  [6] Linha 8: Variável 'z' com nome muito curto (≤4 chars)
+      Trecho  : z = ...
       Contexto:
-               9 | 	ak=((numx**j)/factorial(j))
-        >>>   10 | 	kf=kf+ak
-              11 | 	j=j+1
+               7 | while (pos<k):
+        >>>    8 | 	z = x**cont/factorial(cont) 
+               9 | 	pos = pos +1
 
-  [8] Linha 11: Variável 'j' com nome muito curto (≤4 chars)
-      Trecho  : j = ...
+  [7] Linha 9: Variável 'pos' com nome muito curto (≤4 chars)
+      Trecho  : pos = ...
       Contexto:
-              10 | 	kf=kf+ak
-        >>>   11 | 	j=j+1
-              12 | 	i=i+1
+               8 | 	z = x**cont/factorial(cont) 
+        >>>    9 | 	pos = pos +1
+              10 | 	cont = cont + 2
 
-  [9] Linha 12: Variável 'i' com nome muito curto (≤4 chars)
-      Trecho  : i = ...
+  [8] Linha 10: Variável 'cont' com nome muito curto (≤4 chars)
+      Trecho  : cont = ...
       Contexto:
-              11 | 	j=j+1
-        >>>   12 | 	i=i+1
-              13 | print(round(kf,9))
+               9 | 	pos = pos +1
+        >>>   10 | 	cont = cont + 2
+              11 | 	acm = acm + z
+
+  [9] Linha 11: Variável 'acm' com nome muito curto (≤4 chars)
+      Trecho  : acm = ...
+      Contexto:
+              10 | 	cont = cont + 2
+        >>>   11 | 	acm = acm + z
+              12 | 
 
 ======================================================================

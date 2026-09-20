@@ -1,12 +1,12 @@
 ======================================================================
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
-Arquivo     : 1506_1607.py
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2018_2_v1.81\2018-2\206\users\3656\codes\1506_1607.py
+Arquivo     : 1506_1607.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2018_2_v1.81\2018-2\206\users\3697\executions\1506_1607.log
 Assessment  : 1506
 Título      : TP 5: Vetores e Strings
 Questão     : 1607
-Aluno       : 3656
+Aluno       : 3697
 Grupo       : TP 05
 Significado : Vetores e Strings
 Total MCs   : 1
@@ -17,47 +17,73 @@ Total MCs   : 1
 CÓDIGO FONTE
 ----------------------------------------------------------------------
      1 | from numpy import*
-     2 | el = array(eval(input("Andares que o elevador visitou: ")))
-     3 | c = 0
-     4 | s = 0
-     5 | while (size (el) > c):
-     6 | 	s = (el[c] -1) *3
-     7 | 	c +=1
-     8 | print(s)
+     2 | 
+     3 | a = array(eval(input()))
+     4 | i=1
+     5 | d=0
+     6 | q=0
+     7 | while(i<size(a)):
+     8 | 
+     9 | 	q= a[i]
+    10 | 	d= abs(q-a[i-1])*3 +d
+    11 | 	i=i+1
+    12 | 	
+    13 | print(d)
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
 ----------------------------------------------------------------------
 
 ▶ G4 — Funções/variáveis com nomes não significativos
-  Ocorrências: 4
+  Ocorrências: 7
 
-  [1] Linha 2: Variável 'el' com nome muito curto (≤4 chars)
-      Trecho  : el = ...
+  [1] Linha 3: Variável 'a' com nome muito curto (≤4 chars)
+      Trecho  : a = ...
       Contexto:
-               1 | from numpy import*
-        >>>    2 | el = array(eval(input("Andares que o elevador visitou: ")))
-               3 | c = 0
+               2 | 
+        >>>    3 | a = array(eval(input()))
+               4 | i=1
 
-  [2] Linha 3: Variável 'c' com nome muito curto (≤4 chars)
-      Trecho  : c = ...
+  [2] Linha 4: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
       Contexto:
-               2 | el = array(eval(input("Andares que o elevador visitou: ")))
-        >>>    3 | c = 0
-               4 | s = 0
+               3 | a = array(eval(input()))
+        >>>    4 | i=1
+               5 | d=0
 
-  [3] Linha 4: Variável 's' com nome muito curto (≤4 chars)
-      Trecho  : s = ...
+  [3] Linha 5: Variável 'd' com nome muito curto (≤4 chars)
+      Trecho  : d = ...
       Contexto:
-               3 | c = 0
-        >>>    4 | s = 0
-               5 | while (size (el) > c):
+               4 | i=1
+        >>>    5 | d=0
+               6 | q=0
 
-  [4] Linha 6: Variável 's' com nome muito curto (≤4 chars)
-      Trecho  : s = ...
+  [4] Linha 6: Variável 'q' com nome muito curto (≤4 chars)
+      Trecho  : q = ...
       Contexto:
-               5 | while (size (el) > c):
-        >>>    6 | 	s = (el[c] -1) *3
-               7 | 	c +=1
+               5 | d=0
+        >>>    6 | q=0
+               7 | while(i<size(a)):
+
+  [5] Linha 9: Variável 'q' com nome muito curto (≤4 chars)
+      Trecho  : q = ...
+      Contexto:
+               8 | 
+        >>>    9 | 	q= a[i]
+              10 | 	d= abs(q-a[i-1])*3 +d
+
+  [6] Linha 10: Variável 'd' com nome muito curto (≤4 chars)
+      Trecho  : d = ...
+      Contexto:
+               9 | 	q= a[i]
+        >>>   10 | 	d= abs(q-a[i-1])*3 +d
+              11 | 	i=i+1
+
+  [7] Linha 11: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+              10 | 	d= abs(q-a[i-1])*3 +d
+        >>>   11 | 	i=i+1
+              12 | 	
 
 ======================================================================

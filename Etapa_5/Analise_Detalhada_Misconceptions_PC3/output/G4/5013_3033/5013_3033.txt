@@ -1,12 +1,12 @@
 ======================================================================
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
-Arquivo     : 5013_3033.py
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2023_1_v1.81\2023-1\525\users\8656\codes\5013_3033.py
+Arquivo     : 5013_3033.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2023_1_v1.81\2023-1\525\users\8654\executions\5013_3033.log
 Assessment  : 5013
 Título      : TP3: Est. Condicional Encadeada
 Questão     : 3033
-Aluno       : 8656
+Aluno       : 8654
 Grupo       : TP 03
 Significado : Estrutura Condicional Encadeada
 Total MCs   : 1
@@ -16,18 +16,15 @@ Total MCs   : 1
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | x=float(input("valor de x: "))
-     2 | 
-     3 | if(x <= -100 or x < 0):
-     4 | 	x= -1/x
-     5 | 	print(round(x,4))
-     6 | elif (x < 0 or x<= 100):
-     7 | 	x= 1/x
-     8 | 	print(round(x,4))
-     9 | 	
-    10 | else:
-    11 | 	print("entrada invalida")
-    12 | 	
+     1 | x = float(input())
+     2 | if (- 100 <= x) and (x < 0):
+     3 | 	f = - (1 / x)
+     4 | 	print(round(f,4))
+     5 | elif (x > 0) and (x <= 100):
+     6 | 	f = 1 / x
+     7 | 	print(round(f,4))
+     8 | else:
+     9 | 	print('entrada invalida')
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
@@ -39,21 +36,21 @@ DETALHAMENTO DOS MISCONCEPTIONS
   [1] Linha 1: Variável 'x' com nome muito curto (≤4 chars)
       Trecho  : x = ...
       Contexto:
-        >>>    1 | x=float(input("valor de x: "))
-               2 | 
+        >>>    1 | x = float(input())
+               2 | if (- 100 <= x) and (x < 0):
 
-  [2] Linha 4: Variável 'x' com nome muito curto (≤4 chars)
-      Trecho  : x = ...
+  [2] Linha 3: Variável 'f' com nome muito curto (≤4 chars)
+      Trecho  : f = ...
       Contexto:
-               3 | if(x <= -100 or x < 0):
-        >>>    4 | 	x= -1/x
-               5 | 	print(round(x,4))
+               2 | if (- 100 <= x) and (x < 0):
+        >>>    3 | 	f = - (1 / x)
+               4 | 	print(round(f,4))
 
-  [3] Linha 7: Variável 'x' com nome muito curto (≤4 chars)
-      Trecho  : x = ...
+  [3] Linha 6: Variável 'f' com nome muito curto (≤4 chars)
+      Trecho  : f = ...
       Contexto:
-               6 | elif (x < 0 or x<= 100):
-        >>>    7 | 	x= 1/x
-               8 | 	print(round(x,4))
+               5 | elif (x > 0) and (x <= 100):
+        >>>    6 | 	f = 1 / x
+               7 | 	print(round(f,4))
 
-=======================================================================================
+======================================================================

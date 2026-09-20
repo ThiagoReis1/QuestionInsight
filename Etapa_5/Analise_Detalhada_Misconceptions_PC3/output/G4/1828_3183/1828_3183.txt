@@ -1,12 +1,12 @@
 ======================================================================
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
-Arquivo     : 1828_3183.py
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2019_1_v1.81\2019-1\225\users\4469\codes\1828_3183.py
+Arquivo     : 1828_3183.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2019_1_v1.81\2019-1\225\users\4004\executions\1828_3183.log
 Assessment  : 1828
 Título      : TP6: Repetição por contagem
 Questão     : 3183
-Aluno       : 4469
+Aluno       : 4004
 Grupo       : TP 06
 Significado : Estrutura de Repetição por Contagem
 Total MCs   : 1
@@ -17,19 +17,15 @@ Total MCs   : 1
 CÓDIGO FONTE
 ----------------------------------------------------------------------
      1 | from numpy import*
-     2 | 
-     3 | v1 = array(eval(input()), dtype = int)
-     4 | 
-     5 | v2 = zeros(size(v1), dtype = int)
-     6 | j = 0
-     7 | for i in range(size(v1) - 1, -1, -1):
-     8 | 	v2[j] = v1[i]
-     9 | 	j = j + 1
-    10 | 
-    11 | for i in range(size(v2)):
-    12 | 	v1[i] = v2[i]
-    13 | 
-    14 | print(v1)
+     2 | x = array(eval(input("vetor decrescente: ")))
+     3 | 
+     4 | y = zeros(size(x), dtype=int)
+     5 | z = -1
+     6 | 
+     7 | for i in x:
+     8 | 	y[z] = i
+     9 | 	z = z - 1
+    10 | print(y)
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
@@ -38,31 +34,35 @@ DETALHAMENTO DOS MISCONCEPTIONS
 ▶ G4 — Funções/variáveis com nomes não significativos
   Ocorrências: 4
 
-  [1] Linha 3: Variável 'v1' com nome muito curto (≤4 chars)
-      Trecho  : v1 = ...
+  [1] Linha 2: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
       Contexto:
-               2 | 
-        >>>    3 | v1 = array(eval(input()), dtype = int)
-               4 | 
+               1 | from numpy import*
+        >>>    2 | x = array(eval(input("vetor decrescente: ")))
+               3 | 
 
-  [2] Linha 5: Variável 'v2' com nome muito curto (≤4 chars)
-      Trecho  : v2 = ...
+  [2] Linha 4: Variável 'y' com nome muito curto (≤4 chars)
+      Trecho  : y = ...
       Contexto:
-               4 | 
-        >>>    5 | v2 = zeros(size(v1), dtype = int)
-               6 | j = 0
+               3 | 
+        >>>    4 | y = zeros(size(x), dtype=int)
+               5 | z = -1
 
-  [3] Linha 6: Variável 'j' com nome muito curto (≤4 chars)
-      Trecho  : j = ...
+  [3] Linha 5: Variável 'z' com nome muito curto (≤4 chars)
+      Trecho  : z = ...
       Contexto:
-               5 | v2 = zeros(size(v1), dtype = int)
-        >>>    6 | j = 0
-               7 | for i in range(size(v1) - 1, -1, -1):
+               4 | y = zeros(size(x), dtype=int)
+        >>>    5 | z = -1
+               6 | 
 
-  [4] Linha 9: Variável 'j' com nome muito curto (≤4 chars)
-      Trecho  : j = ...
+  [4] Linha 9: Variável 'z' com nome muito curto (≤4 chars)
+      Trecho  : z = ...
       Contexto:
-               8 | 	v2[j] = v1[i]
+               8 | 	y[z] = i
+        >>>    9 | 	z = z - 1
+              10 | print(y)
+
+======================================================================1[i]
         >>>    9 | 	j = j + 1
               10 | 
 

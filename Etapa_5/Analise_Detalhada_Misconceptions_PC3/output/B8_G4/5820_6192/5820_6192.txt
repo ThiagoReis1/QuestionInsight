@@ -1,12 +1,12 @@
 ======================================================================
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
-Arquivo     : 5820_6192.py
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2024_1_v1.81\2024-1\590\users\9813\codes\5820_6192.py
+Arquivo     : 5820_6192.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2024_1_v1.81\2024-1\590\users\9827\executions\5820_6192.log
 Assessment  : 5820
 Título      : TP 4: Estrutura de Repetição por Condição
 Questão     : 6192
-Aluno       : 9813
+Aluno       : 9827
 Grupo       : TP 04
 Significado : Estrutura de Repetição por Condição
 Total MCs   : 2
@@ -16,12 +16,12 @@ Total MCs   : 2
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | casa = input("Qual casa a bola caiu? (P)Preta (V)Vermelha ou (S): ").upper()
-     2 | cont = 0
-     3 | while (casa != "S"):
-     4 | 	if casa == "P":
-     5 | 		cont+= 1
-     6 | 		casa = input ("Qual a casa a bola caiu? (P)Preta (V)Vermelha ou (S): ").upper()
+     1 | cor= input().upper()
+     2 | cont=0
+     3 | while	cor != 'S':
+     4 | 	if cor == 'PRETA':
+     5 | 		cont = cont +1
+     6 | 	cor=input().upper()
      7 | print(cont)
 
 ----------------------------------------------------------------------
@@ -35,26 +35,33 @@ DETALHAMENTO DOS MISCONCEPTIONS
       Trecho  : —
 
 ▶ G4 — Funções/variáveis com nomes não significativos
-  Ocorrências: 3
+  Ocorrências: 4
 
-  [1] Linha 1: Variável 'casa' com nome muito curto (≤4 chars)
-      Trecho  : casa = ...
+  [1] Linha 1: Variável 'cor' com nome muito curto (≤4 chars)
+      Trecho  : cor = ...
       Contexto:
-        >>>    1 | casa = input("Qual casa a bola caiu? (P)Preta (V)Vermelha ou (S): ").upper()
-               2 | cont = 0
+        >>>    1 | cor= input().upper()
+               2 | cont=0
 
   [2] Linha 2: Variável 'cont' com nome muito curto (≤4 chars)
       Trecho  : cont = ...
       Contexto:
-               1 | casa = input("Qual casa a bola caiu? (P)Preta (V)Vermelha ou (S): ").upper()
-        >>>    2 | cont = 0
-               3 | while (casa != "S"):
+               1 | cor= input().upper()
+        >>>    2 | cont=0
+               3 | while	cor != 'S':
 
-  [3] Linha 6: Variável 'casa' com nome muito curto (≤4 chars)
-      Trecho  : casa = ...
+  [3] Linha 6: Variável 'cor' com nome muito curto (≤4 chars)
+      Trecho  : cor = ...
       Contexto:
-               5 | 		cont+= 1
-        >>>    6 | 		casa = input ("Qual a casa a bola caiu? (P)Preta (V)Vermelha ou (S): ").upper()
+               5 | 		cont = cont +1
+        >>>    6 | 	cor=input().upper()
                7 | print(cont)
+
+  [4] Linha 5: Variável 'cont' com nome muito curto (≤4 chars)
+      Trecho  : cont = ...
+      Contexto:
+               4 | 	if cor == 'PRETA':
+        >>>    5 | 		cont = cont +1
+               6 | 	cor=input().upper()
 
 ======================================================================

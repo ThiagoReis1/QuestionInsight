@@ -1,12 +1,12 @@
 ======================================================================
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
-Arquivo     : 623_1522.py
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2017_1_v1.81\2017-1\139\users\2512\codes\623_1522.py
+Arquivo     : 623_1522.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2017_1_v1.81\2017-1\139\users\2386\executions\623_1522.log
 Assessment  : 623
 Título      : Trabalho Prático 4: Estrutura de Repetição por Condição (while)
 Questão     : 1522
-Aluno       : 2512
+Aluno       : 2386
 Grupo       : TP 04
 Significado : Estrutura de Repetição por Condição
 Total MCs   : 1
@@ -16,87 +16,76 @@ Total MCs   : 1
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | qi = int(input())
-     2 | des = float(input())
-     3 | M = int(input())
-     4 | R = int(input())
-     5 | 
-     6 | soma = 0
-     7 | c = 0
-     8 | 
-     9 | while(qi>0):
-    10 | 	soma = des + M + R
-    11 | 	soma = soma - qi
-    12 | 	c = c + 1
-    13 | print(s)
+     1 | #Quantidade inicial
+     2 | QI = int(input())
+     3 | #Despesa mensal
+     4 | DM = int(input())
+     5 | #Moedas coletadas em impostos
+     6 | QM = int(input())
+     7 | #Moedas roubadas
+     8 | QR = int(input())
+     9 | 
+    10 | t = 0
+    11 | 
+    12 | while(QI > 0):
+    13 | 	QI = QI + QM - DM - QR
+    14 | 	t = t + 1
+    15 | print(t)
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
 ----------------------------------------------------------------------
 
 ▶ G4 — Funções/variáveis com nomes não significativos
-  Ocorrências: 9
+  Ocorrências: 7
 
-  [1] Linha 1: Variável 'qi' com nome muito curto (≤4 chars)
-      Trecho  : qi = ...
+  [1] Linha 2: Variável 'QI' com nome muito curto (≤4 chars)
+      Trecho  : QI = ...
       Contexto:
-        >>>    1 | qi = int(input())
-               2 | des = float(input())
+               1 | #Quantidade inicial
+        >>>    2 | QI = int(input())
+               3 | #Despesa mensal
 
-  [2] Linha 2: Variável 'des' com nome muito curto (≤4 chars)
-      Trecho  : des = ...
+  [2] Linha 4: Variável 'DM' com nome muito curto (≤4 chars)
+      Trecho  : DM = ...
       Contexto:
-               1 | qi = int(input())
-        >>>    2 | des = float(input())
-               3 | M = int(input())
+               3 | #Despesa mensal
+        >>>    4 | DM = int(input())
+               5 | #Moedas coletadas em impostos
 
-  [3] Linha 3: Variável 'M' com nome muito curto (≤4 chars)
-      Trecho  : M = ...
+  [3] Linha 6: Variável 'QM' com nome muito curto (≤4 chars)
+      Trecho  : QM = ...
       Contexto:
-               2 | des = float(input())
-        >>>    3 | M = int(input())
-               4 | R = int(input())
+               5 | #Moedas coletadas em impostos
+        >>>    6 | QM = int(input())
+               7 | #Moedas roubadas
 
-  [4] Linha 4: Variável 'R' com nome muito curto (≤4 chars)
-      Trecho  : R = ...
+  [4] Linha 8: Variável 'QR' com nome muito curto (≤4 chars)
+      Trecho  : QR = ...
       Contexto:
-               3 | M = int(input())
-        >>>    4 | R = int(input())
-               5 | 
+               7 | #Moedas roubadas
+        >>>    8 | QR = int(input())
+               9 | 
 
-  [5] Linha 6: Variável 'soma' com nome muito curto (≤4 chars)
-      Trecho  : soma = ...
+  [5] Linha 10: Variável 't' com nome muito curto (≤4 chars)
+      Trecho  : t = ...
       Contexto:
-               5 | 
-        >>>    6 | soma = 0
-               7 | c = 0
+               9 | 
+        >>>   10 | t = 0
+              11 | 
 
-  [6] Linha 7: Variável 'c' com nome muito curto (≤4 chars)
-      Trecho  : c = ...
+  [6] Linha 13: Variável 'QI' com nome muito curto (≤4 chars)
+      Trecho  : QI = ...
       Contexto:
-               6 | soma = 0
-        >>>    7 | c = 0
-               8 | 
+              12 | while(QI > 0):
+        >>>   13 | 	QI = QI + QM - DM - QR
+              14 | 	t = t + 1
 
-  [7] Linha 10: Variável 'soma' com nome muito curto (≤4 chars)
-      Trecho  : soma = ...
+  [7] Linha 14: Variável 't' com nome muito curto (≤4 chars)
+      Trecho  : t = ...
       Contexto:
-               9 | while(qi>0):
-        >>>   10 | 	soma = des + M + R
-              11 | 	soma = soma - qi
-
-  [8] Linha 11: Variável 'soma' com nome muito curto (≤4 chars)
-      Trecho  : soma = ...
-      Contexto:
-              10 | 	soma = des + M + R
-        >>>   11 | 	soma = soma - qi
-              12 | 	c = c + 1
-
-  [9] Linha 12: Variável 'c' com nome muito curto (≤4 chars)
-      Trecho  : c = ...
-      Contexto:
-              11 | 	soma = soma - qi
-        >>>   12 | 	c = c + 1
-              13 | print(s)
+              13 | 	QI = QI + QM - DM - QR
+        >>>   14 | 	t = t + 1
+              15 | print(t)
 
 ======================================================================

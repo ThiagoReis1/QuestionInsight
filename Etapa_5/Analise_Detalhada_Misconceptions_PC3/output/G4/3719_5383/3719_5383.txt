@@ -1,12 +1,12 @@
 ======================================================================
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
-Arquivo     : 3719_5383.py
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2021_2_v1.81\2021-2\403\users\7188\codes\3719_5383.py
+Arquivo     : 3719_5383.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2021_2_v1.81\2021-2\403\users\7107\executions\3719_5383.log
 Assessment  : 3719
 Título      : TP5: Vetores e Strings
 Questão     : 5383
-Aluno       : 7188
+Aluno       : 7107
 Grupo       : TP 05
 Significado : Vetores e Strings
 Total MCs   : 1
@@ -16,68 +16,61 @@ Total MCs   : 1
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | from numpy import*
-     2 | e= input()
-     3 | i=0
-     4 | t=0
-     5 | v= 0.12
-     6 | nv= 0.18
-     7 | while i < len(e):
-     8 | 	if e[i]== "A"or e[i]=="E"or e[i]=="I"or e[i]=="O"or e[i]=="U": 
-     9 | 		t= t + v 
-    10 | 	else:
-    11 | 		t= t + nv 
-    12 | 	i= i+1
-    13 | print(round(t,2))
+     1 | from numpy import *
+     2 | 
+     3 | e = input().upper()
+     4 | 
+     5 | tv = e.count("A") + e.count("E") + e.count("I") + e.count("O") + e.count("U")
+     6 | to = len(e) - tv
+     7 | 
+     8 | dv = tv * 0.12
+     9 | do = to * 0.18
+    10 | 
+    11 | print(round((dv+do), 2))
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
 ----------------------------------------------------------------------
 
 ▶ G4 — Funções/variáveis com nomes não significativos
-  Ocorrências: 8
+  Ocorrências: 5
 
-  [1] Linha 2: Variável 'e' com nome muito curto (≤4 chars)
+  [1] Linha 3: Variável 'e' com nome muito curto (≤4 chars)
       Trecho  : e = ...
       Contexto:
-               1 | from numpy import*
-        >>>    2 | e= input()
-               3 | i=0
+               2 | 
+        >>>    3 | e = input().upper()
+               4 | 
 
-  [2] Linha 3: Variável 'i' com nome muito curto (≤4 chars)
-      Trecho  : i = ...
+  [2] Linha 5: Variável 'tv' com nome muito curto (≤4 chars)
+      Trecho  : tv = ...
       Contexto:
-               2 | e= input()
-        >>>    3 | i=0
-               4 | t=0
+               4 | 
+        >>>    5 | tv = e.count("A") + e.count("E") + e.count("I") + e.count("O") + e.count("U")
+               6 | to = len(e) - tv
 
-  [3] Linha 4: Variável 't' com nome muito curto (≤4 chars)
-      Trecho  : t = ...
+  [3] Linha 6: Variável 'to' com nome muito curto (≤4 chars)
+      Trecho  : to = ...
       Contexto:
-               3 | i=0
-        >>>    4 | t=0
-               5 | v= 0.12
+               5 | tv = e.count("A") + e.count("E") + e.count("I") + e.count("O") + e.count("U")
+        >>>    6 | to = len(e) - tv
+               7 | 
 
-  [4] Linha 5: Variável 'v' com nome muito curto (≤4 chars)
-      Trecho  : v = ...
+  [4] Linha 8: Variável 'dv' com nome muito curto (≤4 chars)
+      Trecho  : dv = ...
       Contexto:
-               4 | t=0
-        >>>    5 | v= 0.12
-               6 | nv= 0.18
+               7 | 
+        >>>    8 | dv = tv * 0.12
+               9 | do = to * 0.18
 
-  [5] Linha 6: Variável 'nv' com nome muito curto (≤4 chars)
-      Trecho  : nv = ...
+  [5] Linha 9: Variável 'do' com nome muito curto (≤4 chars)
+      Trecho  : do = ...
       Contexto:
-               5 | v= 0.12
-        >>>    6 | nv= 0.18
-               7 | while i < len(e):
+               8 | dv = tv * 0.12
+        >>>    9 | do = to * 0.18
+              10 | 
 
-  [6] Linha 12: Variável 'i' com nome muito curto (≤4 chars)
-      Trecho  : i = ...
-      Contexto:
-              11 | 		t= t + nv 
-        >>>   12 | 	i= i+1
-              13 | print(round(t,2))
+======================================================================
 
   [7] Linha 9: Variável 't' com nome muito curto (≤4 chars)
       Trecho  : t = ...

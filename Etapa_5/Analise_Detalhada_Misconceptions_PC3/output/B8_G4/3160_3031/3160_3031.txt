@@ -1,12 +1,12 @@
 ======================================================================
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
-Arquivo     : 3160_3031.py
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2021_1_v1.81\2021-1\376\users\5173\codes\3160_3031.py
+Arquivo     : 3160_3031.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2021_1_v1.81\2021-1\376\users\5167\executions\3160_3031.log
 Assessment  : 3160
 Título      : TP3 e TP4 - Condicional e Repetição (while) (G)
 Questão     : 3031
-Aluno       : 5173
+Aluno       : 5167
 Grupo       : TP 04
 Significado : Estrutura de Repetição por Condição
 Total MCs   : 2
@@ -16,17 +16,19 @@ Total MCs   : 2
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | num = float(input("entre com o valor de x: "))
-     2 | 
-     3 | if(num <= 1):
-     4 | 	f = 1
-     5 | elif(1 < num and num <=2):
-     6 | 	f = 2
-     7 | elif(2 < num and num <=3):
-     8 | 	f = num**2
-     9 | elif(num > 3):
-    10 | 	f = num**3
-    11 | print(round(f, 2))
+     1 | x = float(input("Insira um valor: "))
+     2 | f = 0
+     3 | 
+     4 | if (x <= 1):
+     5 | 	f = 1
+     6 | elif (1 < x and x <= 2):
+     7 | 	f= 2
+     8 | elif (2 < x and x <= 3):
+     9 | 	f= x**2
+    10 | elif (x >3):
+    11 | 	f= x**3
+    12 | 	
+    13 | print(round(f,2))
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
@@ -35,51 +37,53 @@ DETALHAMENTO DOS MISCONCEPTIONS
 ▶ B8 — Não utilização de elif/else
   Ocorrências: 1
 
-  [1] Linha 7: Cadeia if/elif sem bloco else final
-      Trecho  : if ... (linha 7) / elif ... sem else
+  [1] Linha 8: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 8) / elif ... sem else
       Contexto:
-               6 | 	f = 2
-        >>>    7 | elif(2 < num and num <=3):
-               8 | 	f = num**2
+               7 | 	f= 2
+        >>>    8 | elif (2 < x and x <= 3):
+               9 | 	f= x**2
 
 ▶ G4 — Funções/variáveis com nomes não significativos
-  Ocorrências: 5
+  Ocorrências: 6
 
-  [1] Linha 1: Variável 'num' com nome muito curto (≤4 chars)
-      Trecho  : num = ...
+  [1] Linha 1: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
       Contexto:
-        >>>    1 | num = float(input("entre com o valor de x: "))
-               2 | 
+        >>>    1 | x = float(input("Insira um valor: "))
+               2 | f = 0
 
-  [2] Linha 4: Variável 'f' com nome muito curto (≤4 chars)
+  [2] Linha 2: Variável 'f' com nome muito curto (≤4 chars)
       Trecho  : f = ...
       Contexto:
-               3 | if(num <= 1):
-        >>>    4 | 	f = 1
-               5 | elif(1 < num and num <=2):
+               1 | x = float(input("Insira um valor: "))
+        >>>    2 | f = 0
+               3 | 
 
-  [3] Linha 6: Variável 'f' com nome muito curto (≤4 chars)
+  [3] Linha 5: Variável 'f' com nome muito curto (≤4 chars)
       Trecho  : f = ...
       Contexto:
-               5 | elif(1 < num and num <=2):
-        >>>    6 | 	f = 2
-               7 | elif(2 < num and num <=3):
+               4 | if (x <= 1):
+        >>>    5 | 	f = 1
+               6 | elif (1 < x and x <= 2):
 
-  [4] Linha 8: Variável 'f' com nome muito curto (≤4 chars)
+  [4] Linha 7: Variável 'f' com nome muito curto (≤4 chars)
       Trecho  : f = ...
       Contexto:
-               7 | elif(2 < num and num <=3):
-        >>>    8 | 	f = num**2
-               9 | elif(num > 3):
+               6 | elif (1 < x and x <= 2):
+        >>>    7 | 	f= 2
+               8 | elif (2 < x and x <= 3):
 
-  [5] Linha 10: Variável 'f' com nome muito curto (≤4 chars)
+  [5] Linha 9: Variável 'f' com nome muito curto (≤4 chars)
       Trecho  : f = ...
       Contexto:
-               9 | elif(num > 3):
-        >>>   10 | 	f = num**3
-              11 | print(round(f, 2))
+               8 | elif (2 < x and x <= 3):
+        >>>    9 | 	f= x**2
+              10 | elif (x >3):
 
-======================================================================ontexto:
+  [6] Linha 11: Variável 'f' com nome muito curto (≤4 chars)
+      Trecho  : f = ...
+      Contexto:
               10 | elif (x >3):
         >>>   11 | 	f= x**3
               12 | 	

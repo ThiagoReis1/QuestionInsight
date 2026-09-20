@@ -1,12 +1,12 @@
 ======================================================================
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
-Arquivo     : 5872_6833.py
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2024_1_v1.81\2024-1\594\users\9841\codes\5872_6833.py
+Arquivo     : 5872_6833.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2024_1_v1.81\2024-1\594\users\9691\executions\5872_6833.log
 Assessment  : 5872
 Título      : TP 5: Vetores e Strings
 Questão     : 6833
-Aluno       : 9841
+Aluno       : 9691
 Grupo       : TP 05
 Significado : Vetores e Strings
 Total MCs   : 2
@@ -16,17 +16,24 @@ Total MCs   : 2
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | n = str(input())
-     2 | soma = 0
-     3 | for c in range(0, len(n)):
-     4 | 	if n[c] == "M":
-     5 | 		soma = soma + 7.25
-     6 | 	elif n[c] == "P":
-     7 | 		soma = soma + 4.75
-     8 | 	elif n[c] == "R":
-     9 | 		soma = soma + 3.50
-    10 | print(soma)
-    11 | 	
+     1 | from numpy import*
+     2 | li = input("insira a sua lista: ")
+     3 | i = 0
+     4 | m = 0
+     5 | p = 0
+     6 | r = 0
+     7 | t = len(li) - 1
+     8 | 
+     9 | while i <= t:
+    10 | 	if li[i] == 'M':
+    11 | 		m = m + 1
+    12 | 	elif li[i] == 'P':
+    13 | 		p = p + 1
+    14 | 	elif li[i] == 'R':
+    15 | 		r = r + 1
+    16 | 	i += 1
+    17 | t = m*7.25 + p*4.75 + r*3.50
+    18 | print(round(t , 2))
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
@@ -35,48 +42,84 @@ DETALHAMENTO DOS MISCONCEPTIONS
 ▶ B8 — Não utilização de elif/else
   Ocorrências: 1
 
-  [1] Linha 6: Cadeia if/elif sem bloco else final
-      Trecho  : if ... (linha 6) / elif ... sem else
+  [1] Linha 12: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 12) / elif ... sem else
       Contexto:
-               5 | 		soma = soma + 7.25
-        >>>    6 | 	elif n[c] == "P":
-               7 | 		soma = soma + 4.75
+              11 | 		m = m + 1
+        >>>   12 | 	elif li[i] == 'P':
+              13 | 		p = p + 1
 
 ▶ G4 — Funções/variáveis com nomes não significativos
-  Ocorrências: 5
+  Ocorrências: 10
 
-  [1] Linha 1: Variável 'n' com nome muito curto (≤4 chars)
-      Trecho  : n = ...
+  [1] Linha 2: Variável 'li' com nome muito curto (≤4 chars)
+      Trecho  : li = ...
       Contexto:
-        >>>    1 | n = str(input())
-               2 | soma = 0
+               1 | from numpy import*
+        >>>    2 | li = input("insira a sua lista: ")
+               3 | i = 0
 
-  [2] Linha 2: Variável 'soma' com nome muito curto (≤4 chars)
-      Trecho  : soma = ...
+  [2] Linha 3: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
       Contexto:
-               1 | n = str(input())
-        >>>    2 | soma = 0
-               3 | for c in range(0, len(n)):
+               2 | li = input("insira a sua lista: ")
+        >>>    3 | i = 0
+               4 | m = 0
 
-  [3] Linha 5: Variável 'soma' com nome muito curto (≤4 chars)
-      Trecho  : soma = ...
+  [3] Linha 4: Variável 'm' com nome muito curto (≤4 chars)
+      Trecho  : m = ...
       Contexto:
-               4 | 	if n[c] == "M":
-        >>>    5 | 		soma = soma + 7.25
-               6 | 	elif n[c] == "P":
+               3 | i = 0
+        >>>    4 | m = 0
+               5 | p = 0
 
-  [4] Linha 7: Variável 'soma' com nome muito curto (≤4 chars)
-      Trecho  : soma = ...
+  [4] Linha 5: Variável 'p' com nome muito curto (≤4 chars)
+      Trecho  : p = ...
       Contexto:
-               6 | 	elif n[c] == "P":
-        >>>    7 | 		soma = soma + 4.75
-               8 | 	elif n[c] == "R":
+               4 | m = 0
+        >>>    5 | p = 0
+               6 | r = 0
 
-  [5] Linha 9: Variável 'soma' com nome muito curto (≤4 chars)
-      Trecho  : soma = ...
+  [5] Linha 6: Variável 'r' com nome muito curto (≤4 chars)
+      Trecho  : r = ...
       Contexto:
-               8 | 	elif n[c] == "R":
-        >>>    9 | 		soma = soma + 3.50
-              10 | print(soma)
+               5 | p = 0
+        >>>    6 | r = 0
+               7 | t = len(li) - 1
+
+  [6] Linha 7: Variável 't' com nome muito curto (≤4 chars)
+      Trecho  : t = ...
+      Contexto:
+               6 | r = 0
+        >>>    7 | t = len(li) - 1
+               8 | 
+
+  [7] Linha 17: Variável 't' com nome muito curto (≤4 chars)
+      Trecho  : t = ...
+      Contexto:
+              16 | 	i += 1
+        >>>   17 | t = m*7.25 + p*4.75 + r*3.50
+              18 | print(round(t , 2))
+
+  [8] Linha 11: Variável 'm' com nome muito curto (≤4 chars)
+      Trecho  : m = ...
+      Contexto:
+              10 | 	if li[i] == 'M':
+        >>>   11 | 		m = m + 1
+              12 | 	elif li[i] == 'P':
+
+  [9] Linha 13: Variável 'p' com nome muito curto (≤4 chars)
+      Trecho  : p = ...
+      Contexto:
+              12 | 	elif li[i] == 'P':
+        >>>   13 | 		p = p + 1
+              14 | 	elif li[i] == 'R':
+
+  [10] Linha 15: Variável 'r' com nome muito curto (≤4 chars)
+      Trecho  : r = ...
+      Contexto:
+              14 | 	elif li[i] == 'R':
+        >>>   15 | 		r = r + 1
+              16 | 	i += 1
 
 ======================================================================

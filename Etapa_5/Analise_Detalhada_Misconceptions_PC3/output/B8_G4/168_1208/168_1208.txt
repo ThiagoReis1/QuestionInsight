@@ -1,12 +1,12 @@
 ======================================================================
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
-Arquivo     : 168_1208.py
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2016_1_v1.81\2016-1\111\users\1176\codes\168_1208.py
+Arquivo     : 168_1208.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2016_1_v1.81\2016-1\111\users\1162\executions\168_1208.log
 Assessment  : 168
 Título      : Avaliação Parcial 05 – Vetores e Strings
 Questão     : 1208
-Aluno       : 1176
+Aluno       : 1162
 Grupo       : TP 05
 Significado : Vetores e Strings
 Total MCs   : 2
@@ -16,17 +16,19 @@ Total MCs   : 2
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | from numpy import*
-     2 | vet= array(eval(input("Digite as distancias: ")))
-     3 | c=0
-     4 | soma=0
-     5 | while(c<size(vet)):
-     6 | 	if (vet[c]<98.48):
-     7 | 		soma=soma+1
-     8 | 	c=c+1
-     9 | print(98.48)
-    10 | print(soma)
-    11 | 	
+     1 | from numpy import *
+     2 | v = array(eval(input("qual o vetot:")))
+     3 | i = 0
+     4 | cont = 0
+     5 | soma = 0
+     6 | r = 98.48
+     7 | print(r)
+     8 | while(cont < size(v)):
+     9 | 	if(v[i] < r):
+    10 | 		i = i + 1
+    11 | 		soma = soma + 1
+    12 | 	cont = cont + 1
+    13 | print(soma)
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
@@ -39,44 +41,44 @@ DETALHAMENTO DOS MISCONCEPTIONS
       Trecho  : —
 
 ▶ G4 — Funções/variáveis com nomes não significativos
-  Ocorrências: 5
+  Ocorrências: 8
 
-  [1] Linha 2: Variável 'vet' com nome muito curto (≤4 chars)
-      Trecho  : vet = ...
+  [1] Linha 2: Variável 'v' com nome muito curto (≤4 chars)
+      Trecho  : v = ...
       Contexto:
-               1 | from numpy import*
-        >>>    2 | vet= array(eval(input("Digite as distancias: ")))
-               3 | c=0
+               1 | from numpy import *
+        >>>    2 | v = array(eval(input("qual o vetot:")))
+               3 | i = 0
 
-  [2] Linha 3: Variável 'c' com nome muito curto (≤4 chars)
-      Trecho  : c = ...
+  [2] Linha 3: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
       Contexto:
-               2 | vet= array(eval(input("Digite as distancias: ")))
-        >>>    3 | c=0
-               4 | soma=0
+               2 | v = array(eval(input("qual o vetot:")))
+        >>>    3 | i = 0
+               4 | cont = 0
 
-  [3] Linha 4: Variável 'soma' com nome muito curto (≤4 chars)
+  [3] Linha 4: Variável 'cont' com nome muito curto (≤4 chars)
+      Trecho  : cont = ...
+      Contexto:
+               3 | i = 0
+        >>>    4 | cont = 0
+               5 | soma = 0
+
+  [4] Linha 5: Variável 'soma' com nome muito curto (≤4 chars)
       Trecho  : soma = ...
       Contexto:
-               3 | c=0
-        >>>    4 | soma=0
-               5 | while(c<size(vet)):
+               4 | cont = 0
+        >>>    5 | soma = 0
+               6 | r = 98.48
 
-  [4] Linha 8: Variável 'c' com nome muito curto (≤4 chars)
-      Trecho  : c = ...
+  [5] Linha 6: Variável 'r' com nome muito curto (≤4 chars)
+      Trecho  : r = ...
       Contexto:
-               7 | 		soma=soma+1
-        >>>    8 | 	c=c+1
-               9 | print(98.48)
+               5 | soma = 0
+        >>>    6 | r = 98.48
+               7 | print(r)
 
-  [5] Linha 7: Variável 'soma' com nome muito curto (≤4 chars)
-      Trecho  : soma = ...
-      Contexto:
-               6 | 	if (vet[c]<98.48):
-        >>>    7 | 		soma=soma+1
-               8 | 	c=c+1
-
-======================================================================hars)
+  [6] Linha 12: Variável 'cont' com nome muito curto (≤4 chars)
       Trecho  : cont = ...
       Contexto:
               11 | 		soma = soma + 1

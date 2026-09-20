@@ -1,12 +1,12 @@
 ======================================================================
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
-Arquivo     : 3780_1641.py
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2021_2_v1.81\2021-2\406\users\7137\codes\3780_1641.py
+Arquivo     : 3780_1641.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2021_2_v1.81\2021-2\406\users\7121\executions\3780_1641.log
 Assessment  : 3780
 Título      : TP 6: Estrutura de Repetição por Contagem (for)
 Questão     : 1641
-Aluno       : 7137
+Aluno       : 7121
 Grupo       : TP 06
 Significado : Estrutura de Repetição por Contagem
 Total MCs   : 2
@@ -16,23 +16,24 @@ Total MCs   : 2
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | from numpy import*
-     2 | v = array(eval(input("Digite o valor : ")))
-     3 | 
-     4 | r = 0
-     5 | b = 0
-     6 | 
-     7 | for i in range (size(v)):
-     8 | 	if(v[i] % 3 ==0 ):	
-     9 | 		r = r + 1
-    10 | 		
-    11 | n = zeros (r,dtype = int)	
-    12 | for i in range (size(v)):
-    13 | 	if(v[i] % 3==0):
-    14 | 		n[b] = i
-    15 | 		b = b + 1
-    16 | print(r)
-    17 | print(n)
+     1 | from numpy import *
+     2 | 
+     3 | turma = array(eval(input()))
+     4 | a = 0
+     5 | 
+     6 | for i in range(size(turma)):
+     7 | 	if turma[i] % 3 == 0:
+     8 | 		a = a + 1
+     9 | x = zeros(a, dtype = int)
+    10 | y = 0
+    11 | 
+    12 | for i in range(size(turma)):
+    13 | 	if turma[i] % 3 == 0:
+    14 | 		x[y] = i
+    15 | 		y = y + 1
+    16 | 
+    17 | print(a)
+    18 | print(x)
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
@@ -45,48 +46,41 @@ DETALHAMENTO DOS MISCONCEPTIONS
       Trecho  : —
 
 ▶ G4 — Funções/variáveis com nomes não significativos
-  Ocorrências: 6
+  Ocorrências: 5
 
-  [1] Linha 2: Variável 'v' com nome muito curto (≤4 chars)
-      Trecho  : v = ...
+  [1] Linha 4: Variável 'a' com nome muito curto (≤4 chars)
+      Trecho  : a = ...
       Contexto:
-               1 | from numpy import*
-        >>>    2 | v = array(eval(input("Digite o valor : ")))
-               3 | 
+               3 | turma = array(eval(input()))
+        >>>    4 | a = 0
+               5 | 
 
-  [2] Linha 4: Variável 'r' com nome muito curto (≤4 chars)
-      Trecho  : r = ...
+  [2] Linha 9: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
       Contexto:
-               3 | 
-        >>>    4 | r = 0
-               5 | b = 0
+               8 | 		a = a + 1
+        >>>    9 | x = zeros(a, dtype = int)
+              10 | y = 0
 
-  [3] Linha 5: Variável 'b' com nome muito curto (≤4 chars)
-      Trecho  : b = ...
+  [3] Linha 10: Variável 'y' com nome muito curto (≤4 chars)
+      Trecho  : y = ...
       Contexto:
-               4 | r = 0
-        >>>    5 | b = 0
-               6 | 
+               9 | x = zeros(a, dtype = int)
+        >>>   10 | y = 0
+              11 | 
 
-  [4] Linha 11: Variável 'n' com nome muito curto (≤4 chars)
-      Trecho  : n = ...
+  [4] Linha 8: Variável 'a' com nome muito curto (≤4 chars)
+      Trecho  : a = ...
       Contexto:
-              10 | 		
-        >>>   11 | n = zeros (r,dtype = int)	
-              12 | for i in range (size(v)):
+               7 | 	if turma[i] % 3 == 0:
+        >>>    8 | 		a = a + 1
+               9 | x = zeros(a, dtype = int)
 
-  [5] Linha 9: Variável 'r' com nome muito curto (≤4 chars)
-      Trecho  : r = ...
+  [5] Linha 15: Variável 'y' com nome muito curto (≤4 chars)
+      Trecho  : y = ...
       Contexto:
-               8 | 	if(v[i] % 3 ==0 ):	
-        >>>    9 | 		r = r + 1
-              10 | 		
-
-  [6] Linha 15: Variável 'b' com nome muito curto (≤4 chars)
-      Trecho  : b = ...
-      Contexto:
-              14 | 		n[b] = i
-        >>>   15 | 		b = b + 1
-              16 | print(r)
+              14 | 		x[y] = i
+        >>>   15 | 		y = y + 1
+              16 | 
 
 ======================================================================

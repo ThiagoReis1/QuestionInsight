@@ -1,12 +1,12 @@
 ======================================================================
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
-Arquivo     : 1662_1399.py
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2019_1_v1.81\2019-1\225\users\3995\codes\1662_1399.py
+Arquivo     : 1662_1399.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2019_1_v1.81\2019-1\225\users\4001\executions\1662_1399.log
 Assessment  : 1662
 Título      : TP2 - Estrutura Condicional Simples e Composta
 Questão     : 1399
-Aluno       : 3995
+Aluno       : 4001
 Grupo       : TP 02
 Significado : Estrutura Condicional Simples e Composta
 Total MCs   : 1
@@ -16,66 +16,70 @@ Total MCs   : 1
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | v1=int(input("Quantidade para A.R:"))
-     2 | v2=int(input("Quantidade para D.O:"))
-     3 | if(v1>v2):
-     4 | 	print("Ambrosio Rutra")
-     5 | 	h=(v1/(v1+v2))*100
-     6 | 	print(round(h, 2))
-     7 | else:
-     8 | 	print("Demelza Olecram")
-     9 | 	h=(v2/(v1+v2))*100
-    10 | 	print(round(h, 2))
-    11 | 	
-    12 | 	
+     1 | A = int(input("Qtd de votos AR: "))
+     2 | D = int(input("Qtd de votos DO: "))
+     3 | a = (A * 100)/ (D + A)
+     4 | d = (D * 100)/ (D + A)
+     5 | # Condicoes
+     6 | if (A > D):
+     7 | 	msg = "Ambrosio Rutra"
+     8 | 	msg2 = a
+     9 | else:
+    10 | 	msg = "Demelza Olecram"
+    11 | 	msg2 = d
+    12 | # Saidas
+    13 | print(msg)
+    14 | print(round(msg2, 2))
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
 ----------------------------------------------------------------------
 
 ▶ G4 — Funções/variáveis com nomes não significativos
-  Ocorrências: 4
+  Ocorrências: 8
 
-  [1] Linha 1: Variável 'v1' com nome muito curto (≤4 chars)
-      Trecho  : v1 = ...
+  [1] Linha 1: Variável 'A' com nome muito curto (≤4 chars)
+      Trecho  : A = ...
       Contexto:
-        >>>    1 | v1=int(input("Quantidade para A.R:"))
-               2 | v2=int(input("Quantidade para D.O:"))
+        >>>    1 | A = int(input("Qtd de votos AR: "))
+               2 | D = int(input("Qtd de votos DO: "))
 
-  [2] Linha 2: Variável 'v2' com nome muito curto (≤4 chars)
-      Trecho  : v2 = ...
+  [2] Linha 2: Variável 'D' com nome muito curto (≤4 chars)
+      Trecho  : D = ...
       Contexto:
-               1 | v1=int(input("Quantidade para A.R:"))
-        >>>    2 | v2=int(input("Quantidade para D.O:"))
-               3 | if(v1>v2):
+               1 | A = int(input("Qtd de votos AR: "))
+        >>>    2 | D = int(input("Qtd de votos DO: "))
+               3 | a = (A * 100)/ (D + A)
 
-  [3] Linha 5: Variável 'h' com nome muito curto (≤4 chars)
-      Trecho  : h = ...
+  [3] Linha 3: Variável 'a' com nome muito curto (≤4 chars)
+      Trecho  : a = ...
       Contexto:
-               4 | 	print("Ambrosio Rutra")
-        >>>    5 | 	h=(v1/(v1+v2))*100
-               6 | 	print(round(h, 2))
+               2 | D = int(input("Qtd de votos DO: "))
+        >>>    3 | a = (A * 100)/ (D + A)
+               4 | d = (D * 100)/ (D + A)
 
-  [4] Linha 9: Variável 'h' com nome muito curto (≤4 chars)
-      Trecho  : h = ...
+  [4] Linha 4: Variável 'd' com nome muito curto (≤4 chars)
+      Trecho  : d = ...
       Contexto:
-               8 | 	print("Demelza Olecram")
-        >>>    9 | 	h=(v2/(v1+v2))*100
-              10 | 	print(round(h, 2))
+               3 | a = (A * 100)/ (D + A)
+        >>>    4 | d = (D * 100)/ (D + A)
+               5 | # Condicoes
 
-======================================================================      Contexto:
-               7 | else: 
-        >>>    8 | 	m = "Demelza Olecram"
-               9 | 	m2 = qd / total * 100
-
-  [6] Linha 9: Variável 'm2' com nome muito curto (≤4 chars)
-      Trecho  : m2 = ...
+  [5] Linha 7: Variável 'msg' com nome muito curto (≤4 chars)
+      Trecho  : msg = ...
       Contexto:
-               8 | 	m = "Demelza Olecram"
-        >>>    9 | 	m2 = qd / total * 100
-              10 | print(m)
+               6 | if (A > D):
+        >>>    7 | 	msg = "Ambrosio Rutra"
+               8 | 	msg2 = a
 
-====================================================================== Linha 10: Variável 'msg' com nome muito curto (≤4 chars)
+  [6] Linha 8: Variável 'msg2' com nome muito curto (≤4 chars)
+      Trecho  : msg2 = ...
+      Contexto:
+               7 | 	msg = "Ambrosio Rutra"
+        >>>    8 | 	msg2 = a
+               9 | else:
+
+  [7] Linha 10: Variável 'msg' com nome muito curto (≤4 chars)
       Trecho  : msg = ...
       Contexto:
                9 | else:

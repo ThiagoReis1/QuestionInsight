@@ -1,12 +1,12 @@
 ======================================================================
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
-Arquivo     : 1747_1535.py
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2019_1_v1.81\2019-1\226\users\4157\codes\1747_1535.py
+Arquivo     : 1747_1535.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2019_1_v1.81\2019-1\226\users\4145\executions\1747_1535.log
 Assessment  : 1747
 Título      : TP4: Estrutura de Repetição por Condição (while)
 Questão     : 1535
-Aluno       : 4157
+Aluno       : 4145
 Grupo       : TP 04
 Significado : Estrutura de Repetição por Condição
 Total MCs   : 1
@@ -16,61 +16,70 @@ Total MCs   : 1
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | x = float(input("digite um numero:"))
-     2 | k = int(input("digite um numero inteiro:"))
-     3 | soma = 2
-     4 | m = 0
-     5 | while(x >= -1) and (k > m):
-     6 | 	soma = soma + ((x**3)/3)+((x**5)/5)*(-1)**2
-     7 | 	m = m + 1
-     8 | print(round(soma, 8))
+     1 | x = float(input("valor de x: "))
+     2 | k = int(input("numero de repeticoes: "))
+     3 | i = 0
+     4 | #s=((x**(2*i+ 1))/(2*i +1))*(-1)**i
+     5 | s=0
+     6 | while((-1<=x<=1)and(k>0)):
+     7 | 	s= s + ((x**(2*i +1))/(2*i +1))*(-1)**i
+     8 | 	i=i+1
+     9 | 	k=k-1
+    10 | print(round(s,6))
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
 ----------------------------------------------------------------------
 
 ▶ G4 — Funções/variáveis com nomes não significativos
-  Ocorrências: 6
+  Ocorrências: 7
 
   [1] Linha 1: Variável 'x' com nome muito curto (≤4 chars)
       Trecho  : x = ...
       Contexto:
-        >>>    1 | x = float(input("digite um numero:"))
-               2 | k = int(input("digite um numero inteiro:"))
+        >>>    1 | x = float(input("valor de x: "))
+               2 | k = int(input("numero de repeticoes: "))
 
   [2] Linha 2: Variável 'k' com nome muito curto (≤4 chars)
       Trecho  : k = ...
       Contexto:
-               1 | x = float(input("digite um numero:"))
-        >>>    2 | k = int(input("digite um numero inteiro:"))
-               3 | soma = 2
+               1 | x = float(input("valor de x: "))
+        >>>    2 | k = int(input("numero de repeticoes: "))
+               3 | i = 0
 
-  [3] Linha 3: Variável 'soma' com nome muito curto (≤4 chars)
-      Trecho  : soma = ...
+  [3] Linha 3: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
       Contexto:
-               2 | k = int(input("digite um numero inteiro:"))
-        >>>    3 | soma = 2
-               4 | m = 0
+               2 | k = int(input("numero de repeticoes: "))
+        >>>    3 | i = 0
+               4 | #s=((x**(2*i+ 1))/(2*i +1))*(-1)**i
 
-  [4] Linha 4: Variável 'm' com nome muito curto (≤4 chars)
-      Trecho  : m = ...
+  [4] Linha 5: Variável 's' com nome muito curto (≤4 chars)
+      Trecho  : s = ...
       Contexto:
-               3 | soma = 2
-        >>>    4 | m = 0
-               5 | while(x >= -1) and (k > m):
+               4 | #s=((x**(2*i+ 1))/(2*i +1))*(-1)**i
+        >>>    5 | s=0
+               6 | while((-1<=x<=1)and(k>0)):
 
-  [5] Linha 6: Variável 'soma' com nome muito curto (≤4 chars)
-      Trecho  : soma = ...
+  [5] Linha 7: Variável 's' com nome muito curto (≤4 chars)
+      Trecho  : s = ...
       Contexto:
-               5 | while(x >= -1) and (k > m):
-        >>>    6 | 	soma = soma + ((x**3)/3)+((x**5)/5)*(-1)**2
-               7 | 	m = m + 1
+               6 | while((-1<=x<=1)and(k>0)):
+        >>>    7 | 	s= s + ((x**(2*i +1))/(2*i +1))*(-1)**i
+               8 | 	i=i+1
 
-  [6] Linha 7: Variável 'm' com nome muito curto (≤4 chars)
-      Trecho  : m = ...
+  [6] Linha 8: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
       Contexto:
-               6 | 	soma = soma + ((x**3)/3)+((x**5)/5)*(-1)**2
-        >>>    7 | 	m = m + 1
-               8 | print(round(soma, 8))
+               7 | 	s= s + ((x**(2*i +1))/(2*i +1))*(-1)**i
+        >>>    8 | 	i=i+1
+               9 | 	k=k-1
+
+  [7] Linha 9: Variável 'k' com nome muito curto (≤4 chars)
+      Trecho  : k = ...
+      Contexto:
+               8 | 	i=i+1
+        >>>    9 | 	k=k-1
+              10 | print(round(s,6))
 
 ======================================================================

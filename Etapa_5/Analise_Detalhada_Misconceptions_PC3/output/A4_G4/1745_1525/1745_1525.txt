@@ -1,8 +1,8 @@
 ======================================================================
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
-Arquivo     : 1745_1525.py
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2019_1_v1.81\2019-1\225\users\4312\codes\1745_1525.py
+Arquivo     : 1745_1525.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2019_1_v1.81\2019-1\225\users\4312\executions\1745_1525.log
 Assessment  : 1745
 Título      : TP4: Estrutura de Repetição por Condição (while)
 Questão     : 1525
@@ -22,11 +22,12 @@ CÓDIGO FONTE
      4 | 
      5 | min = 0
      6 | 
-     7 | while(vi > 1000):
-     8 | 	vi = vi + va - vd
-     9 | 	min = min + 1
-    10 | 
-    11 | print(min)
+     7 | while(vi >= 1000):
+     8 | 	x = vi * va
+     9 | 	vi = x - vd
+    10 | 	min = min + 1
+    11 | 
+    12 | print(min)
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
@@ -42,15 +43,15 @@ DETALHAMENTO DOS MISCONCEPTIONS
         >>>    5 | min = 0
                6 | 
 
-  [2] Linha 9: Built-in 'min' redefinido como variável
+  [2] Linha 10: Built-in 'min' redefinido como variável
       Trecho  : min = min + 1
       Contexto:
-               8 | 	vi = vi + va - vd
-        >>>    9 | 	min = min + 1
-              10 | 
+               9 | 	vi = x - vd
+        >>>   10 | 	min = min + 1
+              11 | 
 
 ▶ G4 — Funções/variáveis com nomes não significativos
-  Ocorrências: 6
+  Ocorrências: 7
 
   [1] Linha 1: Variável 'vi' com nome muito curto (≤4 chars)
       Trecho  : vi = ...
@@ -79,18 +80,25 @@ DETALHAMENTO DOS MISCONCEPTIONS
         >>>    5 | min = 0
                6 | 
 
-  [5] Linha 8: Variável 'vi' com nome muito curto (≤4 chars)
+  [5] Linha 8: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+               7 | while(vi >= 1000):
+        >>>    8 | 	x = vi * va
+               9 | 	vi = x - vd
+
+  [6] Linha 9: Variável 'vi' com nome muito curto (≤4 chars)
       Trecho  : vi = ...
       Contexto:
-               7 | while(vi > 1000):
-        >>>    8 | 	vi = vi + va - vd
-               9 | 	min = min + 1
+               8 | 	x = vi * va
+        >>>    9 | 	vi = x - vd
+              10 | 	min = min + 1
 
-  [6] Linha 9: Variável 'min' com nome muito curto (≤4 chars)
+  [7] Linha 10: Variável 'min' com nome muito curto (≤4 chars)
       Trecho  : min = ...
       Contexto:
-               8 | 	vi = vi + va - vd
-        >>>    9 | 	min = min + 1
-              10 | 
+               9 | 	vi = x - vd
+        >>>   10 | 	min = min + 1
+              11 | 
 
 ======================================================================

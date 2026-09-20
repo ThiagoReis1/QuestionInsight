@@ -1,8 +1,8 @@
 ======================================================================
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
-Arquivo     : 5867_6646.py
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2024_1_v1.81\2024-1\590\users\9832\codes\5867_6646.py
+Arquivo     : 5867_6646.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2024_1_v1.81\2024-1\590\users\9832\executions\5867_6646.log
 Assessment  : 5867
 Título      : TP 5: Vetores e Strings
 Questão     : 6646
@@ -20,29 +20,25 @@ CÓDIGO FONTE
      2 | 
      3 | try :
      4 | 	n = array(eval(input("Digite as tres notas: ")))
-     5 | 	
-     6 | except NameError :
-     7 | 	print("Tres notas!!!")
-     8 | 	
-     9 | else :
-    10 | 	if ( size(n) == 3 ) :
-    11 | 		tf = True
-    12 | 		i = 0
-    13 | 		t = 0
-    14 | 		while (i < size(n)) :
-    15 | 			if (n[i] < 0 or n[i] > 10) :
-    16 | 				tf = False
-    17 | 				break
-    18 | 			t += n[i]*(i+1)
-    19 | 			i += 1
-    20 | 		
-    21 | 		if ( tf == True ) :
-    22 | 			t = t/6
-    23 | 			print(round(t,2))
-    24 | 		else :
-    25 | 			print("Bobo.")
-    26 | 	else :
-    27 | 		print("Bobao.")
+     5 | except NameError :
+     6 | 	print("Tres notas.")
+     7 | 	
+     8 | else :
+     9 | 	tf = True
+    10 | 	i = 0
+    11 | 	t = 0
+    12 | 	while (i < size(n)) :
+    13 | 		if (n[i] < 0 or n[i] > 10) :
+    14 | 			tf = False
+    15 | 			break
+    16 | 		t += n[i]*(i+1)
+    17 | 		i += 1
+    18 | 		
+    19 | 	if ( tf == True ) :
+    20 | 		t = t/6
+    21 | 		print(round(t,2))
+    22 | 	else :
+    23 | 		print("Bobo.")
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
@@ -62,41 +58,41 @@ DETALHAMENTO DOS MISCONCEPTIONS
       Contexto:
                3 | try :
         >>>    4 | 	n = array(eval(input("Digite as tres notas: ")))
-               5 | 	
+               5 | except NameError :
 
-  [2] Linha 11: Variável 'tf' com nome muito curto (≤4 chars)
+  [2] Linha 9: Variável 'tf' com nome muito curto (≤4 chars)
       Trecho  : tf = ...
       Contexto:
-              10 | 	if ( size(n) == 3 ) :
-        >>>   11 | 		tf = True
-              12 | 		i = 0
+               8 | else :
+        >>>    9 | 	tf = True
+              10 | 	i = 0
 
-  [3] Linha 12: Variável 'i' com nome muito curto (≤4 chars)
+  [3] Linha 10: Variável 'i' com nome muito curto (≤4 chars)
       Trecho  : i = ...
       Contexto:
-              11 | 		tf = True
-        >>>   12 | 		i = 0
-              13 | 		t = 0
+               9 | 	tf = True
+        >>>   10 | 	i = 0
+              11 | 	t = 0
 
-  [4] Linha 13: Variável 't' com nome muito curto (≤4 chars)
+  [4] Linha 11: Variável 't' com nome muito curto (≤4 chars)
       Trecho  : t = ...
       Contexto:
-              12 | 		i = 0
-        >>>   13 | 		t = 0
-              14 | 		while (i < size(n)) :
+              10 | 	i = 0
+        >>>   11 | 	t = 0
+              12 | 	while (i < size(n)) :
 
-  [5] Linha 22: Variável 't' com nome muito curto (≤4 chars)
+  [5] Linha 20: Variável 't' com nome muito curto (≤4 chars)
       Trecho  : t = ...
       Contexto:
-              21 | 		if ( tf == True ) :
-        >>>   22 | 			t = t/6
-              23 | 			print(round(t,2))
+              19 | 	if ( tf == True ) :
+        >>>   20 | 		t = t/6
+              21 | 		print(round(t,2))
 
-  [6] Linha 16: Variável 'tf' com nome muito curto (≤4 chars)
+  [6] Linha 14: Variável 'tf' com nome muito curto (≤4 chars)
       Trecho  : tf = ...
       Contexto:
-              15 | 			if (n[i] < 0 or n[i] > 10) :
-        >>>   16 | 				tf = False
-              17 | 				break
+              13 | 		if (n[i] < 0 or n[i] > 10) :
+        >>>   14 | 			tf = False
+              15 | 			break
 
 ======================================================================

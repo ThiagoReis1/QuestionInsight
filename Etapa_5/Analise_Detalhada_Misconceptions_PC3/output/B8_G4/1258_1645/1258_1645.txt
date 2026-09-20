@@ -1,12 +1,12 @@
 ======================================================================
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
-Arquivo     : 1258_1645.py
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2018_1_v1.81\2018-1\181\users\3486\codes\1258_1645.py
+Arquivo     : 1258_1645.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2018_1_v1.81\2018-1\181\users\3071\executions\1258_1645.log
 Assessment  : 1258
 Título      : TP 6: Estrutura de Repetição por Contagem (for)
 Questão     : 1645
-Aluno       : 3486
+Aluno       : 3071
 Grupo       : TP 06
 Significado : Estrutura de Repetição por Contagem
 Total MCs   : 2
@@ -17,20 +17,25 @@ Total MCs   : 2
 CÓDIGO FONTE
 ----------------------------------------------------------------------
      1 | from numpy import*
-     2 | v = array(eval(input('digite um valor:')))
-     3 | n = 0
-     4 | b = 0
-     5 | a = zeros(n, dtype=int)
-     6 | for i in range(size(v)):
-     7 | 	if(v[i] >= 2000):
-     8 | 		n = n + 1
-     9 | print(n)
-    10 | for i in range(size(v)):
-    11 | 	if(v[i] >= 2000):
-    12 | 		a[b] = i 
-    13 | 		b = b + 1
-    14 | 		print(b)
-    15 | 
+     2 | vs = array(eval(input("vetor saque: ")))
+     3 | 
+     4 | #acumuladora de saques acima do limite
+     5 | sa = 0 
+     6 | 
+     7 | for i in range(size(vs)):
+     8 | 	if (vs[i] >= 2000):
+     9 | 		sa = sa + 1
+    10 | 	
+    11 | nv = zeros(sa, dtype=int)
+    12 | #indice da posicao do vetor de saida
+    13 | ps = 0
+    14 | 
+    15 | for i in range(size(vs)):
+    16 | 	if (vs[i] >= 2000):
+    17 | 		nv[ps] = i
+    18 | 		ps = ps + 1
+    19 | print(sa)
+    20 | print(nv)
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
@@ -45,46 +50,46 @@ DETALHAMENTO DOS MISCONCEPTIONS
 ▶ G4 — Funções/variáveis com nomes não significativos
   Ocorrências: 6
 
-  [1] Linha 2: Variável 'v' com nome muito curto (≤4 chars)
-      Trecho  : v = ...
+  [1] Linha 2: Variável 'vs' com nome muito curto (≤4 chars)
+      Trecho  : vs = ...
       Contexto:
                1 | from numpy import*
-        >>>    2 | v = array(eval(input('digite um valor:')))
-               3 | n = 0
+        >>>    2 | vs = array(eval(input("vetor saque: ")))
+               3 | 
 
-  [2] Linha 3: Variável 'n' com nome muito curto (≤4 chars)
-      Trecho  : n = ...
+  [2] Linha 5: Variável 'sa' com nome muito curto (≤4 chars)
+      Trecho  : sa = ...
       Contexto:
-               2 | v = array(eval(input('digite um valor:')))
-        >>>    3 | n = 0
-               4 | b = 0
+               4 | #acumuladora de saques acima do limite
+        >>>    5 | sa = 0 
+               6 | 
 
-  [3] Linha 4: Variável 'b' com nome muito curto (≤4 chars)
-      Trecho  : b = ...
+  [3] Linha 11: Variável 'nv' com nome muito curto (≤4 chars)
+      Trecho  : nv = ...
       Contexto:
-               3 | n = 0
-        >>>    4 | b = 0
-               5 | a = zeros(n, dtype=int)
+              10 | 	
+        >>>   11 | nv = zeros(sa, dtype=int)
+              12 | #indice da posicao do vetor de saida
 
-  [4] Linha 5: Variável 'a' com nome muito curto (≤4 chars)
-      Trecho  : a = ...
+  [4] Linha 13: Variável 'ps' com nome muito curto (≤4 chars)
+      Trecho  : ps = ...
       Contexto:
-               4 | b = 0
-        >>>    5 | a = zeros(n, dtype=int)
-               6 | for i in range(size(v)):
+              12 | #indice da posicao do vetor de saida
+        >>>   13 | ps = 0
+              14 | 
 
-  [5] Linha 8: Variável 'n' com nome muito curto (≤4 chars)
-      Trecho  : n = ...
+  [5] Linha 9: Variável 'sa' com nome muito curto (≤4 chars)
+      Trecho  : sa = ...
       Contexto:
-               7 | 	if(v[i] >= 2000):
-        >>>    8 | 		n = n + 1
-               9 | print(n)
+               8 | 	if (vs[i] >= 2000):
+        >>>    9 | 		sa = sa + 1
+              10 | 	
 
-  [6] Linha 13: Variável 'b' com nome muito curto (≤4 chars)
-      Trecho  : b = ...
+  [6] Linha 18: Variável 'ps' com nome muito curto (≤4 chars)
+      Trecho  : ps = ...
       Contexto:
-              12 | 		a[b] = i 
-        >>>   13 | 		b = b + 1
-              14 | 		print(b)
+              17 | 		nv[ps] = i
+        >>>   18 | 		ps = ps + 1
+              19 | print(sa)
 
 ======================================================================

@@ -1,12 +1,12 @@
 ======================================================================
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
-Arquivo     : 565_1977.py
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2017_1_v1.81\2017-1\143\users\2424\codes\565_1977.py
+Arquivo     : 565_1977.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2017_1_v1.81\2017-1\143\users\2260\executions\565_1977.log
 Assessment  : 565
 Título      : Trabalho Prático 3: Estruturas Condicionais Encadeadas
 Questão     : 1977
-Aluno       : 2424
+Aluno       : 2260
 Grupo       : TP 03
 Significado : Estrutura Condicional Encadeada
 Total MCs   : 1
@@ -17,19 +17,18 @@ Total MCs   : 1
 CÓDIGO FONTE
 ----------------------------------------------------------------------
      1 | a = input("genero: ")
-     2 | b = input ("subgenero: ")
+     2 | b = input("subgenero: ")
      3 | 
      4 | if (a=="Investigativa") and (b=="Suspense"):
-     5 | 	print("DEXTER")
-     6 | elif (a=="Investugativa ") and (b=="Drama"):
-     7 | 	print("NARCOS")
-     8 | elif(a=="Dramatica") and (b=="Com ficcao"):
-     9 | 	print("LOST")
+     5 | 		print("DEXTER")		
+     6 | elif (a=="Investigativa") and (b=="Drama"):
+     7 |    print("NARCOS")	
+     8 | elif (a=="Dramatica") and (b=="Com ficcao"):
+     9 |     print("LOST") 	
     10 | elif (a=="Dramatica") and (b=="Aventura"):
-    11 | 	print("SHERLOCK")
+    11 | 	print("SHERLOCK")	
     12 | else:
     13 | 	print("SERIE NAO IDENTIFICADA")
-    14 | 	
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
@@ -42,13 +41,45 @@ DETALHAMENTO DOS MISCONCEPTIONS
       Trecho  : a = ...
       Contexto:
         >>>    1 | a = input("genero: ")
-               2 | b = input ("subgenero: ")
+               2 | b = input("subgenero: ")
 
   [2] Linha 2: Variável 'b' com nome muito curto (≤4 chars)
       Trecho  : b = ...
       Contexto:
                1 | a = input("genero: ")
-        >>>    2 | b = input ("subgenero: ")
+        >>>    2 | b = input("subgenero: ")
                3 | 
 
-=========================================================================================================================================
+====================================================================== gen = input("qual o genero: ").upper()
+        >>>    2 | sub = input("subgenero: ").upper()
+               3 | 
+
+  [3] Linha 5: Variável 'ser' com nome muito curto (≤4 chars)
+      Trecho  : ser = ...
+      Contexto:
+               4 | if(gen == "INVESTIGATIVA") and (sub == "SUSPENSE"):
+        >>>    5 | 	ser = "DEXTER"
+               6 | 	print(ser)
+
+  [4] Linha 8: Variável 'ser' com nome muito curto (≤4 chars)
+      Trecho  : ser = ...
+      Contexto:
+               7 | elif(gen == "INVESTIGATIVA") and (sub == "DRAMA"):
+        >>>    8 | 	ser = "NARCOS"
+               9 | 	print(ser)
+
+  [5] Linha 11: Variável 'ser' com nome muito curto (≤4 chars)
+      Trecho  : ser = ...
+      Contexto:
+              10 | elif(gen == "DRAMATICA") and (sub == "COM FICCAO"):
+        >>>   11 | 	ser = "LOST"
+              12 | 	print(ser)
+
+  [6] Linha 14: Variável 'ser' com nome muito curto (≤4 chars)
+      Trecho  : ser = ...
+      Contexto:
+              13 | elif(gen == "DRAMATICA") and (sub == "AVENTURA"):
+        >>>   14 | 	ser = "SHERLOCK"
+              15 | 	print(ser)
+
+======================================================================

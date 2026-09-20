@@ -1,12 +1,12 @@
 ======================================================================
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
-Arquivo     : 199_1265.py
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2016_1_v1.81\2016-1\102\users\1310\codes\199_1265.py
+Arquivo     : 199_1265.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2016_1_v1.81\2016-1\102\users\1300\executions\199_1265.log
 Assessment  : 199
 Título      : Avaliação Parcial 06 – Repetição por contagem
 Questão     : 1265
-Aluno       : 1310
+Aluno       : 1300
 Grupo       : TP 06
 Significado : Estrutura de Repetição por Contagem
 Total MCs   : 2
@@ -16,19 +16,19 @@ Total MCs   : 2
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | from numpy import *
-     2 | p=float(input("p: "))
-     3 | x=array(eval(input("x: ")))
-     4 | y=array(eval(input("y: ")))
-     5 | h=0
-     6 | n=0
-     7 | j=0
-     8 | t=((p)/(p-1))
-     9 | for i in x:
-    10 | 	n=n+(abs(2*i+y[j]*3)**t)
-    11 | 	j=j+1
-    12 | v=n**(1/t)
-    13 | print(round(v,3))
+     1 | from numpy import*
+     2 | from math import*
+     3 | p = eval(input("digite um numero :"))
+     4 | x = array(eval(input("digite um numero : ")))
+     5 | y = array(eval(input("digite um numero : ")))
+     6 | t= p / (p-1)
+     7 | v=2*x+3*y
+     8 | s = 0
+     9 | sj = 0
+    10 | for i in v:
+    11 | 	s=s+(abs(i))**t
+    12 | xx = (s)**(1/t)
+    13 | print(round(xx,3))
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
@@ -37,84 +37,77 @@ DETALHAMENTO DOS MISCONCEPTIONS
 ▶ A3 — Variável inicializada desnecessariamente
   Ocorrências: 1
 
-  [1] Linha 5: Variável 'h' declarada mas nunca utilizada
-      Trecho  : h = ...
+  [1] Linha 9: Variável 'sj' declarada mas nunca utilizada
+      Trecho  : sj = ...
       Contexto:
-               4 | y=array(eval(input("y: ")))
-        >>>    5 | h=0
-               6 | n=0
+               8 | s = 0
+        >>>    9 | sj = 0
+              10 | for i in v:
 
 ▶ G4 — Funções/variáveis com nomes não significativos
-  Ocorrências: 10
+  Ocorrências: 9
 
-  [1] Linha 2: Variável 'p' com nome muito curto (≤4 chars)
+  [1] Linha 3: Variável 'p' com nome muito curto (≤4 chars)
       Trecho  : p = ...
       Contexto:
-               1 | from numpy import *
-        >>>    2 | p=float(input("p: "))
-               3 | x=array(eval(input("x: ")))
+               2 | from math import*
+        >>>    3 | p = eval(input("digite um numero :"))
+               4 | x = array(eval(input("digite um numero : ")))
 
-  [2] Linha 3: Variável 'x' com nome muito curto (≤4 chars)
+  [2] Linha 4: Variável 'x' com nome muito curto (≤4 chars)
       Trecho  : x = ...
       Contexto:
-               2 | p=float(input("p: "))
-        >>>    3 | x=array(eval(input("x: ")))
-               4 | y=array(eval(input("y: ")))
+               3 | p = eval(input("digite um numero :"))
+        >>>    4 | x = array(eval(input("digite um numero : ")))
+               5 | y = array(eval(input("digite um numero : ")))
 
-  [3] Linha 4: Variável 'y' com nome muito curto (≤4 chars)
+  [3] Linha 5: Variável 'y' com nome muito curto (≤4 chars)
       Trecho  : y = ...
       Contexto:
-               3 | x=array(eval(input("x: ")))
-        >>>    4 | y=array(eval(input("y: ")))
-               5 | h=0
+               4 | x = array(eval(input("digite um numero : ")))
+        >>>    5 | y = array(eval(input("digite um numero : ")))
+               6 | t= p / (p-1)
 
-  [4] Linha 5: Variável 'h' com nome muito curto (≤4 chars)
-      Trecho  : h = ...
-      Contexto:
-               4 | y=array(eval(input("y: ")))
-        >>>    5 | h=0
-               6 | n=0
-
-  [5] Linha 6: Variável 'n' com nome muito curto (≤4 chars)
-      Trecho  : n = ...
-      Contexto:
-               5 | h=0
-        >>>    6 | n=0
-               7 | j=0
-
-  [6] Linha 7: Variável 'j' com nome muito curto (≤4 chars)
-      Trecho  : j = ...
-      Contexto:
-               6 | n=0
-        >>>    7 | j=0
-               8 | t=((p)/(p-1))
-
-  [7] Linha 8: Variável 't' com nome muito curto (≤4 chars)
+  [4] Linha 6: Variável 't' com nome muito curto (≤4 chars)
       Trecho  : t = ...
       Contexto:
-               7 | j=0
-        >>>    8 | t=((p)/(p-1))
-               9 | for i in x:
+               5 | y = array(eval(input("digite um numero : ")))
+        >>>    6 | t= p / (p-1)
+               7 | v=2*x+3*y
 
-  [8] Linha 12: Variável 'v' com nome muito curto (≤4 chars)
+  [5] Linha 7: Variável 'v' com nome muito curto (≤4 chars)
       Trecho  : v = ...
       Contexto:
-              11 | 	j=j+1
-        >>>   12 | v=n**(1/t)
-              13 | print(round(v,3))
+               6 | t= p / (p-1)
+        >>>    7 | v=2*x+3*y
+               8 | s = 0
 
-  [9] Linha 10: Variável 'n' com nome muito curto (≤4 chars)
-      Trecho  : n = ...
+  [6] Linha 8: Variável 's' com nome muito curto (≤4 chars)
+      Trecho  : s = ...
       Contexto:
-               9 | for i in x:
-        >>>   10 | 	n=n+(abs(2*i+y[j]*3)**t)
-              11 | 	j=j+1
+               7 | v=2*x+3*y
+        >>>    8 | s = 0
+               9 | sj = 0
 
-  [10] Linha 11: Variável 'j' com nome muito curto (≤4 chars)
-      Trecho  : j = ...
+  [7] Linha 9: Variável 'sj' com nome muito curto (≤4 chars)
+      Trecho  : sj = ...
       Contexto:
-              10 | 	n=n+(abs(2*i+y[j]*3)**t)
-        >>>   11 | 	j=j+1
-              12 | v=n**(1/t)
+               8 | s = 0
+        >>>    9 | sj = 0
+              10 | for i in v:
 
-==============================================================================================================
+  [8] Linha 12: Variável 'xx' com nome muito curto (≤4 chars)
+      Trecho  : xx = ...
+      Contexto:
+              11 | 	s=s+(abs(i))**t
+        >>>   12 | xx = (s)**(1/t)
+              13 | print(round(xx,3))
+
+  [9] Linha 11: Variável 's' com nome muito curto (≤4 chars)
+      Trecho  : s = ...
+      Contexto:
+              10 | for i in v:
+        >>>   11 | 	s=s+(abs(i))**t
+              12 | xx = (s)**(1/t)
+
+======================================================================

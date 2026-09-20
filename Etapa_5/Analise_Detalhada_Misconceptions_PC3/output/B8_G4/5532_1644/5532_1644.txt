@@ -1,12 +1,12 @@
 ======================================================================
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
-Arquivo     : 5532_1644.py
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2023_2_v1.81\2023-2\559\users\9295\codes\5532_1644.py
+Arquivo     : 5532_1644.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2023_2_v1.81\2023-2\559\users\9205\executions\5532_1644.log
 Assessment  : 5532
 Título      : TP 6: Estrutura de Repetição por Contagem (for)
 Questão     : 1644
-Aluno       : 9295
+Aluno       : 9205
 Grupo       : TP 06
 Significado : Estrutura de Repetição por Contagem
 Total MCs   : 2
@@ -17,20 +17,15 @@ Total MCs   : 2
 CÓDIGO FONTE
 ----------------------------------------------------------------------
      1 | from numpy import*
-     2 | v = array(eval(input("")))
-     3 | ap = 0
-     4 | rp = 0
-     5 | 
-     6 | for i in range(size(v)):
-     7 | 	if v[i] >= 5.0:
-     8 | 		ap += 1
-     9 | 	else:
-    10 | 		rp += 1
-    11 | print(rp)
-    12 | for i in range(size(v)):
-    13 | 	if v[i] < 5.0:
-    14 | 		print(v[i])
-    15 | 
+     2 | a = array(eval(input()))
+     3 | r = 0
+     4 | ind = []
+     5 | for i in range(size(a)):
+     6 | 	if(a[i] < 5):
+     7 | 		r += 1
+     8 | 		ind.append(i)
+     9 | print(r)
+    10 | print(array(ind))
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
@@ -45,25 +40,46 @@ DETALHAMENTO DOS MISCONCEPTIONS
 ▶ G4 — Funções/variáveis com nomes não significativos
   Ocorrências: 3
 
-  [1] Linha 2: Variável 'v' com nome muito curto (≤4 chars)
-      Trecho  : v = ...
+  [1] Linha 2: Variável 'a' com nome muito curto (≤4 chars)
+      Trecho  : a = ...
       Contexto:
                1 | from numpy import*
-        >>>    2 | v = array(eval(input("")))
-               3 | ap = 0
+        >>>    2 | a = array(eval(input()))
+               3 | r = 0
 
-  [2] Linha 3: Variável 'ap' com nome muito curto (≤4 chars)
-      Trecho  : ap = ...
+  [2] Linha 3: Variável 'r' com nome muito curto (≤4 chars)
+      Trecho  : r = ...
       Contexto:
-               2 | v = array(eval(input("")))
-        >>>    3 | ap = 0
-               4 | rp = 0
+               2 | a = array(eval(input()))
+        >>>    3 | r = 0
+               4 | ind = []
 
-  [3] Linha 4: Variável 'rp' com nome muito curto (≤4 chars)
-      Trecho  : rp = ...
+  [3] Linha 4: Variável 'ind' com nome muito curto (≤4 chars)
+      Trecho  : ind = ...
       Contexto:
-               3 | ap = 0
-        >>>    4 | rp = 0
-               5 | 
+               3 | r = 0
+        >>>    4 | ind = []
+               5 | for i in range(size(a)):
+
+======================================================================[4] Linha 12: Variável 'v1' com nome muito curto (≤4 chars)
+      Trecho  : v1 = ...
+      Contexto:
+              11 | 
+        >>>   12 | v1=zeros(c,dtype=int)
+              13 | 
+
+  [5] Linha 10: Variável 'c' com nome muito curto (≤4 chars)
+      Trecho  : c = ...
+      Contexto:
+               9 | 	if v[i]<5:
+        >>>   10 | 		c=c+1
+              11 | 
+
+  [6] Linha 17: Variável 'd' com nome muito curto (≤4 chars)
+      Trecho  : d = ...
+      Contexto:
+              16 | 		v1[d]= x
+        >>>   17 | 		d=d+1
+              18 | 		
 
 ======================================================================

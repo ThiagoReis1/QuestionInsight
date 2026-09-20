@@ -1,12 +1,12 @@
 ======================================================================
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
-Arquivo     : 1058_1022.py
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2018_1_v1.81\2018-1\186\users\3264\codes\1058_1022.py
+Arquivo     : 1058_1022.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2018_1_v1.81\2018-1\186\users\3137\executions\1058_1022.log
 Assessment  : 1058
 Título      : TP01 - Variáveis e Estrutura Sequencial
 Questão     : 1022
-Aluno       : 3264
+Aluno       : 3137
 Grupo       : TP 01
 Significado : Variáveis e Estrutura Sequencial
 Total MCs   : 1
@@ -16,12 +16,12 @@ Total MCs   : 1
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | a = float(input("comprimento da aresta "))
-     2 | b = float(input("custo de aplicacao ")) 
-     3 | 
-     4 | area = 2*(a**2)*((2**0.5)+1)
-     5 | 
-     6 | print(round(area*b,2))
+     1 | from math import *
+     2 | a = float(input("valor da area:  " ))
+     3 | custo = float(input("valor do custo:  "))
+     4 | x = 2 * a **2 * (2 **0.5 + 1 )
+     5 | y = x * custo
+     6 | print(round(y, 2))
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
@@ -30,24 +30,25 @@ DETALHAMENTO DOS MISCONCEPTIONS
 ▶ G4 — Funções/variáveis com nomes não significativos
   Ocorrências: 3
 
-  [1] Linha 1: Variável 'a' com nome muito curto (≤4 chars)
+  [1] Linha 2: Variável 'a' com nome muito curto (≤4 chars)
       Trecho  : a = ...
       Contexto:
-        >>>    1 | a = float(input("comprimento da aresta "))
-               2 | b = float(input("custo de aplicacao ")) 
+               1 | from math import *
+        >>>    2 | a = float(input("valor da area:  " ))
+               3 | custo = float(input("valor do custo:  "))
 
-  [2] Linha 2: Variável 'b' com nome muito curto (≤4 chars)
-      Trecho  : b = ...
+  [2] Linha 4: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
       Contexto:
-               1 | a = float(input("comprimento da aresta "))
-        >>>    2 | b = float(input("custo de aplicacao ")) 
-               3 | 
+               3 | custo = float(input("valor do custo:  "))
+        >>>    4 | x = 2 * a **2 * (2 **0.5 + 1 )
+               5 | y = x * custo
 
-  [3] Linha 4: Variável 'area' com nome muito curto (≤4 chars)
-      Trecho  : area = ...
+  [3] Linha 5: Variável 'y' com nome muito curto (≤4 chars)
+      Trecho  : y = ...
       Contexto:
-               3 | 
-        >>>    4 | area = 2*(a**2)*((2**0.5)+1)
-               5 | 
+               4 | x = 2 * a **2 * (2 **0.5 + 1 )
+        >>>    5 | y = x * custo
+               6 | print(round(y, 2))
 
 ======================================================================

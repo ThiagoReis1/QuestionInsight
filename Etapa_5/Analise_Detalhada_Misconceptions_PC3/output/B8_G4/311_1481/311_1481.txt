@@ -1,12 +1,12 @@
 ======================================================================
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
-Arquivo     : 311_1481.py
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2016_2_v1.81\2016-2\127\users\1905\codes\311_1481.py
+Arquivo     : 311_1481.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2016_2_v1.81\2016-2\127\users\1907\executions\311_1481.log
 Assessment  : 311
 Título      : Trabalho Prático 03 - Estrutura Condicional Encadeada
 Questão     : 1481
-Aluno       : 1905
+Aluno       : 1907
 Grupo       : TP 03
 Significado : Estrutura Condicional Encadeada
 Total MCs   : 2
@@ -16,35 +16,23 @@ Total MCs   : 2
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | al = input("Escolha um alimento:") . upper()
-     2 | cal = int(input("Quantidade de calorias:"))
-     3 | if ((cal>=0) and (cal<=10000)) and ((al=="BANANA") or (al=="MAMAO") or (al=="BIFE") or (al=="BRIGADEIRO") or (al=="FEIJOADA") or (al=="GELATINA") or (al=="OMELETE") or (al=="TOMATE")):
-     4 | 	if (al=="BANANA"):
-     5 | 		quan = cal/0.97
-     6 | 		print(round(quan,2))
-     7 | 	elif(al=="BIFE"):
-     8 | 		quan = cal/2.95
-     9 | 		print(round(quan,2))
-    10 | 	elif(al=="BRIGADEIRO"):
-    11 | 		quan = cal/5
-    12 | 		print(round(quan,2))
-    13 | 	elif(al=="FEIJOADA"):
-    14 | 		quan = cal/1.27
-    15 | 		print(round(quan,2))
-    16 | 	elif(al=="GELATINA"):
-    17 | 		quan = cal/0.67
-    18 | 		print(round(quan,2))
-    19 | 	elif(al=="MAMAO"):
-    20 | 		quan = cal/0.68
-    21 | 		print(round(quan,2))
-    22 | 	elif(al=="OMELETE"):
-    23 | 		quan = cal/1.04
-    24 | 		print(round(quan,2))
-    25 | 	elif(al=="TOMATE"):
-    26 | 		quan = cal/0.2
-    27 | 		print(round(quan,2))
-    28 | else:
-    29 | 	print("Entrada invalida")
+     1 | x = str(input())
+     2 | if (x =="BANANA"):
+     3 | 	print("0.97")
+     4 | elif (x =="BIFE"):
+     5 | 	print("2.95")
+     6 | elif(x =="BRIGADEIRO"):
+     7 | 	print("5")
+     8 | elif(x =="FEIJOADA"):
+     9 | 	print("1.27")
+    10 | elif(x =="GELATINA"):
+    11 | 	print("0.67")
+    12 | elif (x =="MAMAO"):
+    13 | 	print("0.68")
+    14 | elif(x =="OMELETE"):
+    15 | 	print("1.04")
+    16 | elif (x =="TOMATE"):
+    17 | 	print("0.2")
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
@@ -53,83 +41,20 @@ DETALHAMENTO DOS MISCONCEPTIONS
 ▶ B8 — Não utilização de elif/else
   Ocorrências: 1
 
-  [1] Linha 22: Cadeia if/elif sem bloco else final
-      Trecho  : if ... (linha 22) / elif ... sem else
+  [1] Linha 14: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 14) / elif ... sem else
       Contexto:
-              21 | 		print(round(quan,2))
-        >>>   22 | 	elif(al=="OMELETE"):
-              23 | 		quan = cal/1.04
+              13 | 	print("0.68")
+        >>>   14 | elif(x =="OMELETE"):
+              15 | 	print("1.04")
 
 ▶ G4 — Funções/variáveis com nomes não significativos
-  Ocorrências: 10
+  Ocorrências: 1
 
-  [1] Linha 1: Variável 'al' com nome muito curto (≤4 chars)
-      Trecho  : al = ...
+  [1] Linha 1: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
       Contexto:
-        >>>    1 | al = input("Escolha um alimento:") . upper()
-               2 | cal = int(input("Quantidade de calorias:"))
-
-  [2] Linha 2: Variável 'cal' com nome muito curto (≤4 chars)
-      Trecho  : cal = ...
-      Contexto:
-               1 | al = input("Escolha um alimento:") . upper()
-        >>>    2 | cal = int(input("Quantidade de calorias:"))
-               3 | if ((cal>=0) and (cal<=10000)) and ((al=="BANANA") or (al=="MAMAO") or (al=="BIFE") or (al=="BRIGADEIRO") or (al=="FEIJOADA") or (al=="GELATINA") or (al=="OMELETE") or (al=="TOMATE")):
-
-  [3] Linha 5: Variável 'quan' com nome muito curto (≤4 chars)
-      Trecho  : quan = ...
-      Contexto:
-               4 | 	if (al=="BANANA"):
-        >>>    5 | 		quan = cal/0.97
-               6 | 		print(round(quan,2))
-
-  [4] Linha 8: Variável 'quan' com nome muito curto (≤4 chars)
-      Trecho  : quan = ...
-      Contexto:
-               7 | 	elif(al=="BIFE"):
-        >>>    8 | 		quan = cal/2.95
-               9 | 		print(round(quan,2))
-
-  [5] Linha 11: Variável 'quan' com nome muito curto (≤4 chars)
-      Trecho  : quan = ...
-      Contexto:
-              10 | 	elif(al=="BRIGADEIRO"):
-        >>>   11 | 		quan = cal/5
-              12 | 		print(round(quan,2))
-
-  [6] Linha 14: Variável 'quan' com nome muito curto (≤4 chars)
-      Trecho  : quan = ...
-      Contexto:
-              13 | 	elif(al=="FEIJOADA"):
-        >>>   14 | 		quan = cal/1.27
-              15 | 		print(round(quan,2))
-
-  [7] Linha 17: Variável 'quan' com nome muito curto (≤4 chars)
-      Trecho  : quan = ...
-      Contexto:
-              16 | 	elif(al=="GELATINA"):
-        >>>   17 | 		quan = cal/0.67
-              18 | 		print(round(quan,2))
-
-  [8] Linha 20: Variável 'quan' com nome muito curto (≤4 chars)
-      Trecho  : quan = ...
-      Contexto:
-              19 | 	elif(al=="MAMAO"):
-        >>>   20 | 		quan = cal/0.68
-              21 | 		print(round(quan,2))
-
-  [9] Linha 23: Variável 'quan' com nome muito curto (≤4 chars)
-      Trecho  : quan = ...
-      Contexto:
-              22 | 	elif(al=="OMELETE"):
-        >>>   23 | 		quan = cal/1.04
-              24 | 		print(round(quan,2))
-
-  [10] Linha 26: Variável 'quan' com nome muito curto (≤4 chars)
-      Trecho  : quan = ...
-      Contexto:
-              25 | 	elif(al=="TOMATE"):
-        >>>   26 | 		quan = cal/0.2
-              27 | 		print(round(quan,2))
+        >>>    1 | x = str(input())
+               2 | if (x =="BANANA"):
 
 ======================================================================

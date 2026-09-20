@@ -1,12 +1,12 @@
 ======================================================================
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
-Arquivo     : 3305_1644.py
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2021_1_v1.81\2021-1\380\users\6410\codes\3305_1644.py
+Arquivo     : 3305_1644.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2021_1_v1.81\2021-1\380\users\5121\executions\3305_1644.log
 Assessment  : 3305
 Título      : TP6: Repetição por contagem (Sub)
 Questão     : 1644
-Aluno       : 6410
+Aluno       : 5121
 Grupo       : TP 06
 Significado : Estrutura de Repetição por Contagem
 Total MCs   : 2
@@ -16,25 +16,22 @@ Total MCs   : 2
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | from numpy import *
-     2 | 
-     3 | vet = array(eval(input("notas: ")))
-     4 | s = 0
-     5 | 
-     6 | for i in vet:
-     7 | 	if i < 5:
-     8 | 		s = s + 1
-     9 | vet_final = zeros(s,dtype=int)
-    10 | j = 0
-    11 | k = 0
-    12 | 
-    13 | for i in vet :
-    14 | 	if i < 5:
-    15 | 		vet_final[k] = j
-    16 | 		k = k + 1
-    17 | 	j = j + 1
-    18 | print(s)
-    19 | print(vet_final)
+     1 | from numpy import*
+     2 | nota = array(eval(input("Informe as notas: ")))
+     3 | i = 0
+     4 | for a in nota:
+     5 | 	if(a<5):
+     6 | 		i = i + 1
+     7 | v = zeros(i,dtype=int)
+     8 | j = 0
+     9 | k = 0
+    10 | for b in nota:
+    11 | 	if(b<5):
+    12 | 		v[k] = j
+    13 | 		k = k + 1
+    14 | 	j = j + 1
+    15 | print(i)
+    16 | print(v)
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
@@ -47,55 +44,62 @@ DETALHAMENTO DOS MISCONCEPTIONS
       Trecho  : —
 
 ▶ G4 — Funções/variáveis com nomes não significativos
-  Ocorrências: 7
+  Ocorrências: 8
 
-  [1] Linha 3: Variável 'vet' com nome muito curto (≤4 chars)
-      Trecho  : vet = ...
+  [1] Linha 2: Variável 'nota' com nome muito curto (≤4 chars)
+      Trecho  : nota = ...
       Contexto:
-               2 | 
-        >>>    3 | vet = array(eval(input("notas: ")))
-               4 | s = 0
+               1 | from numpy import*
+        >>>    2 | nota = array(eval(input("Informe as notas: ")))
+               3 | i = 0
 
-  [2] Linha 4: Variável 's' com nome muito curto (≤4 chars)
-      Trecho  : s = ...
+  [2] Linha 3: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
       Contexto:
-               3 | vet = array(eval(input("notas: ")))
-        >>>    4 | s = 0
-               5 | 
+               2 | nota = array(eval(input("Informe as notas: ")))
+        >>>    3 | i = 0
+               4 | for a in nota:
 
-  [3] Linha 10: Variável 'j' com nome muito curto (≤4 chars)
+  [3] Linha 7: Variável 'v' com nome muito curto (≤4 chars)
+      Trecho  : v = ...
+      Contexto:
+               6 | 		i = i + 1
+        >>>    7 | v = zeros(i,dtype=int)
+               8 | j = 0
+
+  [4] Linha 8: Variável 'j' com nome muito curto (≤4 chars)
       Trecho  : j = ...
       Contexto:
-               9 | vet_final = zeros(s,dtype=int)
-        >>>   10 | j = 0
-              11 | k = 0
+               7 | v = zeros(i,dtype=int)
+        >>>    8 | j = 0
+               9 | k = 0
 
-  [4] Linha 11: Variável 'k' com nome muito curto (≤4 chars)
+  [5] Linha 9: Variável 'k' com nome muito curto (≤4 chars)
       Trecho  : k = ...
       Contexto:
-              10 | j = 0
-        >>>   11 | k = 0
-              12 | 
+               8 | j = 0
+        >>>    9 | k = 0
+              10 | for b in nota:
 
-  [5] Linha 17: Variável 'j' com nome muito curto (≤4 chars)
+  [6] Linha 14: Variável 'j' com nome muito curto (≤4 chars)
       Trecho  : j = ...
       Contexto:
-              16 | 		k = k + 1
-        >>>   17 | 	j = j + 1
-              18 | print(s)
+              13 | 		k = k + 1
+        >>>   14 | 	j = j + 1
+              15 | print(i)
 
-  [6] Linha 8: Variável 's' com nome muito curto (≤4 chars)
-      Trecho  : s = ...
+  [7] Linha 6: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
       Contexto:
-               7 | 	if i < 5:
-        >>>    8 | 		s = s + 1
-               9 | vet_final = zeros(s,dtype=int)
+               5 | 	if(a<5):
+        >>>    6 | 		i = i + 1
+               7 | v = zeros(i,dtype=int)
 
-  [7] Linha 16: Variável 'k' com nome muito curto (≤4 chars)
+  [8] Linha 13: Variável 'k' com nome muito curto (≤4 chars)
       Trecho  : k = ...
       Contexto:
-              15 | 		vet_final[k] = j
-        >>>   16 | 		k = k + 1
-              17 | 	j = j + 1
+              12 | 		v[k] = j
+        >>>   13 | 		k = k + 1
+              14 | 	j = j + 1
 
 ======================================================================

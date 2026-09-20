@@ -1,12 +1,12 @@
 ======================================================================
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
-Arquivo     : 1752_1529.py
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2019_1_v1.81\2019-1\223\users\4183\codes\1752_1529.py
+Arquivo     : 1752_1529.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2019_1_v1.81\2019-1\223\users\4330\executions\1752_1529.log
 Assessment  : 1752
 Título      : TP4: Estrutura de Repetição por Condição (while)
 Questão     : 1529
-Aluno       : 4183
+Aluno       : 4330
 Grupo       : TP 04
 Significado : Estrutura de Repetição por Condição
 Total MCs   : 2
@@ -16,20 +16,23 @@ Total MCs   : 2
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | inf = int(input("Digite: "))
-     2 | cav = int(input("Digite: "))
-     3 | pi = float(input("Digite: "))
-     4 | pc = float(input("Digite: "))
-     5 | soma = 0
-     6 | mes = 0
-     7 | while (inf + cav < 50000):
-     8 | 	inf = inf + (inf*pi)/100
-     9 | 	cav = cav + (cav*pc)/100
-    10 | 	soma = inf + cav
-    11 | 	mes = mes + 1
-    12 | print(mes)
-    13 | 	
-    14 | 	
+     1 | #quantidade inicial de guerreiros na infantaria
+     2 | qii=int(input("infantaria: "))
+     3 | #quantidade inicial de de guerreiros da cavalaria
+     4 | qic=int(input("cavalaria: "))
+     5 | #percentual de crescimento de tropas infantaria
+     6 | pci=float(input("percentual de crescimento mensal: "))/100
+     7 | #percentual de crescimento de tropas da cavalaria
+     8 | pcc=float(input("percentual de crescimento mensal: "))/100
+     9 | #variavel contadora
+    10 | m = 0
+    11 | x = 0
+    12 | while ( x < 50000 ):
+    13 | 	qii = qii + ( qii * pci)
+    14 | 	qic = qic + ( qic * pcc)
+    15 | 	a = x + qii + qic
+    16 | 	m = m + 1
+    17 | print(m)
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
@@ -38,83 +41,84 @@ DETALHAMENTO DOS MISCONCEPTIONS
 ▶ A3 — Variável inicializada desnecessariamente
   Ocorrências: 1
 
-  [1] Linha 5: Variável 'soma' declarada mas nunca utilizada
-      Trecho  : soma = ...
+  [1] Linha 15: Variável 'a' declarada mas nunca utilizada
+      Trecho  : a = ...
       Contexto:
-               4 | pc = float(input("Digite: "))
-        >>>    5 | soma = 0
-               6 | mes = 0
+              14 | 	qic = qic + ( qic * pcc)
+        >>>   15 | 	a = x + qii + qic
+              16 | 	m = m + 1
 
 ▶ G4 — Funções/variáveis com nomes não significativos
   Ocorrências: 10
 
-  [1] Linha 1: Variável 'inf' com nome muito curto (≤4 chars)
-      Trecho  : inf = ...
+  [1] Linha 2: Variável 'qii' com nome muito curto (≤4 chars)
+      Trecho  : qii = ...
       Contexto:
-        >>>    1 | inf = int(input("Digite: "))
-               2 | cav = int(input("Digite: "))
+               1 | #quantidade inicial de guerreiros na infantaria
+        >>>    2 | qii=int(input("infantaria: "))
+               3 | #quantidade inicial de de guerreiros da cavalaria
 
-  [2] Linha 2: Variável 'cav' com nome muito curto (≤4 chars)
-      Trecho  : cav = ...
+  [2] Linha 4: Variável 'qic' com nome muito curto (≤4 chars)
+      Trecho  : qic = ...
       Contexto:
-               1 | inf = int(input("Digite: "))
-        >>>    2 | cav = int(input("Digite: "))
-               3 | pi = float(input("Digite: "))
+               3 | #quantidade inicial de de guerreiros da cavalaria
+        >>>    4 | qic=int(input("cavalaria: "))
+               5 | #percentual de crescimento de tropas infantaria
 
-  [3] Linha 3: Variável 'pi' com nome muito curto (≤4 chars)
-      Trecho  : pi = ...
+  [3] Linha 6: Variável 'pci' com nome muito curto (≤4 chars)
+      Trecho  : pci = ...
       Contexto:
-               2 | cav = int(input("Digite: "))
-        >>>    3 | pi = float(input("Digite: "))
-               4 | pc = float(input("Digite: "))
+               5 | #percentual de crescimento de tropas infantaria
+        >>>    6 | pci=float(input("percentual de crescimento mensal: "))/100
+               7 | #percentual de crescimento de tropas da cavalaria
 
-  [4] Linha 4: Variável 'pc' com nome muito curto (≤4 chars)
-      Trecho  : pc = ...
+  [4] Linha 8: Variável 'pcc' com nome muito curto (≤4 chars)
+      Trecho  : pcc = ...
       Contexto:
-               3 | pi = float(input("Digite: "))
-        >>>    4 | pc = float(input("Digite: "))
-               5 | soma = 0
+               7 | #percentual de crescimento de tropas da cavalaria
+        >>>    8 | pcc=float(input("percentual de crescimento mensal: "))/100
+               9 | #variavel contadora
 
-  [5] Linha 5: Variável 'soma' com nome muito curto (≤4 chars)
-      Trecho  : soma = ...
+  [5] Linha 10: Variável 'm' com nome muito curto (≤4 chars)
+      Trecho  : m = ...
       Contexto:
-               4 | pc = float(input("Digite: "))
-        >>>    5 | soma = 0
-               6 | mes = 0
+               9 | #variavel contadora
+        >>>   10 | m = 0
+              11 | x = 0
 
-  [6] Linha 6: Variável 'mes' com nome muito curto (≤4 chars)
-      Trecho  : mes = ...
+  [6] Linha 11: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
       Contexto:
-               5 | soma = 0
-        >>>    6 | mes = 0
-               7 | while (inf + cav < 50000):
+              10 | m = 0
+        >>>   11 | x = 0
+              12 | while ( x < 50000 ):
 
-  [7] Linha 8: Variável 'inf' com nome muito curto (≤4 chars)
-      Trecho  : inf = ...
+  [7] Linha 13: Variável 'qii' com nome muito curto (≤4 chars)
+      Trecho  : qii = ...
       Contexto:
-               7 | while (inf + cav < 50000):
-        >>>    8 | 	inf = inf + (inf*pi)/100
-               9 | 	cav = cav + (cav*pc)/100
+              12 | while ( x < 50000 ):
+        >>>   13 | 	qii = qii + ( qii * pci)
+              14 | 	qic = qic + ( qic * pcc)
 
-  [8] Linha 9: Variável 'cav' com nome muito curto (≤4 chars)
-      Trecho  : cav = ...
+  [8] Linha 14: Variável 'qic' com nome muito curto (≤4 chars)
+      Trecho  : qic = ...
       Contexto:
-               8 | 	inf = inf + (inf*pi)/100
-        >>>    9 | 	cav = cav + (cav*pc)/100
-              10 | 	soma = inf + cav
+              13 | 	qii = qii + ( qii * pci)
+        >>>   14 | 	qic = qic + ( qic * pcc)
+              15 | 	a = x + qii + qic
 
-  [9] Linha 10: Variável 'soma' com nome muito curto (≤4 chars)
-      Trecho  : soma = ...
+  [9] Linha 15: Variável 'a' com nome muito curto (≤4 chars)
+      Trecho  : a = ...
       Contexto:
-               9 | 	cav = cav + (cav*pc)/100
-        >>>   10 | 	soma = inf + cav
-              11 | 	mes = mes + 1
+              14 | 	qic = qic + ( qic * pcc)
+        >>>   15 | 	a = x + qii + qic
+              16 | 	m = m + 1
 
-  [10] Linha 11: Variável 'mes' com nome muito curto (≤4 chars)
-      Trecho  : mes = ...
+  [10] Linha 16: Variável 'm' com nome muito curto (≤4 chars)
+      Trecho  : m = ...
       Contexto:
-              10 | 	soma = inf + cav
-        >>>   11 | 	mes = mes + 1
-              12 | print(mes)
+              15 | 	a = x + qii + qic
+        >>>   16 | 	m = m + 1
+              17 | print(m)
 
 ======================================================================

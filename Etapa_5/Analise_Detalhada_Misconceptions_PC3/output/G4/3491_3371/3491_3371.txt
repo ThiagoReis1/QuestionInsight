@@ -1,12 +1,12 @@
 ======================================================================
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
-Arquivo     : 3491_3371.py
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2021_2_v1.81\2021-2\403\users\7188\codes\3491_3371.py
+Arquivo     : 3491_3371.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2021_2_v1.81\2021-2\403\users\7108\executions\3491_3371.log
 Assessment  : 3491
 Título      : TP 02:  Est. Condicional Simples e Composta
 Questão     : 3371
-Aluno       : 7188
+Aluno       : 7108
 Grupo       : TP 02
 Significado : Estrutura Condicional Simples e Composta
 Total MCs   : 1
@@ -16,15 +16,17 @@ Total MCs   : 1
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | me= input("medida em K ou M")
-     2 | vm= float(input("valor da medida"))
-     3 | if me== "K":
-     4 | 	m = vm/1.60934
-     5 | 	print(round(m,2))
-     6 | 	
-     7 | else:
-     8 | 	k= 1.60934 * vm  
-     9 | 	print(round(k,2))
+     1 | um= input()
+     2 | vm= float(input())
+     3 | 
+     4 | va= 1.60934*vm
+     5 | vb= vm/1.60934
+     6 | 
+     7 | if(um=="K"):
+     8 | 	print(round(vb,2))
+     9 | 	
+    10 | else:	
+    11 | 	print(round(va,2))
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
@@ -33,31 +35,34 @@ DETALHAMENTO DOS MISCONCEPTIONS
 ▶ G4 — Funções/variáveis com nomes não significativos
   Ocorrências: 4
 
-  [1] Linha 1: Variável 'me' com nome muito curto (≤4 chars)
-      Trecho  : me = ...
+  [1] Linha 1: Variável 'um' com nome muito curto (≤4 chars)
+      Trecho  : um = ...
       Contexto:
-        >>>    1 | me= input("medida em K ou M")
-               2 | vm= float(input("valor da medida"))
+        >>>    1 | um= input()
+               2 | vm= float(input())
 
   [2] Linha 2: Variável 'vm' com nome muito curto (≤4 chars)
       Trecho  : vm = ...
       Contexto:
-               1 | me= input("medida em K ou M")
-        >>>    2 | vm= float(input("valor da medida"))
-               3 | if me== "K":
+               1 | um= input()
+        >>>    2 | vm= float(input())
+               3 | 
 
-  [3] Linha 4: Variável 'm' com nome muito curto (≤4 chars)
-      Trecho  : m = ...
+  [3] Linha 4: Variável 'va' com nome muito curto (≤4 chars)
+      Trecho  : va = ...
       Contexto:
-               3 | if me== "K":
-        >>>    4 | 	m = vm/1.60934
-               5 | 	print(round(m,2))
+               3 | 
+        >>>    4 | va= 1.60934*vm
+               5 | vb= vm/1.60934
 
-  [4] Linha 8: Variável 'k' com nome muito curto (≤4 chars)
-      Trecho  : k = ...
+  [4] Linha 5: Variável 'vb' com nome muito curto (≤4 chars)
+      Trecho  : vb = ...
       Contexto:
-               7 | else:
-        >>>    8 | 	k= 1.60934 * vm  
+               4 | va= 1.60934*vm
+        >>>    5 | vb= vm/1.60934
+               6 | 
+
+======================================================================934 * vm  
                9 | 	print(round(k,2))
 
 ======================================================================

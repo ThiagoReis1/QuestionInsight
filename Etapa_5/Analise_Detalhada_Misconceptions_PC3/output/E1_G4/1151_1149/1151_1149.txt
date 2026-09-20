@@ -1,0 +1,76 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo     : 1151_1149.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2018_1_v1.81\2018-1\183\users\3484\executions\1151_1149.log
+Assessment  : 1151
+Título      : TP 3 – Condicionais Encadeadas (if/elif)
+Questão     : 1149
+Aluno       : 3484
+Grupo       : TP 03
+Significado : Estrutura Condicional Encadeada
+Total MCs   : 2
+
+⚠️  Misconceptions detectados: E1, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | rl=input()
+     2 | rl=rl.lower()
+     3 | print("Entrada",rl)
+     4 | if ((rl=="Ponta Tempestade") or (rl=="Ilha do Dragao") or (rl=="Campina") or (rl=="Winterfell") or (rl=="Rochedo Casterly") or (rl=="Pyke") or (rl=="Correrio") or (rl=="Ninho da Aguia") or (rl=="Dorne")): 
+     5 | 	if (rl=="Ponta Tempestade"):
+     6 | 		print("Baratheon")
+     7 | 	elif rl=="Ilha do Dragao":
+     8 | 		print("Targaryen")
+     9 | 	elif rl=="Campina":
+    10 | 		print("Tyrell")
+    11 | 	elif rl=="Winterfell":	 
+    12 | 		print("Stark")
+    13 | 	elif rl=="Rochedo Casterly":
+    14 | 		print("Lannister")
+    15 | 	elif rl=="Pyke":	 
+    16 | 		print("Greyjoy")
+    17 | 	elif rl=="Correrio":
+    18 | 		print("Tully")
+    19 | 	elif rl=="Ninho da Aguia":
+    20 | 		print("Arryn")
+    21 | 	elif rl=="Dorne": 
+    22 | 		print("Martell") 
+    23 | 	else:
+    24 | 		print("Entrada",rl,"invalida")
+    25 | else:
+    26 | 	print("Entrada",rl,"invalida")
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ E1 — Verificação desnecessária de todas as combinações possíveis
+  Ocorrências: 1
+
+  [1] Linha 4: 9 condições em um único if — verificação excessiva
+      Trecho  : rl == 'Ponta Tempestade' or rl == 'Ilha do Dragao' or rl == 'Campina' or (rl == 'Winterfell') or (rl == 'Rochedo Casterly') or (rl == 'Pyke') or (rl == 'Correrio') or (rl == 'Ninho da Aguia') or (rl == 'Dorne')
+      Contexto:
+               3 | print("Entrada",rl)
+        >>>    4 | if ((rl=="Ponta Tempestade") or (rl=="Ilha do Dragao") or (rl=="Campina") or (rl=="Winterfell") or (rl=="Rochedo Casterly") or (rl=="Pyke") or (rl=="Correrio") or (rl=="Ninho da Aguia") or (rl=="Dorne")): 
+               5 | 	if (rl=="Ponta Tempestade"):
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 2
+
+  [1] Linha 1: Variável 'rl' com nome muito curto (≤4 chars)
+      Trecho  : rl = ...
+      Contexto:
+        >>>    1 | rl=input()
+               2 | rl=rl.lower()
+
+  [2] Linha 2: Variável 'rl' com nome muito curto (≤4 chars)
+      Trecho  : rl = ...
+      Contexto:
+               1 | rl=input()
+        >>>    2 | rl=rl.lower()
+               3 | print("Entrada",rl)
+
+======================================================================

@@ -1,12 +1,12 @@
 ======================================================================
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
-Arquivo     : 89_1092.py
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2016_1_v1.81\2016-1\111\users\1550\codes\89_1092.py
+Arquivo     : 89_1092.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2016_1_v1.81\2016-1\111\users\1168\executions\89_1092.log
 Assessment  : 89
 Título      : Avaliação Parcial 02 – Estrutura Condicional Composta (sem Aninhamento)
 Questão     : 1092
-Aluno       : 1550
+Aluno       : 1168
 Grupo       : TP 02
 Significado : Estrutura Condicional Simples e Composta
 Total MCs   : 1
@@ -16,61 +16,47 @@ Total MCs   : 1
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | a=  float(input("digite o numero: ")) 
-     2 | a1= int(input("digite o a1: "))
-     3 | a2= int(input("digite o a2: "))
-     4 | a3= int(input("digite o a3: "))
-     5 | s= (a1**3)+(a2**3)+(a3**3)
-     6 | if(s==a):
-     7 | 	print("X atende a prioridade")
-     8 | else:
-     9 | 	print(s)
-    10 | 		
-    11 | 		
-    12 | 		 
-    13 | 
-    14 | 	
-    15 | 
+     1 | num = int(input("numero: "))
+     2 | cent = num // 100
+     3 | dez = (num % 100) // 10
+     4 | unid = num % 10
+     5 | if (num == (cent ** 3) + (dez ** 3) + (unid ** 3)):
+     6 | 	print(num, "atende a propriedade")
+     7 | else:
+     8 | 	print((cent ** 3) + (dez ** 3) + (unid ** 3))
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
 ----------------------------------------------------------------------
 
 ▶ G4 — Funções/variáveis com nomes não significativos
-  Ocorrências: 5
+  Ocorrências: 4
 
-  [1] Linha 1: Variável 'a' com nome muito curto (≤4 chars)
-      Trecho  : a = ...
+  [1] Linha 1: Variável 'num' com nome muito curto (≤4 chars)
+      Trecho  : num = ...
       Contexto:
-        >>>    1 | a=  float(input("digite o numero: ")) 
-               2 | a1= int(input("digite o a1: "))
+        >>>    1 | num = int(input("numero: "))
+               2 | cent = num // 100
 
-  [2] Linha 2: Variável 'a1' com nome muito curto (≤4 chars)
-      Trecho  : a1 = ...
+  [2] Linha 2: Variável 'cent' com nome muito curto (≤4 chars)
+      Trecho  : cent = ...
       Contexto:
-               1 | a=  float(input("digite o numero: ")) 
-        >>>    2 | a1= int(input("digite o a1: "))
-               3 | a2= int(input("digite o a2: "))
+               1 | num = int(input("numero: "))
+        >>>    2 | cent = num // 100
+               3 | dez = (num % 100) // 10
 
-  [3] Linha 3: Variável 'a2' com nome muito curto (≤4 chars)
-      Trecho  : a2 = ...
+  [3] Linha 3: Variável 'dez' com nome muito curto (≤4 chars)
+      Trecho  : dez = ...
       Contexto:
-               2 | a1= int(input("digite o a1: "))
-        >>>    3 | a2= int(input("digite o a2: "))
-               4 | a3= int(input("digite o a3: "))
+               2 | cent = num // 100
+        >>>    3 | dez = (num % 100) // 10
+               4 | unid = num % 10
 
-  [4] Linha 4: Variável 'a3' com nome muito curto (≤4 chars)
-      Trecho  : a3 = ...
+  [4] Linha 4: Variável 'unid' com nome muito curto (≤4 chars)
+      Trecho  : unid = ...
       Contexto:
-               3 | a2= int(input("digite o a2: "))
-        >>>    4 | a3= int(input("digite o a3: "))
-               5 | s= (a1**3)+(a2**3)+(a3**3)
-
-  [5] Linha 5: Variável 's' com nome muito curto (≤4 chars)
-      Trecho  : s = ...
-      Contexto:
-               4 | a3= int(input("digite o a3: "))
-        >>>    5 | s= (a1**3)+(a2**3)+(a3**3)
-               6 | if(s==a):
+               3 | dez = (num % 100) // 10
+        >>>    4 | unid = num % 10
+               5 | if (num == (cent ** 3) + (dez ** 3) + (unid ** 3)):
 
 ======================================================================

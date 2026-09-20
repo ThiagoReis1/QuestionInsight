@@ -1,12 +1,12 @@
 ======================================================================
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
-Arquivo     : 3444_1366.py
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2021_2_v1.81\2021-2\407\users\7161\codes\3444_1366.py
+Arquivo     : 3444_1366.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2021_2_v1.81\2021-2\407\users\7204\executions\3444_1366.log
 Assessment  : 3444
 Título      : TP 01: Variáveis e Estrutura Sequencial
 Questão     : 1366
-Aluno       : 7161
+Aluno       : 7204
 Grupo       : TP 01
 Significado : Variáveis e Estrutura Sequencial
 Total MCs   : 1
@@ -16,15 +16,14 @@ Total MCs   : 1
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | from math import*
+     1 | from math import *
      2 | 
-     3 | a = radians(float(input()))
-     4 | 
-     5 | v = float(input())
-     6 | 
-     7 | d = (v**2)*(sin(2*a))/9.8
-     8 | 
-     9 | print(round(d,2))
+     3 | a = radians(float(input("Angulo da flecha: ")))
+     4 | v = float(input("velocidade inicial: "))
+     5 | 
+     6 | d = (v**2)*sin(2*a)*(1/9.8)
+     7 | 
+     8 | print(round(d,2))
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
@@ -37,24 +36,19 @@ DETALHAMENTO DOS MISCONCEPTIONS
       Trecho  : a = ...
       Contexto:
                2 | 
-        >>>    3 | a = radians(float(input()))
-               4 | 
+        >>>    3 | a = radians(float(input("Angulo da flecha: ")))
+               4 | v = float(input("velocidade inicial: "))
 
-  [2] Linha 5: Variável 'v' com nome muito curto (≤4 chars)
+  [2] Linha 4: Variável 'v' com nome muito curto (≤4 chars)
       Trecho  : v = ...
       Contexto:
-               4 | 
-        >>>    5 | v = float(input())
-               6 | 
+               3 | a = radians(float(input("Angulo da flecha: ")))
+        >>>    4 | v = float(input("velocidade inicial: "))
+               5 | 
 
-  [3] Linha 7: Variável 'd' com nome muito curto (≤4 chars)
+  [3] Linha 6: Variável 'd' com nome muito curto (≤4 chars)
       Trecho  : d = ...
       Contexto:
-               6 | 
-        >>>    7 | d = (v**2)*(sin(2*a))/9.8
-               8 | 
-
-======================================================================:
                5 | 
         >>>    6 | d = (v**2)*sin(2*a)*(1/9.8)
                7 | 

@@ -1,12 +1,12 @@
 ======================================================================
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
-Arquivo     : 4797_6371.py
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2022_2_v1.81\2022-2\485\users\8168\codes\4797_6371.py
+Arquivo     : 4797_6371.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2022_2_v1.81\2022-2\485\users\8163\executions\4797_6371.log
 Assessment  : 4797
 Título      : TP 6: Estrutura de Repetição por Contagem (for)
 Questão     : 6371
-Aluno       : 8168
+Aluno       : 8163
 Grupo       : TP 06
 Significado : Estrutura de Repetição por Contagem
 Total MCs   : 1
@@ -16,45 +16,52 @@ Total MCs   : 1
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | from numpy import *
-     2 | v=array(eval(input("")))
-     3 | 
-     4 | vz=zeros(size(v),dtype=int)
+     1 | from numpy import*
+     2 | 
+     3 | num= array(eval(input("digite os numeros: ")))
+     4 | 
      5 | i=0
-     6 | for x in v:
-     7 | 	if(x!=0):
-     8 | 		vz[i]= (x-1)**2
-     9 | 	else:
-    10 | 		vz[i]=81
-    11 | 	i+=1
-    12 | print(vz)
+     6 | for i in range(size(num)):
+     7 | 	if num[i] == 0:
+     8 | 		n= 9
+     9 | 	else :
+    10 | 		n= num[i]-1
+    11 | 	num[i]=n**2	
+    12 | print(num)
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
 ----------------------------------------------------------------------
 
 ▶ G4 — Funções/variáveis com nomes não significativos
-  Ocorrências: 3
+  Ocorrências: 4
 
-  [1] Linha 2: Variável 'v' com nome muito curto (≤4 chars)
-      Trecho  : v = ...
+  [1] Linha 3: Variável 'num' com nome muito curto (≤4 chars)
+      Trecho  : num = ...
       Contexto:
-               1 | from numpy import *
-        >>>    2 | v=array(eval(input("")))
-               3 | 
+               2 | 
+        >>>    3 | num= array(eval(input("digite os numeros: ")))
+               4 | 
 
-  [2] Linha 4: Variável 'vz' com nome muito curto (≤4 chars)
-      Trecho  : vz = ...
-      Contexto:
-               3 | 
-        >>>    4 | vz=zeros(size(v),dtype=int)
-               5 | i=0
-
-  [3] Linha 5: Variável 'i' com nome muito curto (≤4 chars)
+  [2] Linha 5: Variável 'i' com nome muito curto (≤4 chars)
       Trecho  : i = ...
       Contexto:
-               4 | vz=zeros(size(v),dtype=int)
+               4 | 
         >>>    5 | i=0
-               6 | for x in v:
+               6 | for i in range(size(num)):
+
+  [3] Linha 8: Variável 'n' com nome muito curto (≤4 chars)
+      Trecho  : n = ...
+      Contexto:
+               7 | 	if num[i] == 0:
+        >>>    8 | 		n= 9
+               9 | 	else :
+
+  [4] Linha 10: Variável 'n' com nome muito curto (≤4 chars)
+      Trecho  : n = ...
+      Contexto:
+               9 | 	else :
+        >>>   10 | 		n= num[i]-1
+              11 | 	num[i]=n**2	
 
 ======================================================================

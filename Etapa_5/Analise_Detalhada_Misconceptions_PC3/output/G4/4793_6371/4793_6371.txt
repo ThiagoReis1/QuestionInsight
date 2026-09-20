@@ -1,12 +1,12 @@
 ======================================================================
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
-Arquivo     : 4793_6371.py
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2022_2_v1.81\2022-2\491\users\8414\codes\4793_6371.py
+Arquivo     : 4793_6371.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2022_2_v1.81\2022-2\491\users\8247\executions\4793_6371.log
 Assessment  : 4793
 Título      : TP 6: Estrutura de Repetição por Contagem (for)
 Questão     : 6371
-Aluno       : 8414
+Aluno       : 8247
 Grupo       : TP 06
 Significado : Estrutura de Repetição por Contagem
 Total MCs   : 1
@@ -17,48 +17,26 @@ Total MCs   : 1
 CÓDIGO FONTE
 ----------------------------------------------------------------------
      1 | from numpy import*
-     2 | 
-     3 | vet = array(eval(input(" insira o codigo: ")))
-     4 | cont = zeros(size(vet), dtype=int)
-     5 | i = 0
-     6 | 
-     7 | for i in range(size(vet)): 
-     8 | 	if vet[i] > 0 and vet[i] < 10: 
-     9 | 		cont[i] = (vet[i] - 1)**2
-    10 | 
-    11 | 	else:
-    12 | 		cont[i] = 9**2
-    13 | 		
-    14 | 		
-    15 | print(cont)
-    16 | 	
+     2 | vet = array(eval(input()))
+     3 | for i in range(size(vet)):
+     4 | 	if vet[i] == 0:
+     5 | 		vet[i] = 9**2
+     6 | 	else:
+     7 | 		vet[i] = (vet[i] - 1)**2
+     8 | print(vet)
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
 ----------------------------------------------------------------------
 
 ▶ G4 — Funções/variáveis com nomes não significativos
-  Ocorrências: 3
+  Ocorrências: 1
 
-  [1] Linha 3: Variável 'vet' com nome muito curto (≤4 chars)
+  [1] Linha 2: Variável 'vet' com nome muito curto (≤4 chars)
       Trecho  : vet = ...
       Contexto:
-               2 | 
-        >>>    3 | vet = array(eval(input(" insira o codigo: ")))
-               4 | cont = zeros(size(vet), dtype=int)
-
-  [2] Linha 4: Variável 'cont' com nome muito curto (≤4 chars)
-      Trecho  : cont = ...
-      Contexto:
-               3 | vet = array(eval(input(" insira o codigo: ")))
-        >>>    4 | cont = zeros(size(vet), dtype=int)
-               5 | i = 0
-
-  [3] Linha 5: Variável 'i' com nome muito curto (≤4 chars)
-      Trecho  : i = ...
-      Contexto:
-               4 | cont = zeros(size(vet), dtype=int)
-        >>>    5 | i = 0
-               6 | 
+               1 | from numpy import*
+        >>>    2 | vet = array(eval(input()))
+               3 | for i in range(size(vet)):
 
 ======================================================================

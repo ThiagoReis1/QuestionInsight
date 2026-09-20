@@ -1,12 +1,12 @@
 ======================================================================
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
-Arquivo     : 1833_1643.py
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2019_1_v1.81\2019-1\220\users\4266\codes\1833_1643.py
+Arquivo     : 1833_1643.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2019_1_v1.81\2019-1\220\users\4264\executions\1833_1643.log
 Assessment  : 1833
 Título      : TP6: Repetição por contagem
 Questão     : 1643
-Aluno       : 4266
+Aluno       : 4264
 Grupo       : TP 06
 Significado : Estrutura de Repetição por Contagem
 Total MCs   : 2
@@ -16,23 +16,21 @@ Total MCs   : 2
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | from numpy import*
-     2 | 
-     3 | n = array(eval(input("Digite o vetor nota: ")))
-     4 | c=0
-     5 | j=0
-     6 | p=0
-     7 | for i in n:
-     8 | 	if (i>=5):
-     9 | 		c=c+1
-    10 | v=zeros(c,dtype=int)
-    11 | for i in n:
-    12 | 	if (i>=5):
-    13 | 		v[j]=p
-    14 | 		j=j+1
-    15 | 	p=p+1
-    16 | print(c)
-    17 | print(v)
+     1 | from numpy import *
+     2 | vet=array(eval(input()))
+     3 | aprov = 0
+     4 | for x in vet:
+     5 | 	if(x >= 5):
+     6 | 		aprov += 1
+     7 | print(aprov)
+     8 | i=0
+     9 | n=0
+    10 | for x in vet:
+    11 | 	if(x >= 5):
+    12 | 		vet[i] = n
+    13 | 		i += 1
+    14 | 		n += 1
+    15 | print(vet)
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
@@ -45,62 +43,27 @@ DETALHAMENTO DOS MISCONCEPTIONS
       Trecho  : —
 
 ▶ G4 — Funções/variáveis com nomes não significativos
-  Ocorrências: 8
+  Ocorrências: 3
 
-  [1] Linha 3: Variável 'n' com nome muito curto (≤4 chars)
+  [1] Linha 2: Variável 'vet' com nome muito curto (≤4 chars)
+      Trecho  : vet = ...
+      Contexto:
+               1 | from numpy import *
+        >>>    2 | vet=array(eval(input()))
+               3 | aprov = 0
+
+  [2] Linha 8: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+               7 | print(aprov)
+        >>>    8 | i=0
+               9 | n=0
+
+  [3] Linha 9: Variável 'n' com nome muito curto (≤4 chars)
       Trecho  : n = ...
       Contexto:
-               2 | 
-        >>>    3 | n = array(eval(input("Digite o vetor nota: ")))
-               4 | c=0
-
-  [2] Linha 4: Variável 'c' com nome muito curto (≤4 chars)
-      Trecho  : c = ...
-      Contexto:
-               3 | n = array(eval(input("Digite o vetor nota: ")))
-        >>>    4 | c=0
-               5 | j=0
-
-  [3] Linha 5: Variável 'j' com nome muito curto (≤4 chars)
-      Trecho  : j = ...
-      Contexto:
-               4 | c=0
-        >>>    5 | j=0
-               6 | p=0
-
-  [4] Linha 6: Variável 'p' com nome muito curto (≤4 chars)
-      Trecho  : p = ...
-      Contexto:
-               5 | j=0
-        >>>    6 | p=0
-               7 | for i in n:
-
-  [5] Linha 10: Variável 'v' com nome muito curto (≤4 chars)
-      Trecho  : v = ...
-      Contexto:
-               9 | 		c=c+1
-        >>>   10 | v=zeros(c,dtype=int)
-              11 | for i in n:
-
-  [6] Linha 15: Variável 'p' com nome muito curto (≤4 chars)
-      Trecho  : p = ...
-      Contexto:
-              14 | 		j=j+1
-        >>>   15 | 	p=p+1
-              16 | print(c)
-
-  [7] Linha 9: Variável 'c' com nome muito curto (≤4 chars)
-      Trecho  : c = ...
-      Contexto:
-               8 | 	if (i>=5):
-        >>>    9 | 		c=c+1
-              10 | v=zeros(c,dtype=int)
-
-  [8] Linha 14: Variável 'j' com nome muito curto (≤4 chars)
-      Trecho  : j = ...
-      Contexto:
-              13 | 		v[j]=p
-        >>>   14 | 		j=j+1
-              15 | 	p=p+1
+               8 | i=0
+        >>>    9 | n=0
+              10 | for x in vet:
 
 ======================================================================

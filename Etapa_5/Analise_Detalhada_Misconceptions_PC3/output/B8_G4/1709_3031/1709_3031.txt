@@ -1,12 +1,12 @@
 ======================================================================
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
-Arquivo     : 1709_3031.py
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2019_1_v1.81\2019-1\226\users\4129\codes\1709_3031.py
+Arquivo     : 1709_3031.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2019_1_v1.81\2019-1\226\users\4153\executions\1709_3031.log
 Assessment  : 1709
 Título      : TP3 - Estrutura Condicional Encadeada
 Questão     : 3031
-Aluno       : 4129
+Aluno       : 4153
 Grupo       : TP 03
 Significado : Estrutura Condicional Encadeada
 Total MCs   : 2
@@ -16,18 +16,17 @@ Total MCs   : 2
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | x = float(input("Valor de x:"))
+     1 | x = float(input("Insira o valor de x: "))
      2 | 
      3 | if(x <= 1):
-     4 | 	print(1)
-     5 | elif( 1 < x and x <=2):
-     6 | 	print(2)
-     7 | elif(2 < x and x <= 3):
-     8 | 	z = x**2
-     9 | 	print(round(z, 2))
-    10 | elif(x > 3):
-    11 | 	z = x**3
-    12 | 	print(round(z, 2))
+     4 | 	f = 1
+     5 | elif(1 < x <= 2):
+     6 | 	f = 2
+     7 | elif(2 < x <= 3):
+     8 | 	f = x ** 2
+     9 | elif(x > 3):
+    10 | 	f = x ** 3
+    11 | print(round(f, 2))
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
@@ -39,31 +38,45 @@ DETALHAMENTO DOS MISCONCEPTIONS
   [1] Linha 7: Cadeia if/elif sem bloco else final
       Trecho  : if ... (linha 7) / elif ... sem else
       Contexto:
-               6 | 	print(2)
-        >>>    7 | elif(2 < x and x <= 3):
-               8 | 	z = x**2
+               6 | 	f = 2
+        >>>    7 | elif(2 < x <= 3):
+               8 | 	f = x ** 2
 
 ▶ G4 — Funções/variáveis com nomes não significativos
-  Ocorrências: 3
+  Ocorrências: 5
 
   [1] Linha 1: Variável 'x' com nome muito curto (≤4 chars)
       Trecho  : x = ...
       Contexto:
-        >>>    1 | x = float(input("Valor de x:"))
+        >>>    1 | x = float(input("Insira o valor de x: "))
                2 | 
 
-  [2] Linha 8: Variável 'z' com nome muito curto (≤4 chars)
-      Trecho  : z = ...
+  [2] Linha 4: Variável 'f' com nome muito curto (≤4 chars)
+      Trecho  : f = ...
       Contexto:
-               7 | elif(2 < x and x <= 3):
-        >>>    8 | 	z = x**2
-               9 | 	print(round(z, 2))
+               3 | if(x <= 1):
+        >>>    4 | 	f = 1
+               5 | elif(1 < x <= 2):
 
-  [3] Linha 11: Variável 'z' com nome muito curto (≤4 chars)
-      Trecho  : z = ...
+  [3] Linha 6: Variável 'f' com nome muito curto (≤4 chars)
+      Trecho  : f = ...
       Contexto:
-              10 | elif(x > 3):
-        >>>   11 | 	z = x**3
-              12 | 	print(round(z, 2))
+               5 | elif(1 < x <= 2):
+        >>>    6 | 	f = 2
+               7 | elif(2 < x <= 3):
+
+  [4] Linha 8: Variável 'f' com nome muito curto (≤4 chars)
+      Trecho  : f = ...
+      Contexto:
+               7 | elif(2 < x <= 3):
+        >>>    8 | 	f = x ** 2
+               9 | elif(x > 3):
+
+  [5] Linha 10: Variável 'f' com nome muito curto (≤4 chars)
+      Trecho  : f = ...
+      Contexto:
+               9 | elif(x > 3):
+        >>>   10 | 	f = x ** 3
+              11 | print(round(f, 2))
 
 ======================================================================

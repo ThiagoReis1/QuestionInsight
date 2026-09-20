@@ -1,12 +1,12 @@
 ======================================================================
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
-Arquivo     : 174_1197.py
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2016_1_v1.81\2016-1\103\users\1276\codes\174_1197.py
+Arquivo     : 174_1197.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2016_1_v1.81\2016-1\103\users\1248\executions\174_1197.log
 Assessment  : 174
 Título      : Avaliação Parcial 05 – Vetores e Strings
 Questão     : 1197
-Aluno       : 1276
+Aluno       : 1248
 Grupo       : TP 05
 Significado : Vetores e Strings
 Total MCs   : 2
@@ -16,23 +16,31 @@ Total MCs   : 2
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | from numpy import*
-     2 | temp = array(eval(input("Informe as temperaturas: ")))
-     3 | i = 0
-     4 | j = 0
-     5 | while(i<size(temp)):
-     6 | 	if(temp[i]<50):
-     7 | 		j = j+1
-     8 | 	i = i+1
-     9 | templ = array(zeros(j, dtype = float))
-    10 | i = 0
-    11 | j = 0
-    12 | while(i<size(temp)):
-    13 | 	if(temp[i]<50):
-    14 | 		templ[j] = temp[i]
-    15 | 		j = j+1
-    16 | 	i = i+1
-    17 | print(templ)
+     1 | from numpy import *
+     2 | 
+     3 | v1 = array(eval(input("Digite o vetor 1: ")))
+     4 | 
+     5 | #indice do vetor
+     6 | i = 0 
+     7 | #variavel contadora
+     8 | count = 0
+     9 | 
+    10 | while(i < size(v1)):
+    11 | 	if(v1[i] >= 0):
+    12 | 		count = count + 1
+    13 | 	i = i + 1
+    14 | 	
+    15 | v2 = array(zeros(count, dtype = int))
+    16 | i = 28
+    17 | count = 50
+    18 | 
+    19 | while(i < size(v1)):
+    20 | 	if(v1[i] >= 0):
+    21 | 		v2[count] = v1[i]
+    22 | 		count = count + 1
+    23 | 	i = i + 1
+    24 | 	
+    25 | print(v2)
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
@@ -45,17 +53,12 @@ DETALHAMENTO DOS MISCONCEPTIONS
       Trecho  : —
 
 ▶ G4 — Funções/variáveis com nomes não significativos
-  Ocorrências: 9
+  Ocorrências: 1
 
-  [1] Linha 2: Variável 'temp' com nome muito curto (≤4 chars)
-      Trecho  : temp = ...
-      Contexto:
-               1 | from numpy import*
-        >>>    2 | temp = array(eval(input("Informe as temperaturas: ")))
-               3 | i = 0
+  [1] Linha 0: G4 detectado pelo VisitorMC3 (localização exata não mapeada)
+      Trecho  : —
 
-  [2] Linha 3: Variável 'i' com nome muito curto (≤4 chars)
-      Trecho  : i = ...
+======================================================================    Trecho  : i = ...
       Contexto:
                2 | temp = array(eval(input("Informe as temperaturas: ")))
         >>>    3 | i = 0

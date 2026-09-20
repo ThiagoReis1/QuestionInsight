@@ -1,12 +1,12 @@
 ======================================================================
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
-Arquivo     : 2003_1031.py
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2019_2_v1.81\2019-2\263\users\4859\codes\2003_1031.py
+Arquivo     : 2003_1031.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2019_2_v1.81\2019-2\263\users\4772\executions\2003_1031.log
 Assessment  : 2003
 Título      : TP 01: Variáveis e Estrutura Sequencial (2019)
 Questão     : 1031
-Aluno       : 4859
+Aluno       : 4772
 Grupo       : TP 01
 Significado : Variáveis e Estrutura Sequencial
 Total MCs   : 1
@@ -16,37 +16,44 @@ Total MCs   : 1
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | qu = float (input("gasol: "))
-     2 | tt = float(qu*1.43/50.0)
-     3 | t1 = float(qu*tt)
-     4 | print(round(t1,2))
-     5 | 
+     1 | var = float(input("qual a quantidade de litros abastecidos: "))
+     2 | tdo = (var*2.86)+50.0
+     3 | icms = tdo*0.34
+     4 | vt = icms+tdo
+     5 | print(round(vt, 2))
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
 ----------------------------------------------------------------------
 
 ▶ G4 — Funções/variáveis com nomes não significativos
-  Ocorrências: 3
+  Ocorrências: 4
 
-  [1] Linha 1: Variável 'qu' com nome muito curto (≤4 chars)
-      Trecho  : qu = ...
+  [1] Linha 1: Variável 'var' com nome muito curto (≤4 chars)
+      Trecho  : var = ...
       Contexto:
-        >>>    1 | qu = float (input("gasol: "))
-               2 | tt = float(qu*1.43/50.0)
+        >>>    1 | var = float(input("qual a quantidade de litros abastecidos: "))
+               2 | tdo = (var*2.86)+50.0
 
-  [2] Linha 2: Variável 'tt' com nome muito curto (≤4 chars)
-      Trecho  : tt = ...
+  [2] Linha 2: Variável 'tdo' com nome muito curto (≤4 chars)
+      Trecho  : tdo = ...
       Contexto:
-               1 | qu = float (input("gasol: "))
-        >>>    2 | tt = float(qu*1.43/50.0)
-               3 | t1 = float(qu*tt)
+               1 | var = float(input("qual a quantidade de litros abastecidos: "))
+        >>>    2 | tdo = (var*2.86)+50.0
+               3 | icms = tdo*0.34
 
-  [3] Linha 3: Variável 't1' com nome muito curto (≤4 chars)
-      Trecho  : t1 = ...
+  [3] Linha 3: Variável 'icms' com nome muito curto (≤4 chars)
+      Trecho  : icms = ...
       Contexto:
-               2 | tt = float(qu*1.43/50.0)
-        >>>    3 | t1 = float(qu*tt)
-               4 | print(round(t1,2))
+               2 | tdo = (var*2.86)+50.0
+        >>>    3 | icms = tdo*0.34
+               4 | vt = icms+tdo
+
+  [4] Linha 4: Variável 'vt' com nome muito curto (≤4 chars)
+      Trecho  : vt = ...
+      Contexto:
+               3 | icms = tdo*0.34
+        >>>    4 | vt = icms+tdo
+               5 | print(round(vt, 2))
 
 ======================================================================

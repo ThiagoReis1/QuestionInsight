@@ -1,12 +1,12 @@
 ======================================================================
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
-Arquivo     : 4797_1641.py
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2022_2_v1.81\2022-2\485\users\8158\codes\4797_1641.py
+Arquivo     : 4797_1641.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2022_2_v1.81\2022-2\485\users\8171\executions\4797_1641.log
 Assessment  : 4797
 Título      : TP 6: Estrutura de Repetição por Contagem (for)
 Questão     : 1641
-Aluno       : 8158
+Aluno       : 8171
 Grupo       : TP 06
 Significado : Estrutura de Repetição por Contagem
 Total MCs   : 2
@@ -17,27 +17,19 @@ Total MCs   : 2
 CÓDIGO FONTE
 ----------------------------------------------------------------------
      1 | from numpy import *
-     2 | 
-     3 | v = array(eval(input("Digite o vetor: ")))
-     4 | 
-     5 | acum = 0
-     6 | 
-     7 | for i in range(size(v)):
-     8 | 	if v[i]%3 == 0 :
-     9 | 		acum = acum + 1 
-    10 | print(acum)
-    11 | 
-    12 | v2 = zeros(acum,dtype=int)
-    13 | 
-    14 | x = 0
-    15 | 
-    16 | for i in range(size(v)):
-    17 | 	if v[i]%3 == 0 : 
-    18 | 		v2[x]= i
-    19 | 		x = x + 1
-    20 | 	
-    21 | print(v2)
-    22 | 	
+     2 | v=array(eval(input("")))
+     3 | q=0
+     4 | for x in v:
+     5 | 	if x%3==0:
+     6 | 		q+=1
+     7 | u=zeros(q,dtype=int)
+     8 | j=0
+     9 | for i in range(size(v)):
+    10 | 	if v[i]%3==0:
+    11 | 		u[j]=i
+    12 | 		j+=1
+    13 | print(q)
+    14 | print(u)
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
@@ -50,48 +42,34 @@ DETALHAMENTO DOS MISCONCEPTIONS
       Trecho  : —
 
 ▶ G4 — Funções/variáveis com nomes não significativos
-  Ocorrências: 6
+  Ocorrências: 4
 
-  [1] Linha 3: Variável 'v' com nome muito curto (≤4 chars)
+  [1] Linha 2: Variável 'v' com nome muito curto (≤4 chars)
       Trecho  : v = ...
       Contexto:
-               2 | 
-        >>>    3 | v = array(eval(input("Digite o vetor: ")))
-               4 | 
+               1 | from numpy import *
+        >>>    2 | v=array(eval(input("")))
+               3 | q=0
 
-  [2] Linha 5: Variável 'acum' com nome muito curto (≤4 chars)
-      Trecho  : acum = ...
+  [2] Linha 3: Variável 'q' com nome muito curto (≤4 chars)
+      Trecho  : q = ...
       Contexto:
-               4 | 
-        >>>    5 | acum = 0
-               6 | 
+               2 | v=array(eval(input("")))
+        >>>    3 | q=0
+               4 | for x in v:
 
-  [3] Linha 12: Variável 'v2' com nome muito curto (≤4 chars)
-      Trecho  : v2 = ...
+  [3] Linha 7: Variável 'u' com nome muito curto (≤4 chars)
+      Trecho  : u = ...
       Contexto:
-              11 | 
-        >>>   12 | v2 = zeros(acum,dtype=int)
-              13 | 
+               6 | 		q+=1
+        >>>    7 | u=zeros(q,dtype=int)
+               8 | j=0
 
-  [4] Linha 14: Variável 'x' com nome muito curto (≤4 chars)
-      Trecho  : x = ...
+  [4] Linha 8: Variável 'j' com nome muito curto (≤4 chars)
+      Trecho  : j = ...
       Contexto:
-              13 | 
-        >>>   14 | x = 0
-              15 | 
-
-  [5] Linha 9: Variável 'acum' com nome muito curto (≤4 chars)
-      Trecho  : acum = ...
-      Contexto:
-               8 | 	if v[i]%3 == 0 :
-        >>>    9 | 		acum = acum + 1 
-              10 | print(acum)
-
-  [6] Linha 19: Variável 'x' com nome muito curto (≤4 chars)
-      Trecho  : x = ...
-      Contexto:
-              18 | 		v2[x]= i
-        >>>   19 | 		x = x + 1
-              20 | 	
+               7 | u=zeros(q,dtype=int)
+        >>>    8 | j=0
+               9 | for i in range(size(v)):
 
 ======================================================================

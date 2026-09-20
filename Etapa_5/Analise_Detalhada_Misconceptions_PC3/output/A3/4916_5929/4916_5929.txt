@@ -1,12 +1,12 @@
 ======================================================================
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
-Arquivo     : 4916_5929.py
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2023_1_v1.81\2023-1\523\users\8677\codes\4916_5929.py
+Arquivo     : 4916_5929.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2023_1_v1.81\2023-1\523\users\3454\executions\4916_5929.log
 Assessment  : 4916
 Título      : TP1: Variáveis e Estrutura Sequencial
 Questão     : 5929
-Aluno       : 8677
+Aluno       : 3454
 Grupo       : TP 01
 Significado : Variáveis e Estrutura Sequencial
 Total MCs   : 1
@@ -16,13 +16,17 @@ Total MCs   : 1
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | volume_agua = float(input("Digite o volume: "))
+     1 | vol = float(input())
      2 | 
-     3 | conta = (0.37*volume_agua) + 15
-     4 | total = conta 
-     5 | total2 = conta + 35/100*conta
+     3 | consumo_por_m3 = 0.37
+     4 | taxa_fixa = 15
+     5 | icms = 0.35
      6 | 
-     7 | print(round(total2, 2))
+     7 | total = vol * consumo_por_m3 + 15
+     8 | 
+     9 | valor = total + total * icms
+    10 | 
+    11 | print(round(valor,2))
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
@@ -31,11 +35,11 @@ DETALHAMENTO DOS MISCONCEPTIONS
 ▶ A3 — Variável inicializada desnecessariamente
   Ocorrências: 1
 
-  [1] Linha 4: Variável 'total' declarada mas nunca utilizada
-      Trecho  : total = ...
+  [1] Linha 4: Variável 'taxa_fixa' declarada mas nunca utilizada
+      Trecho  : taxa_fixa = ...
       Contexto:
-               3 | conta = (0.37*volume_agua) + 15
-        >>>    4 | total = conta 
-               5 | total2 = conta + 35/100*conta
+               3 | consumo_por_m3 = 0.37
+        >>>    4 | taxa_fixa = 15
+               5 | icms = 0.35
 
-==================================================================================================
+======================================================================

@@ -1,12 +1,12 @@
 ======================================================================
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
-Arquivo     : 4260_1642.py
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2022_1_v1.81\2022-1\439\users\7660\codes\4260_1642.py
+Arquivo     : 4260_1642.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2022_1_v1.81\2022-1\439\users\5029\executions\4260_1642.log
 Assessment  : 4260
 Título      : TP 6: Estrutura de Repetição por Contagem (for)
 Questão     : 1642
-Aluno       : 7660
+Aluno       : 5029
 Grupo       : TP 06
 Significado : Estrutura de Repetição por Contagem
 Total MCs   : 2
@@ -16,29 +16,37 @@ Total MCs   : 2
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | #---------------------------------------------------------------
-     2 | # Nome: Ivan Lucas de Oliveira Pacheco
-     3 | # Data: 13/02/2023
-     4 | # Objetivo: Contar e listar as turmas com grupos de 5 alunos
-     5 | #---------------------------------------------------------------
-     6 | from numpy import*
+     1 | from numpy import *
+     2 | 
+     3 | # = array(eval(input("")))
+     4 | 
+     5 | #v = []
+     6 | #a = 0
      7 | 
-     8 | vet = array(eval(input("Defina o vetor de turmas: ")))
-     9 | 
-    10 | div = 0
-    11 | for i in range(size(vet)):
-    12 | 	if (vet[i] % 5) == 0:
-    13 | 		div = div + 1
-    14 | 		
-    15 | indices = arange(div)
-    16 | var = 0
-    17 | for j in range(size(vet)):
-    18 | 	if (vet[j] % 5) == 0:
-    19 | 		indices[var] = j
-    20 | 		var = var + 1
-    21 | 		
-    22 | print (div)
-    23 | print (indices)
+     8 | #for alunos in range(size(n)) :
+     9 | 	#if (n[alunos] % 5 == 0) :
+    10 | 		# = a + 1
+    11 | #print(a)	
+    12 | #for alunos in range(size(n)) :
+    13 | 	#if (n[alunos] % 5 == 0) :
+    14 | 		#v.append(alunos)
+    15 | #print(v)	
+    16 | 
+    17 | n = array(eval(input("")))
+    18 | 
+    19 | a = 0
+    20 | c1 = 0
+    21 | 
+    22 | for alunos in n :
+    23 | 	if (alunos % 5 == 0) :
+    24 | 		a = a + 1
+    25 | vf = zeros(a, dtype = int)		
+    26 | for i in range(size(n)) :
+    27 | 	if (n[i] % 5 == 0) :
+    28 | 		vf[c1] = i
+    29 | 		c1 = c1 + 1
+    30 | print(a)
+    31 | print(vf)
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
@@ -51,41 +59,48 @@ DETALHAMENTO DOS MISCONCEPTIONS
       Trecho  : —
 
 ▶ G4 — Funções/variáveis com nomes não significativos
-  Ocorrências: 5
+  Ocorrências: 6
 
-  [1] Linha 8: Variável 'vet' com nome muito curto (≤4 chars)
-      Trecho  : vet = ...
+  [1] Linha 17: Variável 'n' com nome muito curto (≤4 chars)
+      Trecho  : n = ...
       Contexto:
-               7 | 
-        >>>    8 | vet = array(eval(input("Defina o vetor de turmas: ")))
-               9 | 
+              16 | 
+        >>>   17 | n = array(eval(input("")))
+              18 | 
 
-  [2] Linha 10: Variável 'div' com nome muito curto (≤4 chars)
-      Trecho  : div = ...
+  [2] Linha 19: Variável 'a' com nome muito curto (≤4 chars)
+      Trecho  : a = ...
       Contexto:
-               9 | 
-        >>>   10 | div = 0
-              11 | for i in range(size(vet)):
+              18 | 
+        >>>   19 | a = 0
+              20 | c1 = 0
 
-  [3] Linha 16: Variável 'var' com nome muito curto (≤4 chars)
-      Trecho  : var = ...
+  [3] Linha 20: Variável 'c1' com nome muito curto (≤4 chars)
+      Trecho  : c1 = ...
       Contexto:
-              15 | indices = arange(div)
-        >>>   16 | var = 0
-              17 | for j in range(size(vet)):
+              19 | a = 0
+        >>>   20 | c1 = 0
+              21 | 
 
-  [4] Linha 13: Variável 'div' com nome muito curto (≤4 chars)
-      Trecho  : div = ...
+  [4] Linha 25: Variável 'vf' com nome muito curto (≤4 chars)
+      Trecho  : vf = ...
       Contexto:
-              12 | 	if (vet[i] % 5) == 0:
-        >>>   13 | 		div = div + 1
-              14 | 		
+              24 | 		a = a + 1
+        >>>   25 | vf = zeros(a, dtype = int)		
+              26 | for i in range(size(n)) :
 
-  [5] Linha 20: Variável 'var' com nome muito curto (≤4 chars)
-      Trecho  : var = ...
+  [5] Linha 24: Variável 'a' com nome muito curto (≤4 chars)
+      Trecho  : a = ...
       Contexto:
-              19 | 		indices[var] = j
-        >>>   20 | 		var = var + 1
-              21 | 		
+              23 | 	if (alunos % 5 == 0) :
+        >>>   24 | 		a = a + 1
+              25 | vf = zeros(a, dtype = int)		
+
+  [6] Linha 29: Variável 'c1' com nome muito curto (≤4 chars)
+      Trecho  : c1 = ...
+      Contexto:
+              28 | 		vf[c1] = i
+        >>>   29 | 		c1 = c1 + 1
+              30 | print(a)
 
 ======================================================================

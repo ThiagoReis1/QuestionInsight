@@ -1,12 +1,12 @@
 ======================================================================
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
-Arquivo     : 4452_2301.py
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2022_2_v1.81\2022-2\485\users\8171\codes\4452_2301.py
+Arquivo     : 4452_2301.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2022_2_v1.81\2022-2\485\users\8164\executions\4452_2301.log
 Assessment  : 4452
 Título      : TP 01: Variáveis e Estrutura Sequencial
 Questão     : 2301
-Aluno       : 8171
+Aluno       : 8164
 Grupo       : TP 01
 Significado : Variáveis e Estrutura Sequencial
 Total MCs   : 1
@@ -16,15 +16,12 @@ Total MCs   : 1
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | from math import *
-     2 | 
-     3 | b=float(input(""))
-     4 | c=float(input(""))
-     5 | ang=radians(float(input("")))
-     6 | 
-     7 | a = sqrt(b**2 + c**2 - 2*b*c*cos(ang))
-     8 | 
-     9 | print(round(a,2))
+     1 | import math
+     2 | b = float(input("digite o lado b: "))
+     3 | c = float(input("digite o lado c: "))
+     4 | ang = math.radians(float(input("digite o angulo entre b e c: ")))
+     5 | a = math.sqrt(b**2+c**2-2*b*c*math.cos(ang))
+     6 | print(round(a, 2))
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
@@ -33,32 +30,32 @@ DETALHAMENTO DOS MISCONCEPTIONS
 ▶ G4 — Funções/variáveis com nomes não significativos
   Ocorrências: 4
 
-  [1] Linha 3: Variável 'b' com nome muito curto (≤4 chars)
+  [1] Linha 2: Variável 'b' com nome muito curto (≤4 chars)
       Trecho  : b = ...
       Contexto:
-               2 | 
-        >>>    3 | b=float(input(""))
-               4 | c=float(input(""))
+               1 | import math
+        >>>    2 | b = float(input("digite o lado b: "))
+               3 | c = float(input("digite o lado c: "))
 
-  [2] Linha 4: Variável 'c' com nome muito curto (≤4 chars)
+  [2] Linha 3: Variável 'c' com nome muito curto (≤4 chars)
       Trecho  : c = ...
       Contexto:
-               3 | b=float(input(""))
-        >>>    4 | c=float(input(""))
-               5 | ang=radians(float(input("")))
+               2 | b = float(input("digite o lado b: "))
+        >>>    3 | c = float(input("digite o lado c: "))
+               4 | ang = math.radians(float(input("digite o angulo entre b e c: ")))
 
-  [3] Linha 5: Variável 'ang' com nome muito curto (≤4 chars)
+  [3] Linha 4: Variável 'ang' com nome muito curto (≤4 chars)
       Trecho  : ang = ...
       Contexto:
-               4 | c=float(input(""))
-        >>>    5 | ang=radians(float(input("")))
-               6 | 
+               3 | c = float(input("digite o lado c: "))
+        >>>    4 | ang = math.radians(float(input("digite o angulo entre b e c: ")))
+               5 | a = math.sqrt(b**2+c**2-2*b*c*math.cos(ang))
 
-  [4] Linha 7: Variável 'a' com nome muito curto (≤4 chars)
+  [4] Linha 5: Variável 'a' com nome muito curto (≤4 chars)
       Trecho  : a = ...
       Contexto:
-               6 | 
-        >>>    7 | a = sqrt(b**2 + c**2 - 2*b*c*cos(ang))
-               8 | 
+               4 | ang = math.radians(float(input("digite o angulo entre b e c: ")))
+        >>>    5 | a = math.sqrt(b**2+c**2-2*b*c*math.cos(ang))
+               6 | print(round(a, 2))
 
 ======================================================================

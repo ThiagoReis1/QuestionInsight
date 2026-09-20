@@ -1,12 +1,12 @@
 ======================================================================
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
-Arquivo     : 1796_3141.py
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2019_1_v1.81\2019-1\231\users\4212\codes\1796_3141.py
+Arquivo     : 1796_3141.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2019_1_v1.81\2019-1\231\users\4337\executions\1796_3141.log
 Assessment  : 1796
 Título      : TP5: Vetores e Strings
 Questão     : 3141
-Aluno       : 4212
+Aluno       : 4337
 Grupo       : TP 05
 Significado : Vetores e Strings
 Total MCs   : 1
@@ -17,58 +17,25 @@ Total MCs   : 1
 CÓDIGO FONTE
 ----------------------------------------------------------------------
      1 | from numpy import *
-     2 | vet = array(eval(input("Numeros reais positivos: ")))
-     3 | po = 0
-     4 | tam = size(vet)
-     5 | 
-     6 | while(po<tam):
-     7 | 	vet[po] = vet[po]**(1/6)
-     8 | 	po = po + 1
-     9 | 
-    10 | mh = (sum(vet)/tam)**6
-    11 | 
-    12 | print(round(mh,2))
+     2 | n = array(eval(input()))
+     3 | 
+     4 | cont = 0
+     5 | total = 0
+     6 | 
+     7 | while(cont < size(n)):
+     8 | 	total = total + n[cont]**(1/6)
+     9 | 	cont = cont + 1
+    10 | x = (total/size(n))**6
+    11 | print(round(x,2))
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
 ----------------------------------------------------------------------
 
 ▶ G4 — Funções/variáveis com nomes não significativos
-  Ocorrências: 5
+  Ocorrências: 1
 
-  [1] Linha 2: Variável 'vet' com nome muito curto (≤4 chars)
-      Trecho  : vet = ...
-      Contexto:
-               1 | from numpy import *
-        >>>    2 | vet = array(eval(input("Numeros reais positivos: ")))
-               3 | po = 0
-
-  [2] Linha 3: Variável 'po' com nome muito curto (≤4 chars)
-      Trecho  : po = ...
-      Contexto:
-               2 | vet = array(eval(input("Numeros reais positivos: ")))
-        >>>    3 | po = 0
-               4 | tam = size(vet)
-
-  [3] Linha 4: Variável 'tam' com nome muito curto (≤4 chars)
-      Trecho  : tam = ...
-      Contexto:
-               3 | po = 0
-        >>>    4 | tam = size(vet)
-               5 | 
-
-  [4] Linha 10: Variável 'mh' com nome muito curto (≤4 chars)
-      Trecho  : mh = ...
-      Contexto:
-               9 | 
-        >>>   10 | mh = (sum(vet)/tam)**6
-              11 | 
-
-  [5] Linha 8: Variável 'po' com nome muito curto (≤4 chars)
-      Trecho  : po = ...
-      Contexto:
-               7 | 	vet[po] = vet[po]**(1/6)
-        >>>    8 | 	po = po + 1
-               9 | 
+  [1] Linha 0: G4 detectado pelo VisitorMC3 (localização exata não mapeada)
+      Trecho  : —
 
 ======================================================================

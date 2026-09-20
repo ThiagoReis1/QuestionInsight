@@ -1,8 +1,8 @@
 ======================================================================
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
-Arquivo     : 151_1152.py
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2016_1_v1.81\2016-1\108\users\1322\codes\151_1152.py
+Arquivo     : 151_1152.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2016_1_v1.81\2016-1\108\users\1322\executions\151_1152.log
 Assessment  : 151
 Título      : Avaliação Parcial 04 – Estrutura de Repetição por Condição (while)
 Questão     : 1152
@@ -23,49 +23,29 @@ CÓDIGO FONTE
      5 | tp = float(input("Informe a taxa de crescimento anual de Pentos: "))
      6 | tr = float(input("Informe a taxa de crescimento anual de Porto Real:"))
      7 | 
-     8 | T = 1
-     9 | while((nhb + nhp) < nhr):
-    10 | 	t = t + 1
-    11 | 	
-    12 | print(soma)
+     8 | i = 1
+     9 | soma = 0
+    10 | while(nhb + nhr < nhr):
+    11 | 	soma = soma + (nhb*tb)+(nhp*tp)
+    12 | 	i = i + 1
+    13 | print(soma)
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
 ----------------------------------------------------------------------
 
 ▶ A3 — Variável inicializada desnecessariamente
-  Ocorrências: 4
+  Ocorrências: 1
 
-  [1] Linha 4: Variável 'tb' declarada mas nunca utilizada
-      Trecho  : tb = ...
-      Contexto:
-               3 | nhr = int(input("Informe a quantidade de habitantes de Porto Real:"))
-        >>>    4 | tb = float(input("Informe a taxa de crescimento de Bravos: "))
-               5 | tp = float(input("Informe a taxa de crescimento anual de Pentos: "))
-
-  [2] Linha 5: Variável 'tp' declarada mas nunca utilizada
-      Trecho  : tp = ...
-      Contexto:
-               4 | tb = float(input("Informe a taxa de crescimento de Bravos: "))
-        >>>    5 | tp = float(input("Informe a taxa de crescimento anual de Pentos: "))
-               6 | tr = float(input("Informe a taxa de crescimento anual de Porto Real:"))
-
-  [3] Linha 6: Variável 'tr' declarada mas nunca utilizada
+  [1] Linha 6: Variável 'tr' declarada mas nunca utilizada
       Trecho  : tr = ...
       Contexto:
                5 | tp = float(input("Informe a taxa de crescimento anual de Pentos: "))
         >>>    6 | tr = float(input("Informe a taxa de crescimento anual de Porto Real:"))
                7 | 
 
-  [4] Linha 8: Variável 'T' declarada mas nunca utilizada
-      Trecho  : T = ...
-      Contexto:
-               7 | 
-        >>>    8 | T = 1
-               9 | while((nhb + nhp) < nhr):
-
 ▶ G4 — Funções/variáveis com nomes não significativos
-  Ocorrências: 8
+  Ocorrências: 10
 
   [1] Linha 1: Variável 'nhb' com nome muito curto (≤4 chars)
       Trecho  : nhb = ...
@@ -108,18 +88,32 @@ DETALHAMENTO DOS MISCONCEPTIONS
         >>>    6 | tr = float(input("Informe a taxa de crescimento anual de Porto Real:"))
                7 | 
 
-  [7] Linha 8: Variável 'T' com nome muito curto (≤4 chars)
-      Trecho  : T = ...
+  [7] Linha 8: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
       Contexto:
                7 | 
-        >>>    8 | T = 1
-               9 | while((nhb + nhp) < nhr):
+        >>>    8 | i = 1
+               9 | soma = 0
 
-  [8] Linha 10: Variável 't' com nome muito curto (≤4 chars)
-      Trecho  : t = ...
+  [8] Linha 9: Variável 'soma' com nome muito curto (≤4 chars)
+      Trecho  : soma = ...
       Contexto:
-               9 | while((nhb + nhp) < nhr):
-        >>>   10 | 	t = t + 1
-              11 | 	
+               8 | i = 1
+        >>>    9 | soma = 0
+              10 | while(nhb + nhr < nhr):
+
+  [9] Linha 11: Variável 'soma' com nome muito curto (≤4 chars)
+      Trecho  : soma = ...
+      Contexto:
+              10 | while(nhb + nhr < nhr):
+        >>>   11 | 	soma = soma + (nhb*tb)+(nhp*tp)
+              12 | 	i = i + 1
+
+  [10] Linha 12: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+              11 | 	soma = soma + (nhb*tb)+(nhp*tp)
+        >>>   12 | 	i = i + 1
+              13 | print(soma)
 
 ======================================================================

@@ -1,12 +1,12 @@
 ======================================================================
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
-Arquivo     : 334_1527.py
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2016_2_v1.81\2016-2\127\users\1978\codes\334_1527.py
+Arquivo     : 334_1527.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2016_2_v1.81\2016-2\127\users\1905\executions\334_1527.log
 Assessment  : 334
 Título      : Trabalho Prático 04: Estrutura de Repetição por Condição (while)
 Questão     : 1527
-Aluno       : 1978
+Aluno       : 1905
 Grupo       : TP 04
 Significado : Estrutura de Repetição por Condição
 Total MCs   : 1
@@ -16,18 +16,16 @@ Total MCs   : 1
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | qf = int(input())
-     2 | ql = int(input())
-     3 | pcf =float(input())
-     4 | pcl  = float(input())
-     5 | 
-     6 | t = 0
-     7 | 
-     8 | while(qf > ql):
-     9 | 	qf = qf + (qf * pcf/100)
-    10 | 	ql = ql + (ql * pcl/100)
-    11 | 	t = t + 1
-    12 | print(t)
+     1 | qf = int(input("Seguidores Forseti:"))
+     2 | ql = int(input("Seguidores Loki:"))
+     3 | pf = float(input("Cresc Forseti:"))
+     4 | pl = float(input("Cresc Loki:"))
+     5 | t = 0
+     6 | while (qf>ql) and (pl>pf):
+     7 | 	qf = qf + qf*pf/100
+     8 | 	ql = ql + ql*pl/100
+     9 | 	t = t+1
+    10 | print(t)
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
@@ -39,70 +37,56 @@ DETALHAMENTO DOS MISCONCEPTIONS
   [1] Linha 1: Variável 'qf' com nome muito curto (≤4 chars)
       Trecho  : qf = ...
       Contexto:
-        >>>    1 | qf = int(input())
-               2 | ql = int(input())
+        >>>    1 | qf = int(input("Seguidores Forseti:"))
+               2 | ql = int(input("Seguidores Loki:"))
 
   [2] Linha 2: Variável 'ql' com nome muito curto (≤4 chars)
       Trecho  : ql = ...
       Contexto:
-               1 | qf = int(input())
-        >>>    2 | ql = int(input())
-               3 | pcf =float(input())
+               1 | qf = int(input("Seguidores Forseti:"))
+        >>>    2 | ql = int(input("Seguidores Loki:"))
+               3 | pf = float(input("Cresc Forseti:"))
 
-  [3] Linha 3: Variável 'pcf' com nome muito curto (≤4 chars)
-      Trecho  : pcf = ...
+  [3] Linha 3: Variável 'pf' com nome muito curto (≤4 chars)
+      Trecho  : pf = ...
       Contexto:
-               2 | ql = int(input())
-        >>>    3 | pcf =float(input())
-               4 | pcl  = float(input())
+               2 | ql = int(input("Seguidores Loki:"))
+        >>>    3 | pf = float(input("Cresc Forseti:"))
+               4 | pl = float(input("Cresc Loki:"))
 
-  [4] Linha 4: Variável 'pcl' com nome muito curto (≤4 chars)
-      Trecho  : pcl = ...
+  [4] Linha 4: Variável 'pl' com nome muito curto (≤4 chars)
+      Trecho  : pl = ...
       Contexto:
-               3 | pcf =float(input())
-        >>>    4 | pcl  = float(input())
-               5 | 
+               3 | pf = float(input("Cresc Forseti:"))
+        >>>    4 | pl = float(input("Cresc Loki:"))
+               5 | t = 0
 
-  [5] Linha 6: Variável 't' com nome muito curto (≤4 chars)
+  [5] Linha 5: Variável 't' com nome muito curto (≤4 chars)
       Trecho  : t = ...
       Contexto:
-               5 | 
-        >>>    6 | t = 0
-               7 | 
+               4 | pl = float(input("Cresc Loki:"))
+        >>>    5 | t = 0
+               6 | while (qf>ql) and (pl>pf):
 
-  [6] Linha 9: Variável 'qf' com nome muito curto (≤4 chars)
+  [6] Linha 7: Variável 'qf' com nome muito curto (≤4 chars)
       Trecho  : qf = ...
       Contexto:
-               8 | while(qf > ql):
-        >>>    9 | 	qf = qf + (qf * pcf/100)
-              10 | 	ql = ql + (ql * pcl/100)
+               6 | while (qf>ql) and (pl>pf):
+        >>>    7 | 	qf = qf + qf*pf/100
+               8 | 	ql = ql + ql*pl/100
 
-  [7] Linha 10: Variável 'ql' com nome muito curto (≤4 chars)
+  [7] Linha 8: Variável 'ql' com nome muito curto (≤4 chars)
       Trecho  : ql = ...
       Contexto:
-               9 | 	qf = qf + (qf * pcf/100)
-        >>>   10 | 	ql = ql + (ql * pcl/100)
-              11 | 	t = t + 1
+               7 | 	qf = qf + qf*pf/100
+        >>>    8 | 	ql = ql + ql*pl/100
+               9 | 	t = t+1
 
-  [8] Linha 11: Variável 't' com nome muito curto (≤4 chars)
+  [8] Linha 9: Variável 't' com nome muito curto (≤4 chars)
       Trecho  : t = ...
       Contexto:
-              10 | 	ql = ql + (ql * pcl/100)
-        >>>   11 | 	t = t + 1
-              12 | print(t)
-
-======================================================================
-      Trecho  : QIF = ...
-      Contexto:
-               9 | 	QIL = QIL + (QIL * (PEL/100))
-        >>>   10 | 	QIF = QIF + (QIF * (PEF/100))
-              11 | 	
-
-  [8] Linha 12: Variável 'ano' com nome muito curto (≤4 chars)
-      Trecho  : ano = ...
-      Contexto:
-              11 | 	
-        >>>   12 | 	ano = ano + 1
-              13 | print(ano)
+               8 | 	ql = ql + ql*pl/100
+        >>>    9 | 	t = t+1
+              10 | print(t)
 
 ======================================================================

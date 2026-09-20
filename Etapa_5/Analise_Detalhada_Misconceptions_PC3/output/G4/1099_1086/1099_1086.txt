@@ -1,12 +1,12 @@
 ======================================================================
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
-Arquivo     : 1099_1086.py
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2018_1_v1.81\2018-1\187\users\3217\codes\1099_1086.py
+Arquivo     : 1099_1086.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2018_1_v1.81\2018-1\187\users\3202\executions\1099_1086.log
 Assessment  : 1099
 Título      : TP 02 – Estrutura Condicional Composta
 Questão     : 1086
-Aluno       : 3217
+Aluno       : 3202
 Grupo       : TP 02
 Significado : Estrutura Condicional Simples e Composta
 Total MCs   : 1
@@ -16,16 +16,18 @@ Total MCs   : 1
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | u = float(input())
-     2 | m = float(input())
-     3 | a = float(input())
-     4 | k = round((u+m+a)/3, 1)
-     5 | if (k >= 7.0):
-     6 | 	mensagem = "Aprovado"
-     7 | else:
-     8 | 	mensagem = "Reprovado"
-     9 | print(k)
-    10 | print(mensagem)
+     1 | a = float(input())
+     2 | b = float(input())
+     3 | c = float(input())
+     4 | 
+     5 | x = (a + b + c)/3
+     6 | 
+     7 | if (x >= 7.0):
+     8 | 	mensagem = "Aprovado"
+     9 | else:
+    10 | 	mensagem= "Reprovado"
+    11 | print(round(x,1))
+    12 | print(mensagem)
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
@@ -36,5 +38,21 @@ DETALHAMENTO DOS MISCONCEPTIONS
 
   [1] Linha 0: G4 detectado pelo VisitorMC3 (localização exata não mapeada)
       Trecho  : —
+
+====================================================================== | n2 = float(input('nota 2:'))
+
+  [2] Linha 2: Variável 'n2' com nome muito curto (≤4 chars)
+      Trecho  : n2 = ...
+      Contexto:
+               1 | n1 = float(input('nota 1:'))
+        >>>    2 | n2 = float(input('nota 2:'))
+               3 | n3 = float(input('nota 3:'))
+
+  [3] Linha 3: Variável 'n3' com nome muito curto (≤4 chars)
+      Trecho  : n3 = ...
+      Contexto:
+               2 | n2 = float(input('nota 2:'))
+        >>>    3 | n3 = float(input('nota 3:'))
+               4 | 
 
 ======================================================================

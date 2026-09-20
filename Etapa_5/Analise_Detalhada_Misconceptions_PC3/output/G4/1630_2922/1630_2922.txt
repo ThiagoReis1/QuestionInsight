@@ -1,12 +1,12 @@
 ======================================================================
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
-Arquivo     : 1630_2922.py
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2019_1_v1.81\2019-1\223\users\4428\codes\1630_2922.py
+Arquivo     : 1630_2922.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2019_1_v1.81\2019-1\223\users\4478\executions\1630_2922.log
 Assessment  : 1630
 Título      : TP1: Variáveis e Estrutura Sequencial
 Questão     : 2922
-Aluno       : 4428
+Aluno       : 4478
 Grupo       : TP 01
 Significado : Variáveis e Estrutura Sequencial
 Total MCs   : 1
@@ -16,48 +16,61 @@ Total MCs   : 1
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | t = float(input("Tempo de investimento: "))
-     2 | 
-     3 | Qf = 1042000
-     4 | Q0 = 1500
-     5 | 
-     6 | from math import*
-     7 | i = (((Qf/Q0)**(1/t)) - 1)
-     8 | 
-     9 | print (round(i, 5))
+     1 | m = float(input("tempo de investimento:"))
+     2 | acum = 1042000
+     3 | inic = 1500
+     4 | x = acum/inic
+     5 | taxa = x**(1/m)
+     6 | i = taxa-1
+     7 | 
+     8 | print(round(i, 5))
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
 ----------------------------------------------------------------------
 
 ▶ G4 — Funções/variáveis com nomes não significativos
-  Ocorrências: 4
+  Ocorrências: 6
 
-  [1] Linha 1: Variável 't' com nome muito curto (≤4 chars)
-      Trecho  : t = ...
+  [1] Linha 1: Variável 'm' com nome muito curto (≤4 chars)
+      Trecho  : m = ...
       Contexto:
-        >>>    1 | t = float(input("Tempo de investimento: "))
-               2 | 
+        >>>    1 | m = float(input("tempo de investimento:"))
+               2 | acum = 1042000
 
-  [2] Linha 3: Variável 'Qf' com nome muito curto (≤4 chars)
-      Trecho  : Qf = ...
+  [2] Linha 2: Variável 'acum' com nome muito curto (≤4 chars)
+      Trecho  : acum = ...
       Contexto:
-               2 | 
-        >>>    3 | Qf = 1042000
-               4 | Q0 = 1500
+               1 | m = float(input("tempo de investimento:"))
+        >>>    2 | acum = 1042000
+               3 | inic = 1500
 
-  [3] Linha 4: Variável 'Q0' com nome muito curto (≤4 chars)
-      Trecho  : Q0 = ...
+  [3] Linha 3: Variável 'inic' com nome muito curto (≤4 chars)
+      Trecho  : inic = ...
       Contexto:
-               3 | Qf = 1042000
-        >>>    4 | Q0 = 1500
-               5 | 
+               2 | acum = 1042000
+        >>>    3 | inic = 1500
+               4 | x = acum/inic
 
-  [4] Linha 7: Variável 'i' com nome muito curto (≤4 chars)
+  [4] Linha 4: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+               3 | inic = 1500
+        >>>    4 | x = acum/inic
+               5 | taxa = x**(1/m)
+
+  [5] Linha 5: Variável 'taxa' com nome muito curto (≤4 chars)
+      Trecho  : taxa = ...
+      Contexto:
+               4 | x = acum/inic
+        >>>    5 | taxa = x**(1/m)
+               6 | i = taxa-1
+
+  [6] Linha 6: Variável 'i' com nome muito curto (≤4 chars)
       Trecho  : i = ...
       Contexto:
-               6 | from math import*
-        >>>    7 | i = (((Qf/Q0)**(1/t)) - 1)
-               8 | 
+               5 | taxa = x**(1/m)
+        >>>    6 | i = taxa-1
+               7 | 
 
 ======================================================================

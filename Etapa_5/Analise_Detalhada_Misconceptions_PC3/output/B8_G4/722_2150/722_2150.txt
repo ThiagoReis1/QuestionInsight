@@ -1,12 +1,12 @@
 ======================================================================
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
-Arquivo     : 722_2150.py
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2017_1_v1.81\2017-1\140\users\2420\codes\722_2150.py
+Arquivo     : 722_2150.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2017_1_v1.81\2017-1\140\users\2305\executions\722_2150.log
 Assessment  : 722
 Título      : Trabalho Prático 6: Repetição por Contagem
 Questão     : 2150
-Aluno       : 2420
+Aluno       : 2305
 Grupo       : TP 06
 Significado : Estrutura de Repetição por Contagem
 Total MCs   : 2
@@ -17,18 +17,19 @@ Total MCs   : 2
 CÓDIGO FONTE
 ----------------------------------------------------------------------
      1 | from numpy import*
-     2 | vet = array(eval(input("times: ")))
-     3 | m = zeros(4, dtype=int)
-     4 | for i in vet:
-     5 | 	if i == 'BOTAFOGO':
-     6 | 		m[0] += 1
-     7 | 	elif i == 'FLAMENGO':
-     8 | 		m[1] += 1
-     9 | 	elif i == 'FLUMINENSE':
-    10 | 		m[2] += 1
-    11 | 	elif i == 'VASCO':
-    12 | 		m[3] += 1
-    13 | print(m)
+     2 | cont = zeros(4, dtype=int)
+     3 | vet = array(eval(input("TIME: ")))
+     4 | for i in range(size(vet)):
+     5 | 	if (vet[i] == 'BOTAFOGO'):
+     6 | 		cont[0] = cont[0] + 1
+     7 | 	elif(vet[i] == 'FLAMENGO'):
+     8 | 		cont[1] = cont[1] + 1
+     9 | 	elif(vet[i] == 'FLUMINENSE'):
+    10 | 		cont[2] = cont[2] + 1
+    11 | 	elif(vet[i] == 'VASCO'):
+    12 | 		cont[3] = cont[3] + 1
+    13 | 
+    14 | print(cont)
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
@@ -40,25 +41,25 @@ DETALHAMENTO DOS MISCONCEPTIONS
   [1] Linha 9: Cadeia if/elif sem bloco else final
       Trecho  : if ... (linha 9) / elif ... sem else
       Contexto:
-               8 | 		m[1] += 1
-        >>>    9 | 	elif i == 'FLUMINENSE':
-              10 | 		m[2] += 1
+               8 | 		cont[1] = cont[1] + 1
+        >>>    9 | 	elif(vet[i] == 'FLUMINENSE'):
+              10 | 		cont[2] = cont[2] + 1
 
 ▶ G4 — Funções/variáveis com nomes não significativos
   Ocorrências: 2
 
-  [1] Linha 2: Variável 'vet' com nome muito curto (≤4 chars)
-      Trecho  : vet = ...
+  [1] Linha 2: Variável 'cont' com nome muito curto (≤4 chars)
+      Trecho  : cont = ...
       Contexto:
                1 | from numpy import*
-        >>>    2 | vet = array(eval(input("times: ")))
-               3 | m = zeros(4, dtype=int)
+        >>>    2 | cont = zeros(4, dtype=int)
+               3 | vet = array(eval(input("TIME: ")))
 
-  [2] Linha 3: Variável 'm' com nome muito curto (≤4 chars)
-      Trecho  : m = ...
+  [2] Linha 3: Variável 'vet' com nome muito curto (≤4 chars)
+      Trecho  : vet = ...
       Contexto:
-               2 | vet = array(eval(input("times: ")))
-        >>>    3 | m = zeros(4, dtype=int)
-               4 | for i in vet:
+               2 | cont = zeros(4, dtype=int)
+        >>>    3 | vet = array(eval(input("TIME: ")))
+               4 | for i in range(size(vet)):
 
 ======================================================================

@@ -1,12 +1,12 @@
 ======================================================================
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
-Arquivo     : 1270_1646.py
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2018_1_v1.81\2018-1\180\users\3275\codes\1270_1646.py
+Arquivo     : 1270_1646.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2018_1_v1.81\2018-1\180\users\3242\executions\1270_1646.log
 Assessment  : 1270
 Título      : TP 6: Estrutura de Repetição por Contagem (for)
 Questão     : 1646
-Aluno       : 3275
+Aluno       : 3242
 Grupo       : TP 06
 Significado : Estrutura de Repetição por Contagem
 Total MCs   : 2
@@ -16,23 +16,23 @@ Total MCs   : 2
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | from numpy import *
+     1 | from numpy import*
      2 | 
-     3 | vet = array(eval(input("Digite o vetor: ")))
-     4 | v = 0
-     5 | for i in vet:
-     6 | 	if (i <= 50):
-     7 | 		v = v + 1
-     8 | 		
+     3 | # Leitura do primeiro vetor
+     4 | vet = array(eval(input("Primeiro vetor: ")))
+     5 | v = 0
+     6 | for i in vet:
+     7 | 	if(i <= 50):
+     8 | 		v = v + 1
      9 | x = zeros(v, dtype = int)
-    10 | count = 0
-    11 | for j in range(size(vet)):
-    12 | 	
-    13 | 	if (vet[j] <= 50):
-    14 | 		x[count] = j
-    15 | 		count += 1
+    10 | 
+    11 | v = 0
+    12 | for j in range(size(vet)):
+    13 | 	if (vet[j]<= 50):
+    14 | 		x[v] = j
+    15 | 		v = v + 1
     16 | 		
-    17 | print(count)
+    17 | print(v)
     18 | print(x)
 
 ----------------------------------------------------------------------
@@ -46,47 +46,48 @@ DETALHAMENTO DOS MISCONCEPTIONS
       Trecho  : —
 
 ▶ G4 — Funções/variáveis com nomes não significativos
-  Ocorrências: 4
+  Ocorrências: 6
 
-  [1] Linha 3: Variável 'vet' com nome muito curto (≤4 chars)
+  [1] Linha 4: Variável 'vet' com nome muito curto (≤4 chars)
       Trecho  : vet = ...
       Contexto:
-               2 | 
-        >>>    3 | vet = array(eval(input("Digite o vetor: ")))
-               4 | v = 0
+               3 | # Leitura do primeiro vetor
+        >>>    4 | vet = array(eval(input("Primeiro vetor: ")))
+               5 | v = 0
 
-  [2] Linha 4: Variável 'v' com nome muito curto (≤4 chars)
+  [2] Linha 5: Variável 'v' com nome muito curto (≤4 chars)
       Trecho  : v = ...
       Contexto:
-               3 | vet = array(eval(input("Digite o vetor: ")))
-        >>>    4 | v = 0
-               5 | for i in vet:
+               4 | vet = array(eval(input("Primeiro vetor: ")))
+        >>>    5 | v = 0
+               6 | for i in vet:
 
   [3] Linha 9: Variável 'x' com nome muito curto (≤4 chars)
       Trecho  : x = ...
       Contexto:
-               8 | 		
+               8 | 		v = v + 1
         >>>    9 | x = zeros(v, dtype = int)
-              10 | count = 0
+              10 | 
 
-  [4] Linha 7: Variável 'v' com nome muito curto (≤4 chars)
+  [4] Linha 11: Variável 'v' com nome muito curto (≤4 chars)
       Trecho  : v = ...
       Contexto:
-               6 | 	if (i <= 50):
-        >>>    7 | 		v = v + 1
-               8 | 		
+              10 | 
+        >>>   11 | v = 0
+              12 | for j in range(size(vet)):
 
-======================================================================o  : v = ...
-      Contexto:
-               6 | 	if (i <= 50):
-        >>>    7 | 		v= v + 1
-               8 | x=zeros(v,dtype = int)
-
-  [6] Linha 14: Variável 'v' com nome muito curto (≤4 chars)
+  [5] Linha 8: Variável 'v' com nome muito curto (≤4 chars)
       Trecho  : v = ...
       Contexto:
-              13 | 		x[v] = j
-        >>>   14 | 		v = v + 1
-              15 | print(v)
+               7 | 	if(i <= 50):
+        >>>    8 | 		v = v + 1
+               9 | x = zeros(v, dtype = int)
 
-================================================================================================================
+  [6] Linha 15: Variável 'v' com nome muito curto (≤4 chars)
+      Trecho  : v = ...
+      Contexto:
+              14 | 		x[v] = j
+        >>>   15 | 		v = v + 1
+              16 | 		
+
+======================================================================

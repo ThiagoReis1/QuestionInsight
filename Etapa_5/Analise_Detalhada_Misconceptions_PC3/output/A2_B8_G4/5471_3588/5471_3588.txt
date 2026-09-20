@@ -1,12 +1,12 @@
 ======================================================================
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
-Arquivo     : 5471_3588.py
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2023_2_v1.81\2023-2\560\users\9301\codes\5471_3588.py
+Arquivo     : 5471_3588.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2023_2_v1.81\2023-2\560\users\9237\executions\5471_3588.log
 Assessment  : 5471
 Título      : TP 5: Vetores e Strings
 Questão     : 3588
-Aluno       : 9301
+Aluno       : 9237
 Grupo       : TP 05
 Significado : Vetores e Strings
 Total MCs   : 3
@@ -16,20 +16,23 @@ Total MCs   : 3
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | from numpy import *
-     2 | anel = array(eval(input("digite o valor: ")))
-     3 | pont = 10000
-     4 | for i in anel:
-     5 | 	if i == 1:
-     6 | 		pont *= 2
-     7 | 	elif i == 2:
-     8 | 		pont = pont
-     9 | 	elif i == 3:
-    10 | 		pont /= 2
-    11 | 	elif i == 4:
-    12 | 		pont /= 4
-    13 | print(pont)		
-    14 | 		
+     1 | from numpy import*
+     2 | 
+     3 | vet = array(eval(input()))
+     4 | 
+     5 | i = 0
+     6 | pts = 10000
+     7 | while(i < size(vet)):
+     8 | 	if(vet[i] == 1):
+     9 | 		pts = pts * 2
+    10 | 	if(vet[i] == 2):
+    11 | 		pts = pts
+    12 | 	if(vet[i] == 3):
+    13 | 		pts = pts / 2
+    14 | 	if(vet[i] == 4):
+    15 | 		pts = pts / 4
+    16 | 	i = i + 1
+    17 | print(round(pts, 2))
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
@@ -38,45 +41,76 @@ DETALHAMENTO DOS MISCONCEPTIONS
 ▶ A2 — Variável atribuída a si mesma
   Ocorrências: 1
 
-  [1] Linha 8: 'pont' atribuído a si mesmo
-      Trecho  : pont = pont
+  [1] Linha 11: 'pts' atribuído a si mesmo
+      Trecho  : pts = pts
       Contexto:
-               7 | 	elif i == 2:
-        >>>    8 | 		pont = pont
-               9 | 	elif i == 3:
+              10 | 	if(vet[i] == 2):
+        >>>   11 | 		pts = pts
+              12 | 	if(vet[i] == 3):
 
 ▶ B8 — Não utilização de elif/else
   Ocorrências: 1
 
-  [1] Linha 9: Cadeia if/elif sem bloco else final
-      Trecho  : if ... (linha 9) / elif ... sem else
-      Contexto:
-               8 | 		pont = pont
-        >>>    9 | 	elif i == 3:
-              10 | 		pont /= 2
+  [1] Linha 0: B8 detectado pelo VisitorMC3 (localização exata não mapeada)
+      Trecho  : —
 
 ▶ G4 — Funções/variáveis com nomes não significativos
-  Ocorrências: 3
+  Ocorrências: 8
 
-  [1] Linha 2: Variável 'anel' com nome muito curto (≤4 chars)
-      Trecho  : anel = ...
+  [1] Linha 3: Variável 'vet' com nome muito curto (≤4 chars)
+      Trecho  : vet = ...
       Contexto:
-               1 | from numpy import *
-        >>>    2 | anel = array(eval(input("digite o valor: ")))
-               3 | pont = 10000
+               2 | 
+        >>>    3 | vet = array(eval(input()))
+               4 | 
 
-  [2] Linha 3: Variável 'pont' com nome muito curto (≤4 chars)
-      Trecho  : pont = ...
+  [2] Linha 5: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
       Contexto:
-               2 | anel = array(eval(input("digite o valor: ")))
-        >>>    3 | pont = 10000
-               4 | for i in anel:
+               4 | 
+        >>>    5 | i = 0
+               6 | pts = 10000
 
-  [3] Linha 8: Variável 'pont' com nome muito curto (≤4 chars)
-      Trecho  : pont = ...
+  [3] Linha 6: Variável 'pts' com nome muito curto (≤4 chars)
+      Trecho  : pts = ...
       Contexto:
-               7 | 	elif i == 2:
-        >>>    8 | 		pont = pont
-               9 | 	elif i == 3:
+               5 | i = 0
+        >>>    6 | pts = 10000
+               7 | while(i < size(vet)):
+
+  [4] Linha 16: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+              15 | 		pts = pts / 4
+        >>>   16 | 	i = i + 1
+              17 | print(round(pts, 2))
+
+  [5] Linha 9: Variável 'pts' com nome muito curto (≤4 chars)
+      Trecho  : pts = ...
+      Contexto:
+               8 | 	if(vet[i] == 1):
+        >>>    9 | 		pts = pts * 2
+              10 | 	if(vet[i] == 2):
+
+  [6] Linha 11: Variável 'pts' com nome muito curto (≤4 chars)
+      Trecho  : pts = ...
+      Contexto:
+              10 | 	if(vet[i] == 2):
+        >>>   11 | 		pts = pts
+              12 | 	if(vet[i] == 3):
+
+  [7] Linha 13: Variável 'pts' com nome muito curto (≤4 chars)
+      Trecho  : pts = ...
+      Contexto:
+              12 | 	if(vet[i] == 3):
+        >>>   13 | 		pts = pts / 2
+              14 | 	if(vet[i] == 4):
+
+  [8] Linha 15: Variável 'pts' com nome muito curto (≤4 chars)
+      Trecho  : pts = ...
+      Contexto:
+              14 | 	if(vet[i] == 4):
+        >>>   15 | 		pts = pts / 4
+              16 | 	i = i + 1
 
 ======================================================================

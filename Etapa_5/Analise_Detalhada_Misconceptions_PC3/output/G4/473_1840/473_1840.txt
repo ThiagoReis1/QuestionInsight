@@ -1,12 +1,12 @@
 ======================================================================
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
-Arquivo     : 473_1840.py
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2017_1_v1.81\2017-1\143\users\2421\codes\473_1840.py
+Arquivo     : 473_1840.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2017_1_v1.81\2017-1\143\users\2423\executions\473_1840.log
 Assessment  : 473
 Título      : Trabalho Prático 01: Variáveis e Estrutura Sequencial de Programação
 Questão     : 1840
-Aluno       : 2421
+Aluno       : 2423
 Grupo       : TP 01
 Significado : Variáveis e Estrutura Sequencial
 Total MCs   : 1
@@ -16,64 +16,53 @@ Total MCs   : 1
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | n = float(input("escreva o número de mols: " ))
-     2 | v = float(input("volume: "))
-     3 | j = float(input("temperatura: "))
-     4 | r = 0.082057
-     5 | 
-     6 | 
-     7 | t = float(j + 273.1)
-     8 | 
-     9 | f = (n * r * t)/v
-    10 | 
-    11 | print(f)
+     1 | Nm = (float(input("Qual o número de mols?: ")))
+     2 | V = (float(input("Qual o volume?: ")))
+     3 | T = (float(input("Qual a temperatura?: ")))
+     4 | 
+     5 | kelvin = T + 273.1
+     6 | p = (Nm * 0.082057 * kelvin ) / (V)
+     7 | print(p)			  
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
 ----------------------------------------------------------------------
 
 ▶ G4 — Funções/variáveis com nomes não significativos
-  Ocorrências: 6
+  Ocorrências: 4
 
-  [1] Linha 1: Variável 'n' com nome muito curto (≤4 chars)
-      Trecho  : n = ...
+  [1] Linha 1: Variável 'Nm' com nome muito curto (≤4 chars)
+      Trecho  : Nm = ...
       Contexto:
-        >>>    1 | n = float(input("escreva o número de mols: " ))
-               2 | v = float(input("volume: "))
+        >>>    1 | Nm = (float(input("Qual o número de mols?: ")))
+               2 | V = (float(input("Qual o volume?: ")))
 
-  [2] Linha 2: Variável 'v' com nome muito curto (≤4 chars)
-      Trecho  : v = ...
+  [2] Linha 2: Variável 'V' com nome muito curto (≤4 chars)
+      Trecho  : V = ...
       Contexto:
-               1 | n = float(input("escreva o número de mols: " ))
-        >>>    2 | v = float(input("volume: "))
-               3 | j = float(input("temperatura: "))
+               1 | Nm = (float(input("Qual o número de mols?: ")))
+        >>>    2 | V = (float(input("Qual o volume?: ")))
+               3 | T = (float(input("Qual a temperatura?: ")))
 
-  [3] Linha 3: Variável 'j' com nome muito curto (≤4 chars)
-      Trecho  : j = ...
+  [3] Linha 3: Variável 'T' com nome muito curto (≤4 chars)
+      Trecho  : T = ...
       Contexto:
-               2 | v = float(input("volume: "))
-        >>>    3 | j = float(input("temperatura: "))
-               4 | r = 0.082057
+               2 | V = (float(input("Qual o volume?: ")))
+        >>>    3 | T = (float(input("Qual a temperatura?: ")))
+               4 | 
 
-  [4] Linha 4: Variável 'r' com nome muito curto (≤4 chars)
-      Trecho  : r = ...
+  [4] Linha 6: Variável 'p' com nome muito curto (≤4 chars)
+      Trecho  : p = ...
       Contexto:
-               3 | j = float(input("temperatura: "))
-        >>>    4 | r = 0.082057
-               5 | 
+               5 | kelvin = T + 273.1
+        >>>    6 | p = (Nm * 0.082057 * kelvin ) / (V)
+               7 | print(p)			  
 
-  [5] Linha 7: Variável 't' com nome muito curto (≤4 chars)
-      Trecho  : t = ...
-      Contexto:
-               6 | 
-        >>>    7 | t = float(j + 273.1)
-               8 | 
-
-  [6] Linha 9: Variável 'f' com nome muito curto (≤4 chars)
+======================================================================  [6] Linha 6: Variável 'f' com nome muito curto (≤4 chars)
       Trecho  : f = ...
       Contexto:
-               8 | 
-        >>>    9 | f = (n * r * t)/v
-              10 | 
+               5 | t = float(k+273.1)
+        >>>    6 | f = (n*r*t)/v
+               7 | print(f)
 
 ======================================================================

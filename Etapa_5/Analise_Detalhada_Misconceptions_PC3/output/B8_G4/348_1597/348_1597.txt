@@ -1,12 +1,12 @@
 ======================================================================
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
-Arquivo     : 348_1597.py
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2016_2_v1.81\2016-2\127\users\1926\codes\348_1597.py
+Arquivo     : 348_1597.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2016_2_v1.81\2016-2\127\users\1920\executions\348_1597.log
 Assessment  : 348
 Título      : Trabalho Prático 05: Vetores e Strings
 Questão     : 1597
-Aluno       : 1926
+Aluno       : 1920
 Grupo       : TP 05
 Significado : Vetores e Strings
 Total MCs   : 2
@@ -17,17 +17,14 @@ Total MCs   : 2
 CÓDIGO FONTE
 ----------------------------------------------------------------------
      1 | from numpy import*
-     2 | custo = array(eval(input("Digite os custos:")))
+     2 | v = array(eval(input("Vec:")))
      3 | i = 0
-     4 | j = 0
-     5 | while(i<size(custo)):
-     6 | 	if(custo[i]>80):
-     7 | 		j = j + 1
-     8 | 	i = i + 1
-     9 | 
-    10 | cust = sum(custo) - j*5
-    11 | 
-    12 | print(round(cust,2))
+     4 | a = size(v)
+     5 | while (i<a):
+     6 | 	if (v[i]>=80.0):
+     7 | 		v[i]=v[i] - 5
+     8 | 	i += 1
+     9 | print(round(sum(v),2))
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
@@ -40,41 +37,27 @@ DETALHAMENTO DOS MISCONCEPTIONS
       Trecho  : —
 
 ▶ G4 — Funções/variáveis com nomes não significativos
-  Ocorrências: 5
+  Ocorrências: 3
 
-  [1] Linha 3: Variável 'i' com nome muito curto (≤4 chars)
+  [1] Linha 2: Variável 'v' com nome muito curto (≤4 chars)
+      Trecho  : v = ...
+      Contexto:
+               1 | from numpy import*
+        >>>    2 | v = array(eval(input("Vec:")))
+               3 | i = 0
+
+  [2] Linha 3: Variável 'i' com nome muito curto (≤4 chars)
       Trecho  : i = ...
       Contexto:
-               2 | custo = array(eval(input("Digite os custos:")))
+               2 | v = array(eval(input("Vec:")))
         >>>    3 | i = 0
-               4 | j = 0
+               4 | a = size(v)
 
-  [2] Linha 4: Variável 'j' com nome muito curto (≤4 chars)
-      Trecho  : j = ...
+  [3] Linha 4: Variável 'a' com nome muito curto (≤4 chars)
+      Trecho  : a = ...
       Contexto:
                3 | i = 0
-        >>>    4 | j = 0
-               5 | while(i<size(custo)):
-
-  [3] Linha 10: Variável 'cust' com nome muito curto (≤4 chars)
-      Trecho  : cust = ...
-      Contexto:
-               9 | 
-        >>>   10 | cust = sum(custo) - j*5
-              11 | 
-
-  [4] Linha 8: Variável 'i' com nome muito curto (≤4 chars)
-      Trecho  : i = ...
-      Contexto:
-               7 | 		j = j + 1
-        >>>    8 | 	i = i + 1
-               9 | 
-
-  [5] Linha 7: Variável 'j' com nome muito curto (≤4 chars)
-      Trecho  : j = ...
-      Contexto:
-               6 | 	if(custo[i]>80):
-        >>>    7 | 		j = j + 1
-               8 | 	i = i + 1
+        >>>    4 | a = size(v)
+               5 | while (i<a):
 
 ======================================================================

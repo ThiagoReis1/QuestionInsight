@@ -1,12 +1,12 @@
 ======================================================================
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
-Arquivo     : 5867_3589.py
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2024_1_v1.81\2024-1\590\users\9806\codes\5867_3589.py
+Arquivo     : 5867_3589.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2024_1_v1.81\2024-1\590\users\9812\executions\5867_3589.log
 Assessment  : 5867
 Título      : TP 5: Vetores e Strings
 Questão     : 3589
-Aluno       : 9806
+Aluno       : 9812
 Grupo       : TP 05
 Significado : Vetores e Strings
 Total MCs   : 1
@@ -17,20 +17,23 @@ Total MCs   : 1
 CÓDIGO FONTE
 ----------------------------------------------------------------------
      1 | from numpy import *
-     2 | aneis = array(eval(input("Anel acertado: ")))
-     3 | i = 0
-     4 | pts = 0 
-     5 | while i < size(aneis):
-     6 | 	if aneis[i] == 1 :
-     7 | 		pts += 80
-     8 | 	if aneis[i] == 2: 
-     9 | 		pts += 40
-    10 | 	if aneis[i] == 3:
-    11 | 		pts += 20
-    12 | 	if aneis[i] == 4:
-    13 | 		pts += 10
-    14 | 	i += 1
-    15 | print(pts)
+     2 | 
+     3 | aneis = array(eval(input("pontuacao: ")), dtype=int)
+     4 | 
+     5 | i = 0
+     6 | total = 0
+     7 | 
+     8 | while i < size(aneis):
+     9 | 	if aneis[i] == 1:
+    10 | 		total += 80
+    11 | 	elif aneis[i] == 2:
+    12 | 		total += 40
+    13 | 	elif aneis[i] == 3:
+    14 | 		total += 20
+    15 | 	elif aneis[i] == 4:
+    16 | 		total += 10
+    17 | 	i += 1
+    18 | print(total)
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
@@ -39,10 +42,9 @@ DETALHAMENTO DOS MISCONCEPTIONS
 ▶ B8 — Não utilização de elif/else
   Ocorrências: 1
 
-  [1] Linha 0: B8 detectado pelo VisitorMC3 (localização exata não mapeada)
-      Trecho  : —
-
-======================================================================exto:
+  [1] Linha 13: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 13) / elif ... sem else
+      Contexto:
               12 | 		total += 40
         >>>   13 | 	elif aneis[i] == 3:
               14 | 		total += 20

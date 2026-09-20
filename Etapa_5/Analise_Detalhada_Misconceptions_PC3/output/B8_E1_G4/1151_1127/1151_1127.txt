@@ -1,0 +1,85 @@
+======================================================================
+RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
+======================================================================
+Arquivo     : 1151_1127.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2018_1_v1.81\2018-1\183\users\3373\executions\1151_1127.log
+Assessment  : 1151
+Título      : TP 3 – Condicionais Encadeadas (if/elif)
+Questão     : 1127
+Aluno       : 3373
+Grupo       : TP 03
+Significado : Estrutura Condicional Encadeada
+Total MCs   : 3
+
+⚠️  Misconceptions detectados: B8, E1, G4
+
+----------------------------------------------------------------------
+CÓDIGO FONTE
+----------------------------------------------------------------------
+     1 | cl=input()
+     2 | cl=cl.lower()
+     3 | print("Entrada:",cl)
+     4 | if ((cl=="Pentos") or (cl=="Bravos") or (cl=="Lys") or (cl=="Qohor") or (cl=="Norvos") or (cl=="Myr") or (cl=="Tyrosh") or (cl=="Volantis") or (cl=="Lorath")):
+     5 | 	if	(cl=="Pentos"):
+     6 | 		print("pentoshi")
+     7 | 	elif (cl=="Bravos"):
+     8 | 		print("bravosiano")
+     9 | 	elif (cl=="Lys"):
+    10 | 	   print("liseno")
+    11 | 	elif (cl=="Qohor"):
+    12 | 		print("qohorik")
+    13 | 	elif (cl=="Norvos"):
+    14 | 		print("norvoshi")
+    15 | 	elif (cl=="Myr"):
+    16 | 		print("myrano")
+    17 | 	elif (cl=="Tyrosh"):
+    18 | 		print("tyroshi")
+    19 | 	elif (cl=="Volantis"):
+    20 | 		print("volantino")
+    21 | 	elif (cl=="Lorath"):
+    22 | 		print("lorathi")
+    23 | 	
+    24 | else:
+    25 | 	print("Entrada ",cl,"invalida")
+
+----------------------------------------------------------------------
+DETALHAMENTO DOS MISCONCEPTIONS
+----------------------------------------------------------------------
+
+▶ B8 — Não utilização de elif/else
+  Ocorrências: 1
+
+  [1] Linha 19: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 19) / elif ... sem else
+      Contexto:
+              18 | 		print("tyroshi")
+        >>>   19 | 	elif (cl=="Volantis"):
+              20 | 		print("volantino")
+
+▶ E1 — Verificação desnecessária de todas as combinações possíveis
+  Ocorrências: 1
+
+  [1] Linha 4: 9 condições em um único if — verificação excessiva
+      Trecho  : cl == 'Pentos' or cl == 'Bravos' or cl == 'Lys' or (cl == 'Qohor') or (cl == 'Norvos') or (cl == 'Myr') or (cl == 'Tyrosh') or (cl == 'Volantis') or (cl == 'Lorath')
+      Contexto:
+               3 | print("Entrada:",cl)
+        >>>    4 | if ((cl=="Pentos") or (cl=="Bravos") or (cl=="Lys") or (cl=="Qohor") or (cl=="Norvos") or (cl=="Myr") or (cl=="Tyrosh") or (cl=="Volantis") or (cl=="Lorath")):
+               5 | 	if	(cl=="Pentos"):
+
+▶ G4 — Funções/variáveis com nomes não significativos
+  Ocorrências: 2
+
+  [1] Linha 1: Variável 'cl' com nome muito curto (≤4 chars)
+      Trecho  : cl = ...
+      Contexto:
+        >>>    1 | cl=input()
+               2 | cl=cl.lower()
+
+  [2] Linha 2: Variável 'cl' com nome muito curto (≤4 chars)
+      Trecho  : cl = ...
+      Contexto:
+               1 | cl=input()
+        >>>    2 | cl=cl.lower()
+               3 | print("Entrada:",cl)
+
+======================================================================

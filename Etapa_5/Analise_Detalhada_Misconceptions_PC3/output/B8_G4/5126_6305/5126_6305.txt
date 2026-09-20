@@ -1,12 +1,12 @@
 ======================================================================
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
-Arquivo     : 5126_6305.py
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2023_1_v1.81\2023-1\530\users\8733\codes\5126_6305.py
+Arquivo     : 5126_6305.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2023_1_v1.81\2023-1\530\users\8746\executions\5126_6305.log
 Assessment  : 5126
 Título      : TP 5: Vetores e Strings
 Questão     : 6305
-Aluno       : 8733
+Aluno       : 8746
 Grupo       : TP 05
 Significado : Vetores e Strings
 Total MCs   : 2
@@ -16,30 +16,31 @@ Total MCs   : 2
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | from numpy import*
+     1 | x = input("SECAO?: ")
      2 | 
-     3 | entr = input("quantas frutas em iniciais: ")
-     4 | i = 0
-     5 | pre = 0
-     6 | 
-     7 | h = 0
-     8 | l = 0
-     9 | e = 0
+     3 | i = 0
+     4 | H = 0
+     5 | L = 0
+     6 | E = 0
+     7 | q = 0
+     8 | c = 0
+     9 | F = 0
     10 | 
-    11 | while i < len(entr):
-    12 | 	if entr[i] == "H":
-    13 | 		pre = pre + 3.85
-    14 | 		h = h+1
-    15 | 	elif entr[i] == "L":
-    16 | 		pre = pre + 2.95
-    17 | 		l = l + 1
-    18 | 	elif entr[i] == "E":
-    19 | 		pre = pre + 7.90
-    20 | 		e = e + 1
+    11 | while i < len(x):
+    12 | 	if x[i] == "H":
+    13 | 		H = H + 3.85
+    14 | 		q = q + 1
+    15 | 	elif x[i] == "L":
+    16 | 		L = L + 2.95
+    17 | 		c = c + 1
+    18 | 	elif x[i] == "E":
+    19 | 		E = E + 7.90
+    20 | 		F = F + 1
     21 | 	i = i + 1
-    22 | preco = round(pre,2)
+    22 | 	
     23 | 
-    24 | print(preco,h,l,e)
+    24 | s = H + L + E
+    25 | print(round(s, 2 ),q,c,F)
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
@@ -51,102 +52,122 @@ DETALHAMENTO DOS MISCONCEPTIONS
   [1] Linha 15: Cadeia if/elif sem bloco else final
       Trecho  : if ... (linha 15) / elif ... sem else
       Contexto:
-              14 | 		h = h+1
-        >>>   15 | 	elif entr[i] == "L":
-              16 | 		pre = pre + 2.95
+              14 | 		q = q + 1
+        >>>   15 | 	elif x[i] == "L":
+              16 | 		L = L + 2.95
 
 ▶ G4 — Funções/variáveis com nomes não significativos
-  Ocorrências: 13
+  Ocorrências: 16
 
-  [1] Linha 3: Variável 'entr' com nome muito curto (≤4 chars)
-      Trecho  : entr = ...
+  [1] Linha 1: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+        >>>    1 | x = input("SECAO?: ")
+               2 | 
+
+  [2] Linha 3: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
       Contexto:
                2 | 
-        >>>    3 | entr = input("quantas frutas em iniciais: ")
-               4 | i = 0
+        >>>    3 | i = 0
+               4 | H = 0
 
-  [2] Linha 4: Variável 'i' com nome muito curto (≤4 chars)
-      Trecho  : i = ...
+  [3] Linha 4: Variável 'H' com nome muito curto (≤4 chars)
+      Trecho  : H = ...
       Contexto:
-               3 | entr = input("quantas frutas em iniciais: ")
-        >>>    4 | i = 0
-               5 | pre = 0
+               3 | i = 0
+        >>>    4 | H = 0
+               5 | L = 0
 
-  [3] Linha 5: Variável 'pre' com nome muito curto (≤4 chars)
-      Trecho  : pre = ...
+  [4] Linha 5: Variável 'L' com nome muito curto (≤4 chars)
+      Trecho  : L = ...
       Contexto:
-               4 | i = 0
-        >>>    5 | pre = 0
-               6 | 
+               4 | H = 0
+        >>>    5 | L = 0
+               6 | E = 0
 
-  [4] Linha 7: Variável 'h' com nome muito curto (≤4 chars)
-      Trecho  : h = ...
+  [5] Linha 6: Variável 'E' com nome muito curto (≤4 chars)
+      Trecho  : E = ...
       Contexto:
-               6 | 
-        >>>    7 | h = 0
-               8 | l = 0
+               5 | L = 0
+        >>>    6 | E = 0
+               7 | q = 0
 
-  [5] Linha 8: Variável 'l' com nome muito curto (≤4 chars)
-      Trecho  : l = ...
+  [6] Linha 7: Variável 'q' com nome muito curto (≤4 chars)
+      Trecho  : q = ...
       Contexto:
-               7 | h = 0
-        >>>    8 | l = 0
-               9 | e = 0
+               6 | E = 0
+        >>>    7 | q = 0
+               8 | c = 0
 
-  [6] Linha 9: Variável 'e' com nome muito curto (≤4 chars)
-      Trecho  : e = ...
+  [7] Linha 8: Variável 'c' com nome muito curto (≤4 chars)
+      Trecho  : c = ...
       Contexto:
-               8 | l = 0
-        >>>    9 | e = 0
+               7 | q = 0
+        >>>    8 | c = 0
+               9 | F = 0
+
+  [8] Linha 9: Variável 'F' com nome muito curto (≤4 chars)
+      Trecho  : F = ...
+      Contexto:
+               8 | c = 0
+        >>>    9 | F = 0
               10 | 
 
-  [7] Linha 21: Variável 'i' com nome muito curto (≤4 chars)
+  [9] Linha 24: Variável 's' com nome muito curto (≤4 chars)
+      Trecho  : s = ...
+      Contexto:
+              23 | 
+        >>>   24 | s = H + L + E
+              25 | print(round(s, 2 ),q,c,F)
+
+  [10] Linha 21: Variável 'i' com nome muito curto (≤4 chars)
       Trecho  : i = ...
       Contexto:
-              20 | 		e = e + 1
+              20 | 		F = F + 1
         >>>   21 | 	i = i + 1
-              22 | preco = round(pre,2)
+              22 | 	
 
-  [8] Linha 13: Variável 'pre' com nome muito curto (≤4 chars)
-      Trecho  : pre = ...
+  [11] Linha 13: Variável 'H' com nome muito curto (≤4 chars)
+      Trecho  : H = ...
       Contexto:
-              12 | 	if entr[i] == "H":
-        >>>   13 | 		pre = pre + 3.85
-              14 | 		h = h+1
+              12 | 	if x[i] == "H":
+        >>>   13 | 		H = H + 3.85
+              14 | 		q = q + 1
 
-  [9] Linha 14: Variável 'h' com nome muito curto (≤4 chars)
-      Trecho  : h = ...
+  [12] Linha 14: Variável 'q' com nome muito curto (≤4 chars)
+      Trecho  : q = ...
       Contexto:
-              13 | 		pre = pre + 3.85
-        >>>   14 | 		h = h+1
-              15 | 	elif entr[i] == "L":
+              13 | 		H = H + 3.85
+        >>>   14 | 		q = q + 1
+              15 | 	elif x[i] == "L":
 
-  [10] Linha 16: Variável 'pre' com nome muito curto (≤4 chars)
-      Trecho  : pre = ...
+  [13] Linha 16: Variável 'L' com nome muito curto (≤4 chars)
+      Trecho  : L = ...
       Contexto:
-              15 | 	elif entr[i] == "L":
-        >>>   16 | 		pre = pre + 2.95
-              17 | 		l = l + 1
+              15 | 	elif x[i] == "L":
+        >>>   16 | 		L = L + 2.95
+              17 | 		c = c + 1
 
-  [11] Linha 17: Variável 'l' com nome muito curto (≤4 chars)
-      Trecho  : l = ...
+  [14] Linha 17: Variável 'c' com nome muito curto (≤4 chars)
+      Trecho  : c = ...
       Contexto:
-              16 | 		pre = pre + 2.95
-        >>>   17 | 		l = l + 1
-              18 | 	elif entr[i] == "E":
+              16 | 		L = L + 2.95
+        >>>   17 | 		c = c + 1
+              18 | 	elif x[i] == "E":
 
-  [12] Linha 19: Variável 'pre' com nome muito curto (≤4 chars)
-      Trecho  : pre = ...
+  [15] Linha 19: Variável 'E' com nome muito curto (≤4 chars)
+      Trecho  : E = ...
       Contexto:
-              18 | 	elif entr[i] == "E":
-        >>>   19 | 		pre = pre + 7.90
-              20 | 		e = e + 1
+              18 | 	elif x[i] == "E":
+        >>>   19 | 		E = E + 7.90
+              20 | 		F = F + 1
 
-  [13] Linha 20: Variável 'e' com nome muito curto (≤4 chars)
-      Trecho  : e = ...
+  [16] Linha 20: Variável 'F' com nome muito curto (≤4 chars)
+      Trecho  : F = ...
       Contexto:
-              19 | 		pre = pre + 7.90
-        >>>   20 | 		e = e + 1
+              19 | 		E = E + 7.90
+        >>>   20 | 		F = F + 1
               21 | 	i = i + 1
 
 ======================================================================

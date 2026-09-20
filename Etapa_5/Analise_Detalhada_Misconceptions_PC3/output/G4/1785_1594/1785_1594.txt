@@ -1,12 +1,12 @@
 ======================================================================
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
-Arquivo     : 1785_1594.py
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2019_1_v1.81\2019-1\226\users\4160\codes\1785_1594.py
+Arquivo     : 1785_1594.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2019_1_v1.81\2019-1\226\users\4137\executions\1785_1594.log
 Assessment  : 1785
 Título      : TP5: Vetores e Strings
 Questão     : 1594
-Aluno       : 4160
+Aluno       : 4137
 Grupo       : TP 05
 Significado : Vetores e Strings
 Total MCs   : 1
@@ -16,94 +16,74 @@ Total MCs   : 1
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | from numpy import *
-     2 | #vetor de danos
-     3 | vd = array(eval(input("Vetor de danos: ")))
-     4 | #ataque 1 = v[0]*1
-     5 | #ataque 2 = v[i] + 1
-     6 | 
-     7 | i = 0  #cont laco posicao
-     8 | f = 0 #peso
-     9 | soma = 0
-    10 | while(i<size(vd)):
-    11 | 	i = i + 1
-    12 | 	f = f + 1
-    13 | 	soma=soma+1
-    14 | 	w = vd[i] + vd[i] * f
-    15 | 
-    16 | y=sum(w)
-    17 | 
-    18 | print(y)
-    19 | 
+     1 | from numpy import*
+     2 | 
+     3 | d = array(eval(input("")))
+     4 | 
+     5 | i = 0 
+     6 | s = 0 
+     7 | e = 1
+     8 | while(i < size(d)):
+     9 | 	s = s + d[i]*e
+    10 | 	i = i+1
+    11 | 	e = e+1
+    12 | 	
+    13 | print(s)
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
 ----------------------------------------------------------------------
 
 ▶ G4 — Funções/variáveis com nomes não significativos
-  Ocorrências: 9
+  Ocorrências: 7
 
-  [1] Linha 3: Variável 'vd' com nome muito curto (≤4 chars)
-      Trecho  : vd = ...
+  [1] Linha 3: Variável 'd' com nome muito curto (≤4 chars)
+      Trecho  : d = ...
       Contexto:
-               2 | #vetor de danos
-        >>>    3 | vd = array(eval(input("Vetor de danos: ")))
-               4 | #ataque 1 = v[0]*1
+               2 | 
+        >>>    3 | d = array(eval(input("")))
+               4 | 
 
-  [2] Linha 7: Variável 'i' com nome muito curto (≤4 chars)
+  [2] Linha 5: Variável 'i' com nome muito curto (≤4 chars)
       Trecho  : i = ...
       Contexto:
-               6 | 
-        >>>    7 | i = 0  #cont laco posicao
-               8 | f = 0 #peso
+               4 | 
+        >>>    5 | i = 0 
+               6 | s = 0 
 
-  [3] Linha 8: Variável 'f' com nome muito curto (≤4 chars)
-      Trecho  : f = ...
+  [3] Linha 6: Variável 's' com nome muito curto (≤4 chars)
+      Trecho  : s = ...
       Contexto:
-               7 | i = 0  #cont laco posicao
-        >>>    8 | f = 0 #peso
-               9 | soma = 0
+               5 | i = 0 
+        >>>    6 | s = 0 
+               7 | e = 1
 
-  [4] Linha 9: Variável 'soma' com nome muito curto (≤4 chars)
-      Trecho  : soma = ...
+  [4] Linha 7: Variável 'e' com nome muito curto (≤4 chars)
+      Trecho  : e = ...
       Contexto:
-               8 | f = 0 #peso
-        >>>    9 | soma = 0
-              10 | while(i<size(vd)):
+               6 | s = 0 
+        >>>    7 | e = 1
+               8 | while(i < size(d)):
 
-  [5] Linha 16: Variável 'y' com nome muito curto (≤4 chars)
-      Trecho  : y = ...
+  [5] Linha 9: Variável 's' com nome muito curto (≤4 chars)
+      Trecho  : s = ...
       Contexto:
-              15 | 
-        >>>   16 | y=sum(w)
-              17 | 
+               8 | while(i < size(d)):
+        >>>    9 | 	s = s + d[i]*e
+              10 | 	i = i+1
 
-  [6] Linha 11: Variável 'i' com nome muito curto (≤4 chars)
+  [6] Linha 10: Variável 'i' com nome muito curto (≤4 chars)
       Trecho  : i = ...
       Contexto:
-              10 | while(i<size(vd)):
-        >>>   11 | 	i = i + 1
-              12 | 	f = f + 1
+               9 | 	s = s + d[i]*e
+        >>>   10 | 	i = i+1
+              11 | 	e = e+1
 
-  [7] Linha 12: Variável 'f' com nome muito curto (≤4 chars)
-      Trecho  : f = ...
+  [7] Linha 11: Variável 'e' com nome muito curto (≤4 chars)
+      Trecho  : e = ...
       Contexto:
-              11 | 	i = i + 1
-        >>>   12 | 	f = f + 1
-              13 | 	soma=soma+1
-
-  [8] Linha 13: Variável 'soma' com nome muito curto (≤4 chars)
-      Trecho  : soma = ...
-      Contexto:
-              12 | 	f = f + 1
-        >>>   13 | 	soma=soma+1
-              14 | 	w = vd[i] + vd[i] * f
-
-  [9] Linha 14: Variável 'w' com nome muito curto (≤4 chars)
-      Trecho  : w = ...
-      Contexto:
-              13 | 	soma=soma+1
-        >>>   14 | 	w = vd[i] + vd[i] * f
-              15 | 
+              10 | 	i = i+1
+        >>>   11 | 	e = e+1
+              12 | 	
 
 ======================================================================

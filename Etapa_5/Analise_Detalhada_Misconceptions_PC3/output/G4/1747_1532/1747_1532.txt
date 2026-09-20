@@ -1,12 +1,12 @@
 ======================================================================
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
-Arquivo     : 1747_1532.py
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2019_1_v1.81\2019-1\226\users\4422\codes\1747_1532.py
+Arquivo     : 1747_1532.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2019_1_v1.81\2019-1\226\users\4159\executions\1747_1532.log
 Assessment  : 1747
 Título      : TP4: Estrutura de Repetição por Condição (while)
 Questão     : 1532
-Aluno       : 4422
+Aluno       : 4159
 Grupo       : TP 04
 Significado : Estrutura de Repetição por Condição
 Total MCs   : 1
@@ -16,85 +16,82 @@ Total MCs   : 1
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | from math import *
-     2 | x = float(input("x: "))
-     3 | k = int(input("K: "))
-     4 | 
-     5 | soma = 0
-     6 | i = 0
-     7 | fim = k
-     8 | 
-     9 | while(i < fim):
-    10 | 	soma = soma + x**(2*i + 1)/factorial(2*i + 1)
-    11 | 	i = i + 1
-    12 | 
-    13 | 	
-    14 | 	
-    15 | print(round(soma , 9))
-    16 | 	
+     1 | from math import*
+     2 | x = float(input("x "))
+     3 | k = int(input("k "))
+     4 | som = x
+     5 | l = 1
+     6 | v = 3
+     7 | while(k>l):
+     8 | 	som = som + (x**v)/factorial(v)
+     9 | 	v = v+2
+    10 | 	l = l+1
+    11 | print(round(som, 9))
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
 ----------------------------------------------------------------------
 
 ▶ G4 — Funções/variáveis com nomes não significativos
-  Ocorrências: 7
+  Ocorrências: 8
 
   [1] Linha 2: Variável 'x' com nome muito curto (≤4 chars)
       Trecho  : x = ...
       Contexto:
-               1 | from math import *
-        >>>    2 | x = float(input("x: "))
-               3 | k = int(input("K: "))
+               1 | from math import*
+        >>>    2 | x = float(input("x "))
+               3 | k = int(input("k "))
 
   [2] Linha 3: Variável 'k' com nome muito curto (≤4 chars)
       Trecho  : k = ...
       Contexto:
-               2 | x = float(input("x: "))
-        >>>    3 | k = int(input("K: "))
-               4 | 
+               2 | x = float(input("x "))
+        >>>    3 | k = int(input("k "))
+               4 | som = x
 
-  [3] Linha 5: Variável 'soma' com nome muito curto (≤4 chars)
-      Trecho  : soma = ...
+  [3] Linha 4: Variável 'som' com nome muito curto (≤4 chars)
+      Trecho  : som = ...
       Contexto:
-               4 | 
-        >>>    5 | soma = 0
-               6 | i = 0
+               3 | k = int(input("k "))
+        >>>    4 | som = x
+               5 | l = 1
 
-  [4] Linha 6: Variável 'i' com nome muito curto (≤4 chars)
-      Trecho  : i = ...
+  [4] Linha 5: Variável 'l' com nome muito curto (≤4 chars)
+      Trecho  : l = ...
       Contexto:
-               5 | soma = 0
-        >>>    6 | i = 0
-               7 | fim = k
+               4 | som = x
+        >>>    5 | l = 1
+               6 | v = 3
 
-  [5] Linha 7: Variável 'fim' com nome muito curto (≤4 chars)
-      Trecho  : fim = ...
+  [5] Linha 6: Variável 'v' com nome muito curto (≤4 chars)
+      Trecho  : v = ...
       Contexto:
-               6 | i = 0
-        >>>    7 | fim = k
-               8 | 
+               5 | l = 1
+        >>>    6 | v = 3
+               7 | while(k>l):
 
-  [6] Linha 10: Variável 'soma' com nome muito curto (≤4 chars)
-      Trecho  : soma = ...
+  [6] Linha 8: Variável 'som' com nome muito curto (≤4 chars)
+      Trecho  : som = ...
       Contexto:
-               9 | while(i < fim):
-        >>>   10 | 	soma = soma + x**(2*i + 1)/factorial(2*i + 1)
-              11 | 	i = i + 1
+               7 | while(k>l):
+        >>>    8 | 	som = som + (x**v)/factorial(v)
+               9 | 	v = v+2
 
-  [7] Linha 11: Variável 'i' com nome muito curto (≤4 chars)
-      Trecho  : i = ...
+  [7] Linha 9: Variável 'v' com nome muito curto (≤4 chars)
+      Trecho  : v = ...
       Contexto:
-              10 | 	soma = soma + x**(2*i + 1)/factorial(2*i + 1)
-        >>>   11 | 	i = i + 1
-              12 | 
+               8 | 	som = som + (x**v)/factorial(v)
+        >>>    9 | 	v = v+2
+              10 | 	l = l+1
 
-======================================================================to:
-              10 | 	tg1 = factorial(2*i+1)
-        >>>   11 | 	soma = soma + (tg/tg1)
-              12 | 	i = i + 1
+  [8] Linha 10: Variável 'l' com nome muito curto (≤4 chars)
+      Trecho  : l = ...
+      Contexto:
+               9 | 	v = v+2
+        >>>   10 | 	l = l+1
+              11 | print(round(som, 9))
 
-  [8] Linha 12: Variável 'i' com nome muito curto (≤4 chars)
+======================================================================ariável 'i' com nome muito curto (≤4 chars)
       Trecho  : i = ...
       Contexto:
               11 | 	soma = soma + (tg/tg1)
