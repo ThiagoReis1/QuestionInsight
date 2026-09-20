@@ -2,11 +2,11 @@
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
 Arquivo     : 3247_1644.log
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2021_1_v1.81\2021-1\380\users\5133\executions\3247_1644.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2021_1_v1.81\2021-1\380\users\6422\executions\3247_1644.log
 Assessment  : 3247
 Título      : TP6: Repetição por contagem
 Questão     : 1644
-Aluno       : 5133
+Aluno       : 6422
 Grupo       : TP 06
 Significado : Estrutura de Repetição por Contagem
 Total MCs   : 2
@@ -16,26 +16,28 @@ Total MCs   : 2
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | from numpy import * 
-     2 | 
-     3 | a = array(eval(input()))
-     4 | 
-     5 | 
-     6 | reprov = 0
-     7 | 
-     8 | for i in range(size(a)):
-     9 | 	if a[i] < 5 :
-    10 | 		reprov = reprov + 1
-    11 | print(reprov)
-    12 | 
-    13 | n = zeros(reprov,dtype=int)
-    14 | b = 0
-    15 | for i in range (size(a)):
-    16 | 	if a[i] < 5:
-    17 | 		c = i
-    18 | b = b + 1
-    19 | n[b] = c
-    20 | print(n)
+     1 | from numpy import*
+     2 | nota = array(eval(input(" ")))
+     3 | i = 0
+     4 | j = 0
+     5 | t = 0
+     6 | rep = 0
+     7 | r = zeros(2, dtype=int)
+     8 | for i in range(size(nota)):
+     9 | 	if nota[i] > 5:
+    10 | 		t = t + 1
+    11 | 		#print(t)
+    12 | 		
+    13 | for j in range(size(nota)):
+    14 | 	if nota[j] < 5:
+    15 | 		rep = rep + 1
+    16 | 		#print(resultado)
+    17 | 		
+    18 |    #r = zeros(2, dtype=int)
+    19 | r[0] = t
+    20 | r[1]= rep
+    21 | print(t)
+    22 | print(r)
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
@@ -48,44 +50,42 @@ DETALHAMENTO DOS MISCONCEPTIONS
       Trecho  : —
 
 ▶ G4 — Funções/variáveis com nomes não significativos
-  Ocorrências: 5
+  Ocorrências: 8
 
-  [1] Linha 3: Variável 'a' com nome muito curto (≤4 chars)
-      Trecho  : a = ...
+  [1] Linha 2: Variável 'nota' com nome muito curto (≤4 chars)
+      Trecho  : nota = ...
       Contexto:
-               2 | 
-        >>>    3 | a = array(eval(input()))
-               4 | 
+               1 | from numpy import*
+        >>>    2 | nota = array(eval(input(" ")))
+               3 | i = 0
 
-  [2] Linha 13: Variável 'n' com nome muito curto (≤4 chars)
-      Trecho  : n = ...
+  [2] Linha 3: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
       Contexto:
-              12 | 
-        >>>   13 | n = zeros(reprov,dtype=int)
-              14 | b = 0
+               2 | nota = array(eval(input(" ")))
+        >>>    3 | i = 0
+               4 | j = 0
 
-  [3] Linha 14: Variável 'b' com nome muito curto (≤4 chars)
-      Trecho  : b = ...
+  [3] Linha 4: Variável 'j' com nome muito curto (≤4 chars)
+      Trecho  : j = ...
       Contexto:
-              13 | n = zeros(reprov,dtype=int)
-        >>>   14 | b = 0
-              15 | for i in range (size(a)):
+               3 | i = 0
+        >>>    4 | j = 0
+               5 | t = 0
 
-  [4] Linha 18: Variável 'b' com nome muito curto (≤4 chars)
-      Trecho  : b = ...
+  [4] Linha 5: Variável 't' com nome muito curto (≤4 chars)
+      Trecho  : t = ...
       Contexto:
-              17 | 		c = i
-        >>>   18 | b = b + 1
-              19 | n[b] = c
+               4 | j = 0
+        >>>    5 | t = 0
+               6 | rep = 0
 
-  [5] Linha 17: Variável 'c' com nome muito curto (≤4 chars)
-      Trecho  : c = ...
+  [5] Linha 6: Variável 'rep' com nome muito curto (≤4 chars)
+      Trecho  : rep = ...
       Contexto:
-              16 | 	if a[i] < 5:
-        >>>   17 | 		c = i
-              18 | b = b + 1
-
-======================================================================zeros(2, dtype=int)
+               5 | t = 0
+        >>>    6 | rep = 0
+               7 | r = zeros(2, dtype=int)
 
   [6] Linha 7: Variável 'r' com nome muito curto (≤4 chars)
       Trecho  : r = ...

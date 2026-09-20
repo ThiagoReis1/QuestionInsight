@@ -2,11 +2,11 @@
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
 Arquivo     : 1829_1645.log
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2019_1_v1.81\2019-1\221\users\4168\executions\1829_1645.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2019_1_v1.81\2019-1\221\users\4101\executions\1829_1645.log
 Assessment  : 1829
 Título      : TP6: Repetição por contagem
 Questão     : 1645
-Aluno       : 4168
+Aluno       : 4101
 Grupo       : TP 06
 Significado : Estrutura de Repetição por Contagem
 Total MCs   : 2
@@ -17,23 +17,23 @@ Total MCs   : 2
 CÓDIGO FONTE
 ----------------------------------------------------------------------
      1 | from numpy import*
-     2 | 
-     3 | v = array(eval(input()))
-     4 | a = 0 
-     5 | i = 0
-     6 | 
-     7 | for i in range(size(v)):
-     8 | 	if(v[i] >= 2000):
-     9 | 		a = a + 1
-    10 | print(a)
-    11 | 
-    12 | b = 0
-    13 | x = zeros(a, dtype=int)
+     2 | #Vetor de Entrada
+     3 | v = array(eval(input("Saques Efetuados: ")))
+     4 | #Contador para quantidade de saques acima do limite
+     5 | s=0
+     6 | for i in range(size(v)):
+     7 | 	if(v[i]>=2000):
+     8 | 		s += 1
+     9 | print(s)
+    10 | #Vetor de Saída
+    11 | vs = zeros(s, dtype=int)
+    12 | #Contador para alocar valores do vetor de entrada para o vetor de sáida
+    13 | t = 0
     14 | for i in range(size(v)):
-    15 | 	if (v[i] >= 2000):
-    16 | 		x[b] = i
-    17 | 		b +=1
-    18 | print(x)
+    15 | 	if(v[i]>=2000):
+    16 | 		vs[t] = i
+    17 | 		t += 1
+    18 | print(vs)
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
@@ -46,48 +46,34 @@ DETALHAMENTO DOS MISCONCEPTIONS
       Trecho  : —
 
 ▶ G4 — Funções/variáveis com nomes não significativos
-  Ocorrências: 6
+  Ocorrências: 4
 
   [1] Linha 3: Variável 'v' com nome muito curto (≤4 chars)
       Trecho  : v = ...
       Contexto:
-               2 | 
-        >>>    3 | v = array(eval(input()))
-               4 | a = 0 
+               2 | #Vetor de Entrada
+        >>>    3 | v = array(eval(input("Saques Efetuados: ")))
+               4 | #Contador para quantidade de saques acima do limite
 
-  [2] Linha 4: Variável 'a' com nome muito curto (≤4 chars)
-      Trecho  : a = ...
+  [2] Linha 5: Variável 's' com nome muito curto (≤4 chars)
+      Trecho  : s = ...
       Contexto:
-               3 | v = array(eval(input()))
-        >>>    4 | a = 0 
-               5 | i = 0
+               4 | #Contador para quantidade de saques acima do limite
+        >>>    5 | s=0
+               6 | for i in range(size(v)):
 
-  [3] Linha 5: Variável 'i' com nome muito curto (≤4 chars)
-      Trecho  : i = ...
+  [3] Linha 11: Variável 'vs' com nome muito curto (≤4 chars)
+      Trecho  : vs = ...
       Contexto:
-               4 | a = 0 
-        >>>    5 | i = 0
-               6 | 
+              10 | #Vetor de Saída
+        >>>   11 | vs = zeros(s, dtype=int)
+              12 | #Contador para alocar valores do vetor de entrada para o vetor de sáida
 
-  [4] Linha 12: Variável 'b' com nome muito curto (≤4 chars)
-      Trecho  : b = ...
+  [4] Linha 13: Variável 't' com nome muito curto (≤4 chars)
+      Trecho  : t = ...
       Contexto:
-              11 | 
-        >>>   12 | b = 0
-              13 | x = zeros(a, dtype=int)
-
-  [5] Linha 13: Variável 'x' com nome muito curto (≤4 chars)
-      Trecho  : x = ...
-      Contexto:
-              12 | b = 0
-        >>>   13 | x = zeros(a, dtype=int)
+              12 | #Contador para alocar valores do vetor de entrada para o vetor de sáida
+        >>>   13 | t = 0
               14 | for i in range(size(v)):
-
-  [6] Linha 9: Variável 'a' com nome muito curto (≤4 chars)
-      Trecho  : a = ...
-      Contexto:
-               8 | 	if(v[i] >= 2000):
-        >>>    9 | 		a = a + 1
-              10 | print(a)
 
 ======================================================================

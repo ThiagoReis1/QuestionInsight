@@ -2,11 +2,11 @@
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
 Arquivo     : 1181_1539.log
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2018_1_v1.81\2018-1\183\users\3378\executions\1181_1539.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2018_1_v1.81\2018-1\183\users\3381\executions\1181_1539.log
 Assessment  : 1181
 Título      : TP 4: Estrutura de Repetição por Condição (while)
 Questão     : 1539
-Aluno       : 3378
+Aluno       : 3381
 Grupo       : TP 04
 Significado : Estrutura de Repetição por Condição
 Total MCs   : 1
@@ -16,73 +16,67 @@ Total MCs   : 1
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | x= float(input("numero: "))
-     2 | k= int(input("numero: "))
-     3 | 
-     4 | from math import*
-     5 | 
-     6 | soma=0
-     7 | n=1
-     8 | f=1
-     9 | while (k>0):
-    10 | 	k=k-1
-    11 | 	soma=soma+(pow(-x,n)*f)
-    12 | 	f=f*-1
-    13 | 	n=n+1
-    14 | print(round(soma,7))
+     1 | x=float(input("digite o numero: "))
+     2 | k=int(input("digite a constante: "))
+     3 | s=1
+     4 | n=1
+     5 | sinal=-1
+     6 | 
+     7 | while(k>n):
+     8 | 	s=s+pow(x,n)*sinal
+     9 | 	n=n+1
+    10 | 	sinal=sinal*(-1)
+    11 | print(round(s,7))	
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
 ----------------------------------------------------------------------
 
 ▶ G4 — Funções/variáveis com nomes não significativos
-  Ocorrências: 9
+  Ocorrências: 6
 
   [1] Linha 1: Variável 'x' com nome muito curto (≤4 chars)
       Trecho  : x = ...
       Contexto:
-        >>>    1 | x= float(input("numero: "))
-               2 | k= int(input("numero: "))
+        >>>    1 | x=float(input("digite o numero: "))
+               2 | k=int(input("digite a constante: "))
 
   [2] Linha 2: Variável 'k' com nome muito curto (≤4 chars)
       Trecho  : k = ...
       Contexto:
-               1 | x= float(input("numero: "))
-        >>>    2 | k= int(input("numero: "))
-               3 | 
+               1 | x=float(input("digite o numero: "))
+        >>>    2 | k=int(input("digite a constante: "))
+               3 | s=1
 
-  [3] Linha 6: Variável 'soma' com nome muito curto (≤4 chars)
-      Trecho  : soma = ...
+  [3] Linha 3: Variável 's' com nome muito curto (≤4 chars)
+      Trecho  : s = ...
       Contexto:
-               5 | 
-        >>>    6 | soma=0
-               7 | n=1
+               2 | k=int(input("digite a constante: "))
+        >>>    3 | s=1
+               4 | n=1
 
-  [4] Linha 7: Variável 'n' com nome muito curto (≤4 chars)
+  [4] Linha 4: Variável 'n' com nome muito curto (≤4 chars)
       Trecho  : n = ...
       Contexto:
-               6 | soma=0
-        >>>    7 | n=1
-               8 | f=1
+               3 | s=1
+        >>>    4 | n=1
+               5 | sinal=-1
 
-  [5] Linha 8: Variável 'f' com nome muito curto (≤4 chars)
-      Trecho  : f = ...
+  [5] Linha 8: Variável 's' com nome muito curto (≤4 chars)
+      Trecho  : s = ...
       Contexto:
-               7 | n=1
-        >>>    8 | f=1
-               9 | while (k>0):
+               7 | while(k>n):
+        >>>    8 | 	s=s+pow(x,n)*sinal
+               9 | 	n=n+1
 
-  [6] Linha 10: Variável 'k' com nome muito curto (≤4 chars)
-      Trecho  : k = ...
+  [6] Linha 9: Variável 'n' com nome muito curto (≤4 chars)
+      Trecho  : n = ...
       Contexto:
-               9 | while (k>0):
-        >>>   10 | 	k=k-1
-              11 | 	soma=soma+(pow(-x,n)*f)
+               8 | 	s=s+pow(x,n)*sinal
+        >>>    9 | 	n=n+1
+              10 | 	sinal=sinal*(-1)
 
-  [7] Linha 11: Variável 'soma' com nome muito curto (≤4 chars)
-      Trecho  : soma = ...
-      Contexto:
-              10 | 	k=k-1
+======================================================================   10 | 	k=k-1
         >>>   11 | 	soma=soma+(pow(-x,n)*f)
               12 | 	f=f*-1
 

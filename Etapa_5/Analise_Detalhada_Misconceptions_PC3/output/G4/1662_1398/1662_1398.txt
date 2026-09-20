@@ -2,11 +2,11 @@
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
 Arquivo     : 1662_1398.log
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2019_1_v1.81\2019-1\225\users\4485\executions\1662_1398.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2019_1_v1.81\2019-1\225\users\4002\executions\1662_1398.log
 Assessment  : 1662
 Título      : TP2 - Estrutura Condicional Simples e Composta
 Questão     : 1398
-Aluno       : 4485
+Aluno       : 4002
 Grupo       : TP 02
 Significado : Estrutura Condicional Simples e Composta
 Total MCs   : 1
@@ -16,24 +16,65 @@ Total MCs   : 1
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | x= float(input("tempo:"))
-     2 | 
-     3 | if(x<=200):
-     4 | 	print(round((5000+(x*100)),2))
-     5 | else:
-     6 | 	print(round((8000+20000+(x-200)*90),2))
+     1 | tempo = float(input("tempo de voo: "))
+     2 | p1 = 5000
+     3 | min1 = 100
+     4 | p2 = 8000
+     5 | min2 = 90
+     6 | eq1 = (p1 + (tempo*min1))
+     7 | eq2 = (p2 + (200*min1) + ((tempo - 200)*min2))
+     8 | if tempo <= 200:
+     9 | 	print(round(eq1, 2))
+    10 | else:
+    11 | 	print(round(eq2, 2))
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
 ----------------------------------------------------------------------
 
 ▶ G4 — Funções/variáveis com nomes não significativos
-  Ocorrências: 1
+  Ocorrências: 6
 
-  [1] Linha 1: Variável 'x' com nome muito curto (≤4 chars)
-      Trecho  : x = ...
+  [1] Linha 2: Variável 'p1' com nome muito curto (≤4 chars)
+      Trecho  : p1 = ...
       Contexto:
-        >>>    1 | x= float(input("tempo:"))
-               2 | 
+               1 | tempo = float(input("tempo de voo: "))
+        >>>    2 | p1 = 5000
+               3 | min1 = 100
+
+  [2] Linha 3: Variável 'min1' com nome muito curto (≤4 chars)
+      Trecho  : min1 = ...
+      Contexto:
+               2 | p1 = 5000
+        >>>    3 | min1 = 100
+               4 | p2 = 8000
+
+  [3] Linha 4: Variável 'p2' com nome muito curto (≤4 chars)
+      Trecho  : p2 = ...
+      Contexto:
+               3 | min1 = 100
+        >>>    4 | p2 = 8000
+               5 | min2 = 90
+
+  [4] Linha 5: Variável 'min2' com nome muito curto (≤4 chars)
+      Trecho  : min2 = ...
+      Contexto:
+               4 | p2 = 8000
+        >>>    5 | min2 = 90
+               6 | eq1 = (p1 + (tempo*min1))
+
+  [5] Linha 6: Variável 'eq1' com nome muito curto (≤4 chars)
+      Trecho  : eq1 = ...
+      Contexto:
+               5 | min2 = 90
+        >>>    6 | eq1 = (p1 + (tempo*min1))
+               7 | eq2 = (p2 + (200*min1) + ((tempo - 200)*min2))
+
+  [6] Linha 7: Variável 'eq2' com nome muito curto (≤4 chars)
+      Trecho  : eq2 = ...
+      Contexto:
+               6 | eq1 = (p1 + (tempo*min1))
+        >>>    7 | eq2 = (p2 + (200*min1) + ((tempo - 200)*min2))
+               8 | if tempo <= 200:
 
 ======================================================================

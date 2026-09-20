@@ -2,11 +2,11 @@
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
 Arquivo     : 627_1523.log
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2017_1_v1.81\2017-1\140\users\2239\executions\627_1523.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2017_1_v1.81\2017-1\140\users\2284\executions\627_1523.log
 Assessment  : 627
 Título      : Trabalho Prático 04: Estrutura de Repetição por Condição (while)
 Questão     : 1523
-Aluno       : 2239
+Aluno       : 2284
 Grupo       : TP 04
 Significado : Estrutura de Repetição por Condição
 Total MCs   : 2
@@ -16,18 +16,17 @@ Total MCs   : 2
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | qi = int(input())
-     2 | qc = int(input())
-     3 | qd = int(input())
+     1 | qi = int(input("Qtd. inicial: "))
+     2 | qc = int(input("Qtd. balões construídos: "))
+     3 | qd = int(input("Qtc. balões destruídos: "))
      4 | 
-     5 | x=0
-     6 | y=0
-     7 | z=qc-qd
-     8 | 
-     9 | while(qi<200):
-    10 | 	qi = qi + z
-    11 | 	y = y + 1
-    12 | print(y)
+     5 | t = 0
+     6 | 
+     7 | while (qi < 200):
+     8 | 	qi = (qi - qd) + qc
+     9 | 	saldo = qi
+    10 | 	t = t + 1
+    11 | print(t)
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
@@ -36,69 +35,55 @@ DETALHAMENTO DOS MISCONCEPTIONS
 ▶ A3 — Variável inicializada desnecessariamente
   Ocorrências: 1
 
-  [1] Linha 5: Variável 'x' declarada mas nunca utilizada
-      Trecho  : x = ...
+  [1] Linha 9: Variável 'saldo' declarada mas nunca utilizada
+      Trecho  : saldo = ...
       Contexto:
-               4 | 
-        >>>    5 | x=0
-               6 | y=0
+               8 | 	qi = (qi - qd) + qc
+        >>>    9 | 	saldo = qi
+              10 | 	t = t + 1
 
 ▶ G4 — Funções/variáveis com nomes não significativos
-  Ocorrências: 8
+  Ocorrências: 6
 
   [1] Linha 1: Variável 'qi' com nome muito curto (≤4 chars)
       Trecho  : qi = ...
       Contexto:
-        >>>    1 | qi = int(input())
-               2 | qc = int(input())
+        >>>    1 | qi = int(input("Qtd. inicial: "))
+               2 | qc = int(input("Qtd. balões construídos: "))
 
   [2] Linha 2: Variável 'qc' com nome muito curto (≤4 chars)
       Trecho  : qc = ...
       Contexto:
-               1 | qi = int(input())
-        >>>    2 | qc = int(input())
-               3 | qd = int(input())
+               1 | qi = int(input("Qtd. inicial: "))
+        >>>    2 | qc = int(input("Qtd. balões construídos: "))
+               3 | qd = int(input("Qtc. balões destruídos: "))
 
   [3] Linha 3: Variável 'qd' com nome muito curto (≤4 chars)
       Trecho  : qd = ...
       Contexto:
-               2 | qc = int(input())
-        >>>    3 | qd = int(input())
+               2 | qc = int(input("Qtd. balões construídos: "))
+        >>>    3 | qd = int(input("Qtc. balões destruídos: "))
                4 | 
 
-  [4] Linha 5: Variável 'x' com nome muito curto (≤4 chars)
-      Trecho  : x = ...
+  [4] Linha 5: Variável 't' com nome muito curto (≤4 chars)
+      Trecho  : t = ...
       Contexto:
                4 | 
-        >>>    5 | x=0
-               6 | y=0
+        >>>    5 | t = 0
+               6 | 
 
-  [5] Linha 6: Variável 'y' com nome muito curto (≤4 chars)
-      Trecho  : y = ...
-      Contexto:
-               5 | x=0
-        >>>    6 | y=0
-               7 | z=qc-qd
-
-  [6] Linha 7: Variável 'z' com nome muito curto (≤4 chars)
-      Trecho  : z = ...
-      Contexto:
-               6 | y=0
-        >>>    7 | z=qc-qd
-               8 | 
-
-  [7] Linha 10: Variável 'qi' com nome muito curto (≤4 chars)
+  [5] Linha 8: Variável 'qi' com nome muito curto (≤4 chars)
       Trecho  : qi = ...
       Contexto:
-               9 | while(qi<200):
-        >>>   10 | 	qi = qi + z
-              11 | 	y = y + 1
+               7 | while (qi < 200):
+        >>>    8 | 	qi = (qi - qd) + qc
+               9 | 	saldo = qi
 
-  [8] Linha 11: Variável 'y' com nome muito curto (≤4 chars)
-      Trecho  : y = ...
+  [6] Linha 10: Variável 't' com nome muito curto (≤4 chars)
+      Trecho  : t = ...
       Contexto:
-              10 | 	qi = qi + z
-        >>>   11 | 	y = y + 1
-              12 | print(y)
+               9 | 	saldo = qi
+        >>>   10 | 	t = t + 1
+              11 | print(t)
 
 ======================================================================

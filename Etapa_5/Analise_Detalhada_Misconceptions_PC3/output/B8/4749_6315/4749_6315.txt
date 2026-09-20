@@ -2,11 +2,11 @@
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
 Arquivo     : 4749_6315.log
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2022_2_v1.81\2022-2\485\users\8169\executions\4749_6315.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2022_2_v1.81\2022-2\485\users\8158\executions\4749_6315.log
 Assessment  : 4749
 Título      : TP 05: Vetores e Strings
 Questão     : 6315
-Aluno       : 8169
+Aluno       : 8158
 Grupo       : TP 05
 Significado : Vetores e Strings
 Total MCs   : 1
@@ -16,25 +16,26 @@ Total MCs   : 1
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | from numpy import * 
-     2 | v = input("").upper()
-     3 | conti = 0
-     4 | contm = 0
-     5 | conts = 0
-     6 | i=0
-     7 | t = 0
-     8 | while i < len(v):
-     9 | 	if v[i] == 'I':
-    10 | 		conti = conti + 1 
-    11 | 		t = t + 3.75
-    12 | 	elif v[i] == 'M':
-    13 | 		contm = contm + 1
-    14 | 		t = t + 4.50
-    15 | 	elif v[i] == 'S':
-    16 | 		conts = conts + 1
-    17 | 		t = t + 2.90
-    18 | 	i = i +1
-    19 | print(round(t,2), conti, contm, conts)
+     1 | from numpy import *
+     2 | 
+     3 | s = input("Digite a string: ").upper()
+     4 | i = 0
+     5 | acumi = 0
+     6 | acumm = 0
+     7 | acums = 0
+     8 | total = 0 
+     9 | while i < len(s):
+    10 | 	if s[i] == "I":
+    11 | 		total = total+3.75
+    12 | 		acumi = acumi + 1 
+    13 | 	elif s[i] == "M":
+    14 | 		total = total+ 4.50 
+    15 | 		acumm = acumm + 1
+    16 | 	elif s[i] == "S":
+    17 | 		total = total+2.90
+    18 | 		acums = acums + 1
+    19 | 	i +=1
+    20 | print(round(total,2),acumi,acumm,acums)
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
@@ -43,11 +44,11 @@ DETALHAMENTO DOS MISCONCEPTIONS
 ▶ B8 — Não utilização de elif/else
   Ocorrências: 1
 
-  [1] Linha 12: Cadeia if/elif sem bloco else final
-      Trecho  : if ... (linha 12) / elif ... sem else
+  [1] Linha 13: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 13) / elif ... sem else
       Contexto:
-              11 | 		t = t + 3.75
-        >>>   12 | 	elif v[i] == 'M':
-              13 | 		contm = contm + 1
+              12 | 		acumi = acumi + 1 
+        >>>   13 | 	elif s[i] == "M":
+              14 | 		total = total+ 4.50 
 
 ======================================================================

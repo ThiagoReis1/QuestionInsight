@@ -2,11 +2,11 @@
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
 Arquivo     : 176_1196.log
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2016_1_v1.81\2016-1\107\users\1392\executions\176_1196.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2016_1_v1.81\2016-1\107\users\1616\executions\176_1196.log
 Assessment  : 176
 Título      : Avaliação Parcial 05 – Vetores e Strings
 Questão     : 1196
-Aluno       : 1392
+Aluno       : 1616
 Grupo       : TP 05
 Significado : Vetores e Strings
 Total MCs   : 2
@@ -16,27 +16,29 @@ Total MCs   : 2
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | from numpy import*
+     1 | from numpy import *
      2 | 
      3 | minimo = -60
      4 | maximo = 60
      5 | 
-     6 | v = array(eval(input("Digite o vetor: ")))
-     7 | i = 0
-     8 | l = 0
-     9 | while(i < size(v)):
-    10 | 	if((minimo < v[i]) and (v[i] < maximo)):
-    11 | 		l = l + 1
-    12 | 	i = i + 1
-    13 | v1 = ones(l, dtype=float)
-    14 | i = 0
-    15 | i1 = 0
-    16 | while(i < size(v)):
-    17 | 	if((minimo < v[i]) and (v[i] < maximo)):
-    18 | 		v1[i1] = v[i]
-    19 | 		i1 = i1 + 1
-    20 | 	i = i + 1
-    21 | print(v1)
+     6 | vet = array(eval(input("Informe o vetor: ")))
+     7 | 
+     8 | i = 0
+     9 | qtd = 0
+    10 | while (i < size(vet)):
+    11 | 	if ((minimo <vet[i]) and (vet[i] < maximo)):
+    12 | 		qtd = qtd + 1
+    13 | 	i = i + 1
+    14 | vet2 = ones(qtd, dtype=float)
+    15 | i = 0
+    16 | i2 = 0
+    17 | while (i < size(vet)):
+    18 | 	if ((minimo <vet[i]) and (vet[i] < maximo)):
+    19 | 		vet2[i2] = vet[i]
+    20 | 		i2 = i2 + 1
+    21 | 	i = i + 1
+    22 | 	
+    23 | print (vet2)
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
@@ -51,74 +53,74 @@ DETALHAMENTO DOS MISCONCEPTIONS
 ▶ G4 — Funções/variáveis com nomes não significativos
   Ocorrências: 10
 
-  [1] Linha 6: Variável 'v' com nome muito curto (≤4 chars)
-      Trecho  : v = ...
+  [1] Linha 6: Variável 'vet' com nome muito curto (≤4 chars)
+      Trecho  : vet = ...
       Contexto:
                5 | 
-        >>>    6 | v = array(eval(input("Digite o vetor: ")))
-               7 | i = 0
+        >>>    6 | vet = array(eval(input("Informe o vetor: ")))
+               7 | 
 
-  [2] Linha 7: Variável 'i' com nome muito curto (≤4 chars)
+  [2] Linha 8: Variável 'i' com nome muito curto (≤4 chars)
       Trecho  : i = ...
       Contexto:
-               6 | v = array(eval(input("Digite o vetor: ")))
-        >>>    7 | i = 0
-               8 | l = 0
+               7 | 
+        >>>    8 | i = 0
+               9 | qtd = 0
 
-  [3] Linha 8: Variável 'l' com nome muito curto (≤4 chars)
-      Trecho  : l = ...
+  [3] Linha 9: Variável 'qtd' com nome muito curto (≤4 chars)
+      Trecho  : qtd = ...
       Contexto:
-               7 | i = 0
-        >>>    8 | l = 0
-               9 | while(i < size(v)):
+               8 | i = 0
+        >>>    9 | qtd = 0
+              10 | while (i < size(vet)):
 
-  [4] Linha 13: Variável 'v1' com nome muito curto (≤4 chars)
-      Trecho  : v1 = ...
+  [4] Linha 14: Variável 'vet2' com nome muito curto (≤4 chars)
+      Trecho  : vet2 = ...
       Contexto:
-              12 | 	i = i + 1
-        >>>   13 | v1 = ones(l, dtype=float)
-              14 | i = 0
+              13 | 	i = i + 1
+        >>>   14 | vet2 = ones(qtd, dtype=float)
+              15 | i = 0
 
-  [5] Linha 14: Variável 'i' com nome muito curto (≤4 chars)
+  [5] Linha 15: Variável 'i' com nome muito curto (≤4 chars)
       Trecho  : i = ...
       Contexto:
-              13 | v1 = ones(l, dtype=float)
-        >>>   14 | i = 0
-              15 | i1 = 0
+              14 | vet2 = ones(qtd, dtype=float)
+        >>>   15 | i = 0
+              16 | i2 = 0
 
-  [6] Linha 15: Variável 'i1' com nome muito curto (≤4 chars)
-      Trecho  : i1 = ...
+  [6] Linha 16: Variável 'i2' com nome muito curto (≤4 chars)
+      Trecho  : i2 = ...
       Contexto:
-              14 | i = 0
-        >>>   15 | i1 = 0
-              16 | while(i < size(v)):
+              15 | i = 0
+        >>>   16 | i2 = 0
+              17 | while (i < size(vet)):
 
-  [7] Linha 12: Variável 'i' com nome muito curto (≤4 chars)
+  [7] Linha 13: Variável 'i' com nome muito curto (≤4 chars)
       Trecho  : i = ...
       Contexto:
-              11 | 		l = l + 1
-        >>>   12 | 	i = i + 1
-              13 | v1 = ones(l, dtype=float)
+              12 | 		qtd = qtd + 1
+        >>>   13 | 	i = i + 1
+              14 | vet2 = ones(qtd, dtype=float)
 
-  [8] Linha 20: Variável 'i' com nome muito curto (≤4 chars)
+  [8] Linha 21: Variável 'i' com nome muito curto (≤4 chars)
       Trecho  : i = ...
       Contexto:
-              19 | 		i1 = i1 + 1
-        >>>   20 | 	i = i + 1
-              21 | print(v1)
+              20 | 		i2 = i2 + 1
+        >>>   21 | 	i = i + 1
+              22 | 	
 
-  [9] Linha 11: Variável 'l' com nome muito curto (≤4 chars)
-      Trecho  : l = ...
+  [9] Linha 12: Variável 'qtd' com nome muito curto (≤4 chars)
+      Trecho  : qtd = ...
       Contexto:
-              10 | 	if((minimo < v[i]) and (v[i] < maximo)):
-        >>>   11 | 		l = l + 1
-              12 | 	i = i + 1
+              11 | 	if ((minimo <vet[i]) and (vet[i] < maximo)):
+        >>>   12 | 		qtd = qtd + 1
+              13 | 	i = i + 1
 
-  [10] Linha 19: Variável 'i1' com nome muito curto (≤4 chars)
-      Trecho  : i1 = ...
+  [10] Linha 20: Variável 'i2' com nome muito curto (≤4 chars)
+      Trecho  : i2 = ...
       Contexto:
-              18 | 		v1[i1] = v[i]
-        >>>   19 | 		i1 = i1 + 1
-              20 | 	i = i + 1
+              19 | 		vet2[i2] = vet[i]
+        >>>   20 | 		i2 = i2 + 1
+              21 | 	i = i + 1
 
 ======================================================================

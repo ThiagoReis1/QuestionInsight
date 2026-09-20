@@ -2,11 +2,11 @@
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
 Arquivo     : 1270_1644.log
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2018_1_v1.81\2018-1\180\users\3247\executions\1270_1644.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2018_1_v1.81\2018-1\180\users\3276\executions\1270_1644.log
 Assessment  : 1270
 Título      : TP 6: Estrutura de Repetição por Contagem (for)
 Questão     : 1644
-Aluno       : 3247
+Aluno       : 3276
 Grupo       : TP 06
 Significado : Estrutura de Repetição por Contagem
 Total MCs   : 1
@@ -17,18 +17,23 @@ Total MCs   : 1
 CÓDIGO FONTE
 ----------------------------------------------------------------------
      1 | from numpy import *
-     2 | vet = array(eval(input()))
-     3 | 
-     4 | contador=0
-     5 | resultado=[]
-     6 | for i in range(size(vet)):
-     7 | 	if(vet[i]<=5):
-     8 | 		contador=contador+1
-     9 | 		resultado.append(i)
-    10 | 
-    11 | print(contador)
-    12 | resultado=array(resultado)
-    13 | print(resultado)
+     2 | 
+     3 | cont=0
+     4 | vet = eval(input("Nota: "))
+     5 | 
+     6 | for x in vet:
+     7 | 	if (x < 5):
+     8 | 		cont = cont + 1
+     9 | cont1 = zeros(cont, dtype=int)
+    10 | cont=-1
+    11 | 
+    12 | for x in range(size(vet)):
+    13 | 	if(vet[x] < 5):
+    14 | 		cont1[cont] = x
+    15 | 		cont = cont + 1
+    16 | 	
+    17 | print(max(cont1))
+    18 | print(cont1)
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS

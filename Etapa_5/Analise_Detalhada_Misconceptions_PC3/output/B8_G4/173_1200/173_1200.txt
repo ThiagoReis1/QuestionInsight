@@ -2,11 +2,11 @@
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
 Arquivo     : 173_1200.log
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2016_1_v1.81\2016-1\102\users\1308\executions\173_1200.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2016_1_v1.81\2016-1\102\users\1286\executions\173_1200.log
 Assessment  : 173
 Título      : Avaliação Parcial 05 – Vetores e Strings
 Questão     : 1200
-Aluno       : 1308
+Aluno       : 1286
 Grupo       : TP 05
 Significado : Vetores e Strings
 Total MCs   : 2
@@ -16,23 +16,24 @@ Total MCs   : 2
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | from numpy import*
-     2 | v=array(eval(input('Digite os resultados:')))
-     3 | i=0
-     4 | negativo=0
-     5 | while i<size(v):
-     6 | 	if v[i]<0:
-     7 | 		negativo=negativo+1
-     8 | 	i=i+1
-     9 | v2=array(zeros(size(v)-negativo),dtype=float)
-    10 | i=0
-    11 | j=0
-    12 | while i<size(v):
-    13 | 	if v[i]>=0:
-    14 | 		v2[j]=v[i]
-    15 | 		j=j+1
-    16 | 	i=i+1
-    17 | print(v2)
+     1 | from numpy import *
+     2 | v = array(eval(input()))
+     3 | i = 0
+     4 | cont = 0
+     5 | while(i<size(v)):
+     6 |  if(v[i]>=0):
+     7 |   cont= cont+1
+     8 |  i=i+1
+     9 | 
+    10 | pos = array(zeros(cont,dtype=float))
+    11 | i = 0
+    12 | j = 0
+    13 | while(i<size(v)):
+    14 |  if(v[i]>=0):
+    15 |   pos[j]=v[i]
+    16 |   j = j+1
+    17 |  i = i+1
+    18 | print(pos)
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
@@ -45,65 +46,69 @@ DETALHAMENTO DOS MISCONCEPTIONS
       Trecho  : —
 
 ▶ G4 — Funções/variáveis com nomes não significativos
-  Ocorrências: 8
+  Ocorrências: 10
 
   [1] Linha 2: Variável 'v' com nome muito curto (≤4 chars)
       Trecho  : v = ...
       Contexto:
-               1 | from numpy import*
-        >>>    2 | v=array(eval(input('Digite os resultados:')))
-               3 | i=0
+               1 | from numpy import *
+        >>>    2 | v = array(eval(input()))
+               3 | i = 0
 
   [2] Linha 3: Variável 'i' com nome muito curto (≤4 chars)
       Trecho  : i = ...
       Contexto:
-               2 | v=array(eval(input('Digite os resultados:')))
-        >>>    3 | i=0
-               4 | negativo=0
+               2 | v = array(eval(input()))
+        >>>    3 | i = 0
+               4 | cont = 0
 
-  [3] Linha 9: Variável 'v2' com nome muito curto (≤4 chars)
-      Trecho  : v2 = ...
+  [3] Linha 4: Variável 'cont' com nome muito curto (≤4 chars)
+      Trecho  : cont = ...
       Contexto:
-               8 | 	i=i+1
-        >>>    9 | v2=array(zeros(size(v)-negativo),dtype=float)
-              10 | i=0
+               3 | i = 0
+        >>>    4 | cont = 0
+               5 | while(i<size(v)):
 
-  [4] Linha 10: Variável 'i' com nome muito curto (≤4 chars)
+  [4] Linha 10: Variável 'pos' com nome muito curto (≤4 chars)
+      Trecho  : pos = ...
+      Contexto:
+               9 | 
+        >>>   10 | pos = array(zeros(cont,dtype=float))
+              11 | i = 0
+
+  [5] Linha 11: Variável 'i' com nome muito curto (≤4 chars)
       Trecho  : i = ...
       Contexto:
-               9 | v2=array(zeros(size(v)-negativo),dtype=float)
-        >>>   10 | i=0
-              11 | j=0
+              10 | pos = array(zeros(cont,dtype=float))
+        >>>   11 | i = 0
+              12 | j = 0
 
-  [5] Linha 11: Variável 'j' com nome muito curto (≤4 chars)
+  [6] Linha 12: Variável 'j' com nome muito curto (≤4 chars)
       Trecho  : j = ...
       Contexto:
-              10 | i=0
-        >>>   11 | j=0
-              12 | while i<size(v):
+              11 | i = 0
+        >>>   12 | j = 0
+              13 | while(i<size(v)):
 
-  [6] Linha 8: Variável 'i' com nome muito curto (≤4 chars)
+  [7] Linha 8: Variável 'i' com nome muito curto (≤4 chars)
       Trecho  : i = ...
       Contexto:
-               7 | 		negativo=negativo+1
-        >>>    8 | 	i=i+1
-               9 | v2=array(zeros(size(v)-negativo),dtype=float)
+               7 |   cont= cont+1
+        >>>    8 |  i=i+1
+               9 | 
 
-  [7] Linha 16: Variável 'i' com nome muito curto (≤4 chars)
+  [8] Linha 17: Variável 'i' com nome muito curto (≤4 chars)
       Trecho  : i = ...
       Contexto:
-              15 | 		j=j+1
-        >>>   16 | 	i=i+1
-              17 | print(v2)
+              16 |   j = j+1
+        >>>   17 |  i = i+1
+              18 | print(pos)
 
-  [8] Linha 15: Variável 'j' com nome muito curto (≤4 chars)
-      Trecho  : j = ...
+  [9] Linha 7: Variável 'cont' com nome muito curto (≤4 chars)
+      Trecho  : cont = ...
       Contexto:
-              14 | 		v2[j]=v[i]
-        >>>   15 | 		j=j+1
-              16 | 	i=i+1
-
-======================================================================  cont= cont+1
+               6 |  if(v[i]>=0):
+        >>>    7 |   cont= cont+1
                8 |  i=i+1
 
   [10] Linha 16: Variável 'j' com nome muito curto (≤4 chars)

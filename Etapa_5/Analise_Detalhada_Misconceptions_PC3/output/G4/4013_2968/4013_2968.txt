@@ -2,11 +2,11 @@
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
 Arquivo     : 4013_2968.log
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2022_1_v1.81\2022-1\443\users\7599\executions\4013_2968.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2022_1_v1.81\2022-1\443\users\7635\executions\4013_2968.log
 Assessment  : 4013
 Título      : TP 02:  Est. Condicional Simples e Composta
 Questão     : 2968
-Aluno       : 7599
+Aluno       : 7635
 Grupo       : TP 02
 Significado : Estrutura Condicional Simples e Composta
 Total MCs   : 1
@@ -16,50 +16,57 @@ Total MCs   : 1
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | L_S = input("lanche ou salgado:").upper()
-     2 | quan = int(input("quantidade:"))
-     3 | quan_re = int(input("refrigerante:"))
-     4 | if(L_S=="L"):
-     5 | 	msg = (5*quan) + (4*quan_re)
+     1 | a = input("L/S?")
+     2 | e = "L"
+     3 | if(a == e):
+     4 | 	b = float(input("lanches:"))
+     5 | 	ms = (b * 5)
      6 | else:
-     7 | 	msg = (3.5*quan) + (4*quan_re)
-     8 | print(float(round(msg,2)))
+     7 | 	d = float(input("salgados:"))
+     8 | 	ms = (d * 3.5)
+     9 | c = float(input("refrigerantes:"))
+    10 | print(ms + (c * 4))
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
 ----------------------------------------------------------------------
 
 ▶ G4 — Funções/variáveis com nomes não significativos
-  Ocorrências: 4
+  Ocorrências: 7
 
-  [1] Linha 1: Variável 'L_S' com nome muito curto (≤4 chars)
-      Trecho  : L_S = ...
+  [1] Linha 1: Variável 'a' com nome muito curto (≤4 chars)
+      Trecho  : a = ...
       Contexto:
-        >>>    1 | L_S = input("lanche ou salgado:").upper()
-               2 | quan = int(input("quantidade:"))
+        >>>    1 | a = input("L/S?")
+               2 | e = "L"
 
-  [2] Linha 2: Variável 'quan' com nome muito curto (≤4 chars)
-      Trecho  : quan = ...
+  [2] Linha 2: Variável 'e' com nome muito curto (≤4 chars)
+      Trecho  : e = ...
       Contexto:
-               1 | L_S = input("lanche ou salgado:").upper()
-        >>>    2 | quan = int(input("quantidade:"))
-               3 | quan_re = int(input("refrigerante:"))
+               1 | a = input("L/S?")
+        >>>    2 | e = "L"
+               3 | if(a == e):
 
-  [3] Linha 5: Variável 'msg' com nome muito curto (≤4 chars)
-      Trecho  : msg = ...
+  [3] Linha 9: Variável 'c' com nome muito curto (≤4 chars)
+      Trecho  : c = ...
       Contexto:
-               4 | if(L_S=="L"):
-        >>>    5 | 	msg = (5*quan) + (4*quan_re)
+               8 | 	ms = (d * 3.5)
+        >>>    9 | c = float(input("refrigerantes:"))
+              10 | print(ms + (c * 4))
+
+  [4] Linha 4: Variável 'b' com nome muito curto (≤4 chars)
+      Trecho  : b = ...
+      Contexto:
+               3 | if(a == e):
+        >>>    4 | 	b = float(input("lanches:"))
+               5 | 	ms = (b * 5)
+
+  [5] Linha 5: Variável 'ms' com nome muito curto (≤4 chars)
+      Trecho  : ms = ...
+      Contexto:
+               4 | 	b = float(input("lanches:"))
+        >>>    5 | 	ms = (b * 5)
                6 | else:
-
-  [4] Linha 7: Variável 'msg' com nome muito curto (≤4 chars)
-      Trecho  : msg = ...
-      Contexto:
-               6 | else:
-        >>>    7 | 	msg = (3.5*quan) + (4*quan_re)
-               8 | print(float(round(msg,2)))
-
-======================================================================lse:
 
   [6] Linha 7: Variável 'd' com nome muito curto (≤4 chars)
       Trecho  : d = ...

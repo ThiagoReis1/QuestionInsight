@@ -2,11 +2,11 @@
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
 Arquivo     : 3778_1643.log
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2021_2_v1.81\2021-2\403\users\7102\executions\3778_1643.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2021_2_v1.81\2021-2\403\users\7107\executions\3778_1643.log
 Assessment  : 3778
 Título      : TP 6: Estrutura de Repetição por Contagem (for)
 Questão     : 1643
-Aluno       : 7102
+Aluno       : 7107
 Grupo       : TP 06
 Significado : Estrutura de Repetição por Contagem
 Total MCs   : 2
@@ -18,26 +18,21 @@ CÓDIGO FONTE
 ----------------------------------------------------------------------
      1 | from numpy import *
      2 | 
-     3 | v = array(eval(input()))
-     4 | 
-     5 | cont = 0
-     6 | j = 0
-     7 | 
-     8 | for i in range(size(v)):
-     9 | 	
-    10 | 	if (v[i] >= 5):
-    11 | 		
-    12 | 		cont = cont + 1
-    13 | 		
-    14 | x = zeros(cont,dtype=int)
+     3 | vn = array(eval(input()))
+     4 | i = 0
+     5 | vv = []
+     6 | 
+     7 | for e in range(size(vn)):
+     8 | 	
+     9 | 	if(vn[e]>=5):
+    10 | 		vv.append(e)
+    11 | 		i = i + 1
+    12 | 		
+    13 | 
+    14 | vv = array(vv)
     15 | 
-    16 | for i in range(size(v)):
-    17 | 	if(v[i] >= 5):
-    18 | 		x[j]=i
-    19 | 		j = j + 1
-    20 | 		
-    21 | print(cont)
-    22 | print(x)
+    16 | print(i)
+    17 | print(vv)
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
@@ -50,49 +45,41 @@ DETALHAMENTO DOS MISCONCEPTIONS
       Trecho  : —
 
 ▶ G4 — Funções/variáveis com nomes não significativos
-  Ocorrências: 6
+  Ocorrências: 5
 
-  [1] Linha 3: Variável 'v' com nome muito curto (≤4 chars)
-      Trecho  : v = ...
+  [1] Linha 3: Variável 'vn' com nome muito curto (≤4 chars)
+      Trecho  : vn = ...
       Contexto:
                2 | 
-        >>>    3 | v = array(eval(input()))
-               4 | 
+        >>>    3 | vn = array(eval(input()))
+               4 | i = 0
 
-  [2] Linha 5: Variável 'cont' com nome muito curto (≤4 chars)
-      Trecho  : cont = ...
+  [2] Linha 4: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
       Contexto:
-               4 | 
-        >>>    5 | cont = 0
-               6 | j = 0
+               3 | vn = array(eval(input()))
+        >>>    4 | i = 0
+               5 | vv = []
 
-  [3] Linha 6: Variável 'j' com nome muito curto (≤4 chars)
-      Trecho  : j = ...
+  [3] Linha 5: Variável 'vv' com nome muito curto (≤4 chars)
+      Trecho  : vv = ...
       Contexto:
-               5 | cont = 0
-        >>>    6 | j = 0
-               7 | 
+               4 | i = 0
+        >>>    5 | vv = []
+               6 | 
 
-  [4] Linha 14: Variável 'x' com nome muito curto (≤4 chars)
-      Trecho  : x = ...
+  [4] Linha 14: Variável 'vv' com nome muito curto (≤4 chars)
+      Trecho  : vv = ...
       Contexto:
-              13 | 		
-        >>>   14 | x = zeros(cont,dtype=int)
+              13 | 
+        >>>   14 | vv = array(vv)
               15 | 
 
-  [5] Linha 12: Variável 'cont' com nome muito curto (≤4 chars)
-      Trecho  : cont = ...
+  [5] Linha 11: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
       Contexto:
-              11 | 		
-        >>>   12 | 		cont = cont + 1
-              13 | 		
+              10 | 		vv.append(e)
+        >>>   11 | 		i = i + 1
+              12 | 		
 
-  [6] Linha 19: Variável 'j' com nome muito curto (≤4 chars)
-      Trecho  : j = ...
-      Contexto:
-              18 | 		x[j]=i
-        >>>   19 | 		j = j + 1
-              20 | 		
-
-======================================================================
 ======================================================================

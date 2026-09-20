@@ -2,11 +2,11 @@
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
 Arquivo     : 1747_1535.log
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2019_1_v1.81\2019-1\226\users\4145\executions\1747_1535.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2019_1_v1.81\2019-1\226\users\4128\executions\1747_1535.log
 Assessment  : 1747
 Título      : TP4: Estrutura de Repetição por Condição (while)
 Questão     : 1535
-Aluno       : 4145
+Aluno       : 4128
 Grupo       : TP 04
 Significado : Estrutura de Repetição por Condição
 Total MCs   : 1
@@ -16,70 +16,95 @@ Total MCs   : 1
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | x = float(input("valor de x: "))
-     2 | k = int(input("numero de repeticoes: "))
-     3 | i = 0
-     4 | #s=((x**(2*i+ 1))/(2*i +1))*(-1)**i
-     5 | s=0
-     6 | while((-1<=x<=1)and(k>0)):
-     7 | 	s= s + ((x**(2*i +1))/(2*i +1))*(-1)**i
-     8 | 	i=i+1
-     9 | 	k=k-1
-    10 | print(round(s,6))
+     1 | x = float(input("numero real:"))
+     2 | k = int(input("termos da serie:"))
+     3 | 
+     4 | at = 0
+     5 | sx = 1
+     6 | t = 0
+     7 | e = 2
+     8 | 
+     9 | while( t < k):
+    10 | 	at = ((x**sx) / sx) * (-1)**e +at
+    11 | 	t = t + 1
+    12 | 	e = e + 1
+    13 | 	sx = sx + 2
+    14 | print(round(at,6))
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
 ----------------------------------------------------------------------
 
 ▶ G4 — Funções/variáveis com nomes não significativos
-  Ocorrências: 7
+  Ocorrências: 10
 
   [1] Linha 1: Variável 'x' com nome muito curto (≤4 chars)
       Trecho  : x = ...
       Contexto:
-        >>>    1 | x = float(input("valor de x: "))
-               2 | k = int(input("numero de repeticoes: "))
+        >>>    1 | x = float(input("numero real:"))
+               2 | k = int(input("termos da serie:"))
 
   [2] Linha 2: Variável 'k' com nome muito curto (≤4 chars)
       Trecho  : k = ...
       Contexto:
-               1 | x = float(input("valor de x: "))
-        >>>    2 | k = int(input("numero de repeticoes: "))
-               3 | i = 0
+               1 | x = float(input("numero real:"))
+        >>>    2 | k = int(input("termos da serie:"))
+               3 | 
 
-  [3] Linha 3: Variável 'i' com nome muito curto (≤4 chars)
-      Trecho  : i = ...
+  [3] Linha 4: Variável 'at' com nome muito curto (≤4 chars)
+      Trecho  : at = ...
       Contexto:
-               2 | k = int(input("numero de repeticoes: "))
-        >>>    3 | i = 0
-               4 | #s=((x**(2*i+ 1))/(2*i +1))*(-1)**i
+               3 | 
+        >>>    4 | at = 0
+               5 | sx = 1
 
-  [4] Linha 5: Variável 's' com nome muito curto (≤4 chars)
-      Trecho  : s = ...
+  [4] Linha 5: Variável 'sx' com nome muito curto (≤4 chars)
+      Trecho  : sx = ...
       Contexto:
-               4 | #s=((x**(2*i+ 1))/(2*i +1))*(-1)**i
-        >>>    5 | s=0
-               6 | while((-1<=x<=1)and(k>0)):
+               4 | at = 0
+        >>>    5 | sx = 1
+               6 | t = 0
 
-  [5] Linha 7: Variável 's' com nome muito curto (≤4 chars)
-      Trecho  : s = ...
+  [5] Linha 6: Variável 't' com nome muito curto (≤4 chars)
+      Trecho  : t = ...
       Contexto:
-               6 | while((-1<=x<=1)and(k>0)):
-        >>>    7 | 	s= s + ((x**(2*i +1))/(2*i +1))*(-1)**i
-               8 | 	i=i+1
+               5 | sx = 1
+        >>>    6 | t = 0
+               7 | e = 2
 
-  [6] Linha 8: Variável 'i' com nome muito curto (≤4 chars)
-      Trecho  : i = ...
+  [6] Linha 7: Variável 'e' com nome muito curto (≤4 chars)
+      Trecho  : e = ...
       Contexto:
-               7 | 	s= s + ((x**(2*i +1))/(2*i +1))*(-1)**i
-        >>>    8 | 	i=i+1
-               9 | 	k=k-1
+               6 | t = 0
+        >>>    7 | e = 2
+               8 | 
 
-  [7] Linha 9: Variável 'k' com nome muito curto (≤4 chars)
-      Trecho  : k = ...
+  [7] Linha 10: Variável 'at' com nome muito curto (≤4 chars)
+      Trecho  : at = ...
       Contexto:
-               8 | 	i=i+1
-        >>>    9 | 	k=k-1
-              10 | print(round(s,6))
+               9 | while( t < k):
+        >>>   10 | 	at = ((x**sx) / sx) * (-1)**e +at
+              11 | 	t = t + 1
+
+  [8] Linha 11: Variável 't' com nome muito curto (≤4 chars)
+      Trecho  : t = ...
+      Contexto:
+              10 | 	at = ((x**sx) / sx) * (-1)**e +at
+        >>>   11 | 	t = t + 1
+              12 | 	e = e + 1
+
+  [9] Linha 12: Variável 'e' com nome muito curto (≤4 chars)
+      Trecho  : e = ...
+      Contexto:
+              11 | 	t = t + 1
+        >>>   12 | 	e = e + 1
+              13 | 	sx = sx + 2
+
+  [10] Linha 13: Variável 'sx' com nome muito curto (≤4 chars)
+      Trecho  : sx = ...
+      Contexto:
+              12 | 	e = e + 1
+        >>>   13 | 	sx = sx + 2
+              14 | print(round(at,6))
 
 ======================================================================

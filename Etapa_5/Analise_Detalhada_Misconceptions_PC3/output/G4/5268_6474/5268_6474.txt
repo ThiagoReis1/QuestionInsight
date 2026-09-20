@@ -2,11 +2,11 @@
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
 Arquivo     : 5268_6474.log
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2023_2_v1.81\2023-2\562\users\9198\executions\5268_6474.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2023_2_v1.81\2023-2\562\users\9204\executions\5268_6474.log
 Assessment  : 5268
 Título      : TP 1: Variáveis e Estrutura Sequencial
 Questão     : 6474
-Aluno       : 9198
+Aluno       : 9204
 Grupo       : TP 01
 Significado : Variáveis e Estrutura Sequencial
 Total MCs   : 1
@@ -18,11 +18,13 @@ CÓDIGO FONTE
 ----------------------------------------------------------------------
      1 | from math import *
      2 | 
-     3 | LD = float(input("Digite: "))
-     4 | AP = LD/(2*tan(pi/11))
-     5 | AU = (11*LD*AP)/2
-     6 | 
-     7 | print(round(AU, 2))
+     3 | CL = float(input("digite o comprimento do lado do undecagono:"))
+     4 | 
+     5 | D = 2* tan(pi/11)
+     6 | apotema = (CL/D)
+     7 | AU = (11* CL * apotema/2)
+     8 | 
+     9 | print(round(AU,2))
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
@@ -31,25 +33,25 @@ DETALHAMENTO DOS MISCONCEPTIONS
 ▶ G4 — Funções/variáveis com nomes não significativos
   Ocorrências: 3
 
-  [1] Linha 3: Variável 'LD' com nome muito curto (≤4 chars)
-      Trecho  : LD = ...
+  [1] Linha 3: Variável 'CL' com nome muito curto (≤4 chars)
+      Trecho  : CL = ...
       Contexto:
                2 | 
-        >>>    3 | LD = float(input("Digite: "))
-               4 | AP = LD/(2*tan(pi/11))
+        >>>    3 | CL = float(input("digite o comprimento do lado do undecagono:"))
+               4 | 
 
-  [2] Linha 4: Variável 'AP' com nome muito curto (≤4 chars)
-      Trecho  : AP = ...
+  [2] Linha 5: Variável 'D' com nome muito curto (≤4 chars)
+      Trecho  : D = ...
       Contexto:
-               3 | LD = float(input("Digite: "))
-        >>>    4 | AP = LD/(2*tan(pi/11))
-               5 | AU = (11*LD*AP)/2
+               4 | 
+        >>>    5 | D = 2* tan(pi/11)
+               6 | apotema = (CL/D)
 
-  [3] Linha 5: Variável 'AU' com nome muito curto (≤4 chars)
+  [3] Linha 7: Variável 'AU' com nome muito curto (≤4 chars)
       Trecho  : AU = ...
       Contexto:
-               4 | AP = LD/(2*tan(pi/11))
-        >>>    5 | AU = (11*LD*AP)/2
-               6 | 
+               6 | apotema = (CL/D)
+        >>>    7 | AU = (11* CL * apotema/2)
+               8 | 
 
-===========================================================================================================================
+======================================================================

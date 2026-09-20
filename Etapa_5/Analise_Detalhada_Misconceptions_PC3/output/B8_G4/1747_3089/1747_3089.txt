@@ -2,11 +2,11 @@
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
 Arquivo     : 1747_3089.log
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2019_1_v1.81\2019-1\226\users\4476\executions\1747_3089.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2019_1_v1.81\2019-1\226\users\4129\executions\1747_3089.log
 Assessment  : 1747
 Título      : TP4: Estrutura de Repetição por Condição (while)
 Questão     : 3089
-Aluno       : 4476
+Aluno       : 4129
 Grupo       : TP 04
 Significado : Estrutura de Repetição por Condição
 Total MCs   : 2
@@ -16,22 +16,25 @@ Total MCs   : 2
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | m1 = int(input("digite o numero: "))
+     1 | m = int(input("Movimento: "))
      2 | 
-     3 | i = 0
+     3 | a = 0
      4 | 
-     5 | while (m1!=0):
-     6 | 	i = i + m1
-     7 | 	m1 = int(input("digite o numero: "))
-     8 | if (i>0):
-     9 | 	print(i)
-    10 | 	print("Direita")
-    11 | if (i<0):
-    12 | 	print(i)
-    13 | 	print("Esquerda")
-    14 | if (i==0):
-    15 | 	print(i)
-    16 | 	print("Inicial")
+     5 | 
+     6 | while(m != 0):
+     7 | 	p = m + a
+     8 | 	a = p
+     9 | 	
+    10 | 	m = int(input("Movimento: "))
+    11 | 	
+    12 | print(p)
+    13 | 	
+    14 | if(p > 0):
+    15 | 	print("Direita")
+    16 | elif(p < 0):
+    17 | 	print("Esquerda")
+    18 | elif(p == 0):
+    19 | 	print("Inicial")
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
@@ -40,37 +43,48 @@ DETALHAMENTO DOS MISCONCEPTIONS
 ▶ B8 — Não utilização de elif/else
   Ocorrências: 1
 
-  [1] Linha 0: B8 detectado pelo VisitorMC3 (localização exata não mapeada)
-      Trecho  : —
+  [1] Linha 16: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 16) / elif ... sem else
+      Contexto:
+              15 | 	print("Direita")
+        >>>   16 | elif(p < 0):
+              17 | 	print("Esquerda")
 
 ▶ G4 — Funções/variáveis com nomes não significativos
-  Ocorrências: 4
+  Ocorrências: 5
 
-  [1] Linha 1: Variável 'm1' com nome muito curto (≤4 chars)
-      Trecho  : m1 = ...
+  [1] Linha 1: Variável 'm' com nome muito curto (≤4 chars)
+      Trecho  : m = ...
       Contexto:
-        >>>    1 | m1 = int(input("digite o numero: "))
+        >>>    1 | m = int(input("Movimento: "))
                2 | 
 
-  [2] Linha 3: Variável 'i' com nome muito curto (≤4 chars)
-      Trecho  : i = ...
+  [2] Linha 3: Variável 'a' com nome muito curto (≤4 chars)
+      Trecho  : a = ...
       Contexto:
                2 | 
-        >>>    3 | i = 0
+        >>>    3 | a = 0
                4 | 
 
-  [3] Linha 6: Variável 'i' com nome muito curto (≤4 chars)
-      Trecho  : i = ...
+  [3] Linha 7: Variável 'p' com nome muito curto (≤4 chars)
+      Trecho  : p = ...
       Contexto:
-               5 | while (m1!=0):
-        >>>    6 | 	i = i + m1
-               7 | 	m1 = int(input("digite o numero: "))
+               6 | while(m != 0):
+        >>>    7 | 	p = m + a
+               8 | 	a = p
 
-  [4] Linha 7: Variável 'm1' com nome muito curto (≤4 chars)
-      Trecho  : m1 = ...
+  [4] Linha 8: Variável 'a' com nome muito curto (≤4 chars)
+      Trecho  : a = ...
       Contexto:
-               6 | 	i = i + m1
-        >>>    7 | 	m1 = int(input("digite o numero: "))
-               8 | if (i>0):
+               7 | 	p = m + a
+        >>>    8 | 	a = p
+               9 | 	
+
+  [5] Linha 10: Variável 'm' com nome muito curto (≤4 chars)
+      Trecho  : m = ...
+      Contexto:
+               9 | 	
+        >>>   10 | 	m = int(input("Movimento: "))
+              11 | 	
 
 ======================================================================

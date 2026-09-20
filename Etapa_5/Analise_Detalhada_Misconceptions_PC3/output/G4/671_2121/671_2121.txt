@@ -2,11 +2,11 @@
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
 Arquivo     : 671_2121.log
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2017_1_v1.81\2017-1\136\users\2156\executions\671_2121.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2017_1_v1.81\2017-1\136\users\2137\executions\671_2121.log
 Assessment  : 671
 Título      : Trabalho Prático 5: Vetores e Strings
 Questão     : 2121
-Aluno       : 2156
+Aluno       : 2137
 Grupo       : TP 05
 Significado : Vetores e Strings
 Total MCs   : 1
@@ -17,15 +17,14 @@ Total MCs   : 1
 CÓDIGO FONTE
 ----------------------------------------------------------------------
      1 | from numpy import*
-     2 | vet = array(eval(input("Notas parciais: ")))
-     3 | 
-     4 | soma = (vet[0]*5.0+vet[1]*3.0+vet[2]*2.0)/10
-     5 | print(round(soma, 2))
-     6 | 
-     7 | if (soma >= 5):
-     8 | 	print("APROVADO")
-     9 | else:
-    10 | 	print("REPROVADO")
+     2 | n = array(eval(input("notas: ")))
+     3 | nf = (n[0]*5 + n[1]*3 + n[2]*2)/10
+     4 | if (nf >= 5):
+     5 | 	print(round(nf,2))
+     6 | 	print("APROVADO")
+     7 | else:
+     8 | 	print(round(nf,2))
+     9 | 	print("REPROVADO")
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
@@ -34,18 +33,18 @@ DETALHAMENTO DOS MISCONCEPTIONS
 ▶ G4 — Funções/variáveis com nomes não significativos
   Ocorrências: 2
 
-  [1] Linha 2: Variável 'vet' com nome muito curto (≤4 chars)
-      Trecho  : vet = ...
+  [1] Linha 2: Variável 'n' com nome muito curto (≤4 chars)
+      Trecho  : n = ...
       Contexto:
                1 | from numpy import*
-        >>>    2 | vet = array(eval(input("Notas parciais: ")))
-               3 | 
+        >>>    2 | n = array(eval(input("notas: ")))
+               3 | nf = (n[0]*5 + n[1]*3 + n[2]*2)/10
 
-  [2] Linha 4: Variável 'soma' com nome muito curto (≤4 chars)
-      Trecho  : soma = ...
+  [2] Linha 3: Variável 'nf' com nome muito curto (≤4 chars)
+      Trecho  : nf = ...
       Contexto:
-               3 | 
-        >>>    4 | soma = (vet[0]*5.0+vet[1]*3.0+vet[2]*2.0)/10
-               5 | print(round(soma, 2))
+               2 | n = array(eval(input("notas: ")))
+        >>>    3 | nf = (n[0]*5 + n[1]*3 + n[2]*2)/10
+               4 | if (nf >= 5):
 
 ======================================================================

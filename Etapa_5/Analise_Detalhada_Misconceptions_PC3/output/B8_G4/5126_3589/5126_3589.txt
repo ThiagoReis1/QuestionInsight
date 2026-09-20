@@ -2,11 +2,11 @@
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
 Arquivo     : 5126_3589.log
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2023_1_v1.81\2023-1\530\users\8741\executions\5126_3589.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2023_1_v1.81\2023-1\530\users\8730\executions\5126_3589.log
 Assessment  : 5126
 Título      : TP 5: Vetores e Strings
 Questão     : 3589
-Aluno       : 8741
+Aluno       : 8730
 Grupo       : TP 05
 Significado : Vetores e Strings
 Total MCs   : 2
@@ -16,23 +16,21 @@ Total MCs   : 2
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | from numpy import *
-     2 | 
-     3 | x = array(eval(input("aneis: ")))
-     4 | p = 0 
-     5 | i = 0
-     6 | while i < size(x):
-     7 | 	if x[i] == 1:
-     8 | 		p = p + 80
-     9 | 	elif x[i] == 2:
-    10 | 		p = p + 40
-    11 | 	elif x[i] == 3:
-    12 | 		p = p + 20
-    13 | 	elif x[i] == 4:
-    14 | 		p = p + 10
-    15 | 	i = i + 1
-    16 | 
-    17 | print(round(p, 2))
+     1 | from numpy import*
+     2 | num = array(eval(input("alvos acertados:")))
+     3 | i = 0
+     4 | cont = 0
+     5 | while i < size(num):
+     6 | 	if num[i]==1:
+     7 | 		cont = cont+80
+     8 | 	elif num[i] ==2:
+     9 | 		cont = cont+40
+    10 | 	elif num[i] ==3:
+    11 | 		cont = cont+20
+    12 | 	elif num[i] ==4:
+    13 | 		cont = cont+10
+    14 | 	i = i + 1
+    15 | print(round(cont,2))
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
@@ -41,73 +39,69 @@ DETALHAMENTO DOS MISCONCEPTIONS
 ▶ B8 — Não utilização de elif/else
   Ocorrências: 1
 
-  [1] Linha 11: Cadeia if/elif sem bloco else final
-      Trecho  : if ... (linha 11) / elif ... sem else
+  [1] Linha 10: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 10) / elif ... sem else
       Contexto:
-              10 | 		p = p + 40
-        >>>   11 | 	elif x[i] == 3:
-              12 | 		p = p + 20
+               9 | 		cont = cont+40
+        >>>   10 | 	elif num[i] ==3:
+              11 | 		cont = cont+20
 
 ▶ G4 — Funções/variáveis com nomes não significativos
   Ocorrências: 8
 
-  [1] Linha 3: Variável 'x' com nome muito curto (≤4 chars)
-      Trecho  : x = ...
+  [1] Linha 2: Variável 'num' com nome muito curto (≤4 chars)
+      Trecho  : num = ...
       Contexto:
-               2 | 
-        >>>    3 | x = array(eval(input("aneis: ")))
-               4 | p = 0 
+               1 | from numpy import*
+        >>>    2 | num = array(eval(input("alvos acertados:")))
+               3 | i = 0
 
-  [2] Linha 4: Variável 'p' com nome muito curto (≤4 chars)
-      Trecho  : p = ...
-      Contexto:
-               3 | x = array(eval(input("aneis: ")))
-        >>>    4 | p = 0 
-               5 | i = 0
-
-  [3] Linha 5: Variável 'i' com nome muito curto (≤4 chars)
+  [2] Linha 3: Variável 'i' com nome muito curto (≤4 chars)
       Trecho  : i = ...
       Contexto:
-               4 | p = 0 
-        >>>    5 | i = 0
-               6 | while i < size(x):
+               2 | num = array(eval(input("alvos acertados:")))
+        >>>    3 | i = 0
+               4 | cont = 0
 
-  [4] Linha 15: Variável 'i' com nome muito curto (≤4 chars)
+  [3] Linha 4: Variável 'cont' com nome muito curto (≤4 chars)
+      Trecho  : cont = ...
+      Contexto:
+               3 | i = 0
+        >>>    4 | cont = 0
+               5 | while i < size(num):
+
+  [4] Linha 14: Variável 'i' com nome muito curto (≤4 chars)
       Trecho  : i = ...
       Contexto:
-              14 | 		p = p + 10
-        >>>   15 | 	i = i + 1
-              16 | 
+              13 | 		cont = cont+10
+        >>>   14 | 	i = i + 1
+              15 | print(round(cont,2))
 
-  [5] Linha 8: Variável 'p' com nome muito curto (≤4 chars)
-      Trecho  : p = ...
+  [5] Linha 7: Variável 'cont' com nome muito curto (≤4 chars)
+      Trecho  : cont = ...
       Contexto:
-               7 | 	if x[i] == 1:
-        >>>    8 | 		p = p + 80
-               9 | 	elif x[i] == 2:
+               6 | 	if num[i]==1:
+        >>>    7 | 		cont = cont+80
+               8 | 	elif num[i] ==2:
 
-  [6] Linha 10: Variável 'p' com nome muito curto (≤4 chars)
-      Trecho  : p = ...
+  [6] Linha 9: Variável 'cont' com nome muito curto (≤4 chars)
+      Trecho  : cont = ...
       Contexto:
-               9 | 	elif x[i] == 2:
-        >>>   10 | 		p = p + 40
-              11 | 	elif x[i] == 3:
+               8 | 	elif num[i] ==2:
+        >>>    9 | 		cont = cont+40
+              10 | 	elif num[i] ==3:
 
-  [7] Linha 12: Variável 'p' com nome muito curto (≤4 chars)
-      Trecho  : p = ...
+  [7] Linha 11: Variável 'cont' com nome muito curto (≤4 chars)
+      Trecho  : cont = ...
       Contexto:
-              11 | 	elif x[i] == 3:
-        >>>   12 | 		p = p + 20
-              13 | 	elif x[i] == 4:
+              10 | 	elif num[i] ==3:
+        >>>   11 | 		cont = cont+20
+              12 | 	elif num[i] ==4:
 
-  [8] Linha 14: Variável 'p' com nome muito curto (≤4 chars)
-      Trecho  : p = ...
+  [8] Linha 13: Variável 'cont' com nome muito curto (≤4 chars)
+      Trecho  : cont = ...
       Contexto:
-              13 | 	elif x[i] == 4:
-        >>>   14 | 		p = p + 10
-              15 | 	i = i + 1
-
-========================================================================4:
+              12 | 	elif num[i] ==4:
         >>>   13 | 		cont = cont+10
               14 | 	i = i + 1
 

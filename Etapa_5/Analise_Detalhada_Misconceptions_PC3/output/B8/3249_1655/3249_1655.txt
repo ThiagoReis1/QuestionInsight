@@ -2,11 +2,11 @@
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
 Arquivo     : 3249_1655.log
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2021_1_v1.81\2021-1\376\users\6427\executions\3249_1655.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2021_1_v1.81\2021-1\376\users\6435\executions\3249_1655.log
 Assessment  : 3249
 Título      : TP6: Repetição por contagem
 Questão     : 1655
-Aluno       : 6427
+Aluno       : 6435
 Grupo       : TP 06
 Significado : Estrutura de Repetição por Contagem
 Total MCs   : 1
@@ -17,28 +17,23 @@ Total MCs   : 1
 CÓDIGO FONTE
 ----------------------------------------------------------------------
      1 | from numpy import*
-     2 | vetor_ent = input("vetor_ent: ").split(',')
-     3 | 
-     4 | vcont = zeros(5, dtype = int)
+     2 | 
+     3 | estados = input("Qual o estado: ").upper().split(",")
+     4 | cont = zeros(5, dtype=int)
      5 | 
-     6 | for i in range(size(vetor_ent)):
-     7 | 	if(vetor_ent[i] == "AC"):
-     8 | 		vcont [0] = vcont[0] + 1
-     9 | 	elif(vetor_ent[i] == "AM"):
-    10 | 		vcont[1] = vcont[1] + 1
-    11 | 	elif(vetor_ent[i] == "PA"):
-    12 | 		vcont[2] = vcont[2] + 1
-    13 | 	elif(vetor_ent[i] == "RO"):
-    14 | 		vcont[3] = vcont[3] +1
-    15 | 	elif(vetor_ent[i] == "RR"):
-    16 | 		vcont[4] = vcont[4] + 1
-    17 | maior = 0
-    18 | 
-    19 | for i in vcont:
-    20 | 	if i > maior:
-    21 | 		maior = i
-    22 | print(maior)		
-    23 | print(vcont)
+     6 | for i in range(0, size(estados)):
+     7 | 	if estados[i] == "AC":
+     8 | 		cont[0] += 1
+     9 | 	elif estados[i] == "AM":
+    10 | 		cont[1] += 1
+    11 | 	elif estados[i] == "PA":
+    12 | 		cont[2] += 1
+    13 | 	elif estados[i] == "RO":
+    14 | 		cont[3] += 1
+    15 | 	elif estados[i] == "RR":
+    16 | 		cont[4] += 1
+    17 | print(max(cont))
+    18 | print(cont)
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
@@ -50,8 +45,8 @@ DETALHAMENTO DOS MISCONCEPTIONS
   [1] Linha 13: Cadeia if/elif sem bloco else final
       Trecho  : if ... (linha 13) / elif ... sem else
       Contexto:
-              12 | 		vcont[2] = vcont[2] + 1
-        >>>   13 | 	elif(vetor_ent[i] == "RO"):
-              14 | 		vcont[3] = vcont[3] +1
+              12 | 		cont[2] += 1
+        >>>   13 | 	elif estados[i] == "RO":
+              14 | 		cont[3] += 1
 
 ======================================================================

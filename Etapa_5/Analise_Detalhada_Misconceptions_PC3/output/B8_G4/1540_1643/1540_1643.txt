@@ -2,11 +2,11 @@
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
 Arquivo     : 1540_1643.log
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2018_2_v1.81\2018-2\204\users\3807\executions\1540_1643.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2018_2_v1.81\2018-2\204\users\3774\executions\1540_1643.log
 Assessment  : 1540
 Título      : TP 6: Estrutura de Repetição por Contagem (for)
 Questão     : 1643
-Aluno       : 3807
+Aluno       : 3774
 Grupo       : TP 06
 Significado : Estrutura de Repetição por Contagem
 Total MCs   : 2
@@ -16,27 +16,24 @@ Total MCs   : 2
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | from numpy import*
+     1 | from numpy import *
      2 | 
-     3 | a = array(eval(input("notas:")))
-     4 | 
-     5 | c = 0
-     6 | 
-     7 | 
-     8 | for i in range(size(a)):
-     9 | 	if(a[i] >= 5.0):
-    10 | 		c = c + 1
-    11 | 
-    12 | cont = zeros(c,dtype=int)		
-    13 | j = 0
-    14 | 	
-    15 | for i in range(size(a)):
-    16 | 	if(a[i] >= 5.0):
-    17 | 		cont[j] = i
-    18 | 		j = j + 1
-    19 | 		
-    20 | print(c)
-    21 | print(cont)
+     3 | vetor = array(eval(input("Informe os alunos aprovados: ")))
+     4 | ap = 0
+     5 | 
+     6 | for i in range(size(vetor)):
+     7 | 	if vetor[i] >= 5:
+     8 | 		ap = ap + 1
+     9 | print(ap)
+    10 | 
+    11 | p = zeros(ap,dtype=int)
+    12 | j = 0
+    13 | 
+    14 | for i in range(size(vetor)):
+    15 | 	if vetor[i] >= 5:
+    16 | 		p[j] = i	
+    17 | 		j=j+1
+    18 | print(p)
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
@@ -49,48 +46,41 @@ DETALHAMENTO DOS MISCONCEPTIONS
       Trecho  : —
 
 ▶ G4 — Funções/variáveis com nomes não significativos
-  Ocorrências: 6
+  Ocorrências: 5
 
-  [1] Linha 3: Variável 'a' com nome muito curto (≤4 chars)
-      Trecho  : a = ...
+  [1] Linha 4: Variável 'ap' com nome muito curto (≤4 chars)
+      Trecho  : ap = ...
       Contexto:
-               2 | 
-        >>>    3 | a = array(eval(input("notas:")))
-               4 | 
+               3 | vetor = array(eval(input("Informe os alunos aprovados: ")))
+        >>>    4 | ap = 0
+               5 | 
 
-  [2] Linha 5: Variável 'c' com nome muito curto (≤4 chars)
-      Trecho  : c = ...
+  [2] Linha 11: Variável 'p' com nome muito curto (≤4 chars)
+      Trecho  : p = ...
       Contexto:
-               4 | 
-        >>>    5 | c = 0
-               6 | 
+              10 | 
+        >>>   11 | p = zeros(ap,dtype=int)
+              12 | j = 0
 
-  [3] Linha 12: Variável 'cont' com nome muito curto (≤4 chars)
-      Trecho  : cont = ...
-      Contexto:
-              11 | 
-        >>>   12 | cont = zeros(c,dtype=int)		
-              13 | j = 0
-
-  [4] Linha 13: Variável 'j' com nome muito curto (≤4 chars)
+  [3] Linha 12: Variável 'j' com nome muito curto (≤4 chars)
       Trecho  : j = ...
       Contexto:
-              12 | cont = zeros(c,dtype=int)		
-        >>>   13 | j = 0
-              14 | 	
+              11 | p = zeros(ap,dtype=int)
+        >>>   12 | j = 0
+              13 | 
 
-  [5] Linha 10: Variável 'c' com nome muito curto (≤4 chars)
-      Trecho  : c = ...
+  [4] Linha 8: Variável 'ap' com nome muito curto (≤4 chars)
+      Trecho  : ap = ...
       Contexto:
-               9 | 	if(a[i] >= 5.0):
-        >>>   10 | 		c = c + 1
-              11 | 
+               7 | 	if vetor[i] >= 5:
+        >>>    8 | 		ap = ap + 1
+               9 | print(ap)
 
-  [6] Linha 18: Variável 'j' com nome muito curto (≤4 chars)
+  [5] Linha 17: Variável 'j' com nome muito curto (≤4 chars)
       Trecho  : j = ...
       Contexto:
-              17 | 		cont[j] = i
-        >>>   18 | 		j = j + 1
-              19 | 		
+              16 | 		p[j] = i	
+        >>>   17 | 		j=j+1
+              18 | print(p)
 
 ======================================================================

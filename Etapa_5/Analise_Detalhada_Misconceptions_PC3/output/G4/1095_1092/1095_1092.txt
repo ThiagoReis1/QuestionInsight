@@ -2,11 +2,11 @@
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
 Arquivo     : 1095_1092.log
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2018_1_v1.81\2018-1\181\users\3072\executions\1095_1092.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2018_1_v1.81\2018-1\181\users\3044\executions\1095_1092.log
 Assessment  : 1095
 Título      : TP 2 - Condicionais compostos (if/else)
 Questão     : 1092
-Aluno       : 3072
+Aluno       : 3044
 Grupo       : TP 02
 Significado : Estrutura Condicional Simples e Composta
 Total MCs   : 1
@@ -16,50 +16,71 @@ Total MCs   : 1
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | n = int(input("insira um numero: "))
-     2 | 
-     3 | x = n // 1000
-     4 | y = n % 1000
-     5 | z = n // 1000 
-     6 | 
-     7 | if	(((x) ** 3) + ((y) ** 3) + ((z) ** 3)  == n):
-     8 | 	print("atende")
-     9 | 	
-    10 | else:
-    11 | 	print("nao atende")
+     1 | x=int(input("numero: "))
+     2 | a=x//100
+     3 | b=(x//10)%10
+     4 | c=x%10
+     5 | s=(a**3)+(b**3)+(c**3)
+     6 | if(s==x):
+     7 | 	m="atende"
+     8 | else:
+     9 | 	m="nao atende"
+    10 | print(x)
+    11 | print(m)
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
 ----------------------------------------------------------------------
 
 ▶ G4 — Funções/variáveis com nomes não significativos
-  Ocorrências: 4
+  Ocorrências: 7
 
-  [1] Linha 1: Variável 'n' com nome muito curto (≤4 chars)
-      Trecho  : n = ...
-      Contexto:
-        >>>    1 | n = int(input("insira um numero: "))
-               2 | 
-
-  [2] Linha 3: Variável 'x' com nome muito curto (≤4 chars)
+  [1] Linha 1: Variável 'x' com nome muito curto (≤4 chars)
       Trecho  : x = ...
       Contexto:
-               2 | 
-        >>>    3 | x = n // 1000
-               4 | y = n % 1000
+        >>>    1 | x=int(input("numero: "))
+               2 | a=x//100
 
-  [3] Linha 4: Variável 'y' com nome muito curto (≤4 chars)
-      Trecho  : y = ...
+  [2] Linha 2: Variável 'a' com nome muito curto (≤4 chars)
+      Trecho  : a = ...
       Contexto:
-               3 | x = n // 1000
-        >>>    4 | y = n % 1000
-               5 | z = n // 1000 
+               1 | x=int(input("numero: "))
+        >>>    2 | a=x//100
+               3 | b=(x//10)%10
 
-  [4] Linha 5: Variável 'z' com nome muito curto (≤4 chars)
-      Trecho  : z = ...
+  [3] Linha 3: Variável 'b' com nome muito curto (≤4 chars)
+      Trecho  : b = ...
       Contexto:
-               4 | y = n % 1000
-        >>>    5 | z = n // 1000 
-               6 | 
+               2 | a=x//100
+        >>>    3 | b=(x//10)%10
+               4 | c=x%10
+
+  [4] Linha 4: Variável 'c' com nome muito curto (≤4 chars)
+      Trecho  : c = ...
+      Contexto:
+               3 | b=(x//10)%10
+        >>>    4 | c=x%10
+               5 | s=(a**3)+(b**3)+(c**3)
+
+  [5] Linha 5: Variável 's' com nome muito curto (≤4 chars)
+      Trecho  : s = ...
+      Contexto:
+               4 | c=x%10
+        >>>    5 | s=(a**3)+(b**3)+(c**3)
+               6 | if(s==x):
+
+  [6] Linha 7: Variável 'm' com nome muito curto (≤4 chars)
+      Trecho  : m = ...
+      Contexto:
+               6 | if(s==x):
+        >>>    7 | 	m="atende"
+               8 | else:
+
+  [7] Linha 9: Variável 'm' com nome muito curto (≤4 chars)
+      Trecho  : m = ...
+      Contexto:
+               8 | else:
+        >>>    9 | 	m="nao atende"
+              10 | print(x)
 
 ======================================================================

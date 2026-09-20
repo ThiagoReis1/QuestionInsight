@@ -2,11 +2,11 @@
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
 Arquivo     : 4976_6506.log
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2023_1_v1.81\2023-1\528\users\8779\executions\4976_6506.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2023_1_v1.81\2023-1\528\users\8835\executions\4976_6506.log
 Assessment  : 4976
 Título      : TP2: Est. Condicional Simples e Composta
 Questão     : 6506
-Aluno       : 8779
+Aluno       : 8835
 Grupo       : TP 02
 Significado : Estrutura Condicional Simples e Composta
 Total MCs   : 1
@@ -17,41 +17,47 @@ Total MCs   : 1
 CÓDIGO FONTE
 ----------------------------------------------------------------------
      1 | # faça seu código aqui!
-     2 | p = int(input("quantidade de pratos: "))
-     3 | b = input("deseja sobremesa(s ou n)? ")
-     4 | total = 40 * p
-     5 | d = total - total * 5/100
-     6 | if b == "s":
-     7 | 	print(round(d, 2))
-     8 | else:
-     9 | 	print(round(total, 2))
+     2 | pr = int(input("Pratos:"))
+     3 | qa = input("s ou n:")
+     4 | if (qa) == "s":
+     5 | 	cal = (pr*40)*0.95
+     6 | else:
+     7 | 	cal = pr*40
+     8 | print(round(cal,2))
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
 ----------------------------------------------------------------------
 
 ▶ G4 — Funções/variáveis com nomes não significativos
-  Ocorrências: 3
+  Ocorrências: 4
 
-  [1] Linha 2: Variável 'p' com nome muito curto (≤4 chars)
-      Trecho  : p = ...
+  [1] Linha 2: Variável 'pr' com nome muito curto (≤4 chars)
+      Trecho  : pr = ...
       Contexto:
                1 | # faça seu código aqui!
-        >>>    2 | p = int(input("quantidade de pratos: "))
-               3 | b = input("deseja sobremesa(s ou n)? ")
+        >>>    2 | pr = int(input("Pratos:"))
+               3 | qa = input("s ou n:")
 
-  [2] Linha 3: Variável 'b' com nome muito curto (≤4 chars)
-      Trecho  : b = ...
+  [2] Linha 3: Variável 'qa' com nome muito curto (≤4 chars)
+      Trecho  : qa = ...
       Contexto:
-               2 | p = int(input("quantidade de pratos: "))
-        >>>    3 | b = input("deseja sobremesa(s ou n)? ")
-               4 | total = 40 * p
+               2 | pr = int(input("Pratos:"))
+        >>>    3 | qa = input("s ou n:")
+               4 | if (qa) == "s":
 
-  [3] Linha 5: Variável 'd' com nome muito curto (≤4 chars)
-      Trecho  : d = ...
+  [3] Linha 5: Variável 'cal' com nome muito curto (≤4 chars)
+      Trecho  : cal = ...
       Contexto:
-               4 | total = 40 * p
-        >>>    5 | d = total - total * 5/100
-               6 | if b == "s":
+               4 | if (qa) == "s":
+        >>>    5 | 	cal = (pr*40)*0.95
+               6 | else:
+
+  [4] Linha 7: Variável 'cal' com nome muito curto (≤4 chars)
+      Trecho  : cal = ...
+      Contexto:
+               6 | else:
+        >>>    7 | 	cal = pr*40
+               8 | print(round(cal,2))
 
 ======================================================================

@@ -2,11 +2,11 @@
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
 Arquivo     : 3236_3181.log
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2021_1_v1.81\2021-1\377\users\5817\executions\3236_3181.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2021_1_v1.81\2021-1\377\users\5036\executions\3236_3181.log
 Assessment  : 3236
 Título      : TP6: Repetição por contagem
 Questão     : 3181
-Aluno       : 5817
+Aluno       : 5036
 Grupo       : TP 06
 Significado : Estrutura de Repetição por Contagem
 Total MCs   : 2
@@ -16,16 +16,18 @@ Total MCs   : 2
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | from numpy import*
-     2 | l=array(eval(input("Lista: ")))
-     3 | 
-     4 | new=zeros(37,dtype=int)
-     5 | 
-     6 | for i in range(size(l)):
-     7 | 	n=l[i]
-     8 | 	if l[i]==n:
-     9 | 		new[n]+=1
-    10 | print(new)
+     1 | from numpy import *
+     2 | 
+     3 | v = array(eval(input('jogadas: ')))
+     4 | 
+     5 | vet = zeros(37, dtype=int)
+     6 | 
+     7 | for x in v:
+     8 | 	for i in range(37):
+     9 | 		if x == i:
+    10 | 			vet[i] += 1
+    11 | 			
+    12 | print(vet)
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
@@ -38,29 +40,20 @@ DETALHAMENTO DOS MISCONCEPTIONS
       Trecho  : —
 
 ▶ G4 — Funções/variáveis com nomes não significativos
-  Ocorrências: 3
+  Ocorrências: 2
 
-  [1] Linha 2: Variável 'l' com nome muito curto (≤4 chars)
-      Trecho  : l = ...
+  [1] Linha 3: Variável 'v' com nome muito curto (≤4 chars)
+      Trecho  : v = ...
       Contexto:
-               1 | from numpy import*
-        >>>    2 | l=array(eval(input("Lista: ")))
-               3 | 
+               2 | 
+        >>>    3 | v = array(eval(input('jogadas: ')))
+               4 | 
 
-  [2] Linha 4: Variável 'new' com nome muito curto (≤4 chars)
-      Trecho  : new = ...
+  [2] Linha 5: Variável 'vet' com nome muito curto (≤4 chars)
+      Trecho  : vet = ...
       Contexto:
-               3 | 
-        >>>    4 | new=zeros(37,dtype=int)
-               5 | 
-
-  [3] Linha 7: Variável 'n' com nome muito curto (≤4 chars)
-      Trecho  : n = ...
-      Contexto:
-               6 | for i in range(size(l)):
-        >>>    7 | 	n=l[i]
-               8 | 	if l[i]==n:
-
-======================================================================l[i]==n:
+               4 | 
+        >>>    5 | vet = zeros(37, dtype=int)
+               6 | 
 
 ======================================================================

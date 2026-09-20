@@ -2,11 +2,11 @@
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
 Arquivo     : 5030_3035.log
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2023_1_v1.81\2023-1\523\users\8681\executions\5030_3035.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2023_1_v1.81\2023-1\523\users\8686\executions\5030_3035.log
 Assessment  : 5030
 Título      : TP3: Est. Condicional Encadeada
 Questão     : 3035
-Aluno       : 8681
+Aluno       : 8686
 Grupo       : TP 03
 Significado : Estrutura Condicional Encadeada
 Total MCs   : 1
@@ -18,54 +18,43 @@ CÓDIGO FONTE
 ----------------------------------------------------------------------
      1 | from math import *
      2 | 
-     3 | a = float(input("Insira o valor em graus: "))
-     4 | x = radians(a)
-     5 | 
-     6 | if (0 <= a <=360):
-     7 | 	if ((0 <= a < 90) or (180<= a < 270)):
-     8 | 		y = sin(x)
-     9 | 		print(round(y,4))
-    10 | 	elif ((90 <= a < 180) or (270 <= a <360)):
-    11 | 		y = cos(x)
-    12 | 		print(round(y,4))
-    13 | 	else:
-    14 | 		print("entrada invalida")
-    15 | else:
-    16 | 	print("entrada invalida")
+     3 | x = float(input("x: "))
+     4 | 
+     5 | if (0 <= x < 90) or (180 <= x < 270):
+     6 | 	x = radians(x)
+     7 | 	print(round(sin(x), 4))
+     8 | elif (90 <= x < 180) or (270 <= x < 360):	
+     9 | 	x = radians(x)
+    10 | 	print(round(cos(x), 4))
+    11 | else:
+    12 | 	print("entrada invalida")
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
 ----------------------------------------------------------------------
 
 ▶ G4 — Funções/variáveis com nomes não significativos
-  Ocorrências: 4
+  Ocorrências: 3
 
-  [1] Linha 3: Variável 'a' com nome muito curto (≤4 chars)
-      Trecho  : a = ...
-      Contexto:
-               2 | 
-        >>>    3 | a = float(input("Insira o valor em graus: "))
-               4 | x = radians(a)
-
-  [2] Linha 4: Variável 'x' com nome muito curto (≤4 chars)
+  [1] Linha 3: Variável 'x' com nome muito curto (≤4 chars)
       Trecho  : x = ...
       Contexto:
-               3 | a = float(input("Insira o valor em graus: "))
-        >>>    4 | x = radians(a)
-               5 | 
+               2 | 
+        >>>    3 | x = float(input("x: "))
+               4 | 
 
-  [3] Linha 8: Variável 'y' com nome muito curto (≤4 chars)
-      Trecho  : y = ...
+  [2] Linha 6: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
       Contexto:
-               7 | 	if ((0 <= a < 90) or (180<= a < 270)):
-        >>>    8 | 		y = sin(x)
-               9 | 		print(round(y,4))
+               5 | if (0 <= x < 90) or (180 <= x < 270):
+        >>>    6 | 	x = radians(x)
+               7 | 	print(round(sin(x), 4))
 
-  [4] Linha 11: Variável 'y' com nome muito curto (≤4 chars)
-      Trecho  : y = ...
+  [3] Linha 9: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
       Contexto:
-              10 | 	elif ((90 <= a < 180) or (270 <= a <360)):
-        >>>   11 | 		y = cos(x)
-              12 | 		print(round(y,4))
+               8 | elif (90 <= x < 180) or (270 <= x < 360):	
+        >>>    9 | 	x = radians(x)
+              10 | 	print(round(cos(x), 4))
 
 ======================================================================

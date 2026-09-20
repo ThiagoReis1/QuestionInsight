@@ -2,11 +2,11 @@
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
 Arquivo     : 5121_6312.log
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2023_1_v1.81\2023-1\529\users\8632\executions\5121_6312.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2023_1_v1.81\2023-1\529\users\8634\executions\5121_6312.log
 Assessment  : 5121
 Título      : TP 5: Vetores e Strings
 Questão     : 6312
-Aluno       : 8632
+Aluno       : 8634
 Grupo       : TP 05
 Significado : Vetores e Strings
 Total MCs   : 2
@@ -16,24 +16,22 @@ Total MCs   : 2
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | pr= input("p: ").upper()
-     2 | B = 0
-     3 | C = 0
-     4 | E = 0
-     5 | i = 0
-     6 | while i < len(pr):
-     7 | 	if pr[i] == "B":
-     8 | 		B += 1
-     9 | 	elif pr[i] == "C":
-    10 | 		C += 1
-    11 | 	elif pr[i] == "E":
-    12 | 		E += 1
-    13 | 	i += 1
-    14 | pb = B *3.75
-    15 | pc = C * 7.9
-    16 | pe = E * 9.85
-    17 | 
-    18 | print(round(pb+pc+pe, 2),B,C,E)
+     1 | from numpy import*
+     2 | compra = input("Compras: ").upper()
+     3 | b = 0
+     4 | c = 0
+     5 | e = 0
+     6 | i = 0
+     7 | while i < len(compra):
+     8 | 	if compra[i] == "B":
+     9 | 		b +=1
+    10 | 	if compra[i] == "C":
+    11 | 		c+=1
+    12 | 	if compra[i] == "E":
+    13 | 		e+=1
+    14 | 	i+=1
+    15 | soma = (b*3.75)+(c*7.9)+(e*9.85)
+    16 | print(round(soma, 2), b, c, e)
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
@@ -42,69 +40,45 @@ DETALHAMENTO DOS MISCONCEPTIONS
 ▶ B8 — Não utilização de elif/else
   Ocorrências: 1
 
-  [1] Linha 9: Cadeia if/elif sem bloco else final
-      Trecho  : if ... (linha 9) / elif ... sem else
-      Contexto:
-               8 | 		B += 1
-        >>>    9 | 	elif pr[i] == "C":
-              10 | 		C += 1
+  [1] Linha 0: B8 detectado pelo VisitorMC3 (localização exata não mapeada)
+      Trecho  : —
 
 ▶ G4 — Funções/variáveis com nomes não significativos
-  Ocorrências: 8
+  Ocorrências: 5
 
-  [1] Linha 1: Variável 'pr' com nome muito curto (≤4 chars)
-      Trecho  : pr = ...
+  [1] Linha 3: Variável 'b' com nome muito curto (≤4 chars)
+      Trecho  : b = ...
       Contexto:
-        >>>    1 | pr= input("p: ").upper()
-               2 | B = 0
+               2 | compra = input("Compras: ").upper()
+        >>>    3 | b = 0
+               4 | c = 0
 
-  [2] Linha 2: Variável 'B' com nome muito curto (≤4 chars)
-      Trecho  : B = ...
+  [2] Linha 4: Variável 'c' com nome muito curto (≤4 chars)
+      Trecho  : c = ...
       Contexto:
-               1 | pr= input("p: ").upper()
-        >>>    2 | B = 0
-               3 | C = 0
+               3 | b = 0
+        >>>    4 | c = 0
+               5 | e = 0
 
-  [3] Linha 3: Variável 'C' com nome muito curto (≤4 chars)
-      Trecho  : C = ...
+  [3] Linha 5: Variável 'e' com nome muito curto (≤4 chars)
+      Trecho  : e = ...
       Contexto:
-               2 | B = 0
-        >>>    3 | C = 0
-               4 | E = 0
+               4 | c = 0
+        >>>    5 | e = 0
+               6 | i = 0
 
-  [4] Linha 4: Variável 'E' com nome muito curto (≤4 chars)
-      Trecho  : E = ...
-      Contexto:
-               3 | C = 0
-        >>>    4 | E = 0
-               5 | i = 0
-
-  [5] Linha 5: Variável 'i' com nome muito curto (≤4 chars)
+  [4] Linha 6: Variável 'i' com nome muito curto (≤4 chars)
       Trecho  : i = ...
       Contexto:
-               4 | E = 0
-        >>>    5 | i = 0
-               6 | while i < len(pr):
+               5 | e = 0
+        >>>    6 | i = 0
+               7 | while i < len(compra):
 
-  [6] Linha 14: Variável 'pb' com nome muito curto (≤4 chars)
-      Trecho  : pb = ...
+  [5] Linha 15: Variável 'soma' com nome muito curto (≤4 chars)
+      Trecho  : soma = ...
       Contexto:
-              13 | 	i += 1
-        >>>   14 | pb = B *3.75
-              15 | pc = C * 7.9
-
-  [7] Linha 15: Variável 'pc' com nome muito curto (≤4 chars)
-      Trecho  : pc = ...
-      Contexto:
-              14 | pb = B *3.75
-        >>>   15 | pc = C * 7.9
-              16 | pe = E * 9.85
-
-  [8] Linha 16: Variável 'pe' com nome muito curto (≤4 chars)
-      Trecho  : pe = ...
-      Contexto:
-              15 | pc = C * 7.9
-        >>>   16 | pe = E * 9.85
-              17 | 
+              14 | 	i+=1
+        >>>   15 | soma = (b*3.75)+(c*7.9)+(e*9.85)
+              16 | print(round(soma, 2), b, c, e)
 
 ======================================================================

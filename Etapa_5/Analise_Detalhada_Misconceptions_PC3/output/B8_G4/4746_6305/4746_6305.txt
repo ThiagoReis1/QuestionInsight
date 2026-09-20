@@ -2,11 +2,11 @@
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
 Arquivo     : 4746_6305.log
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2022_2_v1.81\2022-2\491\users\8245\executions\4746_6305.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2022_2_v1.81\2022-2\491\users\7170\executions\4746_6305.log
 Assessment  : 4746
 Título      : TP 05: Vetores e Strings
 Questão     : 6305
-Aluno       : 8245
+Aluno       : 7170
 Grupo       : TP 05
 Significado : Vetores e Strings
 Total MCs   : 2
@@ -16,30 +16,31 @@ Total MCs   : 2
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | c = input("Digite a incial da secao visitada: ").upper()
-     2 | 
-     3 | i = 0 #variavel contadora
-     4 | ct_h = 0 
-     5 | ct_l = 0
-     6 | ct_e = 0
-     7 | total = 0 #variavel acumuladora
-     8 | 
-     9 | while (i<len(c)):
-    10 | 	if (c[i] == 'H'):
-    11 | 		total = total + 3.85
-    12 | 		ct_h = ct_h + 1
-    13 | 		
-    14 | 	elif (c[i] == 'L'):
-    15 | 		total = total + 2.95
-    16 | 		ct_l = ct_l + 1
-    17 | 		
-    18 | 	elif (c[i] == 'E'):
-    19 | 		total = total + 7.90
-    20 | 		ct_e = ct_e + 1
-    21 | 		
-    22 | 	i = i + 1
-    23 | 
-    24 | print(round(total,2), ct_h, ct_l, ct_e)
+     1 | a = str(input("Hortifruti (H), Laticinio (L) ou Enlatado (E):  ").upper())
+     2 | h = 0
+     3 | l = 0
+     4 | e = 0
+     5 | v = 0
+     6 | i = 0
+     7 | 
+     8 | for a in "HLE":
+     9 | 	if a == "H":
+    10 | 		h = h+1
+    11 | 		v = v+h*3.85
+    12 | 		
+    13 | 	if a == "L":
+    14 | 		l = l+1
+    15 | 		v = v+l*2.95
+    16 | 	if a == "E":
+    17 | 		e = e+1	
+    18 | 		v= v+e*7.90
+    19 | 
+    20 | 	i += 1
+    21 | 	
+    22 | print(round(v, 2))
+    23 | print(h)
+    24 | print(l)
+    25 | print(e)
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
@@ -48,17 +49,93 @@ DETALHAMENTO DOS MISCONCEPTIONS
 ▶ B8 — Não utilização de elif/else
   Ocorrências: 1
 
-  [1] Linha 14: Cadeia if/elif sem bloco else final
-      Trecho  : if ... (linha 14) / elif ... sem else
-      Contexto:
-              13 | 		
-        >>>   14 | 	elif (c[i] == 'L'):
-              15 | 		total = total + 2.95
+  [1] Linha 0: B8 detectado pelo VisitorMC3 (localização exata não mapeada)
+      Trecho  : —
 
 ▶ G4 — Funções/variáveis com nomes não significativos
-  Ocorrências: 1
+  Ocorrências: 12
 
-  [1] Linha 0: G4 detectado pelo VisitorMC3 (localização exata não mapeada)
-      Trecho  : —
+  [1] Linha 1: Variável 'a' com nome muito curto (≤4 chars)
+      Trecho  : a = ...
+      Contexto:
+        >>>    1 | a = str(input("Hortifruti (H), Laticinio (L) ou Enlatado (E):  ").upper())
+               2 | h = 0
+
+  [2] Linha 2: Variável 'h' com nome muito curto (≤4 chars)
+      Trecho  : h = ...
+      Contexto:
+               1 | a = str(input("Hortifruti (H), Laticinio (L) ou Enlatado (E):  ").upper())
+        >>>    2 | h = 0
+               3 | l = 0
+
+  [3] Linha 3: Variável 'l' com nome muito curto (≤4 chars)
+      Trecho  : l = ...
+      Contexto:
+               2 | h = 0
+        >>>    3 | l = 0
+               4 | e = 0
+
+  [4] Linha 4: Variável 'e' com nome muito curto (≤4 chars)
+      Trecho  : e = ...
+      Contexto:
+               3 | l = 0
+        >>>    4 | e = 0
+               5 | v = 0
+
+  [5] Linha 5: Variável 'v' com nome muito curto (≤4 chars)
+      Trecho  : v = ...
+      Contexto:
+               4 | e = 0
+        >>>    5 | v = 0
+               6 | i = 0
+
+  [6] Linha 6: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+               5 | v = 0
+        >>>    6 | i = 0
+               7 | 
+
+  [7] Linha 10: Variável 'h' com nome muito curto (≤4 chars)
+      Trecho  : h = ...
+      Contexto:
+               9 | 	if a == "H":
+        >>>   10 | 		h = h+1
+              11 | 		v = v+h*3.85
+
+  [8] Linha 11: Variável 'v' com nome muito curto (≤4 chars)
+      Trecho  : v = ...
+      Contexto:
+              10 | 		h = h+1
+        >>>   11 | 		v = v+h*3.85
+              12 | 		
+
+  [9] Linha 14: Variável 'l' com nome muito curto (≤4 chars)
+      Trecho  : l = ...
+      Contexto:
+              13 | 	if a == "L":
+        >>>   14 | 		l = l+1
+              15 | 		v = v+l*2.95
+
+  [10] Linha 15: Variável 'v' com nome muito curto (≤4 chars)
+      Trecho  : v = ...
+      Contexto:
+              14 | 		l = l+1
+        >>>   15 | 		v = v+l*2.95
+              16 | 	if a == "E":
+
+  [11] Linha 17: Variável 'e' com nome muito curto (≤4 chars)
+      Trecho  : e = ...
+      Contexto:
+              16 | 	if a == "E":
+        >>>   17 | 		e = e+1	
+              18 | 		v= v+e*7.90
+
+  [12] Linha 18: Variável 'v' com nome muito curto (≤4 chars)
+      Trecho  : v = ...
+      Contexto:
+              17 | 		e = e+1	
+        >>>   18 | 		v= v+e*7.90
+              19 | 
 
 ======================================================================

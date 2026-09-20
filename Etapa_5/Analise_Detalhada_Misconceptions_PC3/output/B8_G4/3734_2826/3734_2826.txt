@@ -2,11 +2,11 @@
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
 Arquivo     : 3734_2826.log
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2021_2_v1.81\2021-2\407\users\7167\executions\3734_2826.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2021_2_v1.81\2021-2\407\users\7161\executions\3734_2826.log
 Assessment  : 3734
 Título      : TP5: Vetores e Strings
 Questão     : 2826
-Aluno       : 7167
+Aluno       : 7161
 Grupo       : TP 05
 Significado : Vetores e Strings
 Total MCs   : 2
@@ -17,15 +17,16 @@ Total MCs   : 2
 CÓDIGO FONTE
 ----------------------------------------------------------------------
      1 | from numpy import*
-     2 | x=array(eval(input("insira as notas: ")))
-     3 | i=0
+     2 | x = array(eval(input("nota: ")))
+     3 | i = 0
      4 | while i<size(x):
-     5 | 	if x[i]>8:
+     5 | 	if 8.0<x[i]:
      6 | 		x[i]=10.0
-     7 | 	elif x[i]<2:
+     7 | 	elif x[i]<2.0:
      8 | 		x[i]=0.0
      9 | 	i=i+1
-    10 | print(x)	
+    10 | 	
+    11 | print(x)
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
@@ -38,7 +39,7 @@ DETALHAMENTO DOS MISCONCEPTIONS
       Trecho  : if ... (linha 5) / elif ... sem else
       Contexto:
                4 | while i<size(x):
-        >>>    5 | 	if x[i]>8:
+        >>>    5 | 	if 8.0<x[i]:
                6 | 		x[i]=10.0
 
 ▶ G4 — Funções/variáveis com nomes não significativos
@@ -48,14 +49,14 @@ DETALHAMENTO DOS MISCONCEPTIONS
       Trecho  : x = ...
       Contexto:
                1 | from numpy import*
-        >>>    2 | x=array(eval(input("insira as notas: ")))
-               3 | i=0
+        >>>    2 | x = array(eval(input("nota: ")))
+               3 | i = 0
 
   [2] Linha 3: Variável 'i' com nome muito curto (≤4 chars)
       Trecho  : i = ...
       Contexto:
-               2 | x=array(eval(input("insira as notas: ")))
-        >>>    3 | i=0
+               2 | x = array(eval(input("nota: ")))
+        >>>    3 | i = 0
                4 | while i<size(x):
 
   [3] Linha 9: Variável 'i' com nome muito curto (≤4 chars)
@@ -63,6 +64,6 @@ DETALHAMENTO DOS MISCONCEPTIONS
       Contexto:
                8 | 		x[i]=0.0
         >>>    9 | 	i=i+1
-              10 | print(x)	
+              10 | 	
 
 ======================================================================

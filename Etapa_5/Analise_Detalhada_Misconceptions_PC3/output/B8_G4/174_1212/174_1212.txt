@@ -2,11 +2,11 @@
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
 Arquivo     : 174_1212.log
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2016_1_v1.81\2016-1\103\users\1232\executions\174_1212.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2016_1_v1.81\2016-1\103\users\1234\executions\174_1212.log
 Assessment  : 174
 Título      : Avaliação Parcial 05 – Vetores e Strings
 Questão     : 1212
-Aluno       : 1232
+Aluno       : 1234
 Grupo       : TP 05
 Significado : Vetores e Strings
 Total MCs   : 2
@@ -16,19 +16,17 @@ Total MCs   : 2
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | from numpy import *
-     2 | 
-     3 | v = array(eval(input("Digite os pesos:")))
-     4 | 
-     5 | print(307)
-     6 | i = 0
-     7 | j = 0
-     8 | while i<size(v) :
-     9 | 	if v[i]<307 :
-    10 | 		j = j+1
-    11 | 	i = i + 1
-    12 | 	
-    13 | print(j)
+     1 | from numpy import*
+     2 | v=array(eval(input("digite v: ")))
+     3 | n=0
+     4 | cont=0
+     5 | record= 307 
+     6 | while(n < size(v)):
+     7 | 	if(v[n]<record):
+     8 | 		cont=cont+1
+     9 | 	n=n+1
+    10 | print(record)
+    11 | print(cont)
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
@@ -43,39 +41,39 @@ DETALHAMENTO DOS MISCONCEPTIONS
 ▶ G4 — Funções/variáveis com nomes não significativos
   Ocorrências: 5
 
-  [1] Linha 3: Variável 'v' com nome muito curto (≤4 chars)
+  [1] Linha 2: Variável 'v' com nome muito curto (≤4 chars)
       Trecho  : v = ...
       Contexto:
-               2 | 
-        >>>    3 | v = array(eval(input("Digite os pesos:")))
-               4 | 
+               1 | from numpy import*
+        >>>    2 | v=array(eval(input("digite v: ")))
+               3 | n=0
 
-  [2] Linha 6: Variável 'i' com nome muito curto (≤4 chars)
-      Trecho  : i = ...
+  [2] Linha 3: Variável 'n' com nome muito curto (≤4 chars)
+      Trecho  : n = ...
       Contexto:
-               5 | print(307)
-        >>>    6 | i = 0
-               7 | j = 0
+               2 | v=array(eval(input("digite v: ")))
+        >>>    3 | n=0
+               4 | cont=0
 
-  [3] Linha 7: Variável 'j' com nome muito curto (≤4 chars)
-      Trecho  : j = ...
+  [3] Linha 4: Variável 'cont' com nome muito curto (≤4 chars)
+      Trecho  : cont = ...
       Contexto:
-               6 | i = 0
-        >>>    7 | j = 0
-               8 | while i<size(v) :
+               3 | n=0
+        >>>    4 | cont=0
+               5 | record= 307 
 
-  [4] Linha 11: Variável 'i' com nome muito curto (≤4 chars)
-      Trecho  : i = ...
+  [4] Linha 9: Variável 'n' com nome muito curto (≤4 chars)
+      Trecho  : n = ...
       Contexto:
-              10 | 		j = j+1
-        >>>   11 | 	i = i + 1
-              12 | 	
+               8 | 		cont=cont+1
+        >>>    9 | 	n=n+1
+              10 | print(record)
 
-  [5] Linha 10: Variável 'j' com nome muito curto (≤4 chars)
-      Trecho  : j = ...
+  [5] Linha 8: Variável 'cont' com nome muito curto (≤4 chars)
+      Trecho  : cont = ...
       Contexto:
-               9 | 	if v[i]<307 :
-        >>>   10 | 		j = j+1
-              11 | 	i = i + 1
+               7 | 	if(v[n]<record):
+        >>>    8 | 		cont=cont+1
+               9 | 	n=n+1
 
 ======================================================================

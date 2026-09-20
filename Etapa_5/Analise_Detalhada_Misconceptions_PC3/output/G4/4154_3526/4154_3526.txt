@@ -2,11 +2,11 @@
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
 Arquivo     : 4154_3526.log
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2022_1_v1.81\2022-1\440\users\7665\executions\4154_3526.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2022_1_v1.81\2022-1\440\users\7690\executions\4154_3526.log
 Assessment  : 4154
 Título      : TP 04: Estrutura de Repetição por Condição
 Questão     : 3526
-Aluno       : 7665
+Aluno       : 7690
 Grupo       : TP 04
 Significado : Estrutura de Repetição por Condição
 Total MCs   : 1
@@ -16,81 +16,74 @@ Total MCs   : 1
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | n=float(input())
-     2 | k=int(input())
+     1 | x = float(input("numero inteiro maior que 0: "))
+     2 | k = int(input("quantidade de termos: "))
      3 | 
-     4 | i=0
-     5 | j=3
-     6 | tot=n
-     7 | while(i!=k-1):
-     8 | 	tot=tot+(n**j)/j
-     9 | 	j=j+2
-    10 | 	i=i+1
-    11 | print(round(tot,7))
+     4 | ex = 1 
+     5 | div = 1
+     6 | ack = 0
+     7 | soma = 0
+     8 | while(ack < k ):
+     9 | 	son = (x**ex)/div
+    10 | 	ex = ex + 2
+    11 | 	div = div + 2
+    12 | 	ack = ack + 1
+    13 | 	soma = son + soma
+    14 | print(round(soma,7))
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
 ----------------------------------------------------------------------
 
 ▶ G4 — Funções/variáveis com nomes não significativos
-  Ocorrências: 8
+  Ocorrências: 11
 
-  [1] Linha 1: Variável 'n' com nome muito curto (≤4 chars)
-      Trecho  : n = ...
+  [1] Linha 1: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
       Contexto:
-        >>>    1 | n=float(input())
-               2 | k=int(input())
+        >>>    1 | x = float(input("numero inteiro maior que 0: "))
+               2 | k = int(input("quantidade de termos: "))
 
   [2] Linha 2: Variável 'k' com nome muito curto (≤4 chars)
       Trecho  : k = ...
       Contexto:
-               1 | n=float(input())
-        >>>    2 | k=int(input())
+               1 | x = float(input("numero inteiro maior que 0: "))
+        >>>    2 | k = int(input("quantidade de termos: "))
                3 | 
 
-  [3] Linha 4: Variável 'i' com nome muito curto (≤4 chars)
-      Trecho  : i = ...
+  [3] Linha 4: Variável 'ex' com nome muito curto (≤4 chars)
+      Trecho  : ex = ...
       Contexto:
                3 | 
-        >>>    4 | i=0
-               5 | j=3
+        >>>    4 | ex = 1 
+               5 | div = 1
 
-  [4] Linha 5: Variável 'j' com nome muito curto (≤4 chars)
-      Trecho  : j = ...
+  [4] Linha 5: Variável 'div' com nome muito curto (≤4 chars)
+      Trecho  : div = ...
       Contexto:
-               4 | i=0
-        >>>    5 | j=3
-               6 | tot=n
+               4 | ex = 1 
+        >>>    5 | div = 1
+               6 | ack = 0
 
-  [5] Linha 6: Variável 'tot' com nome muito curto (≤4 chars)
-      Trecho  : tot = ...
+  [5] Linha 6: Variável 'ack' com nome muito curto (≤4 chars)
+      Trecho  : ack = ...
       Contexto:
-               5 | j=3
-        >>>    6 | tot=n
-               7 | while(i!=k-1):
+               5 | div = 1
+        >>>    6 | ack = 0
+               7 | soma = 0
 
-  [6] Linha 8: Variável 'tot' com nome muito curto (≤4 chars)
-      Trecho  : tot = ...
+  [6] Linha 7: Variável 'soma' com nome muito curto (≤4 chars)
+      Trecho  : soma = ...
       Contexto:
-               7 | while(i!=k-1):
-        >>>    8 | 	tot=tot+(n**j)/j
-               9 | 	j=j+2
+               6 | ack = 0
+        >>>    7 | soma = 0
+               8 | while(ack < k ):
 
-  [7] Linha 9: Variável 'j' com nome muito curto (≤4 chars)
-      Trecho  : j = ...
+  [7] Linha 9: Variável 'son' com nome muito curto (≤4 chars)
+      Trecho  : son = ...
       Contexto:
-               8 | 	tot=tot+(n**j)/j
-        >>>    9 | 	j=j+2
-              10 | 	i=i+1
-
-  [8] Linha 10: Variável 'i' com nome muito curto (≤4 chars)
-      Trecho  : i = ...
-      Contexto:
-               9 | 	j=j+2
-        >>>   10 | 	i=i+1
-              11 | print(round(tot,7))
-
-======================================================================ex)/div
+               8 | while(ack < k ):
+        >>>    9 | 	son = (x**ex)/div
               10 | 	ex = ex + 2
 
   [8] Linha 10: Variável 'ex' com nome muito curto (≤4 chars)

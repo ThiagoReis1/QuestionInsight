@@ -2,11 +2,11 @@
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
 Arquivo     : 1222_1599.log
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2018_1_v1.81\2018-1\185\users\3342\executions\1222_1599.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2018_1_v1.81\2018-1\185\users\3353\executions\1222_1599.log
 Assessment  : 1222
 Título      : Trabalho Prático 05: Vetores e Strings
 Questão     : 1599
-Aluno       : 3342
+Aluno       : 3353
 Grupo       : TP 05
 Significado : Vetores e Strings
 Total MCs   : 2
@@ -16,19 +16,16 @@ Total MCs   : 2
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | from numpy import *
+     1 | from numpy import*
      2 | 
-     3 | c = array(eval(input("Compras: ")))
-     4 | 
-     5 | i=0
-     6 | s=0
-     7 | while i < size(c):
-     8 | 	if c[i] >= 80:
-     9 | 		c[i] = c[i]*0.85
-    10 | 	s=s+c[i]	
-    11 | 	i = i + 1
-    12 | 	
-    13 | print(round(s,2))
+     3 | cust=array(eval((input("digite um vetor: "))))
+     4 | i=0
+     5 | while(i<size(cust)):
+     6 | 	if(80<cust[i]):
+     7 | 		cust[i]=cust[i]*0.85
+     8 | 	i=i+1
+     9 | 
+    10 | print(round(sum(cust),2))
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
@@ -41,41 +38,27 @@ DETALHAMENTO DOS MISCONCEPTIONS
       Trecho  : —
 
 ▶ G4 — Funções/variáveis com nomes não significativos
-  Ocorrências: 5
+  Ocorrências: 3
 
-  [1] Linha 3: Variável 'c' com nome muito curto (≤4 chars)
-      Trecho  : c = ...
+  [1] Linha 3: Variável 'cust' com nome muito curto (≤4 chars)
+      Trecho  : cust = ...
       Contexto:
                2 | 
-        >>>    3 | c = array(eval(input("Compras: ")))
-               4 | 
+        >>>    3 | cust=array(eval((input("digite um vetor: "))))
+               4 | i=0
 
-  [2] Linha 5: Variável 'i' com nome muito curto (≤4 chars)
+  [2] Linha 4: Variável 'i' com nome muito curto (≤4 chars)
       Trecho  : i = ...
       Contexto:
-               4 | 
-        >>>    5 | i=0
-               6 | s=0
+               3 | cust=array(eval((input("digite um vetor: "))))
+        >>>    4 | i=0
+               5 | while(i<size(cust)):
 
-  [3] Linha 6: Variável 's' com nome muito curto (≤4 chars)
-      Trecho  : s = ...
-      Contexto:
-               5 | i=0
-        >>>    6 | s=0
-               7 | while i < size(c):
-
-  [4] Linha 10: Variável 's' com nome muito curto (≤4 chars)
-      Trecho  : s = ...
-      Contexto:
-               9 | 		c[i] = c[i]*0.85
-        >>>   10 | 	s=s+c[i]	
-              11 | 	i = i + 1
-
-  [5] Linha 11: Variável 'i' com nome muito curto (≤4 chars)
+  [3] Linha 8: Variável 'i' com nome muito curto (≤4 chars)
       Trecho  : i = ...
       Contexto:
-              10 | 	s=s+c[i]	
-        >>>   11 | 	i = i + 1
-              12 | 	
+               7 | 		cust[i]=cust[i]*0.85
+        >>>    8 | 	i=i+1
+               9 | 
 
 ======================================================================

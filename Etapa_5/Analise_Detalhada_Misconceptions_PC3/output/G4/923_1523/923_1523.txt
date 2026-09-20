@@ -2,11 +2,11 @@
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
 Arquivo     : 923_1523.log
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2017_2_v1.81\2017-2\160\users\2854\executions\923_1523.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2017_2_v1.81\2017-2\160\users\2855\executions\923_1523.log
 Assessment  : 923
 Título      : Trabalho Prático 4: Estrutura de Repetição por Condição (while)
 Questão     : 1523
-Aluno       : 2854
+Aluno       : 2855
 Grupo       : TP 04
 Significado : Estrutura de Repetição por Condição
 Total MCs   : 1
@@ -16,69 +16,70 @@ Total MCs   : 1
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | #qunatidade inicial de baloes da frota
-     2 | qi = int(input("quantidade inicial:"))
-     3 | #quantidade de novos baloes construidos
-     4 | qc = int(input("quantidade c:"))
-     5 | #quantidade de baloes destruidos a cada semana
-     6 | qd = int(input("quantidade d:"))
-     7 | 
-     8 | s = 0
-     9 | 
-    10 | 
-    11 | while(qi < 200):
-    12 | 	qi = (qi + qc - qd)
-    13 | 	s = s + 1
-    14 | 
-    15 | print(s)	
+     1 | Qi = int(input("Quantidade inial de balões: "))
+     2 | Qc = int(input("Quantidade de balões costruidos: "))
+     3 | Qd = int(input("Quantidades de balões detruidos: "))
+     4 | 
+     5 | sem = 0
+     6 | Qt = Qi +(Qc -Qd)*0
+     7 | while(Qt < 200):
+     8 | 	sem = sem + 1
+     9 | 	Qt = Qi + (Qc - Qd)*sem
+    10 | print(sem)
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
 ----------------------------------------------------------------------
 
 ▶ G4 — Funções/variáveis com nomes não significativos
-  Ocorrências: 6
+  Ocorrências: 7
 
-  [1] Linha 2: Variável 'qi' com nome muito curto (≤4 chars)
-      Trecho  : qi = ...
+  [1] Linha 1: Variável 'Qi' com nome muito curto (≤4 chars)
+      Trecho  : Qi = ...
       Contexto:
-               1 | #qunatidade inicial de baloes da frota
-        >>>    2 | qi = int(input("quantidade inicial:"))
-               3 | #quantidade de novos baloes construidos
+        >>>    1 | Qi = int(input("Quantidade inial de balões: "))
+               2 | Qc = int(input("Quantidade de balões costruidos: "))
 
-  [2] Linha 4: Variável 'qc' com nome muito curto (≤4 chars)
-      Trecho  : qc = ...
+  [2] Linha 2: Variável 'Qc' com nome muito curto (≤4 chars)
+      Trecho  : Qc = ...
       Contexto:
-               3 | #quantidade de novos baloes construidos
-        >>>    4 | qc = int(input("quantidade c:"))
-               5 | #quantidade de baloes destruidos a cada semana
+               1 | Qi = int(input("Quantidade inial de balões: "))
+        >>>    2 | Qc = int(input("Quantidade de balões costruidos: "))
+               3 | Qd = int(input("Quantidades de balões detruidos: "))
 
-  [3] Linha 6: Variável 'qd' com nome muito curto (≤4 chars)
-      Trecho  : qd = ...
+  [3] Linha 3: Variável 'Qd' com nome muito curto (≤4 chars)
+      Trecho  : Qd = ...
       Contexto:
-               5 | #quantidade de baloes destruidos a cada semana
-        >>>    6 | qd = int(input("quantidade d:"))
-               7 | 
+               2 | Qc = int(input("Quantidade de balões costruidos: "))
+        >>>    3 | Qd = int(input("Quantidades de balões detruidos: "))
+               4 | 
 
-  [4] Linha 8: Variável 's' com nome muito curto (≤4 chars)
-      Trecho  : s = ...
+  [4] Linha 5: Variável 'sem' com nome muito curto (≤4 chars)
+      Trecho  : sem = ...
       Contexto:
-               7 | 
-        >>>    8 | s = 0
-               9 | 
+               4 | 
+        >>>    5 | sem = 0
+               6 | Qt = Qi +(Qc -Qd)*0
 
-  [5] Linha 12: Variável 'qi' com nome muito curto (≤4 chars)
-      Trecho  : qi = ...
+  [5] Linha 6: Variável 'Qt' com nome muito curto (≤4 chars)
+      Trecho  : Qt = ...
       Contexto:
-              11 | while(qi < 200):
-        >>>   12 | 	qi = (qi + qc - qd)
-              13 | 	s = s + 1
+               5 | sem = 0
+        >>>    6 | Qt = Qi +(Qc -Qd)*0
+               7 | while(Qt < 200):
 
-  [6] Linha 13: Variável 's' com nome muito curto (≤4 chars)
-      Trecho  : s = ...
+  [6] Linha 8: Variável 'sem' com nome muito curto (≤4 chars)
+      Trecho  : sem = ...
       Contexto:
-              12 | 	qi = (qi + qc - qd)
-        >>>   13 | 	s = s + 1
-              14 | 
+               7 | while(Qt < 200):
+        >>>    8 | 	sem = sem + 1
+               9 | 	Qt = Qi + (Qc - Qd)*sem
+
+  [7] Linha 9: Variável 'Qt' com nome muito curto (≤4 chars)
+      Trecho  : Qt = ...
+      Contexto:
+               8 | 	sem = sem + 1
+        >>>    9 | 	Qt = Qi + (Qc - Qd)*sem
+              10 | print(sem)
 
 ======================================================================

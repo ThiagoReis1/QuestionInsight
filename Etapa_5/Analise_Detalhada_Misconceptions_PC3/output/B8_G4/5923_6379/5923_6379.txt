@@ -2,11 +2,11 @@
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
 Arquivo     : 5923_6379.log
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2024_1_v1.81\2024-1\590\users\9814\executions\5923_6379.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2024_1_v1.81\2024-1\590\users\9830\executions\5923_6379.log
 Assessment  : 5923
 Título      : TP 6: Estrutura de Repetição por Contagem (for)
 Questão     : 6379
-Aluno       : 9814
+Aluno       : 9830
 Grupo       : TP 06
 Significado : Estrutura de Repetição por Contagem
 Total MCs   : 2
@@ -16,25 +16,23 @@ Total MCs   : 2
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | from numpy import * 
+     1 | from numpy import *
      2 | 
-     3 | s = input('Determine: ').upper().split(',')
-     4 | 
-     5 | v0 = zeros(5, dtype=int)
-     6 | 
-     7 | for i in s:
-     8 | 	if i == 'A':
-     9 | 		v0[0] += 1
-    10 | 	elif i == 'B':
-    11 | 		v0[1] += 1
-    12 | 	elif i == 'C':
-    13 | 		v0[2] += 1
-    14 | 	elif i == 'D':
-    15 | 		v0[3] += 1
-    16 | 	elif i == 'E':
-    17 | 		v0[4] += 1
-    18 | 	
-    19 | print(v0)
+     3 | nota = input("").upper().split(',')
+     4 | cat = zeros(5, dtype=int)
+     5 | for i in nota:
+     6 | 	if i == 'A':
+     7 | 		cat[0] += 1
+     8 | 	elif i == 'B':
+     9 | 		cat[1] += 1
+    10 | 	elif i == 'C':
+    11 | 		cat[2] += 1
+    12 | 	elif i == 'D':
+    13 | 		cat[3] += 1
+    14 | 	elif i == 'E':
+    15 | 		cat[4] += 1
+    16 | 		
+    17 | print(cat)
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
@@ -43,28 +41,28 @@ DETALHAMENTO DOS MISCONCEPTIONS
 ▶ B8 — Não utilização de elif/else
   Ocorrências: 1
 
-  [1] Linha 14: Cadeia if/elif sem bloco else final
-      Trecho  : if ... (linha 14) / elif ... sem else
+  [1] Linha 12: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 12) / elif ... sem else
       Contexto:
-              13 | 		v0[2] += 1
-        >>>   14 | 	elif i == 'D':
-              15 | 		v0[3] += 1
+              11 | 		cat[2] += 1
+        >>>   12 | 	elif i == 'D':
+              13 | 		cat[3] += 1
 
 ▶ G4 — Funções/variáveis com nomes não significativos
   Ocorrências: 2
 
-  [1] Linha 3: Variável 's' com nome muito curto (≤4 chars)
-      Trecho  : s = ...
+  [1] Linha 3: Variável 'nota' com nome muito curto (≤4 chars)
+      Trecho  : nota = ...
       Contexto:
                2 | 
-        >>>    3 | s = input('Determine: ').upper().split(',')
-               4 | 
+        >>>    3 | nota = input("").upper().split(',')
+               4 | cat = zeros(5, dtype=int)
 
-  [2] Linha 5: Variável 'v0' com nome muito curto (≤4 chars)
-      Trecho  : v0 = ...
+  [2] Linha 4: Variável 'cat' com nome muito curto (≤4 chars)
+      Trecho  : cat = ...
       Contexto:
-               4 | 
-        >>>    5 | v0 = zeros(5, dtype=int)
-               6 | 
+               3 | nota = input("").upper().split(',')
+        >>>    4 | cat = zeros(5, dtype=int)
+               5 | for i in nota:
 
 ======================================================================

@@ -2,11 +2,11 @@
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
 Arquivo     : 541_1938.log
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2017_1_v1.81\2017-1\142\users\2353\executions\541_1938.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2017_1_v1.81\2017-1\142\users\2211\executions\541_1938.log
 Assessment  : 541
 Título      : Trabalho Prático 02 - Estrutura Condicional Simples e Composta
 Questão     : 1938
-Aluno       : 2353
+Aluno       : 2211
 Grupo       : TP 02
 Significado : Estrutura Condicional Simples e Composta
 Total MCs   : 1
@@ -16,50 +16,74 @@ Total MCs   : 1
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | a=str(input("Digite o aminoacido: "))
-     2 | 
-     3 | if(a==("arginina".upper())):
-     4 | 	arg=((6*12.011)+(15*1.00794)+(4*14.00674)+(2*15.9994))
-     5 | 	print(round(arg,2))
-     6 | 	
-     7 | else:
-     8 | 	tir=((9*12.011)+(11*1.00794)+(14.00674)+(3*15.9994))
-     9 | 	print(round(tir,2))
+     1 | O=15.9994
+     2 | C=12.011
+     3 | N=14.00674
+     4 | H=1.00794
+     5 | ARGININA=(C*6)+(H*15)+(N*4)+(O*2)
+     6 | TIROSINA=(C*9)+(H*11)+(N+(O*3))
+     7 | 
+     8 | nome= input("tipo de aminoacido: ")
+     9 | 
+    10 | if (nome=="ARGININA"):
+    11 |     peso=ARGININA
+    12 | else:
+    13 | 	 peso=TIROSINA
+    14 | print (round(peso,2))
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
 ----------------------------------------------------------------------
 
 ▶ G4 — Funções/variáveis com nomes não significativos
-  Ocorrências: 3
+  Ocorrências: 7
 
-  [1] Linha 1: Variável 'a' com nome muito curto (≤4 chars)
-      Trecho  : a = ...
+  [1] Linha 1: Variável 'O' com nome muito curto (≤4 chars)
+      Trecho  : O = ...
       Contexto:
-        >>>    1 | a=str(input("Digite o aminoacido: "))
-               2 | 
+        >>>    1 | O=15.9994
+               2 | C=12.011
 
-  [2] Linha 4: Variável 'arg' com nome muito curto (≤4 chars)
-      Trecho  : arg = ...
+  [2] Linha 2: Variável 'C' com nome muito curto (≤4 chars)
+      Trecho  : C = ...
       Contexto:
-               3 | if(a==("arginina".upper())):
-        >>>    4 | 	arg=((6*12.011)+(15*1.00794)+(4*14.00674)+(2*15.9994))
-               5 | 	print(round(arg,2))
+               1 | O=15.9994
+        >>>    2 | C=12.011
+               3 | N=14.00674
 
-  [3] Linha 8: Variável 'tir' com nome muito curto (≤4 chars)
-      Trecho  : tir = ...
+  [3] Linha 3: Variável 'N' com nome muito curto (≤4 chars)
+      Trecho  : N = ...
       Contexto:
-               7 | else:
-        >>>    8 | 	tir=((9*12.011)+(11*1.00794)+(14.00674)+(3*15.9994))
-               9 | 	print(round(tir,2))
-
-======================================================================
-
-  [5] Linha 5: Variável 'A' com nome muito curto (≤4 chars)
-      Trecho  : A = ...
-      Contexto:
+               2 | C=12.011
+        >>>    3 | N=14.00674
                4 | H=1.00794
-        >>>    5 | A=input("digite o aminoacido: ")
-               6 | 
+
+  [4] Linha 4: Variável 'H' com nome muito curto (≤4 chars)
+      Trecho  : H = ...
+      Contexto:
+               3 | N=14.00674
+        >>>    4 | H=1.00794
+               5 | ARGININA=(C*6)+(H*15)+(N*4)+(O*2)
+
+  [5] Linha 8: Variável 'nome' com nome muito curto (≤4 chars)
+      Trecho  : nome = ...
+      Contexto:
+               7 | 
+        >>>    8 | nome= input("tipo de aminoacido: ")
+               9 | 
+
+  [6] Linha 11: Variável 'peso' com nome muito curto (≤4 chars)
+      Trecho  : peso = ...
+      Contexto:
+              10 | if (nome=="ARGININA"):
+        >>>   11 |     peso=ARGININA
+              12 | else:
+
+  [7] Linha 13: Variável 'peso' com nome muito curto (≤4 chars)
+      Trecho  : peso = ...
+      Contexto:
+              12 | else:
+        >>>   13 | 	 peso=TIROSINA
+              14 | print (round(peso,2))
 
 ======================================================================

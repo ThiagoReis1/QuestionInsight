@@ -2,11 +2,11 @@
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
 Arquivo     : 1095_1394.log
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2018_1_v1.81\2018-1\181\users\3399\executions\1095_1394.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2018_1_v1.81\2018-1\181\users\3073\executions\1095_1394.log
 Assessment  : 1095
 Título      : TP 2 - Condicionais compostos (if/else)
 Questão     : 1394
-Aluno       : 3399
+Aluno       : 3073
 Grupo       : TP 02
 Significado : Estrutura Condicional Simples e Composta
 Total MCs   : 1
@@ -16,15 +16,16 @@ Total MCs   : 1
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | x = float(input("numero de hora: "))
+     1 | h = float(input("Horas trabalhadas:"))
      2 | 
-     3 | n1 = (x - 20)
-     4 | 
-     5 | if(x <= 20):
-     6 | 	caso = x*50
+     3 | if(h <= 20):
+     4 | 	p = 50 * h
+     5 | 	print (round(p,2))
+     6 | 	
      7 | else:
-     8 | 	caso = (x*50)-(n1*50) + (n1*70)
-     9 | print(round(caso, 2))
+     8 | 	ex = h - 20
+     9 | 	p = (50 * 20) + (70 * ex)
+    10 | 	print (round(p,2))
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
@@ -33,31 +34,31 @@ DETALHAMENTO DOS MISCONCEPTIONS
 ▶ G4 — Funções/variáveis com nomes não significativos
   Ocorrências: 4
 
-  [1] Linha 1: Variável 'x' com nome muito curto (≤4 chars)
-      Trecho  : x = ...
+  [1] Linha 1: Variável 'h' com nome muito curto (≤4 chars)
+      Trecho  : h = ...
       Contexto:
-        >>>    1 | x = float(input("numero de hora: "))
+        >>>    1 | h = float(input("Horas trabalhadas:"))
                2 | 
 
-  [2] Linha 3: Variável 'n1' com nome muito curto (≤4 chars)
-      Trecho  : n1 = ...
+  [2] Linha 4: Variável 'p' com nome muito curto (≤4 chars)
+      Trecho  : p = ...
       Contexto:
-               2 | 
-        >>>    3 | n1 = (x - 20)
-               4 | 
+               3 | if(h <= 20):
+        >>>    4 | 	p = 50 * h
+               5 | 	print (round(p,2))
 
-  [3] Linha 6: Variável 'caso' com nome muito curto (≤4 chars)
-      Trecho  : caso = ...
-      Contexto:
-               5 | if(x <= 20):
-        >>>    6 | 	caso = x*50
-               7 | else:
-
-  [4] Linha 8: Variável 'caso' com nome muito curto (≤4 chars)
-      Trecho  : caso = ...
+  [3] Linha 8: Variável 'ex' com nome muito curto (≤4 chars)
+      Trecho  : ex = ...
       Contexto:
                7 | else:
-        >>>    8 | 	caso = (x*50)-(n1*50) + (n1*70)
-               9 | print(round(caso, 2))
+        >>>    8 | 	ex = h - 20
+               9 | 	p = (50 * 20) + (70 * ex)
 
-=============================================================================================================================
+  [4] Linha 9: Variável 'p' com nome muito curto (≤4 chars)
+      Trecho  : p = ...
+      Contexto:
+               8 | 	ex = h - 20
+        >>>    9 | 	p = (50 * 20) + (70 * ex)
+              10 | 	print (round(p,2))
+
+======================================================================

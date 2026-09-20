@@ -2,11 +2,11 @@
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
 Arquivo     : 574_1989.log
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2017_1_v1.81\2017-1\138\users\2190\executions\574_1989.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2017_1_v1.81\2017-1\138\users\2195\executions\574_1989.log
 Assessment  : 574
 Título      : Trabalho Prático 3: Estruturas Condicionais Encadeadas
 Questão     : 1989
-Aluno       : 2190
+Aluno       : 2195
 Grupo       : TP 03
 Significado : Estrutura Condicional Encadeada
 Total MCs   : 1
@@ -16,24 +16,24 @@ Total MCs   : 1
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | nome=input("Nome do aminoacido:").upper()
-     2 | 
-     3 | O=15.999
-     4 | C=12.011
-     5 | N=14.00674
-     6 | H=1.00794
-     7 | if(nome == "ASPARAGINA"):
-     8 | 	A=(C*4+H*8+N*2+O*3)
-     9 | 	print(round(A,2))	
-    10 | elif(nome == "GLUTAMINA"):
-    11 | 	G=(C*5+H*8+N*1+O*4)
-    12 | 	print(round(G,2))
-    13 | elif(nome == "TRIPTOFANO"):
-    14 | 	T=(C*11+H*11+N*2+O*2)
-    15 | 	print(round(T,2))		
+     1 | amin = input("").upper()
+     2 | o = 15.999
+     3 | c = 12.011
+     4 | n = 14.00674
+     5 | h = 1.00794
+     6 | 
+     7 | if(amin == "ASPARAGINA"):
+     8 | 	soma = (c * 4) + (h * 8) + (n * 2) + (o * 3)
+     9 | 	print(round(soma, 2))
+    10 | elif(amin == "GLUTAMINA"):
+    11 | 	soma = (c * 5) + (h * 8) + (n * 1) + (o * 4)
+    12 | 	print(round(soma, 2))
+    13 | elif(amin == "TRIPTOFANO"):
+    14 | 	soma = (c * 11) + (h * 11) + (n * 2) + (o * 2)
+    15 | 	print(round(soma, 2))
     16 | else:
-    17 | 	print("Entrada: %s" %(nome))		
-    18 | 	print("Dado Invalido")		
+    17 | 	print("Entrada:", amin)
+    18 | 	print("Dado Invalido")
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
@@ -42,65 +42,61 @@ DETALHAMENTO DOS MISCONCEPTIONS
 ▶ G4 — Funções/variáveis com nomes não significativos
   Ocorrências: 8
 
-  [1] Linha 1: Variável 'nome' com nome muito curto (≤4 chars)
-      Trecho  : nome = ...
+  [1] Linha 1: Variável 'amin' com nome muito curto (≤4 chars)
+      Trecho  : amin = ...
       Contexto:
-        >>>    1 | nome=input("Nome do aminoacido:").upper()
-               2 | 
+        >>>    1 | amin = input("").upper()
+               2 | o = 15.999
 
-  [2] Linha 3: Variável 'O' com nome muito curto (≤4 chars)
-      Trecho  : O = ...
+  [2] Linha 2: Variável 'o' com nome muito curto (≤4 chars)
+      Trecho  : o = ...
       Contexto:
-               2 | 
-        >>>    3 | O=15.999
-               4 | C=12.011
+               1 | amin = input("").upper()
+        >>>    2 | o = 15.999
+               3 | c = 12.011
 
-  [3] Linha 4: Variável 'C' com nome muito curto (≤4 chars)
-      Trecho  : C = ...
+  [3] Linha 3: Variável 'c' com nome muito curto (≤4 chars)
+      Trecho  : c = ...
       Contexto:
-               3 | O=15.999
-        >>>    4 | C=12.011
-               5 | N=14.00674
+               2 | o = 15.999
+        >>>    3 | c = 12.011
+               4 | n = 14.00674
 
-  [4] Linha 5: Variável 'N' com nome muito curto (≤4 chars)
-      Trecho  : N = ...
+  [4] Linha 4: Variável 'n' com nome muito curto (≤4 chars)
+      Trecho  : n = ...
       Contexto:
-               4 | C=12.011
-        >>>    5 | N=14.00674
-               6 | H=1.00794
+               3 | c = 12.011
+        >>>    4 | n = 14.00674
+               5 | h = 1.00794
 
-  [5] Linha 6: Variável 'H' com nome muito curto (≤4 chars)
-      Trecho  : H = ...
+  [5] Linha 5: Variável 'h' com nome muito curto (≤4 chars)
+      Trecho  : h = ...
       Contexto:
-               5 | N=14.00674
-        >>>    6 | H=1.00794
-               7 | if(nome == "ASPARAGINA"):
+               4 | n = 14.00674
+        >>>    5 | h = 1.00794
+               6 | 
 
-  [6] Linha 8: Variável 'A' com nome muito curto (≤4 chars)
-      Trecho  : A = ...
+  [6] Linha 8: Variável 'soma' com nome muito curto (≤4 chars)
+      Trecho  : soma = ...
       Contexto:
-               7 | if(nome == "ASPARAGINA"):
-        >>>    8 | 	A=(C*4+H*8+N*2+O*3)
-               9 | 	print(round(A,2))	
+               7 | if(amin == "ASPARAGINA"):
+        >>>    8 | 	soma = (c * 4) + (h * 8) + (n * 2) + (o * 3)
+               9 | 	print(round(soma, 2))
 
-  [7] Linha 11: Variável 'G' com nome muito curto (≤4 chars)
-      Trecho  : G = ...
+  [7] Linha 11: Variável 'soma' com nome muito curto (≤4 chars)
+      Trecho  : soma = ...
       Contexto:
-              10 | elif(nome == "GLUTAMINA"):
-        >>>   11 | 	G=(C*5+H*8+N*1+O*4)
-              12 | 	print(round(G,2))
+              10 | elif(amin == "GLUTAMINA"):
+        >>>   11 | 	soma = (c * 5) + (h * 8) + (n * 1) + (o * 4)
+              12 | 	print(round(soma, 2))
 
-  [8] Linha 14: Variável 'T' com nome muito curto (≤4 chars)
-      Trecho  : T = ...
+  [8] Linha 14: Variável 'soma' com nome muito curto (≤4 chars)
+      Trecho  : soma = ...
       Contexto:
-              13 | elif(nome == "TRIPTOFANO"):
-        >>>   14 | 	T=(C*11+H*11+N*2+O*2)
-              15 | 	print(round(T,2))		
+              13 | elif(amin == "TRIPTOFANO"):
+        >>>   14 | 	soma = (c * 11) + (h * 11) + (n * 2) + (o * 2)
+              15 | 	print(round(soma, 2))
 
-====================================================================== Trecho  : a = ...
-      Contexto:
-              13 | 	elif(n == "TRIPTOFANO")	:
-        >>>   14 | 		a = (C*11) + (H*11) + (N*2) + (O*2)
-              15 | 		print(round(a, 2))
+======================================================================)
 
 ======================================================================

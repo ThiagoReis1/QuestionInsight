@@ -2,11 +2,11 @@
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
 Arquivo     : 1472_2033.log
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2018_2_v1.81\2018-2\206\users\3706\executions\1472_2033.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2018_2_v1.81\2018-2\206\users\3702\executions\1472_2033.log
 Assessment  : 1472
 Título      : TP 4: Estrutura de Repetição por Condição (while)
 Questão     : 2033
-Aluno       : 3706
+Aluno       : 3702
 Grupo       : TP 04
 Significado : Estrutura de Repetição por Condição
 Total MCs   : 2
@@ -16,17 +16,17 @@ Total MCs   : 2
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | nome= input("")
-     2 | soma= 0
-     3 | 
-     4 | while(nome.upper()!= "S"):
-     5 | 	if(nome.upper()== "ICOMP"):
-     6 | 		soma = soma + 1
-     7 | 		nome= input("")
-     8 | 	else:
-     9 | 		nome= input("")
-    10 | if(nome.upper()=="S"):
-    11 | 	print(soma)
+     1 | t = input()
+     2 | a = t.upper()
+     3 | x = 0
+     4 | 
+     5 | while (a != "S"):
+     6 | 	if (a == "ICOMP"):
+     7 | 		x = x + 1
+     8 | 	t = input()
+     9 | 	a = t.upper()
+    10 | 	
+    11 | print(x)
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
@@ -39,41 +39,47 @@ DETALHAMENTO DOS MISCONCEPTIONS
       Trecho  : —
 
 ▶ G4 — Funções/variáveis com nomes não significativos
-  Ocorrências: 5
+  Ocorrências: 6
 
-  [1] Linha 1: Variável 'nome' com nome muito curto (≤4 chars)
-      Trecho  : nome = ...
+  [1] Linha 1: Variável 't' com nome muito curto (≤4 chars)
+      Trecho  : t = ...
       Contexto:
-        >>>    1 | nome= input("")
-               2 | soma= 0
+        >>>    1 | t = input()
+               2 | a = t.upper()
 
-  [2] Linha 2: Variável 'soma' com nome muito curto (≤4 chars)
-      Trecho  : soma = ...
+  [2] Linha 2: Variável 'a' com nome muito curto (≤4 chars)
+      Trecho  : a = ...
       Contexto:
-               1 | nome= input("")
-        >>>    2 | soma= 0
-               3 | 
+               1 | t = input()
+        >>>    2 | a = t.upper()
+               3 | x = 0
 
-  [3] Linha 6: Variável 'soma' com nome muito curto (≤4 chars)
-      Trecho  : soma = ...
+  [3] Linha 3: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
       Contexto:
-               5 | 	if(nome.upper()== "ICOMP"):
-        >>>    6 | 		soma = soma + 1
-               7 | 		nome= input("")
+               2 | a = t.upper()
+        >>>    3 | x = 0
+               4 | 
 
-  [4] Linha 7: Variável 'nome' com nome muito curto (≤4 chars)
-      Trecho  : nome = ...
+  [4] Linha 8: Variável 't' com nome muito curto (≤4 chars)
+      Trecho  : t = ...
       Contexto:
-               6 | 		soma = soma + 1
-        >>>    7 | 		nome= input("")
-               8 | 	else:
+               7 | 		x = x + 1
+        >>>    8 | 	t = input()
+               9 | 	a = t.upper()
 
-  [5] Linha 9: Variável 'nome' com nome muito curto (≤4 chars)
-      Trecho  : nome = ...
+  [5] Linha 9: Variável 'a' com nome muito curto (≤4 chars)
+      Trecho  : a = ...
       Contexto:
-               8 | 	else:
-        >>>    9 | 		nome= input("")
-              10 | if(nome.upper()=="S"):
+               8 | 	t = input()
+        >>>    9 | 	a = t.upper()
+              10 | 	
 
-======================================================================
+  [6] Linha 7: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+               6 | 	if (a == "ICOMP"):
+        >>>    7 | 		x = x + 1
+               8 | 	t = input()
+
 ======================================================================

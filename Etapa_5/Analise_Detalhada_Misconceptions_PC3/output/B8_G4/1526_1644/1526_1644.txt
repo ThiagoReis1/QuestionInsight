@@ -2,11 +2,11 @@
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
 Arquivo     : 1526_1644.log
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2018_2_v1.81\2018-2\206\users\3709\executions\1526_1644.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2018_2_v1.81\2018-2\206\users\3645\executions\1526_1644.log
 Assessment  : 1526
 Título      : TP 6: Estrutura de Repetição por Contagem (for)
 Questão     : 1644
-Aluno       : 3709
+Aluno       : 3645
 Grupo       : TP 06
 Significado : Estrutura de Repetição por Contagem
 Total MCs   : 2
@@ -16,24 +16,24 @@ Total MCs   : 2
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | from numpy import*
-     2 | #alunos reprovados
-     3 | n = array(eval(input("notas: ")))
-     4 | t = 0
-     5 | y = 0
-     6 | c = 0
-     7 | while t < size(n):
-     8 | 	if (n[t] < 5):
-     9 | 		c += 1
-    10 | 	t += 1
-    11 | t = 0
-    12 | x = zeros(c, dtype=int)
-    13 | while(t < size(n)):
-    14 | 	if n[t] < 5:
-    15 | 		x[y] = t
-    16 | 		y += 1
-    17 | 	t += 1
-    18 | print(c)
+     1 | #nota menor que 5
+     2 | from numpy import *
+     3 | v = array(eval(input('notas:')))
+     4 | a=0
+     5 | t=0
+     6 | while t<size(v):
+     7 | 	if v[t]<5:
+     8 | 		a+=1
+     9 | 	t+=1
+    10 | t=0
+    11 | y=0
+    12 | x=zeros(a,dtype=int)
+    13 | print(a)
+    14 | while t<size(v):
+    15 | 	if v[t]<5:
+    16 | 		x[y]=t
+    17 | 		y+=1
+    18 | 	t+=1
     19 | print(x)
 
 ----------------------------------------------------------------------
@@ -49,46 +49,46 @@ DETALHAMENTO DOS MISCONCEPTIONS
 ▶ G4 — Funções/variáveis com nomes não significativos
   Ocorrências: 6
 
-  [1] Linha 3: Variável 'n' com nome muito curto (≤4 chars)
-      Trecho  : n = ...
+  [1] Linha 3: Variável 'v' com nome muito curto (≤4 chars)
+      Trecho  : v = ...
       Contexto:
-               2 | #alunos reprovados
-        >>>    3 | n = array(eval(input("notas: ")))
-               4 | t = 0
+               2 | from numpy import *
+        >>>    3 | v = array(eval(input('notas:')))
+               4 | a=0
 
-  [2] Linha 4: Variável 't' com nome muito curto (≤4 chars)
+  [2] Linha 4: Variável 'a' com nome muito curto (≤4 chars)
+      Trecho  : a = ...
+      Contexto:
+               3 | v = array(eval(input('notas:')))
+        >>>    4 | a=0
+               5 | t=0
+
+  [3] Linha 5: Variável 't' com nome muito curto (≤4 chars)
       Trecho  : t = ...
       Contexto:
-               3 | n = array(eval(input("notas: ")))
-        >>>    4 | t = 0
-               5 | y = 0
+               4 | a=0
+        >>>    5 | t=0
+               6 | while t<size(v):
 
-  [3] Linha 5: Variável 'y' com nome muito curto (≤4 chars)
+  [4] Linha 10: Variável 't' com nome muito curto (≤4 chars)
+      Trecho  : t = ...
+      Contexto:
+               9 | 	t+=1
+        >>>   10 | t=0
+              11 | y=0
+
+  [5] Linha 11: Variável 'y' com nome muito curto (≤4 chars)
       Trecho  : y = ...
       Contexto:
-               4 | t = 0
-        >>>    5 | y = 0
-               6 | c = 0
-
-  [4] Linha 6: Variável 'c' com nome muito curto (≤4 chars)
-      Trecho  : c = ...
-      Contexto:
-               5 | y = 0
-        >>>    6 | c = 0
-               7 | while t < size(n):
-
-  [5] Linha 11: Variável 't' com nome muito curto (≤4 chars)
-      Trecho  : t = ...
-      Contexto:
-              10 | 	t += 1
-        >>>   11 | t = 0
-              12 | x = zeros(c, dtype=int)
+              10 | t=0
+        >>>   11 | y=0
+              12 | x=zeros(a,dtype=int)
 
   [6] Linha 12: Variável 'x' com nome muito curto (≤4 chars)
       Trecho  : x = ...
       Contexto:
-              11 | t = 0
-        >>>   12 | x = zeros(c, dtype=int)
-              13 | while(t < size(n)):
+              11 | y=0
+        >>>   12 | x=zeros(a,dtype=int)
+              13 | print(a)
 
 ======================================================================

@@ -2,11 +2,11 @@
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
 Arquivo     : 201_1258.log
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2016_1_v1.81\2016-1\106\users\1651\executions\201_1258.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2016_1_v1.81\2016-1\106\users\1660\executions\201_1258.log
 Assessment  : 201
 Título      : Avaliação Parcial 06 – Repetição por contagem
 Questão     : 1258
-Aluno       : 1651
+Aluno       : 1660
 Grupo       : TP 06
 Significado : Estrutura de Repetição por Contagem
 Total MCs   : 2
@@ -18,112 +18,82 @@ CÓDIGO FONTE
 ----------------------------------------------------------------------
      1 | from numpy import *
      2 | from math import *
-     3 | 
-     4 | p=float(input("Qual eh o numero real?"))
-     5 | x = array(eval(input("Qual eh o vetor?")))
-     6 | y = array(eval(input("Qual eh o vetor?")))
-     7 | h=0
-     8 | n=0
-     9 | j=0
-    10 | t = ((p)/(p+1))
-    11 | xy=(x+y)
-    12 | for i in xy:
-    13 | 	n=n+(abs(i))**t
-    14 | v= n**(1/t)
-    15 | print(round(v,3))
+     3 | p = float(input("Qual o valor? "))
+     4 | vet = array(eval(input("Insira o vetor: ")))
+     5 | vet1 = array(eval(input("Insira o outro vetor: ")))
+     6 | t = p / (p + 1)
+     7 | 
+     8 | vint = 0
+     9 | vint1 = 0
+    10 | for i in range (0, size(vet)):
+    11 | 	vint = (abs(vet[i]+vet1[i]) ** t) + vint
+    12 | norv = vint ** (1/t)
+    13 | print(round(norv, 3))
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
 ----------------------------------------------------------------------
 
 ▶ A3 — Variável inicializada desnecessariamente
-  Ocorrências: 2
+  Ocorrências: 1
 
-  [1] Linha 7: Variável 'h' declarada mas nunca utilizada
-      Trecho  : h = ...
+  [1] Linha 9: Variável 'vint1' declarada mas nunca utilizada
+      Trecho  : vint1 = ...
       Contexto:
-               6 | y = array(eval(input("Qual eh o vetor?")))
-        >>>    7 | h=0
-               8 | n=0
-
-  [2] Linha 9: Variável 'j' declarada mas nunca utilizada
-      Trecho  : j = ...
-      Contexto:
-               8 | n=0
-        >>>    9 | j=0
-              10 | t = ((p)/(p+1))
+               8 | vint = 0
+        >>>    9 | vint1 = 0
+              10 | for i in range (0, size(vet)):
 
 ▶ G4 — Funções/variáveis com nomes não significativos
-  Ocorrências: 10
+  Ocorrências: 7
 
-  [1] Linha 4: Variável 'p' com nome muito curto (≤4 chars)
+  [1] Linha 3: Variável 'p' com nome muito curto (≤4 chars)
       Trecho  : p = ...
       Contexto:
-               3 | 
-        >>>    4 | p=float(input("Qual eh o numero real?"))
-               5 | x = array(eval(input("Qual eh o vetor?")))
+               2 | from math import *
+        >>>    3 | p = float(input("Qual o valor? "))
+               4 | vet = array(eval(input("Insira o vetor: ")))
 
-  [2] Linha 5: Variável 'x' com nome muito curto (≤4 chars)
-      Trecho  : x = ...
+  [2] Linha 4: Variável 'vet' com nome muito curto (≤4 chars)
+      Trecho  : vet = ...
       Contexto:
-               4 | p=float(input("Qual eh o numero real?"))
-        >>>    5 | x = array(eval(input("Qual eh o vetor?")))
-               6 | y = array(eval(input("Qual eh o vetor?")))
+               3 | p = float(input("Qual o valor? "))
+        >>>    4 | vet = array(eval(input("Insira o vetor: ")))
+               5 | vet1 = array(eval(input("Insira o outro vetor: ")))
 
-  [3] Linha 6: Variável 'y' com nome muito curto (≤4 chars)
-      Trecho  : y = ...
+  [3] Linha 5: Variável 'vet1' com nome muito curto (≤4 chars)
+      Trecho  : vet1 = ...
       Contexto:
-               5 | x = array(eval(input("Qual eh o vetor?")))
-        >>>    6 | y = array(eval(input("Qual eh o vetor?")))
-               7 | h=0
+               4 | vet = array(eval(input("Insira o vetor: ")))
+        >>>    5 | vet1 = array(eval(input("Insira o outro vetor: ")))
+               6 | t = p / (p + 1)
 
-  [4] Linha 7: Variável 'h' com nome muito curto (≤4 chars)
-      Trecho  : h = ...
-      Contexto:
-               6 | y = array(eval(input("Qual eh o vetor?")))
-        >>>    7 | h=0
-               8 | n=0
-
-  [5] Linha 8: Variável 'n' com nome muito curto (≤4 chars)
-      Trecho  : n = ...
-      Contexto:
-               7 | h=0
-        >>>    8 | n=0
-               9 | j=0
-
-  [6] Linha 9: Variável 'j' com nome muito curto (≤4 chars)
-      Trecho  : j = ...
-      Contexto:
-               8 | n=0
-        >>>    9 | j=0
-              10 | t = ((p)/(p+1))
-
-  [7] Linha 10: Variável 't' com nome muito curto (≤4 chars)
+  [4] Linha 6: Variável 't' com nome muito curto (≤4 chars)
       Trecho  : t = ...
       Contexto:
-               9 | j=0
-        >>>   10 | t = ((p)/(p+1))
-              11 | xy=(x+y)
+               5 | vet1 = array(eval(input("Insira o outro vetor: ")))
+        >>>    6 | t = p / (p + 1)
+               7 | 
 
-  [8] Linha 11: Variável 'xy' com nome muito curto (≤4 chars)
-      Trecho  : xy = ...
+  [5] Linha 8: Variável 'vint' com nome muito curto (≤4 chars)
+      Trecho  : vint = ...
       Contexto:
-              10 | t = ((p)/(p+1))
-        >>>   11 | xy=(x+y)
-              12 | for i in xy:
+               7 | 
+        >>>    8 | vint = 0
+               9 | vint1 = 0
 
-  [9] Linha 14: Variável 'v' com nome muito curto (≤4 chars)
-      Trecho  : v = ...
+  [6] Linha 12: Variável 'norv' com nome muito curto (≤4 chars)
+      Trecho  : norv = ...
       Contexto:
-              13 | 	n=n+(abs(i))**t
-        >>>   14 | v= n**(1/t)
-              15 | print(round(v,3))
+              11 | 	vint = (abs(vet[i]+vet1[i]) ** t) + vint
+        >>>   12 | norv = vint ** (1/t)
+              13 | print(round(norv, 3))
 
-  [10] Linha 13: Variável 'n' com nome muito curto (≤4 chars)
-      Trecho  : n = ...
+  [7] Linha 11: Variável 'vint' com nome muito curto (≤4 chars)
+      Trecho  : vint = ...
       Contexto:
-              12 | for i in xy:
-        >>>   13 | 	n=n+(abs(i))**t
-              14 | v= n**(1/t)
+              10 | for i in range (0, size(vet)):
+        >>>   11 | 	vint = (abs(vet[i]+vet1[i]) ** t) + vint
+              12 | norv = vint ** (1/t)
 
 ======================================================================

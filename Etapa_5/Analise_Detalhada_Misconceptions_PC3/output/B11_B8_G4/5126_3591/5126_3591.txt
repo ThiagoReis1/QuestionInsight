@@ -2,11 +2,11 @@
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
 Arquivo     : 5126_3591.log
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2023_1_v1.81\2023-1\530\users\8745\executions\5126_3591.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2023_1_v1.81\2023-1\530\users\8729\executions\5126_3591.log
 Assessment  : 5126
 Título      : TP 5: Vetores e Strings
 Questão     : 3591
-Aluno       : 8745
+Aluno       : 8729
 Grupo       : TP 05
 Significado : Vetores e Strings
 Total MCs   : 3
@@ -17,24 +17,24 @@ Total MCs   : 3
 CÓDIGO FONTE
 ----------------------------------------------------------------------
      1 | from numpy import*
-     2 | d = array(eval(input("Digite as faces: ")))
-     3 | s = 0
+     2 | x = array(eval(input("Face: ")))
+     3 | p = 0
      4 | i = 0
-     5 | while i < size(d):
-     6 | 	if d[i] == 1:
-     7 | 		s = s + 10
-     8 | 	if d[i] == 2:
-     9 | 		s = s + 5
-    10 | 	if d[i] == 3:
-    11 | 		s = s + 10
-    12 | 	if d[i] == 4:
-    13 | 		s = s + 5
-    14 | 	if d[i] == 5:
-    15 | 		s = s + 10
-    16 | 	if d[i] == 6:
-    17 | 		s = s + 5
-    18 | 	i = i + 1
-    19 | print(s)
+     5 | while i<size(x):
+     6 | 	if x[i] == 1:
+     7 | 		p = p + 10
+     8 | 	if x[i] == 2:
+     9 | 		p = p + 5
+    10 | 	if x[i] == 3:
+    11 | 		p = p + 10
+    12 | 	if x[i] == 4:
+    13 | 		p = p + 5
+    14 | 	if x[i] == 5:
+    15 | 		p = p + 10
+    16 | 	if x[i] == 6:
+    17 | 		p = p + 5
+    18 | 	i += 1
+    19 | print(round(p,2))
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
@@ -53,76 +53,69 @@ DETALHAMENTO DOS MISCONCEPTIONS
       Trecho  : —
 
 ▶ G4 — Funções/variáveis com nomes não significativos
-  Ocorrências: 10
+  Ocorrências: 9
 
-  [1] Linha 2: Variável 'd' com nome muito curto (≤4 chars)
-      Trecho  : d = ...
+  [1] Linha 2: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
       Contexto:
                1 | from numpy import*
-        >>>    2 | d = array(eval(input("Digite as faces: ")))
-               3 | s = 0
+        >>>    2 | x = array(eval(input("Face: ")))
+               3 | p = 0
 
-  [2] Linha 3: Variável 's' com nome muito curto (≤4 chars)
-      Trecho  : s = ...
+  [2] Linha 3: Variável 'p' com nome muito curto (≤4 chars)
+      Trecho  : p = ...
       Contexto:
-               2 | d = array(eval(input("Digite as faces: ")))
-        >>>    3 | s = 0
+               2 | x = array(eval(input("Face: ")))
+        >>>    3 | p = 0
                4 | i = 0
 
   [3] Linha 4: Variável 'i' com nome muito curto (≤4 chars)
       Trecho  : i = ...
       Contexto:
-               3 | s = 0
+               3 | p = 0
         >>>    4 | i = 0
-               5 | while i < size(d):
+               5 | while i<size(x):
 
-  [4] Linha 18: Variável 'i' com nome muito curto (≤4 chars)
-      Trecho  : i = ...
+  [4] Linha 7: Variável 'p' com nome muito curto (≤4 chars)
+      Trecho  : p = ...
       Contexto:
-              17 | 		s = s + 5
-        >>>   18 | 	i = i + 1
-              19 | print(s)
+               6 | 	if x[i] == 1:
+        >>>    7 | 		p = p + 10
+               8 | 	if x[i] == 2:
 
-  [5] Linha 7: Variável 's' com nome muito curto (≤4 chars)
-      Trecho  : s = ...
+  [5] Linha 9: Variável 'p' com nome muito curto (≤4 chars)
+      Trecho  : p = ...
       Contexto:
-               6 | 	if d[i] == 1:
-        >>>    7 | 		s = s + 10
-               8 | 	if d[i] == 2:
+               8 | 	if x[i] == 2:
+        >>>    9 | 		p = p + 5
+              10 | 	if x[i] == 3:
 
-  [6] Linha 9: Variável 's' com nome muito curto (≤4 chars)
-      Trecho  : s = ...
+  [6] Linha 11: Variável 'p' com nome muito curto (≤4 chars)
+      Trecho  : p = ...
       Contexto:
-               8 | 	if d[i] == 2:
-        >>>    9 | 		s = s + 5
-              10 | 	if d[i] == 3:
+              10 | 	if x[i] == 3:
+        >>>   11 | 		p = p + 10
+              12 | 	if x[i] == 4:
 
-  [7] Linha 11: Variável 's' com nome muito curto (≤4 chars)
-      Trecho  : s = ...
+  [7] Linha 13: Variável 'p' com nome muito curto (≤4 chars)
+      Trecho  : p = ...
       Contexto:
-              10 | 	if d[i] == 3:
-        >>>   11 | 		s = s + 10
-              12 | 	if d[i] == 4:
+              12 | 	if x[i] == 4:
+        >>>   13 | 		p = p + 5
+              14 | 	if x[i] == 5:
 
-  [8] Linha 13: Variável 's' com nome muito curto (≤4 chars)
-      Trecho  : s = ...
+  [8] Linha 15: Variável 'p' com nome muito curto (≤4 chars)
+      Trecho  : p = ...
       Contexto:
-              12 | 	if d[i] == 4:
-        >>>   13 | 		s = s + 5
-              14 | 	if d[i] == 5:
+              14 | 	if x[i] == 5:
+        >>>   15 | 		p = p + 10
+              16 | 	if x[i] == 6:
 
-  [9] Linha 15: Variável 's' com nome muito curto (≤4 chars)
-      Trecho  : s = ...
+  [9] Linha 17: Variável 'p' com nome muito curto (≤4 chars)
+      Trecho  : p = ...
       Contexto:
-              14 | 	if d[i] == 5:
-        >>>   15 | 		s = s + 10
-              16 | 	if d[i] == 6:
-
-  [10] Linha 17: Variável 's' com nome muito curto (≤4 chars)
-      Trecho  : s = ...
-      Contexto:
-              16 | 	if d[i] == 6:
-        >>>   17 | 		s = s + 5
-              18 | 	i = i + 1
+              16 | 	if x[i] == 6:
+        >>>   17 | 		p = p + 5
+              18 | 	i += 1
 
 ======================================================================

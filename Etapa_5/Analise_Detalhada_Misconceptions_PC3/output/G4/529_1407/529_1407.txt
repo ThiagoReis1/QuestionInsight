@@ -2,11 +2,11 @@
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
 Arquivo     : 529_1407.log
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2017_1_v1.81\2017-1\138\users\2193\executions\529_1407.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2017_1_v1.81\2017-1\138\users\2206\executions\529_1407.log
 Assessment  : 529
 Título      : Trabalho Prático 02 - Estrutura Condicional Simples e Composta
 Questão     : 1407
-Aluno       : 2193
+Aluno       : 2206
 Grupo       : TP 02
 Significado : Estrutura Condicional Simples e Composta
 Total MCs   : 1
@@ -16,60 +16,68 @@ Total MCs   : 1
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | pontos = int(input(""))
-     2 | s1 = int(input(""))
-     3 | s2 = int(input(""))
-     4 | s3 = int(input(""))
-     5 | N = s1 + s2 + s3
-     6 | perde = 10 * N
-     7 | M = (pontos - perde)
-     8 | if ( M > 0):
-     9 | 	print(M)
-    10 | 	print("VIVO")
-    11 | else:
-    12 | 	print("0")
-    13 | 	print("MORTO")
+     1 | from math import *
+     2 | pv = int(input("quantidade inicial de pontos de vida: "))
+     3 | v1 = int(input("valor de v1: "))
+     4 | v2 = int(input("valor de v2: "))
+     5 | v3 = int(input("valor de v3: "))
+     6 | vl = v1 + v2 + v3
+     7 | N = 10 * vl
+     8 | pontos = pv - N
+     9 | if(pontos > 0):
+    10 | 	print(pontos)
+    11 | 	print("VIVO")
+    12 | else:
+    13 | 	print("0")
+    14 | 	print("MORTO")
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
 ----------------------------------------------------------------------
 
 ▶ G4 — Funções/variáveis com nomes não significativos
-  Ocorrências: 5
+  Ocorrências: 6
 
-  [1] Linha 2: Variável 's1' com nome muito curto (≤4 chars)
-      Trecho  : s1 = ...
+  [1] Linha 2: Variável 'pv' com nome muito curto (≤4 chars)
+      Trecho  : pv = ...
       Contexto:
-               1 | pontos = int(input(""))
-        >>>    2 | s1 = int(input(""))
-               3 | s2 = int(input(""))
+               1 | from math import *
+        >>>    2 | pv = int(input("quantidade inicial de pontos de vida: "))
+               3 | v1 = int(input("valor de v1: "))
 
-  [2] Linha 3: Variável 's2' com nome muito curto (≤4 chars)
-      Trecho  : s2 = ...
+  [2] Linha 3: Variável 'v1' com nome muito curto (≤4 chars)
+      Trecho  : v1 = ...
       Contexto:
-               2 | s1 = int(input(""))
-        >>>    3 | s2 = int(input(""))
-               4 | s3 = int(input(""))
+               2 | pv = int(input("quantidade inicial de pontos de vida: "))
+        >>>    3 | v1 = int(input("valor de v1: "))
+               4 | v2 = int(input("valor de v2: "))
 
-  [3] Linha 4: Variável 's3' com nome muito curto (≤4 chars)
-      Trecho  : s3 = ...
+  [3] Linha 4: Variável 'v2' com nome muito curto (≤4 chars)
+      Trecho  : v2 = ...
       Contexto:
-               3 | s2 = int(input(""))
-        >>>    4 | s3 = int(input(""))
-               5 | N = s1 + s2 + s3
+               3 | v1 = int(input("valor de v1: "))
+        >>>    4 | v2 = int(input("valor de v2: "))
+               5 | v3 = int(input("valor de v3: "))
 
-  [4] Linha 5: Variável 'N' com nome muito curto (≤4 chars)
+  [4] Linha 5: Variável 'v3' com nome muito curto (≤4 chars)
+      Trecho  : v3 = ...
+      Contexto:
+               4 | v2 = int(input("valor de v2: "))
+        >>>    5 | v3 = int(input("valor de v3: "))
+               6 | vl = v1 + v2 + v3
+
+  [5] Linha 6: Variável 'vl' com nome muito curto (≤4 chars)
+      Trecho  : vl = ...
+      Contexto:
+               5 | v3 = int(input("valor de v3: "))
+        >>>    6 | vl = v1 + v2 + v3
+               7 | N = 10 * vl
+
+  [6] Linha 7: Variável 'N' com nome muito curto (≤4 chars)
       Trecho  : N = ...
       Contexto:
-               4 | s3 = int(input(""))
-        >>>    5 | N = s1 + s2 + s3
-               6 | perde = 10 * N
-
-  [5] Linha 7: Variável 'M' com nome muito curto (≤4 chars)
-      Trecho  : M = ...
-      Contexto:
-               6 | perde = 10 * N
-        >>>    7 | M = (pontos - perde)
-               8 | if ( M > 0):
+               6 | vl = v1 + v2 + v3
+        >>>    7 | N = 10 * vl
+               8 | pontos = pv - N
 
 ======================================================================

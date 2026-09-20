@@ -2,11 +2,11 @@
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
 Arquivo     : 611_1538.log
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2017_1_v1.81\2017-1\135\users\2110\executions\611_1538.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2017_1_v1.81\2017-1\135\users\2105\executions\611_1538.log
 Assessment  : 611
 Título      : Trabalho Prático 4: Estrutura de Repetição por Condição (while)
 Questão     : 1538
-Aluno       : 2110
+Aluno       : 2105
 Grupo       : TP 04
 Significado : Estrutura de Repetição por Condição
 Total MCs   : 1
@@ -16,87 +16,82 @@ Total MCs   : 1
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | x = float(input())
-     2 | k = int(input())
-     3 | nc=0
-     4 | up=2
-     5 | sinal=1
-     6 | cont=1
-     7 | while(cont<k):
-     8 | 	c = x**up
-     9 | 	nc=nc+c*sinal
-    10 | 	up=up+2
-    11 | 	sinal=-sinal
-    12 | 	cont=cont+1
-    13 | print(round(1-nc,8))
+     1 | x=float(input("valor da serie:"))
+     2 | k=int(input("termos da serie: "))
+     3 | 
+     4 | cont=0
+     5 | soma=0
+     6 | cima=1
+     7 | baixo=2
+     8 | 
+     9 | while cont<k:
+    10 | 	soma=soma + (x**cima)/(baixo)
+    11 | 	cima=cima+2
+    12 | 	baixo=baixo+2
+    13 | 	cont=cont+1
+    14 | 	total=(1-soma)
+    15 | print(round(total, 6))
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
 ----------------------------------------------------------------------
 
 ▶ G4 — Funções/variáveis com nomes não significativos
-  Ocorrências: 9
+  Ocorrências: 8
 
   [1] Linha 1: Variável 'x' com nome muito curto (≤4 chars)
       Trecho  : x = ...
       Contexto:
-        >>>    1 | x = float(input())
-               2 | k = int(input())
+        >>>    1 | x=float(input("valor da serie:"))
+               2 | k=int(input("termos da serie: "))
 
   [2] Linha 2: Variável 'k' com nome muito curto (≤4 chars)
       Trecho  : k = ...
       Contexto:
-               1 | x = float(input())
-        >>>    2 | k = int(input())
-               3 | nc=0
+               1 | x=float(input("valor da serie:"))
+        >>>    2 | k=int(input("termos da serie: "))
+               3 | 
 
-  [3] Linha 3: Variável 'nc' com nome muito curto (≤4 chars)
-      Trecho  : nc = ...
-      Contexto:
-               2 | k = int(input())
-        >>>    3 | nc=0
-               4 | up=2
-
-  [4] Linha 4: Variável 'up' com nome muito curto (≤4 chars)
-      Trecho  : up = ...
-      Contexto:
-               3 | nc=0
-        >>>    4 | up=2
-               5 | sinal=1
-
-  [5] Linha 6: Variável 'cont' com nome muito curto (≤4 chars)
+  [3] Linha 4: Variável 'cont' com nome muito curto (≤4 chars)
       Trecho  : cont = ...
       Contexto:
-               5 | sinal=1
-        >>>    6 | cont=1
-               7 | while(cont<k):
+               3 | 
+        >>>    4 | cont=0
+               5 | soma=0
 
-  [6] Linha 8: Variável 'c' com nome muito curto (≤4 chars)
-      Trecho  : c = ...
+  [4] Linha 5: Variável 'soma' com nome muito curto (≤4 chars)
+      Trecho  : soma = ...
       Contexto:
-               7 | while(cont<k):
-        >>>    8 | 	c = x**up
-               9 | 	nc=nc+c*sinal
+               4 | cont=0
+        >>>    5 | soma=0
+               6 | cima=1
 
-  [7] Linha 9: Variável 'nc' com nome muito curto (≤4 chars)
-      Trecho  : nc = ...
+  [5] Linha 6: Variável 'cima' com nome muito curto (≤4 chars)
+      Trecho  : cima = ...
       Contexto:
-               8 | 	c = x**up
-        >>>    9 | 	nc=nc+c*sinal
-              10 | 	up=up+2
+               5 | soma=0
+        >>>    6 | cima=1
+               7 | baixo=2
 
-  [8] Linha 10: Variável 'up' com nome muito curto (≤4 chars)
-      Trecho  : up = ...
+  [6] Linha 10: Variável 'soma' com nome muito curto (≤4 chars)
+      Trecho  : soma = ...
       Contexto:
-               9 | 	nc=nc+c*sinal
-        >>>   10 | 	up=up+2
-              11 | 	sinal=-sinal
+               9 | while cont<k:
+        >>>   10 | 	soma=soma + (x**cima)/(baixo)
+              11 | 	cima=cima+2
 
-  [9] Linha 12: Variável 'cont' com nome muito curto (≤4 chars)
+  [7] Linha 11: Variável 'cima' com nome muito curto (≤4 chars)
+      Trecho  : cima = ...
+      Contexto:
+              10 | 	soma=soma + (x**cima)/(baixo)
+        >>>   11 | 	cima=cima+2
+              12 | 	baixo=baixo+2
+
+  [8] Linha 13: Variável 'cont' com nome muito curto (≤4 chars)
       Trecho  : cont = ...
       Contexto:
-              11 | 	sinal=-sinal
-        >>>   12 | 	cont=cont+1
-              13 | print(round(1-nc,8))
+              12 | 	baixo=baixo+2
+        >>>   13 | 	cont=cont+1
+              14 | 	total=(1-soma)
 
 ======================================================================

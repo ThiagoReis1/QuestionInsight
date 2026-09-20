@@ -2,11 +2,11 @@
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
 Arquivo     : 1830_3180.log
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2019_1_v1.81\2019-1\231\users\4236\executions\1830_3180.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2019_1_v1.81\2019-1\231\users\4199\executions\1830_3180.log
 Assessment  : 1830
 Título      : TP6: Repetição por contagem
 Questão     : 3180
-Aluno       : 4236
+Aluno       : 4199
 Grupo       : TP 06
 Significado : Estrutura de Repetição por Contagem
 Total MCs   : 2
@@ -17,27 +17,19 @@ Total MCs   : 2
 CÓDIGO FONTE
 ----------------------------------------------------------------------
      1 | from numpy import*
-     2 | 
-     3 | vet = array(eval(input(" ")))
-     4 | soro = zeros(4, dtype=int)
-     5 | t1 = 0 
-     6 | t2 = 0
-     7 | t3 = 0
-     8 | t4 = 0
-     9 | for i in range(size(vet)):
-    10 | 	if vet[i] == 1:
-    11 | 		t1 = t1 + 1
-    12 | 	elif vet[i] == 2:
-    13 | 		t2 = t2 + 1
-    14 | 	elif vet[i] == 3:
-    15 | 		t3 = t3 + 1
-    16 | 	elif vet[i] == 4:
-    17 | 		t4 = t4 + 1
-    18 | soro[0] = t1
-    19 | soro[1] = t2
-    20 | soro[2] = t3
-    21 | soro[3] = t4
-    22 | print(soro)
+     2 | vets = array(eval(input("tipo de soro")))
+     3 | vetf = zeros(4,dtype=int)
+     4 | for i in range(size(vets)):
+     5 | 	if( vets[i] == 1):
+     6 | 		vetf[0] = vetf[0] + 1
+     7 | 	elif(vets[i] == 2):
+     8 | 		vetf[1] = vetf[1] + 1
+     9 | 	elif(vets[i]==3):
+    10 | 		vetf[2] = vetf[2] + 1
+    11 | 	elif(vets[i]== 4):
+    12 | 		vetf[3] = vetf[3] + 1
+    13 | 		
+    14 | print(vetf)
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
@@ -46,84 +38,28 @@ DETALHAMENTO DOS MISCONCEPTIONS
 ▶ B8 — Não utilização de elif/else
   Ocorrências: 1
 
-  [1] Linha 14: Cadeia if/elif sem bloco else final
-      Trecho  : if ... (linha 14) / elif ... sem else
+  [1] Linha 9: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 9) / elif ... sem else
       Contexto:
-              13 | 		t2 = t2 + 1
-        >>>   14 | 	elif vet[i] == 3:
-              15 | 		t3 = t3 + 1
+               8 | 		vetf[1] = vetf[1] + 1
+        >>>    9 | 	elif(vets[i]==3):
+              10 | 		vetf[2] = vetf[2] + 1
 
 ▶ G4 — Funções/variáveis com nomes não significativos
-  Ocorrências: 10
+  Ocorrências: 2
 
-  [1] Linha 3: Variável 'vet' com nome muito curto (≤4 chars)
-      Trecho  : vet = ...
+  [1] Linha 2: Variável 'vets' com nome muito curto (≤4 chars)
+      Trecho  : vets = ...
       Contexto:
-               2 | 
-        >>>    3 | vet = array(eval(input(" ")))
-               4 | soro = zeros(4, dtype=int)
+               1 | from numpy import*
+        >>>    2 | vets = array(eval(input("tipo de soro")))
+               3 | vetf = zeros(4,dtype=int)
 
-  [2] Linha 4: Variável 'soro' com nome muito curto (≤4 chars)
-      Trecho  : soro = ...
+  [2] Linha 3: Variável 'vetf' com nome muito curto (≤4 chars)
+      Trecho  : vetf = ...
       Contexto:
-               3 | vet = array(eval(input(" ")))
-        >>>    4 | soro = zeros(4, dtype=int)
-               5 | t1 = 0 
-
-  [3] Linha 5: Variável 't1' com nome muito curto (≤4 chars)
-      Trecho  : t1 = ...
-      Contexto:
-               4 | soro = zeros(4, dtype=int)
-        >>>    5 | t1 = 0 
-               6 | t2 = 0
-
-  [4] Linha 6: Variável 't2' com nome muito curto (≤4 chars)
-      Trecho  : t2 = ...
-      Contexto:
-               5 | t1 = 0 
-        >>>    6 | t2 = 0
-               7 | t3 = 0
-
-  [5] Linha 7: Variável 't3' com nome muito curto (≤4 chars)
-      Trecho  : t3 = ...
-      Contexto:
-               6 | t2 = 0
-        >>>    7 | t3 = 0
-               8 | t4 = 0
-
-  [6] Linha 8: Variável 't4' com nome muito curto (≤4 chars)
-      Trecho  : t4 = ...
-      Contexto:
-               7 | t3 = 0
-        >>>    8 | t4 = 0
-               9 | for i in range(size(vet)):
-
-  [7] Linha 11: Variável 't1' com nome muito curto (≤4 chars)
-      Trecho  : t1 = ...
-      Contexto:
-              10 | 	if vet[i] == 1:
-        >>>   11 | 		t1 = t1 + 1
-              12 | 	elif vet[i] == 2:
-
-  [8] Linha 13: Variável 't2' com nome muito curto (≤4 chars)
-      Trecho  : t2 = ...
-      Contexto:
-              12 | 	elif vet[i] == 2:
-        >>>   13 | 		t2 = t2 + 1
-              14 | 	elif vet[i] == 3:
-
-  [9] Linha 15: Variável 't3' com nome muito curto (≤4 chars)
-      Trecho  : t3 = ...
-      Contexto:
-              14 | 	elif vet[i] == 3:
-        >>>   15 | 		t3 = t3 + 1
-              16 | 	elif vet[i] == 4:
-
-  [10] Linha 17: Variável 't4' com nome muito curto (≤4 chars)
-      Trecho  : t4 = ...
-      Contexto:
-              16 | 	elif vet[i] == 4:
-        >>>   17 | 		t4 = t4 + 1
-              18 | soro[0] = t1
+               2 | vets = array(eval(input("tipo de soro")))
+        >>>    3 | vetf = zeros(4,dtype=int)
+               4 | for i in range(size(vets)):
 
 ======================================================================

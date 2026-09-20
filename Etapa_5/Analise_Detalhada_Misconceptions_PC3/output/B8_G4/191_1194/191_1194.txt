@@ -2,11 +2,11 @@
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
 Arquivo     : 191_1194.log
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2016_1_v1.81\2016-1\105\users\1534\executions\191_1194.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2016_1_v1.81\2016-1\105\users\1485\executions\191_1194.log
 Assessment  : 191
 Título      : Avaliação Parcial 05 – Vetores e Strings
 Questão     : 1194
-Aluno       : 1534
+Aluno       : 1485
 Grupo       : TP 05
 Significado : Vetores e Strings
 Total MCs   : 2
@@ -16,28 +16,23 @@ Total MCs   : 2
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | #Suenne Renata Lima Fernandes- 21602342
-     2 | from numpy import *
-     3 | 
-     4 | v = array (eval (input ("Vetor:")))
-     5 | 
-     6 | i = 0
-     7 | t = 0
-     8 | 
-     9 | while (i < size (v)):
-    10 | 	if (v[i] > -100):
-    11 | 		t = t + 1
-    12 | 	i = i + 1
-    13 | vn = array (zeros (t, dtype = float))
-    14 | i = 0
-    15 | j = 0
-    16 | 
-    17 | while (i < size (v)):
-    18 | 	if (v[i] > -100):
-    19 | 		vn[j] = v[i]
-    20 | 		j = j + 1
-    21 | 	i = i + 1
-    22 | print (vn)
+     1 | from numpy import*
+     2 | v = array(eval(input("digite os valores: ")))
+     3 | i = 0
+     4 | n = 0
+     5 | s = 0
+     6 | while (i < size(v)):
+     7 | 	if (v[i] > -100 ):
+     8 | 		n = n +1
+     9 | 	i = i + 1
+    10 | v2 = array(ones(n, dtype = float))
+    11 | i = 0 
+    12 | while (i < size(v)):
+    13 | 	if(v[i] > -100):
+    14 | 		v2[s]=v[i]
+    15 | 		s = s + 1
+    16 | 	i = i + 1
+    17 | print (v2)
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
@@ -52,80 +47,74 @@ DETALHAMENTO DOS MISCONCEPTIONS
 ▶ G4 — Funções/variáveis com nomes não significativos
   Ocorrências: 10
 
-  [1] Linha 4: Variável 'v' com nome muito curto (≤4 chars)
+  [1] Linha 2: Variável 'v' com nome muito curto (≤4 chars)
       Trecho  : v = ...
       Contexto:
-               3 | 
-        >>>    4 | v = array (eval (input ("Vetor:")))
-               5 | 
+               1 | from numpy import*
+        >>>    2 | v = array(eval(input("digite os valores: ")))
+               3 | i = 0
 
-  [2] Linha 6: Variável 'i' com nome muito curto (≤4 chars)
+  [2] Linha 3: Variável 'i' com nome muito curto (≤4 chars)
       Trecho  : i = ...
       Contexto:
-               5 | 
-        >>>    6 | i = 0
-               7 | t = 0
+               2 | v = array(eval(input("digite os valores: ")))
+        >>>    3 | i = 0
+               4 | n = 0
 
-  [3] Linha 7: Variável 't' com nome muito curto (≤4 chars)
-      Trecho  : t = ...
+  [3] Linha 4: Variável 'n' com nome muito curto (≤4 chars)
+      Trecho  : n = ...
       Contexto:
-               6 | i = 0
-        >>>    7 | t = 0
-               8 | 
+               3 | i = 0
+        >>>    4 | n = 0
+               5 | s = 0
 
-  [4] Linha 13: Variável 'vn' com nome muito curto (≤4 chars)
-      Trecho  : vn = ...
+  [4] Linha 5: Variável 's' com nome muito curto (≤4 chars)
+      Trecho  : s = ...
       Contexto:
-              12 | 	i = i + 1
-        >>>   13 | vn = array (zeros (t, dtype = float))
-              14 | i = 0
+               4 | n = 0
+        >>>    5 | s = 0
+               6 | while (i < size(v)):
 
-  [5] Linha 14: Variável 'i' com nome muito curto (≤4 chars)
+  [5] Linha 10: Variável 'v2' com nome muito curto (≤4 chars)
+      Trecho  : v2 = ...
+      Contexto:
+               9 | 	i = i + 1
+        >>>   10 | v2 = array(ones(n, dtype = float))
+              11 | i = 0 
+
+  [6] Linha 11: Variável 'i' com nome muito curto (≤4 chars)
       Trecho  : i = ...
       Contexto:
-              13 | vn = array (zeros (t, dtype = float))
-        >>>   14 | i = 0
-              15 | j = 0
+              10 | v2 = array(ones(n, dtype = float))
+        >>>   11 | i = 0 
+              12 | while (i < size(v)):
 
-  [6] Linha 15: Variável 'j' com nome muito curto (≤4 chars)
-      Trecho  : j = ...
-      Contexto:
-              14 | i = 0
-        >>>   15 | j = 0
-              16 | 
-
-  [7] Linha 12: Variável 'i' com nome muito curto (≤4 chars)
+  [7] Linha 9: Variável 'i' com nome muito curto (≤4 chars)
       Trecho  : i = ...
       Contexto:
-              11 | 		t = t + 1
-        >>>   12 | 	i = i + 1
-              13 | vn = array (zeros (t, dtype = float))
+               8 | 		n = n +1
+        >>>    9 | 	i = i + 1
+              10 | v2 = array(ones(n, dtype = float))
 
-  [8] Linha 21: Variável 'i' com nome muito curto (≤4 chars)
+  [8] Linha 16: Variável 'i' com nome muito curto (≤4 chars)
       Trecho  : i = ...
       Contexto:
-              20 | 		j = j + 1
-        >>>   21 | 	i = i + 1
-              22 | print (vn)
+              15 | 		s = s + 1
+        >>>   16 | 	i = i + 1
+              17 | print (v2)
 
-  [9] Linha 11: Variável 't' com nome muito curto (≤4 chars)
-      Trecho  : t = ...
+  [9] Linha 8: Variável 'n' com nome muito curto (≤4 chars)
+      Trecho  : n = ...
       Contexto:
-              10 | 	if (v[i] > -100):
-        >>>   11 | 		t = t + 1
-              12 | 	i = i + 1
+               7 | 	if (v[i] > -100 ):
+        >>>    8 | 		n = n +1
+               9 | 	i = i + 1
 
-  [10] Linha 20: Variável 'j' com nome muito curto (≤4 chars)
-      Trecho  : j = ...
+  [10] Linha 15: Variável 's' com nome muito curto (≤4 chars)
+      Trecho  : s = ...
       Contexto:
-              19 | 		vn[j] = v[i]
-        >>>   20 | 		j = j + 1
-              21 | 	i = i + 1
-
-======================================================================...
-      Contexto:
-              23 | 		v1 [k] = v [i]
-        >>>   24 | 		k = k + 1
-              25 | 	i = i + 1
+              14 | 		v2[s]=v[i]
+        >>>   15 | 		s = s + 1
+              16 | 	i = i + 1
 
 ======================================================================

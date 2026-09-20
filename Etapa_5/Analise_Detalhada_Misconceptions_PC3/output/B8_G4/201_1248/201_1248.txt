@@ -2,11 +2,11 @@
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
 Arquivo     : 201_1248.log
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2016_1_v1.81\2016-1\106\users\1637\executions\201_1248.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2016_1_v1.81\2016-1\106\users\1660\executions\201_1248.log
 Assessment  : 201
 Título      : Avaliação Parcial 06 – Repetição por contagem
 Questão     : 1248
-Aluno       : 1637
+Aluno       : 1660
 Grupo       : TP 06
 Significado : Estrutura de Repetição por Contagem
 Total MCs   : 2
@@ -16,24 +16,27 @@ Total MCs   : 2
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | #Universidade Federal do Amazonas
-     2 | #Aluna: Ingrid de Lira Lima
-     3 | #Exercicio: 01
-     4 | 
-     5 | from numpy import*
-     6 | v= array(eval(input("digite: ")))
-     7 | v1 = array (zeros(2, dtype= int))
-     8 | a=min(v)
-     9 | b=max(v)
-    10 | 
-    11 | c= (0.75*a)+(0.25*b)
-    12 | d= 0.25*a + 0.75*b
-    13 | for i in range(size(v)):
-    14 | 	if v[i]> c and v[i]<d:
-    15 | 		v1[0]=v1[0]+1
-    16 | 	elif v[i]>=d and v[i]<b:
-    17 | 		v1[1]=v1[1]+1
-    18 | print(v1)	
+     1 | from numpy import *
+     2 | vet = array(eval(input("insira o vetor: ")))
+     3 | vet1 = array(ones(2, dtype = int))
+     4 | for i in range (0, size(vet)):
+     5 | 	a = min(vet)
+     6 | 	b = max(vet)
+     7 | c = (0.75 * a) + (0.25 * b)
+     8 | d = (0.25 * a) + (0.75 * b)
+     9 | 
+    10 | x1 = 0
+    11 | for i in range (0, size(vet)):
+    12 | 	if (vet[i] >= c and vet[i] < d):
+    13 | 		x1 = x1 + 1
+    14 | x2 = 0
+    15 | for i in range (0, size(vet)):
+    16 | 	if (vet[i] >= d and vet[i] < b):
+    17 | 		x2 = x2 + 1
+    18 | 
+    19 | vet1[0] = x1
+    20 | vet1[1] = x2
+    21 | print(vet1)
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
@@ -42,56 +45,80 @@ DETALHAMENTO DOS MISCONCEPTIONS
 ▶ B8 — Não utilização de elif/else
   Ocorrências: 1
 
-  [1] Linha 14: Cadeia if/elif sem bloco else final
-      Trecho  : if ... (linha 14) / elif ... sem else
-      Contexto:
-              13 | for i in range(size(v)):
-        >>>   14 | 	if v[i]> c and v[i]<d:
-              15 | 		v1[0]=v1[0]+1
+  [1] Linha 0: B8 detectado pelo VisitorMC3 (localização exata não mapeada)
+      Trecho  : —
 
 ▶ G4 — Funções/variáveis com nomes não significativos
-  Ocorrências: 6
+  Ocorrências: 10
 
-  [1] Linha 6: Variável 'v' com nome muito curto (≤4 chars)
-      Trecho  : v = ...
+  [1] Linha 2: Variável 'vet' com nome muito curto (≤4 chars)
+      Trecho  : vet = ...
       Contexto:
-               5 | from numpy import*
-        >>>    6 | v= array(eval(input("digite: ")))
-               7 | v1 = array (zeros(2, dtype= int))
+               1 | from numpy import *
+        >>>    2 | vet = array(eval(input("insira o vetor: ")))
+               3 | vet1 = array(ones(2, dtype = int))
 
-  [2] Linha 7: Variável 'v1' com nome muito curto (≤4 chars)
-      Trecho  : v1 = ...
+  [2] Linha 3: Variável 'vet1' com nome muito curto (≤4 chars)
+      Trecho  : vet1 = ...
       Contexto:
-               6 | v= array(eval(input("digite: ")))
-        >>>    7 | v1 = array (zeros(2, dtype= int))
-               8 | a=min(v)
+               2 | vet = array(eval(input("insira o vetor: ")))
+        >>>    3 | vet1 = array(ones(2, dtype = int))
+               4 | for i in range (0, size(vet)):
 
-  [3] Linha 8: Variável 'a' com nome muito curto (≤4 chars)
-      Trecho  : a = ...
-      Contexto:
-               7 | v1 = array (zeros(2, dtype= int))
-        >>>    8 | a=min(v)
-               9 | b=max(v)
-
-  [4] Linha 9: Variável 'b' com nome muito curto (≤4 chars)
-      Trecho  : b = ...
-      Contexto:
-               8 | a=min(v)
-        >>>    9 | b=max(v)
-              10 | 
-
-  [5] Linha 11: Variável 'c' com nome muito curto (≤4 chars)
+  [3] Linha 7: Variável 'c' com nome muito curto (≤4 chars)
       Trecho  : c = ...
       Contexto:
-              10 | 
-        >>>   11 | c= (0.75*a)+(0.25*b)
-              12 | d= 0.25*a + 0.75*b
+               6 | 	b = max(vet)
+        >>>    7 | c = (0.75 * a) + (0.25 * b)
+               8 | d = (0.25 * a) + (0.75 * b)
 
-  [6] Linha 12: Variável 'd' com nome muito curto (≤4 chars)
+  [4] Linha 8: Variável 'd' com nome muito curto (≤4 chars)
       Trecho  : d = ...
       Contexto:
-              11 | c= (0.75*a)+(0.25*b)
-        >>>   12 | d= 0.25*a + 0.75*b
-              13 | for i in range(size(v)):
+               7 | c = (0.75 * a) + (0.25 * b)
+        >>>    8 | d = (0.25 * a) + (0.75 * b)
+               9 | 
+
+  [5] Linha 10: Variável 'x1' com nome muito curto (≤4 chars)
+      Trecho  : x1 = ...
+      Contexto:
+               9 | 
+        >>>   10 | x1 = 0
+              11 | for i in range (0, size(vet)):
+
+  [6] Linha 14: Variável 'x2' com nome muito curto (≤4 chars)
+      Trecho  : x2 = ...
+      Contexto:
+              13 | 		x1 = x1 + 1
+        >>>   14 | x2 = 0
+              15 | for i in range (0, size(vet)):
+
+  [7] Linha 5: Variável 'a' com nome muito curto (≤4 chars)
+      Trecho  : a = ...
+      Contexto:
+               4 | for i in range (0, size(vet)):
+        >>>    5 | 	a = min(vet)
+               6 | 	b = max(vet)
+
+  [8] Linha 6: Variável 'b' com nome muito curto (≤4 chars)
+      Trecho  : b = ...
+      Contexto:
+               5 | 	a = min(vet)
+        >>>    6 | 	b = max(vet)
+               7 | c = (0.75 * a) + (0.25 * b)
+
+  [9] Linha 13: Variável 'x1' com nome muito curto (≤4 chars)
+      Trecho  : x1 = ...
+      Contexto:
+              12 | 	if (vet[i] >= c and vet[i] < d):
+        >>>   13 | 		x1 = x1 + 1
+              14 | x2 = 0
+
+  [10] Linha 17: Variável 'x2' com nome muito curto (≤4 chars)
+      Trecho  : x2 = ...
+      Contexto:
+              16 | 	if (vet[i] >= d and vet[i] < b):
+        >>>   17 | 		x2 = x2 + 1
+              18 | 
 
 ======================================================================

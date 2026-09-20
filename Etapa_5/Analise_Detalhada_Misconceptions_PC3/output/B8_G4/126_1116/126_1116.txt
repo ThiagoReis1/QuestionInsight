@@ -2,11 +2,11 @@
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
 Arquivo     : 126_1116.log
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2016_1_v1.81\2016-1\102\users\1291\executions\126_1116.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2016_1_v1.81\2016-1\102\users\1465\executions\126_1116.log
 Assessment  : 126
 Título      : Avaliação Parcial 03 – Estruturas Condicionais Encadeadas
 Questão     : 1116
-Aluno       : 1291
+Aluno       : 1465
 Grupo       : TP 03
 Significado : Estrutura Condicional Encadeada
 Total MCs   : 2
@@ -16,19 +16,18 @@ Total MCs   : 2
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | x = float(input("Digite a coordenada x:"))
-     2 | y = float(input("Digite a coordenada y:"))
-     3 | 
-     4 | if(x == 0) or (y== 0):
-     5 | 	print("O ponto (",x, ",", y, ") estah situado sobre um dos eixos")
-     6 | elif((x > 0) and (y > 0)):
-     7 | 	print("O ponto (",x ,",", y ,") estah no quadrante 1" )
-     8 | elif((x < 0) and (y > 0)):
-     9 | 	print("O ponto (",x ,",", y ,") estah no quadrante 2" )
-    10 | elif((x < 0) and (y < 0)):
-    11 | 	print("O ponto (",x ,",", y ,") estah no quadrante 3" )
-    12 | elif((x > 0) and (y < 0)):
-    13 | 	print("O ponto (",x ,",", y ,") estah no quadrante 4" )
+     1 | x = float(input("digite x: "))
+     2 | y = float(input("digite y: "))
+     3 | if(x>0 and y>0):
+     4 | 	print("O ponto (", x, ",", y, ") estah no quadrante 1")
+     5 | elif(x<0 and y>0.):
+     6 | 	print("O ponto (", x, ",", y, ") estah no quadrante 2")
+     7 | elif(x<0 and y<0):
+     8 | 	print("O ponto (", x, ",", y, ") estah no quadrante 3")
+     9 | elif(x>0 and y<0):
+    10 | 	print("O ponto (", x, ",", y, ") estah no quadrante 4")
+    11 | elif(x==0 or y==0):
+    12 | 	print("O ponto (", x, ",", y, ") estah situado sobre um dos eixos")
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
@@ -37,12 +36,12 @@ DETALHAMENTO DOS MISCONCEPTIONS
 ▶ B8 — Não utilização de elif/else
   Ocorrências: 1
 
-  [1] Linha 10: Cadeia if/elif sem bloco else final
-      Trecho  : if ... (linha 10) / elif ... sem else
+  [1] Linha 9: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 9) / elif ... sem else
       Contexto:
-               9 | 	print("O ponto (",x ,",", y ,") estah no quadrante 2" )
-        >>>   10 | elif((x < 0) and (y < 0)):
-              11 | 	print("O ponto (",x ,",", y ,") estah no quadrante 3" )
+               8 | 	print("O ponto (", x, ",", y, ") estah no quadrante 3")
+        >>>    9 | elif(x>0 and y<0):
+              10 | 	print("O ponto (", x, ",", y, ") estah no quadrante 4")
 
 ▶ G4 — Funções/variáveis com nomes não significativos
   Ocorrências: 2
@@ -50,14 +49,14 @@ DETALHAMENTO DOS MISCONCEPTIONS
   [1] Linha 1: Variável 'x' com nome muito curto (≤4 chars)
       Trecho  : x = ...
       Contexto:
-        >>>    1 | x = float(input("Digite a coordenada x:"))
-               2 | y = float(input("Digite a coordenada y:"))
+        >>>    1 | x = float(input("digite x: "))
+               2 | y = float(input("digite y: "))
 
   [2] Linha 2: Variável 'y' com nome muito curto (≤4 chars)
       Trecho  : y = ...
       Contexto:
-               1 | x = float(input("Digite a coordenada x:"))
-        >>>    2 | y = float(input("Digite a coordenada y:"))
-               3 | 
+               1 | x = float(input("digite x: "))
+        >>>    2 | y = float(input("digite y: "))
+               3 | if(x>0 and y>0):
 
 ======================================================================

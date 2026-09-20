@@ -2,11 +2,11 @@
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
 Arquivo     : 99_1093.log
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2016_1_v1.81\2016-1\108\users\1343\executions\99_1093.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2016_1_v1.81\2016-1\108\users\1437\executions\99_1093.log
 Assessment  : 99
 Título      : Avaliação Parcial 02 – Estrutura Condicional Composta (sem Aninhamento)
 Questão     : 1093
-Aluno       : 1343
+Aluno       : 1437
 Grupo       : TP 02
 Significado : Estrutura Condicional Simples e Composta
 Total MCs   : 1
@@ -16,43 +16,54 @@ Total MCs   : 1
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | num1=int(input("Insira o numero:"))
-     2 | num2=num1//100
-     3 | num3=num1%100
-     4 | difnum=((num2+num3)**2)
-     5 | if(num1==difnum):
-     6 | 	print(num1,"atende a propriedade")
-     7 | else:
-     8 | 	print(difnum)
+     1 | v = int(input())
+     2 | 
+     3 | x=v//100
+     4 | y=v%100
+     5 | 
+     6 | x2=x*x
+     7 | y2=y*y
+     8 | 
+     9 | if x2+y2==v:
+    10 | 	print( v,"atende a propriedade")
+    11 | else:
+    12 | 	print(x2+y2)
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
 ----------------------------------------------------------------------
 
 ▶ G4 — Funções/variáveis com nomes não significativos
-  Ocorrências: 3
+  Ocorrências: 5
 
-  [1] Linha 1: Variável 'num1' com nome muito curto (≤4 chars)
-      Trecho  : num1 = ...
+  [1] Linha 1: Variável 'v' com nome muito curto (≤4 chars)
+      Trecho  : v = ...
       Contexto:
-        >>>    1 | num1=int(input("Insira o numero:"))
-               2 | num2=num1//100
+        >>>    1 | v = int(input())
+               2 | 
 
-  [2] Linha 2: Variável 'num2' com nome muito curto (≤4 chars)
-      Trecho  : num2 = ...
+  [2] Linha 3: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
       Contexto:
-               1 | num1=int(input("Insira o numero:"))
-        >>>    2 | num2=num1//100
-               3 | num3=num1%100
+               2 | 
+        >>>    3 | x=v//100
+               4 | y=v%100
 
-  [3] Linha 3: Variável 'num3' com nome muito curto (≤4 chars)
-      Trecho  : num3 = ...
+  [3] Linha 4: Variável 'y' com nome muito curto (≤4 chars)
+      Trecho  : y = ...
       Contexto:
-               2 | num2=num1//100
-        >>>    3 | num3=num1%100
-               4 | difnum=((num2+num3)**2)
+               3 | x=v//100
+        >>>    4 | y=v%100
+               5 | 
 
-====================================================================== 'y2' com nome muito curto (≤4 chars)
+  [4] Linha 6: Variável 'x2' com nome muito curto (≤4 chars)
+      Trecho  : x2 = ...
+      Contexto:
+               5 | 
+        >>>    6 | x2=x*x
+               7 | y2=y*y
+
+  [5] Linha 7: Variável 'y2' com nome muito curto (≤4 chars)
       Trecho  : y2 = ...
       Contexto:
                6 | x2=x*x

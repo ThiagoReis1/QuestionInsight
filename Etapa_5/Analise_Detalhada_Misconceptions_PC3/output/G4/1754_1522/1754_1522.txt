@@ -2,11 +2,11 @@
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
 Arquivo     : 1754_1522.log
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2019_1_v1.81\2019-1\231\users\4339\executions\1754_1522.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2019_1_v1.81\2019-1\231\users\4210\executions\1754_1522.log
 Assessment  : 1754
 Título      : TP4: Estrutura de Repetição por Condição (while)
 Questão     : 1522
-Aluno       : 4339
+Aluno       : 4210
 Grupo       : TP 04
 Significado : Estrutura de Repetição por Condição
 Total MCs   : 1
@@ -16,78 +16,74 @@ Total MCs   : 1
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | qi=int(input("moedas de ouro no tesouro:"))
-     2 | dm=int(input("despessa mensal:"))
-     3 | qM=int(input("ouro coletado:"))
-     4 | qr=int(input("moedas de ouro roubadas:"))
-     5 | acu=qi
-     6 | cont=1
-     7 | while( acu >= dm and acu >= qr):
-     8 | 	acu = (acu + qM) -dm - qr
-     9 | 	cont=cont+1
-    10 | 
-    11 | print(cont)
+     1 | q = int(input("insira:"))
+     2 | d = int(input("insira:"))
+     3 | qm = int(input("isnira:"))
+     4 | qr = int(input("insira:"))
+     5 | 
+     6 | i = 0
+     7 | moedas = 0
+     8 | 
+     9 | while(q>0):
+    10 | 	moedas = qm - d - qr
+    11 | 	q = q + moedas
+    12 | 	i = i + 1
+    13 | 
+    14 | print(i)
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
 ----------------------------------------------------------------------
 
 ▶ G4 — Funções/variáveis com nomes não significativos
-  Ocorrências: 8
+  Ocorrências: 7
 
-  [1] Linha 1: Variável 'qi' com nome muito curto (≤4 chars)
-      Trecho  : qi = ...
+  [1] Linha 1: Variável 'q' com nome muito curto (≤4 chars)
+      Trecho  : q = ...
       Contexto:
-        >>>    1 | qi=int(input("moedas de ouro no tesouro:"))
-               2 | dm=int(input("despessa mensal:"))
+        >>>    1 | q = int(input("insira:"))
+               2 | d = int(input("insira:"))
 
-  [2] Linha 2: Variável 'dm' com nome muito curto (≤4 chars)
-      Trecho  : dm = ...
+  [2] Linha 2: Variável 'd' com nome muito curto (≤4 chars)
+      Trecho  : d = ...
       Contexto:
-               1 | qi=int(input("moedas de ouro no tesouro:"))
-        >>>    2 | dm=int(input("despessa mensal:"))
-               3 | qM=int(input("ouro coletado:"))
+               1 | q = int(input("insira:"))
+        >>>    2 | d = int(input("insira:"))
+               3 | qm = int(input("isnira:"))
 
-  [3] Linha 3: Variável 'qM' com nome muito curto (≤4 chars)
-      Trecho  : qM = ...
+  [3] Linha 3: Variável 'qm' com nome muito curto (≤4 chars)
+      Trecho  : qm = ...
       Contexto:
-               2 | dm=int(input("despessa mensal:"))
-        >>>    3 | qM=int(input("ouro coletado:"))
-               4 | qr=int(input("moedas de ouro roubadas:"))
+               2 | d = int(input("insira:"))
+        >>>    3 | qm = int(input("isnira:"))
+               4 | qr = int(input("insira:"))
 
   [4] Linha 4: Variável 'qr' com nome muito curto (≤4 chars)
       Trecho  : qr = ...
       Contexto:
-               3 | qM=int(input("ouro coletado:"))
-        >>>    4 | qr=int(input("moedas de ouro roubadas:"))
-               5 | acu=qi
+               3 | qm = int(input("isnira:"))
+        >>>    4 | qr = int(input("insira:"))
+               5 | 
 
-  [5] Linha 5: Variável 'acu' com nome muito curto (≤4 chars)
-      Trecho  : acu = ...
+  [5] Linha 6: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
       Contexto:
-               4 | qr=int(input("moedas de ouro roubadas:"))
-        >>>    5 | acu=qi
-               6 | cont=1
+               5 | 
+        >>>    6 | i = 0
+               7 | moedas = 0
 
-  [6] Linha 6: Variável 'cont' com nome muito curto (≤4 chars)
-      Trecho  : cont = ...
+  [6] Linha 11: Variável 'q' com nome muito curto (≤4 chars)
+      Trecho  : q = ...
       Contexto:
-               5 | acu=qi
-        >>>    6 | cont=1
-               7 | while( acu >= dm and acu >= qr):
+              10 | 	moedas = qm - d - qr
+        >>>   11 | 	q = q + moedas
+              12 | 	i = i + 1
 
-  [7] Linha 8: Variável 'acu' com nome muito curto (≤4 chars)
-      Trecho  : acu = ...
+  [7] Linha 12: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
       Contexto:
-               7 | while( acu >= dm and acu >= qr):
-        >>>    8 | 	acu = (acu + qM) -dm - qr
-               9 | 	cont=cont+1
-
-  [8] Linha 9: Variável 'cont' com nome muito curto (≤4 chars)
-      Trecho  : cont = ...
-      Contexto:
-               8 | 	acu = (acu + qM) -dm - qr
-        >>>    9 | 	cont=cont+1
-              10 | 
+              11 | 	q = q + moedas
+        >>>   12 | 	i = i + 1
+              13 | 
 
 ======================================================================

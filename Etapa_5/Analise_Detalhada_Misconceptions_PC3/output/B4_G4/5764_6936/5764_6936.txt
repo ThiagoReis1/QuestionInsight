@@ -2,11 +2,11 @@
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
 Arquivo     : 5764_6936.log
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2024_1_v1.81\2024-1\589\users\9840\executions\5764_6936.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2024_1_v1.81\2024-1\589\users\9735\executions\5764_6936.log
 Assessment  : 5764
 Título      : TP 3: Est. Condicional Encadeada
 Questão     : 6936
-Aluno       : 9840
+Aluno       : 9735
 Grupo       : TP 03
 Significado : Estrutura Condicional Encadeada
 Total MCs   : 2
@@ -16,21 +16,22 @@ Total MCs   : 2
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | v = float(input("insira o valor total da compra:"))
-     2 | p = input('insira C ou P ou D:').upper()
-     3 | des= v*(13/100)
-     4 | d= v*(8/100)
-     5 | if p == 'C':
-     6 | 	s=input("insira 1 ou 2:")
-     7 | 	if s =='1':
-     8 | 		t=v
-     9 | 	else:
-    10 | 		t=v+d
-    11 | elif p=='P':
-    12 | 	t=v-des
-    13 | else:
-    14 | 	t=v-des
-    15 | print(round(t,2))
+     1 | p = float(input("negocio: "))
+     2 | op = input("negoicio: ").upper()
+     3 | 
+     4 | if (op=="C"):
+     5 | 	a = int(input("em quantas vezes:"))
+     6 | 	if (a == 1):
+     7 | 		print(round(p, 2))
+     8 | 	else:
+     9 | 		a = p+((8/100)*p)
+    10 | 		print(round(a, 2))
+    11 | elif (op=="P"):
+    12 | 	a = p-((13/100)*p)
+    13 | 	print(round(a, 2))
+    14 | else:
+    15 | 	a = p-((13/100)*p)
+    16 | 	print(round(a, 2))
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
@@ -40,82 +41,61 @@ DETALHAMENTO DOS MISCONCEPTIONS
   Ocorrências: 2
 
   [1] Linha 11: Bloco idêntico ao da linha 11
-      Trecho  : t = v - des
+      Trecho  : a = p - 13 / 100 * p
       Contexto:
-              10 | 		t=v+d
-        >>>   11 | elif p=='P':
-              12 | 	t=v-des
+              10 | 		print(round(a, 2))
+        >>>   11 | elif (op=="P"):
+              12 | 	a = p-((13/100)*p)
 
   [2] Linha 11: Bloco idêntico ao da linha 11
-      Trecho  : t = v - des
+      Trecho  : a = p - 13 / 100 * p
       Contexto:
-              10 | 		t=v+d
-        >>>   11 | elif p=='P':
-              12 | 	t=v-des
+              10 | 		print(round(a, 2))
+        >>>   11 | elif (op=="P"):
+              12 | 	a = p-((13/100)*p)
 
 ▶ G4 — Funções/variáveis com nomes não significativos
-  Ocorrências: 9
+  Ocorrências: 6
 
-  [1] Linha 1: Variável 'v' com nome muito curto (≤4 chars)
-      Trecho  : v = ...
-      Contexto:
-        >>>    1 | v = float(input("insira o valor total da compra:"))
-               2 | p = input('insira C ou P ou D:').upper()
-
-  [2] Linha 2: Variável 'p' com nome muito curto (≤4 chars)
+  [1] Linha 1: Variável 'p' com nome muito curto (≤4 chars)
       Trecho  : p = ...
       Contexto:
-               1 | v = float(input("insira o valor total da compra:"))
-        >>>    2 | p = input('insira C ou P ou D:').upper()
-               3 | des= v*(13/100)
+        >>>    1 | p = float(input("negocio: "))
+               2 | op = input("negoicio: ").upper()
 
-  [3] Linha 3: Variável 'des' com nome muito curto (≤4 chars)
-      Trecho  : des = ...
+  [2] Linha 2: Variável 'op' com nome muito curto (≤4 chars)
+      Trecho  : op = ...
       Contexto:
-               2 | p = input('insira C ou P ou D:').upper()
-        >>>    3 | des= v*(13/100)
-               4 | d= v*(8/100)
+               1 | p = float(input("negocio: "))
+        >>>    2 | op = input("negoicio: ").upper()
+               3 | 
 
-  [4] Linha 4: Variável 'd' com nome muito curto (≤4 chars)
-      Trecho  : d = ...
+  [3] Linha 5: Variável 'a' com nome muito curto (≤4 chars)
+      Trecho  : a = ...
       Contexto:
-               3 | des= v*(13/100)
-        >>>    4 | d= v*(8/100)
-               5 | if p == 'C':
+               4 | if (op=="C"):
+        >>>    5 | 	a = int(input("em quantas vezes:"))
+               6 | 	if (a == 1):
 
-  [5] Linha 6: Variável 's' com nome muito curto (≤4 chars)
-      Trecho  : s = ...
+  [4] Linha 9: Variável 'a' com nome muito curto (≤4 chars)
+      Trecho  : a = ...
       Contexto:
-               5 | if p == 'C':
-        >>>    6 | 	s=input("insira 1 ou 2:")
-               7 | 	if s =='1':
+               8 | 	else:
+        >>>    9 | 		a = p+((8/100)*p)
+              10 | 		print(round(a, 2))
 
-  [6] Linha 8: Variável 't' com nome muito curto (≤4 chars)
-      Trecho  : t = ...
+  [5] Linha 12: Variável 'a' com nome muito curto (≤4 chars)
+      Trecho  : a = ...
       Contexto:
-               7 | 	if s =='1':
-        >>>    8 | 		t=v
-               9 | 	else:
+              11 | elif (op=="P"):
+        >>>   12 | 	a = p-((13/100)*p)
+              13 | 	print(round(a, 2))
 
-  [7] Linha 10: Variável 't' com nome muito curto (≤4 chars)
-      Trecho  : t = ...
+  [6] Linha 15: Variável 'a' com nome muito curto (≤4 chars)
+      Trecho  : a = ...
       Contexto:
-               9 | 	else:
-        >>>   10 | 		t=v+d
-              11 | elif p=='P':
-
-  [8] Linha 12: Variável 't' com nome muito curto (≤4 chars)
-      Trecho  : t = ...
-      Contexto:
-              11 | elif p=='P':
-        >>>   12 | 	t=v-des
-              13 | else:
-
-  [9] Linha 14: Variável 't' com nome muito curto (≤4 chars)
-      Trecho  : t = ...
-      Contexto:
-              13 | else:
-        >>>   14 | 	t=v-des
-              15 | print(round(t,2))
+              14 | else:
+        >>>   15 | 	a = p-((13/100)*p)
+              16 | 	print(round(a, 2))
 
 ======================================================================

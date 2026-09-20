@@ -2,11 +2,11 @@
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
 Arquivo     : 1662_2966.log
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2019_1_v1.81\2019-1\225\users\4001\executions\1662_2966.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2019_1_v1.81\2019-1\225\users\4491\executions\1662_2966.log
 Assessment  : 1662
 Título      : TP2 - Estrutura Condicional Simples e Composta
 Questão     : 2966
-Aluno       : 4001
+Aluno       : 4491
 Grupo       : TP 02
 Significado : Estrutura Condicional Simples e Composta
 Total MCs   : 1
@@ -16,65 +16,56 @@ Total MCs   : 1
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | opcao = input("S/N? ")
-     2 | ing = float(input("Valor do ingresso: "))
-     3 | n = int(input("Qtd de ingressos? "))
-     4 | # Desconto
-     5 | n2 = (ing - (ing * 20/100)) * n
-     6 | n3 = ing * n
-     7 | if(opcao == "S"):
-     8 | 	msg = n2
-     9 | else:
-    10 | 	msg =  n3
-    11 | print(round(msg, 2))
+     1 | m = input("S ou N: ")
+     2 | v = float(input("valor: "))
+     3 | qtd = float(input("quantidade de ingresso: "))
+     4 | 
+     5 | if(m == "S"):
+     6 | 	d = (v*qtd) - (v*qtd*20/100)
+     7 | 	print(round(d, 2))
+     8 | else: 
+     9 | 	p = v*qtd
+    10 | 	print(round(p, 2))
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
 ----------------------------------------------------------------------
 
 ▶ G4 — Funções/variáveis com nomes não significativos
-  Ocorrências: 6
+  Ocorrências: 5
 
-  [1] Linha 2: Variável 'ing' com nome muito curto (≤4 chars)
-      Trecho  : ing = ...
+  [1] Linha 1: Variável 'm' com nome muito curto (≤4 chars)
+      Trecho  : m = ...
       Contexto:
-               1 | opcao = input("S/N? ")
-        >>>    2 | ing = float(input("Valor do ingresso: "))
-               3 | n = int(input("Qtd de ingressos? "))
+        >>>    1 | m = input("S ou N: ")
+               2 | v = float(input("valor: "))
 
-  [2] Linha 3: Variável 'n' com nome muito curto (≤4 chars)
-      Trecho  : n = ...
+  [2] Linha 2: Variável 'v' com nome muito curto (≤4 chars)
+      Trecho  : v = ...
       Contexto:
-               2 | ing = float(input("Valor do ingresso: "))
-        >>>    3 | n = int(input("Qtd de ingressos? "))
-               4 | # Desconto
+               1 | m = input("S ou N: ")
+        >>>    2 | v = float(input("valor: "))
+               3 | qtd = float(input("quantidade de ingresso: "))
 
-  [3] Linha 5: Variável 'n2' com nome muito curto (≤4 chars)
-      Trecho  : n2 = ...
+  [3] Linha 3: Variável 'qtd' com nome muito curto (≤4 chars)
+      Trecho  : qtd = ...
       Contexto:
-               4 | # Desconto
-        >>>    5 | n2 = (ing - (ing * 20/100)) * n
-               6 | n3 = ing * n
+               2 | v = float(input("valor: "))
+        >>>    3 | qtd = float(input("quantidade de ingresso: "))
+               4 | 
 
-  [4] Linha 6: Variável 'n3' com nome muito curto (≤4 chars)
-      Trecho  : n3 = ...
+  [4] Linha 6: Variável 'd' com nome muito curto (≤4 chars)
+      Trecho  : d = ...
       Contexto:
-               5 | n2 = (ing - (ing * 20/100)) * n
-        >>>    6 | n3 = ing * n
-               7 | if(opcao == "S"):
+               5 | if(m == "S"):
+        >>>    6 | 	d = (v*qtd) - (v*qtd*20/100)
+               7 | 	print(round(d, 2))
 
-  [5] Linha 8: Variável 'msg' com nome muito curto (≤4 chars)
-      Trecho  : msg = ...
+  [5] Linha 9: Variável 'p' com nome muito curto (≤4 chars)
+      Trecho  : p = ...
       Contexto:
-               7 | if(opcao == "S"):
-        >>>    8 | 	msg = n2
-               9 | else:
-
-  [6] Linha 10: Variável 'msg' com nome muito curto (≤4 chars)
-      Trecho  : msg = ...
-      Contexto:
-               9 | else:
-        >>>   10 | 	msg =  n3
-              11 | print(round(msg, 2))
+               8 | else: 
+        >>>    9 | 	p = v*qtd
+              10 | 	print(round(p, 2))
 
 ======================================================================

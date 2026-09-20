@@ -2,11 +2,11 @@
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
 Arquivo     : 1828_1642.log
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2019_1_v1.81\2019-1\225\users\3988\executions\1828_1642.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2019_1_v1.81\2019-1\225\users\4011\executions\1828_1642.log
 Assessment  : 1828
 Título      : TP6: Repetição por contagem
 Questão     : 1642
-Aluno       : 3988
+Aluno       : 4011
 Grupo       : TP 06
 Significado : Estrutura de Repetição por Contagem
 Total MCs   : 2
@@ -17,20 +17,27 @@ Total MCs   : 2
 CÓDIGO FONTE
 ----------------------------------------------------------------------
      1 | from numpy import*
-     2 | v = array(eval(input("entrada: ")))
-     3 | s = 0
-     4 | for i in v:
-     5 | 	if(i%5==0):
-     6 | 		s = s + 1
-     7 | r = zeros(s,dtype=int)
-     8 | print(s)
-     9 | n = 0
-    10 | for i in range(size(v)):
+     2 | 
+     3 | qt = array(eval(input("Alunos por sala: ")))
+     4 | tp = 0 
+     5 | 
+     6 | #Primeira parte - ok
+     7 | for x in qt:
+     8 | 	if(x%5 == 0):
+     9 | 		tp = tp + 1
+    10 | print(tp)
     11 | 	
-    12 | 	if(v[i]%5==0):
-    13 | 		r[n]= i
-    14 | 		n = n + 1
-    15 | print(r)
+    12 | #Segunda parte
+    13 | u = zeros(tp, dtype=int)
+    14 | i = 0
+    15 | t = 0
+    16 | 
+    17 | while(i < size(qt)):
+    18 | 	if(qt[i]%5 == 0):
+    19 | 		u[t] = i
+    20 | 	i = i + 1
+    21 | 		
+    22 | print(u)
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
@@ -43,51 +50,49 @@ DETALHAMENTO DOS MISCONCEPTIONS
       Trecho  : —
 
 ▶ G4 — Funções/variáveis com nomes não significativos
-  Ocorrências: 6
+  Ocorrências: 7
 
-  [1] Linha 2: Variável 'v' com nome muito curto (≤4 chars)
-      Trecho  : v = ...
+  [1] Linha 3: Variável 'qt' com nome muito curto (≤4 chars)
+      Trecho  : qt = ...
       Contexto:
-               1 | from numpy import*
-        >>>    2 | v = array(eval(input("entrada: ")))
-               3 | s = 0
+               2 | 
+        >>>    3 | qt = array(eval(input("Alunos por sala: ")))
+               4 | tp = 0 
 
-  [2] Linha 3: Variável 's' com nome muito curto (≤4 chars)
-      Trecho  : s = ...
+  [2] Linha 4: Variável 'tp' com nome muito curto (≤4 chars)
+      Trecho  : tp = ...
       Contexto:
-               2 | v = array(eval(input("entrada: ")))
-        >>>    3 | s = 0
-               4 | for i in v:
+               3 | qt = array(eval(input("Alunos por sala: ")))
+        >>>    4 | tp = 0 
+               5 | 
 
-  [3] Linha 7: Variável 'r' com nome muito curto (≤4 chars)
-      Trecho  : r = ...
+  [3] Linha 13: Variável 'u' com nome muito curto (≤4 chars)
+      Trecho  : u = ...
       Contexto:
-               6 | 		s = s + 1
-        >>>    7 | r = zeros(s,dtype=int)
-               8 | print(s)
+              12 | #Segunda parte
+        >>>   13 | u = zeros(tp, dtype=int)
+              14 | i = 0
 
-  [4] Linha 9: Variável 'n' com nome muito curto (≤4 chars)
-      Trecho  : n = ...
+  [4] Linha 14: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
       Contexto:
-               8 | print(s)
-        >>>    9 | n = 0
-              10 | for i in range(size(v)):
+              13 | u = zeros(tp, dtype=int)
+        >>>   14 | i = 0
+              15 | t = 0
 
-  [5] Linha 6: Variável 's' com nome muito curto (≤4 chars)
-      Trecho  : s = ...
+  [5] Linha 15: Variável 't' com nome muito curto (≤4 chars)
+      Trecho  : t = ...
       Contexto:
-               5 | 	if(i%5==0):
-        >>>    6 | 		s = s + 1
-               7 | r = zeros(s,dtype=int)
+              14 | i = 0
+        >>>   15 | t = 0
+              16 | 
 
-  [6] Linha 14: Variável 'n' com nome muito curto (≤4 chars)
-      Trecho  : n = ...
+  [6] Linha 20: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
       Contexto:
-              13 | 		r[n]= i
-        >>>   14 | 		n = n + 1
-              15 | print(r)
-
-======================================================================             21 | 		
+              19 | 		u[t] = i
+        >>>   20 | 	i = i + 1
+              21 | 		
 
   [7] Linha 9: Variável 'tp' com nome muito curto (≤4 chars)
       Trecho  : tp = ...

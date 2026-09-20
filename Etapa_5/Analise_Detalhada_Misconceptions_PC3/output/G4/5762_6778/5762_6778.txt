@@ -2,11 +2,11 @@
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
 Arquivo     : 5762_6778.log
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2024_1_v1.81\2024-1\591\users\9772\executions\5762_6778.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2024_1_v1.81\2024-1\591\users\9789\executions\5762_6778.log
 Assessment  : 5762
 Título      : TP 3: Est. Condicional Encadeada
 Questão     : 6778
-Aluno       : 9772
+Aluno       : 9789
 Grupo       : TP 03
 Significado : Estrutura Condicional Encadeada
 Total MCs   : 1
@@ -16,68 +16,87 @@ Total MCs   : 1
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | ano= int(input(":"))
-     2 | pais= input(":")
-     3 | pais= pais. upper()
-     4 | idade=2023-ano
-     5 | if pais == "B":
-     6 | 	im=21
-     7 | 	if idade > im:
-     8 | 		print ("sim")
-     9 | 		print(idade - im)
-    10 | 	else:
-    11 | 		print("nao")
-    12 | 		print(im % idade)
-    13 | elif pais == "J":
-    14 | 	im=20
-    15 | 	if idade > im:
-    16 | 		print ("sim")
-    17 | 		print( im - idade)
-    18 | 	else:
-    19 | 		print("nao")
-    20 | 		print (im % idade)
-    21 | else:
-    22 | 	print("invalido")
+     1 | ano = int(input("em qual ano voce nasceu:"))
+     2 | P = input("pais:").upper()
+     3 | 
+     4 | idd = (2023) - ano 
+     5 | 
+     6 | if P == "B" and idd >= 21:
+     7 | 	print ("sim")
+     8 | 	apta = idd - 21
+     9 | 	print (apta)
+    10 | 	
+    11 | elif P == "B" and idd < 21:
+    12 | 	print ("nao")
+    13 | 	apta = 21 - idd
+    14 | 	print (apta)
+    15 | 	
+    16 | elif P == "J" and idd >= 20:
+    17 | 	print ("sim")
+    18 | 	apto = idd - 20
+    19 | 	print (apto)
+    20 | 	
+    21 | elif P == "J" and idd < 20:
+    22 | 	print ("nao")
+    23 | 	apto = 20 - idd
+    24 | 	print (apto)
+    25 | 	
+    26 | else:
+    27 | 	print("invalido")
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
 ----------------------------------------------------------------------
 
 ▶ G4 — Funções/variáveis com nomes não significativos
-  Ocorrências: 5
+  Ocorrências: 7
 
   [1] Linha 1: Variável 'ano' com nome muito curto (≤4 chars)
       Trecho  : ano = ...
       Contexto:
-        >>>    1 | ano= int(input(":"))
-               2 | pais= input(":")
+        >>>    1 | ano = int(input("em qual ano voce nasceu:"))
+               2 | P = input("pais:").upper()
 
-  [2] Linha 2: Variável 'pais' com nome muito curto (≤4 chars)
-      Trecho  : pais = ...
+  [2] Linha 2: Variável 'P' com nome muito curto (≤4 chars)
+      Trecho  : P = ...
       Contexto:
-               1 | ano= int(input(":"))
-        >>>    2 | pais= input(":")
-               3 | pais= pais. upper()
+               1 | ano = int(input("em qual ano voce nasceu:"))
+        >>>    2 | P = input("pais:").upper()
+               3 | 
 
-  [3] Linha 3: Variável 'pais' com nome muito curto (≤4 chars)
-      Trecho  : pais = ...
+  [3] Linha 4: Variável 'idd' com nome muito curto (≤4 chars)
+      Trecho  : idd = ...
       Contexto:
-               2 | pais= input(":")
-        >>>    3 | pais= pais. upper()
-               4 | idade=2023-ano
+               3 | 
+        >>>    4 | idd = (2023) - ano 
+               5 | 
 
-  [4] Linha 6: Variável 'im' com nome muito curto (≤4 chars)
-      Trecho  : im = ...
+  [4] Linha 8: Variável 'apta' com nome muito curto (≤4 chars)
+      Trecho  : apta = ...
       Contexto:
-               5 | if pais == "B":
-        >>>    6 | 	im=21
-               7 | 	if idade > im:
+               7 | 	print ("sim")
+        >>>    8 | 	apta = idd - 21
+               9 | 	print (apta)
 
-  [5] Linha 14: Variável 'im' com nome muito curto (≤4 chars)
-      Trecho  : im = ...
+  [5] Linha 13: Variável 'apta' com nome muito curto (≤4 chars)
+      Trecho  : apta = ...
       Contexto:
-              13 | elif pais == "J":
-        >>>   14 | 	im=20
-              15 | 	if idade > im:
+              12 | 	print ("nao")
+        >>>   13 | 	apta = 21 - idd
+              14 | 	print (apta)
+
+  [6] Linha 18: Variável 'apto' com nome muito curto (≤4 chars)
+      Trecho  : apto = ...
+      Contexto:
+              17 | 	print ("sim")
+        >>>   18 | 	apto = idd - 20
+              19 | 	print (apto)
+
+  [7] Linha 23: Variável 'apto' com nome muito curto (≤4 chars)
+      Trecho  : apto = ...
+      Contexto:
+              22 | 	print ("nao")
+        >>>   23 | 	apto = 20 - idd
+              24 | 	print (apto)
 
 ======================================================================

@@ -2,11 +2,11 @@
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
 Arquivo     : 199_1252.log
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2016_1_v1.81\2016-1\102\users\1303\executions\199_1252.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2016_1_v1.81\2016-1\102\users\1310\executions\199_1252.log
 Assessment  : 199
 Título      : Avaliação Parcial 06 – Repetição por contagem
 Questão     : 1252
-Aluno       : 1303
+Aluno       : 1310
 Grupo       : TP 06
 Significado : Estrutura de Repetição por Contagem
 Total MCs   : 2
@@ -16,22 +16,23 @@ Total MCs   : 2
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | #Johnathan Dias			#Matricula: 21651445
-     2 | from numpy import*
-     3 | 
-     4 | vet = array(eval(input("Digitar o Vetor: ")))
-     5 | 
-     6 | a = min(vet)
-     7 | b = max(vet)
-     8 | c = (0.6 * a) + (0.4 * b)
-     9 | d = (0.3 * a) + (0.7 * b)
-    10 | w = array(zeros(2, dtype = int))
-    11 | for i in vet:
-    12 | 	if (i>= a and i<c):
-    13 | 		w[0] = w[0] + 1
-    14 | 	elif (i >= c and i < d):
-    15 | 		w[1] = w[1] + 1
-    16 | print(w)
+     1 | from numpy import *
+     2 | v=array(eval(input("v: ")))
+     3 | B=max(v)
+     4 | A=min(v)
+     5 | C=((0.6*A)+(0.4*B))
+     6 | D=((0.3*A)+(0.7*B))
+     7 | g=0
+     8 | e=0
+     9 | z=array(zeros(2, dtype=int))
+    10 | for t in v:
+    11 | 	if (t>A and t<C) or (t==A and t<C):
+    12 | 		e=e+1
+    13 | 	if (t>C and t<D) or (t==C and t<D):
+    14 | 		g=g+1
+    15 | z[0]=e
+    16 | z[1]=g
+    17 | print(z)
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
@@ -40,56 +41,80 @@ DETALHAMENTO DOS MISCONCEPTIONS
 ▶ B8 — Não utilização de elif/else
   Ocorrências: 1
 
-  [1] Linha 12: Cadeia if/elif sem bloco else final
-      Trecho  : if ... (linha 12) / elif ... sem else
-      Contexto:
-              11 | for i in vet:
-        >>>   12 | 	if (i>= a and i<c):
-              13 | 		w[0] = w[0] + 1
+  [1] Linha 0: B8 detectado pelo VisitorMC3 (localização exata não mapeada)
+      Trecho  : —
 
 ▶ G4 — Funções/variáveis com nomes não significativos
-  Ocorrências: 6
+  Ocorrências: 10
 
-  [1] Linha 4: Variável 'vet' com nome muito curto (≤4 chars)
-      Trecho  : vet = ...
+  [1] Linha 2: Variável 'v' com nome muito curto (≤4 chars)
+      Trecho  : v = ...
       Contexto:
-               3 | 
-        >>>    4 | vet = array(eval(input("Digitar o Vetor: ")))
-               5 | 
+               1 | from numpy import *
+        >>>    2 | v=array(eval(input("v: ")))
+               3 | B=max(v)
 
-  [2] Linha 6: Variável 'a' com nome muito curto (≤4 chars)
-      Trecho  : a = ...
+  [2] Linha 3: Variável 'B' com nome muito curto (≤4 chars)
+      Trecho  : B = ...
       Contexto:
-               5 | 
-        >>>    6 | a = min(vet)
-               7 | b = max(vet)
+               2 | v=array(eval(input("v: ")))
+        >>>    3 | B=max(v)
+               4 | A=min(v)
 
-  [3] Linha 7: Variável 'b' com nome muito curto (≤4 chars)
-      Trecho  : b = ...
+  [3] Linha 4: Variável 'A' com nome muito curto (≤4 chars)
+      Trecho  : A = ...
       Contexto:
-               6 | a = min(vet)
-        >>>    7 | b = max(vet)
-               8 | c = (0.6 * a) + (0.4 * b)
+               3 | B=max(v)
+        >>>    4 | A=min(v)
+               5 | C=((0.6*A)+(0.4*B))
 
-  [4] Linha 8: Variável 'c' com nome muito curto (≤4 chars)
-      Trecho  : c = ...
+  [4] Linha 5: Variável 'C' com nome muito curto (≤4 chars)
+      Trecho  : C = ...
       Contexto:
-               7 | b = max(vet)
-        >>>    8 | c = (0.6 * a) + (0.4 * b)
-               9 | d = (0.3 * a) + (0.7 * b)
+               4 | A=min(v)
+        >>>    5 | C=((0.6*A)+(0.4*B))
+               6 | D=((0.3*A)+(0.7*B))
 
-  [5] Linha 9: Variável 'd' com nome muito curto (≤4 chars)
-      Trecho  : d = ...
+  [5] Linha 6: Variável 'D' com nome muito curto (≤4 chars)
+      Trecho  : D = ...
       Contexto:
-               8 | c = (0.6 * a) + (0.4 * b)
-        >>>    9 | d = (0.3 * a) + (0.7 * b)
-              10 | w = array(zeros(2, dtype = int))
+               5 | C=((0.6*A)+(0.4*B))
+        >>>    6 | D=((0.3*A)+(0.7*B))
+               7 | g=0
 
-  [6] Linha 10: Variável 'w' com nome muito curto (≤4 chars)
-      Trecho  : w = ...
+  [6] Linha 7: Variável 'g' com nome muito curto (≤4 chars)
+      Trecho  : g = ...
       Contexto:
-               9 | d = (0.3 * a) + (0.7 * b)
-        >>>   10 | w = array(zeros(2, dtype = int))
-              11 | for i in vet:
+               6 | D=((0.3*A)+(0.7*B))
+        >>>    7 | g=0
+               8 | e=0
+
+  [7] Linha 8: Variável 'e' com nome muito curto (≤4 chars)
+      Trecho  : e = ...
+      Contexto:
+               7 | g=0
+        >>>    8 | e=0
+               9 | z=array(zeros(2, dtype=int))
+
+  [8] Linha 9: Variável 'z' com nome muito curto (≤4 chars)
+      Trecho  : z = ...
+      Contexto:
+               8 | e=0
+        >>>    9 | z=array(zeros(2, dtype=int))
+              10 | for t in v:
+
+  [9] Linha 12: Variável 'e' com nome muito curto (≤4 chars)
+      Trecho  : e = ...
+      Contexto:
+              11 | 	if (t>A and t<C) or (t==A and t<C):
+        >>>   12 | 		e=e+1
+              13 | 	if (t>C and t<D) or (t==C and t<D):
+
+  [10] Linha 14: Variável 'g' com nome muito curto (≤4 chars)
+      Trecho  : g = ...
+      Contexto:
+              13 | 	if (t>C and t<D) or (t==C and t<D):
+        >>>   14 | 		g=g+1
+              15 | z[0]=e
 
 ======================================================================

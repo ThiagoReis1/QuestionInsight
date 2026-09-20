@@ -2,11 +2,11 @@
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
 Arquivo     : 348_1601.log
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2016_2_v1.81\2016-2\127\users\1936\executions\348_1601.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2016_2_v1.81\2016-2\127\users\1904\executions\348_1601.log
 Assessment  : 348
 Título      : Trabalho Prático 05: Vetores e Strings
 Questão     : 1601
-Aluno       : 1936
+Aluno       : 1904
 Grupo       : TP 05
 Significado : Vetores e Strings
 Total MCs   : 2
@@ -17,17 +17,14 @@ Total MCs   : 2
 CÓDIGO FONTE
 ----------------------------------------------------------------------
      1 | from numpy import*
-     2 | v = array(eval(input("tempo: ")))
-     3 | i = 0
-     4 | t = 0
-     5 | a = min(v)
-     6 | b = 0
-     7 | while(i<t):
-     8 | 	if(v[i]==a):
-     9 | 		b = i+1
-    10 | 	i = i+1
-    11 | 	
-    12 | print(b)
+     2 | v = array(eval(input("vetor:")))
+     3 | i=1
+     4 | n=0
+     5 | while(i<size(v)):
+     6 | 	if(v[i]<v[n]):
+     7 | 		n  = i
+     8 | 	i=i+1
+     9 | print(n)
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
@@ -40,55 +37,41 @@ DETALHAMENTO DOS MISCONCEPTIONS
       Trecho  : —
 
 ▶ G4 — Funções/variáveis com nomes não significativos
-  Ocorrências: 7
+  Ocorrências: 5
 
   [1] Linha 2: Variável 'v' com nome muito curto (≤4 chars)
       Trecho  : v = ...
       Contexto:
                1 | from numpy import*
-        >>>    2 | v = array(eval(input("tempo: ")))
-               3 | i = 0
+        >>>    2 | v = array(eval(input("vetor:")))
+               3 | i=1
 
   [2] Linha 3: Variável 'i' com nome muito curto (≤4 chars)
       Trecho  : i = ...
       Contexto:
-               2 | v = array(eval(input("tempo: ")))
-        >>>    3 | i = 0
-               4 | t = 0
+               2 | v = array(eval(input("vetor:")))
+        >>>    3 | i=1
+               4 | n=0
 
-  [3] Linha 4: Variável 't' com nome muito curto (≤4 chars)
-      Trecho  : t = ...
+  [3] Linha 4: Variável 'n' com nome muito curto (≤4 chars)
+      Trecho  : n = ...
       Contexto:
-               3 | i = 0
-        >>>    4 | t = 0
-               5 | a = min(v)
+               3 | i=1
+        >>>    4 | n=0
+               5 | while(i<size(v)):
 
-  [4] Linha 5: Variável 'a' com nome muito curto (≤4 chars)
-      Trecho  : a = ...
-      Contexto:
-               4 | t = 0
-        >>>    5 | a = min(v)
-               6 | b = 0
-
-  [5] Linha 6: Variável 'b' com nome muito curto (≤4 chars)
-      Trecho  : b = ...
-      Contexto:
-               5 | a = min(v)
-        >>>    6 | b = 0
-               7 | while(i<t):
-
-  [6] Linha 10: Variável 'i' com nome muito curto (≤4 chars)
+  [4] Linha 8: Variável 'i' com nome muito curto (≤4 chars)
       Trecho  : i = ...
       Contexto:
-               9 | 		b = i+1
-        >>>   10 | 	i = i+1
-              11 | 	
+               7 | 		n  = i
+        >>>    8 | 	i=i+1
+               9 | print(n)
 
-  [7] Linha 9: Variável 'b' com nome muito curto (≤4 chars)
-      Trecho  : b = ...
+  [5] Linha 7: Variável 'n' com nome muito curto (≤4 chars)
+      Trecho  : n = ...
       Contexto:
-               8 | 	if(v[i]==a):
-        >>>    9 | 		b = i+1
-              10 | 	i = i+1
+               6 | 	if(v[i]<v[n]):
+        >>>    7 | 		n  = i
+               8 | 	i=i+1
 
 ======================================================================

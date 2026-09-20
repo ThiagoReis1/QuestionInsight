@@ -2,11 +2,11 @@
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
 Arquivo     : 715_1653.log
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2017_1_v1.81\2017-1\139\users\2385\executions\715_1653.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2017_1_v1.81\2017-1\139\users\2384\executions\715_1653.log
 Assessment  : 715
 Título      : Trabalho Prático 6: Repetição por Contagem
 Questão     : 1653
-Aluno       : 2385
+Aluno       : 2384
 Grupo       : TP 06
 Significado : Estrutura de Repetição por Contagem
 Total MCs   : 2
@@ -17,29 +17,17 @@ Total MCs   : 2
 CÓDIGO FONTE
 ----------------------------------------------------------------------
      1 | from numpy import*
-     2 | a=input().split(',')
-     3 | g=len(a)
-     4 | b=0
-     5 | c=0
-     6 | d=0
-     7 | e=0
-     8 | f=0
-     9 | k=0
-    10 | while(k<g):
-    11 | 	if(a[k]=='AR'):
-    12 | 		b=b+1
-    13 | 	if(a[k]=='BR'):
-    14 | 		c=c+1
-    15 | 	if(a[k]=='CL'):
-    16 | 		d=d+1	
-    17 | 	if(a[k]=='CO'):
-    18 | 		e=e+1
-    19 | 	if(a[k]=='UY'):
-    20 | 		f=f+1		
-    21 | 	k=k+1
-    22 | nv=array([b,c,d,e,f])	
-    23 | print(max(nv))
-    24 | print(nv)
+     2 | 
+     3 | s = input("string").split(',')
+     4 | n = 0
+     5 | a = 0
+     6 | b = 1
+     7 | 
+     8 | for i in range (size(s)):
+     9 | 	if(s[a] == s[b]):
+    10 | 		n = n + 1
+    11 | 		b = b + 1
+    12 | print(n)
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
@@ -52,111 +40,48 @@ DETALHAMENTO DOS MISCONCEPTIONS
       Trecho  : —
 
 ▶ G4 — Funções/variáveis com nomes não significativos
-  Ocorrências: 15
+  Ocorrências: 6
 
-  [1] Linha 2: Variável 'a' com nome muito curto (≤4 chars)
+  [1] Linha 3: Variável 's' com nome muito curto (≤4 chars)
+      Trecho  : s = ...
+      Contexto:
+               2 | 
+        >>>    3 | s = input("string").split(',')
+               4 | n = 0
+
+  [2] Linha 4: Variável 'n' com nome muito curto (≤4 chars)
+      Trecho  : n = ...
+      Contexto:
+               3 | s = input("string").split(',')
+        >>>    4 | n = 0
+               5 | a = 0
+
+  [3] Linha 5: Variável 'a' com nome muito curto (≤4 chars)
       Trecho  : a = ...
       Contexto:
-               1 | from numpy import*
-        >>>    2 | a=input().split(',')
-               3 | g=len(a)
+               4 | n = 0
+        >>>    5 | a = 0
+               6 | b = 1
 
-  [2] Linha 3: Variável 'g' com nome muito curto (≤4 chars)
-      Trecho  : g = ...
-      Contexto:
-               2 | a=input().split(',')
-        >>>    3 | g=len(a)
-               4 | b=0
-
-  [3] Linha 4: Variável 'b' com nome muito curto (≤4 chars)
+  [4] Linha 6: Variável 'b' com nome muito curto (≤4 chars)
       Trecho  : b = ...
       Contexto:
-               3 | g=len(a)
-        >>>    4 | b=0
-               5 | c=0
+               5 | a = 0
+        >>>    6 | b = 1
+               7 | 
 
-  [4] Linha 5: Variável 'c' com nome muito curto (≤4 chars)
-      Trecho  : c = ...
+  [5] Linha 10: Variável 'n' com nome muito curto (≤4 chars)
+      Trecho  : n = ...
       Contexto:
-               4 | b=0
-        >>>    5 | c=0
-               6 | d=0
+               9 | 	if(s[a] == s[b]):
+        >>>   10 | 		n = n + 1
+              11 | 		b = b + 1
 
-  [5] Linha 6: Variável 'd' com nome muito curto (≤4 chars)
-      Trecho  : d = ...
-      Contexto:
-               5 | c=0
-        >>>    6 | d=0
-               7 | e=0
-
-  [6] Linha 7: Variável 'e' com nome muito curto (≤4 chars)
-      Trecho  : e = ...
-      Contexto:
-               6 | d=0
-        >>>    7 | e=0
-               8 | f=0
-
-  [7] Linha 8: Variável 'f' com nome muito curto (≤4 chars)
-      Trecho  : f = ...
-      Contexto:
-               7 | e=0
-        >>>    8 | f=0
-               9 | k=0
-
-  [8] Linha 9: Variável 'k' com nome muito curto (≤4 chars)
-      Trecho  : k = ...
-      Contexto:
-               8 | f=0
-        >>>    9 | k=0
-              10 | while(k<g):
-
-  [9] Linha 22: Variável 'nv' com nome muito curto (≤4 chars)
-      Trecho  : nv = ...
-      Contexto:
-              21 | 	k=k+1
-        >>>   22 | nv=array([b,c,d,e,f])	
-              23 | print(max(nv))
-
-  [10] Linha 21: Variável 'k' com nome muito curto (≤4 chars)
-      Trecho  : k = ...
-      Contexto:
-              20 | 		f=f+1		
-        >>>   21 | 	k=k+1
-              22 | nv=array([b,c,d,e,f])	
-
-  [11] Linha 12: Variável 'b' com nome muito curto (≤4 chars)
+  [6] Linha 11: Variável 'b' com nome muito curto (≤4 chars)
       Trecho  : b = ...
       Contexto:
-              11 | 	if(a[k]=='AR'):
-        >>>   12 | 		b=b+1
-              13 | 	if(a[k]=='BR'):
-
-  [12] Linha 14: Variável 'c' com nome muito curto (≤4 chars)
-      Trecho  : c = ...
-      Contexto:
-              13 | 	if(a[k]=='BR'):
-        >>>   14 | 		c=c+1
-              15 | 	if(a[k]=='CL'):
-
-  [13] Linha 16: Variável 'd' com nome muito curto (≤4 chars)
-      Trecho  : d = ...
-      Contexto:
-              15 | 	if(a[k]=='CL'):
-        >>>   16 | 		d=d+1	
-              17 | 	if(a[k]=='CO'):
-
-  [14] Linha 18: Variável 'e' com nome muito curto (≤4 chars)
-      Trecho  : e = ...
-      Contexto:
-              17 | 	if(a[k]=='CO'):
-        >>>   18 | 		e=e+1
-              19 | 	if(a[k]=='UY'):
-
-  [15] Linha 20: Variável 'f' com nome muito curto (≤4 chars)
-      Trecho  : f = ...
-      Contexto:
-              19 | 	if(a[k]=='UY'):
-        >>>   20 | 		f=f+1		
-              21 | 	k=k+1
+              10 | 		n = n + 1
+        >>>   11 | 		b = b + 1
+              12 | print(n)
 
 ======================================================================

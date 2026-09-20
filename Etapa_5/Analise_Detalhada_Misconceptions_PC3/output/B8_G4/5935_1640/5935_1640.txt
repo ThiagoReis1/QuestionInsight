@@ -2,11 +2,11 @@
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
 Arquivo     : 5935_1640.log
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2024_1_v1.81\2024-1\589\users\9977\executions\5935_1640.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2024_1_v1.81\2024-1\589\users\9742\executions\5935_1640.log
 Assessment  : 5935
 Título      : TP 6: Estrutura de Repetição por Contagem (for)
 Questão     : 1640
-Aluno       : 9977
+Aluno       : 9742
 Grupo       : TP 06
 Significado : Estrutura de Repetição por Contagem
 Total MCs   : 2
@@ -16,21 +16,24 @@ Total MCs   : 2
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | from numpy import*
-     2 | a = array(eval(input('Vetor: ')))
-     3 | b = 0
-     4 | for i in range(size(a)):
-     5 | 	if a[i] % 2 == 0:
-     6 | 		b= b + 1
-     7 | c = zeros(b,dtype=int)
-     8 | d = 0
-     9 | for i in range(size(a)):
-    10 | 	if a [i] % 2 == 0:
-    11 | 		c[d] = c[d] + i
-    12 | 		d = d +1
-    13 | 		
-    14 | print(b)
-    15 | print(c)
+     1 | from numpy import *
+     2 | 
+     3 | n = array(eval(input("N: ")))
+     4 | im = 0 
+     5 | 
+     6 | for i in n:
+     7 | 	if i%2!=0:
+     8 | 		im+=1
+     9 | print(im)
+    10 | 
+    11 | 
+    12 | v = zeros(im, dtype=int)
+    13 | z = 0 
+    14 | for i in range(size(n)):
+    15 | 	if n[i]%2!=0:
+    16 | 		v[z]=i
+    17 | 		z+=1
+    18 | print(v)
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
@@ -43,48 +46,34 @@ DETALHAMENTO DOS MISCONCEPTIONS
       Trecho  : —
 
 ▶ G4 — Funções/variáveis com nomes não significativos
-  Ocorrências: 6
+  Ocorrências: 4
 
-  [1] Linha 2: Variável 'a' com nome muito curto (≤4 chars)
-      Trecho  : a = ...
+  [1] Linha 3: Variável 'n' com nome muito curto (≤4 chars)
+      Trecho  : n = ...
       Contexto:
-               1 | from numpy import*
-        >>>    2 | a = array(eval(input('Vetor: ')))
-               3 | b = 0
+               2 | 
+        >>>    3 | n = array(eval(input("N: ")))
+               4 | im = 0 
 
-  [2] Linha 3: Variável 'b' com nome muito curto (≤4 chars)
-      Trecho  : b = ...
+  [2] Linha 4: Variável 'im' com nome muito curto (≤4 chars)
+      Trecho  : im = ...
       Contexto:
-               2 | a = array(eval(input('Vetor: ')))
-        >>>    3 | b = 0
-               4 | for i in range(size(a)):
+               3 | n = array(eval(input("N: ")))
+        >>>    4 | im = 0 
+               5 | 
 
-  [3] Linha 7: Variável 'c' com nome muito curto (≤4 chars)
-      Trecho  : c = ...
+  [3] Linha 12: Variável 'v' com nome muito curto (≤4 chars)
+      Trecho  : v = ...
       Contexto:
-               6 | 		b= b + 1
-        >>>    7 | c = zeros(b,dtype=int)
-               8 | d = 0
+              11 | 
+        >>>   12 | v = zeros(im, dtype=int)
+              13 | z = 0 
 
-  [4] Linha 8: Variável 'd' com nome muito curto (≤4 chars)
-      Trecho  : d = ...
+  [4] Linha 13: Variável 'z' com nome muito curto (≤4 chars)
+      Trecho  : z = ...
       Contexto:
-               7 | c = zeros(b,dtype=int)
-        >>>    8 | d = 0
-               9 | for i in range(size(a)):
-
-  [5] Linha 6: Variável 'b' com nome muito curto (≤4 chars)
-      Trecho  : b = ...
-      Contexto:
-               5 | 	if a[i] % 2 == 0:
-        >>>    6 | 		b= b + 1
-               7 | c = zeros(b,dtype=int)
-
-  [6] Linha 12: Variável 'd' com nome muito curto (≤4 chars)
-      Trecho  : d = ...
-      Contexto:
-              11 | 		c[d] = c[d] + i
-        >>>   12 | 		d = d +1
-              13 | 		
+              12 | v = zeros(im, dtype=int)
+        >>>   13 | z = 0 
+              14 | for i in range(size(n)):
 
 ======================================================================

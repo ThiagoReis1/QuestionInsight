@@ -2,11 +2,11 @@
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
 Arquivo     : 1997_1364.log
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2019_2_v1.81\2019-2\259\users\4649\executions\1997_1364.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2019_2_v1.81\2019-2\259\users\4640\executions\1997_1364.log
 Assessment  : 1997
 Título      : TP 01: Variáveis e Estrutura Sequencial (2019)
 Questão     : 1364
-Aluno       : 4649
+Aluno       : 4640
 Grupo       : TP 01
 Significado : Variáveis e Estrutura Sequencial
 Total MCs   : 1
@@ -16,60 +16,62 @@ Total MCs   : 1
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | v=float(input("Velocidade da flecha: "))
-     2 | d=float(input("Distancia: "))
-     3 | 
-     4 | from math import*
-     5 | g= 9.8
-     6 | ac=asin((d*g)/(v**2))
-     7 | angulo= ac*90/pi
-     8 | 
-     9 | print(round(angulo,2))
+     1 | import math 
+     2 | vel = float(input("velocity: "))
+     3 | dist = float (input("distancia: "))
+     4 | g = (9.8)
+     5 | div = (90/math.pi)
+     6 | gzin = (g / (vel**2))
+     7 | ota = (dist * gzin)
+     8 | alpha = math.asin(ota) * div 
+     9 | print(round(alpha,2))
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
 ----------------------------------------------------------------------
 
 ▶ G4 — Funções/variáveis com nomes não significativos
-  Ocorrências: 4
+  Ocorrências: 6
 
-  [1] Linha 1: Variável 'v' com nome muito curto (≤4 chars)
-      Trecho  : v = ...
+  [1] Linha 2: Variável 'vel' com nome muito curto (≤4 chars)
+      Trecho  : vel = ...
       Contexto:
-        >>>    1 | v=float(input("Velocidade da flecha: "))
-               2 | d=float(input("Distancia: "))
+               1 | import math 
+        >>>    2 | vel = float(input("velocity: "))
+               3 | dist = float (input("distancia: "))
 
-  [2] Linha 2: Variável 'd' com nome muito curto (≤4 chars)
-      Trecho  : d = ...
+  [2] Linha 3: Variável 'dist' com nome muito curto (≤4 chars)
+      Trecho  : dist = ...
       Contexto:
-               1 | v=float(input("Velocidade da flecha: "))
-        >>>    2 | d=float(input("Distancia: "))
-               3 | 
+               2 | vel = float(input("velocity: "))
+        >>>    3 | dist = float (input("distancia: "))
+               4 | g = (9.8)
 
-  [3] Linha 5: Variável 'g' com nome muito curto (≤4 chars)
+  [3] Linha 4: Variável 'g' com nome muito curto (≤4 chars)
       Trecho  : g = ...
       Contexto:
-               4 | from math import*
-        >>>    5 | g= 9.8
-               6 | ac=asin((d*g)/(v**2))
+               3 | dist = float (input("distancia: "))
+        >>>    4 | g = (9.8)
+               5 | div = (90/math.pi)
 
-  [4] Linha 6: Variável 'ac' com nome muito curto (≤4 chars)
-      Trecho  : ac = ...
+  [4] Linha 5: Variável 'div' com nome muito curto (≤4 chars)
+      Trecho  : div = ...
       Contexto:
-               5 | g= 9.8
-        >>>    6 | ac=asin((d*g)/(v**2))
-               7 | angulo= ac*90/pi
+               4 | g = (9.8)
+        >>>    5 | div = (90/math.pi)
+               6 | gzin = (g / (vel**2))
 
-====================================================================== chars)
-      Trecho  : y = ...
+  [5] Linha 6: Variável 'gzin' com nome muito curto (≤4 chars)
+      Trecho  : gzin = ...
       Contexto:
-               3 | d = float(input("Digite a distancia entre voce e o Falmer: ")) # Declaração da distancia
-        >>>    4 | y = (math.asin(d*(9.8/(vo**2)))*(90/math.pi))
-               5 | print(round(y,2))
+               5 | div = (90/math.pi)
+        >>>    6 | gzin = (g / (vel**2))
+               7 | ota = (dist * gzin)
 
-====================================================================== n3 * n2
-
-======================================================================g / (vel**2))
+  [6] Linha 7: Variável 'ota' com nome muito curto (≤4 chars)
+      Trecho  : ota = ...
+      Contexto:
+               6 | gzin = (g / (vel**2))
         >>>    7 | ota = (dist * gzin)
                8 | alpha = math.asin(ota) * div 
 

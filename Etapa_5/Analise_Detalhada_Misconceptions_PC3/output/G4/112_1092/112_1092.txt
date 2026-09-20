@@ -2,11 +2,11 @@
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
 Arquivo     : 112_1092.log
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2016_1_v1.81\2016-1\105\users\1484\executions\112_1092.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2016_1_v1.81\2016-1\105\users\1504\executions\112_1092.log
 Assessment  : 112
 Título      : Avaliação Parcial 02 – Estrutura Condicional Composta (sem Aninhamento)
 Questão     : 1092
-Aluno       : 1484
+Aluno       : 1504
 Grupo       : TP 02
 Significado : Estrutura Condicional Simples e Composta
 Total MCs   : 1
@@ -16,20 +16,17 @@ Total MCs   : 1
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | #UFAM 
-     2 | #pedro paulo almeida da costa- 21602333
-     3 | num= int(input("digite um numero de três digitos"))
-     4 | # "a" é o primeiro digito
-     5 | a = num // 100
-     6 | ra = num % 100
-     7 | # "b" é o segundo digito
-     8 | b = ra //10
-     9 | # "c" é o terceiro digito
-    10 | c = ra % 10
-    11 | if (num == (a**3)+(b**3)+(c**3) ):
-    12 | 	print(num,"atende a propriedade")
-    13 | else:
-    14 | 	print((a**3)+(b**3)+(c**3))
+     1 | num = int(input("qual o numero:"))
+     2 | a = num // 100
+     3 | restoa = num % 100
+     4 | b = restoa // 10 
+     5 | restob = restoa % 10
+     6 | c= restob
+     7 | X = a**3 + b**3 + c**3
+     8 | if (X == num):
+     9 | 	print(X , ("atende a propriedade"))
+    10 | else:
+    11 | 	print(X)
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
@@ -38,35 +35,41 @@ DETALHAMENTO DOS MISCONCEPTIONS
 ▶ G4 — Funções/variáveis com nomes não significativos
   Ocorrências: 5
 
-  [1] Linha 3: Variável 'num' com nome muito curto (≤4 chars)
+  [1] Linha 1: Variável 'num' com nome muito curto (≤4 chars)
       Trecho  : num = ...
       Contexto:
-               2 | #pedro paulo almeida da costa- 21602333
-        >>>    3 | num= int(input("digite um numero de três digitos"))
-               4 | # "a" é o primeiro digito
+        >>>    1 | num = int(input("qual o numero:"))
+               2 | a = num // 100
 
-  [2] Linha 5: Variável 'a' com nome muito curto (≤4 chars)
+  [2] Linha 2: Variável 'a' com nome muito curto (≤4 chars)
       Trecho  : a = ...
       Contexto:
-               4 | # "a" é o primeiro digito
-        >>>    5 | a = num // 100
-               6 | ra = num % 100
+               1 | num = int(input("qual o numero:"))
+        >>>    2 | a = num // 100
+               3 | restoa = num % 100
 
-  [3] Linha 6: Variável 'ra' com nome muito curto (≤4 chars)
-      Trecho  : ra = ...
-      Contexto:
-               5 | a = num // 100
-        >>>    6 | ra = num % 100
-               7 | # "b" é o segundo digito
-
-  [4] Linha 8: Variável 'b' com nome muito curto (≤4 chars)
+  [3] Linha 4: Variável 'b' com nome muito curto (≤4 chars)
       Trecho  : b = ...
       Contexto:
-               7 | # "b" é o segundo digito
-        >>>    8 | b = ra //10
-               9 | # "c" é o terceiro digito
+               3 | restoa = num % 100
+        >>>    4 | b = restoa // 10 
+               5 | restob = restoa % 10
 
-  [5] Linha 10: Variável 'c' com nome muito curto (≤4 chars)
+  [4] Linha 6: Variável 'c' com nome muito curto (≤4 chars)
+      Trecho  : c = ...
+      Contexto:
+               5 | restob = restoa % 10
+        >>>    6 | c= restob
+               7 | X = a**3 + b**3 + c**3
+
+  [5] Linha 7: Variável 'X' com nome muito curto (≤4 chars)
+      Trecho  : X = ...
+      Contexto:
+               6 | c= restob
+        >>>    7 | X = a**3 + b**3 + c**3
+               8 | if (X == num):
+
+======================================================================e muito curto (≤4 chars)
       Trecho  : c = ...
       Contexto:
                9 | # "c" é o terceiro digito

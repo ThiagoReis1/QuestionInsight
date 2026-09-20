@@ -2,11 +2,11 @@
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
 Arquivo     : 518_1944.log
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2017_1_v1.81\2017-1\135\users\2127\executions\518_1944.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2017_1_v1.81\2017-1\135\users\2129\executions\518_1944.log
 Assessment  : 518
 Título      : Trabalho Prático 02 - Estrutura Condicional Simples e Composta
 Questão     : 1944
-Aluno       : 2127
+Aluno       : 2129
 Grupo       : TP 02
 Significado : Estrutura Condicional Simples e Composta
 Total MCs   : 1
@@ -16,59 +16,79 @@ Total MCs   : 1
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | amino= input("nome do aminoacido:")
-     2 | o =float(15.9994) 
-     3 | c =float(12.011) 
-     4 | n =float(14.00674) 
-     5 | h =float(1.0079)
-     6 | 
-     7 | if (amino.lower() == "leucina"):
-     8 | 	peso = (c*6)+(h*13)+(n)+(o*2)
-     9 | 	print(round(peso,2))
-    10 | else:
-    11 | 	peso2=(c*6)+(h*15)+(n*2)+(o*2)
-    12 | 	print(round(peso2,2))
+     1 | a = input("nome do aminoacido: ")
+     2 | a = a.lower()
+     3 | o = 15.9994
+     4 | c = 12.011
+     5 | n = 14.00674
+     6 | h = 1.0079
+     7 | l = (c*6)+(h*13)+(n)+(o*2)
+     8 | li = (c*6)+(h*15)+(n*2)+(o*2)
+     9 | if a == "leucina":
+    10 |    print(round(l,2))
+    11 | else:
+    12 | 	print(round(li,2))
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
 ----------------------------------------------------------------------
 
 ▶ G4 — Funções/variáveis com nomes não significativos
-  Ocorrências: 5
+  Ocorrências: 8
 
-  [1] Linha 2: Variável 'o' com nome muito curto (≤4 chars)
+  [1] Linha 1: Variável 'a' com nome muito curto (≤4 chars)
+      Trecho  : a = ...
+      Contexto:
+        >>>    1 | a = input("nome do aminoacido: ")
+               2 | a = a.lower()
+
+  [2] Linha 2: Variável 'a' com nome muito curto (≤4 chars)
+      Trecho  : a = ...
+      Contexto:
+               1 | a = input("nome do aminoacido: ")
+        >>>    2 | a = a.lower()
+               3 | o = 15.9994
+
+  [3] Linha 3: Variável 'o' com nome muito curto (≤4 chars)
       Trecho  : o = ...
       Contexto:
-               1 | amino= input("nome do aminoacido:")
-        >>>    2 | o =float(15.9994) 
-               3 | c =float(12.011) 
+               2 | a = a.lower()
+        >>>    3 | o = 15.9994
+               4 | c = 12.011
 
-  [2] Linha 3: Variável 'c' com nome muito curto (≤4 chars)
+  [4] Linha 4: Variável 'c' com nome muito curto (≤4 chars)
       Trecho  : c = ...
       Contexto:
-               2 | o =float(15.9994) 
-        >>>    3 | c =float(12.011) 
-               4 | n =float(14.00674) 
+               3 | o = 15.9994
+        >>>    4 | c = 12.011
+               5 | n = 14.00674
 
-  [3] Linha 4: Variável 'n' com nome muito curto (≤4 chars)
+  [5] Linha 5: Variável 'n' com nome muito curto (≤4 chars)
       Trecho  : n = ...
       Contexto:
-               3 | c =float(12.011) 
-        >>>    4 | n =float(14.00674) 
-               5 | h =float(1.0079)
+               4 | c = 12.011
+        >>>    5 | n = 14.00674
+               6 | h = 1.0079
 
-  [4] Linha 5: Variável 'h' com nome muito curto (≤4 chars)
+  [6] Linha 6: Variável 'h' com nome muito curto (≤4 chars)
       Trecho  : h = ...
       Contexto:
-               4 | n =float(14.00674) 
-        >>>    5 | h =float(1.0079)
-               6 | 
+               5 | n = 14.00674
+        >>>    6 | h = 1.0079
+               7 | l = (c*6)+(h*13)+(n)+(o*2)
 
-  [5] Linha 8: Variável 'peso' com nome muito curto (≤4 chars)
-      Trecho  : peso = ...
+  [7] Linha 7: Variável 'l' com nome muito curto (≤4 chars)
+      Trecho  : l = ...
       Contexto:
-               7 | if (amino.lower() == "leucina"):
-        >>>    8 | 	peso = (c*6)+(h*13)+(n)+(o*2)
-               9 | 	print(round(peso,2))
+               6 | h = 1.0079
+        >>>    7 | l = (c*6)+(h*13)+(n)+(o*2)
+               8 | li = (c*6)+(h*15)+(n*2)+(o*2)
+
+  [8] Linha 8: Variável 'li' com nome muito curto (≤4 chars)
+      Trecho  : li = ...
+      Contexto:
+               7 | l = (c*6)+(h*13)+(n)+(o*2)
+        >>>    8 | li = (c*6)+(h*15)+(n*2)+(o*2)
+               9 | if a == "leucina":
 
 ======================================================================

@@ -2,11 +2,11 @@
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
 Arquivo     : 1678_1391.log
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2019_1_v1.81\2019-1\231\users\4211\executions\1678_1391.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2019_1_v1.81\2019-1\231\users\4233\executions\1678_1391.log
 Assessment  : 1678
 Título      : TP2 - Estrutura Condicional Simples e Composta
 Questão     : 1391
-Aluno       : 4211
+Aluno       : 4233
 Grupo       : TP 02
 Significado : Estrutura Condicional Simples e Composta
 Total MCs   : 1
@@ -16,41 +16,43 @@ Total MCs   : 1
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | ce = float(input("Consumo de energia: "))
-     2 | if(ce <= 150):
-     3 | 	tc = 0.6 * ce + 5
-     4 | else:
-     5 | 	tc = 0.75 * ce + 16
-     6 | print(tc)
+     1 | consumo = int(input("Consumo em kWh: "))
+     2 | a = 0.6
+     3 | b = 0.75
+     4 | x = float((a*consumo) + 5.0)
+     5 | y = float((b*consumo) + 16.0)
+     6 | 
+     7 | 
+     8 | if(consumo <= 150):
+     9 | 	print(round(x,2))
+    10 | else:
+    11 | 	print(round(y,2))
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
 ----------------------------------------------------------------------
 
 ▶ G4 — Funções/variáveis com nomes não significativos
-  Ocorrências: 3
+  Ocorrências: 4
 
-  [1] Linha 1: Variável 'ce' com nome muito curto (≤4 chars)
-      Trecho  : ce = ...
+  [1] Linha 2: Variável 'a' com nome muito curto (≤4 chars)
+      Trecho  : a = ...
       Contexto:
-        >>>    1 | ce = float(input("Consumo de energia: "))
-               2 | if(ce <= 150):
+               1 | consumo = int(input("Consumo em kWh: "))
+        >>>    2 | a = 0.6
+               3 | b = 0.75
 
-  [2] Linha 3: Variável 'tc' com nome muito curto (≤4 chars)
-      Trecho  : tc = ...
+  [2] Linha 3: Variável 'b' com nome muito curto (≤4 chars)
+      Trecho  : b = ...
       Contexto:
-               2 | if(ce <= 150):
-        >>>    3 | 	tc = 0.6 * ce + 5
-               4 | else:
+               2 | a = 0.6
+        >>>    3 | b = 0.75
+               4 | x = float((a*consumo) + 5.0)
 
-  [3] Linha 5: Variável 'tc' com nome muito curto (≤4 chars)
-      Trecho  : tc = ...
+  [3] Linha 4: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
       Contexto:
-               4 | else:
-        >>>    5 | 	tc = 0.75 * ce + 16
-               6 | print(tc)
-
-======================================================================
+               3 | b = 0.75
         >>>    4 | x = float((a*consumo) + 5.0)
                5 | y = float((b*consumo) + 16.0)
 

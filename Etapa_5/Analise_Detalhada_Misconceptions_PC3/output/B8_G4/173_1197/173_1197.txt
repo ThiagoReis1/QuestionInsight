@@ -2,11 +2,11 @@
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
 Arquivo     : 173_1197.log
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2016_1_v1.81\2016-1\102\users\1295\executions\173_1197.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2016_1_v1.81\2016-1\102\users\1464\executions\173_1197.log
 Assessment  : 173
 Título      : Avaliação Parcial 05 – Vetores e Strings
 Questão     : 1197
-Aluno       : 1295
+Aluno       : 1464
 Grupo       : TP 05
 Significado : Vetores e Strings
 Total MCs   : 2
@@ -17,28 +17,22 @@ Total MCs   : 2
 CÓDIGO FONTE
 ----------------------------------------------------------------------
      1 | from numpy import*
-     2 | 
-     3 | v=array(eval(input("v: ")))
-     4 | 
-     5 | i=0
-     6 | n=0
-     7 | 
-     8 | while i<size(v):
-     9 | 	if v[i]>50:
-    10 | 		n=n+1
-    11 | 	i=i+1
-    12 | 	
-    13 | v1=array(zeros(size(v)-n, dtype=float))
-    14 | 
-    15 | i=0
-    16 | j=0
-    17 | while i<size(v):
-    18 | 	if v[i]<=50:
-    19 | 		v1[j]=v[i]
-    20 | 		j=j+1
-    21 | 	i=i+1
-    22 | 	
-    23 | print(v1)
+     2 | v=array(eval(input("v:")))
+     3 | validos=0
+     4 | i=0
+     5 | while(i<size(v)):
+     6 | 	if(v[i]<=50):
+     7 | 		validos=validos+1
+     8 | 	i=i+1
+     9 | v1=ones(validos,dtype=float)
+    10 | i=0
+    11 | j=0
+    12 | while(i<size(v)):
+    13 | 	if(v[i]<=50):
+    14 | 		v1[j]=v[i]
+    15 | 		j=j+1
+    16 | 	i=i+1
+    17 | print(v1)
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
@@ -51,76 +45,62 @@ DETALHAMENTO DOS MISCONCEPTIONS
       Trecho  : —
 
 ▶ G4 — Funções/variáveis com nomes não significativos
-  Ocorrências: 10
+  Ocorrências: 8
 
-  [1] Linha 3: Variável 'v' com nome muito curto (≤4 chars)
+  [1] Linha 2: Variável 'v' com nome muito curto (≤4 chars)
       Trecho  : v = ...
       Contexto:
-               2 | 
-        >>>    3 | v=array(eval(input("v: ")))
-               4 | 
+               1 | from numpy import*
+        >>>    2 | v=array(eval(input("v:")))
+               3 | validos=0
 
-  [2] Linha 5: Variável 'i' com nome muito curto (≤4 chars)
+  [2] Linha 4: Variável 'i' com nome muito curto (≤4 chars)
       Trecho  : i = ...
       Contexto:
-               4 | 
-        >>>    5 | i=0
-               6 | n=0
+               3 | validos=0
+        >>>    4 | i=0
+               5 | while(i<size(v)):
 
-  [3] Linha 6: Variável 'n' com nome muito curto (≤4 chars)
-      Trecho  : n = ...
-      Contexto:
-               5 | i=0
-        >>>    6 | n=0
-               7 | 
-
-  [4] Linha 13: Variável 'v1' com nome muito curto (≤4 chars)
+  [3] Linha 9: Variável 'v1' com nome muito curto (≤4 chars)
       Trecho  : v1 = ...
       Contexto:
-              12 | 	
-        >>>   13 | v1=array(zeros(size(v)-n, dtype=float))
-              14 | 
+               8 | 	i=i+1
+        >>>    9 | v1=ones(validos,dtype=float)
+              10 | i=0
 
-  [5] Linha 15: Variável 'i' com nome muito curto (≤4 chars)
+  [4] Linha 10: Variável 'i' com nome muito curto (≤4 chars)
       Trecho  : i = ...
       Contexto:
-              14 | 
-        >>>   15 | i=0
-              16 | j=0
+               9 | v1=ones(validos,dtype=float)
+        >>>   10 | i=0
+              11 | j=0
 
-  [6] Linha 16: Variável 'j' com nome muito curto (≤4 chars)
+  [5] Linha 11: Variável 'j' com nome muito curto (≤4 chars)
       Trecho  : j = ...
       Contexto:
-              15 | i=0
-        >>>   16 | j=0
-              17 | while i<size(v):
+              10 | i=0
+        >>>   11 | j=0
+              12 | while(i<size(v)):
 
-  [7] Linha 11: Variável 'i' com nome muito curto (≤4 chars)
+  [6] Linha 8: Variável 'i' com nome muito curto (≤4 chars)
       Trecho  : i = ...
       Contexto:
-              10 | 		n=n+1
-        >>>   11 | 	i=i+1
-              12 | 	
+               7 | 		validos=validos+1
+        >>>    8 | 	i=i+1
+               9 | v1=ones(validos,dtype=float)
 
-  [8] Linha 21: Variável 'i' com nome muito curto (≤4 chars)
+  [7] Linha 16: Variável 'i' com nome muito curto (≤4 chars)
       Trecho  : i = ...
       Contexto:
-              20 | 		j=j+1
-        >>>   21 | 	i=i+1
-              22 | 	
+              15 | 		j=j+1
+        >>>   16 | 	i=i+1
+              17 | print(v1)
 
-  [9] Linha 10: Variável 'n' com nome muito curto (≤4 chars)
-      Trecho  : n = ...
-      Contexto:
-               9 | 	if v[i]>50:
-        >>>   10 | 		n=n+1
-              11 | 	i=i+1
-
-  [10] Linha 20: Variável 'j' com nome muito curto (≤4 chars)
+  [8] Linha 15: Variável 'j' com nome muito curto (≤4 chars)
       Trecho  : j = ...
       Contexto:
-              19 | 		v1[j]=v[i]
-        >>>   20 | 		j=j+1
-              21 | 	i=i+1
+              14 | 		v1[j]=v[i]
+        >>>   15 | 		j=j+1
+              16 | 	i=i+1
 
 ======================================================================

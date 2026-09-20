@@ -2,11 +2,11 @@
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
 Arquivo     : 3236_1646.log
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2021_1_v1.81\2021-1\377\users\6367\executions\3236_1646.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2021_1_v1.81\2021-1\377\users\5012\executions\3236_1646.log
 Assessment  : 3236
 Título      : TP6: Repetição por contagem
 Questão     : 1646
-Aluno       : 6367
+Aluno       : 5012
 Grupo       : TP 06
 Significado : Estrutura de Repetição por Contagem
 Total MCs   : 2
@@ -17,22 +17,19 @@ Total MCs   : 2
 CÓDIGO FONTE
 ----------------------------------------------------------------------
      1 | from numpy import*
-     2 | n=array(eval(input("Insira os valores: ")))
-     3 | ns=0
-     4 | entrada=0
-     5 | for i in range(0,size(n)):
-     6 | 	if n[i]<=50.0:
-     7 | 		ns=ns+1
-     8 | 
-     9 | r=zeros(ns,dtype=int)
-    10 | 
-    11 | for a in range (0,size(n)):
-    12 | 	if n[a]<=50.0:
-    13 | 		r[entrada]=a
-    14 | 		entrada=entrada+1
-    15 | 		
-    16 | print(ns)
-    17 | print(r)
+     2 | 
+     3 | v = eval(input("saques:"))
+     4 | 
+     5 | s = []
+     6 | p = 0
+     7 | 
+     8 | for i in range(size(v)):
+     9 | 	if(v[i]<=50):
+    10 | 		p = p + 1
+    11 | 		s.append(i)
+    12 | 		
+    13 | print(p)
+    14 | print(array(s))
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
@@ -45,9 +42,34 @@ DETALHAMENTO DOS MISCONCEPTIONS
       Trecho  : —
 
 ▶ G4 — Funções/variáveis com nomes não significativos
-  Ocorrências: 1
+  Ocorrências: 4
 
-  [1] Linha 0: G4 detectado pelo VisitorMC3 (localização exata não mapeada)
-      Trecho  : —
+  [1] Linha 3: Variável 'v' com nome muito curto (≤4 chars)
+      Trecho  : v = ...
+      Contexto:
+               2 | 
+        >>>    3 | v = eval(input("saques:"))
+               4 | 
+
+  [2] Linha 5: Variável 's' com nome muito curto (≤4 chars)
+      Trecho  : s = ...
+      Contexto:
+               4 | 
+        >>>    5 | s = []
+               6 | p = 0
+
+  [3] Linha 6: Variável 'p' com nome muito curto (≤4 chars)
+      Trecho  : p = ...
+      Contexto:
+               5 | s = []
+        >>>    6 | p = 0
+               7 | 
+
+  [4] Linha 10: Variável 'p' com nome muito curto (≤4 chars)
+      Trecho  : p = ...
+      Contexto:
+               9 | 	if(v[i]<=50):
+        >>>   10 | 		p = p + 1
+              11 | 		s.append(i)
 
 ======================================================================

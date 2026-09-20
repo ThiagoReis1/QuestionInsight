@@ -2,11 +2,11 @@
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
 Arquivo     : 1721_3069.log
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2019_1_v1.81\2019-1\224\users\4464\executions\1721_3069.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2019_1_v1.81\2019-1\224\users\4369\executions\1721_3069.log
 Assessment  : 1721
 Título      : TP3 - Estrutura Condicional Encadeada
 Questão     : 3069
-Aluno       : 4464
+Aluno       : 4369
 Grupo       : TP 03
 Significado : Estrutura Condicional Encadeada
 Total MCs   : 1
@@ -16,70 +16,68 @@ Total MCs   : 1
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | ATAQUE = input("escolha o ataque")
-     2 | D1 = int(input("qual o resultado do primeiro dado jogado"))
-     3 | D2 = int (input("resultado do segundo dado"))
-     4 | if (ATAQUE == "FURIA"):
-     5 | 	if (1 < D1 <= 8) and (1 <D2 <= 8):
-     6 | 		DANO = 10 + D1 + D2
-     7 | 		print(DANO)
-     8 | 	else:
-     9 | 		print("Entrada invalida")
-    10 | elif (ATAQUE == "GRITO"):
-    11 | 	if (1 < D1 <= 8) and (1 < D2 <= 8):
-    12 | 		DANO = 6 + D1 + D2
-    13 | 		print(DANO)
-    14 | 	else:
-    15 | 		print("Entrada invalida")
-    16 | elif ( ATAQUE == "TOQUE"):
-    17 | 	if (1 < D1 < 8 ) and ( 1 < D2 < 8):
-    18 | 		DANO = (D1 + D2)**2
-    19 | 		print(DANO)
-    20 | 	else:
-    21 | 		print("Entrada invalida")
-    22 | else:
-    23 | 	print("Entrada invalida")
+     1 | na = str(input("Digite o nome do ataque: ").upper())
+     2 | vd1 = int(input("Digite o valor do dado 1 de 8 faces: "))
+     3 | vd2 = int(input("Digite o valor do dado 2 de 8 faces: "))
+     4 | 
+     5 | if((0 < vd1 <= 8 and 0 < vd2 <= 8) and na == "FURIA".upper()):
+     6 | 	d = 10 + vd1 + vd2
+     7 | 	print(d)
+     8 | elif(na == "GRITO".upper()):
+     9 | 	d = 6 + vd1 + vd2
+    10 | 	print(d)
+    11 | elif(na == "TOQUE".upper()):
+    12 | 	d = (vd1 + vd2) ** 2
+    13 | 	print(d)
+    14 | else:
+    15 | 	print("Entrada invalida")
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
 ----------------------------------------------------------------------
 
 ▶ G4 — Funções/variáveis com nomes não significativos
-  Ocorrências: 5
+  Ocorrências: 6
 
-  [1] Linha 2: Variável 'D1' com nome muito curto (≤4 chars)
-      Trecho  : D1 = ...
+  [1] Linha 1: Variável 'na' com nome muito curto (≤4 chars)
+      Trecho  : na = ...
       Contexto:
-               1 | ATAQUE = input("escolha o ataque")
-        >>>    2 | D1 = int(input("qual o resultado do primeiro dado jogado"))
-               3 | D2 = int (input("resultado do segundo dado"))
+        >>>    1 | na = str(input("Digite o nome do ataque: ").upper())
+               2 | vd1 = int(input("Digite o valor do dado 1 de 8 faces: "))
 
-  [2] Linha 3: Variável 'D2' com nome muito curto (≤4 chars)
-      Trecho  : D2 = ...
+  [2] Linha 2: Variável 'vd1' com nome muito curto (≤4 chars)
+      Trecho  : vd1 = ...
       Contexto:
-               2 | D1 = int(input("qual o resultado do primeiro dado jogado"))
-        >>>    3 | D2 = int (input("resultado do segundo dado"))
-               4 | if (ATAQUE == "FURIA"):
+               1 | na = str(input("Digite o nome do ataque: ").upper())
+        >>>    2 | vd1 = int(input("Digite o valor do dado 1 de 8 faces: "))
+               3 | vd2 = int(input("Digite o valor do dado 2 de 8 faces: "))
 
-  [3] Linha 6: Variável 'DANO' com nome muito curto (≤4 chars)
-      Trecho  : DANO = ...
+  [3] Linha 3: Variável 'vd2' com nome muito curto (≤4 chars)
+      Trecho  : vd2 = ...
       Contexto:
-               5 | 	if (1 < D1 <= 8) and (1 <D2 <= 8):
-        >>>    6 | 		DANO = 10 + D1 + D2
-               7 | 		print(DANO)
+               2 | vd1 = int(input("Digite o valor do dado 1 de 8 faces: "))
+        >>>    3 | vd2 = int(input("Digite o valor do dado 2 de 8 faces: "))
+               4 | 
 
-  [4] Linha 12: Variável 'DANO' com nome muito curto (≤4 chars)
-      Trecho  : DANO = ...
+  [4] Linha 6: Variável 'd' com nome muito curto (≤4 chars)
+      Trecho  : d = ...
       Contexto:
-              11 | 	if (1 < D1 <= 8) and (1 < D2 <= 8):
-        >>>   12 | 		DANO = 6 + D1 + D2
-              13 | 		print(DANO)
+               5 | if((0 < vd1 <= 8 and 0 < vd2 <= 8) and na == "FURIA".upper()):
+        >>>    6 | 	d = 10 + vd1 + vd2
+               7 | 	print(d)
 
-  [5] Linha 18: Variável 'DANO' com nome muito curto (≤4 chars)
-      Trecho  : DANO = ...
+  [5] Linha 9: Variável 'd' com nome muito curto (≤4 chars)
+      Trecho  : d = ...
       Contexto:
-              17 | 	if (1 < D1 < 8 ) and ( 1 < D2 < 8):
-        >>>   18 | 		DANO = (D1 + D2)**2
-              19 | 		print(DANO)
+               8 | elif(na == "GRITO".upper()):
+        >>>    9 | 	d = 6 + vd1 + vd2
+              10 | 	print(d)
+
+  [6] Linha 12: Variável 'd' com nome muito curto (≤4 chars)
+      Trecho  : d = ...
+      Contexto:
+              11 | elif(na == "TOQUE".upper()):
+        >>>   12 | 	d = (vd1 + vd2) ** 2
+              13 | 	print(d)
 
 ======================================================================

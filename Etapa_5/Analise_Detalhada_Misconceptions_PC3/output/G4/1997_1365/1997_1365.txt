@@ -2,11 +2,11 @@
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
 Arquivo     : 1997_1365.log
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2019_2_v1.81\2019-2\259\users\4651\executions\1997_1365.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2019_2_v1.81\2019-2\259\users\4638\executions\1997_1365.log
 Assessment  : 1997
 Título      : TP 01: Variáveis e Estrutura Sequencial (2019)
 Questão     : 1365
-Aluno       : 4651
+Aluno       : 4638
 Grupo       : TP 01
 Significado : Variáveis e Estrutura Sequencial
 Total MCs   : 1
@@ -16,14 +16,15 @@ Total MCs   : 1
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | from math import*
+     1 | ang = float(input("qual o angulo ?"))
      2 | 
-     3 | a=radians(float(input("Digite o angulo em graus: ")))
-     4 | d=float(input("Digite a distancia em metros: "))
-     5 | 
-     6 | v0=sqrt(d*(9.8/sin(2*a)))
-     7 | 
-     8 | print(round(v0,2))
+     3 | dist = float(input("qual a distancia ?"))
+     4 | 
+     5 | from math import * 
+     6 | 
+     7 | v0 = sqrt(dist*9.8/sin(2*radians(ang)))
+     8 | 
+     9 | print(round(v0, 2))
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
@@ -32,25 +33,24 @@ DETALHAMENTO DOS MISCONCEPTIONS
 ▶ G4 — Funções/variáveis com nomes não significativos
   Ocorrências: 3
 
-  [1] Linha 3: Variável 'a' com nome muito curto (≤4 chars)
-      Trecho  : a = ...
+  [1] Linha 1: Variável 'ang' com nome muito curto (≤4 chars)
+      Trecho  : ang = ...
+      Contexto:
+        >>>    1 | ang = float(input("qual o angulo ?"))
+               2 | 
+
+  [2] Linha 3: Variável 'dist' com nome muito curto (≤4 chars)
+      Trecho  : dist = ...
       Contexto:
                2 | 
-        >>>    3 | a=radians(float(input("Digite o angulo em graus: ")))
-               4 | d=float(input("Digite a distancia em metros: "))
+        >>>    3 | dist = float(input("qual a distancia ?"))
+               4 | 
 
-  [2] Linha 4: Variável 'd' com nome muito curto (≤4 chars)
-      Trecho  : d = ...
-      Contexto:
-               3 | a=radians(float(input("Digite o angulo em graus: ")))
-        >>>    4 | d=float(input("Digite a distancia em metros: "))
-               5 | 
-
-  [3] Linha 6: Variável 'v0' com nome muito curto (≤4 chars)
+  [3] Linha 7: Variável 'v0' com nome muito curto (≤4 chars)
       Trecho  : v0 = ...
       Contexto:
-               5 | 
-        >>>    6 | v0=sqrt(d*(9.8/sin(2*a)))
-               7 | 
+               6 | 
+        >>>    7 | v0 = sqrt(dist*9.8/sin(2*radians(ang)))
+               8 | 
 
 ======================================================================

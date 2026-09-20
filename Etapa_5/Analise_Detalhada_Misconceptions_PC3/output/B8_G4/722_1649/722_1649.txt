@@ -2,11 +2,11 @@
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
 Arquivo     : 722_1649.log
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2017_1_v1.81\2017-1\140\users\2276\executions\722_1649.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2017_1_v1.81\2017-1\140\users\2284\executions\722_1649.log
 Assessment  : 722
 Título      : Trabalho Prático 6: Repetição por Contagem
 Questão     : 1649
-Aluno       : 2276
+Aluno       : 2284
 Grupo       : TP 06
 Significado : Estrutura de Repetição por Contagem
 Total MCs   : 2
@@ -17,37 +17,25 @@ Total MCs   : 2
 CÓDIGO FONTE
 ----------------------------------------------------------------------
      1 | from numpy import*
-     2 | o = input("")
-     3 | x = o.split(',')
-     4 | #P – Preto
-     5 | #C – Castanho
-     6 | #M – Mel
-     7 | #V – Verde
-     8 | #A – Azul
-     9 | p = 0
-    10 | c = 0
-    11 | m = 0
-    12 | v = 0
-    13 | a = 0
-    14 | l = zeros(5, dtype = int)
-    15 | for i in x:
-    16 | 	if i == "P":
-    17 | 		p = p + 1
-    18 | 	if i == "C":
-    19 | 		c = c+ 1
-    20 | 	if i == "M":
-    21 | 		m = m +1
-    22 | 	if i == "V":
-    23 | 		v = v + 1
-    24 | 	if i == "A":
-    25 | 		a = a + 1
-    26 | l[0] = p
-    27 | l[1] = c
-    28 | l[2] = m
-    29 | l[3] = v
-    30 | l[4] = a
-    31 | print(int(max(l)))
-    32 | print(l)
+     2 | 
+     3 | s = input("Cor dos olhos: ")
+     4 | 
+     5 | v = zeros(5, dtype = int)
+     6 | 
+     7 | for i in s:
+     8 | 	if (i == 'P'):
+     9 | 		v[0] += 1
+    10 | 	elif (i == 'C'):
+    11 | 		v[1] += 1
+    12 | 	elif (i == 'M'):
+    13 | 		v[2] += 1
+    14 | 	elif (i == 'V'):
+    15 | 		v[3] += 1
+    16 | 	elif (i == 'A'):
+    17 | 		v[4] += 1
+    18 | 
+    19 | print(max(v))
+    20 | print(v)
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
@@ -56,101 +44,28 @@ DETALHAMENTO DOS MISCONCEPTIONS
 ▶ B8 — Não utilização de elif/else
   Ocorrências: 1
 
-  [1] Linha 0: B8 detectado pelo VisitorMC3 (localização exata não mapeada)
-      Trecho  : —
+  [1] Linha 14: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 14) / elif ... sem else
+      Contexto:
+              13 | 		v[2] += 1
+        >>>   14 | 	elif (i == 'V'):
+              15 | 		v[3] += 1
 
 ▶ G4 — Funções/variáveis com nomes não significativos
-  Ocorrências: 13
+  Ocorrências: 2
 
-  [1] Linha 2: Variável 'o' com nome muito curto (≤4 chars)
-      Trecho  : o = ...
+  [1] Linha 3: Variável 's' com nome muito curto (≤4 chars)
+      Trecho  : s = ...
       Contexto:
-               1 | from numpy import*
-        >>>    2 | o = input("")
-               3 | x = o.split(',')
+               2 | 
+        >>>    3 | s = input("Cor dos olhos: ")
+               4 | 
 
-  [2] Linha 3: Variável 'x' com nome muito curto (≤4 chars)
-      Trecho  : x = ...
-      Contexto:
-               2 | o = input("")
-        >>>    3 | x = o.split(',')
-               4 | #P – Preto
-
-  [3] Linha 9: Variável 'p' com nome muito curto (≤4 chars)
-      Trecho  : p = ...
-      Contexto:
-               8 | #A – Azul
-        >>>    9 | p = 0
-              10 | c = 0
-
-  [4] Linha 10: Variável 'c' com nome muito curto (≤4 chars)
-      Trecho  : c = ...
-      Contexto:
-               9 | p = 0
-        >>>   10 | c = 0
-              11 | m = 0
-
-  [5] Linha 11: Variável 'm' com nome muito curto (≤4 chars)
-      Trecho  : m = ...
-      Contexto:
-              10 | c = 0
-        >>>   11 | m = 0
-              12 | v = 0
-
-  [6] Linha 12: Variável 'v' com nome muito curto (≤4 chars)
+  [2] Linha 5: Variável 'v' com nome muito curto (≤4 chars)
       Trecho  : v = ...
       Contexto:
-              11 | m = 0
-        >>>   12 | v = 0
-              13 | a = 0
-
-  [7] Linha 13: Variável 'a' com nome muito curto (≤4 chars)
-      Trecho  : a = ...
-      Contexto:
-              12 | v = 0
-        >>>   13 | a = 0
-              14 | l = zeros(5, dtype = int)
-
-  [8] Linha 14: Variável 'l' com nome muito curto (≤4 chars)
-      Trecho  : l = ...
-      Contexto:
-              13 | a = 0
-        >>>   14 | l = zeros(5, dtype = int)
-              15 | for i in x:
-
-  [9] Linha 17: Variável 'p' com nome muito curto (≤4 chars)
-      Trecho  : p = ...
-      Contexto:
-              16 | 	if i == "P":
-        >>>   17 | 		p = p + 1
-              18 | 	if i == "C":
-
-  [10] Linha 19: Variável 'c' com nome muito curto (≤4 chars)
-      Trecho  : c = ...
-      Contexto:
-              18 | 	if i == "C":
-        >>>   19 | 		c = c+ 1
-              20 | 	if i == "M":
-
-  [11] Linha 21: Variável 'm' com nome muito curto (≤4 chars)
-      Trecho  : m = ...
-      Contexto:
-              20 | 	if i == "M":
-        >>>   21 | 		m = m +1
-              22 | 	if i == "V":
-
-  [12] Linha 23: Variável 'v' com nome muito curto (≤4 chars)
-      Trecho  : v = ...
-      Contexto:
-              22 | 	if i == "V":
-        >>>   23 | 		v = v + 1
-              24 | 	if i == "A":
-
-  [13] Linha 25: Variável 'a' com nome muito curto (≤4 chars)
-      Trecho  : a = ...
-      Contexto:
-              24 | 	if i == "A":
-        >>>   25 | 		a = a + 1
-              26 | l[0] = p
+               4 | 
+        >>>    5 | v = zeros(5, dtype = int)
+               6 | 
 
 ======================================================================

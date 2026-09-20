@@ -2,11 +2,11 @@
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
 Arquivo     : 515_1397.log
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2017_1_v1.81\2017-1\144\users\2510\executions\515_1397.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2017_1_v1.81\2017-1\144\users\2376\executions\515_1397.log
 Assessment  : 515
 Título      : Trabalho Prático 02 - Estrutura Condicional Simples e Composta
 Questão     : 1397
-Aluno       : 2510
+Aluno       : 2376
 Grupo       : TP 02
 Significado : Estrutura Condicional Simples e Composta
 Total MCs   : 1
@@ -16,14 +16,19 @@ Total MCs   : 1
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | a = float (input("Área a ser Fertilizada: "))
-     2 | 
-     3 | if (a <= 10000):
-     4 | 	x = 5 * a
-     5 | 	print(round(x,2))
-     6 | else:
-     7 | 	x = ((a // 10000)*5*10000) + 4*(a - 10000)
-     8 | 	print(round(x,2))
+     1 | #importar modulo maath
+     2 | from math import*
+     3 | 
+     4 | #Valor da area em hectares
+     5 | a = float(input("Insira o valor da area: "))
+     6 | 
+     7 | #Condiciona para o calculo do custa
+     8 | if (a <= 10000):
+     9 | 	c = 5 * a
+    10 | else:
+    11 | 	c = 50000 + 4 * (a % 10000)
+    12 | 	
+    13 | print(round(c, 2))
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
@@ -32,24 +37,25 @@ DETALHAMENTO DOS MISCONCEPTIONS
 ▶ G4 — Funções/variáveis com nomes não significativos
   Ocorrências: 3
 
-  [1] Linha 1: Variável 'a' com nome muito curto (≤4 chars)
+  [1] Linha 5: Variável 'a' com nome muito curto (≤4 chars)
       Trecho  : a = ...
       Contexto:
-        >>>    1 | a = float (input("Área a ser Fertilizada: "))
-               2 | 
+               4 | #Valor da area em hectares
+        >>>    5 | a = float(input("Insira o valor da area: "))
+               6 | 
 
-  [2] Linha 4: Variável 'x' com nome muito curto (≤4 chars)
-      Trecho  : x = ...
+  [2] Linha 9: Variável 'c' com nome muito curto (≤4 chars)
+      Trecho  : c = ...
       Contexto:
-               3 | if (a <= 10000):
-        >>>    4 | 	x = 5 * a
-               5 | 	print(round(x,2))
+               8 | if (a <= 10000):
+        >>>    9 | 	c = 5 * a
+              10 | else:
 
-  [3] Linha 7: Variável 'x' com nome muito curto (≤4 chars)
-      Trecho  : x = ...
+  [3] Linha 11: Variável 'c' com nome muito curto (≤4 chars)
+      Trecho  : c = ...
       Contexto:
-               6 | else:
-        >>>    7 | 	x = ((a // 10000)*5*10000) + 4*(a - 10000)
-               8 | 	print(round(x,2))
+              10 | else:
+        >>>   11 | 	c = 50000 + 4 * (a % 10000)
+              12 | 	
 
 ======================================================================

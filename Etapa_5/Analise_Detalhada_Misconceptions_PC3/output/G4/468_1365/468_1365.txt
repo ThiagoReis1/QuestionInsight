@@ -2,11 +2,11 @@
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
 Arquivo     : 468_1365.log
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2017_1_v1.81\2017-1\135\users\2118\executions\468_1365.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2017_1_v1.81\2017-1\135\users\2114\executions\468_1365.log
 Assessment  : 468
 Título      : Trabalho Prático 01: Variáveis e Estrutura Sequencial de Programação
 Questão     : 1365
-Aluno       : 2118
+Aluno       : 2114
 Grupo       : TP 01
 Significado : Variáveis e Estrutura Sequencial
 Total MCs   : 1
@@ -16,18 +16,16 @@ Total MCs   : 1
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | from math import *
-     2 | 
-     3 | ang = float(input("valor do angulo: "))
-     4 | d = float(input("valor da distancia: "))
-     5 |  
-     6 | ang1 = radians(ang)
-     7 | 
-     8 | g = 9.8
-     9 | 
-    10 | vo = ((d * g) / sin(2*ang1)) ** 0.5
-    11 | 
-    12 | print(round(vo, 2))
+     1 | from math import * 
+     2 | sqrt(2)
+     3 | 
+     4 | alfa = float(input("digite o angulo de lançamento"))
+     5 | d = float(input("digite a distancia de lançamento"))
+     6 | g = 9.8
+     7 | sena = sin(radians(2 * alfa))
+     8 | vo = sqrt (d * (g / sena))
+     9 | 			  
+    10 | print(round(vo,2))
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
@@ -36,39 +34,39 @@ DETALHAMENTO DOS MISCONCEPTIONS
 ▶ G4 — Funções/variáveis com nomes não significativos
   Ocorrências: 5
 
-  [1] Linha 3: Variável 'ang' com nome muito curto (≤4 chars)
-      Trecho  : ang = ...
+  [1] Linha 4: Variável 'alfa' com nome muito curto (≤4 chars)
+      Trecho  : alfa = ...
       Contexto:
-               2 | 
-        >>>    3 | ang = float(input("valor do angulo: "))
-               4 | d = float(input("valor da distancia: "))
+               3 | 
+        >>>    4 | alfa = float(input("digite o angulo de lançamento"))
+               5 | d = float(input("digite a distancia de lançamento"))
 
-  [2] Linha 4: Variável 'd' com nome muito curto (≤4 chars)
+  [2] Linha 5: Variável 'd' com nome muito curto (≤4 chars)
       Trecho  : d = ...
       Contexto:
-               3 | ang = float(input("valor do angulo: "))
-        >>>    4 | d = float(input("valor da distancia: "))
-               5 |  
+               4 | alfa = float(input("digite o angulo de lançamento"))
+        >>>    5 | d = float(input("digite a distancia de lançamento"))
+               6 | g = 9.8
 
-  [3] Linha 6: Variável 'ang1' com nome muito curto (≤4 chars)
-      Trecho  : ang1 = ...
-      Contexto:
-               5 |  
-        >>>    6 | ang1 = radians(ang)
-               7 | 
-
-  [4] Linha 8: Variável 'g' com nome muito curto (≤4 chars)
+  [3] Linha 6: Variável 'g' com nome muito curto (≤4 chars)
       Trecho  : g = ...
       Contexto:
-               7 | 
-        >>>    8 | g = 9.8
-               9 | 
+               5 | d = float(input("digite a distancia de lançamento"))
+        >>>    6 | g = 9.8
+               7 | sena = sin(radians(2 * alfa))
 
-  [5] Linha 10: Variável 'vo' com nome muito curto (≤4 chars)
+  [4] Linha 7: Variável 'sena' com nome muito curto (≤4 chars)
+      Trecho  : sena = ...
+      Contexto:
+               6 | g = 9.8
+        >>>    7 | sena = sin(radians(2 * alfa))
+               8 | vo = sqrt (d * (g / sena))
+
+  [5] Linha 8: Variável 'vo' com nome muito curto (≤4 chars)
       Trecho  : vo = ...
       Contexto:
-               9 | 
-        >>>   10 | vo = ((d * g) / sin(2*ang1)) ** 0.5
-              11 | 
+               7 | sena = sin(radians(2 * alfa))
+        >>>    8 | vo = sqrt (d * (g / sena))
+               9 | 			  
 
-===============================================================================================
+======================================================================

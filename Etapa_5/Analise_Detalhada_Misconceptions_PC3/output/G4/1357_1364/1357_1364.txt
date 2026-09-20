@@ -2,11 +2,11 @@
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
 Arquivo     : 1357_1364.log
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2018_2_v1.81\2018-2\205\users\3711\executions\1357_1364.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2018_2_v1.81\2018-2\205\users\3715\executions\1357_1364.log
 Assessment  : 1357
 Título      : TP 1: Variáveis e Estrutura Sequencial
 Questão     : 1364
-Aluno       : 3711
+Aluno       : 3715
 Grupo       : TP 01
 Significado : Variáveis e Estrutura Sequencial
 Total MCs   : 1
@@ -16,11 +16,12 @@ Total MCs   : 1
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | from math import *
-     2 | vi = float(input("velocidade inicial"))
-     3 | d = float(input("distancia"))
-     4 | alfa = (asin(d*(9.8/vi**2))*90/pi)
-     5 | print(round(alfa,2))
+     1 | from math import*
+     2 | vinicial=float(input())
+     3 | d=float(input())
+     4 | g=9.8
+     5 | ang=asin((d*g/vinicial**2))*(90/pi)
+     6 | print(round(ang, 2))
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
@@ -29,25 +30,25 @@ DETALHAMENTO DOS MISCONCEPTIONS
 ▶ G4 — Funções/variáveis com nomes não significativos
   Ocorrências: 3
 
-  [1] Linha 2: Variável 'vi' com nome muito curto (≤4 chars)
-      Trecho  : vi = ...
-      Contexto:
-               1 | from math import *
-        >>>    2 | vi = float(input("velocidade inicial"))
-               3 | d = float(input("distancia"))
-
-  [2] Linha 3: Variável 'd' com nome muito curto (≤4 chars)
+  [1] Linha 3: Variável 'd' com nome muito curto (≤4 chars)
       Trecho  : d = ...
       Contexto:
-               2 | vi = float(input("velocidade inicial"))
-        >>>    3 | d = float(input("distancia"))
-               4 | alfa = (asin(d*(9.8/vi**2))*90/pi)
+               2 | vinicial=float(input())
+        >>>    3 | d=float(input())
+               4 | g=9.8
 
-  [3] Linha 4: Variável 'alfa' com nome muito curto (≤4 chars)
-      Trecho  : alfa = ...
+  [2] Linha 4: Variável 'g' com nome muito curto (≤4 chars)
+      Trecho  : g = ...
       Contexto:
-               3 | d = float(input("distancia"))
-        >>>    4 | alfa = (asin(d*(9.8/vi**2))*90/pi)
-               5 | print(round(alfa,2))
+               3 | d=float(input())
+        >>>    4 | g=9.8
+               5 | ang=asin((d*g/vinicial**2))*(90/pi)
+
+  [3] Linha 5: Variável 'ang' com nome muito curto (≤4 chars)
+      Trecho  : ang = ...
+      Contexto:
+               4 | g=9.8
+        >>>    5 | ang=asin((d*g/vinicial**2))*(90/pi)
+               6 | print(round(ang, 2))
 
 ======================================================================

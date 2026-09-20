@@ -2,11 +2,11 @@
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
 Arquivo     : 3495_3368.log
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2021_2_v1.81\2021-2\407\users\7166\executions\3495_3368.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2021_2_v1.81\2021-2\407\users\5655\executions\3495_3368.log
 Assessment  : 3495
 Título      : TP 02:  Est. Condicional Simples e Composta
 Questão     : 3368
-Aluno       : 7166
+Aluno       : 5655
 Grupo       : TP 02
 Significado : Estrutura Condicional Simples e Composta
 Total MCs   : 1
@@ -16,56 +16,48 @@ Total MCs   : 1
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | temp = input("Temperatura em (C/K): ")
-     2 | 
-     3 | if(temp == "C"):
-     4 | 	c =  float(input("digite em Celsius: "))
-     5 | 	K = c + 273.15
-     6 | 	print(round(K, 2))
-     7 | else:
-     8 | 	k = float(input("Digite em Kelvin"))
-     9 | 	C = k - 273.15
-    10 | 	print(round(C, 2))
+     1 | esc = input("Defina a escala: ")
+     2 | temp = float(input("Temperatura: "))
+     3 | 
+     4 | if(esc.upper() == "C"):
+     5 | 	grau = temp + 273.15
+     6 | else:
+     7 | 	grau = temp - 273.15
+     8 | 
+     9 | print(grau)
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
 ----------------------------------------------------------------------
 
 ▶ G4 — Funções/variáveis com nomes não significativos
-  Ocorrências: 5
+  Ocorrências: 4
 
-  [1] Linha 1: Variável 'temp' com nome muito curto (≤4 chars)
+  [1] Linha 1: Variável 'esc' com nome muito curto (≤4 chars)
+      Trecho  : esc = ...
+      Contexto:
+        >>>    1 | esc = input("Defina a escala: ")
+               2 | temp = float(input("Temperatura: "))
+
+  [2] Linha 2: Variável 'temp' com nome muito curto (≤4 chars)
       Trecho  : temp = ...
       Contexto:
-        >>>    1 | temp = input("Temperatura em (C/K): ")
-               2 | 
+               1 | esc = input("Defina a escala: ")
+        >>>    2 | temp = float(input("Temperatura: "))
+               3 | 
 
-  [2] Linha 4: Variável 'c' com nome muito curto (≤4 chars)
-      Trecho  : c = ...
+  [3] Linha 5: Variável 'grau' com nome muito curto (≤4 chars)
+      Trecho  : grau = ...
       Contexto:
-               3 | if(temp == "C"):
-        >>>    4 | 	c =  float(input("digite em Celsius: "))
-               5 | 	K = c + 273.15
+               4 | if(esc.upper() == "C"):
+        >>>    5 | 	grau = temp + 273.15
+               6 | else:
 
-  [3] Linha 5: Variável 'K' com nome muito curto (≤4 chars)
-      Trecho  : K = ...
+  [4] Linha 7: Variável 'grau' com nome muito curto (≤4 chars)
+      Trecho  : grau = ...
       Contexto:
-               4 | 	c =  float(input("digite em Celsius: "))
-        >>>    5 | 	K = c + 273.15
-               6 | 	print(round(K, 2))
-
-  [4] Linha 8: Variável 'k' com nome muito curto (≤4 chars)
-      Trecho  : k = ...
-      Contexto:
-               7 | else:
-        >>>    8 | 	k = float(input("Digite em Kelvin"))
-               9 | 	C = k - 273.15
-
-  [5] Linha 9: Variável 'C' com nome muito curto (≤4 chars)
-      Trecho  : C = ...
-      Contexto:
-               8 | 	k = float(input("Digite em Kelvin"))
-        >>>    9 | 	C = k - 273.15
-              10 | 	print(round(C, 2))
+               6 | else:
+        >>>    7 | 	grau = temp - 273.15
+               8 | 
 
 ======================================================================

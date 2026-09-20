@@ -2,11 +2,11 @@
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
 Arquivo     : 5769_6779.log
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2024_1_v1.81\2024-1\590\users\9834\executions\5769_6779.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2024_1_v1.81\2024-1\590\users\9807\executions\5769_6779.log
 Assessment  : 5769
 Título      : TP 3: Est. Condicional Encadeada
 Questão     : 6779
-Aluno       : 9834
+Aluno       : 9807
 Grupo       : TP 03
 Significado : Estrutura Condicional Encadeada
 Total MCs   : 1
@@ -16,45 +16,55 @@ Total MCs   : 1
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | i = int(input("digite:"))
-     2 | p = input("(B)para brasil e (J) para japao:").upper()
+     1 | a = int(input("Seu nascimento: "))
+     2 | b = input("Coloque o pais:").upper()
      3 | 
-     4 | if (p == "B") and (2023 - i>= 18):
-     5 | 	print("sim")
-     6 | 	print((i+18)- 2023)
-     7 | elif (p == "B") and (2023 - i <= 18):
-     8 | 	print("nao")
-     9 | 	print((i+18)- 2023)
-    10 | elif (p=="J") and (2023 -i >=16):
-    11 | 	print("sim")
-    12 | 	print(2023-(i+16))
-    13 | elif (p=="J") and(2023 - i <= 16):
-    14 | 	print("nao")
-    15 | 	print(2023-(i+16))
-    16 | else:
-    17 | 	print("invalido")
+     4 | total = 2023 - a
+     5 | x = total - 18
+     6 | y = total - 16
+     7 | 
+     8 | bb = 18 - total
+     9 | jj = 16 - total
+    10 | 
+    11 | if b == "B":
+    12 | 	if total >= 18:
+    13 | 		print("sim")
+    14 | 		print(x)
+    15 | 	else:
+    16 | 		print("nao")
+    17 | 		print(bb)
+    18 | 
+    19 | elif b == "J":
+    20 | 	if total >= 16:
+    21 | 		print("sim")
+    22 | 		print(y)
+    23 | 	else:
+    24 | 		print("nao")
+    25 | 		print(jj)
+    26 | else:
+    27 | 	print("invalido")
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
 ----------------------------------------------------------------------
 
 ▶ G4 — Funções/variáveis com nomes não significativos
-  Ocorrências: 2
+  Ocorrências: 6
 
-  [1] Linha 1: Variável 'i' com nome muito curto (≤4 chars)
-      Trecho  : i = ...
+  [1] Linha 1: Variável 'a' com nome muito curto (≤4 chars)
+      Trecho  : a = ...
       Contexto:
-        >>>    1 | i = int(input("digite:"))
-               2 | p = input("(B)para brasil e (J) para japao:").upper()
+        >>>    1 | a = int(input("Seu nascimento: "))
+               2 | b = input("Coloque o pais:").upper()
 
-  [2] Linha 2: Variável 'p' com nome muito curto (≤4 chars)
-      Trecho  : p = ...
+  [2] Linha 2: Variável 'b' com nome muito curto (≤4 chars)
+      Trecho  : b = ...
       Contexto:
-               1 | i = int(input("digite:"))
-        >>>    2 | p = input("(B)para brasil e (J) para japao:").upper()
+               1 | a = int(input("Seu nascimento: "))
+        >>>    2 | b = input("Coloque o pais:").upper()
                3 | 
 
-======================================================================a 5: Variável 'x' com nome muito curto (≤4 chars)
+  [3] Linha 5: Variável 'x' com nome muito curto (≤4 chars)
       Trecho  : x = ...
       Contexto:
                4 | total = 2023 - a

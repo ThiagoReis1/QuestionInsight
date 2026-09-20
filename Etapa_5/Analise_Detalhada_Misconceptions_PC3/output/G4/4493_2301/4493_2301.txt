@@ -2,11 +2,11 @@
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
 Arquivo     : 4493_2301.log
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2022_2_v1.81\2022-2\490\users\8233\executions\4493_2301.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2022_2_v1.81\2022-2\490\users\8230\executions\4493_2301.log
 Assessment  : 4493
 Título      : TP 01: Variáveis e Estrutura Sequencial
 Questão     : 2301
-Aluno       : 8233
+Aluno       : 8230
 Grupo       : TP 01
 Significado : Variáveis e Estrutura Sequencial
 Total MCs   : 1
@@ -17,14 +17,11 @@ Total MCs   : 1
 CÓDIGO FONTE
 ----------------------------------------------------------------------
      1 | from math import*
-     2 | 
-     3 | b = float(input("lado b:"))
-     4 | c = float(input("lado c:"))
-     5 | A = float(input("valor de alfa"))
-     6 | 
-     7 | a = (b ** 2 + c ** 2 - 2 * b * c * cos(radians(A)))**0.5
-     8 | 
-     9 | print(round(a, 2))
+     2 | b = float(input("informe o valor do lado: "))
+     3 | c = float(input("informe o valor do lado: "))
+     4 | a = float(input("informe o valor do angulo: "))
+     5 | exp= sqrt((b**2 + c**2) - 2 * b * c * radians(cos(a)))
+     6 | print(float(round(exp,2)))
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
@@ -33,35 +30,32 @@ DETALHAMENTO DOS MISCONCEPTIONS
 ▶ G4 — Funções/variáveis com nomes não significativos
   Ocorrências: 4
 
-  [1] Linha 3: Variável 'b' com nome muito curto (≤4 chars)
+  [1] Linha 2: Variável 'b' com nome muito curto (≤4 chars)
       Trecho  : b = ...
       Contexto:
-               2 | 
-        >>>    3 | b = float(input("lado b:"))
-               4 | c = float(input("lado c:"))
+               1 | from math import*
+        >>>    2 | b = float(input("informe o valor do lado: "))
+               3 | c = float(input("informe o valor do lado: "))
 
-  [2] Linha 4: Variável 'c' com nome muito curto (≤4 chars)
+  [2] Linha 3: Variável 'c' com nome muito curto (≤4 chars)
       Trecho  : c = ...
       Contexto:
-               3 | b = float(input("lado b:"))
-        >>>    4 | c = float(input("lado c:"))
-               5 | A = float(input("valor de alfa"))
+               2 | b = float(input("informe o valor do lado: "))
+        >>>    3 | c = float(input("informe o valor do lado: "))
+               4 | a = float(input("informe o valor do angulo: "))
 
-  [3] Linha 5: Variável 'A' com nome muito curto (≤4 chars)
-      Trecho  : A = ...
-      Contexto:
-               4 | c = float(input("lado c:"))
-        >>>    5 | A = float(input("valor de alfa"))
-               6 | 
-
-  [4] Linha 7: Variável 'a' com nome muito curto (≤4 chars)
+  [3] Linha 4: Variável 'a' com nome muito curto (≤4 chars)
       Trecho  : a = ...
       Contexto:
-               6 | 
-        >>>    7 | a = (b ** 2 + c ** 2 - 2 * b * c * cos(radians(A)))**0.5
-               8 | 
+               3 | c = float(input("informe o valor do lado: "))
+        >>>    4 | a = float(input("informe o valor do angulo: "))
+               5 | exp= sqrt((b**2 + c**2) - 2 * b * c * radians(cos(a)))
 
-======================================================================  8 | c = sqrt(a**2 + b**2 - 2*a*b*cos(g))
-               9 | 
+  [4] Linha 5: Variável 'exp' com nome muito curto (≤4 chars)
+      Trecho  : exp = ...
+      Contexto:
+               4 | a = float(input("informe o valor do angulo: "))
+        >>>    5 | exp= sqrt((b**2 + c**2) - 2 * b * c * radians(cos(a)))
+               6 | print(float(round(exp,2)))
 
 ======================================================================

@@ -2,11 +2,11 @@
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
 Arquivo     : 5068_6212.log
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2023_1_v1.81\2023-1\530\users\8729\executions\5068_6212.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2023_1_v1.81\2023-1\530\users\8727\executions\5068_6212.log
 Assessment  : 5068
 Título      : TP 04: Estrutura de Repetição por Condição
 Questão     : 6212
-Aluno       : 8729
+Aluno       : 8727
 Grupo       : TP 04
 Significado : Estrutura de Repetição por Condição
 Total MCs   : 2
@@ -16,16 +16,13 @@ Total MCs   : 2
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | c = 0
-     2 | 
-     3 | while True:
-     4 | 	n = int(input('numero: '))
-     5 | 	
-     6 | 	if (n < 0):
-     7 | 		break
-     8 | 	if 26 <= n <= 85:
-     9 | 		c += 1
-    10 | print(c)
+     1 | nums = int(input("numeros saudaveis:"))
+     2 | cont = 0
+     3 | while nums != -1:
+     4 | 	if nums >= 25 and nums <= 85:
+     5 | 		cont = cont + 1
+     6 | 	nums = int(input("numeros saudaveis:"))	
+     7 | print(cont)		
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
@@ -38,33 +35,33 @@ DETALHAMENTO DOS MISCONCEPTIONS
       Trecho  : —
 
 ▶ G4 — Funções/variáveis com nomes não significativos
-  Ocorrências: 2
+  Ocorrências: 4
 
-  [1] Linha 1: Variável 'c' com nome muito curto (≤4 chars)
-      Trecho  : c = ...
+  [1] Linha 1: Variável 'nums' com nome muito curto (≤4 chars)
+      Trecho  : nums = ...
       Contexto:
-        >>>    1 | c = 0
-               2 | 
+        >>>    1 | nums = int(input("numeros saudaveis:"))
+               2 | cont = 0
 
-  [2] Linha 4: Variável 'n' com nome muito curto (≤4 chars)
-      Trecho  : n = ...
+  [2] Linha 2: Variável 'cont' com nome muito curto (≤4 chars)
+      Trecho  : cont = ...
       Contexto:
-               3 | while True:
-        >>>    4 | 	n = int(input('numero: '))
-               5 | 	
+               1 | nums = int(input("numeros saudaveis:"))
+        >>>    2 | cont = 0
+               3 | while nums != -1:
 
-======================================================================iável 'num' com nome muito curto (≤4 chars)
-      Trecho  : num = ...
+  [3] Linha 6: Variável 'nums' com nome muito curto (≤4 chars)
+      Trecho  : nums = ...
       Contexto:
-               6 | 		ter = ter + 1
-        >>>    7 | 	num = int(input("Numero: "))
-               8 | 	
+               5 | 		cont = cont + 1
+        >>>    6 | 	nums = int(input("numeros saudaveis:"))	
+               7 | print(cont)		
 
-  [4] Linha 6: Variável 'ter' com nome muito curto (≤4 chars)
-      Trecho  : ter = ...
+  [4] Linha 5: Variável 'cont' com nome muito curto (≤4 chars)
+      Trecho  : cont = ...
       Contexto:
-               5 | 	if 81 >= num >= 26:
-        >>>    6 | 		ter = ter + 1
-               7 | 	num = int(input("Numero: "))
+               4 | 	if nums >= 25 and nums <= 85:
+        >>>    5 | 		cont = cont + 1
+               6 | 	nums = int(input("numeros saudaveis:"))	
 
 ======================================================================

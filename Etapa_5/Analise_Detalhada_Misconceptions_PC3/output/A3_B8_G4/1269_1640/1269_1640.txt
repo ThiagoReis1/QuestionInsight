@@ -2,11 +2,11 @@
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
 Arquivo     : 1269_1640.log
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2018_1_v1.81\2018-1\187\users\3441\executions\1269_1640.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2018_1_v1.81\2018-1\187\users\3212\executions\1269_1640.log
 Assessment  : 1269
 Título      : TP 6: Estrutura de Repetição por Contagem (for)
 Questão     : 1640
-Aluno       : 3441
+Aluno       : 3212
 Grupo       : TP 06
 Significado : Estrutura de Repetição por Contagem
 Total MCs   : 3
@@ -17,20 +17,25 @@ Total MCs   : 3
 CÓDIGO FONTE
 ----------------------------------------------------------------------
      1 | from numpy import*
-     2 | vet = array(eval(input()))
-     3 | vet1 = zeros(3, dtype=int)#VETOR VAZIO
-     4 | i = 0 #INDICE PARA O VETOR VAZIO
-     5 | c = 0 #CONTADOR DE NUMEROS IMPARES
-     6 | for x in range(0 , size(vet)):
-     7 | 	if vet[x] % 2 == 1:
-     8 | 		c += 1
-     9 | vet1 = zeros(c, dtype=int)
-    10 | for x in range(0, size(vet)):
-    11 | 	if vet[x] % 2 == 1:
-    12 | 		vet1[i] += x
-    13 | 		i += 1
-    14 | print(c)
-    15 | print(vet1)
+     2 | v=array(eval(input("vetor:")))
+     3 | 
+     4 | npar=0
+     5 | for i in range(size(v)):
+     6 | 	if(v[i] % 2 != 0):
+     7 | 		npar=npar+1
+     8 | 		
+     9 | 
+    10 | k=0
+    11 | f=0
+    12 | d=zeros(npar, dtype=int)
+    13 | for i in range(size(v)):
+    14 | 	if(v[i] % 2 != 0):
+    15 | 		k=k+1
+    16 | 		d=d+i
+    17 | 	
+    18 | 	
+    19 | print(npar)
+    20 | print(d)
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
@@ -39,8 +44,12 @@ DETALHAMENTO DOS MISCONCEPTIONS
 ▶ A3 — Variável inicializada desnecessariamente
   Ocorrências: 1
 
-  [1] Linha 0: A3 detectado pelo VisitorMC3 (localização exata não mapeada)
-      Trecho  : —
+  [1] Linha 11: Variável 'f' declarada mas nunca utilizada
+      Trecho  : f = ...
+      Contexto:
+              10 | k=0
+        >>>   11 | f=0
+              12 | d=zeros(npar, dtype=int)
 
 ▶ B8 — Não utilização de elif/else
   Ocorrências: 1
@@ -49,41 +58,62 @@ DETALHAMENTO DOS MISCONCEPTIONS
       Trecho  : —
 
 ▶ G4 — Funções/variáveis com nomes não significativos
-  Ocorrências: 5
+  Ocorrências: 8
 
-  [1] Linha 2: Variável 'vet' com nome muito curto (≤4 chars)
-      Trecho  : vet = ...
+  [1] Linha 2: Variável 'v' com nome muito curto (≤4 chars)
+      Trecho  : v = ...
       Contexto:
                1 | from numpy import*
-        >>>    2 | vet = array(eval(input()))
-               3 | vet1 = zeros(3, dtype=int)#VETOR VAZIO
+        >>>    2 | v=array(eval(input("vetor:")))
+               3 | 
 
-  [2] Linha 3: Variável 'vet1' com nome muito curto (≤4 chars)
-      Trecho  : vet1 = ...
+  [2] Linha 4: Variável 'npar' com nome muito curto (≤4 chars)
+      Trecho  : npar = ...
       Contexto:
-               2 | vet = array(eval(input()))
-        >>>    3 | vet1 = zeros(3, dtype=int)#VETOR VAZIO
-               4 | i = 0 #INDICE PARA O VETOR VAZIO
+               3 | 
+        >>>    4 | npar=0
+               5 | for i in range(size(v)):
 
-  [3] Linha 4: Variável 'i' com nome muito curto (≤4 chars)
-      Trecho  : i = ...
+  [3] Linha 10: Variável 'k' com nome muito curto (≤4 chars)
+      Trecho  : k = ...
       Contexto:
-               3 | vet1 = zeros(3, dtype=int)#VETOR VAZIO
-        >>>    4 | i = 0 #INDICE PARA O VETOR VAZIO
-               5 | c = 0 #CONTADOR DE NUMEROS IMPARES
+               9 | 
+        >>>   10 | k=0
+              11 | f=0
 
-  [4] Linha 5: Variável 'c' com nome muito curto (≤4 chars)
-      Trecho  : c = ...
+  [4] Linha 11: Variável 'f' com nome muito curto (≤4 chars)
+      Trecho  : f = ...
       Contexto:
-               4 | i = 0 #INDICE PARA O VETOR VAZIO
-        >>>    5 | c = 0 #CONTADOR DE NUMEROS IMPARES
-               6 | for x in range(0 , size(vet)):
+              10 | k=0
+        >>>   11 | f=0
+              12 | d=zeros(npar, dtype=int)
 
-  [5] Linha 9: Variável 'vet1' com nome muito curto (≤4 chars)
-      Trecho  : vet1 = ...
+  [5] Linha 12: Variável 'd' com nome muito curto (≤4 chars)
+      Trecho  : d = ...
       Contexto:
-               8 | 		c += 1
-        >>>    9 | vet1 = zeros(c, dtype=int)
-              10 | for x in range(0, size(vet)):
+              11 | f=0
+        >>>   12 | d=zeros(npar, dtype=int)
+              13 | for i in range(size(v)):
+
+  [6] Linha 7: Variável 'npar' com nome muito curto (≤4 chars)
+      Trecho  : npar = ...
+      Contexto:
+               6 | 	if(v[i] % 2 != 0):
+        >>>    7 | 		npar=npar+1
+               8 | 		
+
+  [7] Linha 15: Variável 'k' com nome muito curto (≤4 chars)
+      Trecho  : k = ...
+      Contexto:
+              14 | 	if(v[i] % 2 != 0):
+        >>>   15 | 		k=k+1
+              16 | 		d=d+i
+
+  [8] Linha 16: Variável 'd' com nome muito curto (≤4 chars)
+      Trecho  : d = ...
+      Contexto:
+              15 | 		k=k+1
+        >>>   16 | 		d=d+i
+              17 | 	
 
 ======================================================================

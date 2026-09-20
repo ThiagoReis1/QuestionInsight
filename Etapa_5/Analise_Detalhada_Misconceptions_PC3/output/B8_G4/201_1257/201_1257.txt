@@ -2,11 +2,11 @@
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
 Arquivo     : 201_1257.log
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2016_1_v1.81\2016-1\106\users\1664\executions\201_1257.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2016_1_v1.81\2016-1\106\users\1650\executions\201_1257.log
 Assessment  : 201
 Título      : Avaliação Parcial 06 – Repetição por contagem
 Questão     : 1257
-Aluno       : 1664
+Aluno       : 1650
 Grupo       : TP 06
 Significado : Estrutura de Repetição por Contagem
 Total MCs   : 2
@@ -16,35 +16,23 @@ Total MCs   : 2
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | #---------------------------------
-     2 | # UNIVERSIDADE FEDERAL DO AMAZONAS	
-     3 | # LARISSA SANTOS BRITO - 21454598
-     4 | # DATA: 25/08/2016
-     5 | # AVALIAÇÃO 06 - EXERCÍCIO 01
-     6 | # OBJETIVO: 
-     7 | #---------------------------------
-     8 | from numpy import *
-     9 |  
-    10 | v = array(eval(input("digite o vetor:")))
-    11 | x1 = 0
-    12 | x2= 0
-    13 | 
-    14 | A = min(v)
-    15 | B = max(v)
-    16 | vet = zeros(2, dtype=int)
-    17 | C = 0.85 * A + 0.15 * B
-    18 | D = 0.4 * A + 0.6 * B
-    19 | 
-    20 | for  i in range (size(v)):
-    21 | 	if (v[i] >= A and v[i]< C):
-    22 | 		x1 = x1 + 1
-    23 | for i in range (size(v)):
-    24 | 	if (v[i] >= D and v[i] < B):
-    25 | 		x2 = x2 + 1
-    26 | vet[0] = x1
-    27 | vet[1] = x2
-    28 | 
-    29 | print(vet)
+     1 | from numpy import *
+     2 | 
+     3 | v = array(eval(input("Digite um vetor: ")))
+     4 | vet = zeros(2, dtype=int)
+     5 | 
+     6 | a = min(v)
+     7 | b = max(v)
+     8 | c = 0.85*a + 0.15*b
+     9 | d = 0.4*a + 0.6*b
+    10 | 
+    11 | for i in range(size(v)):
+    12 | 	if ((v[i]>a or v[i]==a) and v[i] <  c):
+    13 | 		vet[0] = vet[0] + 1
+    14 | 	elif ((v[i]>=d) and v[i]<b):
+    15 | 		vet[1] = vet[1] + 1
+    16 | 		
+    17 | print(vet)
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
@@ -53,80 +41,56 @@ DETALHAMENTO DOS MISCONCEPTIONS
 ▶ B8 — Não utilização de elif/else
   Ocorrências: 1
 
-  [1] Linha 0: B8 detectado pelo VisitorMC3 (localização exata não mapeada)
-      Trecho  : —
+  [1] Linha 12: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 12) / elif ... sem else
+      Contexto:
+              11 | for i in range(size(v)):
+        >>>   12 | 	if ((v[i]>a or v[i]==a) and v[i] <  c):
+              13 | 		vet[0] = vet[0] + 1
 
 ▶ G4 — Funções/variáveis com nomes não significativos
-  Ocorrências: 10
+  Ocorrências: 6
 
-  [1] Linha 10: Variável 'v' com nome muito curto (≤4 chars)
+  [1] Linha 3: Variável 'v' com nome muito curto (≤4 chars)
       Trecho  : v = ...
       Contexto:
-               9 |  
-        >>>   10 | v = array(eval(input("digite o vetor:")))
-              11 | x1 = 0
+               2 | 
+        >>>    3 | v = array(eval(input("Digite um vetor: ")))
+               4 | vet = zeros(2, dtype=int)
 
-  [2] Linha 11: Variável 'x1' com nome muito curto (≤4 chars)
-      Trecho  : x1 = ...
-      Contexto:
-              10 | v = array(eval(input("digite o vetor:")))
-        >>>   11 | x1 = 0
-              12 | x2= 0
-
-  [3] Linha 12: Variável 'x2' com nome muito curto (≤4 chars)
-      Trecho  : x2 = ...
-      Contexto:
-              11 | x1 = 0
-        >>>   12 | x2= 0
-              13 | 
-
-  [4] Linha 14: Variável 'A' com nome muito curto (≤4 chars)
-      Trecho  : A = ...
-      Contexto:
-              13 | 
-        >>>   14 | A = min(v)
-              15 | B = max(v)
-
-  [5] Linha 15: Variável 'B' com nome muito curto (≤4 chars)
-      Trecho  : B = ...
-      Contexto:
-              14 | A = min(v)
-        >>>   15 | B = max(v)
-              16 | vet = zeros(2, dtype=int)
-
-  [6] Linha 16: Variável 'vet' com nome muito curto (≤4 chars)
+  [2] Linha 4: Variável 'vet' com nome muito curto (≤4 chars)
       Trecho  : vet = ...
       Contexto:
-              15 | B = max(v)
-        >>>   16 | vet = zeros(2, dtype=int)
-              17 | C = 0.85 * A + 0.15 * B
+               3 | v = array(eval(input("Digite um vetor: ")))
+        >>>    4 | vet = zeros(2, dtype=int)
+               5 | 
 
-  [7] Linha 17: Variável 'C' com nome muito curto (≤4 chars)
-      Trecho  : C = ...
+  [3] Linha 6: Variável 'a' com nome muito curto (≤4 chars)
+      Trecho  : a = ...
       Contexto:
-              16 | vet = zeros(2, dtype=int)
-        >>>   17 | C = 0.85 * A + 0.15 * B
-              18 | D = 0.4 * A + 0.6 * B
+               5 | 
+        >>>    6 | a = min(v)
+               7 | b = max(v)
 
-  [8] Linha 18: Variável 'D' com nome muito curto (≤4 chars)
-      Trecho  : D = ...
+  [4] Linha 7: Variável 'b' com nome muito curto (≤4 chars)
+      Trecho  : b = ...
       Contexto:
-              17 | C = 0.85 * A + 0.15 * B
-        >>>   18 | D = 0.4 * A + 0.6 * B
-              19 | 
+               6 | a = min(v)
+        >>>    7 | b = max(v)
+               8 | c = 0.85*a + 0.15*b
 
-  [9] Linha 22: Variável 'x1' com nome muito curto (≤4 chars)
-      Trecho  : x1 = ...
+  [5] Linha 8: Variável 'c' com nome muito curto (≤4 chars)
+      Trecho  : c = ...
       Contexto:
-              21 | 	if (v[i] >= A and v[i]< C):
-        >>>   22 | 		x1 = x1 + 1
-              23 | for i in range (size(v)):
+               7 | b = max(v)
+        >>>    8 | c = 0.85*a + 0.15*b
+               9 | d = 0.4*a + 0.6*b
 
-  [10] Linha 25: Variável 'x2' com nome muito curto (≤4 chars)
-      Trecho  : x2 = ...
+  [6] Linha 9: Variável 'd' com nome muito curto (≤4 chars)
+      Trecho  : d = ...
       Contexto:
-              24 | 	if (v[i] >= D and v[i] < B):
-        >>>   25 | 		x2 = x2 + 1
-              26 | vet[0] = x1
+               8 | c = 0.85*a + 0.15*b
+        >>>    9 | d = 0.4*a + 0.6*b
+              10 | 
 
 ======================================================================

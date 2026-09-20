@@ -2,11 +2,11 @@
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
 Arquivo     : 5524_6373.log
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2023_2_v1.81\2023-2\557\users\9286\executions\5524_6373.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2023_2_v1.81\2023-2\557\users\9252\executions\5524_6373.log
 Assessment  : 5524
 Título      : TP 6: Estrutura de Repetição por Contagem (for)
 Questão     : 6373
-Aluno       : 9286
+Aluno       : 9252
 Grupo       : TP 06
 Significado : Estrutura de Repetição por Contagem
 Total MCs   : 2
@@ -17,20 +17,20 @@ Total MCs   : 2
 CÓDIGO FONTE
 ----------------------------------------------------------------------
      1 | from numpy import *
-     2 | v = input("Livros:").upper().split(',')
-     3 | s = zeros(4 , dtype=int)
-     4 | 
-     5 | for i in range(len(v)):
-     6 | 	if v[i] == 'A':
-     7 | 		s[0] +=1
-     8 | 	if v[i] == 'P':
-     9 | 		s[1] += 1
-    10 | 	if v[i] == 'D':
-    11 | 		s[2] += 1
-    12 | 	if v[i] == 'M':
-    13 | 		s[3] += 1
-    14 | 	
-    15 | print(s)
+     2 | 
+     3 | t = input("T: ").upper()
+     4 | out = zeros(4,dtype=int)
+     5 | for i in range(len(t)):
+     6 | 	if t[i]=="A":
+     7 | 		out[0]+=1
+     8 | 	if t[i]=="P":
+     9 | 		out[1]+=1
+    10 | 	if t[i]=="D":
+    11 | 		out[2]+=1
+    12 | 	if t[i]=="M":
+    13 | 		out[3]+=1
+    14 | 		
+    15 | print(out)		
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
@@ -45,18 +45,18 @@ DETALHAMENTO DOS MISCONCEPTIONS
 ▶ G4 — Funções/variáveis com nomes não significativos
   Ocorrências: 2
 
-  [1] Linha 2: Variável 'v' com nome muito curto (≤4 chars)
-      Trecho  : v = ...
+  [1] Linha 3: Variável 't' com nome muito curto (≤4 chars)
+      Trecho  : t = ...
       Contexto:
-               1 | from numpy import *
-        >>>    2 | v = input("Livros:").upper().split(',')
-               3 | s = zeros(4 , dtype=int)
+               2 | 
+        >>>    3 | t = input("T: ").upper()
+               4 | out = zeros(4,dtype=int)
 
-  [2] Linha 3: Variável 's' com nome muito curto (≤4 chars)
-      Trecho  : s = ...
+  [2] Linha 4: Variável 'out' com nome muito curto (≤4 chars)
+      Trecho  : out = ...
       Contexto:
-               2 | v = input("Livros:").upper().split(',')
-        >>>    3 | s = zeros(4 , dtype=int)
-               4 | 
+               3 | t = input("T: ").upper()
+        >>>    4 | out = zeros(4,dtype=int)
+               5 | for i in range(len(t)):
 
 ======================================================================

@@ -2,11 +2,11 @@
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
 Arquivo     : 1189_1532.log
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2018_1_v1.81\2018-1\187\users\3203\executions\1189_1532.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2018_1_v1.81\2018-1\187\users\3199\executions\1189_1532.log
 Assessment  : 1189
 Título      : TP 04: Estrutura de Repetição por Condição (while)
 Questão     : 1532
-Aluno       : 3203
+Aluno       : 3199
 Grupo       : TP 04
 Significado : Estrutura de Repetição por Condição
 Total MCs   : 1
@@ -16,79 +16,63 @@ Total MCs   : 1
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | x = float(input("Numero real: "))
-     2 | k = int(input("Numero int: "))
-     3 | from math import *
-     4 | i = 0
-     5 | cont = 0
-     6 | a = 1
-     7 | while (i<k):
-     8 | 	termo = (x**a) / factorial (a)
-     9 | 	cont = cont + termo
-    10 | 	a = a+2
-    11 | 	i = i+1
-    12 | print(round(cont,9))
+     1 | from math import *
+     2 | x = float(input("x: "))
+     3 | k = int(input("k: "))
+     4 | s = 0
+     5 | n = 1
+     6 | while (n<k):
+     7 | 	s = s + ((x**n) / factorial (n))
+     8 | 	n = n + 2
+     9 | 	print(s)
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
 ----------------------------------------------------------------------
 
 ▶ G4 — Funções/variáveis com nomes não significativos
-  Ocorrências: 8
+  Ocorrências: 6
 
-  [1] Linha 1: Variável 'x' com nome muito curto (≤4 chars)
+  [1] Linha 2: Variável 'x' com nome muito curto (≤4 chars)
       Trecho  : x = ...
       Contexto:
-        >>>    1 | x = float(input("Numero real: "))
-               2 | k = int(input("Numero int: "))
+               1 | from math import *
+        >>>    2 | x = float(input("x: "))
+               3 | k = int(input("k: "))
 
-  [2] Linha 2: Variável 'k' com nome muito curto (≤4 chars)
+  [2] Linha 3: Variável 'k' com nome muito curto (≤4 chars)
       Trecho  : k = ...
       Contexto:
-               1 | x = float(input("Numero real: "))
-        >>>    2 | k = int(input("Numero int: "))
-               3 | from math import *
+               2 | x = float(input("x: "))
+        >>>    3 | k = int(input("k: "))
+               4 | s = 0
 
-  [3] Linha 4: Variável 'i' com nome muito curto (≤4 chars)
-      Trecho  : i = ...
+  [3] Linha 4: Variável 's' com nome muito curto (≤4 chars)
+      Trecho  : s = ...
       Contexto:
-               3 | from math import *
-        >>>    4 | i = 0
-               5 | cont = 0
+               3 | k = int(input("k: "))
+        >>>    4 | s = 0
+               5 | n = 1
 
-  [4] Linha 5: Variável 'cont' com nome muito curto (≤4 chars)
-      Trecho  : cont = ...
+  [4] Linha 5: Variável 'n' com nome muito curto (≤4 chars)
+      Trecho  : n = ...
       Contexto:
-               4 | i = 0
-        >>>    5 | cont = 0
-               6 | a = 1
+               4 | s = 0
+        >>>    5 | n = 1
+               6 | while (n<k):
 
-  [5] Linha 6: Variável 'a' com nome muito curto (≤4 chars)
-      Trecho  : a = ...
+  [5] Linha 7: Variável 's' com nome muito curto (≤4 chars)
+      Trecho  : s = ...
       Contexto:
-               5 | cont = 0
-        >>>    6 | a = 1
-               7 | while (i<k):
+               6 | while (n<k):
+        >>>    7 | 	s = s + ((x**n) / factorial (n))
+               8 | 	n = n + 2
 
-  [6] Linha 9: Variável 'cont' com nome muito curto (≤4 chars)
-      Trecho  : cont = ...
+  [6] Linha 8: Variável 'n' com nome muito curto (≤4 chars)
+      Trecho  : n = ...
       Contexto:
-               8 | 	termo = (x**a) / factorial (a)
-        >>>    9 | 	cont = cont + termo
-              10 | 	a = a+2
-
-  [7] Linha 10: Variável 'a' com nome muito curto (≤4 chars)
-      Trecho  : a = ...
-      Contexto:
-               9 | 	cont = cont + termo
-        >>>   10 | 	a = a+2
-              11 | 	i = i+1
-
-  [8] Linha 11: Variável 'i' com nome muito curto (≤4 chars)
-      Trecho  : i = ...
-      Contexto:
-              10 | 	a = a+2
-        >>>   11 | 	i = i+1
-              12 | print(round(cont,9))
+               7 | 	s = s + ((x**n) / factorial (n))
+        >>>    8 | 	n = n + 2
+               9 | 	print(s)
 
 ======================================================================

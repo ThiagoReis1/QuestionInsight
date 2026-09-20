@@ -2,11 +2,11 @@
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
 Arquivo     : 112_1098.log
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2016_1_v1.81\2016-1\105\users\1510\executions\112_1098.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2016_1_v1.81\2016-1\105\users\1482\executions\112_1098.log
 Assessment  : 112
 Título      : Avaliação Parcial 02 – Estrutura Condicional Composta (sem Aninhamento)
 Questão     : 1098
-Aluno       : 1510
+Aluno       : 1482
 Grupo       : TP 02
 Significado : Estrutura Condicional Simples e Composta
 Total MCs   : 1
@@ -16,55 +16,41 @@ Total MCs   : 1
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | #Universidade Federal do Amazonas
-     2 | #Jorge Trajano da Silva Junior
-     3 | #lab de codificação 02 - Avaliação Parcial
-     4 | #06.07.2016
-     5 | #Solicitar número do usuário
-     6 | vlr = int(input("Digite um número: "))
-     7 | #Fornecer a estrutura para condição
-     8 | prt1 = vlr // 1000 #primeiros algarismos
-     9 | prt2 = vlr % 1000 #ultimos algarismos
-    10 | #Estabelecer condição
-    11 | if(vlr == (prt1 - prt2)**4):
-    12 | 	print(vlr, "atende a propriedade")
-    13 | else:
-    14 | 	vlr = (prt1 - prt2)**4
-    15 | 	print(vlr)
+     1 | num = int(input("insira o numero:"))
+     2 | 
+     3 | a = num // 1000
+     4 | b = num % 1000
+     5 | 
+     6 | if (((a - b)**4) == num):
+     7 | 	print(num, "atende a propriedade")
+     8 | else:
+     9 | 	print((a - b)**4)
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
 ----------------------------------------------------------------------
 
 ▶ G4 — Funções/variáveis com nomes não significativos
-  Ocorrências: 4
+  Ocorrências: 3
 
-  [1] Linha 6: Variável 'vlr' com nome muito curto (≤4 chars)
-      Trecho  : vlr = ...
+  [1] Linha 1: Variável 'num' com nome muito curto (≤4 chars)
+      Trecho  : num = ...
       Contexto:
-               5 | #Solicitar número do usuário
-        >>>    6 | vlr = int(input("Digite um número: "))
-               7 | #Fornecer a estrutura para condição
+        >>>    1 | num = int(input("insira o numero:"))
+               2 | 
 
-  [2] Linha 8: Variável 'prt1' com nome muito curto (≤4 chars)
-      Trecho  : prt1 = ...
+  [2] Linha 3: Variável 'a' com nome muito curto (≤4 chars)
+      Trecho  : a = ...
       Contexto:
-               7 | #Fornecer a estrutura para condição
-        >>>    8 | prt1 = vlr // 1000 #primeiros algarismos
-               9 | prt2 = vlr % 1000 #ultimos algarismos
+               2 | 
+        >>>    3 | a = num // 1000
+               4 | b = num % 1000
 
-  [3] Linha 9: Variável 'prt2' com nome muito curto (≤4 chars)
-      Trecho  : prt2 = ...
+  [3] Linha 4: Variável 'b' com nome muito curto (≤4 chars)
+      Trecho  : b = ...
       Contexto:
-               8 | prt1 = vlr // 1000 #primeiros algarismos
-        >>>    9 | prt2 = vlr % 1000 #ultimos algarismos
-              10 | #Estabelecer condição
-
-  [4] Linha 14: Variável 'vlr' com nome muito curto (≤4 chars)
-      Trecho  : vlr = ...
-      Contexto:
-              13 | else:
-        >>>   14 | 	vlr = (prt1 - prt2)**4
-              15 | 	print(vlr)
+               3 | a = num // 1000
+        >>>    4 | b = num % 1000
+               5 | 
 
 ======================================================================

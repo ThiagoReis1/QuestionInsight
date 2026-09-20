@@ -2,11 +2,11 @@
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
 Arquivo     : 5528_1642.log
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2023_2_v1.81\2023-2\560\users\9241\executions\5528_1642.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2023_2_v1.81\2023-2\560\users\9290\executions\5528_1642.log
 Assessment  : 5528
 Título      : TP 6: Estrutura de Repetição por Contagem (for)
 Questão     : 1642
-Aluno       : 9241
+Aluno       : 9290
 Grupo       : TP 06
 Significado : Estrutura de Repetição por Contagem
 Total MCs   : 2
@@ -16,30 +16,20 @@ Total MCs   : 2
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | from numpy import*
-     2 | v= array(eval(input("quantas turmas com grupos de cinco alunos rapaz: ")))
-     3 | 
-     4 | cincum= 0
-     5 | 
-     6 | #contar cincums
-     7 | for i in range(size(v)):
-     8 | 	if(v[i]%5 ==0):
-     9 | 		cincum+= 1
-    10 | 
-    11 | #vetor com quantidades de cincums
-    12 | aux= zeros(cincum, dtype= int)
-    13 | 
-    14 | x=0
-    15 | 
-    16 | for i in range(size(v)):
-    17 | 	if i == 0 and v[0] % 5 ==0:
-    18 | 		aux[0]= 0
-    19 | 		x+=1
-    20 | 	elif(v[i] % 5 ==0):
-    21 | 		aux[x]= i
-    22 | 		x += 1
-    23 | print(cincum)
-    24 | print(aux)
+     1 | from numpy import *
+     2 | v = array(eval(input("v: ")))
+     3 | cont = 0
+     4 | for x in v:
+     5 | 	if x % 5 == 0:
+     6 | 		cont += 1
+     7 | print(cont)
+     8 | contador = zeros(cont, dtype=int)
+     9 | c = 0
+    10 | for indice, x in enumerate(v):
+    11 | 	if x % 5 == 0:
+    12 | 		contador[c] = indice
+    13 | 		c += 1
+    14 | print(contador)
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
@@ -48,12 +38,8 @@ DETALHAMENTO DOS MISCONCEPTIONS
 ▶ B8 — Não utilização de elif/else
   Ocorrências: 1
 
-  [1] Linha 17: Cadeia if/elif sem bloco else final
-      Trecho  : if ... (linha 17) / elif ... sem else
-      Contexto:
-              16 | for i in range(size(v)):
-        >>>   17 | 	if i == 0 and v[0] % 5 ==0:
-              18 | 		aux[0]= 0
+  [1] Linha 0: B8 detectado pelo VisitorMC3 (localização exata não mapeada)
+      Trecho  : —
 
 ▶ G4 — Funções/variáveis com nomes não significativos
   Ocorrências: 3
@@ -61,22 +47,39 @@ DETALHAMENTO DOS MISCONCEPTIONS
   [1] Linha 2: Variável 'v' com nome muito curto (≤4 chars)
       Trecho  : v = ...
       Contexto:
-               1 | from numpy import*
-        >>>    2 | v= array(eval(input("quantas turmas com grupos de cinco alunos rapaz: ")))
-               3 | 
+               1 | from numpy import *
+        >>>    2 | v = array(eval(input("v: ")))
+               3 | cont = 0
 
-  [2] Linha 12: Variável 'aux' com nome muito curto (≤4 chars)
-      Trecho  : aux = ...
+  [2] Linha 3: Variável 'cont' com nome muito curto (≤4 chars)
+      Trecho  : cont = ...
       Contexto:
-              11 | #vetor com quantidades de cincums
-        >>>   12 | aux= zeros(cincum, dtype= int)
-              13 | 
+               2 | v = array(eval(input("v: ")))
+        >>>    3 | cont = 0
+               4 | for x in v:
 
-  [3] Linha 14: Variável 'x' com nome muito curto (≤4 chars)
-      Trecho  : x = ...
+  [3] Linha 9: Variável 'c' com nome muito curto (≤4 chars)
+      Trecho  : c = ...
       Contexto:
-              13 | 
-        >>>   14 | x=0
-              15 | 
+               8 | contador = zeros(cont, dtype=int)
+        >>>    9 | c = 0
+              10 | for indice, x in enumerate(v):
+
+======================================================================      >>>    9 | v1 = zeros(c, dtype=int)
+              10 | 
+
+  [5] Linha 8: Variável 'c' com nome muito curto (≤4 chars)
+      Trecho  : c = ...
+      Contexto:
+               7 | 	if v[i] % 5 == 0:
+        >>>    8 | 		c = c + 1
+               9 | v1 = zeros(c, dtype=int)
+
+  [6] Linha 14: Variável 'd' com nome muito curto (≤4 chars)
+      Trecho  : d = ...
+      Contexto:
+              13 | 		v1[d] = x
+        >>>   14 | 		d = d + 1
+              15 | print(c)
 
 ======================================================================

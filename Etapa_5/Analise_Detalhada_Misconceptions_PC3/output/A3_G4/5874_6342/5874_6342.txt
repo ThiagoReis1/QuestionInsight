@@ -2,11 +2,11 @@
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
 Arquivo     : 5874_6342.log
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2024_1_v1.81\2024-1\589\users\9744\executions\5874_6342.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2024_1_v1.81\2024-1\589\users\9741\executions\5874_6342.log
 Assessment  : 5874
 Título      : TP 5: Vetores e Strings
 Questão     : 6342
-Aluno       : 9744
+Aluno       : 9741
 Grupo       : TP 05
 Significado : Vetores e Strings
 Total MCs   : 2
@@ -16,13 +16,15 @@ Total MCs   : 2
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | tig1 = input()
-     2 | tig = tig1.upper()
-     3 | a = 0
-     4 | if(tig[0]=="M"):
-     5 | 	print(tig)
-     6 | else:
-     7 | 	print("nome invalido")
+     1 | from numpy import*
+     2 | 
+     3 | a = input()
+     4 | i = 0 
+     5 | 
+     6 | if a[0] == "m" or a[0] == "M":
+     7 | 	print(a.upper())
+     8 | else:
+     9 | 	print("nome invalido")
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
@@ -31,34 +33,28 @@ DETALHAMENTO DOS MISCONCEPTIONS
 ▶ A3 — Variável inicializada desnecessariamente
   Ocorrências: 1
 
-  [1] Linha 3: Variável 'a' declarada mas nunca utilizada
-      Trecho  : a = ...
+  [1] Linha 4: Variável 'i' declarada mas nunca utilizada
+      Trecho  : i = ...
       Contexto:
-               2 | tig = tig1.upper()
-        >>>    3 | a = 0
-               4 | if(tig[0]=="M"):
+               3 | a = input()
+        >>>    4 | i = 0 
+               5 | 
 
 ▶ G4 — Funções/variáveis com nomes não significativos
-  Ocorrências: 3
+  Ocorrências: 2
 
-  [1] Linha 1: Variável 'tig1' com nome muito curto (≤4 chars)
-      Trecho  : tig1 = ...
-      Contexto:
-        >>>    1 | tig1 = input()
-               2 | tig = tig1.upper()
-
-  [2] Linha 2: Variável 'tig' com nome muito curto (≤4 chars)
-      Trecho  : tig = ...
-      Contexto:
-               1 | tig1 = input()
-        >>>    2 | tig = tig1.upper()
-               3 | a = 0
-
-  [3] Linha 3: Variável 'a' com nome muito curto (≤4 chars)
+  [1] Linha 3: Variável 'a' com nome muito curto (≤4 chars)
       Trecho  : a = ...
       Contexto:
-               2 | tig = tig1.upper()
-        >>>    3 | a = 0
-               4 | if(tig[0]=="M"):
+               2 | 
+        >>>    3 | a = input()
+               4 | i = 0 
+
+  [2] Linha 4: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+               3 | a = input()
+        >>>    4 | i = 0 
+               5 | 
 
 ======================================================================

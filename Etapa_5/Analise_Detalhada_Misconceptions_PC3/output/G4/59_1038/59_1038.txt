@@ -2,11 +2,11 @@
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
 Arquivo     : 59_1038.log
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2016_1_v1.81\2016-1\102\users\1309\executions\59_1038.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2016_1_v1.81\2016-1\102\users\1292\executions\59_1038.log
 Assessment  : 59
 Título      : Avaliação 01 - Variáveis e Estrutura Sequencial de Programação
 Questão     : 1038
-Aluno       : 1309
+Aluno       : 1292
 Grupo       : TP 01
 Significado : Variáveis e Estrutura Sequencial
 Total MCs   : 1
@@ -16,15 +16,11 @@ Total MCs   : 1
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | # conversão de moeda
-     2 | 
-     3 | Q = float( input("digite o valor dado:") )
+     1 | v=float(input("Qual o valor em reais?: "))
+     2 | vt=v-8.5
+     3 | vc=vt/0.03
      4 | 
-     5 | Co = Q - 8.50
-     6 | 
-     7 | I = Co / 0.03
-     8 | 
-     9 | print(float(round(I,2)))
+     5 | print(round(vc,2))
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
@@ -33,25 +29,24 @@ DETALHAMENTO DOS MISCONCEPTIONS
 ▶ G4 — Funções/variáveis com nomes não significativos
   Ocorrências: 3
 
-  [1] Linha 3: Variável 'Q' com nome muito curto (≤4 chars)
-      Trecho  : Q = ...
+  [1] Linha 1: Variável 'v' com nome muito curto (≤4 chars)
+      Trecho  : v = ...
       Contexto:
-               2 | 
-        >>>    3 | Q = float( input("digite o valor dado:") )
+        >>>    1 | v=float(input("Qual o valor em reais?: "))
+               2 | vt=v-8.5
+
+  [2] Linha 2: Variável 'vt' com nome muito curto (≤4 chars)
+      Trecho  : vt = ...
+      Contexto:
+               1 | v=float(input("Qual o valor em reais?: "))
+        >>>    2 | vt=v-8.5
+               3 | vc=vt/0.03
+
+  [3] Linha 3: Variável 'vc' com nome muito curto (≤4 chars)
+      Trecho  : vc = ...
+      Contexto:
+               2 | vt=v-8.5
+        >>>    3 | vc=vt/0.03
                4 | 
 
-  [2] Linha 5: Variável 'Co' com nome muito curto (≤4 chars)
-      Trecho  : Co = ...
-      Contexto:
-               4 | 
-        >>>    5 | Co = Q - 8.50
-               6 | 
-
-  [3] Linha 7: Variável 'I' com nome muito curto (≤4 chars)
-      Trecho  : I = ...
-      Contexto:
-               6 | 
-        >>>    7 | I = Co / 0.03
-               8 | 
-
-==================================================================================================================
+======================================================================

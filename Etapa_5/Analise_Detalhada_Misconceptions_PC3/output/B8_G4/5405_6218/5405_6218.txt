@@ -2,11 +2,11 @@
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
 Arquivo     : 5405_6218.log
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2023_2_v1.81\2023-2\557\users\9165\executions\5405_6218.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2023_2_v1.81\2023-2\557\users\9167\executions\5405_6218.log
 Assessment  : 5405
 Título      : TP 4: Estrutura de Repetição por Condição
 Questão     : 6218
-Aluno       : 9165
+Aluno       : 9167
 Grupo       : TP 04
 Significado : Estrutura de Repetição por Condição
 Total MCs   : 2
@@ -16,15 +16,15 @@ Total MCs   : 2
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | X =  int(input("Insira um valor para X: "))
-     2 | Y = int(input("Insira um valor para Y: "))
-     3 | cont = 0
-     4 | 
-     5 | while(X < Y):
-     6 | 	if (X % 2):
-     7 | 		cont += 1
-     8 | 		
-     9 | print(cont)
+     1 | x = int(input("valor de X  "))
+     2 | y = int(input("valor de Y  "))
+     3 | cont = x
+     4 | while cont<=y:
+     5 | 	par = cont%2
+     6 | 
+     7 | 	if par==0:
+     8 | 		print(cont)
+     9 | 	cont +=1
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
@@ -37,26 +37,33 @@ DETALHAMENTO DOS MISCONCEPTIONS
       Trecho  : —
 
 ▶ G4 — Funções/variáveis com nomes não significativos
-  Ocorrências: 3
+  Ocorrências: 4
 
-  [1] Linha 1: Variável 'X' com nome muito curto (≤4 chars)
-      Trecho  : X = ...
+  [1] Linha 1: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
       Contexto:
-        >>>    1 | X =  int(input("Insira um valor para X: "))
-               2 | Y = int(input("Insira um valor para Y: "))
+        >>>    1 | x = int(input("valor de X  "))
+               2 | y = int(input("valor de Y  "))
 
-  [2] Linha 2: Variável 'Y' com nome muito curto (≤4 chars)
-      Trecho  : Y = ...
+  [2] Linha 2: Variável 'y' com nome muito curto (≤4 chars)
+      Trecho  : y = ...
       Contexto:
-               1 | X =  int(input("Insira um valor para X: "))
-        >>>    2 | Y = int(input("Insira um valor para Y: "))
-               3 | cont = 0
+               1 | x = int(input("valor de X  "))
+        >>>    2 | y = int(input("valor de Y  "))
+               3 | cont = x
 
   [3] Linha 3: Variável 'cont' com nome muito curto (≤4 chars)
       Trecho  : cont = ...
       Contexto:
-               2 | Y = int(input("Insira um valor para Y: "))
-        >>>    3 | cont = 0
-               4 | 
+               2 | y = int(input("valor de Y  "))
+        >>>    3 | cont = x
+               4 | while cont<=y:
+
+  [4] Linha 5: Variável 'par' com nome muito curto (≤4 chars)
+      Trecho  : par = ...
+      Contexto:
+               4 | while cont<=y:
+        >>>    5 | 	par = cont%2
+               6 | 
 
 ======================================================================

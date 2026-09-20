@@ -2,11 +2,11 @@
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
 Arquivo     : 5126_3587.log
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2023_1_v1.81\2023-1\530\users\8723\executions\5126_3587.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2023_1_v1.81\2023-1\530\users\8748\executions\5126_3587.log
 Assessment  : 5126
 Título      : TP 5: Vetores e Strings
 Questão     : 3587
-Aluno       : 8723
+Aluno       : 8748
 Grupo       : TP 05
 Significado : Vetores e Strings
 Total MCs   : 3
@@ -17,20 +17,23 @@ Total MCs   : 3
 CÓDIGO FONTE
 ----------------------------------------------------------------------
      1 | from numpy import*
-     2 | x = array(eval(input("aneis: ")))
-     3 | p = 100
-     4 | i = 0
-     5 | while i<size(x):
-     6 | 	if x[i] == 1:
-     7 | 		p = p*5
-     8 | 	if x[i] == 2:
-     9 | 		p = p*3
-    10 | 	if x[i] == 3:
-    11 | 		p = p
-    12 | 	if x[i] == 4:
-    13 | 		p = p/2
-    14 | 	i = i+1
-    15 | print(round(p,2))
+     2 | 
+     3 | roda = array(eval(input("manda ai: ")))
+     4 | 
+     5 | i = 0
+     6 | p = 100
+     7 | 
+     8 | while i < size(roda):
+     9 | 	if roda[i] == 1:
+    10 | 		p = p * 5
+    11 | 	if roda[i] == 2:
+    12 | 		p = p * 3
+    13 | 	if roda[i] == 3:
+    14 | 		p = p
+    15 | 	if roda[i] == 4:
+    16 | 		p = p / 2
+    17 | 	i += 1
+    18 | print (p)
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
@@ -39,12 +42,12 @@ DETALHAMENTO DOS MISCONCEPTIONS
 ▶ A2 — Variável atribuída a si mesma
   Ocorrências: 1
 
-  [1] Linha 11: 'p' atribuído a si mesmo
+  [1] Linha 14: 'p' atribuído a si mesmo
       Trecho  : p = p
       Contexto:
-              10 | 	if x[i] == 3:
-        >>>   11 | 		p = p
-              12 | 	if x[i] == 4:
+              13 | 	if roda[i] == 3:
+        >>>   14 | 		p = p
+              15 | 	if roda[i] == 4:
 
 ▶ B8 — Não utilização de elif/else
   Ocorrências: 1
@@ -53,62 +56,55 @@ DETALHAMENTO DOS MISCONCEPTIONS
       Trecho  : —
 
 ▶ G4 — Funções/variáveis com nomes não significativos
-  Ocorrências: 8
+  Ocorrências: 7
 
-  [1] Linha 2: Variável 'x' com nome muito curto (≤4 chars)
-      Trecho  : x = ...
+  [1] Linha 3: Variável 'roda' com nome muito curto (≤4 chars)
+      Trecho  : roda = ...
       Contexto:
-               1 | from numpy import*
-        >>>    2 | x = array(eval(input("aneis: ")))
-               3 | p = 100
+               2 | 
+        >>>    3 | roda = array(eval(input("manda ai: ")))
+               4 | 
 
-  [2] Linha 3: Variável 'p' com nome muito curto (≤4 chars)
-      Trecho  : p = ...
-      Contexto:
-               2 | x = array(eval(input("aneis: ")))
-        >>>    3 | p = 100
-               4 | i = 0
-
-  [3] Linha 4: Variável 'i' com nome muito curto (≤4 chars)
+  [2] Linha 5: Variável 'i' com nome muito curto (≤4 chars)
       Trecho  : i = ...
       Contexto:
-               3 | p = 100
-        >>>    4 | i = 0
-               5 | while i<size(x):
+               4 | 
+        >>>    5 | i = 0
+               6 | p = 100
 
-  [4] Linha 14: Variável 'i' com nome muito curto (≤4 chars)
-      Trecho  : i = ...
-      Contexto:
-              13 | 		p = p/2
-        >>>   14 | 	i = i+1
-              15 | print(round(p,2))
-
-  [5] Linha 7: Variável 'p' com nome muito curto (≤4 chars)
+  [3] Linha 6: Variável 'p' com nome muito curto (≤4 chars)
       Trecho  : p = ...
       Contexto:
-               6 | 	if x[i] == 1:
-        >>>    7 | 		p = p*5
-               8 | 	if x[i] == 2:
+               5 | i = 0
+        >>>    6 | p = 100
+               7 | 
 
-  [6] Linha 9: Variável 'p' com nome muito curto (≤4 chars)
+  [4] Linha 10: Variável 'p' com nome muito curto (≤4 chars)
       Trecho  : p = ...
       Contexto:
-               8 | 	if x[i] == 2:
-        >>>    9 | 		p = p*3
-              10 | 	if x[i] == 3:
+               9 | 	if roda[i] == 1:
+        >>>   10 | 		p = p * 5
+              11 | 	if roda[i] == 2:
 
-  [7] Linha 11: Variável 'p' com nome muito curto (≤4 chars)
+  [5] Linha 12: Variável 'p' com nome muito curto (≤4 chars)
       Trecho  : p = ...
       Contexto:
-              10 | 	if x[i] == 3:
-        >>>   11 | 		p = p
-              12 | 	if x[i] == 4:
+              11 | 	if roda[i] == 2:
+        >>>   12 | 		p = p * 3
+              13 | 	if roda[i] == 3:
 
-  [8] Linha 13: Variável 'p' com nome muito curto (≤4 chars)
+  [6] Linha 14: Variável 'p' com nome muito curto (≤4 chars)
       Trecho  : p = ...
       Contexto:
-              12 | 	if x[i] == 4:
-        >>>   13 | 		p = p/2
-              14 | 	i = i+1
+              13 | 	if roda[i] == 3:
+        >>>   14 | 		p = p
+              15 | 	if roda[i] == 4:
+
+  [7] Linha 16: Variável 'p' com nome muito curto (≤4 chars)
+      Trecho  : p = ...
+      Contexto:
+              15 | 	if roda[i] == 4:
+        >>>   16 | 		p = p / 2
+              17 | 	i += 1
 
 ======================================================================

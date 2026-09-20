@@ -2,11 +2,11 @@
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
 Arquivo     : 577_1991.log
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2017_1_v1.81\2017-1\139\users\2396\executions\577_1991.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2017_1_v1.81\2017-1\139\users\2517\executions\577_1991.log
 Assessment  : 577
 Título      : Trabalho Prático 3: Estruturas Condicionais Encadeadas
 Questão     : 1991
-Aluno       : 2396
+Aluno       : 2517
 Grupo       : TP 03
 Significado : Estrutura Condicional Encadeada
 Total MCs   : 1
@@ -16,86 +16,63 @@ Total MCs   : 1
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | from math import*
-     2 | amin = input('aminoacido:')
-     3 | o = 15.9994
-     4 | c = 12.011
-     5 | n = 14.00674
-     6 | h = 1.0079
-     7 | g = (c*2)+(h*5)+n+(o*2)
-     8 | p = (c*5)+(h*10)+n+(o*2)
-     9 | s = (c*3)+(h*7)+n+(o*3)
-    10 | if(amin.upper() == 'Glicina'.upper()):
-    11 | 	print(round(g, 2))
-    12 | elif(amin.upper() == 'Prolina'.upper()):
-    13 | 	print(round(p, 2))
-    14 | elif(amin.upper() == 'Serina'.upper()):
-    15 | 	print(round(s, 2))
-    16 | else:
-    17 | 	print('Entrada:', amin)
-    18 | 	print('Dado Invalido')
+     1 | x = input()
+     2 | 
+     3 | O=15.9994
+     4 | C=12.011
+     5 | N=14.00674
+     6 | H=1.0079
+     7 | 
+     8 | if(x == "Glicina".upper()):
+     9 | 	print(C*2 + H*5 + N + O*2)
+    10 | else:
+    11 | 	if(x == "Prolina".upper()):
+    12 | 	   print(C*5 + H*10 + N + O*2)
+    13 | 	else:
+    14 | 		if(x == "Serina".upper()):
+    15 | 		   print(C*3 + H*7 + N + O*3)
+    16 | 		else:
+    17 | 			print("Dado Invalido")
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
 ----------------------------------------------------------------------
 
 ▶ G4 — Funções/variáveis com nomes não significativos
-  Ocorrências: 8
+  Ocorrências: 5
 
-  [1] Linha 2: Variável 'amin' com nome muito curto (≤4 chars)
-      Trecho  : amin = ...
+  [1] Linha 1: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
       Contexto:
-               1 | from math import*
-        >>>    2 | amin = input('aminoacido:')
-               3 | o = 15.9994
+        >>>    1 | x = input()
+               2 | 
 
-  [2] Linha 3: Variável 'o' com nome muito curto (≤4 chars)
-      Trecho  : o = ...
+  [2] Linha 3: Variável 'O' com nome muito curto (≤4 chars)
+      Trecho  : O = ...
       Contexto:
-               2 | amin = input('aminoacido:')
-        >>>    3 | o = 15.9994
-               4 | c = 12.011
+               2 | 
+        >>>    3 | O=15.9994
+               4 | C=12.011
 
-  [3] Linha 4: Variável 'c' com nome muito curto (≤4 chars)
-      Trecho  : c = ...
+  [3] Linha 4: Variável 'C' com nome muito curto (≤4 chars)
+      Trecho  : C = ...
       Contexto:
-               3 | o = 15.9994
-        >>>    4 | c = 12.011
-               5 | n = 14.00674
+               3 | O=15.9994
+        >>>    4 | C=12.011
+               5 | N=14.00674
 
-  [4] Linha 5: Variável 'n' com nome muito curto (≤4 chars)
-      Trecho  : n = ...
+  [4] Linha 5: Variável 'N' com nome muito curto (≤4 chars)
+      Trecho  : N = ...
       Contexto:
-               4 | c = 12.011
-        >>>    5 | n = 14.00674
-               6 | h = 1.0079
+               4 | C=12.011
+        >>>    5 | N=14.00674
+               6 | H=1.0079
 
-  [5] Linha 6: Variável 'h' com nome muito curto (≤4 chars)
-      Trecho  : h = ...
+  [5] Linha 6: Variável 'H' com nome muito curto (≤4 chars)
+      Trecho  : H = ...
       Contexto:
-               5 | n = 14.00674
-        >>>    6 | h = 1.0079
-               7 | g = (c*2)+(h*5)+n+(o*2)
-
-  [6] Linha 7: Variável 'g' com nome muito curto (≤4 chars)
-      Trecho  : g = ...
-      Contexto:
-               6 | h = 1.0079
-        >>>    7 | g = (c*2)+(h*5)+n+(o*2)
-               8 | p = (c*5)+(h*10)+n+(o*2)
-
-  [7] Linha 8: Variável 'p' com nome muito curto (≤4 chars)
-      Trecho  : p = ...
-      Contexto:
-               7 | g = (c*2)+(h*5)+n+(o*2)
-        >>>    8 | p = (c*5)+(h*10)+n+(o*2)
-               9 | s = (c*3)+(h*7)+n+(o*3)
-
-  [8] Linha 9: Variável 's' com nome muito curto (≤4 chars)
-      Trecho  : s = ...
-      Contexto:
-               8 | p = (c*5)+(h*10)+n+(o*2)
-        >>>    9 | s = (c*3)+(h*7)+n+(o*3)
-              10 | if(amin.upper() == 'Glicina'.upper()):
+               5 | N=14.00674
+        >>>    6 | H=1.0079
+               7 | 
 
 ======================================================================

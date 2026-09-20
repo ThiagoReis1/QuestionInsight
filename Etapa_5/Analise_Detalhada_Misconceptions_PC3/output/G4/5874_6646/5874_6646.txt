@@ -2,11 +2,11 @@
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
 Arquivo     : 5874_6646.log
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2024_1_v1.81\2024-1\589\users\9954\executions\5874_6646.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2024_1_v1.81\2024-1\589\users\9737\executions\5874_6646.log
 Assessment  : 5874
 Título      : TP 5: Vetores e Strings
 Questão     : 6646
-Aluno       : 9954
+Aluno       : 9737
 Grupo       : TP 05
 Significado : Vetores e Strings
 Total MCs   : 1
@@ -17,79 +17,72 @@ Total MCs   : 1
 CÓDIGO FONTE
 ----------------------------------------------------------------------
      1 | from numpy import*
-     2 | 
-     3 | w = array(eval(input()))
-     4 | p = array([1,2,3])
-     5 | f = size(p)
+     2 | vt = array(eval(input()))
+     3 | ps = array([1,2,3])
+     4 | tam = size(vt)
+     5 | 
      6 | i = 0
-     7 | s = 0
-     8 | while i < f:
-     9 | 	m = w[i] * p[i]
-    10 | 	s = s + m
-    11 | 	i = i + 1
-    12 | print(round(s/sum(p),2))
+     7 | soma = 0
+     8 | while i < tam:
+     9 | 	m = vt[i] * ps[i]
+    10 | 	soma = soma + m
+    11 | 	i += 1
+    12 | print(round(soma/sum(ps),2))
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
 ----------------------------------------------------------------------
 
 ▶ G4 — Funções/variáveis com nomes não significativos
-  Ocorrências: 8
+  Ocorrências: 7
 
-  [1] Linha 3: Variável 'w' com nome muito curto (≤4 chars)
-      Trecho  : w = ...
+  [1] Linha 2: Variável 'vt' com nome muito curto (≤4 chars)
+      Trecho  : vt = ...
       Contexto:
-               2 | 
-        >>>    3 | w = array(eval(input()))
-               4 | p = array([1,2,3])
+               1 | from numpy import*
+        >>>    2 | vt = array(eval(input()))
+               3 | ps = array([1,2,3])
 
-  [2] Linha 4: Variável 'p' com nome muito curto (≤4 chars)
-      Trecho  : p = ...
+  [2] Linha 3: Variável 'ps' com nome muito curto (≤4 chars)
+      Trecho  : ps = ...
       Contexto:
-               3 | w = array(eval(input()))
-        >>>    4 | p = array([1,2,3])
-               5 | f = size(p)
+               2 | vt = array(eval(input()))
+        >>>    3 | ps = array([1,2,3])
+               4 | tam = size(vt)
 
-  [3] Linha 5: Variável 'f' com nome muito curto (≤4 chars)
-      Trecho  : f = ...
+  [3] Linha 4: Variável 'tam' com nome muito curto (≤4 chars)
+      Trecho  : tam = ...
       Contexto:
-               4 | p = array([1,2,3])
-        >>>    5 | f = size(p)
-               6 | i = 0
+               3 | ps = array([1,2,3])
+        >>>    4 | tam = size(vt)
+               5 | 
 
   [4] Linha 6: Variável 'i' com nome muito curto (≤4 chars)
       Trecho  : i = ...
       Contexto:
-               5 | f = size(p)
+               5 | 
         >>>    6 | i = 0
-               7 | s = 0
+               7 | soma = 0
 
-  [5] Linha 7: Variável 's' com nome muito curto (≤4 chars)
-      Trecho  : s = ...
+  [5] Linha 7: Variável 'soma' com nome muito curto (≤4 chars)
+      Trecho  : soma = ...
       Contexto:
                6 | i = 0
-        >>>    7 | s = 0
-               8 | while i < f:
+        >>>    7 | soma = 0
+               8 | while i < tam:
 
   [6] Linha 9: Variável 'm' com nome muito curto (≤4 chars)
       Trecho  : m = ...
       Contexto:
-               8 | while i < f:
-        >>>    9 | 	m = w[i] * p[i]
-              10 | 	s = s + m
+               8 | while i < tam:
+        >>>    9 | 	m = vt[i] * ps[i]
+              10 | 	soma = soma + m
 
-  [7] Linha 10: Variável 's' com nome muito curto (≤4 chars)
-      Trecho  : s = ...
+  [7] Linha 10: Variável 'soma' com nome muito curto (≤4 chars)
+      Trecho  : soma = ...
       Contexto:
-               9 | 	m = w[i] * p[i]
-        >>>   10 | 	s = s + m
-              11 | 	i = i + 1
-
-  [8] Linha 11: Variável 'i' com nome muito curto (≤4 chars)
-      Trecho  : i = ...
-      Contexto:
-              10 | 	s = s + m
-        >>>   11 | 	i = i + 1
-              12 | print(round(s/sum(p),2))
+               9 | 	m = vt[i] * ps[i]
+        >>>   10 | 	soma = soma + m
+              11 | 	i += 1
 
 ======================================================================

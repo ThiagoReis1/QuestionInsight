@@ -2,11 +2,11 @@
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
 Arquivo     : 577_1992.log
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2017_1_v1.81\2017-1\139\users\2398\executions\577_1992.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2017_1_v1.81\2017-1\139\users\2512\executions\577_1992.log
 Assessment  : 577
 Título      : Trabalho Prático 3: Estruturas Condicionais Encadeadas
 Questão     : 1992
-Aluno       : 2398
+Aluno       : 2512
 Grupo       : TP 03
 Significado : Estrutura Condicional Encadeada
 Total MCs   : 1
@@ -16,84 +16,53 @@ Total MCs   : 1
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | nda = input("aminoacido: ")
-     2 | o = 15.999
-     3 | c = 12.011
-     4 | n = 14.00674
-     5 | h = 1.00794
-     6 | if (nda.lower() == "glutamina"):
-     7 | 	pm = (c*5)+(h*8)+(n*1)+(o*4)
-     8 | 	print(round(pm, 2))
-     9 | elif (nda.lower() == "histidina"):
-    10 | 	pm = (c*6)+(h*10)+(n*3)+(o*2)
-    11 | 	print(round(pm, 2))
-    12 | elif(nda.lower() == "prolina"):
-    13 | 	pm = (c*5)+(h*10)+(n*1)+(o*2)
-    14 | 	print(round(pm, 2))
-    15 | else:
-    16 | 	print("Entrada:", nda)
-    17 | 	print("Dado Invalido")
+     1 | a = input().lower()
+     2 | 
+     3 | if(a == "glutamina"):
+     4 | 	p = (12.011 * 5 + 1.00794 * 8 + 14.00674 * 1 + 15.999 * 4)
+     5 | 	print(round(p,2))
+     6 | elif(a == "histidina"):
+     7 | 	p = (12.011 * 6 + 1.00794 * 10 + 14.00674 * 3 + 15.999 * 2)
+     8 | 	print(round(p,2))
+     9 | elif(a == "prolina"):
+    10 | 	p = (12.011 * 5 + 1.00794 * 10 + 14.00674 * 1 + 15.999 * 2)
+    11 | 	print(round(p,2))
+    12 | else:
+    13 | 	print("Entrada: ", a)
+    14 | 	print("Dado Invalido")
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
 ----------------------------------------------------------------------
 
 ▶ G4 — Funções/variáveis com nomes não significativos
-  Ocorrências: 8
+  Ocorrências: 4
 
-  [1] Linha 1: Variável 'nda' com nome muito curto (≤4 chars)
-      Trecho  : nda = ...
+  [1] Linha 1: Variável 'a' com nome muito curto (≤4 chars)
+      Trecho  : a = ...
       Contexto:
-        >>>    1 | nda = input("aminoacido: ")
-               2 | o = 15.999
+        >>>    1 | a = input().lower()
+               2 | 
 
-  [2] Linha 2: Variável 'o' com nome muito curto (≤4 chars)
-      Trecho  : o = ...
+  [2] Linha 4: Variável 'p' com nome muito curto (≤4 chars)
+      Trecho  : p = ...
       Contexto:
-               1 | nda = input("aminoacido: ")
-        >>>    2 | o = 15.999
-               3 | c = 12.011
+               3 | if(a == "glutamina"):
+        >>>    4 | 	p = (12.011 * 5 + 1.00794 * 8 + 14.00674 * 1 + 15.999 * 4)
+               5 | 	print(round(p,2))
 
-  [3] Linha 3: Variável 'c' com nome muito curto (≤4 chars)
-      Trecho  : c = ...
+  [3] Linha 7: Variável 'p' com nome muito curto (≤4 chars)
+      Trecho  : p = ...
       Contexto:
-               2 | o = 15.999
-        >>>    3 | c = 12.011
-               4 | n = 14.00674
+               6 | elif(a == "histidina"):
+        >>>    7 | 	p = (12.011 * 6 + 1.00794 * 10 + 14.00674 * 3 + 15.999 * 2)
+               8 | 	print(round(p,2))
 
-  [4] Linha 4: Variável 'n' com nome muito curto (≤4 chars)
-      Trecho  : n = ...
+  [4] Linha 10: Variável 'p' com nome muito curto (≤4 chars)
+      Trecho  : p = ...
       Contexto:
-               3 | c = 12.011
-        >>>    4 | n = 14.00674
-               5 | h = 1.00794
-
-  [5] Linha 5: Variável 'h' com nome muito curto (≤4 chars)
-      Trecho  : h = ...
-      Contexto:
-               4 | n = 14.00674
-        >>>    5 | h = 1.00794
-               6 | if (nda.lower() == "glutamina"):
-
-  [6] Linha 7: Variável 'pm' com nome muito curto (≤4 chars)
-      Trecho  : pm = ...
-      Contexto:
-               6 | if (nda.lower() == "glutamina"):
-        >>>    7 | 	pm = (c*5)+(h*8)+(n*1)+(o*4)
-               8 | 	print(round(pm, 2))
-
-  [7] Linha 10: Variável 'pm' com nome muito curto (≤4 chars)
-      Trecho  : pm = ...
-      Contexto:
-               9 | elif (nda.lower() == "histidina"):
-        >>>   10 | 	pm = (c*6)+(h*10)+(n*3)+(o*2)
-              11 | 	print(round(pm, 2))
-
-  [8] Linha 13: Variável 'pm' com nome muito curto (≤4 chars)
-      Trecho  : pm = ...
-      Contexto:
-              12 | elif(nda.lower() == "prolina"):
-        >>>   13 | 	pm = (c*5)+(h*10)+(n*1)+(o*2)
-              14 | 	print(round(pm, 2))
+               9 | elif(a == "prolina"):
+        >>>   10 | 	p = (12.011 * 5 + 1.00794 * 10 + 14.00674 * 1 + 15.999 * 2)
+              11 | 	print(round(p,2))
 
 ======================================================================

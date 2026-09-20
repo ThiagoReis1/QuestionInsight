@@ -2,11 +2,11 @@
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
 Arquivo     : 3780_1640.log
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2021_2_v1.81\2021-2\406\users\7126\executions\3780_1640.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2021_2_v1.81\2021-2\406\users\7138\executions\3780_1640.log
 Assessment  : 3780
 Título      : TP 6: Estrutura de Repetição por Contagem (for)
 Questão     : 1640
-Aluno       : 7126
+Aluno       : 7138
 Grupo       : TP 06
 Significado : Estrutura de Repetição por Contagem
 Total MCs   : 2
@@ -17,23 +17,26 @@ Total MCs   : 2
 CÓDIGO FONTE
 ----------------------------------------------------------------------
      1 | from numpy import*
-     2 | 
-     3 | vet=array(eval(input("digite")))
-     4 | cont=0
-     5 | 
-     6 | for i in range (0, size(vet)):
-     7 | 	if (vet[i] % 2) != 0:
-     8 | 		cont=cont + 1
-     9 | 		
-    10 | vcont = zeros(cont,dtype=int)
-    11 | x=0
-    12 | for i in range(0,size(vet)):
-    13 | 	if (vet[i] % 2) != 0:
-    14 | 		vcont[x] = i
-    15 | 		x = x + 1
-    16 | 	
-    17 | print(cont)
-    18 | print(vcont)
+     2 | t = array(eval(input()))
+     3 | 
+     4 | i = 0 
+     5 | c = 0 
+     6 | a = 0 
+     7 | d = 0 
+     8 | 
+     9 | while(i<size(t)):
+    10 | 	if(t[i]%2 != 0):
+    11 | 		c = c + 1
+    12 | 	i = i + 1
+    13 | print(c)
+    14 | 
+    15 | v = zeros(c, dtype=int)
+    16 | 
+    17 | for a in range(size(t)):
+    18 | 	if(t[a]%2 != 0):
+    19 | 		v[d] = a
+    20 | 		d = d + 1
+    21 | print(v)
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
@@ -46,41 +49,69 @@ DETALHAMENTO DOS MISCONCEPTIONS
       Trecho  : —
 
 ▶ G4 — Funções/variáveis com nomes não significativos
-  Ocorrências: 5
+  Ocorrências: 9
 
-  [1] Linha 3: Variável 'vet' com nome muito curto (≤4 chars)
-      Trecho  : vet = ...
+  [1] Linha 2: Variável 't' com nome muito curto (≤4 chars)
+      Trecho  : t = ...
       Contexto:
-               2 | 
-        >>>    3 | vet=array(eval(input("digite")))
-               4 | cont=0
+               1 | from numpy import*
+        >>>    2 | t = array(eval(input()))
+               3 | 
 
-  [2] Linha 4: Variável 'cont' com nome muito curto (≤4 chars)
-      Trecho  : cont = ...
+  [2] Linha 4: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
       Contexto:
-               3 | vet=array(eval(input("digite")))
-        >>>    4 | cont=0
-               5 | 
+               3 | 
+        >>>    4 | i = 0 
+               5 | c = 0 
 
-  [3] Linha 11: Variável 'x' com nome muito curto (≤4 chars)
-      Trecho  : x = ...
+  [3] Linha 5: Variável 'c' com nome muito curto (≤4 chars)
+      Trecho  : c = ...
       Contexto:
-              10 | vcont = zeros(cont,dtype=int)
-        >>>   11 | x=0
-              12 | for i in range(0,size(vet)):
+               4 | i = 0 
+        >>>    5 | c = 0 
+               6 | a = 0 
 
-  [4] Linha 8: Variável 'cont' com nome muito curto (≤4 chars)
-      Trecho  : cont = ...
+  [4] Linha 6: Variável 'a' com nome muito curto (≤4 chars)
+      Trecho  : a = ...
       Contexto:
-               7 | 	if (vet[i] % 2) != 0:
-        >>>    8 | 		cont=cont + 1
-               9 | 		
+               5 | c = 0 
+        >>>    6 | a = 0 
+               7 | d = 0 
 
-  [5] Linha 15: Variável 'x' com nome muito curto (≤4 chars)
-      Trecho  : x = ...
+  [5] Linha 7: Variável 'd' com nome muito curto (≤4 chars)
+      Trecho  : d = ...
       Contexto:
-              14 | 		vcont[x] = i
-        >>>   15 | 		x = x + 1
-              16 | 	
+               6 | a = 0 
+        >>>    7 | d = 0 
+               8 | 
+
+  [6] Linha 15: Variável 'v' com nome muito curto (≤4 chars)
+      Trecho  : v = ...
+      Contexto:
+              14 | 
+        >>>   15 | v = zeros(c, dtype=int)
+              16 | 
+
+  [7] Linha 12: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+              11 | 		c = c + 1
+        >>>   12 | 	i = i + 1
+              13 | print(c)
+
+  [8] Linha 11: Variável 'c' com nome muito curto (≤4 chars)
+      Trecho  : c = ...
+      Contexto:
+              10 | 	if(t[i]%2 != 0):
+        >>>   11 | 		c = c + 1
+              12 | 	i = i + 1
+
+  [9] Linha 20: Variável 'd' com nome muito curto (≤4 chars)
+      Trecho  : d = ...
+      Contexto:
+              19 | 		v[d] = a
+        >>>   20 | 		d = d + 1
+              21 | print(v)
 
 ======================================================================

@@ -2,11 +2,11 @@
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
 Arquivo     : 1709_3035.log
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2019_1_v1.81\2019-1\226\users\4146\executions\1709_3035.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2019_1_v1.81\2019-1\226\users\4160\executions\1709_3035.log
 Assessment  : 1709
 Título      : TP3 - Estrutura Condicional Encadeada
 Questão     : 3035
-Aluno       : 4146
+Aluno       : 4160
 Grupo       : TP 03
 Significado : Estrutura Condicional Encadeada
 Total MCs   : 2
@@ -17,20 +17,16 @@ Total MCs   : 2
 CÓDIGO FONTE
 ----------------------------------------------------------------------
      1 | from math import *
-     2 | 
-     3 | x1 = float(input("Valor de x: "))
-     4 | 
-     5 | x = radians(x1)
-     6 | 
-     7 | if (0 <= x1 < 360):
-     8 | 	if (0 <= x1 < 90) or (180 <= x1 < 270):
-     9 | 		y = sin(x)
-    10 | 		print(round(y, 4))
-    11 | 	elif (90 <= x1 < 180) or (270 <= x1 < 360):
-    12 | 		y = cos(x)
-    13 | 		print(round(y, 4))
-    14 | else:
-    15 | 	print("entrada invalida")
+     2 | x = float(input("Digite x : "))
+     3 | 
+     4 | if ((x >= 0 and x <90) or (x>= 180 and x< 270 )):
+     5 | 	a = sin(radians(x))
+     6 | 	print(round(a,4))
+     7 | elif ((x>= 90 and x<180) or (x <= 270 and x <360)):
+     8 | 	a = cos(radians(x))
+     9 | 	print(round(a,4))
+    10 | elif (x<0 or x> 360):
+    11 | 	print("entrada invalida")
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
@@ -39,42 +35,35 @@ DETALHAMENTO DOS MISCONCEPTIONS
 ▶ B8 — Não utilização de elif/else
   Ocorrências: 1
 
-  [1] Linha 8: Cadeia if/elif sem bloco else final
-      Trecho  : if ... (linha 8) / elif ... sem else
+  [1] Linha 7: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 7) / elif ... sem else
       Contexto:
-               7 | if (0 <= x1 < 360):
-        >>>    8 | 	if (0 <= x1 < 90) or (180 <= x1 < 270):
-               9 | 		y = sin(x)
+               6 | 	print(round(a,4))
+        >>>    7 | elif ((x>= 90 and x<180) or (x <= 270 and x <360)):
+               8 | 	a = cos(radians(x))
 
 ▶ G4 — Funções/variáveis com nomes não significativos
-  Ocorrências: 4
+  Ocorrências: 3
 
-  [1] Linha 3: Variável 'x1' com nome muito curto (≤4 chars)
-      Trecho  : x1 = ...
-      Contexto:
-               2 | 
-        >>>    3 | x1 = float(input("Valor de x: "))
-               4 | 
-
-  [2] Linha 5: Variável 'x' com nome muito curto (≤4 chars)
+  [1] Linha 2: Variável 'x' com nome muito curto (≤4 chars)
       Trecho  : x = ...
       Contexto:
-               4 | 
-        >>>    5 | x = radians(x1)
-               6 | 
+               1 | from math import *
+        >>>    2 | x = float(input("Digite x : "))
+               3 | 
 
-  [3] Linha 9: Variável 'y' com nome muito curto (≤4 chars)
-      Trecho  : y = ...
+  [2] Linha 5: Variável 'a' com nome muito curto (≤4 chars)
+      Trecho  : a = ...
       Contexto:
-               8 | 	if (0 <= x1 < 90) or (180 <= x1 < 270):
-        >>>    9 | 		y = sin(x)
-              10 | 		print(round(y, 4))
+               4 | if ((x >= 0 and x <90) or (x>= 180 and x< 270 )):
+        >>>    5 | 	a = sin(radians(x))
+               6 | 	print(round(a,4))
 
-  [4] Linha 12: Variável 'y' com nome muito curto (≤4 chars)
-      Trecho  : y = ...
+  [3] Linha 8: Variável 'a' com nome muito curto (≤4 chars)
+      Trecho  : a = ...
       Contexto:
-              11 | 	elif (90 <= x1 < 180) or (270 <= x1 < 360):
-        >>>   12 | 		y = cos(x)
-              13 | 		print(round(y, 4))
+               7 | elif ((x>= 90 and x<180) or (x <= 270 and x <360)):
+        >>>    8 | 	a = cos(radians(x))
+               9 | 	print(round(a,4))
 
 ======================================================================

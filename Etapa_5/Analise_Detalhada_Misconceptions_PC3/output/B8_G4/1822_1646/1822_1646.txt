@@ -2,11 +2,11 @@
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
 Arquivo     : 1822_1646.log
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2019_1_v1.81\2019-1\226\users\4129\executions\1822_1646.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2019_1_v1.81\2019-1\226\users\4146\executions\1822_1646.log
 Assessment  : 1822
 Título      : TP6: Repetição por contagem
 Questão     : 1646
-Aluno       : 4129
+Aluno       : 4146
 Grupo       : TP 06
 Significado : Estrutura de Repetição por Contagem
 Total MCs   : 2
@@ -16,23 +16,25 @@ Total MCs   : 2
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | from numpy import*
-     2 | 
-     3 | vet = array(eval(input("Saques:")))
-     4 | 
-     5 | x = 0
-     6 | 
-     7 | for i in range(size(vet)):
-     8 | 	if(vet[i]<=50):
-     9 | 		x = x + 1
-    10 | print(x)
-    11 | a = 0
-    12 | d = zeros(x, dtype=int)
-    13 | for i in range(size(vet)):
-    14 | 	if(vet[i]<=50):
-    15 | 		d[a] = i
-    16 | 		a = a + 1
-    17 | print(d)
+     1 | from numpy import *
+     2 | saque = array(eval(input("Valores dos saques: ")))
+     3 | c = 0
+     4 | for x in saque:
+     5 | 	if (x <= 50):
+     6 | 		c = c + 1
+     7 | 		
+     8 | print(c)
+     9 | 
+    10 | vet = zeros(c, dtype=int)
+    11 | x = 0
+    12 | y = 0 
+    13 | for i in range(size(saque)):
+    14 | 	if(saque[i] <= 50):
+    15 | 		x = i
+    16 | 		vet[y] = vet[y] + x
+    17 | 		y = y + 1
+    18 | 
+    19 | print(vet)
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
@@ -45,51 +47,48 @@ DETALHAMENTO DOS MISCONCEPTIONS
       Trecho  : —
 
 ▶ G4 — Funções/variáveis com nomes não significativos
-  Ocorrências: 6
+  Ocorrências: 7
 
-  [1] Linha 3: Variável 'vet' com nome muito curto (≤4 chars)
+  [1] Linha 3: Variável 'c' com nome muito curto (≤4 chars)
+      Trecho  : c = ...
+      Contexto:
+               2 | saque = array(eval(input("Valores dos saques: ")))
+        >>>    3 | c = 0
+               4 | for x in saque:
+
+  [2] Linha 10: Variável 'vet' com nome muito curto (≤4 chars)
       Trecho  : vet = ...
       Contexto:
-               2 | 
-        >>>    3 | vet = array(eval(input("Saques:")))
-               4 | 
+               9 | 
+        >>>   10 | vet = zeros(c, dtype=int)
+              11 | x = 0
 
-  [2] Linha 5: Variável 'x' com nome muito curto (≤4 chars)
+  [3] Linha 11: Variável 'x' com nome muito curto (≤4 chars)
       Trecho  : x = ...
       Contexto:
-               4 | 
-        >>>    5 | x = 0
-               6 | 
+              10 | vet = zeros(c, dtype=int)
+        >>>   11 | x = 0
+              12 | y = 0 
 
-  [3] Linha 11: Variável 'a' com nome muito curto (≤4 chars)
-      Trecho  : a = ...
+  [4] Linha 12: Variável 'y' com nome muito curto (≤4 chars)
+      Trecho  : y = ...
       Contexto:
-              10 | print(x)
-        >>>   11 | a = 0
-              12 | d = zeros(x, dtype=int)
+              11 | x = 0
+        >>>   12 | y = 0 
+              13 | for i in range(size(saque)):
 
-  [4] Linha 12: Variável 'd' com nome muito curto (≤4 chars)
-      Trecho  : d = ...
+  [5] Linha 6: Variável 'c' com nome muito curto (≤4 chars)
+      Trecho  : c = ...
       Contexto:
-              11 | a = 0
-        >>>   12 | d = zeros(x, dtype=int)
-              13 | for i in range(size(vet)):
+               5 | 	if (x <= 50):
+        >>>    6 | 		c = c + 1
+               7 | 		
 
-  [5] Linha 9: Variável 'x' com nome muito curto (≤4 chars)
+  [6] Linha 15: Variável 'x' com nome muito curto (≤4 chars)
       Trecho  : x = ...
       Contexto:
-               8 | 	if(vet[i]<=50):
-        >>>    9 | 		x = x + 1
-              10 | print(x)
-
-  [6] Linha 16: Variável 'a' com nome muito curto (≤4 chars)
-      Trecho  : a = ...
-      Contexto:
-              15 | 		d[a] = i
-        >>>   16 | 		a = a + 1
-              17 | print(d)
-
-====================================================================== i
+              14 | 	if(saque[i] <= 50):
+        >>>   15 | 		x = i
               16 | 		vet[y] = vet[y] + x
 
   [7] Linha 17: Variável 'y' com nome muito curto (≤4 chars)

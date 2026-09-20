@@ -2,11 +2,11 @@
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
 Arquivo     : 1822_1644.log
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2019_1_v1.81\2019-1\226\users\4477\executions\1822_1644.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2019_1_v1.81\2019-1\226\users\4137\executions\1822_1644.log
 Assessment  : 1822
 Título      : TP6: Repetição por contagem
 Questão     : 1644
-Aluno       : 4477
+Aluno       : 4137
 Grupo       : TP 06
 Significado : Estrutura de Repetição por Contagem
 Total MCs   : 2
@@ -16,28 +16,26 @@ Total MCs   : 2
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | # Módulo
-     2 | from numpy import *
-     3 | # Entrada
-     4 | v = array(eval(input("Vetor: ")))
-     5 | # Acumuladora
-     6 | soma = 0
-     7 | # Laço "For"
-     8 | for i in range(size(v)):
-     9 | 	if (v[i] < 5):
-    10 | 		soma = soma + 1
-    11 | print(soma)
-    12 | # Contador do vetor	
-    13 | cont = zeros(soma, dtype=int)
-    14 | # Contadores
-    15 | j = 0
-    16 | # Laço "for" 02
-    17 | for i in range(size(v)):
-    18 | 	if (v[i] < 5):
-    19 | 		cont[j] = i
-    20 | 		j = j + 1
-    21 | # Saída
-    22 | print(cont)
+     1 | from numpy import*
+     2 | 
+     3 | n = array(eval(input("Notas do aluno:")))
+     4 | r = 0 #contador pros reprovados
+     5 | for i in range(size(n)):
+     6 | 	if n[i] < 5.0:
+     7 | 		r = r + 1
+     8 | 
+     9 | 
+    10 | print(r)
+    11 | d = zeros(r, dtype = int)
+    12 | a = 0
+    13 | b = 0
+    14 | 
+    15 | for j in range(size(n)):
+    16 | 	if n[j] < 5:
+    17 | 		d[a] = j
+    18 | 		a = a+1
+    19 | 	b = b + 1
+    20 | print(d)
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
@@ -50,48 +48,62 @@ DETALHAMENTO DOS MISCONCEPTIONS
       Trecho  : —
 
 ▶ G4 — Funções/variáveis com nomes não significativos
-  Ocorrências: 6
+  Ocorrências: 8
 
-  [1] Linha 4: Variável 'v' com nome muito curto (≤4 chars)
-      Trecho  : v = ...
+  [1] Linha 3: Variável 'n' com nome muito curto (≤4 chars)
+      Trecho  : n = ...
       Contexto:
-               3 | # Entrada
-        >>>    4 | v = array(eval(input("Vetor: ")))
-               5 | # Acumuladora
+               2 | 
+        >>>    3 | n = array(eval(input("Notas do aluno:")))
+               4 | r = 0 #contador pros reprovados
 
-  [2] Linha 6: Variável 'soma' com nome muito curto (≤4 chars)
-      Trecho  : soma = ...
+  [2] Linha 4: Variável 'r' com nome muito curto (≤4 chars)
+      Trecho  : r = ...
       Contexto:
-               5 | # Acumuladora
-        >>>    6 | soma = 0
-               7 | # Laço "For"
+               3 | n = array(eval(input("Notas do aluno:")))
+        >>>    4 | r = 0 #contador pros reprovados
+               5 | for i in range(size(n)):
 
-  [3] Linha 13: Variável 'cont' com nome muito curto (≤4 chars)
-      Trecho  : cont = ...
+  [3] Linha 11: Variável 'd' com nome muito curto (≤4 chars)
+      Trecho  : d = ...
       Contexto:
-              12 | # Contador do vetor	
-        >>>   13 | cont = zeros(soma, dtype=int)
-              14 | # Contadores
+              10 | print(r)
+        >>>   11 | d = zeros(r, dtype = int)
+              12 | a = 0
 
-  [4] Linha 15: Variável 'j' com nome muito curto (≤4 chars)
-      Trecho  : j = ...
+  [4] Linha 12: Variável 'a' com nome muito curto (≤4 chars)
+      Trecho  : a = ...
       Contexto:
-              14 | # Contadores
-        >>>   15 | j = 0
-              16 | # Laço "for" 02
+              11 | d = zeros(r, dtype = int)
+        >>>   12 | a = 0
+              13 | b = 0
 
-  [5] Linha 10: Variável 'soma' com nome muito curto (≤4 chars)
-      Trecho  : soma = ...
+  [5] Linha 13: Variável 'b' com nome muito curto (≤4 chars)
+      Trecho  : b = ...
       Contexto:
-               9 | 	if (v[i] < 5):
-        >>>   10 | 		soma = soma + 1
-              11 | print(soma)
+              12 | a = 0
+        >>>   13 | b = 0
+              14 | 
 
-  [6] Linha 20: Variável 'j' com nome muito curto (≤4 chars)
-      Trecho  : j = ...
+  [6] Linha 19: Variável 'b' com nome muito curto (≤4 chars)
+      Trecho  : b = ...
       Contexto:
-              19 | 		cont[j] = i
-        >>>   20 | 		j = j + 1
-              21 | # Saída
+              18 | 		a = a+1
+        >>>   19 | 	b = b + 1
+              20 | print(d)
+
+  [7] Linha 7: Variável 'r' com nome muito curto (≤4 chars)
+      Trecho  : r = ...
+      Contexto:
+               6 | 	if n[i] < 5.0:
+        >>>    7 | 		r = r + 1
+               8 | 
+
+  [8] Linha 18: Variável 'a' com nome muito curto (≤4 chars)
+      Trecho  : a = ...
+      Contexto:
+              17 | 		d[a] = j
+        >>>   18 | 		a = a+1
+              19 | 	b = b + 1
 
 ======================================================================

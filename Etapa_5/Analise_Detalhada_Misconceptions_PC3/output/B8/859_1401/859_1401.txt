@@ -2,11 +2,11 @@
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
 Arquivo     : 859_1401.log
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2017_2_v1.81\2017-2\162\users\2818\executions\859_1401.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2017_2_v1.81\2017-2\162\users\2812\executions\859_1401.log
 Assessment  : 859
 Título      : Trabalho Prático 02 - Estrutura Condicional Simples e Composta (sem aninhamento)
 Questão     : 1401
-Aluno       : 2818
+Aluno       : 2812
 Grupo       : TP 02
 Significado : Estrutura Condicional Simples e Composta
 Total MCs   : 1
@@ -16,18 +16,21 @@ Total MCs   : 1
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | ataque = str (input(""))
-     2 | baforadas = int (input(""))
-     3 | 
-     4 | if (ataque == 'maritimo'):
-     5 | 	unidades = baforadas*40
-     6 | 	print ("Viserion")
-     7 | 	print (unidades)
-     8 | 
-     9 | elif (ataque == 'terrestre'):
-    10 | 	unidades2 = baforadas*150
-    11 | 	print ("Drogon")
-    12 | 	print (unidades2)
+     1 | tipo_de_ataque = input("Maritimo ou terrestre: ")
+     2 | tipo_de_ataque = tipo_de_ataque.lower()
+     3 | bafo = int(input("Quantas baforadas: "))
+     4 | 
+     5 | if(tipo_de_ataque == "maritimo"):
+     6 | 	dragao = "Viserion"
+     7 | 	destruido = bafo * 40
+     8 | 	print(dragao)
+     9 | 	print(destruido)
+    10 | 	
+    11 | elif(tipo_de_ataque == "terrestre"):
+    12 | 	dragao = "Drogon"
+    13 | 	destruido = bafo * 150
+    14 | 	print(dragao)
+    15 | 	print(destruido)
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
@@ -36,11 +39,11 @@ DETALHAMENTO DOS MISCONCEPTIONS
 ▶ B8 — Não utilização de elif/else
   Ocorrências: 1
 
-  [1] Linha 4: Cadeia if/elif sem bloco else final
-      Trecho  : if ... (linha 4) / elif ... sem else
+  [1] Linha 5: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 5) / elif ... sem else
       Contexto:
-               3 | 
-        >>>    4 | if (ataque == 'maritimo'):
-               5 | 	unidades = baforadas*40
+               4 | 
+        >>>    5 | if(tipo_de_ataque == "maritimo"):
+               6 | 	dragao = "Viserion"
 
 ======================================================================

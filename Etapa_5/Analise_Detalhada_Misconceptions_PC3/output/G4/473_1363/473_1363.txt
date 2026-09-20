@@ -2,11 +2,11 @@
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
 Arquivo     : 473_1363.log
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2017_1_v1.81\2017-1\143\users\2263\executions\473_1363.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2017_1_v1.81\2017-1\143\users\2245\executions\473_1363.log
 Assessment  : 473
 Título      : Trabalho Prático 01: Variáveis e Estrutura Sequencial de Programação
 Questão     : 1363
-Aluno       : 2263
+Aluno       : 2245
 Grupo       : TP 01
 Significado : Variáveis e Estrutura Sequencial
 Total MCs   : 1
@@ -16,14 +16,23 @@ Total MCs   : 1
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | p=float(input("digite o valor da massa:"))
-     2 | f=2**((1+p/1000))
-     3 | from math import*
-     4 | s=p*(pi**2)/(3141)
-     5 | o=2*(sqrt(p/40))
-     6 | print(round(f,2))
-     7 | print(round(s,2))
-     8 | print(round(o,2))
+     1 | from math import *
+     2 | 
+     3 | # entrada para a variavel p que simboliza a massa da espada
+     4 | p = float(input("Digite o valor da massa da espada: "))
+     5 | 
+     6 | #Calculo da massa de Flawless Ruby
+     7 | FR = 2 ** (1 + p/1000)
+     8 | 
+     9 | #Calculo da massa de Soul Gem
+    10 | SG = p * ((pi ** 2) / 3141 )
+    11 | 
+    12 | #Calculo da massa de Óleo de Dwarven
+    13 | OD = 2 * (sqrt(p/40))
+    14 | 
+    15 | print(float(round(FR, 2)))
+    16 | print(float(round(SG, 2)))
+    17 | print(float(round(OD, 2)))
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
@@ -32,34 +41,24 @@ DETALHAMENTO DOS MISCONCEPTIONS
 ▶ G4 — Funções/variáveis com nomes não significativos
   Ocorrências: 4
 
-  [1] Linha 1: Variável 'p' com nome muito curto (≤4 chars)
+  [1] Linha 4: Variável 'p' com nome muito curto (≤4 chars)
       Trecho  : p = ...
       Contexto:
-        >>>    1 | p=float(input("digite o valor da massa:"))
-               2 | f=2**((1+p/1000))
+               3 | # entrada para a variavel p que simboliza a massa da espada
+        >>>    4 | p = float(input("Digite o valor da massa da espada: "))
+               5 | 
 
-  [2] Linha 2: Variável 'f' com nome muito curto (≤4 chars)
-      Trecho  : f = ...
+  [2] Linha 7: Variável 'FR' com nome muito curto (≤4 chars)
+      Trecho  : FR = ...
       Contexto:
-               1 | p=float(input("digite o valor da massa:"))
-        >>>    2 | f=2**((1+p/1000))
-               3 | from math import*
+               6 | #Calculo da massa de Flawless Ruby
+        >>>    7 | FR = 2 ** (1 + p/1000)
+               8 | 
 
-  [3] Linha 4: Variável 's' com nome muito curto (≤4 chars)
-      Trecho  : s = ...
+  [3] Linha 10: Variável 'SG' com nome muito curto (≤4 chars)
+      Trecho  : SG = ...
       Contexto:
-               3 | from math import*
-        >>>    4 | s=p*(pi**2)/(3141)
-               5 | o=2*(sqrt(p/40))
-
-  [4] Linha 5: Variável 'o' com nome muito curto (≤4 chars)
-      Trecho  : o = ...
-      Contexto:
-               4 | s=p*(pi**2)/(3141)
-        >>>    5 | o=2*(sqrt(p/40))
-               6 | print(round(f,2))
-
-======================================================================da massa de Soul Gem
+               9 | #Calculo da massa de Soul Gem
         >>>   10 | SG = p * ((pi ** 2) / 3141 )
               11 | 
 

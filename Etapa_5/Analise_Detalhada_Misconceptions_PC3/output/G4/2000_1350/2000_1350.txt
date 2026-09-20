@@ -2,11 +2,11 @@
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
 Arquivo     : 2000_1350.log
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2019_2_v1.81\2019-2\258\users\4660\executions\2000_1350.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2019_2_v1.81\2019-2\258\users\4718\executions\2000_1350.log
 Assessment  : 2000
 Título      : TP 01: Variáveis e Estrutura Sequencial (2019)
 Questão     : 1350
-Aluno       : 4660
+Aluno       : 4718
 Grupo       : TP 01
 Significado : Variáveis e Estrutura Sequencial
 Total MCs   : 1
@@ -16,13 +16,13 @@ Total MCs   : 1
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | ea=float(input("Estimativa de arvores: "))
-     2 | cm=float(input("Semieixo maior: "))
-     3 | cn=float(input("Semieixo menor: "))
-     4 | from math import*
-     5 | a=pi*cm*cn
-     6 | s=a*ea
-     7 | print(int(s))
+     1 | from math import*
+     2 | ea = float(input("ea: "))
+     3 | csm = float(input("csm: "))
+     4 | csme = float(input("csme: "))
+     5 | area = pi*csm*csme
+     6 | qar = ea*area
+     7 | print(int(qar))
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
@@ -31,38 +31,39 @@ DETALHAMENTO DOS MISCONCEPTIONS
 ▶ G4 — Funções/variáveis com nomes não significativos
   Ocorrências: 5
 
-  [1] Linha 1: Variável 'ea' com nome muito curto (≤4 chars)
+  [1] Linha 2: Variável 'ea' com nome muito curto (≤4 chars)
       Trecho  : ea = ...
       Contexto:
-        >>>    1 | ea=float(input("Estimativa de arvores: "))
-               2 | cm=float(input("Semieixo maior: "))
+               1 | from math import*
+        >>>    2 | ea = float(input("ea: "))
+               3 | csm = float(input("csm: "))
 
-  [2] Linha 2: Variável 'cm' com nome muito curto (≤4 chars)
-      Trecho  : cm = ...
+  [2] Linha 3: Variável 'csm' com nome muito curto (≤4 chars)
+      Trecho  : csm = ...
       Contexto:
-               1 | ea=float(input("Estimativa de arvores: "))
-        >>>    2 | cm=float(input("Semieixo maior: "))
-               3 | cn=float(input("Semieixo menor: "))
+               2 | ea = float(input("ea: "))
+        >>>    3 | csm = float(input("csm: "))
+               4 | csme = float(input("csme: "))
 
-  [3] Linha 3: Variável 'cn' com nome muito curto (≤4 chars)
-      Trecho  : cn = ...
+  [3] Linha 4: Variável 'csme' com nome muito curto (≤4 chars)
+      Trecho  : csme = ...
       Contexto:
-               2 | cm=float(input("Semieixo maior: "))
-        >>>    3 | cn=float(input("Semieixo menor: "))
-               4 | from math import*
+               3 | csm = float(input("csm: "))
+        >>>    4 | csme = float(input("csme: "))
+               5 | area = pi*csm*csme
 
-  [4] Linha 5: Variável 'a' com nome muito curto (≤4 chars)
-      Trecho  : a = ...
+  [4] Linha 5: Variável 'area' com nome muito curto (≤4 chars)
+      Trecho  : area = ...
       Contexto:
-               4 | from math import*
-        >>>    5 | a=pi*cm*cn
-               6 | s=a*ea
+               4 | csme = float(input("csme: "))
+        >>>    5 | area = pi*csm*csme
+               6 | qar = ea*area
 
-  [5] Linha 6: Variável 's' com nome muito curto (≤4 chars)
-      Trecho  : s = ...
+  [5] Linha 6: Variável 'qar' com nome muito curto (≤4 chars)
+      Trecho  : qar = ...
       Contexto:
-               5 | a=pi*cm*cn
-        >>>    6 | s=a*ea
-               7 | print(int(s))
+               5 | area = pi*csm*csme
+        >>>    6 | qar = ea*area
+               7 | print(int(qar))
 
 ======================================================================

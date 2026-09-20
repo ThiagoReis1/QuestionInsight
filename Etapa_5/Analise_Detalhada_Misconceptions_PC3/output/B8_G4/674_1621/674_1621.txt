@@ -2,11 +2,11 @@
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
 Arquivo     : 674_1621.log
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2017_1_v1.81\2017-1\141\users\2540\executions\674_1621.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2017_1_v1.81\2017-1\141\users\2425\executions\674_1621.log
 Assessment  : 674
 Título      : Trabalho Prático 5: Vetores e Strings
 Questão     : 1621
-Aluno       : 2540
+Aluno       : 2425
 Grupo       : TP 05
 Significado : Vetores e Strings
 Total MCs   : 2
@@ -16,27 +16,30 @@ Total MCs   : 2
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | from numpy import*
-     2 | 
-     3 | vet1 = array(eval(input("produtos")))
-     4 | vet2 = array(eval(input("quantidade ")))
-     5 | 
-     6 | i = 0
-     7 | soma = 0
-     8 | 
-     9 | while(i < size(vet1)):
-    10 | 	if(vet1[i]== "ARROZ"):
-    11 | 		soma = soma + 1.25 * vet2[i]
-    12 | 	elif(vet1[i]=="FEIJAO"):
-    13 | 		soma = soma + 2.60 * vet2[i]
-    14 | 	elif(vet1[i]=="BIS"):
-    15 | 		soma = soma + 1.80 * vet2[i]
-    16 | 	elif(vet1[i]=="MIOJO"):
-    17 | 		soma = soma + 0.85 * vet2[i]
-    18 | 	elif(vet1[i]=="FANTA"):
-    19 | 		soma = soma + 3.20 * vet2[i]
-    20 | 	i = i + 1
-    21 | print(soma)
+     1 | from numpy import *
+     2 | vn = array(eval(input("Nomes:")))
+     3 | vq = array(eval(input("Quantidade:")))
+     4 | 
+     5 | i = 0
+     6 | p1=0
+     7 | p2=0
+     8 | p3=0
+     9 | p4=0
+    10 | p5=0
+    11 | while(i<size(vq)):
+    12 | 	if(vn[i]=='ARROZ'):
+    13 | 		p1 = 1.25*vq[i]
+    14 | 	elif(vn[i]=='FEIJAO'):
+    15 | 		p2 = 2.60*vq[i]
+    16 | 	elif(vn[i]=='BIS'):
+    17 | 		p3 = 1.80*vq[i]
+    18 | 	elif(vn[i]=='MIOJO'):
+    19 | 		p4 = 0.85*vq[i]
+    20 | 	elif(vn[i]=='FANTA'):
+    21 | 		p5 = 3.20*vq[i]
+    22 | 	i = i + 1
+    23 | p = p1+p2+p3+p4+p5
+    24 | print(round(p, 2))
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
@@ -45,87 +48,98 @@ DETALHAMENTO DOS MISCONCEPTIONS
 ▶ B8 — Não utilização de elif/else
   Ocorrências: 1
 
-  [1] Linha 16: Cadeia if/elif sem bloco else final
-      Trecho  : if ... (linha 16) / elif ... sem else
+  [1] Linha 18: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 18) / elif ... sem else
       Contexto:
-              15 | 		soma = soma + 1.80 * vet2[i]
-        >>>   16 | 	elif(vet1[i]=="MIOJO"):
-              17 | 		soma = soma + 0.85 * vet2[i]
+              17 | 		p3 = 1.80*vq[i]
+        >>>   18 | 	elif(vn[i]=='MIOJO'):
+              19 | 		p4 = 0.85*vq[i]
 
 ▶ G4 — Funções/variáveis com nomes não significativos
-  Ocorrências: 10
+  Ocorrências: 15
 
-  [1] Linha 3: Variável 'vet1' com nome muito curto (≤4 chars)
-      Trecho  : vet1 = ...
+  [1] Linha 2: Variável 'vn' com nome muito curto (≤4 chars)
+      Trecho  : vn = ...
       Contexto:
-               2 | 
-        >>>    3 | vet1 = array(eval(input("produtos")))
-               4 | vet2 = array(eval(input("quantidade ")))
+               1 | from numpy import *
+        >>>    2 | vn = array(eval(input("Nomes:")))
+               3 | vq = array(eval(input("Quantidade:")))
 
-  [2] Linha 4: Variável 'vet2' com nome muito curto (≤4 chars)
-      Trecho  : vet2 = ...
+  [2] Linha 3: Variável 'vq' com nome muito curto (≤4 chars)
+      Trecho  : vq = ...
       Contexto:
-               3 | vet1 = array(eval(input("produtos")))
-        >>>    4 | vet2 = array(eval(input("quantidade ")))
-               5 | 
+               2 | vn = array(eval(input("Nomes:")))
+        >>>    3 | vq = array(eval(input("Quantidade:")))
+               4 | 
 
-  [3] Linha 6: Variável 'i' com nome muito curto (≤4 chars)
+  [3] Linha 5: Variável 'i' com nome muito curto (≤4 chars)
       Trecho  : i = ...
       Contexto:
-               5 | 
-        >>>    6 | i = 0
-               7 | soma = 0
+               4 | 
+        >>>    5 | i = 0
+               6 | p1=0
 
-  [4] Linha 7: Variável 'soma' com nome muito curto (≤4 chars)
-      Trecho  : soma = ...
+  [4] Linha 6: Variável 'p1' com nome muito curto (≤4 chars)
+      Trecho  : p1 = ...
       Contexto:
-               6 | i = 0
-        >>>    7 | soma = 0
-               8 | 
+               5 | i = 0
+        >>>    6 | p1=0
+               7 | p2=0
 
-  [5] Linha 20: Variável 'i' com nome muito curto (≤4 chars)
+  [5] Linha 7: Variável 'p2' com nome muito curto (≤4 chars)
+      Trecho  : p2 = ...
+      Contexto:
+               6 | p1=0
+        >>>    7 | p2=0
+               8 | p3=0
+
+  [6] Linha 8: Variável 'p3' com nome muito curto (≤4 chars)
+      Trecho  : p3 = ...
+      Contexto:
+               7 | p2=0
+        >>>    8 | p3=0
+               9 | p4=0
+
+  [7] Linha 9: Variável 'p4' com nome muito curto (≤4 chars)
+      Trecho  : p4 = ...
+      Contexto:
+               8 | p3=0
+        >>>    9 | p4=0
+              10 | p5=0
+
+  [8] Linha 10: Variável 'p5' com nome muito curto (≤4 chars)
+      Trecho  : p5 = ...
+      Contexto:
+               9 | p4=0
+        >>>   10 | p5=0
+              11 | while(i<size(vq)):
+
+  [9] Linha 23: Variável 'p' com nome muito curto (≤4 chars)
+      Trecho  : p = ...
+      Contexto:
+              22 | 	i = i + 1
+        >>>   23 | p = p1+p2+p3+p4+p5
+              24 | print(round(p, 2))
+
+  [10] Linha 22: Variável 'i' com nome muito curto (≤4 chars)
       Trecho  : i = ...
       Contexto:
-              19 | 		soma = soma + 3.20 * vet2[i]
-        >>>   20 | 	i = i + 1
-              21 | print(soma)
+              21 | 		p5 = 3.20*vq[i]
+        >>>   22 | 	i = i + 1
+              23 | p = p1+p2+p3+p4+p5
 
-  [6] Linha 11: Variável 'soma' com nome muito curto (≤4 chars)
-      Trecho  : soma = ...
+  [11] Linha 13: Variável 'p1' com nome muito curto (≤4 chars)
+      Trecho  : p1 = ...
       Contexto:
-              10 | 	if(vet1[i]== "ARROZ"):
-        >>>   11 | 		soma = soma + 1.25 * vet2[i]
-              12 | 	elif(vet1[i]=="FEIJAO"):
+              12 | 	if(vn[i]=='ARROZ'):
+        >>>   13 | 		p1 = 1.25*vq[i]
+              14 | 	elif(vn[i]=='FEIJAO'):
 
-  [7] Linha 13: Variável 'soma' com nome muito curto (≤4 chars)
-      Trecho  : soma = ...
+  [12] Linha 15: Variável 'p2' com nome muito curto (≤4 chars)
+      Trecho  : p2 = ...
       Contexto:
-              12 | 	elif(vet1[i]=="FEIJAO"):
-        >>>   13 | 		soma = soma + 2.60 * vet2[i]
-              14 | 	elif(vet1[i]=="BIS"):
-
-  [8] Linha 15: Variável 'soma' com nome muito curto (≤4 chars)
-      Trecho  : soma = ...
-      Contexto:
-              14 | 	elif(vet1[i]=="BIS"):
-        >>>   15 | 		soma = soma + 1.80 * vet2[i]
-              16 | 	elif(vet1[i]=="MIOJO"):
-
-  [9] Linha 17: Variável 'soma' com nome muito curto (≤4 chars)
-      Trecho  : soma = ...
-      Contexto:
-              16 | 	elif(vet1[i]=="MIOJO"):
-        >>>   17 | 		soma = soma + 0.85 * vet2[i]
-              18 | 	elif(vet1[i]=="FANTA"):
-
-  [10] Linha 19: Variável 'soma' com nome muito curto (≤4 chars)
-      Trecho  : soma = ...
-      Contexto:
-              18 | 	elif(vet1[i]=="FANTA"):
-        >>>   19 | 		soma = soma + 3.20 * vet2[i]
-              20 | 	i = i + 1
-
-======================================================================0*vq[i]
+              14 | 	elif(vn[i]=='FEIJAO'):
+        >>>   15 | 		p2 = 2.60*vq[i]
               16 | 	elif(vn[i]=='BIS'):
 
   [13] Linha 17: Variável 'p3' com nome muito curto (≤4 chars)

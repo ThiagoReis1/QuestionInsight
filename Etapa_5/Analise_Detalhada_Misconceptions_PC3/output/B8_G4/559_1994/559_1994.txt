@@ -2,11 +2,11 @@
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
 Arquivo     : 559_1994.log
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2017_1_v1.81\2017-1\135\users\2103\executions\559_1994.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2017_1_v1.81\2017-1\135\users\2129\executions\559_1994.log
 Assessment  : 559
 Título      : Trabalho Prático 3: Estruturas Condicionais Encadeadas
 Questão     : 1994
-Aluno       : 2103
+Aluno       : 2129
 Grupo       : TP 03
 Significado : Estrutura Condicional Encadeada
 Total MCs   : 2
@@ -16,23 +16,17 @@ Total MCs   : 2
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | o = 15.9994
-     2 | c = 12.011
-     3 | n = 14.00674
-     4 | h = 1.0079
-     5 | 
-     6 | mol = input("Digite um aminoacido: ").lower()
-     7 | 
-     8 | if(mol!="histidina" and mol!="leucina" and mol!="lisina"):
-     9 | 	print("Entrada:",mol)
-    10 | 	print("Dado Invalido")
-    11 | else:
-    12 | 	if(mol=="histidina"):
-    13 | 		print(round(6*c + 10*h + 3*n + 2*o, 2))
-    14 | 	if(mol=="leucina"):
-    15 | 		print(round(6*c + 13*h + n + 2*o, 2))
-    16 | 	if(mol=="lisina"):
-    17 | 		print(round(c*6 + h*15 + n*2 + o*2, 2))
+     1 | a = input("A: ")
+     2 | if (a.upper() != "HISTIDINA")  and (a.upper() != "LEUCINA") and (a.upper() != "LISINA"): 
+     3 | 	print("Entrada:",a)
+     4 | 	print("Dado Invalido")
+     5 | else: 
+     6 | 	if (a.upper() == "HISTIDINA"):
+     7 | 		print(round(6*12.011+10*1.0079+3*14.00674+2*15.9994,2))
+     8 | 	if (a.upper() == "LEUCINA"):	
+     9 | 		print(round(6*12.011+13*1.0079+1*14.00674+2*15.9994,2))
+    10 | 	if (a.upper() == "LISINA"):	
+    11 | 		print(round(6*12.011+15*1.0079+2*14.00674+2*15.9994,2))
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
@@ -41,48 +35,20 @@ DETALHAMENTO DOS MISCONCEPTIONS
 ▶ B8 — Não utilização de elif/else
   Ocorrências: 1
 
-  [1] Linha 8: Cadeia if/elif sem bloco else final
-      Trecho  : if ... (linha 8) / elif ... sem else
+  [1] Linha 2: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 2) / elif ... sem else
       Contexto:
-               7 | 
-        >>>    8 | if(mol!="histidina" and mol!="leucina" and mol!="lisina"):
-               9 | 	print("Entrada:",mol)
+               1 | a = input("A: ")
+        >>>    2 | if (a.upper() != "HISTIDINA")  and (a.upper() != "LEUCINA") and (a.upper() != "LISINA"): 
+               3 | 	print("Entrada:",a)
 
 ▶ G4 — Funções/variáveis com nomes não significativos
-  Ocorrências: 5
+  Ocorrências: 1
 
-  [1] Linha 1: Variável 'o' com nome muito curto (≤4 chars)
-      Trecho  : o = ...
+  [1] Linha 1: Variável 'a' com nome muito curto (≤4 chars)
+      Trecho  : a = ...
       Contexto:
-        >>>    1 | o = 15.9994
-               2 | c = 12.011
-
-  [2] Linha 2: Variável 'c' com nome muito curto (≤4 chars)
-      Trecho  : c = ...
-      Contexto:
-               1 | o = 15.9994
-        >>>    2 | c = 12.011
-               3 | n = 14.00674
-
-  [3] Linha 3: Variável 'n' com nome muito curto (≤4 chars)
-      Trecho  : n = ...
-      Contexto:
-               2 | c = 12.011
-        >>>    3 | n = 14.00674
-               4 | h = 1.0079
-
-  [4] Linha 4: Variável 'h' com nome muito curto (≤4 chars)
-      Trecho  : h = ...
-      Contexto:
-               3 | n = 14.00674
-        >>>    4 | h = 1.0079
-               5 | 
-
-  [5] Linha 6: Variável 'mol' com nome muito curto (≤4 chars)
-      Trecho  : mol = ...
-      Contexto:
-               5 | 
-        >>>    6 | mol = input("Digite um aminoacido: ").lower()
-               7 | 
+        >>>    1 | a = input("A: ")
+               2 | if (a.upper() != "HISTIDINA")  and (a.upper() != "LEUCINA") and (a.upper() != "LISINA"): 
 
 ======================================================================

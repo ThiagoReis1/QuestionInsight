@@ -2,11 +2,11 @@
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
 Arquivo     : 1670_1396.log
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2019_1_v1.81\2019-1\224\users\4378\executions\1670_1396.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2019_1_v1.81\2019-1\224\users\4431\executions\1670_1396.log
 Assessment  : 1670
 Título      : TP2 - Estrutura Condicional Simples e Composta
 Questão     : 1396
-Aluno       : 4378
+Aluno       : 4431
 Grupo       : TP 02
 Significado : Estrutura Condicional Simples e Composta
 Total MCs   : 1
@@ -16,39 +16,54 @@ Total MCs   : 1
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | vc=float(input("digite o valor consumido:"))
-     2 | x= 0.1 * vc + vc
-     3 | y= 0.06 * vc + vc
-     4 | if vc<=300:
-     5 |    print(round(x, 2))
-     6 | else:
-     7 | 	print(round(y, 2))
+     1 | x=float(input("Digite o valor consumido: "))
+     2 | if(x>300):
+     3 | 	y=x-(x*0.94)
+     4 | 	z=x+y
+     5 | else:
+     6 | 	y=x*0.1
+     7 | 	z=x+y
+     8 | print(round(z,2))	
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
 ----------------------------------------------------------------------
 
 ▶ G4 — Funções/variáveis com nomes não significativos
-  Ocorrências: 3
+  Ocorrências: 5
 
-  [1] Linha 1: Variável 'vc' com nome muito curto (≤4 chars)
-      Trecho  : vc = ...
-      Contexto:
-        >>>    1 | vc=float(input("digite o valor consumido:"))
-               2 | x= 0.1 * vc + vc
-
-  [2] Linha 2: Variável 'x' com nome muito curto (≤4 chars)
+  [1] Linha 1: Variável 'x' com nome muito curto (≤4 chars)
       Trecho  : x = ...
       Contexto:
-               1 | vc=float(input("digite o valor consumido:"))
-        >>>    2 | x= 0.1 * vc + vc
-               3 | y= 0.06 * vc + vc
+        >>>    1 | x=float(input("Digite o valor consumido: "))
+               2 | if(x>300):
 
-  [3] Linha 3: Variável 'y' com nome muito curto (≤4 chars)
+  [2] Linha 3: Variável 'y' com nome muito curto (≤4 chars)
       Trecho  : y = ...
       Contexto:
-               2 | x= 0.1 * vc + vc
-        >>>    3 | y= 0.06 * vc + vc
-               4 | if vc<=300:
+               2 | if(x>300):
+        >>>    3 | 	y=x-(x*0.94)
+               4 | 	z=x+y
+
+  [3] Linha 4: Variável 'z' com nome muito curto (≤4 chars)
+      Trecho  : z = ...
+      Contexto:
+               3 | 	y=x-(x*0.94)
+        >>>    4 | 	z=x+y
+               5 | else:
+
+  [4] Linha 6: Variável 'y' com nome muito curto (≤4 chars)
+      Trecho  : y = ...
+      Contexto:
+               5 | else:
+        >>>    6 | 	y=x*0.1
+               7 | 	z=x+y
+
+  [5] Linha 7: Variável 'z' com nome muito curto (≤4 chars)
+      Trecho  : z = ...
+      Contexto:
+               6 | 	y=x*0.1
+        >>>    7 | 	z=x+y
+               8 | print(round(z,2))	
 
 ======================================================================

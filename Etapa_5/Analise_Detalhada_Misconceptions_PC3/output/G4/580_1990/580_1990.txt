@@ -2,11 +2,11 @@
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
 Arquivo     : 580_1990.log
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2017_1_v1.81\2017-1\142\users\2216\executions\580_1990.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2017_1_v1.81\2017-1\142\users\2213\executions\580_1990.log
 Assessment  : 580
 Título      : Trabalho Prático 3: Estruturas Condicionais Encadeadas
 Questão     : 1990
-Aluno       : 2216
+Aluno       : 2213
 Grupo       : TP 03
 Significado : Estrutura Condicional Encadeada
 Total MCs   : 1
@@ -16,60 +16,88 @@ Total MCs   : 1
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | N=input("nome")
-     2 | n=(N).upper()
-     3 | if(n=="GLUTAMINA"):
-     4 | 	v=(12.011*5)+(1.00794*8)+(14.0067)+(15.9994*4)
-     5 | 	print (round(v,2))
-     6 | elif(n=="SERINA"):
-     7 | 	v=(12.011*3)+(1.00794*7)+(14.0067)+(15.9994*3)
-     8 | 	print(round (v , 2))
-     9 | elif(n=="TREONINA"):
-    10 | 	v=(12.011*4)+(1.00794*9)+(14.0067)+(15.9994*3)
-    11 | 	print(round (v , 2))
-    12 | else:
-    13 | 	print("Entrada:",N)
-    14 | 	print("Dado Invalido")
+     1 | nome=input("qual o nome: ").upper()
+     2 | 
+     3 | o=15.9994
+     4 | c=12.011
+     5 | n=14.0067
+     6 | h=1.00794
+     7 | 
+     8 | 
+     9 | if(nome=="GLUTAMINA"):
+    10 | 	x=(c*5+h*8+n*1+o*4)
+    11 | 	print(round(x,2))
+    12 | elif(nome=="SERINA"):
+    13 | 	x=(c*3+h*7+n+o*3)
+    14 | 	print(round(x,2))
+    15 | elif(nome=="TREONINA"):
+    16 | 	x=(c*4+h*9+n+o*3)
+    17 | 	print(round(x,2))
+    18 | 		
+    19 | else:	
+    20 | 	print("Entrada:",nome)
+    21 | 	print("Dado Invalido")
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
 ----------------------------------------------------------------------
 
 ▶ G4 — Funções/variáveis com nomes não significativos
-  Ocorrências: 5
+  Ocorrências: 8
 
-  [1] Linha 1: Variável 'N' com nome muito curto (≤4 chars)
-      Trecho  : N = ...
+  [1] Linha 1: Variável 'nome' com nome muito curto (≤4 chars)
+      Trecho  : nome = ...
       Contexto:
-        >>>    1 | N=input("nome")
-               2 | n=(N).upper()
+        >>>    1 | nome=input("qual o nome: ").upper()
+               2 | 
 
-  [2] Linha 2: Variável 'n' com nome muito curto (≤4 chars)
+  [2] Linha 3: Variável 'o' com nome muito curto (≤4 chars)
+      Trecho  : o = ...
+      Contexto:
+               2 | 
+        >>>    3 | o=15.9994
+               4 | c=12.011
+
+  [3] Linha 4: Variável 'c' com nome muito curto (≤4 chars)
+      Trecho  : c = ...
+      Contexto:
+               3 | o=15.9994
+        >>>    4 | c=12.011
+               5 | n=14.0067
+
+  [4] Linha 5: Variável 'n' com nome muito curto (≤4 chars)
       Trecho  : n = ...
       Contexto:
-               1 | N=input("nome")
-        >>>    2 | n=(N).upper()
-               3 | if(n=="GLUTAMINA"):
+               4 | c=12.011
+        >>>    5 | n=14.0067
+               6 | h=1.00794
 
-  [3] Linha 4: Variável 'v' com nome muito curto (≤4 chars)
-      Trecho  : v = ...
+  [5] Linha 6: Variável 'h' com nome muito curto (≤4 chars)
+      Trecho  : h = ...
       Contexto:
-               3 | if(n=="GLUTAMINA"):
-        >>>    4 | 	v=(12.011*5)+(1.00794*8)+(14.0067)+(15.9994*4)
-               5 | 	print (round(v,2))
+               5 | n=14.0067
+        >>>    6 | h=1.00794
+               7 | 
 
-  [4] Linha 7: Variável 'v' com nome muito curto (≤4 chars)
-      Trecho  : v = ...
+  [6] Linha 10: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
       Contexto:
-               6 | elif(n=="SERINA"):
-        >>>    7 | 	v=(12.011*3)+(1.00794*7)+(14.0067)+(15.9994*3)
-               8 | 	print(round (v , 2))
+               9 | if(nome=="GLUTAMINA"):
+        >>>   10 | 	x=(c*5+h*8+n*1+o*4)
+              11 | 	print(round(x,2))
 
-  [5] Linha 10: Variável 'v' com nome muito curto (≤4 chars)
-      Trecho  : v = ...
+  [7] Linha 13: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
       Contexto:
-               9 | elif(n=="TREONINA"):
-        >>>   10 | 	v=(12.011*4)+(1.00794*9)+(14.0067)+(15.9994*3)
-              11 | 	print(round (v , 2))
+              12 | elif(nome=="SERINA"):
+        >>>   13 | 	x=(c*3+h*7+n+o*3)
+              14 | 	print(round(x,2))
+
+  [8] Linha 16: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+              15 | elif(nome=="TREONINA"):
+        >>>   16 | 	x=(c*4+h*9+n+o*3)
+              17 | 	print(round(x,2))
 
 ======================================================================

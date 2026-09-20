@@ -2,11 +2,11 @@
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
 Arquivo     : 720_1641.log
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2017_1_v1.81\2017-1\137\users\2172\executions\720_1641.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2017_1_v1.81\2017-1\137\users\2208\executions\720_1641.log
 Assessment  : 720
 Título      : Trabalho Prático 6: Repetição por Contagem
 Questão     : 1641
-Aluno       : 2172
+Aluno       : 2208
 Grupo       : TP 06
 Significado : Estrutura de Repetição por Contagem
 Total MCs   : 2
@@ -16,23 +16,25 @@ Total MCs   : 2
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | from numpy import *
-     2 | a=array(eval(input("alunos matriculados:")))
-     3 | 
-     4 | n=0
-     5 | 
-     6 | for i in arange(0,size(a)):
-     7 | 	if(a[i]%(3)==0):
-     8 | 		n=n+1
-     9 | print(n)
-    10 | cont=zeros(n,dtype=int)
-    11 | s=0
-    12 | 
-    13 | for i in arange(0,size(a)):
-    14 | 	if(a[i]%(3)==0):
-    15 | 		cont[s]=i
-    16 | 		s=s+1
-    17 | print(cont)
+     1 | from numpy import*
+     2 | 
+     3 | tur=array(eval(input("Quantidade de Alunos: ")))
+     4 | 
+     5 | x=0
+     6 | 
+     7 | for i in range (size(tur)):
+     8 | 	if(tur[i]%3==0):
+     9 | 		x = x +1
+    10 | 	
+    11 | vet=zeros(x, dtype = int)
+    12 | print(x)
+    13 | y=0
+    14 | for i in range(size (tur)):
+    15 | 	if(tur[i]%3==0):
+    16 | 		vet[y]=i
+    17 | 		y=y+1
+    18 | 		
+    19 | print(vet)
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
@@ -47,46 +49,46 @@ DETALHAMENTO DOS MISCONCEPTIONS
 ▶ G4 — Funções/variáveis com nomes não significativos
   Ocorrências: 6
 
-  [1] Linha 2: Variável 'a' com nome muito curto (≤4 chars)
-      Trecho  : a = ...
+  [1] Linha 3: Variável 'tur' com nome muito curto (≤4 chars)
+      Trecho  : tur = ...
       Contexto:
-               1 | from numpy import *
-        >>>    2 | a=array(eval(input("alunos matriculados:")))
-               3 | 
+               2 | 
+        >>>    3 | tur=array(eval(input("Quantidade de Alunos: ")))
+               4 | 
 
-  [2] Linha 4: Variável 'n' com nome muito curto (≤4 chars)
-      Trecho  : n = ...
+  [2] Linha 5: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
       Contexto:
-               3 | 
-        >>>    4 | n=0
-               5 | 
+               4 | 
+        >>>    5 | x=0
+               6 | 
 
-  [3] Linha 10: Variável 'cont' com nome muito curto (≤4 chars)
-      Trecho  : cont = ...
+  [3] Linha 11: Variável 'vet' com nome muito curto (≤4 chars)
+      Trecho  : vet = ...
       Contexto:
-               9 | print(n)
-        >>>   10 | cont=zeros(n,dtype=int)
-              11 | s=0
+              10 | 	
+        >>>   11 | vet=zeros(x, dtype = int)
+              12 | print(x)
 
-  [4] Linha 11: Variável 's' com nome muito curto (≤4 chars)
-      Trecho  : s = ...
+  [4] Linha 13: Variável 'y' com nome muito curto (≤4 chars)
+      Trecho  : y = ...
       Contexto:
-              10 | cont=zeros(n,dtype=int)
-        >>>   11 | s=0
-              12 | 
+              12 | print(x)
+        >>>   13 | y=0
+              14 | for i in range(size (tur)):
 
-  [5] Linha 8: Variável 'n' com nome muito curto (≤4 chars)
-      Trecho  : n = ...
+  [5] Linha 9: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
       Contexto:
-               7 | 	if(a[i]%(3)==0):
-        >>>    8 | 		n=n+1
-               9 | print(n)
+               8 | 	if(tur[i]%3==0):
+        >>>    9 | 		x = x +1
+              10 | 	
 
-  [6] Linha 16: Variável 's' com nome muito curto (≤4 chars)
-      Trecho  : s = ...
+  [6] Linha 17: Variável 'y' com nome muito curto (≤4 chars)
+      Trecho  : y = ...
       Contexto:
-              15 | 		cont[s]=i
-        >>>   16 | 		s=s+1
-              17 | print(cont)
+              16 | 		vet[y]=i
+        >>>   17 | 		y=y+1
+              18 | 		
 
 ======================================================================

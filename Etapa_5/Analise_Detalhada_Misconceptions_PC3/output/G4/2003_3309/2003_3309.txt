@@ -2,11 +2,11 @@
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
 Arquivo     : 2003_3309.log
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2019_2_v1.81\2019-2\263\users\4770\executions\2003_3309.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2019_2_v1.81\2019-2\263\users\4765\executions\2003_3309.log
 Assessment  : 2003
 Título      : TP 01: Variáveis e Estrutura Sequencial (2019)
 Questão     : 3309
-Aluno       : 4770
+Aluno       : 4765
 Grupo       : TP 01
 Significado : Variáveis e Estrutura Sequencial
 Total MCs   : 1
@@ -16,43 +16,52 @@ Total MCs   : 1
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | a=float(input("qual o peso da mercadoria? "))
-     2 | b=float(43.21*a+25)
-     3 | c=float(b+(b*62/100))
-     4 | print(round(c, 2))
+     1 | var = float(input())
+     2 | var1 = float(var*43.21)
+     3 | var2 = float(var1+25)
+     4 | var3 = float(var2*0.62)
+     5 | var4 = float(var3+var2)
+     6 | print(round(var4,2))
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
 ----------------------------------------------------------------------
 
 ▶ G4 — Funções/variáveis com nomes não significativos
-  Ocorrências: 3
+  Ocorrências: 5
 
-  [1] Linha 1: Variável 'a' com nome muito curto (≤4 chars)
-      Trecho  : a = ...
+  [1] Linha 1: Variável 'var' com nome muito curto (≤4 chars)
+      Trecho  : var = ...
       Contexto:
-        >>>    1 | a=float(input("qual o peso da mercadoria? "))
-               2 | b=float(43.21*a+25)
+        >>>    1 | var = float(input())
+               2 | var1 = float(var*43.21)
 
-  [2] Linha 2: Variável 'b' com nome muito curto (≤4 chars)
-      Trecho  : b = ...
+  [2] Linha 2: Variável 'var1' com nome muito curto (≤4 chars)
+      Trecho  : var1 = ...
       Contexto:
-               1 | a=float(input("qual o peso da mercadoria? "))
-        >>>    2 | b=float(43.21*a+25)
-               3 | c=float(b+(b*62/100))
+               1 | var = float(input())
+        >>>    2 | var1 = float(var*43.21)
+               3 | var2 = float(var1+25)
 
-  [3] Linha 3: Variável 'c' com nome muito curto (≤4 chars)
-      Trecho  : c = ...
+  [3] Linha 3: Variável 'var2' com nome muito curto (≤4 chars)
+      Trecho  : var2 = ...
       Contexto:
-               2 | b=float(43.21*a+25)
-        >>>    3 | c=float(b+(b*62/100))
-               4 | print(round(c, 2))
+               2 | var1 = float(var*43.21)
+        >>>    3 | var2 = float(var1+25)
+               4 | var3 = float(var2*0.62)
 
-======================================================================muito curto (≤4 chars)
-      Trecho  : cf = ...
+  [4] Linha 4: Variável 'var3' com nome muito curto (≤4 chars)
+      Trecho  : var3 = ...
       Contexto:
-               3 | cp=float(ca*62/100)
-        >>>    4 | cf=float(ca+cp)
-               5 | print(round(cf,2))
+               3 | var2 = float(var1+25)
+        >>>    4 | var3 = float(var2*0.62)
+               5 | var4 = float(var3+var2)
+
+  [5] Linha 5: Variável 'var4' com nome muito curto (≤4 chars)
+      Trecho  : var4 = ...
+      Contexto:
+               4 | var3 = float(var2*0.62)
+        >>>    5 | var4 = float(var3+var2)
+               6 | print(round(var4,2))
 
 ======================================================================

@@ -2,11 +2,11 @@
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
 Arquivo     : 1715_3031.log
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2019_1_v1.81\2019-1\223\users\4342\executions\1715_3031.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2019_1_v1.81\2019-1\223\users\4183\executions\1715_3031.log
 Assessment  : 1715
 Título      : TP3 - Estrutura Condicional Encadeada
 Questão     : 3031
-Aluno       : 4342
+Aluno       : 4183
 Grupo       : TP 03
 Significado : Estrutura Condicional Encadeada
 Total MCs   : 3
@@ -16,19 +16,16 @@ Total MCs   : 3
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | var=float(input("valor:"))
-     2 | z=1
-     3 | x=2
-     4 | c=(var**2)
-     5 | d=(var**3)
-     6 | if(var<=1):
-     7 | 	print(round(z, 2))
-     8 | elif((var>1) and (var<=2)):
-     9 | 	print(round(x,2))
-    10 | elif((var>2) and (var<=3)):
-    11 | 	print(round(c, 2))
-    12 | elif(var>3):
-    13 | 	print(round(d, 2))
+     1 | fx = float(input("Valor de x: "))
+     2 | 
+     3 | if (fx<= 1):
+     4 | 	print(1)
+     5 | elif (fx > 1 and fx <= 2):
+     6 | 	print(2)
+     7 | elif (fx > 2 and fx <= 3):
+     8 | 	print(round(fx**2,2))
+     9 | elif (fx > 3):
+    10 | 	print(round(fx**3,2))
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
@@ -37,12 +34,12 @@ DETALHAMENTO DOS MISCONCEPTIONS
 ▶ B8 — Não utilização de elif/else
   Ocorrências: 1
 
-  [1] Linha 10: Cadeia if/elif sem bloco else final
-      Trecho  : if ... (linha 10) / elif ... sem else
+  [1] Linha 7: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 7) / elif ... sem else
       Contexto:
-               9 | 	print(round(x,2))
-        >>>   10 | elif((var>2) and (var<=3)):
-              11 | 	print(round(c, 2))
+               6 | 	print(2)
+        >>>    7 | elif (fx > 2 and fx <= 3):
+               8 | 	print(round(fx**2,2))
 
 ▶ B9 — elif/else retestando condições já verificadas
   Ocorrências: 1
@@ -51,40 +48,12 @@ DETALHAMENTO DOS MISCONCEPTIONS
       Trecho  : —
 
 ▶ G4 — Funções/variáveis com nomes não significativos
-  Ocorrências: 5
+  Ocorrências: 1
 
-  [1] Linha 1: Variável 'var' com nome muito curto (≤4 chars)
-      Trecho  : var = ...
+  [1] Linha 1: Variável 'fx' com nome muito curto (≤4 chars)
+      Trecho  : fx = ...
       Contexto:
-        >>>    1 | var=float(input("valor:"))
-               2 | z=1
-
-  [2] Linha 2: Variável 'z' com nome muito curto (≤4 chars)
-      Trecho  : z = ...
-      Contexto:
-               1 | var=float(input("valor:"))
-        >>>    2 | z=1
-               3 | x=2
-
-  [3] Linha 3: Variável 'x' com nome muito curto (≤4 chars)
-      Trecho  : x = ...
-      Contexto:
-               2 | z=1
-        >>>    3 | x=2
-               4 | c=(var**2)
-
-  [4] Linha 4: Variável 'c' com nome muito curto (≤4 chars)
-      Trecho  : c = ...
-      Contexto:
-               3 | x=2
-        >>>    4 | c=(var**2)
-               5 | d=(var**3)
-
-  [5] Linha 5: Variável 'd' com nome muito curto (≤4 chars)
-      Trecho  : d = ...
-      Contexto:
-               4 | c=(var**2)
-        >>>    5 | d=(var**3)
-               6 | if(var<=1):
+        >>>    1 | fx = float(input("Valor de x: "))
+               2 | 
 
 ======================================================================

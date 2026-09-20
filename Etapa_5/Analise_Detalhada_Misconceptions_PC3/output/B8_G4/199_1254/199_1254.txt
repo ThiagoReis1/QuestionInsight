@@ -2,11 +2,11 @@
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
 Arquivo     : 199_1254.log
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2016_1_v1.81\2016-1\102\users\1464\executions\199_1254.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2016_1_v1.81\2016-1\102\users\1313\executions\199_1254.log
 Assessment  : 199
 Título      : Avaliação Parcial 06 – Repetição por contagem
 Questão     : 1254
-Aluno       : 1464
+Aluno       : 1313
 Grupo       : TP 06
 Significado : Estrutura de Repetição por Contagem
 Total MCs   : 2
@@ -17,125 +17,76 @@ Total MCs   : 2
 CÓDIGO FONTE
 ----------------------------------------------------------------------
      1 | from numpy import*
-     2 | v=array(eval(input("v:")))
-     3 | 
-     4 | for i in v:
-     5 | 	if(i==min(v)):
-     6 | 		A=i
-     7 | 	elif(i==max(v)):
-     8 | 		B=i
-     9 | C=0.6*A+0.4*B
-    10 | D=0.3*A+0.7*B
-    11 | x1=0
-    12 | x2=0
-    13 | j=0
-    14 | for j in v:
-    15 | 	if(j>=C and j<D):
-    16 | 		x1=x1+1
-    17 | 	elif(j>=D and j<B):
-    18 | 		x2=x2+1
-    19 | x=array([x1,x2])
-    20 | print(x)
+     2 | v = array(eval(input("digite:")))
+     3 | v2 = array(zeros(2,dtype=int))
+     4 | a = min(v)
+     5 | b = max(v)
+     6 | c = (0.6*a) + (0.4*b)
+     7 | d = (0.3*a) + (0.7*b)
+     8 | for i in v:
+     9 | 	if(i>=c and i<d):
+    10 | 		v2[0] = v2[0]+1
+    11 | 	elif(i>=d and i<b):
+    12 | 		v2[1] = v2[1]+1
+    13 | print(v2)
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
 ----------------------------------------------------------------------
 
 ▶ B8 — Não utilização de elif/else
-  Ocorrências: 2
+  Ocorrências: 1
 
-  [1] Linha 5: Cadeia if/elif sem bloco else final
-      Trecho  : if ... (linha 5) / elif ... sem else
+  [1] Linha 9: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 9) / elif ... sem else
       Contexto:
-               4 | for i in v:
-        >>>    5 | 	if(i==min(v)):
-               6 | 		A=i
-
-  [2] Linha 15: Cadeia if/elif sem bloco else final
-      Trecho  : if ... (linha 15) / elif ... sem else
-      Contexto:
-              14 | for j in v:
-        >>>   15 | 	if(j>=C and j<D):
-              16 | 		x1=x1+1
+               8 | for i in v:
+        >>>    9 | 	if(i>=c and i<d):
+              10 | 		v2[0] = v2[0]+1
 
 ▶ G4 — Funções/variáveis com nomes não significativos
-  Ocorrências: 11
+  Ocorrências: 6
 
   [1] Linha 2: Variável 'v' com nome muito curto (≤4 chars)
       Trecho  : v = ...
       Contexto:
                1 | from numpy import*
-        >>>    2 | v=array(eval(input("v:")))
-               3 | 
+        >>>    2 | v = array(eval(input("digite:")))
+               3 | v2 = array(zeros(2,dtype=int))
 
-  [2] Linha 9: Variável 'C' com nome muito curto (≤4 chars)
-      Trecho  : C = ...
+  [2] Linha 3: Variável 'v2' com nome muito curto (≤4 chars)
+      Trecho  : v2 = ...
       Contexto:
-               8 | 		B=i
-        >>>    9 | C=0.6*A+0.4*B
-              10 | D=0.3*A+0.7*B
+               2 | v = array(eval(input("digite:")))
+        >>>    3 | v2 = array(zeros(2,dtype=int))
+               4 | a = min(v)
 
-  [3] Linha 10: Variável 'D' com nome muito curto (≤4 chars)
-      Trecho  : D = ...
+  [3] Linha 4: Variável 'a' com nome muito curto (≤4 chars)
+      Trecho  : a = ...
       Contexto:
-               9 | C=0.6*A+0.4*B
-        >>>   10 | D=0.3*A+0.7*B
-              11 | x1=0
+               3 | v2 = array(zeros(2,dtype=int))
+        >>>    4 | a = min(v)
+               5 | b = max(v)
 
-  [4] Linha 11: Variável 'x1' com nome muito curto (≤4 chars)
-      Trecho  : x1 = ...
+  [4] Linha 5: Variável 'b' com nome muito curto (≤4 chars)
+      Trecho  : b = ...
       Contexto:
-              10 | D=0.3*A+0.7*B
-        >>>   11 | x1=0
-              12 | x2=0
+               4 | a = min(v)
+        >>>    5 | b = max(v)
+               6 | c = (0.6*a) + (0.4*b)
 
-  [5] Linha 12: Variável 'x2' com nome muito curto (≤4 chars)
-      Trecho  : x2 = ...
+  [5] Linha 6: Variável 'c' com nome muito curto (≤4 chars)
+      Trecho  : c = ...
       Contexto:
-              11 | x1=0
-        >>>   12 | x2=0
-              13 | j=0
+               5 | b = max(v)
+        >>>    6 | c = (0.6*a) + (0.4*b)
+               7 | d = (0.3*a) + (0.7*b)
 
-  [6] Linha 13: Variável 'j' com nome muito curto (≤4 chars)
-      Trecho  : j = ...
+  [6] Linha 7: Variável 'd' com nome muito curto (≤4 chars)
+      Trecho  : d = ...
       Contexto:
-              12 | x2=0
-        >>>   13 | j=0
-              14 | for j in v:
-
-  [7] Linha 19: Variável 'x' com nome muito curto (≤4 chars)
-      Trecho  : x = ...
-      Contexto:
-              18 | 		x2=x2+1
-        >>>   19 | x=array([x1,x2])
-              20 | print(x)
-
-  [8] Linha 6: Variável 'A' com nome muito curto (≤4 chars)
-      Trecho  : A = ...
-      Contexto:
-               5 | 	if(i==min(v)):
-        >>>    6 | 		A=i
-               7 | 	elif(i==max(v)):
-
-  [9] Linha 16: Variável 'x1' com nome muito curto (≤4 chars)
-      Trecho  : x1 = ...
-      Contexto:
-              15 | 	if(j>=C and j<D):
-        >>>   16 | 		x1=x1+1
-              17 | 	elif(j>=D and j<B):
-
-  [10] Linha 8: Variável 'B' com nome muito curto (≤4 chars)
-      Trecho  : B = ...
-      Contexto:
-               7 | 	elif(i==max(v)):
-        >>>    8 | 		B=i
-               9 | C=0.6*A+0.4*B
-
-  [11] Linha 18: Variável 'x2' com nome muito curto (≤4 chars)
-      Trecho  : x2 = ...
-      Contexto:
-              17 | 	elif(j>=D and j<B):
-        >>>   18 | 		x2=x2+1
-              19 | x=array([x1,x2])
+               6 | c = (0.6*a) + (0.4*b)
+        >>>    7 | d = (0.3*a) + (0.7*b)
+               8 | for i in v:
 
 ======================================================================

@@ -2,11 +2,11 @@
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
 Arquivo     : 1187_2030.log
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2018_1_v1.81\2018-1\186\users\3570\executions\1187_2030.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2018_1_v1.81\2018-1\186\users\3144\executions\1187_2030.log
 Assessment  : 1187
 Título      : TP 4: Estrutura de Repetição por Condição (while)
 Questão     : 2030
-Aluno       : 3570
+Aluno       : 3144
 Grupo       : TP 04
 Significado : Estrutura de Repetição por Condição
 Total MCs   : 2
@@ -16,19 +16,15 @@ Total MCs   : 2
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | face = input("cara ou coroa:")
-     2 | cara = 0
-     3 | f = face.upper()
-     4 | if(f == "CARA") or (f == "COROA"):
-     5 | 	while(f != "S"):
-     6 | 		if(f == "CARA"):
-     7 | 			cara = cara + 1
-     8 | 			face = input("cara ou coroa:")
-     9 | 			f = face.upper()
-    10 | 		else:
-    11 | 			face = input("cara ou coroa:")
-    12 | 			f = face.upper()
-    13 | print(cara)			
+     1 | n=input("n:").upper()
+     2 | 
+     3 | cont=0
+     4 | 
+     5 | while(n=="CARA" or n=="COROA")and n!="S":
+     6 | 	if(n=="CARA"):
+     7 | 		cont=cont+1
+     8 | 	n=input("n:").upper()
+     9 | print(cont)
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
@@ -41,61 +37,33 @@ DETALHAMENTO DOS MISCONCEPTIONS
       Trecho  : —
 
 ▶ G4 — Funções/variáveis com nomes não significativos
-  Ocorrências: 8
+  Ocorrências: 4
 
-  [1] Linha 1: Variável 'face' com nome muito curto (≤4 chars)
-      Trecho  : face = ...
+  [1] Linha 1: Variável 'n' com nome muito curto (≤4 chars)
+      Trecho  : n = ...
       Contexto:
-        >>>    1 | face = input("cara ou coroa:")
-               2 | cara = 0
+        >>>    1 | n=input("n:").upper()
+               2 | 
 
-  [2] Linha 2: Variável 'cara' com nome muito curto (≤4 chars)
-      Trecho  : cara = ...
+  [2] Linha 3: Variável 'cont' com nome muito curto (≤4 chars)
+      Trecho  : cont = ...
       Contexto:
-               1 | face = input("cara ou coroa:")
-        >>>    2 | cara = 0
-               3 | f = face.upper()
+               2 | 
+        >>>    3 | cont=0
+               4 | 
 
-  [3] Linha 3: Variável 'f' com nome muito curto (≤4 chars)
-      Trecho  : f = ...
+  [3] Linha 8: Variável 'n' com nome muito curto (≤4 chars)
+      Trecho  : n = ...
       Contexto:
-               2 | cara = 0
-        >>>    3 | f = face.upper()
-               4 | if(f == "CARA") or (f == "COROA"):
+               7 | 		cont=cont+1
+        >>>    8 | 	n=input("n:").upper()
+               9 | print(cont)
 
-  [4] Linha 7: Variável 'cara' com nome muito curto (≤4 chars)
-      Trecho  : cara = ...
+  [4] Linha 7: Variável 'cont' com nome muito curto (≤4 chars)
+      Trecho  : cont = ...
       Contexto:
-               6 | 		if(f == "CARA"):
-        >>>    7 | 			cara = cara + 1
-               8 | 			face = input("cara ou coroa:")
-
-  [5] Linha 8: Variável 'face' com nome muito curto (≤4 chars)
-      Trecho  : face = ...
-      Contexto:
-               7 | 			cara = cara + 1
-        >>>    8 | 			face = input("cara ou coroa:")
-               9 | 			f = face.upper()
-
-  [6] Linha 9: Variável 'f' com nome muito curto (≤4 chars)
-      Trecho  : f = ...
-      Contexto:
-               8 | 			face = input("cara ou coroa:")
-        >>>    9 | 			f = face.upper()
-              10 | 		else:
-
-  [7] Linha 11: Variável 'face' com nome muito curto (≤4 chars)
-      Trecho  : face = ...
-      Contexto:
-              10 | 		else:
-        >>>   11 | 			face = input("cara ou coroa:")
-              12 | 			f = face.upper()
-
-  [8] Linha 12: Variável 'f' com nome muito curto (≤4 chars)
-      Trecho  : f = ...
-      Contexto:
-              11 | 			face = input("cara ou coroa:")
-        >>>   12 | 			f = face.upper()
-              13 | print(cara)			
+               6 | 	if(n=="CARA"):
+        >>>    7 | 		cont=cont+1
+               8 | 	n=input("n:").upper()
 
 ======================================================================

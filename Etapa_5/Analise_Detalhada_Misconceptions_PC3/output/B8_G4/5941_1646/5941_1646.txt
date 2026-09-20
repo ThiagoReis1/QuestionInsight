@@ -2,11 +2,11 @@
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
 Arquivo     : 5941_1646.log
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2024_1_v1.81\2024-1\597\users\9801\executions\5941_1646.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2024_1_v1.81\2024-1\597\users\9794\executions\5941_1646.log
 Assessment  : 5941
 Título      : TP 6: Estrutura de Repetição por Contagem (for)
 Questão     : 1646
-Aluno       : 9801
+Aluno       : 9794
 Grupo       : TP 06
 Significado : Estrutura de Repetição por Contagem
 Total MCs   : 2
@@ -17,25 +17,20 @@ Total MCs   : 2
 CÓDIGO FONTE
 ----------------------------------------------------------------------
      1 | from numpy import *
-     2 | 
-     3 | v = array(eval(input("Vetor? ")))
-     4 | lim = 50
-     5 | cont = 0
-     6 | 
-     7 | for e in range(size(v)):
-     8 | 	if v[e] <= lim:
-     9 | 		cont += 1
-    10 | j = 0
-    11 | v0 = zeros(cont, dtype = int)
-    12 | for e in range(size(v)):
-    13 | 	if v[e] <= lim:
-    14 | 		v0[j] = e
-    15 | 		j = j + 1
-    16 | print(cont)
-    17 | print(v0)
-    18 | #for e in range(size(v0)):
-    19 | #	v0[e] = v0[e] + e
-    20 | #print(v0)
+     2 | v = array(eval(input("insira o vetor: ")))
+     3 | cont = 0
+     4 | for e in v:
+     5 | 	if e <= 50:
+     6 | 		cont = cont + 1
+     7 | print(cont)
+     8 | 			 
+     9 | saida = zeros(cont, dtype=int)
+    10 | pos = 0
+    11 | for i in range(size(v)):
+    12 | 	if v[i] <= 50:
+    13 | 		saida[pos] = i
+    14 | 		pos = pos + 1
+    15 | print(saida)
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
@@ -48,48 +43,41 @@ DETALHAMENTO DOS MISCONCEPTIONS
       Trecho  : —
 
 ▶ G4 — Funções/variáveis com nomes não significativos
-  Ocorrências: 6
+  Ocorrências: 5
 
-  [1] Linha 3: Variável 'v' com nome muito curto (≤4 chars)
+  [1] Linha 2: Variável 'v' com nome muito curto (≤4 chars)
       Trecho  : v = ...
       Contexto:
-               2 | 
-        >>>    3 | v = array(eval(input("Vetor? ")))
-               4 | lim = 50
+               1 | from numpy import *
+        >>>    2 | v = array(eval(input("insira o vetor: ")))
+               3 | cont = 0
 
-  [2] Linha 4: Variável 'lim' com nome muito curto (≤4 chars)
-      Trecho  : lim = ...
-      Contexto:
-               3 | v = array(eval(input("Vetor? ")))
-        >>>    4 | lim = 50
-               5 | cont = 0
-
-  [3] Linha 5: Variável 'cont' com nome muito curto (≤4 chars)
+  [2] Linha 3: Variável 'cont' com nome muito curto (≤4 chars)
       Trecho  : cont = ...
       Contexto:
-               4 | lim = 50
-        >>>    5 | cont = 0
-               6 | 
+               2 | v = array(eval(input("insira o vetor: ")))
+        >>>    3 | cont = 0
+               4 | for e in v:
 
-  [4] Linha 10: Variável 'j' com nome muito curto (≤4 chars)
-      Trecho  : j = ...
+  [3] Linha 10: Variável 'pos' com nome muito curto (≤4 chars)
+      Trecho  : pos = ...
       Contexto:
-               9 | 		cont += 1
-        >>>   10 | j = 0
-              11 | v0 = zeros(cont, dtype = int)
+               9 | saida = zeros(cont, dtype=int)
+        >>>   10 | pos = 0
+              11 | for i in range(size(v)):
 
-  [5] Linha 11: Variável 'v0' com nome muito curto (≤4 chars)
-      Trecho  : v0 = ...
+  [4] Linha 6: Variável 'cont' com nome muito curto (≤4 chars)
+      Trecho  : cont = ...
       Contexto:
-              10 | j = 0
-        >>>   11 | v0 = zeros(cont, dtype = int)
-              12 | for e in range(size(v)):
+               5 | 	if e <= 50:
+        >>>    6 | 		cont = cont + 1
+               7 | print(cont)
 
-  [6] Linha 15: Variável 'j' com nome muito curto (≤4 chars)
-      Trecho  : j = ...
+  [5] Linha 14: Variável 'pos' com nome muito curto (≤4 chars)
+      Trecho  : pos = ...
       Contexto:
-              14 | 		v0[j] = e
-        >>>   15 | 		j = j + 1
-              16 | print(cont)
+              13 | 		saida[pos] = i
+        >>>   14 | 		pos = pos + 1
+              15 | print(saida)
 
 ======================================================================

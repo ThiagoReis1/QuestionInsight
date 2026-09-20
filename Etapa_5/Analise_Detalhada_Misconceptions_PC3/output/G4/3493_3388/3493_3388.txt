@@ -2,11 +2,11 @@
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
 Arquivo     : 3493_3388.log
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2021_2_v1.81\2021-2\408\users\7141\executions\3493_3388.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2021_2_v1.81\2021-2\408\users\6012\executions\3493_3388.log
 Assessment  : 3493
 Título      : TP 02:  Est. Condicional Simples e Composta
 Questão     : 3388
-Aluno       : 7141
+Aluno       : 6012
 Grupo       : TP 02
 Significado : Estrutura Condicional Simples e Composta
 Total MCs   : 1
@@ -16,15 +16,14 @@ Total MCs   : 1
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | u = input("Qual a unidade de medida usada: b ou w? ").upper()
-     2 | v = float(input("Qual o valor da medida?: "))
-     3 | 
-     4 | if (u == "W"):
-     5 |      b = 3.41214*v
-     6 | else:
-     7 | 	b = v/3.41214
-     8 | 	
-     9 | print(round(b, 2))
+     1 | m = input("medida: ")
+     2 | v = float(input("value: "))
+     3 | if(m == "B"):
+     4 | 	w = v / 3.41214
+     5 | 	print(round(w, 2))
+     6 | else: 
+     7 | 	b = 3.41214 * v
+     8 | 	print(round(b, 2))
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
@@ -33,31 +32,31 @@ DETALHAMENTO DOS MISCONCEPTIONS
 ▶ G4 — Funções/variáveis com nomes não significativos
   Ocorrências: 4
 
-  [1] Linha 1: Variável 'u' com nome muito curto (≤4 chars)
-      Trecho  : u = ...
+  [1] Linha 1: Variável 'm' com nome muito curto (≤4 chars)
+      Trecho  : m = ...
       Contexto:
-        >>>    1 | u = input("Qual a unidade de medida usada: b ou w? ").upper()
-               2 | v = float(input("Qual o valor da medida?: "))
+        >>>    1 | m = input("medida: ")
+               2 | v = float(input("value: "))
 
   [2] Linha 2: Variável 'v' com nome muito curto (≤4 chars)
       Trecho  : v = ...
       Contexto:
-               1 | u = input("Qual a unidade de medida usada: b ou w? ").upper()
-        >>>    2 | v = float(input("Qual o valor da medida?: "))
-               3 | 
+               1 | m = input("medida: ")
+        >>>    2 | v = float(input("value: "))
+               3 | if(m == "B"):
 
-  [3] Linha 5: Variável 'b' com nome muito curto (≤4 chars)
-      Trecho  : b = ...
+  [3] Linha 4: Variável 'w' com nome muito curto (≤4 chars)
+      Trecho  : w = ...
       Contexto:
-               4 | if (u == "W"):
-        >>>    5 |      b = 3.41214*v
-               6 | else:
+               3 | if(m == "B"):
+        >>>    4 | 	w = v / 3.41214
+               5 | 	print(round(w, 2))
 
   [4] Linha 7: Variável 'b' com nome muito curto (≤4 chars)
       Trecho  : b = ...
       Contexto:
-               6 | else:
-        >>>    7 | 	b = v/3.41214
-               8 | 	
+               6 | else: 
+        >>>    7 | 	b = 3.41214 * v
+               8 | 	print(round(b, 2))
 
 ======================================================================

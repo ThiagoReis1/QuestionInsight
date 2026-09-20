@@ -2,11 +2,11 @@
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
 Arquivo     : 334_1525.log
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2016_2_v1.81\2016-2\127\users\1931\executions\334_1525.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2016_2_v1.81\2016-2\127\users\1936\executions\334_1525.log
 Assessment  : 334
 Título      : Trabalho Prático 04: Estrutura de Repetição por Condição (while)
 Questão     : 1525
-Aluno       : 1931
+Aluno       : 1936
 Grupo       : TP 04
 Significado : Estrutura de Repetição por Condição
 Total MCs   : 1
@@ -16,63 +16,69 @@ Total MCs   : 1
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | v1 = int(input("Digite valor inicial de agua na masmorra :"))
-     2 | vb = int(input("Volume de agua bombeado: "))
-     3 | vm = int(input("Volume de agua tirado a cada minuto: "))
-     4 | tempo = 0
-     5 | while(v1 > 1000):
-     6 | 	vm = vm * tempo
-     7 | 	vb = vb * tempo
-     8 | 	v1 = vm - (vb  + v1 )
-     9 | 	tempo = tempo + 1
-    10 | print(tempo)
+     1 | vi = int(input("volume inicial: "))
+     2 | vb = int(input("volume bombeado a cadea min: "))
+     3 | vr = int(input("volume retirado: "))
+     4 | m = 0
+     5 | v = vi
+     6 | while(v>1000):
+     7 | 	v = v + vb - vr
+     8 | 	m = m + 1
+     9 | print(m)
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
 ----------------------------------------------------------------------
 
 ▶ G4 — Funções/variáveis com nomes não significativos
-  Ocorrências: 6
+  Ocorrências: 7
 
-  [1] Linha 1: Variável 'v1' com nome muito curto (≤4 chars)
-      Trecho  : v1 = ...
+  [1] Linha 1: Variável 'vi' com nome muito curto (≤4 chars)
+      Trecho  : vi = ...
       Contexto:
-        >>>    1 | v1 = int(input("Digite valor inicial de agua na masmorra :"))
-               2 | vb = int(input("Volume de agua bombeado: "))
+        >>>    1 | vi = int(input("volume inicial: "))
+               2 | vb = int(input("volume bombeado a cadea min: "))
 
   [2] Linha 2: Variável 'vb' com nome muito curto (≤4 chars)
       Trecho  : vb = ...
       Contexto:
-               1 | v1 = int(input("Digite valor inicial de agua na masmorra :"))
-        >>>    2 | vb = int(input("Volume de agua bombeado: "))
-               3 | vm = int(input("Volume de agua tirado a cada minuto: "))
+               1 | vi = int(input("volume inicial: "))
+        >>>    2 | vb = int(input("volume bombeado a cadea min: "))
+               3 | vr = int(input("volume retirado: "))
 
-  [3] Linha 3: Variável 'vm' com nome muito curto (≤4 chars)
-      Trecho  : vm = ...
+  [3] Linha 3: Variável 'vr' com nome muito curto (≤4 chars)
+      Trecho  : vr = ...
       Contexto:
-               2 | vb = int(input("Volume de agua bombeado: "))
-        >>>    3 | vm = int(input("Volume de agua tirado a cada minuto: "))
-               4 | tempo = 0
+               2 | vb = int(input("volume bombeado a cadea min: "))
+        >>>    3 | vr = int(input("volume retirado: "))
+               4 | m = 0
 
-  [4] Linha 6: Variável 'vm' com nome muito curto (≤4 chars)
-      Trecho  : vm = ...
+  [4] Linha 4: Variável 'm' com nome muito curto (≤4 chars)
+      Trecho  : m = ...
       Contexto:
-               5 | while(v1 > 1000):
-        >>>    6 | 	vm = vm * tempo
-               7 | 	vb = vb * tempo
+               3 | vr = int(input("volume retirado: "))
+        >>>    4 | m = 0
+               5 | v = vi
 
-  [5] Linha 7: Variável 'vb' com nome muito curto (≤4 chars)
-      Trecho  : vb = ...
+  [5] Linha 5: Variável 'v' com nome muito curto (≤4 chars)
+      Trecho  : v = ...
       Contexto:
-               6 | 	vm = vm * tempo
-        >>>    7 | 	vb = vb * tempo
-               8 | 	v1 = vm - (vb  + v1 )
+               4 | m = 0
+        >>>    5 | v = vi
+               6 | while(v>1000):
 
-  [6] Linha 8: Variável 'v1' com nome muito curto (≤4 chars)
-      Trecho  : v1 = ...
+  [6] Linha 7: Variável 'v' com nome muito curto (≤4 chars)
+      Trecho  : v = ...
       Contexto:
-               7 | 	vb = vb * tempo
-        >>>    8 | 	v1 = vm - (vb  + v1 )
-               9 | 	tempo = tempo + 1
+               6 | while(v>1000):
+        >>>    7 | 	v = v + vb - vr
+               8 | 	m = m + 1
+
+  [7] Linha 8: Variável 'm' com nome muito curto (≤4 chars)
+      Trecho  : m = ...
+      Contexto:
+               7 | 	v = v + vb - vr
+        >>>    8 | 	m = m + 1
+               9 | print(m)
 
 ======================================================================

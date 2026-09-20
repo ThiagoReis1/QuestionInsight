@@ -2,11 +2,11 @@
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
 Arquivo     : 1830_1642.log
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2019_1_v1.81\2019-1\231\users\4206\executions\1830_1642.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2019_1_v1.81\2019-1\231\users\4225\executions\1830_1642.log
 Assessment  : 1830
 Título      : TP6: Repetição por contagem
 Questão     : 1642
-Aluno       : 4206
+Aluno       : 4225
 Grupo       : TP 06
 Significado : Estrutura de Repetição por Contagem
 Total MCs   : 2
@@ -16,22 +16,18 @@ Total MCs   : 2
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | from numpy import *
-     2 | a = array(eval(input()))
-     3 | t = 0
-     4 | for i in range(0,size(a)):
-     5 | 	if(a[i]%5==0):
-     6 | 		t = t+1
-     7 | 	
-     8 | b = array(zeros(t,dtype = int))
-     9 | x = 0
-    10 | for i in range(0,size(a)):
-    11 | 	if(a[i]%5==0):
-    12 | 		b[x]= b[x]+i
-    13 | 		x = x+1
-    14 | 
-    15 | print(t)
-    16 | print(b)
+     1 | from numpy import*
+     2 | a = array(eval(input( )))
+     3 | k = 0
+     4 | for i in range(size(a)):
+     5 | 	if(a[i]%5 == 0):
+     6 | 		k = k + 1
+     7 | print(k)
+     8 | cont = zeros(k, dtype=int)
+     9 | for j in range(size(cont)):
+    10 | 	if(a[i]%5 == 0):
+    11 | 		cont[j] = cont[j] + a[i]
+    12 | print(cont)
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
@@ -44,48 +40,34 @@ DETALHAMENTO DOS MISCONCEPTIONS
       Trecho  : —
 
 ▶ G4 — Funções/variáveis com nomes não significativos
-  Ocorrências: 6
+  Ocorrências: 4
 
   [1] Linha 2: Variável 'a' com nome muito curto (≤4 chars)
       Trecho  : a = ...
       Contexto:
-               1 | from numpy import *
-        >>>    2 | a = array(eval(input()))
-               3 | t = 0
+               1 | from numpy import*
+        >>>    2 | a = array(eval(input( )))
+               3 | k = 0
 
-  [2] Linha 3: Variável 't' com nome muito curto (≤4 chars)
-      Trecho  : t = ...
+  [2] Linha 3: Variável 'k' com nome muito curto (≤4 chars)
+      Trecho  : k = ...
       Contexto:
-               2 | a = array(eval(input()))
-        >>>    3 | t = 0
-               4 | for i in range(0,size(a)):
+               2 | a = array(eval(input( )))
+        >>>    3 | k = 0
+               4 | for i in range(size(a)):
 
-  [3] Linha 8: Variável 'b' com nome muito curto (≤4 chars)
-      Trecho  : b = ...
+  [3] Linha 8: Variável 'cont' com nome muito curto (≤4 chars)
+      Trecho  : cont = ...
       Contexto:
-               7 | 	
-        >>>    8 | b = array(zeros(t,dtype = int))
-               9 | x = 0
+               7 | print(k)
+        >>>    8 | cont = zeros(k, dtype=int)
+               9 | for j in range(size(cont)):
 
-  [4] Linha 9: Variável 'x' com nome muito curto (≤4 chars)
-      Trecho  : x = ...
+  [4] Linha 6: Variável 'k' com nome muito curto (≤4 chars)
+      Trecho  : k = ...
       Contexto:
-               8 | b = array(zeros(t,dtype = int))
-        >>>    9 | x = 0
-              10 | for i in range(0,size(a)):
-
-  [5] Linha 6: Variável 't' com nome muito curto (≤4 chars)
-      Trecho  : t = ...
-      Contexto:
-               5 | 	if(a[i]%5==0):
-        >>>    6 | 		t = t+1
-               7 | 	
-
-  [6] Linha 13: Variável 'x' com nome muito curto (≤4 chars)
-      Trecho  : x = ...
-      Contexto:
-              12 | 		b[x]= b[x]+i
-        >>>   13 | 		x = x+1
-              14 | 
+               5 | 	if(a[i]%5 == 0):
+        >>>    6 | 		k = k + 1
+               7 | print(k)
 
 ======================================================================

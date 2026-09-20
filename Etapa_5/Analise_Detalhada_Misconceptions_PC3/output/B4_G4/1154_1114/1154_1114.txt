@@ -2,11 +2,11 @@
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
 Arquivo     : 1154_1114.log
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2018_1_v1.81\2018-1\185\users\3423\executions\1154_1114.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2018_1_v1.81\2018-1\185\users\3345\executions\1154_1114.log
 Assessment  : 1154
 Título      : TP 3 – Condicionais Encadeadas (if/elif)
 Questão     : 1114
-Aluno       : 3423
+Aluno       : 3345
 Grupo       : TP 03
 Significado : Estrutura Condicional Encadeada
 Total MCs   : 2
@@ -16,67 +16,75 @@ Total MCs   : 2
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | v= float(input("velocidade do trem: "))
-     2 | t= float(input("tempo de viagem: "))
-     3 | d= v*t
-     4 | print("Entradas:",v,"km/h","e",t,"h")
-     5 | if (v <= 0) or (t < 0):
-     6 | 	print("Dados invalidos")
-     7 | elif (0 <= d <100):
-     8 | 	print("Proxima parada: Bravos")
-     9 | elif (100 <= d < 200):
-    10 | 	print("Proxima parada: Castamere")
-    11 | elif (200 <= d < 400):
-    12 | 	print("Proxima parada: Doriath")
-    13 | elif (400 <= d < 600):
-    14 | 	print("Proxima parada: Edoras")
-    15 | elif (600 <= d < 750):
-    16 | 	print("Proxima parada: Fangorn")
-    17 | elif (750 <= d < 1150):
-    18 | 	print("Proxima parada: Gondor")
-    19 | elif (d >= 1150):
-    20 | 	print("Proxima parada: Hogsmead")
-    21 | else:
-    22 | 	print("Dados invalidos")
+     1 | v = float(input("Velocidade do trem: "))
+     2 | t = float(input("Tempo de viagem: "))
+     3 | d = v*t
+     4 | if (v > 0) and (t >0):
+     5 | 	if (d > 0) and (d<100):
+     6 | 		m = "Bravos"
+     7 | 	elif (d>=100) and (d<200):
+     8 | 		m = "Castamere"
+     9 | 	elif (d>=200) and (d<400):
+    10 | 		m = "Doriath"
+    11 | 	elif (d>=400) and (d<600):
+    12 | 		m = "Edoras"
+    13 | 	elif (d>=600) and (d<750):
+    14 | 		m = "Fangorn"
+    15 | 	elif (d>=750) and (d<1150):
+    16 | 		m = "Gondor"
+    17 | 	elif (d>=1150) and (d<1400):
+    18 | 		m = "Hogsmead"
+    19 | 	else:
+    20 | 		m = "Hogsmead"
+    21 | 	print("Entradas: ", v, " km/h e ", t, " h")
+    22 | 	print("Proxima parada: ", m)
+    23 | else:
+    24 | 	print("Entradas: ", v, " km/h e ", t, " h")
+    25 | 	print("Dados invalidos")
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
 ----------------------------------------------------------------------
 
 ▶ B4 — Comandos repetidos dentro de blocos if-elif-else
-  Ocorrências: 1
+  Ocorrências: 7
 
-  [1] Linha 19: Bloco idêntico ao da linha 5
-      Trecho  : print('Dados invalidos')
+  [1] Linha 17: Bloco idêntico ao da linha 17
+      Trecho  : m = 'Hogsmead'
       Contexto:
-              18 | 	print("Proxima parada: Gondor")
-        >>>   19 | elif (d >= 1150):
-              20 | 	print("Proxima parada: Hogsmead")
+              16 | 		m = "Gondor"
+        >>>   17 | 	elif (d>=1150) and (d<1400):
+              18 | 		m = "Hogsmead"
 
-▶ G4 — Funções/variáveis com nomes não significativos
-  Ocorrências: 3
-
-  [1] Linha 1: Variável 'v' com nome muito curto (≤4 chars)
-      Trecho  : v = ...
+  [2] Linha 17: Bloco idêntico ao da linha 17
+      Trecho  : m = 'Hogsmead'
       Contexto:
-        >>>    1 | v= float(input("velocidade do trem: "))
-               2 | t= float(input("tempo de viagem: "))
+              16 | 		m = "Gondor"
+        >>>   17 | 	elif (d>=1150) and (d<1400):
+              18 | 		m = "Hogsmead"
 
-  [2] Linha 2: Variável 't' com nome muito curto (≤4 chars)
-      Trecho  : t = ...
+  [3] Linha 17: Bloco idêntico ao da linha 17
+      Trecho  : m = 'Hogsmead'
       Contexto:
-               1 | v= float(input("velocidade do trem: "))
-        >>>    2 | t= float(input("tempo de viagem: "))
-               3 | d= v*t
+              16 | 		m = "Gondor"
+        >>>   17 | 	elif (d>=1150) and (d<1400):
+              18 | 		m = "Hogsmead"
 
-  [3] Linha 3: Variável 'd' com nome muito curto (≤4 chars)
-      Trecho  : d = ...
+  [4] Linha 17: Bloco idêntico ao da linha 17
+      Trecho  : m = 'Hogsmead'
       Contexto:
-               2 | t= float(input("tempo de viagem: "))
-        >>>    3 | d= v*t
-               4 | print("Entradas:",v,"km/h","e",t,"h")
+              16 | 		m = "Gondor"
+        >>>   17 | 	elif (d>=1150) and (d<1400):
+              18 | 		m = "Hogsmead"
 
-======================================================================[6] Linha 17: Bloco idêntico ao da linha 17
+  [5] Linha 17: Bloco idêntico ao da linha 17
+      Trecho  : m = 'Hogsmead'
+      Contexto:
+              16 | 		m = "Gondor"
+        >>>   17 | 	elif (d>=1150) and (d<1400):
+              18 | 		m = "Hogsmead"
+
+  [6] Linha 17: Bloco idêntico ao da linha 17
       Trecho  : m = 'Hogsmead'
       Contexto:
               16 | 		m = "Gondor"

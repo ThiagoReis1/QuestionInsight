@@ -2,11 +2,11 @@
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
 Arquivo     : 5532_6376.log
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2023_2_v1.81\2023-2\559\users\6308\executions\5532_6376.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2023_2_v1.81\2023-2\559\users\6303\executions\5532_6376.log
 Assessment  : 5532
 Título      : TP 6: Estrutura de Repetição por Contagem (for)
 Questão     : 6376
-Aluno       : 6308
+Aluno       : 6303
 Grupo       : TP 06
 Significado : Estrutura de Repetição por Contagem
 Total MCs   : 1
@@ -16,23 +16,19 @@ Total MCs   : 1
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | from numpy import * 
-     2 | 
-     3 | pontos = input().split(',')
-     4 | 
-     5 | pontosPorJogador = zeros(4, dtype = int)
-     6 | 
-     7 | for jogador in pontos:
-     8 | 	if(jogador == 'A'):
-     9 | 		pontosPorJogador[0] += 1
-    10 | 	elif(jogador == 'B'):
-    11 | 		pontosPorJogador[1] += 1
-    12 | 	elif(jogador == 'C'):
-    13 | 		pontosPorJogador[2] += 1
-    14 | 	elif(jogador == 'D'):
-    15 | 		pontosPorJogador[3] += 1
-    16 | 
-    17 | print(pontosPorJogador)
+     1 | from numpy import *
+     2 | entrada = input().split(',')
+     3 | jogo = zeros(4, dtype=int)
+     4 | for i in entrada:
+     5 | 	if i.lower()=='a':
+     6 | 		jogo[0]+=1
+     7 | 	elif i.lower()=='b':
+     8 | 		jogo[1]+=1
+     9 | 	elif i.lower()=='c':
+    10 | 		jogo[2]+=1
+    11 | 	elif i.lower()=='d':
+    12 | 		jogo[3]+=1
+    13 | print(jogo)
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
@@ -41,11 +37,11 @@ DETALHAMENTO DOS MISCONCEPTIONS
 ▶ B8 — Não utilização de elif/else
   Ocorrências: 1
 
-  [1] Linha 12: Cadeia if/elif sem bloco else final
-      Trecho  : if ... (linha 12) / elif ... sem else
+  [1] Linha 9: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 9) / elif ... sem else
       Contexto:
-              11 | 		pontosPorJogador[1] += 1
-        >>>   12 | 	elif(jogador == 'C'):
-              13 | 		pontosPorJogador[2] += 1
+               8 | 		jogo[1]+=1
+        >>>    9 | 	elif i.lower()=='c':
+              10 | 		jogo[2]+=1
 
 ======================================================================

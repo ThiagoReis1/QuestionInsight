@@ -2,11 +2,11 @@
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
 Arquivo     : 478_1842.log
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2017_1_v1.81\2017-1\141\users\2309\executions\478_1842.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2017_1_v1.81\2017-1\141\users\2433\executions\478_1842.log
 Assessment  : 478
 Título      : Trabalho Prático 01: Variáveis e Estrutura Sequencial de Programação
 Questão     : 1842
-Aluno       : 2309
+Aluno       : 2433
 Grupo       : TP 01
 Significado : Variáveis e Estrutura Sequencial
 Total MCs   : 1
@@ -16,56 +16,65 @@ Total MCs   : 1
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | from math import *
-     2 | 
-     3 | Qo = float(input('digite o valor investido  '))
-     4 | Qf = float(input('digite o valor pretendido  '))
-     5 | y = float(input('digite a duração do investimento '))
+     1 | Q = float(input(" valor inicial: "))
+     2 | Qf = float(input(" valor final: "))
+     3 | Y = int(input(" número de anos: ")) 
+     4 | 
+     5 | from math import*
      6 | 
-     7 | r = (log(Qf) - log(Qo)) / y
-     8 | 			 
-     9 | print(r)
+     7 | A = log(Qf)
+     8 | B = log(Q)
+     9 | 
+    10 | r = float ((A - B) / Y)
+    11 | 
+    12 | print (r)
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
 ----------------------------------------------------------------------
 
 ▶ G4 — Funções/variáveis com nomes não significativos
-  Ocorrências: 4
+  Ocorrências: 6
 
-  [1] Linha 3: Variável 'Qo' com nome muito curto (≤4 chars)
-      Trecho  : Qo = ...
+  [1] Linha 1: Variável 'Q' com nome muito curto (≤4 chars)
+      Trecho  : Q = ...
       Contexto:
-               2 | 
-        >>>    3 | Qo = float(input('digite o valor investido  '))
-               4 | Qf = float(input('digite o valor pretendido  '))
+        >>>    1 | Q = float(input(" valor inicial: "))
+               2 | Qf = float(input(" valor final: "))
 
-  [2] Linha 4: Variável 'Qf' com nome muito curto (≤4 chars)
+  [2] Linha 2: Variável 'Qf' com nome muito curto (≤4 chars)
       Trecho  : Qf = ...
       Contexto:
-               3 | Qo = float(input('digite o valor investido  '))
-        >>>    4 | Qf = float(input('digite o valor pretendido  '))
-               5 | y = float(input('digite a duração do investimento '))
+               1 | Q = float(input(" valor inicial: "))
+        >>>    2 | Qf = float(input(" valor final: "))
+               3 | Y = int(input(" número de anos: ")) 
 
-  [3] Linha 5: Variável 'y' com nome muito curto (≤4 chars)
-      Trecho  : y = ...
+  [3] Linha 3: Variável 'Y' com nome muito curto (≤4 chars)
+      Trecho  : Y = ...
       Contexto:
-               4 | Qf = float(input('digite o valor pretendido  '))
-        >>>    5 | y = float(input('digite a duração do investimento '))
-               6 | 
+               2 | Qf = float(input(" valor final: "))
+        >>>    3 | Y = int(input(" número de anos: ")) 
+               4 | 
 
-  [4] Linha 7: Variável 'r' com nome muito curto (≤4 chars)
-      Trecho  : r = ...
+  [4] Linha 7: Variável 'A' com nome muito curto (≤4 chars)
+      Trecho  : A = ...
       Contexto:
                6 | 
-        >>>    7 | r = (log(Qf) - log(Qo)) / y
-               8 | 			 
+        >>>    7 | A = log(Qf)
+               8 | B = log(Q)
 
-======================================================================' com nome muito curto (≤4 chars)
+  [5] Linha 8: Variável 'B' com nome muito curto (≤4 chars)
+      Trecho  : B = ...
+      Contexto:
+               7 | A = log(Qf)
+        >>>    8 | B = log(Q)
+               9 | 
+
+  [6] Linha 10: Variável 'r' com nome muito curto (≤4 chars)
       Trecho  : r = ...
       Contexto:
                9 | 
-        >>>   10 | r = (A - B) / Y
+        >>>   10 | r = float ((A - B) / Y)
               11 | 
 
 ======================================================================

@@ -2,11 +2,11 @@
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
 Arquivo     : 5867_6833.log
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2024_1_v1.81\2024-1\590\users\9829\executions\5867_6833.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2024_1_v1.81\2024-1\590\users\9814\executions\5867_6833.log
 Assessment  : 5867
 Título      : TP 5: Vetores e Strings
 Questão     : 6833
-Aluno       : 9829
+Aluno       : 9814
 Grupo       : TP 05
 Significado : Vetores e Strings
 Total MCs   : 2
@@ -16,26 +16,20 @@ Total MCs   : 2
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | string = input("produto: ").upper()
+     1 | s = input('determine a secao: ').upper()
      2 | 
      3 | i = 0
-     4 | 
-     5 | m = 7.25
-     6 | p = 4.75
-     7 | r = 3.50
-     8 | 
-     9 | maxi = len(string)
-    10 | acum = 0
-    11 | 
-    12 | while i < maxi:
-    13 | 	if string[i] == 'M':
-    14 | 		acum += m
-    15 | 	elif string[i] == 'P':
-    16 | 		acum += p
-    17 | 	elif string[i] == 'R':
-    18 | 		acum += r
-    19 | 	i+= 1
-    20 | print(round(acum, 2))
+     4 | t = round(0, 2)
+     5 | 
+     6 | while i < len(s):
+     7 | 	if s[i] == 'M':
+     8 | 		t = t + 7.25
+     9 | 	elif s[i] == 'P':
+    10 | 		t = t + 4.75
+    11 | 	elif s[i] == 'R':
+    12 | 		t = t + 3.50
+    13 | 	i = i + 1
+    14 | print(t)
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
@@ -44,59 +38,61 @@ DETALHAMENTO DOS MISCONCEPTIONS
 ▶ B8 — Não utilização de elif/else
   Ocorrências: 1
 
-  [1] Linha 15: Cadeia if/elif sem bloco else final
-      Trecho  : if ... (linha 15) / elif ... sem else
+  [1] Linha 9: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 9) / elif ... sem else
       Contexto:
-              14 | 		acum += m
-        >>>   15 | 	elif string[i] == 'P':
-              16 | 		acum += p
+               8 | 		t = t + 7.25
+        >>>    9 | 	elif s[i] == 'P':
+              10 | 		t = t + 4.75
 
 ▶ G4 — Funções/variáveis com nomes não significativos
-  Ocorrências: 6
+  Ocorrências: 7
 
-  [1] Linha 3: Variável 'i' com nome muito curto (≤4 chars)
+  [1] Linha 1: Variável 's' com nome muito curto (≤4 chars)
+      Trecho  : s = ...
+      Contexto:
+        >>>    1 | s = input('determine a secao: ').upper()
+               2 | 
+
+  [2] Linha 3: Variável 'i' com nome muito curto (≤4 chars)
       Trecho  : i = ...
       Contexto:
                2 | 
         >>>    3 | i = 0
-               4 | 
+               4 | t = round(0, 2)
 
-  [2] Linha 5: Variável 'm' com nome muito curto (≤4 chars)
-      Trecho  : m = ...
+  [3] Linha 4: Variável 't' com nome muito curto (≤4 chars)
+      Trecho  : t = ...
       Contexto:
-               4 | 
-        >>>    5 | m = 7.25
-               6 | p = 4.75
+               3 | i = 0
+        >>>    4 | t = round(0, 2)
+               5 | 
 
-  [3] Linha 6: Variável 'p' com nome muito curto (≤4 chars)
-      Trecho  : p = ...
+  [4] Linha 13: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
       Contexto:
-               5 | m = 7.25
-        >>>    6 | p = 4.75
-               7 | r = 3.50
+              12 | 		t = t + 3.50
+        >>>   13 | 	i = i + 1
+              14 | print(t)
 
-  [4] Linha 7: Variável 'r' com nome muito curto (≤4 chars)
-      Trecho  : r = ...
+  [5] Linha 8: Variável 't' com nome muito curto (≤4 chars)
+      Trecho  : t = ...
       Contexto:
-               6 | p = 4.75
-        >>>    7 | r = 3.50
-               8 | 
+               7 | 	if s[i] == 'M':
+        >>>    8 | 		t = t + 7.25
+               9 | 	elif s[i] == 'P':
 
-  [5] Linha 9: Variável 'maxi' com nome muito curto (≤4 chars)
-      Trecho  : maxi = ...
+  [6] Linha 10: Variável 't' com nome muito curto (≤4 chars)
+      Trecho  : t = ...
       Contexto:
-               8 | 
-        >>>    9 | maxi = len(string)
-              10 | acum = 0
+               9 | 	elif s[i] == 'P':
+        >>>   10 | 		t = t + 4.75
+              11 | 	elif s[i] == 'R':
 
-  [6] Linha 10: Variável 'acum' com nome muito curto (≤4 chars)
-      Trecho  : acum = ...
+  [7] Linha 12: Variável 't' com nome muito curto (≤4 chars)
+      Trecho  : t = ...
       Contexto:
-               9 | maxi = len(string)
-        >>>   10 | acum = 0
-              11 | 
-
-======================================================================      11 | 	elif s[i] == 'R':
+              11 | 	elif s[i] == 'R':
         >>>   12 | 		t = t + 3.50
               13 | 	i = i + 1
 

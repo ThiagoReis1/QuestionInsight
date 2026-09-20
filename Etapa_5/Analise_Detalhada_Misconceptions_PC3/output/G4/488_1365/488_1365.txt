@@ -2,11 +2,11 @@
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
 Arquivo     : 488_1365.log
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2017_1_v1.81\2017-1\142\users\2574\executions\488_1365.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2017_1_v1.81\2017-1\142\users\2353\executions\488_1365.log
 Assessment  : 488
 Título      : Trabalho Prático 01: Variáveis e Estrutura Sequencial de Programação
 Questão     : 1365
-Aluno       : 2574
+Aluno       : 2353
 Grupo       : TP 01
 Significado : Variáveis e Estrutura Sequencial
 Total MCs   : 1
@@ -16,73 +16,52 @@ Total MCs   : 1
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | #Necessario
-     2 | from math import*
-     3 | 
-     4 | #entradas
-     5 | a = float(input("digite a: "))
-     6 | d = float(input("digite d: "))
+     1 | from math import*
+     2 | 
+     3 | a=float(input("Digite o angulo da flecha: "))
+     4 | d=float(input("Digite a distancia: "))
+     5 | 
+     6 | graus= radians(a)
      7 | 
-     8 | #valores fixos
+     8 | g = 9.8
      9 | 
-    10 | aa = radians(a)
-    11 | g = 9.8
-    12 | 
-    13 | #formula
-    14 | 
-    15 | v = d*g/sin(2*aa)
-    16 | s = v**0.5
-    17 | #saida
-    18 | 
-    19 | print(float(round(s,2)))
+    10 | v = sqrt((d*g)/ sin(2*graus))
+    11 | 
+    12 | print(round(v,2))
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
 ----------------------------------------------------------------------
 
 ▶ G4 — Funções/variáveis com nomes não significativos
-  Ocorrências: 6
+  Ocorrências: 4
 
-  [1] Linha 5: Variável 'a' com nome muito curto (≤4 chars)
+  [1] Linha 3: Variável 'a' com nome muito curto (≤4 chars)
       Trecho  : a = ...
       Contexto:
-               4 | #entradas
-        >>>    5 | a = float(input("digite a: "))
-               6 | d = float(input("digite d: "))
+               2 | 
+        >>>    3 | a=float(input("Digite o angulo da flecha: "))
+               4 | d=float(input("Digite a distancia: "))
 
-  [2] Linha 6: Variável 'd' com nome muito curto (≤4 chars)
+  [2] Linha 4: Variável 'd' com nome muito curto (≤4 chars)
       Trecho  : d = ...
       Contexto:
-               5 | a = float(input("digite a: "))
-        >>>    6 | d = float(input("digite d: "))
-               7 | 
+               3 | a=float(input("Digite o angulo da flecha: "))
+        >>>    4 | d=float(input("Digite a distancia: "))
+               5 | 
 
-  [3] Linha 10: Variável 'aa' com nome muito curto (≤4 chars)
-      Trecho  : aa = ...
-      Contexto:
-               9 | 
-        >>>   10 | aa = radians(a)
-              11 | g = 9.8
-
-  [4] Linha 11: Variável 'g' com nome muito curto (≤4 chars)
+  [3] Linha 8: Variável 'g' com nome muito curto (≤4 chars)
       Trecho  : g = ...
       Contexto:
-              10 | aa = radians(a)
-        >>>   11 | g = 9.8
-              12 | 
+               7 | 
+        >>>    8 | g = 9.8
+               9 | 
 
-  [5] Linha 15: Variável 'v' com nome muito curto (≤4 chars)
+  [4] Linha 10: Variável 'v' com nome muito curto (≤4 chars)
       Trecho  : v = ...
       Contexto:
-              14 | 
-        >>>   15 | v = d*g/sin(2*aa)
-              16 | s = v**0.5
-
-  [6] Linha 16: Variável 's' com nome muito curto (≤4 chars)
-      Trecho  : s = ...
-      Contexto:
-              15 | v = d*g/sin(2*aa)
-        >>>   16 | s = v**0.5
-              17 | #saida
+               9 | 
+        >>>   10 | v = sqrt((d*g)/ sin(2*graus))
+              11 | 
 
 ======================================================================

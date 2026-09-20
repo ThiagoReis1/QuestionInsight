@@ -2,11 +2,11 @@
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
 Arquivo     : 169_1211.log
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2016_1_v1.81\2016-1\108\users\1343\executions\169_1211.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2016_1_v1.81\2016-1\108\users\1331\executions\169_1211.log
 Assessment  : 169
 Título      : Avaliação Parcial 05 – Vetores e Strings
 Questão     : 1211
-Aluno       : 1343
+Aluno       : 1331
 Grupo       : TP 05
 Significado : Vetores e Strings
 Total MCs   : 2
@@ -17,17 +17,15 @@ Total MCs   : 2
 CÓDIGO FONTE
 ----------------------------------------------------------------------
      1 | from numpy import*
-     2 | 
-     3 | re = 307
-     4 | disc= array(eval(input()))
-     5 | i=0
-     6 | c=0
-     7 | while (i<size(disc)):
-     8 | 	if (disc[i]>re):
-     9 | 		c = c+1
-    10 | 	i+=1
-    11 | print(re)
-    12 | print(c)
+     2 | v = array(eval(input("Insira os pesos dos levantamentos ")))
+     3 | i = 0
+     4 | cont = 0
+     5 | while (i < size(v)):
+     6 | 	if (v[i] > 307):
+     7 | 		cont = cont + 1
+     8 | 	i = i + 1
+     9 | print(307)
+    10 | print (cont)
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
@@ -42,39 +40,39 @@ DETALHAMENTO DOS MISCONCEPTIONS
 ▶ G4 — Funções/variáveis com nomes não significativos
   Ocorrências: 5
 
-  [1] Linha 3: Variável 're' com nome muito curto (≤4 chars)
-      Trecho  : re = ...
+  [1] Linha 2: Variável 'v' com nome muito curto (≤4 chars)
+      Trecho  : v = ...
       Contexto:
-               2 | 
-        >>>    3 | re = 307
-               4 | disc= array(eval(input()))
+               1 | from numpy import*
+        >>>    2 | v = array(eval(input("Insira os pesos dos levantamentos ")))
+               3 | i = 0
 
-  [2] Linha 4: Variável 'disc' com nome muito curto (≤4 chars)
-      Trecho  : disc = ...
-      Contexto:
-               3 | re = 307
-        >>>    4 | disc= array(eval(input()))
-               5 | i=0
-
-  [3] Linha 5: Variável 'i' com nome muito curto (≤4 chars)
+  [2] Linha 3: Variável 'i' com nome muito curto (≤4 chars)
       Trecho  : i = ...
       Contexto:
-               4 | disc= array(eval(input()))
-        >>>    5 | i=0
-               6 | c=0
+               2 | v = array(eval(input("Insira os pesos dos levantamentos ")))
+        >>>    3 | i = 0
+               4 | cont = 0
 
-  [4] Linha 6: Variável 'c' com nome muito curto (≤4 chars)
-      Trecho  : c = ...
+  [3] Linha 4: Variável 'cont' com nome muito curto (≤4 chars)
+      Trecho  : cont = ...
       Contexto:
-               5 | i=0
-        >>>    6 | c=0
-               7 | while (i<size(disc)):
+               3 | i = 0
+        >>>    4 | cont = 0
+               5 | while (i < size(v)):
 
-  [5] Linha 9: Variável 'c' com nome muito curto (≤4 chars)
-      Trecho  : c = ...
+  [4] Linha 8: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
       Contexto:
-               8 | 	if (disc[i]>re):
-        >>>    9 | 		c = c+1
-              10 | 	i+=1
+               7 | 		cont = cont + 1
+        >>>    8 | 	i = i + 1
+               9 | print(307)
+
+  [5] Linha 7: Variável 'cont' com nome muito curto (≤4 chars)
+      Trecho  : cont = ...
+      Contexto:
+               6 | 	if (v[i] > 307):
+        >>>    7 | 		cont = cont + 1
+               8 | 	i = i + 1
 
 ======================================================================

@@ -2,11 +2,11 @@
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
 Arquivo     : 1269_1641.log
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2018_1_v1.81\2018-1\187\users\3190\executions\1269_1641.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2018_1_v1.81\2018-1\187\users\3191\executions\1269_1641.log
 Assessment  : 1269
 Título      : TP 6: Estrutura de Repetição por Contagem (for)
 Questão     : 1641
-Aluno       : 3190
+Aluno       : 3191
 Grupo       : TP 06
 Significado : Estrutura de Repetição por Contagem
 Total MCs   : 2
@@ -16,23 +16,20 @@ Total MCs   : 2
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | from numpy import* 
-     2 | vet = array(eval(input("Insira a quantidade de alunos: ")))
-     3 | 
-     4 | c = 0 
-     5 | 
-     6 | for i in vet: 
-     7 | 	if i%3==0:
-     8 | 		c = c + 1 
-     9 | print(c)
-    10 | 
-    11 | v = zeros(c,dtype=int)
-    12 | k = 1
-    13 | for i in range(1, size(vet)):
-    14 | 	if i%3==0:
-    15 | 		k = k + 1 
-    16 | 		v = v + [k]
-    17 | 	print(v)
+     1 | from numpy import*
+     2 | v = array(eval(input('Digite um vetor:')))
+     3 | t = 0 #total
+     4 | for i in v:
+     5 | 	if i % 3 == 0:
+     6 | 		t += 1
+     7 | print(t)
+     8 | s = zeros(t, dtype=int)
+     9 | j = 0
+    10 | for k in range(size(v)):
+    11 | 	if v[k] %3 ==0:
+    12 | 		s[j] += k
+    13 | 		j += 1
+    14 | print(s)
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
@@ -45,55 +42,34 @@ DETALHAMENTO DOS MISCONCEPTIONS
       Trecho  : —
 
 ▶ G4 — Funções/variáveis com nomes não significativos
-  Ocorrências: 7
+  Ocorrências: 4
 
-  [1] Linha 2: Variável 'vet' com nome muito curto (≤4 chars)
-      Trecho  : vet = ...
-      Contexto:
-               1 | from numpy import* 
-        >>>    2 | vet = array(eval(input("Insira a quantidade de alunos: ")))
-               3 | 
-
-  [2] Linha 4: Variável 'c' com nome muito curto (≤4 chars)
-      Trecho  : c = ...
-      Contexto:
-               3 | 
-        >>>    4 | c = 0 
-               5 | 
-
-  [3] Linha 11: Variável 'v' com nome muito curto (≤4 chars)
+  [1] Linha 2: Variável 'v' com nome muito curto (≤4 chars)
       Trecho  : v = ...
       Contexto:
-              10 | 
-        >>>   11 | v = zeros(c,dtype=int)
-              12 | k = 1
+               1 | from numpy import*
+        >>>    2 | v = array(eval(input('Digite um vetor:')))
+               3 | t = 0 #total
 
-  [4] Linha 12: Variável 'k' com nome muito curto (≤4 chars)
-      Trecho  : k = ...
+  [2] Linha 3: Variável 't' com nome muito curto (≤4 chars)
+      Trecho  : t = ...
       Contexto:
-              11 | v = zeros(c,dtype=int)
-        >>>   12 | k = 1
-              13 | for i in range(1, size(vet)):
+               2 | v = array(eval(input('Digite um vetor:')))
+        >>>    3 | t = 0 #total
+               4 | for i in v:
 
-  [5] Linha 8: Variável 'c' com nome muito curto (≤4 chars)
-      Trecho  : c = ...
+  [3] Linha 8: Variável 's' com nome muito curto (≤4 chars)
+      Trecho  : s = ...
       Contexto:
-               7 | 	if i%3==0:
-        >>>    8 | 		c = c + 1 
-               9 | print(c)
+               7 | print(t)
+        >>>    8 | s = zeros(t, dtype=int)
+               9 | j = 0
 
-  [6] Linha 15: Variável 'k' com nome muito curto (≤4 chars)
-      Trecho  : k = ...
+  [4] Linha 9: Variável 'j' com nome muito curto (≤4 chars)
+      Trecho  : j = ...
       Contexto:
-              14 | 	if i%3==0:
-        >>>   15 | 		k = k + 1 
-              16 | 		v = v + [k]
-
-  [7] Linha 16: Variável 'v' com nome muito curto (≤4 chars)
-      Trecho  : v = ...
-      Contexto:
-              15 | 		k = k + 1 
-        >>>   16 | 		v = v + [k]
-              17 | 	print(v)
+               8 | s = zeros(t, dtype=int)
+        >>>    9 | j = 0
+              10 | for k in range(size(v)):
 
 ======================================================================

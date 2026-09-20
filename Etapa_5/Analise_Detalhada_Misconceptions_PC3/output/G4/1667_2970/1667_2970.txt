@@ -2,11 +2,11 @@
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
 Arquivo     : 1667_2970.log
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2019_1_v1.81\2019-1\223\users\4427\executions\1667_2970.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2019_1_v1.81\2019-1\223\users\4180\executions\1667_2970.log
 Assessment  : 1667
 Título      : TP2 - Estrutura Condicional Simples e Composta
 Questão     : 2970
-Aluno       : 4427
+Aluno       : 4180
 Grupo       : TP 02
 Significado : Estrutura Condicional Simples e Composta
 Total MCs   : 1
@@ -16,62 +16,52 @@ Total MCs   : 1
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | t=int(input("Quanto tempo em meses? "))
-     2 | #Digitar as variaveis de entrada
-     3 | Qf=1000000 + 42000
-     4 | Q0=1500
-     5 | Q=Qf/Q0
+     1 | t = float(input( "Tempo de Investimento: " ))
+     2 | Qf = 1500*t
+     3 | Qi = 1500
+     4 | 
+     5 | from math import* 
      6 | 
-     7 | i=float(Q**(1/t))-1
+     7 | i = (sqrt(Qf/Qi**(1/t))-1)
      8 | 
-     9 | if i <= 0.01:
-    10 |  	imprima = "Real"
-    11 | 
+     9 | if ( i <= (0.01)):
+    10 | 	print("Real")
+    11 | 	
     12 | else:
-    13 | 	imprima = "Irreal"
-    14 | 
-    15 | print (i)
-    16 | print (imprima)
+    13 | 	print("Irreal")
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
 ----------------------------------------------------------------------
 
 ▶ G4 — Funções/variáveis com nomes não significativos
-  Ocorrências: 5
+  Ocorrências: 4
 
   [1] Linha 1: Variável 't' com nome muito curto (≤4 chars)
       Trecho  : t = ...
       Contexto:
-        >>>    1 | t=int(input("Quanto tempo em meses? "))
-               2 | #Digitar as variaveis de entrada
+        >>>    1 | t = float(input( "Tempo de Investimento: " ))
+               2 | Qf = 1500*t
 
-  [2] Linha 3: Variável 'Qf' com nome muito curto (≤4 chars)
+  [2] Linha 2: Variável 'Qf' com nome muito curto (≤4 chars)
       Trecho  : Qf = ...
       Contexto:
-               2 | #Digitar as variaveis de entrada
-        >>>    3 | Qf=1000000 + 42000
-               4 | Q0=1500
+               1 | t = float(input( "Tempo de Investimento: " ))
+        >>>    2 | Qf = 1500*t
+               3 | Qi = 1500
 
-  [3] Linha 4: Variável 'Q0' com nome muito curto (≤4 chars)
-      Trecho  : Q0 = ...
+  [3] Linha 3: Variável 'Qi' com nome muito curto (≤4 chars)
+      Trecho  : Qi = ...
       Contexto:
-               3 | Qf=1000000 + 42000
-        >>>    4 | Q0=1500
-               5 | Q=Qf/Q0
+               2 | Qf = 1500*t
+        >>>    3 | Qi = 1500
+               4 | 
 
-  [4] Linha 5: Variável 'Q' com nome muito curto (≤4 chars)
-      Trecho  : Q = ...
-      Contexto:
-               4 | Q0=1500
-        >>>    5 | Q=Qf/Q0
-               6 | 
-
-  [5] Linha 7: Variável 'i' com nome muito curto (≤4 chars)
+  [4] Linha 7: Variável 'i' com nome muito curto (≤4 chars)
       Trecho  : i = ...
       Contexto:
                6 | 
-        >>>    7 | i=float(Q**(1/t))-1
+        >>>    7 | i = (sqrt(Qf/Qi**(1/t))-1)
                8 | 
 
 ======================================================================

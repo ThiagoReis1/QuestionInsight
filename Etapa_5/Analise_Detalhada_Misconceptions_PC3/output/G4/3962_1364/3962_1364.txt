@@ -2,11 +2,11 @@
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
 Arquivo     : 3962_1364.log
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2022_1_v1.81\2022-1\443\users\7592\executions\3962_1364.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2022_1_v1.81\2022-1\443\users\7584\executions\3962_1364.log
 Assessment  : 3962
 Título      : TP 01: Variáveis e Estrutura Sequencial
 Questão     : 1364
-Aluno       : 7592
+Aluno       : 7584
 Grupo       : TP 01
 Significado : Variáveis e Estrutura Sequencial
 Total MCs   : 1
@@ -16,15 +16,14 @@ Total MCs   : 1
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | from math import asin, pi
-     2 | 
-     3 | a = float(input("velocidade inicial"))
-     4 | d = float(input("distancia"))
+     1 | from math import *
+     2 | v0 = float(input("Qual a velocidade inicial da flecha ao sair do arco? "))
+     3 | d = float(input("Qual a distancia de voce e um determinado Falmer? "))
+     4 | 
      5 | g = 9.8
-     6 | 
-     7 | x = asin( d * (g/(a**2))) * (90/pi)
-     8 | 
-     9 | print(round(x, 2))
+     6 | ang = ((asin(d * (g/(v0 **2)))) * (90/pi))
+     7 | 
+     8 | print(round(ang, 2))
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
@@ -33,32 +32,32 @@ DETALHAMENTO DOS MISCONCEPTIONS
 ▶ G4 — Funções/variáveis com nomes não significativos
   Ocorrências: 4
 
-  [1] Linha 3: Variável 'a' com nome muito curto (≤4 chars)
-      Trecho  : a = ...
+  [1] Linha 2: Variável 'v0' com nome muito curto (≤4 chars)
+      Trecho  : v0 = ...
       Contexto:
-               2 | 
-        >>>    3 | a = float(input("velocidade inicial"))
-               4 | d = float(input("distancia"))
+               1 | from math import *
+        >>>    2 | v0 = float(input("Qual a velocidade inicial da flecha ao sair do arco? "))
+               3 | d = float(input("Qual a distancia de voce e um determinado Falmer? "))
 
-  [2] Linha 4: Variável 'd' com nome muito curto (≤4 chars)
+  [2] Linha 3: Variável 'd' com nome muito curto (≤4 chars)
       Trecho  : d = ...
       Contexto:
-               3 | a = float(input("velocidade inicial"))
-        >>>    4 | d = float(input("distancia"))
-               5 | g = 9.8
+               2 | v0 = float(input("Qual a velocidade inicial da flecha ao sair do arco? "))
+        >>>    3 | d = float(input("Qual a distancia de voce e um determinado Falmer? "))
+               4 | 
 
   [3] Linha 5: Variável 'g' com nome muito curto (≤4 chars)
       Trecho  : g = ...
       Contexto:
-               4 | d = float(input("distancia"))
+               4 | 
         >>>    5 | g = 9.8
-               6 | 
+               6 | ang = ((asin(d * (g/(v0 **2)))) * (90/pi))
 
-  [4] Linha 7: Variável 'x' com nome muito curto (≤4 chars)
-      Trecho  : x = ...
+  [4] Linha 6: Variável 'ang' com nome muito curto (≤4 chars)
+      Trecho  : ang = ...
       Contexto:
-               6 | 
-        >>>    7 | x = asin( d * (g/(a**2))) * (90/pi)
-               8 | 
+               5 | g = 9.8
+        >>>    6 | ang = ((asin(d * (g/(v0 **2)))) * (90/pi))
+               7 | 
 
 ======================================================================

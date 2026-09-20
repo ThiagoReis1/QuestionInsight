@@ -2,11 +2,11 @@
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
 Arquivo     : 5020_6571.log
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2023_1_v1.81\2023-1\527\users\8767\executions\5020_6571.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2023_1_v1.81\2023-1\527\users\8816\executions\5020_6571.log
 Assessment  : 5020
 Título      : TP3: Est. Condicional Encadeada
 Questão     : 6571
-Aluno       : 8767
+Aluno       : 8816
 Grupo       : TP 03
 Significado : Estrutura Condicional Encadeada
 Total MCs   : 1
@@ -16,53 +16,58 @@ Total MCs   : 1
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | p= float(input())
+     1 | peso = float(input("Peso do pacote: "))
      2 | 
-     3 | if (p < 5):
-     4 | 	tf= 3.75 + 10
-     5 | 	print("total= ",round(tf,2))
-     6 | elif (p == 5):
-     7 | 	tf= 4.75 + 10 
-     8 | 	print("total= ",round(tf,2))
-     9 | else:
-    10 | 	tf= 5.75 + 10 
-    11 | 	print("total= ",round (tf,2))
+     3 | taxa = 10
+     4 | 
+     5 | if peso < 5:
+     6 | 	var = taxa + 3.75
+     7 | 	
+     8 | elif peso > 5:
+     9 | 	var = taxa + 5.75
+    10 | 	
+    11 | else:
+    12 | 	var = taxa + 4.75
+    13 | 	
+    14 | print("total=",round(var,2))
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
 ----------------------------------------------------------------------
 
 ▶ G4 — Funções/variáveis com nomes não significativos
-  Ocorrências: 4
+  Ocorrências: 5
 
-  [1] Linha 1: Variável 'p' com nome muito curto (≤4 chars)
-      Trecho  : p = ...
+  [1] Linha 1: Variável 'peso' com nome muito curto (≤4 chars)
+      Trecho  : peso = ...
       Contexto:
-        >>>    1 | p= float(input())
+        >>>    1 | peso = float(input("Peso do pacote: "))
                2 | 
 
-  [2] Linha 4: Variável 'tf' com nome muito curto (≤4 chars)
-      Trecho  : tf = ...
+  [2] Linha 3: Variável 'taxa' com nome muito curto (≤4 chars)
+      Trecho  : taxa = ...
       Contexto:
-               3 | if (p < 5):
-        >>>    4 | 	tf= 3.75 + 10
-               5 | 	print("total= ",round(tf,2))
+               2 | 
+        >>>    3 | taxa = 10
+               4 | 
 
-  [3] Linha 7: Variável 'tf' com nome muito curto (≤4 chars)
-      Trecho  : tf = ...
+  [3] Linha 6: Variável 'var' com nome muito curto (≤4 chars)
+      Trecho  : var = ...
       Contexto:
-               6 | elif (p == 5):
-        >>>    7 | 	tf= 4.75 + 10 
-               8 | 	print("total= ",round(tf,2))
+               5 | if peso < 5:
+        >>>    6 | 	var = taxa + 3.75
+               7 | 	
 
-  [4] Linha 10: Variável 'tf' com nome muito curto (≤4 chars)
-      Trecho  : tf = ...
+  [4] Linha 9: Variável 'var' com nome muito curto (≤4 chars)
+      Trecho  : var = ...
       Contexto:
-               9 | else:
-        >>>   10 | 	tf= 5.75 + 10 
-              11 | 	print("total= ",round (tf,2))
+               8 | elif peso > 5:
+        >>>    9 | 	var = taxa + 5.75
+              10 | 	
 
-======================================================================to:
+  [5] Linha 12: Variável 'var' com nome muito curto (≤4 chars)
+      Trecho  : var = ...
+      Contexto:
               11 | else:
         >>>   12 | 	var = taxa + 4.75
               13 | 	

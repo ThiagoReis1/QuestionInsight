@@ -2,11 +2,11 @@
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
 Arquivo     : 5011_6108.log
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2023_1_v1.81\2023-1\529\users\8645\executions\5011_6108.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2023_1_v1.81\2023-1\529\users\8635\executions\5011_6108.log
 Assessment  : 5011
 Título      : TP3: Est. Condicional Encadeada
 Questão     : 6108
-Aluno       : 8645
+Aluno       : 8635
 Grupo       : TP 03
 Significado : Estrutura Condicional Encadeada
 Total MCs   : 2
@@ -16,18 +16,17 @@ Total MCs   : 2
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | comb=float(input("quantidade de combustivel: "))
-     2 | 
-     3 | if comb < 17.5:
-     4 | 	t = comb + 1.5
-     5 | elif comb >= 17.5 and comb < 35.0:
-     6 | 	t = comb + 2.3
-     7 | elif comb >= 35.0 and comb < 50.0:
-     8 | 	t = comb + 3.3
+     1 | qt = int(input("quantidade de combustivel: "))
+     2 | msg = 0
+     3 | if qt < 17.5:
+     4 | 	msg = qt + 1.5
+     5 | elif qt < 35.0 and qt >= 17.5:
+     6 | 	msg = qt + 2.3
+     7 | elif qt < 50.0 and qt >= 35.0:
+     8 | 	msg = qt + 3.3
      9 | else:
-    10 | 	t = comb + 4.7
-    11 | 	
-    12 | print(round(t, 1))	
+    10 | 	msg = qt + 4.7
+    11 | print(round(msg, 1))	
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
@@ -40,40 +39,47 @@ DETALHAMENTO DOS MISCONCEPTIONS
       Trecho  : —
 
 ▶ G4 — Funções/variáveis com nomes não significativos
-  Ocorrências: 5
+  Ocorrências: 6
 
-  [1] Linha 1: Variável 'comb' com nome muito curto (≤4 chars)
-      Trecho  : comb = ...
+  [1] Linha 1: Variável 'qt' com nome muito curto (≤4 chars)
+      Trecho  : qt = ...
       Contexto:
-        >>>    1 | comb=float(input("quantidade de combustivel: "))
-               2 | 
+        >>>    1 | qt = int(input("quantidade de combustivel: "))
+               2 | msg = 0
 
-  [2] Linha 4: Variável 't' com nome muito curto (≤4 chars)
-      Trecho  : t = ...
+  [2] Linha 2: Variável 'msg' com nome muito curto (≤4 chars)
+      Trecho  : msg = ...
       Contexto:
-               3 | if comb < 17.5:
-        >>>    4 | 	t = comb + 1.5
-               5 | elif comb >= 17.5 and comb < 35.0:
+               1 | qt = int(input("quantidade de combustivel: "))
+        >>>    2 | msg = 0
+               3 | if qt < 17.5:
 
-  [3] Linha 6: Variável 't' com nome muito curto (≤4 chars)
-      Trecho  : t = ...
+  [3] Linha 4: Variável 'msg' com nome muito curto (≤4 chars)
+      Trecho  : msg = ...
       Contexto:
-               5 | elif comb >= 17.5 and comb < 35.0:
-        >>>    6 | 	t = comb + 2.3
-               7 | elif comb >= 35.0 and comb < 50.0:
+               3 | if qt < 17.5:
+        >>>    4 | 	msg = qt + 1.5
+               5 | elif qt < 35.0 and qt >= 17.5:
 
-  [4] Linha 8: Variável 't' com nome muito curto (≤4 chars)
-      Trecho  : t = ...
+  [4] Linha 6: Variável 'msg' com nome muito curto (≤4 chars)
+      Trecho  : msg = ...
       Contexto:
-               7 | elif comb >= 35.0 and comb < 50.0:
-        >>>    8 | 	t = comb + 3.3
+               5 | elif qt < 35.0 and qt >= 17.5:
+        >>>    6 | 	msg = qt + 2.3
+               7 | elif qt < 50.0 and qt >= 35.0:
+
+  [5] Linha 8: Variável 'msg' com nome muito curto (≤4 chars)
+      Trecho  : msg = ...
+      Contexto:
+               7 | elif qt < 50.0 and qt >= 35.0:
+        >>>    8 | 	msg = qt + 3.3
                9 | else:
 
-  [5] Linha 10: Variável 't' com nome muito curto (≤4 chars)
-      Trecho  : t = ...
+  [6] Linha 10: Variável 'msg' com nome muito curto (≤4 chars)
+      Trecho  : msg = ...
       Contexto:
                9 | else:
-        >>>   10 | 	t = comb + 4.7
-              11 | 	
+        >>>   10 | 	msg = qt + 4.7
+              11 | print(round(msg, 1))	
 
 ======================================================================

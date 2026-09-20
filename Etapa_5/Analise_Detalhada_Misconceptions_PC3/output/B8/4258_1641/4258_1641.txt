@@ -2,11 +2,11 @@
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
 Arquivo     : 4258_1641.log
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2022_1_v1.81\2022-1\440\users\7665\executions\4258_1641.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2022_1_v1.81\2022-1\440\users\7510\executions\4258_1641.log
 Assessment  : 4258
 Título      : TP 6: Estrutura de Repetição por Contagem (for)
 Questão     : 1641
-Aluno       : 7665
+Aluno       : 7510
 Grupo       : TP 06
 Significado : Estrutura de Repetição por Contagem
 Total MCs   : 1
@@ -16,23 +16,18 @@ Total MCs   : 1
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | from numpy import *
-     2 | 
-     3 | vetor = array(eval(input()))
+     1 | import numpy as np
+     2 | entrada = np.array(eval(input()))
+     3 | 
      4 | 
-     5 | cont=0
-     6 | 
-     7 | for i in range(size(vetor)):
-     8 | 	if vetor[i]%3==0:
-     9 | 		cont=cont+1
-    10 | final=zeros(cont, dtype=int)
-    11 | j=0
-    12 | for i in range(size(vetor)):
-    13 | 	if vetor[i]%3==0:
-    14 | 		final[j]=i
-    15 | 		j=j+1
-    16 | print(cont)
-    17 | print(final)
+     5 | indice = [] 
+     6 | cont = 0
+     7 | for i in range(len(entrada)):
+     8 | 	if entrada[i] % 3 == 0:
+     9 | 		indice.append(i)
+    10 | 		cont+=1
+    11 | print(cont)
+    12 | print(np.array(indice))
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS

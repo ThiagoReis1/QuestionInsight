@@ -2,11 +2,11 @@
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
 Arquivo     : 5877_3590.log
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2024_1_v1.81\2024-1\591\users\9771\executions\5877_3590.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2024_1_v1.81\2024-1\591\users\9848\executions\5877_3590.log
 Assessment  : 5877
 Título      : TP 5: Vetores e Strings
 Questão     : 3590
-Aluno       : 9771
+Aluno       : 9848
 Grupo       : TP 05
 Significado : Vetores e Strings
 Total MCs   : 2
@@ -18,24 +18,27 @@ CÓDIGO FONTE
 ----------------------------------------------------------------------
      1 | from numpy import *
      2 | 
-     3 | face = array(eval(input('insira a pontuacao total: ')))
+     3 | dados = array(eval(input('quais foram as pontuacoes')))
      4 | 
      5 | i = 0
-     6 | pontos = 0
-     7 | while i < size(face):
-     8 | 	if face[i] == 1:
-     9 | 		pontos += 10
-    10 | 	elif face[i] == 2:
-    11 | 		pontos += 5
-    12 | 	elif face[i] == 4:
-    13 | 		pontos += 5
-    14 | 	elif face[i] == 5:
-    15 | 		pontos += 20
-    16 | 	elif face[i] == 6:
-    17 | 		pontos += 10
-    18 | 	i += 1
-    19 | 		
-    20 | print(round(pontos))
+     6 | pts = 0
+     7 | 
+     8 | while i < size(dados):
+     9 | 	if dados[i] == 1:
+    10 | 		pts = pts + 10
+    11 | 	elif dados[i] == 2:
+    12 | 		pts = pts + 5
+    13 | 	elif dados[i] == 3:
+    14 | 		pts = pts + 0
+    15 | 	elif dados[i] == 4:
+    16 | 		pts = pts + 5
+    17 | 	elif dados[i] == 5:
+    18 | 		pts = pts + 20
+    19 | 	elif dados [i] == 6:
+    20 | 		pts = pts + 10
+    21 | 	i = i + 1
+    22 | 	
+    23 | print(round(pts, 2))
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
@@ -44,35 +47,35 @@ DETALHAMENTO DOS MISCONCEPTIONS
 ▶ B4 — Comandos repetidos dentro de blocos if-elif-else
   Ocorrências: 3
 
-  [1] Linha 12: Bloco idêntico ao da linha 10
-      Trecho  : pontos += 5
+  [1] Linha 15: Bloco idêntico ao da linha 11
+      Trecho  : pts = pts + 5
       Contexto:
-              11 | 		pontos += 5
-        >>>   12 | 	elif face[i] == 4:
-              13 | 		pontos += 5
+              14 | 		pts = pts + 0
+        >>>   15 | 	elif dados[i] == 4:
+              16 | 		pts = pts + 5
 
-  [2] Linha 16: Bloco idêntico ao da linha 8
-      Trecho  : pontos += 10
+  [2] Linha 19: Bloco idêntico ao da linha 9
+      Trecho  : pts = pts + 10
       Contexto:
-              15 | 		pontos += 20
-        >>>   16 | 	elif face[i] == 6:
-              17 | 		pontos += 10
+              18 | 		pts = pts + 20
+        >>>   19 | 	elif dados [i] == 6:
+              20 | 		pts = pts + 10
 
-  [3] Linha 12: Bloco idêntico ao da linha 10
-      Trecho  : pontos += 5
+  [3] Linha 15: Bloco idêntico ao da linha 11
+      Trecho  : pts = pts + 5
       Contexto:
-              11 | 		pontos += 5
-        >>>   12 | 	elif face[i] == 4:
-              13 | 		pontos += 5
+              14 | 		pts = pts + 0
+        >>>   15 | 	elif dados[i] == 4:
+              16 | 		pts = pts + 5
 
 ▶ B8 — Não utilização de elif/else
   Ocorrências: 1
 
-  [1] Linha 14: Cadeia if/elif sem bloco else final
-      Trecho  : if ... (linha 14) / elif ... sem else
+  [1] Linha 17: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 17) / elif ... sem else
       Contexto:
-              13 | 		pontos += 5
-        >>>   14 | 	elif face[i] == 5:
-              15 | 		pontos += 20
+              16 | 		pts = pts + 5
+        >>>   17 | 	elif dados[i] == 5:
+              18 | 		pts = pts + 20
 
 ======================================================================

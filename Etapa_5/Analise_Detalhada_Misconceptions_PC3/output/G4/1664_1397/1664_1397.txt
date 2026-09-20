@@ -2,11 +2,11 @@
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
 Arquivo     : 1664_1397.log
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2019_1_v1.81\2019-1\226\users\4143\executions\1664_1397.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2019_1_v1.81\2019-1\226\users\4163\executions\1664_1397.log
 Assessment  : 1664
 Título      : TP2 - Estrutura Condicional Simples e Composta
 Questão     : 1397
-Aluno       : 4143
+Aluno       : 4163
 Grupo       : TP 02
 Significado : Estrutura Condicional Simples e Composta
 Total MCs   : 1
@@ -16,52 +16,57 @@ Total MCs   : 1
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | # Area fertilizada de 10.000 =< R$ 5,00
-     2 | # area fertilizada for mais de 10.000> então pros 10.000 é 5 pro resto é 4
-     3 | a = float(input("Area a ser fertilizada:"))
+     1 | a = int(input("tamanho da area: "))
+     2 | b = a-10000 
+     3 | c = 10000
      4 | 
-     5 | if (a <= 10000):
-     6 | 	eq = a * 5
-     7 | 	print(round(eq,2))
+     5 | 
+     6 | if a<=10000:
+     7 | 	msg = (5*a)
      8 | else:
-     9 | 	eq2 = a - 10000
-    10 | 	eq1 = (10000 * 5) + (eq2 * 4) 
-    11 | 	
-    12 | 	print(round(eq1,2))
+     9 | 	msg =(c*5+b*4) 
+    10 | 	
+    11 | print	(msg)
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
 ----------------------------------------------------------------------
 
 ▶ G4 — Funções/variáveis com nomes não significativos
-  Ocorrências: 4
+  Ocorrências: 5
 
-  [1] Linha 3: Variável 'a' com nome muito curto (≤4 chars)
+  [1] Linha 1: Variável 'a' com nome muito curto (≤4 chars)
       Trecho  : a = ...
       Contexto:
-               2 | # area fertilizada for mais de 10.000> então pros 10.000 é 5 pro resto é 4
-        >>>    3 | a = float(input("Area a ser fertilizada:"))
+        >>>    1 | a = int(input("tamanho da area: "))
+               2 | b = a-10000 
+
+  [2] Linha 2: Variável 'b' com nome muito curto (≤4 chars)
+      Trecho  : b = ...
+      Contexto:
+               1 | a = int(input("tamanho da area: "))
+        >>>    2 | b = a-10000 
+               3 | c = 10000
+
+  [3] Linha 3: Variável 'c' com nome muito curto (≤4 chars)
+      Trecho  : c = ...
+      Contexto:
+               2 | b = a-10000 
+        >>>    3 | c = 10000
                4 | 
 
-  [2] Linha 6: Variável 'eq' com nome muito curto (≤4 chars)
-      Trecho  : eq = ...
+  [4] Linha 7: Variável 'msg' com nome muito curto (≤4 chars)
+      Trecho  : msg = ...
       Contexto:
-               5 | if (a <= 10000):
-        >>>    6 | 	eq = a * 5
-               7 | 	print(round(eq,2))
+               6 | if a<=10000:
+        >>>    7 | 	msg = (5*a)
+               8 | else:
 
-  [3] Linha 9: Variável 'eq2' com nome muito curto (≤4 chars)
-      Trecho  : eq2 = ...
+  [5] Linha 9: Variável 'msg' com nome muito curto (≤4 chars)
+      Trecho  : msg = ...
       Contexto:
                8 | else:
-        >>>    9 | 	eq2 = a - 10000
-              10 | 	eq1 = (10000 * 5) + (eq2 * 4) 
-
-  [4] Linha 10: Variável 'eq1' com nome muito curto (≤4 chars)
-      Trecho  : eq1 = ...
-      Contexto:
-               9 | 	eq2 = a - 10000
-        >>>   10 | 	eq1 = (10000 * 5) + (eq2 * 4) 
-              11 | 	
+        >>>    9 | 	msg =(c*5+b*4) 
+              10 | 	
 
 ======================================================================

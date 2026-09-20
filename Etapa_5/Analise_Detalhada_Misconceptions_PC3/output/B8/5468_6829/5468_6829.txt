@@ -2,11 +2,11 @@
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
 Arquivo     : 5468_6829.log
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2023_2_v1.81\2023-2\557\users\4816\executions\5468_6829.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2023_2_v1.81\2023-2\557\users\9147\executions\5468_6829.log
 Assessment  : 5468
 Título      : TP 5: Vetores e Strings
 Questão     : 6829
-Aluno       : 4816
+Aluno       : 9147
 Grupo       : TP 05
 Significado : Vetores e Strings
 Total MCs   : 1
@@ -16,20 +16,28 @@ Total MCs   : 1
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | produto = input().upper()
+     1 | vetors = input("insira o produto (A) para acougue, (L) para laticinios e (P) para padaria: ").upper()
      2 | 
      3 | i = 0
-     4 | soma = 0
-     5 | 
-     6 | while i < len(produto):
-     7 | 	if produto[i] == 'A':
-     8 | 		soma += 19.9
-     9 | 	elif produto[i] == 'L':
-    10 | 		soma += 3.5
-    11 | 	elif produto[i] == 'P':
-    12 | 		soma += 4.25
-    13 | 	i += 1
-    14 | print(round(soma,2))
+     4 | preco = 0
+     5 | qtdA = 0
+     6 | qtdL = 0
+     7 | qtdP = 0
+     8 | 
+     9 | while	i < len(vetors):
+    10 | 	if	vetors[i] == "A":
+    11 | 		preco += 19.90
+    12 | 		qtdA += 1
+    13 | 	elif	vetors[i] == "L":
+    14 | 		preco += 3.50
+    15 | 		qtdL += 1
+    16 | 	elif	vetors[i] == "P":
+    17 | 		preco += 4.25
+    18 | 		qtdP += 1
+    19 | 		
+    20 | 	i += 1
+    21 | 	
+    22 | print(round(preco, 2))
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
@@ -38,11 +46,11 @@ DETALHAMENTO DOS MISCONCEPTIONS
 ▶ B8 — Não utilização de elif/else
   Ocorrências: 1
 
-  [1] Linha 9: Cadeia if/elif sem bloco else final
-      Trecho  : if ... (linha 9) / elif ... sem else
+  [1] Linha 13: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 13) / elif ... sem else
       Contexto:
-               8 | 		soma += 19.9
-        >>>    9 | 	elif produto[i] == 'L':
-              10 | 		soma += 3.5
+              12 | 		qtdA += 1
+        >>>   13 | 	elif	vetors[i] == "L":
+              14 | 		preco += 3.50
 
 ======================================================================

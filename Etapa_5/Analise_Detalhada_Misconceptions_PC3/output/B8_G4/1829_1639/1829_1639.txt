@@ -2,11 +2,11 @@
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
 Arquivo     : 1829_1639.log
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2019_1_v1.81\2019-1\221\users\4102\executions\1829_1639.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2019_1_v1.81\2019-1\221\users\4118\executions\1829_1639.log
 Assessment  : 1829
 Título      : TP6: Repetição por contagem
 Questão     : 1639
-Aluno       : 4102
+Aluno       : 4118
 Grupo       : TP 06
 Significado : Estrutura de Repetição por Contagem
 Total MCs   : 2
@@ -17,19 +17,20 @@ Total MCs   : 2
 CÓDIGO FONTE
 ----------------------------------------------------------------------
      1 | from numpy import*
-     2 | a = array(eval(input("Quantidade de alunos por turma: ")))
-     3 | c = 0
-     4 | for i in range(size(a)):
-     5 | 	if (a[i]%2 == 0):
-     6 | 		c = c + 1
-     7 | print(c)
-     8 | v = zeros(c, dtype=int)
-     9 | t = 0
-    10 | for i in range(size(a)):
-    11 | 	if (a[i]%2 == 0):
-    12 | 		v[t] = i
-    13 | 		t = t + 1
-    14 | print(v)
+     2 | t = array(eval(input("Aluno: ")))
+     3 | p = 0
+     4 | 
+     5 | for i in range(size(t)):
+     6 | 	if(t[i]%2 == 0):
+     7 | 		p += 1
+     8 | z = zeros(p, dtype = int)
+     9 | i = 0
+    10 | for ip in range(size(t)):
+    11 | 	if(t[ip]%2 == 0):
+    12 | 		z[i] = ip
+    13 | 		i += 1
+    14 | print(p)
+    15 | print(z)
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
@@ -42,48 +43,34 @@ DETALHAMENTO DOS MISCONCEPTIONS
       Trecho  : —
 
 ▶ G4 — Funções/variáveis com nomes não significativos
-  Ocorrências: 6
+  Ocorrências: 4
 
-  [1] Linha 2: Variável 'a' com nome muito curto (≤4 chars)
-      Trecho  : a = ...
+  [1] Linha 2: Variável 't' com nome muito curto (≤4 chars)
+      Trecho  : t = ...
       Contexto:
                1 | from numpy import*
-        >>>    2 | a = array(eval(input("Quantidade de alunos por turma: ")))
-               3 | c = 0
+        >>>    2 | t = array(eval(input("Aluno: ")))
+               3 | p = 0
 
-  [2] Linha 3: Variável 'c' com nome muito curto (≤4 chars)
-      Trecho  : c = ...
+  [2] Linha 3: Variável 'p' com nome muito curto (≤4 chars)
+      Trecho  : p = ...
       Contexto:
-               2 | a = array(eval(input("Quantidade de alunos por turma: ")))
-        >>>    3 | c = 0
-               4 | for i in range(size(a)):
+               2 | t = array(eval(input("Aluno: ")))
+        >>>    3 | p = 0
+               4 | 
 
-  [3] Linha 8: Variável 'v' com nome muito curto (≤4 chars)
-      Trecho  : v = ...
+  [3] Linha 8: Variável 'z' com nome muito curto (≤4 chars)
+      Trecho  : z = ...
       Contexto:
-               7 | print(c)
-        >>>    8 | v = zeros(c, dtype=int)
-               9 | t = 0
+               7 | 		p += 1
+        >>>    8 | z = zeros(p, dtype = int)
+               9 | i = 0
 
-  [4] Linha 9: Variável 't' com nome muito curto (≤4 chars)
-      Trecho  : t = ...
+  [4] Linha 9: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
       Contexto:
-               8 | v = zeros(c, dtype=int)
-        >>>    9 | t = 0
-              10 | for i in range(size(a)):
-
-  [5] Linha 6: Variável 'c' com nome muito curto (≤4 chars)
-      Trecho  : c = ...
-      Contexto:
-               5 | 	if (a[i]%2 == 0):
-        >>>    6 | 		c = c + 1
-               7 | print(c)
-
-  [6] Linha 13: Variável 't' com nome muito curto (≤4 chars)
-      Trecho  : t = ...
-      Contexto:
-              12 | 		v[t] = i
-        >>>   13 | 		t = t + 1
-              14 | print(v)
+               8 | z = zeros(p, dtype = int)
+        >>>    9 | i = 0
+              10 | for ip in range(size(t)):
 
 ======================================================================

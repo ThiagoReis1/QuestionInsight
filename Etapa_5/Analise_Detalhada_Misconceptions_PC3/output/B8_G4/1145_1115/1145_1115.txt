@@ -2,11 +2,11 @@
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
 Arquivo     : 1145_1115.log
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2018_1_v1.81\2018-1\181\users\3486\executions\1145_1115.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2018_1_v1.81\2018-1\181\users\3064\executions\1145_1115.log
 Assessment  : 1145
 Título      : TP 3 – Condicionais Encadeadas (if/elif)
 Questão     : 1115
-Aluno       : 3486
+Aluno       : 3064
 Grupo       : TP 03
 Significado : Estrutura Condicional Encadeada
 Total MCs   : 2
@@ -16,24 +16,23 @@ Total MCs   : 2
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | sa = float(input('salario atual:'))
-     2 | cod = int(input('digite o codigo:'))
-     3 | print('Entradas: R$ ', sa, 'e codigo',cod)
-     4 | if(sa>0)and(cod==101)or(cod==102)or(cod==103)or(cod==104):
-     5 | 	if(cod==101):
-     6 | 		x = ((0.80*sa)/100)+sa
-     7 | 		print('Novo salario: R$ ',round(x, 2))
-     8 | 	elif(cod==102):
-     9 | 		x = ((0.65*sa)/100)+sa
-    10 | 		print('Novo salario: R$ ',round(x, 2))
-    11 | 	elif(cod==103):
-    12 | 		x = ((0.60*sa)/100)+sa
-    13 | 		print('Novo salario: R$ ',round(x, 2))
-    14 | 	elif(cod==104):
-    15 | 		x = ((0.55*sa)/100)+sa
-    16 | 		print('Novo salario: R$ ',round(x, 2))
-    17 | else:
-    18 | 	print('Dados invalidos')
+     1 | x= float(input("Digite o salario atual: "))
+     2 | y= int(input("Digite o codigo do cargo: "))
+     3 | print("Entradas: R$",x,"e codigo",y)
+     4 | if (x<=0)or((y!=101)and(y!=102)and(y!=103)and(y!=104)):
+     5 | 	print("Dados invalidos")
+     6 | elif (y==103):
+     7 | 	z= (x*(0.006))+x
+     8 | 	print("Novo salario: R$",round(z,2))
+     9 | elif  (y==101):
+    10 | 	z= (x*(0.008))+x
+    11 | 	print("Novo salario: R$",round(z,2))	
+    12 | elif  (y==102):
+    13 | 	z= (x*(0.0065))+x
+    14 | 	print("Novo salario: R$",round(z,2))	
+    15 | elif  (y==104):
+    16 | 	z= (x*(0.0055))+x
+    17 | 	print("Novo salario: R$",round(z,2))	
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
@@ -42,55 +41,57 @@ DETALHAMENTO DOS MISCONCEPTIONS
 ▶ B8 — Não utilização de elif/else
   Ocorrências: 1
 
-  [1] Linha 11: Cadeia if/elif sem bloco else final
-      Trecho  : if ... (linha 11) / elif ... sem else
+  [1] Linha 12: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 12) / elif ... sem else
       Contexto:
-              10 | 		print('Novo salario: R$ ',round(x, 2))
-        >>>   11 | 	elif(cod==103):
-              12 | 		x = ((0.60*sa)/100)+sa
+              11 | 	print("Novo salario: R$",round(z,2))	
+        >>>   12 | elif  (y==102):
+              13 | 	z= (x*(0.0065))+x
 
 ▶ G4 — Funções/variáveis com nomes não significativos
   Ocorrências: 6
 
-  [1] Linha 1: Variável 'sa' com nome muito curto (≤4 chars)
-      Trecho  : sa = ...
-      Contexto:
-        >>>    1 | sa = float(input('salario atual:'))
-               2 | cod = int(input('digite o codigo:'))
-
-  [2] Linha 2: Variável 'cod' com nome muito curto (≤4 chars)
-      Trecho  : cod = ...
-      Contexto:
-               1 | sa = float(input('salario atual:'))
-        >>>    2 | cod = int(input('digite o codigo:'))
-               3 | print('Entradas: R$ ', sa, 'e codigo',cod)
-
-  [3] Linha 6: Variável 'x' com nome muito curto (≤4 chars)
+  [1] Linha 1: Variável 'x' com nome muito curto (≤4 chars)
       Trecho  : x = ...
       Contexto:
-               5 | 	if(cod==101):
-        >>>    6 | 		x = ((0.80*sa)/100)+sa
-               7 | 		print('Novo salario: R$ ',round(x, 2))
+        >>>    1 | x= float(input("Digite o salario atual: "))
+               2 | y= int(input("Digite o codigo do cargo: "))
 
-  [4] Linha 9: Variável 'x' com nome muito curto (≤4 chars)
-      Trecho  : x = ...
+  [2] Linha 2: Variável 'y' com nome muito curto (≤4 chars)
+      Trecho  : y = ...
       Contexto:
-               8 | 	elif(cod==102):
-        >>>    9 | 		x = ((0.65*sa)/100)+sa
-              10 | 		print('Novo salario: R$ ',round(x, 2))
+               1 | x= float(input("Digite o salario atual: "))
+        >>>    2 | y= int(input("Digite o codigo do cargo: "))
+               3 | print("Entradas: R$",x,"e codigo",y)
 
-  [5] Linha 12: Variável 'x' com nome muito curto (≤4 chars)
-      Trecho  : x = ...
+  [3] Linha 7: Variável 'z' com nome muito curto (≤4 chars)
+      Trecho  : z = ...
       Contexto:
-              11 | 	elif(cod==103):
-        >>>   12 | 		x = ((0.60*sa)/100)+sa
-              13 | 		print('Novo salario: R$ ',round(x, 2))
+               6 | elif (y==103):
+        >>>    7 | 	z= (x*(0.006))+x
+               8 | 	print("Novo salario: R$",round(z,2))
 
-  [6] Linha 15: Variável 'x' com nome muito curto (≤4 chars)
-      Trecho  : x = ...
+  [4] Linha 10: Variável 'z' com nome muito curto (≤4 chars)
+      Trecho  : z = ...
       Contexto:
-              14 | 	elif(cod==104):
-        >>>   15 | 		x = ((0.55*sa)/100)+sa
-              16 | 		print('Novo salario: R$ ',round(x, 2))
+               9 | elif  (y==101):
+        >>>   10 | 	z= (x*(0.008))+x
+              11 | 	print("Novo salario: R$",round(z,2))	
+
+  [5] Linha 13: Variável 'z' com nome muito curto (≤4 chars)
+      Trecho  : z = ...
+      Contexto:
+              12 | elif  (y==102):
+        >>>   13 | 	z= (x*(0.0065))+x
+              14 | 	print("Novo salario: R$",round(z,2))	
+
+  [6] Linha 16: Variável 'z' com nome muito curto (≤4 chars)
+      Trecho  : z = ...
+      Contexto:
+              15 | elif  (y==104):
+        >>>   16 | 	z= (x*(0.0055))+x
+              17 | 	print("Novo salario: R$",round(z,2))	
+
+======================================================================))
 
 ======================================================================

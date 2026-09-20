@@ -2,11 +2,11 @@
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
 Arquivo     : 1831_1647.log
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2019_1_v1.81\2019-1\223\users\4170\executions\1831_1647.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2019_1_v1.81\2019-1\223\users\4175\executions\1831_1647.log
 Assessment  : 1831
 Título      : TP6: Repetição por contagem
 Questão     : 1647
-Aluno       : 4170
+Aluno       : 4175
 Grupo       : TP 06
 Significado : Estrutura de Repetição por Contagem
 Total MCs   : 2
@@ -16,19 +16,26 @@ Total MCs   : 2
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | from numpy import*
-     2 | v = array(eval(input("Porcentagem de frequencia: ")))
-     3 | a = 0
-     4 | j = 0
-     5 | for i in range(size(v)):
-     6 | 	if(v[i]>=70):
-     7 | 		a= a+1
-     8 | print(a)		
-     9 | vet = zeros(a, dtype=int)
-    10 | for i in range(size(v)):
-    11 | 	if(v[i]>=70):
-    12 | 		j = j+1
-    13 | print(vet)		
+     1 | from numpy import *
+     2 | 
+     3 | x = array(eval(input()))
+     4 | 
+     5 | h = 0
+     6 | 
+     7 | for i in range(size(x)):
+     8 | 	if x[i] >= 70:
+     9 | 		h += 1
+    10 | 	
+    11 | a = zeros(h,dtype=int)
+    12 | b = 0
+    13 | 
+    14 | for i in range(size(x)):
+    15 | 	if x[i] >= 70:
+    16 | 		a[b] = i
+    17 | 		b += 1
+    18 | 		
+    19 | print(h)
+    20 | print(a)
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
@@ -41,48 +48,34 @@ DETALHAMENTO DOS MISCONCEPTIONS
       Trecho  : —
 
 ▶ G4 — Funções/variáveis com nomes não significativos
-  Ocorrências: 6
+  Ocorrências: 4
 
-  [1] Linha 2: Variável 'v' com nome muito curto (≤4 chars)
-      Trecho  : v = ...
+  [1] Linha 3: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
       Contexto:
-               1 | from numpy import*
-        >>>    2 | v = array(eval(input("Porcentagem de frequencia: ")))
-               3 | a = 0
+               2 | 
+        >>>    3 | x = array(eval(input()))
+               4 | 
 
-  [2] Linha 3: Variável 'a' com nome muito curto (≤4 chars)
+  [2] Linha 5: Variável 'h' com nome muito curto (≤4 chars)
+      Trecho  : h = ...
+      Contexto:
+               4 | 
+        >>>    5 | h = 0
+               6 | 
+
+  [3] Linha 11: Variável 'a' com nome muito curto (≤4 chars)
       Trecho  : a = ...
       Contexto:
-               2 | v = array(eval(input("Porcentagem de frequencia: ")))
-        >>>    3 | a = 0
-               4 | j = 0
+              10 | 	
+        >>>   11 | a = zeros(h,dtype=int)
+              12 | b = 0
 
-  [3] Linha 4: Variável 'j' com nome muito curto (≤4 chars)
-      Trecho  : j = ...
+  [4] Linha 12: Variável 'b' com nome muito curto (≤4 chars)
+      Trecho  : b = ...
       Contexto:
-               3 | a = 0
-        >>>    4 | j = 0
-               5 | for i in range(size(v)):
-
-  [4] Linha 9: Variável 'vet' com nome muito curto (≤4 chars)
-      Trecho  : vet = ...
-      Contexto:
-               8 | print(a)		
-        >>>    9 | vet = zeros(a, dtype=int)
-              10 | for i in range(size(v)):
-
-  [5] Linha 7: Variável 'a' com nome muito curto (≤4 chars)
-      Trecho  : a = ...
-      Contexto:
-               6 | 	if(v[i]>=70):
-        >>>    7 | 		a= a+1
-               8 | print(a)		
-
-  [6] Linha 12: Variável 'j' com nome muito curto (≤4 chars)
-      Trecho  : j = ...
-      Contexto:
-              11 | 	if(v[i]>=70):
-        >>>   12 | 		j = j+1
-              13 | print(vet)		
+              11 | a = zeros(h,dtype=int)
+        >>>   12 | b = 0
+              13 | 
 
 ======================================================================

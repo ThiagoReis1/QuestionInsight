@@ -2,11 +2,11 @@
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
 Arquivo     : 980_1650.log
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2017_2_v1.81\2017-2\160\users\2856\executions\980_1650.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2017_2_v1.81\2017-2\160\users\2859\executions\980_1650.log
 Assessment  : 980
 Título      : Trabalho Prático 06 – Repetição por contagem
 Questão     : 1650
-Aluno       : 2856
+Aluno       : 2859
 Grupo       : TP 06
 Significado : Estrutura de Repetição por Contagem
 Total MCs   : 2
@@ -16,20 +16,37 @@ Total MCs   : 2
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | from numpy import*
-     2 | x = input("x: ").split(',')
-     3 | v = zeros(5, dtype = int)
-     4 | if(x == "p"):
-     5 | 	v[0] = v[0] + 1
-     6 | elif(x == "c"):
-     7 | 	v[1] = v[1] + 1
-     8 | elif(x == "r"):
-     9 | 	v[2] = v[2] + 1
-    10 | elif(x == "l"):
-    11 | 	v[3] = v[3] + 1
-    12 | elif(x == "b"):
-    13 | 	v[4] = v[4] + 1
-    14 | print(v)
+     1 | from numpy import *
+     2 | v = input("Cores: ").upper().split(',')
+     3 | 
+     4 | cont = zeros(5, dtype=int)
+     5 | 
+     6 | c_p = 0
+     7 | c_c = 0
+     8 | c_r = 0
+     9 | c_l = 0
+    10 | c_b = 0
+    11 | 
+    12 | for i in v:
+    13 | 	if(i == 'P'):
+    14 | 		c_p = c_p + 1
+    15 | 	elif(i == 'C'):
+    16 | 		c_c = c_c + 1
+    17 | 	elif(i == 'R'):
+    18 | 		c_r = c_r + 1
+    19 | 	elif(i == 'L'):
+    20 | 		c_l = c_l + 1
+    21 | 	elif(i == 'B'):
+    22 | 		c_b = c_b + 1
+    23 | 
+    24 | cont[0] = c_p
+    25 | cont[1] = c_c
+    26 | cont[2] = c_r
+    27 | cont[3] = c_l
+    28 | cont[4] = c_b
+    29 | 
+    30 | print(max(cont))
+    31 | print(cont)
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
@@ -38,31 +55,22 @@ DETALHAMENTO DOS MISCONCEPTIONS
 ▶ B8 — Não utilização de elif/else
   Ocorrências: 1
 
-  [1] Linha 10: Cadeia if/elif sem bloco else final
-      Trecho  : if ... (linha 10) / elif ... sem else
+  [1] Linha 19: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 19) / elif ... sem else
       Contexto:
-               9 | 	v[2] = v[2] + 1
-        >>>   10 | elif(x == "l"):
-              11 | 	v[3] = v[3] + 1
+              18 | 		c_r = c_r + 1
+        >>>   19 | 	elif(i == 'L'):
+              20 | 		c_l = c_l + 1
 
 ▶ G4 — Funções/variáveis com nomes não significativos
-  Ocorrências: 2
+  Ocorrências: 12
 
-  [1] Linha 2: Variável 'x' com nome muito curto (≤4 chars)
-      Trecho  : x = ...
-      Contexto:
-               1 | from numpy import*
-        >>>    2 | x = input("x: ").split(',')
-               3 | v = zeros(5, dtype = int)
-
-  [2] Linha 3: Variável 'v' com nome muito curto (≤4 chars)
+  [1] Linha 2: Variável 'v' com nome muito curto (≤4 chars)
       Trecho  : v = ...
       Contexto:
-               2 | x = input("x: ").split(',')
-        >>>    3 | v = zeros(5, dtype = int)
-               4 | if(x == "p"):
-
-======================================================================     3 | 
+               1 | from numpy import *
+        >>>    2 | v = input("Cores: ").upper().split(',')
+               3 | 
 
   [2] Linha 4: Variável 'cont' com nome muito curto (≤4 chars)
       Trecho  : cont = ...

@@ -2,11 +2,11 @@
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
 Arquivo     : 4177_3589.log
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2022_1_v1.81\2022-1\445\users\7693\executions\4177_3589.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2022_1_v1.81\2022-1\445\users\7628\executions\4177_3589.log
 Assessment  : 4177
 Título      : TP 05: Vetores e Strings
 Questão     : 3589
-Aluno       : 7693
+Aluno       : 7628
 Grupo       : TP 05
 Significado : Vetores e Strings
 Total MCs   : 2
@@ -16,24 +16,24 @@ Total MCs   : 2
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | from numpy import *
-     2 | 
-     3 | j = array(eval(input("Digite os aneis que acertou: ")))
-     4 | 
-     5 | i = 0
-     6 | cont = 0
-     7 | while i < size(j):
-     8 | 	if j[i] == 1:
-     9 | 		cont = cont+80
-    10 | 	elif j[i] == 2:
-    11 | 		cont = cont +40
-    12 | 	elif j[i] == 3:
-    13 | 		cont = cont +20
-    14 | 	elif j[i] == 4:
-    15 | 		cont = cont+10
-    16 | 	
-    17 | 	i = i+1
-    18 | print(cont)
+     1 | from numpy import*
+     2 | a=array(eval(input()))
+     3 | 
+     4 | i=0
+     5 | v=zeros(size(a))
+     6 | while i<size(a):
+     7 | 	if a[i]==1:
+     8 | 		v[i]=80
+     9 | 	if a[i]==2:
+    10 | 		v[i]=40
+    11 | 	if a[i]==3:
+    12 | 		v[i]=20
+    13 | 	if a[i]==4:
+    14 | 		v[i]=10
+    15 | 	i=i+1
+    16 | 	b=sum(v)
+    17 | 	b=int(b)
+    18 | print(b)
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
@@ -42,70 +42,52 @@ DETALHAMENTO DOS MISCONCEPTIONS
 ▶ B8 — Não utilização de elif/else
   Ocorrências: 1
 
-  [1] Linha 12: Cadeia if/elif sem bloco else final
-      Trecho  : if ... (linha 12) / elif ... sem else
-      Contexto:
-              11 | 		cont = cont +40
-        >>>   12 | 	elif j[i] == 3:
-              13 | 		cont = cont +20
+  [1] Linha 0: B8 detectado pelo VisitorMC3 (localização exata não mapeada)
+      Trecho  : —
 
 ▶ G4 — Funções/variáveis com nomes não significativos
-  Ocorrências: 8
+  Ocorrências: 6
 
-  [1] Linha 3: Variável 'j' com nome muito curto (≤4 chars)
-      Trecho  : j = ...
+  [1] Linha 2: Variável 'a' com nome muito curto (≤4 chars)
+      Trecho  : a = ...
       Contexto:
-               2 | 
-        >>>    3 | j = array(eval(input("Digite os aneis que acertou: ")))
-               4 | 
+               1 | from numpy import*
+        >>>    2 | a=array(eval(input()))
+               3 | 
 
-  [2] Linha 5: Variável 'i' com nome muito curto (≤4 chars)
+  [2] Linha 4: Variável 'i' com nome muito curto (≤4 chars)
       Trecho  : i = ...
       Contexto:
-               4 | 
-        >>>    5 | i = 0
-               6 | cont = 0
+               3 | 
+        >>>    4 | i=0
+               5 | v=zeros(size(a))
 
-  [3] Linha 6: Variável 'cont' com nome muito curto (≤4 chars)
-      Trecho  : cont = ...
+  [3] Linha 5: Variável 'v' com nome muito curto (≤4 chars)
+      Trecho  : v = ...
       Contexto:
-               5 | i = 0
-        >>>    6 | cont = 0
-               7 | while i < size(j):
+               4 | i=0
+        >>>    5 | v=zeros(size(a))
+               6 | while i<size(a):
 
-  [4] Linha 17: Variável 'i' com nome muito curto (≤4 chars)
+  [4] Linha 15: Variável 'i' com nome muito curto (≤4 chars)
       Trecho  : i = ...
       Contexto:
-              16 | 	
-        >>>   17 | 	i = i+1
-              18 | print(cont)
+              14 | 		v[i]=10
+        >>>   15 | 	i=i+1
+              16 | 	b=sum(v)
 
-  [5] Linha 9: Variável 'cont' com nome muito curto (≤4 chars)
-      Trecho  : cont = ...
+  [5] Linha 16: Variável 'b' com nome muito curto (≤4 chars)
+      Trecho  : b = ...
       Contexto:
-               8 | 	if j[i] == 1:
-        >>>    9 | 		cont = cont+80
-              10 | 	elif j[i] == 2:
+              15 | 	i=i+1
+        >>>   16 | 	b=sum(v)
+              17 | 	b=int(b)
 
-  [6] Linha 11: Variável 'cont' com nome muito curto (≤4 chars)
-      Trecho  : cont = ...
+  [6] Linha 17: Variável 'b' com nome muito curto (≤4 chars)
+      Trecho  : b = ...
       Contexto:
-              10 | 	elif j[i] == 2:
-        >>>   11 | 		cont = cont +40
-              12 | 	elif j[i] == 3:
-
-  [7] Linha 13: Variável 'cont' com nome muito curto (≤4 chars)
-      Trecho  : cont = ...
-      Contexto:
-              12 | 	elif j[i] == 3:
-        >>>   13 | 		cont = cont +20
-              14 | 	elif j[i] == 4:
-
-  [8] Linha 15: Variável 'cont' com nome muito curto (≤4 chars)
-      Trecho  : cont = ...
-      Contexto:
-              14 | 	elif j[i] == 4:
-        >>>   15 | 		cont = cont+10
-              16 | 	
+              16 | 	b=sum(v)
+        >>>   17 | 	b=int(b)
+              18 | print(b)
 
 ======================================================================

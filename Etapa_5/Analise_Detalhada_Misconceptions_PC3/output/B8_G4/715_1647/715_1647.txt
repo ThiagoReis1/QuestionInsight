@@ -2,11 +2,11 @@
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
 Arquivo     : 715_1647.log
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2017_1_v1.81\2017-1\139\users\2388\executions\715_1647.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2017_1_v1.81\2017-1\139\users\2387\executions\715_1647.log
 Assessment  : 715
 Título      : Trabalho Prático 6: Repetição por Contagem
 Questão     : 1647
-Aluno       : 2388
+Aluno       : 2387
 Grupo       : TP 06
 Significado : Estrutura de Repetição por Contagem
 Total MCs   : 2
@@ -17,22 +17,19 @@ Total MCs   : 2
 CÓDIGO FONTE
 ----------------------------------------------------------------------
      1 | from numpy import*
-     2 | pc = array(eval(input(": ")))
-     3 | 
-     4 | ap= 0
-     5 | 
-     6 | for i in pc:
-     7 | 	if( i >= 70):
-     8 | 		ap = ap+1
-     9 | 
-    10 | v= zeros(ap, dtype= int)
-    11 | print(ap)
-    12 | j=0
-    13 | for i in range(size(pc)):
-    14 | 	if( pc[i] >= 70):
-    15 | 		v[j] = i
-    16 | 		j =j+1
-    17 | print(v)
+     2 | v = array(eval(input()))
+     3 | i = 0
+     4 | for a in range(size(v)):
+     5 | 	if(v[a] >= 70):
+     6 | 		i = i + 1
+     7 | print(i) # n.de alunos aprov.
+     8 | d = zeros(i, dtype = int)
+     9 | j = 0
+    10 | for b in range(size(v)):
+    11 | 	if(v[b] >= 70):
+    12 | 		d[j] = b
+    13 | 		j = j + 1
+    14 | print(d)		
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
@@ -47,49 +44,46 @@ DETALHAMENTO DOS MISCONCEPTIONS
 ▶ G4 — Funções/variáveis com nomes não significativos
   Ocorrências: 6
 
-  [1] Linha 2: Variável 'pc' com nome muito curto (≤4 chars)
-      Trecho  : pc = ...
-      Contexto:
-               1 | from numpy import*
-        >>>    2 | pc = array(eval(input(": ")))
-               3 | 
-
-  [2] Linha 4: Variável 'ap' com nome muito curto (≤4 chars)
-      Trecho  : ap = ...
-      Contexto:
-               3 | 
-        >>>    4 | ap= 0
-               5 | 
-
-  [3] Linha 10: Variável 'v' com nome muito curto (≤4 chars)
+  [1] Linha 2: Variável 'v' com nome muito curto (≤4 chars)
       Trecho  : v = ...
       Contexto:
-               9 | 
-        >>>   10 | v= zeros(ap, dtype= int)
-              11 | print(ap)
+               1 | from numpy import*
+        >>>    2 | v = array(eval(input()))
+               3 | i = 0
 
-  [4] Linha 12: Variável 'j' com nome muito curto (≤4 chars)
+  [2] Linha 3: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+               2 | v = array(eval(input()))
+        >>>    3 | i = 0
+               4 | for a in range(size(v)):
+
+  [3] Linha 8: Variável 'd' com nome muito curto (≤4 chars)
+      Trecho  : d = ...
+      Contexto:
+               7 | print(i) # n.de alunos aprov.
+        >>>    8 | d = zeros(i, dtype = int)
+               9 | j = 0
+
+  [4] Linha 9: Variável 'j' com nome muito curto (≤4 chars)
       Trecho  : j = ...
       Contexto:
-              11 | print(ap)
-        >>>   12 | j=0
-              13 | for i in range(size(pc)):
+               8 | d = zeros(i, dtype = int)
+        >>>    9 | j = 0
+              10 | for b in range(size(v)):
 
-  [5] Linha 8: Variável 'ap' com nome muito curto (≤4 chars)
-      Trecho  : ap = ...
+  [5] Linha 6: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
       Contexto:
-               7 | 	if( i >= 70):
-        >>>    8 | 		ap = ap+1
-               9 | 
+               5 | 	if(v[a] >= 70):
+        >>>    6 | 		i = i + 1
+               7 | print(i) # n.de alunos aprov.
 
-  [6] Linha 16: Variável 'j' com nome muito curto (≤4 chars)
+  [6] Linha 13: Variável 'j' com nome muito curto (≤4 chars)
       Trecho  : j = ...
       Contexto:
-              15 | 		v[j] = i
-        >>>   16 | 		j =j+1
-              17 | print(v)
-
-======================================================================+ 1
-              16 | 
+              12 | 		d[j] = b
+        >>>   13 | 		j = j + 1
+              14 | print(d)		
 
 ======================================================================

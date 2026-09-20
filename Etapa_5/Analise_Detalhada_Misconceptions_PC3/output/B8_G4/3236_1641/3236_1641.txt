@@ -2,11 +2,11 @@
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
 Arquivo     : 3236_1641.log
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2021_1_v1.81\2021-1\377\users\5041\executions\3236_1641.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2021_1_v1.81\2021-1\377\users\6359\executions\3236_1641.log
 Assessment  : 3236
 Título      : TP6: Repetição por contagem
 Questão     : 1641
-Aluno       : 5041
+Aluno       : 6359
 Grupo       : TP 06
 Significado : Estrutura de Repetição por Contagem
 Total MCs   : 2
@@ -16,28 +16,24 @@ Total MCs   : 2
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | from numpy import *
-     2 | 
-     3 | q = array(eval(input("Informe a quantidade de alunos matriculados: ")))
+     1 | from numpy import*
+     2 | l=array(eval(input("Lista: ")))
+     3 | cont=0
      4 | 
-     5 | i = 0
-     6 | u = 0
-     7 | 
-     8 | 
-     9 | for x in range(0, size(q)):
-    10 | 	if q[x]%3==0:
-    11 | 		i = i + 1
-    12 | 	v = zeros(i, dtype=int)
-    13 | 	
-    14 | for x in range(0, size(q)):
-    15 | 	if q[x]%3==0:
-    16 | 		v[u] = x
-    17 | 		u = u + 1
-    18 | 		
-    19 | 	
-    20 | 	
-    21 | print(i)
-    22 | print(v)
+     5 | for c in range(size(l)):
+     6 | 	if l[c]%3==0:
+     7 | 		cont=cont+1
+     8 | 		
+     9 | v=zeros(cont,dtype=int)
+    10 | d=0
+    11 | 
+    12 | for x in range(size(l)):
+    13 | 	if l[x]%3==0:
+    14 | 		v[d]=x
+    15 | 		d=d+1
+    16 | 		
+    17 | print(cont)
+    18 | print(v)
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
@@ -52,46 +48,46 @@ DETALHAMENTO DOS MISCONCEPTIONS
 ▶ G4 — Funções/variáveis com nomes não significativos
   Ocorrências: 6
 
-  [1] Linha 3: Variável 'q' com nome muito curto (≤4 chars)
-      Trecho  : q = ...
+  [1] Linha 2: Variável 'l' com nome muito curto (≤4 chars)
+      Trecho  : l = ...
       Contexto:
-               2 | 
-        >>>    3 | q = array(eval(input("Informe a quantidade de alunos matriculados: ")))
+               1 | from numpy import*
+        >>>    2 | l=array(eval(input("Lista: ")))
+               3 | cont=0
+
+  [2] Linha 3: Variável 'cont' com nome muito curto (≤4 chars)
+      Trecho  : cont = ...
+      Contexto:
+               2 | l=array(eval(input("Lista: ")))
+        >>>    3 | cont=0
                4 | 
 
-  [2] Linha 5: Variável 'i' com nome muito curto (≤4 chars)
-      Trecho  : i = ...
-      Contexto:
-               4 | 
-        >>>    5 | i = 0
-               6 | u = 0
-
-  [3] Linha 6: Variável 'u' com nome muito curto (≤4 chars)
-      Trecho  : u = ...
-      Contexto:
-               5 | i = 0
-        >>>    6 | u = 0
-               7 | 
-
-  [4] Linha 12: Variável 'v' com nome muito curto (≤4 chars)
+  [3] Linha 9: Variável 'v' com nome muito curto (≤4 chars)
       Trecho  : v = ...
       Contexto:
-              11 | 		i = i + 1
-        >>>   12 | 	v = zeros(i, dtype=int)
-              13 | 	
+               8 | 		
+        >>>    9 | v=zeros(cont,dtype=int)
+              10 | d=0
 
-  [5] Linha 11: Variável 'i' com nome muito curto (≤4 chars)
-      Trecho  : i = ...
+  [4] Linha 10: Variável 'd' com nome muito curto (≤4 chars)
+      Trecho  : d = ...
       Contexto:
-              10 | 	if q[x]%3==0:
-        >>>   11 | 		i = i + 1
-              12 | 	v = zeros(i, dtype=int)
+               9 | v=zeros(cont,dtype=int)
+        >>>   10 | d=0
+              11 | 
 
-  [6] Linha 17: Variável 'u' com nome muito curto (≤4 chars)
-      Trecho  : u = ...
+  [5] Linha 7: Variável 'cont' com nome muito curto (≤4 chars)
+      Trecho  : cont = ...
       Contexto:
-              16 | 		v[u] = x
-        >>>   17 | 		u = u + 1
-              18 | 		
+               6 | 	if l[c]%3==0:
+        >>>    7 | 		cont=cont+1
+               8 | 		
+
+  [6] Linha 15: Variável 'd' com nome muito curto (≤4 chars)
+      Trecho  : d = ...
+      Contexto:
+              14 | 		v[d]=x
+        >>>   15 | 		d=d+1
+              16 | 		
 
 ======================================================================

@@ -2,11 +2,11 @@
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
 Arquivo     : 1472_1531.log
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2018_2_v1.81\2018-2\206\users\3705\executions\1472_1531.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2018_2_v1.81\2018-2\206\users\3699\executions\1472_1531.log
 Assessment  : 1472
 Título      : TP 4: Estrutura de Repetição por Condição (while)
 Questão     : 1531
-Aluno       : 3705
+Aluno       : 3699
 Grupo       : TP 04
 Significado : Estrutura de Repetição por Condição
 Total MCs   : 1
@@ -17,62 +17,58 @@ Total MCs   : 1
 CÓDIGO FONTE
 ----------------------------------------------------------------------
      1 | from math import*
-     2 | x = eval(input(""))
-     3 | k = int(input("")) - 1
-     4 | d = 0 #soma
-     5 | t = 0 #contagem
-     6 | while(t<k):
-     7 |     cos = ((((-1) ** t)) * (x ** (2 * t + 2))/(factorial(2 * t + 2)))
-     8 |     d = d + cos
-     9 |     t = t + 1
-    10 | print(round(d,10))	
+     2 | angulo = eval(input("digite o angulo: "))
+     3 | k = int(input("quantidade de termos: "))
+     4 | soma = 0
+     5 | i = 0
+     6 | while(i<k):
+     7 | 	soma = soma + (((-1)**(i))* (angulo**(2*i)/factorial(2*i)))
+     8 | 	i =i + 1
+     9 | print(round(soma,10))
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
 ----------------------------------------------------------------------
 
 ▶ G4 — Funções/variáveis com nomes não significativos
-  Ocorrências: 7
+  Ocorrências: 5
 
-  [1] Linha 2: Variável 'x' com nome muito curto (≤4 chars)
-      Trecho  : x = ...
-      Contexto:
-               1 | from math import*
-        >>>    2 | x = eval(input(""))
-               3 | k = int(input("")) - 1
-
-  [2] Linha 3: Variável 'k' com nome muito curto (≤4 chars)
+  [1] Linha 3: Variável 'k' com nome muito curto (≤4 chars)
       Trecho  : k = ...
       Contexto:
-               2 | x = eval(input(""))
-        >>>    3 | k = int(input("")) - 1
-               4 | d = 0 #soma
+               2 | angulo = eval(input("digite o angulo: "))
+        >>>    3 | k = int(input("quantidade de termos: "))
+               4 | soma = 0
 
-  [3] Linha 4: Variável 'd' com nome muito curto (≤4 chars)
-      Trecho  : d = ...
+  [2] Linha 4: Variável 'soma' com nome muito curto (≤4 chars)
+      Trecho  : soma = ...
       Contexto:
-               3 | k = int(input("")) - 1
-        >>>    4 | d = 0 #soma
-               5 | t = 0 #contagem
+               3 | k = int(input("quantidade de termos: "))
+        >>>    4 | soma = 0
+               5 | i = 0
 
-  [4] Linha 5: Variável 't' com nome muito curto (≤4 chars)
-      Trecho  : t = ...
+  [3] Linha 5: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
       Contexto:
-               4 | d = 0 #soma
-        >>>    5 | t = 0 #contagem
-               6 | while(t<k):
+               4 | soma = 0
+        >>>    5 | i = 0
+               6 | while(i<k):
 
-  [5] Linha 7: Variável 'cos' com nome muito curto (≤4 chars)
-      Trecho  : cos = ...
+  [4] Linha 7: Variável 'soma' com nome muito curto (≤4 chars)
+      Trecho  : soma = ...
       Contexto:
-               6 | while(t<k):
-        >>>    7 |     cos = ((((-1) ** t)) * (x ** (2 * t + 2))/(factorial(2 * t + 2)))
-               8 |     d = d + cos
+               6 | while(i<k):
+        >>>    7 | 	soma = soma + (((-1)**(i))* (angulo**(2*i)/factorial(2*i)))
+               8 | 	i =i + 1
 
-  [6] Linha 8: Variável 'd' com nome muito curto (≤4 chars)
-      Trecho  : d = ...
+  [5] Linha 8: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
       Contexto:
-               7 |     cos = ((((-1) ** t)) * (x ** (2 * t + 2))/(factorial(2 * t + 2)))
+               7 | 	soma = soma + (((-1)**(i))* (angulo**(2*i)/factorial(2*i)))
+        >>>    8 | 	i =i + 1
+               9 | print(round(soma,10))
+
+======================================================================       7 |     cos = ((((-1) ** t)) * (x ** (2 * t + 2))/(factorial(2 * t + 2)))
         >>>    8 |     d = d + cos
                9 |     t = t + 1
 

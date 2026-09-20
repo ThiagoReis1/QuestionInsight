@@ -2,11 +2,11 @@
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
 Arquivo     : 1225_1609.log
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2018_1_v1.81\2018-1\181\users\3066\executions\1225_1609.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2018_1_v1.81\2018-1\181\users\3255\executions\1225_1609.log
 Assessment  : 1225
 Título      : TP 5: Vetores e Strings
 Questão     : 1609
-Aluno       : 3066
+Aluno       : 3255
 Grupo       : TP 05
 Significado : Vetores e Strings
 Total MCs   : 2
@@ -16,23 +16,19 @@ Total MCs   : 2
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | from numpy import *
-     2 | v = array(eval(input("digite: ")))
-     3 | p = input("digite: ").upper()
-     4 | i = 0
-     5 | j = 0
-     6 | pos = 0
-     7 | while (i < len(v)):
-     8 | 	d = p.replace("R","L")
-     9 | 	if (v[i] == d):
-    10 | 		pos = i
-    11 | 		v[i] = v[i] + p
-    12 | 		j = 1
-    13 | 		print(pos)
-    14 | 	i = i + 1
-    15 | 
-    16 | if (j == 0):
-    17 | 	print("NAO ENCONTRADA")
+     1 | from numpy import*
+     2 | v= array(eval(input("Palavras: ")))
+     3 | p= input("Palavra normal: ")
+     4 | 
+     5 | p1= p.replace("R", "L")
+     6 | i=0
+     7 | 
+     8 | while(i < size(v)):
+     9 | 	if(p1 == v[i]):
+    10 | 		print(i)
+    11 | 	i= i + 1
+    12 | 
+    13 | print("NAO ENCONTRADA")
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
@@ -45,69 +41,41 @@ DETALHAMENTO DOS MISCONCEPTIONS
       Trecho  : —
 
 ▶ G4 — Funções/variáveis com nomes não significativos
-  Ocorrências: 9
+  Ocorrências: 5
 
   [1] Linha 2: Variável 'v' com nome muito curto (≤4 chars)
       Trecho  : v = ...
       Contexto:
-               1 | from numpy import *
-        >>>    2 | v = array(eval(input("digite: ")))
-               3 | p = input("digite: ").upper()
+               1 | from numpy import*
+        >>>    2 | v= array(eval(input("Palavras: ")))
+               3 | p= input("Palavra normal: ")
 
   [2] Linha 3: Variável 'p' com nome muito curto (≤4 chars)
       Trecho  : p = ...
       Contexto:
-               2 | v = array(eval(input("digite: ")))
-        >>>    3 | p = input("digite: ").upper()
-               4 | i = 0
+               2 | v= array(eval(input("Palavras: ")))
+        >>>    3 | p= input("Palavra normal: ")
+               4 | 
 
-  [3] Linha 4: Variável 'i' com nome muito curto (≤4 chars)
+  [3] Linha 5: Variável 'p1' com nome muito curto (≤4 chars)
+      Trecho  : p1 = ...
+      Contexto:
+               4 | 
+        >>>    5 | p1= p.replace("R", "L")
+               6 | i=0
+
+  [4] Linha 6: Variável 'i' com nome muito curto (≤4 chars)
       Trecho  : i = ...
       Contexto:
-               3 | p = input("digite: ").upper()
-        >>>    4 | i = 0
-               5 | j = 0
+               5 | p1= p.replace("R", "L")
+        >>>    6 | i=0
+               7 | 
 
-  [4] Linha 5: Variável 'j' com nome muito curto (≤4 chars)
-      Trecho  : j = ...
-      Contexto:
-               4 | i = 0
-        >>>    5 | j = 0
-               6 | pos = 0
-
-  [5] Linha 6: Variável 'pos' com nome muito curto (≤4 chars)
-      Trecho  : pos = ...
-      Contexto:
-               5 | j = 0
-        >>>    6 | pos = 0
-               7 | while (i < len(v)):
-
-  [6] Linha 8: Variável 'd' com nome muito curto (≤4 chars)
-      Trecho  : d = ...
-      Contexto:
-               7 | while (i < len(v)):
-        >>>    8 | 	d = p.replace("R","L")
-               9 | 	if (v[i] == d):
-
-  [7] Linha 14: Variável 'i' com nome muito curto (≤4 chars)
+  [5] Linha 11: Variável 'i' com nome muito curto (≤4 chars)
       Trecho  : i = ...
       Contexto:
-              13 | 		print(pos)
-        >>>   14 | 	i = i + 1
-              15 | 
-
-  [8] Linha 10: Variável 'pos' com nome muito curto (≤4 chars)
-      Trecho  : pos = ...
-      Contexto:
-               9 | 	if (v[i] == d):
-        >>>   10 | 		pos = i
-              11 | 		v[i] = v[i] + p
-
-  [9] Linha 12: Variável 'j' com nome muito curto (≤4 chars)
-      Trecho  : j = ...
-      Contexto:
-              11 | 		v[i] = v[i] + p
-        >>>   12 | 		j = 1
-              13 | 		print(pos)
+              10 | 		print(i)
+        >>>   11 | 	i= i + 1
+              12 | 
 
 ======================================================================

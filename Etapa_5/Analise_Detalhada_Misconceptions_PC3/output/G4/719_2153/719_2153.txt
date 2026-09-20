@@ -2,11 +2,11 @@
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
 Arquivo     : 719_2153.log
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2017_1_v1.81\2017-1\141\users\2318\executions\719_2153.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2017_1_v1.81\2017-1\141\users\2324\executions\719_2153.log
 Assessment  : 719
 Título      : Trabalho Prático 6: Repetição por Contagem
 Questão     : 2153
-Aluno       : 2318
+Aluno       : 2324
 Grupo       : TP 06
 Significado : Estrutura de Repetição por Contagem
 Total MCs   : 1
@@ -17,58 +17,46 @@ Total MCs   : 1
 CÓDIGO FONTE
 ----------------------------------------------------------------------
      1 | from numpy import*
-     2 | from math import*
-     3 | 
-     4 | P = array(eval(input("")))
-     5 | Q = array(eval(input("")))
-     6 | 
-     7 | a = 0
-     8 | 
-     9 | for i in range (size(P)):
-    10 | 	a = a+(P[i] - Q[i]) ** 2
-    11 | D = sqrt(a)
-    12 | print(round(D, 4))
+     2 | v=array(eval(input()))
+     3 | q=array(eval(input()))
+     4 | j=0
+     5 | for i in range(size(v)):
+     6 | 	j=(v[i]-q[i])**2+j
+     7 | print(round((j)**(1/2), 4))
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
 ----------------------------------------------------------------------
 
 ▶ G4 — Funções/variáveis com nomes não significativos
-  Ocorrências: 5
+  Ocorrências: 4
 
-  [1] Linha 4: Variável 'P' com nome muito curto (≤4 chars)
-      Trecho  : P = ...
+  [1] Linha 2: Variável 'v' com nome muito curto (≤4 chars)
+      Trecho  : v = ...
       Contexto:
-               3 | 
-        >>>    4 | P = array(eval(input("")))
-               5 | Q = array(eval(input("")))
+               1 | from numpy import*
+        >>>    2 | v=array(eval(input()))
+               3 | q=array(eval(input()))
 
-  [2] Linha 5: Variável 'Q' com nome muito curto (≤4 chars)
-      Trecho  : Q = ...
+  [2] Linha 3: Variável 'q' com nome muito curto (≤4 chars)
+      Trecho  : q = ...
       Contexto:
-               4 | P = array(eval(input("")))
-        >>>    5 | Q = array(eval(input("")))
-               6 | 
+               2 | v=array(eval(input()))
+        >>>    3 | q=array(eval(input()))
+               4 | j=0
 
-  [3] Linha 7: Variável 'a' com nome muito curto (≤4 chars)
-      Trecho  : a = ...
+  [3] Linha 4: Variável 'j' com nome muito curto (≤4 chars)
+      Trecho  : j = ...
       Contexto:
-               6 | 
-        >>>    7 | a = 0
-               8 | 
+               3 | q=array(eval(input()))
+        >>>    4 | j=0
+               5 | for i in range(size(v)):
 
-  [4] Linha 11: Variável 'D' com nome muito curto (≤4 chars)
-      Trecho  : D = ...
+  [4] Linha 6: Variável 'j' com nome muito curto (≤4 chars)
+      Trecho  : j = ...
       Contexto:
-              10 | 	a = a+(P[i] - Q[i]) ** 2
-        >>>   11 | D = sqrt(a)
-              12 | print(round(D, 4))
+               5 | for i in range(size(v)):
+        >>>    6 | 	j=(v[i]-q[i])**2+j
+               7 | print(round((j)**(1/2), 4))
 
-  [5] Linha 10: Variável 'a' com nome muito curto (≤4 chars)
-      Trecho  : a = ...
-      Contexto:
-               9 | for i in range (size(P)):
-        >>>   10 | 	a = a+(P[i] - Q[i]) ** 2
-              11 | D = sqrt(a)
-
-====================================================================================================================
+======================================================================

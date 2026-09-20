@@ -2,11 +2,11 @@
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
 Arquivo     : 169_1192.log
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2016_1_v1.81\2016-1\108\users\1329\executions\169_1192.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2016_1_v1.81\2016-1\108\users\1441\executions\169_1192.log
 Assessment  : 169
 Título      : Avaliação Parcial 05 – Vetores e Strings
 Questão     : 1192
-Aluno       : 1329
+Aluno       : 1441
 Grupo       : TP 05
 Significado : Vetores e Strings
 Total MCs   : 2
@@ -16,25 +16,29 @@ Total MCs   : 2
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | from numpy import*
-     2 | a=eval(input())
-     3 | x=0
-     4 | cont=0
-     5 | vet=(zeros(size(a),dtype=float))
+     1 | from numpy import *
+     2 | a=array(eval(input("Digite o vetor:")))
+     3 | 
+     4 | x=0
+     5 | cont=0
      6 | while(x<size(a)):
-     7 | 	if(a[x]>=0):
-     8 | 		vet[x]=a[x]
-     9 | 		cont+=1
-    10 | 	x+=1
-    11 | vet2=(zeros(cont,dtype=float))
-    12 | y=0
-    13 | z=0
-    14 | while(y<size(vet)):
-    15 | 	if(vet[y]>0):
-    16 | 		vet2[z]=vet[y]
-    17 | 		z+=1
-    18 | 	y+=1
-    19 | print(vet2)
+     7 | 	if(a[x]<0):
+     8 | 		cont+=1
+     9 | 	x+=1
+    10 | 
+    11 | #print (cont)
+    12 | 
+    13 | vet=array(zeros(size(a)-cont,dtype=float))
+    14 | 	
+    15 | j=0
+    16 | k=0
+    17 | while(j<size(a)):
+    18 | 	if(a[j]>=0):
+    19 | 		vet[k]=a[j]
+    20 | 		k+=1
+    21 | 	j+=1
+    22 | 
+    23 | print(vet)
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
@@ -47,55 +51,48 @@ DETALHAMENTO DOS MISCONCEPTIONS
       Trecho  : —
 
 ▶ G4 — Funções/variáveis com nomes não significativos
-  Ocorrências: 7
+  Ocorrências: 6
 
   [1] Linha 2: Variável 'a' com nome muito curto (≤4 chars)
       Trecho  : a = ...
       Contexto:
-               1 | from numpy import*
-        >>>    2 | a=eval(input())
-               3 | x=0
+               1 | from numpy import *
+        >>>    2 | a=array(eval(input("Digite o vetor:")))
+               3 | 
 
-  [2] Linha 3: Variável 'x' com nome muito curto (≤4 chars)
+  [2] Linha 4: Variável 'x' com nome muito curto (≤4 chars)
       Trecho  : x = ...
       Contexto:
-               2 | a=eval(input())
-        >>>    3 | x=0
-               4 | cont=0
+               3 | 
+        >>>    4 | x=0
+               5 | cont=0
 
-  [3] Linha 4: Variável 'cont' com nome muito curto (≤4 chars)
+  [3] Linha 5: Variável 'cont' com nome muito curto (≤4 chars)
       Trecho  : cont = ...
       Contexto:
-               3 | x=0
-        >>>    4 | cont=0
-               5 | vet=(zeros(size(a),dtype=float))
-
-  [4] Linha 5: Variável 'vet' com nome muito curto (≤4 chars)
-      Trecho  : vet = ...
-      Contexto:
-               4 | cont=0
-        >>>    5 | vet=(zeros(size(a),dtype=float))
+               4 | x=0
+        >>>    5 | cont=0
                6 | while(x<size(a)):
 
-  [5] Linha 11: Variável 'vet2' com nome muito curto (≤4 chars)
-      Trecho  : vet2 = ...
+  [4] Linha 13: Variável 'vet' com nome muito curto (≤4 chars)
+      Trecho  : vet = ...
       Contexto:
-              10 | 	x+=1
-        >>>   11 | vet2=(zeros(cont,dtype=float))
-              12 | y=0
+              12 | 
+        >>>   13 | vet=array(zeros(size(a)-cont,dtype=float))
+              14 | 	
 
-  [6] Linha 12: Variável 'y' com nome muito curto (≤4 chars)
-      Trecho  : y = ...
+  [5] Linha 15: Variável 'j' com nome muito curto (≤4 chars)
+      Trecho  : j = ...
       Contexto:
-              11 | vet2=(zeros(cont,dtype=float))
-        >>>   12 | y=0
-              13 | z=0
+              14 | 	
+        >>>   15 | j=0
+              16 | k=0
 
-  [7] Linha 13: Variável 'z' com nome muito curto (≤4 chars)
-      Trecho  : z = ...
+  [6] Linha 16: Variável 'k' com nome muito curto (≤4 chars)
+      Trecho  : k = ...
       Contexto:
-              12 | y=0
-        >>>   13 | z=0
-              14 | while(y<size(vet)):
+              15 | j=0
+        >>>   16 | k=0
+              17 | while(j<size(a)):
 
 ======================================================================

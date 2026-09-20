@@ -2,11 +2,11 @@
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
 Arquivo     : 672_2127.log
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2017_1_v1.81\2017-1\142\users\2562\executions\672_2127.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2017_1_v1.81\2017-1\142\users\2213\executions\672_2127.log
 Assessment  : 672
 Título      : Trabalho Prático 5: Vetores e Strings
 Questão     : 2127
-Aluno       : 2562
+Aluno       : 2213
 Grupo       : TP 05
 Significado : Vetores e Strings
 Total MCs   : 1
@@ -16,40 +16,40 @@ Total MCs   : 1
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | from numpy import*
-     2 | 
-     3 | m=array(eval(input("notas: ")))
-     4 | mf=(sum(m)-min(m))/3
-     5 | 
-     6 | if(mf>=50.0):
-     7 | 	print(round(mf, 2))
-     8 | 	print("APROVADO")
-     9 | else:
-    10 | 	print(round(mf, 2))
-    11 | 	print("REPROVADO")
+     1 | from numpy import *
+     2 | dp=array(eval(input("QUAL:")))
+     3 | m= sum(dp)
+     4 | pt= (m-min(dp))/3.0
+     5 | print(round(pt,2))
+     6 | if(pt>=50):
+     7 | 	print("APROVADO")
+     8 | else:
+     9 | 	print("REPROVADO")
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
 ----------------------------------------------------------------------
 
 ▶ G4 — Funções/variáveis com nomes não significativos
-  Ocorrências: 2
+  Ocorrências: 3
 
-  [1] Linha 3: Variável 'm' com nome muito curto (≤4 chars)
+  [1] Linha 2: Variável 'dp' com nome muito curto (≤4 chars)
+      Trecho  : dp = ...
+      Contexto:
+               1 | from numpy import *
+        >>>    2 | dp=array(eval(input("QUAL:")))
+               3 | m= sum(dp)
+
+  [2] Linha 3: Variável 'm' com nome muito curto (≤4 chars)
       Trecho  : m = ...
       Contexto:
-               2 | 
-        >>>    3 | m=array(eval(input("notas: ")))
-               4 | mf=(sum(m)-min(m))/3
+               2 | dp=array(eval(input("QUAL:")))
+        >>>    3 | m= sum(dp)
+               4 | pt= (m-min(dp))/3.0
 
-  [2] Linha 4: Variável 'mf' com nome muito curto (≤4 chars)
-      Trecho  : mf = ...
+  [3] Linha 4: Variável 'pt' com nome muito curto (≤4 chars)
+      Trecho  : pt = ...
       Contexto:
-               3 | m=array(eval(input("notas: ")))
-        >>>    4 | mf=(sum(m)-min(m))/3
-               5 | 
-
-======================================================================      Contexto:
                3 | m= sum(dp)
         >>>    4 | pt= (m-min(dp))/3.0
                5 | print(round(pt,2))

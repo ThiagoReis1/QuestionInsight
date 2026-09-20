@@ -2,11 +2,11 @@
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
 Arquivo     : 476_1834.log
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2017_1_v1.81\2017-1\137\users\2177\executions\476_1834.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2017_1_v1.81\2017-1\137\users\2184\executions\476_1834.log
 Assessment  : 476
 Título      : Trabalho Prático 01: Variáveis e Estrutura Sequencial de Programação
 Questão     : 1834
-Aluno       : 2177
+Aluno       : 2184
 Grupo       : TP 01
 Significado : Variáveis e Estrutura Sequencial
 Total MCs   : 1
@@ -16,12 +16,17 @@ Total MCs   : 1
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | mg= float(input("Leia mg: "))
-     2 | vg= float(input("Leia vg: "))
-     3 | mp= float(input("Leia mp: "))
-     4 | vp= float(input("Leia vp: "))
-     5 | vf= ((mg*vg)-(mp*vp))/(mg+mp)
-     6 | print(vf)
+     1 | from math import *
+     2 | 
+     3 | mg = int(input("massa do peixe grande? "))
+     4 | vg = int(input("velocidade do peixe grande? "))
+     5 | 
+     6 | mp = int(input("massa do peixe pequeno? "))
+     7 | vp = int(input("velocidade do peixe pequeno ? "))
+     8 | 
+     9 | vf = mg * vg - mp * vp / mg + mp
+    10 | 
+    11 | print(vf)
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
@@ -30,38 +35,39 @@ DETALHAMENTO DOS MISCONCEPTIONS
 ▶ G4 — Funções/variáveis com nomes não significativos
   Ocorrências: 5
 
-  [1] Linha 1: Variável 'mg' com nome muito curto (≤4 chars)
+  [1] Linha 3: Variável 'mg' com nome muito curto (≤4 chars)
       Trecho  : mg = ...
       Contexto:
-        >>>    1 | mg= float(input("Leia mg: "))
-               2 | vg= float(input("Leia vg: "))
+               2 | 
+        >>>    3 | mg = int(input("massa do peixe grande? "))
+               4 | vg = int(input("velocidade do peixe grande? "))
 
-  [2] Linha 2: Variável 'vg' com nome muito curto (≤4 chars)
+  [2] Linha 4: Variável 'vg' com nome muito curto (≤4 chars)
       Trecho  : vg = ...
       Contexto:
-               1 | mg= float(input("Leia mg: "))
-        >>>    2 | vg= float(input("Leia vg: "))
-               3 | mp= float(input("Leia mp: "))
+               3 | mg = int(input("massa do peixe grande? "))
+        >>>    4 | vg = int(input("velocidade do peixe grande? "))
+               5 | 
 
-  [3] Linha 3: Variável 'mp' com nome muito curto (≤4 chars)
+  [3] Linha 6: Variável 'mp' com nome muito curto (≤4 chars)
       Trecho  : mp = ...
       Contexto:
-               2 | vg= float(input("Leia vg: "))
-        >>>    3 | mp= float(input("Leia mp: "))
-               4 | vp= float(input("Leia vp: "))
+               5 | 
+        >>>    6 | mp = int(input("massa do peixe pequeno? "))
+               7 | vp = int(input("velocidade do peixe pequeno ? "))
 
-  [4] Linha 4: Variável 'vp' com nome muito curto (≤4 chars)
+  [4] Linha 7: Variável 'vp' com nome muito curto (≤4 chars)
       Trecho  : vp = ...
       Contexto:
-               3 | mp= float(input("Leia mp: "))
-        >>>    4 | vp= float(input("Leia vp: "))
-               5 | vf= ((mg*vg)-(mp*vp))/(mg+mp)
+               6 | mp = int(input("massa do peixe pequeno? "))
+        >>>    7 | vp = int(input("velocidade do peixe pequeno ? "))
+               8 | 
 
-  [5] Linha 5: Variável 'vf' com nome muito curto (≤4 chars)
+  [5] Linha 9: Variável 'vf' com nome muito curto (≤4 chars)
       Trecho  : vf = ...
       Contexto:
-               4 | vp= float(input("Leia vp: "))
-        >>>    5 | vf= ((mg*vg)-(mp*vp))/(mg+mp)
-               6 | print(vf)
+               8 | 
+        >>>    9 | vf = mg * vg - mp * vp / mg + mp
+              10 | 
 
 ======================================================================

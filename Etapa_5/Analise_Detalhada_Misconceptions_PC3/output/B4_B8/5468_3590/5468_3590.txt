@@ -2,11 +2,11 @@
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
 Arquivo     : 5468_3590.log
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2023_2_v1.81\2023-2\557\users\9170\executions\5468_3590.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2023_2_v1.81\2023-2\557\users\9168\executions\5468_3590.log
 Assessment  : 5468
 Título      : TP 5: Vetores e Strings
 Questão     : 3590
-Aluno       : 9170
+Aluno       : 9168
 Grupo       : TP 05
 Significado : Vetores e Strings
 Total MCs   : 2
@@ -16,24 +16,33 @@ Total MCs   : 2
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | from numpy import*
+     1 | from numpy import *
      2 | 
-     3 | fc=array(eval(input("Face do Dado: ")))
-     4 | i=0
-     5 | total=0
-     6 | while i<size(fc):
-     7 | 	if fc[i]==1:
-     8 | 		total+=10
-     9 | 	elif fc[i]==2:
-    10 | 		total+=5
-    11 | 	elif fc[i]==4:
-    12 | 		total+=5
-    13 | 	elif fc[i]==5:
-    14 | 		total+=20
-    15 | 	elif fc[i]==6:
-    16 | 		total+=10
-    17 | 	i+=1
-    18 | print(total)
+     3 | vetor = array(eval(input()))
+     4 | i = 0
+     5 | pontos = 0
+     6 | 
+     7 | while i < size(vetor):
+     8 | 	if vetor[i] == 1:
+     9 | 		pontos += 10
+    10 | 		
+    11 | 	elif vetor[i] == 2:
+    12 | 		pontos += 5
+    13 | 		
+    14 | 	elif vetor[i] == 3:
+    15 | 		pontos += 0
+    16 | 		
+    17 | 	elif vetor[i] == 4:
+    18 | 		pontos += 5
+    19 | 		
+    20 | 	elif vetor[i] == 5:
+    21 | 		pontos += 20
+    22 | 		
+    23 | 	elif vetor[i] == 6:
+    24 | 		pontos += 10
+    25 | 		
+    26 | 	i += 1
+    27 | print(pontos)
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
@@ -42,35 +51,35 @@ DETALHAMENTO DOS MISCONCEPTIONS
 ▶ B4 — Comandos repetidos dentro de blocos if-elif-else
   Ocorrências: 3
 
-  [1] Linha 11: Bloco idêntico ao da linha 9
-      Trecho  : total += 5
+  [1] Linha 17: Bloco idêntico ao da linha 11
+      Trecho  : pontos += 5
       Contexto:
-              10 | 		total+=5
-        >>>   11 | 	elif fc[i]==4:
-              12 | 		total+=5
+              16 | 		
+        >>>   17 | 	elif vetor[i] == 4:
+              18 | 		pontos += 5
 
-  [2] Linha 15: Bloco idêntico ao da linha 7
-      Trecho  : total += 10
+  [2] Linha 23: Bloco idêntico ao da linha 8
+      Trecho  : pontos += 10
       Contexto:
-              14 | 		total+=20
-        >>>   15 | 	elif fc[i]==6:
-              16 | 		total+=10
+              22 | 		
+        >>>   23 | 	elif vetor[i] == 6:
+              24 | 		pontos += 10
 
-  [3] Linha 11: Bloco idêntico ao da linha 9
-      Trecho  : total += 5
+  [3] Linha 17: Bloco idêntico ao da linha 11
+      Trecho  : pontos += 5
       Contexto:
-              10 | 		total+=5
-        >>>   11 | 	elif fc[i]==4:
-              12 | 		total+=5
+              16 | 		
+        >>>   17 | 	elif vetor[i] == 4:
+              18 | 		pontos += 5
 
 ▶ B8 — Não utilização de elif/else
   Ocorrências: 1
 
-  [1] Linha 13: Cadeia if/elif sem bloco else final
-      Trecho  : if ... (linha 13) / elif ... sem else
+  [1] Linha 20: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 20) / elif ... sem else
       Contexto:
-              12 | 		total+=5
-        >>>   13 | 	elif fc[i]==5:
-              14 | 		total+=20
+              19 | 		
+        >>>   20 | 	elif vetor[i] == 5:
+              21 | 		pontos += 20
 
 ======================================================================

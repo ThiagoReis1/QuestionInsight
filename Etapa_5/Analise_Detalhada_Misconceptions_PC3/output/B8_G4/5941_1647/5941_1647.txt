@@ -2,11 +2,11 @@
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
 Arquivo     : 5941_1647.log
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2024_1_v1.81\2024-1\597\users\9796\executions\5941_1647.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2024_1_v1.81\2024-1\597\users\9802\executions\5941_1647.log
 Assessment  : 5941
 Título      : TP 6: Estrutura de Repetição por Contagem (for)
 Questão     : 1647
-Aluno       : 9796
+Aluno       : 9802
 Grupo       : TP 06
 Significado : Estrutura de Repetição por Contagem
 Total MCs   : 2
@@ -16,20 +16,25 @@ Total MCs   : 2
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | from numpy import *
-     2 | alunos_ap = array(eval(input("alunos aP:")))
-     3 | cont =0
-     4 | for i in alunos_ap:
-     5 | 	if i>=70:
-     6 | 		cont +=1
-     7 | print(cont)
-     8 | j=0
-     9 | v=zeros(cont, dtype=int)
-    10 | for i in range(size(alunos_ap)):
-    11 | 	if alunos_ap[i]>=70:
-    12 | 		v[j]=i
-    13 | 		j+=1
-    14 | print(v)
+     1 | from numpy import*
+     2 | 
+     3 | al = array(eval(input("porcentagem dos alunos: ")))
+     4 | 
+     5 | ac = 0
+     6 | 
+     7 | for i in range(size(al)):
+     8 | 	if al[i] >= 70:
+     9 | 		ac = ac + 1
+    10 | 		
+    11 | c = zeros(ac, dtype=int)
+    12 | j = 0
+    13 | 
+    14 | for i in range(size(al)):
+    15 | 	if al[i] >= 70:
+    16 | 		c[j] = i
+    17 | 		j = j + 1
+    18 | print(ac)
+    19 | print(c)
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
@@ -42,30 +47,31 @@ DETALHAMENTO DOS MISCONCEPTIONS
       Trecho  : —
 
 ▶ G4 — Funções/variáveis com nomes não significativos
-  Ocorrências: 3
+  Ocorrências: 6
 
-  [1] Linha 3: Variável 'cont' com nome muito curto (≤4 chars)
-      Trecho  : cont = ...
+  [1] Linha 3: Variável 'al' com nome muito curto (≤4 chars)
+      Trecho  : al = ...
       Contexto:
-               2 | alunos_ap = array(eval(input("alunos aP:")))
-        >>>    3 | cont =0
-               4 | for i in alunos_ap:
+               2 | 
+        >>>    3 | al = array(eval(input("porcentagem dos alunos: ")))
+               4 | 
 
-  [2] Linha 8: Variável 'j' com nome muito curto (≤4 chars)
+  [2] Linha 5: Variável 'ac' com nome muito curto (≤4 chars)
+      Trecho  : ac = ...
+      Contexto:
+               4 | 
+        >>>    5 | ac = 0
+               6 | 
+
+  [3] Linha 11: Variável 'c' com nome muito curto (≤4 chars)
+      Trecho  : c = ...
+      Contexto:
+              10 | 		
+        >>>   11 | c = zeros(ac, dtype=int)
+              12 | j = 0
+
+  [4] Linha 12: Variável 'j' com nome muito curto (≤4 chars)
       Trecho  : j = ...
-      Contexto:
-               7 | print(cont)
-        >>>    8 | j=0
-               9 | v=zeros(cont, dtype=int)
-
-  [3] Linha 9: Variável 'v' com nome muito curto (≤4 chars)
-      Trecho  : v = ...
-      Contexto:
-               8 | j=0
-        >>>    9 | v=zeros(cont, dtype=int)
-              10 | for i in range(size(alunos_ap)):
-
-====================================================================== : j = ...
       Contexto:
               11 | c = zeros(ac, dtype=int)
         >>>   12 | j = 0

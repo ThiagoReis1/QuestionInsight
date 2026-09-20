@@ -2,11 +2,11 @@
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
 Arquivo     : 5921_1646.log
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2024_1_v1.81\2024-1\587\users\9663\executions\5921_1646.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2024_1_v1.81\2024-1\587\users\9671\executions\5921_1646.log
 Assessment  : 5921
 Título      : TP 6: Estrutura de Repetição por Contagem (for)
 Questão     : 1646
-Aluno       : 9663
+Aluno       : 9671
 Grupo       : TP 06
 Significado : Estrutura de Repetição por Contagem
 Total MCs   : 2
@@ -16,24 +16,26 @@ Total MCs   : 2
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | from numpy import*
+     1 | from numpy import *
      2 | 
-     3 | vetor = array(eval(input()))
-     4 | cont = 0
-     5 | 
+     3 | saque = array(eval(input("insira o valor do saque: ")))
+     4 | 
+     5 | c = 0
      6 | 
-     7 | for i in range(0, size(vetor)):
-     8 | 	if vetor[i] <= 50:
-     9 | 		cont+= 1
-    10 | 			
-    11 | print(cont)
-    12 | v = zeros(cont, dtype = int)
-    13 | j = 0
-    14 | for i in range(0, size(vetor)):
-    15 | 	if vetor[i] <= 50:
-    16 | 		v[j] = i
-    17 | 		j = j + 1
-    18 | print(v)
+     7 | for i in range(size(saque)):
+     8 | 	if saque[i] <= 50:
+     9 | 		c = c + 1
+    10 | 
+    11 | v = zeros(c, dtype=int)
+    12 | x = 0
+    13 | 
+    14 | for i in range(size(saque)):
+    15 | 	if saque[i] <= 50:
+    16 | 		v[x] = i
+    17 | 		x = x + 1
+    18 | 		
+    19 | print(c)
+    20 | print(v)
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
@@ -46,34 +48,41 @@ DETALHAMENTO DOS MISCONCEPTIONS
       Trecho  : —
 
 ▶ G4 — Funções/variáveis com nomes não significativos
-  Ocorrências: 4
+  Ocorrências: 5
 
-  [1] Linha 4: Variável 'cont' com nome muito curto (≤4 chars)
-      Trecho  : cont = ...
+  [1] Linha 5: Variável 'c' com nome muito curto (≤4 chars)
+      Trecho  : c = ...
       Contexto:
-               3 | vetor = array(eval(input()))
-        >>>    4 | cont = 0
-               5 | 
+               4 | 
+        >>>    5 | c = 0
+               6 | 
 
-  [2] Linha 12: Variável 'v' com nome muito curto (≤4 chars)
+  [2] Linha 11: Variável 'v' com nome muito curto (≤4 chars)
       Trecho  : v = ...
       Contexto:
-              11 | print(cont)
-        >>>   12 | v = zeros(cont, dtype = int)
-              13 | j = 0
+              10 | 
+        >>>   11 | v = zeros(c, dtype=int)
+              12 | x = 0
 
-  [3] Linha 13: Variável 'j' com nome muito curto (≤4 chars)
-      Trecho  : j = ...
+  [3] Linha 12: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
       Contexto:
-              12 | v = zeros(cont, dtype = int)
-        >>>   13 | j = 0
-              14 | for i in range(0, size(vetor)):
+              11 | v = zeros(c, dtype=int)
+        >>>   12 | x = 0
+              13 | 
 
-  [4] Linha 17: Variável 'j' com nome muito curto (≤4 chars)
-      Trecho  : j = ...
+  [4] Linha 9: Variável 'c' com nome muito curto (≤4 chars)
+      Trecho  : c = ...
       Contexto:
-              16 | 		v[j] = i
-        >>>   17 | 		j = j + 1
-              18 | print(v)
+               8 | 	if saque[i] <= 50:
+        >>>    9 | 		c = c + 1
+              10 | 
+
+  [5] Linha 17: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
+      Contexto:
+              16 | 		v[x] = i
+        >>>   17 | 		x = x + 1
+              18 | 		
 
 ======================================================================

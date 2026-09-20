@@ -2,11 +2,11 @@
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
 Arquivo     : 5472_6832.log
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2023_2_v1.81\2023-2\559\users\9227\executions\5472_6832.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2023_2_v1.81\2023-2\559\users\9229\executions\5472_6832.log
 Assessment  : 5472
 Título      : TP 5: Vetores e Strings
 Questão     : 6832
-Aluno       : 9227
+Aluno       : 9229
 Grupo       : TP 05
 Significado : Vetores e Strings
 Total MCs   : 2
@@ -16,21 +16,20 @@ Total MCs   : 2
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | v = input("")
+     1 | p = input(" ")
      2 | 
-     3 | i = 0
-     4 | p = 0.0
+     3 | c = 0 
+     4 | v = 0
      5 | 
-     6 | 
-     7 | while i < len(v):
-     8 | 	if v[i] == "H":
-     9 | 		p += 5.40
-    10 | 	elif v[i] == "C":
-    11 | 		p += 8.95
-    12 | 	elif v[i] == "L":
-    13 | 		p += 4.50
-    14 | 	i += 1
-    15 | print(round(p, 2))
+     6 | while c < len(p):
+     7 | 	if p[c] == "H":
+     8 | 		v += 5.40
+     9 | 	elif p[c] == "C":
+    10 | 		v += 8.95
+    11 | 	elif p[c] == "L":
+    12 | 		v += 4.50
+    13 | 	c += 1
+    14 | print(round(v, 2))
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
@@ -39,34 +38,34 @@ DETALHAMENTO DOS MISCONCEPTIONS
 ▶ B8 — Não utilização de elif/else
   Ocorrências: 1
 
-  [1] Linha 10: Cadeia if/elif sem bloco else final
-      Trecho  : if ... (linha 10) / elif ... sem else
+  [1] Linha 9: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 9) / elif ... sem else
       Contexto:
-               9 | 		p += 5.40
-        >>>   10 | 	elif v[i] == "C":
-              11 | 		p += 8.95
+               8 | 		v += 5.40
+        >>>    9 | 	elif p[c] == "C":
+              10 | 		v += 8.95
 
 ▶ G4 — Funções/variáveis com nomes não significativos
   Ocorrências: 3
 
-  [1] Linha 1: Variável 'v' com nome muito curto (≤4 chars)
-      Trecho  : v = ...
-      Contexto:
-        >>>    1 | v = input("")
-               2 | 
-
-  [2] Linha 3: Variável 'i' com nome muito curto (≤4 chars)
-      Trecho  : i = ...
-      Contexto:
-               2 | 
-        >>>    3 | i = 0
-               4 | p = 0.0
-
-  [3] Linha 4: Variável 'p' com nome muito curto (≤4 chars)
+  [1] Linha 1: Variável 'p' com nome muito curto (≤4 chars)
       Trecho  : p = ...
       Contexto:
-               3 | i = 0
-        >>>    4 | p = 0.0
+        >>>    1 | p = input(" ")
+               2 | 
+
+  [2] Linha 3: Variável 'c' com nome muito curto (≤4 chars)
+      Trecho  : c = ...
+      Contexto:
+               2 | 
+        >>>    3 | c = 0 
+               4 | v = 0
+
+  [3] Linha 4: Variável 'v' com nome muito curto (≤4 chars)
+      Trecho  : v = ...
+      Contexto:
+               3 | c = 0 
+        >>>    4 | v = 0
                5 | 
 
 ======================================================================

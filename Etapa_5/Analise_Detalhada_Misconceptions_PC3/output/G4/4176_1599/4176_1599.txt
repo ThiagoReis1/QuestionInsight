@@ -2,11 +2,11 @@
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
 Arquivo     : 4176_1599.log
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2022_1_v1.81\2022-1\443\users\7594\executions\4176_1599.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2022_1_v1.81\2022-1\443\users\7589\executions\4176_1599.log
 Assessment  : 4176
 Título      : TP 05: Vetores e Strings
 Questão     : 1599
-Aluno       : 7594
+Aluno       : 7589
 Grupo       : TP 05
 Significado : Vetores e Strings
 Total MCs   : 1
@@ -16,50 +16,46 @@ Total MCs   : 1
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | from numpy import*
+     1 | from numpy import *
      2 | 
-     3 | c = array(eval(input()))
+     3 | v = array(eval(input("Coloque o valor dos produtos comprados: ")))
      4 | 
-     5 | i = 0
-     6 | p = 0
-     7 | 
-     8 | while i < size(c):
-     9 | 	if c[i]>=80:
-    10 | 		p += c[i]-c[i]*15/100
-    11 | 	else:
-    12 | 		p += c[i]
-    13 | 	i += 1
-    14 | print(round(p,2))
+     5 | a = ones(size(v), dtype=float)
+     6 | 
+     7 | i = 0
+     8 | 
+     9 | while (i < size(a)):
+    10 | 	if (v[i] <= 80):
+    11 | 		a[i] = v[i]
+    12 | 	else:
+    13 | 		a[i] = 0.85 * v[i]
+    14 | 	i = i + 1
+    15 | 	
+    16 | print(round(sum(a), 2))
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
 ----------------------------------------------------------------------
 
 ▶ G4 — Funções/variáveis com nomes não significativos
-  Ocorrências: 3
+  Ocorrências: 4
 
-  [1] Linha 3: Variável 'c' com nome muito curto (≤4 chars)
-      Trecho  : c = ...
+  [1] Linha 3: Variável 'v' com nome muito curto (≤4 chars)
+      Trecho  : v = ...
       Contexto:
                2 | 
-        >>>    3 | c = array(eval(input()))
+        >>>    3 | v = array(eval(input("Coloque o valor dos produtos comprados: ")))
                4 | 
 
-  [2] Linha 5: Variável 'i' com nome muito curto (≤4 chars)
+  [2] Linha 5: Variável 'a' com nome muito curto (≤4 chars)
+      Trecho  : a = ...
+      Contexto:
+               4 | 
+        >>>    5 | a = ones(size(v), dtype=float)
+               6 | 
+
+  [3] Linha 7: Variável 'i' com nome muito curto (≤4 chars)
       Trecho  : i = ...
-      Contexto:
-               4 | 
-        >>>    5 | i = 0
-               6 | p = 0
-
-  [3] Linha 6: Variável 'p' com nome muito curto (≤4 chars)
-      Trecho  : p = ...
-      Contexto:
-               5 | i = 0
-        >>>    6 | p = 0
-               7 | 
-
-======================================================================...
       Contexto:
                6 | 
         >>>    7 | i = 0

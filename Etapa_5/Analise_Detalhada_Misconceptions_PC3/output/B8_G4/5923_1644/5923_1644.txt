@@ -2,11 +2,11 @@
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
 Arquivo     : 5923_1644.log
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2024_1_v1.81\2024-1\590\users\9827\executions\5923_1644.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2024_1_v1.81\2024-1\590\users\9828\executions\5923_1644.log
 Assessment  : 5923
 Título      : TP 6: Estrutura de Repetição por Contagem (for)
 Questão     : 1644
-Aluno       : 9827
+Aluno       : 9828
 Grupo       : TP 06
 Significado : Estrutura de Repetição por Contagem
 Total MCs   : 2
@@ -16,21 +16,20 @@ Total MCs   : 2
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | from numpy import*
-     2 | notas = array(eval(input()))
-     3 | acum = 0
-     4 | for i in range(size(notas)):
-     5 | 	if	notas[i] < 5:
-     6 | 		acum +=1
-     7 | print(acum)
-     8 | vet = zeros(acum,dtype=int)
-     9 | j=0
-    10 | 
-    11 | for i in range (size(notas)):
-    12 | 	if notas[i]<5:
-    13 | 		vet[j]= vet[j] + i
-    14 | 		j+=1
-    15 | print(vet)
+     1 | from numpy import *
+     2 | n = array(eval(input("M: ")))
+     3 | r = 0
+     4 | for i in range(size(n)):
+     5 | 	if n[i] < 5:
+     6 | 		r += 1
+     7 | c = zeros(r,dtype=int)
+     8 | k = 0
+     9 | for j in range(size(n)):
+    10 | 	if n[j] < 5:
+    11 | 		c[k] = j
+    12 | 		k+=1
+    13 | print(r)
+    14 | print(c)
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
@@ -43,30 +42,33 @@ DETALHAMENTO DOS MISCONCEPTIONS
       Trecho  : —
 
 ▶ G4 — Funções/variáveis com nomes não significativos
-  Ocorrências: 3
+  Ocorrências: 4
 
-  [1] Linha 3: Variável 'acum' com nome muito curto (≤4 chars)
-      Trecho  : acum = ...
+  [1] Linha 2: Variável 'n' com nome muito curto (≤4 chars)
+      Trecho  : n = ...
       Contexto:
-               2 | notas = array(eval(input()))
-        >>>    3 | acum = 0
-               4 | for i in range(size(notas)):
+               1 | from numpy import *
+        >>>    2 | n = array(eval(input("M: ")))
+               3 | r = 0
 
-  [2] Linha 8: Variável 'vet' com nome muito curto (≤4 chars)
-      Trecho  : vet = ...
+  [2] Linha 3: Variável 'r' com nome muito curto (≤4 chars)
+      Trecho  : r = ...
       Contexto:
-               7 | print(acum)
-        >>>    8 | vet = zeros(acum,dtype=int)
-               9 | j=0
+               2 | n = array(eval(input("M: ")))
+        >>>    3 | r = 0
+               4 | for i in range(size(n)):
 
-  [3] Linha 9: Variável 'j' com nome muito curto (≤4 chars)
-      Trecho  : j = ...
+  [3] Linha 7: Variável 'c' com nome muito curto (≤4 chars)
+      Trecho  : c = ...
       Contexto:
-               8 | vet = zeros(acum,dtype=int)
-        >>>    9 | j=0
-              10 | 
+               6 | 		r += 1
+        >>>    7 | c = zeros(r,dtype=int)
+               8 | k = 0
 
-======================================================================     7 | c = zeros(r,dtype=int)
+  [4] Linha 8: Variável 'k' com nome muito curto (≤4 chars)
+      Trecho  : k = ...
+      Contexto:
+               7 | c = zeros(r,dtype=int)
         >>>    8 | k = 0
                9 | for j in range(size(n)):
 

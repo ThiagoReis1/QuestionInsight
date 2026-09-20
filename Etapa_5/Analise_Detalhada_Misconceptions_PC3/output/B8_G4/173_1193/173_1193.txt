@@ -2,11 +2,11 @@
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
 Arquivo     : 173_1193.log
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2016_1_v1.81\2016-1\102\users\1285\executions\173_1193.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2016_1_v1.81\2016-1\102\users\1462\executions\173_1193.log
 Assessment  : 173
 Título      : Avaliação Parcial 05 – Vetores e Strings
 Questão     : 1193
-Aluno       : 1285
+Aluno       : 1462
 Grupo       : TP 05
 Significado : Vetores e Strings
 Total MCs   : 2
@@ -16,24 +16,23 @@ Total MCs   : 2
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | from numpy import*
-     2 | vet = array(eval(input("Digite as temperaturas:")))
-     3 | i=0
-     4 | j=0
-     5 | vinv = 0
-     6 | 
-     7 | while (i<size(vet)):
-     8 | 	if (vet[i] > -100):
-     9 | 		vinv = vinv + 1
-    10 | 	i = i+1
-    11 | i=0
-    12 | vet2 = array(ones(vinv,dtype=float))
-    13 | while (i<size(vet)):
-    14 | 	if (vet[i] > -100):
-    15 | 		vet2[j] = vet[i]
-    16 | 		j = j+1
-    17 | 	i = i+1
-    18 | print (vet2)
+     1 | from numpy import* 
+     2 | v = array(eval(input("Temperatura:")))
+     3 | i = 0
+     4 | cont = 0
+     5 | while (i<size(v)):
+     6 | 	if(v[i]>=-100):
+     7 | 		cont= cont+1
+     8 | 	i = i+ 1 
+     9 | p=array(zeros(cont,dtype = float))
+    10 | i = 0 
+    11 | k = 0
+    12 | while(i<size(v)):
+    13 | 	if(-100 <= v[i]):
+    14 | 		p[k]= v[i]
+    15 | 		k = k+1
+    16 | 	i = i+1
+    17 | print(p)
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
@@ -48,74 +47,74 @@ DETALHAMENTO DOS MISCONCEPTIONS
 ▶ G4 — Funções/variáveis com nomes não significativos
   Ocorrências: 10
 
-  [1] Linha 2: Variável 'vet' com nome muito curto (≤4 chars)
-      Trecho  : vet = ...
+  [1] Linha 2: Variável 'v' com nome muito curto (≤4 chars)
+      Trecho  : v = ...
       Contexto:
-               1 | from numpy import*
-        >>>    2 | vet = array(eval(input("Digite as temperaturas:")))
-               3 | i=0
+               1 | from numpy import* 
+        >>>    2 | v = array(eval(input("Temperatura:")))
+               3 | i = 0
 
   [2] Linha 3: Variável 'i' com nome muito curto (≤4 chars)
       Trecho  : i = ...
       Contexto:
-               2 | vet = array(eval(input("Digite as temperaturas:")))
-        >>>    3 | i=0
-               4 | j=0
+               2 | v = array(eval(input("Temperatura:")))
+        >>>    3 | i = 0
+               4 | cont = 0
 
-  [3] Linha 4: Variável 'j' com nome muito curto (≤4 chars)
-      Trecho  : j = ...
+  [3] Linha 4: Variável 'cont' com nome muito curto (≤4 chars)
+      Trecho  : cont = ...
       Contexto:
-               3 | i=0
-        >>>    4 | j=0
-               5 | vinv = 0
+               3 | i = 0
+        >>>    4 | cont = 0
+               5 | while (i<size(v)):
 
-  [4] Linha 5: Variável 'vinv' com nome muito curto (≤4 chars)
-      Trecho  : vinv = ...
+  [4] Linha 9: Variável 'p' com nome muito curto (≤4 chars)
+      Trecho  : p = ...
       Contexto:
-               4 | j=0
-        >>>    5 | vinv = 0
-               6 | 
+               8 | 	i = i+ 1 
+        >>>    9 | p=array(zeros(cont,dtype = float))
+              10 | i = 0 
 
-  [5] Linha 11: Variável 'i' com nome muito curto (≤4 chars)
+  [5] Linha 10: Variável 'i' com nome muito curto (≤4 chars)
       Trecho  : i = ...
       Contexto:
-              10 | 	i = i+1
-        >>>   11 | i=0
-              12 | vet2 = array(ones(vinv,dtype=float))
+               9 | p=array(zeros(cont,dtype = float))
+        >>>   10 | i = 0 
+              11 | k = 0
 
-  [6] Linha 12: Variável 'vet2' com nome muito curto (≤4 chars)
-      Trecho  : vet2 = ...
+  [6] Linha 11: Variável 'k' com nome muito curto (≤4 chars)
+      Trecho  : k = ...
       Contexto:
-              11 | i=0
-        >>>   12 | vet2 = array(ones(vinv,dtype=float))
-              13 | while (i<size(vet)):
+              10 | i = 0 
+        >>>   11 | k = 0
+              12 | while(i<size(v)):
 
-  [7] Linha 10: Variável 'i' com nome muito curto (≤4 chars)
+  [7] Linha 8: Variável 'i' com nome muito curto (≤4 chars)
       Trecho  : i = ...
       Contexto:
-               9 | 		vinv = vinv + 1
-        >>>   10 | 	i = i+1
-              11 | i=0
+               7 | 		cont= cont+1
+        >>>    8 | 	i = i+ 1 
+               9 | p=array(zeros(cont,dtype = float))
 
-  [8] Linha 17: Variável 'i' com nome muito curto (≤4 chars)
+  [8] Linha 16: Variável 'i' com nome muito curto (≤4 chars)
       Trecho  : i = ...
       Contexto:
-              16 | 		j = j+1
-        >>>   17 | 	i = i+1
-              18 | print (vet2)
+              15 | 		k = k+1
+        >>>   16 | 	i = i+1
+              17 | print(p)
 
-  [9] Linha 9: Variável 'vinv' com nome muito curto (≤4 chars)
-      Trecho  : vinv = ...
+  [9] Linha 7: Variável 'cont' com nome muito curto (≤4 chars)
+      Trecho  : cont = ...
       Contexto:
-               8 | 	if (vet[i] > -100):
-        >>>    9 | 		vinv = vinv + 1
-              10 | 	i = i+1
+               6 | 	if(v[i]>=-100):
+        >>>    7 | 		cont= cont+1
+               8 | 	i = i+ 1 
 
-  [10] Linha 16: Variável 'j' com nome muito curto (≤4 chars)
-      Trecho  : j = ...
+  [10] Linha 15: Variável 'k' com nome muito curto (≤4 chars)
+      Trecho  : k = ...
       Contexto:
-              15 | 		vet2[j] = vet[i]
-        >>>   16 | 		j = j+1
-              17 | 	i = i+1
+              14 | 		p[k]= v[i]
+        >>>   15 | 		k = k+1
+              16 | 	i = i+1
 
 ======================================================================

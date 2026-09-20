@@ -2,11 +2,11 @@
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
 Arquivo     : 1822_1645.log
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2019_1_v1.81\2019-1\226\users\4157\executions\1822_1645.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2019_1_v1.81\2019-1\226\users\4124\executions\1822_1645.log
 Assessment  : 1822
 Título      : TP6: Repetição por contagem
 Questão     : 1645
-Aluno       : 4157
+Aluno       : 4124
 Grupo       : TP 06
 Significado : Estrutura de Repetição por Contagem
 Total MCs   : 2
@@ -16,23 +16,20 @@ Total MCs   : 2
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | from numpy import*
-     2 | s = array(eval(input("saques:")))
-     3 | i = 0
-     4 | 
-     5 | for x in range(size(s)):
-     6 | 	if(s[x]>=2000):
-     7 | 		i=i+1
-     8 | print(i)
-     9 | v= zeros(i, dtype=int)
-    10 | b=0
-    11 | i=0
-    12 | for z in range(size(s)):
-    13 | 	if(s[z]>=2000):
-    14 | 		v[i]=b
-    15 | 		i=i+1
-    16 | 	b=b+1
-    17 | print(v)
+     1 | from numpy import *
+     2 | v = array(eval(input("Valores dos saques: ")))
+     3 | val = 0
+     4 | for i in range(size(v)):
+     5 | 	if (v[i] >= 2000):
+     6 | 		val = val + 1
+     7 | vet = zeros(val, dtype = int)
+     8 | k = 0
+     9 | for j in range(size(v)):
+    10 | 	#vet = zeros(val, dtype = int)
+    11 | 	if v[j] >= 2000:
+    12 | 		v[j] = k
+    13 | print(val)
+    14 | print(vet)
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
@@ -45,62 +42,41 @@ DETALHAMENTO DOS MISCONCEPTIONS
       Trecho  : —
 
 ▶ G4 — Funções/variáveis com nomes não significativos
-  Ocorrências: 8
+  Ocorrências: 5
 
-  [1] Linha 2: Variável 's' com nome muito curto (≤4 chars)
-      Trecho  : s = ...
-      Contexto:
-               1 | from numpy import*
-        >>>    2 | s = array(eval(input("saques:")))
-               3 | i = 0
-
-  [2] Linha 3: Variável 'i' com nome muito curto (≤4 chars)
-      Trecho  : i = ...
-      Contexto:
-               2 | s = array(eval(input("saques:")))
-        >>>    3 | i = 0
-               4 | 
-
-  [3] Linha 9: Variável 'v' com nome muito curto (≤4 chars)
+  [1] Linha 2: Variável 'v' com nome muito curto (≤4 chars)
       Trecho  : v = ...
       Contexto:
-               8 | print(i)
-        >>>    9 | v= zeros(i, dtype=int)
-              10 | b=0
+               1 | from numpy import *
+        >>>    2 | v = array(eval(input("Valores dos saques: ")))
+               3 | val = 0
 
-  [4] Linha 10: Variável 'b' com nome muito curto (≤4 chars)
-      Trecho  : b = ...
+  [2] Linha 3: Variável 'val' com nome muito curto (≤4 chars)
+      Trecho  : val = ...
       Contexto:
-               9 | v= zeros(i, dtype=int)
-        >>>   10 | b=0
-              11 | i=0
+               2 | v = array(eval(input("Valores dos saques: ")))
+        >>>    3 | val = 0
+               4 | for i in range(size(v)):
 
-  [5] Linha 11: Variável 'i' com nome muito curto (≤4 chars)
-      Trecho  : i = ...
+  [3] Linha 7: Variável 'vet' com nome muito curto (≤4 chars)
+      Trecho  : vet = ...
       Contexto:
-              10 | b=0
-        >>>   11 | i=0
-              12 | for z in range(size(s)):
+               6 | 		val = val + 1
+        >>>    7 | vet = zeros(val, dtype = int)
+               8 | k = 0
 
-  [6] Linha 16: Variável 'b' com nome muito curto (≤4 chars)
-      Trecho  : b = ...
+  [4] Linha 8: Variável 'k' com nome muito curto (≤4 chars)
+      Trecho  : k = ...
       Contexto:
-              15 | 		i=i+1
-        >>>   16 | 	b=b+1
-              17 | print(v)
+               7 | vet = zeros(val, dtype = int)
+        >>>    8 | k = 0
+               9 | for j in range(size(v)):
 
-  [7] Linha 7: Variável 'i' com nome muito curto (≤4 chars)
-      Trecho  : i = ...
+  [5] Linha 6: Variável 'val' com nome muito curto (≤4 chars)
+      Trecho  : val = ...
       Contexto:
-               6 | 	if(s[x]>=2000):
-        >>>    7 | 		i=i+1
-               8 | print(i)
-
-  [8] Linha 15: Variável 'i' com nome muito curto (≤4 chars)
-      Trecho  : i = ...
-      Contexto:
-              14 | 		v[i]=b
-        >>>   15 | 		i=i+1
-              16 | 	b=b+1
+               5 | 	if (v[i] >= 2000):
+        >>>    6 | 		val = val + 1
+               7 | vet = zeros(val, dtype = int)
 
 ======================================================================

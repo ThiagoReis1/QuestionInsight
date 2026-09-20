@@ -2,11 +2,11 @@
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
 Arquivo     : 4242_1649.log
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2022_1_v1.81\2022-1\443\users\7595\executions\4242_1649.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2022_1_v1.81\2022-1\443\users\7588\executions\4242_1649.log
 Assessment  : 4242
 Título      : TP 6: Estrutura de Repetição por Contagem (for)
 Questão     : 1649
-Aluno       : 7595
+Aluno       : 7588
 Grupo       : TP 06
 Significado : Estrutura de Repetição por Contagem
 Total MCs   : 1
@@ -18,24 +18,24 @@ CÓDIGO FONTE
 ----------------------------------------------------------------------
      1 | from numpy import *
      2 | 
-     3 | strg = input("Cor: ").split(',')
+     3 | s = input().split(',')
      4 | 
-     5 | cores_contagem = zeros(5, dtype = int)
+     5 | vCont = zeros(5, dtype = int)
      6 | 
-     7 | for i in range (len(strg)):
-     8 | 	if(strg[i].upper() == "P"):
-     9 | 		cores_contagem[0] += 1
-    10 | 	elif(strg[i].upper() == "C"):
-    11 | 		cores_contagem[1] += 1
-    12 | 	elif(strg[i].upper() == "M"):
-    13 | 		cores_contagem[2] += 1
-    14 | 	elif(strg[i].upper() == "V"):
-    15 | 		cores_contagem[3] += 1
-    16 | 	elif(strg[i].upper() == "A"):
-    17 | 		cores_contagem[4] += 1
-    18 | 	
-    19 | print(max(cores_contagem))
-    20 | print(cores_contagem)
+     7 | for i in range(len(s)):
+     8 | 	if(s[i] == 'P'):
+     9 | 		vCont[0] += 1
+    10 | 	elif(s[i] == 'C'):
+    11 | 		vCont[1] += 1
+    12 | 	elif(s[i] == 'M'):
+    13 | 		vCont[2] += 1
+    14 | 	elif(s[i] == 'V'):
+    15 | 		vCont[3] += 1
+    16 | 	elif(s[i] == 'A'):
+    17 | 		vCont[4] += 1
+    18 | 
+    19 | print(max(vCont))
+    20 | print(vCont)
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
@@ -47,8 +47,8 @@ DETALHAMENTO DOS MISCONCEPTIONS
   [1] Linha 14: Cadeia if/elif sem bloco else final
       Trecho  : if ... (linha 14) / elif ... sem else
       Contexto:
-              13 | 		cores_contagem[2] += 1
-        >>>   14 | 	elif(strg[i].upper() == "V"):
-              15 | 		cores_contagem[3] += 1
+              13 | 		vCont[2] += 1
+        >>>   14 | 	elif(s[i] == 'V'):
+              15 | 		vCont[3] += 1
 
 ======================================================================

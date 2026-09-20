@@ -2,11 +2,11 @@
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
 Arquivo     : 1718_3068.log
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2019_1_v1.81\2019-1\231\users\4219\executions\1718_3068.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2019_1_v1.81\2019-1\231\users\4236\executions\1718_3068.log
 Assessment  : 1718
 Título      : TP3 - Estrutura Condicional Encadeada
 Questão     : 3068
-Aluno       : 4219
+Aluno       : 4236
 Grupo       : TP 03
 Significado : Estrutura Condicional Encadeada
 Total MCs   : 3
@@ -16,19 +16,23 @@ Total MCs   : 3
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | nome = input("insira: ")
-     2 | des = int(input("insira: "))
-     3 | d1 = int(input("insira: "))
-     4 | d2 = int(input("insira: "))
-     5 | s = d1 + d2
-     6 | if ((1>d1) or (d1<10) or  (1>d2) or (d2<10) or (nome!= "CIMITARRA") or (nome!="KATANA") or (nome!= "SABRE") or (des<0)) :
-     7 | 	print("Entrada invalida")
-     8 | elif (nome =="CIMITARRA") :
-     9 | 	print(2*s+ 2*d)
-    10 | elif (nome=="KATANA") :
-    11 | 	print ((2*s)+ d )
-    12 | elif (nome=="SABRE") :
-    13 | 	print (s + 2*d )
+     1 | nome = input("nome? (CIMITARRA/KATANA/SABRE)").upper()
+     2 | d = int(input("num: "))
+     3 | n1 = int(input("valor: "))
+     4 | n2 = int(input("valor: "))
+     5 | S = n1 + n2
+     6 | SA = "SABRE"
+     7 | KA = "KATANA"
+     8 | CI= "CIMITARRA"
+     9 | 
+    10 | if ((1>n1>10) or (1>n2>10) or (d<0) or (nome != SA) or (nome != KA) or (nome!= CI)) :
+    11 | 	print("Entrada invalida")
+    12 | elif (nome == "CIMITARRA"):
+    13 | 	print(2 * S + 2 * d)
+    14 | elif (nome == "KATANA"):
+    15 | 	print(2 * S + d)
+    16 | elif (nome == "SABRE"):
+    17 | 	print(S + 2 * d)
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
@@ -37,61 +41,65 @@ DETALHAMENTO DOS MISCONCEPTIONS
 ▶ B8 — Não utilização de elif/else
   Ocorrências: 1
 
-  [1] Linha 10: Cadeia if/elif sem bloco else final
-      Trecho  : if ... (linha 10) / elif ... sem else
+  [1] Linha 14: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 14) / elif ... sem else
       Contexto:
-               9 | 	print(2*s+ 2*d)
-        >>>   10 | elif (nome=="KATANA") :
-              11 | 	print ((2*s)+ d )
+              13 | 	print(2 * S + 2 * d)
+        >>>   14 | elif (nome == "KATANA"):
+              15 | 	print(2 * S + d)
 
 ▶ E1 — Verificação desnecessária de todas as combinações possíveis
   Ocorrências: 1
 
-  [1] Linha 6: 8 condições em um único if — verificação excessiva
-      Trecho  : 1 > d1 or d1 < 10 or 1 > d2 or (d2 < 10) or (nome != 'CIMITARRA') or (nome != 'KATANA') or (nome != 'SABRE') or (des < 0)
+  [1] Linha 10: 6 condições em um único if — verificação excessiva
+      Trecho  : 1 > n1 > 10 or 1 > n2 > 10 or d < 0 or (nome != SA) or (nome != KA) or (nome != CI)
       Contexto:
-               5 | s = d1 + d2
-        >>>    6 | if ((1>d1) or (d1<10) or  (1>d2) or (d2<10) or (nome!= "CIMITARRA") or (nome!="KATANA") or (nome!= "SABRE") or (des<0)) :
-               7 | 	print("Entrada invalida")
+               9 | 
+        >>>   10 | if ((1>n1>10) or (1>n2>10) or (d<0) or (nome != SA) or (nome != KA) or (nome!= CI)) :
+              11 | 	print("Entrada invalida")
 
 ▶ G4 — Funções/variáveis com nomes não significativos
-  Ocorrências: 5
+  Ocorrências: 8
 
   [1] Linha 1: Variável 'nome' com nome muito curto (≤4 chars)
       Trecho  : nome = ...
       Contexto:
-        >>>    1 | nome = input("insira: ")
-               2 | des = int(input("insira: "))
+        >>>    1 | nome = input("nome? (CIMITARRA/KATANA/SABRE)").upper()
+               2 | d = int(input("num: "))
 
-  [2] Linha 2: Variável 'des' com nome muito curto (≤4 chars)
-      Trecho  : des = ...
+  [2] Linha 2: Variável 'd' com nome muito curto (≤4 chars)
+      Trecho  : d = ...
       Contexto:
-               1 | nome = input("insira: ")
-        >>>    2 | des = int(input("insira: "))
-               3 | d1 = int(input("insira: "))
+               1 | nome = input("nome? (CIMITARRA/KATANA/SABRE)").upper()
+        >>>    2 | d = int(input("num: "))
+               3 | n1 = int(input("valor: "))
 
-  [3] Linha 3: Variável 'd1' com nome muito curto (≤4 chars)
-      Trecho  : d1 = ...
+  [3] Linha 3: Variável 'n1' com nome muito curto (≤4 chars)
+      Trecho  : n1 = ...
       Contexto:
-               2 | des = int(input("insira: "))
-        >>>    3 | d1 = int(input("insira: "))
-               4 | d2 = int(input("insira: "))
+               2 | d = int(input("num: "))
+        >>>    3 | n1 = int(input("valor: "))
+               4 | n2 = int(input("valor: "))
 
-  [4] Linha 4: Variável 'd2' com nome muito curto (≤4 chars)
-      Trecho  : d2 = ...
+  [4] Linha 4: Variável 'n2' com nome muito curto (≤4 chars)
+      Trecho  : n2 = ...
       Contexto:
-               3 | d1 = int(input("insira: "))
-        >>>    4 | d2 = int(input("insira: "))
-               5 | s = d1 + d2
+               3 | n1 = int(input("valor: "))
+        >>>    4 | n2 = int(input("valor: "))
+               5 | S = n1 + n2
 
-  [5] Linha 5: Variável 's' com nome muito curto (≤4 chars)
-      Trecho  : s = ...
+  [5] Linha 5: Variável 'S' com nome muito curto (≤4 chars)
+      Trecho  : S = ...
       Contexto:
-               4 | d2 = int(input("insira: "))
-        >>>    5 | s = d1 + d2
-               6 | if ((1>d1) or (d1<10) or  (1>d2) or (d2<10) or (nome!= "CIMITARRA") or (nome!="KATANA") or (nome!= "SABRE") or (des<0)) :
+               4 | n2 = int(input("valor: "))
+        >>>    5 | S = n1 + n2
+               6 | SA = "SABRE"
 
-======================================================================  >>>    6 | SA = "SABRE"
+  [6] Linha 6: Variável 'SA' com nome muito curto (≤4 chars)
+      Trecho  : SA = ...
+      Contexto:
+               5 | S = n1 + n2
+        >>>    6 | SA = "SABRE"
                7 | KA = "KATANA"
 
   [7] Linha 7: Variável 'KA' com nome muito curto (≤4 chars)

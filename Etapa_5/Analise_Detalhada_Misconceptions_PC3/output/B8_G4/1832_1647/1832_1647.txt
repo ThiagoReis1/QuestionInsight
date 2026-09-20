@@ -2,11 +2,11 @@
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
 Arquivo     : 1832_1647.log
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2019_1_v1.81\2019-1\224\users\4432\executions\1832_1647.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2019_1_v1.81\2019-1\224\users\4384\executions\1832_1647.log
 Assessment  : 1832
 Título      : TP6: Repetição por contagem
 Questão     : 1647
-Aluno       : 4432
+Aluno       : 4384
 Grupo       : TP 06
 Significado : Estrutura de Repetição por Contagem
 Total MCs   : 2
@@ -16,19 +16,20 @@ Total MCs   : 2
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | from numpy import*
-     2 | y=0
-     3 | x=array(eval(input("frequenciados alunos  ")))
-     4 | for elemento in x:
-     5 | 	if( elemento >= 70):
-     6 | 		y=y+1
-     7 | print(y)
-     8 | for w in x:
-     9 | 	y=0
-    10 | 	if(x[y]>=70):
-    11 | 		y=y+1
-    12 | m=zeros(y,dtype(int))
-    13 | print(m)
+     1 | from numpy import* 
+     2 | f=array(eval(input("digite a frequencia dos alunos: ")))
+     3 | ap=0
+     4 | y=0
+     5 | for elemento in f:
+     6 | 	if elemento >=70:
+     7 | 		ap=ap+1
+     8 | print(ap)
+     9 | n=zeros(y, dtype=int)
+    10 | for i in range(size(f)):
+    11 | 	if i >=70:
+    12 | 		y=y+1
+    13 | k=n
+    14 | print(k)
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
@@ -41,48 +42,55 @@ DETALHAMENTO DOS MISCONCEPTIONS
       Trecho  : —
 
 ▶ G4 — Funções/variáveis com nomes não significativos
-  Ocorrências: 6
+  Ocorrências: 7
 
-  [1] Linha 2: Variável 'y' com nome muito curto (≤4 chars)
+  [1] Linha 2: Variável 'f' com nome muito curto (≤4 chars)
+      Trecho  : f = ...
+      Contexto:
+               1 | from numpy import* 
+        >>>    2 | f=array(eval(input("digite a frequencia dos alunos: ")))
+               3 | ap=0
+
+  [2] Linha 3: Variável 'ap' com nome muito curto (≤4 chars)
+      Trecho  : ap = ...
+      Contexto:
+               2 | f=array(eval(input("digite a frequencia dos alunos: ")))
+        >>>    3 | ap=0
+               4 | y=0
+
+  [3] Linha 4: Variável 'y' com nome muito curto (≤4 chars)
       Trecho  : y = ...
       Contexto:
-               1 | from numpy import*
-        >>>    2 | y=0
-               3 | x=array(eval(input("frequenciados alunos  ")))
+               3 | ap=0
+        >>>    4 | y=0
+               5 | for elemento in f:
 
-  [2] Linha 3: Variável 'x' com nome muito curto (≤4 chars)
-      Trecho  : x = ...
+  [4] Linha 9: Variável 'n' com nome muito curto (≤4 chars)
+      Trecho  : n = ...
       Contexto:
-               2 | y=0
-        >>>    3 | x=array(eval(input("frequenciados alunos  ")))
-               4 | for elemento in x:
+               8 | print(ap)
+        >>>    9 | n=zeros(y, dtype=int)
+              10 | for i in range(size(f)):
 
-  [3] Linha 12: Variável 'm' com nome muito curto (≤4 chars)
-      Trecho  : m = ...
+  [5] Linha 13: Variável 'k' com nome muito curto (≤4 chars)
+      Trecho  : k = ...
       Contexto:
-              11 | 		y=y+1
-        >>>   12 | m=zeros(y,dtype(int))
-              13 | print(m)
+              12 | 		y=y+1
+        >>>   13 | k=n
+              14 | print(k)
 
-  [4] Linha 9: Variável 'y' com nome muito curto (≤4 chars)
+  [6] Linha 7: Variável 'ap' com nome muito curto (≤4 chars)
+      Trecho  : ap = ...
+      Contexto:
+               6 | 	if elemento >=70:
+        >>>    7 | 		ap=ap+1
+               8 | print(ap)
+
+  [7] Linha 12: Variável 'y' com nome muito curto (≤4 chars)
       Trecho  : y = ...
       Contexto:
-               8 | for w in x:
-        >>>    9 | 	y=0
-              10 | 	if(x[y]>=70):
-
-  [5] Linha 6: Variável 'y' com nome muito curto (≤4 chars)
-      Trecho  : y = ...
-      Contexto:
-               5 | 	if( elemento >= 70):
-        >>>    6 | 		y=y+1
-               7 | print(y)
-
-  [6] Linha 11: Variável 'y' com nome muito curto (≤4 chars)
-      Trecho  : y = ...
-      Contexto:
-              10 | 	if(x[y]>=70):
-        >>>   11 | 		y=y+1
-              12 | m=zeros(y,dtype(int))
+              11 | 	if i >=70:
+        >>>   12 | 		y=y+1
+              13 | k=n
 
 ======================================================================

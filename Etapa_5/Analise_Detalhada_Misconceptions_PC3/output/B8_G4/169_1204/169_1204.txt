@@ -2,11 +2,11 @@
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
 Arquivo     : 169_1204.log
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2016_1_v1.81\2016-1\108\users\1358\executions\169_1204.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2016_1_v1.81\2016-1\108\users\1339\executions\169_1204.log
 Assessment  : 169
 Título      : Avaliação Parcial 05 – Vetores e Strings
 Questão     : 1204
-Aluno       : 1358
+Aluno       : 1339
 Grupo       : TP 05
 Significado : Vetores e Strings
 Total MCs   : 2
@@ -16,18 +16,18 @@ Total MCs   : 2
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | from numpy import *
-     2 | s = 2.5
-     3 | vetor = array(eval(input("Informe o vetor: ")))
-     4 | i = 0
-     5 | cont = 0
-     6 | 
-     7 | while(i < size(vetor)):
-     8 | 	if(vetor[i] < s):
-     9 | 		cont = cont + 1
-    10 | 	i = i + 1
-    11 | print(s)
-    12 | print(cont)
+     1 | from numpy import*
+     2 | s=eval(input("diga os saltos:"))
+     3 | 
+     4 | i=0
+     5 | q=0
+     6 | r=2.5
+     7 | while i<size(s):
+     8 | 	if s[i]<r:
+     9 | 		q+=1
+    10 | 	i+=1
+    11 | print(r)
+    12 | print(q)
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
@@ -40,41 +40,34 @@ DETALHAMENTO DOS MISCONCEPTIONS
       Trecho  : —
 
 ▶ G4 — Funções/variáveis com nomes não significativos
-  Ocorrências: 5
+  Ocorrências: 4
 
   [1] Linha 2: Variável 's' com nome muito curto (≤4 chars)
       Trecho  : s = ...
       Contexto:
-               1 | from numpy import *
-        >>>    2 | s = 2.5
-               3 | vetor = array(eval(input("Informe o vetor: ")))
+               1 | from numpy import*
+        >>>    2 | s=eval(input("diga os saltos:"))
+               3 | 
 
   [2] Linha 4: Variável 'i' com nome muito curto (≤4 chars)
       Trecho  : i = ...
       Contexto:
-               3 | vetor = array(eval(input("Informe o vetor: ")))
-        >>>    4 | i = 0
-               5 | cont = 0
+               3 | 
+        >>>    4 | i=0
+               5 | q=0
 
-  [3] Linha 5: Variável 'cont' com nome muito curto (≤4 chars)
-      Trecho  : cont = ...
+  [3] Linha 5: Variável 'q' com nome muito curto (≤4 chars)
+      Trecho  : q = ...
       Contexto:
-               4 | i = 0
-        >>>    5 | cont = 0
-               6 | 
+               4 | i=0
+        >>>    5 | q=0
+               6 | r=2.5
 
-  [4] Linha 10: Variável 'i' com nome muito curto (≤4 chars)
-      Trecho  : i = ...
+  [4] Linha 6: Variável 'r' com nome muito curto (≤4 chars)
+      Trecho  : r = ...
       Contexto:
-               9 | 		cont = cont + 1
-        >>>   10 | 	i = i + 1
-              11 | print(s)
-
-  [5] Linha 9: Variável 'cont' com nome muito curto (≤4 chars)
-      Trecho  : cont = ...
-      Contexto:
-               8 | 	if(vetor[i] < s):
-        >>>    9 | 		cont = cont + 1
-              10 | 	i = i + 1
+               5 | q=0
+        >>>    6 | r=2.5
+               7 | while i<size(s):
 
 ======================================================================

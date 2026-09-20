@@ -2,11 +2,11 @@
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
 Arquivo     : 1830_1658.log
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2019_1_v1.81\2019-1\231\users\4216\executions\1830_1658.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2019_1_v1.81\2019-1\231\users\4212\executions\1830_1658.log
 Assessment  : 1830
 Título      : TP6: Repetição por contagem
 Questão     : 1658
-Aluno       : 4216
+Aluno       : 4212
 Grupo       : TP 06
 Significado : Estrutura de Repetição por Contagem
 Total MCs   : 2
@@ -16,25 +16,25 @@ Total MCs   : 2
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | from numpy import*
-     2 | n = input("insira: ").split(',')
-     3 | d = zeros(5, dtype=int)
+     1 | from numpy import *
+     2 | sti = input("Paises:").split(',')
+     3 | qp = zeros(5, dtype = int)
      4 | 
-     5 | for i in range(size(n)):
-     6 | 	if(n[i]=="CHN"):
-     7 | 		d[0] = d[0] + 1
-     8 | 	elif(n[i]=="JPN"):
-     9 | 		d[1] = d[1] + 1
-    10 | 	elif(n[i]=="KOR"):
-    11 | 		d[2] = d[2] + 1
-    12 | 	elif(n[i]=="MGL"):
-    13 | 		d[3] = d[3] + 1
-    14 | 	elif(n[i]=="THA"):
-    15 | 		d[4] = d[4] + 1
-    16 | 		
-    17 | 
-    18 | print(max(d))
-    19 | print(d)
+     5 | for i in sti:
+     6 | 	if(i.upper()=='CHN'):
+     7 | 		qp[0] = qp[0] + 1
+     8 | 	elif(i.upper()=='JPN'):
+     9 | 		qp[1] = qp[1] + 1
+    10 | 	elif(i.upper()=='KOR'):
+    11 | 		qp[2] = qp[2] + 1
+    12 | 	elif(i.upper()=='MGL'):
+    13 | 		qp[3] = qp[3] + 1
+    14 | 	elif(i.upper()=='THA'):
+    15 | 		qp[4] = qp[4] + 1
+    16 | 
+    17 | mais = max(qp)
+    18 | print(mais)
+    19 | print(qp)
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
@@ -46,25 +46,32 @@ DETALHAMENTO DOS MISCONCEPTIONS
   [1] Linha 12: Cadeia if/elif sem bloco else final
       Trecho  : if ... (linha 12) / elif ... sem else
       Contexto:
-              11 | 		d[2] = d[2] + 1
-        >>>   12 | 	elif(n[i]=="MGL"):
-              13 | 		d[3] = d[3] + 1
+              11 | 		qp[2] = qp[2] + 1
+        >>>   12 | 	elif(i.upper()=='MGL'):
+              13 | 		qp[3] = qp[3] + 1
 
 ▶ G4 — Funções/variáveis com nomes não significativos
-  Ocorrências: 2
+  Ocorrências: 3
 
-  [1] Linha 2: Variável 'n' com nome muito curto (≤4 chars)
-      Trecho  : n = ...
+  [1] Linha 2: Variável 'sti' com nome muito curto (≤4 chars)
+      Trecho  : sti = ...
       Contexto:
-               1 | from numpy import*
-        >>>    2 | n = input("insira: ").split(',')
-               3 | d = zeros(5, dtype=int)
+               1 | from numpy import *
+        >>>    2 | sti = input("Paises:").split(',')
+               3 | qp = zeros(5, dtype = int)
 
-  [2] Linha 3: Variável 'd' com nome muito curto (≤4 chars)
-      Trecho  : d = ...
+  [2] Linha 3: Variável 'qp' com nome muito curto (≤4 chars)
+      Trecho  : qp = ...
       Contexto:
-               2 | n = input("insira: ").split(',')
-        >>>    3 | d = zeros(5, dtype=int)
+               2 | sti = input("Paises:").split(',')
+        >>>    3 | qp = zeros(5, dtype = int)
                4 | 
+
+  [3] Linha 17: Variável 'mais' com nome muito curto (≤4 chars)
+      Trecho  : mais = ...
+      Contexto:
+              16 | 
+        >>>   17 | mais = max(qp)
+              18 | print(mais)
 
 ======================================================================

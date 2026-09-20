@@ -2,11 +2,11 @@
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
 Arquivo     : 152_1155.log
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2016_1_v1.81\2016-1\106\users\1652\executions\152_1155.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2016_1_v1.81\2016-1\106\users\1638\executions\152_1155.log
 Assessment  : 152
 Título      : Avaliação Parcial 04 – Estrutura de Repetição por Condição (while)
 Questão     : 1155
-Aluno       : 1652
+Aluno       : 1638
 Grupo       : TP 04
 Significado : Estrutura de Repetição por Condição
 Total MCs   : 1
@@ -16,82 +16,82 @@ Total MCs   : 1
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | num1 = int(input("Digite o numero de leu:"))
-     2 | num2 = int(input("Digite o numero de vi:"))
-     3 | taxa1 = float(input("Digite a taxa de crescimento de leu:"))
-     4 | taxa2 = float(input("Digite a taxa de crescimento de vi"))
-     5 | i1 = taxa1/100
-     6 | i2 = taxa2/100
-     7 | i = 1
-     8 | while (num1 >= 2*num2):
-     9 | 	num1 = num1 + (num1*i1)
-    10 | 	num2 = num2 + (num2*i2)
-    11 | 	i = i + 1
-    12 | print (i)
+     1 | nc = float(input("numero de copias iniciais: "))
+     2 | nl = float(input("numero inicial de leucocitos: "))
+     3 | tx = float(input("numero taxa de multiplicação: "))
+     4 | tx1 = float(input("numero taxa de leuucocitos: "))
+     5 | 
+     6 | virus = nc
+     7 | leucocitos = nl
+     8 | mv = tx*0.01
+     9 | ml = tx1*0.01
+    10 | cont = 5
+    11 | 
+    12 | while(nl == 2*nc):
+    13 | 	cont = virus*mv + leucocitos*ml
+    14 | 	cont = cont + 1
+    15 | print(cont)
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
 ----------------------------------------------------------------------
 
 ▶ G4 — Funções/variáveis com nomes não significativos
-  Ocorrências: 8
+  Ocorrências: 9
 
-  [1] Linha 1: Variável 'num1' com nome muito curto (≤4 chars)
-      Trecho  : num1 = ...
+  [1] Linha 1: Variável 'nc' com nome muito curto (≤4 chars)
+      Trecho  : nc = ...
       Contexto:
-        >>>    1 | num1 = int(input("Digite o numero de leu:"))
-               2 | num2 = int(input("Digite o numero de vi:"))
+        >>>    1 | nc = float(input("numero de copias iniciais: "))
+               2 | nl = float(input("numero inicial de leucocitos: "))
 
-  [2] Linha 2: Variável 'num2' com nome muito curto (≤4 chars)
-      Trecho  : num2 = ...
+  [2] Linha 2: Variável 'nl' com nome muito curto (≤4 chars)
+      Trecho  : nl = ...
       Contexto:
-               1 | num1 = int(input("Digite o numero de leu:"))
-        >>>    2 | num2 = int(input("Digite o numero de vi:"))
-               3 | taxa1 = float(input("Digite a taxa de crescimento de leu:"))
+               1 | nc = float(input("numero de copias iniciais: "))
+        >>>    2 | nl = float(input("numero inicial de leucocitos: "))
+               3 | tx = float(input("numero taxa de multiplicação: "))
 
-  [3] Linha 5: Variável 'i1' com nome muito curto (≤4 chars)
-      Trecho  : i1 = ...
+  [3] Linha 3: Variável 'tx' com nome muito curto (≤4 chars)
+      Trecho  : tx = ...
       Contexto:
-               4 | taxa2 = float(input("Digite a taxa de crescimento de vi"))
-        >>>    5 | i1 = taxa1/100
-               6 | i2 = taxa2/100
+               2 | nl = float(input("numero inicial de leucocitos: "))
+        >>>    3 | tx = float(input("numero taxa de multiplicação: "))
+               4 | tx1 = float(input("numero taxa de leuucocitos: "))
 
-  [4] Linha 6: Variável 'i2' com nome muito curto (≤4 chars)
-      Trecho  : i2 = ...
+  [4] Linha 4: Variável 'tx1' com nome muito curto (≤4 chars)
+      Trecho  : tx1 = ...
       Contexto:
-               5 | i1 = taxa1/100
-        >>>    6 | i2 = taxa2/100
-               7 | i = 1
+               3 | tx = float(input("numero taxa de multiplicação: "))
+        >>>    4 | tx1 = float(input("numero taxa de leuucocitos: "))
+               5 | 
 
-  [5] Linha 7: Variável 'i' com nome muito curto (≤4 chars)
-      Trecho  : i = ...
+  [5] Linha 8: Variável 'mv' com nome muito curto (≤4 chars)
+      Trecho  : mv = ...
       Contexto:
-               6 | i2 = taxa2/100
-        >>>    7 | i = 1
-               8 | while (num1 >= 2*num2):
+               7 | leucocitos = nl
+        >>>    8 | mv = tx*0.01
+               9 | ml = tx1*0.01
 
-  [6] Linha 9: Variável 'num1' com nome muito curto (≤4 chars)
-      Trecho  : num1 = ...
+  [6] Linha 9: Variável 'ml' com nome muito curto (≤4 chars)
+      Trecho  : ml = ...
       Contexto:
-               8 | while (num1 >= 2*num2):
-        >>>    9 | 	num1 = num1 + (num1*i1)
-              10 | 	num2 = num2 + (num2*i2)
+               8 | mv = tx*0.01
+        >>>    9 | ml = tx1*0.01
+              10 | cont = 5
 
-  [7] Linha 10: Variável 'num2' com nome muito curto (≤4 chars)
-      Trecho  : num2 = ...
+  [7] Linha 10: Variável 'cont' com nome muito curto (≤4 chars)
+      Trecho  : cont = ...
       Contexto:
-               9 | 	num1 = num1 + (num1*i1)
-        >>>   10 | 	num2 = num2 + (num2*i2)
-              11 | 	i = i + 1
+               9 | ml = tx1*0.01
+        >>>   10 | cont = 5
+              11 | 
 
-  [8] Linha 11: Variável 'i' com nome muito curto (≤4 chars)
-      Trecho  : i = ...
+  [8] Linha 13: Variável 'cont' com nome muito curto (≤4 chars)
+      Trecho  : cont = ...
       Contexto:
-              10 | 	num2 = num2 + (num2*i2)
-        >>>   11 | 	i = i + 1
-              12 | print (i)
-
-======================================================================ont = virus*mv + leucocitos*ml
+              12 | while(nl == 2*nc):
+        >>>   13 | 	cont = virus*mv + leucocitos*ml
               14 | 	cont = cont + 1
 
   [9] Linha 14: Variável 'cont' com nome muito curto (≤4 chars)

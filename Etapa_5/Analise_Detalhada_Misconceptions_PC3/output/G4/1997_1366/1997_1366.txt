@@ -2,11 +2,11 @@
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
 Arquivo     : 1997_1366.log
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2019_2_v1.81\2019-2\259\users\4659\executions\1997_1366.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2019_2_v1.81\2019-2\259\users\4654\executions\1997_1366.log
 Assessment  : 1997
 Título      : TP 01: Variáveis e Estrutura Sequencial (2019)
 Questão     : 1366
-Aluno       : 4659
+Aluno       : 4654
 Grupo       : TP 01
 Significado : Variáveis e Estrutura Sequencial
 Total MCs   : 1
@@ -16,11 +16,13 @@ Total MCs   : 1
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | from math import*
-     2 | a = radians(float(input("angulo da flecha: ")))
-     3 | vi = float(input("velocidade inicial: "))
-     4 | d = ((vi**2)*(sin(2*a)/9.8))
-     5 | print(round(d,2))
+     1 | import math 
+     2 | angulo = math.radians (float(input()))
+     3 | vi = float(input())
+     4 | g = 9.8
+     5 | d = vi**2 * math.sin(2*angulo)/g
+     6 | 
+     7 | print(round(d,2))
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
@@ -29,25 +31,25 @@ DETALHAMENTO DOS MISCONCEPTIONS
 ▶ G4 — Funções/variáveis com nomes não significativos
   Ocorrências: 3
 
-  [1] Linha 2: Variável 'a' com nome muito curto (≤4 chars)
-      Trecho  : a = ...
-      Contexto:
-               1 | from math import*
-        >>>    2 | a = radians(float(input("angulo da flecha: ")))
-               3 | vi = float(input("velocidade inicial: "))
-
-  [2] Linha 3: Variável 'vi' com nome muito curto (≤4 chars)
+  [1] Linha 3: Variável 'vi' com nome muito curto (≤4 chars)
       Trecho  : vi = ...
       Contexto:
-               2 | a = radians(float(input("angulo da flecha: ")))
-        >>>    3 | vi = float(input("velocidade inicial: "))
-               4 | d = ((vi**2)*(sin(2*a)/9.8))
+               2 | angulo = math.radians (float(input()))
+        >>>    3 | vi = float(input())
+               4 | g = 9.8
 
-  [3] Linha 4: Variável 'd' com nome muito curto (≤4 chars)
+  [2] Linha 4: Variável 'g' com nome muito curto (≤4 chars)
+      Trecho  : g = ...
+      Contexto:
+               3 | vi = float(input())
+        >>>    4 | g = 9.8
+               5 | d = vi**2 * math.sin(2*angulo)/g
+
+  [3] Linha 5: Variável 'd' com nome muito curto (≤4 chars)
       Trecho  : d = ...
       Contexto:
-               3 | vi = float(input("velocidade inicial: "))
-        >>>    4 | d = ((vi**2)*(sin(2*a)/9.8))
-               5 | print(round(d,2))
+               4 | g = 9.8
+        >>>    5 | d = vi**2 * math.sin(2*angulo)/g
+               6 | 
 
 ======================================================================

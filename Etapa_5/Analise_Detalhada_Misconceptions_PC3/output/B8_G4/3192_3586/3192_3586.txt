@@ -2,11 +2,11 @@
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
 Arquivo     : 3192_3586.log
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2021_1_v1.81\2021-1\379\users\6345\executions\3192_3586.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2021_1_v1.81\2021-1\379\users\6351\executions\3192_3586.log
 Assessment  : 3192
 Título      : TP5: Vetores e Strings (G)
 Questão     : 3586
-Aluno       : 6345
+Aluno       : 6351
 Grupo       : TP 05
 Significado : Vetores e Strings
 Total MCs   : 2
@@ -16,29 +16,25 @@ Total MCs   : 2
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | from numpy import *
-     2 | 
-     3 | vet = array(eval(input("aneis acertados: ")))
-     4 | 
-     5 | i = 0
-     6 | s = 0
-     7 | 
-     8 | while (i<size(vet)):
-     9 | 	if (vet[i] == 1):
-    10 | 		s = s + 100
-    11 | 		
-    12 | 	elif (vet[i] == 2):
-    13 | 		s = s + 60
-    14 | 		
-    15 | 	elif (vet[i] == 3):
-    16 | 		s = s + 20
-    17 | 		
-    18 | 	elif (vet[i] == 4):
-    19 | 		s = s + 0
-    20 | 		
-    21 | 	i = i + 1
-    22 | 	
-    23 | print (s)
+     1 | from numpy import*
+     2 | v = array(eval(input("digite o vetor: ")))
+     3 | i = 0
+     4 | pt = 0 
+     5 | while(i<size(v)):
+     6 | 	if(v[i]==1):
+     7 | 		s = 100
+     8 | 		pt = pt + s
+     9 | 	elif(v[i]==2):
+    10 | 		s = 60
+    11 | 		pt = pt + s
+    12 | 	elif(v[i]==3):
+    13 | 		s = 20
+    14 | 		pt = pt + s
+    15 | 	elif(v[i]==4):
+    16 | 		s = 0
+    17 | 		pt = pt + s
+    18 | 	i = i + 1
+    19 | print(pt)
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
@@ -47,73 +43,71 @@ DETALHAMENTO DOS MISCONCEPTIONS
 ▶ B8 — Não utilização de elif/else
   Ocorrências: 1
 
-  [1] Linha 15: Cadeia if/elif sem bloco else final
-      Trecho  : if ... (linha 15) / elif ... sem else
+  [1] Linha 12: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 12) / elif ... sem else
       Contexto:
-              14 | 		
-        >>>   15 | 	elif (vet[i] == 3):
-              16 | 		s = s + 20
+              11 | 		pt = pt + s
+        >>>   12 | 	elif(v[i]==3):
+              13 | 		s = 20
 
 ▶ G4 — Funções/variáveis com nomes não significativos
-  Ocorrências: 8
+  Ocorrências: 12
 
-  [1] Linha 3: Variável 'vet' com nome muito curto (≤4 chars)
-      Trecho  : vet = ...
+  [1] Linha 2: Variável 'v' com nome muito curto (≤4 chars)
+      Trecho  : v = ...
       Contexto:
-               2 | 
-        >>>    3 | vet = array(eval(input("aneis acertados: ")))
-               4 | 
+               1 | from numpy import*
+        >>>    2 | v = array(eval(input("digite o vetor: ")))
+               3 | i = 0
 
-  [2] Linha 5: Variável 'i' com nome muito curto (≤4 chars)
+  [2] Linha 3: Variável 'i' com nome muito curto (≤4 chars)
       Trecho  : i = ...
       Contexto:
-               4 | 
-        >>>    5 | i = 0
-               6 | s = 0
+               2 | v = array(eval(input("digite o vetor: ")))
+        >>>    3 | i = 0
+               4 | pt = 0 
 
-  [3] Linha 6: Variável 's' com nome muito curto (≤4 chars)
-      Trecho  : s = ...
+  [3] Linha 4: Variável 'pt' com nome muito curto (≤4 chars)
+      Trecho  : pt = ...
       Contexto:
-               5 | i = 0
-        >>>    6 | s = 0
-               7 | 
+               3 | i = 0
+        >>>    4 | pt = 0 
+               5 | while(i<size(v)):
 
-  [4] Linha 21: Variável 'i' com nome muito curto (≤4 chars)
+  [4] Linha 18: Variável 'i' com nome muito curto (≤4 chars)
       Trecho  : i = ...
       Contexto:
-              20 | 		
-        >>>   21 | 	i = i + 1
-              22 | 	
+              17 | 		pt = pt + s
+        >>>   18 | 	i = i + 1
+              19 | print(pt)
 
-  [5] Linha 10: Variável 's' com nome muito curto (≤4 chars)
+  [5] Linha 7: Variável 's' com nome muito curto (≤4 chars)
       Trecho  : s = ...
       Contexto:
-               9 | 	if (vet[i] == 1):
-        >>>   10 | 		s = s + 100
-              11 | 		
+               6 | 	if(v[i]==1):
+        >>>    7 | 		s = 100
+               8 | 		pt = pt + s
 
-  [6] Linha 13: Variável 's' com nome muito curto (≤4 chars)
+  [6] Linha 8: Variável 'pt' com nome muito curto (≤4 chars)
+      Trecho  : pt = ...
+      Contexto:
+               7 | 		s = 100
+        >>>    8 | 		pt = pt + s
+               9 | 	elif(v[i]==2):
+
+  [7] Linha 10: Variável 's' com nome muito curto (≤4 chars)
       Trecho  : s = ...
       Contexto:
-              12 | 	elif (vet[i] == 2):
-        >>>   13 | 		s = s + 60
-              14 | 		
+               9 | 	elif(v[i]==2):
+        >>>   10 | 		s = 60
+              11 | 		pt = pt + s
 
-  [7] Linha 16: Variável 's' com nome muito curto (≤4 chars)
-      Trecho  : s = ...
+  [8] Linha 11: Variável 'pt' com nome muito curto (≤4 chars)
+      Trecho  : pt = ...
       Contexto:
-              15 | 	elif (vet[i] == 3):
-        >>>   16 | 		s = s + 20
-              17 | 		
-
-  [8] Linha 19: Variável 's' com nome muito curto (≤4 chars)
-      Trecho  : s = ...
-      Contexto:
-              18 | 	elif (vet[i] == 4):
-        >>>   19 | 		s = s + 0
-              20 | 		
-
-======================================================================
+              10 | 		s = 60
+        >>>   11 | 		pt = pt + s
+              12 | 	elif(v[i]==3):
 
   [9] Linha 13: Variável 's' com nome muito curto (≤4 chars)
       Trecho  : s = ...

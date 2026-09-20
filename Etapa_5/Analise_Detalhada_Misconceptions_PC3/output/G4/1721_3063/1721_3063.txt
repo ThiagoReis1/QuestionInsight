@@ -2,11 +2,11 @@
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
 Arquivo     : 1721_3063.log
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2019_1_v1.81\2019-1\224\users\4380\executions\1721_3063.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2019_1_v1.81\2019-1\224\users\4446\executions\1721_3063.log
 Assessment  : 1721
 Título      : TP3 - Estrutura Condicional Encadeada
 Questão     : 3063
-Aluno       : 4380
+Aluno       : 4446
 Grupo       : TP 03
 Significado : Estrutura Condicional Encadeada
 Total MCs   : 1
@@ -16,48 +16,47 @@ Total MCs   : 1
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | po=int(input("qtd de gold: "))
-     2 | a=input("armadura: ")
-     3 | d=int(input("numero de 1 a 8: "))
-     4 | if (po==0):
-     5 | 		print("Entrada invalida")
-     6 | elif (po>=200) and (a=="INTEIRA"):
-     7 | 		print(30*d-20)
-     8 | elif (po>=50) and (a=="MALHA"):
-     9 | 		print(15*d-1)
-    10 | elif (po>=100) and (a=="PLACA"):
-    11 | 		print(20*d-18)
-    12 | else:
-    13 | 		print("PO insuficiente")
+     1 | po=int(input("quantidade de pecas de ouro: "))
+     2 | nome=input("nome da armadura: ")
+     3 | d=int(input("fator de destreza: "))
+     4 | nome= nome.upper()
+     5 | 
+     6 | fr1= 30 * d - 20
+     7 | fr2= 15 * d - 1
+     8 | fr3= 20 * d - 18
+     9 | 
+    10 | if( 1<=d<=8 and nome=="INTEIRA" and po>=200):
+    11 | 	print(fr1)
+    12 | elif( 1<=d<=8 and nome=="PLACA" and po>=100):
+    13 | 	print(fr3)
+    14 | elif( 1<=d<=8 and nome=="MALHA" and po>=50):
+    15 | 	print(fr2)
+    16 | elif(po<50):
+    17 | 	print("PO insuficiente")
+    18 | else:
+    19 | 	print("Entrada invalida")
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
 ----------------------------------------------------------------------
 
 ▶ G4 — Funções/variáveis com nomes não significativos
-  Ocorrências: 3
+  Ocorrências: 7
 
   [1] Linha 1: Variável 'po' com nome muito curto (≤4 chars)
       Trecho  : po = ...
       Contexto:
-        >>>    1 | po=int(input("qtd de gold: "))
-               2 | a=input("armadura: ")
+        >>>    1 | po=int(input("quantidade de pecas de ouro: "))
+               2 | nome=input("nome da armadura: ")
 
-  [2] Linha 2: Variável 'a' com nome muito curto (≤4 chars)
-      Trecho  : a = ...
+  [2] Linha 2: Variável 'nome' com nome muito curto (≤4 chars)
+      Trecho  : nome = ...
       Contexto:
-               1 | po=int(input("qtd de gold: "))
-        >>>    2 | a=input("armadura: ")
-               3 | d=int(input("numero de 1 a 8: "))
+               1 | po=int(input("quantidade de pecas de ouro: "))
+        >>>    2 | nome=input("nome da armadura: ")
+               3 | d=int(input("fator de destreza: "))
 
   [3] Linha 3: Variável 'd' com nome muito curto (≤4 chars)
-      Trecho  : d = ...
-      Contexto:
-               2 | a=input("armadura: ")
-        >>>    3 | d=int(input("numero de 1 a 8: "))
-               4 | if (po==0):
-
-======================================================================
       Trecho  : d = ...
       Contexto:
                2 | nome=input("nome da armadura: ")

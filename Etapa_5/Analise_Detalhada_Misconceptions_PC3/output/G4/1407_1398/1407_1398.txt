@@ -2,11 +2,11 @@
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
 Arquivo     : 1407_1398.log
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2018_2_v1.81\2018-2\207\users\3731\executions\1407_1398.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2018_2_v1.81\2018-2\207\users\3738\executions\1407_1398.log
 Assessment  : 1407
 Título      : TP 2 - Condicional Simples e Composta (if/else)
 Questão     : 1398
-Aluno       : 3731
+Aluno       : 3738
 Grupo       : TP 02
 Significado : Estrutura Condicional Simples e Composta
 Total MCs   : 1
@@ -16,56 +16,46 @@ Total MCs   : 1
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | t1= float(input("tempo em minutos: "))
-     2 | 
-     3 | ct =5000+100*t1
-     4 | 
-     5 | ct2 = 8000+100*200+90*(t1-200)
-     6 | if (t1 <= 200):
-     7 | 	t1=ct
-     8 | else :
-     9 | 	t1=ct2
-    10 | print(round(t1,2))
+     1 | v = float(input("a"))
+     2 | e = v-200
+     3 | if (v<=200):
+     4 | 	c = 5000+(100*v)
+     5 | else:
+     6 | 	c = 8000+(200*100)+(90*e)
+     7 | print(c)
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
 ----------------------------------------------------------------------
 
 ▶ G4 — Funções/variáveis com nomes não significativos
-  Ocorrências: 5
+  Ocorrências: 4
 
-  [1] Linha 1: Variável 't1' com nome muito curto (≤4 chars)
-      Trecho  : t1 = ...
+  [1] Linha 1: Variável 'v' com nome muito curto (≤4 chars)
+      Trecho  : v = ...
       Contexto:
-        >>>    1 | t1= float(input("tempo em minutos: "))
-               2 | 
+        >>>    1 | v = float(input("a"))
+               2 | e = v-200
 
-  [2] Linha 3: Variável 'ct' com nome muito curto (≤4 chars)
-      Trecho  : ct = ...
+  [2] Linha 2: Variável 'e' com nome muito curto (≤4 chars)
+      Trecho  : e = ...
       Contexto:
-               2 | 
-        >>>    3 | ct =5000+100*t1
-               4 | 
+               1 | v = float(input("a"))
+        >>>    2 | e = v-200
+               3 | if (v<=200):
 
-  [3] Linha 5: Variável 'ct2' com nome muito curto (≤4 chars)
-      Trecho  : ct2 = ...
+  [3] Linha 4: Variável 'c' com nome muito curto (≤4 chars)
+      Trecho  : c = ...
       Contexto:
-               4 | 
-        >>>    5 | ct2 = 8000+100*200+90*(t1-200)
-               6 | if (t1 <= 200):
+               3 | if (v<=200):
+        >>>    4 | 	c = 5000+(100*v)
+               5 | else:
 
-  [4] Linha 7: Variável 't1' com nome muito curto (≤4 chars)
-      Trecho  : t1 = ...
+  [4] Linha 6: Variável 'c' com nome muito curto (≤4 chars)
+      Trecho  : c = ...
       Contexto:
-               6 | if (t1 <= 200):
-        >>>    7 | 	t1=ct
-               8 | else :
-
-  [5] Linha 9: Variável 't1' com nome muito curto (≤4 chars)
-      Trecho  : t1 = ...
-      Contexto:
-               8 | else :
-        >>>    9 | 	t1=ct2
-              10 | print(round(t1,2))
+               5 | else:
+        >>>    6 | 	c = 8000+(200*100)+(90*e)
+               7 | print(c)
 
 ======================================================================

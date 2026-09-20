@@ -2,11 +2,11 @@
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
 Arquivo     : 579_1980.log
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2017_1_v1.81\2017-1\141\users\2430\executions\579_1980.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2017_1_v1.81\2017-1\141\users\2320\executions\579_1980.log
 Assessment  : 579
 Título      : Trabalho Prático 3: Estruturas Condicionais Encadeadas
 Questão     : 1980
-Aluno       : 2430
+Aluno       : 2320
 Grupo       : TP 03
 Significado : Estrutura Condicional Encadeada
 Total MCs   : 1
@@ -16,49 +16,31 @@ Total MCs   : 1
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | estado = input("Digite o nome do Estado: ")
-     2 | cidade = input("Digite o nome da Cidade: ")
-     3 | 
-     4 | if((estado == "Amazonas") or (estado == "Para")): 
-     5 | 	if(estado == "Amazonas"):
-     6 | 		if(cidade == "Manaus" or cidade == "Parintins"):
-     7 | 			if(cidade == "Manaus"):
-     8 | 				print("Coroado".upper())
-     9 | 			elif (cidade == "Parintins"):
-    10 | 				print("PALMARES".upper())
-    11 | 		else:
-    12 | 			print("Bairro nao identificado".upper())
-    13 | 	else:
-    14 | 		if( estado == "Para"):
-    15 | 			if((cidade =="Belem") or (cidade == "Santarem")):
-    16 | 				if(cidade == "Belem"):
-    17 | 					print ("Cidade velha".upper() )
-    18 | 				elif(cidade == "Santarem"):
-    19 | 					print("Centro".upper())
-    20 | 		else:
-    21 | 			print("Bairro nao identificado".upper())
-    22 | else:
-    23 | 	print("Bairro nao identificado".upper())
+     1 | estado=input("digite estado: ")
+     2 | cidade=input("digite cidade: ")
+     3 | estado=estado.upper()
+     4 | cidade=cidade.upper()
+     5 | if estado=="AMAZONAS" and cidade=="MANAUS" :
+     6 | 	print("COROADO".upper())
+     7 | elif estado=="AMAZONAS" and cidade=="PARINTINS":
+     8 | 	print("PALMARES".upper())
+     9 | elif estado=="PARA" and cidade=="BELEM":
+    10 | 	print("CIDADE VELHA".upper())
+    11 | elif estado=="PARA" and cidade=="SANTAREM":
+    12 | 	  print("CENTO".upper())
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
 ----------------------------------------------------------------------
 
 ▶ B8 — Não utilização de elif/else
-  Ocorrências: 2
+  Ocorrências: 1
 
-  [1] Linha 7: Cadeia if/elif sem bloco else final
-      Trecho  : if ... (linha 7) / elif ... sem else
+  [1] Linha 9: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 9) / elif ... sem else
       Contexto:
-               6 | 		if(cidade == "Manaus" or cidade == "Parintins"):
-        >>>    7 | 			if(cidade == "Manaus"):
-               8 | 				print("Coroado".upper())
-
-  [2] Linha 16: Cadeia if/elif sem bloco else final
-      Trecho  : if ... (linha 16) / elif ... sem else
-      Contexto:
-              15 | 			if((cidade =="Belem") or (cidade == "Santarem")):
-        >>>   16 | 				if(cidade == "Belem"):
-              17 | 					print ("Cidade velha".upper() )
+               8 | 	print("PALMARES".upper())
+        >>>    9 | elif estado=="PARA" and cidade=="BELEM":
+              10 | 	print("CIDADE VELHA".upper())
 
 ======================================================================

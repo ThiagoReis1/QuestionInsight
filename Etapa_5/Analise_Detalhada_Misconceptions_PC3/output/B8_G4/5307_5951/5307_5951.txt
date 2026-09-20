@@ -2,11 +2,11 @@
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
 Arquivo     : 5307_5951.log
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2023_2_v1.81\2023-2\562\users\9193\executions\5307_5951.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2023_2_v1.81\2023-2\562\users\3967\executions\5307_5951.log
 Assessment  : 5307
 Título      : TP 2:  Est. Condicional Simples e Composta
 Questão     : 5951
-Aluno       : 9193
+Aluno       : 3967
 Grupo       : TP 02
 Significado : Estrutura Condicional Simples e Composta
 Total MCs   : 2
@@ -16,16 +16,18 @@ Total MCs   : 2
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | cm = input("\"T\" para Tapioca e \"S\" para Salgado: ")
-     2 | qnt = int(input("Digite a quantidade: "))
-     3 | ac = int(input("Digite a quantidade de acais: "))
+     1 | tous = input()
+     2 | qts = int(input())
+     3 | qa = int(input())
      4 | 
-     5 | if cm.upper() == "T":
-     6 | 	vlr = qnt * 4.5 + ac * 12.0
-     7 | 	print(round(vlr, 2))
-     8 | if cm.upper() == "S":
-     9 | 	vlr =  qnt * 5.0 + ac * 12.0
-    10 | 	print(round(vlr, 2))
+     5 | if tous == "T":
+     6 | 	vlr = 4.5*qts
+     7 | if tous == "S":
+     8 | 	vlr = 5*qts
+     9 | 
+    10 | vlr = vlr + qa * 12
+    11 | 
+    12 | print(vlr)
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
@@ -38,40 +40,47 @@ DETALHAMENTO DOS MISCONCEPTIONS
       Trecho  : —
 
 ▶ G4 — Funções/variáveis com nomes não significativos
-  Ocorrências: 5
+  Ocorrências: 6
 
-  [1] Linha 1: Variável 'cm' com nome muito curto (≤4 chars)
-      Trecho  : cm = ...
+  [1] Linha 1: Variável 'tous' com nome muito curto (≤4 chars)
+      Trecho  : tous = ...
       Contexto:
-        >>>    1 | cm = input("\"T\" para Tapioca e \"S\" para Salgado: ")
-               2 | qnt = int(input("Digite a quantidade: "))
+        >>>    1 | tous = input()
+               2 | qts = int(input())
 
-  [2] Linha 2: Variável 'qnt' com nome muito curto (≤4 chars)
-      Trecho  : qnt = ...
+  [2] Linha 2: Variável 'qts' com nome muito curto (≤4 chars)
+      Trecho  : qts = ...
       Contexto:
-               1 | cm = input("\"T\" para Tapioca e \"S\" para Salgado: ")
-        >>>    2 | qnt = int(input("Digite a quantidade: "))
-               3 | ac = int(input("Digite a quantidade de acais: "))
+               1 | tous = input()
+        >>>    2 | qts = int(input())
+               3 | qa = int(input())
 
-  [3] Linha 3: Variável 'ac' com nome muito curto (≤4 chars)
-      Trecho  : ac = ...
+  [3] Linha 3: Variável 'qa' com nome muito curto (≤4 chars)
+      Trecho  : qa = ...
       Contexto:
-               2 | qnt = int(input("Digite a quantidade: "))
-        >>>    3 | ac = int(input("Digite a quantidade de acais: "))
+               2 | qts = int(input())
+        >>>    3 | qa = int(input())
                4 | 
 
-  [4] Linha 6: Variável 'vlr' com nome muito curto (≤4 chars)
+  [4] Linha 10: Variável 'vlr' com nome muito curto (≤4 chars)
       Trecho  : vlr = ...
       Contexto:
-               5 | if cm.upper() == "T":
-        >>>    6 | 	vlr = qnt * 4.5 + ac * 12.0
-               7 | 	print(round(vlr, 2))
+               9 | 
+        >>>   10 | vlr = vlr + qa * 12
+              11 | 
 
-  [5] Linha 9: Variável 'vlr' com nome muito curto (≤4 chars)
+  [5] Linha 6: Variável 'vlr' com nome muito curto (≤4 chars)
       Trecho  : vlr = ...
       Contexto:
-               8 | if cm.upper() == "S":
-        >>>    9 | 	vlr =  qnt * 5.0 + ac * 12.0
-              10 | 	print(round(vlr, 2))
+               5 | if tous == "T":
+        >>>    6 | 	vlr = 4.5*qts
+               7 | if tous == "S":
+
+  [6] Linha 8: Variável 'vlr' com nome muito curto (≤4 chars)
+      Trecho  : vlr = ...
+      Contexto:
+               7 | if tous == "S":
+        >>>    8 | 	vlr = 5*qts
+               9 | 
 
 ======================================================================

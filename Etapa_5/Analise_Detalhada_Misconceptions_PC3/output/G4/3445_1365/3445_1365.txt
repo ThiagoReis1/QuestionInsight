@@ -2,11 +2,11 @@
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
 Arquivo     : 3445_1365.log
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2021_2_v1.81\2021-2\410\users\7179\executions\3445_1365.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2021_2_v1.81\2021-2\410\users\7181\executions\3445_1365.log
 Assessment  : 3445
 Título      : TP 01: Variáveis e Estrutura Sequencial
 Questão     : 1365
-Aluno       : 7179
+Aluno       : 7181
 Grupo       : TP 01
 Significado : Variáveis e Estrutura Sequencial
 Total MCs   : 1
@@ -16,12 +16,12 @@ Total MCs   : 1
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | import math
-     2 | a = math.radians(float(input("")))
-     3 | d = float(input(""))
-     4 | g = 9.8
-     5 | v0 = math.sqrt(d*(g/math.sin(2*a)))
-     6 | print(round(v0,2))
+     1 | from math import *
+     2 | ang=float(input("entre com o angulo da flecha:  "))
+     3 | g=9.8
+     4 | d=float(input("entre com a distancia da fera:  "))
+     5 | v=(d*(g/sin(radians(2*ang))))**0.5
+     6 | print(round(v, 2))
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
@@ -30,32 +30,32 @@ DETALHAMENTO DOS MISCONCEPTIONS
 ▶ G4 — Funções/variáveis com nomes não significativos
   Ocorrências: 4
 
-  [1] Linha 2: Variável 'a' com nome muito curto (≤4 chars)
-      Trecho  : a = ...
+  [1] Linha 2: Variável 'ang' com nome muito curto (≤4 chars)
+      Trecho  : ang = ...
       Contexto:
-               1 | import math
-        >>>    2 | a = math.radians(float(input("")))
-               3 | d = float(input(""))
+               1 | from math import *
+        >>>    2 | ang=float(input("entre com o angulo da flecha:  "))
+               3 | g=9.8
 
-  [2] Linha 3: Variável 'd' com nome muito curto (≤4 chars)
-      Trecho  : d = ...
-      Contexto:
-               2 | a = math.radians(float(input("")))
-        >>>    3 | d = float(input(""))
-               4 | g = 9.8
-
-  [3] Linha 4: Variável 'g' com nome muito curto (≤4 chars)
+  [2] Linha 3: Variável 'g' com nome muito curto (≤4 chars)
       Trecho  : g = ...
       Contexto:
-               3 | d = float(input(""))
-        >>>    4 | g = 9.8
-               5 | v0 = math.sqrt(d*(g/math.sin(2*a)))
+               2 | ang=float(input("entre com o angulo da flecha:  "))
+        >>>    3 | g=9.8
+               4 | d=float(input("entre com a distancia da fera:  "))
 
-  [4] Linha 5: Variável 'v0' com nome muito curto (≤4 chars)
-      Trecho  : v0 = ...
+  [3] Linha 4: Variável 'd' com nome muito curto (≤4 chars)
+      Trecho  : d = ...
       Contexto:
-               4 | g = 9.8
-        >>>    5 | v0 = math.sqrt(d*(g/math.sin(2*a)))
-               6 | print(round(v0,2))
+               3 | g=9.8
+        >>>    4 | d=float(input("entre com a distancia da fera:  "))
+               5 | v=(d*(g/sin(radians(2*ang))))**0.5
+
+  [4] Linha 5: Variável 'v' com nome muito curto (≤4 chars)
+      Trecho  : v = ...
+      Contexto:
+               4 | d=float(input("entre com a distancia da fera:  "))
+        >>>    5 | v=(d*(g/sin(radians(2*ang))))**0.5
+               6 | print(round(v, 2))
 
 ======================================================================

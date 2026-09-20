@@ -2,11 +2,11 @@
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
 Arquivo     : 3433_1029.log
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2021_2_v1.81\2021-2\403\users\6026\executions\3433_1029.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2021_2_v1.81\2021-2\403\users\7101\executions\3433_1029.log
 Assessment  : 3433
 Título      : TP 01: Variáveis e Estrutura Sequencial
 Questão     : 1029
-Aluno       : 6026
+Aluno       : 7101
 Grupo       : TP 01
 Significado : Variáveis e Estrutura Sequencial
 Total MCs   : 1
@@ -16,16 +16,15 @@ Total MCs   : 1
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | c= float(input("Digite o tempo:"))
-     2 | 
-     3 | 
-     4 | v= (0.28*c)+23
-     5 | 
-     6 | im= v*31/100
-     7 | 
-     8 | t= v+im
-     9 | 
-    10 | print(round(t, 2))
+     1 | #Custo de R$0,28 por minuto consumido
+     2 | #Valor fixo de R$23,00 de assinatura
+     3 | #31% de ICMS
+     4 | #Escreva um programa que leia: o consumo de chamadas (em minutos) durante um certo mês
+     5 | a = float(input("Chamada em minutos:"))
+     6 | b = a * 0.28
+     7 | c = b + 23
+     8 | d = c + c*0.31
+     9 | print(round(d, 2))
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
@@ -34,34 +33,23 @@ DETALHAMENTO DOS MISCONCEPTIONS
 ▶ G4 — Funções/variáveis com nomes não significativos
   Ocorrências: 4
 
-  [1] Linha 1: Variável 'c' com nome muito curto (≤4 chars)
+  [1] Linha 5: Variável 'a' com nome muito curto (≤4 chars)
+      Trecho  : a = ...
+      Contexto:
+               4 | #Escreva um programa que leia: o consumo de chamadas (em minutos) durante um certo mês
+        >>>    5 | a = float(input("Chamada em minutos:"))
+               6 | b = a * 0.28
+
+  [2] Linha 6: Variável 'b' com nome muito curto (≤4 chars)
+      Trecho  : b = ...
+      Contexto:
+               5 | a = float(input("Chamada em minutos:"))
+        >>>    6 | b = a * 0.28
+               7 | c = b + 23
+
+  [3] Linha 7: Variável 'c' com nome muito curto (≤4 chars)
       Trecho  : c = ...
       Contexto:
-        >>>    1 | c= float(input("Digite o tempo:"))
-               2 | 
-
-  [2] Linha 4: Variável 'v' com nome muito curto (≤4 chars)
-      Trecho  : v = ...
-      Contexto:
-               3 | 
-        >>>    4 | v= (0.28*c)+23
-               5 | 
-
-  [3] Linha 6: Variável 'im' com nome muito curto (≤4 chars)
-      Trecho  : im = ...
-      Contexto:
-               5 | 
-        >>>    6 | im= v*31/100
-               7 | 
-
-  [4] Linha 8: Variável 't' com nome muito curto (≤4 chars)
-      Trecho  : t = ...
-      Contexto:
-               7 | 
-        >>>    8 | t= v+im
-               9 | 
-
-======================================================================   Contexto:
                6 | b = a * 0.28
         >>>    7 | c = b + 23
                8 | d = c + c*0.31

@@ -2,11 +2,11 @@
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
 Arquivo     : 4792_6378.log
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2022_2_v1.81\2022-2\487\users\8186\executions\4792_6378.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2022_2_v1.81\2022-2\487\users\8194\executions\4792_6378.log
 Assessment  : 4792
 Título      : TP 06: Estrutura de Repetição por Contagem (for)
 Questão     : 6378
-Aluno       : 8186
+Aluno       : 8194
 Grupo       : TP 06
 Significado : Estrutura de Repetição por Contagem
 Total MCs   : 2
@@ -18,26 +18,19 @@ CÓDIGO FONTE
 ----------------------------------------------------------------------
      1 | from numpy import*
      2 | 
-     3 | cont = input("Diga: ").upper().split(',')
-     4 | 
-     5 | v = zeros(4, dtype = int)
-     6 | 
-     7 | 
-     8 | for i in range(size(cont)):
-     9 | 	
-    10 | 	if (cont[i] == 'C'):
-    11 | 		v[0] = v[0] + 1
-    12 | 		
-    13 | 	if (cont[i] == 'D'):
-    14 | 		v[1] = v[1] + 1
-    15 | 		
-    16 | 	if (cont[i] == 'V'):
-    17 | 		v[2] = v[2] + 1
-    18 | 		
-    19 | 	if (cont[i] == 'U'):
-    20 | 		v[3] = v[3] + 1
-    21 | 		
-    22 | print(v)
+     3 | n = input("Digite: ").upper().split(",")
+     4 | cont = zeros(4,dtype=int)
+     5 | 
+     6 | for i in range(size(n)):
+     7 | 	if(n[i] == "C"):
+     8 | 		cont[0] = cont[0] + 1
+     9 | 	elif(n[i] == "D"):
+    10 | 		cont[1] = cont[1] + 1
+    11 | 	elif(n[i] == "V"):
+    12 | 		cont[2] = cont[2] + 1
+    13 | 	elif(n[i] == "U"):
+    14 | 		cont[3] = cont[3] + 1
+    15 | print(cont)
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
@@ -46,24 +39,28 @@ DETALHAMENTO DOS MISCONCEPTIONS
 ▶ B8 — Não utilização de elif/else
   Ocorrências: 1
 
-  [1] Linha 0: B8 detectado pelo VisitorMC3 (localização exata não mapeada)
-      Trecho  : —
+  [1] Linha 11: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 11) / elif ... sem else
+      Contexto:
+              10 | 		cont[1] = cont[1] + 1
+        >>>   11 | 	elif(n[i] == "V"):
+              12 | 		cont[2] = cont[2] + 1
 
 ▶ G4 — Funções/variáveis com nomes não significativos
   Ocorrências: 2
 
-  [1] Linha 3: Variável 'cont' com nome muito curto (≤4 chars)
-      Trecho  : cont = ...
+  [1] Linha 3: Variável 'n' com nome muito curto (≤4 chars)
+      Trecho  : n = ...
       Contexto:
                2 | 
-        >>>    3 | cont = input("Diga: ").upper().split(',')
-               4 | 
+        >>>    3 | n = input("Digite: ").upper().split(",")
+               4 | cont = zeros(4,dtype=int)
 
-  [2] Linha 5: Variável 'v' com nome muito curto (≤4 chars)
-      Trecho  : v = ...
+  [2] Linha 4: Variável 'cont' com nome muito curto (≤4 chars)
+      Trecho  : cont = ...
       Contexto:
-               4 | 
-        >>>    5 | v = zeros(4, dtype = int)
-               6 | 
+               3 | n = input("Digite: ").upper().split(",")
+        >>>    4 | cont = zeros(4,dtype=int)
+               5 | 
 
-==============================================================================
+======================================================================

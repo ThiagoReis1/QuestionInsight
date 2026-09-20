@@ -2,11 +2,11 @@
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
 Arquivo     : 1747_3089.log
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2019_1_v1.81\2019-1\226\users\4145\executions\1747_3089.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2019_1_v1.81\2019-1\226\users\4152\executions\1747_3089.log
 Assessment  : 1747
 Título      : TP4: Estrutura de Repetição por Condição (while)
 Questão     : 3089
-Aluno       : 4145
+Aluno       : 4152
 Grupo       : TP 04
 Significado : Estrutura de Repetição por Condição
 Total MCs   : 1
@@ -16,56 +16,48 @@ Total MCs   : 1
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | n = int(input("digite um numero: "))
-     2 | d = 0
-     3 | while(n!=0):
-     4 | 	d= d+n
-     5 | 	n=int(input("digite um numero: "))
-     6 | 
-     7 | 
-     8 | print(d)
-     9 | if(d<0):
-    10 | 	print("Esquerda")
-    11 | elif(d==0):
-    12 | 	print("Inicial")
-    13 | else:
-    14 | 	print("Direita")
+     1 | num = int(input("Digite aqui o numero representante do movimento: "))
+     2 | soma = 0 #Acumuladora
+     3 | while (num != 0):
+     4 | 	soma = soma + num
+     5 | 	num = int(input("Digite aqui o numero representante do movimento: "))
+     6 | if (soma == 0):
+     7 | 	msg = "Inicial"
+     8 | elif (soma > 0):
+     9 | 	msg = "Direita"
+    10 | else:
+    11 | 	msg = "Esquerda"
+    12 | print(soma)
+    13 | print(msg)
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
 ----------------------------------------------------------------------
 
 ▶ G4 — Funções/variáveis com nomes não significativos
-  Ocorrências: 4
+  Ocorrências: 7
 
-  [1] Linha 1: Variável 'n' com nome muito curto (≤4 chars)
-      Trecho  : n = ...
+  [1] Linha 1: Variável 'num' com nome muito curto (≤4 chars)
+      Trecho  : num = ...
       Contexto:
-        >>>    1 | n = int(input("digite um numero: "))
-               2 | d = 0
+        >>>    1 | num = int(input("Digite aqui o numero representante do movimento: "))
+               2 | soma = 0 #Acumuladora
 
-  [2] Linha 2: Variável 'd' com nome muito curto (≤4 chars)
-      Trecho  : d = ...
+  [2] Linha 2: Variável 'soma' com nome muito curto (≤4 chars)
+      Trecho  : soma = ...
       Contexto:
-               1 | n = int(input("digite um numero: "))
-        >>>    2 | d = 0
-               3 | while(n!=0):
+               1 | num = int(input("Digite aqui o numero representante do movimento: "))
+        >>>    2 | soma = 0 #Acumuladora
+               3 | while (num != 0):
 
-  [3] Linha 4: Variável 'd' com nome muito curto (≤4 chars)
-      Trecho  : d = ...
+  [3] Linha 4: Variável 'soma' com nome muito curto (≤4 chars)
+      Trecho  : soma = ...
       Contexto:
-               3 | while(n!=0):
-        >>>    4 | 	d= d+n
-               5 | 	n=int(input("digite um numero: "))
+               3 | while (num != 0):
+        >>>    4 | 	soma = soma + num
+               5 | 	num = int(input("Digite aqui o numero representante do movimento: "))
 
-  [4] Linha 5: Variável 'n' com nome muito curto (≤4 chars)
-      Trecho  : n = ...
-      Contexto:
-               4 | 	d= d+n
-        >>>    5 | 	n=int(input("digite um numero: "))
-               6 | 
-
-======================================================================[4] Linha 5: Variável 'num' com nome muito curto (≤4 chars)
+  [4] Linha 5: Variável 'num' com nome muito curto (≤4 chars)
       Trecho  : num = ...
       Contexto:
                4 | 	soma = soma + num

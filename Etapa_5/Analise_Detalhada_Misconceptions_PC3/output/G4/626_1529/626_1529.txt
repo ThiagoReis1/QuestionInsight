@@ -2,11 +2,11 @@
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
 Arquivo     : 626_1529.log
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2017_1_v1.81\2017-1\142\users\2574\executions\626_1529.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2017_1_v1.81\2017-1\142\users\2225\executions\626_1529.log
 Assessment  : 626
 Título      : Trabalho Prático 04: Estrutura de Repetição por Condição (while)
 Questão     : 1529
-Aluno       : 2574
+Aluno       : 2225
 Grupo       : TP 04
 Significado : Estrutura de Repetição por Condição
 Total MCs   : 1
@@ -16,98 +16,127 @@ Total MCs   : 1
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | from math import*
-     2 | inf = int(input("Insira a quantidade inicial da infantaria: "))
-     3 | cal = int(input("Insira quantidade inicial da cavalaria.: "))
-     4 | pinf = float(input("Insira o percentual da infantaria: "))
-     5 | pcal = float(input("Insira o percentual da cavalaria: "))
-     6 | 
-     7 | xinf = inf
-     8 | xcal = cal
-     9 | m = 0
-    10 | 
-    11 | while(xinf + xcal < 50000):
-    12 | 	xinf = xinf +(xinf*pinf/100)
-    13 | 	xcal = xcal +(xcal*pcal/100)
-    14 | 	m = m + 1
-    15 | 
-    16 | print(m)	
+     1 | qii=int(input("qi de g infantaria: "))
+     2 | qic=int(input("qi de g cavalaria: "))
+     3 | pi=float(input("percentual: "))/100
+     4 | pc=float(input("percentual: "))/100
+     5 | 
+     6 | a=qii
+     7 | b=qic
+     8 | c=pi
+     9 | d=pc
+    10 | soma=0
+    11 | i=0
+    12 | while(a+b<50000):
+    13 | 	a=a+(a*c)
+    14 | 	b=b+(b*d)
+    15 | 	soma=soma+(a+b)
+    16 | 	i=i+1
+    17 | 
+    18 | print(i)
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
 ----------------------------------------------------------------------
 
 ▶ G4 — Funções/variáveis com nomes não significativos
-  Ocorrências: 10
+  Ocorrências: 14
 
-  [1] Linha 2: Variável 'inf' com nome muito curto (≤4 chars)
-      Trecho  : inf = ...
+  [1] Linha 1: Variável 'qii' com nome muito curto (≤4 chars)
+      Trecho  : qii = ...
       Contexto:
-               1 | from math import*
-        >>>    2 | inf = int(input("Insira a quantidade inicial da infantaria: "))
-               3 | cal = int(input("Insira quantidade inicial da cavalaria.: "))
+        >>>    1 | qii=int(input("qi de g infantaria: "))
+               2 | qic=int(input("qi de g cavalaria: "))
 
-  [2] Linha 3: Variável 'cal' com nome muito curto (≤4 chars)
-      Trecho  : cal = ...
+  [2] Linha 2: Variável 'qic' com nome muito curto (≤4 chars)
+      Trecho  : qic = ...
       Contexto:
-               2 | inf = int(input("Insira a quantidade inicial da infantaria: "))
-        >>>    3 | cal = int(input("Insira quantidade inicial da cavalaria.: "))
-               4 | pinf = float(input("Insira o percentual da infantaria: "))
+               1 | qii=int(input("qi de g infantaria: "))
+        >>>    2 | qic=int(input("qi de g cavalaria: "))
+               3 | pi=float(input("percentual: "))/100
 
-  [3] Linha 4: Variável 'pinf' com nome muito curto (≤4 chars)
-      Trecho  : pinf = ...
+  [3] Linha 3: Variável 'pi' com nome muito curto (≤4 chars)
+      Trecho  : pi = ...
       Contexto:
-               3 | cal = int(input("Insira quantidade inicial da cavalaria.: "))
-        >>>    4 | pinf = float(input("Insira o percentual da infantaria: "))
-               5 | pcal = float(input("Insira o percentual da cavalaria: "))
+               2 | qic=int(input("qi de g cavalaria: "))
+        >>>    3 | pi=float(input("percentual: "))/100
+               4 | pc=float(input("percentual: "))/100
 
-  [4] Linha 5: Variável 'pcal' com nome muito curto (≤4 chars)
-      Trecho  : pcal = ...
+  [4] Linha 4: Variável 'pc' com nome muito curto (≤4 chars)
+      Trecho  : pc = ...
       Contexto:
-               4 | pinf = float(input("Insira o percentual da infantaria: "))
-        >>>    5 | pcal = float(input("Insira o percentual da cavalaria: "))
-               6 | 
+               3 | pi=float(input("percentual: "))/100
+        >>>    4 | pc=float(input("percentual: "))/100
+               5 | 
 
-  [5] Linha 7: Variável 'xinf' com nome muito curto (≤4 chars)
-      Trecho  : xinf = ...
+  [5] Linha 6: Variável 'a' com nome muito curto (≤4 chars)
+      Trecho  : a = ...
       Contexto:
-               6 | 
-        >>>    7 | xinf = inf
-               8 | xcal = cal
+               5 | 
+        >>>    6 | a=qii
+               7 | b=qic
 
-  [6] Linha 8: Variável 'xcal' com nome muito curto (≤4 chars)
-      Trecho  : xcal = ...
+  [6] Linha 7: Variável 'b' com nome muito curto (≤4 chars)
+      Trecho  : b = ...
       Contexto:
-               7 | xinf = inf
-        >>>    8 | xcal = cal
-               9 | m = 0
+               6 | a=qii
+        >>>    7 | b=qic
+               8 | c=pi
 
-  [7] Linha 9: Variável 'm' com nome muito curto (≤4 chars)
-      Trecho  : m = ...
+  [7] Linha 8: Variável 'c' com nome muito curto (≤4 chars)
+      Trecho  : c = ...
       Contexto:
-               8 | xcal = cal
-        >>>    9 | m = 0
-              10 | 
+               7 | b=qic
+        >>>    8 | c=pi
+               9 | d=pc
 
-  [8] Linha 12: Variável 'xinf' com nome muito curto (≤4 chars)
-      Trecho  : xinf = ...
+  [8] Linha 9: Variável 'd' com nome muito curto (≤4 chars)
+      Trecho  : d = ...
       Contexto:
-              11 | while(xinf + xcal < 50000):
-        >>>   12 | 	xinf = xinf +(xinf*pinf/100)
-              13 | 	xcal = xcal +(xcal*pcal/100)
+               8 | c=pi
+        >>>    9 | d=pc
+              10 | soma=0
 
-  [9] Linha 13: Variável 'xcal' com nome muito curto (≤4 chars)
-      Trecho  : xcal = ...
+  [9] Linha 10: Variável 'soma' com nome muito curto (≤4 chars)
+      Trecho  : soma = ...
       Contexto:
-              12 | 	xinf = xinf +(xinf*pinf/100)
-        >>>   13 | 	xcal = xcal +(xcal*pcal/100)
-              14 | 	m = m + 1
+               9 | d=pc
+        >>>   10 | soma=0
+              11 | i=0
 
-  [10] Linha 14: Variável 'm' com nome muito curto (≤4 chars)
-      Trecho  : m = ...
+  [10] Linha 11: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
       Contexto:
-              13 | 	xcal = xcal +(xcal*pcal/100)
-        >>>   14 | 	m = m + 1
-              15 | 
+              10 | soma=0
+        >>>   11 | i=0
+              12 | while(a+b<50000):
+
+  [11] Linha 13: Variável 'a' com nome muito curto (≤4 chars)
+      Trecho  : a = ...
+      Contexto:
+              12 | while(a+b<50000):
+        >>>   13 | 	a=a+(a*c)
+              14 | 	b=b+(b*d)
+
+  [12] Linha 14: Variável 'b' com nome muito curto (≤4 chars)
+      Trecho  : b = ...
+      Contexto:
+              13 | 	a=a+(a*c)
+        >>>   14 | 	b=b+(b*d)
+              15 | 	soma=soma+(a+b)
+
+  [13] Linha 15: Variável 'soma' com nome muito curto (≤4 chars)
+      Trecho  : soma = ...
+      Contexto:
+              14 | 	b=b+(b*d)
+        >>>   15 | 	soma=soma+(a+b)
+              16 | 	i=i+1
+
+  [14] Linha 16: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+              15 | 	soma=soma+(a+b)
+        >>>   16 | 	i=i+1
+              17 | 
 
 ======================================================================

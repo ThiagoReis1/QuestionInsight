@@ -2,11 +2,11 @@
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
 Arquivo     : 212_1257.log
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2016_1_v1.81\2016-1\105\users\1527\executions\212_1257.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2016_1_v1.81\2016-1\105\users\1499\executions\212_1257.log
 Assessment  : 212
 Título      : Avaliação Parcial 06 – Repetição por contagem
 Questão     : 1257
-Aluno       : 1527
+Aluno       : 1499
 Grupo       : TP 06
 Significado : Estrutura de Repetição por Contagem
 Total MCs   : 2
@@ -16,22 +16,31 @@ Total MCs   : 2
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | #ufam - Laís Amorim Reis - 21602327
-     2 | from numpy import *
-     3 | 
-     4 | v = array(eval(input()))
-     5 | 
-     6 | A = min(v)
-     7 | B = max(v)
-     8 | C = 0.85*A + 0.15*B
-     9 | D = 0.4*A + 0.6*B
-    10 | x = array(zeros(2,dtype = int))
-    11 | for i in range(0,size(v)):
-    12 | 	if(v[i]>=A and v[i]<C):
-    13 | 		x[0] = x[0]+1
-    14 | 	elif(v[i]>=D and v[i]<B):
-    15 | 		x[1] = x[1]+1
-    16 | print(x)
+     1 | from numpy import *
+     2 | 
+     3 | v1 = array(eval(input("Qual o vetor: ")))
+     4 | 
+     5 | a = min(v1)
+     6 | b = max(v1)
+     7 | 
+     8 | c = (0.85 * a) + (0.15 * b)
+     9 | d = (0.4 * a) + (0.6 * b)
+    10 | 
+    11 | v2 = array(zeros(2, dtype = int))
+    12 | 
+    13 | x2 = 0
+    14 | x1 = 0
+    15 | 
+    16 | for i in range(size(v1)) :
+    17 | 	if v1[i] >= a and v1[i] < c :
+    18 | 		x1 = x1 + 1
+    19 | for i in range(size(v1)) :
+    20 | 	if v1[i] >= d and v1[i] < b :
+    21 | 		x2 = x2 + 1
+    22 | v2[0] = x1
+    23 | v2[1] = x2
+    24 | 
+    25 | print(v2)
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
@@ -40,56 +49,80 @@ DETALHAMENTO DOS MISCONCEPTIONS
 ▶ B8 — Não utilização de elif/else
   Ocorrências: 1
 
-  [1] Linha 12: Cadeia if/elif sem bloco else final
-      Trecho  : if ... (linha 12) / elif ... sem else
-      Contexto:
-              11 | for i in range(0,size(v)):
-        >>>   12 | 	if(v[i]>=A and v[i]<C):
-              13 | 		x[0] = x[0]+1
+  [1] Linha 0: B8 detectado pelo VisitorMC3 (localização exata não mapeada)
+      Trecho  : —
 
 ▶ G4 — Funções/variáveis com nomes não significativos
-  Ocorrências: 6
+  Ocorrências: 10
 
-  [1] Linha 4: Variável 'v' com nome muito curto (≤4 chars)
-      Trecho  : v = ...
+  [1] Linha 3: Variável 'v1' com nome muito curto (≤4 chars)
+      Trecho  : v1 = ...
       Contexto:
-               3 | 
-        >>>    4 | v = array(eval(input()))
-               5 | 
+               2 | 
+        >>>    3 | v1 = array(eval(input("Qual o vetor: ")))
+               4 | 
 
-  [2] Linha 6: Variável 'A' com nome muito curto (≤4 chars)
-      Trecho  : A = ...
+  [2] Linha 5: Variável 'a' com nome muito curto (≤4 chars)
+      Trecho  : a = ...
       Contexto:
-               5 | 
-        >>>    6 | A = min(v)
-               7 | B = max(v)
+               4 | 
+        >>>    5 | a = min(v1)
+               6 | b = max(v1)
 
-  [3] Linha 7: Variável 'B' com nome muito curto (≤4 chars)
-      Trecho  : B = ...
+  [3] Linha 6: Variável 'b' com nome muito curto (≤4 chars)
+      Trecho  : b = ...
       Contexto:
-               6 | A = min(v)
-        >>>    7 | B = max(v)
-               8 | C = 0.85*A + 0.15*B
+               5 | a = min(v1)
+        >>>    6 | b = max(v1)
+               7 | 
 
-  [4] Linha 8: Variável 'C' com nome muito curto (≤4 chars)
-      Trecho  : C = ...
+  [4] Linha 8: Variável 'c' com nome muito curto (≤4 chars)
+      Trecho  : c = ...
       Contexto:
-               7 | B = max(v)
-        >>>    8 | C = 0.85*A + 0.15*B
-               9 | D = 0.4*A + 0.6*B
+               7 | 
+        >>>    8 | c = (0.85 * a) + (0.15 * b)
+               9 | d = (0.4 * a) + (0.6 * b)
 
-  [5] Linha 9: Variável 'D' com nome muito curto (≤4 chars)
-      Trecho  : D = ...
+  [5] Linha 9: Variável 'd' com nome muito curto (≤4 chars)
+      Trecho  : d = ...
       Contexto:
-               8 | C = 0.85*A + 0.15*B
-        >>>    9 | D = 0.4*A + 0.6*B
-              10 | x = array(zeros(2,dtype = int))
+               8 | c = (0.85 * a) + (0.15 * b)
+        >>>    9 | d = (0.4 * a) + (0.6 * b)
+              10 | 
 
-  [6] Linha 10: Variável 'x' com nome muito curto (≤4 chars)
-      Trecho  : x = ...
+  [6] Linha 11: Variável 'v2' com nome muito curto (≤4 chars)
+      Trecho  : v2 = ...
       Contexto:
-               9 | D = 0.4*A + 0.6*B
-        >>>   10 | x = array(zeros(2,dtype = int))
-              11 | for i in range(0,size(v)):
+              10 | 
+        >>>   11 | v2 = array(zeros(2, dtype = int))
+              12 | 
+
+  [7] Linha 13: Variável 'x2' com nome muito curto (≤4 chars)
+      Trecho  : x2 = ...
+      Contexto:
+              12 | 
+        >>>   13 | x2 = 0
+              14 | x1 = 0
+
+  [8] Linha 14: Variável 'x1' com nome muito curto (≤4 chars)
+      Trecho  : x1 = ...
+      Contexto:
+              13 | x2 = 0
+        >>>   14 | x1 = 0
+              15 | 
+
+  [9] Linha 18: Variável 'x1' com nome muito curto (≤4 chars)
+      Trecho  : x1 = ...
+      Contexto:
+              17 | 	if v1[i] >= a and v1[i] < c :
+        >>>   18 | 		x1 = x1 + 1
+              19 | for i in range(size(v1)) :
+
+  [10] Linha 21: Variável 'x2' com nome muito curto (≤4 chars)
+      Trecho  : x2 = ...
+      Contexto:
+              20 | 	if v1[i] >= d and v1[i] < b :
+        >>>   21 | 		x2 = x2 + 1
+              22 | v2[0] = x1
 
 ======================================================================

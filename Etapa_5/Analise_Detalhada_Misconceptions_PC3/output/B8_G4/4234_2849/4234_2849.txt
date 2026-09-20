@@ -2,11 +2,11 @@
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
 Arquivo     : 4234_2849.log
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2022_1_v1.81\2022-1\441\users\7566\executions\4234_2849.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2022_1_v1.81\2022-1\441\users\2964\executions\4234_2849.log
 Assessment  : 4234
 Título      : TP 6: Estrutura de Repetição por Contagem (for)
 Questão     : 2849
-Aluno       : 7566
+Aluno       : 2964
 Grupo       : TP 06
 Significado : Estrutura de Repetição por Contagem
 Total MCs   : 2
@@ -16,15 +16,17 @@ Total MCs   : 2
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | from numpy import *
-     2 | a = array(eval(input("insira o vetor: ")))
-     3 | j = 0
-     4 | for i in range(size(a)):
-     5 | 	j = j + a[i]
-     6 | 	if(a[i] == 0):
-     7 | 		j = 0
-     8 | 		j = j + a[i]
-     9 | print(j)
+     1 | import numpy as np
+     2 | 
+     3 | v = np.array(eval(input()))
+     4 | soma = 0
+     5 | 
+     6 | for i in range(0, v.size):
+     7 | 	soma += v[i]	
+     8 | 	if(v[i] == 0):
+     9 | 		soma = 0
+    10 | 
+    11 | print(soma)
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
@@ -37,41 +39,27 @@ DETALHAMENTO DOS MISCONCEPTIONS
       Trecho  : —
 
 ▶ G4 — Funções/variáveis com nomes não significativos
-  Ocorrências: 5
+  Ocorrências: 3
 
-  [1] Linha 2: Variável 'a' com nome muito curto (≤4 chars)
-      Trecho  : a = ...
+  [1] Linha 3: Variável 'v' com nome muito curto (≤4 chars)
+      Trecho  : v = ...
       Contexto:
-               1 | from numpy import *
-        >>>    2 | a = array(eval(input("insira o vetor: ")))
-               3 | j = 0
+               2 | 
+        >>>    3 | v = np.array(eval(input()))
+               4 | soma = 0
 
-  [2] Linha 3: Variável 'j' com nome muito curto (≤4 chars)
-      Trecho  : j = ...
+  [2] Linha 4: Variável 'soma' com nome muito curto (≤4 chars)
+      Trecho  : soma = ...
       Contexto:
-               2 | a = array(eval(input("insira o vetor: ")))
-        >>>    3 | j = 0
-               4 | for i in range(size(a)):
+               3 | v = np.array(eval(input()))
+        >>>    4 | soma = 0
+               5 | 
 
-  [3] Linha 5: Variável 'j' com nome muito curto (≤4 chars)
-      Trecho  : j = ...
+  [3] Linha 9: Variável 'soma' com nome muito curto (≤4 chars)
+      Trecho  : soma = ...
       Contexto:
-               4 | for i in range(size(a)):
-        >>>    5 | 	j = j + a[i]
-               6 | 	if(a[i] == 0):
-
-  [4] Linha 7: Variável 'j' com nome muito curto (≤4 chars)
-      Trecho  : j = ...
-      Contexto:
-               6 | 	if(a[i] == 0):
-        >>>    7 | 		j = 0
-               8 | 		j = j + a[i]
-
-  [5] Linha 8: Variável 'j' com nome muito curto (≤4 chars)
-      Trecho  : j = ...
-      Contexto:
-               7 | 		j = 0
-        >>>    8 | 		j = j + a[i]
-               9 | print(j)
+               8 | 	if(v[i] == 0):
+        >>>    9 | 		soma = 0
+              10 | 
 
 ======================================================================

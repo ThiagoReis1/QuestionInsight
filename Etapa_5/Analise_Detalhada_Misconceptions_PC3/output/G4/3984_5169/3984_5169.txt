@@ -2,11 +2,11 @@
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
 Arquivo     : 3984_5169.log
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2022_1_v1.81\2022-1\438\users\7655\executions\3984_5169.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2022_1_v1.81\2022-1\438\users\7653\executions\3984_5169.log
 Assessment  : 3984
 Título      : TP 01: Variáveis e Estrutura Sequencial
 Questão     : 5169
-Aluno       : 7655
+Aluno       : 7653
 Grupo       : TP 01
 Significado : Variáveis e Estrutura Sequencial
 Total MCs   : 1
@@ -16,12 +16,10 @@ Total MCs   : 1
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | p= float(input("Insira o peso (em gramas) do saco de racao: "))
-     2 | qtd= float(input("Insira a quantidade diaria de racao: "))
-     3 | 
-     4 | #Saida
-     5 | qf= p-(qtd*4)
-     6 | print(round(qf,2))
+     1 | p = float(input("peso:"))
+     2 | q = float(input("quantidade:"))
+     3 | rs = (p-q*4)
+     4 | print(round(rs,2))
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
@@ -33,18 +31,24 @@ DETALHAMENTO DOS MISCONCEPTIONS
   [1] Linha 1: Variável 'p' com nome muito curto (≤4 chars)
       Trecho  : p = ...
       Contexto:
-        >>>    1 | p= float(input("Insira o peso (em gramas) do saco de racao: "))
-               2 | qtd= float(input("Insira a quantidade diaria de racao: "))
+        >>>    1 | p = float(input("peso:"))
+               2 | q = float(input("quantidade:"))
 
-  [2] Linha 2: Variável 'qtd' com nome muito curto (≤4 chars)
-      Trecho  : qtd = ...
+  [2] Linha 2: Variável 'q' com nome muito curto (≤4 chars)
+      Trecho  : q = ...
       Contexto:
-               1 | p= float(input("Insira o peso (em gramas) do saco de racao: "))
-        >>>    2 | qtd= float(input("Insira a quantidade diaria de racao: "))
-               3 | 
+               1 | p = float(input("peso:"))
+        >>>    2 | q = float(input("quantidade:"))
+               3 | rs = (p-q*4)
 
-  [3] Linha 5: Variável 'qf' com nome muito curto (≤4 chars)
-      Trecho  : qf = ...
+  [3] Linha 3: Variável 'rs' com nome muito curto (≤4 chars)
+      Trecho  : rs = ...
+      Contexto:
+               2 | q = float(input("quantidade:"))
+        >>>    3 | rs = (p-q*4)
+               4 | print(round(rs,2))
+
+======================================================================.
       Contexto:
                4 | #Saida
         >>>    5 | qf= p-(qtd*4)

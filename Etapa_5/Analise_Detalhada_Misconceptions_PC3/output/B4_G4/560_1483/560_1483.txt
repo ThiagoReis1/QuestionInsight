@@ -2,11 +2,11 @@
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
 Arquivo     : 560_1483.log
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2017_1_v1.81\2017-1\144\users\1466\executions\560_1483.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2017_1_v1.81\2017-1\144\users\2204\executions\560_1483.log
 Assessment  : 560
 Título      : Trabalho Prático 3: Estruturas Condicionais Encadeadas
 Questão     : 1483
-Aluno       : 1466
+Aluno       : 2204
 Grupo       : TP 03
 Significado : Estrutura Condicional Encadeada
 Total MCs   : 2
@@ -16,99 +16,83 @@ Total MCs   : 2
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | n=input().upper()
-     2 | a=int(input())
-     3 | if(a<0 or a>1000):
-     4 | 	print("Entrada invalida")
-     5 | elif(n=="COMPUTADOR"):
-     6 | 	print(round(a*12,2))
-     7 | elif(n=="FREEZER"):
-     8 | 	print(round(a*52,2))
-     9 | elif(n=="FURADEIRA"):
-    10 | 	print(round(a*1.7,2))
-    11 | elif(n=="LIQUIDIFICADOR"):
-    12 | 	print(round(a*1.8,2))
-    13 | elif(n=="MICROONDAS"):
-    14 | 	print(round(a*15,2))
-    15 | elif(n=="NOTEBOOK"):
-    16 | 	print(round(a*2.5,2))
-    17 | elif(n=="TELEVISOR"):
-    18 | 	print(round(a*15,2))
-    19 | elif(n=="VENTILADOR"):
-    20 | 	print(round(a*2.4,2))
-    21 | else:
-    22 | 	print("Entrada invalida")
+     1 | x = input("Digite o nome: ").lower()
+     2 | y = float(input("Quantidade de equipamento : "))
+     3 | if(x =="COMPUTADOR".lower()):
+     4 | 	print(round(( y * 12),2))
+     5 | elif(x == "FREEZER".lower()):
+     6 | 	print(round((y * 52),2))
+     7 | elif(x == "FURADEIRA".lower()):
+     8 | 	print(round((y * 1.7),2))
+     9 | elif(x == "LIQUIDIFICADOR".lower()):
+    10 | 	print(round((y * 1.8),2))
+    11 | elif(x == "MICROONDAS".lower()):
+    12 | 	print(round((y * 15),2))
+    13 | elif(x =="NOTEBOOK".lower()):
+    14 | 	print(round((y * 2.5),2))
+    15 | elif(x == "TELEVISOR".lower()):
+    16 | 	print(round((y * 15),2))
+    17 | elif(x == "VENTILADOR".lower()):
+    18 | 	print(round((y * 2.4),2))
+    19 | else:
+    20 | 	print("Entrada invalida")
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
 ----------------------------------------------------------------------
 
 ▶ B4 — Comandos repetidos dentro de blocos if-elif-else
-  Ocorrências: 7
+  Ocorrências: 5
 
-  [1] Linha 17: Bloco idêntico ao da linha 13
-      Trecho  : print(round(a * 15, 2))
+  [1] Linha 15: Bloco idêntico ao da linha 11
+      Trecho  : print(round(y * 15, 2))
       Contexto:
-              16 | 	print(round(a*2.5,2))
-        >>>   17 | elif(n=="TELEVISOR"):
-              18 | 	print(round(a*15,2))
+              14 | 	print(round((y * 2.5),2))
+        >>>   15 | elif(x == "TELEVISOR".lower()):
+              16 | 	print(round((y * 15),2))
 
-  [2] Linha 19: Bloco idêntico ao da linha 3
-      Trecho  : print('Entrada invalida')
+  [2] Linha 15: Bloco idêntico ao da linha 11
+      Trecho  : print(round(y * 15, 2))
       Contexto:
-              18 | 	print(round(a*15,2))
-        >>>   19 | elif(n=="VENTILADOR"):
-              20 | 	print(round(a*2.4,2))
+              14 | 	print(round((y * 2.5),2))
+        >>>   15 | elif(x == "TELEVISOR".lower()):
+              16 | 	print(round((y * 15),2))
 
-  [3] Linha 17: Bloco idêntico ao da linha 13
-      Trecho  : print(round(a * 15, 2))
+  [3] Linha 15: Bloco idêntico ao da linha 11
+      Trecho  : print(round(y * 15, 2))
       Contexto:
-              16 | 	print(round(a*2.5,2))
-        >>>   17 | elif(n=="TELEVISOR"):
-              18 | 	print(round(a*15,2))
+              14 | 	print(round((y * 2.5),2))
+        >>>   15 | elif(x == "TELEVISOR".lower()):
+              16 | 	print(round((y * 15),2))
 
-  [4] Linha 17: Bloco idêntico ao da linha 13
-      Trecho  : print(round(a * 15, 2))
+  [4] Linha 15: Bloco idêntico ao da linha 11
+      Trecho  : print(round(y * 15, 2))
       Contexto:
-              16 | 	print(round(a*2.5,2))
-        >>>   17 | elif(n=="TELEVISOR"):
-              18 | 	print(round(a*15,2))
+              14 | 	print(round((y * 2.5),2))
+        >>>   15 | elif(x == "TELEVISOR".lower()):
+              16 | 	print(round((y * 15),2))
 
-  [5] Linha 17: Bloco idêntico ao da linha 13
-      Trecho  : print(round(a * 15, 2))
+  [5] Linha 15: Bloco idêntico ao da linha 11
+      Trecho  : print(round(y * 15, 2))
       Contexto:
-              16 | 	print(round(a*2.5,2))
-        >>>   17 | elif(n=="TELEVISOR"):
-              18 | 	print(round(a*15,2))
-
-  [6] Linha 17: Bloco idêntico ao da linha 13
-      Trecho  : print(round(a * 15, 2))
-      Contexto:
-              16 | 	print(round(a*2.5,2))
-        >>>   17 | elif(n=="TELEVISOR"):
-              18 | 	print(round(a*15,2))
-
-  [7] Linha 17: Bloco idêntico ao da linha 13
-      Trecho  : print(round(a * 15, 2))
-      Contexto:
-              16 | 	print(round(a*2.5,2))
-        >>>   17 | elif(n=="TELEVISOR"):
-              18 | 	print(round(a*15,2))
+              14 | 	print(round((y * 2.5),2))
+        >>>   15 | elif(x == "TELEVISOR".lower()):
+              16 | 	print(round((y * 15),2))
 
 ▶ G4 — Funções/variáveis com nomes não significativos
   Ocorrências: 2
 
-  [1] Linha 1: Variável 'n' com nome muito curto (≤4 chars)
-      Trecho  : n = ...
+  [1] Linha 1: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
       Contexto:
-        >>>    1 | n=input().upper()
-               2 | a=int(input())
+        >>>    1 | x = input("Digite o nome: ").lower()
+               2 | y = float(input("Quantidade de equipamento : "))
 
-  [2] Linha 2: Variável 'a' com nome muito curto (≤4 chars)
-      Trecho  : a = ...
+  [2] Linha 2: Variável 'y' com nome muito curto (≤4 chars)
+      Trecho  : y = ...
       Contexto:
-               1 | n=input().upper()
-        >>>    2 | a=int(input())
-               3 | if(a<0 or a>1000):
+               1 | x = input("Digite o nome: ").lower()
+        >>>    2 | y = float(input("Quantidade de equipamento : "))
+               3 | if(x =="COMPUTADOR".lower()):
 
 ======================================================================

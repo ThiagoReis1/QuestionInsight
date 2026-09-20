@@ -2,11 +2,11 @@
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
 Arquivo     : 4973_5950.log
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2023_1_v1.81\2023-1\524\users\8660\executions\4973_5950.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2023_1_v1.81\2023-1\524\users\8877\executions\4973_5950.log
 Assessment  : 4973
 Título      : TP2: Est. Condicional Simples e Composta
 Questão     : 5950
-Aluno       : 8660
+Aluno       : 8877
 Grupo       : TP 02
 Significado : Estrutura Condicional Simples e Composta
 Total MCs   : 1
@@ -16,17 +16,21 @@ Total MCs   : 1
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | esq = input("torta T ou pastel P: ")
-     2 | qnt = int(input("fatias: "))
-     3 | cpp = int(input("quantos cappuccinos: "))
+     1 | tp = str(input("Informe o item (T ou P): ")).upper()
+     2 | qtp = int(input("Informe a quantidade: "))
+     3 | qc = int(input("Informe quantas bebidas: "))
      4 | 
-     5 | c = cpp * 4.50
-     6 | 
-     7 | if esq.upper() == "T":
-     8 | 	pf = c + (qnt * 6)
-     9 | else:
-    10 | 	pf = 5 * qnt + c
-    11 | print(pf)
+     5 | t = 6
+     6 | p = 5
+     7 | c = 4.5
+     8 | 
+     9 | if tp == "T":
+    10 | 	conta = t * qtp + c * qc
+    11 | 	print(float(round(conta, 2)))
+    12 | 	
+    13 | else:
+    14 | 	conta = p * qtp + c * qc
+    15 | 	print(float(round(conta, 2)))
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
@@ -35,45 +39,45 @@ DETALHAMENTO DOS MISCONCEPTIONS
 ▶ G4 — Funções/variáveis com nomes não significativos
   Ocorrências: 6
 
-  [1] Linha 1: Variável 'esq' com nome muito curto (≤4 chars)
-      Trecho  : esq = ...
+  [1] Linha 1: Variável 'tp' com nome muito curto (≤4 chars)
+      Trecho  : tp = ...
       Contexto:
-        >>>    1 | esq = input("torta T ou pastel P: ")
-               2 | qnt = int(input("fatias: "))
+        >>>    1 | tp = str(input("Informe o item (T ou P): ")).upper()
+               2 | qtp = int(input("Informe a quantidade: "))
 
-  [2] Linha 2: Variável 'qnt' com nome muito curto (≤4 chars)
-      Trecho  : qnt = ...
+  [2] Linha 2: Variável 'qtp' com nome muito curto (≤4 chars)
+      Trecho  : qtp = ...
       Contexto:
-               1 | esq = input("torta T ou pastel P: ")
-        >>>    2 | qnt = int(input("fatias: "))
-               3 | cpp = int(input("quantos cappuccinos: "))
+               1 | tp = str(input("Informe o item (T ou P): ")).upper()
+        >>>    2 | qtp = int(input("Informe a quantidade: "))
+               3 | qc = int(input("Informe quantas bebidas: "))
 
-  [3] Linha 3: Variável 'cpp' com nome muito curto (≤4 chars)
-      Trecho  : cpp = ...
+  [3] Linha 3: Variável 'qc' com nome muito curto (≤4 chars)
+      Trecho  : qc = ...
       Contexto:
-               2 | qnt = int(input("fatias: "))
-        >>>    3 | cpp = int(input("quantos cappuccinos: "))
+               2 | qtp = int(input("Informe a quantidade: "))
+        >>>    3 | qc = int(input("Informe quantas bebidas: "))
                4 | 
 
-  [4] Linha 5: Variável 'c' com nome muito curto (≤4 chars)
+  [4] Linha 5: Variável 't' com nome muito curto (≤4 chars)
+      Trecho  : t = ...
+      Contexto:
+               4 | 
+        >>>    5 | t = 6
+               6 | p = 5
+
+  [5] Linha 6: Variável 'p' com nome muito curto (≤4 chars)
+      Trecho  : p = ...
+      Contexto:
+               5 | t = 6
+        >>>    6 | p = 5
+               7 | c = 4.5
+
+  [6] Linha 7: Variável 'c' com nome muito curto (≤4 chars)
       Trecho  : c = ...
       Contexto:
-               4 | 
-        >>>    5 | c = cpp * 4.50
-               6 | 
-
-  [5] Linha 8: Variável 'pf' com nome muito curto (≤4 chars)
-      Trecho  : pf = ...
-      Contexto:
-               7 | if esq.upper() == "T":
-        >>>    8 | 	pf = c + (qnt * 6)
-               9 | else:
-
-  [6] Linha 10: Variável 'pf' com nome muito curto (≤4 chars)
-      Trecho  : pf = ...
-      Contexto:
-               9 | else:
-        >>>   10 | 	pf = 5 * qnt + c
-              11 | print(pf)
+               6 | p = 5
+        >>>    7 | c = 4.5
+               8 | 
 
 ======================================================================

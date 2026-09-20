@@ -2,11 +2,11 @@
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
 Arquivo     : 367_1645.log
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2016_2_v1.81\2016-2\127\users\1937\executions\367_1645.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2016_2_v1.81\2016-2\127\users\1904\executions\367_1645.log
 Assessment  : 367
 Título      : Trabalho Prático 06 - Estrutura de Repetição por Contagem (for)
 Questão     : 1645
-Aluno       : 1937
+Aluno       : 1904
 Grupo       : TP 06
 Significado : Estrutura de Repetição por Contagem
 Total MCs   : 2
@@ -17,25 +17,17 @@ Total MCs   : 2
 CÓDIGO FONTE
 ----------------------------------------------------------------------
      1 | from numpy import*
-     2 | 
-     3 | saque = array(eval(input()))
-     4 | 
-     5 | a = 0
-     6 | q = 0
-     7 | 
-     8 | for i in range(size(saque)):
-     9 | 	if(saque[i] >= 2000):
-    10 | 		q = q + 1
-    11 | 	
-    12 | v = zeros(q,dtype = int)
-    13 | 
-    14 | for i in range(size(saque)):
-    15 | 	if(saque[i] >= 2000):
-    16 | 		v[a] = i
-    17 | 		a = a + 1
-    18 | 
-    19 | print(q)
-    20 | print(v)
+     2 | v = array(eval(input("vetor:")))
+     3 | i=0
+     4 | r=0
+     5 | s=[]
+     6 | while i<size(v):
+     7 | 	if (v[i]>=2000)and(v[i]>0):
+     8 | 		r=r+1
+     9 | 		s.append(i)
+    10 | 	i=i+1
+    11 | print(r)
+    12 | print(array(s))
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
@@ -48,43 +40,48 @@ DETALHAMENTO DOS MISCONCEPTIONS
       Trecho  : —
 
 ▶ G4 — Funções/variáveis com nomes não significativos
-  Ocorrências: 5
+  Ocorrências: 6
 
-  [1] Linha 5: Variável 'a' com nome muito curto (≤4 chars)
-      Trecho  : a = ...
-      Contexto:
-               4 | 
-        >>>    5 | a = 0
-               6 | q = 0
-
-  [2] Linha 6: Variável 'q' com nome muito curto (≤4 chars)
-      Trecho  : q = ...
-      Contexto:
-               5 | a = 0
-        >>>    6 | q = 0
-               7 | 
-
-  [3] Linha 12: Variável 'v' com nome muito curto (≤4 chars)
+  [1] Linha 2: Variável 'v' com nome muito curto (≤4 chars)
       Trecho  : v = ...
       Contexto:
-              11 | 	
-        >>>   12 | v = zeros(q,dtype = int)
-              13 | 
+               1 | from numpy import*
+        >>>    2 | v = array(eval(input("vetor:")))
+               3 | i=0
 
-  [4] Linha 10: Variável 'q' com nome muito curto (≤4 chars)
-      Trecho  : q = ...
+  [2] Linha 3: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
       Contexto:
-               9 | 	if(saque[i] >= 2000):
-        >>>   10 | 		q = q + 1
-              11 | 	
+               2 | v = array(eval(input("vetor:")))
+        >>>    3 | i=0
+               4 | r=0
 
-  [5] Linha 17: Variável 'a' com nome muito curto (≤4 chars)
-      Trecho  : a = ...
+  [3] Linha 4: Variável 'r' com nome muito curto (≤4 chars)
+      Trecho  : r = ...
       Contexto:
-              16 | 		v[a] = i
-        >>>   17 | 		a = a + 1
-              18 | 
+               3 | i=0
+        >>>    4 | r=0
+               5 | s=[]
 
-======================================================================             9 | 		s.append(i)
+  [4] Linha 5: Variável 's' com nome muito curto (≤4 chars)
+      Trecho  : s = ...
+      Contexto:
+               4 | r=0
+        >>>    5 | s=[]
+               6 | while i<size(v):
+
+  [5] Linha 10: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+               9 | 		s.append(i)
+        >>>   10 | 	i=i+1
+              11 | print(r)
+
+  [6] Linha 8: Variável 'r' com nome muito curto (≤4 chars)
+      Trecho  : r = ...
+      Contexto:
+               7 | 	if (v[i]>=2000)and(v[i]>0):
+        >>>    8 | 		r=r+1
+               9 | 		s.append(i)
 
 ======================================================================

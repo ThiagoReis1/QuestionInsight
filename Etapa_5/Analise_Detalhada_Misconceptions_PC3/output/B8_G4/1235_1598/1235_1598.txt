@@ -2,11 +2,11 @@
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
 Arquivo     : 1235_1598.log
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2018_1_v1.81\2018-1\187\users\3221\executions\1235_1598.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2018_1_v1.81\2018-1\187\users\3201\executions\1235_1598.log
 Assessment  : 1235
 Título      : TP 5: Vetores e Strings
 Questão     : 1598
-Aluno       : 3221
+Aluno       : 3201
 Grupo       : TP 05
 Significado : Vetores e Strings
 Total MCs   : 2
@@ -16,19 +16,15 @@ Total MCs   : 2
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | from numpy import *
-     2 | v = array(eval(input()))
-     3 | 
-     4 | i = 0
-     5 | d = 0
-     6 | 
-     7 | while i<size(v):
-     8 | 	if (v[i]>80):
-     9 | 		d = d + 5
-    10 | 	i = i + 1
-    11 | ct = sum(v) - d
-    12 | 
-    13 | print(round(ct,2))
+     1 | from numpy import* 
+     2 | v=array(eval(input( )))
+     3 | i=0
+     4 | 		  
+     5 | while i<size(v):
+     6 | 	if v[i]>80.0:
+     7 | 		v[i]=v[i]-5.0
+     8 | 	i=i+1
+     9 | print(round(sum(v),2))
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
@@ -41,48 +37,27 @@ DETALHAMENTO DOS MISCONCEPTIONS
       Trecho  : —
 
 ▶ G4 — Funções/variáveis com nomes não significativos
-  Ocorrências: 6
+  Ocorrências: 3
 
   [1] Linha 2: Variável 'v' com nome muito curto (≤4 chars)
       Trecho  : v = ...
       Contexto:
-               1 | from numpy import *
-        >>>    2 | v = array(eval(input()))
-               3 | 
+               1 | from numpy import* 
+        >>>    2 | v=array(eval(input( )))
+               3 | i=0
 
-  [2] Linha 4: Variável 'i' com nome muito curto (≤4 chars)
+  [2] Linha 3: Variável 'i' com nome muito curto (≤4 chars)
       Trecho  : i = ...
       Contexto:
-               3 | 
-        >>>    4 | i = 0
-               5 | d = 0
+               2 | v=array(eval(input( )))
+        >>>    3 | i=0
+               4 | 		  
 
-  [3] Linha 5: Variável 'd' com nome muito curto (≤4 chars)
-      Trecho  : d = ...
-      Contexto:
-               4 | i = 0
-        >>>    5 | d = 0
-               6 | 
-
-  [4] Linha 11: Variável 'ct' com nome muito curto (≤4 chars)
-      Trecho  : ct = ...
-      Contexto:
-              10 | 	i = i + 1
-        >>>   11 | ct = sum(v) - d
-              12 | 
-
-  [5] Linha 10: Variável 'i' com nome muito curto (≤4 chars)
+  [3] Linha 8: Variável 'i' com nome muito curto (≤4 chars)
       Trecho  : i = ...
       Contexto:
-               9 | 		d = d + 5
-        >>>   10 | 	i = i + 1
-              11 | ct = sum(v) - d
-
-  [6] Linha 9: Variável 'd' com nome muito curto (≤4 chars)
-      Trecho  : d = ...
-      Contexto:
-               8 | 	if (v[i]>80):
-        >>>    9 | 		d = d + 5
-              10 | 	i = i + 1
+               7 | 		v[i]=v[i]-5.0
+        >>>    8 | 	i=i+1
+               9 | print(round(sum(v),2))
 
 ======================================================================

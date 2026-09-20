@@ -2,11 +2,11 @@
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
 Arquivo     : 4157_3586.log
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2022_1_v1.81\2022-1\444\users\7616\executions\4157_3586.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2022_1_v1.81\2022-1\444\users\7622\executions\4157_3586.log
 Assessment  : 4157
 Título      : TP 05: Vetores e Strings
 Questão     : 3586
-Aluno       : 7616
+Aluno       : 7622
 Grupo       : TP 05
 Significado : Vetores e Strings
 Total MCs   : 1
@@ -16,26 +16,24 @@ Total MCs   : 1
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | from numpy import*
+     1 | from numpy import *
      2 | 
-     3 | acertos = array(eval(input("Acertos: ")))
+     3 | vet = array(eval(input("numeros: ")))
      4 | 
      5 | i = 0
-     6 | p = 0
+     6 | pontos = 0
      7 | 
-     8 | while i < size(acertos):
-     9 | 	if acertos[i] == 1:
-    10 | 		p = p + 100
-    11 | 	elif acertos[i] == 2:
-    12 | 		p = p + 60
-    13 | 	elif acertos[i] == 3:
-    14 | 		p = p + 20
-    15 | 	elif acertos[i] == 4:
-    16 | 		p = p + 0
-    17 | 	
-    18 | 	i += 1
-    19 | 	
-    20 | print(p)
+     8 | while i < size(vet):
+     9 | 	if vet[i] == 1:
+    10 | 		pontos = pontos + 100
+    11 | 	elif vet[i] == 2:
+    12 | 		pontos += 60
+    13 | 	elif vet[i] == 3:
+    14 | 		pontos += 20
+    15 | 	elif vet[i] == 4:
+    16 | 		pontos += 0
+    17 | 	i += 1
+    18 | print(sum(pontos))
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
@@ -47,8 +45,8 @@ DETALHAMENTO DOS MISCONCEPTIONS
   [1] Linha 13: Cadeia if/elif sem bloco else final
       Trecho  : if ... (linha 13) / elif ... sem else
       Contexto:
-              12 | 		p = p + 60
-        >>>   13 | 	elif acertos[i] == 3:
-              14 | 		p = p + 20
+              12 | 		pontos += 60
+        >>>   13 | 	elif vet[i] == 3:
+              14 | 		pontos += 20
 
 ======================================================================

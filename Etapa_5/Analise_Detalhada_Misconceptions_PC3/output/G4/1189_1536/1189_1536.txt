@@ -2,11 +2,11 @@
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
 Arquivo     : 1189_1536.log
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2018_1_v1.81\2018-1\187\users\3213\executions\1189_1536.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2018_1_v1.81\2018-1\187\users\3204\executions\1189_1536.log
 Assessment  : 1189
 Título      : TP 04: Estrutura de Repetição por Condição (while)
 Questão     : 1536
-Aluno       : 3213
+Aluno       : 3204
 Grupo       : TP 04
 Significado : Estrutura de Repetição por Condição
 Total MCs   : 1
@@ -16,89 +16,138 @@ Total MCs   : 1
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | x = float(input("valor de x: "))
-     2 | k = int(input("valor de k: "))
+     1 | x = float(input("Numero real:"))
+     2 | k = int(input("Quantidade de termos:"))
      3 | 
-     4 | cont = 1
-     5 | soma = x
-     6 | vc = k
-     7 | ex = 1
-     8 | 
-     9 | #if ((-1 < ac <= 1) and (vc > 0)):
-    10 | while (cont < vc):
-    11 | 		soma = soma + (-1)*(-1)**(cont+1)*((x**(ex+1))/(ex+1))
-    12 | 		cont = cont + 1
-    13 | 		ex = ex + 1
-    14 | 		
-    15 | print(round(soma,10))
+     4 | cont = 0
+     5 | soma = 0
+     6 | e = 1
+     7 | 
+     8 | while(cont<k): 
+     9 | 	if(cont%2 == 0):
+    10 | 		n = x**e
+    11 | 		m = n/e
+    12 | 		soma = soma + m
+    13 | 		cont = cont + 1
+    14 | 		e = e + 1
+    15 | 	else:
+    16 | 		n = x**e
+    17 | 		m = n/e
+    18 | 		soma = soma - m
+    19 | 		cont = cont + 1
+    20 | 		e = e + 1
+    21 | 		
+    22 | print(round(soma, 10))
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
 ----------------------------------------------------------------------
 
 ▶ G4 — Funções/variáveis com nomes não significativos
-  Ocorrências: 9
+  Ocorrências: 15
 
   [1] Linha 1: Variável 'x' com nome muito curto (≤4 chars)
       Trecho  : x = ...
       Contexto:
-        >>>    1 | x = float(input("valor de x: "))
-               2 | k = int(input("valor de k: "))
+        >>>    1 | x = float(input("Numero real:"))
+               2 | k = int(input("Quantidade de termos:"))
 
   [2] Linha 2: Variável 'k' com nome muito curto (≤4 chars)
       Trecho  : k = ...
       Contexto:
-               1 | x = float(input("valor de x: "))
-        >>>    2 | k = int(input("valor de k: "))
+               1 | x = float(input("Numero real:"))
+        >>>    2 | k = int(input("Quantidade de termos:"))
                3 | 
 
   [3] Linha 4: Variável 'cont' com nome muito curto (≤4 chars)
       Trecho  : cont = ...
       Contexto:
                3 | 
-        >>>    4 | cont = 1
-               5 | soma = x
+        >>>    4 | cont = 0
+               5 | soma = 0
 
   [4] Linha 5: Variável 'soma' com nome muito curto (≤4 chars)
       Trecho  : soma = ...
       Contexto:
-               4 | cont = 1
-        >>>    5 | soma = x
-               6 | vc = k
+               4 | cont = 0
+        >>>    5 | soma = 0
+               6 | e = 1
 
-  [5] Linha 6: Variável 'vc' com nome muito curto (≤4 chars)
-      Trecho  : vc = ...
+  [5] Linha 6: Variável 'e' com nome muito curto (≤4 chars)
+      Trecho  : e = ...
       Contexto:
-               5 | soma = x
-        >>>    6 | vc = k
-               7 | ex = 1
+               5 | soma = 0
+        >>>    6 | e = 1
+               7 | 
 
-  [6] Linha 7: Variável 'ex' com nome muito curto (≤4 chars)
-      Trecho  : ex = ...
+  [6] Linha 10: Variável 'n' com nome muito curto (≤4 chars)
+      Trecho  : n = ...
       Contexto:
-               6 | vc = k
-        >>>    7 | ex = 1
-               8 | 
+               9 | 	if(cont%2 == 0):
+        >>>   10 | 		n = x**e
+              11 | 		m = n/e
 
-  [7] Linha 11: Variável 'soma' com nome muito curto (≤4 chars)
+  [7] Linha 11: Variável 'm' com nome muito curto (≤4 chars)
+      Trecho  : m = ...
+      Contexto:
+              10 | 		n = x**e
+        >>>   11 | 		m = n/e
+              12 | 		soma = soma + m
+
+  [8] Linha 12: Variável 'soma' com nome muito curto (≤4 chars)
       Trecho  : soma = ...
       Contexto:
-              10 | while (cont < vc):
-        >>>   11 | 		soma = soma + (-1)*(-1)**(cont+1)*((x**(ex+1))/(ex+1))
-              12 | 		cont = cont + 1
+              11 | 		m = n/e
+        >>>   12 | 		soma = soma + m
+              13 | 		cont = cont + 1
 
-  [8] Linha 12: Variável 'cont' com nome muito curto (≤4 chars)
+  [9] Linha 13: Variável 'cont' com nome muito curto (≤4 chars)
       Trecho  : cont = ...
       Contexto:
-              11 | 		soma = soma + (-1)*(-1)**(cont+1)*((x**(ex+1))/(ex+1))
-        >>>   12 | 		cont = cont + 1
-              13 | 		ex = ex + 1
+              12 | 		soma = soma + m
+        >>>   13 | 		cont = cont + 1
+              14 | 		e = e + 1
 
-  [9] Linha 13: Variável 'ex' com nome muito curto (≤4 chars)
-      Trecho  : ex = ...
+  [10] Linha 14: Variável 'e' com nome muito curto (≤4 chars)
+      Trecho  : e = ...
       Contexto:
-              12 | 		cont = cont + 1
-        >>>   13 | 		ex = ex + 1
-              14 | 		
+              13 | 		cont = cont + 1
+        >>>   14 | 		e = e + 1
+              15 | 	else:
+
+  [11] Linha 16: Variável 'n' com nome muito curto (≤4 chars)
+      Trecho  : n = ...
+      Contexto:
+              15 | 	else:
+        >>>   16 | 		n = x**e
+              17 | 		m = n/e
+
+  [12] Linha 17: Variável 'm' com nome muito curto (≤4 chars)
+      Trecho  : m = ...
+      Contexto:
+              16 | 		n = x**e
+        >>>   17 | 		m = n/e
+              18 | 		soma = soma - m
+
+  [13] Linha 18: Variável 'soma' com nome muito curto (≤4 chars)
+      Trecho  : soma = ...
+      Contexto:
+              17 | 		m = n/e
+        >>>   18 | 		soma = soma - m
+              19 | 		cont = cont + 1
+
+  [14] Linha 19: Variável 'cont' com nome muito curto (≤4 chars)
+      Trecho  : cont = ...
+      Contexto:
+              18 | 		soma = soma - m
+        >>>   19 | 		cont = cont + 1
+              20 | 		e = e + 1
+
+  [15] Linha 20: Variável 'e' com nome muito curto (≤4 chars)
+      Trecho  : e = ...
+      Contexto:
+              19 | 		cont = cont + 1
+        >>>   20 | 		e = e + 1
+              21 | 		
 
 ======================================================================

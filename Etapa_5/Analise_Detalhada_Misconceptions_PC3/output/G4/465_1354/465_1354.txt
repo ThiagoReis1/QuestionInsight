@@ -2,11 +2,11 @@
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
 Arquivo     : 465_1354.log
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2017_1_v1.81\2017-1\144\users\2616\executions\465_1354.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2017_1_v1.81\2017-1\144\users\2376\executions\465_1354.log
 Assessment  : 465
 Título      : Trabalho Prático 01: Variáveis e Estrutura Sequencial de Programação
 Questão     : 1354
-Aluno       : 2616
+Aluno       : 2376
 Grupo       : TP 01
 Significado : Variáveis e Estrutura Sequencial
 Total MCs   : 1
@@ -16,12 +16,23 @@ Total MCs   : 1
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | pi = 3.1416
-     2 | mw = int(input('Média em Watts desejada: '))
-     3 | a = int(input('Raio do cômodo circular: '))
-     4 | area = ((pi*a)**2)
-     5 | 
-     6 | print((area*mw)//1)
+     1 | #Importar modulo
+     2 | from math import*
+     3 | 
+     4 | #Media de watts 
+     5 | m = float(input("Digite a media de watts:"))
+     6 | 
+     7 | #Raio
+     8 | r = float(input("Digite o raio:"))
+     9 | 
+    10 | #Area do circulo
+    11 | A = pi * (r ** 2)
+    12 | 
+    13 | #Area iluminada
+    14 | p = A * m 
+    15 | 
+    16 | #Impressao do resultado
+    17 | print(round(p, 2))
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
@@ -30,31 +41,32 @@ DETALHAMENTO DOS MISCONCEPTIONS
 ▶ G4 — Funções/variáveis com nomes não significativos
   Ocorrências: 4
 
-  [1] Linha 1: Variável 'pi' com nome muito curto (≤4 chars)
-      Trecho  : pi = ...
+  [1] Linha 5: Variável 'm' com nome muito curto (≤4 chars)
+      Trecho  : m = ...
       Contexto:
-        >>>    1 | pi = 3.1416
-               2 | mw = int(input('Média em Watts desejada: '))
+               4 | #Media de watts 
+        >>>    5 | m = float(input("Digite a media de watts:"))
+               6 | 
 
-  [2] Linha 2: Variável 'mw' com nome muito curto (≤4 chars)
-      Trecho  : mw = ...
+  [2] Linha 8: Variável 'r' com nome muito curto (≤4 chars)
+      Trecho  : r = ...
       Contexto:
-               1 | pi = 3.1416
-        >>>    2 | mw = int(input('Média em Watts desejada: '))
-               3 | a = int(input('Raio do cômodo circular: '))
+               7 | #Raio
+        >>>    8 | r = float(input("Digite o raio:"))
+               9 | 
 
-  [3] Linha 3: Variável 'a' com nome muito curto (≤4 chars)
-      Trecho  : a = ...
+  [3] Linha 11: Variável 'A' com nome muito curto (≤4 chars)
+      Trecho  : A = ...
       Contexto:
-               2 | mw = int(input('Média em Watts desejada: '))
-        >>>    3 | a = int(input('Raio do cômodo circular: '))
-               4 | area = ((pi*a)**2)
+              10 | #Area do circulo
+        >>>   11 | A = pi * (r ** 2)
+              12 | 
 
-  [4] Linha 4: Variável 'area' com nome muito curto (≤4 chars)
-      Trecho  : area = ...
+  [4] Linha 14: Variável 'p' com nome muito curto (≤4 chars)
+      Trecho  : p = ...
       Contexto:
-               3 | a = int(input('Raio do cômodo circular: '))
-        >>>    4 | area = ((pi*a)**2)
-               5 | 
+              13 | #Area iluminada
+        >>>   14 | p = A * m 
+              15 | 
 
 ======================================================================

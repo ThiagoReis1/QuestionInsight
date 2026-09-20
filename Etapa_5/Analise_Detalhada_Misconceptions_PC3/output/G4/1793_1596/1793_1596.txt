@@ -2,11 +2,11 @@
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
 Arquivo     : 1793_1596.log
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2019_1_v1.81\2019-1\224\users\4369\executions\1793_1596.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2019_1_v1.81\2019-1\224\users\4382\executions\1793_1596.log
 Assessment  : 1793
 Título      : TP5: Vetores e Strings
 Questão     : 1596
-Aluno       : 4369
+Aluno       : 4382
 Grupo       : TP 05
 Significado : Vetores e Strings
 Total MCs   : 1
@@ -16,62 +16,97 @@ Total MCs   : 1
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | from numpy import*
-     2 | v = array(eval(input("Digite vetor: ")))
-     3 | s = sum(v) 
-     4 | m = min(v)
-     5 | s1 = s - m
-     6 | t = size(v) - 1
-     7 | me = (s1 / t) 
-     8 | print(me)
+     1 | from numpy import *
+     2 | VN = array(eval(input(" vetor de notas:")))
+     3 | i = 0
+     4 | s = 0
+     5 | siz = 0
+     6 | while(i<size(VN)):
+     7 | 	if(VN[i]== min(VN)):
+     8 | 		s = s + 0
+     9 | 		siz = siz + 0
+    10 | 	else :
+    11 | 		s = s + VN[i]
+    12 | 		siz = siz + 1
+    13 | 	i = i + 1
+    14 | M = s/siz
+    15 | print(round(M,2))
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
 ----------------------------------------------------------------------
 
 ▶ G4 — Funções/variáveis com nomes não significativos
-  Ocorrências: 6
+  Ocorrências: 10
 
-  [1] Linha 2: Variável 'v' com nome muito curto (≤4 chars)
-      Trecho  : v = ...
+  [1] Linha 2: Variável 'VN' com nome muito curto (≤4 chars)
+      Trecho  : VN = ...
       Contexto:
-               1 | from numpy import*
-        >>>    2 | v = array(eval(input("Digite vetor: ")))
-               3 | s = sum(v) 
+               1 | from numpy import *
+        >>>    2 | VN = array(eval(input(" vetor de notas:")))
+               3 | i = 0
 
-  [2] Linha 3: Variável 's' com nome muito curto (≤4 chars)
+  [2] Linha 3: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
+      Contexto:
+               2 | VN = array(eval(input(" vetor de notas:")))
+        >>>    3 | i = 0
+               4 | s = 0
+
+  [3] Linha 4: Variável 's' com nome muito curto (≤4 chars)
       Trecho  : s = ...
       Contexto:
-               2 | v = array(eval(input("Digite vetor: ")))
-        >>>    3 | s = sum(v) 
-               4 | m = min(v)
+               3 | i = 0
+        >>>    4 | s = 0
+               5 | siz = 0
 
-  [3] Linha 4: Variável 'm' com nome muito curto (≤4 chars)
-      Trecho  : m = ...
+  [4] Linha 5: Variável 'siz' com nome muito curto (≤4 chars)
+      Trecho  : siz = ...
       Contexto:
-               3 | s = sum(v) 
-        >>>    4 | m = min(v)
-               5 | s1 = s - m
+               4 | s = 0
+        >>>    5 | siz = 0
+               6 | while(i<size(VN)):
 
-  [4] Linha 5: Variável 's1' com nome muito curto (≤4 chars)
-      Trecho  : s1 = ...
+  [5] Linha 14: Variável 'M' com nome muito curto (≤4 chars)
+      Trecho  : M = ...
       Contexto:
-               4 | m = min(v)
-        >>>    5 | s1 = s - m
-               6 | t = size(v) - 1
+              13 | 	i = i + 1
+        >>>   14 | M = s/siz
+              15 | print(round(M,2))
 
-  [5] Linha 6: Variável 't' com nome muito curto (≤4 chars)
-      Trecho  : t = ...
+  [6] Linha 13: Variável 'i' com nome muito curto (≤4 chars)
+      Trecho  : i = ...
       Contexto:
-               5 | s1 = s - m
-        >>>    6 | t = size(v) - 1
-               7 | me = (s1 / t) 
+              12 | 		siz = siz + 1
+        >>>   13 | 	i = i + 1
+              14 | M = s/siz
 
-  [6] Linha 7: Variável 'me' com nome muito curto (≤4 chars)
-      Trecho  : me = ...
+  [7] Linha 8: Variável 's' com nome muito curto (≤4 chars)
+      Trecho  : s = ...
       Contexto:
-               6 | t = size(v) - 1
-        >>>    7 | me = (s1 / t) 
-               8 | print(me)
+               7 | 	if(VN[i]== min(VN)):
+        >>>    8 | 		s = s + 0
+               9 | 		siz = siz + 0
+
+  [8] Linha 9: Variável 'siz' com nome muito curto (≤4 chars)
+      Trecho  : siz = ...
+      Contexto:
+               8 | 		s = s + 0
+        >>>    9 | 		siz = siz + 0
+              10 | 	else :
+
+  [9] Linha 11: Variável 's' com nome muito curto (≤4 chars)
+      Trecho  : s = ...
+      Contexto:
+              10 | 	else :
+        >>>   11 | 		s = s + VN[i]
+              12 | 		siz = siz + 1
+
+  [10] Linha 12: Variável 'siz' com nome muito curto (≤4 chars)
+      Trecho  : siz = ...
+      Contexto:
+              11 | 		s = s + VN[i]
+        >>>   12 | 		siz = siz + 1
+              13 | 	i = i + 1
 
 ======================================================================

@@ -2,11 +2,11 @@
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
 Arquivo     : 1829_1642.log
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2019_1_v1.81\2019-1\221\users\4113\executions\1829_1642.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2019_1_v1.81\2019-1\221\users\4108\executions\1829_1642.log
 Assessment  : 1829
 Título      : TP6: Repetição por contagem
 Questão     : 1642
-Aluno       : 4113
+Aluno       : 4108
 Grupo       : TP 06
 Significado : Estrutura de Repetição por Contagem
 Total MCs   : 2
@@ -17,12 +17,27 @@ Total MCs   : 2
 CÓDIGO FONTE
 ----------------------------------------------------------------------
      1 | from numpy import*
-     2 | v = array(eval(input()))
-     3 | c = 0
-     4 | for i in range(size(v)):
-     5 | 	if(size(i)==5):
-     6 | 		c = c + 1
-     7 | print(c)
+     2 | qt = array(eval(input("Quantidades de alunos por turma: ")))
+     3 | nt = 0
+     4 | v = zeros(size(qt),dtype = int)
+     5 | 
+     6 | for i in range(size(qt)):
+     7 | 	v[i] = qt[i]% 5
+     8 | 	if v[i] == 0:
+     9 | 		nt = nt + 1
+    10 | 		
+    11 | q = zeros(nt,dtype = int)
+    12 | j = 0
+    13 | for i in range (size(qt)):
+    14 | 	v[i] = qt[i]%5
+    15 | 	if v[i] == 0:
+    16 | 		q[j] = i
+    17 | 		j = j+ 1
+    18 | 
+    19 | 
+    20 | 			
+    21 | print(nt)
+    22 | print(q)
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
@@ -35,30 +50,18 @@ DETALHAMENTO DOS MISCONCEPTIONS
       Trecho  : —
 
 ▶ G4 — Funções/variáveis com nomes não significativos
-  Ocorrências: 3
+  Ocorrências: 7
 
-  [1] Linha 2: Variável 'v' com nome muito curto (≤4 chars)
-      Trecho  : v = ...
+  [1] Linha 2: Variável 'qt' com nome muito curto (≤4 chars)
+      Trecho  : qt = ...
       Contexto:
                1 | from numpy import*
-        >>>    2 | v = array(eval(input()))
-               3 | c = 0
+        >>>    2 | qt = array(eval(input("Quantidades de alunos por turma: ")))
+               3 | nt = 0
 
-  [2] Linha 3: Variável 'c' com nome muito curto (≤4 chars)
-      Trecho  : c = ...
+  [2] Linha 3: Variável 'nt' com nome muito curto (≤4 chars)
+      Trecho  : nt = ...
       Contexto:
-               2 | v = array(eval(input()))
-        >>>    3 | c = 0
-               4 | for i in range(size(v)):
-
-  [3] Linha 6: Variável 'c' com nome muito curto (≤4 chars)
-      Trecho  : c = ...
-      Contexto:
-               5 | 	if(size(i)==5):
-        >>>    6 | 		c = c + 1
-               7 | print(c)
-
-======================================================================     Contexto:
                2 | qt = array(eval(input("Quantidades de alunos por turma: ")))
         >>>    3 | nt = 0
                4 | v = zeros(size(qt),dtype = int)

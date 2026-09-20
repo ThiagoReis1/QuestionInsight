@@ -2,11 +2,11 @@
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
 Arquivo     : 3491_1395.log
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2021_2_v1.81\2021-2\403\users\7190\executions\3491_1395.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2021_2_v1.81\2021-2\403\users\7102\executions\3491_1395.log
 Assessment  : 3491
 Título      : TP 02:  Est. Condicional Simples e Composta
 Questão     : 1395
-Aluno       : 7190
+Aluno       : 7102
 Grupo       : TP 02
 Significado : Estrutura Condicional Simples e Composta
 Total MCs   : 1
@@ -16,49 +16,40 @@ Total MCs   : 1
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | v = float(input("valor: "))
+     1 | v = float(input())
      2 | 
-     3 | c = 0.05 * v
-     4 | 
-     5 | if(v<=1000):
-     6 | 	print(round(c,2))
-     7 | else:
-     8 | 	d = v - 1000
-     9 | 	b = d * 0.10 + 1000 * 0.05
-    10 | 	print(round(b,2))
+     3 | if(v <= 1000):
+     4 | 	c = (v * 0.05) 
+     5 | else:
+     6 | 	c = (1000 * 0.05) + ((v - 1000) * 0.1)
+     7 | 
+     8 | print(round(c,2))
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
 ----------------------------------------------------------------------
 
 ▶ G4 — Funções/variáveis com nomes não significativos
-  Ocorrências: 4
+  Ocorrências: 3
 
   [1] Linha 1: Variável 'v' com nome muito curto (≤4 chars)
       Trecho  : v = ...
       Contexto:
-        >>>    1 | v = float(input("valor: "))
+        >>>    1 | v = float(input())
                2 | 
 
-  [2] Linha 3: Variável 'c' com nome muito curto (≤4 chars)
+  [2] Linha 4: Variável 'c' com nome muito curto (≤4 chars)
       Trecho  : c = ...
       Contexto:
-               2 | 
-        >>>    3 | c = 0.05 * v
-               4 | 
+               3 | if(v <= 1000):
+        >>>    4 | 	c = (v * 0.05) 
+               5 | else:
 
-  [3] Linha 8: Variável 'd' com nome muito curto (≤4 chars)
-      Trecho  : d = ...
+  [3] Linha 6: Variável 'c' com nome muito curto (≤4 chars)
+      Trecho  : c = ...
       Contexto:
-               7 | else:
-        >>>    8 | 	d = v - 1000
-               9 | 	b = d * 0.10 + 1000 * 0.05
-
-  [4] Linha 9: Variável 'b' com nome muito curto (≤4 chars)
-      Trecho  : b = ...
-      Contexto:
-               8 | 	d = v - 1000
-        >>>    9 | 	b = d * 0.10 + 1000 * 0.05
-              10 | 	print(round(b,2))
+               5 | else:
+        >>>    6 | 	c = (1000 * 0.05) + ((v - 1000) * 0.1)
+               7 | 
 
 ======================================================================

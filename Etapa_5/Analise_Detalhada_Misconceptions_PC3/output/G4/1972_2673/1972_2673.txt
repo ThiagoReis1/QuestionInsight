@@ -2,11 +2,11 @@
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
 Arquivo     : 1972_2673.log
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2019_2_v1.81\2019-2\261\users\4684\executions\1972_2673.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2019_2_v1.81\2019-2\261\users\4687\executions\1972_2673.log
 Assessment  : 1972
 Título      : TP 01: Variáveis e Estrutura Sequencial (2019)
 Questão     : 2673
-Aluno       : 4684
+Aluno       : 4687
 Grupo       : TP 01
 Significado : Variáveis e Estrutura Sequencial
 Total MCs   : 1
@@ -16,13 +16,11 @@ Total MCs   : 1
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | var1 = float(input("Qual o valor do raio? "))
-     2 | var2 = int(input("Qual o numero de lados? "))
-     3 | 
-     4 | import math
-     5 | cal = 2*(var1)*(math.sin(math.pi/var2))
-     6 | 
-     7 | print(round(cal,2))
+     1 | from math import*
+     2 | r = float(input("raio:"))
+     3 | n = int(input("lado:"))
+     4 | L = 2*r*sin(pi/n)
+     5 | print(round(L, 2))
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
@@ -31,24 +29,28 @@ DETALHAMENTO DOS MISCONCEPTIONS
 ▶ G4 — Funções/variáveis com nomes não significativos
   Ocorrências: 3
 
-  [1] Linha 1: Variável 'var1' com nome muito curto (≤4 chars)
-      Trecho  : var1 = ...
+  [1] Linha 2: Variável 'r' com nome muito curto (≤4 chars)
+      Trecho  : r = ...
       Contexto:
-        >>>    1 | var1 = float(input("Qual o valor do raio? "))
-               2 | var2 = int(input("Qual o numero de lados? "))
+               1 | from math import*
+        >>>    2 | r = float(input("raio:"))
+               3 | n = int(input("lado:"))
 
-  [2] Linha 2: Variável 'var2' com nome muito curto (≤4 chars)
-      Trecho  : var2 = ...
+  [2] Linha 3: Variável 'n' com nome muito curto (≤4 chars)
+      Trecho  : n = ...
       Contexto:
-               1 | var1 = float(input("Qual o valor do raio? "))
-        >>>    2 | var2 = int(input("Qual o numero de lados? "))
-               3 | 
+               2 | r = float(input("raio:"))
+        >>>    3 | n = int(input("lado:"))
+               4 | L = 2*r*sin(pi/n)
 
-  [3] Linha 5: Variável 'cal' com nome muito curto (≤4 chars)
-      Trecho  : cal = ...
+  [3] Linha 4: Variável 'L' com nome muito curto (≤4 chars)
+      Trecho  : L = ...
       Contexto:
-               4 | import math
-        >>>    5 | cal = 2*(var1)*(math.sin(math.pi/var2))
+               3 | n = int(input("lado:"))
+        >>>    4 | L = 2*r*sin(pi/n)
+               5 | print(round(L, 2))
+
+======================================================================math.sin(math.pi/var2))
                6 | 
 
 ======================================================================

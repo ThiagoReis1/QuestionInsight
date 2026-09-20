@@ -2,11 +2,11 @@
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
 Arquivo     : 96_1093.log
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2016_1_v1.81\2016-1\107\users\1633\executions\96_1093.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2016_1_v1.81\2016-1\107\users\1383\executions\96_1093.log
 Assessment  : 96
 Título      : Avaliação Parcial 02 – Estrutura Condicional Composta (sem Aninhamento)
 Questão     : 1093
-Aluno       : 1633
+Aluno       : 1383
 Grupo       : TP 02
 Significado : Estrutura Condicional Simples e Composta
 Total MCs   : 1
@@ -16,14 +16,15 @@ Total MCs   : 1
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | X = int(input("Qual o valor do número ?"))
-     2 | p1 = X // 100
-     3 | p2 = X%100
-     4 | calculo = (p1 ** 2) + (p2 ** 2)
-     5 | if( X == calculo) :
-     6 | 	print("1008 atende a propriedade")
-     7 | else: 
-     8 | 	print(calculo)
+     1 | valor = int(input("Digite o numero"))
+     2 | 
+     3 | a = (valor // 100.0)
+     4 | b = (valor % 100.0)
+     5 | c = (a**2+b**2)
+     6 | if (c == valor):
+     7 |    print("X atende a propriedade")
+     8 | else:
+     9 | 	print(c)
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
@@ -32,24 +33,25 @@ DETALHAMENTO DOS MISCONCEPTIONS
 ▶ G4 — Funções/variáveis com nomes não significativos
   Ocorrências: 3
 
-  [1] Linha 1: Variável 'X' com nome muito curto (≤4 chars)
-      Trecho  : X = ...
+  [1] Linha 3: Variável 'a' com nome muito curto (≤4 chars)
+      Trecho  : a = ...
       Contexto:
-        >>>    1 | X = int(input("Qual o valor do número ?"))
-               2 | p1 = X // 100
+               2 | 
+        >>>    3 | a = (valor // 100.0)
+               4 | b = (valor % 100.0)
 
-  [2] Linha 2: Variável 'p1' com nome muito curto (≤4 chars)
-      Trecho  : p1 = ...
+  [2] Linha 4: Variável 'b' com nome muito curto (≤4 chars)
+      Trecho  : b = ...
       Contexto:
-               1 | X = int(input("Qual o valor do número ?"))
-        >>>    2 | p1 = X // 100
-               3 | p2 = X%100
+               3 | a = (valor // 100.0)
+        >>>    4 | b = (valor % 100.0)
+               5 | c = (a**2+b**2)
 
-  [3] Linha 3: Variável 'p2' com nome muito curto (≤4 chars)
-      Trecho  : p2 = ...
+  [3] Linha 5: Variável 'c' com nome muito curto (≤4 chars)
+      Trecho  : c = ...
       Contexto:
-               2 | p1 = X // 100
-        >>>    3 | p2 = X%100
-               4 | calculo = (p1 ** 2) + (p2 ** 2)
+               4 | b = (valor % 100.0)
+        >>>    5 | c = (a**2+b**2)
+               6 | if (c == valor):
 
 ======================================================================

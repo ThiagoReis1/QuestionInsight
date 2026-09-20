@@ -2,11 +2,11 @@
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
 Arquivo     : 1709_3063.log
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2019_1_v1.81\2019-1\226\users\4477\executions\1709_3063.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2019_1_v1.81\2019-1\226\users\4160\executions\1709_3063.log
 Assessment  : 1709
 Título      : TP3 - Estrutura Condicional Encadeada
 Questão     : 3063
-Aluno       : 4477
+Aluno       : 4160
 Grupo       : TP 03
 Significado : Estrutura Condicional Encadeada
 Total MCs   : 2
@@ -16,23 +16,23 @@ Total MCs   : 2
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | gold = int(input("Determinar a quantidade de ouro: "))
-     2 | armor = input("Determinar material da armadura: ").upper()
-     3 | d = int(input("Determinar fator de destreza: "))
+     1 | po = int(input("A quantidade de pecas de ouro: "))
+     2 | a = input("Nome da armadura (MALHA, PLACA ou INTEIRA): ").upper()
+     3 | d = int(input("Fator de destreza: "))
      4 | 
-     5 | I = 30*d-20
-     6 | M = 15*d-1
-     7 | P = 20*d-18
-     8 | 
-     9 | if (d >= 1 and d <=8):
-    10 | 	if (armor == "INTEIRA") and (gold >= 200):
-    11 | 		print(I)
-    12 | 	elif (armor == "MALHA") and (gold >= 50):
-    13 | 		print(M)
-    14 | 	elif (armor == "PLACA") and (gold >= 100):
-    15 | 		print(P)
-    16 | 	else:
-    17 | 		print("PO insuficiente")
+     5 | if ((d <=0 or d >8) and (a!= "MALHA" or a!= "PLACA" or a!= "INTEIRA")):
+     6 | 	print("Entrada invalida")
+     7 | elif(po < 50) :
+     8 | 	print("PO insuficiente")
+     9 | elif (a == "INTEIRA" and po >= 200):
+    10 | 	r = (30 * d) - 20 
+    11 | 	print (r)
+    12 | elif (a== "MALHA" and po >= 50 or po < 100):
+    13 | 	r = (15 * d) - 1
+    14 | 	print(r)
+    15 | elif (a=="PLACA" and po >=100 or po < 200):
+    16 | 	r = (20 * d) - 18
+    17 | 	print(r)
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
@@ -41,44 +41,55 @@ DETALHAMENTO DOS MISCONCEPTIONS
 ▶ B8 — Não utilização de elif/else
   Ocorrências: 1
 
-  [1] Linha 0: B8 detectado pelo VisitorMC3 (localização exata não mapeada)
-      Trecho  : —
+  [1] Linha 12: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 12) / elif ... sem else
+      Contexto:
+              11 | 	print (r)
+        >>>   12 | elif (a== "MALHA" and po >= 50 or po < 100):
+              13 | 	r = (15 * d) - 1
 
 ▶ G4 — Funções/variáveis com nomes não significativos
-  Ocorrências: 5
+  Ocorrências: 6
 
-  [1] Linha 1: Variável 'gold' com nome muito curto (≤4 chars)
-      Trecho  : gold = ...
+  [1] Linha 1: Variável 'po' com nome muito curto (≤4 chars)
+      Trecho  : po = ...
       Contexto:
-        >>>    1 | gold = int(input("Determinar a quantidade de ouro: "))
-               2 | armor = input("Determinar material da armadura: ").upper()
+        >>>    1 | po = int(input("A quantidade de pecas de ouro: "))
+               2 | a = input("Nome da armadura (MALHA, PLACA ou INTEIRA): ").upper()
 
-  [2] Linha 3: Variável 'd' com nome muito curto (≤4 chars)
+  [2] Linha 2: Variável 'a' com nome muito curto (≤4 chars)
+      Trecho  : a = ...
+      Contexto:
+               1 | po = int(input("A quantidade de pecas de ouro: "))
+        >>>    2 | a = input("Nome da armadura (MALHA, PLACA ou INTEIRA): ").upper()
+               3 | d = int(input("Fator de destreza: "))
+
+  [3] Linha 3: Variável 'd' com nome muito curto (≤4 chars)
       Trecho  : d = ...
       Contexto:
-               2 | armor = input("Determinar material da armadura: ").upper()
-        >>>    3 | d = int(input("Determinar fator de destreza: "))
+               2 | a = input("Nome da armadura (MALHA, PLACA ou INTEIRA): ").upper()
+        >>>    3 | d = int(input("Fator de destreza: "))
                4 | 
 
-  [3] Linha 5: Variável 'I' com nome muito curto (≤4 chars)
-      Trecho  : I = ...
+  [4] Linha 10: Variável 'r' com nome muito curto (≤4 chars)
+      Trecho  : r = ...
       Contexto:
-               4 | 
-        >>>    5 | I = 30*d-20
-               6 | M = 15*d-1
+               9 | elif (a == "INTEIRA" and po >= 200):
+        >>>   10 | 	r = (30 * d) - 20 
+              11 | 	print (r)
 
-  [4] Linha 6: Variável 'M' com nome muito curto (≤4 chars)
-      Trecho  : M = ...
+  [5] Linha 13: Variável 'r' com nome muito curto (≤4 chars)
+      Trecho  : r = ...
       Contexto:
-               5 | I = 30*d-20
-        >>>    6 | M = 15*d-1
-               7 | P = 20*d-18
+              12 | elif (a== "MALHA" and po >= 50 or po < 100):
+        >>>   13 | 	r = (15 * d) - 1
+              14 | 	print(r)
 
-  [5] Linha 7: Variável 'P' com nome muito curto (≤4 chars)
-      Trecho  : P = ...
+  [6] Linha 16: Variável 'r' com nome muito curto (≤4 chars)
+      Trecho  : r = ...
       Contexto:
-               6 | M = 15*d-1
-        >>>    7 | P = 20*d-18
-               8 | 
+              15 | elif (a=="PLACA" and po >=100 or po < 200):
+        >>>   16 | 	r = (20 * d) - 18
+              17 | 	print(r)
 
 ======================================================================

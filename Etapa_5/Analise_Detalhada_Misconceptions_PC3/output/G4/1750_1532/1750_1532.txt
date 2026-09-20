@@ -2,11 +2,11 @@
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
 Arquivo     : 1750_1532.log
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2019_1_v1.81\2019-1\221\users\4112\executions\1750_1532.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2019_1_v1.81\2019-1\221\users\4119\executions\1750_1532.log
 Assessment  : 1750
 Título      : TP4: Estrutura de Repetição por Condição (while)
 Questão     : 1532
-Aluno       : 4112
+Aluno       : 4119
 Grupo       : TP 04
 Significado : Estrutura de Repetição por Condição
 Total MCs   : 1
@@ -17,94 +17,86 @@ Total MCs   : 1
 CÓDIGO FONTE
 ----------------------------------------------------------------------
      1 | from math import* 
-     2 | x=float(input("um numero real:"))
-     3 | y=int(input("um numero inteiro:"))
-     4 | c=0
-     5 | r=0
-     6 | n=1
-     7 | t=1
-     8 | while(c<y):
-     9 | 	r=r+(x**(t)/factorial(n))
-    10 | 	t=t+2
-    11 | 	n=n+2
-    12 | 	c=c+1
-    13 | print(round(r,9))
+     2 | x = float(input("digite um numero: "))
+     3 | k = int(input("quantidade de termos: "))
+     4 | e = 0 #variavel acumuladora
+     5 | cont = 0 #variavel contadora
+     6 | fact = 1 #variavel acumuladora
+     7 | while (cont < k):
+     8 | 	e = e + (x / factorial(fact))
+     9 | 	x = x * (x ** 2)
+    10 | 	fact = fact + 2
+    11 | 	cont = cont + 1
+    12 | print (round(e , 9))
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
 ----------------------------------------------------------------------
 
 ▶ G4 — Funções/variáveis com nomes não significativos
-  Ocorrências: 10
+  Ocorrências: 9
 
   [1] Linha 2: Variável 'x' com nome muito curto (≤4 chars)
       Trecho  : x = ...
       Contexto:
                1 | from math import* 
-        >>>    2 | x=float(input("um numero real:"))
-               3 | y=int(input("um numero inteiro:"))
+        >>>    2 | x = float(input("digite um numero: "))
+               3 | k = int(input("quantidade de termos: "))
 
-  [2] Linha 3: Variável 'y' com nome muito curto (≤4 chars)
-      Trecho  : y = ...
+  [2] Linha 3: Variável 'k' com nome muito curto (≤4 chars)
+      Trecho  : k = ...
       Contexto:
-               2 | x=float(input("um numero real:"))
-        >>>    3 | y=int(input("um numero inteiro:"))
-               4 | c=0
+               2 | x = float(input("digite um numero: "))
+        >>>    3 | k = int(input("quantidade de termos: "))
+               4 | e = 0 #variavel acumuladora
 
-  [3] Linha 4: Variável 'c' com nome muito curto (≤4 chars)
-      Trecho  : c = ...
+  [3] Linha 4: Variável 'e' com nome muito curto (≤4 chars)
+      Trecho  : e = ...
       Contexto:
-               3 | y=int(input("um numero inteiro:"))
-        >>>    4 | c=0
-               5 | r=0
+               3 | k = int(input("quantidade de termos: "))
+        >>>    4 | e = 0 #variavel acumuladora
+               5 | cont = 0 #variavel contadora
 
-  [4] Linha 5: Variável 'r' com nome muito curto (≤4 chars)
-      Trecho  : r = ...
+  [4] Linha 5: Variável 'cont' com nome muito curto (≤4 chars)
+      Trecho  : cont = ...
       Contexto:
-               4 | c=0
-        >>>    5 | r=0
-               6 | n=1
+               4 | e = 0 #variavel acumuladora
+        >>>    5 | cont = 0 #variavel contadora
+               6 | fact = 1 #variavel acumuladora
 
-  [5] Linha 6: Variável 'n' com nome muito curto (≤4 chars)
-      Trecho  : n = ...
+  [5] Linha 6: Variável 'fact' com nome muito curto (≤4 chars)
+      Trecho  : fact = ...
       Contexto:
-               5 | r=0
-        >>>    6 | n=1
-               7 | t=1
+               5 | cont = 0 #variavel contadora
+        >>>    6 | fact = 1 #variavel acumuladora
+               7 | while (cont < k):
 
-  [6] Linha 7: Variável 't' com nome muito curto (≤4 chars)
-      Trecho  : t = ...
+  [6] Linha 8: Variável 'e' com nome muito curto (≤4 chars)
+      Trecho  : e = ...
       Contexto:
-               6 | n=1
-        >>>    7 | t=1
-               8 | while(c<y):
+               7 | while (cont < k):
+        >>>    8 | 	e = e + (x / factorial(fact))
+               9 | 	x = x * (x ** 2)
 
-  [7] Linha 9: Variável 'r' com nome muito curto (≤4 chars)
-      Trecho  : r = ...
+  [7] Linha 9: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
       Contexto:
-               8 | while(c<y):
-        >>>    9 | 	r=r+(x**(t)/factorial(n))
-              10 | 	t=t+2
+               8 | 	e = e + (x / factorial(fact))
+        >>>    9 | 	x = x * (x ** 2)
+              10 | 	fact = fact + 2
 
-  [8] Linha 10: Variável 't' com nome muito curto (≤4 chars)
-      Trecho  : t = ...
+  [8] Linha 10: Variável 'fact' com nome muito curto (≤4 chars)
+      Trecho  : fact = ...
       Contexto:
-               9 | 	r=r+(x**(t)/factorial(n))
-        >>>   10 | 	t=t+2
-              11 | 	n=n+2
+               9 | 	x = x * (x ** 2)
+        >>>   10 | 	fact = fact + 2
+              11 | 	cont = cont + 1
 
-  [9] Linha 11: Variável 'n' com nome muito curto (≤4 chars)
-      Trecho  : n = ...
+  [9] Linha 11: Variável 'cont' com nome muito curto (≤4 chars)
+      Trecho  : cont = ...
       Contexto:
-              10 | 	t=t+2
-        >>>   11 | 	n=n+2
-              12 | 	c=c+1
-
-  [10] Linha 12: Variável 'c' com nome muito curto (≤4 chars)
-      Trecho  : c = ...
-      Contexto:
-              11 | 	n=n+2
-        >>>   12 | 	c=c+1
-              13 | print(round(r,9))
+              10 | 	fact = fact + 2
+        >>>   11 | 	cont = cont + 1
+              12 | print (round(e , 9))
 
 ======================================================================

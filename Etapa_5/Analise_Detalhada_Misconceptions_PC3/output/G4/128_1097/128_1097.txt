@@ -2,11 +2,11 @@
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
 Arquivo     : 128_1097.log
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2016_1_v1.81\2016-1\105\users\1501\executions\128_1097.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2016_1_v1.81\2016-1\105\users\1483\executions\128_1097.log
 Assessment  : 128
 Título      : Avaliação Parcial 02 [Grupo 2] – Estrutura Condicional Composta (sem Aninhamento)
 Questão     : 1097
-Aluno       : 1501
+Aluno       : 1483
 Grupo       : TP 02
 Significado : Estrutura Condicional Simples e Composta
 Total MCs   : 1
@@ -16,14 +16,16 @@ Total MCs   : 1
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | n = int(input("qual o valor: "))
-     2 | n1 = n // 1000
-     3 | n2 = n % 1000
-     4 | X = ((n1 - n2) ** 2)
-     5 | if (X == n):
-     6 | 	print(X, "atende a propriedade")
-     7 | else:
-     8 | 	print(X)
+     1 | #entrada
+     2 | v = int(input("digite entrada:"))
+     3 | x1 = v // 1000
+     4 | x2 = v % 1000
+     5 | 
+     6 | if(v == (x1 - x2)):
+     7 | 	print(v , "X atende a propriedade")
+     8 | else:
+     9 | 	y = (x1 - x2)**2
+    10 | 	print(y)
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
@@ -32,31 +34,32 @@ DETALHAMENTO DOS MISCONCEPTIONS
 ▶ G4 — Funções/variáveis com nomes não significativos
   Ocorrências: 4
 
-  [1] Linha 1: Variável 'n' com nome muito curto (≤4 chars)
-      Trecho  : n = ...
+  [1] Linha 2: Variável 'v' com nome muito curto (≤4 chars)
+      Trecho  : v = ...
       Contexto:
-        >>>    1 | n = int(input("qual o valor: "))
-               2 | n1 = n // 1000
+               1 | #entrada
+        >>>    2 | v = int(input("digite entrada:"))
+               3 | x1 = v // 1000
 
-  [2] Linha 2: Variável 'n1' com nome muito curto (≤4 chars)
-      Trecho  : n1 = ...
+  [2] Linha 3: Variável 'x1' com nome muito curto (≤4 chars)
+      Trecho  : x1 = ...
       Contexto:
-               1 | n = int(input("qual o valor: "))
-        >>>    2 | n1 = n // 1000
-               3 | n2 = n % 1000
+               2 | v = int(input("digite entrada:"))
+        >>>    3 | x1 = v // 1000
+               4 | x2 = v % 1000
 
-  [3] Linha 3: Variável 'n2' com nome muito curto (≤4 chars)
-      Trecho  : n2 = ...
+  [3] Linha 4: Variável 'x2' com nome muito curto (≤4 chars)
+      Trecho  : x2 = ...
       Contexto:
-               2 | n1 = n // 1000
-        >>>    3 | n2 = n % 1000
-               4 | X = ((n1 - n2) ** 2)
+               3 | x1 = v // 1000
+        >>>    4 | x2 = v % 1000
+               5 | 
 
-  [4] Linha 4: Variável 'X' com nome muito curto (≤4 chars)
-      Trecho  : X = ...
+  [4] Linha 9: Variável 'y' com nome muito curto (≤4 chars)
+      Trecho  : y = ...
       Contexto:
-               3 | n2 = n % 1000
-        >>>    4 | X = ((n1 - n2) ** 2)
-               5 | if (X == n):
+               8 | else:
+        >>>    9 | 	y = (x1 - x2)**2
+              10 | 	print(y)
 
 ======================================================================

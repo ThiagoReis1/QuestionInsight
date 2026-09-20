@@ -2,11 +2,11 @@
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
 Arquivo     : 4260_1650.log
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2022_1_v1.81\2022-1\439\users\7659\executions\4260_1650.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2022_1_v1.81\2022-1\439\users\7658\executions\4260_1650.log
 Assessment  : 4260
 Título      : TP 6: Estrutura de Repetição por Contagem (for)
 Questão     : 1650
-Aluno       : 7659
+Aluno       : 7658
 Grupo       : TP 06
 Significado : Estrutura de Repetição por Contagem
 Total MCs   : 1
@@ -17,25 +17,21 @@ Total MCs   : 1
 CÓDIGO FONTE
 ----------------------------------------------------------------------
      1 | from numpy import *
-     2 | 
-     3 | cabelos = input("digite: ").upper().split(',')
-     4 | 
-     5 | soma = zeros(5, dtype=int)
-     6 | 
-     7 | for i in range(size(cabelos)):
-     8 | 	if cabelos[i] == 'P' :
-     9 | 		soma[0] = soma[0] + 1
-    10 | 	elif cabelos[i] == 'C':
-    11 | 		soma[1] = soma[1] + 1
-    12 | 	elif cabelos[i] == 'R':
-    13 | 		soma[2] = soma[2] + 1
-    14 | 	elif cabelos[i] == 'L':
-    15 | 		soma[3] = soma[3] + 1
-    16 | 	elif cabelos[i] == 'B':
-    17 | 		soma[4] = soma[4] + 1
-    18 | 
-    19 | print(max(soma))
-    20 | print(soma)
+     2 | tc=input('P,C,R,L OU B?').upper().split(',')
+     3 | cores= zeros(5, dtype= int)
+     4 | for i in range(size(tc)):
+     5 | 	if tc[i] == 'P':
+     6 | 		cores[0] = cores[0] + 1
+     7 | 	elif tc[i] == 'C':
+     8 | 		cores[1] = cores[1] + 1
+     9 | 	elif tc[i] == 'R':
+    10 | 		cores[2] +=1
+    11 | 	elif tc[i] == 'L':
+    12 | 		cores[3] += 1
+    13 | 	elif tc[i] == 'B':
+    14 | 		cores[4] += 1
+    15 | print(max(cores))
+    16 | print(cores)
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
@@ -44,11 +40,11 @@ DETALHAMENTO DOS MISCONCEPTIONS
 ▶ B8 — Não utilização de elif/else
   Ocorrências: 1
 
-  [1] Linha 14: Cadeia if/elif sem bloco else final
-      Trecho  : if ... (linha 14) / elif ... sem else
+  [1] Linha 11: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 11) / elif ... sem else
       Contexto:
-              13 | 		soma[2] = soma[2] + 1
-        >>>   14 | 	elif cabelos[i] == 'L':
-              15 | 		soma[3] = soma[3] + 1
+              10 | 		cores[2] +=1
+        >>>   11 | 	elif tc[i] == 'L':
+              12 | 		cores[3] += 1
 
 ======================================================================

@@ -2,11 +2,11 @@
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
 Arquivo     : 3778_1645.log
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2021_2_v1.81\2021-2\403\users\7185\executions\3778_1645.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2021_2_v1.81\2021-2\403\users\7105\executions\3778_1645.log
 Assessment  : 3778
 Título      : TP 6: Estrutura de Repetição por Contagem (for)
 Questão     : 1645
-Aluno       : 7185
+Aluno       : 7105
 Grupo       : TP 06
 Significado : Estrutura de Repetição por Contagem
 Total MCs   : 2
@@ -18,50 +18,24 @@ CÓDIGO FONTE
 ----------------------------------------------------------------------
      1 | from numpy import *
      2 | 
-     3 | # entrada (saques)
-     4 | 
-     5 | saq = array(eval(input()))
-     6 | 
-     7 | # contadora
-     8 | 
-     9 | scont = 0 # valores altos de saque
-    10 | 
-    11 | # laço 1
-    12 |  
-    13 | for i in range(size(saq)):
-    14 | 	
-    15 | 	if (saq[i] >= 2000):
-    16 | 		
-    17 | 		scont = scont + 1
-    18 | 		
-    19 | 	
-    20 | 
-    21 | # saida 1
-    22 | 
-    23 | print (scont)
-    24 | 
-    25 | # vetor de saida 2
-    26 | 
-    27 | vets = zeros (scont, dtype = int)
-    28 | 
-    29 | # laço 2
-    30 | 
-    31 | for i in range (size(saq)):
-    32 | 	
-    33 | 	if (i == 0):
-    34 | 		
-    35 | 		u = 0 # datermina progressao do vetor saida 2
-    36 | 		
-    37 | 	if (saq[i] >= 2000):
-    38 | 		
-    39 | 		vets[u] = i
-    40 | 		u = u + 1
-    41 | 		
-    42 | 	
-    43 | 
-    44 | # saida 2
-    45 | 
-    46 | print (vets)
+     3 | cont = 0
+     4 | contx = 0
+     5 | 
+     6 | v = array(eval(input()))
+     7 | 
+     8 | for i in range(size(v)):
+     9 | 	if(v[i]>=2000):
+    10 | 		cont+=1
+    11 | 		
+    12 | z = zeros(cont, dtype = int)
+    13 | 
+    14 | for j in range(size(v)):
+    15 | 	if(v[j]>=2000):
+    16 | 		z[contx] = j
+    17 | 		contx+=1
+    18 | 
+    19 | print(cont)
+    20 | print(z)
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
@@ -74,9 +48,27 @@ DETALHAMENTO DOS MISCONCEPTIONS
       Trecho  : —
 
 ▶ G4 — Funções/variáveis com nomes não significativos
-  Ocorrências: 1
+  Ocorrências: 3
 
-  [1] Linha 0: G4 detectado pelo VisitorMC3 (localização exata não mapeada)
-      Trecho  : —
+  [1] Linha 3: Variável 'cont' com nome muito curto (≤4 chars)
+      Trecho  : cont = ...
+      Contexto:
+               2 | 
+        >>>    3 | cont = 0
+               4 | contx = 0
+
+  [2] Linha 6: Variável 'v' com nome muito curto (≤4 chars)
+      Trecho  : v = ...
+      Contexto:
+               5 | 
+        >>>    6 | v = array(eval(input()))
+               7 | 
+
+  [3] Linha 12: Variável 'z' com nome muito curto (≤4 chars)
+      Trecho  : z = ...
+      Contexto:
+              11 | 		
+        >>>   12 | z = zeros(cont, dtype = int)
+              13 | 
 
 ======================================================================

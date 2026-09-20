@@ -2,11 +2,11 @@
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
 Arquivo     : 1796_1597.log
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2019_1_v1.81\2019-1\231\users\4483\executions\1796_1597.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2019_1_v1.81\2019-1\231\users\4225\executions\1796_1597.log
 Assessment  : 1796
 Título      : TP5: Vetores e Strings
 Questão     : 1597
-Aluno       : 4483
+Aluno       : 4225
 Grupo       : TP 05
 Significado : Vetores e Strings
 Total MCs   : 1
@@ -18,59 +18,62 @@ CÓDIGO FONTE
 ----------------------------------------------------------------------
      1 | from numpy import*
      2 | 
-     3 | vci = array(eval(input("vetor de custo dos itens:")))
-     4 | sum(vci)
-     5 | i=0
-     6 | 
-     7 | while(i>=80):
-     8 | 	i = i+1
-     9 | 	i = i*(15/100)
-    10 | soma = sum(vci)
-    11 | print(round(soma, 2))
+     3 | vc = array(eval(input( )))
+     4 | i = 0
+     5 | v = 0
+     6 | while(i<size(vc)):
+     7 | 	if(vc[i]>=80):
+     8 | 		v = v+(vc[i]-5.0)
+     9 | 	else:
+    10 | 		v = v+vc[i]
+    11 | 	i = i+1
+    12 | print(round(v, 2))
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
 ----------------------------------------------------------------------
 
 ▶ G4 — Funções/variáveis com nomes não significativos
-  Ocorrências: 5
+  Ocorrências: 6
 
-  [1] Linha 3: Variável 'vci' com nome muito curto (≤4 chars)
-      Trecho  : vci = ...
+  [1] Linha 3: Variável 'vc' com nome muito curto (≤4 chars)
+      Trecho  : vc = ...
       Contexto:
                2 | 
-        >>>    3 | vci = array(eval(input("vetor de custo dos itens:")))
-               4 | sum(vci)
+        >>>    3 | vc = array(eval(input( )))
+               4 | i = 0
 
-  [2] Linha 5: Variável 'i' com nome muito curto (≤4 chars)
+  [2] Linha 4: Variável 'i' com nome muito curto (≤4 chars)
       Trecho  : i = ...
       Contexto:
-               4 | sum(vci)
-        >>>    5 | i=0
-               6 | 
+               3 | vc = array(eval(input( )))
+        >>>    4 | i = 0
+               5 | v = 0
 
-  [3] Linha 10: Variável 'soma' com nome muito curto (≤4 chars)
-      Trecho  : soma = ...
+  [3] Linha 5: Variável 'v' com nome muito curto (≤4 chars)
+      Trecho  : v = ...
       Contexto:
-               9 | 	i = i*(15/100)
-        >>>   10 | soma = sum(vci)
-              11 | print(round(soma, 2))
+               4 | i = 0
+        >>>    5 | v = 0
+               6 | while(i<size(vc)):
 
-  [4] Linha 8: Variável 'i' com nome muito curto (≤4 chars)
+  [4] Linha 11: Variável 'i' com nome muito curto (≤4 chars)
       Trecho  : i = ...
       Contexto:
-               7 | while(i>=80):
-        >>>    8 | 	i = i+1
-               9 | 	i = i*(15/100)
+              10 | 		v = v+vc[i]
+        >>>   11 | 	i = i+1
+              12 | print(round(v, 2))
 
-  [5] Linha 9: Variável 'i' com nome muito curto (≤4 chars)
-      Trecho  : i = ...
+  [5] Linha 8: Variável 'v' com nome muito curto (≤4 chars)
+      Trecho  : v = ...
       Contexto:
-               8 | 	i = i+1
-        >>>    9 | 	i = i*(15/100)
-              10 | soma = sum(vci)
+               7 | 	if(vc[i]>=80):
+        >>>    8 | 		v = v+(vc[i]-5.0)
+               9 | 	else:
 
-======================================================================   Contexto:
+  [6] Linha 10: Variável 'v' com nome muito curto (≤4 chars)
+      Trecho  : v = ...
+      Contexto:
                9 | 	else:
         >>>   10 | 		v = v+vc[i]
               11 | 	i = i+1

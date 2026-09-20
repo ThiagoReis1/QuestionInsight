@@ -2,11 +2,11 @@
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
 Arquivo     : 5765_6936.log
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2024_1_v1.81\2024-1\597\users\9796\executions\5765_6936.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2024_1_v1.81\2024-1\597\users\9957\executions\5765_6936.log
 Assessment  : 5765
 Título      : TP 3: Est. Condicional Encadeada
 Questão     : 6936
-Aluno       : 9796
+Aluno       : 9957
 Grupo       : TP 03
 Significado : Estrutura Condicional Encadeada
 Total MCs   : 2
@@ -16,22 +16,22 @@ Total MCs   : 2
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | valor_compra = float(input("Digite o valor da compra:"))
-     2 | codigo = input("Digite o codigo da opcao de pagamento:")
+     1 | valor = float(input())
+     2 | forma = input()
      3 | 
-     4 | if codigo == 'D':
-     5 | 	valor_pago = valor_compra - (valor_compra*0.13)
-     6 | 	print(round(valor_pago,2))
-     7 | elif codigo == 'P':
-     8 | 	valor_pago = valor_compra - (valor_compra*0.13)
-     9 | 	print(round(valor_pago,2))
-    10 | elif codigo == 'C':
-    11 | 	vezes = int(input("PAgar de 1 ou 2 vezes"))
-    12 | 	if vezes == 1:
-    13 | 		print(round(valor_compra,2))
-    14 | 	else:
-    15 | 		valor_pago = valor_compra+(valor_compra*0.08)
-    16 | 		print(round(valor_pago,2))
+     4 | if forma == "D":
+     5 | 	resultado = valor - (valor * 0.13)
+     6 | elif forma == "P":
+     7 | 	resultado = valor - (valor * 0.13)
+     8 | elif forma == "C":
+     9 | 	parcela = int(input())
+    10 | 	if parcela == 1:
+    11 | 		resultado = valor
+    12 | 	else:
+    13 | 		resultado = valor + (valor * 0.08)
+    14 | 		
+    15 | resultado_arredondado = round(resultado, 2)
+    16 | print(resultado_arredondado)
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
@@ -40,21 +40,21 @@ DETALHAMENTO DOS MISCONCEPTIONS
 ▶ B4 — Comandos repetidos dentro de blocos if-elif-else
   Ocorrências: 1
 
-  [1] Linha 7: Bloco idêntico ao da linha 4
-      Trecho  : valor_pago = valor_compra - valor_compra * 0.13
+  [1] Linha 6: Bloco idêntico ao da linha 4
+      Trecho  : resultado = valor - valor * 0.13
       Contexto:
-               6 | 	print(round(valor_pago,2))
-        >>>    7 | elif codigo == 'P':
-               8 | 	valor_pago = valor_compra - (valor_compra*0.13)
+               5 | 	resultado = valor - (valor * 0.13)
+        >>>    6 | elif forma == "P":
+               7 | 	resultado = valor - (valor * 0.13)
 
 ▶ B8 — Não utilização de elif/else
   Ocorrências: 1
 
-  [1] Linha 7: Cadeia if/elif sem bloco else final
-      Trecho  : if ... (linha 7) / elif ... sem else
+  [1] Linha 6: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 6) / elif ... sem else
       Contexto:
-               6 | 	print(round(valor_pago,2))
-        >>>    7 | elif codigo == 'P':
-               8 | 	valor_pago = valor_compra - (valor_compra*0.13)
+               5 | 	resultado = valor - (valor * 0.13)
+        >>>    6 | elif forma == "P":
+               7 | 	resultado = valor - (valor * 0.13)
 
 ======================================================================

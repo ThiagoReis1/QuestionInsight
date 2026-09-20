@@ -2,11 +2,11 @@
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
 Arquivo     : 711_1655.log
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2017_1_v1.81\2017-1\135\users\2367\executions\711_1655.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2017_1_v1.81\2017-1\135\users\2129\executions\711_1655.log
 Assessment  : 711
 Título      : Trabalho Prático 6: Repetição por Contagem
 Questão     : 1655
-Aluno       : 2367
+Aluno       : 2129
 Grupo       : TP 06
 Significado : Estrutura de Repetição por Contagem
 Total MCs   : 2
@@ -17,23 +17,26 @@ Total MCs   : 2
 CÓDIGO FONTE
 ----------------------------------------------------------------------
      1 | from numpy import*
-     2 | cont = zeros(5, dtype=int)
-     3 | # Leitura do vetor de tipos sanguineos
-     4 | vet = input("estados: ").upper().split(',')
-     5 | # Contagem de ocorrencias
-     6 | for i in range(size(vet)):
-     7 |     if (vet[i] == 'AC'):
-     8 |         cont[0] = cont[0] + 1
-     9 |     elif(vet[i] == 'AM'):
-    10 |         cont[1] = cont[1] + 1
-    11 |     elif(vet[i] == 'PA'):
-    12 |         cont[2] = cont[2] + 1
-    13 |     elif(vet[i] == 'RO'):
-    14 |         cont[3] = cont[3] + 1
-    15 |     elif(vet[i] == 'RR'):
-    16 |         cont[4] = cont[4] + 1
-    17 | print(max(cont))
-    18 | print(cont)
+     2 | 
+     3 | vet = input("digite o estado: ").split(',')
+     4 | cont = zeros(5,dtype=int)
+     5 | for elemento in vet:
+     6 | 	if(elemento == "AC"):
+     7 | 		cont[0] = cont[0]+1
+     8 | 	elif(elemento == "AM"):
+     9 | 		cont[1] = cont[1]+1
+    10 | 	
+    11 | 	elif(elemento == "PA"):
+    12 | 		cont[2] = cont[2]+1
+    13 | 	
+    14 | 	elif(elemento == "RO"):
+    15 | 		cont[3] = cont[3]+1
+    16 | 		
+    17 | 	elif(elemento == "RR"):
+    18 | 		cont[4] = cont[4]+1
+    19 | 		
+    20 | print(max(cont))
+    21 | print(cont)		
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
@@ -42,28 +45,28 @@ DETALHAMENTO DOS MISCONCEPTIONS
 ▶ B8 — Não utilização de elif/else
   Ocorrências: 1
 
-  [1] Linha 13: Cadeia if/elif sem bloco else final
-      Trecho  : if ... (linha 13) / elif ... sem else
+  [1] Linha 14: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 14) / elif ... sem else
       Contexto:
-              12 |         cont[2] = cont[2] + 1
-        >>>   13 |     elif(vet[i] == 'RO'):
-              14 |         cont[3] = cont[3] + 1
+              13 | 	
+        >>>   14 | 	elif(elemento == "RO"):
+              15 | 		cont[3] = cont[3]+1
 
 ▶ G4 — Funções/variáveis com nomes não significativos
   Ocorrências: 2
 
-  [1] Linha 2: Variável 'cont' com nome muito curto (≤4 chars)
-      Trecho  : cont = ...
-      Contexto:
-               1 | from numpy import*
-        >>>    2 | cont = zeros(5, dtype=int)
-               3 | # Leitura do vetor de tipos sanguineos
-
-  [2] Linha 4: Variável 'vet' com nome muito curto (≤4 chars)
+  [1] Linha 3: Variável 'vet' com nome muito curto (≤4 chars)
       Trecho  : vet = ...
       Contexto:
-               3 | # Leitura do vetor de tipos sanguineos
-        >>>    4 | vet = input("estados: ").upper().split(',')
-               5 | # Contagem de ocorrencias
+               2 | 
+        >>>    3 | vet = input("digite o estado: ").split(',')
+               4 | cont = zeros(5,dtype=int)
+
+  [2] Linha 4: Variável 'cont' com nome muito curto (≤4 chars)
+      Trecho  : cont = ...
+      Contexto:
+               3 | vet = input("digite o estado: ").split(',')
+        >>>    4 | cont = zeros(5,dtype=int)
+               5 | for elemento in vet:
 
 ======================================================================

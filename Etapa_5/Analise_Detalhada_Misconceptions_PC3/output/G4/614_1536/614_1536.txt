@@ -2,11 +2,11 @@
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
 Arquivo     : 614_1536.log
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2017_1_v1.81\2017-1\143\users\2269\executions\614_1536.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2017_1_v1.81\2017-1\143\users\2254\executions\614_1536.log
 Assessment  : 614
 Título      : Trabalho Prático 4: Estrutura de Repetição por Condição (while)
 Questão     : 1536
-Aluno       : 2269
+Aluno       : 2254
 Grupo       : TP 04
 Significado : Estrutura de Repetição por Condição
 Total MCs   : 1
@@ -16,19 +16,18 @@ Total MCs   : 1
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | from math import*
-     2 | x = float(input(": "))
-     3 | k = int(input(": "))
-     4 | i = 0
-     5 | a = 0
-     6 | t = 2
-     7 | sinal = + 1
-     8 | while(i < k):
-     9 | 	a = a + (1 - x**2)+(x**3)-(x**4)+(x**5)/factorial(t)
-    10 | 	i = i + 1
-    11 | 	t = t + 1
-    12 | 	sinal = - sinal
-    13 | print(round(a,10))
+     1 | nx = float(input(":"))
+     2 | ni = int(input(":"))
+     3 | b = 2
+     4 | soma = 1
+     5 | sinal = - 1
+     6 | cont = 1
+     7 | while(cont<ni):
+     8 | 	soma = soma + sinal * ((nx**b)/b)
+     9 | 	b = b + 1
+    10 | 	sinal = sinal * -1
+    11 | 	cont = cont + 1
+    12 | print(round(soma,10))
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
@@ -37,60 +36,59 @@ DETALHAMENTO DOS MISCONCEPTIONS
 ▶ G4 — Funções/variáveis com nomes não significativos
   Ocorrências: 8
 
-  [1] Linha 2: Variável 'x' com nome muito curto (≤4 chars)
-      Trecho  : x = ...
+  [1] Linha 1: Variável 'nx' com nome muito curto (≤4 chars)
+      Trecho  : nx = ...
       Contexto:
-               1 | from math import*
-        >>>    2 | x = float(input(": "))
-               3 | k = int(input(": "))
+        >>>    1 | nx = float(input(":"))
+               2 | ni = int(input(":"))
 
-  [2] Linha 3: Variável 'k' com nome muito curto (≤4 chars)
-      Trecho  : k = ...
+  [2] Linha 2: Variável 'ni' com nome muito curto (≤4 chars)
+      Trecho  : ni = ...
       Contexto:
-               2 | x = float(input(": "))
-        >>>    3 | k = int(input(": "))
-               4 | i = 0
+               1 | nx = float(input(":"))
+        >>>    2 | ni = int(input(":"))
+               3 | b = 2
 
-  [3] Linha 4: Variável 'i' com nome muito curto (≤4 chars)
-      Trecho  : i = ...
+  [3] Linha 3: Variável 'b' com nome muito curto (≤4 chars)
+      Trecho  : b = ...
       Contexto:
-               3 | k = int(input(": "))
-        >>>    4 | i = 0
-               5 | a = 0
+               2 | ni = int(input(":"))
+        >>>    3 | b = 2
+               4 | soma = 1
 
-  [4] Linha 5: Variável 'a' com nome muito curto (≤4 chars)
-      Trecho  : a = ...
+  [4] Linha 4: Variável 'soma' com nome muito curto (≤4 chars)
+      Trecho  : soma = ...
       Contexto:
-               4 | i = 0
-        >>>    5 | a = 0
-               6 | t = 2
+               3 | b = 2
+        >>>    4 | soma = 1
+               5 | sinal = - 1
 
-  [5] Linha 6: Variável 't' com nome muito curto (≤4 chars)
-      Trecho  : t = ...
+  [5] Linha 6: Variável 'cont' com nome muito curto (≤4 chars)
+      Trecho  : cont = ...
       Contexto:
-               5 | a = 0
-        >>>    6 | t = 2
-               7 | sinal = + 1
+               5 | sinal = - 1
+        >>>    6 | cont = 1
+               7 | while(cont<ni):
 
-  [6] Linha 9: Variável 'a' com nome muito curto (≤4 chars)
-      Trecho  : a = ...
+  [6] Linha 8: Variável 'soma' com nome muito curto (≤4 chars)
+      Trecho  : soma = ...
       Contexto:
-               8 | while(i < k):
-        >>>    9 | 	a = a + (1 - x**2)+(x**3)-(x**4)+(x**5)/factorial(t)
-              10 | 	i = i + 1
+               7 | while(cont<ni):
+        >>>    8 | 	soma = soma + sinal * ((nx**b)/b)
+               9 | 	b = b + 1
 
-  [7] Linha 10: Variável 'i' com nome muito curto (≤4 chars)
-      Trecho  : i = ...
+  [7] Linha 9: Variável 'b' com nome muito curto (≤4 chars)
+      Trecho  : b = ...
       Contexto:
-               9 | 	a = a + (1 - x**2)+(x**3)-(x**4)+(x**5)/factorial(t)
-        >>>   10 | 	i = i + 1
-              11 | 	t = t + 1
+               8 | 	soma = soma + sinal * ((nx**b)/b)
+        >>>    9 | 	b = b + 1
+              10 | 	sinal = sinal * -1
 
-  [8] Linha 11: Variável 't' com nome muito curto (≤4 chars)
-      Trecho  : t = ...
+  [8] Linha 11: Variável 'cont' com nome muito curto (≤4 chars)
+      Trecho  : cont = ...
       Contexto:
-              10 | 	i = i + 1
-        >>>   11 | 	t = t + 1
-              12 | 	sinal = - sinal
+              10 | 	sinal = sinal * -1
+        >>>   11 | 	cont = cont + 1
+              12 | print(round(soma,10))
 
-======================================================================
+==========================================================================================

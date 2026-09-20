@@ -2,11 +2,11 @@
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
 Arquivo     : 1972_1364.log
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2019_2_v1.81\2019-2\261\users\4710\executions\1972_1364.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2019_2_v1.81\2019-2\261\users\4679\executions\1972_1364.log
 Assessment  : 1972
 Título      : TP 01: Variáveis e Estrutura Sequencial (2019)
 Questão     : 1364
-Aluno       : 4710
+Aluno       : 4679
 Grupo       : TP 01
 Significado : Variáveis e Estrutura Sequencial
 Total MCs   : 1
@@ -16,45 +16,39 @@ Total MCs   : 1
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | Var1=float(input("Velocidade inicial: "))
-     2 | Var2=float(input("Distancia: "))
-     3 | import math
+     1 | from math import*
+     2 | v=float(input("valor inicial?"))
+     3 | d=float(input("distancia?"))
      4 | g=9.8
-     5 | x=math.asin(Var2*g/(Var1**2))*90/math.pi
-     6 | print(round(x,2))
+     5 | angulo= (asin(d*g/v**2)*90/pi)
+     6 | print(round(angulo,2))
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
 ----------------------------------------------------------------------
 
 ▶ G4 — Funções/variáveis com nomes não significativos
-  Ocorrências: 4
+  Ocorrências: 3
 
-  [1] Linha 1: Variável 'Var1' com nome muito curto (≤4 chars)
-      Trecho  : Var1 = ...
+  [1] Linha 2: Variável 'v' com nome muito curto (≤4 chars)
+      Trecho  : v = ...
       Contexto:
-        >>>    1 | Var1=float(input("Velocidade inicial: "))
-               2 | Var2=float(input("Distancia: "))
+               1 | from math import*
+        >>>    2 | v=float(input("valor inicial?"))
+               3 | d=float(input("distancia?"))
 
-  [2] Linha 2: Variável 'Var2' com nome muito curto (≤4 chars)
-      Trecho  : Var2 = ...
+  [2] Linha 3: Variável 'd' com nome muito curto (≤4 chars)
+      Trecho  : d = ...
       Contexto:
-               1 | Var1=float(input("Velocidade inicial: "))
-        >>>    2 | Var2=float(input("Distancia: "))
-               3 | import math
+               2 | v=float(input("valor inicial?"))
+        >>>    3 | d=float(input("distancia?"))
+               4 | g=9.8
 
   [3] Linha 4: Variável 'g' com nome muito curto (≤4 chars)
       Trecho  : g = ...
       Contexto:
-               3 | import math
+               3 | d=float(input("distancia?"))
         >>>    4 | g=9.8
-               5 | x=math.asin(Var2*g/(Var1**2))*90/math.pi
-
-  [4] Linha 5: Variável 'x' com nome muito curto (≤4 chars)
-      Trecho  : x = ...
-      Contexto:
-               4 | g=9.8
-        >>>    5 | x=math.asin(Var2*g/(Var1**2))*90/math.pi
-               6 | print(round(x,2))
+               5 | angulo= (asin(d*g/v**2)*90/pi)
 
 ======================================================================

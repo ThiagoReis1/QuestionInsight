@@ -2,11 +2,11 @@
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
 Arquivo     : 1223_1594.log
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2018_1_v1.81\2018-1\183\users\3387\executions\1223_1594.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2018_1_v1.81\2018-1\183\users\3379\executions\1223_1594.log
 Assessment  : 1223
 Título      : Trabalho Prático 05: Vetores e Strings
 Questão     : 1594
-Aluno       : 3387
+Aluno       : 3379
 Grupo       : TP 05
 Significado : Vetores e Strings
 Total MCs   : 1
@@ -16,81 +16,71 @@ Total MCs   : 1
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | from numpy import*
-     2 | 
-     3 | vet=array(eval(input()))
-     4 | m=size(vet)
-     5 | i=0
-     6 | j=1
-     7 | while i<m:
-     8 | 	vet[i]=vet[i]*j
-     9 | 	i=i+1
-    10 | 	j=j+1
-    11 | vet1=sum(vet)
-    12 | vet1=int(vet1)
-    13 | print(vet1)
+     1 | from numpy import *
+     2 | atk= array(eval(input("Insira o vetor de atk: ")))
+     3 | i=0
+     4 | j=1
+     5 | dano= 0
+     6 | while (i < size(atk)):
+     7 | 	dano= dano + (atk[i] * j)
+     8 | 	j= j + 1
+     9 | 	i= i + 1
+    10 | print(dano)
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
 ----------------------------------------------------------------------
 
 ▶ G4 — Funções/variáveis com nomes não significativos
-  Ocorrências: 8
+  Ocorrências: 7
 
-  [1] Linha 3: Variável 'vet' com nome muito curto (≤4 chars)
-      Trecho  : vet = ...
+  [1] Linha 2: Variável 'atk' com nome muito curto (≤4 chars)
+      Trecho  : atk = ...
       Contexto:
-               2 | 
-        >>>    3 | vet=array(eval(input()))
-               4 | m=size(vet)
+               1 | from numpy import *
+        >>>    2 | atk= array(eval(input("Insira o vetor de atk: ")))
+               3 | i=0
 
-  [2] Linha 4: Variável 'm' com nome muito curto (≤4 chars)
-      Trecho  : m = ...
-      Contexto:
-               3 | vet=array(eval(input()))
-        >>>    4 | m=size(vet)
-               5 | i=0
-
-  [3] Linha 5: Variável 'i' com nome muito curto (≤4 chars)
+  [2] Linha 3: Variável 'i' com nome muito curto (≤4 chars)
       Trecho  : i = ...
       Contexto:
-               4 | m=size(vet)
-        >>>    5 | i=0
-               6 | j=1
+               2 | atk= array(eval(input("Insira o vetor de atk: ")))
+        >>>    3 | i=0
+               4 | j=1
 
-  [4] Linha 6: Variável 'j' com nome muito curto (≤4 chars)
+  [3] Linha 4: Variável 'j' com nome muito curto (≤4 chars)
       Trecho  : j = ...
       Contexto:
-               5 | i=0
-        >>>    6 | j=1
-               7 | while i<m:
+               3 | i=0
+        >>>    4 | j=1
+               5 | dano= 0
 
-  [5] Linha 11: Variável 'vet1' com nome muito curto (≤4 chars)
-      Trecho  : vet1 = ...
+  [4] Linha 5: Variável 'dano' com nome muito curto (≤4 chars)
+      Trecho  : dano = ...
       Contexto:
-              10 | 	j=j+1
-        >>>   11 | vet1=sum(vet)
-              12 | vet1=int(vet1)
+               4 | j=1
+        >>>    5 | dano= 0
+               6 | while (i < size(atk)):
 
-  [6] Linha 12: Variável 'vet1' com nome muito curto (≤4 chars)
-      Trecho  : vet1 = ...
+  [5] Linha 7: Variável 'dano' com nome muito curto (≤4 chars)
+      Trecho  : dano = ...
       Contexto:
-              11 | vet1=sum(vet)
-        >>>   12 | vet1=int(vet1)
-              13 | print(vet1)
+               6 | while (i < size(atk)):
+        >>>    7 | 	dano= dano + (atk[i] * j)
+               8 | 	j= j + 1
+
+  [6] Linha 8: Variável 'j' com nome muito curto (≤4 chars)
+      Trecho  : j = ...
+      Contexto:
+               7 | 	dano= dano + (atk[i] * j)
+        >>>    8 | 	j= j + 1
+               9 | 	i= i + 1
 
   [7] Linha 9: Variável 'i' com nome muito curto (≤4 chars)
       Trecho  : i = ...
       Contexto:
-               8 | 	vet[i]=vet[i]*j
-        >>>    9 | 	i=i+1
-              10 | 	j=j+1
-
-  [8] Linha 10: Variável 'j' com nome muito curto (≤4 chars)
-      Trecho  : j = ...
-      Contexto:
-               9 | 	i=i+1
-        >>>   10 | 	j=j+1
-              11 | vet1=sum(vet)
+               8 | 	j= j + 1
+        >>>    9 | 	i= i + 1
+              10 | print(dano)
 
 ======================================================================

@@ -2,11 +2,11 @@
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
 Arquivo     : 859_1399.log
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2017_2_v1.81\2017-2\162\users\2825\executions\859_1399.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2017_2_v1.81\2017-2\162\users\2816\executions\859_1399.log
 Assessment  : 859
 Título      : Trabalho Prático 02 - Estrutura Condicional Simples e Composta (sem aninhamento)
 Questão     : 1399
-Aluno       : 2825
+Aluno       : 2816
 Grupo       : TP 02
 Significado : Estrutura Condicional Simples e Composta
 Total MCs   : 1
@@ -16,62 +16,66 @@ Total MCs   : 1
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | Q1 = float(input("Quantidade de votos para o candidato Ambrosio Rutra:"))
-     2 | Q2 = float(input("Quantidade de votos para o candidato Demelza Olecram:"))
+     1 | AR= int(input("Quantidade de votos de Ambrosio Rutra:"))
+     2 | DO= int(input("Quantidade de votos de Demelza Olecram:"))
      3 | 
-     4 | x = (Q1 + Q2)
-     5 | 
-     6 | 
-     7 | 
-     8 | if(Q1>Q2):
-     9 | 	y = (Q1*100)/x
-    10 | 	print("Ambrosio Rutra")
-    11 | 	print(round(y,2))
-    12 | 	
-    13 | else:
-    14 | 	z = (Q2*100)/x
-    15 | 	print("Demelza Olecram")
-    16 | 	print(round(z,2))
+     4 | if(AR>DO):
+     5 | 	msg= "Ambrosio Rutra"
+     6 | 	por= 100 * AR/ (AR + DO)
+     7 | 	print(msg)
+     8 | 	print(round(por, 2))
+     9 | else:
+    10 | 	msg= "Demelza Olecram"
+    11 | 	por= 100 * DO/ (AR + DO)
+    12 | 	print(msg)
+    13 | 	print(round(por, 2))
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
 ----------------------------------------------------------------------
 
 ▶ G4 — Funções/variáveis com nomes não significativos
-  Ocorrências: 5
+  Ocorrências: 6
 
-  [1] Linha 1: Variável 'Q1' com nome muito curto (≤4 chars)
-      Trecho  : Q1 = ...
+  [1] Linha 1: Variável 'AR' com nome muito curto (≤4 chars)
+      Trecho  : AR = ...
       Contexto:
-        >>>    1 | Q1 = float(input("Quantidade de votos para o candidato Ambrosio Rutra:"))
-               2 | Q2 = float(input("Quantidade de votos para o candidato Demelza Olecram:"))
+        >>>    1 | AR= int(input("Quantidade de votos de Ambrosio Rutra:"))
+               2 | DO= int(input("Quantidade de votos de Demelza Olecram:"))
 
-  [2] Linha 2: Variável 'Q2' com nome muito curto (≤4 chars)
-      Trecho  : Q2 = ...
+  [2] Linha 2: Variável 'DO' com nome muito curto (≤4 chars)
+      Trecho  : DO = ...
       Contexto:
-               1 | Q1 = float(input("Quantidade de votos para o candidato Ambrosio Rutra:"))
-        >>>    2 | Q2 = float(input("Quantidade de votos para o candidato Demelza Olecram:"))
+               1 | AR= int(input("Quantidade de votos de Ambrosio Rutra:"))
+        >>>    2 | DO= int(input("Quantidade de votos de Demelza Olecram:"))
                3 | 
 
-  [3] Linha 4: Variável 'x' com nome muito curto (≤4 chars)
-      Trecho  : x = ...
+  [3] Linha 5: Variável 'msg' com nome muito curto (≤4 chars)
+      Trecho  : msg = ...
       Contexto:
-               3 | 
-        >>>    4 | x = (Q1 + Q2)
-               5 | 
+               4 | if(AR>DO):
+        >>>    5 | 	msg= "Ambrosio Rutra"
+               6 | 	por= 100 * AR/ (AR + DO)
 
-  [4] Linha 9: Variável 'y' com nome muito curto (≤4 chars)
-      Trecho  : y = ...
+  [4] Linha 6: Variável 'por' com nome muito curto (≤4 chars)
+      Trecho  : por = ...
       Contexto:
-               8 | if(Q1>Q2):
-        >>>    9 | 	y = (Q1*100)/x
-              10 | 	print("Ambrosio Rutra")
+               5 | 	msg= "Ambrosio Rutra"
+        >>>    6 | 	por= 100 * AR/ (AR + DO)
+               7 | 	print(msg)
 
-  [5] Linha 14: Variável 'z' com nome muito curto (≤4 chars)
-      Trecho  : z = ...
+  [5] Linha 10: Variável 'msg' com nome muito curto (≤4 chars)
+      Trecho  : msg = ...
       Contexto:
-              13 | else:
-        >>>   14 | 	z = (Q2*100)/x
-              15 | 	print("Demelza Olecram")
+               9 | else:
+        >>>   10 | 	msg= "Demelza Olecram"
+              11 | 	por= 100 * DO/ (AR + DO)
+
+  [6] Linha 11: Variável 'por' com nome muito curto (≤4 chars)
+      Trecho  : por = ...
+      Contexto:
+              10 | 	msg= "Demelza Olecram"
+        >>>   11 | 	por= 100 * DO/ (AR + DO)
+              12 | 	print(msg)
 
 ======================================================================

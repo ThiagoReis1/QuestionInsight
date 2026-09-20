@@ -2,11 +2,11 @@
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
 Arquivo     : 1621_2920.log
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2019_1_v1.81\2019-1\222\users\4085\executions\1621_2920.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2019_1_v1.81\2019-1\222\users\4080\executions\1621_2920.log
 Assessment  : 1621
 Título      : TP1: Variáveis e Estrutura Sequencial
 Questão     : 2920
-Aluno       : 4085
+Aluno       : 4080
 Grupo       : TP 01
 Significado : Variáveis e Estrutura Sequencial
 Total MCs   : 1
@@ -16,72 +16,74 @@ Total MCs   : 1
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | a = float(input("quantas gramas possui o prato? "))
-     2 | b = int(input("quantidade de bebidas: "))
-     3 | c = int(input("quantidade de sobremesas: "))
-     4 | d = 26.90
-     5 | e = 3.50
-     6 | f = 3.00
-     7 | g = a/1000
-     8 | total = (g * d + b * e + c * f)
-     9 | print(round(total, 2))
+     1 | from math import*
+     2 | g = float(input("quantas gramas tem seu prato?: "))
+     3 | b = float(input("quantas bebidas?: "))
+     4 | s = float(input("quantas sobremesas?: "))
+     5 | k = float(g/1000)
+     6 | l = k*26.90
+     7 | l1 = b*3.5
+     8 | l2 = s*3.0
+     9 | l3 = (l+l1+l2)
+    10 | print(round(l3,2))
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
 ----------------------------------------------------------------------
 
 ▶ G4 — Funções/variáveis com nomes não significativos
-  Ocorrências: 7
+  Ocorrências: 8
 
-  [1] Linha 1: Variável 'a' com nome muito curto (≤4 chars)
-      Trecho  : a = ...
-      Contexto:
-        >>>    1 | a = float(input("quantas gramas possui o prato? "))
-               2 | b = int(input("quantidade de bebidas: "))
-
-  [2] Linha 2: Variável 'b' com nome muito curto (≤4 chars)
-      Trecho  : b = ...
-      Contexto:
-               1 | a = float(input("quantas gramas possui o prato? "))
-        >>>    2 | b = int(input("quantidade de bebidas: "))
-               3 | c = int(input("quantidade de sobremesas: "))
-
-  [3] Linha 3: Variável 'c' com nome muito curto (≤4 chars)
-      Trecho  : c = ...
-      Contexto:
-               2 | b = int(input("quantidade de bebidas: "))
-        >>>    3 | c = int(input("quantidade de sobremesas: "))
-               4 | d = 26.90
-
-  [4] Linha 4: Variável 'd' com nome muito curto (≤4 chars)
-      Trecho  : d = ...
-      Contexto:
-               3 | c = int(input("quantidade de sobremesas: "))
-        >>>    4 | d = 26.90
-               5 | e = 3.50
-
-  [5] Linha 5: Variável 'e' com nome muito curto (≤4 chars)
-      Trecho  : e = ...
-      Contexto:
-               4 | d = 26.90
-        >>>    5 | e = 3.50
-               6 | f = 3.00
-
-  [6] Linha 6: Variável 'f' com nome muito curto (≤4 chars)
-      Trecho  : f = ...
-      Contexto:
-               5 | e = 3.50
-        >>>    6 | f = 3.00
-               7 | g = a/1000
-
-  [7] Linha 7: Variável 'g' com nome muito curto (≤4 chars)
+  [1] Linha 2: Variável 'g' com nome muito curto (≤4 chars)
       Trecho  : g = ...
       Contexto:
-               6 | f = 3.00
-        >>>    7 | g = a/1000
-               8 | total = (g * d + b * e + c * f)
+               1 | from math import*
+        >>>    2 | g = float(input("quantas gramas tem seu prato?: "))
+               3 | b = float(input("quantas bebidas?: "))
 
-======================================================================a 9: Variável 'l3' com nome muito curto (≤4 chars)
+  [2] Linha 3: Variável 'b' com nome muito curto (≤4 chars)
+      Trecho  : b = ...
+      Contexto:
+               2 | g = float(input("quantas gramas tem seu prato?: "))
+        >>>    3 | b = float(input("quantas bebidas?: "))
+               4 | s = float(input("quantas sobremesas?: "))
+
+  [3] Linha 4: Variável 's' com nome muito curto (≤4 chars)
+      Trecho  : s = ...
+      Contexto:
+               3 | b = float(input("quantas bebidas?: "))
+        >>>    4 | s = float(input("quantas sobremesas?: "))
+               5 | k = float(g/1000)
+
+  [4] Linha 5: Variável 'k' com nome muito curto (≤4 chars)
+      Trecho  : k = ...
+      Contexto:
+               4 | s = float(input("quantas sobremesas?: "))
+        >>>    5 | k = float(g/1000)
+               6 | l = k*26.90
+
+  [5] Linha 6: Variável 'l' com nome muito curto (≤4 chars)
+      Trecho  : l = ...
+      Contexto:
+               5 | k = float(g/1000)
+        >>>    6 | l = k*26.90
+               7 | l1 = b*3.5
+
+  [6] Linha 7: Variável 'l1' com nome muito curto (≤4 chars)
+      Trecho  : l1 = ...
+      Contexto:
+               6 | l = k*26.90
+        >>>    7 | l1 = b*3.5
+               8 | l2 = s*3.0
+
+  [7] Linha 8: Variável 'l2' com nome muito curto (≤4 chars)
+      Trecho  : l2 = ...
+      Contexto:
+               7 | l1 = b*3.5
+        >>>    8 | l2 = s*3.0
+               9 | l3 = (l+l1+l2)
+
+  [8] Linha 9: Variável 'l3' com nome muito curto (≤4 chars)
       Trecho  : l3 = ...
       Contexto:
                8 | l2 = s*3.0

@@ -2,11 +2,11 @@
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
 Arquivo     : 97_1092.log
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2016_1_v1.81\2016-1\102\users\1308\executions\97_1092.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2016_1_v1.81\2016-1\102\users\1306\executions\97_1092.log
 Assessment  : 97
 Título      : Avaliação Parcial 02 – Estrutura Condicional Composta (sem Aninhamento)
 Questão     : 1092
-Aluno       : 1308
+Aluno       : 1306
 Grupo       : TP 02
 Significado : Estrutura Condicional Simples e Composta
 Total MCs   : 1
@@ -16,62 +16,72 @@ Total MCs   : 1
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | X=int(input("Digite o numero X:"))
-     2 | a=X//100
-     3 | b=(X%100)//10
-     4 | c=(X%100)%10
-     5 | s=a**3+b**3+c**3
-     6 | if(s==X):
-     7 | 	print(X,"atende a propriedade")
-     8 | else:
-     9 | 	print(s)
+     1 | v = int(input())
+     2 | c1 = int(v//100)
+     3 | r1 = v%100
+     4 | c2= int(r1//10)
+     5 | r2 =r1%10
+     6 | c3 = int(r2//1)
+     7 | X = c1**3+c2**3+c3**3
+     8 | if X == v:
+     9 | 	print(X)
+    10 | 	print("atende a propriedade")
+    11 | else:
+    12 | 	print(X)
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
 ----------------------------------------------------------------------
 
 ▶ G4 — Funções/variáveis com nomes não significativos
-  Ocorrências: 5
+  Ocorrências: 7
 
-  [1] Linha 1: Variável 'X' com nome muito curto (≤4 chars)
+  [1] Linha 1: Variável 'v' com nome muito curto (≤4 chars)
+      Trecho  : v = ...
+      Contexto:
+        >>>    1 | v = int(input())
+               2 | c1 = int(v//100)
+
+  [2] Linha 2: Variável 'c1' com nome muito curto (≤4 chars)
+      Trecho  : c1 = ...
+      Contexto:
+               1 | v = int(input())
+        >>>    2 | c1 = int(v//100)
+               3 | r1 = v%100
+
+  [3] Linha 3: Variável 'r1' com nome muito curto (≤4 chars)
+      Trecho  : r1 = ...
+      Contexto:
+               2 | c1 = int(v//100)
+        >>>    3 | r1 = v%100
+               4 | c2= int(r1//10)
+
+  [4] Linha 4: Variável 'c2' com nome muito curto (≤4 chars)
+      Trecho  : c2 = ...
+      Contexto:
+               3 | r1 = v%100
+        >>>    4 | c2= int(r1//10)
+               5 | r2 =r1%10
+
+  [5] Linha 5: Variável 'r2' com nome muito curto (≤4 chars)
+      Trecho  : r2 = ...
+      Contexto:
+               4 | c2= int(r1//10)
+        >>>    5 | r2 =r1%10
+               6 | c3 = int(r2//1)
+
+  [6] Linha 6: Variável 'c3' com nome muito curto (≤4 chars)
+      Trecho  : c3 = ...
+      Contexto:
+               5 | r2 =r1%10
+        >>>    6 | c3 = int(r2//1)
+               7 | X = c1**3+c2**3+c3**3
+
+  [7] Linha 7: Variável 'X' com nome muito curto (≤4 chars)
       Trecho  : X = ...
       Contexto:
-        >>>    1 | X=int(input("Digite o numero X:"))
-               2 | a=X//100
-
-  [2] Linha 2: Variável 'a' com nome muito curto (≤4 chars)
-      Trecho  : a = ...
-      Contexto:
-               1 | X=int(input("Digite o numero X:"))
-        >>>    2 | a=X//100
-               3 | b=(X%100)//10
-
-  [3] Linha 3: Variável 'b' com nome muito curto (≤4 chars)
-      Trecho  : b = ...
-      Contexto:
-               2 | a=X//100
-        >>>    3 | b=(X%100)//10
-               4 | c=(X%100)%10
-
-  [4] Linha 4: Variável 'c' com nome muito curto (≤4 chars)
-      Trecho  : c = ...
-      Contexto:
-               3 | b=(X%100)//10
-        >>>    4 | c=(X%100)%10
-               5 | s=a**3+b**3+c**3
-
-  [5] Linha 5: Variável 's' com nome muito curto (≤4 chars)
-      Trecho  : s = ...
-      Contexto:
-               4 | c=(X%100)%10
-        >>>    5 | s=a**3+b**3+c**3
-               6 | if(s==X):
-
-======================================================================iável 'n1' com nome muito curto (≤4 chars)
-      Trecho  : n1 = ...
-      Contexto:
-               6 | r10=r100%10
-        >>>    7 | n1=r10//1
-               8 | 
+               6 | c3 = int(r2//1)
+        >>>    7 | X = c1**3+c2**3+c3**3
+               8 | if X == v:
 
 ======================================================================

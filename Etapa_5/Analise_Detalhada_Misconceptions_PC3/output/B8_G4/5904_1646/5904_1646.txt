@@ -2,11 +2,11 @@
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
 Arquivo     : 5904_1646.log
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2024_1_v1.81\2024-1\593\users\9708\executions\5904_1646.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2024_1_v1.81\2024-1\593\users\9703\executions\5904_1646.log
 Assessment  : 5904
 Título      : TP 6: Estrutura de Repetição por Contagem (for)
 Questão     : 1646
-Aluno       : 9708
+Aluno       : 9703
 Grupo       : TP 06
 Significado : Estrutura de Repetição por Contagem
 Total MCs   : 2
@@ -16,20 +16,22 @@ Total MCs   : 2
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | from numpy import*
-     2 | s = array(eval(input()))
-     3 | cont = 0
-     4 | for i in range(size(s)):
-     5 | 	if s[i] <= 50:
-     6 | 		cont +=1
-     7 | print(cont)
-     8 | aux = zeros(cont,dtype=int)
-     9 | j = 0
-    10 | for i in range(size(s)):
-    11 | 	if s[i] <= 50:
-    12 | 		aux[j] = i
-    13 | 		j +=1
-    14 | print(aux)
+     1 | from numpy import *
+     2 | 
+     3 | vet = array(eval(input()))
+     4 | cont = 0
+     5 | 
+     6 | for i in vet:
+     7 | 	if i <= 50:
+     8 | 		cont += 1
+     9 | print(cont)
+    10 | aux = zeros(cont,dtype=int)
+    11 | j = 0
+    12 | for i in range(size(vet)):
+    13 | 	if vet[i] <= 50:
+    14 | 		aux[j] = i
+    15 | 		j += 1
+    16 | print(aux)
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
@@ -44,32 +46,32 @@ DETALHAMENTO DOS MISCONCEPTIONS
 ▶ G4 — Funções/variáveis com nomes não significativos
   Ocorrências: 4
 
-  [1] Linha 2: Variável 's' com nome muito curto (≤4 chars)
-      Trecho  : s = ...
+  [1] Linha 3: Variável 'vet' com nome muito curto (≤4 chars)
+      Trecho  : vet = ...
       Contexto:
-               1 | from numpy import*
-        >>>    2 | s = array(eval(input()))
-               3 | cont = 0
+               2 | 
+        >>>    3 | vet = array(eval(input()))
+               4 | cont = 0
 
-  [2] Linha 3: Variável 'cont' com nome muito curto (≤4 chars)
+  [2] Linha 4: Variável 'cont' com nome muito curto (≤4 chars)
       Trecho  : cont = ...
       Contexto:
-               2 | s = array(eval(input()))
-        >>>    3 | cont = 0
-               4 | for i in range(size(s)):
+               3 | vet = array(eval(input()))
+        >>>    4 | cont = 0
+               5 | 
 
-  [3] Linha 8: Variável 'aux' com nome muito curto (≤4 chars)
+  [3] Linha 10: Variável 'aux' com nome muito curto (≤4 chars)
       Trecho  : aux = ...
       Contexto:
-               7 | print(cont)
-        >>>    8 | aux = zeros(cont,dtype=int)
-               9 | j = 0
+               9 | print(cont)
+        >>>   10 | aux = zeros(cont,dtype=int)
+              11 | j = 0
 
-  [4] Linha 9: Variável 'j' com nome muito curto (≤4 chars)
+  [4] Linha 11: Variável 'j' com nome muito curto (≤4 chars)
       Trecho  : j = ...
       Contexto:
-               8 | aux = zeros(cont,dtype=int)
-        >>>    9 | j = 0
-              10 | for i in range(size(s)):
+              10 | aux = zeros(cont,dtype=int)
+        >>>   11 | j = 0
+              12 | for i in range(size(vet)):
 
 ======================================================================

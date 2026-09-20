@@ -2,11 +2,11 @@
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
 Arquivo     : 675_2124.log
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2017_1_v1.81\2017-1\140\users\2305\executions\675_2124.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2017_1_v1.81\2017-1\140\users\2289\executions\675_2124.log
 Assessment  : 675
 Título      : Trabalho Prático 5: Vetores e Strings
 Questão     : 2124
-Aluno       : 2305
+Aluno       : 2289
 Grupo       : TP 05
 Significado : Vetores e Strings
 Total MCs   : 1
@@ -16,38 +16,41 @@ Total MCs   : 1
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | from numpy import*
-     2 | 
-     3 | v = array(eval(input()))
-     4 | m = sum(v)-max(v)
+     1 | from numpy import *
+     2 | v = array(eval(input()))
+     3 | 
+     4 | m = sum(v) - max(v)
      5 | 
      6 | mf = m / 3
      7 | 
-     8 | print (round(mf,2))
-     9 | if mf >= 5:
-    10 | 	print ("APROVOU")
-    11 | else:
-    12 | 	print("REPROVOU")
+     8 | if mf >= 5:
+     9 | 	print(round(mf, 2))
+    10 | 	msg = "aprovou".upper()
+    11 | 	print(msg)
+    12 | else:
+    13 | 	print(round(mf, 2))
+    14 | 	msg = "reprovou".upper()
+    15 | 	print(msg)
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
 ----------------------------------------------------------------------
 
 ▶ G4 — Funções/variáveis com nomes não significativos
-  Ocorrências: 3
+  Ocorrências: 5
 
-  [1] Linha 3: Variável 'v' com nome muito curto (≤4 chars)
+  [1] Linha 2: Variável 'v' com nome muito curto (≤4 chars)
       Trecho  : v = ...
       Contexto:
-               2 | 
-        >>>    3 | v = array(eval(input()))
-               4 | m = sum(v)-max(v)
+               1 | from numpy import *
+        >>>    2 | v = array(eval(input()))
+               3 | 
 
   [2] Linha 4: Variável 'm' com nome muito curto (≤4 chars)
       Trecho  : m = ...
       Contexto:
-               3 | v = array(eval(input()))
-        >>>    4 | m = sum(v)-max(v)
+               3 | 
+        >>>    4 | m = sum(v) - max(v)
                5 | 
 
   [3] Linha 6: Variável 'mf' com nome muito curto (≤4 chars)
@@ -56,5 +59,19 @@ DETALHAMENTO DOS MISCONCEPTIONS
                5 | 
         >>>    6 | mf = m / 3
                7 | 
+
+  [4] Linha 10: Variável 'msg' com nome muito curto (≤4 chars)
+      Trecho  : msg = ...
+      Contexto:
+               9 | 	print(round(mf, 2))
+        >>>   10 | 	msg = "aprovou".upper()
+              11 | 	print(msg)
+
+  [5] Linha 14: Variável 'msg' com nome muito curto (≤4 chars)
+      Trecho  : msg = ...
+      Contexto:
+              13 | 	print(round(mf, 2))
+        >>>   14 | 	msg = "reprovou".upper()
+              15 | 	print(msg)
 
 ======================================================================

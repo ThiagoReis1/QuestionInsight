@@ -2,11 +2,11 @@
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
 Arquivo     : 4542_5950.log
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2022_2_v1.81\2022-2\487\users\8185\executions\4542_5950.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2022_2_v1.81\2022-2\487\users\8183\executions\4542_5950.log
 Assessment  : 4542
 Título      : TP 02:  Est. Condicional Simples e Composta
 Questão     : 5950
-Aluno       : 8185
+Aluno       : 8183
 Grupo       : TP 02
 Significado : Estrutura Condicional Simples e Composta
 Total MCs   : 1
@@ -16,28 +16,68 @@ Total MCs   : 1
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | from math import*
-     2 | tp = input("torta ou pastel")
-     3 | q = int(input("Quantos t ou p"))
-     4 | c = int(input("quantos cappuccinos"))
-     5 | 
-     6 | tp.upper 
-     7 | 
-     8 | if tp == "T":
-     9 | 	total = (c*4.5) + (q*6)
-    10 | else: 
-    11 | 	total = (c*4.5) + (q*5)
-    12 | 	
-    13 | print(total)
+     1 | var1 = input("Informe se deseja torta ou pastel (T / P): ")
+     2 | var2 = int(input("Informe a quantidade de fatias de torta ou pastel: "))
+     3 | var3 = int(input("Informe a quantidade de cappuccinos: "))
+     4 | 
+     5 | T = 6
+     6 | P = 5
+     7 | C = 4.50
+     8 | 
+     9 | if (var1.upper() == 'T'):
+    10 | 	conta = (var2 * T) + (var3 * C)
+    11 | 	
+    12 | else:
+    13 | 	conta = (var2 * P) + (var3 * C)
+    14 | 	
+    15 | print(conta)
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
 ----------------------------------------------------------------------
 
 ▶ G4 — Funções/variáveis com nomes não significativos
-  Ocorrências: 1
+  Ocorrências: 6
 
-  [1] Linha 0: G4 detectado pelo VisitorMC3 (localização exata não mapeada)
-      Trecho  : —
+  [1] Linha 1: Variável 'var1' com nome muito curto (≤4 chars)
+      Trecho  : var1 = ...
+      Contexto:
+        >>>    1 | var1 = input("Informe se deseja torta ou pastel (T / P): ")
+               2 | var2 = int(input("Informe a quantidade de fatias de torta ou pastel: "))
+
+  [2] Linha 2: Variável 'var2' com nome muito curto (≤4 chars)
+      Trecho  : var2 = ...
+      Contexto:
+               1 | var1 = input("Informe se deseja torta ou pastel (T / P): ")
+        >>>    2 | var2 = int(input("Informe a quantidade de fatias de torta ou pastel: "))
+               3 | var3 = int(input("Informe a quantidade de cappuccinos: "))
+
+  [3] Linha 3: Variável 'var3' com nome muito curto (≤4 chars)
+      Trecho  : var3 = ...
+      Contexto:
+               2 | var2 = int(input("Informe a quantidade de fatias de torta ou pastel: "))
+        >>>    3 | var3 = int(input("Informe a quantidade de cappuccinos: "))
+               4 | 
+
+  [4] Linha 5: Variável 'T' com nome muito curto (≤4 chars)
+      Trecho  : T = ...
+      Contexto:
+               4 | 
+        >>>    5 | T = 6
+               6 | P = 5
+
+  [5] Linha 6: Variável 'P' com nome muito curto (≤4 chars)
+      Trecho  : P = ...
+      Contexto:
+               5 | T = 6
+        >>>    6 | P = 5
+               7 | C = 4.50
+
+  [6] Linha 7: Variável 'C' com nome muito curto (≤4 chars)
+      Trecho  : C = ...
+      Contexto:
+               6 | P = 5
+        >>>    7 | C = 4.50
+               8 | 
 
 ======================================================================

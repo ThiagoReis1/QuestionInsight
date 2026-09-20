@@ -2,11 +2,11 @@
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
 Arquivo     : 132_1159.log
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2016_1_v1.81\2016-1\111\users\1158\executions\132_1159.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2016_1_v1.81\2016-1\111\users\1184\executions\132_1159.log
 Assessment  : 132
 Título      : Avaliação Parcial 04 – Estrutura de Repetição por Condição (while)
 Questão     : 1159
-Aluno       : 1158
+Aluno       : 1184
 Grupo       : TP 04
 Significado : Estrutura de Repetição por Condição
 Total MCs   : 1
@@ -16,17 +16,24 @@ Total MCs   : 1
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | pt = int(input())
-     2 | pp = int(input())
-     3 | cpt = float(input())
-     4 | cpp = float(input())
-     5 | nmax = int(input())
-     6 | anos = 1
-     7 | while(nmax >= (pt + pp)):
-     8 | 	pt = pt*(1 + cpt)
-     9 | 	pp = pp*(1 + cpp)
-    10 | 	anos = anos + 1
-    11 | print(anos)
+     1 | tam = int(input("digite quantidade de tambaquis:"))
+     2 | pac = int(input("digite quantidade de pacus:"))
+     3 | tt = float(input("taxa de crescimento tam:"))
+     4 | tp = float(input("taxa de crescimento pac:"))
+     5 | v = int(input("total do viveiro:"))
+     6 | 
+     7 | anos = 1
+     8 | peixes = 0
+     9 | 
+    10 | 
+    11 | while (peixes <= v):
+    12 | 				tam = tam * (1 + (tt / 100))
+    13 | 				pac = pac * (1 + (tp / 100))
+    14 | 				anos = anos + 1
+    15 | 				peixes = peixes +tam + pac
+    16 | 		
+    17 | else:		
+    18 | 				print(anos)
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
@@ -35,66 +42,66 @@ DETALHAMENTO DOS MISCONCEPTIONS
 ▶ G4 — Funções/variáveis com nomes não significativos
   Ocorrências: 9
 
-  [1] Linha 1: Variável 'pt' com nome muito curto (≤4 chars)
-      Trecho  : pt = ...
+  [1] Linha 1: Variável 'tam' com nome muito curto (≤4 chars)
+      Trecho  : tam = ...
       Contexto:
-        >>>    1 | pt = int(input())
-               2 | pp = int(input())
+        >>>    1 | tam = int(input("digite quantidade de tambaquis:"))
+               2 | pac = int(input("digite quantidade de pacus:"))
 
-  [2] Linha 2: Variável 'pp' com nome muito curto (≤4 chars)
-      Trecho  : pp = ...
+  [2] Linha 2: Variável 'pac' com nome muito curto (≤4 chars)
+      Trecho  : pac = ...
       Contexto:
-               1 | pt = int(input())
-        >>>    2 | pp = int(input())
-               3 | cpt = float(input())
+               1 | tam = int(input("digite quantidade de tambaquis:"))
+        >>>    2 | pac = int(input("digite quantidade de pacus:"))
+               3 | tt = float(input("taxa de crescimento tam:"))
 
-  [3] Linha 3: Variável 'cpt' com nome muito curto (≤4 chars)
-      Trecho  : cpt = ...
+  [3] Linha 3: Variável 'tt' com nome muito curto (≤4 chars)
+      Trecho  : tt = ...
       Contexto:
-               2 | pp = int(input())
-        >>>    3 | cpt = float(input())
-               4 | cpp = float(input())
+               2 | pac = int(input("digite quantidade de pacus:"))
+        >>>    3 | tt = float(input("taxa de crescimento tam:"))
+               4 | tp = float(input("taxa de crescimento pac:"))
 
-  [4] Linha 4: Variável 'cpp' com nome muito curto (≤4 chars)
-      Trecho  : cpp = ...
+  [4] Linha 4: Variável 'tp' com nome muito curto (≤4 chars)
+      Trecho  : tp = ...
       Contexto:
-               3 | cpt = float(input())
-        >>>    4 | cpp = float(input())
-               5 | nmax = int(input())
+               3 | tt = float(input("taxa de crescimento tam:"))
+        >>>    4 | tp = float(input("taxa de crescimento pac:"))
+               5 | v = int(input("total do viveiro:"))
 
-  [5] Linha 5: Variável 'nmax' com nome muito curto (≤4 chars)
-      Trecho  : nmax = ...
+  [5] Linha 5: Variável 'v' com nome muito curto (≤4 chars)
+      Trecho  : v = ...
       Contexto:
-               4 | cpp = float(input())
-        >>>    5 | nmax = int(input())
-               6 | anos = 1
+               4 | tp = float(input("taxa de crescimento pac:"))
+        >>>    5 | v = int(input("total do viveiro:"))
+               6 | 
 
-  [6] Linha 6: Variável 'anos' com nome muito curto (≤4 chars)
+  [6] Linha 7: Variável 'anos' com nome muito curto (≤4 chars)
       Trecho  : anos = ...
       Contexto:
-               5 | nmax = int(input())
-        >>>    6 | anos = 1
-               7 | while(nmax >= (pt + pp)):
+               6 | 
+        >>>    7 | anos = 1
+               8 | peixes = 0
 
-  [7] Linha 8: Variável 'pt' com nome muito curto (≤4 chars)
-      Trecho  : pt = ...
+  [7] Linha 12: Variável 'tam' com nome muito curto (≤4 chars)
+      Trecho  : tam = ...
       Contexto:
-               7 | while(nmax >= (pt + pp)):
-        >>>    8 | 	pt = pt*(1 + cpt)
-               9 | 	pp = pp*(1 + cpp)
+              11 | while (peixes <= v):
+        >>>   12 | 				tam = tam * (1 + (tt / 100))
+              13 | 				pac = pac * (1 + (tp / 100))
 
-  [8] Linha 9: Variável 'pp' com nome muito curto (≤4 chars)
-      Trecho  : pp = ...
+  [8] Linha 13: Variável 'pac' com nome muito curto (≤4 chars)
+      Trecho  : pac = ...
       Contexto:
-               8 | 	pt = pt*(1 + cpt)
-        >>>    9 | 	pp = pp*(1 + cpp)
-              10 | 	anos = anos + 1
+              12 | 				tam = tam * (1 + (tt / 100))
+        >>>   13 | 				pac = pac * (1 + (tp / 100))
+              14 | 				anos = anos + 1
 
-  [9] Linha 10: Variável 'anos' com nome muito curto (≤4 chars)
+  [9] Linha 14: Variável 'anos' com nome muito curto (≤4 chars)
       Trecho  : anos = ...
       Contexto:
-               9 | 	pp = pp*(1 + cpp)
-        >>>   10 | 	anos = anos + 1
-              11 | print(anos)
+              13 | 				pac = pac * (1 + (tp / 100))
+        >>>   14 | 				anos = anos + 1
+              15 | 				peixes = peixes +tam + pac
 
 ======================================================================

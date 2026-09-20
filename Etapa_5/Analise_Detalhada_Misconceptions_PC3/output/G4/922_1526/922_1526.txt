@@ -2,11 +2,11 @@
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
 Arquivo     : 922_1526.log
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2017_2_v1.81\2017-2\162\users\2826\executions\922_1526.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2017_2_v1.81\2017-2\162\users\2881\executions\922_1526.log
 Assessment  : 922
 Título      : Trabalho Prático 4: Estrutura de Repetição por Condição (while)
 Questão     : 1526
-Aluno       : 2826
+Aluno       : 2881
 Grupo       : TP 04
 Significado : Estrutura de Repetição por Condição
 Total MCs   : 1
@@ -16,62 +16,77 @@ Total MCs   : 1
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | qi=int(input("quantidade inicial: "))
-     2 | gp=int(input("gasta por dia: "))
-     3 | rs=int(input("recupera pos sono: "))
-     4 | t=0
-     5 | 
-     6 | while(qi>0):
-     7 | 	qi=qi+rs-gp
-     8 | 	t=t+1
-     9 | print(t)
+     1 | qim = int(input("Quantidade inicial de mana da bruxa Sosípatra: "))
+     2 | qg = int(input("Quantidade de mana que ela gasta por dia: "))
+     3 | qr = int(input("Quantidade de mana que ela recupera durante o sono: "))
+     4 | dias = 0
+     5 | mana = qim
+     6 | while (mana!=0):
+     7 | 	calc = mana-qg+qr
+     8 | 	mana = mana+calc
+     9 | 	dias = dias+1
+    10 | print (dias)
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
 ----------------------------------------------------------------------
 
 ▶ G4 — Funções/variáveis com nomes não significativos
-  Ocorrências: 6
+  Ocorrências: 8
 
-  [1] Linha 1: Variável 'qi' com nome muito curto (≤4 chars)
-      Trecho  : qi = ...
+  [1] Linha 1: Variável 'qim' com nome muito curto (≤4 chars)
+      Trecho  : qim = ...
       Contexto:
-        >>>    1 | qi=int(input("quantidade inicial: "))
-               2 | gp=int(input("gasta por dia: "))
+        >>>    1 | qim = int(input("Quantidade inicial de mana da bruxa Sosípatra: "))
+               2 | qg = int(input("Quantidade de mana que ela gasta por dia: "))
 
-  [2] Linha 2: Variável 'gp' com nome muito curto (≤4 chars)
-      Trecho  : gp = ...
+  [2] Linha 2: Variável 'qg' com nome muito curto (≤4 chars)
+      Trecho  : qg = ...
       Contexto:
-               1 | qi=int(input("quantidade inicial: "))
-        >>>    2 | gp=int(input("gasta por dia: "))
-               3 | rs=int(input("recupera pos sono: "))
+               1 | qim = int(input("Quantidade inicial de mana da bruxa Sosípatra: "))
+        >>>    2 | qg = int(input("Quantidade de mana que ela gasta por dia: "))
+               3 | qr = int(input("Quantidade de mana que ela recupera durante o sono: "))
 
-  [3] Linha 3: Variável 'rs' com nome muito curto (≤4 chars)
-      Trecho  : rs = ...
+  [3] Linha 3: Variável 'qr' com nome muito curto (≤4 chars)
+      Trecho  : qr = ...
       Contexto:
-               2 | gp=int(input("gasta por dia: "))
-        >>>    3 | rs=int(input("recupera pos sono: "))
-               4 | t=0
+               2 | qg = int(input("Quantidade de mana que ela gasta por dia: "))
+        >>>    3 | qr = int(input("Quantidade de mana que ela recupera durante o sono: "))
+               4 | dias = 0
 
-  [4] Linha 4: Variável 't' com nome muito curto (≤4 chars)
-      Trecho  : t = ...
+  [4] Linha 4: Variável 'dias' com nome muito curto (≤4 chars)
+      Trecho  : dias = ...
       Contexto:
-               3 | rs=int(input("recupera pos sono: "))
-        >>>    4 | t=0
-               5 | 
+               3 | qr = int(input("Quantidade de mana que ela recupera durante o sono: "))
+        >>>    4 | dias = 0
+               5 | mana = qim
 
-  [5] Linha 7: Variável 'qi' com nome muito curto (≤4 chars)
-      Trecho  : qi = ...
+  [5] Linha 5: Variável 'mana' com nome muito curto (≤4 chars)
+      Trecho  : mana = ...
       Contexto:
-               6 | while(qi>0):
-        >>>    7 | 	qi=qi+rs-gp
-               8 | 	t=t+1
+               4 | dias = 0
+        >>>    5 | mana = qim
+               6 | while (mana!=0):
 
-  [6] Linha 8: Variável 't' com nome muito curto (≤4 chars)
-      Trecho  : t = ...
+  [6] Linha 7: Variável 'calc' com nome muito curto (≤4 chars)
+      Trecho  : calc = ...
       Contexto:
-               7 | 	qi=qi+rs-gp
-        >>>    8 | 	t=t+1
-               9 | print(t)
+               6 | while (mana!=0):
+        >>>    7 | 	calc = mana-qg+qr
+               8 | 	mana = mana+calc
+
+  [7] Linha 8: Variável 'mana' com nome muito curto (≤4 chars)
+      Trecho  : mana = ...
+      Contexto:
+               7 | 	calc = mana-qg+qr
+        >>>    8 | 	mana = mana+calc
+               9 | 	dias = dias+1
+
+  [8] Linha 9: Variável 'dias' com nome muito curto (≤4 chars)
+      Trecho  : dias = ...
+      Contexto:
+               8 | 	mana = mana+calc
+        >>>    9 | 	dias = dias+1
+              10 | print (dias)
 
 ======================================================================

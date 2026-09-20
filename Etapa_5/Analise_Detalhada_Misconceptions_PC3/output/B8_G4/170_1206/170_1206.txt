@@ -2,11 +2,11 @@
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
 Arquivo     : 170_1206.log
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2016_1_v1.81\2016-1\109\users\1140\executions\170_1206.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2016_1_v1.81\2016-1\109\users\1199\executions\170_1206.log
 Assessment  : 170
 Título      : Avaliação Parcial 05 – Vetores e Strings
 Questão     : 1206
-Aluno       : 1140
+Aluno       : 1199
 Grupo       : TP 05
 Significado : Vetores e Strings
 Total MCs   : 2
@@ -17,17 +17,18 @@ Total MCs   : 2
 CÓDIGO FONTE
 ----------------------------------------------------------------------
      1 | from numpy import *
-     2 | 
-     3 | v = array(eval(input()))
-     4 | i = 0 
-     5 | j = 0
-     6 | recorde = 8.95
-     7 | while(i<size(v)):
-     8 | 	if v[i] < recorde :
-     9 | 		j = j + 1 
-    10 | 	i = i + 1 
-    11 | print(recorde)
-    12 | print(j)
+     2 | d = array(eval(input("Digite o valor das distancias: ")))
+     3 | i = 0 
+     4 | recorde = 8.95
+     5 | s = 0 
+     6 | 
+     7 | while (i <  size(d)):
+     8 | 	if(d[i] < recorde):
+     9 | 		s = s + 1
+    10 | 	i = i + 1
+    11 | 
+    12 | print (recorde)
+    13 | print (s)
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
@@ -42,39 +43,39 @@ DETALHAMENTO DOS MISCONCEPTIONS
 ▶ G4 — Funções/variáveis com nomes não significativos
   Ocorrências: 5
 
-  [1] Linha 3: Variável 'v' com nome muito curto (≤4 chars)
-      Trecho  : v = ...
+  [1] Linha 2: Variável 'd' com nome muito curto (≤4 chars)
+      Trecho  : d = ...
       Contexto:
-               2 | 
-        >>>    3 | v = array(eval(input()))
-               4 | i = 0 
+               1 | from numpy import *
+        >>>    2 | d = array(eval(input("Digite o valor das distancias: ")))
+               3 | i = 0 
 
-  [2] Linha 4: Variável 'i' com nome muito curto (≤4 chars)
+  [2] Linha 3: Variável 'i' com nome muito curto (≤4 chars)
       Trecho  : i = ...
       Contexto:
-               3 | v = array(eval(input()))
-        >>>    4 | i = 0 
-               5 | j = 0
+               2 | d = array(eval(input("Digite o valor das distancias: ")))
+        >>>    3 | i = 0 
+               4 | recorde = 8.95
 
-  [3] Linha 5: Variável 'j' com nome muito curto (≤4 chars)
-      Trecho  : j = ...
+  [3] Linha 5: Variável 's' com nome muito curto (≤4 chars)
+      Trecho  : s = ...
       Contexto:
-               4 | i = 0 
-        >>>    5 | j = 0
-               6 | recorde = 8.95
+               4 | recorde = 8.95
+        >>>    5 | s = 0 
+               6 | 
 
   [4] Linha 10: Variável 'i' com nome muito curto (≤4 chars)
       Trecho  : i = ...
       Contexto:
-               9 | 		j = j + 1 
-        >>>   10 | 	i = i + 1 
-              11 | print(recorde)
+               9 | 		s = s + 1
+        >>>   10 | 	i = i + 1
+              11 | 
 
-  [5] Linha 9: Variável 'j' com nome muito curto (≤4 chars)
-      Trecho  : j = ...
+  [5] Linha 9: Variável 's' com nome muito curto (≤4 chars)
+      Trecho  : s = ...
       Contexto:
-               8 | 	if v[i] < recorde :
-        >>>    9 | 		j = j + 1 
-              10 | 	i = i + 1 
+               8 | 	if(d[i] < recorde):
+        >>>    9 | 		s = s + 1
+              10 | 	i = i + 1
 
 ======================================================================

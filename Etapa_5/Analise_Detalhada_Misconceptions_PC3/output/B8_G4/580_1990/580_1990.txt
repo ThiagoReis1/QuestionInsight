@@ -2,11 +2,11 @@
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
 Arquivo     : 580_1990.log
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2017_1_v1.81\2017-1\142\users\2219\executions\580_1990.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2017_1_v1.81\2017-1\142\users\2226\executions\580_1990.log
 Assessment  : 580
 Título      : Trabalho Prático 3: Estruturas Condicionais Encadeadas
 Questão     : 1990
-Aluno       : 2219
+Aluno       : 2226
 Grupo       : TP 03
 Significado : Estrutura Condicional Encadeada
 Total MCs   : 2
@@ -16,23 +16,22 @@ Total MCs   : 2
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | aminoacido = input("Informe o aminoacido:").upper()
-     2 | O = 15.9994
-     3 | C = 12.011
-     4 | N = 14.0067
-     5 | H = 1.00794
-     6 | if(aminoacido == "GLUTAMINA" or aminoacido =="SERINA" or aminoacido=="TREONINA" ):
-     7 | 	if (aminoacido =="GLUTAMINA"):
-     8 | 		calc = (C*5)+(H*8)+(N*1)+(O*4)
-     9 | 	elif(aminoacido=="SERINA"):
-    10 | 		calc = C*3+ H*7+ N+ O*3
-    11 | 	elif (aminoacido=="TREONINA"):
-    12 | 		calc = C*4+ H*9+ N+ O*3
+     1 | am=input("nome do aminoacido").upper()
+     2 | 
+     3 | if((am=="GLUTAMINA") or (am=="SERINA") or (am=="TREONINA")):
+     4 | 	if(am=="GLUTAMINA"):
+     5 | 		x=((12.011*5)+(1.00794*8)+(14.0067*1)+(15.9994*4))
+     6 | 		print(round(x,2))
+     7 | 	elif(am=="SERINA"):
+     8 | 		y=((12.011*3)+(1.00794*7)+14.0067+(15.9994*3))
+     9 | 		print(round(y,2))
+    10 | 	elif(am=="TREONINA"):
+    11 | 		z=((12.011*4)+(1.00794*9)+14.0067+(15.9994*3))	
+    12 | 		print(round(z,2))
     13 | 		
-    14 | 	print(round(calc,2))
-    15 | else:
-    16 | 	print("Entrada:",aminoacido)
-    17 | 	print("Dado Invalido")
+    14 | else:
+    15 | 	print("Entrada:", am)
+    16 | 	print("Dado Invalido")
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
@@ -41,63 +40,41 @@ DETALHAMENTO DOS MISCONCEPTIONS
 ▶ B8 — Não utilização de elif/else
   Ocorrências: 1
 
-  [1] Linha 9: Cadeia if/elif sem bloco else final
-      Trecho  : if ... (linha 9) / elif ... sem else
+  [1] Linha 7: Cadeia if/elif sem bloco else final
+      Trecho  : if ... (linha 7) / elif ... sem else
       Contexto:
-               8 | 		calc = (C*5)+(H*8)+(N*1)+(O*4)
-        >>>    9 | 	elif(aminoacido=="SERINA"):
-              10 | 		calc = C*3+ H*7+ N+ O*3
+               6 | 		print(round(x,2))
+        >>>    7 | 	elif(am=="SERINA"):
+               8 | 		y=((12.011*3)+(1.00794*7)+14.0067+(15.9994*3))
 
 ▶ G4 — Funções/variáveis com nomes não significativos
-  Ocorrências: 7
+  Ocorrências: 4
 
-  [1] Linha 2: Variável 'O' com nome muito curto (≤4 chars)
-      Trecho  : O = ...
+  [1] Linha 1: Variável 'am' com nome muito curto (≤4 chars)
+      Trecho  : am = ...
       Contexto:
-               1 | aminoacido = input("Informe o aminoacido:").upper()
-        >>>    2 | O = 15.9994
-               3 | C = 12.011
+        >>>    1 | am=input("nome do aminoacido").upper()
+               2 | 
 
-  [2] Linha 3: Variável 'C' com nome muito curto (≤4 chars)
-      Trecho  : C = ...
+  [2] Linha 5: Variável 'x' com nome muito curto (≤4 chars)
+      Trecho  : x = ...
       Contexto:
-               2 | O = 15.9994
-        >>>    3 | C = 12.011
-               4 | N = 14.0067
+               4 | 	if(am=="GLUTAMINA"):
+        >>>    5 | 		x=((12.011*5)+(1.00794*8)+(14.0067*1)+(15.9994*4))
+               6 | 		print(round(x,2))
 
-  [3] Linha 4: Variável 'N' com nome muito curto (≤4 chars)
-      Trecho  : N = ...
+  [3] Linha 8: Variável 'y' com nome muito curto (≤4 chars)
+      Trecho  : y = ...
       Contexto:
-               3 | C = 12.011
-        >>>    4 | N = 14.0067
-               5 | H = 1.00794
+               7 | 	elif(am=="SERINA"):
+        >>>    8 | 		y=((12.011*3)+(1.00794*7)+14.0067+(15.9994*3))
+               9 | 		print(round(y,2))
 
-  [4] Linha 5: Variável 'H' com nome muito curto (≤4 chars)
-      Trecho  : H = ...
+  [4] Linha 11: Variável 'z' com nome muito curto (≤4 chars)
+      Trecho  : z = ...
       Contexto:
-               4 | N = 14.0067
-        >>>    5 | H = 1.00794
-               6 | if(aminoacido == "GLUTAMINA" or aminoacido =="SERINA" or aminoacido=="TREONINA" ):
-
-  [5] Linha 8: Variável 'calc' com nome muito curto (≤4 chars)
-      Trecho  : calc = ...
-      Contexto:
-               7 | 	if (aminoacido =="GLUTAMINA"):
-        >>>    8 | 		calc = (C*5)+(H*8)+(N*1)+(O*4)
-               9 | 	elif(aminoacido=="SERINA"):
-
-  [6] Linha 10: Variável 'calc' com nome muito curto (≤4 chars)
-      Trecho  : calc = ...
-      Contexto:
-               9 | 	elif(aminoacido=="SERINA"):
-        >>>   10 | 		calc = C*3+ H*7+ N+ O*3
-              11 | 	elif (aminoacido=="TREONINA"):
-
-  [7] Linha 12: Variável 'calc' com nome muito curto (≤4 chars)
-      Trecho  : calc = ...
-      Contexto:
-              11 | 	elif (aminoacido=="TREONINA"):
-        >>>   12 | 		calc = C*4+ H*9+ N+ O*3
-              13 | 		
+              10 | 	elif(am=="TREONINA"):
+        >>>   11 | 		z=((12.011*4)+(1.00794*9)+14.0067+(15.9994*3))	
+              12 | 		print(round(z,2))
 
 ======================================================================

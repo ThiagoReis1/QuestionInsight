@@ -2,11 +2,11 @@
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
 Arquivo     : 1662_2975.log
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2019_1_v1.81\2019-1\225\users\3992\executions\1662_2975.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2019_1_v1.81\2019-1\225\users\3993\executions\1662_2975.log
 Assessment  : 1662
 Título      : TP2 - Estrutura Condicional Simples e Composta
 Questão     : 2975
-Aluno       : 3992
+Aluno       : 3993
 Grupo       : TP 02
 Significado : Estrutura Condicional Simples e Composta
 Total MCs   : 1
@@ -16,18 +16,17 @@ Total MCs   : 1
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | var1 = int(input("quantidade do suco: "))
-     2 | var2 = int(input("quantidade de salgado:"))
-     3 | var3 = float(input("valor disponivel: "))
-     4 | var4 = var1*3
-     5 | var5 = var2*3.5
-     6 | var6 = var4 + var5
-     7 | if(var4 + var5 <= var3): 
-     8 | 	mensagem = "Sim"
-     9 | else: 
-    10 | 	mensagem = "Nao"
-    11 | print(round(var6,2))
-    12 | print(mensagem)
+     1 | qs = int(input("quantidade de suco"))
+     2 | sal = int(input("quantidade de salgados"))
+     3 | v = float(input("valor disponivel"))
+     4 | 
+     5 | vt = (qs * 3) + (sal * 3.50)
+     6 | if v >= vt:
+     7 | 	m = "Sim"
+     8 | else:
+     9 | 	m = "Nao"
+    10 | print(round(vt, 2))
+    11 | print(m)
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
@@ -36,45 +35,45 @@ DETALHAMENTO DOS MISCONCEPTIONS
 ▶ G4 — Funções/variáveis com nomes não significativos
   Ocorrências: 6
 
-  [1] Linha 1: Variável 'var1' com nome muito curto (≤4 chars)
-      Trecho  : var1 = ...
+  [1] Linha 1: Variável 'qs' com nome muito curto (≤4 chars)
+      Trecho  : qs = ...
       Contexto:
-        >>>    1 | var1 = int(input("quantidade do suco: "))
-               2 | var2 = int(input("quantidade de salgado:"))
+        >>>    1 | qs = int(input("quantidade de suco"))
+               2 | sal = int(input("quantidade de salgados"))
 
-  [2] Linha 2: Variável 'var2' com nome muito curto (≤4 chars)
-      Trecho  : var2 = ...
+  [2] Linha 2: Variável 'sal' com nome muito curto (≤4 chars)
+      Trecho  : sal = ...
       Contexto:
-               1 | var1 = int(input("quantidade do suco: "))
-        >>>    2 | var2 = int(input("quantidade de salgado:"))
-               3 | var3 = float(input("valor disponivel: "))
+               1 | qs = int(input("quantidade de suco"))
+        >>>    2 | sal = int(input("quantidade de salgados"))
+               3 | v = float(input("valor disponivel"))
 
-  [3] Linha 3: Variável 'var3' com nome muito curto (≤4 chars)
-      Trecho  : var3 = ...
+  [3] Linha 3: Variável 'v' com nome muito curto (≤4 chars)
+      Trecho  : v = ...
       Contexto:
-               2 | var2 = int(input("quantidade de salgado:"))
-        >>>    3 | var3 = float(input("valor disponivel: "))
-               4 | var4 = var1*3
+               2 | sal = int(input("quantidade de salgados"))
+        >>>    3 | v = float(input("valor disponivel"))
+               4 | 
 
-  [4] Linha 4: Variável 'var4' com nome muito curto (≤4 chars)
-      Trecho  : var4 = ...
+  [4] Linha 5: Variável 'vt' com nome muito curto (≤4 chars)
+      Trecho  : vt = ...
       Contexto:
-               3 | var3 = float(input("valor disponivel: "))
-        >>>    4 | var4 = var1*3
-               5 | var5 = var2*3.5
+               4 | 
+        >>>    5 | vt = (qs * 3) + (sal * 3.50)
+               6 | if v >= vt:
 
-  [5] Linha 5: Variável 'var5' com nome muito curto (≤4 chars)
-      Trecho  : var5 = ...
+  [5] Linha 7: Variável 'm' com nome muito curto (≤4 chars)
+      Trecho  : m = ...
       Contexto:
-               4 | var4 = var1*3
-        >>>    5 | var5 = var2*3.5
-               6 | var6 = var4 + var5
+               6 | if v >= vt:
+        >>>    7 | 	m = "Sim"
+               8 | else:
 
-  [6] Linha 6: Variável 'var6' com nome muito curto (≤4 chars)
-      Trecho  : var6 = ...
+  [6] Linha 9: Variável 'm' com nome muito curto (≤4 chars)
+      Trecho  : m = ...
       Contexto:
-               5 | var5 = var2*3.5
-        >>>    6 | var6 = var4 + var5
-               7 | if(var4 + var5 <= var3): 
+               8 | else:
+        >>>    9 | 	m = "Nao"
+              10 | print(round(vt, 2))
 
 ======================================================================

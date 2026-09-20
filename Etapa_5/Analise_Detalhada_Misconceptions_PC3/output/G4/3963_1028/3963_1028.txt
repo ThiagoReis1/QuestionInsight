@@ -2,11 +2,11 @@
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
 Arquivo     : 3963_1028.log
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2022_1_v1.81\2022-1\441\users\7570\executions\3963_1028.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2022_1_v1.81\2022-1\441\users\7566\executions\3963_1028.log
 Assessment  : 3963
 Título      : TP 01: Variáveis e Estrutura Sequencial
 Questão     : 1028
-Aluno       : 7570
+Aluno       : 7566
 Grupo       : TP 01
 Significado : Variáveis e Estrutura Sequencial
 Total MCs   : 1
@@ -16,54 +16,44 @@ Total MCs   : 1
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | x = float(input("Volume de agua: "))
-     2 | c = 0.37
-     3 | f = 15
-     4 | total = x * c + f
-     5 | w = total * 35/100
-     6 | z = total + w
-     7 | 
-     8 | print(round(z, 2))
+     1 | a = float(input("Qual o volume de agua consumida no mes: "))
+     2 | b = a*0.37 + 15
+     3 | c = 0.35*b
+     4 | d = b + c
+     5 | print(round(d, 2))
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
 ----------------------------------------------------------------------
 
 ▶ G4 — Funções/variáveis com nomes não significativos
-  Ocorrências: 5
+  Ocorrências: 4
 
-  [1] Linha 1: Variável 'x' com nome muito curto (≤4 chars)
-      Trecho  : x = ...
+  [1] Linha 1: Variável 'a' com nome muito curto (≤4 chars)
+      Trecho  : a = ...
       Contexto:
-        >>>    1 | x = float(input("Volume de agua: "))
-               2 | c = 0.37
+        >>>    1 | a = float(input("Qual o volume de agua consumida no mes: "))
+               2 | b = a*0.37 + 15
 
-  [2] Linha 2: Variável 'c' com nome muito curto (≤4 chars)
+  [2] Linha 2: Variável 'b' com nome muito curto (≤4 chars)
+      Trecho  : b = ...
+      Contexto:
+               1 | a = float(input("Qual o volume de agua consumida no mes: "))
+        >>>    2 | b = a*0.37 + 15
+               3 | c = 0.35*b
+
+  [3] Linha 3: Variável 'c' com nome muito curto (≤4 chars)
       Trecho  : c = ...
       Contexto:
-               1 | x = float(input("Volume de agua: "))
-        >>>    2 | c = 0.37
-               3 | f = 15
+               2 | b = a*0.37 + 15
+        >>>    3 | c = 0.35*b
+               4 | d = b + c
 
-  [3] Linha 3: Variável 'f' com nome muito curto (≤4 chars)
-      Trecho  : f = ...
+  [4] Linha 4: Variável 'd' com nome muito curto (≤4 chars)
+      Trecho  : d = ...
       Contexto:
-               2 | c = 0.37
-        >>>    3 | f = 15
-               4 | total = x * c + f
-
-  [4] Linha 5: Variável 'w' com nome muito curto (≤4 chars)
-      Trecho  : w = ...
-      Contexto:
-               4 | total = x * c + f
-        >>>    5 | w = total * 35/100
-               6 | z = total + w
-
-  [5] Linha 6: Variável 'z' com nome muito curto (≤4 chars)
-      Trecho  : z = ...
-      Contexto:
-               5 | w = total * 35/100
-        >>>    6 | z = total + w
-               7 | 
+               3 | c = 0.35*b
+        >>>    4 | d = b + c
+               5 | print(round(d, 2))
 
 ======================================================================

@@ -2,11 +2,11 @@
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
 Arquivo     : 94_1080.log
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2016_1_v1.81\2016-1\103\users\1239\executions\94_1080.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2016_1_v1.81\2016-1\103\users\1267\executions\94_1080.log
 Assessment  : 94
 Título      : Avaliação Parcial 02 – Estrutura Condicional Composta (sem Aninhamento)
 Questão     : 1080
-Aluno       : 1239
+Aluno       : 1267
 Grupo       : TP 02
 Significado : Estrutura Condicional Simples e Composta
 Total MCs   : 1
@@ -16,16 +16,20 @@ Total MCs   : 1
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | x = float(input("digite o valor de x: "))
-     2 | y = float(input("digite o valor de y: "))
-     3 | z = float(input("digite o valor de z: "))
-     4 | 
-     5 | opcao = (x + y + z)/3
+     1 | from math import*
+     2 | 
+     3 | n1 = float(input("Digite a n1: "))
+     4 | n2 = float(input("Digite a n2: "))
+     5 | n3 = float(input("Digite a n3: "))
      6 | 
-     7 | if(opcao >= 5):
-     8 | 	print(aprovado)
-     9 | else:
-    10 | 	print(round(opcao, 1))
+     7 | media = (n1 + n2 + n3) / 3
+     8 | 
+     9 | if(media >= 5):
+    10 | 	print(float(round(media, 1)))
+    11 | 	print("Aprovado")
+    12 | else:
+    13 | 	print(float(round(media, 1)))
+    14 | 	print("Reprovado")
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
@@ -34,24 +38,25 @@ DETALHAMENTO DOS MISCONCEPTIONS
 ▶ G4 — Funções/variáveis com nomes não significativos
   Ocorrências: 3
 
-  [1] Linha 1: Variável 'x' com nome muito curto (≤4 chars)
-      Trecho  : x = ...
+  [1] Linha 3: Variável 'n1' com nome muito curto (≤4 chars)
+      Trecho  : n1 = ...
       Contexto:
-        >>>    1 | x = float(input("digite o valor de x: "))
-               2 | y = float(input("digite o valor de y: "))
+               2 | 
+        >>>    3 | n1 = float(input("Digite a n1: "))
+               4 | n2 = float(input("Digite a n2: "))
 
-  [2] Linha 2: Variável 'y' com nome muito curto (≤4 chars)
-      Trecho  : y = ...
+  [2] Linha 4: Variável 'n2' com nome muito curto (≤4 chars)
+      Trecho  : n2 = ...
       Contexto:
-               1 | x = float(input("digite o valor de x: "))
-        >>>    2 | y = float(input("digite o valor de y: "))
-               3 | z = float(input("digite o valor de z: "))
+               3 | n1 = float(input("Digite a n1: "))
+        >>>    4 | n2 = float(input("Digite a n2: "))
+               5 | n3 = float(input("Digite a n3: "))
 
-  [3] Linha 3: Variável 'z' com nome muito curto (≤4 chars)
-      Trecho  : z = ...
+  [3] Linha 5: Variável 'n3' com nome muito curto (≤4 chars)
+      Trecho  : n3 = ...
       Contexto:
-               2 | y = float(input("digite o valor de y: "))
-        >>>    3 | z = float(input("digite o valor de z: "))
-               4 | 
+               4 | n2 = float(input("Digite a n2: "))
+        >>>    5 | n3 = float(input("Digite a n3: "))
+               6 | 
 
-=============================================================================================
+======================================================================

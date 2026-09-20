@@ -2,11 +2,11 @@
 RELATÓRIO DE ANÁLISE DE MISCONCEPTIONS (MC³)
 ======================================================================
 Arquivo     : 5945_6374.log
-Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2024_1_v1.81\2024-1\591\users\9888\executions\5945_6374.log
+Caminho     : D:\Trabalho_Super\QuestionInsight\Extraidos\cb_dataset_2024_1_v1.81\2024-1\591\users\9789\executions\5945_6374.log
 Assessment  : 5945
 Título      : TP 6: Estrutura de Repetição por Contagem (for)
 Questão     : 6374
-Aluno       : 9888
+Aluno       : 9789
 Grupo       : TP 06
 Significado : Estrutura de Repetição por Contagem
 Total MCs   : 2
@@ -16,22 +16,20 @@ Total MCs   : 2
 ----------------------------------------------------------------------
 CÓDIGO FONTE
 ----------------------------------------------------------------------
-     1 | from numpy import *
-     2 | 
-     3 | s = input ('pacientes: ').upper().split(',')
+     1 | from numpy import*
+     2 | p = array(input("").upper().split(","))
+     3 | a = zeros(4, dtype = int)
      4 | 
-     5 | ab = array([0,0,0,0])
-     6 | 
-     7 | for i in s:
-     8 | 	if i =='O':
-     9 | 		ab[0] = ab[0] + 1
-    10 | 	elif i == 'D':
-    11 | 	   ab[1] = ab [1] +1
-    12 | 	elif i == 'N':
-    13 | 		ab[2] = ab[2] + 1
-    14 | 	elif i == 'C':
-    15 | 		ab[3] = ab[3] +1
-    16 | print(ab)
+     5 | for v in p:
+     6 | 	if v == "O":
+     7 | 		a[0] += 1
+     8 | 	if v == "D":
+     9 | 		a[1] += 1 
+    10 | 	if v == "N":
+    11 | 		a[2] += 1 
+    12 | 	if v == "C":
+    13 | 		a[3] += 1 
+    14 | print(a)
 
 ----------------------------------------------------------------------
 DETALHAMENTO DOS MISCONCEPTIONS
@@ -40,28 +38,24 @@ DETALHAMENTO DOS MISCONCEPTIONS
 ▶ B8 — Não utilização de elif/else
   Ocorrências: 1
 
-  [1] Linha 12: Cadeia if/elif sem bloco else final
-      Trecho  : if ... (linha 12) / elif ... sem else
-      Contexto:
-              11 | 	   ab[1] = ab [1] +1
-        >>>   12 | 	elif i == 'N':
-              13 | 		ab[2] = ab[2] + 1
+  [1] Linha 0: B8 detectado pelo VisitorMC3 (localização exata não mapeada)
+      Trecho  : —
 
 ▶ G4 — Funções/variáveis com nomes não significativos
   Ocorrências: 2
 
-  [1] Linha 3: Variável 's' com nome muito curto (≤4 chars)
-      Trecho  : s = ...
+  [1] Linha 2: Variável 'p' com nome muito curto (≤4 chars)
+      Trecho  : p = ...
       Contexto:
-               2 | 
-        >>>    3 | s = input ('pacientes: ').upper().split(',')
-               4 | 
+               1 | from numpy import*
+        >>>    2 | p = array(input("").upper().split(","))
+               3 | a = zeros(4, dtype = int)
 
-  [2] Linha 5: Variável 'ab' com nome muito curto (≤4 chars)
-      Trecho  : ab = ...
+  [2] Linha 3: Variável 'a' com nome muito curto (≤4 chars)
+      Trecho  : a = ...
       Contexto:
+               2 | p = array(input("").upper().split(","))
+        >>>    3 | a = zeros(4, dtype = int)
                4 | 
-        >>>    5 | ab = array([0,0,0,0])
-               6 | 
 
 ======================================================================
