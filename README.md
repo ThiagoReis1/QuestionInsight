@@ -18,7 +18,7 @@ O pré-processamento mantém `Extraidos/` como a única base física e gera `Eta
 
 ### Etapa 3: Processamento dos Dados
 
-Execute o notebook `Processamento.ipynb`. Nessa fase, você aplicará as métricas de análise nas questões, como dificuldade, discriminação e outras estatísticas relacionadas. O objetivo é avaliar como as questões se comportam em relação aos parâmetros definidos.
+Execute o notebook `Processamento.ipynb`. Nessa fase, são calculadas as métricas de dificuldade e discriminação e é gerado o índice `Etapa_3/output/indice_usuarios.json`, que preserva as notas finais por estudante–questão. O arquivo `Etapa_3/output/questoes_ordenadas.csv` e o índice de usuários são as fontes usadas pelo parser e pelas análises posteriores.
 
 ### Etapa 4: Resultados Finais e Avaliação
 
@@ -32,13 +32,15 @@ Para mais informações sobre a **Etapa 4**, visite o repositório relacionado: 
 
 Esta etapa tem como foco a identificação de **misconceptions** (conceitos incorretos, também chamados de **MC³**) presentes nas respostas dos estudantes, por meio da análise sintática e semântica de códigos-fonte em Python.
 
-Execute os arquivos na seguinte ordem:
+Execute os notebooks da Etapa 5 nesta ordem:
 
-1. `1_Misconceptions_Parser.py` (ou o notebook equivalente `1_Misconceptions_Parser.ipynb`) — analisa os códigos dos estudantes e detecta os tipos de misconceptions (MC³) usando `VisitorMC3.py`, gerando `output/misconceptions_resumo_por_questao.csv` e `output/misconceptions_detalhado_por_usuario.csv`.
+1. `1_Misconceptions_Parser.py` (ou `1_Misconceptions_Parser.ipynb`) — localiza a última submissão válida em cada `execution.log`, extrai o código efetivamente avaliado e detecta os misconceptions MC³ usando `VisitorMC3.py`. Gera `output/misconceptions_resumo_por_questao.csv`, `output/misconceptions_detalhado_por_usuario.csv` e o relatório de falhas, quando aplicável.
 
-1. `2_preparacao_analise.ipynb` — consolida os dados das etapas anteriores e gera `output/dataset_analise_questoes.csv` e `output/mapeamento_provas_questoes.json`, únicos arquivos consumidos pelo notebook seguinte.
+2. `2_preparacao_analise.ipynb` — combina o resumo de misconceptions com as métricas agregadas por questão e gera `output/dataset_analise_questoes.csv` e `output/mapeamento_provas_questoes.json`.
 
-1. `3_analise_etapas_1_7.ipynb` — gera os gráficos e métricas finais (caracterização da amostra, análise dos MC³, análise de dificuldade, correlações entre misconceptions e métricas de dificuldade/discriminação, e comparação com fatores demográficos), permitindo a construção de estratégias pedagógicas mais eficazes.
+3. `3_Analise_Integrada_Misconceptions_Metricas.ipynb` — produz a caracterização da amostra, as distribuições de MC³, as análises de dificuldade, as correlações, as comparações demográficas, as tabelas LaTeX e a modelagem individual por episódio.
+
+O notebook de preparação deve ser executado antes da análise integrada, pois fornece as entradas auxiliares consumidas por ela. A seleção de PC³ usa o catálogo completo e os filtros globais configurados no notebook; não há uma restrição fixa somente a B4, B8 e B9.
 
 > Os notebooks antigos `2_analise_graficos.ipynb` e `3_analise_assuntos.ipynb` foram substituídos por `2_preparacao_analise.ipynb` e não fazem mais parte do fluxo do projeto.
 
@@ -177,7 +179,7 @@ QuestionInsight/
     ├── VisitorMC3.py                        # Motor de detecção: percorre a AST do código dos alunos
     ├── 1_Misconceptions_Parser.py / .ipynb  # Roda o VisitorMC3 em escala sobre a base de códigos
     ├── 2_preparacao_analise.ipynb           # Consolida os dados das etapas anteriores
-    ├── 3_analise_etapas_1_7.ipynb           # Gráficos e métricas finais
+    ├── 3_Analise_Integrada_Misconceptions_Metricas.ipynb           # Gráficos e métricas finais
     ├── Analise_Detalhada_Misconceptions_PC3/ # Notebook e relatórios detalhados por combinação de MC³ (opcional)
     │   ├── Analise_Detalhada_Misconceptions_PC3.ipynb
     │   └── output/                           # JSON de referências e relatórios .txt
@@ -260,7 +262,7 @@ Execute os notebooks/scripts **nesta sequência**, pois cada etapa consome os ar
        python Etapa_5/1_Misconceptions_Parser.py progressBar
        ```
     1. `Etapa_5/2_preparacao_analise.ipynb` — consolida os dados das etapas anteriores.
-    1. `Etapa_5/3_analise_etapas_1_7.ipynb` — gera os gráficos e métricas finais.
+    1. `Etapa_5/3_Analise_Integrada_Misconceptions_Metricas.ipynb` — gera os gráficos e métricas finais.
 
 ### 5. Observações importantes
 
