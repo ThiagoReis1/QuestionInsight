@@ -1,0 +1,29 @@
+﻿arquivo,unidade,conteudo,uso
+histogramas_metricas_todas.pdf,questão,Distribuição das métricas iniciais; contagens em escala log1p e proporções em escala original.,"Identificar assimetria, caudas e possíveis valores extremos antes de escolher testes/modelos."
+estatisticas_metricas.csv,questão,"N, média, mediana, desvio-padrão, assimetria, curtose, mínimo e máximo por métrica.",Descrever o comportamento das métricas e apoiar a escolha de resumo/transformação.
+metricas_postos_zscore.csv,questão,Postos decrescentes padronizados das métricas em casos completos.,Colocar escalas distintas em base comparável para seleção e análise dimensional; não é a matriz original.
+matriz_spearman_completa.csv,questão,Correlações de Spearman entre as métricas originais.,Detectar associações monotônicas e pares potencialmente redundantes.
+matriz_p_bruto_completa.csv,questão,P-valores brutos correspondentes à matriz completa.,Auditar a incerteza das correlações; não são efeitos causais nem valores ajustados.
+matriz_spearman_completa.pdf,questão,Mapa de calor da matriz completa de correlações.,Visualizar rapidamente a estrutura de associação e redundância entre métricas.
+msa_antes_selecao.csv,questão/métrica,MSA inicial de cada métrica antes da seleção automática.,Identificar variáveis pouco adequadas à estrutura fatorial exploratória.
+metricas_removidas_automaticamente.csv,métrica,"Métricas removidas por pares com |rho| alto ou VIF elevado, com justificativa e VIF.",Auditar exatamente quais variáveis a regra reprodutível retirou.
+metricas_removidas_por_msa.csv,métrica,"Métricas removidas iterativamente por MSA abaixo de 0,50.","Documentar a segunda etapa da seleção, após reduzir colinearidade."
+diagnostico_final_MSA_VIF.csv,métrica,MSA e VIF das métricas retidas.,Verificar adequação individual e colinearidade residual da solução final.
+diagnosticos_fatorabilidade.csv,conjunto de métricas,"KMO, Bartlett, determinante e dimensões antes/depois da seleção.",Avaliar se os padrões de correlação justificam uma redução exploratória de dimensões.
+matriz_spearman_final.csv,questão,Spearman das métricas retidas.,Verificar a estrutura de associação após seleção.
+matriz_p_bruto_final.csv,questão,P-valores brutos da matriz final.,Auditar a incerteza da solução final; não interpretar isoladamente como causalidade.
+matriz_spearman_final.pdf,questão,Mapa de calor da solução final de métricas.,Comunicar visualmente a estrutura após a remoção de redundâncias.
+renumeracao_metricas.csv,métrica,"Correspondência entre MD original, novo código, rótulo e inclusão/exclusão.",Evitar trocar o significado de uma MD depois da renumeração.
+tabela_metricas_final_postos_zscore.csv,questão,"Tabela de postos padronizados das métricas retidas, por questão.",Entrada documentada para a análise de componentes principais.
+tabela_metricas_final_postos_zscore_rotulada.csv,questão,Tabela de postos padronizados com código MD e nome legível; MD14 aparece como Eventos sem deleções.,"Tabela de leitura para o artigo, preservando a correspondência com o crosswalk."
+pca_analise_paralela.csv,componente,"Autovalores observados, limiar de simulação e decisão de retenção.",Estimar quantas dimensões retêm mais informação do que ruído aleatório.
+pca_cargas.csv,métrica/componente,Cargas das métricas retidas nos componentes selecionados.,Interpretar quais métricas contribuem para cada dimensão exploratória.
+irt_2pl_por_questao.csv,questão,"Status, discriminação a e erro-padrão do 2PL, quando o ajuste R está disponível.",Diagnóstico psicométrico item a item; só usar parâmetro se o modelo convergir e passar diagnóstico.
+irt_2pl_por_questao.csv.diagnosticos.txt,modelo IRT,"Resumo do ajuste e teste M2 do pacote mirt, quando produzido.",Inspecionar ajuste global e advertências do 2PL.
+irt_2pl_por_questao.csv.log,execução R,"Saída padrão e erros da tentativa IRT, quando Rscript está disponível.","Investigar instalação, avisos e falhas de execução."
+glmmTMB_pc3.csv,episódio/modelo,"Coeficientes, OR, IC, p, p-BH, N e variâncias aleatórias do GLMM em R, quando disponível.",Arquivo legado não convergente; não usar como inferência final. A análise autoritativa está em validacao_glmm_python/.
+glmmTMB_pc3.csv.log,execução R,"Saída padrão e erros da tentativa glmmTMB, quando Rscript está disponível.",Investigar avisos e falhas de convergência/execução.
+glmmTMB_pc3.csv.erros.json,PC³/modelo,Erros associados a desfechos específicos que não puderam ser ajustados.,Distinguir falha de um resultado nulo ou não significativo.
+RELATORIO_PIPELINE_AUTOMATICO.md,pipeline,"Resumo das regras, métricas removidas, fatorabilidade, PCA, IRT, GLMM e limitações.",Rastrear decisões e não transportar automaticamente resultados provisórios para o artigo.
+status_execucao.json,pipeline,"Contagens, métricas retidas, componentes, estados dos modelos e lista real de arquivos gerados.","Auditar em formato legível por máquina se uma etapa executou, falhou ou foi pulada."
+catalogo_saidas_pipeline.csv,arquivo gerado,"Este catálogo: nome, unidade, conteúdo e uso analítico de cada saída.",Orientar a leitura das saídas sem abrir os arquivos às cegas.
